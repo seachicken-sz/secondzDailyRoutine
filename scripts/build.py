@@ -52,7 +52,7 @@ def build_song_menu(src_filename: str, dist_filename: str):
 
 
 def build_request_list_shortcut():
-    request_lists = load_json("requestListJson.json")
+    request_lists = load_json("listJson.json")
 
     item_names = []
     url_by_name = {}
