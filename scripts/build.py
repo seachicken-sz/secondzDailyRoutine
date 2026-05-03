@@ -67,7 +67,6 @@ def build_song_menu(src_filename: str, dist_filename: str):
     )
 
 def main():
-    # 拡張子を含めて指定
     build_song_menu("requestSong.json", "requestSongShortcut.json")
     build_song_menu("spotifySong.json", "spotifySongShortcut.json")
 
