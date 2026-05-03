@@ -80,8 +80,8 @@ def build_request_list_shortcut():
 
 
 def main():
-    build_song_menu("requestSongJson.json", "requestSongShortcutJson")
-    build_song_menu("spotifySongJson.json", "spotifySongShortcutJson")
+    build_song_menu("requestSongJson.json", "requestSongJson")
+    build_song_menu("spotifySongJson.json", "spotifySongJson")
     build_request_list_shortcut()
 
 
