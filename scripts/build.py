@@ -1,10 +1,9 @@
 import json
 from pathlib import Path
 
-# スクリプトの場所を基準にプロジェクトのルートを設定
-# main.pyがリポジトリのルート直下にある場合は .parent
-# もし scripts/ などのサブフォルダ内にある場合は .parents[1] に変更してください
-ROOT = Path(__file__).resolve().parent
+# スクリプトが scripts/build.py にある場合、
+# .parent は scripts/ を指すため、もう一つ上のリポジトリルートを指定します
+ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 DIST_DIR = ROOT / "dist"
 
@@ -16,7 +15,8 @@ def load_json(filename: str):
     path = DATA_DIR / filename
     
     if not path.exists():
-        raise FileNotFoundError(f"入力ファイルが見つかりません: {path}")
+        # デバッグしやすいよう、探している絶対パスをエラーに出す
+        raise FileNotFoundError(f"入力ファイルが見つかりません: {path.absolute()}")
 
     with path.open("r", encoding="utf-8") as f:
         return json.load(f)
@@ -65,8 +65,7 @@ def build_song_menu(src_filename: str, dist_filename: str):
 
 
 def main():
-    # 実際のファイル名（拡張子 .json）に合わせて指定
-    # これにより GitHub Actions 上で dist/ 内に正しくファイルが生成されます
+    # 拡張子 .json を含めて指定
     build_song_menu("requestSong.json", "requestSongShortcut.json")
     build_song_menu("spotifySong.json", "spotifySongShortcut.json")
 
