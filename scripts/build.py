@@ -52,7 +52,7 @@ def build_song_menu(src_filename: str, dist_filename: str):
 
 
 def build_request_list_shortcut():
-    request_lists = load_json("requestListJson")
+    request_lists = load_json("listJson.json")
 
     item_names = []
     url_by_name = {}
@@ -80,8 +80,8 @@ def build_request_list_shortcut():
 
 
 def main():
-    build_song_menu("requestSongJson", "requestSongShortcutJson")
-    build_song_menu("spotifySongJson", "spotifySongShortcutJson")
+    build_song_menu("requestSongJson.json", "requestSongShortcutJson")
+    build_song_menu("spotifySongJson.json", "spotifySongShortcutJson")
     build_request_list_shortcut()
 
 
