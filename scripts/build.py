@@ -71,7 +71,7 @@ def build_request_list_shortcut():
             url_by_name[name] = url
 
     save_json(
-        "requestListShortcutJson",
+        "requestListJson",
         {
             "itemNames": item_names,
             "urlByName": url_by_name,
