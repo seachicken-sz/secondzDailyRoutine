@@ -1,0 +1,12 @@
+[
+  {
+    "listName":"リストA",
+    "items":[
+      {"name":"MAJ特別賞Yahoo!で検索","url":"https://search.yahoo.co.jp/search?&ei=UTF-8&p=timelesz","comment":"検索結果が見えたら投票完了！","input-flag":false,"alert-flag":false},
+      {"name":"エムオン！","url":"https://www.m-on.jp/request/?action_request_search=True&artist_id=19237","comment":"リクエストしたい曲をタップ！","input-flag":false,"alert-flag":false},
+      {"name":"&シノトピック","url":"https://www.tbsradio.jp/articles/program/and/","comment":"最新記事をタップ！アクセスランクがあがるよ！","input-flag":false,"alert-flag":false},
+      {"name":"全農 COUNTDOWN JAPAN","url":"https://tfm.co.jp/f/countdownjapan/message","request-type":"text","request-input":"メッセージ&リクエスト","comment":"","input-flag":true,"alert-flag":false},
+      {"name":"NACK5","url":"https://www.nack5.co.jp/message/270/","request-type":"music","request-input":"タイトル","comment":"","input-flag":true,"alert-flag":false}
+      ]
+  }
+]
