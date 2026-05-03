@@ -7,13 +7,16 @@ DIST_DIR = ROOT / "dist"
 
 DIST_DIR.mkdir(exist_ok=True)
 
+
 def load_json(filename: str):
     with (DATA_DIR / filename).open("r", encoding="utf-8") as f:
         return json.load(f)
 
+
 def save_json(filename: str, data):
     with (DIST_DIR / filename).open("w", encoding="utf-8", newline="\n") as f:
         json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
+
 
 def build_song_menu(src_filename: str, dist_filename: str):
     items = load_json(src_filename)
@@ -37,16 +40,21 @@ def build_song_menu(src_filename: str, dist_filename: str):
         else:
             false_names.append(name)
 
-    save_json(dist_filename, {
-        "trueNames": true_names,
-        "falseNames": false_names,
-        "allNames": false_names + true_names,
-        "urlByName": url_by_name
-    })
+    save_json(
+        dist_filename,
+        {
+            "trueNames": true_names,
+            "falseNames": false_names,
+            "allNames": false_names + true_names,
+            "urlByName": url_by_name,
+        },
+    )
+
 
 def main():
     build_song_menu("requestSongJson", "requestSongShortcutJson")
     build_song_menu("spotifySongJson", "spotifySongShortcutJson")
+
 
 if __name__ == "__main__":
     main()
