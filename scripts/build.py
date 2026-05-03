@@ -13,7 +13,7 @@ DIST_DIR.mkdir(parents=True, exist_ok=True)
 
 def load_json(filename: str):
     path = DATA_DIR / filename
-    
+
     if not path.exists():
         # デバッグしやすいよう、探している絶対パスをエラーに出す
         raise FileNotFoundError(f"入力ファイルが見つかりません: {path.absolute()}")
@@ -66,8 +66,8 @@ def build_song_menu(src_filename: str, dist_filename: str):
 
 def main():
     # 拡張子 .json を含めて指定
-    build_song_menu("requestSong.json", "requestSongShortcut.json")
-    build_song_menu("spotifySong.json", "spotifySongShortcut.json")
+    build_song_menu("requestSongJson.json", "requestSongShortcutJson.json")
+    build_song_menu("spotifySongJson.json", "spotifySongShortcutJson.json")
 
 
 if __name__ == "__main__":
