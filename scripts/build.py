@@ -51,6 +51,31 @@ def build_song_menu(src_filename: str, dist_filename: str):
     )
 
 
+def build_name_url_list(src_filename: str, dist_filename: str):
+    items = load_json(src_filename)
+
+    item_names = []
+    url_by_name = {}
+
+    for item in items:
+        name = item.get("name", "")
+        url = item.get("url", "")
+
+        if not name:
+            continue
+
+        item_names.append(name)
+        url_by_name[name] = url
+
+    save_json(
+        dist_filename,
+        {
+            "itemNames": item_names,
+            "urlByName": url_by_name,
+        },
+    )
+
+
 def build_request_list_shortcut():
     request_lists = load_json("listJson.json")
 
@@ -83,6 +108,8 @@ def main():
     build_song_menu("requestSongJson.json", "requestSongJson")
     build_song_menu("spotifySongJson.json", "spotifySongJson")
     build_request_list_shortcut()
+    build_name_url_list("youtubeMVListJson.json", "youtubeMVListJson")
+    build_name_url_list("youtubePlayListJson.json", "youtubePlayListJson")
 
 
 if __name__ == "__main__":
