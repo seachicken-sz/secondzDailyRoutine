@@ -1,37 +1,24 @@
 import json
 from pathlib import Path
 
-# スクリプトが scripts/build.py にある場合、
-# .parent は scripts/ を指すため、もう一つ上のリポジトリルートを指定します
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 DIST_DIR = ROOT / "dist"
 
-# 出力先ディレクトリがない場合は自動作成
-DIST_DIR.mkdir(parents=True, exist_ok=True)
+DIST_DIR.mkdir(exist_ok=True)
 
 
 def load_json(filename: str):
-    path = DATA_DIR / filename
-
-    if not path.exists():
-        # デバッグしやすいよう、探している絶対パスをエラーに出す
-        raise FileNotFoundError(f"入力ファイルが見つかりません: {path.absolute()}")
-
-    with path.open("r", encoding="utf-8") as f:
+    with (DATA_DIR / filename).open("r", encoding="utf-8") as f:
         return json.load(f)
 
 
 def save_json(filename: str, data):
-    # ファイルを書き出し（minifyして保存）
     with (DIST_DIR / filename).open("w", encoding="utf-8", newline="\n") as f:
         json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
 
 
 def build_song_menu(src_filename: str, dist_filename: str):
-    """
-    ファン活動のルーティンを自動化するためのJSONを構築します。
-    """
     items = load_json(src_filename)
 
     true_names = []
@@ -58,16 +45,44 @@ def build_song_menu(src_filename: str, dist_filename: str):
         {
             "trueNames": true_names,
             "falseNames": false_names,
-            "allNames": true_names + false_names,
+            "allNames": false_names + true_names,
+            "urlByName": url_by_name,
+        },
+    )
+
+
+def build_request_list_shortcut():
+    request_lists = load_json("requestListJson")
+
+    item_names = []
+    url_by_name = {}
+
+    for request_list in request_lists:
+        items = request_list.get("items", [])
+
+        for item in items:
+            name = item.get("name", "")
+            url = item.get("url", "")
+
+            if not name:
+                continue
+
+            item_names.append(name)
+            url_by_name[name] = url
+
+    save_json(
+        "requestListShortcutJson",
+        {
+            "itemNames": item_names,
             "urlByName": url_by_name,
         },
     )
 
 
 def main():
-    # 拡張子 .json を含めて指定
-    build_song_menu("requestSongJson.json", "requestSongShortcutJson.json")
-    build_song_menu("spotifySongJson.json", "spotifySongShortcutJson.json")
+    build_song_menu("requestSongJson", "requestSongShortcutJson")
+    build_song_menu("spotifySongJson", "spotifySongShortcutJson")
+    build_request_list_shortcut()
 
 
 if __name__ == "__main__":
