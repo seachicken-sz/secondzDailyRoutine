@@ -16,5 +16,11 @@
       {"name":"SkyrocketCompany","url":"https://www.tfm.co.jp/f/sc/message","request-type":"text","request-input":"メッセージ","comment":"コーナーは「楽曲リクエスト」を選択！","input-flag":true,"alert-flag":false},
       {"name":"ローソン","url":"https://www.lawson.co.jp/lab/cshotstation/art/1308047_7551.html","request-type":"music","request-input":"■曲名","comment":"「>>リクエストの登録はこちら！」をタップしてフォームを開いて！","input-flag":true,"alert-flag":false},
       ]
+  },
+  {
+    "listName":"マジ面倒だけどがんばろ",
+    "items":[
+      {"name":"ドリパス「ブラック校則」","url":"https://www.dreampass.jp/m369173","comment":"ドリパスの投票は事前にドリパスへの会員登録が必須です。まだの方は左上の×か完了をタップして次に進んでください。","input-flag":false,"alert-flag":true}
+      ]
   }
 ]
