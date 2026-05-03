@@ -22,12 +22,15 @@ jobs:
         with:
           python-version: "3.11"
 
-      - run: python scripts/build.py
+      - name: Build generated JSON
+        run: python scripts/build.py
 
       - name: Commit generated JSON
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add dist/*.json
+
+          git add dist/*
+
           git diff --cached --quiet || git commit -m "Build shortcut JSON"
           git push
