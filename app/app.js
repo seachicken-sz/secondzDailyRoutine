@@ -276,13 +276,28 @@ copyDailyTaskTextButtonElement.addEventListener("click", async () => {
   }
 });
 
-openDailyTaskUrlButtonElement.addEventListener("click", () => {
+openDailyTaskUrlButtonElement.addEventListener("click", async () => {
   const item = getCurrentDailyTaskItem();
   const itemUrl = getDailyTaskItemUrl(item);
 
   if (!item || !itemUrl) {
     showError(dailyTaskErrorAreaElement, "URLが設定されていません。");
     return;
+  }
+
+  if (item["input-flag"] === true) {
+    const copyText = buildDailyTaskCopyText(item);
+
+    if (copyText) {
+      try {
+        await navigator.clipboard.writeText(copyText);
+        hideError(dailyTaskErrorAreaElement);
+      } catch (error) {
+        console.error(error);
+        showError(dailyTaskErrorAreaElement, "コピーに失敗しました。もう一度ページを開くボタンを押してください。");
+        return;
+      }
+    }
   }
 
   recordCompletedDailyItem(item);
@@ -965,16 +980,9 @@ function renderCurrentDailyTask() {
 }
 
 function renderDailyTaskCopyArea(item) {
-  if (item["input-flag"] !== true) {
-    dailyTaskCopyAreaElement.classList.add("hidden");
-    dailyTaskCopyTextElement.textContent = "";
-    return;
-  }
-
-  const copyText = buildDailyTaskCopyText(item);
-
-  dailyTaskCopyTextElement.textContent = copyText;
-  dailyTaskCopyAreaElement.classList.remove("hidden");
+  dailyTaskCopyAreaElement.classList.add("hidden");
+  dailyTaskCopyTextElement.textContent = "";
+  copyDailyTaskTextButtonElement.textContent = "コピーする";
 }
 
 function buildDailyTaskCopyText(item) {
@@ -1255,6 +1263,7 @@ function extractYoutubeVideoId(url) {
     return "";
   } catch {
     return "";
+;
   }
 }
 
@@ -1323,6 +1332,7 @@ function getSelectedRequestSongName() {
 function getSelectedRequestSongUrl() {
   if (!state.selectedRequestSong || !state.selectedRequestSong.url) {
     return "";
+;
   }
 
   return buildRequestSongUrl(state.selectedRequestSong.url);
