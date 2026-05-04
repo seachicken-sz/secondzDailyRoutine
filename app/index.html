@@ -8,7 +8,32 @@
 </head>
 <body>
   <main class="app">
-    <section id="spotifyStep" class="step-screen">
+    <section id="homeStep" class="step-screen">
+      <header class="home-header">
+        <p class="step-label">HOME</p>
+        <h1>secondz Daily Routine⌛</h1>
+        <p class="description">
+          今日できる推し活タスクを順番に進めます。
+        </p>
+      </header>
+
+      <section class="home-limited-area">
+        <h2>今できる期間限定タスク</h2>
+        <div id="homeOnceTaskList" class="home-once-task-list"></div>
+      </section>
+
+      <section class="home-action-area">
+        <button id="startRoutineButton" class="primary-button">
+          開始する
+        </button>
+
+        <button id="openHowToButton" class="text-link-button" type="button">
+          導入方法
+        </button>
+      </section>
+    </section>
+
+    <section id="spotifyStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">STEP 1</p>
         <h1>今日のBGM🎧</h1>
@@ -36,11 +61,12 @@
       <section class="scroll-area">
         <section class="bottom-action-area spotify-skip-area">
           <button id="skipSpotifyButton" class="secondary-button no-margin-button">
-            BGMなし
+            BGMなしで進む
           </button>
         </section>
 
         <section class="song-section">
+          <h2>おすすめ</h2>
           <div id="recommendedSongs" class="song-list"></div>
         </section>
 
@@ -60,10 +86,10 @@
     <section id="onceListSelectStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">STEP 2</p>
-        <h1>これ終わってる？</h1>
+        <h1>期間限定タスク✅</h1>
         <p class="description">
-          終わってないものにチェックをいれて「次へ」！<br>
-          忘れないうちにやっとこ👍
+          今日やるものにチェックを入れてください。<br>
+          デフォルトでは期限内のタスクをすべて「済み」扱いにしています。
         </p>
       </header>
 
@@ -94,7 +120,7 @@
     <section id="onceTaskRunStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">STEP 2</p>
-        <h1>これ終わってる？</h1>
+        <h1>期間限定タスクを実行</h1>
         <p id="onceTaskProgress" class="description"></p>
       </header>
 
@@ -121,7 +147,8 @@
         <p class="step-label">STEP 3</p>
         <h1>本日のリクエスト曲🎶</h1>
         <p class="description">
-          今日リクエストする曲は？
+          今日リクエストする曲を選んでください。<br>
+          おすすめ曲を優先表示しています。
         </p>
       </header>
 
@@ -142,6 +169,7 @@
 
       <section class="scroll-area">
         <section class="song-section">
+          <h2>おすすめ</h2>
           <div id="recommendedRequestSongs" class="song-list"></div>
         </section>
 
@@ -161,7 +189,7 @@
     <section id="dailyTaskStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">STEP 4</p>
-        <h1>デイリータスク📅</h1>
+        <h1>リクエストループ📮</h1>
         <p id="dailyTaskHeaderDescription" class="description"></p>
       </header>
 
@@ -169,6 +197,7 @@
         <p id="dailyTaskGroupName" class="group-label"></p>
         <p id="dailyTaskProgress" class="description"></p>
 
+        <p class="selected-label">タスク</p>
         <h2 id="dailyTaskName" class="task-title"></h2>
 
         <div id="dailyTaskCommentArea" class="notice-box"></div>
@@ -197,7 +226,7 @@
     <section id="dailyGroupEndStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">STEP 4</p>
-        <h1>デイリータスク📅</h1>
+        <h1>リクエストループ📮</h1>
       </header>
 
       <section class="task-card">
@@ -219,17 +248,17 @@
         <p class="step-label">STEP 5</p>
         <h1>ポストする？📝</h1>
         <p class="description">
-          SNSで今日やったタスク共有しとく？
+          今日のリクエスト報告文を作れます。
         </p>
       </header>
 
       <section class="task-card">
         <button id="makePostButton" class="primary-button">
-          共有する！
+          ポスト文を作る
         </button>
 
         <button id="skipPostButton" class="secondary-button">
-          やめとく
+          投稿しない
         </button>
       </section>
     </section>
@@ -239,7 +268,7 @@
         <p class="step-label">STEP 5</p>
         <h1>ポスト文作成📝</h1>
         <p class="description">
-          ポストに追加したい項目にチェック✅
+          追加したい項目にチェックを入れてください。
         </p>
       </header>
 
@@ -266,6 +295,7 @@
         </section>
 
         <section class="task-card">
+          <p class="selected-label">生成文</p>
           <div id="generatedPostText" class="copy-text"></div>
 
           <button id="copyPostTextButton" class="secondary-button">
@@ -292,15 +322,15 @@
     <section id="youtubeAskStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">STEP 6</p>
-        <h1>YouTubeも見とく？▶️</h1>
+        <h1>YouTubeも見る？▶️</h1>
         <p class="description">
-          Spotifyの再生も終わってたらYoutubeも行っとかない？
+          仕上げにYouTubeも回せます。
         </p>
       </header>
 
       <section class="task-card">
         <button id="watchYoutubeButton" class="primary-button">
-          見とこ
+          見る
         </button>
 
         <button id="finishWithoutYoutubeButton" class="secondary-button">
@@ -313,6 +343,9 @@
       <header class="header">
         <p class="step-label">STEP 6</p>
         <h1>YouTubeを選ぶ▶️</h1>
+        <p class="description">
+          再生リストかMVを選んで開いてください。
+        </p>
       </header>
 
       <section id="youtubeErrorArea" class="error-area hidden"></section>
@@ -339,11 +372,48 @@
     <section id="placeholderNextStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">FINISH</p>
-        <h1>お疲れ様でした😊 Big Love💚</h1>
+        <h1>完了⌛</h1>
         <p id="placeholderMessage" class="description"></p>
       </header>
     </section>
   </main>
+
+  <div id="howToModal" class="modal-overlay hidden">
+    <section class="modal-content" role="dialog" aria-modal="true" aria-labelledby="howToTitle">
+      <div class="modal-header">
+        <h2 id="howToTitle">導入方法</h2>
+        <button id="closeHowToButton" class="modal-close-button" type="button" aria-label="閉じる">
+          ×
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <section class="how-to-section">
+          <h3>iPhone / iOS</h3>
+          <ol>
+            <li>Safariでこのページを開く</li>
+            <li>共有ボタンを押す</li>
+            <li>「ホーム画面に追加」を選ぶ</li>
+            <li>名前を確認して「追加」を押す</li>
+          </ol>
+        </section>
+
+        <section class="how-to-section">
+          <h3>Android</h3>
+          <ol>
+            <li>Chromeでこのページを開く</li>
+            <li>右上のメニューを押す</li>
+            <li>「インストール」または「ホーム画面に追加」を選ぶ</li>
+            <li>画面の案内に従って追加する</li>
+          </ol>
+        </section>
+
+        <p class="modal-note">
+          SpotifyやYouTubeがブラウザで開く場合は、各アプリを入れてログインしたうえで、Androidは対象アプリの「対応リンクを開く」をONにしてください。
+        </p>
+      </div>
+    </section>
+  </div>
 
   <script src="./app.js"></script>
 </body>
