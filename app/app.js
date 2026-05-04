@@ -125,6 +125,7 @@ const shareToXButtonElement = document.getElementById("shareToXButton");
 const shareToThreadsButtonElement = document.getElementById("shareToThreadsButton");
 const copyShareTextButtonElement = document.getElementById("copyShareTextButton");
 const shareErrorAreaElement = document.getElementById("shareErrorArea");
+const backHomeButtonElement = document.getElementById("backHomeButton");
 
 document.addEventListener("DOMContentLoaded", init);
 
@@ -442,6 +443,10 @@ copyShareTextButtonElement.addEventListener("click", async () => {
     console.error(error);
     showError(shareErrorAreaElement, "コピーに失敗しました。共有文を長押しでコピーしてください。");
   }
+});
+
+backHomeButtonElement.addEventListener("click", () => {
+  showOnlyStep(homeStepElement);
 });
 
 async function init() {
