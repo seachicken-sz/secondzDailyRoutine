@@ -12,13 +12,10 @@
       <header class="home-header">
         <p class="step-label">HOME</p>
         <h1>secondz Daily Routine⌛</h1>
-        <p class="description">
-          今日できる推し活タスクを順番に進めます。
-        </p>
       </header>
 
       <section class="home-limited-area">
-        <h2>今できる期間限定タスク</h2>
+        <h2>Hot!</h2>
         <div id="homeOnceTaskList" class="home-once-task-list"></div>
       </section>
 
@@ -61,12 +58,11 @@
       <section class="scroll-area">
         <section class="bottom-action-area spotify-skip-area">
           <button id="skipSpotifyButton" class="secondary-button no-margin-button">
-            BGMなしで進む
+            BGMなし
           </button>
         </section>
 
         <section class="song-section">
-          <h2>おすすめ</h2>
           <div id="recommendedSongs" class="song-list"></div>
         </section>
 
@@ -86,10 +82,9 @@
     <section id="onceListSelectStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">STEP 2</p>
-        <h1>期間限定タスク✅</h1>
+        <h1>これ終わってる？</h1>
         <p class="description">
-          今日やるものにチェックを入れてください。<br>
-          デフォルトでは期限内のタスクをすべて「済み」扱いにしています。
+          終わってないものを選択して「次へ」を押してください。
         </p>
       </header>
 
@@ -120,12 +115,12 @@
     <section id="onceTaskRunStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">STEP 2</p>
-        <h1>期間限定タスクを実行</h1>
+        <h1>これ終わってる？
+        </h1>
         <p id="onceTaskProgress" class="description"></p>
       </header>
 
       <section class="task-card">
-        <p class="selected-label">タスク</p>
         <h2 id="onceTaskName" class="task-title"></h2>
 
         <div id="onceTaskMessageArea" class="notice-box"></div>
@@ -147,8 +142,7 @@
         <p class="step-label">STEP 3</p>
         <h1>本日のリクエスト曲🎶</h1>
         <p class="description">
-          今日リクエストする曲を選んでください。<br>
-          おすすめ曲を優先表示しています。
+          今日リクエストする曲は？
         </p>
       </header>
 
@@ -189,7 +183,7 @@
     <section id="dailyTaskStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">STEP 4</p>
-        <h1>リクエストループ📮</h1>
+        <h1>デイリータスク📅</h1>
         <p id="dailyTaskHeaderDescription" class="description"></p>
       </header>
 
@@ -226,7 +220,7 @@
     <section id="dailyGroupEndStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">STEP 4</p>
-        <h1>リクエストループ📮</h1>
+        <h1>デイリータスク📅</h1>
       </header>
 
       <section class="task-card">
@@ -246,15 +240,15 @@
     <section id="postAskStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">STEP 5</p>
-        <h1>ポストする？📝</h1>
+        <h1>タスク完了✅</h1>
         <p class="description">
-          今日のリクエスト報告文を作れます。
+          今日のタスク完了をSNSで共有する？
         </p>
       </header>
 
       <section class="task-card">
         <button id="makePostButton" class="primary-button">
-          ポスト文を作る
+          共有する！
         </button>
 
         <button id="skipPostButton" class="secondary-button">
@@ -295,7 +289,6 @@
         </section>
 
         <section class="task-card">
-          <p class="selected-label">生成文</p>
           <div id="generatedPostText" class="copy-text"></div>
 
           <button id="copyPostTextButton" class="secondary-button">
@@ -324,7 +317,7 @@
         <p class="step-label">STEP 6</p>
         <h1>YouTubeも見る？▶️</h1>
         <p class="description">
-          仕上げにYouTubeも回せます。
+          Spotifyの再生終わってたらYoutubeも行っとく？
         </p>
       </header>
 
@@ -342,10 +335,7 @@
     <section id="youtubeSelectStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">STEP 6</p>
-        <h1>YouTubeを選ぶ▶️</h1>
-        <p class="description">
-          再生リストかMVを選んで開いてください。
-        </p>
+        <h1>動画を選ぶ▶️</h1>
       </header>
 
       <section id="youtubeErrorArea" class="error-area hidden"></section>
