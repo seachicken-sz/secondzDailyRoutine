@@ -55,7 +55,6 @@ h1 {
 }
 
 .selected-area,
-.fixed-action-area,
 .task-card {
   flex-shrink: 0;
   margin: 0 0 14px;
@@ -175,6 +174,14 @@ h1 {
   margin-top: 12px;
 }
 
+.check-control-area {
+  margin: 0 0 14px;
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
 .check-list {
   display: grid;
   gap: 10px;
@@ -201,6 +208,14 @@ h1 {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
+}
+
+.bottom-action-area {
+  margin: 14px 0 0;
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
 .task-title {
@@ -239,20 +254,4 @@ h1 {
 
 .hidden {
   display: none;
-}
-
-.check-control-area {
-  margin: 0 0 14px;
-  padding: 16px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-}
-
-.bottom-action-area {
-  margin: 14px 0 0;
-  padding: 16px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
