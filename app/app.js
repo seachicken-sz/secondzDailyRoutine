@@ -40,6 +40,7 @@ const selectedAreaElement = document.getElementById("selectedArea");
 const selectedSongNameElement = document.getElementById("selectedSongName");
 const openSpotifyButtonElement = document.getElementById("openSpotifyButton");
 const spotifyNextButtonElement = document.getElementById("spotifyNextButton");
+const skipSpotifyButtonElement = document.getElementById("skipSpotifyButton");
 const spotifyErrorAreaElement = document.getElementById("spotifyErrorArea");
 const toggleOtherSongsButtonElement = document.getElementById("toggleOtherSongsButton");
 const toggleOtherSongsIconElement = document.getElementById("toggleOtherSongsIcon");
@@ -88,7 +89,6 @@ const stopDailyGroupButtonElement = document.getElementById("stopDailyGroupButto
 const makePostButtonElement = document.getElementById("makePostButton");
 const skipPostButtonElement = document.getElementById("skipPostButton");
 const postErrorAreaElement = document.getElementById("postErrorArea");
-const fixedPostTextPreviewElement = document.getElementById("fixedPostTextPreview");
 const checkAllPostItemsButtonElement = document.getElementById("checkAllPostItemsButton");
 const clearAllPostItemsButtonElement = document.getElementById("clearAllPostItemsButton");
 const postItemListElement = document.getElementById("postItemList");
@@ -98,6 +98,7 @@ const generatedPostTextElement = document.getElementById("generatedPostText");
 const copyPostTextButtonElement = document.getElementById("copyPostTextButton");
 const openXPostButtonElement = document.getElementById("openXPostButton");
 const openThreadsButtonElement = document.getElementById("openThreadsButton");
+const postNextButtonElement = document.getElementById("postNextButton");
 
 const placeholderMessageElement = document.getElementById("placeholderMessage");
 
@@ -114,6 +115,11 @@ openSpotifyButtonElement.addEventListener("click", () => {
   spotifyNextButtonElement.classList.remove("hidden");
 
   location.href = spotifyUrl;
+});
+
+skipSpotifyButtonElement.addEventListener("click", async () => {
+  state.selectedSong = null;
+  await showOnceListSelectStep();
 });
 
 spotifyNextButtonElement.addEventListener("click", async () => {
@@ -334,6 +340,10 @@ openThreadsButtonElement.addEventListener("click", async () => {
     console.error(error);
     showError(postErrorAreaElement, "コピーに失敗しました。投稿文を長押しでコピーしてください。");
   }
+});
+
+postNextButtonElement.addEventListener("click", () => {
+  showPlaceholderNextStep("投稿ステップはここまでです。次はYouTube再生に進みます。");
 });
 
 async function init() {
@@ -840,7 +850,6 @@ function showPostAskStep() {
 function showPostEditStep() {
   state.postItems = buildPostItems();
 
-  fixedPostTextPreviewElement.textContent = buildFixedPostText();
   renderPostItemList(state.postItems);
   updateGeneratedPostText();
 
@@ -860,7 +869,7 @@ function buildPostItems() {
       id: `once-${index}`,
       name: task.name,
       url: task.url || "",
-      checked: true,
+      checked: false,
     });
   });
 
@@ -873,7 +882,7 @@ function buildPostItems() {
       id: `daily-${index}`,
       name: item.name,
       url: item.url || "",
-      checked: true,
+      checked: false,
     });
   });
 
@@ -958,10 +967,6 @@ function buildPostText() {
   });
 
   return lines.join("\n");
-}
-
-function buildFixedPostText() {
-  return buildFixedPostLines().join("\n");
 }
 
 function buildFixedPostLines() {
