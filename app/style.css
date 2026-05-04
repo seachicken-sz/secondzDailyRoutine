@@ -522,3 +522,20 @@ h1 {
 .hidden {
   display: none;
 }
+
+.feedback-card {
+  margin-top: 16px;
+}
+
+.feedback-text {
+  margin: 0 0 16px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.feedback-link-button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
