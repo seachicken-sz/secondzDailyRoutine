@@ -154,6 +154,71 @@
         </section>
       </section>
     </section>
+
+    <section id="dailyTaskStep" class="step-screen hidden">
+      <header class="header">
+        <p class="step-label">STEP 4</p>
+        <h1>リクエストループ📮</h1>
+        <p id="dailyTaskHeaderDescription" class="description"></p>
+      </header>
+
+      <section class="task-card">
+        <p id="dailyTaskGroupName" class="group-label"></p>
+        <p id="dailyTaskProgress" class="description"></p>
+
+        <p class="selected-label">タスク</p>
+        <h2 id="dailyTaskName" class="task-title"></h2>
+
+        <div id="dailyTaskCommentArea" class="notice-box"></div>
+
+        <section id="dailyTaskCopyArea" class="copy-area hidden">
+          <p class="selected-label">コピーする文言</p>
+          <div id="dailyTaskCopyText" class="copy-text"></div>
+
+          <button id="copyDailyTaskTextButton" class="secondary-button">
+            コピーする
+          </button>
+        </section>
+
+        <button id="openDailyTaskUrlButton" class="primary-button">
+          ページを開く
+        </button>
+
+        <button id="dailyTaskNextButton" class="secondary-button hidden">
+          次へ
+        </button>
+      </section>
+
+      <section id="dailyTaskErrorArea" class="error-area hidden"></section>
+    </section>
+
+    <section id="dailyGroupEndStep" class="step-screen hidden">
+      <header class="header">
+        <p class="step-label">STEP 4</p>
+        <h1>リクエストループ📮</h1>
+      </header>
+
+      <section class="task-card">
+        <p id="endedGroupName" class="group-label"></p>
+        <h2 class="task-title">もうちょっと頑張る？</h2>
+
+        <button id="continueDailyGroupButton" class="primary-button">
+          頑張る！
+        </button>
+
+        <button id="stopDailyGroupButton" class="secondary-button">
+          今日はここまで
+        </button>
+      </section>
+    </section>
+
+    <section id="placeholderNextStep" class="step-screen hidden">
+      <header class="header">
+        <p class="step-label">NEXT</p>
+        <h1>ここまで完了⌛</h1>
+        <p id="placeholderMessage" class="description"></p>
+      </header>
+    </section>
   </main>
 
   <script src="./app.js"></script>
