@@ -1,4 +1,4 @@
-const SPOTIFY_TRACK_BASE_URL = "https://open.spotify.com/track/";
+　const SPOTIFY_TRACK_BASE_URL = "https://open.spotify.com/track/";
 const USEN_REQUEST_BASE_URL = "https://usen.oshireq.com/song/";
 const X_POST_URL = "https://twitter.com/intent/tweet?text=";
 const THREADS_URL = "https://www.threads.net/";
@@ -26,7 +26,7 @@ const state = {
 
   youtubePlaylists: [],
   youtubeMvs: [],
-  
+
   stepHistory: [],
   currentStepElement: null,
 };
@@ -129,10 +129,9 @@ const shareToThreadsButtonElement = document.getElementById("shareToThreadsButto
 const copyShareTextButtonElement = document.getElementById("copyShareTextButton");
 const shareErrorAreaElement = document.getElementById("shareErrorArea");
 const backHomeButtonElement = document.getElementById("backHomeButton");
+const backStepButtonElement = document.getElementById("backStepButton");
 
 document.addEventListener("DOMContentLoaded", init);
-
-const backStepButtonElement = document.getElementById("backStepButton");
 
 backStepButtonElement.addEventListener("click", () => {
   goBackStep();
@@ -165,7 +164,6 @@ openSpotifyButtonElement.addEventListener("click", () => {
   const spotifyUrl = buildSpotifyUrl(state.selectedSong.url);
 
   spotifyNextButtonElement.classList.remove("hidden");
-
   location.href = spotifyUrl;
 });
 
@@ -251,7 +249,6 @@ openRequestSongButtonElement.addEventListener("click", () => {
   const requestUrl = buildRequestSongUrl(state.selectedRequestSong.url);
 
   requestSongNextButtonElement.classList.remove("hidden");
-
   location.href = requestUrl;
 });
 
@@ -289,7 +286,6 @@ openDailyTaskUrlButtonElement.addEventListener("click", () => {
   recordCompletedDailyItem(item);
 
   dailyTaskNextButtonElement.classList.remove("hidden");
-
   location.href = itemUrl;
 });
 
@@ -402,23 +398,12 @@ watchYoutubeButtonElement.addEventListener("click", async () => {
   await showYoutubeSelectStep();
 });
 
-function buildAppShareText() {
-  return [
-    "secondz Daily Routine⌛",
-    getAppShareUrl(),
-  ].join("\n");
-}
-
-function getAppShareUrl() {
-  return `${location.origin}${location.pathname}`;
-}
-
 finishWithoutYoutubeButtonElement.addEventListener("click", () => {
-  showPlaceholderNextStep("お疲れ様さまでした☺️Big Love💚");
+  showPlaceholderNextStep("お疲れ様さまでした☺️Big Love");
 });
 
 finishFromYoutubeButtonElement.addEventListener("click", () => {
-  showPlaceholderNextStep("お疲れ様さまでした☺️Big Love💚");
+  showPlaceholderNextStep("お疲れ様さまでした☺️Big Love");
 });
 
 shareToXButtonElement.addEventListener("click", () => {
@@ -480,10 +465,16 @@ async function init() {
 
     state.onceTasks = await loadOnceTasks();
     renderHomeOnceTaskList(state.onceTasks);
+
+    state.currentStepElement = homeStepElement;
+    updateBackStepButton();
   } catch (error) {
     console.error(error);
     showError(spotifyErrorAreaElement, "初期データの読み込みに失敗しました。JSONの形式や配置を確認してください。");
     renderHomeOnceTaskList([]);
+
+    state.currentStepElement = homeStepElement;
+    updateBackStepButton();
   }
 }
 
@@ -776,7 +767,7 @@ function renderOnceTaskCheckList(tasks) {
     name.textContent = task.name;
 
     checkbox.addEventListener("change", () => {
-      name.textContent = checkbox.checked ? task.name : task.name;
+      name.textContent = task.name;
     });
 
     label.appendChild(checkbox);
@@ -795,7 +786,7 @@ function setAllOnceTaskChecks(checked) {
     const task = state.onceTasks[Number(checkbox.dataset.index)];
 
     if (nameElement && task) {
-      nameElement.textContent = checked ? task.name : task.name;
+      nameElement.textContent = task.name;
     }
   });
 
@@ -1114,11 +1105,11 @@ function renderPostItemList(items) {
 
     const name = document.createElement("span");
     name.className = "check-item-name";
-    name.textContent = item.checked ? +item.name : item.name;
+    name.textContent = item.checked ? "✅ " + item.name : item.name;
 
     checkbox.addEventListener("change", () => {
       item.checked = checkbox.checked;
-      name.textContent = checkbox.checked ? item.name : item.name;
+      name.textContent = checkbox.checked ? "✅ " + item.name : item.name;
       updateGeneratedPostText();
     });
 
@@ -1264,6 +1255,17 @@ function extractYoutubeVideoId(url) {
   }
 }
 
+function buildAppShareText() {
+  return [
+    "secondz Daily Routine⌛",
+    getAppShareUrl(),
+  ].join("\n");
+}
+
+function getAppShareUrl() {
+  return `${location.origin}${location.pathname}`;
+}
+
 function countLinks(text) {
   const links = text.match(/https?:\/\/\S+/g);
   return links ? links.length : 0;
@@ -1360,6 +1362,72 @@ function showOnlyStep(activeStepElement, options = {}) {
 
   state.currentStepElement = activeStepElement;
   updateBackStepButton();
+}
+
+function goBackStep() {
+  if (state.currentStepElement === dailyTaskStepElement) {
+    goBackDailyTask();
+    return;
+  }
+
+  if (state.currentStepElement === dailyGroupEndStepElement) {
+    goBackFromDailyGroupEnd();
+    return;
+  }
+
+  const previousStepElement = state.stepHistory.pop();
+
+  if (!previousStepElement) {
+    showOnlyStep(homeStepElement, { recordHistory: false });
+    return;
+  }
+
+  showOnlyStep(previousStepElement, { recordHistory: false });
+}
+
+function goBackDailyTask() {
+  if (state.currentDailyTaskIndex > 0) {
+    state.currentDailyTaskIndex -= 1;
+    renderCurrentDailyTask();
+    return;
+  }
+
+  if (state.currentDailyGroupIndex > 0) {
+    state.currentDailyGroupIndex -= 1;
+
+    const previousGroup = getCurrentDailyGroup();
+    const previousGroupItems = getDailyGroupItems(previousGroup);
+
+    state.currentDailyTaskIndex = Math.max(previousGroupItems.length - 1, 0);
+    renderCurrentDailyTask();
+    return;
+  }
+
+  const previousStepElement = state.stepHistory.pop();
+
+  if (!previousStepElement) {
+    showOnlyStep(requestSongStepElement, { recordHistory: false });
+    return;
+  }
+
+  showOnlyStep(previousStepElement, { recordHistory: false });
+}
+
+function goBackFromDailyGroupEnd() {
+  const currentGroup = getCurrentDailyGroup();
+  const currentGroupItems = getDailyGroupItems(currentGroup);
+
+  state.currentDailyTaskIndex = Math.max(currentGroupItems.length - 1, 0);
+  showOnlyStep(dailyTaskStepElement, { recordHistory: false });
+  renderCurrentDailyTask();
+}
+
+function updateBackStepButton() {
+  const shouldShowBackButton =
+    state.currentStepElement &&
+    state.currentStepElement !== homeStepElement;
+
+  backStepButtonElement.classList.toggle("hidden", !shouldShowBackButton);
 }
 
 function buildSpotifyUrl(trackIdOrUrl) {
