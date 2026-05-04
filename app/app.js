@@ -759,10 +759,10 @@ function renderOnceTaskCheckList(tasks) {
 
     const name = document.createElement("span");
     name.className = "check-item-name";
-    name.textContent = "✅ " + task.name;
+    name.textContent = task.name;
 
     checkbox.addEventListener("change", () => {
-      name.textContent = checkbox.checked ? "✅ " + task.name : task.name;
+      name.textContent = checkbox.checked ? task.name : task.name;
     });
 
     label.appendChild(checkbox);
@@ -781,7 +781,7 @@ function setAllOnceTaskChecks(checked) {
     const task = state.onceTasks[Number(checkbox.dataset.index)];
 
     if (nameElement && task) {
-      nameElement.textContent = checked ? "✅ " + task.name : task.name;
+      nameElement.textContent = checked ? task.name : task.name;
     }
   });
 
@@ -986,10 +986,10 @@ function buildDailyTaskHeaderDescription() {
   const selectedRequestSongName = getSelectedRequestSongName();
 
   if (!selectedRequestSongName) {
-    return "1つずつ開いて、できるところまで進めよう。";
+    return "";
   }
 
-  return `今日のリクエスト曲: ${selectedRequestSongName}\n1つずつ開いて、できるところまで進めよう。`;
+  return `今日のリクエスト曲: ${selectedRequestSongName}\n`;
 }
 
 function showDailyGroupEndStep() {
@@ -1100,11 +1100,11 @@ function renderPostItemList(items) {
 
     const name = document.createElement("span");
     name.className = "check-item-name";
-    name.textContent = item.checked ? "✅ " + item.name : item.name;
+    name.textContent = item.checked ? +item.name : item.name;
 
     checkbox.addEventListener("change", () => {
       item.checked = checkbox.checked;
-      name.textContent = checkbox.checked ? "✅ " + item.name : item.name;
+      name.textContent = checkbox.checked ? item.name : item.name;
       updateGeneratedPostText();
     });
 
