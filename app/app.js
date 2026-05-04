@@ -389,11 +389,11 @@ watchYoutubeButtonElement.addEventListener("click", async () => {
 });
 
 finishWithoutYoutubeButtonElement.addEventListener("click", () => {
-  showPlaceholderNextStep("今日のタスクはここまで！お疲れさまでした⌛");
+  showPlaceholderNextStep("お疲れ様さまでした☺️Big Love💚");
 });
 
 finishFromYoutubeButtonElement.addEventListener("click", () => {
-  showPlaceholderNextStep("今日のタスクはここまで！お疲れさまでした⌛");
+  showPlaceholderNextStep("お疲れ様さまでした☺️Big Love💚");
 });
 
 async function init() {
