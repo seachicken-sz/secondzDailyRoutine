@@ -1263,7 +1263,6 @@ function extractYoutubeVideoId(url) {
     return "";
   } catch {
     return "";
-;
   }
 }
 
@@ -1332,7 +1331,6 @@ function getSelectedRequestSongName() {
 function getSelectedRequestSongUrl() {
   if (!state.selectedRequestSong || !state.selectedRequestSong.url) {
     return "";
-;
   }
 
   return buildRequestSongUrl(state.selectedRequestSong.url);
