@@ -2,6 +2,7 @@ const SPOTIFY_TRACK_BASE_URL = "https://open.spotify.com/track/";
 const USEN_REQUEST_BASE_URL = "https://usen.oshireq.com/song/";
 const X_POST_URL = "https://twitter.com/intent/tweet?text=";
 const THREADS_URL = "https://www.threads.net/";
+const YOUTUBE_THUMBNAIL_BASE_URL = "https://img.youtube.com/vi/";
 
 const state = {
   selectedSong: null,
@@ -22,7 +23,17 @@ const state = {
   completedDailyItems: [],
 
   postItems: [],
+
+  youtubePlaylists: [],
+  youtubeMvs: [],
 };
+
+const homeStepElement = document.getElementById("homeStep");
+const homeOnceTaskListElement = document.getElementById("homeOnceTaskList");
+const startRoutineButtonElement = document.getElementById("startRoutineButton");
+const openHowToButtonElement = document.getElementById("openHowToButton");
+const howToModalElement = document.getElementById("howToModal");
+const closeHowToButtonElement = document.getElementById("closeHowToButton");
 
 const spotifyStepElement = document.getElementById("spotifyStep");
 const onceListSelectStepElement = document.getElementById("onceListSelectStep");
@@ -32,6 +43,8 @@ const dailyTaskStepElement = document.getElementById("dailyTaskStep");
 const dailyGroupEndStepElement = document.getElementById("dailyGroupEndStep");
 const postAskStepElement = document.getElementById("postAskStep");
 const postEditStepElement = document.getElementById("postEditStep");
+const youtubeAskStepElement = document.getElementById("youtubeAskStep");
+const youtubeSelectStepElement = document.getElementById("youtubeSelectStep");
 const placeholderNextStepElement = document.getElementById("placeholderNextStep");
 
 const recommendedSongsElement = document.getElementById("recommendedSongs");
@@ -100,9 +113,34 @@ const openXPostButtonElement = document.getElementById("openXPostButton");
 const openThreadsButtonElement = document.getElementById("openThreadsButton");
 const postNextButtonElement = document.getElementById("postNextButton");
 
+const watchYoutubeButtonElement = document.getElementById("watchYoutubeButton");
+const finishWithoutYoutubeButtonElement = document.getElementById("finishWithoutYoutubeButton");
+const youtubeErrorAreaElement = document.getElementById("youtubeErrorArea");
+const youtubePlaylistRowElement = document.getElementById("youtubePlaylistRow");
+const youtubeMvRowElement = document.getElementById("youtubeMvRow");
+const finishFromYoutubeButtonElement = document.getElementById("finishFromYoutubeButton");
+
 const placeholderMessageElement = document.getElementById("placeholderMessage");
 
 document.addEventListener("DOMContentLoaded", init);
+
+startRoutineButtonElement.addEventListener("click", () => {
+  showOnlyStep(spotifyStepElement);
+});
+
+openHowToButtonElement.addEventListener("click", () => {
+  howToModalElement.classList.remove("hidden");
+});
+
+closeHowToButtonElement.addEventListener("click", () => {
+  howToModalElement.classList.add("hidden");
+});
+
+howToModalElement.addEventListener("click", (event) => {
+  if (event.target === howToModalElement) {
+    howToModalElement.classList.add("hidden");
+  }
+});
 
 openSpotifyButtonElement.addEventListener("click", () => {
   if (!state.selectedSong) {
@@ -281,7 +319,7 @@ makePostButtonElement.addEventListener("click", () => {
 });
 
 skipPostButtonElement.addEventListener("click", () => {
-  showPlaceholderNextStep("今日はここまで。お疲れさまでした⌛");
+  showYoutubeAskStep();
 });
 
 checkAllPostItemsButtonElement.addEventListener("click", () => {
@@ -343,7 +381,19 @@ openThreadsButtonElement.addEventListener("click", async () => {
 });
 
 postNextButtonElement.addEventListener("click", () => {
-  showPlaceholderNextStep("投稿ステップはここまでです。次はYouTube再生に進みます。");
+  showYoutubeAskStep();
+});
+
+watchYoutubeButtonElement.addEventListener("click", async () => {
+  await showYoutubeSelectStep();
+});
+
+finishWithoutYoutubeButtonElement.addEventListener("click", () => {
+  showPlaceholderNextStep("今日のタスクはここまで！お疲れさまでした⌛");
+});
+
+finishFromYoutubeButtonElement.addEventListener("click", () => {
+  showPlaceholderNextStep("今日のタスクはここまで！お疲れさまでした⌛");
 });
 
 async function init() {
@@ -365,9 +415,13 @@ async function init() {
     }
 
     updateOtherSongsAccordion();
+
+    state.onceTasks = await loadOnceTasks();
+    renderHomeOnceTaskList(state.onceTasks);
   } catch (error) {
     console.error(error);
-    showError(spotifyErrorAreaElement, "Spotify曲リストの読み込みに失敗しました。JSONの形式や配置を確認してください。");
+    showError(spotifyErrorAreaElement, "初期データの読み込みに失敗しました。JSONの形式や配置を確認してください。");
+    renderHomeOnceTaskList([]);
   }
 }
 
@@ -455,6 +509,54 @@ async function loadDailyGroups() {
   });
 }
 
+async function loadYoutubePlaylists() {
+  const response = await fetch("../data/youtubePlayListJson.json?ts=" + Date.now());
+
+  if (!response.ok) {
+    throw new Error("youtubePlayListJson.json の取得に失敗しました。");
+  }
+
+  const playlists = await response.json();
+
+  if (!Array.isArray(playlists)) {
+    throw new Error("youtubePlayListJson.json が配列形式ではありません。");
+  }
+
+  return playlists.filter((item) => item && item.name && item.url);
+}
+
+async function loadYoutubeMvs() {
+  const response = await fetch("../data/youtubeMVListJson.json?ts=" + Date.now());
+
+  if (!response.ok) {
+    throw new Error("youtubeMVListJson.json の取得に失敗しました。");
+  }
+
+  const mvs = await response.json();
+
+  if (!Array.isArray(mvs)) {
+    throw new Error("youtubeMVListJson.json が配列形式ではありません。");
+  }
+
+  return mvs.filter((item) => item && item.name && item.url);
+}
+
+function renderHomeOnceTaskList(tasks) {
+  homeOnceTaskListElement.innerHTML = "";
+
+  if (!tasks || tasks.length === 0) {
+    homeOnceTaskListElement.innerHTML = '<p class="empty-text">現在、期限内の期間限定タスクはありません。</p>';
+    return;
+  }
+
+  tasks.forEach((task) => {
+    const item = document.createElement("div");
+    item.className = "home-once-task-item";
+    item.textContent = `${formatTaskLimitDate(task.to)}まで ${task.name}`;
+    homeOnceTaskListElement.appendChild(item);
+  });
+}
+
 function renderSpotifySongList(container, songs) {
   container.innerHTML = "";
 
@@ -486,6 +588,48 @@ function renderRequestSongList(container, songs) {
     });
 
     container.appendChild(button);
+  });
+}
+
+function renderYoutubeCardRow(container, items, type) {
+  container.innerHTML = "";
+
+  if (items.length === 0) {
+    container.innerHTML = '<p class="empty-text">表示できる項目がありません。</p>';
+    return;
+  }
+
+  items.forEach((item) => {
+    const card = document.createElement("button");
+    card.type = "button";
+    card.className = "youtube-card";
+
+    const thumbnailUrl = getYoutubeThumbnailUrl(item);
+
+    if (thumbnailUrl) {
+      const thumbnail = document.createElement("img");
+      thumbnail.className = "youtube-thumbnail";
+      thumbnail.src = thumbnailUrl;
+      thumbnail.alt = item.name;
+      thumbnail.loading = "lazy";
+      card.appendChild(thumbnail);
+    } else {
+      const textCard = document.createElement("div");
+      textCard.className = "youtube-text-card";
+      textCard.textContent = type === "playlist" ? "再生リスト" : "MV";
+      card.appendChild(textCard);
+    }
+
+    const name = document.createElement("p");
+    name.className = "youtube-card-name";
+    name.textContent = item.name;
+    card.appendChild(name);
+
+    card.addEventListener("click", () => {
+      location.href = item.url;
+    });
+
+    container.appendChild(card);
   });
 }
 
@@ -981,6 +1125,83 @@ function buildFixedPostLines() {
   ];
 }
 
+async function showYoutubeAskStep() {
+  showOnlyStep(youtubeAskStepElement);
+}
+
+async function showYoutubeSelectStep() {
+  try {
+    if (state.youtubePlaylists.length === 0) {
+      state.youtubePlaylists = await loadYoutubePlaylists();
+    }
+
+    if (state.youtubeMvs.length === 0) {
+      state.youtubeMvs = await loadYoutubeMvs();
+    }
+
+    renderYoutubeCardRow(youtubePlaylistRowElement, state.youtubePlaylists, "playlist");
+    renderYoutubeCardRow(youtubeMvRowElement, state.youtubeMvs, "mv");
+
+    showOnlyStep(youtubeSelectStepElement);
+    hideError(youtubeErrorAreaElement);
+  } catch (error) {
+    console.error(error);
+    showError(youtubeErrorAreaElement, "YouTubeリストの読み込みに失敗しました。JSONの形式や配置を確認してください。");
+  }
+}
+
+function getYoutubeThumbnailUrl(item) {
+  if (!item) {
+    return "";
+  }
+
+  if (item.thumbnail) {
+    return item.thumbnail;
+  }
+
+  const videoId = extractYoutubeVideoId(item.url);
+
+  if (!videoId) {
+    return "";
+  }
+
+  return `${YOUTUBE_THUMBNAIL_BASE_URL}${videoId}/hqdefault.jpg`;
+}
+
+function extractYoutubeVideoId(url) {
+  if (!url) {
+    return "";
+  }
+
+  try {
+    const parsedUrl = new URL(url);
+
+    if (parsedUrl.hostname.includes("youtu.be")) {
+      return parsedUrl.pathname.replace("/", "");
+    }
+
+    if (parsedUrl.searchParams.get("v")) {
+      return parsedUrl.searchParams.get("v");
+    }
+
+    const shortsMatch = parsedUrl.pathname.match(/\/shorts\/([^/?]+)/);
+
+    if (shortsMatch) {
+      return shortsMatch[1];
+    }
+
+    const embedMatch = parsedUrl.pathname.match(/\/embed\/([^/?]+)/);
+
+    if (embedMatch) {
+      return embedMatch[1];
+    }
+
+    return "";
+  } catch {
+    return "";
+  }
+}
+
 function countLinks(text) {
   const links = text.match(/https?:\/\/\S+/g);
   return links ? links.length : 0;
@@ -1047,6 +1268,7 @@ function showPlaceholderNextStep(message) {
 
 function showOnlyStep(activeStepElement) {
   const steps = [
+    homeStepElement,
     spotifyStepElement,
     onceListSelectStepElement,
     onceTaskRunStepElement,
@@ -1055,6 +1277,8 @@ function showOnlyStep(activeStepElement) {
     dailyGroupEndStepElement,
     postAskStepElement,
     postEditStepElement,
+    youtubeAskStepElement,
+    youtubeSelectStepElement,
     placeholderNextStepElement,
   ];
 
@@ -1126,6 +1350,16 @@ function formatMonthDay(date) {
   const day = String(date.getDate()).padStart(2, "0");
 
   return `${month}/${day}`;
+}
+
+function formatTaskLimitDate(value) {
+  const date = parseDateTime(value);
+
+  if (!date) {
+    return "期限未設定";
+  }
+
+  return formatMonthDay(date);
 }
 
 function showError(element, message) {
