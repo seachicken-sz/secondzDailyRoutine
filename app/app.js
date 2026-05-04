@@ -392,6 +392,17 @@ watchYoutubeButtonElement.addEventListener("click", async () => {
   await showYoutubeSelectStep();
 });
 
+function buildAppShareText() {
+  return [
+    "secondz Daily Routine⌛",
+    getAppShareUrl(),
+  ].join("\n");
+}
+
+function getAppShareUrl() {
+  return `${location.origin}${location.pathname}`;
+}
+
 finishWithoutYoutubeButtonElement.addEventListener("click", () => {
   showPlaceholderNextStep("お疲れ様さまでした☺️Big Love💚");
 });
