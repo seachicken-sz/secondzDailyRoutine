@@ -3,14 +3,20 @@ const SPOTIFY_TRACK_BASE_URL = "https://open.spotify.com/track/";
 const state = {
   selectedSong: null,
   isOtherSongsOpen: false,
+
   onceTasks: [],
   selectedOnceTasks: [],
   currentOnceTaskIndex: 0,
+
+  requestSongs: [],
+  selectedRequestSong: null,
+  isOtherRequestSongsOpen: false,
 };
 
 const spotifyStepElement = document.getElementById("spotifyStep");
 const onceListSelectStepElement = document.getElementById("onceListSelectStep");
 const onceTaskRunStepElement = document.getElementById("onceTaskRunStep");
+const requestSongStepElement = document.getElementById("requestSongStep");
 
 const recommendedSongsElement = document.getElementById("recommendedSongs");
 const otherSongsElement = document.getElementById("otherSongs");
@@ -35,6 +41,17 @@ const onceTaskMessageAreaElement = document.getElementById("onceTaskMessageArea"
 const openOnceTaskUrlButtonElement = document.getElementById("openOnceTaskUrlButton");
 const onceTaskNextButtonElement = document.getElementById("onceTaskNextButton");
 const onceTaskRunErrorAreaElement = document.getElementById("onceTaskRunErrorArea");
+
+const selectedRequestSongAreaElement = document.getElementById("selectedRequestSongArea");
+const selectedRequestSongNameElement = document.getElementById("selectedRequestSongName");
+const openRequestSongButtonElement = document.getElementById("openRequestSongButton");
+const requestSongNextButtonElement = document.getElementById("requestSongNextButton");
+const requestSongErrorAreaElement = document.getElementById("requestSongErrorArea");
+const recommendedRequestSongsElement = document.getElementById("recommendedRequestSongs");
+const otherRequestSongsElement = document.getElementById("otherRequestSongs");
+const toggleOtherRequestSongsButtonElement = document.getElementById("toggleOtherRequestSongsButton");
+const toggleOtherRequestSongsIconElement = document.getElementById("toggleOtherRequestSongsIcon");
+const otherRequestSongsWrapperElement = document.getElementById("otherRequestSongsWrapper");
 
 document.addEventListener("DOMContentLoaded", init);
 
@@ -68,18 +85,21 @@ clearAllOnceTasksButtonElement.addEventListener("click", () => {
   setAllOnceTaskChecks(false);
 });
 
-startOnceTasksButtonElement.addEventListener("click", () => {
+startOnceTasksButtonElement.addEventListener("click", async () => {
   const selectedTasks = getCheckedOnceTasks();
 
+  hideError(onceListErrorAreaElement);
+
   if (selectedTasks.length === 0) {
-    showError(onceListErrorAreaElement, "実行するタスクを1つ以上選んでください。");
+    state.selectedOnceTasks = [];
+    state.currentOnceTaskIndex = 0;
+    await showRequestSongStep();
     return;
   }
 
   state.selectedOnceTasks = selectedTasks;
   state.currentOnceTaskIndex = 0;
 
-  hideError(onceListErrorAreaElement);
   showOnceTaskRunStep();
 });
 
@@ -91,20 +111,46 @@ openOnceTaskUrlButtonElement.addEventListener("click", () => {
     return;
   }
 
-  window.location.href = task.url;
+  if (task["move-flag"] === true) {
+    window.open(task.url, "_blank", "noopener");
+    onceTaskNextButtonElement.classList.remove("hidden");
+    return;
+  }
 
-  onceTaskNextButtonElement.classList.remove("hidden");
+  window.location.href = task.url;
 });
 
-onceTaskNextButtonElement.addEventListener("click", () => {
+onceTaskNextButtonElement.addEventListener("click", async () => {
   state.currentOnceTaskIndex += 1;
 
   if (state.currentOnceTaskIndex >= state.selectedOnceTasks.length) {
-    showPlaceholderNextStep();
+    await showRequestSongStep();
     return;
   }
 
   renderCurrentOnceTask();
+});
+
+toggleOtherRequestSongsButtonElement.addEventListener("click", () => {
+  state.isOtherRequestSongsOpen = !state.isOtherRequestSongsOpen;
+  updateOtherRequestSongsAccordion();
+});
+
+openRequestSongButtonElement.addEventListener("click", () => {
+  if (!state.selectedRequestSong) {
+    showError(requestSongErrorAreaElement, "リクエスト曲が選択されていません。");
+    return;
+  }
+
+  const requestUrl = buildRequestSongUrl(state.selectedRequestSong.url);
+
+  requestSongNextButtonElement.classList.remove("hidden");
+
+  window.location.href = requestUrl;
+});
+
+requestSongNextButtonElement.addEventListener("click", () => {
+  alert("次のステップへ進みます。");
 });
 
 async function init() {
@@ -114,8 +160,8 @@ async function init() {
     const recommendedSongs = songs.filter((song) => song.flag === true);
     const otherSongs = songs.filter((song) => song.flag !== true);
 
-    renderSongList(recommendedSongsElement, recommendedSongs);
-    renderSongList(otherSongsElement, otherSongs);
+    renderSpotifySongList(recommendedSongsElement, recommendedSongs);
+    renderSpotifySongList(otherSongsElement, otherSongs);
 
     if (recommendedSongs.length === 0) {
       recommendedSongsElement.innerHTML = '<p class="empty-text">おすすめ曲はありません。</p>';
@@ -166,17 +212,50 @@ async function loadOnceTasks() {
   });
 }
 
-function renderSongList(container, songs) {
+async function loadRequestSongs() {
+  const response = await fetch("../data/requestSongJson.json?ts=" + Date.now());
+
+  if (!response.ok) {
+    throw new Error("requestSongJson.json の取得に失敗しました。");
+  }
+
+  const songs = await response.json();
+
+  if (!Array.isArray(songs)) {
+    throw new Error("requestSongJson.json が配列形式ではありません。");
+  }
+
+  return songs.filter((song) => song && song.name && song.url);
+}
+
+function renderSpotifySongList(container, songs) {
   container.innerHTML = "";
 
   songs.forEach((song) => {
     const button = document.createElement("button");
     button.type = "button";
-    button.className = "song-button";
+    button.className = "song-button spotify-song-button";
     button.textContent = song.name;
 
     button.addEventListener("click", () => {
       selectSong(song);
+    });
+
+    container.appendChild(button);
+  });
+}
+
+function renderRequestSongList(container, songs) {
+  container.innerHTML = "";
+
+  songs.forEach((song) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "song-button request-song-button";
+    button.textContent = song.name;
+
+    button.addEventListener("click", () => {
+      selectRequestSong(song);
     });
 
     container.appendChild(button);
@@ -191,12 +270,24 @@ function selectSong(song) {
 
   spotifyNextButtonElement.classList.add("hidden");
 
-  updateSelectedButtonStyle(song);
+  updateSelectedButtonStyle(".spotify-song-button", song);
   hideError(spotifyErrorAreaElement);
 }
 
-function updateSelectedButtonStyle(selectedSong) {
-  const buttons = document.querySelectorAll(".song-button");
+function selectRequestSong(song) {
+  state.selectedRequestSong = song;
+
+  selectedRequestSongNameElement.textContent = song.name;
+  selectedRequestSongAreaElement.classList.remove("hidden");
+
+  requestSongNextButtonElement.classList.add("hidden");
+
+  updateSelectedButtonStyle(".request-song-button", song);
+  hideError(requestSongErrorAreaElement);
+}
+
+function updateSelectedButtonStyle(selector, selectedSong) {
+  const buttons = document.querySelectorAll(selector);
 
   buttons.forEach((button) => {
     button.classList.toggle("selected", button.textContent === selectedSong.name);
@@ -206,6 +297,11 @@ function updateSelectedButtonStyle(selectedSong) {
 function updateOtherSongsAccordion() {
   otherSongsWrapperElement.classList.toggle("hidden", !state.isOtherSongsOpen);
   toggleOtherSongsIconElement.textContent = state.isOtherSongsOpen ? "－" : "＋";
+}
+
+function updateOtherRequestSongsAccordion() {
+  otherRequestSongsWrapperElement.classList.toggle("hidden", !state.isOtherRequestSongsOpen);
+  toggleOtherRequestSongsIconElement.textContent = state.isOtherRequestSongsOpen ? "－" : "＋";
 }
 
 async function showOnceListSelectStep() {
@@ -218,6 +314,7 @@ async function showOnceListSelectStep() {
 
     spotifyStepElement.classList.add("hidden");
     onceTaskRunStepElement.classList.add("hidden");
+    requestSongStepElement.classList.add("hidden");
     onceListSelectStepElement.classList.remove("hidden");
 
     hideError(onceListErrorAreaElement);
@@ -297,6 +394,7 @@ function getCheckedOnceTasks() {
 function showOnceTaskRunStep() {
   onceListSelectStepElement.classList.add("hidden");
   spotifyStepElement.classList.add("hidden");
+  requestSongStepElement.classList.add("hidden");
   onceTaskRunStepElement.classList.remove("hidden");
 
   renderCurrentOnceTask();
@@ -311,7 +409,7 @@ function renderCurrentOnceTask() {
   onceTaskNextButtonElement.classList.add("hidden");
 
   if (!task) {
-    showPlaceholderNextStep();
+    showRequestSongStep();
     return;
   }
 
@@ -331,6 +429,18 @@ function renderCurrentOnceTask() {
 function buildOnceTaskMessage(task) {
   const messages = [];
 
+  if (task["move-flag"] === true) {
+    if (task["alert-message"]) {
+      messages.push(task["alert-message"]);
+    }
+
+    if (messages.length === 0) {
+      messages.push("ページを開いてタスクを完了してください。");
+    }
+
+    return messages.join("\n\n");
+  }
+
   if (task["alert-message"]) {
     messages.push(task["alert-message"]);
   }
@@ -346,12 +456,38 @@ function buildOnceTaskMessage(task) {
   return messages.join("\n\n");
 }
 
-function showPlaceholderNextStep() {
-  onceTaskProgressElement.textContent = "";
-  onceTaskNameElement.textContent = "期間限定タスクはここまでです";
-  onceTaskMessageAreaElement.textContent = "次はリクエスト曲選択に進みます。";
-  openOnceTaskUrlButtonElement.classList.add("hidden");
-  onceTaskNextButtonElement.classList.add("hidden");
+async function showRequestSongStep() {
+  try {
+    if (state.requestSongs.length === 0) {
+      state.requestSongs = await loadRequestSongs();
+    }
+
+    const recommendedRequestSongs = state.requestSongs.filter((song) => song.flag === true);
+    const otherRequestSongs = state.requestSongs.filter((song) => song.flag !== true);
+
+    renderRequestSongList(recommendedRequestSongsElement, recommendedRequestSongs);
+    renderRequestSongList(otherRequestSongsElement, otherRequestSongs);
+
+    if (recommendedRequestSongs.length === 0) {
+      recommendedRequestSongsElement.innerHTML = '<p class="empty-text">おすすめ曲はありません。</p>';
+    }
+
+    if (otherRequestSongs.length === 0) {
+      otherRequestSongsElement.innerHTML = '<p class="empty-text">その他の曲はありません。</p>';
+    }
+
+    updateOtherRequestSongsAccordion();
+
+    spotifyStepElement.classList.add("hidden");
+    onceListSelectStepElement.classList.add("hidden");
+    onceTaskRunStepElement.classList.add("hidden");
+    requestSongStepElement.classList.remove("hidden");
+
+    hideError(requestSongErrorAreaElement);
+  } catch (error) {
+    console.error(error);
+    showError(onceTaskRunErrorAreaElement, "リクエスト曲リストの読み込みに失敗しました。JSONの形式や配置を確認してください。");
+  }
 }
 
 function buildSpotifyUrl(trackIdOrUrl) {
@@ -360,6 +496,10 @@ function buildSpotifyUrl(trackIdOrUrl) {
   }
 
   return SPOTIFY_TRACK_BASE_URL + encodeURIComponent(trackIdOrUrl);
+}
+
+function buildRequestSongUrl(url) {
+  return "https://usen.oshireq.com/song/" + encodeURIComponent(url);
 }
 
 function isWithinPeriod(fromValue, toValue) {
