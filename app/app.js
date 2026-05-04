@@ -121,6 +121,10 @@ const youtubeMvRowElement = document.getElementById("youtubeMvRow");
 const finishFromYoutubeButtonElement = document.getElementById("finishFromYoutubeButton");
 
 const placeholderMessageElement = document.getElementById("placeholderMessage");
+const shareToXButtonElement = document.getElementById("shareToXButton");
+const shareToThreadsButtonElement = document.getElementById("shareToThreadsButton");
+const copyShareTextButtonElement = document.getElementById("copyShareTextButton");
+const shareErrorAreaElement = document.getElementById("shareErrorArea");
 
 document.addEventListener("DOMContentLoaded", init);
 
@@ -394,6 +398,39 @@ finishWithoutYoutubeButtonElement.addEventListener("click", () => {
 
 finishFromYoutubeButtonElement.addEventListener("click", () => {
   showPlaceholderNextStep("お疲れ様さまでした☺️Big Love💚");
+});
+
+shareToXButtonElement.addEventListener("click", () => {
+  const shareText = buildAppShareText();
+  const url = X_POST_URL + encodeURIComponent(shareText);
+
+  location.href = url;
+});
+
+shareToThreadsButtonElement.addEventListener("click", async () => {
+  const shareText = buildAppShareText();
+
+  try {
+    await navigator.clipboard.writeText(shareText);
+    hideError(shareErrorAreaElement);
+    location.href = THREADS_URL;
+  } catch (error) {
+    console.error(error);
+    showError(shareErrorAreaElement, "コピーに失敗しました。共有文を長押しでコピーしてください。");
+  }
+});
+
+copyShareTextButtonElement.addEventListener("click", async () => {
+  const shareText = buildAppShareText();
+
+  try {
+    await navigator.clipboard.writeText(shareText);
+    copyShareTextButtonElement.textContent = "コピーしました";
+    hideError(shareErrorAreaElement);
+  } catch (error) {
+    console.error(error);
+    showError(shareErrorAreaElement, "コピーに失敗しました。共有文を長押しでコピーしてください。");
+  }
 });
 
 async function init() {
