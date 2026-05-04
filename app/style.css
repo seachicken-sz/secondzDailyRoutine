@@ -218,6 +218,14 @@ h1 {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
+.group-label {
+  margin: 0 0 8px;
+  color: #1db954;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
 .task-title {
   margin: 0 0 14px;
   font-size: 22px;
@@ -232,6 +240,25 @@ h1 {
   color: #333;
   line-height: 1.7;
   white-space: pre-wrap;
+}
+
+.copy-area {
+  margin: 0 0 14px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #ecfff3;
+  border: 1px solid #bdebcf;
+}
+
+.copy-text {
+  margin: 0 0 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #222;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 .error-area {
