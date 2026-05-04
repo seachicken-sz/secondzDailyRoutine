@@ -34,6 +34,12 @@
       <section id="spotifyErrorArea" class="error-area hidden"></section>
 
       <section class="scroll-area">
+        <section class="bottom-action-area spotify-skip-area">
+          <button id="skipSpotifyButton" class="secondary-button no-margin-button">
+            BGMなしで進む
+          </button>
+        </section>
+
         <section class="song-section">
           <h2>おすすめ</h2>
           <div id="recommendedSongs" class="song-list"></div>
@@ -244,11 +250,6 @@
       <section id="postErrorArea" class="error-area hidden"></section>
 
       <section class="scroll-area">
-        <section class="task-card">
-          <p class="selected-label">固定で入る内容</p>
-          <div id="fixedPostTextPreview" class="copy-text"></div>
-        </section>
-
         <section class="check-control-area">
           <div class="button-row">
             <button id="checkAllPostItemsButton" class="secondary-button compact-button">
@@ -260,9 +261,9 @@
           </div>
         </section>
 
-        <div id="postItemList" class="check-list"></div>
+        <div id="postItemList" class="check-list post-item-list"></div>
 
-        <section class="task-card">
+        <section class="task-card post-check-card">
           <p class="selected-label">チェック</p>
           <p id="postTextCount" class="description"></p>
           <p id="postLinkCount" class="description"></p>
@@ -276,12 +277,18 @@
             コピーする
           </button>
 
-          <button id="openXPostButton" class="primary-button">
+          <button id="openXPostButton" class="primary-button post-action-button">
             Xに投稿
           </button>
 
           <button id="openThreadsButton" class="secondary-button">
             コピーしてThreadsを開く
+          </button>
+        </section>
+
+        <section class="bottom-action-area">
+          <button id="postNextButton" class="primary-button">
+            次へ
           </button>
         </section>
       </section>
