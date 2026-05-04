@@ -111,9 +111,9 @@ openSpotifyButtonElement.addEventListener("click", () => {
 
   const spotifyUrl = buildSpotifyUrl(state.selectedSong.url);
 
-  window.open(spotifyUrl, "_blank", "noopener");
-
   spotifyNextButtonElement.classList.remove("hidden");
+
+  location.href = spotifyUrl;
 });
 
 spotifyNextButtonElement.addEventListener("click", async () => {
@@ -160,12 +160,12 @@ openOnceTaskUrlButtonElement.addEventListener("click", () => {
   }
 
   if (task["move-flag"] === true) {
-    window.open(task.url, "_blank", "noopener");
     onceTaskNextButtonElement.classList.remove("hidden");
+    location.href = task.url;
     return;
   }
 
-  window.location.href = task.url;
+  location.href = task.url;
 });
 
 onceTaskNextButtonElement.addEventListener("click", async () => {
@@ -194,7 +194,7 @@ openRequestSongButtonElement.addEventListener("click", () => {
 
   requestSongNextButtonElement.classList.remove("hidden");
 
-  window.location.href = requestUrl;
+  location.href = requestUrl;
 });
 
 requestSongNextButtonElement.addEventListener("click", async () => {
@@ -232,7 +232,7 @@ openDailyTaskUrlButtonElement.addEventListener("click", () => {
 
   dailyTaskNextButtonElement.classList.remove("hidden");
 
-  window.location.href = itemUrl;
+  location.href = itemUrl;
 });
 
 dailyTaskNextButtonElement.addEventListener("click", () => {
@@ -315,7 +315,7 @@ openXPostButtonElement.addEventListener("click", () => {
   }
 
   const url = X_POST_URL + encodeURIComponent(postText);
-  window.open(url, "_blank", "noopener");
+  location.href = url;
 });
 
 openThreadsButtonElement.addEventListener("click", async () => {
@@ -328,8 +328,8 @@ openThreadsButtonElement.addEventListener("click", async () => {
 
   try {
     await navigator.clipboard.writeText(postText);
-    window.open(THREADS_URL, "_blank", "noopener");
     hideError(postErrorAreaElement);
+    location.href = THREADS_URL;
   } catch (error) {
     console.error(error);
     showError(postErrorAreaElement, "コピーに失敗しました。投稿文を長押しでコピーしてください。");
