@@ -28,11 +28,18 @@ body {
   flex-direction: column;
   overflow: hidden;
 }
-
-.header,
-.home-header {
+.header {
   flex-shrink: 0;
   margin-bottom: 14px;
+}
+
+.home-header {
+  flex-shrink: 0;
+  min-height: 30%;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .step-label {
