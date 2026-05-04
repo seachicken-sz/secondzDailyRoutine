@@ -212,6 +212,81 @@
       </section>
     </section>
 
+    <section id="postAskStep" class="step-screen hidden">
+      <header class="header">
+        <p class="step-label">STEP 5</p>
+        <h1>ポストする？📝</h1>
+        <p class="description">
+          今日のリクエスト報告文を作れます。
+        </p>
+      </header>
+
+      <section class="task-card">
+        <button id="makePostButton" class="primary-button">
+          ポスト文を作る
+        </button>
+
+        <button id="skipPostButton" class="secondary-button">
+          投稿しない
+        </button>
+      </section>
+    </section>
+
+    <section id="postEditStep" class="step-screen hidden">
+      <header class="header">
+        <p class="step-label">STEP 5</p>
+        <h1>ポスト文作成📝</h1>
+        <p class="description">
+          追加したい項目にチェックを入れてください。
+        </p>
+      </header>
+
+      <section id="postErrorArea" class="error-area hidden"></section>
+
+      <section class="scroll-area">
+        <section class="task-card">
+          <p class="selected-label">固定で入る内容</p>
+          <div id="fixedPostTextPreview" class="copy-text"></div>
+        </section>
+
+        <section class="check-control-area">
+          <div class="button-row">
+            <button id="checkAllPostItemsButton" class="secondary-button compact-button">
+              すべてチェック
+            </button>
+            <button id="clearAllPostItemsButton" class="secondary-button compact-button">
+              すべてクリア
+            </button>
+          </div>
+        </section>
+
+        <div id="postItemList" class="check-list"></div>
+
+        <section class="task-card">
+          <p class="selected-label">チェック</p>
+          <p id="postTextCount" class="description"></p>
+          <p id="postLinkCount" class="description"></p>
+        </section>
+
+        <section class="task-card">
+          <p class="selected-label">生成文</p>
+          <div id="generatedPostText" class="copy-text"></div>
+
+          <button id="copyPostTextButton" class="secondary-button">
+            コピーする
+          </button>
+
+          <button id="openXPostButton" class="primary-button">
+            Xに投稿
+          </button>
+
+          <button id="openThreadsButton" class="secondary-button">
+            コピーしてThreadsを開く
+          </button>
+        </section>
+      </section>
+    </section>
+
     <section id="placeholderNextStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">NEXT</p>
