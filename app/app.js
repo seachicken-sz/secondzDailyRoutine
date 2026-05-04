@@ -26,6 +26,9 @@ const state = {
 
   youtubePlaylists: [],
   youtubeMvs: [],
+  
+  stepHistory: [],
+  currentStepElement: null,
 };
 
 const homeStepElement = document.getElementById("homeStep");
@@ -128,6 +131,12 @@ const shareErrorAreaElement = document.getElementById("shareErrorArea");
 const backHomeButtonElement = document.getElementById("backHomeButton");
 
 document.addEventListener("DOMContentLoaded", init);
+
+const backStepButtonElement = document.getElementById("backStepButton");
+
+backStepButtonElement.addEventListener("click", () => {
+  goBackStep();
+});
 
 startRoutineButtonElement.addEventListener("click", () => {
   showOnlyStep(spotifyStepElement);
@@ -1319,7 +1328,17 @@ function showPlaceholderNextStep(message) {
   showOnlyStep(placeholderNextStepElement);
 }
 
-function showOnlyStep(activeStepElement) {
+function showOnlyStep(activeStepElement, options = {}) {
+  const shouldRecordHistory = options.recordHistory !== false;
+
+  if (
+    shouldRecordHistory &&
+    state.currentStepElement &&
+    state.currentStepElement !== activeStepElement
+  ) {
+    state.stepHistory.push(state.currentStepElement);
+  }
+
   const steps = [
     homeStepElement,
     spotifyStepElement,
@@ -1338,6 +1357,9 @@ function showOnlyStep(activeStepElement) {
   steps.forEach((stepElement) => {
     stepElement.classList.toggle("hidden", stepElement !== activeStepElement);
   });
+
+  state.currentStepElement = activeStepElement;
+  updateBackStepButton();
 }
 
 function buildSpotifyUrl(trackIdOrUrl) {
