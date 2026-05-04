@@ -359,13 +359,31 @@
       </section>
     </section>
 
-    <section id="placeholderNextStep" class="step-screen hidden">
-      <header class="header">
-        <p class="step-label">FINISH</p>
-        <h1>完了⌛</h1>
-        <p id="placeholderMessage" class="description"></p>
-      </header>
-    </section>
+<section id="placeholderNextStep" class="step-screen hidden">
+  <header class="header">
+    <p class="step-label">FINISH</p>
+    <h1>完了⌛</h1>
+    <p id="placeholderMessage" class="description"></p>
+  </header>
+
+  <section class="task-card">
+    <h2 class="task-title">このツールを共有しますか？</h2>
+
+    <button id="shareToXButton" class="primary-button">
+      Xで共有する
+    </button>
+
+    <button id="shareToThreadsButton" class="secondary-button">
+      コピーしてThreadsを開く
+    </button>
+
+    <button id="copyShareTextButton" class="secondary-button">
+      コピーだけする
+    </button>
+  </section>
+
+  <section id="shareErrorArea" class="error-area hidden"></section>
+</section>
   </main>
 
   <div id="howToModal" class="modal-overlay hidden">
