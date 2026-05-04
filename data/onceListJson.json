@@ -9,7 +9,7 @@
     "to": "202605202359",
     "move-flag":true,
     "alert-message":"これからSpotifyに移動します。 投票が終わったら通知か 画面左上の「◀︎ショートカット」をタップしてショートカットアプリに戻ってください。",
-    "notice-message":"Rock this Partyを探して投票！ 投票が終わったらここをタップ！"
+    "notice-message":"Rock this Partyを探して投票！ 投票が終わったら「ショートカット」に戻ってね！"
   },
     {
     "name": "国宝級イケメンランキング",
@@ -19,5 +19,8 @@
     "url": "",
     "from": "202605070000",
     "to": "202605312359",
+    "move-flag":false,
+    "alert-message":"",
+    "notice-message":"勝利くんに投票しよ😊"
   }
 ]
