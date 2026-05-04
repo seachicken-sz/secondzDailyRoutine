@@ -1,4 +1,4 @@
-　const SPOTIFY_TRACK_BASE_URL = "https://open.spotify.com/track/";
+const SPOTIFY_TRACK_BASE_URL = "https://open.spotify.com/track/";
 const USEN_REQUEST_BASE_URL = "https://usen.oshireq.com/song/";
 const X_POST_URL = "https://twitter.com/intent/tweet?text=";
 const THREADS_URL = "https://www.threads.net/";
@@ -133,9 +133,11 @@ const backStepButtonElement = document.getElementById("backStepButton");
 
 document.addEventListener("DOMContentLoaded", init);
 
-backStepButtonElement.addEventListener("click", () => {
-  goBackStep();
-});
+if (backStepButtonElement) {
+  backStepButtonElement.addEventListener("click", () => {
+    goBackStep();
+  });
+}
 
 startRoutineButtonElement.addEventListener("click", () => {
   showOnlyStep(spotifyStepElement);
@@ -440,7 +442,8 @@ copyShareTextButtonElement.addEventListener("click", async () => {
 });
 
 backHomeButtonElement.addEventListener("click", () => {
-  showOnlyStep(homeStepElement);
+  state.stepHistory = [];
+  showOnlyStep(homeStepElement, { recordHistory: false });
 });
 
 async function init() {
@@ -1331,6 +1334,11 @@ function showPlaceholderNextStep(message) {
 }
 
 function showOnlyStep(activeStepElement, options = {}) {
+  if (!activeStepElement) {
+    console.error("表示対象の画面が見つかりません。");
+    return;
+  }
+
   const shouldRecordHistory = options.recordHistory !== false;
 
   if (
@@ -1354,7 +1362,7 @@ function showOnlyStep(activeStepElement, options = {}) {
     youtubeAskStepElement,
     youtubeSelectStepElement,
     placeholderNextStepElement,
-  ];
+  ].filter(Boolean);
 
   steps.forEach((stepElement) => {
     stepElement.classList.toggle("hidden", stepElement !== activeStepElement);
@@ -1423,6 +1431,10 @@ function goBackFromDailyGroupEnd() {
 }
 
 function updateBackStepButton() {
+  if (!backStepButtonElement) {
+    return;
+  }
+
   const shouldShowBackButton =
     state.currentStepElement &&
     state.currentStepElement !== homeStepElement;
@@ -1506,11 +1518,19 @@ function formatTaskLimitDate(value) {
 }
 
 function showError(element, message) {
+  if (!element) {
+    return;
+  }
+
   element.textContent = message;
   element.classList.remove("hidden");
 }
 
 function hideError(element) {
+  if (!element) {
+    return;
+  }
+
   element.textContent = "";
   element.classList.add("hidden");
 }
