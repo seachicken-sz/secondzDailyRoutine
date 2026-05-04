@@ -8,33 +8,115 @@
 </head>
 <body>
   <main class="app">
-    <header class="header">
-      <p class="step-label">STEP 1</p>
-      <h1>Spotifyで再生する曲を選ぶ</h1>
-      <p class="description">
-        今日のBGMにする曲を選んで、Spotifyで開いてください。
-      </p>
-    </header>
+    <section id="spotifyStep" class="step-screen">
+      <header class="header">
+        <p class="step-label">STEP 1</p>
+        <h1>今日のBGM🎧</h1>
+        <p class="description">
+          Spotifyで<strong>１日１曲</strong>聞くと月間アクティブユーザーに貢献👍<br>
+          聴きながらデイリータスク終わらせちゃお😊
+        </p>
+      </header>
 
-    <section id="selectedArea" class="selected-area hidden">
-      <p class="selected-label">選択中</p>
-      <p id="selectedSongName" class="selected-song"></p>
-      <button id="openSpotifyButton" class="primary-button">
-        Spotifyで開く
+      <section id="selectedArea" class="selected-area hidden">
+        <p class="selected-label">選択中</p>
+        <p id="selectedSongName" class="selected-song"></p>
+
+        <button id="openSpotifyButton" class="primary-button">
+          Spotifyで開く
+        </button>
+
+        <button id="spotifyNextButton" class="secondary-button hidden">
+          次へ
+        </button>
+      </section>
+
+      <section id="spotifyErrorArea" class="error-area hidden"></section>
+
+      <section class="scroll-area">
+        <section class="song-section">
+          <h2>おすすめ</h2>
+          <div id="recommendedSongs" class="song-list"></div>
+        </section>
+
+        <section class="song-section">
+          <button id="toggleOtherSongsButton" class="accordion-button" type="button">
+            <span>その他</span>
+            <span id="toggleOtherSongsIcon">＋</span>
+          </button>
+
+          <div id="otherSongsWrapper" class="accordion-content hidden">
+            <div id="otherSongs" class="song-list"></div>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <section id="onceListSelectStep" class="step-screen hidden">
+      <header class="header">
+        <p class="step-label">STEP 2</p>
+        <h1>期間限定タスク✅</h1>
+        <p class="description">
+          今日やるものにチェックを入れてください。<br>
+          デフォルトでは期限内のタスクをすべて「済み」扱いにしています。
+        </p>
+      </header>
+
+      <section id="onceListErrorArea" class="error-area hidden"></section>
+
+      <section class="fixed-action-area">
+        <div class="button-row">
+          <button id="checkAllOnceTasksButton" class="secondary-button compact-button">
+            すべてチェック
+          </button>
+          <button id="clearAllOnceTasksButton" class="secondary-button compact-button">
+            すべてクリア
+          </button>
+        </div>
+
+        <button id="startOnceTasksButton" class="primary-button">
+          次へ
+        </button>
+      </section>
+
+      <section class="scroll-area">
+        <div id="onceTaskList" class="check-list"></div>
+      </section>
+    </section>
+
+<section id="onceListSelectStep" class="step-screen hidden">
+  <header class="header">
+    <p class="step-label">STEP 2</p>
+    <h1>期間限定タスク✅</h1>
+    <p class="description">
+      今日やるものにチェックを入れてください。<br>
+      デフォルトでは期限内のタスクをすべて「済み」扱いにしています。
+    </p>
+  </header>
+
+  <section id="onceListErrorArea" class="error-area hidden"></section>
+
+  <section class="scroll-area">
+    <section class="check-control-area">
+      <div class="button-row">
+        <button id="checkAllOnceTasksButton" class="secondary-button compact-button">
+          すべてチェック
+        </button>
+        <button id="clearAllOnceTasksButton" class="secondary-button compact-button">
+          すべてクリア
+        </button>
+      </div>
+    </section>
+
+    <div id="onceTaskList" class="check-list"></div>
+
+    <section class="bottom-action-area">
+      <button id="startOnceTasksButton" class="primary-button">
+        次へ
       </button>
     </section>
-
-    <section class="song-section">
-      <h2>おすすめ</h2>
-      <div id="recommendedSongs" class="song-list"></div>
-    </section>
-
-    <section class="song-section">
-      <h2>その他</h2>
-      <div id="otherSongs" class="song-list"></div>
-    </section>
-
-    <section id="errorArea" class="error-area hidden"></section>
+  </section>
+</section>
   </main>
 
   <script src="./app.js"></script>
