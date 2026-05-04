@@ -221,8 +221,9 @@ copyDailyTaskTextButtonElement.addEventListener("click", async () => {
 
 openDailyTaskUrlButtonElement.addEventListener("click", () => {
   const item = getCurrentDailyTaskItem();
+  const itemUrl = getDailyTaskItemUrl(item);
 
-  if (!item || !item.url) {
+  if (!item || !itemUrl) {
     showError(dailyTaskErrorAreaElement, "URLが設定されていません。");
     return;
   }
@@ -231,13 +232,13 @@ openDailyTaskUrlButtonElement.addEventListener("click", () => {
 
   dailyTaskNextButtonElement.classList.remove("hidden");
 
-  window.location.href = item.url;
+  window.location.href = itemUrl;
 });
 
 dailyTaskNextButtonElement.addEventListener("click", () => {
   const item = getCurrentDailyTaskItem();
 
-  if (item && !item.url) {
+  if (item && !getDailyTaskItemUrl(item)) {
     recordCompletedDailyItem(item);
   }
 
@@ -733,17 +734,19 @@ function renderCurrentDailyTask() {
   }
 
   const items = getDailyGroupItems(group);
+  const itemName = getDailyTaskItemName(item);
+  const itemUrl = getDailyTaskItemUrl(item);
 
   dailyTaskHeaderDescriptionElement.textContent = buildDailyTaskHeaderDescription();
   dailyTaskGroupNameElement.textContent = group.listName;
   dailyTaskProgressElement.textContent = `${state.currentDailyTaskIndex + 1} / ${items.length}`;
-  dailyTaskNameElement.textContent = item.name || "名称未設定";
+  dailyTaskNameElement.textContent = itemName;
 
   dailyTaskCommentAreaElement.textContent = item.comment || "ページを開いてタスクを完了してください。";
 
   renderDailyTaskCopyArea(item);
 
-  if (item.url) {
+  if (itemUrl) {
     openDailyTaskUrlButtonElement.classList.remove("hidden");
   } else {
     openDailyTaskUrlButtonElement.classList.add("hidden");
@@ -772,7 +775,7 @@ function buildDailyTaskCopyText(item) {
     return "";
   }
 
-  const musicName = item["request-input"] || getSelectedRequestSongName();
+  const musicName = getSelectedRequestSongName();
 
   return template.replaceAll("musicname", musicName);
 }
@@ -805,11 +808,18 @@ function showDailyGroupEndStep() {
 }
 
 function recordCompletedDailyItem(item) {
-  if (!item || !item.name) {
+  if (!item) {
     return;
   }
 
-  const key = `${item.name}_${item.url || ""}`;
+  const name = getDailyTaskItemName(item);
+  const url = getDailyTaskItemUrl(item);
+
+  if (!name) {
+    return;
+  }
+
+  const key = `${name}_${url}`;
   const exists = state.completedDailyItems.some((completedItem) => completedItem.key === key);
 
   if (exists) {
@@ -818,8 +828,8 @@ function recordCompletedDailyItem(item) {
 
   state.completedDailyItems.push({
     key,
-    name: item.name,
-    url: item.url || "",
+    name,
+    url,
   });
 }
 
@@ -991,6 +1001,22 @@ function getDailyGroupItems(group) {
   }
 
   return group.items;
+}
+
+function getDailyTaskItemName(item) {
+  if (!item) {
+    return "名称未設定";
+  }
+
+  return item.name || item.title || item.listName || "名称未設定";
+}
+
+function getDailyTaskItemUrl(item) {
+  if (!item) {
+    return "";
+  }
+
+  return item.url || "";
 }
 
 function getSelectedRequestSongName() {
