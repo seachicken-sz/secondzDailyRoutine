@@ -64,59 +64,96 @@
 
       <section id="onceListErrorArea" class="error-area hidden"></section>
 
-      <section class="fixed-action-area">
-        <div class="button-row">
-          <button id="checkAllOnceTasksButton" class="secondary-button compact-button">
-            すべてチェック
-          </button>
-          <button id="clearAllOnceTasksButton" class="secondary-button compact-button">
-            すべてクリア
-          </button>
-        </div>
+      <section class="scroll-area">
+        <section class="check-control-area">
+          <div class="button-row">
+            <button id="checkAllOnceTasksButton" class="secondary-button compact-button">
+              すべてチェック
+            </button>
+            <button id="clearAllOnceTasksButton" class="secondary-button compact-button">
+              すべてクリア
+            </button>
+          </div>
+        </section>
 
-        <button id="startOnceTasksButton" class="primary-button">
+        <div id="onceTaskList" class="check-list"></div>
+
+        <section class="bottom-action-area">
+          <button id="startOnceTasksButton" class="primary-button">
+            次へ
+          </button>
+        </section>
+      </section>
+    </section>
+
+    <section id="onceTaskRunStep" class="step-screen hidden">
+      <header class="header">
+        <p class="step-label">STEP 2</p>
+        <h1>期間限定タスクを実行</h1>
+        <p id="onceTaskProgress" class="description"></p>
+      </header>
+
+      <section class="task-card">
+        <p class="selected-label">タスク</p>
+        <h2 id="onceTaskName" class="task-title"></h2>
+
+        <div id="onceTaskMessageArea" class="notice-box"></div>
+
+        <button id="openOnceTaskUrlButton" class="primary-button">
+          ページを開く
+        </button>
+
+        <button id="onceTaskNextButton" class="secondary-button hidden">
           次へ
         </button>
       </section>
 
+      <section id="onceTaskRunErrorArea" class="error-area hidden"></section>
+    </section>
+
+    <section id="requestSongStep" class="step-screen hidden">
+      <header class="header">
+        <p class="step-label">STEP 3</p>
+        <h1>本日のリクエスト曲🎶</h1>
+        <p class="description">
+          今日リクエストする曲を選んでください。<br>
+          おすすめ曲を優先表示しています。
+        </p>
+      </header>
+
+      <section id="selectedRequestSongArea" class="selected-area hidden">
+        <p class="selected-label">選択中</p>
+        <p id="selectedRequestSongName" class="selected-song"></p>
+
+        <button id="openRequestSongButton" class="primary-button">
+          リクエストページを開く
+        </button>
+
+        <button id="requestSongNextButton" class="secondary-button hidden">
+          次へ
+        </button>
+      </section>
+
+      <section id="requestSongErrorArea" class="error-area hidden"></section>
+
       <section class="scroll-area">
-        <div id="onceTaskList" class="check-list"></div>
+        <section class="song-section">
+          <h2>おすすめ</h2>
+          <div id="recommendedRequestSongs" class="song-list"></div>
+        </section>
+
+        <section class="song-section">
+          <button id="toggleOtherRequestSongsButton" class="accordion-button" type="button">
+            <span>その他</span>
+            <span id="toggleOtherRequestSongsIcon">＋</span>
+          </button>
+
+          <div id="otherRequestSongsWrapper" class="accordion-content hidden">
+            <div id="otherRequestSongs" class="song-list"></div>
+          </div>
+        </section>
       </section>
     </section>
-
-<section id="onceListSelectStep" class="step-screen hidden">
-  <header class="header">
-    <p class="step-label">STEP 2</p>
-    <h1>期間限定タスク✅</h1>
-    <p class="description">
-      今日やるものにチェックを入れてください。<br>
-      デフォルトでは期限内のタスクをすべて「済み」扱いにしています。
-    </p>
-  </header>
-
-  <section id="onceListErrorArea" class="error-area hidden"></section>
-
-  <section class="scroll-area">
-    <section class="check-control-area">
-      <div class="button-row">
-        <button id="checkAllOnceTasksButton" class="secondary-button compact-button">
-          すべてチェック
-        </button>
-        <button id="clearAllOnceTasksButton" class="secondary-button compact-button">
-          すべてクリア
-        </button>
-      </div>
-    </section>
-
-    <div id="onceTaskList" class="check-list"></div>
-
-    <section class="bottom-action-area">
-      <button id="startOnceTasksButton" class="primary-button">
-        次へ
-      </button>
-    </section>
-  </section>
-</section>
   </main>
 
   <script src="./app.js"></script>
