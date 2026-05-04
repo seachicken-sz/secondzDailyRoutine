@@ -144,6 +144,10 @@ h1 {
   cursor: pointer;
 }
 
+.no-margin-button {
+  margin-top: 0;
+}
+
 .button-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -218,6 +222,10 @@ h1 {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
+.spotify-skip-area {
+  margin-bottom: 18px;
+}
+
 .group-label {
   margin: 0 0 8px;
   color: #1db954;
@@ -259,6 +267,19 @@ h1 {
   line-height: 1.7;
   white-space: pre-wrap;
   word-break: break-word;
+}
+
+.post-item-list {
+  margin-bottom: 24px;
+}
+
+.post-check-card {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.post-action-button {
+  margin-top: 18px;
 }
 
 .error-area {
