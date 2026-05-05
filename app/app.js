@@ -35,9 +35,18 @@ const homeStepElement = document.getElementById("homeStep");
 const homeOnceTaskListElement = document.getElementById("homeOnceTaskList");
 const homeInfoListElement = document.getElementById("homeInfoList");
 const startRoutineButtonElement = document.getElementById("startRoutineButton");
+
 const openHowToButtonElement = document.getElementById("openHowToButton");
 const howToModalElement = document.getElementById("howToModal");
 const closeHowToButtonElement = document.getElementById("closeHowToButton");
+
+const openUsageButtonElement = document.getElementById("openUsageButton");
+const usageModalElement = document.getElementById("usageModal");
+const closeUsageButtonElement = document.getElementById("closeUsageButton");
+
+const stepTopActionBarElement = document.getElementById("stepTopActionBar");
+const backStepButtonElement = document.getElementById("backStepButton");
+const stepUsageButtonElement = document.getElementById("stepUsageButton");
 
 const spotifyStepElement = document.getElementById("spotifyStep");
 const onceListSelectStepElement = document.getElementById("onceListSelectStep");
@@ -130,7 +139,6 @@ const shareToThreadsButtonElement = document.getElementById("shareToThreadsButto
 const copyShareTextButtonElement = document.getElementById("copyShareTextButton");
 const shareErrorAreaElement = document.getElementById("shareErrorArea");
 const backHomeButtonElement = document.getElementById("backHomeButton");
-const backStepButtonElement = document.getElementById("backStepButton");
 
 document.addEventListener("DOMContentLoaded", init);
 
@@ -140,23 +148,59 @@ if (backStepButtonElement) {
   });
 }
 
-startRoutineButtonElement.addEventListener("click", () => {
-  showOnlyStep(spotifyStepElement);
-});
+if (startRoutineButtonElement) {
+  startRoutineButtonElement.addEventListener("click", () => {
+    showOnlyStep(spotifyStepElement);
+  });
+}
 
-openHowToButtonElement.addEventListener("click", () => {
-  howToModalElement.classList.remove("hidden");
-});
+if (openHowToButtonElement && howToModalElement) {
+  openHowToButtonElement.addEventListener("click", () => {
+    howToModalElement.classList.remove("hidden");
+  });
+}
 
-closeHowToButtonElement.addEventListener("click", () => {
-  howToModalElement.classList.add("hidden");
-});
-
-howToModalElement.addEventListener("click", (event) => {
-  if (event.target === howToModalElement) {
+if (closeHowToButtonElement && howToModalElement) {
+  closeHowToButtonElement.addEventListener("click", () => {
     howToModalElement.classList.add("hidden");
+  });
+}
+
+if (howToModalElement) {
+  howToModalElement.addEventListener("click", (event) => {
+    if (event.target === howToModalElement) {
+      howToModalElement.classList.add("hidden");
+    }
+  });
+}
+
+const openUsageModal = () => {
+  if (usageModalElement) {
+    usageModalElement.classList.remove("hidden");
   }
-});
+};
+
+if (openUsageButtonElement) {
+  openUsageButtonElement.addEventListener("click", openUsageModal);
+}
+
+if (stepUsageButtonElement) {
+  stepUsageButtonElement.addEventListener("click", openUsageModal);
+}
+
+if (closeUsageButtonElement && usageModalElement) {
+  closeUsageButtonElement.addEventListener("click", () => {
+    usageModalElement.classList.add("hidden");
+  });
+}
+
+if (usageModalElement) {
+  usageModalElement.addEventListener("click", (event) => {
+    if (event.target === usageModalElement) {
+      usageModalElement.classList.add("hidden");
+    }
+  });
+}
 
 openSpotifyButtonElement.addEventListener("click", () => {
   if (!state.selectedSong) {
@@ -489,7 +533,7 @@ async function init() {
     renderHomeInfoList(homeInfoList);
 
     state.currentStepElement = homeStepElement;
-    updateBackStepButton();
+    updateStepTopActionBar();
   } catch (error) {
     console.error(error);
     showError(spotifyErrorAreaElement, "初期データの読み込みに失敗しました。JSONの形式や配置を確認してください。");
@@ -497,7 +541,7 @@ async function init() {
     renderHomeInfoList([]);
 
     state.currentStepElement = homeStepElement;
-    updateBackStepButton();
+    updateStepTopActionBar();
   }
 }
 
@@ -1430,7 +1474,7 @@ function showOnlyStep(activeStepElement, options = {}) {
   });
 
   state.currentStepElement = activeStepElement;
-  updateBackStepButton();
+  updateStepTopActionBar();
 }
 
 function goBackStep() {
@@ -1491,16 +1535,16 @@ function goBackFromDailyGroupEnd() {
   renderCurrentDailyTask();
 }
 
-function updateBackStepButton() {
-  if (!backStepButtonElement) {
+function updateStepTopActionBar() {
+  if (!stepTopActionBarElement) {
     return;
   }
 
-  const shouldShowBackButton =
+  const shouldShowTopActionBar =
     state.currentStepElement &&
     state.currentStepElement !== homeStepElement;
 
-  backStepButtonElement.classList.toggle("hidden", !shouldShowBackButton);
+  stepTopActionBarElement.classList.toggle("hidden", !shouldShowTopActionBar);
 }
 
 function buildSpotifyUrl(trackIdOrUrl) {
