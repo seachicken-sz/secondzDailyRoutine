@@ -1,22 +1,22 @@
 [
   {
-    "listName":"簡単、毎日回そう",
+    "listName":"お手軽簡単、できたら毎日やろ",
     "lastFlag":false,
     "items":[
-      {"name":"MAJ特別賞Yahoo!で検索","url":"https://search.yahoo.co.jp/search?&ei=UTF-8&p=timelesz","comment":"検索結果が見えたら投票完了！","input-flag":false,"alert-flag":false}
+      {"id":"daily_maj_yahoo_2026","name":"MAJ特別賞Yahoo!で検索","url":"https://search.yahoo.co.jp/search?&ei=UTF-8&p=timelesz","comment":"検索結果が見えたら投票完了！","input-flag":false,"alert-flag":false}
       ]
   },
   {
     "listName":"ちょっと面倒だけどがんばろ",
     "lastFlag":true,
     "items":[
-      {"name":"FM福岡 BUTCH COUNTDOWN RADIO","url":"https://fmfukuoka.co.jp/message/?m=reform","request-type":"music-slash-artist","request-input":"リクエスト(曲名／アーティスト名)","comment":"番組名は「BUTCH COUNTDOWN RADIO」を選択！","input-flag":true,"alert-flag":true},
-      {"name":"SkyrocketCompany","url":"https://www.tfm.co.jp/f/sc/message","request-type":"text","request-input":"メッセージ","comment":"コーナーは「楽曲リクエスト」を選択！","input-flag":true,"alert-flag":false},
-      {"name":"ローソン","url":"https://www.lawson.co.jp/lab/cshotstation/art/1308047_7551.html","request-type":"music","request-input":"■曲名","comment":"「>>リクエストの登録はこちら！」をタップしてフォームを開いて！","input-flag":true,"alert-flag":false},
-      {"name":"エムオン！","url":"https://www.m-on.jp/request/?action_request_search=True&artist_id=19237","comment":"リクエストしたい曲をタップ！","input-flag":false,"alert-flag":false},
-      {"name":"&シノ","url":"https://www.tbsradio.jp/articles/program/and/","comment":"最新記事をタップ！アクセスランクがあがるよ！","input-flag":false,"alert-flag":false},
-      {"name":"全農 COUNTDOWN JAPAN","url":"https://tfm.co.jp/f/countdownjapan/message","request-type":"text","request-input":"メッセージ&リクエスト","comment":"","input-flag":true,"alert-flag":false},
-      {"name":"NACK5","url":"https://www.nack5.co.jp/message/270/","request-type":"music","request-input":"タイトル","comment":"入力できるまでちょっと時間かかるかも。","input-flag":true,"alert-flag":false}
+      {"id":"daily_butchcountdownradio","name":"FM福岡 BUTCH COUNTDOWN RADIO","url":"https://fmfukuoka.co.jp/message/?m=reform","request-type":"music-slash-artist","request-input":"リクエスト(曲名／アーティスト名)","comment":"番組名は「BUTCH COUNTDOWN RADIO」を選択！","input-flag":true,"alert-flag":true},
+      {"id":"daily_skyrocketcompany","name":"SkyrocketCompany","url":"https://www.tfm.co.jp/f/sc/message","request-type":"text","request-input":"メッセージ","comment":"コーナーは「楽曲リクエスト」を選択！","input-flag":true,"alert-flag":false},
+      {"id":"daily_lawson","name":"ローソン","url":"https://www.lawson.co.jp/lab/cshotstation/art/1308047_7551.html","request-type":"music","request-input":"■曲名","comment":"「>>リクエストの登録はこちら！」をタップしてフォームを開いて！","input-flag":true,"alert-flag":false},
+      {"id":"daily_mon","name":"エムオン！","url":"https://www.m-on.jp/request/?action_request_search=True&artist_id=19237","comment":"リクエストしたい曲をタップ！","input-flag":false,"alert-flag":false},
+      {"id":"daily_andshino","name":"&シノ","url":"https://www.tbsradio.jp/articles/program/and/","comment":"最新記事をタップ！アクセスランクがあがるよ！","input-flag":false,"alert-flag":false},
+      {"id":"daily_zennocountdownjapan","name":"全農 COUNTDOWN JAPAN","url":"https://tfm.co.jp/f/countdownjapan/message","request-type":"text","request-input":"メッセージ&リクエスト","comment":"","input-flag":true,"alert-flag":false},
+      {"id":"daily_nack5","name":"NACK5","url":"https://www.nack5.co.jp/message/270/","request-type":"music","request-input":"タイトル","comment":"入力できるまでちょっと時間かかるかも。","input-flag":true,"alert-flag":false}
       ]
   }
 ]
