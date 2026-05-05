@@ -139,29 +139,33 @@ const backHomeButtonElement = document.getElementById("backHomeButton");
 
 document.addEventListener("DOMContentLoaded", init);
 
-if (backStepButtonElement) {
-  backStepButtonElement.addEventListener("click", () => {
-    goBackStep();
-  });
+function addClickEvent(element, handler) {
+  if (!element) {
+    return;
+  }
+
+  element.addEventListener("click", handler);
 }
 
-if (startRoutineButtonElement) {
-  startRoutineButtonElement.addEventListener("click", () => {
-    showOnlyStep(spotifyStepElement);
-  });
-}
+addClickEvent(backStepButtonElement, () => {
+  goBackStep();
+});
 
-if (openHowToButtonElement && howToModalElement) {
-  openHowToButtonElement.addEventListener("click", () => {
+addClickEvent(startRoutineButtonElement, () => {
+  showOnlyStep(spotifyStepElement);
+});
+
+addClickEvent(openHowToButtonElement, () => {
+  if (howToModalElement) {
     howToModalElement.classList.remove("hidden");
-  });
-}
+  }
+});
 
-if (closeHowToButtonElement && howToModalElement) {
-  closeHowToButtonElement.addEventListener("click", () => {
+addClickEvent(closeHowToButtonElement, () => {
+  if (howToModalElement) {
     howToModalElement.classList.add("hidden");
-  });
-}
+  }
+});
 
 if (howToModalElement) {
   howToModalElement.addEventListener("click", (event) => {
@@ -177,19 +181,14 @@ const openUsageModal = () => {
   }
 };
 
-if (openUsageButtonElement) {
-  openUsageButtonElement.addEventListener("click", openUsageModal);
-}
+addClickEvent(openUsageButtonElement, openUsageModal);
+addClickEvent(stepUsageButtonElement, openUsageModal);
 
-if (stepUsageButtonElement) {
-  stepUsageButtonElement.addEventListener("click", openUsageModal);
-}
-
-if (closeUsageButtonElement && usageModalElement) {
-  closeUsageButtonElement.addEventListener("click", () => {
+addClickEvent(closeUsageButtonElement, () => {
+  if (usageModalElement) {
     usageModalElement.classList.add("hidden");
-  });
-}
+  }
+});
 
 if (usageModalElement) {
   usageModalElement.addEventListener("click", (event) => {
@@ -199,7 +198,7 @@ if (usageModalElement) {
   });
 }
 
-openSpotifyButtonElement.addEventListener("click", () => {
+addClickEvent(openSpotifyButtonElement, () => {
   if (!state.selectedSong) {
     showError(spotifyErrorAreaElement, "曲が選択されていません。");
     return;
@@ -207,33 +206,36 @@ openSpotifyButtonElement.addEventListener("click", () => {
 
   const spotifyUrl = buildSpotifyUrl(state.selectedSong.url);
 
-  spotifyNextButtonElement.classList.remove("hidden");
+  if (spotifyNextButtonElement) {
+    spotifyNextButtonElement.classList.remove("hidden");
+  }
+
   location.href = spotifyUrl;
 });
 
-skipSpotifyButtonElement.addEventListener("click", async () => {
+addClickEvent(skipSpotifyButtonElement, async () => {
   state.selectedSong = null;
   await showOnceListSelectStep();
 });
 
-spotifyNextButtonElement.addEventListener("click", async () => {
+addClickEvent(spotifyNextButtonElement, async () => {
   await showOnceListSelectStep();
 });
 
-toggleOtherSongsButtonElement.addEventListener("click", () => {
+addClickEvent(toggleOtherSongsButtonElement, () => {
   state.isOtherSongsOpen = !state.isOtherSongsOpen;
   updateOtherSongsAccordion();
 });
 
-checkAllOnceTasksButtonElement.addEventListener("click", () => {
+addClickEvent(checkAllOnceTasksButtonElement, () => {
   setAllOnceTaskChecks(true);
 });
 
-clearAllOnceTasksButtonElement.addEventListener("click", () => {
+addClickEvent(clearAllOnceTasksButtonElement, () => {
   setAllOnceTaskChecks(false);
 });
 
-startOnceTasksButtonElement.addEventListener("click", async () => {
+addClickEvent(startOnceTasksButtonElement, async () => {
   const selectedTasks = getCheckedOnceTasks();
 
   hideError(onceListErrorAreaElement);
@@ -251,7 +253,7 @@ startOnceTasksButtonElement.addEventListener("click", async () => {
   showOnceTaskRunStep();
 });
 
-openOnceTaskUrlButtonElement.addEventListener("click", () => {
+addClickEvent(openOnceTaskUrlButtonElement, () => {
   const task = state.selectedOnceTasks[state.currentOnceTaskIndex];
 
   if (!task || !task.url) {
@@ -259,11 +261,14 @@ openOnceTaskUrlButtonElement.addEventListener("click", () => {
     return;
   }
 
-  onceTaskNextButtonElement.classList.remove("hidden");
+  if (onceTaskNextButtonElement) {
+    onceTaskNextButtonElement.classList.remove("hidden");
+  }
+
   location.href = task.url;
 });
 
-onceTaskNextButtonElement.addEventListener("click", async () => {
+addClickEvent(onceTaskNextButtonElement, async () => {
   state.currentOnceTaskIndex += 1;
 
   if (state.currentOnceTaskIndex >= state.selectedOnceTasks.length) {
@@ -274,12 +279,12 @@ onceTaskNextButtonElement.addEventListener("click", async () => {
   renderCurrentOnceTask();
 });
 
-toggleOtherRequestSongsButtonElement.addEventListener("click", () => {
+addClickEvent(toggleOtherRequestSongsButtonElement, () => {
   state.isOtherRequestSongsOpen = !state.isOtherRequestSongsOpen;
   updateOtherRequestSongsAccordion();
 });
 
-openRequestSongButtonElement.addEventListener("click", () => {
+addClickEvent(openRequestSongButtonElement, () => {
   if (!state.selectedRequestSong) {
     showError(requestSongErrorAreaElement, "リクエスト曲が選択されていません。");
     return;
@@ -287,16 +292,19 @@ openRequestSongButtonElement.addEventListener("click", () => {
 
   const requestUrl = buildRequestSongUrl(state.selectedRequestSong.url);
 
-  requestSongNextButtonElement.classList.remove("hidden");
+  if (requestSongNextButtonElement) {
+    requestSongNextButtonElement.classList.remove("hidden");
+  }
+
   location.href = requestUrl;
 });
 
-requestSongNextButtonElement.addEventListener("click", async () => {
+addClickEvent(requestSongNextButtonElement, async () => {
   await showDailyTaskStep();
 });
 
-copyDailyTaskTextButtonElement.addEventListener("click", async () => {
-  const text = dailyTaskCopyTextElement.textContent;
+addClickEvent(copyDailyTaskTextButtonElement, async () => {
+  const text = dailyTaskCopyTextElement ? dailyTaskCopyTextElement.textContent : "";
 
   if (!text) {
     showError(dailyTaskErrorAreaElement, "コピーする文言がありません。");
@@ -306,14 +314,17 @@ copyDailyTaskTextButtonElement.addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(text);
     hideError(dailyTaskErrorAreaElement);
-    copyDailyTaskTextButtonElement.textContent = "コピーしました";
+
+    if (copyDailyTaskTextButtonElement) {
+      copyDailyTaskTextButtonElement.textContent = "コピーしました";
+    }
   } catch (error) {
     console.error(error);
     showError(dailyTaskErrorAreaElement, "コピーに失敗しました。長押しでコピーしてください。");
   }
 });
 
-openDailyTaskUrlButtonElement.addEventListener("click", async () => {
+addClickEvent(openDailyTaskUrlButtonElement, async () => {
   const item = getCurrentDailyTaskItem();
   const itemUrl = getDailyTaskItemUrl(item);
 
@@ -339,11 +350,14 @@ openDailyTaskUrlButtonElement.addEventListener("click", async () => {
 
   recordCompletedDailyItem(item);
 
-  dailyTaskNextButtonElement.classList.remove("hidden");
+  if (dailyTaskNextButtonElement) {
+    dailyTaskNextButtonElement.classList.remove("hidden");
+  }
+
   location.href = itemUrl;
 });
 
-dailyTaskNextButtonElement.addEventListener("click", () => {
+addClickEvent(dailyTaskNextButtonElement, () => {
   const item = getCurrentDailyTaskItem();
 
   if (item && !getDailyTaskItemUrl(item)) {
@@ -362,7 +376,7 @@ dailyTaskNextButtonElement.addEventListener("click", () => {
   renderCurrentDailyTask();
 });
 
-continueDailyGroupButtonElement.addEventListener("click", () => {
+addClickEvent(continueDailyGroupButtonElement, () => {
   state.currentDailyGroupIndex += 1;
   state.currentDailyTaskIndex = 0;
 
@@ -374,29 +388,29 @@ continueDailyGroupButtonElement.addEventListener("click", () => {
   showDailyTaskStep(false);
 });
 
-stopDailyGroupButtonElement.addEventListener("click", () => {
+addClickEvent(stopDailyGroupButtonElement, () => {
   showPostAskStep();
 });
 
-makePostButtonElement.addEventListener("click", () => {
+addClickEvent(makePostButtonElement, () => {
   showPostEditStep();
 });
 
-skipPostButtonElement.addEventListener("click", () => {
+addClickEvent(skipPostButtonElement, () => {
   showYoutubeAskStep();
 });
 
-checkAllPostItemsButtonElement.addEventListener("click", () => {
+addClickEvent(checkAllPostItemsButtonElement, () => {
   setAllPostItemChecks(true);
   updateGeneratedPostText();
 });
 
-clearAllPostItemsButtonElement.addEventListener("click", () => {
+addClickEvent(clearAllPostItemsButtonElement, () => {
   setAllPostItemChecks(false);
   updateGeneratedPostText();
 });
 
-copyPostTextButtonElement.addEventListener("click", async () => {
+addClickEvent(copyPostTextButtonElement, async () => {
   const postText = getGeneratedPostText();
 
   if (!postText) {
@@ -406,7 +420,11 @@ copyPostTextButtonElement.addEventListener("click", async () => {
 
   try {
     await navigator.clipboard.writeText(postText);
-    copyPostTextButtonElement.textContent = "コピーしました";
+
+    if (copyPostTextButtonElement) {
+      copyPostTextButtonElement.textContent = "コピーしました";
+    }
+
     hideError(postErrorAreaElement);
   } catch (error) {
     console.error(error);
@@ -414,7 +432,7 @@ copyPostTextButtonElement.addEventListener("click", async () => {
   }
 });
 
-openXPostButtonElement.addEventListener("click", () => {
+addClickEvent(openXPostButtonElement, () => {
   const postText = getGeneratedPostText();
 
   if (!postText) {
@@ -426,7 +444,7 @@ openXPostButtonElement.addEventListener("click", () => {
   location.href = url;
 });
 
-openThreadsButtonElement.addEventListener("click", async () => {
+addClickEvent(openThreadsButtonElement, async () => {
   const postText = getGeneratedPostText();
 
   if (!postText) {
@@ -444,56 +462,23 @@ openThreadsButtonElement.addEventListener("click", async () => {
   }
 });
 
-postNextButtonElement.addEventListener("click", () => {
+addClickEvent(postNextButtonElement, () => {
   showYoutubeAskStep();
 });
 
-watchYoutubeButtonElement.addEventListener("click", async () => {
+addClickEvent(watchYoutubeButtonElement, async () => {
   await showYoutubeSelectStep();
 });
 
-finishWithoutYoutubeButtonElement.addEventListener("click", () => {
+addClickEvent(finishWithoutYoutubeButtonElement, () => {
   showPlaceholderNextStep("お疲れ様さまでした☺️Big Love💚");
 });
 
-finishFromYoutubeButtonElement.addEventListener("click", () => {
+addClickEvent(finishFromYoutubeButtonElement, () => {
   showPlaceholderNextStep("お疲れ様さまでした☺️Big Love💚");
 });
 
-shareToXButtonElement.addEventListener("click", () => {
-  const shareText = buildAppShareText();
-  const url = X_POST_URL + encodeURIComponent(shareText);
-
-  location.href = url;
-});
-
-shareToThreadsButtonElement.addEventListener("click", async () => {
-  const shareText = buildAppShareText();
-
-  try {
-    await navigator.clipboard.writeText(shareText);
-    hideError(shareErrorAreaElement);
-    location.href = THREADS_URL;
-  } catch (error) {
-    console.error(error);
-    showError(shareErrorAreaElement, "コピーに失敗しました。共有文を長押しでコピーしてください。");
-  }
-});
-
-copyShareTextButtonElement.addEventListener("click", async () => {
-  const shareText = buildAppShareText();
-
-  try {
-    await navigator.clipboard.writeText(shareText);
-    copyShareTextButtonElement.textContent = "コピーしました";
-    hideError(shareErrorAreaElement);
-  } catch (error) {
-    console.error(error);
-    showError(shareErrorAreaElement, "コピーに失敗しました。共有文を長押しでコピーしてください。");
-  }
-});
-
-backHomeButtonElement.addEventListener("click", () => {
+addClickEvent(backHomeButtonElement, () => {
   state.stepHistory = [];
   showOnlyStep(homeStepElement, { recordHistory: false });
 });
@@ -672,6 +657,10 @@ async function loadYoutubeMvs() {
 }
 
 function renderHomeOnceTaskList(tasks) {
+  if (!homeOnceTaskListElement) {
+    return;
+  }
+
   homeOnceTaskListElement.innerHTML = "";
 
   if (!tasks || tasks.length === 0) {
@@ -688,6 +677,10 @@ function renderHomeOnceTaskList(tasks) {
 }
 
 function renderHomeInfoList(items) {
+  if (!homeInfoListElement) {
+    return;
+  }
+
   homeInfoListElement.innerHTML = "";
 
   if (!items || items.length === 0) {
@@ -719,6 +712,10 @@ function renderHomeInfoList(items) {
 }
 
 function renderSpotifySongList(container, songs) {
+  if (!container) {
+    return;
+  }
+
   container.innerHTML = "";
 
   songs.forEach((song) => {
@@ -736,6 +733,10 @@ function renderSpotifySongList(container, songs) {
 }
 
 function renderRequestSongList(container, songs) {
+  if (!container) {
+    return;
+  }
+
   container.innerHTML = "";
 
   songs.forEach((song) => {
@@ -753,6 +754,10 @@ function renderRequestSongList(container, songs) {
 }
 
 function renderYoutubeCardRow(container, items, type) {
+  if (!container) {
+    return;
+  }
+
   container.innerHTML = "";
 
   if (items.length === 0) {
@@ -797,10 +802,17 @@ function renderYoutubeCardRow(container, items, type) {
 function selectSong(song) {
   state.selectedSong = song;
 
-  selectedSongNameElement.textContent = song.name;
-  selectedAreaElement.classList.remove("hidden");
+  if (selectedSongNameElement) {
+    selectedSongNameElement.textContent = song.name;
+  }
 
-  spotifyNextButtonElement.classList.add("hidden");
+  if (selectedAreaElement) {
+    selectedAreaElement.classList.remove("hidden");
+  }
+
+  if (spotifyNextButtonElement) {
+    spotifyNextButtonElement.classList.add("hidden");
+  }
 
   updateSelectedButtonStyle(".spotify-song-button", song);
   hideError(spotifyErrorAreaElement);
@@ -809,10 +821,17 @@ function selectSong(song) {
 function selectRequestSong(song) {
   state.selectedRequestSong = song;
 
-  selectedRequestSongNameElement.textContent = song.name;
-  selectedRequestSongAreaElement.classList.remove("hidden");
+  if (selectedRequestSongNameElement) {
+    selectedRequestSongNameElement.textContent = song.name;
+  }
 
-  requestSongNextButtonElement.classList.add("hidden");
+  if (selectedRequestSongAreaElement) {
+    selectedRequestSongAreaElement.classList.remove("hidden");
+  }
+
+  if (requestSongNextButtonElement) {
+    requestSongNextButtonElement.classList.add("hidden");
+  }
 
   updateSelectedButtonStyle(".request-song-button", song);
   hideError(requestSongErrorAreaElement);
@@ -827,13 +846,23 @@ function updateSelectedButtonStyle(selector, selectedSong) {
 }
 
 function updateOtherSongsAccordion() {
-  otherSongsWrapperElement.classList.toggle("hidden", !state.isOtherSongsOpen);
-  toggleOtherSongsIconElement.textContent = state.isOtherSongsOpen ? "－" : "＋";
+  if (otherSongsWrapperElement) {
+    otherSongsWrapperElement.classList.toggle("hidden", !state.isOtherSongsOpen);
+  }
+
+  if (toggleOtherSongsIconElement) {
+    toggleOtherSongsIconElement.textContent = state.isOtherSongsOpen ? "－" : "＋";
+  }
 }
 
 function updateOtherRequestSongsAccordion() {
-  otherRequestSongsWrapperElement.classList.toggle("hidden", !state.isOtherRequestSongsOpen);
-  toggleOtherRequestSongsIconElement.textContent = state.isOtherRequestSongsOpen ? "－" : "＋";
+  if (otherRequestSongsWrapperElement) {
+    otherRequestSongsWrapperElement.classList.toggle("hidden", !state.isOtherRequestSongsOpen);
+  }
+
+  if (toggleOtherRequestSongsIconElement) {
+    toggleOtherRequestSongsIconElement.textContent = state.isOtherRequestSongsOpen ? "－" : "＋";
+  }
 }
 
 async function showOnceListSelectStep() {
@@ -854,6 +883,10 @@ async function showOnceListSelectStep() {
 }
 
 function renderOnceTaskCheckList(tasks) {
+  if (!onceTaskListElement) {
+    return;
+  }
+
   onceTaskListElement.innerHTML = "";
 
   if (tasks.length === 0) {
@@ -885,6 +918,10 @@ function renderOnceTaskCheckList(tasks) {
 }
 
 function setAllOnceTaskChecks(checked) {
+  if (!onceTaskListElement) {
+    return;
+  }
+
   const checkboxes = onceTaskListElement.querySelectorAll('input[type="checkbox"]');
 
   checkboxes.forEach((checkbox) => {
@@ -902,6 +939,10 @@ function setAllOnceTaskChecks(checked) {
 }
 
 function getCheckedOnceTasks() {
+  if (!onceTaskListElement) {
+    return [];
+  }
+
   const checkboxes = onceTaskListElement.querySelectorAll('input[type="checkbox"]');
   const selectedTasks = [];
 
@@ -931,23 +972,40 @@ function renderCurrentOnceTask() {
   const totalNumber = state.selectedOnceTasks.length;
 
   hideError(onceTaskRunErrorAreaElement);
-  onceTaskNextButtonElement.classList.add("hidden");
+
+  if (onceTaskNextButtonElement) {
+    onceTaskNextButtonElement.classList.add("hidden");
+  }
 
   if (!task) {
     showRequestSongStep();
     return;
   }
 
-  onceTaskProgressElement.textContent = `${currentNumber} / ${totalNumber}`;
-  onceTaskNameElement.textContent = task.name;
+  if (onceTaskProgressElement) {
+    onceTaskProgressElement.textContent = `${currentNumber} / ${totalNumber}`;
+  }
 
-  onceTaskMessageAreaElement.textContent = buildOnceTaskMessage(task);
+  if (onceTaskNameElement) {
+    onceTaskNameElement.textContent = task.name;
+  }
+
+  if (onceTaskMessageAreaElement) {
+    onceTaskMessageAreaElement.textContent = buildOnceTaskMessage(task);
+  }
 
   if (task.url) {
-    openOnceTaskUrlButtonElement.classList.remove("hidden");
+    if (openOnceTaskUrlButtonElement) {
+      openOnceTaskUrlButtonElement.classList.remove("hidden");
+    }
   } else {
-    openOnceTaskUrlButtonElement.classList.add("hidden");
-    onceTaskNextButtonElement.classList.remove("hidden");
+    if (openOnceTaskUrlButtonElement) {
+      openOnceTaskUrlButtonElement.classList.add("hidden");
+    }
+
+    if (onceTaskNextButtonElement) {
+      onceTaskNextButtonElement.classList.remove("hidden");
+    }
   }
 }
 
@@ -993,11 +1051,11 @@ async function showRequestSongStep() {
     renderRequestSongList(recommendedRequestSongsElement, recommendedRequestSongs);
     renderRequestSongList(otherRequestSongsElement, otherRequestSongs);
 
-    if (recommendedRequestSongs.length === 0) {
+    if (recommendedRequestSongs.length === 0 && recommendedRequestSongsElement) {
       recommendedRequestSongsElement.innerHTML = '<p class="empty-text">おすすめ曲はありません。</p>';
     }
 
-    if (otherRequestSongs.length === 0) {
+    if (otherRequestSongs.length === 0 && otherRequestSongsElement) {
       otherRequestSongsElement.innerHTML = '<p class="empty-text">その他の曲はありません。</p>';
     }
 
@@ -1040,8 +1098,14 @@ function renderCurrentDailyTask() {
   const item = getCurrentDailyTaskItem();
 
   hideError(dailyTaskErrorAreaElement);
-  dailyTaskNextButtonElement.classList.add("hidden");
-  copyDailyTaskTextButtonElement.textContent = "コピーする";
+
+  if (dailyTaskNextButtonElement) {
+    dailyTaskNextButtonElement.classList.add("hidden");
+  }
+
+  if (copyDailyTaskTextButtonElement) {
+    copyDailyTaskTextButtonElement.textContent = "コピーする";
+  }
 
   if (!group || !item) {
     showPostAskStep();
@@ -1052,27 +1116,55 @@ function renderCurrentDailyTask() {
   const itemName = getDailyTaskItemName(item);
   const itemUrl = getDailyTaskItemUrl(item);
 
-  dailyTaskHeaderDescriptionElement.textContent = buildDailyTaskHeaderDescription();
-  dailyTaskGroupNameElement.textContent = group.listName;
-  dailyTaskProgressElement.textContent = `${state.currentDailyTaskIndex + 1} / ${items.length}`;
-  dailyTaskNameElement.textContent = itemName;
+  if (dailyTaskHeaderDescriptionElement) {
+    dailyTaskHeaderDescriptionElement.textContent = buildDailyTaskHeaderDescription();
+  }
 
-  dailyTaskCommentAreaElement.textContent = item.comment || "ページを開いてタスクを完了してください。";
+  if (dailyTaskGroupNameElement) {
+    dailyTaskGroupNameElement.textContent = group.listName;
+  }
+
+  if (dailyTaskProgressElement) {
+    dailyTaskProgressElement.textContent = `${state.currentDailyTaskIndex + 1} / ${items.length}`;
+  }
+
+  if (dailyTaskNameElement) {
+    dailyTaskNameElement.textContent = itemName;
+  }
+
+  if (dailyTaskCommentAreaElement) {
+    dailyTaskCommentAreaElement.textContent = item.comment || "ページを開いてタスクを完了してください。";
+  }
 
   renderDailyTaskCopyArea(item);
 
   if (itemUrl) {
-    openDailyTaskUrlButtonElement.classList.remove("hidden");
+    if (openDailyTaskUrlButtonElement) {
+      openDailyTaskUrlButtonElement.classList.remove("hidden");
+    }
   } else {
-    openDailyTaskUrlButtonElement.classList.add("hidden");
-    dailyTaskNextButtonElement.classList.remove("hidden");
+    if (openDailyTaskUrlButtonElement) {
+      openDailyTaskUrlButtonElement.classList.add("hidden");
+    }
+
+    if (dailyTaskNextButtonElement) {
+      dailyTaskNextButtonElement.classList.remove("hidden");
+    }
   }
 }
 
 function renderDailyTaskCopyArea(item) {
-  dailyTaskCopyAreaElement.classList.add("hidden");
-  dailyTaskCopyTextElement.textContent = "";
-  copyDailyTaskTextButtonElement.textContent = "コピーする";
+  if (dailyTaskCopyAreaElement) {
+    dailyTaskCopyAreaElement.classList.add("hidden");
+  }
+
+  if (dailyTaskCopyTextElement) {
+    dailyTaskCopyTextElement.textContent = "";
+  }
+
+  if (copyDailyTaskTextButtonElement) {
+    copyDailyTaskTextButtonElement.textContent = "コピーする";
+  }
 }
 
 function buildDailyTaskCopyText(item) {
@@ -1111,7 +1203,10 @@ function showDailyGroupEndStep() {
     return;
   }
 
-  endedGroupNameElement.textContent = `「${group.listName}」はここまで！`;
+  if (endedGroupNameElement) {
+    endedGroupNameElement.textContent = `「${group.listName}」はここまで！`;
+  }
+
   showOnlyStep(dailyGroupEndStepElement);
 }
 
@@ -1202,6 +1297,10 @@ function buildPostItems() {
 }
 
 function renderPostItemList(items) {
+  if (!postItemListElement) {
+    return;
+  }
+
   postItemListElement.innerHTML = "";
 
   if (items.length === 0) {
@@ -1245,22 +1344,30 @@ function setAllPostItemChecks(checked) {
 function updateGeneratedPostText() {
   const postText = buildPostText();
 
-  generatedPostTextElement.textContent = postText;
+  if (generatedPostTextElement) {
+    generatedPostTextElement.textContent = postText;
+  }
 
   const textLength = postText.length;
   const linkCount = countLinks(postText);
 
-  postTextCountElement.textContent = `X文字数目安: ${textLength} / 280`;
-  postLinkCountElement.textContent = `Threadsリンク数: ${linkCount} / 5`;
+  if (postTextCountElement) {
+    postTextCountElement.textContent = `X文字数目安: ${textLength} / 280`;
+    postTextCountElement.classList.toggle("warning-text", textLength > 280);
+  }
 
-  postTextCountElement.classList.toggle("warning-text", textLength > 280);
-  postLinkCountElement.classList.toggle("warning-text", linkCount > 5);
+  if (postLinkCountElement) {
+    postLinkCountElement.textContent = `Threadsリンク数: ${linkCount} / 5`;
+    postLinkCountElement.classList.toggle("warning-text", linkCount > 5);
+  }
 
-  copyPostTextButtonElement.textContent = "コピーする";
+  if (copyPostTextButtonElement) {
+    copyPostTextButtonElement.textContent = "コピーする";
+  }
 }
 
 function getGeneratedPostText() {
-  return generatedPostTextElement.textContent || "";
+  return generatedPostTextElement ? generatedPostTextElement.textContent || "" : "";
 }
 
 function buildPostText() {
@@ -1374,13 +1481,6 @@ function extractYoutubeVideoId(url) {
   }
 }
 
-function buildAppShareText() {
-  return [
-    "secondz Daily Routine⌛",
-    getAppShareUrl(),
-  ].join("\n");
-}
-
 function getAppShareUrl() {
   return `${location.origin}${location.pathname}`;
 }
@@ -1461,7 +1561,10 @@ function getPostSpotifyUrl() {
 }
 
 function showPlaceholderNextStep(message) {
-  placeholderMessageElement.textContent = message;
+  if (placeholderMessageElement) {
+    placeholderMessageElement.textContent = message;
+  }
+
   showOnlyStep(placeholderNextStepElement);
 }
 
