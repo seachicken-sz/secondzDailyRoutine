@@ -593,11 +593,7 @@ async function loadHomeInfoList() {
   }
 
   return informationList.filter((item) => {
-    return item
-      && item.name
-      && item.from
-      && item.to
-      && isWithinPeriod(item.from, item.to);
+    return item && item.name && isWithinPeriod(item.from, item.to);
   });
 }
 
@@ -708,7 +704,8 @@ function renderHomeInfoList(items) {
   }
 
   items.forEach((item) => {
-    const text = `${formatTaskLimitRange(item.from, item.to)} ${item.name}`;
+    const dateLabel = formatHomeInfoDateLabel(item);
+    const text = dateLabel ? `${dateLabel} ${item.name}` : item.name;
     const hasUrl = item.url && String(item.url).trim() !== "";
 
     if (hasUrl) {
@@ -1217,11 +1214,11 @@ function renderPostItemList(items) {
 
     const name = document.createElement("span");
     name.className = "check-item-name";
-    name.textContent = item.checked ? "✅ " + item.name : item.name;
+    name.textContent = item.name;
 
     checkbox.addEventListener("change", () => {
       item.checked = checkbox.checked;
-      name.textContent = checkbox.checked ? "✅ " + item.name : item.name;
+      name.textContent = item.name;
       updateGeneratedPostText();
     });
 
@@ -1230,7 +1227,6 @@ function renderPostItemList(items) {
     postItemListElement.appendChild(label);
   });
 }
-
 function setAllPostItemChecks(checked) {
   state.postItems.forEach((item) => {
     item.checked = checked;
@@ -1635,6 +1631,39 @@ function formatTaskLimitRange(fromValue, toValue) {
   }
 
   return `${formatMonthDay(fromDate)}〜${formatMonthDay(toDate)}`;
+}
+
+function formatHomeInfoDateLabel(item) {
+  if (!item) {
+    return "";
+  }
+
+  const releaseDate = parseDateTime(item.release);
+
+  if (releaseDate) {
+    return formatMonthDay(releaseDate);
+  }
+
+  return formatHomeInfoPeriodLabel(item.from, item.to);
+}
+
+function formatHomeInfoPeriodLabel(fromValue, toValue) {
+  const fromDate = parseDateTime(fromValue);
+  const toDate = parseDateTime(toValue);
+
+  if (fromDate && toDate) {
+    return `${formatMonthDay(fromDate)}〜${formatMonthDay(toDate)}`;
+  }
+
+  if (fromDate) {
+    return `${formatMonthDay(fromDate)}〜`;
+  }
+
+  if (toDate) {
+    return `〜${formatMonthDay(toDate)}`;
+  }
+
+  return "";
 }
 
 function showError(element, message) {
