@@ -745,9 +745,13 @@ function renderYoutubeCardRow(container, items, type) {
     name.textContent = item.name;
     card.appendChild(name);
 
-    card.addEventListener("click", () => {
+  card.addEventListener("click", () => {
+    showPlaceholderNextStep("お疲れ様さまでした☺️Big Love");
+  
+    setTimeout(() => {
       location.href = item.url;
-    });
+    }, 100);
+  });
 
     container.appendChild(card);
   });
@@ -906,10 +910,6 @@ function renderCurrentOnceTask() {
 
   hideError(onceTaskRunErrorAreaElement);
 
-  if (onceTaskNextButtonElement) {
-    onceTaskNextButtonElement.classList.add("hidden");
-  }
-
   if (!task) {
     showRequestSongStep();
     return;
@@ -935,10 +935,11 @@ function renderCurrentOnceTask() {
     if (openOnceTaskUrlButtonElement) {
       openOnceTaskUrlButtonElement.classList.add("hidden");
     }
+  }
 
-    if (onceTaskNextButtonElement) {
-      onceTaskNextButtonElement.classList.remove("hidden");
-    }
+  // 期間限定タスクは、ページを開かなくても次へ進めるようにする
+  if (onceTaskNextButtonElement) {
+    onceTaskNextButtonElement.classList.remove("hidden");
   }
 }
 
