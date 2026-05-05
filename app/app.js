@@ -259,12 +259,7 @@ openOnceTaskUrlButtonElement.addEventListener("click", () => {
     return;
   }
 
-  if (task["move-flag"] === true) {
-    onceTaskNextButtonElement.classList.remove("hidden");
-    location.href = task.url;
-    return;
-  }
-
+  onceTaskNextButtonElement.classList.remove("hidden");
   location.href = task.url;
 });
 
