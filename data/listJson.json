@@ -27,7 +27,7 @@
           "url":"https://www.nack5.co.jp/message/270/",
           "request-type":"music",
           "request-input":"タイトル",
-          "comment":"ページが開くまで少し時間がかかります。少し待ってね。",
+          "comment":"ページが開くまで少し時間がかかります。入力できないときは少し待ってね。",
           "input-flag":true,
           "alert-flag":false
         },
@@ -51,7 +51,7 @@
         "url":"https://www.lawson.co.jp/lab/cshotstation/art/1308047_7551.html",
         "request-type":"music",
         "request-input":"■曲名",
-        "comment":"「>>リクエストの登録はこちら！」をタップしてフォームを開いて■曲名にペースト！",
+        "comment":"「>>リクエストの登録はこちら！」をタップしてフォームを開いて「■曲名」にペースト！",
         "input-flag":true,
         "alert-flag":false
       },
@@ -61,7 +61,7 @@
         "url":"https://fmfukuoka.co.jp/message/?m=reform",
         "request-type":"music-slash-artist",
         "request-input":"リクエスト(曲名／アーティスト名)",
-        "comment":"番組名は「BUTCH COUNTDOWN RADIO」を選択してください！リクエスト欄にペースト！",
+        "comment":"番組名は「BUTCH COUNTDOWN RADIO」を選択！リクエスト欄にペースト！",
         "input-flag":true,
         "alert-flag":true
       },
