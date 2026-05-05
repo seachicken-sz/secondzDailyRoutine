@@ -392,6 +392,24 @@ h1 {
   font-size: 18px;
   font-weight: 800;
 }
+.ruby-h {
+  position: relative;
+  display: inline-block;
+  line-height: 1.2;
+  padding-top: 0.9em;
+}
+
+.ruby-h span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #00a7c8;
+  font-size: 0.35em;
+  line-height: 1;
+  white-space: nowrap;
+  font-weight: 600;
+}
 
 .home-now-request-area {
   height: 25%;
