@@ -8,19 +8,28 @@
 </head>
 <body>
   <main class="app">
-  <button id="backStepButton" class="back-step-button hidden" type="button">
-    ← 戻る
-  </button>
-  <section id="homeStep" class="step-screen">
-<header class="home-header">
-  <div class="home-logo-area">
-    <h1>secondz Daily Routine⌛</h1>
-  </div>
-</header>
+    <button id="backStepButton" class="back-step-button hidden" type="button">
+      ← 戻る
+    </button>
 
-      <section class="home-limited-area">
-        <h2>今はこれやろ</h2>
-        <div id="homeOnceTaskList" class="home-once-task-list"></div>
+    <section id="homeStep" class="step-screen">
+      <header class="home-header">
+        <div class="home-logo-area">
+          <!-- ロゴ画像に差し替える場合は下のimgを使う -->
+          <!-- <img src="./icons/logo.png" alt="secondz Daily Routine" class="home-logo-image"> -->
+          <p class="step-label">HOME</p>
+          <h1>secondz Daily Routine⌛</h1>
+        </div>
+      </header>
+
+      <section class="home-card home-now-request-area">
+        <h2>Now Request</h2>
+        <div id="homeOnceTaskList" class="home-list-box"></div>
+      </section>
+
+      <section class="home-card home-information-area">
+        <h2>Information</h2>
+        <div id="homeInfoList" class="home-list-box"></div>
       </section>
 
       <section class="home-action-area">
@@ -37,11 +46,11 @@
     <section id="spotifyStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">STEP 1</p>
-        <h1>今日のBGM🎧</h1>
+        <h1>今日のBGM</h1>
         <p class="description">
-          Spotifyで<strong>１日１曲</strong>聞くと月間アクティブユーザーに貢献👍<br>
-          聴きながらデイリータスク終わらせちゃお😊<br>
-          <strong>再生されたらこのアプリに戻ってきてね</strong>
+          Spotifyで<strong>１日１曲</strong>聞くと月間アクティブユーザーに貢献<br>
+          聴きながらデイリータスク終わらせちゃお<br>
+          再生されたらこのアプリに戻ってきてね
         </p>
       </header>
 
@@ -62,6 +71,7 @@
 
       <section class="scroll-area">
         <section class="song-section">
+          <h2>おすすめ</h2>
           <div id="recommendedSongs" class="song-list"></div>
         </section>
 
@@ -74,11 +84,12 @@
           <div id="otherSongsWrapper" class="accordion-content hidden">
             <div id="otherSongs" class="song-list"></div>
           </div>
-          <section class="bottom-action-area spotify-skip-area">
+        </section>
+
+        <section class="bottom-action-area spotify-skip-area">
           <button id="skipSpotifyButton" class="secondary-button no-margin-button">
             BGMなし
           </button>
-        </section>
         </section>
       </section>
     </section>
@@ -119,15 +130,12 @@
     <section id="onceTaskRunStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">STEP 2</p>
-        <h1>これ終わってる？
-        </h1>
+        <h1>これ終わってる？</h1>
         <p id="onceTaskProgress" class="description"></p>
-        <p class="description">
-          アプリ遷移を伴う場合、(Spotify、YouTubeなど)終わったらこのアプリに戻ってきてね！
-        </p>
       </header>
 
       <section class="task-card">
+        <p class="selected-label">タスク</p>
         <h2 id="onceTaskName" class="task-title"></h2>
 
         <div id="onceTaskMessageArea" class="notice-box"></div>
@@ -147,10 +155,9 @@
     <section id="requestSongStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">STEP 3</p>
-        <h1>本日のリクエスト曲🎶</h1>
+        <h1>本日のリクエスト曲</h1>
         <p class="description">
-          今日は何リクエストする？<br>
-        USEN推し活リクエストが済んだら左上の❌で閉じて次へ進んでね！
+          今日は何リクエストする？
         </p>
       </header>
 
@@ -171,6 +178,7 @@
 
       <section class="scroll-area">
         <section class="song-section">
+          <h2>おすすめ</h2>
           <div id="recommendedRequestSongs" class="song-list"></div>
         </section>
 
@@ -190,13 +198,15 @@
     <section id="dailyTaskStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">STEP 4</p>
-        <h1>デイリータスク📅</h1>
+        <h1>デイリータスク</h1>
         <p id="dailyTaskHeaderDescription" class="description"></p>
       </header>
 
       <section class="task-card">
         <p id="dailyTaskGroupName" class="group-label"></p>
         <p id="dailyTaskProgress" class="description"></p>
+
+        <p class="selected-label">タスク</p>
         <h2 id="dailyTaskName" class="task-title"></h2>
 
         <div id="dailyTaskCommentArea" class="notice-box"></div>
@@ -225,7 +235,7 @@
     <section id="dailyGroupEndStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">STEP 4</p>
-        <h1>デイリータスク📅</h1>
+        <h1>デイリータスク</h1>
       </header>
 
       <section class="task-card">
@@ -265,7 +275,7 @@
     <section id="postEditStep" class="step-screen hidden">
       <header class="header">
         <p class="step-label">STEP 5</p>
-        <h1>ポスト文作成📝</h1>
+        <h1>ポスト文作成</h1>
         <p class="description">
           追加したい項目にチェックを入れてね！
         </p>
@@ -294,6 +304,7 @@
         </section>
 
         <section class="task-card">
+          <p class="selected-label">生成文</p>
           <div id="generatedPostText" class="copy-text"></div>
 
           <button id="copyPostTextButton" class="secondary-button">
@@ -364,47 +375,53 @@
       </section>
     </section>
 
-<section id="placeholderNextStep" class="step-screen hidden">
-  <header class="header">
-    <p class="step-label">FINISH</p>
-    <h1>完了⌛</h1>
-    <p id="placeholderMessage" class="description"></p>
-  </header>
-  <section class="task-card feedback-card">
+    <section id="placeholderNextStep" class="step-screen hidden">
+      <header class="header">
+        <p class="step-label">FINISH</p>
+        <h1>完了⌛</h1>
+        <p id="placeholderMessage" class="description"></p>
+      </header>
 
-    <p class="feedback-text">
-      「このリクエスト/投票も追加して欲しい」「こんな機能つけてくれたら嬉しい」「この再生リストも追加して」「エラーありました」等、ありましたら↓からお送りください。
-    </p>
+      <section class="task-card feedback-card">
+        <p class="feedback-text">
+          「このリクエスト/投票も追加して欲しい」「こんな機能つけてくれたら嬉しい」「エラーありました」等、ありましたら↓からお送りください。<br>
+          その他使用した感想もお待ちしてます。
+        </p>
 
-    <a href="https://mond.how/ja/tsunakan_r" target="_blank" rel="noopener noreferrer" class="primary-button feedback-link-button">追加リクエスト/エラー報告はこちら
-    </a>
+        <a
+          href="https://mond.how/ja/tsunakan_r"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="primary-button feedback-link-button"
+        >
+          追加リクエスト/エラー報告はこちら
+        </a>
+      </section>
 
-  </section>
+      <section class="task-card">
+        <h2 class="task-title">このツールを共有しますか？</h2>
 
-  <section class="task-card">
-    <h2 class="task-title">このツールを共有しますか？</h2>
+        <button id="shareToXButton" class="primary-button">
+          Xで共有する
+        </button>
 
-    <button id="shareToXButton" class="primary-button">
-      Xで共有する
-    </button>
+        <button id="shareToThreadsButton" class="secondary-button">
+          コピーしてスレッズを開く
+        </button>
 
-    <button id="shareToThreadsButton" class="secondary-button">
-      コピーしてスレッズを開く
-    </button>
+        <button id="copyShareTextButton" class="secondary-button">
+          コピーだけする
+        </button>
+      </section>
 
-    <button id="copyShareTextButton" class="secondary-button">
-      コピーだけする
-    </button>
-  </section>
+      <section id="shareErrorArea" class="error-area hidden"></section>
 
-  <section id="shareErrorArea" class="error-area hidden"></section>
-
-  <section class="bottom-action-area">
-    <button id="backHomeButton" class="secondary-button no-margin-button">
-      ホームに戻る
-    </button>
-  </section>
-</section>
+      <section class="task-card">
+        <button id="backHomeButton" class="secondary-button no-margin-button">
+          ホームに戻る
+        </button>
+      </section>
+    </section>
   </main>
 
   <div id="howToModal" class="modal-overlay hidden">
