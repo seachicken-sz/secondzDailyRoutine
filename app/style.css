@@ -617,6 +617,11 @@ h1 {
 
 .step-usage-button {
   margin-left: auto;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  color: #666;
+  padding: 6px 4px;
 }
 
 .text-link-row {
