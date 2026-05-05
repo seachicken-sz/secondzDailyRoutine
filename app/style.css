@@ -393,24 +393,10 @@ h1 {
   font-weight: 800;
 }
 
-.ruby-h ruby {
-  display: inline-flex;
-  flex-direction: column-reverse;
-  align-items: stretch;
-  line-height: 1.05;
-}
-
 .ruby-h rt {
-  display: block;
-  width: 100%;
   color: #00b7c2;
-  font-size: 0.35em;
-  line-height: 1;
-  text-align: justify;
-  text-align-last: justify;
-  white-space: nowrap;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  padding-bottom: 0.3rem;
+  letter-spacing: 0.18rem;
 }
 
 .home-now-request-area {
