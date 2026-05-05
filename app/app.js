@@ -1203,7 +1203,7 @@ function buildPostItems() {
   items.push({
     id: "app-share",
     name: "このツールをSNSにシェア",
-    postText: "🔧タムごとDaily",
+    postText: " #タムごとDaily",
     url: getAppShareUrl(),
     checked: false,
   });
