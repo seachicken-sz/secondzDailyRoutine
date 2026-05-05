@@ -593,7 +593,11 @@ async function loadHomeInfoList() {
   }
 
   return informationList.filter((item) => {
-    return item && item.name && item.from && item.to;
+    return item
+      && item.name
+      && item.from
+      && item.to
+      && isWithinPeriod(item.from, item.to);
   });
 }
 
