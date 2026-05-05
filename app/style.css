@@ -400,7 +400,7 @@ h1 {
 }
 
 .ruby-h span {
-  display: inline-block;
+  display: block;
   text-align:center;
   color: #00a7c8;
   font-size: 0.35em;
