@@ -1202,7 +1202,8 @@ function buildPostItems() {
 
   items.push({
     id: "app-share",
-    name: "⏱タムごとDaily",
+    name: "このツールをSNSにシェア",
+    postText: "🔧タムごとDaily",
     url: getAppShareUrl(),
     checked: false,
   });
@@ -1284,10 +1285,12 @@ function buildPostText() {
       return;
     }
 
+    const postText = item.postText || item.name;
+
     if (item.id === "spotify-bgm" || item.id === "app-share") {
-      lines.push(item.name);
+      lines.push(postText);
     } else {
-      lines.push(`✅${item.name}`);
+      lines.push(`✅${postText}`);
     }
 
     if (item.url) {
