@@ -36,7 +36,7 @@ body {
 
 .home-header {
   flex-shrink: 0;
-  min-height: 24%;
+  min-height: 20%;
   margin-bottom: 12px;
   display: flex;
   align-items: center;
@@ -59,12 +59,11 @@ body {
   line-height: 1.25;
 }
 
-.home-logo-image {
-  width: min(34vw, 150px);
+.home-logo-area img {
+  width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto 14px;
-  border-radius: 24px;
+  margin: 0 auto;
 }
 
 .step-label {
@@ -394,11 +393,11 @@ h1 {
 }
 
 .home-now-request-area {
-  height: 22%;
+  height: 25%;
 }
 
 .home-information-area {
-  height: 20%;
+  height: 25%;
 }
 
 .home-list-box {
