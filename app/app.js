@@ -461,11 +461,11 @@ watchYoutubeButtonElement.addEventListener("click", async () => {
 });
 
 finishWithoutYoutubeButtonElement.addEventListener("click", () => {
-  showPlaceholderNextStep("お疲れ様さまでした☺️Big Love");
+  showPlaceholderNextStep("お疲れ様さまでした☺️Big Love💚");
 });
 
 finishFromYoutubeButtonElement.addEventListener("click", () => {
-  showPlaceholderNextStep("お疲れ様さまでした☺️Big Love");
+  showPlaceholderNextStep("お疲れ様さまでした☺️Big Love💚");
 });
 
 shareToXButtonElement.addEventListener("click", () => {
@@ -694,7 +694,7 @@ function renderHomeOnceTaskList(tasks) {
   tasks.forEach((task) => {
     const item = document.createElement("div");
     item.className = "home-list-item";
-    item.textContent = `${formatTaskLimitDate(task.to)}まで ${task.name}`;
+    item.textContent = `～${formatTaskLimitDate(task.to)} ${task.name}`;
     homeOnceTaskListElement.appendChild(item);
   });
 }
