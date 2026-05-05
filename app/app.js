@@ -3,6 +3,7 @@ const USEN_REQUEST_BASE_URL = "https://usen.oshireq.com/song/";
 const X_POST_URL = "https://twitter.com/intent/tweet?text=";
 const THREADS_URL = "https://www.threads.net/";
 const YOUTUBE_THUMBNAIL_BASE_URL = "https://img.youtube.com/vi/";
+const TIMELESZ_SPOTIFY_ARTIST_URL = "https://open.spotify.com/intl-ja/artist/1ZFfhzyXjPvbzSYPlCIwo3";
 
 const state = {
   selectedSong: null,
@@ -1192,6 +1193,20 @@ function buildPostItems() {
     });
   });
 
+  items.push({
+    id: "spotify-bgm",
+    name: getPostSpotifyName(),
+    url: getPostSpotifyUrl(),
+    checked: false,
+  });
+
+  items.push({
+    id: "app-share",
+    name: "🔧DailyRoutine⌛",
+    url: getAppShareUrl(),
+    checked: false,
+  });
+
   return items;
 }
 
@@ -1227,6 +1242,7 @@ function renderPostItemList(items) {
     postItemListElement.appendChild(label);
   });
 }
+
 function setAllPostItemChecks(checked) {
   state.postItems.forEach((item) => {
     item.checked = checked;
@@ -1264,7 +1280,11 @@ function buildPostText() {
       return;
     }
 
-    lines.push(`✅${item.name}`);
+    if (item.id === "spotify-bgm" || item.id === "app-share") {
+      lines.push(item.name);
+    } else {
+      lines.push(`✅${item.name}`);
+    }
 
     if (item.url) {
       lines.push(item.url);
@@ -1431,6 +1451,22 @@ function getSelectedRequestSongUrl() {
   }
 
   return buildRequestSongUrl(state.selectedRequestSong.url);
+}
+
+function getPostSpotifyName() {
+  if (!state.selectedSong || !state.selectedSong.url) {
+    return "🎧timelesz - Spotify";
+  }
+
+  return "🎧本日のBGM";
+}
+
+function getPostSpotifyUrl() {
+  if (!state.selectedSong || !state.selectedSong.url) {
+    return TIMELESZ_SPOTIFY_ARTIST_URL;
+  }
+
+  return buildSpotifyUrl(state.selectedSong.url);
 }
 
 function showPlaceholderNextStep(message) {
