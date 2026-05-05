@@ -135,10 +135,6 @@ const youtubeMvRowElement = document.getElementById("youtubeMvRow");
 const finishFromYoutubeButtonElement = document.getElementById("finishFromYoutubeButton");
 
 const placeholderMessageElement = document.getElementById("placeholderMessage");
-const shareToXButtonElement = document.getElementById("shareToXButton");
-const shareToThreadsButtonElement = document.getElementById("shareToThreadsButton");
-const copyShareTextButtonElement = document.getElementById("copyShareTextButton");
-const shareErrorAreaElement = document.getElementById("shareErrorArea");
 const backHomeButtonElement = document.getElementById("backHomeButton");
 
 document.addEventListener("DOMContentLoaded", init);
