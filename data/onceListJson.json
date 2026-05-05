@@ -1,7 +1,20 @@
 [
+   {
+    "id":"once_maj_yahoo_2026",
+    "name": "MAJ特別賞🏆 Yahooでtimeleszを検索🔍",
+    "question": "Yahoo！でtimelesz検索しない？",
+    "yes": "やめとく",
+    "no": "する！",
+    "url": "https://search.yahoo.co.jp/search?&ei=UTF-8&p=timelesz",
+    "from": "202605010000",
+    "to": "202605312359",
+    "move-flag":false,
+    "alert-message":"",
+    "notice-message":"検索結果が見えたら投票完了✅ ✖で閉じてね！"
+  },
   {
     "id":"once_maj_listener_2026",
-    "name": "1日1回Spotify投票🏆",
+    "name": "MAJ 1日1回Spotify投票🏆",
     "question": "今日はMAJ投票済んだ？",
     "yes": "終わった！",
     "no": "まだかも",
@@ -9,7 +22,7 @@
     "from": "202605010000",
     "to": "202605202359",
     "move-flag":true,
-    "alert-message":"これからSpotifyに移動します。 投票が終わったら通知か 画面左上の「◀︎ショートカット」をタップしてショートカットアプリに戻ってください。",
+    "alert-message":"これからSpotifyに移動します。 投票が終わったら画面左上の「◀︎ショートカット(タムごとDaily)」を押して元のアプリに戻ってください。",
     "notice-message":"Rock this Partyを探して投票！ 投票が終わったら元のアプリに戻ってね！"
   },
   {
@@ -36,6 +49,6 @@
     "to": "202605312359",
     "move-flag":false,
     "alert-message":"",
-    "notice-message":"勝利くんに投票しよ😊"
+    "notice-message":"勝利くんに投票しよ😊 顔面国宝を殿堂入りさせよ🏆"
   }
 ]
