@@ -75,8 +75,6 @@ const otherSongsWrapperElement = document.getElementById("otherSongsWrapper");
 
 const onceTaskListElement = document.getElementById("onceTaskList");
 const onceListErrorAreaElement = document.getElementById("onceListErrorArea");
-const checkAllOnceTasksButtonElement = document.getElementById("checkAllOnceTasksButton");
-const clearAllOnceTasksButtonElement = document.getElementById("clearAllOnceTasksButton");
 const startOnceTasksButtonElement = document.getElementById("startOnceTasksButton");
 
 const onceTaskProgressElement = document.getElementById("onceTaskProgress");
@@ -102,9 +100,6 @@ const dailyTaskGroupNameElement = document.getElementById("dailyTaskGroupName");
 const dailyTaskProgressElement = document.getElementById("dailyTaskProgress");
 const dailyTaskNameElement = document.getElementById("dailyTaskName");
 const dailyTaskCommentAreaElement = document.getElementById("dailyTaskCommentArea");
-const dailyTaskCopyAreaElement = document.getElementById("dailyTaskCopyArea");
-const dailyTaskCopyTextElement = document.getElementById("dailyTaskCopyText");
-const copyDailyTaskTextButtonElement = document.getElementById("copyDailyTaskTextButton");
 const openDailyTaskUrlButtonElement = document.getElementById("openDailyTaskUrlButton");
 const dailyTaskNextButtonElement = document.getElementById("dailyTaskNextButton");
 const dailyTaskErrorAreaElement = document.getElementById("dailyTaskErrorArea");
@@ -116,8 +111,6 @@ const stopDailyGroupButtonElement = document.getElementById("stopDailyGroupButto
 const makePostButtonElement = document.getElementById("makePostButton");
 const skipPostButtonElement = document.getElementById("skipPostButton");
 const postErrorAreaElement = document.getElementById("postErrorArea");
-const checkAllPostItemsButtonElement = document.getElementById("checkAllPostItemsButton");
-const clearAllPostItemsButtonElement = document.getElementById("clearAllPostItemsButton");
 const postItemListElement = document.getElementById("postItemList");
 const postTextCountElement = document.getElementById("postTextCount");
 const postLinkCountElement = document.getElementById("postLinkCount");
@@ -227,14 +220,6 @@ addClickEvent(toggleOtherSongsButtonElement, () => {
   updateOtherSongsAccordion();
 });
 
-addClickEvent(checkAllOnceTasksButtonElement, () => {
-  setAllOnceTaskChecks(true);
-});
-
-addClickEvent(clearAllOnceTasksButtonElement, () => {
-  setAllOnceTaskChecks(false);
-});
-
 addClickEvent(startOnceTasksButtonElement, async () => {
   const selectedTasks = getCheckedOnceTasks();
 
@@ -301,27 +286,6 @@ addClickEvent(openRequestSongButtonElement, () => {
 
 addClickEvent(requestSongNextButtonElement, async () => {
   await showDailyTaskStep();
-});
-
-addClickEvent(copyDailyTaskTextButtonElement, async () => {
-  const text = dailyTaskCopyTextElement ? dailyTaskCopyTextElement.textContent : "";
-
-  if (!text) {
-    showError(dailyTaskErrorAreaElement, "コピーする文言がありません。");
-    return;
-  }
-
-  try {
-    await navigator.clipboard.writeText(text);
-    hideError(dailyTaskErrorAreaElement);
-
-    if (copyDailyTaskTextButtonElement) {
-      copyDailyTaskTextButtonElement.textContent = "コピーしました";
-    }
-  } catch (error) {
-    console.error(error);
-    showError(dailyTaskErrorAreaElement, "コピーに失敗しました。長押しでコピーしてください。");
-  }
 });
 
 addClickEvent(openDailyTaskUrlButtonElement, async () => {
@@ -398,16 +362,6 @@ addClickEvent(makePostButtonElement, () => {
 
 addClickEvent(skipPostButtonElement, () => {
   showYoutubeAskStep();
-});
-
-addClickEvent(checkAllPostItemsButtonElement, () => {
-  setAllPostItemChecks(true);
-  updateGeneratedPostText();
-});
-
-addClickEvent(clearAllPostItemsButtonElement, () => {
-  setAllPostItemChecks(false);
-  updateGeneratedPostText();
 });
 
 addClickEvent(copyPostTextButtonElement, async () => {
@@ -493,11 +447,11 @@ async function init() {
     renderSpotifySongList(recommendedSongsElement, recommendedSongs);
     renderSpotifySongList(otherSongsElement, otherSongs);
 
-    if (recommendedSongs.length === 0) {
+    if (recommendedSongs.length === 0 && recommendedSongsElement) {
       recommendedSongsElement.innerHTML = '<p class="empty-text">おすすめ曲はありません。</p>';
     }
 
-    if (otherSongs.length === 0) {
+    if (otherSongs.length === 0 && otherSongsElement) {
       otherSongsElement.innerHTML = '<p class="empty-text">その他の曲はありません。</p>';
     }
 
@@ -917,27 +871,6 @@ function renderOnceTaskCheckList(tasks) {
   });
 }
 
-function setAllOnceTaskChecks(checked) {
-  if (!onceTaskListElement) {
-    return;
-  }
-
-  const checkboxes = onceTaskListElement.querySelectorAll('input[type="checkbox"]');
-
-  checkboxes.forEach((checkbox) => {
-    checkbox.checked = checked;
-
-    const nameElement = checkbox.parentElement.querySelector(".check-item-name");
-    const task = state.onceTasks[Number(checkbox.dataset.index)];
-
-    if (nameElement && task) {
-      nameElement.textContent = task.name;
-    }
-  });
-
-  hideError(onceListErrorAreaElement);
-}
-
 function getCheckedOnceTasks() {
   if (!onceTaskListElement) {
     return [];
@@ -1103,10 +1036,6 @@ function renderCurrentDailyTask() {
     dailyTaskNextButtonElement.classList.add("hidden");
   }
 
-  if (copyDailyTaskTextButtonElement) {
-    copyDailyTaskTextButtonElement.textContent = "コピーする";
-  }
-
   if (!group || !item) {
     showPostAskStep();
     return;
@@ -1136,8 +1065,6 @@ function renderCurrentDailyTask() {
     dailyTaskCommentAreaElement.textContent = item.comment || "ページを開いてタスクを完了してください。";
   }
 
-  renderDailyTaskCopyArea(item);
-
   if (itemUrl) {
     if (openDailyTaskUrlButtonElement) {
       openDailyTaskUrlButtonElement.classList.remove("hidden");
@@ -1150,20 +1077,6 @@ function renderCurrentDailyTask() {
     if (dailyTaskNextButtonElement) {
       dailyTaskNextButtonElement.classList.remove("hidden");
     }
-  }
-}
-
-function renderDailyTaskCopyArea(item) {
-  if (dailyTaskCopyAreaElement) {
-    dailyTaskCopyAreaElement.classList.add("hidden");
-  }
-
-  if (dailyTaskCopyTextElement) {
-    dailyTaskCopyTextElement.textContent = "";
-  }
-
-  if (copyDailyTaskTextButtonElement) {
-    copyDailyTaskTextButtonElement.textContent = "コピーする";
   }
 }
 
@@ -1333,14 +1246,6 @@ function renderPostItemList(items) {
   });
 }
 
-function setAllPostItemChecks(checked) {
-  state.postItems.forEach((item) => {
-    item.checked = checked;
-  });
-
-  renderPostItemList(state.postItems);
-}
-
 function updateGeneratedPostText() {
   const postText = buildPostText();
 
@@ -1458,7 +1363,6 @@ function extractYoutubeVideoId(value) {
 
   const text = String(value).trim();
 
-  // videoIdだけ入っている場合
   if (/^[a-zA-Z0-9_-]{11}$/.test(text)) {
     return text;
   }
