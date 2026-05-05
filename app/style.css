@@ -400,15 +400,13 @@ h1 {
 }
 
 .ruby-h span {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  display: inline-block;
   color: #00a7c8;
   font-size: 0.35em;
   line-height: 1;
   white-space: nowrap;
   font-weight: 600;
+  letter-spacing: 0.2rem;
 }
 
 .home-now-request-area {
