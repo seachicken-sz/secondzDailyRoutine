@@ -589,6 +589,56 @@ h1 {
   font-weight: 700;
 }
 
+.step-top-action-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.back-step-button,
+.step-usage-button {
+  width: fit-content;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #333;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.step-usage-button {
+  margin-left: auto;
+}
+
+.text-link-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 12px auto 0;
+}
+
+.text-link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.modal-header h2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .hidden {
   display: none;
 }
