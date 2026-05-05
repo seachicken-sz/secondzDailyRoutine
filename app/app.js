@@ -1438,8 +1438,12 @@ function getYoutubeThumbnailUrl(item) {
     return item.thumbnail;
   }
 
-  const videoId = extractYoutubeVideoId(item.url);
+  const startMovieVideoId = extractYoutubeVideoId(item.startmovie);
+  if (startMovieVideoId) {
+    return `${YOUTUBE_THUMBNAIL_BASE_URL}${startMovieVideoId}/hqdefault.jpg`;
+  }
 
+  const videoId = extractYoutubeVideoId(item.url);
   if (!videoId) {
     return "";
   }
@@ -1447,16 +1451,23 @@ function getYoutubeThumbnailUrl(item) {
   return `${YOUTUBE_THUMBNAIL_BASE_URL}${videoId}/hqdefault.jpg`;
 }
 
-function extractYoutubeVideoId(url) {
-  if (!url) {
+function extractYoutubeVideoId(value) {
+  if (!value) {
     return "";
   }
 
+  const text = String(value).trim();
+
+  // videoIdだけ入っている場合
+  if (/^[a-zA-Z0-9_-]{11}$/.test(text)) {
+    return text;
+  }
+
   try {
-    const parsedUrl = new URL(url);
+    const parsedUrl = new URL(text);
 
     if (parsedUrl.hostname.includes("youtu.be")) {
-      return parsedUrl.pathname.replace("/", "");
+      return parsedUrl.pathname.replace("/", "").split("/")[0];
     }
 
     if (parsedUrl.searchParams.get("v")) {
@@ -1464,13 +1475,11 @@ function extractYoutubeVideoId(url) {
     }
 
     const shortsMatch = parsedUrl.pathname.match(/\/shorts\/([^/?]+)/);
-
     if (shortsMatch) {
       return shortsMatch[1];
     }
 
     const embedMatch = parsedUrl.pathname.match(/\/embed\/([^/?]+)/);
-
     if (embedMatch) {
       return embedMatch[1];
     }
