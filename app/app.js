@@ -1201,7 +1201,7 @@ function buildPostItems() {
 
   items.push({
     id: "app-share",
-    name: "🔧DailyRoutine⌛",
+    name: "⏱タムごとDaily",
     url: getAppShareUrl(),
     checked: false,
   });
