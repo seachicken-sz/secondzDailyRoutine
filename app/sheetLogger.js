@@ -1,8 +1,7 @@
 // app/sheetLogger.js
 
 // Google Apps Script のウェブアプリURL
-// 例: https://script.google.com/macros/s/xxxxxxxxxxxxxxxxxxxx/exec
-const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzkz6B1RBaxJJldU3ny1wIQzDv1D3DSLfepfYIAKATn1X03hkE9bE2l9Mozt-q9c1Yd/exec";
+const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbztgZylfO0v0zUYME1Gooiyvh3YI9zY5D_FX0_P5jpFBwn5lVWuWCYqq0Rak7Z62OwA/exec";
 
 // Apps Script側と同じ値にする
 const SHEET_TOKEN = "test-token";
@@ -18,7 +17,9 @@ const SHEET_TASK_TYPES = [
   "onceList",
   "list",
   "spotify",
-  "requestSong"
+  "requestSong",
+  "start",
+  "youtube"
 ];
 
 /**
@@ -96,6 +97,8 @@ function createFallbackClientId() {
  * onceList / list は item.itemId を使う想定
  * spotify は options.itemId に `sp_${trackId}` を渡す想定
  * requestSong は options.itemId に `rq_${trackId}` を渡す想定
+ * start は itemId: "start" を使う想定
+ * youtube は options.itemId に `yt_${id}` またはURL由来の値を渡す想定
  *
  * @param {Object} item 元データ
  * @param {Object} [options] 上書き用
@@ -128,6 +131,8 @@ function createSheetItem(item, options = {}) {
  * @param {Array<Object|null|undefined>} [groups.list]
  * @param {Array<Object|null|undefined>} [groups.spotify]
  * @param {Array<Object|null|undefined>} [groups.requestSong]
+ * @param {Array<Object|null|undefined>} [groups.start]
+ * @param {Array<Object|null|undefined>} [groups.youtube]
  * @returns {Object}
  */
 function createSheetPayload(groups) {
@@ -200,4 +205,89 @@ async function sendSheetLog(groups) {
   } catch (error) {
     return false;
   }
+}
+
+/**
+ * 開始ログを送信する
+ *
+ * @returns {Promise<boolean>}
+ */
+async function sendStartLog() {
+  const item = createSheetItem({}, {
+    itemId: "start",
+    title: "開始",
+    url: ""
+  });
+
+  return sendSheetLog({
+    start: [item]
+  });
+}
+
+/**
+ * YouTube移動ログを送信する
+ *
+ * @param {Object} item 移動先データ
+ * @param {string} [item.itemId]
+ * @param {string} [item.id]
+ * @param {string} [item.name]
+ * @param {string} [item.title]
+ * @param {string} [item.url]
+ * @returns {Promise<boolean>}
+ */
+async function sendYoutubeLog(item) {
+  if (!item) {
+    return false;
+  }
+
+  const url = item.url || "";
+  const itemId =
+    item.itemId ||
+    item.id ||
+    createYoutubeItemId(url);
+
+  const sheetItem = createSheetItem(item, {
+    itemId,
+    title: item.name || item.title || "",
+    url
+  });
+
+  if (!sheetItem) {
+    return false;
+  }
+
+  return sendSheetLog({
+    youtube: [sheetItem]
+  });
+}
+
+/**
+ * YouTubeログ用itemIdを作成する
+ *
+ * @param {string} url
+ * @returns {string}
+ */
+function createYoutubeItemId(url) {
+  if (!url) {
+    return "yt_unknown";
+  }
+
+  try {
+    const parsedUrl = new URL(url);
+    const videoId = parsedUrl.searchParams.get("v");
+
+    if (videoId) {
+      return `yt_${videoId}`;
+    }
+
+    const pathname = parsedUrl.pathname.replace(/^\/+/, "");
+
+    if (pathname) {
+      return `yt_${pathname.replace(/[^a-zA-Z0-9_-]/g, "_")}`;
+    }
+  } catch (error) {
+    // URLとして解釈できない場合は下の簡易IDに落とす
+  }
+
+  return `yt_${String(url).replace(/[^a-zA-Z0-9_-]/g, "_").slice(0, 80)}`;
 }
