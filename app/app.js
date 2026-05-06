@@ -1203,6 +1203,14 @@ function showPostEditStep() {
 function buildPostItems() {
   const items = [];
 
+  items.push({
+    id: "app-share",
+    name: "このツールをSNSにシェア",
+    postText: "",
+    url: getAppShareUrl(),
+    checked: true,
+  });
+
   state.selectedOnceTasks.forEach((task, index) => {
     if (!task || !task.name) {
       return;
@@ -1233,14 +1241,6 @@ function buildPostItems() {
     id: "spotify-bgm",
     name: getPostSpotifyName(),
     url: getPostSpotifyUrl(),
-    checked: false,
-  });
-
-  items.push({
-    id: "app-share",
-    name: "このツールをSNSにシェア",
-    postText: " #タムごとDaily",
-    url: getAppShareUrl(),
     checked: false,
   });
 
@@ -1295,7 +1295,7 @@ function updateGeneratedPostText() {
   const linkCount = countLinks(postText);
 
   if (postTextCountElement) {
-    postTextCountElement.textContent = `X文字数目安: ${textLength} / 280`;
+    postTextCountElement.textContent = ``;
     postTextCountElement.classList.toggle("warning-text", textLength > 280);
   }
 
@@ -1333,7 +1333,55 @@ function buildPostText() {
       lines.push(item.url);
     }
   });
+  lines.push("⏰  const postText = buildPostText();
 
+  if (generatedPostTextElement) {
+    generatedPostTextElement.textContent = postText;
+  }
+
+  const textLength = postText.length;
+  const linkCount = countLinks(postText);
+
+  if (postTextCountElement) {
+    postTextCountElement.textContent = ``;
+    postTextCountElement.classList.toggle("warning-text", textLength > 280);
+  }
+
+  if (postLinkCountElement) {
+    postLinkCountElement.textContent = `Threadsリンク数: ${linkCount} / 5`;
+    postLinkCountElement.classList.toggle("warning-text", linkCount > 5);
+  }
+
+  if (copyPostTextButtonElement) {
+    copyPostTextButtonElement.textContent = "コピーする";
+  }
+}
+
+function getGeneratedPostText() {
+  return generatedPostTextElement ? generatedPostTextElement.textContent || "" : "";
+}
+
+function buildPostText() {
+  const lines = buildFixedPostLines();
+
+  state.postItems.forEach((item) => {
+    if (!item.checked) {
+      return;
+    }
+
+    const postText = item.postText || item.name;
+
+    if (item.id === "spotify-bgm" || item.id === "app-share") {
+      lines.push(postText);
+    } else {
+      lines.push(`✅${postText}`);
+    }
+
+    if (item.url) {
+      lines.push(item.url);
+    }
+  });
+  lines.push("🕰️クリックですぐ使えるよ▼");
   return lines.join("\n");
 }
 
@@ -1342,7 +1390,7 @@ function buildFixedPostLines() {
   const selectedRequestSongUrl = getSelectedRequestSongUrl();
 
   return [
-    `${formatMonthDay(new Date())}のタスク完了👍`,
+    `${formatMonthDay(new Date())}「タムごとDaily」タスク完了👍`,
     `${selectedRequestSongName}をリクエストしたよ😊`,
     "✅USEN推しリク",
     selectedRequestSongUrl,
