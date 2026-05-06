@@ -1216,7 +1216,7 @@ function buildPostItems() {
   name: "USEN推しリク",
   postText: "USEN推しリク",
   url: getSelectedRequestSongUrl(),
-  checked: true,
+  checked: false,
 });
 
   state.selectedOnceTasks.forEach((task, index) => {
