@@ -1216,9 +1216,31 @@ function sendSheetLogOnPostAskStep() {
     });
   });
 
+  const spotifyItems = state.selectedSong
+    ? [
+        createSheetItem(state.selectedSong, {
+          itemId: `sp_${state.selectedSong.url}`,
+          title: state.selectedSong.name,
+          url: buildSpotifyUrl(state.selectedSong.url),
+        }),
+      ]
+    : [];
+
+  const requestSongItems = state.selectedRequestSong
+    ? [
+        createSheetItem(state.selectedRequestSong, {
+          itemId: state.selectedRequestSong.id || `rq_${state.selectedRequestSong.url}`,
+          title: state.selectedRequestSong.name,
+          url: buildRequestSongUrl(state.selectedRequestSong.url),
+        }),
+      ]
+    : [];
+
   sendSheetLog({
     onceList: onceListItems,
     list: listItems,
+    spotify: spotifyItems,
+    requestSong: requestSongItems,
   });
 
   state.isSheetLogSentInCurrentFlow = true;
