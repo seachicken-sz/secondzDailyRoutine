@@ -424,13 +424,11 @@ h1 {
 .home-list-box {
   flex: 1;
   min-height: 3rem;
-  max-height: 5rem;
+  max-height: none;
   padding: 12px;
   background: #ffffff;
   border: 1px solid #d9d9d9;
   border-radius: 14px;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 .home-list-item,
