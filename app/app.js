@@ -146,7 +146,7 @@ addClickEvent(backStepButtonElement, () => {
   goBackStep();
 });
 
-addClickEvent(startRoutineButtonElement, () => {
+addClickEvent(startRoutineButtonElement, async () => {
   await sendStartLog();
   showOnlyStep(spotifyStepElement);
 });
