@@ -1327,10 +1327,12 @@ function buildPostText() {
   state.postItems.forEach((item) => {
     if (!item.checked) return;
 
-    const postText = item.postText || item.name;
+    const postText = item.postText ?? item.name;
 
     if (item.id === "spotify-bgm" || item.id === "app-share") {
-      lines.push(postText);
+      if (postText) {
+        lines.push(postText);
+      }
     } else {
       lines.push(`✅${postText}`);
     }
