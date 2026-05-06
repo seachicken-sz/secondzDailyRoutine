@@ -146,8 +146,11 @@ addClickEvent(backStepButtonElement, () => {
   goBackStep();
 });
 
-addClickEvent(startRoutineButtonElement, async () => {
-  await sendStartLog();
+addClickEvent(startRoutineButtonElement, () => {
+  sendStartLog().catch((error) => {
+    console.error("startLog送信失敗", error);
+  });
+
   showOnlyStep(spotifyStepElement);
 });
 
