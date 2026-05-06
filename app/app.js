@@ -250,6 +250,9 @@ addClickEvent(openOnceTaskUrlButtonElement, () => {
     onceTaskNextButtonElement.classList.remove("hidden");
   }
 
+  setButtonStyle(openOnceTaskUrlButtonElement, "gray");
+  setButtonStyle(onceTaskNextButtonElement, "primary");
+
   location.href = task.url;
 });
 
@@ -317,6 +320,9 @@ addClickEvent(openDailyTaskUrlButtonElement, async () => {
   if (dailyTaskNextButtonElement) {
     dailyTaskNextButtonElement.classList.remove("hidden");
   }
+
+  setButtonStyle(openDailyTaskUrlButtonElement, "gray");
+  setButtonStyle(dailyTaskNextButtonElement, "primary");
 
   location.href = itemUrl;
 });
@@ -941,6 +947,8 @@ function renderCurrentOnceTask() {
   if (onceTaskNextButtonElement) {
     onceTaskNextButtonElement.classList.remove("hidden");
   }
+  setButtonStyle(openOnceTaskUrlButtonElement, "primary");
+  setButtonStyle(onceTaskNextButtonElement, "secondary");
 }
 
 function buildOnceTaskMessage(task) {
@@ -1079,6 +1087,8 @@ function renderCurrentDailyTask() {
       dailyTaskNextButtonElement.classList.remove("hidden");
     }
   }
+  setButtonStyle(openDailyTaskUrlButtonElement, "primary");
+  setButtonStyle(dailyTaskNextButtonElement, "secondary");
 }
 
 function buildDailyTaskCopyText(item) {
@@ -1720,6 +1730,27 @@ function showError(element, message) {
 
   element.textContent = message;
   element.classList.remove("hidden");
+}
+function setButtonStyle(buttonElement, styleType) {
+  if (!buttonElement) {
+    return;
+  }
+
+  buttonElement.classList.remove("primary-button");
+  buttonElement.classList.remove("secondary-button");
+  buttonElement.classList.remove("gray-button");
+
+  if (styleType === "primary") {
+    buttonElement.classList.add("primary-button");
+    return;
+  }
+
+  if (styleType === "gray") {
+    buttonElement.classList.add("gray-button");
+    return;
+  }
+
+  buttonElement.classList.add("secondary-button");
 }
 
 function hideError(element) {
