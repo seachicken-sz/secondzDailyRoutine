@@ -1365,9 +1365,7 @@ function buildPostText() {
   const lines = buildFixedPostLines();
 
   state.postItems.forEach((item) => {
-    if (!item.checked) {
-      return;
-    }
+    if (!item.checked) return;
 
     const postText = item.postText || item.name;
 
@@ -1381,7 +1379,11 @@ function buildPostText() {
       lines.push(item.url);
     }
   });
+
+  // ←ここだけでいい
+  lines.push("");
   lines.push("🕰️クリックですぐ使えるよ▼");
+
   return lines.join("\n");
 }
 
