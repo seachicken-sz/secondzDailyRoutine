@@ -31,32 +31,33 @@
           <img src="../img/logo.png" alt="タムごとDaily">
         </div>
       </header>
-      <!--onceListJsonの期限内のものを表示-->
-      <section class="home-card home-now-request-area">
-        <h2 class="ruby-h"><ruby>期間限定<rt>limited task</rt></ruby></h2>
-        <div id="homeOnceTaskList" class="home-list-box"></div>
-      </section>
-      <!--homeInfoJsonの期限内のものを表示-->
-      <section class="home-card home-information-area">
-        <h2 class="ruby-h"><ruby>最近のタムごと<rt>information</rt></rt></ruby></h2>
-        <div id="homeInfoList" class="home-list-box"></div>
-      </section>
-      <!--ホームのボタン-->
+
       <section class="home-action-area">
         <button id="startRoutineButton" class="primary-button">
           開始する
         </button>
-
-        <div class="text-link-row">
-          <button id="openHowToButton" class="text-link-button">導入方法</button>
-          <button id="openUsageButton" class="text-link-button">使い方</button>
-        </div>
-      </section>
+        </section>
+        <!--onceListJsonの期限内のものを表示-->
+        <section class="home-card home-now-request-area">
+          <h2 class="ruby-h"><ruby>期間限定<rt>limited task</rt></ruby></h2>
+          <div id="homeOnceTaskList" class="home-list-box"></div>
+        </section>
+        <!--homeInfoJsonの期限内のものを表示-->
+        <section class="home-card home-information-area">
+          <h2 class="ruby-h"><ruby>最近のタムごと<rt>information</rt></rt></ruby></h2>
+          <div id="homeInfoList" class="home-list-box"></div>
+        </section>
+        <!--ホームのボタン-->
+        <section class="home-button-area">
+          <div class="text-link-row">
+            <button id="openHowToButton" class="text-link-button">導入方法</button>
+            <button id="openUsageButton" class="text-link-button">使い方</button>
+          </div>
+        </section>
     </section>
     <!--STEP 1 Spotify-->
     <section id="spotifyStep" class="step-screen hidden">
       <header class="header">
-        <p class="step-label">STEP 1</p>
         <h1>今日のBGM🎧</h1>
         <p class="description">
           Spotifyで<strong>１日１曲</strong>聞くと月間アクティブユーザーに貢献👍<br>
@@ -106,7 +107,6 @@
     <!--STEP 2 期間限定タスク-->
     <section id="onceListSelectStep" class="step-screen hidden">
       <header class="header">
-        <p class="step-label">STEP 2</p>
         <h1>期間限定タスク🗒️</h1>
         <p class="description">
           これ終わってる？期間限定だから早めにやっちゃお👍<br>
@@ -129,7 +129,6 @@
 
     <section id="onceTaskRunStep" class="step-screen hidden">
       <header class="header">
-        <p class="step-label">STEP 2</p>
         <h1>期間限定タスク🗒️</h1>
         <p id="onceTaskProgress" class="description"></p>
       </header>
@@ -153,10 +152,10 @@
     <!--STEP 3 USEN推しリク-->
     <section id="requestSongStep" class="step-screen hidden">
       <header class="header">
-        <p class="step-label">STEP 3</p>
         <h1>本日のラジオリクエスト曲📻</h1>
         <p class="description">
-          今日は何をリクエストする？
+          今日は何をリクエストする？<br>
+          曲を選んで<strong>「USEN推し活リクエスト」</strong>からリクエストしてね！
         </p>
       </header>
 
@@ -165,7 +164,7 @@
         <p id="selectedRequestSongName" class="selected-song"></p>
 
         <button id="openRequestSongButton" class="primary-button">
-          USEN推し活リクエストを開く
+          ページを開く
         </button>
 
         <button id="requestSongNextButton" class="secondary-button hidden">
@@ -195,7 +194,6 @@
     <!--STEP 4 デイリータスク-->
     <section id="dailyTaskStep" class="step-screen hidden">
       <header class="header">
-        <p class="step-label">STEP 4</p>
         <h1>デイリータスク📅</h1>
         <p id="dailyTaskHeaderDescription" class="description"></p>
       </header>
@@ -221,7 +219,6 @@
 
     <section id="dailyGroupEndStep" class="step-screen hidden">
       <header class="header">
-        <p class="step-label">STEP 4</p>
         <h1>デイリータスク📅</h1>
       </header>
 
@@ -241,7 +238,6 @@
     <!--STEP 5 SNS共有-->
     <section id="postAskStep" class="step-screen hidden">
       <header class="header">
-        <p class="step-label">STEP 5</p>
         <h1>デイリータスク完了✅</h1>
         <p class="description">
           今日やったタスクをSNSで共有する？
@@ -261,7 +257,6 @@
 
     <section id="postEditStep" class="step-screen hidden">
       <header class="header">
-        <p class="step-label">STEP 5</p>
         <h1>ポスト文章作成</h1>
         <p class="description">
           追加したい項目にチェックを入れてね！
@@ -306,7 +301,6 @@
     <!--STEP 6 Youtube-->
     <section id="youtubeAskStep" class="step-screen hidden">
       <header class="header">
-        <p class="step-label">STEP 6</p>
         <h1>YouTubeも見る？▶️</h1>
         <p class="description">
           Spotifyの再生終わってたらついでにYoutubeも行っとく？
@@ -326,7 +320,6 @@
 
     <section id="youtubeSelectStep" class="step-screen hidden">
       <header class="header">
-        <p class="step-label">STEP 6</p>
         <h1>動画を選ぶ▶️</h1>
       </header>
 
@@ -353,7 +346,6 @@
     <!--完了-->
     <section id="placeholderNextStep" class="step-screen hidden">
       <header class="header">
-        <p class="step-label">FINISH</p>
         <h1>完了⌛</h1>
         <p id="placeholderMessage" class="description"></p>
       </header>
