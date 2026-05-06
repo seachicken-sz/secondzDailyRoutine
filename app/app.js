@@ -1211,6 +1211,14 @@ function buildPostItems() {
     checked: true,
   });
 
+  items.push({
+  id: "usen-request",
+  name: "USEN推しリク",
+  postText: "USEN推しリク",
+  url: getSelectedRequestSongUrl(),
+  checked: true,
+});
+
   state.selectedOnceTasks.forEach((task, index) => {
     if (!task || !task.name) {
       return;
@@ -1344,9 +1352,7 @@ function buildFixedPostLines() {
 
   return [
     `${formatMonthDay(new Date())}「タムごとDaily」タスク完了👍`,
-    `${selectedRequestSongName}をリクエストしたよ😊`,
-    "✅USEN推しリク",
-    selectedRequestSongUrl,
+    `${selectedRequestSongName}をリクエストしたよ😊`
   ];
 }
 
