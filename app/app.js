@@ -203,6 +203,13 @@ addClickEvent(openSpotifyButtonElement, () => {
     spotifyNextButtonElement.classList.remove("hidden");
   }
 
+  setButtonStyle(openSpotifyButtonElement, "gray");
+  setButtonStyle(spotifyNextButtonElement, "primary");
+
+  setSongListVisibility(recommendedSongsElement, false);
+  setSongListVisibility(otherSongsWrapperElement, false);
+  setSongListVisibility(toggleOtherSongsButtonElement, false);
+
   location.href = spotifyUrl;
 });
 
@@ -283,6 +290,13 @@ addClickEvent(openRequestSongButtonElement, () => {
   if (requestSongNextButtonElement) {
     requestSongNextButtonElement.classList.remove("hidden");
   }
+
+  setButtonStyle(openRequestSongButtonElement, "gray");
+  setButtonStyle(requestSongNextButtonElement, "primary");
+
+  setSongListVisibility(recommendedRequestSongsElement, false);
+  setSongListVisibility(otherRequestSongsWrapperElement, false);
+  setSongListVisibility(toggleOtherRequestSongsButtonElement, false);
 
   location.href = requestUrl;
 });
@@ -777,6 +791,12 @@ function selectSong(song) {
   if (spotifyNextButtonElement) {
     spotifyNextButtonElement.classList.add("hidden");
   }
+  setButtonStyle(openSpotifyButtonElement, "primary");
+  setButtonStyle(spotifyNextButtonElement, "secondary");
+  
+  setSongListVisibility(recommendedSongsElement, true);
+  setSongListVisibility(toggleOtherSongsButtonElement, true);
+  updateOtherSongsAccordion();
 
   updateSelectedButtonStyle(".spotify-song-button", song);
   hideError(spotifyErrorAreaElement);
@@ -796,6 +816,12 @@ function selectRequestSong(song) {
   if (requestSongNextButtonElement) {
     requestSongNextButtonElement.classList.add("hidden");
   }
+  setButtonStyle(openRequestSongButtonElement, "primary");
+  setButtonStyle(requestSongNextButtonElement, "secondary");
+  
+  setSongListVisibility(recommendedRequestSongsElement, true);
+  setSongListVisibility(toggleOtherRequestSongsButtonElement, true);
+  updateOtherRequestSongsAccordion();  
 
   updateSelectedButtonStyle(".request-song-button", song);
   hideError(requestSongErrorAreaElement);
@@ -1731,6 +1757,15 @@ function showError(element, message) {
   element.textContent = message;
   element.classList.remove("hidden");
 }
+
+function setSongListVisibility(containerElement, shouldShow) {
+  if (!containerElement) {
+    return;
+  }
+
+  containerElement.classList.toggle("hidden", !shouldShow);
+}
+
 function setButtonStyle(buttonElement, styleType) {
   if (!buttonElement) {
     return;
