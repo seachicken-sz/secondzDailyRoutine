@@ -2,7 +2,7 @@
 
 // Google Apps Script のウェブアプリURL
 // 例: https://script.google.com/macros/s/xxxxxxxxxxxxxxxxxxxx/exec
-const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwJqWoytAg86gNSrS53mpO0kcU0pH4zSWqkrfj7YN26_ZHR0TUTlAFBwbXYLRaRhc72/exec";
+const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzkz6B1RBaxJJldU3ny1wIQzDv1D3DSLfepfYIAKATn1X03hkE9bE2l9Mozt-q9c1Yd/exec";
 
 // Apps Script側と同じ値にする
 const SHEET_TOKEN = "test-token";
