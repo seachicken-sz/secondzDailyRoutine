@@ -1382,7 +1382,7 @@ function buildPostText() {
 
   // ←ここだけでいい
   lines.push("");
-  lines.push("🕰️クリックですぐ使えるよ▼");
+  lines.push("クリックですぐ使えるよ▼");
 
   return lines.join("\n");
 }
