@@ -147,6 +147,7 @@ addClickEvent(backStepButtonElement, () => {
 });
 
 addClickEvent(startRoutineButtonElement, () => {
+  await sendStartLog();
   showOnlyStep(spotifyStepElement);
 });
 
@@ -768,13 +769,19 @@ function renderYoutubeCardRow(container, items, type) {
     name.textContent = item.name;
     card.appendChild(name);
 
-  card.addEventListener("click", () => {
-    showPlaceholderNextStep("お疲れ様さまでした☺️Big Love");
-  
-    setTimeout(() => {
-      location.href = item.url;
-    }, 100);
+card.addEventListener("click", async () => {
+  await sendYoutubeLog({
+    itemId: item.id || item.itemId || createYoutubeLogItemId(item),
+    title: item.name || item.title || "",
+    url: item.url || ""
   });
+
+  showPlaceholderNextStep("お疲れ様さまでした☺️Big Love");
+
+  setTimeout(() => {
+    location.href = item.url;
+  }, 100);
+});
 
     container.appendChild(card);
   });
@@ -1497,6 +1504,24 @@ function extractYoutubeVideoId(value) {
   } catch {
     return "";
   }
+}
+
+function createYoutubeLogItemId(item) {
+  if (!item) {
+    return "yt_unknown";
+  }
+
+  const videoId = extractYoutubeVideoId(item.url) || extractYoutubeVideoId(item.startmovie);
+
+  if (videoId) {
+    return `yt_${videoId}`;
+  }
+
+  if (item.url) {
+    return `yt_${String(item.url).replace(/[^a-zA-Z0-9_-]/g, "_").slice(0, 80)}`;
+  }
+
+  return "yt_unknown";
 }
 
 function getAppShareUrl() {
