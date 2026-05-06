@@ -772,11 +772,13 @@ function renderYoutubeCardRow(container, items, type) {
     name.textContent = item.name;
     card.appendChild(name);
 
-card.addEventListener("click", async () => {
-  await sendYoutubeLog({
+card.addEventListener("click", () => {
+  sendYoutubeLog({
     itemId: item.id || item.itemId || createYoutubeLogItemId(item),
     title: item.name || item.title || "",
     url: item.url || ""
+  }).catch((error) => {
+    console.error("youtubeLog送信失敗", error);
   });
 
   showPlaceholderNextStep("お疲れ様さまでした☺️Big Love");
