@@ -149,14 +149,15 @@ h1 {
 
 .gray-button {
   width: 100%;
-  border: none;
+  margin-top: 10px;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
   border-radius: 999px;
-  padding: 14px 18px;
-  font-size: 1rem;
-  font-weight: 700;
   background: #e5e7eb;
   color: #6b7280;
-  box-shadow: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .gray-button:active {
