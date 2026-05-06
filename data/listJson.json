@@ -7,7 +7,7 @@
           "id":"daily_mon",
           "name":"エムオン！",
           "url":"https://www.m-on.jp/request/?action_request_search=True&artist_id=19237",
-          "comment":"リクエストしたい曲をタップ！",
+          "comment":"「timeleszの楽曲一覧」の下からリクエストしたい曲をタップ！",
           "input-flag":false,
           "alert-flag":false
         },
@@ -17,7 +17,7 @@
           "url":"https://tfm.co.jp/f/countdownjapan/message",
           "request-type":"text",
           "request-input":"メッセージ&リクエスト",
-          "comment":"メッセージ&リクエスト欄にそのままペーストしてください！",
+          "comment":"開いたらメッセージ&リクエスト欄にそのままペーストしてください！",
           "input-flag":true,
           "alert-flag":false
         },
