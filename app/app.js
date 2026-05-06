@@ -30,6 +30,8 @@ const state = {
 
   stepHistory: [],
   currentStepElement: null,
+
+  isSheetLogSentInCurrentFlow: false,
 };
 
 const homeStepElement = document.getElementById("homeStep");
@@ -454,6 +456,7 @@ addClickEvent(finishFromYoutubeButtonElement, () => {
 
 addClickEvent(backHomeButtonElement, () => {
   state.stepHistory = [];
+  state.isSheetLogSentInCurrentFlow = false;
   showOnlyStep(homeStepElement, { recordHistory: false });
 });
 
@@ -1181,6 +1184,7 @@ function recordCompletedDailyItem(item) {
 
   state.completedDailyItems.push({
     key,
+    itemId: item.id,
     name,
     url,
   });
@@ -1188,6 +1192,36 @@ function recordCompletedDailyItem(item) {
 
 function showPostAskStep() {
   showOnlyStep(postAskStepElement);
+  sendSheetLogOnPostAskStep();
+}
+
+function sendSheetLogOnPostAskStep() {
+  if (state.isSheetLogSentInCurrentFlow) {
+    return;
+  }
+
+  const onceListItems = state.selectedOnceTasks.map((task) => {
+    return createSheetItem(task, {
+      itemId: task.id,
+      title: task.name,
+      url: task.url || "",
+    });
+  });
+
+  const listItems = state.completedDailyItems.map((item) => {
+    return createSheetItem(item, {
+      itemId: item.itemId,
+      title: item.name,
+      url: item.url || "",
+    });
+  });
+
+  sendSheetLog({
+    onceList: onceListItems,
+    list: listItems,
+  });
+
+  state.isSheetLogSentInCurrentFlow = true;
 }
 
 function showPostEditStep() {
