@@ -105,6 +105,16 @@ const backHomeButtonElement = document.getElementById("backHomeButton");
 
 document.addEventListener("DOMContentLoaded", init);
 
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    saveFlowState();
+  }
+});
+
+window.addEventListener("pagehide", () => {
+  saveFlowState();
+});
+
 function addClickEvent(element, handler) {
   if (!element) {
     return;
