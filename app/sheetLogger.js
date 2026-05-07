@@ -35,23 +35,31 @@ function getSheetPlatform() {
     /iPad|iPhone|iPod/.test(ua) ||
     (platform === "MacIntel" && navigator.maxTouchPoints > 1);
 
+  const isAndroid = /Android/.test(ua);
+
+  const isStandalone =
+    window.matchMedia("(display-mode: standalone)").matches ||
+    window.matchMedia("(display-mode: fullscreen)").matches ||
+    window.matchMedia("(display-mode: minimal-ui)").matches ||
+    window.navigator.standalone === true;
+
   if (isIOS) {
-    return "ios";
+    return isStandalone ? "ios/pwa" : "ios/browser";
   }
 
-  if (/Android/.test(ua)) {
-    return "android";
+  if (isAndroid) {
+    return isStandalone ? "android/pwa" : "android/browser";
   }
 
   if (/Win/.test(platform)) {
-    return "windows";
+    return isStandalone ? "windows/pwa" : "windows/browser";
   }
 
   if (/Mac/.test(platform)) {
-    return "mac";
+    return isStandalone ? "mac/pwa" : "mac/browser";
   }
 
-  return "unknown";
+  return isStandalone ? "unknown/pwa" : "unknown/browser";
 }
 
 /**
