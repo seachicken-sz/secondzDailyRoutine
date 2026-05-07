@@ -1039,6 +1039,23 @@ function buildOnceTaskMessage(task) {
 
 async function showRequestSongStep() {
   try {
+    state.selectedRequestSong = null;
+    
+    if (selectedRequestSongAreaElement) {
+      selectedRequestSongAreaElement.classList.add("hidden");
+    }
+    
+    if (requestSongNextButtonElement) {
+      requestSongNextButtonElement.classList.add("hidden");
+    }
+    
+    setButtonStyle(openRequestSongButtonElement, "primary");
+    setButtonStyle(requestSongNextButtonElement, "secondary");
+    
+    setSongListVisibility(recommendedRequestSongsElement, true);
+    setSongListVisibility(toggleOtherRequestSongsButtonElement, true);
+    
+    updateOtherRequestSongsAccordion();
     if (state.requestSongs.length === 0) {
       state.requestSongs = await loadRequestSongs();
     }
