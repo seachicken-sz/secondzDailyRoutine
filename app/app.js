@@ -104,6 +104,7 @@ const placeholderMessageElement = document.getElementById("placeholderMessage");
 const backHomeButtonElement = document.getElementById("backHomeButton");
 
 const openHowToFromHomeCardButtonElement = document.getElementById("openHowToFromHomeCardButton");
+const homeInstallGuideCardElement = document.getElementById("homeInstallGuideCard");
 
 document.addEventListener("DOMContentLoaded", init);
 
@@ -466,8 +467,23 @@ addClickEvent(backHomeButtonElement, () => {
   showOnlyStep(homeStepElement, { recordHistory: false });
 });
 
+function updateHomeInstallGuideVisibility() {
+  if (!homeInstallGuideCardElement) {
+    return;
+  }
+
+  const isStandalone =
+    window.matchMedia("(display-mode: standalone)").matches ||
+    window.navigator.standalone === true;
+
+  homeInstallGuideCardElement.classList.toggle("hidden", isStandalone);
+}
+
 async function init() {
   try {
+    
+    updateHomeInstallGuideVisibility();
+    
     const songs = await loadSpotifySongs();
 
     const recommendedSongs = songs.filter((song) => song.flag === true);
