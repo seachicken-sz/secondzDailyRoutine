@@ -5,35 +5,6 @@ const THREADS_URL = "https://www.threads.net/";
 const YOUTUBE_THUMBNAIL_BASE_URL = "https://img.youtube.com/vi/";
 const TIMELESZ_SPOTIFY_ARTIST_URL = "https://open.spotify.com/intl-ja/artist/1ZFfhzyXjPvbzSYPlCIwo3";
 
-const state = {
-  selectedSong: null,
-  isOtherSongsOpen: false,
-
-  onceTasks: [],
-  selectedOnceTasks: [],
-  currentOnceTaskIndex: 0,
-
-  requestSongs: [],
-  selectedRequestSong: null,
-  isOtherRequestSongsOpen: false,
-
-  requestTexts: {},
-  dailyGroups: [],
-  currentDailyGroupIndex: 0,
-  currentDailyTaskIndex: 0,
-  completedDailyItems: [],
-
-  postItems: [],
-
-  youtubePlaylists: [],
-  youtubeMvs: [],
-
-  stepHistory: [],
-  currentStepElement: null,
-
-  isSheetLogSentInCurrentFlow: false,
-};
-
 const homeStepElement = document.getElementById("homeStep");
 const homeOnceTaskListElement = document.getElementById("homeOnceTaskList");
 const homeInfoListElement = document.getElementById("homeInfoList");
