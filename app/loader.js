@@ -1,3 +1,4 @@
+//JSON読み込み
 async function loadJsonFile(path, label) {
   const response = await fetch(`${path}?ts=${Date.now()}`);
 
@@ -8,6 +9,7 @@ async function loadJsonFile(path, label) {
   return response.json();
 }
 
+//Spotify
 async function loadSpotifySongs() {
   const songs = await loadJsonFile("../data/spotifySongJson.json", "spotifySongJson.json");
 
@@ -17,31 +19,7 @@ async function loadSpotifySongs() {
 
   return songs.filter((song) => song && song.name && song.url);
 }
-
-async function loadOnceTasks() {
-  const tasks = await loadJsonFile("../data/onceListJson.json", "onceListJson.json");
-
-  if (!Array.isArray(tasks)) {
-    throw new Error("onceListJson.json が配列形式ではありません。");
-  }
-
-  return tasks.filter((task) => {
-    return task && task.name && isWithinPeriod(task.from, task.to);
-  });
-}
-
-async function loadHomeInfoList() {
-  const informationList = await loadJsonFile("../data/homeInfoListJson.json", "homeInfoListJson.json");
-
-  if (!Array.isArray(informationList)) {
-    throw new Error("homeInfoListJson.json が配列形式ではありません。");
-  }
-
-  return informationList.filter((item) => {
-    return item && item.name && isWithinPeriod(item.from, item.to);
-  });
-}
-
+//リクエスト曲読み込み
 async function loadRequestSongs() {
   const songs = await loadJsonFile("../data/requestSongJson.json", "requestSongJson.json");
 
@@ -51,7 +29,7 @@ async function loadRequestSongs() {
 
   return songs.filter((song) => song && song.name && song.url);
 }
-
+//リクエスト文章読み込み
 async function loadRequestTexts() {
   const requestTexts = await loadJsonFile("../data/requestTextJson.json", "requestTextJson.json");
 
@@ -61,7 +39,7 @@ async function loadRequestTexts() {
 
   return requestTexts;
 }
-
+//デイリータスク読み込み
 async function loadDailyGroups() {
   const groups = await loadJsonFile("../data/listJson.json", "listJson.json");
 
@@ -73,7 +51,7 @@ async function loadDailyGroups() {
     return group && group.listName && Array.isArray(group.items) && group.items.length > 0;
   });
 }
-
+//YouTubeプレリ読み込み
 async function loadYoutubePlaylists() {
   const playlists = await loadJsonFile("../data/youtubePlayListJson.json", "youtubePlayListJson.json");
 
@@ -83,7 +61,7 @@ async function loadYoutubePlaylists() {
 
   return playlists.filter((item) => item && item.name && item.url);
 }
-
+//YouTubeMV読み込み
 async function loadYoutubeMvs() {
   const mvs = await loadJsonFile("../data/youtubeMVListJson.json", "youtubeMVListJson.json");
 
