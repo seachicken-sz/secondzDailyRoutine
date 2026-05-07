@@ -186,6 +186,9 @@ addClickEvent(openSpotifyButtonElement, () => {
   setSongListVisibility(recommendedSongsElement, false);
   setSongListVisibility(otherSongsWrapperElement, false);
   setSongListVisibility(toggleOtherSongsButtonElement, false);
+  
+  state.openedAction = "spotifyOpened";
+  saveFlowState(state.openedAction);
 
   location.href = spotifyUrl;
 });
@@ -236,6 +239,9 @@ addClickEvent(openOnceTaskUrlButtonElement, () => {
 
   setButtonStyle(openOnceTaskUrlButtonElement, "gray");
   setButtonStyle(onceTaskNextButtonElement, "primary");
+  
+  state.openedAction = "onceTaskOpened";
+  saveFlowState(state.openedAction);
 
   location.href = task.url;
 });
@@ -275,6 +281,8 @@ addClickEvent(openRequestSongButtonElement, () => {
   setSongListVisibility(otherRequestSongsWrapperElement, false);
   setSongListVisibility(toggleOtherRequestSongsButtonElement, false);
 
+  state.openedAction = "requestSongOpened";
+  saveFlowState(state.openedAction);
   location.href = requestUrl;
 });
 
@@ -315,6 +323,8 @@ addClickEvent(openDailyTaskUrlButtonElement, async () => {
   setButtonStyle(openDailyTaskUrlButtonElement, "gray");
   setButtonStyle(dailyTaskNextButtonElement, "primary");
 
+  state.openedAction = "dailyTaskOpened";
+  saveFlowState(state.openedAction);
   location.href = itemUrl;
 });
 
@@ -432,6 +442,7 @@ addClickEvent(finishFromYoutubeButtonElement, () => {
 addClickEvent(backHomeButtonElement, () => {
   state.stepHistory = [];
   state.isSheetLogSentInCurrentFlow = false;
+  clearFlowState();
   showOnlyStep(homeStepElement, { recordHistory: false });
 });
 
@@ -461,8 +472,7 @@ async function init() {
     const homeInfoList = await loadHomeInfoList();
     renderHomeInfoList(homeInfoList);
 
-    state.currentStepElement = homeStepElement;
-    updateStepTopActionBar();
+    await restoreFlowStateOrHome();
   } catch (error) {
     console.error(error);
     showError(spotifyErrorAreaElement, "初期データの読み込みに失敗しました。JSONの形式や配置を確認してください。");
@@ -473,6 +483,101 @@ async function init() {
     updateStepTopActionBar();
   }
 }
+
+async function restoreFlowStateOrHome() {
+  const flowState = loadFlowState();
+
+  if (!flowState || !flowState.currentStepId) {
+    showOnlyStep(homeStepElement, { recordHistory: false });
+    return;
+  }
+
+  state.selectedSong = flowState.selectedSong || null;
+  state.selectedOnceTasks = Array.isArray(flowState.selectedOnceTasks)
+    ? flowState.selectedOnceTasks
+    : [];
+  state.currentOnceTaskIndex = Number(flowState.currentOnceTaskIndex) || 0;
+  state.selectedRequestSong = flowState.selectedRequestSong || null;
+  state.currentDailyGroupIndex = Number(flowState.currentDailyGroupIndex) || 0;
+  state.currentDailyTaskIndex = Number(flowState.currentDailyTaskIndex) || 0;
+  state.completedDailyItems = Array.isArray(flowState.completedDailyItems)
+    ? flowState.completedDailyItems
+    : [];
+  state.openedAction = flowState.openedAction || "";
+
+  if (flowState.currentStepId === "spotifyStep") {
+    showOnlyStep(spotifyStepElement, { recordHistory: false });
+
+    if (state.selectedSong) {
+      selectSong(state.selectedSong);
+    }
+
+    if (state.openedAction === "spotifyOpened") {
+      spotifyNextButtonElement.classList.remove("hidden");
+      setButtonStyle(openSpotifyButtonElement, "gray");
+      setButtonStyle(spotifyNextButtonElement, "primary");
+    }
+
+    return;
+  }
+
+  if (flowState.currentStepId === "onceListSelectStep") {
+    await showOnceListSelectStep();
+    return;
+  }
+
+  if (flowState.currentStepId === "onceTaskRunStep") {
+    showOnlyStep(onceTaskRunStepElement, { recordHistory: false });
+    renderCurrentOnceTask();
+
+    if (state.openedAction === "onceTaskOpened") {
+      onceTaskNextButtonElement.classList.remove("hidden");
+      setButtonStyle(openOnceTaskUrlButtonElement, "gray");
+      setButtonStyle(onceTaskNextButtonElement, "primary");
+    }
+
+    return;
+  }
+
+  if (flowState.currentStepId === "requestSongStep") {
+    await showRequestSongStep();
+
+    if (state.selectedRequestSong) {
+      selectRequestSong(state.selectedRequestSong);
+    }
+
+    if (state.openedAction === "requestSongOpened") {
+      requestSongNextButtonElement.classList.remove("hidden");
+      setButtonStyle(openRequestSongButtonElement, "gray");
+      setButtonStyle(requestSongNextButtonElement, "primary");
+    }
+
+    return;
+  }
+
+  if (flowState.currentStepId === "dailyTaskStep") {
+    await showDailyTaskStep();
+
+    if (state.openedAction === "dailyTaskOpened") {
+      dailyTaskNextButtonElement.classList.remove("hidden");
+      setButtonStyle(openDailyTaskUrlButtonElement, "gray");
+      setButtonStyle(dailyTaskNextButtonElement, "primary");
+    }
+
+    return;
+  }
+
+  const stepElement = document.getElementById(flowState.currentStepId);
+
+  if (stepElement) {
+    showOnlyStep(stepElement, { recordHistory: false });
+    return;
+  }
+
+  clearFlowState();
+  showOnlyStep(homeStepElement, { recordHistory: false });
+}
+
 
 //期間限定タスク読み込み
 async function loadOnceTasks() {
@@ -1527,6 +1632,8 @@ function showOnlyStep(activeStepElement, options = {}) {
 
   state.currentStepElement = activeStepElement;
   updateStepTopActionBar();
+  
+  saveFlowState();
 }
 
 function goBackStep() {
