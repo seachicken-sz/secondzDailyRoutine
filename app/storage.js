@@ -8,14 +8,14 @@ function getTodayKey() {
   ].join("");
 }
 
-function saveFlowState(openedAction = state.openedAction || "") {
-  if (!state.currentStepElement || state.currentStepElement === homeStepElement) {
+function saveFlowState(openedAction = state.openedAction || "", stepElement = state.currentStepElement) {
+  if (!stepElement || stepElement === homeStepElement) {
     return;
   }
 
   const flowState = {
     dateKey: getTodayKey(),
-    currentStepId: state.currentStepElement.id,
+    currentStepId: stepElement.id,
     selectedSong: state.selectedSong,
     selectedOnceTasks: state.selectedOnceTasks,
     currentOnceTaskIndex: state.currentOnceTaskIndex,
