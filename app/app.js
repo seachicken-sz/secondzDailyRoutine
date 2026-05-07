@@ -474,22 +474,7 @@ async function init() {
   }
 }
 
-async function loadSpotifySongs() {
-  const response = await fetch("../data/spotifySongJson.json?ts=" + Date.now());
-
-  if (!response.ok) {
-    throw new Error("spotifySongJson.json の取得に失敗しました。");
-  }
-
-  const songs = await response.json();
-
-  if (!Array.isArray(songs)) {
-    throw new Error("spotifySongJson.json が配列形式ではありません。");
-  }
-
-  return songs.filter((song) => song && song.name && song.url);
-}
-
+//期間限定タスク読み込み
 async function loadOnceTasks() {
   const response = await fetch("../data/onceListJson.json?ts=" + Date.now());
 
@@ -507,7 +492,7 @@ async function loadOnceTasks() {
     return task && task.name && isWithinPeriod(task.from, task.to);
   });
 }
-
+//情報読み込み
 async function loadHomeInfoList() {
   const response = await fetch("../data/homeInfoListJson.json?ts=" + Date.now());
 
@@ -524,88 +509,6 @@ async function loadHomeInfoList() {
   return informationList.filter((item) => {
     return item && item.name && isWithinPeriod(item.from, item.to);
   });
-}
-
-async function loadRequestSongs() {
-  const response = await fetch("../data/requestSongJson.json?ts=" + Date.now());
-
-  if (!response.ok) {
-    throw new Error("requestSongJson.json の取得に失敗しました。");
-  }
-
-  const songs = await response.json();
-
-  if (!Array.isArray(songs)) {
-    throw new Error("requestSongJson.json が配列形式ではありません。");
-  }
-
-  return songs.filter((song) => song && song.name && song.url);
-}
-
-async function loadRequestTexts() {
-  const response = await fetch("../data/requestTextJson.json?ts=" + Date.now());
-
-  if (!response.ok) {
-    throw new Error("requestTextJson.json の取得に失敗しました。");
-  }
-
-  const requestTexts = await response.json();
-
-  if (!requestTexts || Array.isArray(requestTexts) || typeof requestTexts !== "object") {
-    throw new Error("requestTextJson.json がオブジェクト形式ではありません。");
-  }
-
-  return requestTexts;
-}
-
-async function loadDailyGroups() {
-  const response = await fetch("../data/listJson.json?ts=" + Date.now());
-
-  if (!response.ok) {
-    throw new Error("listJson.json の取得に失敗しました。");
-  }
-
-  const groups = await response.json();
-
-  if (!Array.isArray(groups)) {
-    throw new Error("listJson.json が配列形式ではありません。");
-  }
-
-  return groups.filter((group) => {
-    return group && group.listName && Array.isArray(group.items) && group.items.length > 0;
-  });
-}
-
-async function loadYoutubePlaylists() {
-  const response = await fetch("../data/youtubePlayListJson.json?ts=" + Date.now());
-
-  if (!response.ok) {
-    throw new Error("youtubePlayListJson.json の取得に失敗しました。");
-  }
-
-  const playlists = await response.json();
-
-  if (!Array.isArray(playlists)) {
-    throw new Error("youtubePlayListJson.json が配列形式ではありません。");
-  }
-
-  return playlists.filter((item) => item && item.name && item.url);
-}
-
-async function loadYoutubeMvs() {
-  const response = await fetch("../data/youtubeMVListJson.json?ts=" + Date.now());
-
-  if (!response.ok) {
-    throw new Error("youtubeMVListJson.json の取得に失敗しました。");
-  }
-
-  const mvs = await response.json();
-
-  if (!Array.isArray(mvs)) {
-    throw new Error("youtubeMVListJson.json が配列形式ではありません。");
-  }
-
-  return mvs.filter((item) => item && item.name && item.url);
 }
 
 function renderHomeOnceTaskList(tasks) {
