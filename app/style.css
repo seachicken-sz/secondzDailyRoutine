@@ -678,6 +678,33 @@ h1 {
   gap: 6px;
 }
 
+.home-install-guide-area {
+  text-align: left;
+  background: #f4fffc;
+  border: 1px solid #d7efe8;
+}
+
+.home-install-title {
+  margin: 0 0 8px;
+  font-weight: 700;
+  color: #4d8f81;
+}
+
+.home-install-text {
+  margin: 0 0 8px;
+  line-height: 1.7;
+}
+
+.home-install-link {
+  padding: 0;
+  font-weight: 700;
+  color: #5ea999;
+}
+
+.home-install-link:hover {
+  color: #4d8f81;
+}
+
 .hidden {
   display: none;
 }
