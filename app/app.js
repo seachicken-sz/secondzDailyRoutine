@@ -197,10 +197,10 @@ addClickEvent(openSpotifyButtonElement, () => {
   setSongListVisibility(otherSongsWrapperElement, false);
   setSongListVisibility(toggleOtherSongsButtonElement, false);
   
-  state.openedAction = "spotifyOpened";
-  saveFlowState(state.openedAction);
+state.openedAction = "spotifyOpened";
+saveFlowState(state.openedAction, spotifyStepElement);
 
-  location.href = spotifyUrl;
+location.href = spotifyUrl;
 });
 
 addClickEvent(skipSpotifyButtonElement, async () => {
@@ -250,10 +250,10 @@ addClickEvent(openOnceTaskUrlButtonElement, () => {
   setButtonStyle(openOnceTaskUrlButtonElement, "gray");
   setButtonStyle(onceTaskNextButtonElement, "primary");
   
-  state.openedAction = "onceTaskOpened";
-  saveFlowState(state.openedAction);
+state.openedAction = "onceTaskOpened";
+saveFlowState(state.openedAction, onceTaskRunStepElement);
 
-  location.href = task.url;
+location.href = task.url;
 });
 
 addClickEvent(onceTaskNextButtonElement, async () => {
@@ -291,9 +291,10 @@ addClickEvent(openRequestSongButtonElement, () => {
   setSongListVisibility(otherRequestSongsWrapperElement, false);
   setSongListVisibility(toggleOtherRequestSongsButtonElement, false);
 
-  state.openedAction = "requestSongOpened";
-  saveFlowState(state.openedAction);
-  location.href = requestUrl;
+state.openedAction = "requestSongOpened";
+saveFlowState(state.openedAction, requestSongStepElement);
+
+location.href = requestUrl;
 });
 
 addClickEvent(requestSongNextButtonElement, async () => {
@@ -333,9 +334,10 @@ addClickEvent(openDailyTaskUrlButtonElement, async () => {
   setButtonStyle(openDailyTaskUrlButtonElement, "gray");
   setButtonStyle(dailyTaskNextButtonElement, "primary");
 
-  state.openedAction = "dailyTaskOpened";
-  saveFlowState(state.openedAction);
-  location.href = itemUrl;
+state.openedAction = "dailyTaskOpened";
+saveFlowState(state.openedAction, dailyTaskStepElement);
+
+location.href = itemUrl;
 });
 
 addClickEvent(dailyTaskNextButtonElement, () => {
