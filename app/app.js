@@ -103,6 +103,8 @@ const finishFromYoutubeButtonElement = document.getElementById("finishFromYoutub
 const placeholderMessageElement = document.getElementById("placeholderMessage");
 const backHomeButtonElement = document.getElementById("backHomeButton");
 
+const openHowToFromHomeCardButtonElement = document.getElementById("openHowToFromHomeCardButton");
+
 document.addEventListener("DOMContentLoaded", init);
 
 document.addEventListener("visibilitychange", () => {
@@ -144,6 +146,12 @@ addClickEvent(openHowToButtonElement, () => {
 addClickEvent(closeHowToButtonElement, () => {
   if (howToModalElement) {
     howToModalElement.classList.add("hidden");
+  }
+});
+
+addClickEvent(openHowToFromHomeCardButtonElement, () => {
+  if (howToModalElement) {
+    howToModalElement.classList.remove("hidden");
   }
 });
 
