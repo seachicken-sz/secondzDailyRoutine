@@ -27,7 +27,7 @@
   },
   {
     "id": "once_kokuho_gmail_202605",
-    "name": "【1人1回まで※Gmail必須】国宝級イケメンランキング2026上半期",
+    "name": "【1人1回まで※Gmail必須】国宝級イケメンランキング2026 NOW部門　上半期",
     "question": "投票は終わった？",
     "yes": "終わった！",
     "no": "まだかも",
@@ -40,7 +40,7 @@
   },
   {
     "id": "once_kokuho_vivi_202605",
-    "name": "【1人1回まで※viviID必須】国宝級イケメンランキング2026上半期",
+    "name": "【1人1回まで※viviID必須】国宝級イケメンランキング NOW部門 2026上半期",
     "question": "投票は終わった？",
     "yes": "終わった！",
     "no": "まだかも",
@@ -51,6 +51,32 @@
     "alert-message": "",
     "notice-message": "投票が終わったら✖️で閉じて戻ってきてください！"
   },
+  {
+  "id": "once_kokuho_adult_gmail_202605",
+  "name": "【1人1回まで※Gmail必須】国宝級イケメンランキング2026上半期 Adult部門",
+  "question": "投票は終わった？",
+  "yes": "終わった！",
+  "no": "まだかも",
+  "url": "https://docs.google.com/forms/d/e/1FAIpQLSel12Gtn0HD9iGTWGtl5Ixdv3bI-fE7uvaIHeSfocoturfhzA/viewform",
+  "from": "202605070000",
+  "to": "202605222359",
+  "move-flag": false,
+  "alert-message": "",
+  "notice-message": "投票が終わったら✖️で閉じて戻ってきてください！"
+},
+{
+  "id": "once_kokuho_adult_vivi_202605",
+  "name": "【1人1回まで※viviID必須】国宝級イケメンランキング2026上半期 Adult部門",
+  "question": "投票は終わった？",
+  "yes": "終わった！",
+  "no": "まだかも",
+  "url": "https://www.vivi.tv/uec-form/?uecfcode=enq-gxlwuh-09",
+  "from": "202605070000",
+  "to": "202605222359",
+  "move-flag": false,
+  "alert-message": "",
+  "notice-message": "投票が終わったら✖️で閉じて戻ってきてください！"
+},
   {
     "id": "once_camcam_yokogao_202605",
     "name": "【1人1回まで】CanCam『恋する横顔 2026夏』",
