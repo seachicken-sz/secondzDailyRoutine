@@ -1235,8 +1235,11 @@ function recordCompletedDailyItem(item) {
 }
 
 function showPostAskStep() {
-  showOnlyStep(postAskStepElement);
   sendSheetLogOnPostAskStep();
+
+  clearFlowState();
+
+  showOnlyStep(postAskStepElement);
 }
 
 function sendSheetLogOnPostAskStep() {
