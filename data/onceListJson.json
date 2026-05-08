@@ -10,7 +10,7 @@
     "to": "202605312359",
     "move-flag": false,
     "alert-message": "",
-    "notice-message": "検索結果が見えたらもう投票完了！ ✖で閉じてね！"
+    "notice-message": "検索結果が見えたらもう投票完了！\n✖️で閉じてね！"
   },
   {
     "id": "once_maj_listener_2026",
@@ -22,7 +22,7 @@
     "from": "202605010000",
     "to": "202605202359",
     "move-flag": true,
-    "alert-message": "これからSpotifyに移動します。 投票が終わったらバックでこのアプリに戻ってきてください。 投票するには「投票する」→進んだ画面からRock this Partyを探して投票してください。",
+    "alert-message": "これからSpotifyに移動します。 \n投票が終わったらバックでこのアプリに戻ってきてください。 \n\n投票するには「投票する」→進んだ画面からRock this Partyを探して投票してください。",
     "notice-message": "Rock this Partyを探して投票！ 投票が終わったら元のアプリに戻ってね！"
   },
   {
@@ -49,7 +49,7 @@
     "to": "202605222359",
     "move-flag": false,
     "alert-message": "",
-    "notice-message": "投票が終わったら✖️で閉じて戻ってきてください！"
+    "notice-message": "viviIDが必要になります。登録がまだの方は登録してから投票をお願いします。\n投票が終わったら✖️で閉じて戻ってきてください！"
   },
   {
   "id": "once_kokuho_adult_gmail_202605",
@@ -75,7 +75,7 @@
   "to": "202605222359",
   "move-flag": false,
   "alert-message": "",
-  "notice-message": "投票が終わったら✖️で閉じて戻ってきてください！"
+  "notice-message": "viviIDが必要になります。登録がまだの方は登録してから投票をお願いします。\n投票が終わったら✖️で閉じて戻ってきてください！"
 },
   {
     "id": "once_camcam_yokogao_202605",
@@ -88,6 +88,6 @@
     "to": "202605202359",
     "move-flag": false,
     "alert-message": "",
-    "notice-message": "グループ名＋フルネームでの回答を忘れずに！　回答が終わったら✖️で閉じて戻ってきてください！"
+    "notice-message": "グループ名＋フルネームでの回答を忘れずに！　\n回答が終わったら✖️で閉じて戻ってきてください！"
   }
 ]
