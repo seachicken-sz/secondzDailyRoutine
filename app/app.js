@@ -1222,10 +1222,11 @@ function showOnlyStep(activeStepElement, options = {}) {
 
   state.currentStepElement = activeStepElement;
   updateStepTopActionBar();
-  
-  saveFlowState();
-}
 
+  if (options.saveFlow !== false) {
+    saveFlowState();
+  }
+}
 function goBackStep() {
   if (state.currentStepElement === dailyTaskStepElement) {
     goBackDailyTask();
