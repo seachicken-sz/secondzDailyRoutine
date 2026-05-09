@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="タムごとDaily">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="https://seachicken-sz.github.io/secondzDailyRoutine/img/link-card.jpg">
+  <meta property="og:url" content="https://seachicken-sz.github.io/secondzDailyRoutine/app/">
+  <meta name="twitter:card" content="summary_large_image"> 
+  
+  <title>タムごとDaily</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="manifest" href="../manifest.json">
+  <link rel="apple-touch-icon" href="../img/icon-180.png">
+  <link rel="icon" type="image/png" href="../img/icon-180.png"">
+  <meta name="theme-color" content="#ffffff">  
+</head>
+<body>
+  <main class="app">
+    <!--共通パーツ-->
+    <div id="stepTopActionBar" class="step-top-action-bar hidden">
+      <button id="backStepButton" class="back-step-button" type="button">
+        <i class="bi bi-chevron-left"></i>
+        <span>戻る</span>
+      </button>
+    
+      <button id="stepUsageButton" class="step-usage-button" type="button">
+        <i class="bi bi-question-octagon"></i>
+      </button>
+    </div>
+    <!--ホーム-->
+    <section id="homeStep" class="step-screen">
+      <header class="home-header">
+        <!--ロゴ-->
+        <div class="home-logo-area">
+          <img src="../img/logo.png" alt="タムごとDaily">
+        </div>
+      </header>
+
+      <section class="home-action-area">
+        <button id="startRoutineButton" class="primary-button">
+          開始する
+        </button>
+        </section>
+        
+        <section id="homeInstallGuideCard" class="home-card home-install-guide-area">
+          <h2 class="ruby-h"><ruby>はじめに<rt>first step</rt></ruby></h2>
+        
+          <p class="home-install-title">🔰まずは「ホーム画面に追加」する</p>
+        
+          <p class="home-install-text">
+            最初はブラウザで開いているので<br>
+            <strong>共有 → ホーム画面に追加</strong>をすると、ホーム画面にアイコンができます。<br>
+            そのアイコンからスタートしてください。
+          </p>
+        
+          <button id="openHowToFromHomeCardButton" class="text-link-button home-install-link" type="button">
+            詳しくはこちら ＞＞
+          </button>
+        </section>
+
+        <!--onceListJsonの期限内のものを表示-->
+        <section class="home-card home-now-request-area">
+          <h2 class="ruby-h"><ruby>期間限定<rt>limited task</rt></ruby></h2>
+          <div id="homeOnceTaskList" class="home-list-box"></div>
+        </section>
+        <!--homeInfoJsonの期限内のものを表示-->
+        <section class="home-card home-information-area">
+          <h2 class="ruby-h"><ruby>最近のタムごと<rt>information</rt></rt></ruby></h2>
+          <div id="homeInfoList" class="home-list-box"></div>
+        </section>
+        <!--ホームのボタン-->
+        <section class="home-button-area">
+          <div class="text-link-row">
+            <button id="openHowToButton" class="text-link-button">導入方法</button>
+            <button id="openUsageButton" class="text-link-button">使い方</button>
+          </div>
+        </section>
+    </section>
+    <!--STEP 1 Spotify-->
+    <section id="spotifyStep" class="step-screen hidden">
+      <header class="header">
+        <h1>今日のBGM🎧</h1>
+        <p class="description">
+          Spotifyが開いたら、曲が再生されます。<br>
+          <strong>再生されたら、バックでこのアプリ</strong>に戻ってきてね
+        </p>
+      </header>
+
+      <section id="selectedArea" class="selected-area hidden">
+        <p class="selected-label">選択中</p>
+        <p id="selectedSongName" class="selected-song"></p>
+
+        <button id="openSpotifyButton" class="primary-button">
+          Spotifyで開く
+        </button>
+
+        <button id="spotifyNextButton" class="secondary-button hidden">
+          次へ
+        </button>
+      </section>
+
+      <section id="spotifyErrorArea" class="error-area hidden"></section>
+
+      <section class="scroll-area">
+        <section class="song-section">
+          <div id="recommendedSongs" class="song-list"></div>
+        </section>
+
+        <section class="song-section">
+          <button id="toggleOtherSongsButton" class="accordion-button" type="button">
+            <span>その他</span>
+            <span id="toggleOtherSongsIcon">＋</span>
+          </button>
+
+          <div id="otherSongsWrapper" class="accordion-content hidden">
+            <div id="otherSongs" class="song-list"></div>
+          </div>
+        </section>
+
+        <section class="bottom-action-area spotify-skip-area">
+          <button id="skipSpotifyButton" class="secondary-button no-margin-button">
+            BGMなし
+          </button>
+        </section>
+      </section>
+    </section>
+    <!--STEP 2 期間限定タスク-->
+    <section id="onceListSelectStep" class="step-screen hidden">
+      <header class="header">
+        <h1>期間限定タスク🗒️</h1>
+        <p class="description">
+          これ終わってる？期間限定だから早めにやっちゃお👍<br>
+          今やるものにチェックをいれて「次へ」を押してください！
+        </p>
+      </header>
+
+      <section id="onceListErrorArea" class="error-area hidden"></section>
+
+      <section class="scroll-area">
+        <div id="onceTaskList" class="check-list"></div>
+
+        <section class="bottom-action-area">
+          <button id="startOnceTasksButton" class="primary-button">
+            次へ
+          </button>
+        </section>
+      </section>
+    </section>
+
+    <section id="onceTaskRunStep" class="step-screen hidden">
+      <header class="header">
+        <p id="onceTaskProgress" class="description"></p>
+      </header>
+
+      <section class="task-card">
+        <h2 id="onceTaskName" class="task-title"></h2>
+
+        <div id="onceTaskMessageArea" class="notice-box"></div>
+
+        <button id="openOnceTaskUrlButton" class="primary-button">
+          ページを開く
+        </button>
+
+        <button id="onceTaskNextButton" class="secondary-button hidden">
+          次へ
+        </button>
+      </section>
+
+      <section id="onceTaskRunErrorArea" class="error-area hidden"></section>
+    </section>
+    <!--STEP 3 USEN推しリク-->
+    <section id="requestSongStep" class="step-screen hidden">
+      <header class="header">
+        <h1>本日のラジオリクエスト曲📻</h1>
+        <p class="description">
+          今日は何をリクエストする？<br>
+          曲を選んで<strong>「USEN推し活リクエスト」</strong>からリクエストしてね！
+        </p>
+      </header>
+
+      <section id="selectedRequestSongArea" class="selected-area hidden">
+        <p class="selected-label">選択中</p>
+        <p id="selectedRequestSongName" class="selected-song"></p>
+
+        <button id="openRequestSongButton" class="primary-button">
+          ページを開く
+        </button>
+
+        <button id="requestSongNextButton" class="secondary-button hidden">
+          次へ
+        </button>
+      </section>
+
+      <section id="requestSongErrorArea" class="error-area hidden"></section>
+
+      <section class="scroll-area">
+        <section class="song-section">
+          <div id="recommendedRequestSongs" class="song-list"></div>
+        </section>
+
+        <section class="song-section">
+          <button id="toggleOtherRequestSongsButton" class="accordion-button" type="button">
+            <span>その他</span>
+            <span id="toggleOtherRequestSongsIcon">＋</span>
+          </button>
+
+          <div id="otherRequestSongsWrapper" class="accordion-content hidden">
+            <div id="otherRequestSongs" class="song-list"></div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <!--STEP 4 デイリータスク-->
+    <section id="dailyTaskStep" class="step-screen hidden">
+      <header class="header">
+        <p id="dailyTaskHeaderDescription" class="description"></p>
+      </header>
+
+      <section class="task-card">
+        <p id="dailyTaskGroupName" class="group-label"></p>
+        <p id="dailyTaskProgress" class="description"></p>
+        <h2 id="dailyTaskName" class="task-title"></h2>
+
+        <div id="dailyTaskCommentArea" class="notice-box"></div>
+
+        <button id="openDailyTaskUrlButton" class="primary-button">
+          ページを開く
+        </button>
+
+        <button id="dailyTaskNextButton" class="secondary-button hidden">
+          次へ
+        </button>
+      </section>
+
+      <section id="dailyTaskErrorArea" class="error-area hidden"></section>
+    </section>
+
+    <section id="dailyGroupEndStep" class="step-screen hidden">
+      <header class="header">
+      </header>
+
+      <section class="task-card">
+        <p id="endedGroupName" class="group-label"></p>
+        <h2 class="task-title">もうちょっと頑張る？</h2>
+
+        <button id="continueDailyGroupButton" class="primary-button">
+          頑張る！
+        </button>
+
+        <button id="stopDailyGroupButton" class="secondary-button">
+          今日はここまで
+        </button>
+      </section>
+    </section>
+    <!--STEP 5 SNS共有-->
+    <section id="postAskStep" class="step-screen hidden">
+      <header class="header">
+        <h1>SNSシェア</h1>
+        <p class="description">
+          今日やったタスクをSNSで共有する？
+        </p>
+      </header>
+
+      <section class="task-card">
+        <button id="makePostButton" class="primary-button">
+          共有する！
+        </button>
+
+        <button id="skipPostButton" class="secondary-button">
+          やめとく
+        </button>
+      </section>
+    </section>
+
+    <section id="postEditStep" class="step-screen hidden">
+      <header class="header">
+        <h1>シェア文章作成📝</h1>
+        <p class="description">
+          追加したい項目にチェックを入れてね！
+        </p>
+      </header>
+
+      <section id="postErrorArea" class="error-area hidden"></section>
+
+      <section class="scroll-area">
+        <div id="postItemList" class="check-list post-item-list"></div>
+
+        <section class="task-card post-check-card">
+          <p class="selected-label">チェック</p>
+          <p id="postTextCount" class="description"></p>
+          <p id="postLinkCount" class="description"></p>
+        </section>
+
+        <section class="task-card">
+          <p class="selected-label">生成文</p>
+          <div id="generatedPostText" class="copy-text"></div>
+
+          <button id="copyPostTextButton" class="secondary-button">
+            コピーする
+          </button>
+
+          <button id="openXPostButton" class="primary-button post-action-button">
+            Xに投稿
+          </button>
+
+          <button id="openThreadsButton" class="secondary-button">
+            コピーしてThreadsを開く
+          </button>
+        </section>
+
+        <section class="bottom-action-area">
+          <button id="postNextButton" class="primary-button">
+            次へ
+          </button>
+        </section>
+      </section>
+    </section>
+    <!--STEP 6 Youtube-->
+    <section id="youtubeAskStep" class="step-screen hidden">
+      <header class="header">
+        <h1>YouTubeも見る？▶️</h1>
+        <p class="description">
+          Spotifyの再生終わってたらついでにYoutubeも行っとく？
+        </p>
+      </header>
+
+      <section class="task-card">
+        <button id="watchYoutubeButton" class="primary-button">
+          見る！
+        </button>
+
+        <button id="finishWithoutYoutubeButton" class="secondary-button">
+          今日はここまで
+        </button>
+      </section>
+    </section>
+
+    <section id="youtubeSelectStep" class="step-screen hidden">
+      <header class="header">
+        <h1>動画を選ぶ▶️</h1>
+      </header>
+
+      <section id="youtubeErrorArea" class="error-area hidden"></section>
+
+      <section class="scroll-area">
+        <section class="youtube-section">
+          <h2>再生リスト</h2>
+          <div id="youtubePlaylistRow" class="youtube-card-row"></div>
+        </section>
+
+        <section class="youtube-section">
+          <h2>MV</h2>
+          <div id="youtubeMvRow" class="youtube-card-row"></div>
+        </section>
+
+        <section class="bottom-action-area">
+          <button id="finishFromYoutubeButton" class="primary-button">
+            今日はここまで
+          </button>
+        </section>
+      </section>
+    </section>
+    <!--完了-->
+    <section id="placeholderNextStep" class="step-screen hidden">
+      <header class="header">
+        <h1>完了⌛</h1>
+        <p id="placeholderMessage" class="description"></p>
+      </header>
+
+      <section class="task-card feedback-card">
+        <h3>フィードバック</h3>
+        <p class="feedback-text">
+          投票系、ラジオリクエスト先、その他etc…<br>
+          「みんなで毎日これやりたい！」という方はぜひこちらからお送りください。
+        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScsX4mHxLIRujrZy2bElGDuOfGI8OQgJapFwBiAcGQKPZCzWw/viewform?usp=sharing&ouid=105111966497500869107" target="_blank" rel="noopener noreferrer" class="primary-button feedback-link-button">追加リクエスト</a>
+        <p class="feedback-text">
+          <br>
+          困ったこと、感想、こんなことできる？などはこちらからお送りください。
+        </p>
+        <a href="https://mond.how/ja/tsunakan_r" target="_blank" rel="noopener noreferrer" class="primary-button feedback-link-button">mond</a>
+      </section>
+      <section class="task-card">
+        <button id="backHomeButton" class="secondary-button no-margin-button">
+          ホームに戻る
+        </button>
+      </section>
+    </section>
+  </main>
+
+  <div id="howToModal" class="modal-overlay hidden">
+    <section class="modal-content" role="dialog" aria-modal="true" aria-labelledby="howToTitle">
+      <div class="modal-header">
+        <h2 id="howToTitle">導入方法</h2>
+        <button id="closeHowToButton" class="modal-close-button" type="button" aria-label="閉じる">
+          ×
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <section class="how-to-section">
+          <p>
+            このツールは<strong>ホーム画面に追加</strong>することをお勧めします。 <br>          
+            ホーム画面に追加すると……
+          </p>
+          <ul>
+              <li>開くのが楽</li>
+              <li>アプリのように使えるので、USEN推しリクなどが終わったら左上の✖で閉じれば続きが超簡単</li>
+              <li>とにかく楽ちん</li>
+            </ul>
+          <p>以下にOS別の導入方法を記載しています。<br>
+            もし上手くいかないとき、難しいときはお気軽にお問い合わせください。<br>
+            <a href="https://mond.how/ja/tsunakan_r">mond</a>　<a href="https://x.com/tsunakan_r">X</a>
+          </p>
+        </section>
+        <section class="how-to-section">
+          <h3>iPhone(iPad) / iOS の場合</h3>
+          <ol>
+            <li>Safariでこのページを開く</li>
+            <li>「共有」ボタンを押す<br>「<i class="bi bi-box-arrow-up"></i>」こんなボタン</li>
+            <li>「<i class="bi bi-plus-square"></i>ホーム画面に追加」を選ぶ<br>表示されないときは「<i class="bi bi-chevron-down"></i>もっとみる」をタップし、探してみてください</li>
+            <li>「WEBアプリとして開く」の横が<i class="bi bi-toggle-on"></i>のようになっていること（オン状態）を確認し、右上の「追加」を押す</li>
+            <li>ホーム画面に「タムごとDaily」というアプリが追加されるので、それをタップして開いてください</li>
+          </ol>
+        </section>
+
+        <section class="how-to-section">
+          <h3>Android</h3>
+          <ol>
+            <li>Chromeでこのページを開く</li>
+            <li>右上のメニュー（<i class="bi bi-three-dots-vertical"></i>）を押す</li>
+            <li>「インストール」または「ホーム画面に追加」を選ぶ</li>
+            <li>「追加」または「はい」を選ぶ</li>
+            <li>ホーム画面に「タムごとDaily」というアプリが追加されるので、それをタップして開いてください</li>
+          </ol>
+        </section>
+
+        <p class="modal-note">
+          SpotifyやYouTubeがブラウザで開く場合は、各アプリを入れてログインしたうえで、Androidは対象アプリの「対応リンクを開く」をONにしてください。
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <div id="usageModal" class="modal-overlay hidden">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>使い方</h2>
+      <button id="closeUsageButton" class="modal-close-button" type="button">×</button>
+    </div>
+
+    <div class="modal-body">
+      <section class="how-to-section">
+        <h3>基本の流れ</h3>
+        <ol>
+          <li><strong>SpotifyでBGMを選ぶ</strong><br>
+            最初に表示されたものの中に好みのものがなければ、「その他」をタップすると現在Spotifyで配信されている曲の一覧が表示されます。<br>
+            画面上部に「Spotifyで再生する」ボタンが表示されるので、それをタップしてください。<br>
+            曲が再生されたらアプリを切り替えて「タムごとDaily」に戻ってきてください。<br>
+            もし曲を再生したくないときは「BGMなし」を選ぶと次に進みます。
+          </li>
+          <li><strong>期間限定タスク</strong><br>
+            〇日までなど、期間限定系のタスクが表示されます。<br>
+            終わってないもので今投票/リクエストなどしたいものがあったら✅をいれて「次へ」を押してください。<br>
+            <ul>
+              <li>アプリ遷移するもの(SpotifyやYouTubeなど)の場合<br>
+                おそらく自動で遷移します。(しない場合は既定ブラウザで開くと遷移します)<br>
+                タスクが完了したらSpotify同様にアプリを切り替えて「タムごとDaily」に戻ってきてください。
+              </li>
+              <li>アプリ遷移しないもの(アプリが切り替わらずWEBページが表示される)場合<br>
+                タスクが完了したら✖や完了などで閉じてください。<br>
+                XやLINEなどで開いたWEBページを閉じるときと同じ要領です。
+              </li>
+              <li>曲名を入力する必要があるもの<br>
+                ページを開くとき、各フォームに合わせた形でクリップボードにコピーされます。<br>
+                例：timeleszのRock this Partyをリクエストします！, timelesz/Rock this Party など<br>
+                もしフォームや入力方法の変更などがあった場合はご連絡ください。
+              </li>
+            </ul>
+            タスクが完了してアプリに戻ったりWEBページを閉じたりすると、「次へ」ボタンが表示されます。<br>
+            最後のタスクが完了すると次に移動します。
+          </li>
+          <li><strong>デイリータスク</strong><br>
+            毎日やれるタスクが表示されます。<br>
+            ページを開く前に注意事項ややり方が簡単に表示されるのでそれを参考にしてください。<br>
+            分かりにくいときはご連絡ください。
+            <ul>
+              <li>アプリ遷移するもの(SpotifyやYouTubeなど)の場合<br>
+                おそらく自動で遷移します。(しない場合は既定ブラウザで開くと遷移します)<br>
+                タスクが完了したらSpotify同様にアプリを切り替えて「タムごとDaily」に戻ってきてください。
+              </li>
+              <li>アプリ遷移しないもの(アプリが切り替わらずWEBページが表示される)場合<br>
+                タスクが完了したら✖や完了などで閉じてください。<br>
+                XやLINEなどで開いたWEBページを閉じるときと同じ要領です。
+              </li>
+              <li>曲名を入力する必要があるもの<br>
+                ページを開くとき、各フォームに合わせた形でクリップボードにコピーされます。<br>
+                例：timeleszのRock this Partyをリクエストします！, timelesz/Rock this Party など<br>
+                もしフォームや入力方法の変更などがあった場合はご連絡ください。
+              </li>
+            </ul>
+            タスクが完了してアプリに戻ったりWEBページを閉じたりすると、「次へ」ボタンが表示されます。<br>
+            最後のタスクが完了すると、続けるかどうかの質問が出ます。(出ないときもあります)<br>
+            続けるときはまたタスクが表示されます。<br>
+            これまでと同じ要領で進めてください。<br>
+            続けないときは次に進みます。
+          </li>
+          <li><strong>SNS共有</strong><br>
+            こなしたタスクをSNSに共有できます。<br>
+            共有したいものを選択して希望のボタンを押してください。<br>
+            各SNSアプリで投稿が終わったらこのアプリに戻り、「次へ」ボタンを押してください。
+          </li>
+          <li><strong>YouTube再生</strong><br>
+            もし余力があったらYouTubeも再生していってください。<br>
+            再生リストや動画のの追加リクエストはmondまたはDMまたはリプライで受け付けています。
+          </li>
+        </ol>
+      </section>
+      <p class="modal-note">
+        お問い合わせ・質問はこちら<br>
+        <a href ="https://docs.google.com/forms/d/12qZFvckxN_fbIT6Uq_UwXGPCx6hl8sglsRoRuRqY5xE/edit">タムごとDaily追加リクエストフォーム</a>
+        <a href="https://mond.how/ja/tsunakan_r">mond</a>
+        <a href="https://x.com/tsunakan_r">X</a>
+      </p>
+      <p class="modal-note">
+        <strong>このツールについて</strong><br>
+        「タムごとDaily」は、timeleszを応援する毎日の行動をまとめて確認できる非公式ファンメイドツールです。<br>
+        Spotifyを聴く、USEN推しリクをする、SNSでシェアする、期間限定のタスクを確認するなど、日々の推し活を少しでも忘れず・楽しく続けられるように作成しています。<br>
+        掲載している情報やリンクはできるだけ確認していますが、手動管理のため内容が古くなる場合があります。<br>
+        大事なお知らせや期限については、必ず公式情報もあわせてご確認ください。<br><br>
+        このツールは個人による非公式ツールです。<br>
+        所属事務所、各サービスとは関係ありません。<br><br>
+        またこのツールで個人の特定につながる情報を収集することはありません。(本名・住所・電話番号・SNSアカウントなど)<br>
+        スマートフォン内のデータにアクセスすることもありません。(連絡先、写真など)
+      </p>
+    </div>
+  </div>
+</div>
+  <script src="./sheetLogger.js"></script>
+  <script src="./state.js"></script>
+  <script src="./loader.js"></script>
+  <script src="./storage.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
