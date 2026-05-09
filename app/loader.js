@@ -11,7 +11,7 @@ async function loadJsonFile(path, label) {
 
 //Spotify
 async function loadSpotifySongs() {
-  const songs = await loadJsonFile("../data/spotifySongJson.json", "spotifySongJson.json");
+  const songs = await loadJsonFile(DATA_PATHS.spotifySongs, "spotifySongJson.json");
 
   if (!Array.isArray(songs)) {
     throw new Error("spotifySongJson.json が配列形式ではありません。");
@@ -19,9 +19,36 @@ async function loadSpotifySongs() {
 
   return songs.filter((song) => song && song.name && song.url);
 }
+
+//期間限定タスク読み込み
+async function loadOnceTasks() {
+  const tasks = await loadJsonFile(DATA_PATHS.onceTasks, "onceListJson.json");
+
+  if (!Array.isArray(tasks)) {
+    throw new Error("onceListJson.json が配列形式ではありません。");
+  }
+
+  return tasks.filter((task) => {
+    return task && task.name && isWithinPeriod(task.from, task.to);
+  });
+}
+
+//情報読み込み
+async function loadHomeInfoList() {
+  const informationList = await loadJsonFile(DATA_PATHS.homeInfoList, "homeInfoListJson.json");
+
+  if (!Array.isArray(informationList)) {
+    throw new Error("homeInfoListJson.json が配列形式ではありません。");
+  }
+
+  return informationList.filter((item) => {
+    return item && item.name && isWithinPeriod(item.from, item.to);
+  });
+}
+
 //リクエスト曲読み込み
 async function loadRequestSongs() {
-  const songs = await loadJsonFile("../data/requestSongJson.json", "requestSongJson.json");
+  const songs = await loadJsonFile(DATA_PATHS.requestSongs, "requestSongJson.json");
 
   if (!Array.isArray(songs)) {
     throw new Error("requestSongJson.json が配列形式ではありません。");
@@ -29,9 +56,10 @@ async function loadRequestSongs() {
 
   return songs.filter((song) => song && song.name && song.url);
 }
+
 //リクエスト文章読み込み
 async function loadRequestTexts() {
-  const requestTexts = await loadJsonFile("../data/requestTextJson.json", "requestTextJson.json");
+  const requestTexts = await loadJsonFile(DATA_PATHS.requestTexts, "requestTextJson.json");
 
   if (!requestTexts || Array.isArray(requestTexts) || typeof requestTexts !== "object") {
     throw new Error("requestTextJson.json がオブジェクト形式ではありません。");
@@ -39,9 +67,10 @@ async function loadRequestTexts() {
 
   return requestTexts;
 }
+
 //デイリータスク読み込み
 async function loadDailyGroups() {
-  const groups = await loadJsonFile("../data/listJson.json", "listJson.json");
+  const groups = await loadJsonFile(DATA_PATHS.dailyGroups, "listJson.json");
 
   if (!Array.isArray(groups)) {
     throw new Error("listJson.json が配列形式ではありません。");
@@ -51,9 +80,10 @@ async function loadDailyGroups() {
     return group && group.listName && Array.isArray(group.items) && group.items.length > 0;
   });
 }
+
 //YouTubeプレリ読み込み
 async function loadYoutubePlaylists() {
-  const playlists = await loadJsonFile("../data/youtubePlayListJson.json", "youtubePlayListJson.json");
+  const playlists = await loadJsonFile(DATA_PATHS.youtubePlaylists, "youtubePlayListJson.json");
 
   if (!Array.isArray(playlists)) {
     throw new Error("youtubePlayListJson.json が配列形式ではありません。");
@@ -61,9 +91,10 @@ async function loadYoutubePlaylists() {
 
   return playlists.filter((item) => item && item.name && item.url);
 }
+
 //YouTubeMV読み込み
 async function loadYoutubeMvs() {
-  const mvs = await loadJsonFile("../data/youtubeMVListJson.json", "youtubeMVListJson.json");
+  const mvs = await loadJsonFile(DATA_PATHS.youtubeMvs, "youtubeMVListJson.json");
 
   if (!Array.isArray(mvs)) {
     throw new Error("youtubeMVListJson.json が配列形式ではありません。");

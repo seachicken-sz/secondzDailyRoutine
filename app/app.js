@@ -1,10 +1,3 @@
-const SPOTIFY_TRACK_BASE_URL = "https://open.spotify.com/track/";
-const USEN_REQUEST_BASE_URL = "https://usen.oshireq.com/song/";
-const X_POST_URL = "https://twitter.com/intent/tweet?text=";
-const THREADS_URL = "https://www.threads.net/";
-const YOUTUBE_THUMBNAIL_BASE_URL = "https://img.youtube.com/vi/";
-const TIMELESZ_SPOTIFY_ARTIST_URL = "https://open.spotify.com/intl-ja/artist/1ZFfhzyXjPvbzSYPlCIwo3";
-
 // ==================================================
 // DOM: 共通ナビゲーション
 // ==================================================
@@ -253,7 +246,9 @@ document.addEventListener("visibilitychange", () => {
   }
 });
 window.addEventListener("pagehide", () => {
-  saveFlowState();
+  if (options.saveFlow !== false) {
+    saveFlowState();
+  }
 });
 // ==================================================
 // クリックイベント設定
@@ -342,7 +337,7 @@ if (usageModalElement) {
 addClickEvent(openSpotifyButtonElement, () => {
   // 曲が未選択の場合はエラー表示して処理を止める
   if (!state.selectedSong) {
-    showError(spotifyErrorAreaElement, "曲が選択されていません。");
+    showError(spotifyErrorAreaElement, MESSAGES.errors.noSongSelected);
     return;
   }
   // 選択中の曲からSpotify用URLを作成
@@ -360,7 +355,7 @@ addClickEvent(openSpotifyButtonElement, () => {
   setSongListVisibility(toggleOtherSongsButtonElement, false);
   // Spotifyを開いた状態として保存する
   // アプリに戻ってきた時に次へボタン表示などを復元するため
-  state.openedAction = "spotifyOpened";
+  state.openedAction = OPENED_ACTIONS.spotify;
   saveFlowState(state.openedAction, spotifyStepElement);
   // Spotifyへ移動
   location.href = spotifyUrl;
@@ -412,7 +407,7 @@ addClickEvent(openOnceTaskUrlButtonElement, () => {
   const task = state.selectedOnceTasks[state.currentOnceTaskIndex];
   // タスクまたはURLがない場合はエラー表示して処理を止める
   if (!task || !task.url) {
-    showError(onceTaskRunErrorAreaElement, "URLが設定されていません。");
+    showError(onceTaskRunErrorAreaElement, MESSAGES.errors.noUrl);
     return;
   }
   // ページを開いた後に進めるよう、次へボタンを表示
@@ -424,7 +419,7 @@ addClickEvent(openOnceTaskUrlButtonElement, () => {
   setButtonStyle(onceTaskNextButtonElement, "primary");
   // 期間限定タスクを開いた状態として保存する
   // アプリに戻ってきた時に次へボタン表示などを復元するため
-  state.openedAction = "onceTaskOpened";
+  state.openedAction = OPENED_ACTIONS.onceTask;
   saveFlowState(state.openedAction, onceTaskRunStepElement);
   // 期間限定タスクのURLへ移動
   location.href = task.url;
@@ -455,7 +450,7 @@ addClickEvent(toggleOtherRequestSongsButtonElement, () => {
 addClickEvent(openRequestSongButtonElement, () => {
   // リクエスト曲が未選択の場合はエラー表示して処理を止める
   if (!state.selectedRequestSong) {
-    showError(requestSongErrorAreaElement, "リクエスト曲が選択されていません。");
+    showError(requestSongErrorAreaElement, MESSAGES.errors.noRequestSongSelected);
     return;
   }
   // 選択中の曲からUSEN推しリク用URLを作成
@@ -473,7 +468,7 @@ addClickEvent(openRequestSongButtonElement, () => {
   setSongListVisibility(toggleOtherRequestSongsButtonElement, false);
   // USEN推しリクを開いた状態として保存する
   // アプリに戻ってきた時に次へボタン表示などを復元するため
-  state.openedAction = "requestSongOpened";
+  state.openedAction = OPENED_ACTIONS.requestSong;
   saveFlowState(state.openedAction, requestSongStepElement);
   // USEN推しリクページへ移動
   location.href = requestUrl;
@@ -494,7 +489,7 @@ addClickEvent(openDailyTaskUrlButtonElement, async () => {
   const itemUrl = getDailyTaskItemUrl(item);
   // タスクまたはURLがない場合はエラー表示して処理を止める
   if (!item || !itemUrl) {
-    showError(dailyTaskErrorAreaElement, "URLが設定されていません。");
+    showError(dailyTaskErrorAreaElement, MESSAGES.errors.noUrl);
     return;
   }
   // 入力補助が必要なタスクの場合は、ページを開く前にコピー文を作成してクリップボードへ入れる
@@ -506,7 +501,7 @@ addClickEvent(openDailyTaskUrlButtonElement, async () => {
         hideError(dailyTaskErrorAreaElement);
       } catch (error) {
         console.error(error);
-        showError(dailyTaskErrorAreaElement, "コピーに失敗しました。もう一度ページを開くボタンを押してください。");
+        showError(dailyTaskErrorAreaElement, MESSAGES.errors.dailyCopyFailed);
         return;
       }
     }
@@ -522,7 +517,7 @@ addClickEvent(openDailyTaskUrlButtonElement, async () => {
   setButtonStyle(dailyTaskNextButtonElement, "primary");
   // デイリータスクを開いた状態として保存する
   // アプリに戻ってきた時に次へボタン表示などを復元するため
-  state.openedAction = "dailyTaskOpened";
+  state.openedAction = OPENED_ACTIONS.dailyTask;
   saveFlowState(state.openedAction, dailyTaskStepElement);
   // デイリータスクのURLへ移動
   location.href = itemUrl;
@@ -586,7 +581,7 @@ addClickEvent(copyPostTextButtonElement, async () => {
   const postText = getGeneratedPostText();
   // 投稿文が空の場合はエラー表示して処理を止める
   if (!postText) {
-    showError(postErrorAreaElement, "コピーする投稿文がありません。");
+    showError(postErrorAreaElement, MESSAGES.errors.noCopyPostText);
     return;
   }
   try {
@@ -601,7 +596,7 @@ addClickEvent(copyPostTextButtonElement, async () => {
   } catch (error) {
     // コピーに失敗した場合は、手動コピーを促す
     console.error(error);
-    showError(postErrorAreaElement, "コピーに失敗しました。投稿文を長押しでコピーしてください。");
+    showError(postErrorAreaElement, MESSAGES.errors.copyFailed);
   }
 });
 // Xに投稿ボタン押下時
@@ -610,7 +605,7 @@ addClickEvent(openXPostButtonElement, () => {
   const postText = getGeneratedPostText();
   // 投稿文が空の場合はエラー表示して処理を止める
   if (!postText) {
-    showError(postErrorAreaElement, "投稿文がありません。");
+    showError(postErrorAreaElement, MESSAGES.errors.noPostText);
     return;
   }
   // X投稿画面用URLを作成して移動
@@ -623,7 +618,7 @@ addClickEvent(openThreadsButtonElement, async () => {
   const postText = getGeneratedPostText();
   // 投稿文が空の場合はエラー表示して処理を止める
   if (!postText) {
-    showError(postErrorAreaElement, "投稿文がありません。");
+    showError(postErrorAreaElement, MESSAGES.errors.noPostText);
     return;
   }
   try {
@@ -636,7 +631,7 @@ addClickEvent(openThreadsButtonElement, async () => {
   } catch (error) {
     // コピーに失敗した場合は、手動コピーを促す
     console.error(error);
-    showError(postErrorAreaElement, "コピーに失敗しました。投稿文を長押しでコピーしてください。");
+    showError(postErrorAreaElement, MESSAGES.errors.copyFailed);
   }
 });
 // 投稿文編集画面の次へボタン押下時
@@ -655,12 +650,12 @@ addClickEvent(watchYoutubeButtonElement, async () => {
 // YouTube確認画面の「今日はここまで」ボタン押下時
 addClickEvent(finishWithoutYoutubeButtonElement, () => {
   // 完了画面へ進む
-  showPlaceholderNextStep("お疲れ様さまでした☺️Big Love💚");
+  showPlaceholderNextStep(MESSAGES.finish);
 });
 // YouTube選択画面の「今日はここまで」ボタン押下時
 addClickEvent(finishFromYoutubeButtonElement, () => {
   // 完了画面へ進む
-  showPlaceholderNextStep("お疲れ様さまでした☺️Big Love💚");
+  showPlaceholderNextStep(MESSAGES.finish);
 });
 // ==================================================
 // クリックイベント設定 - 完了画面
@@ -704,11 +699,11 @@ async function init() {
     renderSpotifySongList(otherSongsElement, otherSongs);
 
     if (recommendedSongs.length === 0 && recommendedSongsElement) {
-      recommendedSongsElement.innerHTML = '<p class="empty-text">おすすめ曲はありません。</p>';
+      recommendedSongsElement.innerHTML = `<p class="empty-text">${MESSAGES.empty.recommendedSongs}</p>`;
     }
 
     if (otherSongs.length === 0 && otherSongsElement) {
-      otherSongsElement.innerHTML = '<p class="empty-text">その他の曲はありません。</p>';
+      otherSongsElement.innerHTML = `<p class="empty-text">${MESSAGES.empty.otherSongs}</p>`;
     }
 
     updateOtherSongsAccordion();
@@ -719,11 +714,21 @@ async function init() {
     await restoreFlowStateOrHome();
   } catch (error) {
     console.error(error);
-    showError(spotifyErrorAreaElement, "初期データの読み込みに失敗しました。ERROR:JSON");
+    showError(spotifyErrorAreaElement, MESSAGES.errors.initialLoadFailed);
     renderHomeOnceTaskList([]);
     renderHomeInfoList([]);
     state.currentStepElement = homeStepElement;
     updateStepTopActionBar();
+  }
+}
+
+async function ensureDailyDataLoaded() {
+  if (!state.requestTexts || Object.keys(state.requestTexts).length === 0) {
+    state.requestTexts = await loadRequestTexts();
+  }
+
+  if (!Array.isArray(state.dailyGroups) || state.dailyGroups.length === 0) {
+    state.dailyGroups = await loadDailyGroups();
   }
 }
 
@@ -754,7 +759,7 @@ async function restoreFlowStateOrHome() {
       selectSong(state.selectedSong);
     }
 
-    if (state.openedAction === "spotifyOpened") {
+    if (state.openedAction === OPENED_ACTIONS.spotify) {
       spotifyNextButtonElement.classList.remove("hidden");
       setButtonStyle(openSpotifyButtonElement, "gray");
       setButtonStyle(spotifyNextButtonElement, "primary");
@@ -772,7 +777,7 @@ async function restoreFlowStateOrHome() {
     showOnlyStep(onceTaskRunStepElement, { recordHistory: false });
     renderCurrentOnceTask();
 
-    if (state.openedAction === "onceTaskOpened") {
+    if (state.openedAction === OPENED_ACTIONS.onceTask) {
       onceTaskNextButtonElement.classList.remove("hidden");
       setButtonStyle(openOnceTaskUrlButtonElement, "gray");
       setButtonStyle(onceTaskNextButtonElement, "primary");
@@ -782,25 +787,33 @@ async function restoreFlowStateOrHome() {
   }
 
   if (flowState.currentStepId === "requestSongStep") {
+    const restoredRequestSong = state.selectedRequestSong;
+
     await showRequestSongStep();
 
-    if (state.selectedRequestSong) {
-      selectRequestSong(state.selectedRequestSong);
+    if (restoredRequestSong) {
+      selectRequestSong(restoredRequestSong);
     }
 
-    if (state.openedAction === "requestSongOpened") {
+    if (state.openedAction === OPENED_ACTIONS.requestSong) {
       requestSongNextButtonElement.classList.remove("hidden");
       setButtonStyle(openRequestSongButtonElement, "gray");
       setButtonStyle(requestSongNextButtonElement, "primary");
+      setSongListVisibility(recommendedRequestSongsElement, false);
+      setSongListVisibility(otherRequestSongsWrapperElement, false);
+      setSongListVisibility(toggleOtherRequestSongsButtonElement, false);
     }
 
     return;
   }
 
   if (flowState.currentStepId === "dailyTaskStep") {
-    await showDailyTaskStep();
+    await ensureDailyDataLoaded();
 
-    if (state.openedAction === "dailyTaskOpened") {
+    showOnlyStep(dailyTaskStepElement, { recordHistory: false });
+    renderCurrentDailyTask();
+
+    if (state.openedAction === OPENED_ACTIONS.dailyTask) {
       dailyTaskNextButtonElement.classList.remove("hidden");
       setButtonStyle(openDailyTaskUrlButtonElement, "gray");
       setButtonStyle(dailyTaskNextButtonElement, "primary");
@@ -821,43 +834,6 @@ async function restoreFlowStateOrHome() {
 }
 
 
-//期間限定タスク読み込み
-async function loadOnceTasks() {
-  const response = await fetch("../data/onceListJson.json?ts=" + Date.now());
-
-  if (!response.ok) {
-    throw new Error("onceListJson.json の取得に失敗しました。");
-  }
-
-  const tasks = await response.json();
-
-  if (!Array.isArray(tasks)) {
-    throw new Error("onceListJson.json が配列形式ではありません。");
-  }
-
-  return tasks.filter((task) => {
-    return task && task.name && isWithinPeriod(task.from, task.to);
-  });
-}
-//情報読み込み
-async function loadHomeInfoList() {
-  const response = await fetch("../data/homeInfoListJson.json?ts=" + Date.now());
-
-  if (!response.ok) {
-    throw new Error("homeInfoListJson.json の取得に失敗しました。");
-  }
-
-  const informationList = await response.json();
-
-  if (!Array.isArray(informationList)) {
-    throw new Error("homeInfoListJson.json が配列形式ではありません。");
-  }
-
-  return informationList.filter((item) => {
-    return item && item.name && isWithinPeriod(item.from, item.to);
-  });
-}
-
 function renderHomeOnceTaskList(tasks) {
   if (!homeOnceTaskListElement) {
     return;
@@ -866,7 +842,7 @@ function renderHomeOnceTaskList(tasks) {
   homeOnceTaskListElement.innerHTML = "";
 
   if (!tasks || tasks.length === 0) {
-    homeOnceTaskListElement.innerHTML = '<p class="empty-text">現在、期限内のリクエストはありません。</p>';
+    homeOnceTaskListElement.innerHTML = `<p class="empty-text">${MESSAGES.empty.onceTasks}</p>`;
     return;
   }
 
@@ -886,7 +862,7 @@ function renderHomeInfoList(items) {
   homeInfoListElement.innerHTML = "";
 
   if (!items || items.length === 0) {
-    homeInfoListElement.innerHTML = '<p class="empty-text">現在、お知らせはありません。</p>';
+    homeInfoListElement.innerHTML = `<p class="empty-text">${MESSAGES.empty.homeInfo}</p>`;
     return;
   }
 
@@ -963,7 +939,7 @@ function renderYoutubeCardRow(container, items, type) {
   container.innerHTML = "";
 
   if (items.length === 0) {
-    container.innerHTML = '<p class="empty-text">表示できる項目がありません。</p>';
+    container.innerHTML = `<p class="empty-text">${MESSAGES.empty.youtubeItems}</p>`;
     return;
   }
 
@@ -1002,7 +978,7 @@ card.addEventListener("click", () => {
     console.error("youtubeLog送信失敗", error);
   });
 
-  showPlaceholderNextStep("お疲れ様さまでした☺️Big Love");
+  showPlaceholderNextStep(MESSAGES.finish);
 
   setTimeout(() => {
     location.href = item.url;
@@ -1273,11 +1249,11 @@ async function showRequestSongStep() {
     renderRequestSongList(otherRequestSongsElement, otherRequestSongs);
 
     if (recommendedRequestSongs.length === 0 && recommendedRequestSongsElement) {
-      recommendedRequestSongsElement.innerHTML = '<p class="empty-text">おすすめ曲はありません。</p>';
+      recommendedRequestSongsElement.innerHTML = `<p class="empty-text">${MESSAGES.empty.recommendedSongs}</p>`;
     }
 
     if (otherRequestSongs.length === 0 && otherRequestSongsElement) {
-      otherRequestSongsElement.innerHTML = '<p class="empty-text">その他の曲はありません。</p>';
+      otherRequestSongsElement.innerHTML = `<p class="empty-text">${MESSAGES.empty.otherSongs}</p>`;
     }
 
     updateOtherRequestSongsAccordion();
@@ -1443,9 +1419,8 @@ function recordCompletedDailyItem(item) {
 function showPostAskStep() {
   sendSheetLogOnPostAskStep();
 
+  showOnlyStep(postAskStepElement, { saveFlow: false });
   clearFlowState();
-
-  showOnlyStep(postAskStepElement);
 }
 
 function sendSheetLogOnPostAskStep() {

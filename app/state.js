@@ -1,5 +1,3 @@
-const FLOW_STORAGE_KEY = "tamugotoDailyFlowState";
-
 const state = {
   selectedSong: null,
   isOtherSongsOpen: false,

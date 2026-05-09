@@ -26,12 +26,14 @@ function saveFlowState(openedAction = state.openedAction || "", stepElement = st
     openedAction
   };
 
-  localStorage.setItem(FLOW_STORAGE_KEY, JSON.stringify(flowState));
+  localStorage.setItem(STORAGE_KEYS.flowState, JSON.stringify(flowState));
 }
 
 function loadFlowState() {
   try {
-    const raw = localStorage.getItem(FLOW_STORAGE_KEY);
+    const raw =
+      localStorage.getItem(STORAGE_KEYS.flowState) ||
+      localStorage.getItem("tamugotoDailyFlowState");
 
     if (!raw) {
       return null;
@@ -53,6 +55,7 @@ function loadFlowState() {
 }
 
 function clearFlowState() {
-  localStorage.removeItem(FLOW_STORAGE_KEY);
+  localStorage.removeItem(STORAGE_KEYS.flowState);
+  localStorage.removeItem("tamugotoDailyFlowState");
   state.openedAction = "";
 }
