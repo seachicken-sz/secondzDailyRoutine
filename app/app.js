@@ -5,157 +5,303 @@ const THREADS_URL = "https://www.threads.net/";
 const YOUTUBE_THUMBNAIL_BASE_URL = "https://img.youtube.com/vi/";
 const TIMELESZ_SPOTIFY_ARTIST_URL = "https://open.spotify.com/intl-ja/artist/1ZFfhzyXjPvbzSYPlCIwo3";
 
-const homeStepElement = document.getElementById("homeStep");
-const homeOnceTaskListElement = document.getElementById("homeOnceTaskList");
-const homeInfoListElement = document.getElementById("homeInfoList");
-const startRoutineButtonElement = document.getElementById("startRoutineButton");
-
-const openHowToButtonElement = document.getElementById("openHowToButton");
-const howToModalElement = document.getElementById("howToModal");
-const closeHowToButtonElement = document.getElementById("closeHowToButton");
-
-const openUsageButtonElement = document.getElementById("openUsageButton");
-const usageModalElement = document.getElementById("usageModal");
-const closeUsageButtonElement = document.getElementById("closeUsageButton");
-
+// ==================================================
+// DOM: 共通ナビゲーション
+// ==================================================
+// 画面上部の戻る・使い方エリア
 const stepTopActionBarElement = document.getElementById("stepTopActionBar");
+// 戻るボタン
 const backStepButtonElement = document.getElementById("backStepButton");
+// ステップ画面用の使い方ボタン
 const stepUsageButtonElement = document.getElementById("stepUsageButton");
 
+// ==================================================
+// DOM: ホーム画面
+// ==================================================
+
+// ホーム画面全体
+const homeStepElement = document.getElementById("homeStep");
+// 開始ボタン
+const startRoutineButtonElement = document.getElementById("startRoutineButton");
+// ホーム画面の導入案内カード（ブラウザ限定）
+const homeInstallGuideCardElement = document.getElementById("homeInstallGuideCard");
+// 導入案内カード内の「詳しくはこちら」ボタン（ブラウザ限定）
+const openHowToFromHomeCardButtonElement = document.getElementById("openHowToFromHomeCardButton");
+// 期間限定タスク表示エリア
+const homeOnceTaskListElement = document.getElementById("homeOnceTaskList");
+// お知らせ表示エリア
+const homeInfoListElement = document.getElementById("homeInfoList");
+// ホーム下部の「初回設定」ボタン
+const openHowToButtonElement = document.getElementById("openHowToButton");
+// ホーム下部の「使い方」ボタン
+const openUsageButtonElement = document.getElementById("openUsageButton");
+
+// ==================================================
+// DOM: 初回設定モーダル
+// ==================================================
+// 初回設定モーダル全体
+const howToModalElement = document.getElementById("howToModal");
+// 初回設定モーダルの閉じるボタン
+const closeHowToButtonElement = document.getElementById("closeHowToButton");
+
+// ==================================================
+// DOM: 使い方モーダル
+// ==================================================
+
+// 使い方モーダル全体
+const usageModalElement = document.getElementById("usageModal");
+// 使い方モーダルの閉じるボタン
+const closeUsageButtonElement = document.getElementById("closeUsageButton");
+
+// ==================================================
+// DOM: STEP 1 Spotify
+// ==================================================
+
+// Spotifyステップ画面全体
 const spotifyStepElement = document.getElementById("spotifyStep");
-const onceListSelectStepElement = document.getElementById("onceListSelectStep");
-const onceTaskRunStepElement = document.getElementById("onceTaskRunStep");
-const requestSongStepElement = document.getElementById("requestSongStep");
-const dailyTaskStepElement = document.getElementById("dailyTaskStep");
-const dailyGroupEndStepElement = document.getElementById("dailyGroupEndStep");
-const postAskStepElement = document.getElementById("postAskStep");
-const postEditStepElement = document.getElementById("postEditStep");
-const youtubeAskStepElement = document.getElementById("youtubeAskStep");
-const youtubeSelectStepElement = document.getElementById("youtubeSelectStep");
-const placeholderNextStepElement = document.getElementById("placeholderNextStep");
-
-const recommendedSongsElement = document.getElementById("recommendedSongs");
-const otherSongsElement = document.getElementById("otherSongs");
+// 選択中の曲表示エリア
 const selectedAreaElement = document.getElementById("selectedArea");
+// 選択中の曲名
 const selectedSongNameElement = document.getElementById("selectedSongName");
+// Spotifyを開くボタン
 const openSpotifyButtonElement = document.getElementById("openSpotifyButton");
+// Spotify完了後の次へボタン
 const spotifyNextButtonElement = document.getElementById("spotifyNextButton");
-const skipSpotifyButtonElement = document.getElementById("skipSpotifyButton");
+// Spotifyエラー表示エリア
 const spotifyErrorAreaElement = document.getElementById("spotifyErrorArea");
+// おすすめ曲リスト
+const recommendedSongsElement = document.getElementById("recommendedSongs");
+// その他曲の開閉ボタン
 const toggleOtherSongsButtonElement = document.getElementById("toggleOtherSongsButton");
+// その他曲の開閉アイコン
 const toggleOtherSongsIconElement = document.getElementById("toggleOtherSongsIcon");
+// その他曲の開閉ラッパー
 const otherSongsWrapperElement = document.getElementById("otherSongsWrapper");
+// その他曲リスト
+const otherSongsElement = document.getElementById("otherSongs");
+// BGMなしボタン
+const skipSpotifyButtonElement = document.getElementById("skipSpotifyButton");
 
-const onceTaskListElement = document.getElementById("onceTaskList");
+// ==================================================
+// DOM: STEP 2 期間限定タスク選択
+// ==================================================
+// 期間限定タスク選択画面全体
+const onceListSelectStepElement = document.getElementById("onceListSelectStep");
+// 期間限定タスク選択画面のエラー表示エリア
 const onceListErrorAreaElement = document.getElementById("onceListErrorArea");
+// 期間限定タスクのチェックリスト
+const onceTaskListElement = document.getElementById("onceTaskList");
+// 選択した期間限定タスクを開始するボタン
 const startOnceTasksButtonElement = document.getElementById("startOnceTasksButton");
 
+// ==================================================
+// DOM: STEP 2 期間限定タスク実行
+// ==================================================
+// 期間限定タスク実行画面全体
+const onceTaskRunStepElement = document.getElementById("onceTaskRunStep");
+// 現在の期間限定タスク進捗
 const onceTaskProgressElement = document.getElementById("onceTaskProgress");
+// 現在の期間限定タスク名
 const onceTaskNameElement = document.getElementById("onceTaskName");
+// 現在の期間限定タスク説明・注意文
 const onceTaskMessageAreaElement = document.getElementById("onceTaskMessageArea");
+// 期間限定タスクのページを開くボタン
 const openOnceTaskUrlButtonElement = document.getElementById("openOnceTaskUrlButton");
+// 期間限定タスク完了後の次へボタン
 const onceTaskNextButtonElement = document.getElementById("onceTaskNextButton");
+// 期間限定タスク実行画面のエラー表示エリア
 const onceTaskRunErrorAreaElement = document.getElementById("onceTaskRunErrorArea");
 
+// ==================================================
+// DOM: STEP 3 USEN推しリク
+// ==================================================
+// USEN推しリク曲選択画面全体
+const requestSongStepElement = document.getElementById("requestSongStep");
+// 選択中のリクエスト曲表示エリア
 const selectedRequestSongAreaElement = document.getElementById("selectedRequestSongArea");
+// 選択中のリクエスト曲名
 const selectedRequestSongNameElement = document.getElementById("selectedRequestSongName");
+// USEN推しリクページを開くボタン
 const openRequestSongButtonElement = document.getElementById("openRequestSongButton");
+// USEN推しリク完了後の次へボタン
 const requestSongNextButtonElement = document.getElementById("requestSongNextButton");
+// USEN推しリクのエラー表示エリア
 const requestSongErrorAreaElement = document.getElementById("requestSongErrorArea");
+// おすすめリクエスト曲リスト
 const recommendedRequestSongsElement = document.getElementById("recommendedRequestSongs");
-const otherRequestSongsElement = document.getElementById("otherRequestSongs");
+// その他リクエスト曲の開閉ボタン
 const toggleOtherRequestSongsButtonElement = document.getElementById("toggleOtherRequestSongsButton");
+// その他リクエスト曲の開閉アイコン
 const toggleOtherRequestSongsIconElement = document.getElementById("toggleOtherRequestSongsIcon");
+// その他リクエスト曲の開閉ラッパー
 const otherRequestSongsWrapperElement = document.getElementById("otherRequestSongsWrapper");
+// その他リクエスト曲リスト
+const otherRequestSongsElement = document.getElementById("otherRequestSongs");
 
+// ==================================================
+// DOM: STEP 4 デイリータスク
+// ==================================================
+// デイリータスク画面全体
+const dailyTaskStepElement = document.getElementById("dailyTaskStep");
+// デイリータスク画面上部の説明
 const dailyTaskHeaderDescriptionElement = document.getElementById("dailyTaskHeaderDescription");
+// 現在のデイリータスクグループ名
 const dailyTaskGroupNameElement = document.getElementById("dailyTaskGroupName");
+// 現在のデイリータスク進捗
 const dailyTaskProgressElement = document.getElementById("dailyTaskProgress");
+// 現在のデイリータスク名
 const dailyTaskNameElement = document.getElementById("dailyTaskName");
+// 現在のデイリータスク説明・注意文
 const dailyTaskCommentAreaElement = document.getElementById("dailyTaskCommentArea");
+// デイリータスクのページを開くボタン
 const openDailyTaskUrlButtonElement = document.getElementById("openDailyTaskUrlButton");
+// デイリータスク完了後の次へボタン
 const dailyTaskNextButtonElement = document.getElementById("dailyTaskNextButton");
+// デイリータスクのエラー表示エリア
 const dailyTaskErrorAreaElement = document.getElementById("dailyTaskErrorArea");
 
+// ==================================================
+// DOM: STEP 4 デイリーグループ終了
+// ==================================================
+// デイリーグループ終了画面全体
+const dailyGroupEndStepElement = document.getElementById("dailyGroupEndStep");
+// 終了したデイリーグループ名
 const endedGroupNameElement = document.getElementById("endedGroupName");
+// 次のデイリーグループへ進むボタン
 const continueDailyGroupButtonElement = document.getElementById("continueDailyGroupButton");
+// デイリータスクを終了するボタン
 const stopDailyGroupButtonElement = document.getElementById("stopDailyGroupButton");
 
+// ==================================================
+// DOM: STEP 5 SNS共有確認
+// ==================================================
+// SNS共有確認画面全体
+const postAskStepElement = document.getElementById("postAskStep");
+// 投稿文作成へ進むボタン
 const makePostButtonElement = document.getElementById("makePostButton");
+// SNS共有をスキップするボタン
 const skipPostButtonElement = document.getElementById("skipPostButton");
+
+// ==================================================
+// DOM: STEP 5 投稿文編集
+// ==================================================
+
+// 投稿文編集画面全体
+const postEditStepElement = document.getElementById("postEditStep");
+// 投稿文編集画面のエラー表示エリア
 const postErrorAreaElement = document.getElementById("postErrorArea");
+// 投稿に含める項目のチェックリスト
 const postItemListElement = document.getElementById("postItemList");
+// 投稿文字数表示
 const postTextCountElement = document.getElementById("postTextCount");
+// 投稿リンク数表示
 const postLinkCountElement = document.getElementById("postLinkCount");
+// 生成された投稿文表示エリア
 const generatedPostTextElement = document.getElementById("generatedPostText");
+// 投稿文をコピーするボタン
 const copyPostTextButtonElement = document.getElementById("copyPostTextButton");
+// X投稿画面を開くボタン
 const openXPostButtonElement = document.getElementById("openXPostButton");
+// Threadsを開くボタン
 const openThreadsButtonElement = document.getElementById("openThreadsButton");
+// 投稿ステップ完了後の次へボタン
 const postNextButtonElement = document.getElementById("postNextButton");
 
+// ==================================================
+// DOM: STEP 6 YouTube確認
+// ==================================================
+// YouTubeを見るか確認する画面全体
+const youtubeAskStepElement = document.getElementById("youtubeAskStep");
+// YouTube選択画面へ進むボタン
 const watchYoutubeButtonElement = document.getElementById("watchYoutubeButton");
+// YouTubeを見ずに終了するボタン
 const finishWithoutYoutubeButtonElement = document.getElementById("finishWithoutYoutubeButton");
+
+// ==================================================
+// DOM: STEP 6 YouTube選択
+// ==================================================
+// YouTube選択画面全体
+const youtubeSelectStepElement = document.getElementById("youtubeSelectStep");
+// YouTube選択画面のエラー表示エリア
 const youtubeErrorAreaElement = document.getElementById("youtubeErrorArea");
+// YouTube再生リスト表示行
 const youtubePlaylistRowElement = document.getElementById("youtubePlaylistRow");
+// YouTube MV表示行
 const youtubeMvRowElement = document.getElementById("youtubeMvRow");
+// YouTube選択画面から終了するボタン
 const finishFromYoutubeButtonElement = document.getElementById("finishFromYoutubeButton");
 
+// ==================================================
+// DOM: 完了画面
+// ==================================================
+// 完了画面全体
+const placeholderNextStepElement = document.getElementById("placeholderNextStep");
+// 完了メッセージ
 const placeholderMessageElement = document.getElementById("placeholderMessage");
+// ホームに戻るボタン
 const backHomeButtonElement = document.getElementById("backHomeButton");
 
-const openHowToFromHomeCardButtonElement = document.getElementById("openHowToFromHomeCardButton");
-const homeInstallGuideCardElement = document.getElementById("homeInstallGuideCard");
-
+// ==================================================
+// 初期表示
+// ==================================================
+// 画面生成
 document.addEventListener("DOMContentLoaded", init);
-
+// アプリ遷移時に現在の状態を保存
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
     saveFlowState();
   }
 });
-
 window.addEventListener("pagehide", () => {
   saveFlowState();
 });
-
+// ==================================================
+// クリックイベント設定
+// ==================================================
 function addClickEvent(element, handler) {
+  // HTML側に要素がない場合は何もしない
   if (!element) {
     return;
   }
-
   element.addEventListener("click", handler);
 }
-
+// ==================================================
+// クリックイベント設定 - HOME、共通
+// ==================================================
+// 戻るボタン押下時
 addClickEvent(backStepButtonElement, () => {
   goBackStep();
 });
-
+// 開始ボタン押下時
 addClickEvent(startRoutineButtonElement, () => {
   sendStartLog().catch((error) => {
-    console.error("startLog送信失敗", error);
+    console.error("startError", error);
   });
-
   showOnlyStep(spotifyStepElement);
 });
-
+// ==================================================
+// クリックイベント設定 - モーダル
+// ==================================================
+// 画面下部の初回設定ボタン押下時
 addClickEvent(openHowToButtonElement, () => {
   if (howToModalElement) {
     howToModalElement.classList.remove("hidden");
   }
 });
-
+// 初回設定モーダルの閉じるボタン押下時
 addClickEvent(closeHowToButtonElement, () => {
   if (howToModalElement) {
     howToModalElement.classList.add("hidden");
   }
 });
-
+// ホーム画面カード内の初回設定ボタン押下時
 addClickEvent(openHowToFromHomeCardButtonElement, () => {
   if (howToModalElement) {
     howToModalElement.classList.remove("hidden");
   }
 });
-
+// 初回設定モーダルの外側タップ時
+// モーダル本文をタップした場合は閉じない
 if (howToModalElement) {
   howToModalElement.addEventListener("click", (event) => {
     if (event.target === howToModalElement) {
@@ -163,22 +309,25 @@ if (howToModalElement) {
     }
   });
 }
-
+// 使い方モーダルを開く共通処理
+// ホーム画面下部ボタン・ステップ上部ボタンの両方から使う
 const openUsageModal = () => {
   if (usageModalElement) {
     usageModalElement.classList.remove("hidden");
   }
 };
-
+// ホーム画面下部の使い方ボタン押下時
 addClickEvent(openUsageButtonElement, openUsageModal);
+// ステップ画面上部の使い方ボタン押下時
 addClickEvent(stepUsageButtonElement, openUsageModal);
-
+// 使い方モーダルの閉じるボタン押下時
 addClickEvent(closeUsageButtonElement, () => {
   if (usageModalElement) {
     usageModalElement.classList.add("hidden");
   }
 });
-
+// 使い方モーダルの外側タップ時
+// モーダル本文をタップした場合は閉じない
 if (usageModalElement) {
   usageModalElement.addEventListener("click", (event) => {
     if (event.target === usageModalElement) {
@@ -186,142 +335,171 @@ if (usageModalElement) {
     }
   });
 }
-
+// ==================================================
+// クリックイベント設定 - Spotify
+// ==================================================
+// Spotifyで開くボタン押下時
 addClickEvent(openSpotifyButtonElement, () => {
+  // 曲が未選択の場合はエラー表示して処理を止める
   if (!state.selectedSong) {
     showError(spotifyErrorAreaElement, "曲が選択されていません。");
     return;
   }
-
+  // 選択中の曲からSpotify用URLを作成
   const spotifyUrl = buildSpotifyUrl(state.selectedSong.url);
-
+  // Spotifyを開いた後に進めるよう、次へボタンを表示
   if (spotifyNextButtonElement) {
     spotifyNextButtonElement.classList.remove("hidden");
   }
-
+  // 開くボタンは押下済み表示、次へボタンを主ボタン表示にする
   setButtonStyle(openSpotifyButtonElement, "gray");
   setButtonStyle(spotifyNextButtonElement, "primary");
-
+  // Spotify遷移後は曲リストを非表示にして、戻ってきた時の画面を簡略化する
   setSongListVisibility(recommendedSongsElement, false);
   setSongListVisibility(otherSongsWrapperElement, false);
   setSongListVisibility(toggleOtherSongsButtonElement, false);
-  
-state.openedAction = "spotifyOpened";
-saveFlowState(state.openedAction, spotifyStepElement);
-
-location.href = spotifyUrl;
+  // Spotifyを開いた状態として保存する
+  // アプリに戻ってきた時に次へボタン表示などを復元するため
+  state.openedAction = "spotifyOpened";
+  saveFlowState(state.openedAction, spotifyStepElement);
+  // Spotifyへ移動
+  location.href = spotifyUrl;
 });
-
+// BGMなしボタン押下時
 addClickEvent(skipSpotifyButtonElement, async () => {
+  // Spotify曲は未選択扱いにする
   state.selectedSong = null;
+  // 期間限定タスク選択へ進む
   await showOnceListSelectStep();
 });
-
+// Spotifyステップの次へボタン押下時
 addClickEvent(spotifyNextButtonElement, async () => {
+  // 期間限定タスク選択へ進む
   await showOnceListSelectStep();
 });
-
+// Spotifyの「その他」開閉ボタン押下時
 addClickEvent(toggleOtherSongsButtonElement, () => {
+  // その他曲リストの開閉状態を反転する
   state.isOtherSongsOpen = !state.isOtherSongsOpen;
+  // 反転後の状態を画面に反映する
   updateOtherSongsAccordion();
 });
-
+// ==================================================
+// クリックイベント設定 - 期間限定タスク
+// ==================================================
+// 期間限定タスク選択画面の次へボタン押下時
 addClickEvent(startOnceTasksButtonElement, async () => {
+  // チェックされている期間限定タスクを取得
   const selectedTasks = getCheckedOnceTasks();
-
+  // 前回表示されていたエラーを消す
   hideError(onceListErrorAreaElement);
-
+  // 選択された期間限定タスクがない場合は、USEN推しリクへ進む
   if (selectedTasks.length === 0) {
     state.selectedOnceTasks = [];
     state.currentOnceTaskIndex = 0;
     await showRequestSongStep();
     return;
   }
-
+  // 選択された期間限定タスクを保存し、先頭から実行する
   state.selectedOnceTasks = selectedTasks;
   state.currentOnceTaskIndex = 0;
-
+  // 期間限定タスク実行画面へ進む
   showOnceTaskRunStep();
 });
-
+// 期間限定タスクのページを開くボタン押下時
 addClickEvent(openOnceTaskUrlButtonElement, () => {
+  // 現在実行中の期間限定タスクを取得
   const task = state.selectedOnceTasks[state.currentOnceTaskIndex];
-
+  // タスクまたはURLがない場合はエラー表示して処理を止める
   if (!task || !task.url) {
     showError(onceTaskRunErrorAreaElement, "URLが設定されていません。");
     return;
   }
-
+  // ページを開いた後に進めるよう、次へボタンを表示
   if (onceTaskNextButtonElement) {
     onceTaskNextButtonElement.classList.remove("hidden");
   }
-
+  // 開くボタンは押下済み表示、次へボタンを主ボタン表示にする
   setButtonStyle(openOnceTaskUrlButtonElement, "gray");
   setButtonStyle(onceTaskNextButtonElement, "primary");
-  
-state.openedAction = "onceTaskOpened";
-saveFlowState(state.openedAction, onceTaskRunStepElement);
-
-location.href = task.url;
+  // 期間限定タスクを開いた状態として保存する
+  // アプリに戻ってきた時に次へボタン表示などを復元するため
+  state.openedAction = "onceTaskOpened";
+  saveFlowState(state.openedAction, onceTaskRunStepElement);
+  // 期間限定タスクのURLへ移動
+  location.href = task.url;
 });
-
+// 期間限定タスク実行画面の次へボタン押下時
 addClickEvent(onceTaskNextButtonElement, async () => {
+  // 次の期間限定タスクへ進める
   state.currentOnceTaskIndex += 1;
-
+  // 選択した期間限定タスクがすべて終わったら、USEN推しリクへ進む
   if (state.currentOnceTaskIndex >= state.selectedOnceTasks.length) {
     await showRequestSongStep();
     return;
   }
-
+  // 次の期間限定タスクを画面に表示する
   renderCurrentOnceTask();
 });
-
+// ==================================================
+// クリックイベント設定 - USEN推し活
+// ==================================================
+// USEN推しリクの「その他」開閉ボタン押下時
 addClickEvent(toggleOtherRequestSongsButtonElement, () => {
+  // その他リクエスト曲リストの開閉状態を反転する
   state.isOtherRequestSongsOpen = !state.isOtherRequestSongsOpen;
+  // 反転後の状態を画面に反映する
   updateOtherRequestSongsAccordion();
 });
-
+// USEN推しリクのページを開くボタン押下時
 addClickEvent(openRequestSongButtonElement, () => {
+  // リクエスト曲が未選択の場合はエラー表示して処理を止める
   if (!state.selectedRequestSong) {
     showError(requestSongErrorAreaElement, "リクエスト曲が選択されていません。");
     return;
   }
-
+  // 選択中の曲からUSEN推しリク用URLを作成
   const requestUrl = buildRequestSongUrl(state.selectedRequestSong.url);
-
+  // ページを開いた後に進めるよう、次へボタンを表示
   if (requestSongNextButtonElement) {
     requestSongNextButtonElement.classList.remove("hidden");
   }
-
+  // 開くボタンは押下済み表示、次へボタンを主ボタン表示にする
   setButtonStyle(openRequestSongButtonElement, "gray");
   setButtonStyle(requestSongNextButtonElement, "primary");
-
+  // USEN推しリク遷移後は曲リストを非表示にして、戻ってきた時の画面を簡略化する
   setSongListVisibility(recommendedRequestSongsElement, false);
   setSongListVisibility(otherRequestSongsWrapperElement, false);
   setSongListVisibility(toggleOtherRequestSongsButtonElement, false);
-
-state.openedAction = "requestSongOpened";
-saveFlowState(state.openedAction, requestSongStepElement);
-
-location.href = requestUrl;
+  // USEN推しリクを開いた状態として保存する
+  // アプリに戻ってきた時に次へボタン表示などを復元するため
+  state.openedAction = "requestSongOpened";
+  saveFlowState(state.openedAction, requestSongStepElement);
+  // USEN推しリクページへ移動
+  location.href = requestUrl;
 });
-
+// USEN推しリクステップの次へボタン押下時
 addClickEvent(requestSongNextButtonElement, async () => {
+  // デイリータスクへ進む
   await showDailyTaskStep();
 });
-
+// ==================================================
+// クリックイベント設定 - デイリータスク
+// ==================================================
+// デイリータスクのページを開くボタン押下時
 addClickEvent(openDailyTaskUrlButtonElement, async () => {
+  // 現在表示中のデイリータスクを取得
   const item = getCurrentDailyTaskItem();
+  // 現在のデイリータスクからURLを取得
   const itemUrl = getDailyTaskItemUrl(item);
-
+  // タスクまたはURLがない場合はエラー表示して処理を止める
   if (!item || !itemUrl) {
     showError(dailyTaskErrorAreaElement, "URLが設定されていません。");
     return;
   }
-
+  // 入力補助が必要なタスクの場合は、ページを開く前にコピー文を作成してクリップボードへ入れる
   if (item["input-flag"] === true) {
     const copyText = buildDailyTaskCopyText(item);
-
     if (copyText) {
       try {
         await navigator.clipboard.writeText(copyText);
@@ -333,159 +511,192 @@ addClickEvent(openDailyTaskUrlButtonElement, async () => {
       }
     }
   }
-
+  // 現在のデイリータスクを完了済みとして記録する
   recordCompletedDailyItem(item);
-
+  // ページを開いた後に進めるよう、次へボタンを表示
   if (dailyTaskNextButtonElement) {
     dailyTaskNextButtonElement.classList.remove("hidden");
   }
-
+  // 開くボタンは押下済み表示、次へボタンを主ボタン表示にする
   setButtonStyle(openDailyTaskUrlButtonElement, "gray");
   setButtonStyle(dailyTaskNextButtonElement, "primary");
-
-state.openedAction = "dailyTaskOpened";
-saveFlowState(state.openedAction, dailyTaskStepElement);
-
-location.href = itemUrl;
+  // デイリータスクを開いた状態として保存する
+  // アプリに戻ってきた時に次へボタン表示などを復元するため
+  state.openedAction = "dailyTaskOpened";
+  saveFlowState(state.openedAction, dailyTaskStepElement);
+  // デイリータスクのURLへ移動
+  location.href = itemUrl;
 });
-
+// デイリータスクの次へボタン押下時
 addClickEvent(dailyTaskNextButtonElement, () => {
+  // 現在表示中のデイリータスクを取得
   const item = getCurrentDailyTaskItem();
-
+  // URLがないタスクは「ページを開く」操作がないため、次へ押下時に完了記録する
   if (item && !getDailyTaskItemUrl(item)) {
     recordCompletedDailyItem(item);
   }
-
+  // 次のデイリータスクへ進める
   state.currentDailyTaskIndex += 1;
-
+  // 現在のデイリータスクグループを取得
   const currentGroup = getCurrentDailyGroup();
-
+  // グループがない、または現在のグループ内のタスクが終わった場合は、グループ終了画面へ進む
   if (!currentGroup || state.currentDailyTaskIndex >= getDailyGroupItems(currentGroup).length) {
     showDailyGroupEndStep();
     return;
   }
-
+  // 次のデイリータスクを画面に表示する
   renderCurrentDailyTask();
 });
-
+// デイリーグループ終了画面の「頑張る！」ボタン押下時
 addClickEvent(continueDailyGroupButtonElement, () => {
+  // 次のデイリータスクグループへ進める
   state.currentDailyGroupIndex += 1;
+  // 次のグループの先頭タスクから開始する
   state.currentDailyTaskIndex = 0;
-
+  // すべてのデイリータスクグループが終わった場合は、SNS共有確認へ進む
   if (state.currentDailyGroupIndex >= state.dailyGroups.length) {
     showPostAskStep();
     return;
   }
-
+  // 次のデイリータスクグループを表示する
+  // false指定で、デイリータスク全体の再読み込み・初期化はしない
   showDailyTaskStep(false);
 });
-
+// デイリーグループ終了画面の「今日はここまで」ボタン押下時
 addClickEvent(stopDailyGroupButtonElement, () => {
+  // SNS共有確認へ進む
   showPostAskStep();
 });
-
+// ==================================================
+// クリックイベント設定 - SNSシェア
+// ==================================================
+// SNS共有確認画面の「共有する！」ボタン押下時
 addClickEvent(makePostButtonElement, () => {
+  // 投稿文編集画面へ進む
   showPostEditStep();
 });
-
+// SNS共有確認画面の「やめとく」ボタン押下時
 addClickEvent(skipPostButtonElement, () => {
+  // YouTube確認画面へ進む
   showYoutubeAskStep();
 });
-
+// 投稿文をコピーするボタン押下時
 addClickEvent(copyPostTextButtonElement, async () => {
+  // 現在表示されている投稿文を取得
   const postText = getGeneratedPostText();
-
+  // 投稿文が空の場合はエラー表示して処理を止める
   if (!postText) {
     showError(postErrorAreaElement, "コピーする投稿文がありません。");
     return;
   }
-
   try {
+    // 投稿文をクリップボードへコピー
     await navigator.clipboard.writeText(postText);
-
+    // コピー成功後、ボタン文言を一時的に変更する
     if (copyPostTextButtonElement) {
       copyPostTextButtonElement.textContent = "コピーしました";
     }
-
+    // コピー成功時はエラー表示を消す
     hideError(postErrorAreaElement);
   } catch (error) {
+    // コピーに失敗した場合は、手動コピーを促す
     console.error(error);
     showError(postErrorAreaElement, "コピーに失敗しました。投稿文を長押しでコピーしてください。");
   }
 });
-
+// Xに投稿ボタン押下時
 addClickEvent(openXPostButtonElement, () => {
+  // 現在表示されている投稿文を取得
   const postText = getGeneratedPostText();
-
+  // 投稿文が空の場合はエラー表示して処理を止める
   if (!postText) {
     showError(postErrorAreaElement, "投稿文がありません。");
     return;
   }
-
+  // X投稿画面用URLを作成して移動
   const url = X_POST_URL + encodeURIComponent(postText);
   location.href = url;
 });
-
+// Threadsを開くボタン押下時
 addClickEvent(openThreadsButtonElement, async () => {
+  // 現在表示されている投稿文を取得
   const postText = getGeneratedPostText();
-
+  // 投稿文が空の場合はエラー表示して処理を止める
   if (!postText) {
     showError(postErrorAreaElement, "投稿文がありません。");
     return;
   }
-
   try {
+    // Threadsは投稿文をURLに渡せないため、先にクリップボードへコピーする
     await navigator.clipboard.writeText(postText);
+    // コピー成功時はエラー表示を消す
     hideError(postErrorAreaElement);
+    // Threadsへ移動
     location.href = THREADS_URL;
   } catch (error) {
+    // コピーに失敗した場合は、手動コピーを促す
     console.error(error);
     showError(postErrorAreaElement, "コピーに失敗しました。投稿文を長押しでコピーしてください。");
   }
 });
-
+// 投稿文編集画面の次へボタン押下時
 addClickEvent(postNextButtonElement, () => {
+  // YouTube確認画面へ進む
   showYoutubeAskStep();
 });
-
+// ==================================================
+// クリックイベント設定 - YouTube再生
+// ==================================================
+// YouTube確認画面の「見る！」ボタン押下時
 addClickEvent(watchYoutubeButtonElement, async () => {
+  // YouTube選択画面へ進む
   await showYoutubeSelectStep();
 });
-
+// YouTube確認画面の「今日はここまで」ボタン押下時
 addClickEvent(finishWithoutYoutubeButtonElement, () => {
+  // 完了画面へ進む
   showPlaceholderNextStep("お疲れ様さまでした☺️Big Love💚");
 });
-
+// YouTube選択画面の「今日はここまで」ボタン押下時
 addClickEvent(finishFromYoutubeButtonElement, () => {
+  // 完了画面へ進む
   showPlaceholderNextStep("お疲れ様さまでした☺️Big Love💚");
 });
-
+// ==================================================
+// クリックイベント設定 - 完了画面
+// ==================================================
+// 完了画面の「ホームに戻る」ボタン押下時
 addClickEvent(backHomeButtonElement, () => {
+  // 戻る履歴をリセットする
   state.stepHistory = [];
+  // 送信済みflagリセット
   state.isSheetLogSentInCurrentFlow = false;
+  // 保存済みの途中再開データを削除する
   clearFlowState();
+  // 履歴を追加せずにホーム画面へ戻る
   showOnlyStep(homeStepElement, { recordHistory: false });
 });
-
+// ==================================================
+// 関数
+// ==================================================
+// ホーム画面の初回設定カード表示を更新する関数
 function updateHomeInstallGuideVisibility() {
+  // 初回設定カードがHTMLに存在しない場合は何もしない
   if (!homeInstallGuideCardElement) {
     return;
   }
-
+  // PWAとしてホーム画面から起動されているか判定する
   const isStandalone =
     window.matchMedia("(display-mode: standalone)").matches ||
     window.navigator.standalone === true;
-
+  // PWA起動済みの場合は初回設定カードを非表示にする
   homeInstallGuideCardElement.classList.toggle("hidden", isStandalone);
 }
-
+//初期表示関数
 async function init() {
   try {
-    
     updateHomeInstallGuideVisibility();
-    
     const songs = await loadSpotifySongs();
-
     const recommendedSongs = songs.filter((song) => song.flag === true);
     const otherSongs = songs.filter((song) => song.flag !== true);
 
@@ -501,20 +712,16 @@ async function init() {
     }
 
     updateOtherSongsAccordion();
-
     state.onceTasks = await loadOnceTasks();
     renderHomeOnceTaskList(state.onceTasks);
-
     const homeInfoList = await loadHomeInfoList();
     renderHomeInfoList(homeInfoList);
-
     await restoreFlowStateOrHome();
   } catch (error) {
     console.error(error);
-    showError(spotifyErrorAreaElement, "初期データの読み込みに失敗しました。JSONの形式や配置を確認してください。");
+    showError(spotifyErrorAreaElement, "初期データの読み込みに失敗しました。ERROR:JSON");
     renderHomeOnceTaskList([]);
     renderHomeInfoList([]);
-
     state.currentStepElement = homeStepElement;
     updateStepTopActionBar();
   }
@@ -522,7 +729,6 @@ async function init() {
 
 async function restoreFlowStateOrHome() {
   const flowState = loadFlowState();
-
   if (!flowState || !flowState.currentStepId) {
     showOnlyStep(homeStepElement, { recordHistory: false });
     return;
