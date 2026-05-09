@@ -10,9 +10,7 @@ document.addEventListener("visibilitychange", () => {
   }
 });
 window.addEventListener("pagehide", () => {
-  if (options.saveFlow !== false) {
-    saveFlowState();
-  }
+  saveFlowState();
 });
 // ==================================================
 // クリックイベント設定
