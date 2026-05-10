@@ -9,6 +9,9 @@ function getTodayKey() {
 }
 
 function saveFlowState(openedAction = state.openedAction || "", stepElement = state.currentStepElement) {
+  if (state.isFlowStateSaveDisabled) {
+    return;
+  }  
   if (!stepElement || stepElement === homeStepElement) {
     return;
   }
