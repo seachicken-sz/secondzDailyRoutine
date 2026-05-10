@@ -2,6 +2,8 @@
 // 投稿文生成・投稿項目
 // ==================================================
 
+let currentPostPreviewPlatform = "x";
+
 function buildPostItems() {
   const items = [];
 
@@ -58,14 +60,19 @@ function buildPostItems() {
 }
 
 function renderPostItemList(items) {
-  if (!postItemListElement) {
+  renderPostItemListByContainer(postItemXListElement, items);
+  renderPostItemListByContainer(postItemThreadsListElement, items);
+}
+
+function renderPostItemListByContainer(container, items) {
+  if (!container) {
     return;
   }
 
-  postItemListElement.innerHTML = "";
+  container.innerHTML = "";
 
   if (items.length === 0) {
-    postItemListElement.innerHTML = '<p class="empty-text">追加できる項目はありません。</p>';
+    container.innerHTML = '<p class="empty-text">追加できる項目はありません。</p>';
     return;
   }
 
@@ -83,14 +90,22 @@ function renderPostItemList(items) {
     name.textContent = item.name;
 
     checkbox.addEventListener("change", () => {
-      item.checked = checkbox.checked;
-      name.textContent = item.name;
-      eneratedPostText();
+      const targetIndex = Number(checkbox.dataset.index);
+      const targetItem = state.postItems[targetIndex];
+
+      if (!targetItem) {
+        return;
+      }
+
+      targetItem.checked = checkbox.checked;
+
+      renderPostItemList(state.postItems);
+      updateGeneratedPostText();
     });
 
     label.appendChild(checkbox);
     label.appendChild(name);
-    postItemListElement.appendChild(label);
+    container.appendChild(label);
   });
 }
 
@@ -106,18 +121,17 @@ function updateGeneratedPostText() {
     generatedThreadsPostTextElement.textContent = threadsPostText;
   }
 
-  const activePostText = getActivePostText();
-  const textLength = activePostText.length;
-  const linkCount = countLinks(activePostText);
+  const xTextLength = countXPostTextLength(xPostText);
+  const threadsLinkCount = countLinks(threadsPostText);
 
-  if (postTextCountElement) {
-    postTextCountElement.textContent = "";
-    postTextCountElement.classList.toggle("warning-text", textLength > 280);
+  if (xPostTextCountElement) {
+    xPostTextCountElement.textContent = `X文字数: ${xTextLength} / 280`;
+    xPostTextCountElement.classList.toggle("warning-text", xTextLength > 280);
   }
 
-  if (postLinkCountElement) {
-    postLinkCountElement.textContent = `Threadsリンク数: ${linkCount} / 5`;
-    postLinkCountElement.classList.toggle("warning-text", linkCount > 5);
+  if (threadsPostLinkCountElement) {
+    threadsPostLinkCountElement.textContent = `Threadsリンク数: ${threadsLinkCount} / 5`;
+    threadsPostLinkCountElement.classList.toggle("warning-text", threadsLinkCount > 5);
   }
 
   if (copyXPostTextButtonElement) {
@@ -128,8 +142,6 @@ function updateGeneratedPostText() {
 function getGeneratedPostText() {
   return getActivePostText();
 }
-
-let currentPostPreviewPlatform = "x";
 
 function getActivePostText() {
   if (currentPostPreviewPlatform === "threads") {
@@ -175,6 +187,32 @@ function setPostPreviewPlatform(platform) {
   }
 
   updateGeneratedPostText();
+}
+
+function countXPostTextLength(text) {
+  if (!text) {
+    return 0;
+  }
+
+  const urlPattern = /https?:\/\/[^\s]+/g;
+  const urls = text.match(urlPattern) || [];
+  const textWithoutUrls = text.replace(urlPattern, "");
+
+  return countXWeightedTextLength(textWithoutUrls) + urls.length * 23;
+}
+
+function countXWeightedTextLength(text) {
+  let count = 0;
+
+  Array.from(text).forEach((char) => {
+    count += isHalfWidthChar(char) ? 1 : 2;
+  });
+
+  return count;
+}
+
+function isHalfWidthChar(char) {
+  return /^[\u0020-\u007e\u00a1-\u00ff]$/.test(char);
 }
 
 function buildPostText(platform = "x") {
