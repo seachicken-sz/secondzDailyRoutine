@@ -85,7 +85,7 @@ function renderPostItemList(items) {
     checkbox.addEventListener("change", () => {
       item.checked = checkbox.checked;
       name.textContent = item.name;
-      updateGeneratedPostText();
+      eneratedPostText();
     });
 
     label.appendChild(checkbox);
@@ -95,14 +95,20 @@ function renderPostItemList(items) {
 }
 
 function updateGeneratedPostText() {
-  const postText = buildPostText();
+  const xPostText = buildPostText("x");
+  const threadsPostText = buildPostText("threads");
 
-  if (generatedPostTextElement) {
-    generatedPostTextElement.textContent = postText;
+  if (generatedXPostTextElement) {
+    generatedXPostTextElement.textContent = xPostText;
   }
 
-  const textLength = postText.length;
-  const linkCount = countLinks(postText);
+  if (generatedThreadsPostTextElement) {
+    generatedThreadsPostTextElement.textContent = threadsPostText;
+  }
+
+  const activePostText = getActivePostText();
+  const textLength = activePostText.length;
+  const linkCount = countLinks(activePostText);
 
   if (postTextCountElement) {
     postTextCountElement.textContent = "";
@@ -114,17 +120,66 @@ function updateGeneratedPostText() {
     postLinkCountElement.classList.toggle("warning-text", linkCount > 5);
   }
 
-  if (copyPostTextButtonElement) {
-    copyPostTextButtonElement.textContent = "コピーする";
+  if (copyXPostTextButtonElement) {
+    copyXPostTextButtonElement.textContent = "コピーする";
   }
 }
 
 function getGeneratedPostText() {
-  return generatedPostTextElement ? generatedPostTextElement.textContent || "" : "";
+  return getActivePostText();
 }
 
-function buildPostText() {
+let currentPostPreviewPlatform = "x";
+
+function getActivePostText() {
+  if (currentPostPreviewPlatform === "threads") {
+    return generatedThreadsPostTextElement
+      ? generatedThreadsPostTextElement.textContent || ""
+      : "";
+  }
+
+  return generatedXPostTextElement
+    ? generatedXPostTextElement.textContent || ""
+    : "";
+}
+
+function setPostPreviewPlatform(platform) {
+  currentPostPreviewPlatform = platform === "threads" ? "threads" : "x";
+
+  if (postPreviewXTabButtonElement) {
+    postPreviewXTabButtonElement.classList.toggle(
+      "active",
+      currentPostPreviewPlatform === "x"
+    );
+  }
+
+  if (postPreviewThreadsTabButtonElement) {
+    postPreviewThreadsTabButtonElement.classList.toggle(
+      "active",
+      currentPostPreviewPlatform === "threads"
+    );
+  }
+
+  if (postPreviewXPanelElement) {
+    postPreviewXPanelElement.classList.toggle(
+      "hidden",
+      currentPostPreviewPlatform !== "x"
+    );
+  }
+
+  if (postPreviewThreadsPanelElement) {
+    postPreviewThreadsPanelElement.classList.toggle(
+      "hidden",
+      currentPostPreviewPlatform !== "threads"
+    );
+  }
+
+  updateGeneratedPostText();
+}
+
+function buildPostText(platform = "x") {
   const lines = buildFixedPostLines();
+  const bottomShareLines = [];
 
   state.postItems.forEach((item) => {
     if (!item.checked) {
@@ -132,6 +187,18 @@ function buildPostText() {
     }
 
     const postText = item.postText ?? item.name;
+
+    if (platform === "threads" && item.id === "app-share") {
+      if (postText) {
+        bottomShareLines.push(postText);
+      }
+
+      if (item.url) {
+        bottomShareLines.push(item.url);
+      }
+
+      return;
+    }
 
     if (item.id === "spotify-bgm" || item.id === "app-share") {
       if (postText) {
@@ -148,6 +215,10 @@ function buildPostText() {
 
   lines.push("");
   lines.push("クリックですぐ使えるよ▼");
+
+  if (platform === "threads" && bottomShareLines.length > 0) {
+    lines.push(...bottomShareLines);
+  }
 
   return lines.join("\n");
 }
