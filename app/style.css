@@ -299,6 +299,38 @@ h1 {
   white-space: pre-wrap;
   word-break: break-word;
 }
+.post-preview-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 8px 0 12px;
+  padding: 4px;
+  border-radius: var(--radius-button);
+  background: var(--color-bg);
+}
+
+.post-preview-tab {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-button);
+  background: transparent;
+  color: var(--color-muted);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.post-preview-tab.active {
+  border-color: var(--color-primary);
+  background: var(--color-surface);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-card);
+}
+
+.post-preview-panel {
+  margin-top: 8px;
+}
 
 .post-item-list {
   margin-bottom: 24px;
