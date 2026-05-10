@@ -183,28 +183,32 @@ const skipPostButtonElement = document.getElementById("skipPostButton");
 const postEditStepElement = document.getElementById("postEditStep");
 // 投稿文編集画面のエラー表示エリア
 const postErrorAreaElement = document.getElementById("postErrorArea");
-// 投稿に含める項目のチェックリスト
-const postItemListElement = document.getElementById("postItemList");
-// 投稿文字数表示
-const postTextCountElement = document.getElementById("postTextCount");
-// 投稿リンク数表示
-const postLinkCountElement = document.getElementById("postLinkCount");
-// 生成された投稿文表示エリア
-//const generatedPostTextElement = document.getElementById("generatedPostText");
-// 投稿文をコピーするボタン
-//const copyPostTextButtonElement = document.getElementById("copyPostTextButton");
+
 // X版投稿文プレビュータブ
 const postPreviewXTabButtonElement = document.getElementById("postPreviewXTabButton");
 // Threads版投稿文プレビュータブ
 const postPreviewThreadsTabButtonElement = document.getElementById("postPreviewThreadsTabButton");
+
 // X版投稿文パネル
 const postPreviewXPanelElement = document.getElementById("postPreviewXPanel");
 // Threads版投稿文パネル
 const postPreviewThreadsPanelElement = document.getElementById("postPreviewThreadsPanel");
+
+// X版チェックリスト
+const postItemXListElement = document.getElementById("postItemXList");
+// Threads版チェックリスト
+const postItemThreadsListElement = document.getElementById("postItemThreadsList");
+
+// X版文字数表示
+const xPostTextCountElement = document.getElementById("xPostTextCount");
+// Threads版リンク数表示
+const threadsPostLinkCountElement = document.getElementById("threadsPostLinkCount");
+
 // X版投稿文表示エリア
 const generatedXPostTextElement = document.getElementById("generatedXPostText");
 // Threads版投稿文表示エリア
 const generatedThreadsPostTextElement = document.getElementById("generatedThreadsPostText");
+
 // X版投稿文をコピーするボタン
 const copyXPostTextButtonElement = document.getElementById("copyXPostTextButton");
 // X投稿画面を開くボタン
