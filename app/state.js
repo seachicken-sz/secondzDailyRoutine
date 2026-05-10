@@ -25,5 +25,6 @@ const state = {
   currentStepElement: null,
 
   isSheetLogSentInCurrentFlow: false,
+  isFlowStateSaveDisabled: false,
   openedAction: "",
 };
