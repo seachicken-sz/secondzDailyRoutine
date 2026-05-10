@@ -3,8 +3,8 @@ name: Capture Spotify Monthly Listener
 on:
   workflow_dispatch:
   schedule:
-    # JST 09:10 = UTC 00:10
-    - cron: "10 0 * * *"
+    # JST 04:00 = UTC 19:00
+    - cron: "0 19 * * *"
 
 permissions:
   contents: write
