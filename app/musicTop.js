@@ -53,8 +53,14 @@ function getThisWeekRequestRankingItems(items) {
 function renderRequestRanking({ recentRequestItems, thisWeekRequestItems }) {
   return `
     <div class="request-ranking-content" data-expanded="false">
-      ${renderRequestRankingBlock("人気リクエスト曲", recentRequestItems)}
-      ${renderRequestRankingBlock("今週の人気リクエスト曲", thisWeekRequestItems)}
+      ${renderRequestRankingBlock(
+        { main: "人気リクエスト曲", ruby: "popular request" },
+        recentRequestItems
+      )}
+      ${renderRequestRankingBlock(
+        { main: "今週の人気リクエスト曲", ruby: "weekly request" },
+        thisWeekRequestItems
+      )}
 
       <button type="button" id="requestRankingToggleButton" class="request-ranking-toggle">
         もっと見る
@@ -69,7 +75,9 @@ function renderRequestRankingBlock(title, items) {
 
   return `
     <section class="request-ranking-block">
-      <h2 class="request-ranking-title">${escapeHtml(title)}</h2>
+      <h2 class="request-ranking-title ruby-h">
+        <ruby>${escapeHtml(title.main)}<rt>${escapeHtml(title.ruby)}</rt></ruby>
+      </h2>
 
       <div class="request-ranking-main">
         ${firstItem ? renderRequestRankingItem(firstItem) : '<p class="request-ranking-empty">データなし</p>'}
