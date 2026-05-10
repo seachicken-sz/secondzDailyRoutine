@@ -748,6 +748,14 @@ h1 {
 .home-install-link:hover {
   color: #4d8f81;
 }
+#home-top-share-btn-wrap{
+  display:flex;
+  justyify-content:end;
+}
+#home-top-share-btn-wrap button{
+  color:#666;
+  font-size:22px;
+}
 .request-ranking-card {
   flex-shrink: 0;
   margin: 0 0 12px;
