@@ -85,23 +85,14 @@ function renderRequestRankingBlock(title, items) {
 function renderRequestRankingItem(item) {
   const rank = Number(item.rank || 0);
   const title = item.title || "タイトル不明";
-  const url = item.url || "";
-
-  const innerHtml = `
-    <span class="request-ranking-rank">${rank}</span>
-    <span class="request-ranking-song">
-      <span class="request-ranking-song-title">${escapeHtml(title)}</span>
-    </span>
-  `;
-
-  if (!url) {
-    return `<div class="request-ranking-item">${innerHtml}</div>`;
-  }
 
   return `
-    <a class="request-ranking-item" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">
-      ${innerHtml}
-    </a>
+    <div class="request-ranking-item">
+      <span class="request-ranking-rank">${rank}</span>
+      <span class="request-ranking-song">
+        <span class="request-ranking-song-title">${escapeHtml(title)}</span>
+      </span>
+    </div>
   `;
 }
 
