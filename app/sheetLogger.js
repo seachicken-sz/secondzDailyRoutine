@@ -1,31 +1,22 @@
-// app/sheetLogger.js
-
-// Google Apps Script のウェブアプリURL
-const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbztgZylfO0v0zUYME1Gooiyvh3YI9zY5D_FX0_P5jpFBwn5lVWuWCYqq0Rak7Z62OwA/exec";
-
-// Apps Script側と同じ値にする
+const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyPHel75TjxIKZrfjItAyoaR4_zL0ptWb7PuvMZfuJGMtZnn4ZbPvi23OhnC1p7N-GL/exec";
 const SHEET_TOKEN = "test-token";
-
-// スプレッドシートに保存するアプリ名
 const SHEET_APP_NAME = "secondzDailyRoutine";
-
-// clientIdを保存するlocalStorageキー
 const SHEET_CLIENT_ID_KEY = "secondzDailyRoutineClientId";
 
-// Googleスプレッドシート送信対象のtaskType
 const SHEET_TASK_TYPES = [
   "onceList",
   "list",
   "spotify",
   "requestSong",
   "start",
+  "snsShare",
   "youtube"
 ];
 
 /**
- * 端末・OSをざっくり判定する
+ * 端末・OS・PWA起動状態をざっくり判定する
  *
- * @returns {"ios" | "android" | "windows" | "mac" | "unknown"}
+ * @returns {string}
  */
 function getSheetPlatform() {
   const ua = navigator.userAgent || "";
@@ -65,8 +56,6 @@ function getSheetPlatform() {
 /**
  * 同じ端末・同じブラウザっぽい利用環境を識別するIDを取得する
  *
- * localStorageに保存されていなければ新規作成する
- *
  * @returns {string}
  */
 function getSheetClientId() {
@@ -100,13 +89,22 @@ function createFallbackClientId() {
 }
 
 /**
- * 1件分のスプレッドシート送信用itemを作成する
+ * ログ用IDを簡易生成する
  *
- * onceList / list は item.itemId を使う想定
- * spotify は options.itemId に `sp_${trackId}` を渡す想定
- * requestSong は options.itemId に `rq_${trackId}` を渡す想定
- * start は itemId: "start" を使う想定
- * youtube は options.itemId に `yt_${id}` またはURL由来の値を渡す想定
+ * @param {string} prefix
+ * @param {string} value
+ * @returns {string}
+ */
+function createLogItemId(prefix, value) {
+  const normalizedValue = String(value || "unknown")
+    .replace(/[^a-zA-Z0-9_-]/g, "_")
+    .slice(0, 80);
+
+  return `${prefix}_${normalizedValue}`;
+}
+
+/**
+ * 1件分のスプレッドシート送信用itemを作成する
  *
  * @param {Object} item 元データ
  * @param {Object} [options] 上書き用
@@ -116,7 +114,7 @@ function createFallbackClientId() {
  * @returns {{itemId: string, title: string, url: string} | null}
  */
 function createSheetItem(item, options = {}) {
-  const itemId = options.itemId || item.itemId || "";
+  const itemId = options.itemId || item.itemId || item.id || "";
   const title = options.title || item.name || item.title || "";
   const url = options.url ?? item.url ?? "";
 
@@ -135,12 +133,6 @@ function createSheetItem(item, options = {}) {
  * taskTypeごとのitemsをpayload形式に整形する
  *
  * @param {Object} groups
- * @param {Array<Object|null|undefined>} [groups.onceList]
- * @param {Array<Object|null|undefined>} [groups.list]
- * @param {Array<Object|null|undefined>} [groups.spotify]
- * @param {Array<Object|null|undefined>} [groups.requestSong]
- * @param {Array<Object|null|undefined>} [groups.start]
- * @param {Array<Object|null|undefined>} [groups.youtube]
  * @returns {Object}
  */
 function createSheetPayload(groups) {
@@ -181,8 +173,10 @@ function hasSheetItems(payload) {
 /**
  * Googleスプレッドシートへログを送信する
  *
+ * 遷移直前のログが多いため、sendBeaconを優先する。
+ *
  * @param {Object} groups taskTypeごとの送信item配列
- * @returns {Promise<boolean>} 送信リクエストを投げた場合 true
+ * @returns {Promise<boolean>}
  */
 async function sendSheetLog(groups) {
   if (!SHEET_WEB_APP_URL || SHEET_WEB_APP_URL.includes("ここに")) {
@@ -199,18 +193,30 @@ async function sendSheetLog(groups) {
     return false;
   }
 
+  const body = JSON.stringify(payload);
+
   try {
+    if (navigator.sendBeacon) {
+      const blob = new Blob([body], {
+        type: "text/plain;charset=utf-8"
+      });
+
+      return navigator.sendBeacon(SHEET_WEB_APP_URL, blob);
+    }
+
     await fetch(SHEET_WEB_APP_URL, {
       method: "POST",
       mode: "no-cors",
+      keepalive: true,
       headers: {
         "Content-Type": "text/plain;charset=utf-8"
       },
-      body: JSON.stringify(payload)
+      body
     });
 
     return true;
   } catch (error) {
+    console.error("sheetLog送信失敗", error);
     return false;
   }
 }
@@ -233,14 +239,129 @@ async function sendStartLog() {
 }
 
 /**
+ * Spotify遷移ログを送信する
+ *
+ * @param {Object} song
+ * @returns {Promise<boolean>}
+ */
+async function sendSpotifyLog(song) {
+  if (!song || !song.url) {
+    return false;
+  }
+
+  const item = createSheetItem(song, {
+    itemId: song.id || createLogItemId("sp", song.url),
+    title: song.name || "",
+    url: buildSpotifyUrl(song.url)
+  });
+
+  return sendSheetLog({
+    spotify: [item]
+  });
+}
+
+/**
+ * 期間限定タスク終了ログを送信する
+ *
+ * @param {Array<Object>} tasks
+ * @returns {Promise<boolean>}
+ */
+async function sendOnceListLog(tasks) {
+  if (!Array.isArray(tasks) || tasks.length === 0) {
+    return false;
+  }
+
+  const items = tasks.map((task) => {
+    const itemId = task.id || task.itemId || createLogItemId("once", `${task.name}_${task.url}`);
+
+    return createSheetItem(task, {
+      itemId,
+      title: task.name || task.title || "",
+      url: task.url || ""
+    });
+  });
+
+  return sendSheetLog({
+    onceList: items
+  });
+}
+
+/**
+ * リクエスト曲ログを送信する
+ *
+ * @param {Object} song
+ * @returns {Promise<boolean>}
+ */
+async function sendRequestSongLog(song) {
+  if (!song || !song.url) {
+    return false;
+  }
+
+  const item = createSheetItem(song, {
+    itemId: song.id || createLogItemId("rq", song.url),
+    title: song.name || "",
+    url: buildRequestSongUrl(song.url)
+  });
+
+  return sendSheetLog({
+    requestSong: [item]
+  });
+}
+
+/**
+ * デイリータスクログを送信する
+ *
+ * @param {Array<Object>} completedItems
+ * @returns {Promise<boolean>}
+ */
+async function sendDailyTaskLog(completedItems) {
+  if (!Array.isArray(completedItems) || completedItems.length === 0) {
+    return false;
+  }
+
+  const items = completedItems.map((item) => {
+    const itemId =
+      item.itemId ||
+      item.id ||
+      item.key ||
+      createLogItemId("daily", `${item.name}_${item.url}`);
+
+    return createSheetItem(item, {
+      itemId,
+      title: item.name || item.title || "",
+      url: item.url || ""
+    });
+  });
+
+  return sendSheetLog({
+    list: items
+  });
+}
+
+/**
+ * SNSシェアボタン押下ログを送信する
+ *
+ * @param {"x" | "threads"} platform
+ * @returns {Promise<boolean>}
+ */
+async function sendSnsShareLog(platform) {
+  const normalizedPlatform = platform === "threads" ? "threads" : "x";
+
+  const item = createSheetItem({}, {
+    itemId: `sns_${normalizedPlatform}`,
+    title: normalizedPlatform === "threads" ? "Threadsシェア" : "Xシェア",
+    url: ""
+  });
+
+  return sendSheetLog({
+    snsShare: [item]
+  });
+}
+
+/**
  * YouTube移動ログを送信する
  *
  * @param {Object} item 移動先データ
- * @param {string} [item.itemId]
- * @param {string} [item.id]
- * @param {string} [item.name]
- * @param {string} [item.title]
- * @param {string} [item.url]
  * @returns {Promise<boolean>}
  */
 async function sendYoutubeLog(item) {
@@ -297,5 +418,5 @@ function createYoutubeItemId(url) {
     // URLとして解釈できない場合は下の簡易IDに落とす
   }
 
-  return `yt_${String(url).replace(/[^a-zA-Z0-9_-]/g, "_").slice(0, 80)}`;
+  return createLogItemId("yt", url);
 }
