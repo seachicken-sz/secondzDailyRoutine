@@ -28,6 +28,9 @@ const homeInfoListElement = document.getElementById("homeInfoList");
 const openHowToButtonElement = document.getElementById("openHowToButton");
 // ホーム下部の「使い方」ボタン
 const openUsageButtonElement = document.getElementById("openUsageButton");
+//ホームのSNSシェアボタン
+const homeTopShareButtonElement = document.getElementById("homeTopShareButton");
+const homeBottomShareButtonElement = document.getElementById("homeBottomShareButton");
 
 // ==================================================
 // DOM: 初回設定モーダル
