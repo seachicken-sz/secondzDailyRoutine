@@ -742,23 +742,23 @@ h1 {
 .home-install-link:hover {
   color: #4d8f81;
 }
-
 .request-ranking-card {
-  margin: 16px 0;
-  padding: 16px;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+  margin: 0 0 12px;
+  padding: 14px 16px;
+  border-radius: var(--radius-card);
+  background: var(--color-bg);
+  box-shadow: var(--shadow-card);
 }
 
 .request-ranking-area {
   display: grid;
-  gap: 14px;
+  gap: 10px;
 }
 
 .request-ranking-content {
   display: grid;
-  gap: 14px;
+  gap: 12px;
 }
 
 .request-ranking-block {
@@ -767,9 +767,10 @@ h1 {
 }
 
 .request-ranking-title {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 700;
+  margin: 0 0 2px;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.4;
 }
 
 .request-ranking-main,
@@ -790,11 +791,17 @@ h1 {
   display: flex;
   gap: 10px;
   align-items: flex-start;
-  padding: 10px 12px;
-  border-radius: 12px;
-  background: #f7f4ef;
-  color: inherit;
+  padding: 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 14px;
+  background: var(--color-bg);
+  color: var(--color-text);
   text-decoration: none;
+}
+
+.request-ranking-item:hover {
+  border-color: var(--color-primary-border);
+  background: var(--color-primary-light);
 }
 
 .request-ranking-rank {
@@ -803,10 +810,12 @@ h1 {
   flex: 0 0 auto;
   width: 1.8em;
   height: 1.8em;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-button);
+  background: var(--color-primary-light);
+  border: 1px solid var(--color-primary-border);
+  color: var(--color-primary);
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .request-ranking-song {
@@ -816,30 +825,46 @@ h1 {
 }
 
 .request-ranking-song-title {
+  font-size: 15px;
   font-weight: 700;
-  line-height: 1.35;
+  line-height: 1.45;
+  color: var(--color-text);
 }
 
 .request-ranking-song-count {
-  font-size: 0.78rem;
-  opacity: 0.68;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-muted);
+  line-height: 1.4;
 }
 
 .request-ranking-toggle {
   width: 100%;
+  margin-top: 2px;
   padding: 10px 12px;
-  border: 0;
-  border-radius: 999px;
-  background: #f0ece4;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-button);
+  background: var(--color-surface);
+  color: var(--color-muted);
+  font-size: 13px;
   font-weight: 700;
   cursor: pointer;
+}
+
+.request-ranking-toggle:active {
+  transform: scale(0.98);
 }
 
 .request-ranking-loading,
 .request-ranking-empty {
   margin: 0;
-  font-size: 0.9rem;
-  opacity: 0.72;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--color-surface);
+  color: var(--color-muted);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
 }
 
 .hidden {
