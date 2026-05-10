@@ -1000,10 +1000,11 @@ function recordCompletedDailyItem(item) {
 }
 
 function showPostAskStep() {
-  sendSheetLogOnPostAskStep();
-
-  showOnlyStep(postAskStepElement, { saveFlow: false });
+  state.isFlowStateSaveDisabled = true;
   clearFlowState();
+  
+  sendSheetLogOnPostAskStep();
+  showOnlyStep(postAskStepElement, { saveFlow: false });
 }
 
 function sendSheetLogOnPostAskStep() {
