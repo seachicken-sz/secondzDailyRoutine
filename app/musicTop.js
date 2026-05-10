@@ -17,14 +17,11 @@ async function loadRequestRanking() {
     const data = await response.json();
 
     const recentItems = Array.isArray(data.recentMusicTop) ? data.recentMusicTop : [];
-    const weeklyItems = Array.isArray(data.weeklyMusicTop) ? data.weeklyMusicTop : [];
 
     const recentRequestItems = getRequestRankingItems(recentItems);
-    const thisWeekRequestItems = getThisWeekRequestRankingItems(weeklyItems);
 
     area.innerHTML = renderRequestRanking({
       recentRequestItems,
-      thisWeekRequestItems,
     });
 
     setupRequestRankingToggle();
@@ -57,11 +54,6 @@ function renderRequestRanking({ recentRequestItems, thisWeekRequestItems }) {
         { main: "人気リクエスト曲", ruby: "request ranking" },
         recentRequestItems
       )}
-      ${renderRequestRankingBlock(
-        { main: "今週の人気リクエスト曲", ruby: "weekly request ranking" },
-        thisWeekRequestItems
-      )}
-
       <button type="button" id="requestRankingToggleButton" class="request-ranking-toggle">
         もっと見る
       </button>
