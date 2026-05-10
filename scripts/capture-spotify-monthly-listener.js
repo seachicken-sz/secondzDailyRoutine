@@ -154,27 +154,36 @@ async function sendToSpreadsheet(record) {
     return;
   }
 
+  const payload = {
+    type: "spotifyMonthlyListener",
+    ...record,
+  };
+
+  console.log("Sending to spreadsheet...");
+  console.log(
+    `POST URL is set: ${SPOTIFY_WEB_APP_URL.startsWith(
+      "https://script.google.com/macros/s/"
+    )}`
+  );
+  console.log("Payload:");
+  console.log(JSON.stringify(payload, null, 2));
+
   const response = await fetch(SPOTIFY_WEB_APP_URL, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      type: "spotifyMonthlyListener",
-      ...record,
-    }),
+    body: JSON.stringify(payload),
   });
 
   const responseText = await response.text();
+
+  console.log(`Spreadsheet response status: ${response.status}`);
+  console.log("Spreadsheet sync response:");
+  console.log(responseText);
 
   if (!response.ok) {
     throw new Error(
       `Spreadsheet sync failed: ${response.status} ${responseText}`
     );
   }
-
-  console.log("Spreadsheet sync response:");
-  console.log(responseText);
 }
 
 async function main() {
