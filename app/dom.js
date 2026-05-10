@@ -190,9 +190,23 @@ const postTextCountElement = document.getElementById("postTextCount");
 // 投稿リンク数表示
 const postLinkCountElement = document.getElementById("postLinkCount");
 // 生成された投稿文表示エリア
-const generatedPostTextElement = document.getElementById("generatedPostText");
+//const generatedPostTextElement = document.getElementById("generatedPostText");
 // 投稿文をコピーするボタン
-const copyPostTextButtonElement = document.getElementById("copyPostTextButton");
+//const copyPostTextButtonElement = document.getElementById("copyPostTextButton");
+// X版投稿文プレビュータブ
+const postPreviewXTabButtonElement = document.getElementById("postPreviewXTabButton");
+// Threads版投稿文プレビュータブ
+const postPreviewThreadsTabButtonElement = document.getElementById("postPreviewThreadsTabButton");
+// X版投稿文パネル
+const postPreviewXPanelElement = document.getElementById("postPreviewXPanel");
+// Threads版投稿文パネル
+const postPreviewThreadsPanelElement = document.getElementById("postPreviewThreadsPanel");
+// X版投稿文表示エリア
+const generatedXPostTextElement = document.getElementById("generatedXPostText");
+// Threads版投稿文表示エリア
+const generatedThreadsPostTextElement = document.getElementById("generatedThreadsPostText");
+// X版投稿文をコピーするボタン
+const copyXPostTextButtonElement = document.getElementById("copyXPostTextButton");
 // X投稿画面を開くボタン
 const openXPostButtonElement = document.getElementById("openXPostButton");
 // Threadsを開くボタン
