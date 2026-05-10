@@ -119,6 +119,9 @@ addClickEvent(openSpotifyButtonElement, () => {
   // アプリに戻ってきた時に次へボタン表示などを復元するため
   state.openedAction = OPENED_ACTIONS.spotify;
   saveFlowState(state.openedAction, spotifyStepElement);
+  sendSpotifyLog(state.selectedSong).catch((error) => {
+  console.error("spotifyLog送信失敗", error);
+});
   // Spotifyへ移動
   location.href = spotifyUrl;
 });
@@ -192,9 +195,12 @@ addClickEvent(onceTaskNextButtonElement, async () => {
   state.currentOnceTaskIndex += 1;
   // 選択した期間限定タスクがすべて終わったら、USEN推しリクへ進む
   if (state.currentOnceTaskIndex >= state.selectedOnceTasks.length) {
-    await showRequestSongStep();
-    return;
-  }
+  sendOnceListLog(state.selectedOnceTasks).catch((error) => {
+    console.error("onceListLog送信失敗", error);
+  });
+  await showRequestSongStep();
+  return;
+}
   // 次の期間限定タスクを画面に表示する
   renderCurrentOnceTask();
 });
@@ -232,6 +238,9 @@ addClickEvent(openRequestSongButtonElement, () => {
   // アプリに戻ってきた時に次へボタン表示などを復元するため
   state.openedAction = OPENED_ACTIONS.requestSong;
   saveFlowState(state.openedAction, requestSongStepElement);
+  sendRequestSongLog(state.selectedRequestSong).catch((error) => {
+  console.error("requestSongLog送信失敗", error);
+});
   // USEN推しリクページへ移動
   location.href = requestUrl;
 });
@@ -389,7 +398,9 @@ addClickEvent(openXPostButtonElement, () => {
     showError(postErrorAreaElement, MESSAGES.errors.noPostText);
     return;
   }
-
+  sendSnsShareLog("x").catch((error) => {
+    console.error("snsShareLog送信失敗", error);
+  });
   // X投稿画面用URLを作成して移動
   const url = X_POST_URL + encodeURIComponent(postText);
   location.href = url;
@@ -405,14 +416,15 @@ addClickEvent(openThreadsButtonElement, async () => {
     showError(postErrorAreaElement, MESSAGES.errors.noPostText);
     return;
   }
-
   try {
     // Threadsは投稿文をURLに渡せないため、先にクリップボードへコピーする
     await navigator.clipboard.writeText(postText);
 
     // コピー成功時はエラー表示を消す
     hideError(postErrorAreaElement);
-
+    sendSnsShareLog("threads").catch((error) => {
+      console.error("snsShareLog送信失敗", error);
+    });
     // Threadsへ移動
     location.href = THREADS_URL;
   } catch (error) {
@@ -991,47 +1003,8 @@ function sendSheetLogOnPostAskStep() {
     return;
   }
 
-  const onceListItems = state.selectedOnceTasks.map((task) => {
-    return createSheetItem(task, {
-      itemId: task.id,
-      title: task.name,
-      url: task.url || "",
-    });
-  });
-
-  const listItems = state.completedDailyItems.map((item) => {
-    return createSheetItem(item, {
-      itemId: item.itemId,
-      title: item.name,
-      url: item.url || "",
-    });
-  });
-
-  const spotifyItems = state.selectedSong
-    ? [
-        createSheetItem(state.selectedSong, {
-          itemId: `sp_${state.selectedSong.url}`,
-          title: state.selectedSong.name,
-          url: buildSpotifyUrl(state.selectedSong.url),
-        }),
-      ]
-    : [];
-
-  const requestSongItems = state.selectedRequestSong
-    ? [
-        createSheetItem(state.selectedRequestSong, {
-          itemId: state.selectedRequestSong.id || `rq_${state.selectedRequestSong.url}`,
-          title: state.selectedRequestSong.name,
-          url: buildRequestSongUrl(state.selectedRequestSong.url),
-        }),
-      ]
-    : [];
-
-  sendSheetLog({
-    onceList: onceListItems,
-    list: listItems,
-    spotify: spotifyItems,
-    requestSong: requestSongItems,
+  sendDailyTaskLog(state.completedDailyItems).catch((error) => {
+    console.error("dailyTaskLog送信失敗", error);
   });
 
   state.isSheetLogSentInCurrentFlow = true;
