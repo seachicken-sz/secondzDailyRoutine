@@ -81,14 +81,11 @@ function renderRequestRankingItem(item) {
   const rank = Number(item.rank || 0);
   const title = item.title || "タイトル不明";
   const url = item.url || "";
-  const count = Number(item.count || 0);
-  const users = Number(item.users || 0);
 
   const innerHtml = `
     <span class="request-ranking-rank">${rank}</span>
     <span class="request-ranking-song">
-      <span class="request-ranking-song-title">${escapeHtml(title)}</span>
-      <span class="request-ranking-song-count">${count}回 / ${users}人</span>
+      <span class="request-ranking-song-title">${escapeMusicTopHtml(title)}</span>
     </span>
   `;
 
@@ -97,7 +94,7 @@ function renderRequestRankingItem(item) {
   }
 
   return `
-    <a class="request-ranking-item" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">
+    <a class="request-ranking-item" href="${escapeMusicTopHtml(url)}" target="_blank" rel="noopener noreferrer">
       ${innerHtml}
     </a>
   `;
