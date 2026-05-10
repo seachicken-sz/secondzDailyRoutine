@@ -194,7 +194,7 @@ h1 {
   padding: 14px 16px;
   border: 1px solid var(--color-border);
   border-radius: 14px;
-  background: var();
+  background: var(--color-surface);
   color: var(--color-text);
   font-size: 17px;
   font-weight: 700;
@@ -211,7 +211,7 @@ h1 {
 .check-control-area {
   margin: 0 0 14px;
   padding: 16px;
-  background: var();
+  background: var(--color-surface);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
 }
@@ -228,7 +228,7 @@ h1 {
   padding: 14px 16px;
   border: 1px solid var(--color-border);
   border-radius: 14px;
-  background: var();
+  background: var(--color-surface);
   cursor: pointer;
 }
 
