@@ -722,10 +722,16 @@ h1 {
   border: 1px solid #d7efe8;
 }
 
-.home-install-title {
-  margin: 0 0 8px;
-  font-weight: 700;
-  color: #4d8f81;
+.request-ranking-heading {
+  padding-left: 10px;
+  border-left: 4px solid var(--color-primary);
+}
+
+.request-ranking-title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.4;
 }
 
 .home-install-text {
