@@ -287,44 +287,54 @@
       <section id="postErrorArea" class="error-area hidden"></section>
 
       <section class="scroll-area">
-        <div id="postItemList" class="check-list post-item-list"></div>
-
-        <section class="task-card post-check-card">
-          <p class="selected-label">チェック</p>
-          <p id="postTextCount" class="description"></p>
-          <p id="postLinkCount" class="description"></p>
-        </section>
-
         <section class="task-card">
-          <p class="selected-label">生成文</p>
+          <p class="selected-label">プレビュー</p>
         
           <div class="post-preview-tabs" role="tablist" aria-label="投稿先切り替え">
             <button
               id="postPreviewXTabButton"
               class="post-preview-tab active"
-              type="button">
+              type="button"
+            >
               X
             </button>
         
             <button
               id="postPreviewThreadsTabButton"
               class="post-preview-tab"
-              type="button">
+              type="button"
+            >
               Threads
             </button>
           </div>
         
           <section id="postPreviewXPanel" class="post-preview-panel">
+            <div id="postItemXList" class="check-list post-item-list"></div>
+        
+            <section class="post-check-box">
+              <p class="selected-label">チェック</p>
+              <p id="xPostTextCount" class="description"></p>
+            </section>
+        
             <div id="generatedXPostText" class="copy-text"></div>
-            <button id="openXPostButton" class="primary-button post-action-button">
-              Xに投稿
-            </button>
+        
             <button id="copyXPostTextButton" class="secondary-button">
               コピーする
             </button>
+        
+            <button id="openXPostButton" class="primary-button post-action-button">
+              Xに投稿
+            </button>
           </section>
-      
+        
           <section id="postPreviewThreadsPanel" class="post-preview-panel hidden">
+            <div id="postItemThreadsList" class="check-list post-item-list"></div>
+        
+            <section class="post-check-box">
+              <p class="selected-label">チェック</p>
+              <p id="threadsPostLinkCount" class="description"></p>
+            </section>
+        
             <div id="generatedThreadsPostText" class="copy-text"></div>
         
             <button id="openThreadsButton" class="primary-button post-action-button">
@@ -332,6 +342,8 @@
             </button>
           </section>
         </section>
+
+
 
         <section class="bottom-action-area">
           <button id="postNextButton" class="primary-button">
