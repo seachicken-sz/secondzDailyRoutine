@@ -36,6 +36,10 @@ addClickEvent(startRoutineButtonElement, () => {
   });
   showOnlyStep(spotifyStepElement);
 });
+// SNSシェアボタン
+addClickEvent(homeTopShareButtonElement, shareAppFromHome);
+addClickEvent(homeBottomShareButtonElement, shareAppFromHome);
+
 // ==================================================
 // クリックイベント設定 - モーダル
 // ==================================================
@@ -1208,3 +1212,27 @@ function updateStepTopActionBar() {
   stepTopActionBarElement.classList.toggle("hidden", !shouldShowTopActionBar);
 }
 
+async function shareAppFromHome() {
+  const shareData = {
+    title: "タムごとDaily",
+    text: "タムごとDailyはこちら▼",
+    url: "https://seachicken-sz.github.io/secondzDailyRoutine/app/",
+  };
+
+  try {
+    if (navigator.share) {
+      await navigator.share(shareData);
+      return;
+    }
+
+    await navigator.clipboard.writeText(`${shareData.text}\n${shareData.url}`);
+    alert("共有が使えない環境のため、URLをコピーしました。");
+  } catch (error) {
+    if (error.name === "AbortError") {
+      return;
+    }
+
+    console.error(error);
+    alert("共有に失敗しました。");
+  }
+}
