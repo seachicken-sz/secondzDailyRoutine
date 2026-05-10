@@ -9,6 +9,11 @@ async function loadRequestRanking() {
 
   try {
     const response = await fetch(MUSIC_TOP_API_URL);
+
+    if (!response.ok) {
+      throw new Error(`Music top API error: ${response.status}`);
+    }
+
     const data = await response.json();
 
     const recentItems = Array.isArray(data.recentMusicTop) ? data.recentMusicTop : [];
@@ -85,7 +90,7 @@ function renderRequestRankingItem(item) {
   const innerHtml = `
     <span class="request-ranking-rank">${rank}</span>
     <span class="request-ranking-song">
-      <span class="request-ranking-song-title">${escapeHtmltitle)}</span>
+      <span class="request-ranking-song-title">${escapeHtml(title)}</span>
     </span>
   `;
 
@@ -94,7 +99,7 @@ function renderRequestRankingItem(item) {
   }
 
   return `
-    <a class="request-ranking-item" href="${escapeHtmlurl)}" target="_blank" rel="noopener noreferrer">
+    <a class="request-ranking-item" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">
       ${innerHtml}
     </a>
   `;
@@ -105,6 +110,17 @@ function setupRequestRankingToggle() {
   const button = document.getElementById("requestRankingToggleButton");
 
   if (!content || !button) {
+    return;
+  }
+
+  const extraItems = content.querySelectorAll(".request-ranking-extra");
+
+  const hasHiddenItems = Array.from(extraItems).some((extraItem) => {
+    return extraItem.children.length > 0;
+  });
+
+  if (!hasHiddenItems) {
+    button.classList.add("hidden");
     return;
   }
 
