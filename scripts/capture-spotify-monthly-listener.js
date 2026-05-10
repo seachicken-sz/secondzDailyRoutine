@@ -13,6 +13,8 @@ const OUTPUT_PATH = path.join(
   "spotifyMonthlyListenerJson.json"
 );
 
+const SPOTIFY_WEB_APP_URL = process.env.SPOTIFY_WEB_APP_URL;
+
 function getJstDateParts() {
   const now = new Date();
 
@@ -90,7 +92,9 @@ function extractListenerCount(listenerText) {
 }
 
 function upsertTodayRecord(history, newRecord) {
-  const existingIndex = history.findIndex((item) => item.date === newRecord.date);
+  const existingIndex = history.findIndex((item) => {
+    return item.date === newRecord.date;
+  });
 
   if (existingIndex >= 0) {
     history[existingIndex] = {
@@ -144,6 +148,35 @@ async function getMonthlyListenerText() {
   }
 }
 
+async function sendToSpreadsheet(record) {
+  if (!SPOTIFY_WEB_APP_URL) {
+    console.log("SPOTIFY_WEB_APP_URL is not set. Skip spreadsheet sync.");
+    return;
+  }
+
+  const response = await fetch(SPOTIFY_WEB_APP_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      type: "spotifyMonthlyListener",
+      ...record,
+    }),
+  });
+
+  const responseText = await response.text();
+
+  if (!response.ok) {
+    throw new Error(
+      `Spreadsheet sync failed: ${response.status} ${responseText}`
+    );
+  }
+
+  console.log("Spreadsheet sync response:");
+  console.log(responseText);
+}
+
 async function main() {
   const { date, createdAt } = getJstDateParts();
 
@@ -169,6 +202,8 @@ async function main() {
   });
 
   writeHistory(nextHistory);
+
+  await sendToSpreadsheet(newRecord);
 
   console.log("Saved Spotify monthly listener data:");
   console.log(JSON.stringify(newRecord, null, 2));
