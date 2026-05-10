@@ -3,7 +3,6 @@ const fs = require("fs");
 const path = require("path");
 
 const ARTIST_NAME = "timelesz";
-
 const RANKING_URL = "https://usen.oshireq.com/";
 
 const OUTPUT_PATH = path.join(
@@ -65,7 +64,7 @@ function readCurrentHistory() {
   const parsed = JSON.parse(rawText);
 
   if (!Array.isArray(parsed)) {
-    throw new Error("UsenRequestRankingJson.json must be an array.");
+    throw new Error("timeleszRequestRankingJson.json must be an array.");
   }
 
   return parsed;
@@ -199,9 +198,7 @@ async function getTimeleszRankingItems(page) {
       continue;
     }
 
-    const url = href
-      ? new URL(href, RANKING_URL).toString()
-      : "";
+    const url = href ? new URL(href, RANKING_URL).toString() : "";
 
     results.push({
       valueText,
@@ -234,8 +231,17 @@ async function captureRankingItems() {
       locale: "ja-JP",
     });
 
+    console.log(`Opening ranking page: ${RANKING_URL}`);
+
     await page.goto(RANKING_URL, {
-      waitUntil: "networkidle",
+      waitUntil: "domcontentloaded",
+      timeout: 90000,
+    });
+
+    console.log("Page loaded. Waiting for ranking list...");
+
+    await page.waitForSelector("li", {
+      state: "visible",
       timeout: 60000,
     });
 
@@ -244,6 +250,8 @@ async function captureRankingItems() {
     await scrollToBottom(page);
 
     const items = await getTimeleszRankingItems(page);
+
+    console.log(`Captured timelesz ranking items: ${items.length}`);
 
     return items;
   } finally {
@@ -258,7 +266,7 @@ async function sendToSpreadsheet(snapshot) {
   }
 
   const payload = {
-    type: "UsenRequestRanking",
+    type: "timeleszRequestRanking",
     ...snapshot,
   };
 
