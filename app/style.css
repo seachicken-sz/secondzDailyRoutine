@@ -94,6 +94,9 @@ h1 {
 .song-section:first-child {
   margin-top: 0;
 }
+.song-section:last-child {
+  margin-bottom: 18px;
+}
 
 .song-section h2,
 .youtube-section h2 {
@@ -242,8 +245,8 @@ h1 {
 }
 
 .bottom-action-area {
-  margin: 14px 0 0;
-  padding: 16px;
+  margin: 14px 0 20px;
+  padding: 10px 16px 16px 16px;
   background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
