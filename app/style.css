@@ -1,19 +1,36 @@
+:root {
+  --color-primary: #02b9a5;
+  --color-primary-light: #ecfff3;
+  --color-primary-border: #bdebcf;
+
+  --color-bg: #f6f6f6;
+  --color-surface: #ffffff;
+  --color-text: #222;
+  --color-muted: #666;
+  --color-border: #ddd;
+  --color-danger: #b00020;
+
+  --radius-card: 16px;
+  --radius-button: 999px;
+  --shadow-card: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+/*******************/
+/*共通設定 - 画面*/
+/*******************/
 * {
   box-sizing: border-box;
 }
-
 html,
 body {
   height: 100%;
 }
-
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f6f6f6;
-  color: #222;
+  background: var(--color-bg);
+  color: var(--color-text);
 }
-
 .app {
   width: min(100%, 720px);
   height: 100dvh;
@@ -21,7 +38,12 @@ body {
   padding: 18px 0px;
   overflow: hidden;
 }
-
+/*タイトル表示*/
+.header {
+  flex-shrink: 0;
+  margin-bottom: 14px;
+}
+/*メインコンテンツ表示*/
 .step-screen {
   height: 100%;
   display: flex;
@@ -29,22 +51,9 @@ body {
   overflow: hidden;
   padding:0 20px
 }
-
-.header {
-  flex-shrink: 0;
-  margin-bottom: 14px;
-}
-
-
-
-.step-label {
-  margin: 0 0 6px;
-  font-size: 13px;
-  font-weight: 700;
-  color: #02B9A5;
-  letter-spacing: 0.08em;
-}
-
+/*******************/
+/*共通設定 - パーツ*/
+/*******************/
 h1 {
   margin: 0;
   font-size: 24px;
@@ -62,15 +71,15 @@ h1 {
   flex-shrink: 0;
   margin: 0 0 14px;
   padding: 16px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
 }
 
 .selected-label {
   margin: 0 0 4px;
   font-size: 13px;
-  color: #666;
+  color: var(--color-muted);
 }
 
 .selected-song {
@@ -112,58 +121,49 @@ h1 {
 .song-button {
   width: 100%;
   padding: 14px 16px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border);
   border-radius: 14px;
-  background: #ffffff;
-  color: #222;
+  background: var(--color-surface);
+  color: var(--color-text);
   font-size: 16px;
   text-align: left;
   cursor: pointer;
 }
 
 .song-button.selected {
-  border-color: #02B9A5;
-  background: #ecfff3;
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
   font-weight: 700;
 }
 
-.primary-button {
-  width: 100%;
-  margin-top: 10px;
-  padding: 14px 16px;
-  border: none;
-  border-radius: 999px;
-  background: #02B9A5;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.secondary-button {
-  width: 100%;
-  margin-top: 10px;
-  padding: 14px 16px;
-  border: 1px solid #ddd;
-  border-radius: 999px;
-  background: #ffffff;
-  color: #222;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
+.primary-button,
+.secondary-button,
 .gray-button {
   width: 100%;
   margin-top: 10px;
   padding: 14px 16px;
-  border: 1px solid #ddd;
-  border-radius: 999px;
-  background: #e5e7eb;
-  color: #6b7280;
+  border-radius: var(--radius-button);
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
+}
+
+.primary-button {
+  border: none;
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.secondary-button {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.gray-button {
+  border: 1px solid var(--color-border);
+  background: #e5e7eb;
+  color: #6b7280;
 }
 
 .gray-button:active {
@@ -192,10 +192,10 @@ h1 {
 .accordion-button {
   width: 100%;
   padding: 14px 16px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border);
   border-radius: 14px;
-  background: #ffffff;
-  color: #222;
+  background: var(--color-bg);
+  color: var(--color-text);
   font-size: 17px;
   font-weight: 700;
   display: flex;
@@ -211,9 +211,9 @@ h1 {
 .check-control-area {
   margin: 0 0 14px;
   padding: 16px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  background: var(--color-bg);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
 }
 
 .check-list {
@@ -226,9 +226,9 @@ h1 {
   align-items: center;
   gap: 10px;
   padding: 14px 16px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border);
   border-radius: 14px;
-  background: #ffffff;
+  background: var(--color-bg);
   cursor: pointer;
 }
 
@@ -247,9 +247,9 @@ h1 {
 .bottom-action-area {
   margin: 14px 0 20px;
   padding: 10px 16px 16px 16px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  background: var(--color-bg);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
 }
 
 .spotify-skip-area {
@@ -258,7 +258,7 @@ h1 {
 
 .group-label {
   margin: 0 0 8px;
-  color: #02B9A5;
+  color: var(--color-primary);
   font-size: 14px;
   font-weight: 700;
   line-height: 1.5;
@@ -274,7 +274,7 @@ h1 {
   margin: 0 0 14px;
   padding: 14px;
   border-radius: 12px;
-  background: #f6f6f6;
+  background: var(--color-bg);
   color: #333;
   line-height: 1.7;
   white-space: pre-wrap;
@@ -285,16 +285,16 @@ h1 {
   margin: 0 0 14px;
   padding: 14px;
   border-radius: 12px;
-  background: #ecfff3;
-  border: 1px solid #bdebcf;
+  background: var(--color-primary-light);
+  border: 1px solid var(--color-primary-border);
 }
 
 .copy-text {
   margin: 0 0 12px;
   padding: 12px;
   border-radius: 10px;
-  background: #ffffff;
-  color: #222;
+  background: var(--color-bg);
+  color: var(--color-text);
   line-height: 1.7;
   white-space: pre-wrap;
   word-break: break-word;
@@ -332,9 +332,9 @@ h1 {
 .youtube-card {
   min-width: 180px;
   max-width: 180px;
-  border: 1px solid #ddd;
-  border-radius: 16px;
-  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-bg);
   overflow: hidden;
   cursor: pointer;
   flex-shrink: 0;
@@ -356,7 +356,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ecfff3;
+  background: var(--color-primary-light);
   color: #1b6b3a;
   font-weight: 700;
   text-align: center;
@@ -369,7 +369,7 @@ h1 {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.45;
-  color: #222;
+  color: var(--color-text);
 }
 #homeStep {
   overflow-y: scroll;
@@ -404,9 +404,9 @@ h1 {
   flex-shrink: 0;
   margin: 0 0 12px;
   padding: 14px 16px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  background: var(--color-bg);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
 }
@@ -431,7 +431,7 @@ h1 {
   margin-bottom: 3rem;
   padding: 14px 16px 16px;
   background: transparent;
-  border-radius: 16px;
+  border-radius: var(--radius-card);
 }
 .home-action-area button{
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.241);
@@ -453,7 +453,7 @@ h1 {
   min-height: 3rem;
   max-height: none;
   padding: 12px;
-  background: #ffffff;
+  background: var(--color-bg);
   border: 1px solid #d9d9d9;
   border-radius: 14px;
 }
@@ -465,7 +465,7 @@ h1 {
   font-size: 15px;
   line-height: 1.6;
   font-weight: 700;
-  color: #222;
+  color: var(--color-text);
   text-decoration: none;
 }
 
@@ -486,7 +486,7 @@ h1 {
   padding: 4px 8px;
   border: none;
   background: transparent;
-  color: #666;
+  color: var(--color-muted);
   font-size: 12px;
   font-weight: 700;
   text-decoration: underline;
@@ -507,7 +507,7 @@ h1 {
 .modal-content {
   width: min(100%, 520px);
   max-height: min(80dvh, 640px);
-  background: #ffffff;
+  background: var(--color-bg);
   border-radius: 18px;
   box-shadow: 0 10px 32px rgba(0, 0, 0, 0.22);
   overflow: hidden;
@@ -534,9 +534,9 @@ h1 {
   width: 36px;
   height: 36px;
   border: none;
-  border-radius: 999px;
+  border-radius: var(--radius-button);
   background: #f2f2f2;
-  color: #222;
+  color: var(--color-text);
   font-size: 24px;
   line-height: 1;
   cursor: pointer;
@@ -567,7 +567,7 @@ h1 {
   margin: 10px 0 0;
   padding: 12px;
   border-radius: 12px;
-  background: #f6f6f6;
+  background: var(--color-bg);
   color: #555;
   font-size: 13px;
   line-height: 1.7;
@@ -596,7 +596,7 @@ h1 {
   padding: 14px;
   border-radius: 12px;
   background: #fff0f0;
-  color: #b00020;
+  color: var(--color-danger);
   line-height: 1.6;
 }
 
@@ -605,26 +605,26 @@ h1 {
   width: fit-content;
   margin: 0 0 10px;
   padding: 6px 10px;
-  border: 1px solid #ddd;
-  border-radius: 999px;
-  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-button);
+  background: var(--color-bg);
   color: #333;
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-card);
 }
 
 .empty-text {
   margin: 0;
   padding: 12px;
-  color: #666;
+  color: var(--color-muted);
   background: #fff;
   border-radius: 12px;
 }
 
 .warning-text {
-  color: #b00020;
+  color: var(--color-danger);
   font-weight: 700;
 }
 
@@ -641,14 +641,14 @@ h1 {
 .step-usage-button {
   width: fit-content;
   padding: 6px 10px;
-  border: 1px solid #ddd;
-  border-radius: 999px;
-  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-button);
+  background: var(--color-bg);
   color: #333;
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-card);
 
   display: inline-flex;
   align-items: center;
@@ -660,7 +660,7 @@ h1 {
   border: none;
   background: transparent;
   box-shadow: none;
-  color: #666;
+  color: var(--color-muted);
   padding: 6px 4px;
 }
 
