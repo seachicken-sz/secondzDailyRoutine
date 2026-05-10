@@ -1,4 +1,4 @@
-const MUSIC_TOP_API_URL = "Apps ScriptのWebアプリURL?type=musicTopAll";
+const MUSIC_TOP_API_URL = "https://script.google.com/macros/s/AKfycbyyETjEfIqs9fSUMD4Kj_3c5Zey_j92Sovy1DPld5Q03o63zpAmQqhTi6fB4FKy6xWU/exec?type=musicTopAll";
 
 async function loadRequestRanking() {
   const area = document.getElementById("requestRankingArea");
