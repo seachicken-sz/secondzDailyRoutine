@@ -491,6 +491,7 @@ function updateHomeInstallGuideVisibility() {
 async function init() {
   try {
     updateHomeInstallGuideVisibility();
+
     const songs = await loadSpotifySongs();
     const recommendedSongs = songs.filter((song) => song.flag === true);
     const otherSongs = songs.filter((song) => song.flag !== true);
@@ -499,18 +500,25 @@ async function init() {
     renderSpotifySongList(otherSongsElement, otherSongs);
 
     if (recommendedSongs.length === 0 && recommendedSongsElement) {
-      recommendedSongsElement.innerHTML = `<p class="empty-text">${MESSAGES.empty.recommendedSongs}</p>`;
+      recommendedSongsElement.innerHTML = `<p>${MESSAGES.empty.recommendedSongs}</p>`;
     }
 
     if (otherSongs.length === 0 && otherSongsElement) {
-      otherSongsElement.innerHTML = `<p class="empty-text">${MESSAGES.empty.otherSongs}</p>`;
+      otherSongsElement.innerHTML = `<p>${MESSAGES.empty.otherSongs}</p>`;
     }
 
     updateOtherSongsAccordion();
+
     state.onceTasks = await loadOnceTasks();
     renderHomeOnceTaskList(state.onceTasks);
+
     const homeInfoList = await loadHomeInfoList();
     renderHomeInfoList(homeInfoList);
+
+    if (typeof loadRequestRanking === "function") {
+      await loadRequestRanking();
+    }
+
     await restoreFlowStateOrHome();
   } catch (error) {
     console.error(error);
