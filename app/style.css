@@ -750,11 +750,13 @@ h1 {
 }
 #home-top-share-btn-wrap{
   display:flex;
-  justyify-content:end;
+  justify-content: end;
 }
 #home-top-share-btn-wrap button{
   color:#666;
   font-size:22px;
+      background-color: transparent;
+    border: none;
 }
 .request-ranking-card {
   flex-shrink: 0;
