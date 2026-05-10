@@ -338,6 +338,7 @@ addClickEvent(skipPostButtonElement, () => {
   showYoutubeAskStep();
 });
 // 投稿文をコピーするボタン押下時
+/*
 addClickEvent(copyPostTextButtonElement, async () => {
   // 現在表示されている投稿文を取得
   const postText = getGeneratedPostText();
@@ -361,37 +362,63 @@ addClickEvent(copyPostTextButtonElement, async () => {
     showError(postErrorAreaElement, MESSAGES.errors.copyFailed);
   }
 });
+*/
+// X版プレビュータブ押下時
+addClickEvent(postPreviewXTabButtonElement, () => {
+  setPostPreviewPlatform("x");
+});
+
+// Threads版プレビュータブ押下時
+addClickEvent(postPreviewThreadsTabButtonElement, () => {
+  setPostPreviewPlatform("threads");
+});
+
+// X版投稿文をコピーするボタン押下時
+addClickEvent(copyXPostTextButtonElement, async () => {
+  const postText = buildPostText("x");
+
+  if (!postText) {
+    showError(postErrorAreaElement, MESSAGES.errors.noCopyPostText);
+    return;
+  }
+
+  try {
+    await navigator.clipboard.writeText(postText);
+
+    if (copyXPostTextButtonElement) {
+      copyXPostTextButtonElement.textContent = "コピーしました";
+    }
+
+    hideError(postErrorAreaElement);
+  } catch (error) {
+    console.error(error);
+    showError(postErrorAreaElement, MESSAGES.errors.copyFailed);
+  }
+});
 // Xに投稿ボタン押下時
 addClickEvent(openXPostButtonElement, () => {
-  // 現在表示されている投稿文を取得
-  const postText = getGeneratedPostText();
-  // 投稿文が空の場合はエラー表示して処理を止める
+  const postText = buildPostText("x");
   if (!postText) {
     showError(postErrorAreaElement, MESSAGES.errors.noPostText);
     return;
   }
-  // X投稿画面用URLを作成して移動
   const url = X_POST_URL + encodeURIComponent(postText);
   location.href = url;
 });
 // Threadsを開くボタン押下時
 addClickEvent(openThreadsButtonElement, async () => {
-  // 現在表示されている投稿文を取得
-  const postText = getGeneratedPostText();
-  // 投稿文が空の場合はエラー表示して処理を止める
+  const postText = buildPostText("threads");
+
   if (!postText) {
     showError(postErrorAreaElement, MESSAGES.errors.noPostText);
     return;
   }
+
   try {
-    // Threadsは投稿文をURLに渡せないため、先にクリップボードへコピーする
     await navigator.clipboard.writeText(postText);
-    // コピー成功時はエラー表示を消す
     hideError(postErrorAreaElement);
-    // Threadsへ移動
     location.href = THREADS_URL;
   } catch (error) {
-    // コピーに失敗した場合は、手動コピーを促す
     console.error(error);
     showError(postErrorAreaElement, MESSAGES.errors.copyFailed);
   }
@@ -1013,12 +1040,9 @@ function sendSheetLogOnPostAskStep() {
 
 function showPostEditStep() {
   state.postItems = buildPostItems();
-
   renderPostItemList(state.postItems);
-  updateGeneratedPostText();
-
+  setPostPreviewPlatform("x");
   showOnlyStep(postEditStepElement);
-  hideError(postErrorAreaElement);
 }
 async function showYoutubeAskStep() {
   showOnlyStep(youtubeAskStepElement);
