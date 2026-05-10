@@ -115,6 +115,21 @@ function upsertSnapshot(history, newSnapshot) {
   return [...history, newSnapshot];
 }
 
+function keepOnlyRecentRankingSnapshots(history, currentCreatedAt) {
+  const currentTime = new Date(currentCreatedAt).getTime();
+  const borderTime = currentTime - 24 * 60 * 60 * 1000;
+
+  return history.filter((item) => {
+    const itemTime = new Date(item.createdAt || item.capturedHour).getTime();
+
+    if (Number.isNaN(itemTime)) {
+      return false;
+    }
+
+    return itemTime >= borderTime;
+  });
+}
+
 async function scrollToBottom(page) {
   let previousHeight = 0;
   let previousItemCount = 0;
@@ -317,7 +332,9 @@ async function main() {
     createdAt,
   };
 
-  const nextHistory = upsertSnapshot(currentHistory, newSnapshot);
+  let nextHistory = upsertSnapshot(currentHistory, newSnapshot);
+
+  nextHistory = keepOnlyRecentRankingSnapshots(nextHistory, createdAt);
 
   nextHistory.sort((a, b) => {
     return String(a.capturedHour).localeCompare(String(b.capturedHour));
@@ -329,6 +346,9 @@ async function main() {
 
   console.log("Saved timelesz request ranking data:");
   console.log(JSON.stringify(newSnapshot, null, 2));
+
+  console.log("Current JSON records:");
+  console.log(JSON.stringify(nextHistory, null, 2));
 }
 
 main().catch((error) => {
