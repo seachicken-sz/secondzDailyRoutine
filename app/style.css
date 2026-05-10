@@ -798,12 +798,6 @@ h1 {
   color: var(--color-text);
   text-decoration: none;
 }
-
-.request-ranking-item:hover {
-  border-color: var(--color-primary-border);
-  background: var(--color-primary-light);
-}
-
 .request-ranking-rank {
   display: inline-grid;
   place-items: center;
