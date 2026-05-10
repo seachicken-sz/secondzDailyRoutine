@@ -85,7 +85,7 @@ function renderRequestRankingItem(item) {
   const innerHtml = `
     <span class="request-ranking-rank">${rank}</span>
     <span class="request-ranking-song">
-      <span class="request-ranking-song-title">${escapeMusicTopHtml(title)}</span>
+      <span class="request-ranking-song-title">${escapeHtmltitle)}</span>
     </span>
   `;
 
@@ -94,7 +94,7 @@ function renderRequestRankingItem(item) {
   }
 
   return `
-    <a class="request-ranking-item" href="${escapeMusicTopHtml(url)}" target="_blank" rel="noopener noreferrer">
+    <a class="request-ranking-item" href="${escapeHtmlurl)}" target="_blank" rel="noopener noreferrer">
       ${innerHtml}
     </a>
   `;
