@@ -54,7 +54,7 @@ function renderRequestRanking({ recentRequestItems, thisWeekRequestItems }) {
   return `
     <div class="request-ranking-content" data-expanded="false">
       ${renderRequestRankingBlock(
-        { main: "最近の人気リクエスト曲", ruby: "popular request ranking" },
+        { main: "人気リクエスト曲", ruby: "request ranking" },
         recentRequestItems
       )}
       ${renderRequestRankingBlock(
