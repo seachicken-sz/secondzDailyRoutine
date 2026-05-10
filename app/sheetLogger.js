@@ -1,5 +1,5 @@
-const SHEET_WEB_APP_URL = process.env.SHEET_WEB_APP_URL;
-const SHEET_TOKEN = process.env.LOG_TOKEN
+const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyPHel75TjxIKZrfjItAyoaR4_zL0ptWb7PuvMZfuJGMtZnn4ZbPvi23OhnC1p7N-GL/exec";
+const SHEET_TOKEN = "test-token";
 const SHEET_APP_NAME = "secondzDailyRoutine";
 const SHEET_CLIENT_ID_KEY = "secondzDailyRoutineClientId";
 
