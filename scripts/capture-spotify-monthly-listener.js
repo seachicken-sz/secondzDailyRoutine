@@ -108,6 +108,44 @@ function upsertTodayRecord(history, newRecord) {
   return [...history, newRecord];
 }
 
+function getPreviousDateString(currentDate) {
+  const currentDateTime = new Date(`${currentDate}T00:00:00+09:00`);
+  const previousDateTime = new Date(
+    currentDateTime.getTime() - 24 * 60 * 60 * 1000
+  );
+
+  const formatter = new Intl.DateTimeFormat("ja-JP", {
+    timeZone: "Asia/Tokyo",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+
+  const parts = formatter.formatToParts(previousDateTime);
+  const values = {};
+
+  parts.forEach((part) => {
+    if (part.type !== "literal") {
+      values[part.type] = part.value;
+    }
+  });
+
+  return `${values.year}-${values.month}-${values.day}`;
+}
+
+function keepOnlyRecentSpotifyRecords(history, currentDate) {
+  const previousDate = getPreviousDateString(currentDate);
+
+  const keepDates = new Set([
+    previousDate,
+    currentDate,
+  ]);
+
+  return history.filter((item) => {
+    return keepDates.has(item.date);
+  });
+}
+
 async function getMonthlyListenerText() {
   const browser = await chromium.launch({
     headless: true,
@@ -204,7 +242,9 @@ async function main() {
     createdAt,
   };
 
-  const nextHistory = upsertTodayRecord(currentHistory, newRecord);
+  let nextHistory = upsertTodayRecord(currentHistory, newRecord);
+
+  nextHistory = keepOnlyRecentSpotifyRecords(nextHistory, date);
 
   nextHistory.sort((a, b) => {
     return String(a.date).localeCompare(String(b.date));
@@ -216,6 +256,9 @@ async function main() {
 
   console.log("Saved Spotify monthly listener data:");
   console.log(JSON.stringify(newRecord, null, 2));
+
+  console.log("Current JSON records:");
+  console.log(JSON.stringify(nextHistory, null, 2));
 }
 
 main().catch((error) => {
