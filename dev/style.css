@@ -816,9 +816,7 @@ h1 {
   font-size: 13px;
   line-height: 1.7;
 }
-#shareImageCanvas{
-   width:100%;
-}
+
 
 .feedback-card {
   margin-top: 16px;
@@ -1149,6 +1147,11 @@ h1 {
 
 .share-image-canvas-wrap{
   text-align:center;
+  max-width:100%;
+}
+#shareImageCanvas{
+   width:100%;
+  max-width:100%;
 }
 /* =========================
    Theme modal
