@@ -610,15 +610,46 @@ addClickEvent(downloadShareImageButtonElement, async () => {
     return;
   }
 
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement("a");
+  const file = new File([blob], "tamugoto-daily-share.png", {
+    type: "image/png",
+  });
 
-  link.href = url;
-  link.download = "tamugoto-daily-share.png";
-  link.click();
+  try {
+    // PWA / スマホ向け：共有シートを優先
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({
+        files: [file],
+        title: "タムごとDaily",
+        text: "今日の推し活ログ",
+      });
 
-  URL.revokeObjectURL(url);
-  hideError(postErrorAreaElement);
+      hideError(postErrorAreaElement);
+      return;
+    }
+
+    // 共有シート非対応環境：通常ダウンロード
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.download = "tamugoto-daily-share.png";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    setTimeout(() => {
+      URL.revokeObjectURL(url);
+    }, 1000);
+
+    hideError(postErrorAreaElement);
+  } catch (error) {
+    if (error.name === "AbortError") {
+      return;
+    }
+
+    console.error(error);
+    showError(postErrorAreaElement, "画像の保存に失敗しました。");
+  }
 });
 // ==================================================
 // クリックイベント設定 - YouTube再生
