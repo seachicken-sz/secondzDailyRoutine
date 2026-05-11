@@ -28,6 +28,7 @@ const DATA_PATHS = {
 // ==================================================
 const STORAGE_KEYS = {
   flowState: "secondzDailyRoutineFlowState",
+  onceTaskDoneMap: "secondzDailyRoutineOnceTaskDoneMap",
 };
 
 // ==================================================
