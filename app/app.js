@@ -195,6 +195,8 @@ addClickEvent(openOnceTaskUrlButtonElement, () => {
 });
 // 期間限定タスク実行画面の次へボタン押下時
 addClickEvent(onceTaskNextButtonElement, async () => {
+  const currentTask = state.selectedOnceTasks[state.currentOnceTaskIndex];
+  markOnceTaskDone(currentTask);
   // 次の期間限定タスクへ進める
   state.currentOnceTaskIndex += 1;
   // 選択した期間限定タスクがすべて終わったら、USEN推しリクへ進む
