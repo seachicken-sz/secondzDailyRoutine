@@ -1,17 +1,8 @@
 const { chromium } = require("playwright");
-const fs = require("fs");
-const path = require("path");
 
 const ARTIST_NAME = "timelesz";
 const ARTIST_ID = "1ZFfhzyXjPvbzSYPlCIwo3";
 const ARTIST_URL = `https://open.spotify.com/intl-ja/artist/${ARTIST_ID}`;
-
-const OUTPUT_PATH = path.join(
-  __dirname,
-  "..",
-  "data",
-  "spotifyMonthlyListenerJson.json"
-);
 
 const SPOTIFY_WEB_APP_URL = process.env.SPOTIFY_WEB_APP_URL;
 
@@ -38,112 +29,21 @@ function getJstDateParts() {
     }
   });
 
-  const date = `${values.year}-${values.month}-${values.day}`;
-  const createdAt = `${values.year}-${values.month}-${values.day}T${values.hour}:${values.minute}:${values.second}+09:00`;
-
   return {
-    date,
-    createdAt,
+    date: `${values.year}-${values.month}-${values.day}`,
+    capturedAt: `${values.year}-${values.month}-${values.day}T${values.hour}:${values.minute}:${values.second}+09:00`,
+    createdAt: `${values.year}-${values.month}-${values.day}T${values.hour}:${values.minute}:${values.second}+09:00`,
   };
 }
 
-function readCurrentHistory() {
-  if (!fs.existsSync(OUTPUT_PATH)) {
-    return [];
-  }
-
-  const rawText = fs.readFileSync(OUTPUT_PATH, "utf-8").trim();
-
-  if (!rawText) {
-    return [];
-  }
-
-  const parsed = JSON.parse(rawText);
-
-  if (!Array.isArray(parsed)) {
-    throw new Error("spotifyMonthlyListenerJson.json must be an array.");
-  }
-
-  return parsed;
-}
-
-function writeHistory(history) {
-  const outputDir = path.dirname(OUTPUT_PATH);
-
-  fs.mkdirSync(outputDir, {
-    recursive: true,
-  });
-
-  fs.writeFileSync(
-    OUTPUT_PATH,
-    `${JSON.stringify(history, null, 2)}\n`,
-    "utf-8"
-  );
-}
-
 function extractListenerCount(listenerText) {
-  const numericText = listenerText.replace(/[^\d]/g, "");
+  const numericText = String(listenerText || "").replace(/[^\d]/g, "");
 
   if (!numericText) {
     throw new Error(`Could not extract listener count from: ${listenerText}`);
   }
 
   return Number(numericText);
-}
-
-function upsertTodayRecord(history, newRecord) {
-  const existingIndex = history.findIndex((item) => {
-    return item.date === newRecord.date;
-  });
-
-  if (existingIndex >= 0) {
-    history[existingIndex] = {
-      ...history[existingIndex],
-      ...newRecord,
-    };
-
-    return history;
-  }
-
-  return [...history, newRecord];
-}
-
-function getPreviousDateString(currentDate) {
-  const currentDateTime = new Date(`${currentDate}T00:00:00+09:00`);
-  const previousDateTime = new Date(
-    currentDateTime.getTime() - 24 * 60 * 60 * 1000
-  );
-
-  const formatter = new Intl.DateTimeFormat("ja-JP", {
-    timeZone: "Asia/Tokyo",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  });
-
-  const parts = formatter.formatToParts(previousDateTime);
-  const values = {};
-
-  parts.forEach((part) => {
-    if (part.type !== "literal") {
-      values[part.type] = part.value;
-    }
-  });
-
-  return `${values.year}-${values.month}-${values.day}`;
-}
-
-function keepOnlyRecentSpotifyRecords(history, currentDate) {
-  const previousDate = getPreviousDateString(currentDate);
-
-  const keepDates = new Set([
-    previousDate,
-    currentDate,
-  ]);
-
-  return history.filter((item) => {
-    return keepDates.has(item.date);
-  });
 }
 
 async function getMonthlyListenerText() {
@@ -159,6 +59,8 @@ async function getMonthlyListenerText() {
       },
       locale: "ja-JP",
     });
+
+    console.log(`Opening Spotify artist page: ${ARTIST_URL}`);
 
     await page.goto(ARTIST_URL, {
       waitUntil: "networkidle",
@@ -188,8 +90,7 @@ async function getMonthlyListenerText() {
 
 async function sendToSpreadsheet(record) {
   if (!SPOTIFY_WEB_APP_URL) {
-    console.log("SPOTIFY_WEB_APP_URL is not set. Skip spreadsheet sync.");
-    return;
+    throw new Error("SPOTIFY_WEB_APP_URL is not set.");
   }
 
   const payload = {
@@ -197,7 +98,7 @@ async function sendToSpreadsheet(record) {
     ...record,
   };
 
-  console.log("Sending to spreadsheet...");
+  console.log("Sending Spotify monthly listener to spreadsheet...");
   console.log(
     `POST URL is set: ${SPOTIFY_WEB_APP_URL.startsWith(
       "https://script.google.com/macros/s/"
@@ -225,15 +126,14 @@ async function sendToSpreadsheet(record) {
 }
 
 async function main() {
-  const { date, createdAt } = getJstDateParts();
+  const { date, capturedAt, createdAt } = getJstDateParts();
 
   const listenerText = await getMonthlyListenerText();
   const listenerCount = extractListenerCount(listenerText);
 
-  const currentHistory = readCurrentHistory();
-
-  const newRecord = {
+  const record = {
     date,
+    capturedAt,
     artist: ARTIST_NAME,
     artistId: ARTIST_ID,
     listenerText,
@@ -242,23 +142,10 @@ async function main() {
     createdAt,
   };
 
-  let nextHistory = upsertTodayRecord(currentHistory, newRecord);
+  await sendToSpreadsheet(record);
 
-  nextHistory = keepOnlyRecentSpotifyRecords(nextHistory, date);
-
-  nextHistory.sort((a, b) => {
-    return String(a.date).localeCompare(String(b.date));
-  });
-
-  writeHistory(nextHistory);
-
-  await sendToSpreadsheet(newRecord);
-
-  console.log("Saved Spotify monthly listener data:");
-  console.log(JSON.stringify(newRecord, null, 2));
-
-  console.log("Current JSON records:");
-  console.log(JSON.stringify(nextHistory, null, 2));
+  console.log("Saved Spotify monthly listener data to spreadsheet:");
+  console.log(JSON.stringify(record, null, 2));
 }
 
 main().catch((error) => {
