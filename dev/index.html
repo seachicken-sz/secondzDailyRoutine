@@ -673,6 +673,44 @@
       </div>
     </div>
   </div>
+  <div id="shareImageModal" class="modal-overlay hidden">
+  <div class="modal-content share-image-modal-content" role="dialog" aria-modal="true" aria-labelledby="shareImageModalTitle">
+    <div class="modal-header">
+      <h2 id="shareImageModalTitle">シェア画像</h2>
+      <button
+        type="button"
+        id="closeShareImageModalButton"
+        class="modal-close-button"
+        aria-label="閉じる"
+      >
+        ×
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <div class="share-image-theme-row" aria-label="画像カラー選択">
+        <button type="button" class="share-image-theme-button" data-share-image-theme="red" aria-label="赤">❤️</button>
+        <button type="button" class="share-image-theme-button" data-share-image-theme="purple" aria-label="紫">💜</button>
+        <button type="button" class="share-image-theme-button" data-share-image-theme="green" aria-label="緑">💚</button>
+        <button type="button" class="share-image-theme-button" data-share-image-theme="blue" aria-label="水色">🩵</button>
+        <button type="button" class="share-image-theme-button" data-share-image-theme="lime" aria-label="黄緑">💚</button>
+        <button type="button" class="share-image-theme-button" data-share-image-theme="pink" aria-label="ピンク">🩷</button>
+        <button type="button" class="share-image-theme-button" data-share-image-theme="yellow" aria-label="黄色">💛</button>
+        <button type="button" class="share-image-theme-button" data-share-image-theme="white" aria-label="白">🤍</button>
+        <button type="button" class="share-image-theme-button" data-share-image-theme="flower" aria-label="花">🌺</button>
+      </div>
+
+      <div class="share-image-canvas-wrap">
+        <canvas id="shareImageCanvas"></canvas>
+      </div>
+
+      <p class="share-image-note">
+        カラーを選ぶと画像が再生成されます。
+      </p>
+    </div>
+  </div>
+</div>
+  
 <script src="./config.js" defer></script>
 <script src="./state.js" defer></script>
 <script src="./dom.js" defer></script>
