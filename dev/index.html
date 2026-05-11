@@ -327,7 +327,15 @@
               <p class="selected-label">チェック</p>
               <p id="xPostTextCount" class="description"></p>
             </section>
-        
+            <button id="openShareImageModalButton" type="button">
+              この内容で画像を生成
+            </button>
+            
+            <div id="shareImageModal" class="modal-overlay hidden">
+              <div class="modal-content">
+                <canvas id="shareImageCanvas"></canvas>
+              </div>
+            </div>
             <div id="generatedXPostText" class="copy-text"></div>
         
             <button id="copyXPostTextButton" class="secondary-button">
