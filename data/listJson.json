@@ -6,6 +6,7 @@
         {
           "id":"daily_mon",
           "name":"エムオン！",
+          "short-name": "エムオン！",
           "url":"https://www.m-on.jp/request/?action_request_search=True&artist_id=19237",
           "comment":"「timeleszの楽曲一覧」の下からリクエストしたい曲をタップ！",
           "input-flag":false,
@@ -14,6 +15,7 @@
         {
           "id":"daily_zennocountdownjapan",
           "name":"全農 COUNTDOWN JAPAN",
+          "short-name": "COUNTDOWN JAPAN",
           "url":"https://tfm.co.jp/f/countdownjapan/message",
           "request-type":"text",
           "request-input":"メッセージ&リクエスト",
@@ -24,6 +26,7 @@
         {
           "id":"daily_nack5",
           "name":"NACK5",
+          "short-name": "NACK5",
           "url":"https://www.nack5.co.jp/message/270/",
           "request-type":"music",
           "request-input":"タイトル",
@@ -34,6 +37,7 @@
         {
           "id":"daily_andshino",
           "name":"&シノ",
+          "short-name": "&シノ",
           "url":"https://www.tbsradio.jp/articles/program/and/",
           "comment":"最新記事をタップ！アクセスランクがあがるよ！",
           "input-flag":false,
@@ -47,7 +51,8 @@
     "items":[
       {
         "id":"daily_lawson",
-        "name":"ローソン",
+        "name":"ローソン店内BGMリクエスト",
+        "short-name": "ローソン",
         "url":"https://www.lawson.co.jp/lab/cshotstation/art/1308047_7551.html",
         "request-type":"music",
         "request-input":"■曲名",
@@ -58,6 +63,7 @@
       {
         "id":"daily_butchcountdownradio",
         "name":"FM福岡 BUTCH COUNTDOWN RADIO",
+        "short-name": "BUTCH COUNTDOWN RADIO",
         "url":"https://fmfukuoka.co.jp/message/?m=reform",
         "request-type":"music-slash-artist",
         "request-input":"リクエスト(曲名／アーティスト名)",
@@ -68,6 +74,7 @@
       {
         "id":"daily_skyrocketcompany",
         "name":"SkyrocketCompany",
+        "short-name": "SkyrocketCompany",
         "url":"https://www.tfm.co.jp/f/sc/message",
         "request-type":"text",
         "request-input":"メッセージ",
