@@ -2,9 +2,6 @@ name: Capture timelesz Request Ranking
 
 on:
   workflow_dispatch:
-  schedule:
-    # Every hour
-    - cron: "0 * * * *"
 
 permissions:
   contents: write
@@ -37,6 +34,7 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+          git pull --rebase
           git add data/timeleszRequestRankingJson.json
           git commit -m "Update timelesz request ranking data" || echo "No changes to commit"
           git push
