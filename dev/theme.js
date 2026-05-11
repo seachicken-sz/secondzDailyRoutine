@@ -1,7 +1,25 @@
 // ==================================================
 // テーマ設定
 // ==================================================
+const THEME_LOGO_MAP = {
+  normal: "../img/logo.png",
+  red: "../img/logo-red.png",
+  purple: "../img/logo-purple.png",
+  green: "../img/logo-green.png",
+  sky: "../img/logo-sky.png",
+  lime: "../img/logo-lime.png",
+  pink: "../img/logo-pink.png",
+  yellow: "../img/logo-yellow.png",
+  white: "../img/logo-white.png",
+};
 
+function updateThemeLogo(themeName) {
+  if (!homeLogoImageElement) {
+    return;
+  }
+
+  homeLogoImageElement.src = THEME_LOGO_MAP[themeName] || THEME_LOGO_MAP.normal;
+}
 const THEME_STORAGE_KEY = "selectedTheme";
 
 const THEME_LIST = [
