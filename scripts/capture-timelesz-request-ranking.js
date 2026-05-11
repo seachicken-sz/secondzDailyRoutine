@@ -28,16 +28,11 @@ function getJstDateParts() {
     }
   });
 
-  const date = `${values.year}-${values.month}-${values.day}`;
-  const hour = `${values.hour}:00`;
-  const capturedHour = `${values.year}-${values.month}-${values.day}T${values.hour}:00:00+09:00`;
-  const createdAt = `${values.year}-${values.month}-${values.day}T${values.hour}:${values.minute}:${values.second}+09:00`;
-
   return {
-    date,
-    hour,
-    capturedHour,
-    createdAt,
+    date: `${values.year}-${values.month}-${values.day}`,
+    hour: `${values.hour}:00`,
+    capturedHour: `${values.year}-${values.month}-${values.day}T${values.hour}:00:00+09:00`,
+    createdAt: `${values.year}-${values.month}-${values.day}T${values.hour}:${values.minute}:${values.second}+09:00`,
   };
 }
 
@@ -138,15 +133,13 @@ async function getTimeleszRankingItems(page) {
       continue;
     }
 
-    const url = href ? new URL(href, RANKING_URL).toString() : "";
-
     results.push({
       valueText,
       valueNumber: extractNumber(valueText),
       artist: ARTIST_NAME,
       songTitle,
       songId,
-      url,
+      url: href ? new URL(href, RANKING_URL).toString() : "",
     });
   }
 
@@ -154,10 +147,6 @@ async function getTimeleszRankingItems(page) {
 }
 
 async function captureRankingItems() {
-  if (!RANKING_URL || RANKING_URL === "ここにランキングページURL") {
-    throw new Error("RANKING_URL is not set.");
-  }
-
   const browser = await chromium.launch({
     headless: true,
   });
@@ -177,8 +166,6 @@ async function captureRankingItems() {
       waitUntil: "domcontentloaded",
       timeout: 90000,
     });
-
-    console.log("Page loaded. Waiting for ranking list...");
 
     await page.waitForSelector("li", {
       state: "visible",
@@ -209,15 +196,6 @@ async function sendToSpreadsheet(snapshot) {
     ...snapshot,
   };
 
-  console.log("Sending to spreadsheet...");
-  console.log(
-    `POST URL is set: ${RANKING_WEB_APP_URL.startsWith(
-      "https://script.google.com/macros/s/"
-    )}`
-  );
-  console.log("Payload:");
-  console.log(JSON.stringify(payload, null, 2));
-
   const response = await fetch(RANKING_WEB_APP_URL, {
     method: "POST",
     body: JSON.stringify(payload),
@@ -226,9 +204,6 @@ async function sendToSpreadsheet(snapshot) {
   const responseText = await response.text();
 
   console.log(`Spreadsheet response status: ${response.status}`);
-  console.log(`Spreadsheet final URL: ${response.url}`);
-  console.log(`Spreadsheet redirected: ${response.redirected}`);
-  console.log("Spreadsheet sync response:");
   console.log(responseText);
 
   if (!response.ok) {
@@ -256,7 +231,7 @@ async function main() {
 
   await sendToSpreadsheet(snapshot);
 
-  console.log("Saved timelesz request ranking data to spreadsheet:");
+  console.log("Saved to spreadsheet:");
   console.log(JSON.stringify(snapshot, null, 2));
 }
 
