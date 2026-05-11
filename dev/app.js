@@ -445,6 +445,15 @@ addClickEvent(postNextButtonElement, () => {
   // YouTube確認画面へ進む
   showYoutubeAskStep();
 });
+
+const openShareImageModalButtonElement =
+  document.getElementById("openShareImageModalButton");
+
+const shareImageModalElement =
+  document.getElementById("shareImageModal");
+
+const shareImageCanvasElement =
+  document.getElementById("shareImageCanvas");
 // ==================================================
 // クリックイベント設定 - YouTube再生
 // ==================================================
