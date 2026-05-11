@@ -2,12 +2,9 @@ name: Capture Spotify Monthly Listener
 
 on:
   workflow_dispatch:
-  schedule:
-    # JST 04:00 = UTC 19:00
-    - cron: "0 19 * * *"
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   capture:
@@ -30,13 +27,5 @@ jobs:
 
       - name: Capture Spotify monthly listener
         env:
-          SPOTIFY_WEB_APP_URL: ${{ secrets.SPOTIFY_WEB_APP_URL }}
+          SPOTIFY_WEB_APP_URL: ${{ secrets.RANKING_WEB_APP_URL }}
         run: node scripts/capture-spotify-monthly-listener.js
-
-      - name: Commit monthly listener data
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add data/spotifyMonthlyListenerJson.json
-          git commit -m "Update Spotify monthly listener data" || echo "No changes to commit"
-          git push
