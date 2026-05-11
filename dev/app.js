@@ -446,14 +446,120 @@ addClickEvent(postNextButtonElement, () => {
   showYoutubeAskStep();
 });
 
-const openShareImageModalButtonElement =
-  document.getElementById("openShareImageModalButton");
+let currentShareImageTheme = getCurrentThemeKeyForShareImage();
 
-const shareImageModalElement =
-  document.getElementById("shareImageModal");
+function getCurrentThemeKeyForShareImage() {
+  const savedTheme = localStorage.getItem("selectedTheme");
 
-const shareImageCanvasElement =
-  document.getElementById("shareImageCanvas");
+  const themeMap = {
+    red: "red",
+    purple: "purple",
+    green: "green",
+    sky: "blue",
+    blue: "blue",
+    lime: "lime",
+    pink: "pink",
+    yellow: "yellow",
+    white: "white",
+    normal: "normal",
+  };
+
+  return themeMap[savedTheme] || "red";
+}
+
+function getShareImageDateText() {
+  const now = new Date();
+  return `${now.getMonth() + 1}/${now.getDate()}`;
+}
+
+function getShareImageRequestText() {
+  if (!state.selectedRequestSong) {
+    return "";
+  }
+
+  const name =
+    state.selectedRequestSong["short-name"] ||
+    state.selectedRequestSong.shortName ||
+    state.selectedRequestSong.name ||
+    "";
+
+  return name ? `USEN推しリク「${name}」` : "";
+}
+
+function getShareImageBgmText() {
+  if (!state.selectedSong) {
+    return "";
+  }
+
+  return (
+    state.selectedSong["short-name"] ||
+    state.selectedSong.shortName ||
+    state.selectedSong.name ||
+    ""
+  );
+}
+
+function renderShareImage(themeKey = currentShareImageTheme) {
+  if (!shareImageCanvasElement) {
+    return;
+  }
+
+  const items = buildShareImageItems({
+    selectedOnceTasks: state.selectedOnceTasks,
+    completedDailyItems: state.completedDailyItems,
+  });
+
+  if (items.length === 0 && !state.selectedRequestSong && !state.selectedSong) {
+    showError(postErrorAreaElement, "画像にする内容がありません。");
+    return;
+  }
+
+  currentShareImageTheme = themeKey;
+
+  drawShareImage(shareImageCanvasElement, {
+    themeKey: currentShareImageTheme,
+    dateText: getShareImageDateText(),
+    appName: "タムごとDaily",
+    title: "タスク完了",
+    requestText: getShareImageRequestText(),
+    bgmText: getShareImageBgmText(),
+    items,
+  });
+
+  hideError(postErrorAreaElement);
+}
+
+addClickEvent(openShareImageModalButtonElement, () => {
+  if (!shareImageModalElement) {
+    return;
+  }
+
+  shareImageModalElement.classList.remove("hidden");
+  renderShareImage();
+});
+
+addClickEvent(closeShareImageModalButtonElement, () => {
+  if (!shareImageModalElement) {
+    return;
+  }
+
+  shareImageModalElement.classList.add("hidden");
+});
+
+if (shareImageModalElement) {
+  shareImageModalElement.addEventListener("click", (event) => {
+    if (event.target === shareImageModalElement) {
+      shareImageModalElement.classList.add("hidden");
+    }
+  });
+}
+
+shareImageThemeButtonElements.forEach((button) => {
+  button.addEventListener("click", () => {
+    const themeKey = button.dataset.shareImageTheme || "red";
+    renderShareImage(themeKey);
+  });
+});
 // ==================================================
 // クリックイベント設定 - YouTube再生
 // ==================================================
