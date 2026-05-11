@@ -493,7 +493,7 @@ function getShareImageRequestText() {
 
   const name = state.selectedRequestSong.name || "";
 
-  return name ? `USEN推しリク「${name}」` : "";
+  return name ? `USEN：${name}` : "";
 }
 
 function getShareImageBgmText() {
