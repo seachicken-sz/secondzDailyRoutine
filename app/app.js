@@ -1218,7 +1218,7 @@ function updateStepTopActionBar() {
 async function shareAppFromHome() {
   const shareData = {
     title: "タムごとDaily",
-    text: "タムごとDailyはこちら▼",
+    text: "推し活便利ツール「タムごとDaily」",
     url: "https://seachicken-sz.github.io/secondzDailyRoutine/app/",
   };
 
