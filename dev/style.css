@@ -816,6 +816,9 @@ h1 {
   font-size: 13px;
   line-height: 1.7;
 }
+#shareImageCanvas{
+   width:100%;
+}
 
 .feedback-card {
   margin-top: 16px;
