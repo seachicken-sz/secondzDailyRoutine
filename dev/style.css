@@ -1224,7 +1224,7 @@ h1 {
 
 .share-image-theme-button-white {
   --share-image-theme-color: #ffffff;
-  --share-image-theme-soft: ##d7d7d7;
+  --share-image-theme-soft: #d7d7d7;
   --share-image-theme-border: #9ca3af;
 }
 
@@ -1414,9 +1414,9 @@ h1 {
 
 /* 白 */
 .theme-heart-button[data-theme-button="white"] {
-    --theme-preview-color: #ffffff;
-    --theme-preview-bg: #e9e9e9;
-    --theme-preview-border: #111827;
+  --theme-preview-color: #ffffff;
+  --theme-preview-bg: #e5e7eb;
+  --theme-preview-border: #d1d5db;
 }
 
 /* ハワイ / normal */
@@ -1439,23 +1439,53 @@ h1 {
 
 /* white theme adjustment */
 :root[data-theme="white"] .theme-heart-button {
-  border-color: var(--color-border);
+  border-color: #e5e7eb;
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f6f6f6 100%
+    );
   box-shadow: none;
 }
 
+:root[data-theme="white"] .theme-heart-button::before {
+  background: var(--theme-preview-bg, #f6f6f6);
+}
+
+:root[data-theme="white"] .theme-heart-chip {
+  background: #ffffff;
+  border-color: var(--theme-preview-border, #e5e7eb);
+  color: var(--theme-preview-color, #111827);
+}
+
+:root[data-theme="white"] .theme-heart-label {
+  color: #111827;
+}
+
+/* 白テーマ選択ボタンだけ：薄いグレー丸 + 白ハート */
+:root[data-theme="white"] .theme-heart-button[data-theme-button="white"] .theme-heart-chip {
+  background: #e5e7eb;
+  border-color: #d1d5db;
+  color: #ffffff;
+}
+
+:root[data-theme="white"] .theme-heart-button[data-theme-button="white"] .theme-heart-label {
+  color: #111827;
+}
+
+/* 選択中 */
 :root[data-theme="white"] .theme-heart-button.active {
-  border-color: var(--color-brand);
-  background: var(--color-surface);
+  border-color: #9ca3af;
+  background: #ffffff;
 }
 
 :root[data-theme="white"] .theme-heart-button.active .theme-heart-chip {
-  background: var(--color-brand);
-  color: var(--color-text-inverse);
-  border-color: var(--color-brand);
+  border-color: var(--theme-preview-border, #9ca3af);
 }
 
 :root[data-theme="white"] .theme-heart-button.active .theme-heart-label {
-  color: var(--color-brand);
+  color: #111827;
 }
 /* =========================
    White theme adjustment
