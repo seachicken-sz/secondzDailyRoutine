@@ -48,7 +48,14 @@
           開始する
         </button>
         </section>
-        
+      
+      </section>
+        <section class="home-color-change-area">
+          <button type="button" id="openThemeModalButton" class="text-link-button">
+            テーマカラー変更
+          </button>
+        </section>
+    
         <section id="homeInstallGuideCard" class="home-card home-install-guide-area">
           <h2 class="ruby-h"><ruby>はじめに<rt>first step</rt></ruby></h2>
         
@@ -578,6 +585,87 @@
     </div>
   </div>
 </div>
+  <div id="themeModal" class="modal-overlay hidden">
+    <div class="modal-content theme-modal-content" role="dialog" aria-modal="true" aria-labelledby="themeModalTitle">
+      <div class="modal-header">
+        <h2 id="themeModalTitle">テーマカラーチェンジ</h2>
+        <button type="button" id="closeThemeModalButton" class="modal-close-button" aria-label="閉じる">
+          ×
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p class="theme-modal-description">
+          好きなカラーを選んでください。選んだカラーは自動で保存されます。
+        </p>
+
+<div class="theme-heart-grid" aria-label="テーマカラー選択">
+  <button type="button" class="theme-heart-button" data-theme-button="red" aria-label="赤">
+    <span class="theme-heart-chip">
+      <span class="theme-heart-icon">♥</span>
+    </span>
+    <span class="theme-heart-label">Red</span>
+  </button>
+
+  <button type="button" class="theme-heart-button" data-theme-button="purple" aria-label="紫">
+    <span class="theme-heart-chip">
+      <span class="theme-heart-icon">♥</span>
+    </span>
+    <span class="theme-heart-label">Purple</span>
+  </button>
+
+  <button type="button" class="theme-heart-button" data-theme-button="green" aria-label="緑">
+    <span class="theme-heart-chip">
+      <span class="theme-heart-icon">♥</span>
+    </span>
+    <span class="theme-heart-label">Green</span>
+  </button>
+
+  <button type="button" class="theme-heart-button" data-theme-button="sky" aria-label="水色">
+    <span class="theme-heart-chip">
+      <span class="theme-heart-icon">♥</span>
+    </span>
+    <span class="theme-heart-label">Sky</span>
+  </button>
+
+  <button type="button" class="theme-heart-button" data-theme-button="lime" aria-label="黄緑">
+    <span class="theme-heart-chip">
+      <span class="theme-heart-icon">♥</span>
+    </span>
+      <span class="theme-heart-label">Yellow Green</span>
+  </button>
+
+  <button type="button" class="theme-heart-button" data-theme-button="pink" aria-label="ピンク">
+    <span class="theme-heart-chip">
+      <span class="theme-heart-icon">♥</span>
+    </span>
+    <span class="theme-heart-label">Pink</span>
+  </button>
+
+  <button type="button" class="theme-heart-button" data-theme-button="yellow" aria-label="黄色">
+    <span class="theme-heart-chip">
+      <span class="theme-heart-icon">♥</span>
+    </span>
+      <span class="theme-heart-label">Yellow</span>
+  </button>
+
+  <button type="button" class="theme-heart-button" data-theme-button="white" aria-label="白">
+    <span class="theme-heart-chip">
+      <span class="theme-heart-icon">♥</span>
+    </span>
+      <span class="theme-heart-label">White</span>
+  </button>
+
+  <button type="button" class="theme-heart-button theme-heart-button-hawaii" data-theme-button="normal" aria-label="はわい">
+    <span class="theme-heart-chip">
+      <span class="theme-heart-icon">🌺</span>
+    </span>
+    <span class="theme-heart-label">Emerald</span>
+  </button>
+</div>
+      </div>
+    </div>
+  </div>
 <script src="./config.js" defer></script>
 <script src="./state.js" defer></script>
 <script src="./dom.js" defer></script>
@@ -589,6 +677,7 @@
 <script src="./renderers.js" defer></script>
 <script src="./selectors.js" defer></script>
 <script src="./musicTop.js" defer></script>
+<script src="./theme.js" defer></script>
 <script src="./app.js" defer></script>
 </body>
 </html>
