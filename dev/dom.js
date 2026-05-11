@@ -14,6 +14,8 @@ const stepUsageButtonElement = document.getElementById("stepUsageButton");
 
 // ホーム画面全体
 const homeStepElement = document.getElementById("homeStep");
+// ロゴ画像
+const homeLogoImageElement = document.getElementById("homeLogoImage");
 // 開始ボタン
 const startRoutineButtonElement = document.getElementById("startRoutineButton");
 // ホーム画面の導入案内カード（ブラウザ限定）
