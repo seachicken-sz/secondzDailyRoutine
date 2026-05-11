@@ -27,5 +27,5 @@ jobs:
 
       - name: Capture Spotify monthly listener
         env:
-          SPOTIFY_WEB_APP_URL: ${{ secrets.RANKING_WEB_APP_URL }}
+          SPOTIFY_WEB_APP_URL: ${{ secrets.SPOTIFY_WEB_APP_URL }}
         run: node scripts/capture-spotify-monthly-listener.js
