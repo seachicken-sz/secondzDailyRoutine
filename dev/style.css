@@ -1449,7 +1449,7 @@ h1 {
   box-shadow: none;
 }
 
-:root[data-theme="white"] .theme-heart-button::before {
+:root[data-theme="white"] .theme-heart-button[data-theme-button="white"]::before {
   background: #ffffff;
 }
 .theme-heart-button[data-theme-button="white"]::before {
