@@ -1,16 +1,7 @@
 const { chromium } = require("playwright");
-const fs = require("fs");
-const path = require("path");
 
 const ARTIST_NAME = "timelesz";
 const RANKING_URL = "https://usen.oshireq.com/";
-
-const OUTPUT_PATH = path.join(
-  __dirname,
-  "..",
-  "data",
-  "timeleszRequestRankingJson.json"
-);
 
 const RANKING_WEB_APP_URL = process.env.RANKING_WEB_APP_URL;
 
@@ -50,40 +41,6 @@ function getJstDateParts() {
   };
 }
 
-function readCurrentHistory() {
-  if (!fs.existsSync(OUTPUT_PATH)) {
-    return [];
-  }
-
-  const rawText = fs.readFileSync(OUTPUT_PATH, "utf-8").trim();
-
-  if (!rawText) {
-    return [];
-  }
-
-  const parsed = JSON.parse(rawText);
-
-  if (!Array.isArray(parsed)) {
-    throw new Error("timeleszRequestRankingJson.json must be an array.");
-  }
-
-  return parsed;
-}
-
-function writeHistory(history) {
-  const outputDir = path.dirname(OUTPUT_PATH);
-
-  fs.mkdirSync(outputDir, {
-    recursive: true,
-  });
-
-  fs.writeFileSync(
-    OUTPUT_PATH,
-    `${JSON.stringify(history, null, 2)}\n`,
-    "utf-8"
-  );
-}
-
 function normalizeText(text) {
   return text ? text.trim() : "";
 }
@@ -96,38 +53,6 @@ function extractNumber(text) {
   }
 
   return Number(numericText);
-}
-
-function upsertSnapshot(history, newSnapshot) {
-  const existingIndex = history.findIndex((item) => {
-    return item.capturedHour === newSnapshot.capturedHour;
-  });
-
-  if (existingIndex >= 0) {
-    history[existingIndex] = {
-      ...history[existingIndex],
-      ...newSnapshot,
-    };
-
-    return history;
-  }
-
-  return [...history, newSnapshot];
-}
-
-function keepOnlyRecentRankingSnapshots(history, currentCreatedAt) {
-  const currentTime = new Date(currentCreatedAt).getTime();
-  const borderTime = currentTime - 24 * 60 * 60 * 1000;
-
-  return history.filter((item) => {
-    const itemTime = new Date(item.createdAt || item.capturedHour).getTime();
-
-    if (Number.isNaN(itemTime)) {
-      return false;
-    }
-
-    return itemTime >= borderTime;
-  });
 }
 
 async function scrollToBottom(page) {
@@ -276,8 +201,7 @@ async function captureRankingItems() {
 
 async function sendToSpreadsheet(snapshot) {
   if (!RANKING_WEB_APP_URL) {
-    console.log("RANKING_WEB_APP_URL is not set. Skip spreadsheet sync.");
-    return;
+    throw new Error("RANKING_WEB_APP_URL is not set.");
   }
 
   const payload = {
@@ -319,9 +243,7 @@ async function main() {
 
   const items = await captureRankingItems();
 
-  const currentHistory = readCurrentHistory();
-
-  const newSnapshot = {
+  const snapshot = {
     date,
     hour,
     capturedHour,
@@ -332,23 +254,10 @@ async function main() {
     createdAt,
   };
 
-  let nextHistory = upsertSnapshot(currentHistory, newSnapshot);
+  await sendToSpreadsheet(snapshot);
 
-  nextHistory = keepOnlyRecentRankingSnapshots(nextHistory, createdAt);
-
-  nextHistory.sort((a, b) => {
-    return String(a.capturedHour).localeCompare(String(b.capturedHour));
-  });
-
-  writeHistory(nextHistory);
-
-  await sendToSpreadsheet(newSnapshot);
-
-  console.log("Saved timelesz request ranking data:");
-  console.log(JSON.stringify(newSnapshot, null, 2));
-
-  console.log("Current JSON records:");
-  console.log(JSON.stringify(nextHistory, null, 2));
+  console.log("Saved timelesz request ranking data to spreadsheet:");
+  console.log(JSON.stringify(snapshot, null, 2));
 }
 
 main().catch((error) => {
