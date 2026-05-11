@@ -86,6 +86,7 @@ function applyTheme(themeName) {
 
   localStorage.setItem(THEME_STORAGE_KEY, safeThemeName);
   updateThemeButtonState(safeThemeName);
+  updateThemeLogo(safeThemeName);
 }
 
 function updateThemeButtonState(themeName) {
