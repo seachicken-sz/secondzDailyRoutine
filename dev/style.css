@@ -1452,6 +1452,9 @@ h1 {
 :root[data-theme="white"] .theme-heart-button::before {
   background: #ffffff;
 }
+.theme-heart-button::before[data-theme-button="white"] {
+  background: #ffffff;
+}
 
 :root[data-theme="white"] .theme-heart-chip {
   background: #ffffff;
