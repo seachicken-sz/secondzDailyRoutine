@@ -106,30 +106,31 @@ function renderOnceTaskCheckList(tasks) {
 
   onceTaskListElement.innerHTML = "";
 
-  if (tasks.length === 0) {
-    onceTaskListElement.innerHTML = '<p class="empty-text">現在、期限内の期間限定タスクはありません。</p>';
+  if (!tasks || tasks.length === 0) {
+    onceTaskListElement.innerHTML = `<p class="empty-text">${MESSAGES.empty.onceTasks}</p>`;
     return;
   }
 
   tasks.forEach((task, index) => {
+    const isDone = isOnceTaskDone(task);
+
     const label = document.createElement("label");
     label.className = "check-item";
 
+    if (isDone) {
+      label.classList.add("is-done");
+    }
+
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-    checkbox.checked = true;
+    checkbox.checked = !isDone;
     checkbox.dataset.index = String(index);
 
-    const name = document.createElement("span");
-    name.className = "check-item-name";
-    name.textContent = task.name;
-
-    checkbox.addEventListener("change", () => {
-      name.textContent = task.name;
-    });
+    const text = document.createElement("span");
+    text.textContent = isDone ? `${task.name}（完了済み）` : task.name;
 
     label.appendChild(checkbox);
-    label.appendChild(name);
+    label.appendChild(text);
     onceTaskListElement.appendChild(label);
   });
 }
