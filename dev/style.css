@@ -1095,31 +1095,39 @@ h1 {
 /* =========================
    Share Image Modal - Theme Buttons
 ========================= */
-
 .share-image-theme-row {
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
   gap: 8px;
   margin: 0 0 14px;
-  padding: 4px 2px 10px;
-  overflow-x: auto;
+  padding: 4px 2px 12px;
+  overflow-x: scroll;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
+
+  /* Firefox */
+  scrollbar-width: auto;
+  scrollbar-color: var(--color-brand) var(--color-surface-soft);
 }
 
+/* Chrome / Edge / Safari */
 .share-image-theme-row::-webkit-scrollbar {
-  height: 4px;
+  height: 8px;
+}
+
+.share-image-theme-row::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: var(--color-surface-soft);
 }
 
 .share-image-theme-row::-webkit-scrollbar-thumb {
   border-radius: 999px;
-  background: var(--color-border-soft);
+  background: var(--color-brand);
 }
 
-.share-image-theme-row::-webkit-scrollbar-track {
-  background: transparent;
+.share-image-theme-row::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
 }
 
 .share-image-theme-button {
