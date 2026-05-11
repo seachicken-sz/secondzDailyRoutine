@@ -1223,9 +1223,9 @@ h1 {
 }
 
 .share-image-theme-button-white {
-  --share-image-theme-color: #111827;
-  --share-image-theme-soft: #ffffff;
-  --share-image-theme-border: #d1d5db;
+  --share-image-theme-color: #ffffff;
+  --share-image-theme-soft: #6b7280;
+  --share-image-theme-border: #9ca3af;
 }
 
 .share-image-theme-button-normal {
@@ -1246,6 +1246,7 @@ h1 {
 #shareImageCanvas{
    width:100%;
   max-width:100%;
+  height:auto!important;
 }
 /* =========================
    Theme modal
@@ -1413,8 +1414,8 @@ h1 {
 
 /* 白 */
 .theme-heart-button[data-theme-button="white"] {
-  --theme-preview-color: #111827;
-  --theme-preview-bg: #ffffff;
+  --theme-preview-color: #ffffff;
+  --theme-preview-bg: #6b7280;
   --theme-preview-border: #111827;
 }
 
