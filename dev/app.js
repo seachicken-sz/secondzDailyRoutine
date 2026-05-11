@@ -541,12 +541,45 @@ function getShareImageTaskItems() {
   return items;
 }
 
+function getCheckedPostItemsForShareImage() {
+  const items = [];
+
+  if (!Array.isArray(state.postItems)) {
+    return items;
+  }
+
+  state.postItems.forEach((item) => {
+    if (!item || item.checked !== true) {
+      return;
+    }
+
+    // SNSシェアだけ画像には入れない
+    if (item.id === "app-share") {
+      return;
+    }
+
+    const name =
+      item.imageText ||
+      item["short-name"] ||
+      item.shortName ||
+      item.postText ||
+      item.name ||
+      "";
+
+    if (name) {
+      items.push(name);
+    }
+  });
+
+  return items;
+}
+
 function renderShareImage(themeKey = currentShareImageTheme) {
   if (!shareImageCanvasElement) {
     return;
   }
 
-  const items = getShareImageTaskItems();
+  const items = getCheckedPostItemsForShareImage();
 
   if (items.length === 0 && !state.selectedRequestSong && !state.selectedSong) {
     showError(postErrorAreaElement, "画像にする内容がありません。");
