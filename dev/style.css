@@ -946,6 +946,17 @@ h1 {
   line-height: 1.4;
 }
 
+#home-top-share-btn-wrap{
+  display:flex;
+  justify-content: end;
+}
+#home-top-share-btn-wrap button{
+  color:#666;
+  font-size:22px;
+      background-color: transparent;
+    border: none;
+}
+
 .home-install-text {
   margin: 0 0 8px;
   line-height: 1.7;
