@@ -1098,25 +1098,52 @@ h1 {
 
 .share-image-theme-row {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   gap: 8px;
   margin: 0 0 14px;
+  padding: 4px 2px 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.share-image-theme-row::-webkit-scrollbar {
+  height: 4px;
+}
+
+.share-image-theme-row::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: var(--color-border-soft);
+}
+
+.share-image-theme-row::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .share-image-theme-button {
-  width: 34px;
-  height: 34px;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
   padding: 0;
-  border: 1px solid var(--color-border-accent);
+  border: 0;
   border-radius: 999px;
-  background: var(--color-surface);
-  box-shadow: var(--shadow-card-soft);
-  font-size: 17px;
-  line-height: 1;
+  background: transparent;
   display: grid;
   place-items: center;
   cursor: pointer;
+}
+
+.share-image-theme-chip {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--share-image-theme-soft);
+  border: 1px solid var(--share-image-theme-border);
+  box-shadow: var(--shadow-card-soft);
   transition:
     transform 0.16s ease,
     box-shadow 0.16s ease,
@@ -1124,25 +1151,92 @@ h1 {
     background-color 0.16s ease;
 }
 
-.share-image-theme-button:hover {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-card);
-  border-color: var(--color-brand-border);
+.share-image-theme-icon {
+  color: var(--share-image-theme-color);
+  font-size: 17px;
+  line-height: 1;
+  transform: translateY(1px);
 }
 
-.share-image-theme-button:active {
+.share-image-theme-button:hover .share-image-theme-chip {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+}
+
+.share-image-theme-button:active .share-image-theme-chip {
   transform: scale(0.94);
-  box-shadow: var(--shadow-card-soft);
 }
 
 .share-image-theme-button:focus-visible {
   outline: 2px solid var(--color-brand);
   outline-offset: 3px;
 }
-.share-image-theme-button.is-selected {
-  border-color: var(--color-brand);
-  background: var(--color-brand-soft);
-  box-shadow: 0 0 0 3px var(--color-brand-border);
+
+.share-image-theme-button.is-selected .share-image-theme-chip {
+  border-color: var(--share-image-theme-color);
+  box-shadow:
+    0 0 0 3px var(--share-image-theme-border),
+    var(--shadow-card);
+}
+
+/* カラー定義 */
+.share-image-theme-button-red {
+  --share-image-theme-color: #ef4444;
+  --share-image-theme-soft: #fff1f2;
+  --share-image-theme-border: #fecdd3;
+}
+
+.share-image-theme-button-purple {
+  --share-image-theme-color: #8b5cf6;
+  --share-image-theme-soft: #f5f3ff;
+  --share-image-theme-border: #ddd6fe;
+}
+
+.share-image-theme-button-green {
+  --share-image-theme-color: #22c55e;
+  --share-image-theme-soft: #f0fdf4;
+  --share-image-theme-border: #bbf7d0;
+}
+
+.share-image-theme-button-blue {
+  --share-image-theme-color: #38bdf8;
+  --share-image-theme-soft: #f0f9ff;
+  --share-image-theme-border: #bae6fd;
+}
+
+.share-image-theme-button-lime {
+  --share-image-theme-color: #84cc16;
+  --share-image-theme-soft: #f7fee7;
+  --share-image-theme-border: #d9f99d;
+}
+
+.share-image-theme-button-pink {
+  --share-image-theme-color: #f472b6;
+  --share-image-theme-soft: #fff0f7;
+  --share-image-theme-border: #f9c5df;
+}
+
+.share-image-theme-button-yellow {
+  --share-image-theme-color: #eab308;
+  --share-image-theme-soft: #fefce8;
+  --share-image-theme-border: #fde68a;
+}
+
+.share-image-theme-button-white {
+  --share-image-theme-color: #111827;
+  --share-image-theme-soft: #ffffff;
+  --share-image-theme-border: #d1d5db;
+}
+
+.share-image-theme-button-normal {
+  --share-image-theme-color: #02b9a5;
+  --share-image-theme-soft: #ecfff3;
+  --share-image-theme-border: #bdebcf;
+}
+
+.share-image-theme-button-normal .share-image-theme-icon {
+  font-size: 15px;
+  transform: translateY(0);
 }
 
 .share-image-canvas-wrap{
