@@ -1095,6 +1095,62 @@ h1 {
   line-height: 1.6;
 }
 /* =========================
+   Share Image Modal - Theme Buttons
+========================= */
+
+.share-image-theme-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+
+.share-image-theme-button {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid var(--color-border-accent);
+  border-radius: 999px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card-soft);
+  font-size: 17px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.16s ease,
+    border-color 0.16s ease,
+    background-color 0.16s ease;
+}
+
+.share-image-theme-button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--color-brand-border);
+}
+
+.share-image-theme-button:active {
+  transform: scale(0.94);
+  box-shadow: var(--shadow-card-soft);
+}
+
+.share-image-theme-button:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 3px;
+}
+.share-image-theme-button.is-selected {
+  border-color: var(--color-brand);
+  background: var(--color-brand-soft);
+  box-shadow: 0 0 0 3px var(--color-brand-border);
+}
+
+.share-image-canvas-wrap{
+  text-align:center;
+}
+/* =========================
    Theme modal
 ========================= */
 .theme-modal-content {
