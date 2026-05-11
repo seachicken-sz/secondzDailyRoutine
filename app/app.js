@@ -514,6 +514,7 @@ async function init() {
     updateOtherSongsAccordion();
 
     state.onceTasks = await loadOnceTasks();
+    cleanupOnceTaskDoneMap(state.onceTasks);
     renderHomeOnceTaskList(state.onceTasks);
 
     const homeInfoList = await loadHomeInfoList();
