@@ -222,6 +222,12 @@ const openXPostButtonElement = document.getElementById("openXPostButton");
 const openThreadsButtonElement = document.getElementById("openThreadsButton");
 // 投稿ステップ完了後の次へボタン
 const postNextButtonElement = document.getElementById("postNextButton");
+//画像生成
+const openShareImageModalButtonElement = document.getElementById("openShareImageModalButton");
+const shareImageModalElement = document.getElementById("shareImageModal");
+const closeShareImageModalButtonElement = document.getElementById("closeShareImageModalButton");
+const shareImageCanvasElement = document.getElementById("shareImageCanvas");
+const shareImageThemeButtonElements = document.querySelectorAll("[data-share-image-theme]");
 
 // ==================================================
 // DOM: STEP 6 YouTube確認
