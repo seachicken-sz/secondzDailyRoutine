@@ -4,11 +4,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-
-concurrency:
-  group: capture-timelesz-request-ranking
-  cancel-in-progress: false
+  contents: read
 
 jobs:
   capture:
@@ -17,8 +13,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -35,12 +29,3 @@ jobs:
         env:
           RANKING_WEB_APP_URL: ${{ secrets.RANKING_WEB_APP_URL }}
         run: node scripts/capture-timelesz-request-ranking.js
-
-      - name: Commit timelesz request ranking data
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git pull --rebase
-          git add data/timeleszRequestRankingJson.json
-          git commit -m "Update timelesz request ranking data" || echo "No changes to commit"
-          git push
