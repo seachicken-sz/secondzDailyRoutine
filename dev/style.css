@@ -1099,6 +1099,7 @@ h1 {
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
+  background-color:#fcfcfc;
   gap: 8px;
   margin: 0 0 14px;
   padding: 4px 2px 12px;
