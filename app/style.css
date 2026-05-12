@@ -1094,6 +1094,23 @@ h1 {
   font-weight: 700;
   line-height: 1.6;
 }
+.usen-ranking-info {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.usen-ranking-line,
+.usen-ranking-song {
+  display: block;
+}
+
+.usen-ranking-song {
+  color: var(--color-brand);
+}
+
 /* =========================
    Share Image Modal - Theme Buttons
 ========================= */
