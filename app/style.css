@@ -972,7 +972,9 @@ h1 {
 .home-install-link:hover {
   color: var(--color-link-hover);
 }
-
+.spotify-listener-count {
+  white-space: pre-line;
+}
 .request-ranking-card {
   flex-shrink: 0;
   margin: 0 0 12px;
