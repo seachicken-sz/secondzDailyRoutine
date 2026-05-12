@@ -38,15 +38,14 @@ async function loadRequestRanking() {
 }
 
 function renderSpotifyListenerInfo(spotifyListener) {
-  const infoElement = document.getElementById("spotifyListenerInfo");
   const countElement = document.getElementById("spotifyListenerCount");
 
-  if (!infoElement || !countElement) {
+  if (!countElement) {
     return;
   }
 
   if (!spotifyListener || spotifyListener.today == null) {
-    infoElement.classList.add("hidden");
+    countElement.classList.add("hidden");
     countElement.textContent = "";
     return;
   }
@@ -55,7 +54,7 @@ function renderSpotifyListenerInfo(spotifyListener) {
   const diff = toDisplayNumber(spotifyListener.diff);
 
   if (today === null) {
-    infoElement.classList.add("hidden");
+    countElement.classList.add("hidden");
     countElement.textContent = "";
     return;
   }
@@ -68,8 +67,10 @@ function renderSpotifyListenerInfo(spotifyListener) {
     diffText = `（前日比 ＋${diff.toLocaleString("ja-JP")}）`;
   }
 
-  countElement.textContent = `${todayText}${diffText}`;
-  infoElement.classList.remove("hidden");
+  countElement.textContent =
+    `Spotify本日のtimelesz 月間リスナー数\n${todayText}${diffText}`;
+
+  countElement.classList.remove("hidden");
 }
 
 function toDisplayNumber(value) {
