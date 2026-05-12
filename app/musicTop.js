@@ -68,7 +68,7 @@ function renderSpotifyListenerInfo(spotifyListener) {
   }
 
   countElement.textContent =
-    `Spotify本日のtimelesz 月間リスナー数\n${todayText}${diffText}`;
+    `Spotify本日の月間リスナー数<br>${todayText}人${diffText}`;
 
   countElement.classList.remove("hidden");
 }
