@@ -1,4 +1,4 @@
-const MUSIC_TOP_API_URL = "https://script.google.com/macros/s/AKfycbyyETjEfIqs9fSUMD4Kj_3c5Zey_j92Sovy1DPld5Q03o63zpAmQqhTi6fB4FKy6xWU/exec?type=musicTopAll";
+const MUSIC_TOP_API_URL = "https://script.google.com/macros/s/AKfycbzSxC7H8f6QufHRP_HvK98QdmKjraXAXoRY6bHW2-8UDOz6rvb6CtksaSoVlMy2feTE/exec?type=musicTopAll";
 
 async function loadRequestRanking() {
   const area = document.getElementById("requestRankingArea");
@@ -15,6 +15,10 @@ async function loadRequestRanking() {
     }
 
     const data = await response.json();
+
+    console.log("musicTopAll data", data);
+console.log("latestUsenRanking", data.latestUsenRanking);
+console.log("spotifyListener", data.spotifyListener);
 
     const recentItems = Array.isArray(data.recentMusicTop) ? data.recentMusicTop : [];
 
