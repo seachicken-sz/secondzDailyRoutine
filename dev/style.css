@@ -1272,57 +1272,25 @@ h1 {
   line-height: 1.7;
 }
 
-.theme-heart-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+.home-color-change-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .theme-heart-button {
   position: relative;
-  min-height: 106px;
-  padding: 12px 8px 10px;
-  border: 1px solid var(--color-border);
-  border-radius: 22px;
-  background:
-    linear-gradient(
-      180deg,
-      var(--color-surface) 0%,
-      var(--color-page-bg) 100%
-    );
+  width: auto;
+  height: auto;
+  aspect-ratio: 1;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
   color: var(--theme-preview-color, var(--color-brand));
   cursor: pointer;
   font: inherit;
   box-shadow: var(--shadow-card-soft);
   overflow: hidden;
-
-  display: grid;
-  place-items: center;
-  align-content: center;
-  gap: 8px;
-}
-
-.theme-heart-button::before {
-  content: "";
-  position: absolute;
-  inset: 8px;
-  border-radius: 18px;
-  background: var(--theme-preview-bg, var(--color-brand-soft));
-  opacity: 0.7;
-  z-index: 0;
-}
-
-.theme-heart-button::after {
-  content: "";
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 9px;
-  height: 9px;
-  border-radius: 999px;
-  background: var(--theme-preview-color, var(--color-brand));
-  opacity: 0.75;
-  z-index: 1;
 }
 
 .theme-heart-button:active {
@@ -1335,43 +1303,52 @@ h1 {
   box-shadow: var(--shadow-card);
 }
 
-.theme-heart-button.active::before {
-  opacity: 1;
-}
-
 .theme-heart-chip {
   position: relative;
-  z-index: 1;
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
-  background: var(--color-surface);
-  border: 1px solid var(--theme-preview-border, var(--color-brand-border));
+  width: 6.5vw;
+  max-width: 40px;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  background:
+    radial-gradient(circle at 30% 28%, rgba(255,255,255,0.95) 0 16%, rgba(255,255,255,0.35) 17%, transparent 38%),
+    linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--theme-preview-bg) 92%, white 8%) 0%,
+      var(--theme-preview-bg) 48%,
+      color-mix(in srgb, var(--theme-preview-color) 18%, var(--theme-preview-bg)) 100%
+    );
+
+  border: 1px solid
+    color-mix(in srgb, var(--theme-preview-border) 72%, white 28%);
+
   color: var(--theme-preview-color, var(--color-brand));
-  box-shadow: var(--shadow-card-soft);
+
+  box-shadow:
+    inset 0 2px 3px rgba(255,255,255,0.55),
+    inset 0 -3px 6px rgba(0,0,0,0.08),
+    0 4px 10px rgba(0,0,0,0.10);
 
   display: inline-grid;
   place-items: center;
+
+  backdrop-filter: blur(4px);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    filter 0.18s ease;
 }
 
 .theme-heart-icon {
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1;
+  opacity: 0.5;
 }
-
-.theme-heart-label {
-  position: relative;
-  z-index: 1;
-  color: var(--color-text);
-  font-size: 12px;
-  font-weight: 800;
-  line-height: 1.3;
+.theme-heart-button.active .theme-heart-icon{
+  opacity: 1;
 }
-
-.theme-heart-button.active .theme-heart-label {
-  color: var(--color-brand);
-}
-
 /* 赤 */
 .theme-heart-button[data-theme-button="red"] {
   --theme-preview-color: #ef4444;
@@ -1427,6 +1404,21 @@ h1 {
   --theme-preview-bg: #e5e7eb;
   --theme-preview-border: #d1d5db;
 }
+.theme-heart-button[data-theme-button="white"] .theme-heart-icon {
+  opacity: 1;
+}
+.theme-heart-button[data-theme-button="white"] .theme-heart-chip {
+  background:
+    radial-gradient(circle at 30% 28%, rgba(255,255,255,0.95) 0 16%, rgba(255,255,255,0.35) 17%, transparent 38%),
+    linear-gradient(145deg, #f7f7f7 0%, #e5e7eb 48%, #d1d5db 100%);
+}
+
+.theme-heart-button[data-theme-button="white"]:active .theme-heart-chip,
+.theme-heart-button[data-theme-button="white"].active .theme-heart-chip {
+  background:
+    radial-gradient(circle at 30% 28%, rgba(255,255,255,0.70) 0 16%, rgba(255,255,255,0.20) 17%, transparent 38%),
+    linear-gradient(145deg, #cfcfcf 0%, #a3a3a3 48%, #989898 100%);
+}
 
 /* ハワイ / normal */
 .theme-heart-button[data-theme-button="normal"] {
@@ -1442,68 +1434,6 @@ h1 {
     linear-gradient(135deg, #fef3c7 0%, #ecfff3 46%, #e0f2fe 100%);
 }
 
-.theme-heart-button-hawaii .theme-heart-icon {
-  font-size: 25px;
-}
-
-/* white theme adjustment */
-:root[data-theme="white"] .theme-heart-button {
-  border-color: #e5e7eb;
-  background:
-    linear-gradient(
-      180deg,
-      #ffffff 0%,
-      #f6f6f6 100%
-    );
-  box-shadow: none;
-}
-
-:root[data-theme="white"] .theme-heart-button[data-theme-button="white"]::before {
-  background: #ffffff;
-}
-.theme-heart-button[data-theme-button="white"]::before {
-  background: #ffffff;
-}
-
-:root[data-theme="white"] .theme-heart-chip {
-  background: #ffffff;
-  border-color: var(--theme-preview-border, #e5e7eb);
-  color: var(--theme-preview-color, #111827);
-}
-
-:root[data-theme="white"] .theme-heart-label {
-  color: #111827;
-}
-
-/* 白テーマ選択ボタンだけ：薄いグレー丸 + 白ハート */
-:root[data-theme="white"] .theme-heart-button[data-theme-button="white"] .theme-heart-chip {
-  background: #e5e7eb;
-  border-color: #d1d5db;
-  color: #ffffff;
-}
-.theme-heart-button[data-theme-button="white"] .theme-heart-chip {
-  background: #e5e7eb;
-  border-color: #d1d5db;
-  color: #ffffff;
-}
-
-:root[data-theme="white"] .theme-heart-button[data-theme-button="white"] .theme-heart-label {
-  color: #111827;
-}
-
-/* 選択中 */
-:root[data-theme="white"] .theme-heart-button.active {
-  border-color: #9ca3af;
-  background: #ffffff;
-}
-
-:root[data-theme="white"] .theme-heart-button.active .theme-heart-chip {
-  border-color: var(--theme-preview-border, #9ca3af);
-}
-
-:root[data-theme="white"] .theme-heart-button.active .theme-heart-label {
-  color: #111827;
-}
 /* =========================
    White theme adjustment
 ========================= */
