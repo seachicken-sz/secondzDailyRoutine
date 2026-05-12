@@ -2,7 +2,10 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+/>
   <meta property="og:title" content="タムごとDaily">
   <meta property="og:description" content="">
   <meta property="og:image" content="https://seachicken-sz.github.io/secondzDailyRoutine/img/link-card.jpg">
@@ -49,7 +52,7 @@
         </button>
         </section>
     
-    <section class="home-color-change-area">
+        <section class="home-color-change-area">
       <div class="theme-heart-grid" aria-label="テーマカラー選択">
         <button type="button" class="theme-heart-button" data-theme-button="red" aria-label="赤">
           <span class="theme-heart-chip">
@@ -146,6 +149,7 @@
           Spotifyが開いたら、曲が再生されます。<br>
           <strong>再生されたら、バックでこのアプリ</strong>に戻ってきてね
         </p>
+        <p id="spotifyListenerCount" class="spotify-listener-count"></p>
       </header>
 
       <section id="selectedArea" class="selected-area hidden">
@@ -238,6 +242,7 @@
           今日は何をリクエストする？<br>
           曲を選んで<strong>「USEN推し活リクエスト」</strong>からリクエストしてね！
         </p>
+        <p id="usenRankingInfo" class="usen-ranking-info hidden"></p>
       </header>
 
       <section id="selectedRequestSongArea" class="selected-area hidden">
@@ -629,6 +634,75 @@
     </div>
   </div>
 </div>
+<div id="themeModal" class="modal-overlay hidden">
+  <div class="modal-content theme-modal-content" role="dialog" aria-modal="true" aria-labelledby="themeModalTitle">
+    <div class="modal-header">
+      <h2 id="themeModalTitle">テーマカラーチェンジ</h2>
+      <button type="button" id="closeThemeModalButton" class="modal-close-button" aria-label="閉じる">×</button>
+    </div>
+    <div class="modal-body">
+      <p class="theme-modal-description">
+        好きなカラーを選んでください。選んだカラーは自動で保存されます。
+      </p>
+      <div class="theme-heart-grid" aria-label="テーマカラー選択">
+        <button type="button" class="theme-heart-button" data-theme-button="red" aria-label="赤">
+          <span class="theme-heart-chip">
+            <span class="theme-heart-icon">♥</span>
+          </span>
+          <span class="theme-heart-label">Red</span>
+        </button>
+        <button type="button" class="theme-heart-button" data-theme-button="purple" aria-label="紫">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon">♥</span>
+            </span>
+            <span class="theme-heart-label">Purple</span>
+          </button>
+          <button type="button" class="theme-heart-button" data-theme-button="green" aria-label="緑">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon">♥</span>
+            </span>
+            <span class="theme-heart-label">Green</span>
+          </button>
+          <button type="button" class="theme-heart-button" data-theme-button="sky" aria-label="水色">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon">♥</span>
+            </span>
+            <span class="theme-heart-label">Sky</span>
+          </button>
+          <button type="button" class="theme-heart-button" data-theme-button="lime" aria-label="黄緑">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon">♥</span>
+            </span>
+              <span class="theme-heart-label">Yellow Green</span>
+          </button>
+          <button type="button" class="theme-heart-button" data-theme-button="pink" aria-label="ピンク">
+              <span class="theme-heart-chip">
+              <span class="theme-heart-icon">♥</span>
+            </span>
+            <span class="theme-heart-label">Pink</span>
+          </button>
+          <button type="button" class="theme-heart-button" data-theme-button="yellow" aria-label="黄色">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon">♥</span>
+            </span>
+              <span class="theme-heart-label">Yellow</span>
+          </button>
+          <button type="button" class="theme-heart-button" data-theme-button="white" aria-label="白">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon">♥</span>
+            </span>
+              <span class="theme-heart-label">White</span>
+          </button>
+          <button type="button" class="theme-heart-button theme-heart-button-hawaii" data-theme-button="normal" aria-label="ハワイ">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon">🌺</span>
+            </span>
+            <span class="theme-heart-label">Emerald</span>
+          </button>
+        </div>  
+      </div>
+    </div>
+  </div>
   
   <div id="shareImageModal" class="modal-overlay hidden">
   <div class="modal-content share-image-modal-content" role="dialog" aria-modal="true" aria-labelledby="shareImageModalTitle">
