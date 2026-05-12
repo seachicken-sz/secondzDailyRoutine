@@ -57,6 +57,8 @@ const closeUsageButtonElement = document.getElementById("closeUsageButton");
 
 // Spotifyステップ画面全体
 const spotifyStepElement = document.getElementById("spotifyStep");
+// リスナー表示
+const countElement = document.getElementById("spotifyListenerCount");
 // 選択中の曲表示エリア
 const selectedAreaElement = document.getElementById("selectedArea");
 // 選択中の曲名
