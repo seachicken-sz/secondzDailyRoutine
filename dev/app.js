@@ -540,7 +540,6 @@ function getShareImageTaskItems() {
 
   return items;
 }
-
 function getCheckedPostItemsForShareImage() {
   const items = [];
 
@@ -555,6 +554,22 @@ function getCheckedPostItemsForShareImage() {
 
     // SNSシェアだけ画像には入れない
     if (item.id === "app-share") {
+      return;
+    }
+
+    // USEN推しリク
+    if (item.id === "usen-request") {
+      const songName = state.selectedRequestSong?.name || "";
+      items.push(
+        songName ? `本日のリクエスト: ${songName}` : "本日のリクエスト"
+      );
+      return;
+    }
+
+    // Spotify / BGM
+    if (item.id === "spotify-bgm") {
+      const songName = state.selectedSong?.name || "";
+      items.push(songName ? `本日のBGM: ${songName}` : "本日のBGM");
       return;
     }
 
