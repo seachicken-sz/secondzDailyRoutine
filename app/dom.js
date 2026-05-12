@@ -119,7 +119,6 @@ const onceTaskRunErrorAreaElement = document.getElementById("onceTaskRunErrorAre
 // USEN推しリク曲選択画面全体
 const requestSongStepElement = document.getElementById("requestSongStep");
 // ランキング表示
-const spotifyListenerCountElement = document.getElementById("spotifyListenerCount");
 const usenRankingInfoElement = document.getElementById("usenRankingInfo");
 // 選択中のリクエスト曲表示エリア
 const selectedRequestSongAreaElement = document.getElementById("selectedRequestSongArea");
