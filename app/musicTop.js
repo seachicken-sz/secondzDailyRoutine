@@ -16,10 +16,6 @@ async function loadRequestRanking() {
 
     const data = await response.json();
 
-    console.log("musicTopAll data", data);
-console.log("latestUsenRanking", data.latestUsenRanking);
-console.log("spotifyListener", data.spotifyListener);
-
     const recentItems = Array.isArray(data.recentMusicTop) ? data.recentMusicTop : [];
 
     const recentRequestItems = getRequestRankingItems(recentItems);
