@@ -17,6 +17,9 @@ async function loadRequestRanking() {
     const data = await response.json();
 
     const recentItems = Array.isArray(data.recentMusicTop) ? data.recentMusicTop : [];
+    const spotifyListener = data.spotifyListener || null;
+
+    renderSpotifyListenerInfo(spotifyListener);
 
     const recentRequestItems = getRequestRankingItems(recentItems);
 
@@ -27,8 +30,60 @@ async function loadRequestRanking() {
     setupRequestRankingToggle();
   } catch (error) {
     console.error("request ranking load error", error);
+
+    renderSpotifyListenerInfo(null);
+
     area.innerHTML = '<p class="request-ranking-empty">人気リクエスト曲の読み込みに失敗しました。</p>';
   }
+}
+
+function renderSpotifyListenerInfo(spotifyListener) {
+  const infoElement = document.getElementById("spotifyListenerInfo");
+  const countElement = document.getElementById("spotifyListenerCount");
+
+  if (!infoElement || !countElement) {
+    return;
+  }
+
+  if (!spotifyListener || spotifyListener.today == null) {
+    infoElement.classList.add("hidden");
+    countElement.textContent = "";
+    return;
+  }
+
+  const today = toDisplayNumber(spotifyListener.today);
+  const diff = toDisplayNumber(spotifyListener.diff);
+
+  if (today === null) {
+    infoElement.classList.add("hidden");
+    countElement.textContent = "";
+    return;
+  }
+
+  const todayText = today.toLocaleString("ja-JP");
+
+  let diffText = "";
+
+  if (diff !== null && diff > 0) {
+    diffText = `（前日比 ＋${diff.toLocaleString("ja-JP")}）`;
+  }
+
+  countElement.textContent = `${todayText}${diffText}`;
+  infoElement.classList.remove("hidden");
+}
+
+function toDisplayNumber(value) {
+  if (value === null || value === undefined || value === "") {
+    return null;
+  }
+
+  const number = Number(String(value).replace(/,/g, ""));
+
+  if (Number.isNaN(number)) {
+    return null;
+  }
+
+  return number;
 }
 
 function getRequestRankingItems(items) {
