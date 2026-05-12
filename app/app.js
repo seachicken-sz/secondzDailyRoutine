@@ -446,6 +446,249 @@ addClickEvent(postNextButtonElement, () => {
   showYoutubeAskStep();
 });
 // ==================================================
+// クリックイベント設定 - SNSシェア画像出力
+// ==================================================
+function getShareImageBlob() {
+  return new Promise((resolve) => {
+    if (!shareImageCanvasElement) {
+      resolve(null);
+      return;
+    }
+
+    shareImageCanvasElement.toBlob((blob) => {
+      resolve(blob);
+    }, "image/png");
+  });
+}
+let currentShareImageTheme = getCurrentThemeKeyForShareImage();
+
+function getCurrentThemeKeyForShareImage() {
+  const savedTheme = localStorage.getItem("selectedTheme");
+
+  const themeMap = {
+    red: "red",
+    purple: "purple",
+    green: "green",
+    sky: "blue",
+    blue: "blue",
+    lime: "lime",
+    pink: "pink",
+    yellow: "yellow",
+    white: "white",
+    normal: "normal",
+  };
+
+  return themeMap[savedTheme] || "normal";
+}
+
+function getShareImageDateText() {
+  const now = new Date();
+  return `${now.getMonth() + 1}/${now.getDate()}`;
+}
+
+function getShareImageRequestText() {
+  if (!state.selectedRequestSong) {
+    return "";
+  }
+
+  const name = state.selectedRequestSong.name || "";
+
+  return name ? `USEN：${name}` : "";
+}
+
+function getShareImageBgmText() {
+  if (!state.selectedSong || !state.selectedSong.url) {
+    return "";
+  }
+
+  const name = state.selectedSong.name || "";
+
+  return name ? `BGM：${name}` : "";
+}
+
+function getShareImageTaskName(item) {
+  if (!item) {
+    return "";
+  }
+
+  return (
+    item["short-name"] ||
+    item.shortName ||
+    item.name ||
+    ""
+  );
+}
+
+function getShareImageTaskItems() {
+  const items = [];
+
+  state.selectedOnceTasks.forEach((task) => {
+    const name = getShareImageTaskName(task);
+
+    if (name) {
+      items.push(name);
+    }
+  });
+
+  state.completedDailyItems.forEach((item) => {
+    const name = getShareImageTaskName(item);
+
+    if (name) {
+      items.push(name);
+    }
+  });
+
+  return items;
+}
+
+function getCheckedPostItemsForShareImage() {
+  const items = [];
+
+  if (!Array.isArray(state.postItems)) {
+    return items;
+  }
+
+  state.postItems.forEach((item) => {
+    if (!item || item.checked !== true) {
+      return;
+    }
+
+    // SNSシェア、USEN推しリク、BGMは画像のチェック項目には入れない
+    if (
+      item.id === "app-share" ||
+      item.id === "usen-request" ||
+      item.id === "spotify-bgm"
+    ) {
+      return;
+    }
+
+    const name =
+      item.imageText ||
+      item["short-name"] ||
+      item.shortName ||
+      item.postText ||
+      item.name ||
+      "";
+
+    if (name) {
+      items.push(name);
+    }
+  });
+
+  return items;
+}
+
+function renderShareImage(themeKey = currentShareImageTheme) {
+  if (!shareImageCanvasElement) {
+    return;
+  }
+
+  const items = getCheckedPostItemsForShareImage();
+
+  if (items.length === 0 && !state.selectedRequestSong && !state.selectedSong) {
+    showError(postErrorAreaElement, "画像にする内容がありません。");
+    return;
+  }
+
+  currentShareImageTheme = themeKey;
+
+  drawShareImage(shareImageCanvasElement, {
+    themeKey: currentShareImageTheme,
+    dateText: getShareImageDateText(),
+    appName: "タムごとDaily",
+    title: "タスク完了！",
+    requestText: getShareImageRequestText(),
+    bgmText: getShareImageBgmText(),
+    items,
+  });
+
+  hideError(postErrorAreaElement);
+}
+
+addClickEvent(openShareImageModalButtonElement, () => {
+  if (!shareImageModalElement) {
+    return;
+  }
+
+  shareImageModalElement.classList.remove("hidden");
+  renderShareImage();
+});
+
+addClickEvent(closeShareImageModalButtonElement, () => {
+  if (!shareImageModalElement) {
+    return;
+  }
+
+  shareImageModalElement.classList.add("hidden");
+});
+
+if (shareImageModalElement) {
+  shareImageModalElement.addEventListener("click", (event) => {
+    if (event.target === shareImageModalElement) {
+      shareImageModalElement.classList.add("hidden");
+    }
+  });
+}
+
+shareImageThemeButtonElements.forEach((button) => {
+  button.addEventListener("click", () => {
+    const themeKey = button.dataset.shareImageTheme || getCurrentThemeKeyForShareImage();
+    renderShareImage(themeKey);
+  });
+});
+
+addClickEvent(downloadShareImageButtonElement, async () => {
+  renderShareImage(currentShareImageTheme);
+
+  const blob = await getShareImageBlob();
+
+  if (!blob) {
+    showError(postErrorAreaElement, "画像の作成に失敗しました。");
+    return;
+  }
+
+  const file = new File([blob], "tamugoto-daily-share.png", {
+    type: "image/png",
+  });
+
+  try {
+    // PWA / スマホ向け：共有シートを優先
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({
+        files: [file],
+        title: "タムごとDaily",
+        text: "今日の推し活ログ",
+      });
+
+      hideError(postErrorAreaElement);
+      return;
+    }
+
+    // 共有シート非対応環境：通常ダウンロード
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.download = "tamugoto-daily-share.png";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    setTimeout(() => {
+      URL.revokeObjectURL(url);
+    }, 1000);
+
+    hideError(postErrorAreaElement);
+  } catch (error) {
+    if (error.name === "AbortError") {
+      return;
+    }
+
+    console.error(error);
+    showError(postErrorAreaElement, "画像の保存に失敗しました。");
+  }
+});
+// ==================================================
 // クリックイベント設定 - YouTube再生
 // ==================================================
 // YouTube確認画面の「見る！」ボタン押下時
@@ -1002,6 +1245,7 @@ function recordCompletedDailyItem(item) {
     key,
     itemId: item.id,
     name,
+  shortName: item["short-name"] || item.shortName || "",
     url,
   });
 }

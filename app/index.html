@@ -39,13 +39,19 @@
       <header class="home-header">
         <!--ロゴ-->
         <div class="home-logo-area">
-          <img src="../img/logo.png" alt="タムごとDaily">
+          <img id="homeLogoImage" src="../img/logo.png" alt="タムごとDaily">
         </div>
       </header>
 
       <section class="home-action-area">
         <button id="startRoutineButton" class="primary-button">
           開始する
+        </button>
+        </section>
+    
+        <section class="home-color-change-area">
+          <button type="button" id="openThemeModalButton" class="text-link-button">
+            テーマカラー変更
         </button>
         </section>
         
@@ -323,13 +329,11 @@
             </section>
         
             <div id="generatedXPostText" class="copy-text"></div>
-        
-            <button id="copyXPostTextButton" class="secondary-button">
-              コピーする
-            </button>
-        
             <button id="openXPostButton" class="primary-button post-action-button">
               Xに投稿
+            </button>
+            <button id="copyXPostTextButton" class="secondary-button">
+              コピーする
             </button>
           </section>
         
@@ -347,6 +351,9 @@
               コピーしてThreadsを開く
             </button>
           </section>
+            <button id="openShareImageModalButton" type="button" class="secondary-button">
+              この内容で画像を生成
+            </button>
         </section>
 
 
@@ -578,6 +585,164 @@
     </div>
   </div>
 </div>
+<div id="themeModal" class="modal-overlay hidden">
+  <div class="modal-content theme-modal-content" role="dialog" aria-modal="true" aria-labelledby="themeModalTitle">
+    <div class="modal-header">
+      <h2 id="themeModalTitle">テーマカラーチェンジ</h2>
+      <button type="button" id="closeThemeModalButton" class="modal-close-button" aria-label="閉じる">×</button>
+    </div>
+    <div class="modal-body">
+      <p class="theme-modal-description">
+        好きなカラーを選んでください。選んだカラーは自動で保存されます。
+      </p>
+      <div class="theme-heart-grid" aria-label="テーマカラー選択">
+        <button type="button" class="theme-heart-button" data-theme-button="red" aria-label="赤">
+          <span class="theme-heart-chip">
+            <span class="theme-heart-icon">♥</span>
+          </span>
+          <span class="theme-heart-label">Red</span>
+        </button>
+        <button type="button" class="theme-heart-button" data-theme-button="purple" aria-label="紫">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon">♥</span>
+            </span>
+            <span class="theme-heart-label">Purple</span>
+          </button>
+          <button type="button" class="theme-heart-button" data-theme-button="green" aria-label="緑">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon">♥</span>
+            </span>
+            <span class="theme-heart-label">Green</span>
+          </button>
+          <button type="button" class="theme-heart-button" data-theme-button="sky" aria-label="水色">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon">♥</span>
+            </span>
+            <span class="theme-heart-label">Sky</span>
+          </button>
+          <button type="button" class="theme-heart-button" data-theme-button="lime" aria-label="黄緑">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon">♥</span>
+            </span>
+              <span class="theme-heart-label">Yellow Green</span>
+          </button>
+          <button type="button" class="theme-heart-button" data-theme-button="pink" aria-label="ピンク">
+              <span class="theme-heart-chip">
+              <span class="theme-heart-icon">♥</span>
+            </span>
+            <span class="theme-heart-label">Pink</span>
+          </button>
+          <button type="button" class="theme-heart-button" data-theme-button="yellow" aria-label="黄色">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon">♥</span>
+            </span>
+              <span class="theme-heart-label">Yellow</span>
+          </button>
+          <button type="button" class="theme-heart-button" data-theme-button="white" aria-label="白">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon">♥</span>
+            </span>
+              <span class="theme-heart-label">White</span>
+          </button>
+          <button type="button" class="theme-heart-button theme-heart-button-hawaii" data-theme-button="normal" aria-label="ハワイ">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon">🌺</span>
+            </span>
+            <span class="theme-heart-label">Emerald</span>
+          </button>
+        </div>  
+      </div>
+    </div>
+  </div>
+  
+  <div id="shareImageModal" class="modal-overlay hidden">
+  <div class="modal-content share-image-modal-content" role="dialog" aria-modal="true" aria-labelledby="shareImageModalTitle">
+    <div class="modal-header">
+      <h2 id="shareImageModalTitle">シェア画像</h2>
+      <button
+        type="button"
+        id="closeShareImageModalButton"
+        class="modal-close-button"
+        aria-label="閉じる"
+      >
+        ×
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <div class="share-image-canvas-wrap">
+        <canvas id="shareImageCanvas"></canvas>
+      </div>
+      
+      <div class="share-image-action-row">
+        <button type="button" id="downloadShareImageButton" class="primary-button">
+          画像を保存
+        </button>
+      </div>
+      <p class="share-image-note">
+        カラーを選ぶと画像が再生成されます<br>
+        全8色＋1です。
+      </p>
+      <div class="share-image-theme-row" aria-label="画像カラー選択">
+        <button type="button" class="share-image-theme-button share-image-theme-button-red" data-share-image-theme="red" aria-label="赤">
+          <span class="share-image-theme-chip">
+            <span class="share-image-theme-icon">♥</span>
+          </span>
+        </button>
+      
+        <button type="button" class="share-image-theme-button share-image-theme-button-purple" data-share-image-theme="purple" aria-label="紫">
+          <span class="share-image-theme-chip">
+            <span class="share-image-theme-icon">♥</span>
+          </span>
+        </button>
+      
+        <button type="button" class="share-image-theme-button share-image-theme-button-green" data-share-image-theme="green" aria-label="緑">
+          <span class="share-image-theme-chip">
+            <span class="share-image-theme-icon">♥</span>
+          </span>
+        </button>
+      
+        <button type="button" class="share-image-theme-button share-image-theme-button-blue" data-share-image-theme="blue" aria-label="水色">
+          <span class="share-image-theme-chip">
+            <span class="share-image-theme-icon">♥</span>
+          </span>
+        </button>
+      
+        <button type="button" class="share-image-theme-button share-image-theme-button-lime" data-share-image-theme="lime" aria-label="黄緑">
+          <span class="share-image-theme-chip">
+            <span class="share-image-theme-icon">♥</span>
+          </span>
+        </button>
+      
+        <button type="button" class="share-image-theme-button share-image-theme-button-pink" data-share-image-theme="pink" aria-label="ピンク">
+          <span class="share-image-theme-chip">
+            <span class="share-image-theme-icon">♥</span>
+          </span>
+        </button>
+      
+        <button type="button" class="share-image-theme-button share-image-theme-button-yellow" data-share-image-theme="yellow" aria-label="黄色">
+          <span class="share-image-theme-chip">
+            <span class="share-image-theme-icon">♥</span>
+          </span>
+        </button>
+      
+        <button type="button" class="share-image-theme-button share-image-theme-button-white" data-share-image-theme="white" aria-label="白">
+          <span class="share-image-theme-chip">
+            <span class="share-image-theme-icon">♥</span>
+          </span>
+        </button>
+      
+        <button type="button" class="share-image-theme-button share-image-theme-button-normal" data-share-image-theme="normal" aria-label="通常">
+          <span class="share-image-theme-chip">
+            <span class="share-image-theme-icon">🌺</span>
+          </span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <script src="./config.js" defer></script>
 <script src="./state.js" defer></script>
 <script src="./dom.js" defer></script>
@@ -589,6 +754,8 @@
 <script src="./renderers.js" defer></script>
 <script src="./selectors.js" defer></script>
 <script src="./musicTop.js" defer></script>
+<script src="./theme.js" defer></script>
+<script src="./canvas.js" defer></script>
 <script src="./app.js" defer></script>
 </body>
 </html>

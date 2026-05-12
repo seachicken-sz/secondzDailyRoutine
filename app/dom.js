@@ -14,6 +14,8 @@ const stepUsageButtonElement = document.getElementById("stepUsageButton");
 
 // ホーム画面全体
 const homeStepElement = document.getElementById("homeStep");
+// ロゴ画像
+const homeLogoImageElement = document.getElementById("homeLogoImage");
 // 開始ボタン
 const startRoutineButtonElement = document.getElementById("startRoutineButton");
 // ホーム画面の導入案内カード（ブラウザ限定）
@@ -220,6 +222,13 @@ const openXPostButtonElement = document.getElementById("openXPostButton");
 const openThreadsButtonElement = document.getElementById("openThreadsButton");
 // 投稿ステップ完了後の次へボタン
 const postNextButtonElement = document.getElementById("postNextButton");
+//画像生成
+const openShareImageModalButtonElement = document.getElementById("openShareImageModalButton");
+const shareImageModalElement = document.getElementById("shareImageModal");
+const closeShareImageModalButtonElement = document.getElementById("closeShareImageModalButton");
+const shareImageCanvasElement = document.getElementById("shareImageCanvas");
+const shareImageThemeButtonElements = document.querySelectorAll("[data-share-image-theme]");
+const downloadShareImageButtonElement = document.getElementById("downloadShareImageButton");
 
 // ==================================================
 // DOM: STEP 6 YouTube確認
