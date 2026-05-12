@@ -497,7 +497,7 @@ function getShareImageRequestText() {
 }
 
 function getShareImageBgmText() {
-  if (!state.selectedSong) {
+  if (!state.selectedSong || !state.selectedSong.url) {
     return "";
   }
 
@@ -540,6 +540,7 @@ function getShareImageTaskItems() {
 
   return items;
 }
+
 function getCheckedPostItemsForShareImage() {
   const items = [];
 
@@ -552,24 +553,12 @@ function getCheckedPostItemsForShareImage() {
       return;
     }
 
-    // SNSシェアだけ画像には入れない
-    if (item.id === "app-share") {
-      return;
-    }
-
-    // USEN推しリク
-    if (item.id === "usen-request") {
-      const songName = state.selectedRequestSong?.name || "";
-      items.push(
-        songName ? `本日のリクエスト: ${songName}` : "本日のリクエスト"
-      );
-      return;
-    }
-
-    // Spotify / BGM
-    if (item.id === "spotify-bgm") {
-      const songName = state.selectedSong?.name || "";
-      items.push(songName ? `本日のBGM: ${songName}` : "本日のBGM");
+    // SNSシェア、USEN推しリク、BGMは画像のチェック項目には入れない
+    if (
+      item.id === "app-share" ||
+      item.id === "usen-request" ||
+      item.id === "spotify-bgm"
+    ) {
       return;
     }
 
