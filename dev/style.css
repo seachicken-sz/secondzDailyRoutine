@@ -182,27 +182,27 @@
    Theme - white
 ========================= */
 :root[data-theme="white"] {
-  --color-brand: #111827;
+  --color-brand: #666666;
   --color-brand-soft: #ffffff;
-  --color-brand-border: #111827;
-  --color-accent: #111827;
-  --color-accent-text: #111827;
+  --color-brand-border: #666666;
+  --color-accent: #666666;
+  --color-accent-text: #666666;
 
   --color-page-bg: #f6f6f6;
   --color-surface: #ffffff;
 
   --color-text: #111827;
-  --color-text-sub: #111827;
+  --color-text-sub: #434343;
   --color-text-muted: #4b5563;
   --color-text-description: #374151;
 
   --color-link: #111827;
   --color-link-hover: #000000;
 
-  --color-border: #111827;
-  --color-border-soft: #111827;
+  --color-border: #666666;
+  --color-border-soft: #8f8f8f;
   --color-border-light: #d1d5db;
-  --color-border-accent: #111827;
+  --color-border-accent: #666666;
 
   --shadow-card: none;
   --shadow-card-soft: none;
