@@ -31,6 +31,7 @@ function buildPostItems() {
     items.push({
       id: `once-${index}`,
       name: task.name,
+      imageText: task["short-name"] || task.shortName || task.name,
       url: task.url || "",
       checked: false,
     });
@@ -44,6 +45,7 @@ function buildPostItems() {
     items.push({
       id: `daily-${index}`,
       name: item.name,
+      imageText: item["short-name"] || item.shortName || item.name,
       url: item.url || "",
       checked: false,
     });
