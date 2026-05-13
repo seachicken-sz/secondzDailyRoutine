@@ -2,7 +2,10 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+/>
   <meta property="og:title" content="タムごとDaily">
   <meta property="og:description" content="">
   <meta property="og:image" content="https://seachicken-sz.github.io/secondzDailyRoutine/img/link-card.jpg">
@@ -15,7 +18,7 @@
   <link rel="stylesheet" href="./style.css" />
   <link rel="manifest" href="../manifest.json">
   <link rel="apple-touch-icon" href="../img/icon-180.png">
-  <link rel="icon" type="image/png" href="../img/icon-180.png"">
+  <link rel="icon" type="image/png" href="../img/icon-180.png">
   <meta name="theme-color" content="#ffffff">  
 </head>
 <body>
@@ -50,9 +53,53 @@
         </section>
     
         <section class="home-color-change-area">
-          <button type="button" id="openThemeModalButton" class="text-link-button">
-            テーマカラー変更
+      <div class="theme-heart-grid" aria-label="テーマカラー選択">
+        <button type="button" class="theme-heart-button" data-theme-button="red" aria-label="赤">
+          <span class="theme-heart-chip">
+            <span class="theme-heart-icon"><i class="bi bi-suit-heart-fill"></i></span>
+          </span>
         </button>
+        <button type="button" class="theme-heart-button" data-theme-button="purple" aria-label="紫">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon"><i class="bi bi-suit-heart-fill"></i></span>
+            </span>
+          </button>
+          <button type="button" class="theme-heart-button" data-theme-button="green" aria-label="緑">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon"><i class="bi bi-suit-heart-fill"></i></span>
+            </span>
+          </button>
+          <button type="button" class="theme-heart-button" data-theme-button="sky" aria-label="水色">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon"><i class="bi bi-suit-heart-fill"></i></span>
+            </span>
+          </button>
+          <button type="button" class="theme-heart-button" data-theme-button="lime" aria-label="黄緑">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon"><i class="bi bi-suit-heart-fill"></i></span>
+            </span>
+          </button>
+          <button type="button" class="theme-heart-button" data-theme-button="pink" aria-label="ピンク">
+              <span class="theme-heart-chip">
+              <span class="theme-heart-icon"><i class="bi bi-suit-heart-fill"></i></span>
+            </span>
+          </button>
+          <button type="button" class="theme-heart-button" data-theme-button="yellow" aria-label="黄色">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon"><i class="bi bi-suit-heart-fill"></i></span>
+            </span>
+          </button>
+          <button type="button" class="theme-heart-button" data-theme-button="white" aria-label="白">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon"><i class="bi bi-suit-heart-fill"></i></span>
+            </span>
+          </button>
+          <button type="button" class="theme-heart-button theme-heart-button-hawaii" data-theme-button="normal" aria-label="ハワイ">
+            <span class="theme-heart-chip">
+              <span class="theme-heart-icon"><i class="bi bi-star-fill"></i></span>
+            </span>
+          </button>
+        </div> 
         </section>
         
         <section id="homeInstallGuideCard" class="home-card home-install-guide-area">
@@ -688,55 +735,55 @@
       <div class="share-image-theme-row" aria-label="画像カラー選択">
         <button type="button" class="share-image-theme-button share-image-theme-button-red" data-share-image-theme="red" aria-label="赤">
           <span class="share-image-theme-chip">
-            <span class="share-image-theme-icon">♥</span>
+            <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
           </span>
         </button>
       
         <button type="button" class="share-image-theme-button share-image-theme-button-purple" data-share-image-theme="purple" aria-label="紫">
           <span class="share-image-theme-chip">
-            <span class="share-image-theme-icon">♥</span>
+            <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
           </span>
         </button>
       
         <button type="button" class="share-image-theme-button share-image-theme-button-green" data-share-image-theme="green" aria-label="緑">
           <span class="share-image-theme-chip">
-            <span class="share-image-theme-icon">♥</span>
+            <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
           </span>
         </button>
       
         <button type="button" class="share-image-theme-button share-image-theme-button-blue" data-share-image-theme="blue" aria-label="水色">
           <span class="share-image-theme-chip">
-            <span class="share-image-theme-icon">♥</span>
+            <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
           </span>
         </button>
       
         <button type="button" class="share-image-theme-button share-image-theme-button-lime" data-share-image-theme="lime" aria-label="黄緑">
           <span class="share-image-theme-chip">
-            <span class="share-image-theme-icon">♥</span>
+            <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
           </span>
         </button>
       
         <button type="button" class="share-image-theme-button share-image-theme-button-pink" data-share-image-theme="pink" aria-label="ピンク">
           <span class="share-image-theme-chip">
-            <span class="share-image-theme-icon">♥</span>
+            <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
           </span>
         </button>
       
         <button type="button" class="share-image-theme-button share-image-theme-button-yellow" data-share-image-theme="yellow" aria-label="黄色">
           <span class="share-image-theme-chip">
-            <span class="share-image-theme-icon">♥</span>
+            <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
           </span>
         </button>
       
         <button type="button" class="share-image-theme-button share-image-theme-button-white" data-share-image-theme="white" aria-label="白">
           <span class="share-image-theme-chip">
-            <span class="share-image-theme-icon">♥</span>
+            <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
           </span>
         </button>
       
         <button type="button" class="share-image-theme-button share-image-theme-button-normal" data-share-image-theme="normal" aria-label="通常">
           <span class="share-image-theme-chip">
-            <span class="share-image-theme-icon">🌺</span>
+            <span class="share-image-theme-icon"><i class="bi bi-star-fill"></i></span>
           </span>
         </button>
       </div>
