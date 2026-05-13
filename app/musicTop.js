@@ -67,7 +67,7 @@ function renderSpotifyListenerInfo(spotifyListener) {
 
   if (!spotifyListener || spotifyListener.today == null) {
     countElement.classList.add("hidden");
-    countElement.textContent = "";
+    countElement.innerHTML = "";
     return;
   }
 
@@ -76,7 +76,7 @@ function renderSpotifyListenerInfo(spotifyListener) {
 
   if (today === null) {
     countElement.classList.add("hidden");
-    countElement.textContent = "";
+    countElement.innerHTML = "";
     return;
   }
 
@@ -88,8 +88,15 @@ function renderSpotifyListenerInfo(spotifyListener) {
     diffText = `（前日比 ＋${diff.toLocaleString("ja-JP")}）`;
   }
 
-  countElement.textContent =
-    `Spotify本日の月間リスナー数\n${todayText}人${diffText}`;
+  countElement.innerHTML = `
+    <span class="spotify-listener-label">
+      Spotify本日の月間リスナー数
+    </span>
+    <br>
+    <strong>
+      ${escapeHtml(todayText)}人${escapeHtml(diffText)}
+    </strong>
+  `;
 
   countElement.classList.remove("hidden");
 }
