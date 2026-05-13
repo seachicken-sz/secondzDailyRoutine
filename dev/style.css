@@ -723,6 +723,173 @@ h1 {
   margin-bottom: 0;
 }
 
+/* =========================
+   メンバーお仕事
+========================= */
+.member-works-card {
+  display: grid;
+  gap: 16px;
+}
+
+/* =========================
+   フィルター
+========================= */
+
+.member-filter-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.member-filter-chip {
+  min-height: 34px;
+  padding: 0 14px;
+  min-width: 3rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 800;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-card-soft);
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.member-filter-chip.active {
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+  color: var(--color-text-inverse);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+}
+
+/* =========================
+   曜日
+========================= */
+
+.member-weekday-group {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 6px;
+}
+
+.member-weekday-items {
+  display: grid;
+  gap: 6px;
+}
+
+.member-weekday-heading {
+  color: var(--color-brand);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+}
+
+/* =========================
+   リスト行
+========================= */
+.member-work-row {
+  display: grid;
+
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-areas:
+    "type title meta"
+    ".    links links";
+
+  column-gap: 8px;
+  row-gap: 2px;
+
+  align-items: center;
+}
+
+.member-work-type {
+  grid-area: type;
+
+  flex-shrink: 0;
+
+  min-width: 42px;
+  height: 20px;
+
+  border-radius: 999px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.member-work-type.tv {
+  background: #ff6b6b;
+}
+
+.member-work-type.radio {
+  background: #8b5cf6;
+}
+
+.member-work-type.web {
+  background: #06b6d4;
+}
+
+.member-work-type.magazine {
+  background: #22c55e;
+}
+
+.member-work-type.live {
+  background: #f59e0b;
+}
+
+.member-work-title {
+  grid-area: title;
+  min-width: 0;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.member-work-meta {
+  grid-area: meta;
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.member-work-links {
+  grid-area: links;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.member-work-link {
+  flex-shrink: 0;
+  color: var(--color-brand);
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.member-work-link::after {
+  content: "›";
+  margin-left: 2px;
+}
+
+/* =========================
+   テキストリンク
+========================= */
 .text-link-button {
   display: block;
   width: fit-content;
@@ -736,7 +903,9 @@ h1 {
   text-decoration: underline;
   cursor: pointer;
 }
-
+/* =========================
+   モーダル
+========================= */
 .modal-overlay {
   position: fixed;
   inset: 0;
