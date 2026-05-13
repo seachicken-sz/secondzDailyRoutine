@@ -107,7 +107,7 @@ addClickEvent(openSpotifyButtonElement, () => {
     return;
   }
   // 選択中の曲からSpotify用URLを作成
-  const spotifyUrl = buildSpotifyUrl(state.selectedSong.url);
+  const spotifyUrl = buildSpotifyUrl(state.selectedSong);
   // Spotifyを開いた後に進めるよう、次へボタンを表示
   if (spotifyNextButtonElement) {
     spotifyNextButtonElement.classList.remove("hidden");
