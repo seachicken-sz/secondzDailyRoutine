@@ -1,4 +1,15 @@
-const MUSIC_TOP_API_URL = "https://script.google.com/macros/s/AKfycbzSxC7H8f6QufHRP_HvK98QdmKjraXAXoRY6bHW2-8UDOz6rvb6CtksaSoVlMy2feTE/exec?type=musicTopAll";
+const MUSIC_TOP_API_URL = `../data/musicTopJson.json?v=${getMusicTopCacheKey()}`;
+
+function getMusicTopCacheKey() {
+  const now = new Date();
+
+  return [
+    now.getFullYear(),
+    String(now.getMonth() + 1).padStart(2, "0"),
+    String(now.getDate()).padStart(2, "0"),
+    String(now.getHours()).padStart(2, "0"),
+  ].join("");
+}
 
 async function loadRequestRanking() {
   const area = document.getElementById("requestRankingArea");
