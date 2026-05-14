@@ -92,9 +92,7 @@ function groupByLinkType(items) {
   return MEMBER_WORK_LINK_GROUPS
     .map((group) => ({
       group,
-      items: items
-        .filter(group.isTarget)
-        .sort(sortMemberWorks)
+      items: items.filter(group.isTarget)
     }))
     .filter(({ items }) => items.length > 0);
 }
@@ -123,75 +121,6 @@ function isVisibleMemberWork(item) {
   return item.members.some((member) =>
     selectedMembers.has(member)
   );
-}
-
-function getMemberPriority(item) {
-  if (Array.isArray(item.members) && item.members.includes("all")) {
-    return 0;
-  }
-
-  return 1;
-}
-
-function sortMemberWorks(a, b) {
-  const aMemberPriority = getMemberPriority(a);
-  const bMemberPriority = getMemberPriority(b);
-
-  if (aMemberPriority !== bMemberPriority) {
-    return aMemberPriority - bMemberPriority;
-  }
-
-  const aToValue = getToValue(a);
-  const bToValue = getToValue(b);
-
-  if (aToValue !== bToValue) {
-    return aToValue - bToValue;
-  }
-
-  const aDateValue = getDateValue(a);
-  const bDateValue = getDateValue(b);
-
-  if (aDateValue !== bDateValue) {
-    return aDateValue - bDateValue;
-  }
-
-  return getTimeValue(a) - getTimeValue(b);
-}
-
-function getDateValue(item) {
-  if (item.dateTime) {
-    return Number(item.dateTime.slice(0, 8));
-  }
-
-  if (item.from) {
-    return Number(item.from.slice(0, 8));
-  }
-
-  return 0;
-}
-
-function getTimeValue(item) {
-  if (item.time) {
-    return Number(String(item.time).replace(":", ""));
-  }
-
-  if (item.dateTime) {
-    return Number(item.dateTime.slice(8, 12));
-  }
-
-  if (item.from) {
-    return Number(item.from.slice(8, 12));
-  }
-
-  return 0;
-}
-
-function getToValue(item) {
-  if (item.to) {
-    return Number(String(item.to).slice(0, 8));
-  }
-
-  return 99999999;
 }
 
 function getRemainingDays(item) {
