@@ -1096,7 +1096,7 @@ async function showRequestSongStep() {
     hideError(requestSongErrorAreaElement);
   } catch (error) {
     console.error(error);
-    showError(onceTaskRunErrorAreaElement, "リクエスト曲リストの読み込みに失敗しました。JSONの形式や配置を確認してください。");
+    showError(onceTaskRunErrorAreaElement, "※エラーが発生しました。アプリを立ち上げ直してください。ERROR:requestSong");
   }
 }
 
@@ -1119,7 +1119,7 @@ async function showDailyTaskStep(shouldInitialize = true) {
     renderCurrentDailyTask();
   } catch (error) {
     console.error(error);
-    showError(requestSongErrorAreaElement, "リクエストループの読み込みに失敗しました。JSONの形式や配置を確認してください。");
+    showError(requestSongErrorAreaElement, "※エラーが発生しました。アプリを立ち上げ直してください。ERROR:list");
   }
 }
 
@@ -1297,7 +1297,7 @@ async function showYoutubeSelectStep() {
     hideError(youtubeErrorAreaElement);
   } catch (error) {
     console.error(error);
-    showError(youtubeErrorAreaElement, "YouTubeリストの読み込みに失敗しました。JSONの形式や配置を確認してください。");
+    showError(youtubeErrorAreaElement, "※エラーが発生しました。アプリを立ち上げ直してください。ERROR:youtube");
   }
 }
 
