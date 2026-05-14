@@ -2,6 +2,7 @@ const MEMBER_WORK_LINK_GROUPS = [
   {
     key: "tver",
     label: "TVer",
+    description: "TVerはいいねとあとで見るを押してね！",
     urlKey: "platformUrl",
     isTarget: (item) =>
       item.workType === "tv" &&
@@ -10,6 +11,7 @@ const MEMBER_WORK_LINK_GROUPS = [
   {
     key: "radiko",
     label: "radiko",
+    description: "radikoはSNSシェアを押してね！",
     urlKey: "platformUrl",
     isTarget: (item) =>
       item.workType === "radio" &&
@@ -18,6 +20,7 @@ const MEMBER_WORK_LINK_GROUPS = [
   {
     key: "message",
     label: "メッセージ",
+    description: "メッセージを送ろう！",
     urlKey: "messageUrl",
     isTarget: (item) =>
       Boolean(item.messageUrl)
@@ -25,6 +28,7 @@ const MEMBER_WORK_LINK_GROUPS = [
   {
     key: "access",
     label: "アクセス",
+    description: "アクセスするだけでも応援！",
     urlKey: "accessUrl",
     isTarget: (item) =>
       Boolean(item.accessUrl)
@@ -67,9 +71,9 @@ function renderMemberWorks() {
 
     section.innerHTML = `
       <div class="member-link-section-header">
-        <h3 class="member-link-section-title">
+        <h2 class="member-link-section-title">
           ${escapeHtml(group.label)}
-        </h3>
+        </h2>
       </div>
 
       <div class="member-link-list">
@@ -119,6 +123,13 @@ function isVisibleMemberWork(item) {
 }
 
 function sortMemberWorks(a, b) {
+  const aToValue = getToValue(a);
+  const bToValue = getToValue(b);
+
+  if (aToValue !== bToValue) {
+    return aToValue - bToValue;
+  }
+
   const aDateValue = getDateValue(a);
   const bDateValue = getDateValue(b);
 
@@ -157,6 +168,64 @@ function getTimeValue(item) {
   return 0;
 }
 
+function getToValue(item) {
+  if (item.to) {
+    return Number(String(item.to).slice(0, 8));
+  }
+
+  return 99999999;
+}
+
+function getRemainingDays(item) {
+  if (!item.to) {
+    return null;
+  }
+
+  const to = String(item.to).slice(0, 8);
+
+  const todayDate = createDateFromYmd(getTodayYmd());
+  const toDate = createDateFromYmd(to);
+
+  const diffTime = toDate.getTime() - todayDate.getTime();
+  const diffDays = Math.ceil(diffTime / 86400000);
+
+  if (diffDays < 0) {
+    return null;
+  }
+
+  return diffDays;
+}
+
+function createDateFromYmd(value) {
+  return new Date(
+    Number(value.slice(0, 4)),
+    Number(value.slice(4, 6)) - 1,
+    Number(value.slice(6, 8))
+  );
+}
+
+function buildRemainingText(item) {
+  const remainingDays = getRemainingDays(item);
+
+  if (remainingDays === null || remainingDays > 7) {
+    return "";
+  }
+
+  if (remainingDays === 0) {
+    return `
+      <span class="member-work-link-limit">
+        ※本日まで
+      </span>
+    `;
+  }
+
+  return `
+    <span class="member-work-link-limit">
+      ※残り${remainingDays}日
+    </span>
+  `;
+}
+
 function createWorkItemHtml(item, group) {
   return `
     <a
@@ -165,8 +234,12 @@ function createWorkItemHtml(item, group) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <span class="member-work-link-title">
-        ${escapeHtml(getProgramDisplayName(item))}
+      <span class="member-work-link-main">
+        <span class="member-work-link-title">
+          ${escapeHtml(getProgramDisplayName(item))}
+        </span>
+
+        ${buildRemainingText(item)}
       </span>
 
       <span class="member-work-link-arrow" aria-hidden="true">
