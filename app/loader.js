@@ -81,6 +81,29 @@ async function loadDailyGroups() {
   });
 }
 
+//メンバーお仕事読み込み
+async function loadMemberWorks() {
+  const works = await loadJsonFile(
+    DATA_PATHS.memberWorks,
+    "memberWorksJson.json"
+  );
+
+  if (!Array.isArray(works)) {
+    throw new Error(
+      "memberWorksJson.json が配列形式ではありません。"
+    );
+  }
+
+  return works.filter((item) => {
+    return (
+      item &&
+      item.title &&
+      Array.isArray(item.members) &&
+      item.members.length > 0
+    );
+  });
+}
+
 //YouTubeプレリ読み込み
 async function loadYoutubePlaylists() {
   const playlists = await loadJsonFile(DATA_PATHS.youtubePlaylists, "youtubePlayListJson.json");
