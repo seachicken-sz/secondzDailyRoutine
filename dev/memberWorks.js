@@ -1,11 +1,34 @@
-const WEEKDAY_LABELS = [
-  "SUN",
-  "MON",
-  "TUE",
-  "WED",
-  "THU",
-  "FRI",
-  "SAT"
+const MEMBER_WORK_LINK_GROUPS = [
+  {
+    key: "tver",
+    label: "TVer",
+    urlKey: "platformUrl",
+    isTarget: (item) =>
+      item.workType === "tv" &&
+      Boolean(item.platformUrl)
+  },
+  {
+    key: "radiko",
+    label: "radiko",
+    urlKey: "platformUrl",
+    isTarget: (item) =>
+      item.workType === "radio" &&
+      Boolean(item.platformUrl)
+  },
+  {
+    key: "message",
+    label: "メッセージ",
+    urlKey: "messageUrl",
+    isTarget: (item) =>
+      Boolean(item.messageUrl)
+  },
+  {
+    key: "access",
+    label: "アクセス",
+    urlKey: "accessUrl",
+    isTarget: (item) =>
+      Boolean(item.accessUrl)
+  }
 ];
 
 let MEMBER_WORKS = [];
@@ -31,30 +54,40 @@ async function initializeMemberWorks() {
 
 function renderMemberWorks() {
   const visibleItems = MEMBER_WORKS
-    .filter(isVisibleMemberWork)
-    .sort(sortMemberWorks);
+    .filter(isVisibleMemberWork);
 
-  const grouped = groupByWeekday(visibleItems);
+  const grouped = groupByLinkType(visibleItems);
 
   memberWorksArea.innerHTML = "";
 
-  grouped.forEach(({ weekday, items }) => {
+  grouped.forEach(({ group, items }) => {
     const section = document.createElement("section");
 
-    section.className = "member-weekday-group";
+    section.className = `member-link-group member-link-group-${group.key}`;
 
     section.innerHTML = `
       <div class="member-weekday-heading">
-        ${WEEKDAY_LABELS[weekday]}
+        ${group.label}
       </div>
 
       <div class="member-weekday-items">
-        ${items.map(createWorkItemHtml).join("")}
+        ${items.map((item) => createWorkItemHtml(item, group)).join("")}
       </div>
     `;
 
     memberWorksArea.appendChild(section);
   });
+}
+
+function groupByLinkType(items) {
+  return MEMBER_WORK_LINK_GROUPS
+    .map((group) => ({
+      group,
+      items: items
+        .filter(group.isTarget)
+        .sort(sortMemberWorks)
+    }))
+    .filter(({ items }) => items.length > 0);
 }
 
 function isVisibleMemberWork(item) {
@@ -80,26 +113,26 @@ function isVisibleMemberWork(item) {
 }
 
 function sortMemberWorks(a, b) {
-  const aWeekday = getWeekday(a);
-  const bWeekday = getWeekday(b);
+  const aDateValue = getDateValue(a);
+  const bDateValue = getDateValue(b);
 
-  if (aWeekday !== bWeekday) {
-    return aWeekday - bWeekday;
+  if (aDateValue !== bDateValue) {
+    return aDateValue - bDateValue;
   }
 
   return getTimeValue(a) - getTimeValue(b);
 }
 
-function getWeekday(item) {
-  if (typeof item.weekday !== "undefined") {
-    return item.weekday;
+function getDateValue(item) {
+  if (item.dateTime) {
+    return Number(item.dateTime.slice(0, 8));
   }
 
-  return new Date(
-    item.dateTime.slice(0, 4),
-    item.dateTime.slice(4, 6) - 1,
-    item.dateTime.slice(6, 8)
-  ).getDay();
+  if (item.from) {
+    return Number(item.from.slice(0, 8));
+  }
+
+  return 0;
 }
 
 function getTimeValue(item) {
@@ -107,32 +140,21 @@ function getTimeValue(item) {
     return Number(item.time.replace(":", ""));
   }
 
-  return Number(item.dateTime.slice(8, 12));
+  if (item.dateTime) {
+    return Number(item.dateTime.slice(8, 12));
+  }
+
+  if (item.from) {
+    return Number(item.from.slice(8, 12));
+  }
+
+  return 0;
 }
 
-function groupByWeekday(items) {
-  const map = new Map();
-
-  items.forEach((item) => {
-    const weekday = getWeekday(item);
-
-    if (!map.has(weekday)) {
-      map.set(weekday, []);
-    }
-
-    map.get(weekday).push(item);
-  });
-
-  return Array.from(map.entries()).map(([weekday, groupItems]) => ({
-    weekday,
-    items: groupItems
-  }));
-}
-
-function createWorkItemHtml(item) {
+function createWorkItemHtml(item, group) {
   return `
     <article class="member-work-row">
-      <span class="member-work-type ${item.workType}">
+      <span class="member-work-type ${escapeHtml(item.workType)}">
         ${getWorkTypeLabel(item.workType)}
       </span>
 
@@ -145,8 +167,7 @@ function createWorkItemHtml(item) {
       </span>
 
       <div class="member-work-links">
-        ${buildPlatformLink(item)}
-        ${buildMessageLink(item)}
+        ${buildGroupLink(item, group)}
       </div>
     </article>
   `;
@@ -158,59 +179,46 @@ function getWorkTypeLabel(workType) {
     radio: "RADIO"
   };
 
-  return labelMap[workType] || workType.toUpperCase();
+  return labelMap[workType] || String(workType).toUpperCase();
 }
 
-function buildPlatformLink(item) {
-  if (!item.platformUrl) {
-    return "";
-  }
+function buildGroupLink(item, group) {
+  const url = item[group.urlKey];
 
-  const labelMap = {
-    tv: "TVer",
-    radio: "radiko"
-  };
-
-  const label =
-    item.platformLabel ||
-    labelMap[item.workType] ||
-    "リンク";
-
-  return `
-    <a
-      class="member-work-link"
-      href="${item.platformUrl}"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      ${label}
-    </a>
-  `;
-}
-
-function buildMessageLink(item) {
-  if (!item.messageUrl) {
+  if (!url) {
     return "";
   }
 
   return `
     <a
       class="member-work-link"
-      href="${item.messageUrl}"
+      href="${escapeHtml(url)}"
       target="_blank"
       rel="noopener noreferrer"
     >
-      メッセージ
+      ${escapeHtml(getProgramDisplayName(item))}
     </a>
   `;
+}
+
+function getProgramDisplayName(item) {
+  return item.programName || item.program || item.title || "リンク";
 }
 
 function buildMetaText(item) {
   if (item.time) {
-    return `${item.time}〜`;
+    return `${escapeHtml(item.time)}〜`;
   }
 
-  return formatDateTime(item.dateTime);
+  if (item.dateTime) {
+    return formatDateTime(item.dateTime);
+  }
+
+  if (item.from) {
+    return formatDateTime(item.from);
+  }
+
+  return "";
 }
 
 function formatDateTime(value) {
@@ -233,7 +241,7 @@ function getTodayYmd() {
 }
 
 function escapeHtml(value) {
-  return String(value)
+  return String(value ?? "")
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
