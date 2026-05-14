@@ -58,14 +58,10 @@ function renderMemberWorks() {
 }
 
 function isVisibleMemberWork(item) {
-  if (item.dateTime) {
-    const expireDays = item.expireDays ?? 7;
+  if (item.to) {
+    const today = getTodayYmd();
 
-    const expireAt =
-      parseDateTime(item.dateTime) +
-      expireDays * 24 * 60 * 60 * 1000;
-
-    if (Date.now() > expireAt) {
+    if (today > item.to) {
       return false;
     }
   }
@@ -159,10 +155,7 @@ function createWorkItemHtml(item) {
 function getWorkTypeLabel(workType) {
   const labelMap = {
     tv: "TV",
-    radio: "RADIO",
-    web: "WEB",
-    magazine: "MAG",
-    live: "LIVE"
+    radio: "RADIO"
   };
 
   return labelMap[workType] || workType.toUpperCase();
@@ -175,10 +168,7 @@ function buildPlatformLink(item) {
 
   const labelMap = {
     tv: "TVer",
-    radio: "radiko",
-    web: "WEB",
-    magazine: "WEB",
-    live: "詳細"
+    radio: "radiko"
   };
 
   const label =
@@ -232,14 +222,14 @@ function formatDateTime(value) {
   return `${month}/${day} ${hour}:${minute}`;
 }
 
-function parseDateTime(value) {
-  return new Date(
-    Number(value.slice(0, 4)),
-    Number(value.slice(4, 6)) - 1,
-    Number(value.slice(6, 8)),
-    Number(value.slice(8, 10)),
-    Number(value.slice(10, 12))
-  ).getTime();
+function getTodayYmd() {
+  const now = new Date();
+
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+
+  return `${year}${month}${day}`;
 }
 
 function escapeHtml(value) {
