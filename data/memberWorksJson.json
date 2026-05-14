@@ -1,13 +1,14 @@
 [
   {
-    "title": "hourz",
+    "title": "hoursz",
     "workType": "radio",
     "members": [
       "fuma"
     ],
     "weekday": 0,
     "time": "11:00",
-    "platformUrl": "https://radiko.jp/r_seasons/10029508"
+    "platformUrl": "https://radiko.jp/r_seasons/10029508",
+    "messageUrl": "https://www.tfm.co.jp/f/hoursz/message"
   },
   {
     "title": "timeleszファミリア",
@@ -48,7 +49,9 @@
       "hara"
     ],
     "weekday": 2,
-    "time": "22:00"
+    "time": "22:00",
+    "platformUrl": "https://radiko.jp/share/?t=20260512222005&sid=QRR",
+    "messageUrl": "https://form.run/@reco"
   },
   {
     "title": "夜ノ音",
@@ -79,7 +82,7 @@
     ],
     "weekday": 3,
     "time": "21:00",
-    "to": "20260630",
+    "to": "20260701",
     "platformUrl": "https://tver.jp/series/srskkomxag"
   },
   {
@@ -130,6 +133,7 @@
     ],
     "weekday": 6,
     "time": "16:00",
+    "platformUrl": "https://radiko.jp/r_seasons/10032510",
     "messageUrl": "and@tbs.co.jp",
     "accessUrl": "https://www.tbsradio.jp/articles/program/and/"
   },
