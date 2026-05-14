@@ -925,9 +925,7 @@ h1 {
   text-decoration: underline;
   cursor: pointer;
 }
-/* =========================
-   モーダル
-========================= */
+
 .modal-overlay {
   position: fixed;
   inset: 0;
