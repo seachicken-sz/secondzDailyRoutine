@@ -126,6 +126,13 @@ function isVisibleMemberWork(item) {
 }
 
 function sortMemberWorks(a, b) {
+  const aMemberPriority = getMemberPriority(a);
+  const bMemberPriority = getMemberPriority(b);
+
+  if (aMemberPriority !== bMemberPriority) {
+    return aMemberPriority - bMemberPriority;
+  }
+
   const aToValue = getToValue(a);
   const bToValue = getToValue(b);
 
