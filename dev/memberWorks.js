@@ -63,14 +63,16 @@ function renderMemberWorks() {
   grouped.forEach(({ group, items }) => {
     const section = document.createElement("section");
 
-    section.className = `member-link-group member-link-group-${group.key}`;
+    section.className = `member-link-section member-link-section-${group.key}`;
 
     section.innerHTML = `
-      <div class="member-weekday-heading">
-        ${group.label}
+      <div class="member-link-section-header">
+        <h3 class="member-link-section-title">
+          ${escapeHtml(group.label)}
+        </h3>
       </div>
 
-      <div class="member-weekday-items">
+      <div class="member-link-list">
         ${items.map((item) => createWorkItemHtml(item, group)).join("")}
       </div>
     `;
@@ -103,8 +105,12 @@ function isVisibleMemberWork(item) {
     return true;
   }
 
-  if (item.members.includes("all")) {
+  if (Array.isArray(item.members) && item.members.includes("all")) {
     return true;
+  }
+
+  if (!Array.isArray(item.members)) {
+    return false;
   }
 
   return item.members.some((member) =>
@@ -137,7 +143,7 @@ function getDateValue(item) {
 
 function getTimeValue(item) {
   if (item.time) {
-    return Number(item.time.replace(":", ""));
+    return Number(String(item.time).replace(":", ""));
   }
 
   if (item.dateTime) {
@@ -153,81 +159,25 @@ function getTimeValue(item) {
 
 function createWorkItemHtml(item, group) {
   return `
-    <article class="member-work-row">
-      <span class="member-work-type ${escapeHtml(item.workType)}">
-        ${getWorkTypeLabel(item.workType)}
-      </span>
-
-      <span class="member-work-title">
-        ${escapeHtml(item.title)}
-      </span>
-
-      <span class="member-work-meta">
-        ${buildMetaText(item)}
-      </span>
-
-      <div class="member-work-links">
-        ${buildGroupLink(item, group)}
-      </div>
-    </article>
-  `;
-}
-
-function getWorkTypeLabel(workType) {
-  const labelMap = {
-    tv: "TV",
-    radio: "RADIO"
-  };
-
-  return labelMap[workType] || String(workType).toUpperCase();
-}
-
-function buildGroupLink(item, group) {
-  const url = item[group.urlKey];
-
-  if (!url) {
-    return "";
-  }
-
-  return `
     <a
-      class="member-work-link"
-      href="${escapeHtml(url)}"
+      class="member-work-link-card"
+      href="${escapeHtml(item[group.urlKey])}"
       target="_blank"
       rel="noopener noreferrer"
     >
-      ${escapeHtml(getProgramDisplayName(item))}
+      <span class="member-work-link-title">
+        ${escapeHtml(getProgramDisplayName(item))}
+      </span>
+
+      <span class="member-work-link-arrow" aria-hidden="true">
+        ›
+      </span>
     </a>
   `;
 }
 
 function getProgramDisplayName(item) {
   return item.programName || item.program || item.title || "リンク";
-}
-
-function buildMetaText(item) {
-  if (item.time) {
-    return `${escapeHtml(item.time)}〜`;
-  }
-
-  if (item.dateTime) {
-    return formatDateTime(item.dateTime);
-  }
-
-  if (item.from) {
-    return formatDateTime(item.from);
-  }
-
-  return "";
-}
-
-function formatDateTime(value) {
-  const month = value.slice(4, 6);
-  const day = value.slice(6, 8);
-  const hour = value.slice(8, 10);
-  const minute = value.slice(10, 12);
-
-  return `${month}/${day} ${hour}:${minute}`;
 }
 
 function getTodayYmd() {
