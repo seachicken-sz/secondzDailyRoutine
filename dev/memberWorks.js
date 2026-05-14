@@ -125,6 +125,14 @@ function isVisibleMemberWork(item) {
   );
 }
 
+function getMemberPriority(item) {
+  if (Array.isArray(item.members) && item.members.includes("all")) {
+    return 0;
+  }
+
+  return 1;
+}
+
 function sortMemberWorks(a, b) {
   const aMemberPriority = getMemberPriority(a);
   const bMemberPriority = getMemberPriority(b);
