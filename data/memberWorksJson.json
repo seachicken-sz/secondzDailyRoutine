@@ -23,6 +23,18 @@
     "messageUrl": "https://www.tfm.co.jp/f/hoursz/message"
   },
   {
+    "title": "＆シノ！",
+    "workType": "radio",
+    "members": [
+      "shinozuka"
+    ],
+    "weekday": 6,
+    "time": "16:00",
+    "platformUrl": "https://radiko.jp/r_seasons/10032510",
+    "messageUrl": "mailto:and@tbs.co.jp",
+    "accessUrl": "https://www.tbsradio.jp/articles/program/and/"
+  },
+  {
     "title": "タイムレスマン",
     "workType": "tv",
     "members": [
@@ -41,6 +53,27 @@
     "weekday": 0,
     "time": "14:00",
     "platformUrl": "https://tver.jp/series/srg8u5vpld"
+  },
+  {
+    "title": "ネイチャーティーチャー",
+    "workType": "tv",
+    "members": [
+      "hara",
+      "shinozuka"
+    ],
+    "weekday": 2,
+    "time": "11:56",
+    "platformUrl": "https://tver.jp/series/sr9q4n3zsc"
+  },
+  {
+    "title": "ニカゲーム",
+    "workType": "tv",
+    "members": [
+      "inomata"
+    ],
+    "weekday": 3,
+    "time": "25:55",
+    "platformUrl": "https://tver.jp/series/srkdvb9xtyj"
   },
   {
     "title": "ザ！鉄腕！DASH!!",
@@ -74,38 +107,6 @@
     "platformUrl": "https://tver.jp/series/srv5ck6m6m"
   },
   {
-    "title": "ネイチャーティーチャー",
-    "workType": "tv",
-    "members": [
-      "hara",
-      "shinozuka"
-    ],
-    "weekday": 2,
-    "time": "11:56",
-    "platformUrl": "https://tver.jp/series/sr9q4n3zsc"
-  },
-  {
-    "title": "ボーダレス",
-    "workType": "tv",
-    "members": [
-      "shori"
-    ],
-    "weekday": 3,
-    "time": "21:00",
-    "to": "20260701",
-    "platformUrl": "https://tver.jp/series/srskkomxag"
-  },
-  {
-    "title": "ニカゲーム",
-    "workType": "tv",
-    "members": [
-      "inomata"
-    ],
-    "weekday": 3,
-    "time": "25:55",
-    "platformUrl": "https://tver.jp/series/srkdvb9xtyj"
-  },
-  {
     "title": "何かオモシロいコトないの？",
     "workType": "tv",
     "members": [
@@ -126,16 +127,15 @@
     "platformUrl": "https://tver.jp/series/sr8y9zb5qo"
   },
   {
-    "title": "＆シノ！",
-    "workType": "radio",
+    "title": "ボーダレス",
+    "workType": "tv",
     "members": [
-      "shinozuka"
+      "shori"
     ],
-    "weekday": 6,
-    "time": "16:00",
-    "platformUrl": "https://radiko.jp/r_seasons/10032510",
-    "messageUrl": "mailto:and@tbs.co.jp",
-    "accessUrl": "https://www.tbsradio.jp/articles/program/and/"
+    "weekday": 3,
+    "time": "21:00",
+    "to": "20260701",
+    "platformUrl": "https://tver.jp/series/srskkomxag"
   },
   {
     "title": "偉人救助美術館",
