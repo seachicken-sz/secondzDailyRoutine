@@ -768,125 +768,131 @@ h1 {
 }
 
 /* =========================
-   曜日
+   リンクカテゴリ
 ========================= */
 
-.member-weekday-group {
-  margin-top: 0.75rem;
+.member-link-section {
   display: grid;
-  gap: 6px;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: var(--shadow-card-soft);
+  backdrop-filter: blur(12px);
 }
 
-.member-weekday-items {
-  display: grid;
-  gap: 6px;
+.member-link-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.member-weekday-heading {
+.member-link-section-title {
+  margin: 0;
   color: var(--color-brand);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 900;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
+}
+
+.member-link-list {
+  display: grid;
+  gap: 8px;
 }
 
 /* =========================
-   リスト行
+   リンクカード
 ========================= */
-.member-work-row {
-  display: grid;
 
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  grid-template-areas:
-    "type title meta"
-    ".    links links";
+.member-work-link-card {
+  min-width: 0;
+  min-height: 44px;
+  padding: 11px 12px 11px 14px;
 
-  column-gap: 8px;
-  row-gap: 2px;
-
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.92),
+      rgba(255, 255, 255, 0.62)
+    );
+
+  color: var(--color-text);
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.86);
+
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.16s ease,
+    border-color 0.16s ease;
 }
 
-.member-work-type {
-  grid-area: type;
+.member-work-link-card:active {
+  transform: scale(0.98);
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.86);
+}
 
+.member-work-link-title {
+  min-width: 0;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 850;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.member-work-link-arrow {
   flex-shrink: 0;
-
-  min-width: 42px;
-  height: 20px;
-
+  width: 22px;
+  height: 22px;
   border-radius: 999px;
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  color: white;
+  background: var(--color-brand);
+  color: var(--color-text-inverse);
 
-  font-size: 9px;
+  font-size: 18px;
   font-weight: 900;
-  letter-spacing: 0.08em;
+  line-height: 1;
 }
 
-.member-work-type.tv {
-  background: #ff6b6b;
+/* =========================
+   カテゴリ別 微調整
+========================= */
+
+.member-link-section-tver .member-link-section-title::before {
+  content: "📺 ";
 }
 
-.member-work-type.radio {
-  background: #8b5cf6;
+.member-link-section-radiko .member-link-section-title::before {
+  content: "📻 ";
 }
 
-.member-work-type.web {
-  background: #06b6d4;
+.member-link-section-message .member-link-section-title::before {
+  content: "💌 ";
 }
 
-.member-work-type.magazine {
-  background: #22c55e;
+.member-link-section-access .member-link-section-title::before {
+  content: "🔗 ";
 }
-
-.member-work-type.live {
-  background: #f59e0b;
-}
-
-.member-work-title {
-  grid-area: title;
-  min-width: 0;
-  color: var(--color-text);
-  font-size: 14px;
-  font-weight: 800;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.member-work-meta {
-  grid-area: meta;
-  flex-shrink: 0;
-  color: var(--color-text-muted);
-  font-size: 12px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.member-work-links {
-  grid-area: links;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.member-work-link {
-  flex-shrink: 0;
-  color: var(--color-brand);
-  font-size: 12px;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-.member-work-link::after {
-  content: "›";
-  margin-left: 2px;
-}
-
 /* =========================
    テキストリンク
 ========================= */
