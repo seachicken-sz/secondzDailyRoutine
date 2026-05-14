@@ -71,16 +71,19 @@ function renderMemberWorks() {
 
     section.innerHTML = `
       <div class="member-link-section-header">
-        <h2 class="member-link-section-title">
+        <h3 class="member-link-section-title">
           ${escapeHtml(group.label)}
-        </h2>
+        </h3>
+    
+        <p class="member-link-section-description">
+          ${escapeHtml(group.description)}
+        </p>
       </div>
-
+    
       <div class="member-link-list">
         ${items.map((item) => createWorkItemHtml(item, group)).join("")}
       </div>
     `;
-
     memberWorksArea.appendChild(section);
   });
 }
