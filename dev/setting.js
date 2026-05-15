@@ -10,27 +10,27 @@ const setupGuideState = {
 const SETUP_GUIDE_IMAGES = {
   x: {
     title: "Xからブラウザで開く方法",
-    src: "./img/setup/setup-x-browser.png",
+    src: "./img/setting/setup-x-browser.png",
     alt: "XからSafariまたはChromeで開く手順",
   },
   threads: {
     title: "Threadsからブラウザで開く方法",
-    src: "./img/setup/setup-threads-browser.png",
+    src: "./img/setting/setup-threads-browser.png",
     alt: "ThreadsからSafariまたはChromeで開く手順",
   },
   ios: {
     title: "iPhoneでホーム画面に追加する方法",
-    src: "./img/setup/setup-ios-safari.png",
+    src: "./img/setting/setup-ios-safari.png",
     alt: "iPhoneのSafariでホーム画面に追加する手順",
   },
   android: {
     title: "Androidでホーム画面に追加する方法",
-    src: "./img/setup/setup-android-chrome.png",
+    src: "./img/setting/setup-android-chrome.png",
     alt: "AndroidのChromeでホーム画面に追加する手順",
   },
   checkLaunch: {
     title: "最後にここを確認",
-    src: "./img/setup/setup-check-launch.png",
+    src: "./img/setting/setup-check-launch.png",
     alt: "ホーム画面のアイコンから起動できているか確認する画像",
   },
 };
