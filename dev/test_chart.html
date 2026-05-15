@@ -334,30 +334,31 @@
             }
           ]
         },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: {
-            y: {
-              reverse: true,
-              min: 1,
-              max: 50,
-              ticks: {
-                stepSize: 10
-              }
-            },
-            x: {
-              ticks: {
-                maxTicksLimit: 8
-              }
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            }
-          }
-        }
+options: {
+  responsive: true,
+  maintainAspectRatio: false,
+  resizeDelay: 100,
+  scales: {
+    y: {
+      reverse: true,
+      min: 1,
+      max: 50,
+      ticks: {
+        stepSize: 10
+      }
+    },
+    x: {
+      ticks: {
+        maxTicksLimit: 8
+      }
+    }
+  },
+  plugins: {
+    legend: {
+      display: false
+    }
+  }
+}
       });
     }
 
