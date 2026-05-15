@@ -22,11 +22,6 @@ const SETUP_GUIDE_IMAGES = {
     src: `${SETUP_GUIDE_IMAGE_BASE_PATH}setup-threads-browser.png`,
     alt: "ThreadsからSafariまたはChromeで開く手順",
   },
-  browser: {
-    title: "ブラウザアプリで開いている場合",
-    src: `${SETUP_GUIDE_IMAGE_BASE_PATH}setup-browser.png`,
-    alt: "SafariまたはChromeなどのブラウザアプリで開いている場合の案内",
-  },
   ios: {
     title: "iPhoneでホーム画面に追加する方法",
     src: `${SETUP_GUIDE_IMAGE_BASE_PATH}setup-ios-safari.png`,
@@ -62,7 +57,8 @@ function initializeSetupGuide() {
       setActiveSetupButton(openPlaceButtons, button);
       resetSetupButtons(deviceTypeButtons);
 
-      renderSetupGuide();
+      renderOpenPlaceGuide();
+      clearDeviceGuide();
       showSetupDeviceQuestion();
     });
   });
@@ -72,31 +68,57 @@ function initializeSetupGuide() {
       setupGuideState.deviceType = button.dataset.deviceType;
 
       setActiveSetupButton(deviceTypeButtons, button);
-      renderSetupGuide();
+      renderDeviceGuide();
     });
   });
 }
 
-function renderSetupGuide() {
-  const area = document.getElementById("setupGuideArea");
+function renderOpenPlaceGuide() {
+  const area = document.getElementById("setupOpenPlaceGuideArea");
 
   if (!area) {
     return;
   }
 
-  const openPlaceGuide = getOpenPlaceGuideImage();
-  const deviceGuide = getDeviceGuideImage();
+  const guide = getOpenPlaceGuideImage();
 
-  if (!openPlaceGuide) {
-    clearSetupGuide();
+  if (!guide) {
+    area.innerHTML = "";
+    area.classList.add("hidden");
     return;
   }
 
   area.innerHTML = `
     <div class="setup-guide-card">
-      ${buildSetupGuideImageHtml(openPlaceGuide)}
+      ${buildSetupGuideImageHtml(guide)}
 
-      ${deviceGuide ? buildSetupDeviceGuideHtml(deviceGuide) : buildSetupGuideNoteHtml()}
+      <p class="setup-guide-note">
+        ブラウザで開けたら、続けて下の「② 使っている端末は？」を選んでね。
+      </p>
+    </div>
+  `;
+
+  area.classList.remove("hidden");
+}
+
+function renderDeviceGuide() {
+  const area = document.getElementById("setupDeviceGuideArea");
+
+  if (!area) {
+    return;
+  }
+
+  const guide = getDeviceGuideImage();
+
+  if (!guide) {
+    clearDeviceGuide();
+    return;
+  }
+
+  area.innerHTML = `
+    <div class="setup-guide-card">
+      ${buildSetupGuideImageHtml(guide)}
+      ${buildSetupCheckLaunchHtml()}
     </div>
   `;
 
@@ -110,10 +132,6 @@ function getOpenPlaceGuideImage() {
 
   if (setupGuideState.openPlace === "threads") {
     return SETUP_GUIDE_IMAGES.threads;
-  }
-
-  if (setupGuideState.openPlace === "browser") {
-    return SETUP_GUIDE_IMAGES.browser;
   }
 
   return null;
@@ -146,15 +164,6 @@ function buildSetupGuideImageHtml(guide) {
   `;
 }
 
-function buildSetupDeviceGuideHtml(deviceGuide) {
-  return `
-    <div class="setup-device-block">
-      ${buildSetupGuideImageHtml(deviceGuide)}
-      ${buildSetupCheckLaunchHtml()}
-    </div>
-  `;
-}
-
 function buildSetupCheckLaunchHtml() {
   const checkGuide = SETUP_GUIDE_IMAGES.checkLaunch;
 
@@ -174,26 +183,6 @@ function buildSetupCheckLaunchHtml() {
       </p>
     </div>
   `;
-}
-
-function buildSetupGuideNoteHtml() {
-  if (setupGuideState.openPlace === "x" || setupGuideState.openPlace === "threads") {
-    return `
-      <p class="setup-guide-note">
-        ブラウザで開けたら、続けて下の「② 使っている端末は？」を選んでね。
-      </p>
-    `;
-  }
-
-  if (setupGuideState.openPlace === "browser") {
-    return `
-      <p class="setup-guide-note">
-        続けて下の「② 使っている端末は？」を選んでね。
-      </p>
-    `;
-  }
-
-  return "";
 }
 
 function setActiveSetupButton(buttons, activeButton) {
@@ -224,8 +213,19 @@ function hideSetupDeviceQuestion() {
   }
 }
 
-function clearSetupGuide() {
-  const area = document.getElementById("setupGuideArea");
+function clearOpenPlaceGuide() {
+  const area = document.getElementById("setupOpenPlaceGuideArea");
+
+  if (!area) {
+    return;
+  }
+
+  area.innerHTML = "";
+  area.classList.add("hidden");
+}
+
+function clearDeviceGuide() {
+  const area = document.getElementById("setupDeviceGuideArea");
 
   if (!area) {
     return;
@@ -245,5 +245,6 @@ function resetSetupGuide() {
   resetSetupButtons(openPlaceButtons);
   resetSetupButtons(deviceTypeButtons);
   hideSetupDeviceQuestion();
-  clearSetupGuide();
+  clearOpenPlaceGuide();
+  clearDeviceGuide();
 }
