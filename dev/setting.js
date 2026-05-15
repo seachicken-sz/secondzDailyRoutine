@@ -93,7 +93,7 @@ function renderOpenPlaceGuide() {
       ${buildSetupGuideImageHtml(guide)}
 
       <p class="setup-guide-note">
-        ブラウザで開けたら、続けて下の「② 使っている端末は？」を選んでね。
+        ↓↓次のステップに進んでください！
       </p>
     </div>
   `;
@@ -179,7 +179,7 @@ function buildSetupCheckLaunchHtml() {
       >
 
       <p class="setup-guide-note">
-        ホーム画面に追加できたら、次からは必ずホーム画面のアイコンから開いてね。
+        ホーム画面に追加されたアイコンをタップして起動してください！
       </p>
     </div>
   `;
