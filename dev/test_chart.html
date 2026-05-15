@@ -168,12 +168,16 @@
 .chart-canvas-wrap {
   position: relative;
   width: 100%;
-  height: 140px;
+  height: 135px;
+  max-height: 135px;
+  overflow: hidden;
 }
 
-canvas {
+.chart-canvas-wrap canvas {
+  display: block;
   width: 100% !important;
-  height: 100% !important;
+  height: 135px !important;
+  max-height: 135px !important;
 }
 
     .tables {
