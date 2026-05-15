@@ -263,13 +263,13 @@
 
     <section class="stats">
       <div class="stat">
-        <span class="stat-icon">👍</span>
+        <span class="stat-icon"><i class="ph ph-thumbs-up"></i></span>
         <span class="stat-label">いいね数</span>
         <strong id="likeCount"></strong>
       </div>
 
       <div class="stat">
-        <span class="stat-icon">★</span>
+        <span class="stat-icon"><i class="ph ph-trend-up"></i></span>
         <span class="stat-label">お気に入り数</span>
         <strong id="favoriteCount"></strong>
       </div>
@@ -375,7 +375,7 @@
 
       document.getElementById("programTitle").textContent = data.programTitle;
       document.getElementById("programMeta").innerHTML = `
-        ${data.broadcastDate}　放送　（ ${data.updatedAt}　更新 ）<br>
+        ${data.broadcastDate}　放送　（ <i class="ph ph-clock"></i> ${data.updatedAt}　更新 ）<br>
         ${data.subtitle}
       `;
 
