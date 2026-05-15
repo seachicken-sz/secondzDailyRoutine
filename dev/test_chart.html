@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TVer 48時間ランキング推移レポート</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: linear-gradient(135deg, #e8f7ff, #fff4fb);
+      color: #10213f;
+    }
+
+    .report {
+      width: 760px;
+      margin: 0 auto;
+      padding-bottom: 24px;
+      background:
+        radial-gradient(#bde8ff 1px, transparent 1px),
+        linear-gradient(135deg, #ffffff 0%, #f2fbff 55%, #fff1fa 100%);
+      background-size: 10px 10px, auto;
+      border-radius: 0 0 24px 24px;
+      overflow: hidden;
+    }
+
+    .top-bar {
+      background: #071d54;
+      color: white;
+      text-align: center;
+      font-weight: 700;
+      padding: 6px;
+      font-size: 18px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 22px 24px 14px;
+    }
+
+    .program-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .rank-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 0 28px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.92);
+      border-radius: 14px;
+      box-shadow: 0 3px 10px rgba(27, 70, 120, 0.22);
+      padding: 16px;
+      text-align: center;
+    }
+
+    .label {
+      display: inline-block;
+      color: white;
+      padding: 6px 28px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .blue { background: #0877df; }
+    .pink { background: #ec2386; }
+
+    .rank-main {
+      margin-top: 10px;
+      font-size: 76px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .rank-main span {
+      font-size: 36px;
+      margin-left: 8px;
+    }
+
+    .sub-rank {
+      margin: 10px auto 0;
+      width: 220px;
+      border-radius: 8px;
+      padding: 6px;
+      font-weight: 700;
+    }
+
+    .sub-rank.blue-bg {
+      background: #e9f4ff;
+      color: #0877df;
+    }
+
+    .sub-rank.pink-bg {
+      background: #fff0f7;
+      color: #ec2386;
+    }
+
+    .stats {
+      margin: 14px 28px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(27, 70, 120, 0.22);
+      overflow: hidden;
+      font-weight: 700;
+    }
+
+    .stat {
+      padding: 13px 20px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .stat + .stat {
+      border-left: 1px solid #d6e4ef;
+    }
+
+    .stat strong {
+      margin-left: 18px;
+      font-size: 26px;
+      color: #36bfd0;
+    }
+
+    .chart-section,
+    .table-section {
+      margin: 14px 28px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 3px 10px rgba(27, 70, 120, 0.22);
+      padding: 18px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .charts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .chart-title {
+      color: white;
+      text-align: center;
+      border-radius: 999px;
+      padding: 6px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    canvas {
+      width: 100%;
+      height: 210px;
+    }
+
+    .tables {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .table-title {
+      color: white;
+      text-align: center;
+      padding: 8px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      padding: 9px 12px;
+      font-size: 14px;
+      background: #f6f8fb;
+      margin-bottom: 4px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: #6c7a90;
+      padding: 4px 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="report">
+    <div class="top-bar">TVer 48時間ランキング推移レポート</div>
+
+    <section class="hero">
+      <div class="program-title">夜の音 -TOKYO MIDNIGHT MUSIC-</div>
+      <div class="meta">
+        2026/05/13　放送　（ 2026/05/14 11:00　更新 ）<br>
+        代理MC 田中樹！SEKAI NO OWARI & ちゃんみな豪華コラボ
+      </div>
+    </section>
+
+    <section class="rank-cards">
+      <div class="card">
+        <div class="label blue">バラエティランキング</div>
+        <div class="rank-main" style="color:#0877df;">13<span>位</span></div>
+        <div class="sub-rank blue-bg">36時間目　13　位</div>
+      </div>
+
+      <div class="card">
+        <div class="label pink">総合ランキング</div>
+        <div class="rank-main" style="color:#ec2386;">24<span>位</span></div>
+        <div class="sub-rank pink-bg">36時間目　32　位</div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat">👍　いいね数 <strong>11,000</strong></div>
+      <div class="stat">〽　お気に入り数 <strong>4.9万</strong></div>
+    </section>
+
+    <section class="chart-section">
+      <div class="section-title">ランキング推移（48時間）</div>
+
+      <div class="charts">
+        <div>
+          <div class="chart-title blue">バラエティ</div>
+          <canvas id="varietyChart"></canvas>
+        </div>
+
+        <div>
+          <div class="chart-title pink">総　合</div>
+          <canvas id="overallChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <div class="tables">
+        <div>
+          <div class="table-title blue">バラエティすぐ上ランキング</div>
+          <div class="row"><span>10</span><span>謎る！さんま御殿!!</span></div>
+          <div class="row"><span>11</span><span>あちこちオードリー</span></div>
+          <div class="row"><span>12</span><span>世界の果てまでイッテQ！</span></div>
+          <div class="row"><span>13</span><span>夜の音 -TOKYO MIDNIGHT MUSIC-</span></div>
+        </div>
+
+        <div>
+          <div class="table-title pink">総合すぐ上ランキング</div>
+          <div class="row"><span>29</span><span>102回目のプロポーズ</span></div>
+          <div class="row"><span>30</span><span>鍵のかかった部屋</span></div>
+          <div class="row"><span>31</span><span>今夜、秘密のキッチンで</span></div>
+          <div class="row"><span>32</span><span>夜の音 -TOKYO MIDNIGHT MUSIC-</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      データ出典：TVer。本データは個人がTVerをより楽しむために作成された資料であり、公式とは一切関係がありません。
+    </div>
+  </main>
+
+  <script>
+    const labels = Array.from({ length: 48 }, (_, i) => i + 1);
+
+    const varietyRanks = [
+      null, null, null, null, null, null, 50, 39, 31, 28, 30, 24,
+      25, 21, 20, 18, 16, 14, 13, 12, 12, 12, 12, 12,
+      13, 12, 12, 13, 12, 12, 13, null, null, null, null, null,
+      null, null, null, null, null, null, null, null, null, null, null, null
+    ];
+
+    const previousVarietyRanks = [
+      null, null, null, null, null, null, null, null, null, null, null, null,
+      null, null, null, null, null, null, null, null, 49, 43, 40, 38,
+      40, 42, 44, 46, 47, null, null, null, null, null, null, null,
+      null, null, null, null, null, null, null, null, null, null, null, null
+    ];
+
+    const overallRanks = [
+      null, null, null, null, null, null, null, null, null, null, null, 50,
+      47, 43, 38, 35, 31, 28, 25, 24, 24, 24, 24, 25,
+      25, 25, 26, 27, 27, 31, 32, 32, 32, null, null, null,
+      null, null, null, null, null, null, null, null, null, null, null, null
+    ];
+
+    function createRankingChart(canvasId, currentData, previousData, color) {
+      new Chart(document.getElementById(canvasId), {
+        type: "line",
+        data: {
+          labels,
+          datasets: [
+            {
+              label: "最新回",
+              data: currentData,
+              borderColor: color,
+              backgroundColor: color,
+              tension: 0.35,
+              pointRadius: 3,
+              spanGaps: true
+            },
+            {
+              label: "前回",
+              data: previousData,
+              borderColor: "#aaa",
+              backgroundColor: "#aaa",
+              tension: 0.35,
+              pointRadius: 3,
+              spanGaps: true
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              reverse: true,
+              min: 1,
+              max: 50,
+              ticks: {
+                stepSize: 10
+              }
+            },
+            x: {
+              ticks: {
+                maxTicksLimit: 8
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              display: false
+            }
+          }
+        }
+      });
+    }
+
+    createRankingChart("varietyChart", varietyRanks, previousVarietyRanks, "#0877df");
+    createRankingChart("overallChart", overallRanks, [], "#ec2386");
+  </script>
+</body>
+</html>
