@@ -1664,7 +1664,7 @@ h1 {
 
 
 /* ==================================================
-   初回設定ガイド
+   初回設定ガイドモーダル
 ================================================== */
 
 .setup-modal-content {
@@ -1707,6 +1707,7 @@ h1 {
   color: var(--color-text-main);
   font: inherit;
   font-weight: 700;
+  line-height: 1.5;
   text-align: left;
   cursor: pointer;
   box-shadow: var(--shadow-card-soft);
@@ -1724,7 +1725,6 @@ h1 {
 }
 
 .setup-guide-area {
-  margin-top: 2px;
   animation: setupGuideFadeIn 0.2s ease-out;
 }
 
@@ -1785,7 +1785,6 @@ h1 {
     transform: translateY(0);
   }
 }
-
 
 .hidden {
   display: none;
