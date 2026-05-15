@@ -120,8 +120,11 @@
     }
 
     .stat {
-      padding: 13px 20px;
-      text-align: center;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
       font-size: 18px;
     }
 
@@ -129,9 +132,28 @@
       border-left: 1px solid #d6e4ef;
     }
 
+    .stat-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #edf4fa;
+      color: #5b9eea;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .stat-label {
+      font-weight: 700;
+      color: #40536d;
+    }
+
     .stat strong {
-      margin-left: 18px;
-      font-size: 26px;
+      margin-left: 4px;
+      font-size: 28px;
       color: #36bfd0;
     }
 
@@ -156,6 +178,10 @@
       gap: 24px;
     }
 
+    .chart-box {
+      min-width: 0;
+    }
+
     .chart-title {
       color: white;
       text-align: center;
@@ -165,24 +191,19 @@
       margin-bottom: 8px;
     }
 
-.chart-box {
-  min-width: 0;
-}
+    .chart-canvas-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      overflow: hidden;
+    }
 
-.chart-canvas-wrap {
-  position: relative;
-  width: 100%;
-  height: auto;
-    aspect-ratio: 3 / 2;
-  overflow: hidden;
-}
-
-.chart-canvas-wrap canvas {
-  display: block;
-  width: 100% !important;
-  height: auto;
-    aspect-ratio: 3 / 2;
-}
+    .chart-canvas-wrap canvas {
+      display: block;
+      width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 3 / 2;
+    }
 
     .tables {
       display: grid;
@@ -221,68 +242,68 @@
     <div class="top-bar">TVer 48時間ランキング推移レポート</div>
 
     <section class="hero">
-      <div class="program-title">夜の音 -TOKYO MIDNIGHT MUSIC-</div>
-      <div class="meta">
-        2026/05/13　放送　（ 2026/05/14 11:00　更新 ）<br>
-        代理MC 田中樹！SEKAI NO OWARI & ちゃんみな豪華コラボ
-      </div>
+      <div id="programTitle" class="program-title"></div>
+      <div id="programMeta" class="meta"></div>
     </section>
 
     <section class="rank-cards">
       <div class="card">
         <div class="label blue">バラエティランキング</div>
-        <div class="rank-main" style="color:#0877df;">13<span>位</span></div>
-        <div class="sub-rank blue-bg">36時間目　13　位</div>
+        <div id="varietyCurrentRank" class="rank-main" style="color:#0877df;"></div>
+        <div id="varietyElapsedRank" class="sub-rank blue-bg"></div>
       </div>
 
       <div class="card">
         <div class="label pink">総合ランキング</div>
-        <div class="rank-main" style="color:#ec2386;">24<span>位</span></div>
-        <div class="sub-rank pink-bg">36時間目　32　位</div>
+        <div id="overallCurrentRank" class="rank-main" style="color:#ec2386;"></div>
+        <div id="overallElapsedRank" class="sub-rank pink-bg"></div>
       </div>
     </section>
 
     <section class="stats">
-      <div class="stat">👍　いいね数 <strong>11,000</strong></div>
-      <div class="stat">〽　お気に入り数 <strong>4.9万</strong></div>
+      <div class="stat">
+        <span class="stat-icon">👍</span>
+        <span class="stat-label">いいね数</span>
+        <strong id="likeCount"></strong>
+      </div>
+
+      <div class="stat">
+        <span class="stat-icon">★</span>
+        <span class="stat-label">お気に入り数</span>
+        <strong id="favoriteCount"></strong>
+      </div>
     </section>
 
     <section class="chart-section">
       <div class="section-title">ランキング推移（48時間）</div>
 
-<div class="charts">
-  <div class="chart-box">
-    <div class="chart-title blue">バラエティ</div>
-    <div class="chart-canvas-wrap">
-      <canvas id="varietyChart"></canvas>
-    </div>
-  </div>
+      <div class="charts">
+        <div class="chart-box">
+          <div class="chart-title blue">バラエティ</div>
+          <div class="chart-canvas-wrap">
+            <canvas id="varietyChart"></canvas>
+          </div>
+        </div>
 
-  <div class="chart-box">
-    <div class="chart-title pink">総　合</div>
-    <div class="chart-canvas-wrap">
-      <canvas id="overallChart"></canvas>
-    </div>
-  </div>
-</div>
+        <div class="chart-box">
+          <div class="chart-title pink">総　合</div>
+          <div class="chart-canvas-wrap">
+            <canvas id="overallChart"></canvas>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="table-section">
       <div class="tables">
         <div>
           <div class="table-title blue">バラエティすぐ上ランキング</div>
-          <div class="row"><span>10</span><span>謎る！さんま御殿!!</span></div>
-          <div class="row"><span>11</span><span>あちこちオードリー</span></div>
-          <div class="row"><span>12</span><span>世界の果てまでイッテQ！</span></div>
-          <div class="row"><span>13</span><span>夜の音 -TOKYO MIDNIGHT MUSIC-</span></div>
+          <div id="varietyNearbyRanking"></div>
         </div>
 
         <div>
           <div class="table-title pink">総合すぐ上ランキング</div>
-          <div class="row"><span>29</span><span>102回目のプロポーズ</span></div>
-          <div class="row"><span>30</span><span>鍵のかかった部屋</span></div>
-          <div class="row"><span>31</span><span>今夜、秘密のキッチンで</span></div>
-          <div class="row"><span>32</span><span>夜の音 -TOKYO MIDNIGHT MUSIC-</span></div>
+          <div id="overallNearbyRanking"></div>
         </div>
       </div>
     </section>
@@ -293,85 +314,197 @@
   </main>
 
   <script>
+    const report = {
+      programTitle: "夜の音 -TOKYO MIDNIGHT MUSIC-",
+      broadcastDate: "2026/05/13",
+      updatedAt: "2026/05/14 11:00",
+      subtitle: "代理MC 田中樹！SEKAI NO OWARI & ちゃんみな豪華コラボ",
+
+      likes: "11,000",
+      favorites: "4.9万",
+
+      variety: {
+        currentRank: 13,
+        elapsedHour: 36,
+        elapsedRank: 13,
+        currentData: [
+          null, null, null, null, null, null, 50, 39, 31, 28, 30, 24,
+          25, 21, 20, 18, 16, 14, 13, 12, 12, 12, 12, 12,
+          13, 12, 12, 13, 12, 12, 13, null, null, null, null, null,
+          null, null, null, null, null, null, null, null, null, null, null, null
+        ],
+        previousData: [
+          null, null, null, null, null, null, null, null, null, null, null, null,
+          null, null, null, null, null, null, null, null, 49, 43, 40, 38,
+          40, 42, 44, 46, 47, null, null, null, null, null, null, null,
+          null, null, null, null, null, null, null, null, null, null, null, null
+        ],
+        nearbyRanking: [
+          { rank: 10, title: "謎る！さんま御殿!!" },
+          { rank: 11, title: "あちこちオードリー" },
+          { rank: 12, title: "世界の果てまでイッテQ！" },
+          { rank: 13, title: "夜の音 -TOKYO MIDNIGHT MUSIC-" }
+        ]
+      },
+
+      overall: {
+        currentRank: 24,
+        elapsedHour: 36,
+        elapsedRank: 32,
+        currentData: [
+          null, null, null, null, null, null, null, null, null, null, null, 50,
+          47, 43, 38, 35, 31, 28, 25, 24, 24, 24, 24, 25,
+          25, 25, 26, 27, 27, 31, 32, 32, 32, null, null, null,
+          null, null, null, null, null, null, null, null, null, null, null, null
+        ],
+        previousData: [],
+        nearbyRanking: [
+          { rank: 29, title: "102回目のプロポーズ" },
+          { rank: 30, title: "鍵のかかった部屋" },
+          { rank: 31, title: "今夜、秘密のキッチンで" },
+          { rank: 32, title: "夜の音 -TOKYO MIDNIGHT MUSIC-" }
+        ]
+      }
+    };
+
     const labels = Array.from({ length: 48 }, (_, i) => i + 1);
 
-    const varietyRanks = [
-      null, null, null, null, null, null, 50, 39, 31, 28, 30, 24,
-      25, 21, 20, 18, 16, 14, 13, 12, 12, 12, 12, 12,
-      13, 12, 12, 13, 12, 12, 13, null, null, null, null, null,
-      null, null, null, null, null, null, null, null, null, null, null, null
-    ];
+    function renderReport(data) {
+      document.title = `${data.programTitle} ${data.broadcastDate}｜TVer 48時間ランキング推移レポート`;
 
-    const previousVarietyRanks = [
-      null, null, null, null, null, null, null, null, null, null, null, null,
-      null, null, null, null, null, null, null, null, 49, 43, 40, 38,
-      40, 42, 44, 46, 47, null, null, null, null, null, null, null,
-      null, null, null, null, null, null, null, null, null, null, null, null
-    ];
+      document.getElementById("programTitle").textContent = data.programTitle;
+      document.getElementById("programMeta").innerHTML = `
+        ${data.broadcastDate}　放送　（ ${data.updatedAt}　更新 ）<br>
+        ${data.subtitle}
+      `;
 
-    const overallRanks = [
-      null, null, null, null, null, null, null, null, null, null, null, 50,
-      47, 43, 38, 35, 31, 28, 25, 24, 24, 24, 24, 25,
-      25, 25, 26, 27, 27, 31, 32, 32, 32, null, null, null,
-      null, null, null, null, null, null, null, null, null, null, null, null
-    ];
+      document.getElementById("varietyCurrentRank").innerHTML = `${data.variety.currentRank}<span>位</span>`;
+      document.getElementById("varietyElapsedRank").textContent =
+        `${data.variety.elapsedHour}時間目　${data.variety.elapsedRank}　位`;
+
+      document.getElementById("overallCurrentRank").innerHTML = `${data.overall.currentRank}<span>位</span>`;
+      document.getElementById("overallElapsedRank").textContent =
+        `${data.overall.elapsedHour}時間目　${data.overall.elapsedRank}　位`;
+
+      document.getElementById("likeCount").textContent = data.likes;
+      document.getElementById("favoriteCount").textContent = data.favorites;
+
+      renderNearbyRanking("varietyNearbyRanking", data.variety.nearbyRanking);
+      renderNearbyRanking("overallNearbyRanking", data.overall.nearbyRanking);
+
+      createRankingChart("varietyChart", data.variety.currentData, data.variety.previousData, "#0877df");
+      createRankingChart("overallChart", data.overall.currentData, data.overall.previousData, "#ec2386");
+    }
+
+    function renderNearbyRanking(elementId, rankingList) {
+      document.getElementById(elementId).innerHTML = rankingList.map(item => `
+        <div class="row">
+          <span>${item.rank}</span>
+          <span>${item.title}</span>
+        </div>
+      `).join("");
+    }
 
     function createRankingChart(canvasId, currentData, previousData, color) {
+      const datasets = [
+        {
+          label: "最新回",
+          data: currentData,
+          borderColor: color,
+          backgroundColor: color,
+          tension: 0.35,
+          pointRadius: 3,
+          pointHoverRadius: 3,
+          borderWidth: 2,
+          spanGaps: true
+        }
+      ];
+
+      if (Array.isArray(previousData) && previousData.length > 0) {
+        datasets.push({
+          label: "前回",
+          data: previousData,
+          borderColor: "#aab3bd",
+          backgroundColor: "#aab3bd",
+          tension: 0.35,
+          pointRadius: 3,
+          pointHoverRadius: 3,
+          borderWidth: 2,
+          spanGaps: true
+        });
+      }
+
       new Chart(document.getElementById(canvasId), {
         type: "line",
         data: {
           labels,
-          datasets: [
-            {
-              label: "最新回",
-              data: currentData,
-              borderColor: color,
-              backgroundColor: color,
-              tension: 0.35,
-              pointRadius: 3,
-              spanGaps: true
-            },
-            {
-              label: "前回",
-              data: previousData,
-              borderColor: "#aaa",
-              backgroundColor: "#aaa",
-              tension: 0.35,
-              pointRadius: 3,
-              spanGaps: true
-            }
-          ]
+          datasets
         },
-options: {
-  responsive: true,
-  maintainAspectRatio: false,
-  resizeDelay: 100,
-  scales: {
-    y: {
-      reverse: true,
-      min: 1,
-      max: 50,
-      ticks: {
-        stepSize: 10
-      }
-    },
-    x: {
-      ticks: {
-        maxTicksLimit: 8
-      }
-    }
-  },
-  plugins: {
-    legend: {
-      display: false
-    }
-  }
-}
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          aspectRatio: 1.5,
+          resizeDelay: 100,
+          scales: {
+            y: {
+              reverse: true,
+              min: 1,
+              max: 50,
+              border: {
+                display: false
+              },
+              grid: {
+                display: true,
+                color: "#e5edf5",
+                drawTicks: false
+              },
+              ticks: {
+                stepSize: 10,
+                padding: 8,
+                callback: function(value) {
+                  if (value === 1) {
+                    return "👑 1";
+                  }
+                  return value;
+                }
+              }
+            },
+            x: {
+              border: {
+                display: false
+              },
+              grid: {
+                display: false,
+                drawTicks: false
+              },
+              ticks: {
+                maxTicksLimit: 8,
+                padding: 6
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              display: false
+            }
+          }
+        }
       });
     }
 
-    createRankingChart("varietyChart", varietyRanks, previousVarietyRanks, "#0877df");
-    createRankingChart("overallChart", overallRanks, [], "#ec2386");
+    renderReport(report);
+
+    /*
+    外部JSON化する場合は、上の renderReport(report); を消してこれに変更。
+
+    async function initializeReport() {
+      const response = await fetch("../data/tverRankingReport.json");
+      const data = await response.json();
+      renderReport(data);
+    }
+
+    initializeReport();
+    */
   </script>
 </body>
 </html>
