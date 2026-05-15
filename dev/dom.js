@@ -38,9 +38,9 @@ const homeBottomShareButtonElement = document.getElementById("homeBottomShareBut
 // DOM: 初回設定モーダル
 // ==================================================
 // 初回設定モーダル全体
-const howToModalElement = document.getElementById("howToModal");
+const howToModalElement = document.getElementById("firstSetupModal");
 // 初回設定モーダルの閉じるボタン
-const closeHowToButtonElement = document.getElementById("closeHowToButton");
+const closeHowToButtonElement = document.getElementById("closeFirstSetupModalButton");
 
 // ==================================================
 // DOM: 使い方モーダル
