@@ -22,6 +22,18 @@ const defaultRankingTheme = {
   bgClass: "blue-bg"
 };
 
+function getRankingThemeByIndex(index) {
+  return index === 1
+    ? rankingThemeMap.overall
+    : rankingThemeMap.variety;
+}
+
+function formatRank(rank) {
+  return rank === null || rank === undefined || rank === ""
+    ? "-"
+    : rank;
+}
+
 async function initializeReport() {
   const response = await fetch("./tverRankingReport.json");
   const data = await response.json();
@@ -62,17 +74,17 @@ function renderRankCards(rankings) {
     return;
   }
 
-  container.innerHTML = rankings.map((ranking) => {
-    const theme = getRankingTheme(ranking.type);
+  container.innerHTML = rankings.map((ranking, index) => {
+    const theme = getRankingThemeByIndex(index);
 
     return `
       <div class="card">
         <div class="label ${theme.labelClass}">${ranking.label}ランキング</div>
         <div class="rank-main" style="color:${theme.color};">
-          ${ranking.currentRank}<span>位</span>
+          ${formatRank(ranking.currentRank)}<span>位</span>
         </div>
         <div class="sub-rank ${theme.bgClass}">
-          ${ranking.elapsedHour}時間目　${ranking.elapsedRank}　位
+          ${ranking.elapsedHour}時間目　${formatRank(ranking.elapsedRank)}　位
         </div>
       </div>
     `;
@@ -92,7 +104,7 @@ function renderCharts(rankings) {
   }
 
   container.innerHTML = rankings.map((ranking, index) => {
-    const theme = getRankingTheme(ranking.type);
+    const theme = getRankingThemeByIndex(index);
     const canvasId = `rankingChart_${ranking.type || index}`;
 
     return `
@@ -135,7 +147,7 @@ function renderNearbyRankingTables(rankings) {
   }
 
   container.innerHTML = rankings.map((ranking) => {
-    const theme = getRankingTheme(ranking.type);
+    const theme = getRankingThemeByIndex(index);
 
     return `
       <div>
