@@ -1,4 +1,5 @@
 let reportData = null;
+let reportBundle = null;
 let rankingCharts = [];
 
 const labels = Array.from({ length: 48 }, (_, i) => i + 1);
@@ -32,22 +33,97 @@ async function initializeReport() {
   const response = await fetch("./tverRankingReport.json");
   const data = await response.json();
 
+  reportBundle = normalizeReportBundle(data);
+
+  const selectedProgramId = getInitialProgramId(reportBundle.reports);
+
+  setupProgramSelect(reportBundle.reports, selectedProgramId);
+  renderSelectedReport(selectedProgramId);
+  setupSaveImageButton();
+}
+
+function normalizeReportBundle(data) {
+  if (data && data.reports && typeof data.reports === "object") {
+    return data;
+  }
+
+  return {
+    updatedAt: data && data.updatedAt ? data.updatedAt : "",
+    reports: {
+      sample: data
+    }
+  };
+}
+
+function getInitialProgramId(reports) {
+  const params = new URLSearchParams(window.location.search);
+  const requestedId = params.get("id");
+
+  if (requestedId && reports[requestedId]) {
+    return requestedId;
+  }
+
+  return Object.keys(reports)[0] || "";
+}
+
+function setupProgramSelect(reports, selectedProgramId) {
+  const select = document.getElementById("programSelect");
+
+  if (!select) {
+    return;
+  }
+
+  const entries = Object.entries(reports);
+
+  select.innerHTML = entries.map(([programId, report]) => {
+    const selected = programId === selectedProgramId ? "selected" : "";
+
+    return `
+      <option value="${escapeHtml(programId)}" ${selected}>
+        ${escapeHtml(report.programTitle || programId)}
+      </option>
+    `;
+  }).join("");
+
+  select.addEventListener("change", () => {
+    const nextProgramId = select.value;
+    updateUrlProgramId(nextProgramId);
+    renderSelectedReport(nextProgramId);
+  });
+}
+
+function renderSelectedReport(programId) {
+  if (!reportBundle || !reportBundle.reports) {
+    return;
+  }
+
+  const data = reportBundle.reports[programId];
+
+  if (!data) {
+    return;
+  }
+
   reportData = data;
   renderReport(data);
-  setupSaveImageButton();
+}
+
+function updateUrlProgramId(programId) {
+  const url = new URL(window.location.href);
+  url.searchParams.set("id", programId);
+  history.replaceState(null, "", url.toString());
 }
 
 function renderReport(data) {
   document.title = `${data.programTitle} ${data.broadcastDate}｜TVer 48時間ランキング推移レポート`;
 
-  document.getElementById("programTitle").textContent = data.programTitle;
+  document.getElementById("programTitle").textContent = data.programTitle || "";
   document.getElementById("programMeta").innerHTML = `
-    ${data.broadcastDate}　放送　（ <i class="ph ph-clock"></i> ${data.updatedAt}　更新 ）<br>
-    ${data.subtitle}
+    ${data.broadcastDate || ""}　放送　（ <i class="ph ph-clock"></i> ${data.updatedAt || ""}　更新 ）<br>
+    ${data.subtitle || ""}
   `;
 
-  document.getElementById("likeCount").textContent = data.likes;
-  document.getElementById("favoriteCount").textContent = data.favorites;
+  document.getElementById("likeCount").textContent = data.likes || "";
+  document.getElementById("favoriteCount").textContent = data.favorites || "";
 
   destroyRankingCharts();
 
@@ -73,7 +149,7 @@ function renderRankCards(rankings) {
 
     return `
       <div class="card">
-        <div class="label ${theme.labelClass}">${ranking.label}ランキング</div>
+        <div class="label ${theme.labelClass}">${escapeHtml(ranking.label || "")}ランキング</div>
         <div class="rank-main" style="color:${theme.color};">
           ${formatRank(ranking.currentRank)}<span>位</span>
         </div>
@@ -103,7 +179,7 @@ function renderCharts(rankings) {
 
     return `
       <div class="chart-box">
-        <div class="chart-title ${theme.labelClass}">${ranking.label}</div>
+        <div class="chart-title ${theme.labelClass}">${escapeHtml(ranking.label || "")}</div>
         <div class="chart-canvas-wrap">
           <canvas id="${canvasId}"></canvas>
         </div>
@@ -145,7 +221,7 @@ function renderNearbyRankingTables(rankings) {
 
     return `
       <div>
-        <div class="table-title ${theme.labelClass}">${ranking.label}すぐ上ランキング</div>
+        <div class="table-title ${theme.labelClass}">${escapeHtml(ranking.label || "")}すぐ上ランキング</div>
         <div>
           ${createNearbyRankingHtml(ranking.nearbyRanking)}
         </div>
@@ -162,7 +238,7 @@ function createNearbyRankingHtml(rankingList) {
   return rankingList.map(item => `
     <div class="row">
       <span>${formatRank(item.rank)}</span>
-      <span>${item.title}</span>
+      <span>${escapeHtml(item.title || "")}</span>
     </div>
   `).join("");
 }
@@ -352,6 +428,15 @@ async function saveReportImage() {
     link.click();
     URL.revokeObjectURL(url);
   }, "image/png");
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 initializeReport();
