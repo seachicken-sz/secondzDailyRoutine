@@ -303,11 +303,19 @@ async function saveReportImage() {
     return;
   }
 
+  target.classList.add("is-capturing");
+
+  await new Promise(resolve => requestAnimationFrame(resolve));
+
   const canvas = await html2canvas(target, {
     scale: 2,
     useCORS: true,
-    backgroundColor: null
+    backgroundColor: null,
+    width: 760,
+    windowWidth: 760
   });
+
+  target.classList.remove("is-capturing");
 
   const fileName = `${reportData.programTitle}_${reportData.broadcastDate}_ranking-report.png`
     .replace(/[\\/:*?"<>|]/g, "-");
