@@ -227,6 +227,7 @@ body {
 }
 
 .save-area {
+  width:760px;
   display: flex;
   justify-content: center;
   margin: 24px 0 40px;
