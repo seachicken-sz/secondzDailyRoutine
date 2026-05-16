@@ -146,7 +146,7 @@ function renderNearbyRankingTables(rankings) {
     return;
   }
 
-  container.innerHTML = rankings.map((ranking) => {
+  container.innerHTML = rankings.map((ranking, index) => {
     const theme = getRankingThemeByIndex(index);
 
     return `
