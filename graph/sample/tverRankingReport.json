@@ -5,45 +5,95 @@
   "subtitle": "代理MC 田中樹！SEKAI NO OWARI & ちゃんみな豪華コラボ",
   "likes": "11,000",
   "favorites": "4.9万",
-  "variety": {
-    "currentRank": 13,
-    "elapsedHour": 36,
-    "elapsedRank": 13,
-    "currentData": [
-      null, null, null, null, null, null, 50, 39, 31, 28, 30, 24,
-      25, 21, 20, 18, 16, 14, 13, 12, 12, 12, 12, 12,
-      13, 12, 12, 13, 12, 12, 13, null, null, null, null, null,
-      null, null, null, null, null, null, null, null, null, null, null, null
-    ],
-    "previousData": [
-      null, null, null, null, null, null, null, null, null, null, null, null,
-      null, null, null, null, null, null, null, null, 49, 43, 40, 38,
-      40, 42, 44, 46, 47, null, null, null, null, null, null, null,
-      null, null, null, null, null, null, null, null, null, null, null, null
-    ],
-    "nearbyRanking": [
-      { "rank": 10, "title": "謎る！さんま御殿!!" },
-      { "rank": 11, "title": "あちこちオードリー" },
-      { "rank": 12, "title": "世界の果てまでイッテQ！" },
-      { "rank": 13, "title": "夜の音 -TOKYO MIDNIGHT MUSIC-" }
-    ]
-  },
-  "overall": {
-    "currentRank": 24,
-    "elapsedHour": 36,
-    "elapsedRank": 32,
-    "currentData": [
-      null, null, null, null, null, null, null, null, null, null, null, 50,
-      47, 43, 38, 35, 31, 28, 25, 24, 24, 24, 24, 25,
-      25, 25, 26, 27, 27, 31, 32, 32, 32, null, null, null,
-      null, null, null, null, null, null, null, null, null, null, null, null
-    ],
-    "previousData": [],
-    "nearbyRanking": [
-      { "rank": 29, "title": "102回目のプロポーズ" },
-      { "rank": 30, "title": "鍵のかかった部屋" },
-      { "rank": 31, "title": "今夜、秘密のキッチンで" },
-      { "rank": 32, "title": "夜の音 -TOKYO MIDNIGHT MUSIC-" }
-    ]
-  }
+  "rankings": [
+    {
+      "type": "variety",
+      "label": "バラエティ",
+      "currentRank": 13,
+      "elapsedHour": 36,
+      "elapsedRank": 13,
+      "currentPoints": [
+        { "hour": 6, "rank": 50 },
+        { "hour": 7, "rank": 39 },
+        { "hour": 8, "rank": 31 },
+        { "hour": 9, "rank": 28 },
+        { "hour": 10, "rank": 30 },
+        { "hour": 11, "rank": 24 },
+        { "hour": 12, "rank": 25 },
+        { "hour": 13, "rank": 21 },
+        { "hour": 14, "rank": 20 },
+        { "hour": 15, "rank": 18 },
+        { "hour": 16, "rank": 16 },
+        { "hour": 17, "rank": 14 },
+        { "hour": 18, "rank": 13 },
+        { "hour": 19, "rank": 12 },
+        { "hour": 20, "rank": 12 },
+        { "hour": 21, "rank": 12 },
+        { "hour": 22, "rank": 12 },
+        { "hour": 23, "rank": 12 },
+        { "hour": 24, "rank": 13 },
+        { "hour": 25, "rank": 12 },
+        { "hour": 26, "rank": 12 },
+        { "hour": 27, "rank": 13 },
+        { "hour": 28, "rank": 12 },
+        { "hour": 29, "rank": 12 },
+        { "hour": 30, "rank": 13 }
+      ],
+      "previousPoints": [
+        { "hour": 20, "rank": 49 },
+        { "hour": 21, "rank": 43 },
+        { "hour": 22, "rank": 40 },
+        { "hour": 23, "rank": 38 },
+        { "hour": 24, "rank": 40 },
+        { "hour": 25, "rank": 42 },
+        { "hour": 26, "rank": 44 },
+        { "hour": 27, "rank": 46 },
+        { "hour": 28, "rank": 47 }
+      ],
+      "nearbyRanking": [
+        { "rank": 10, "title": "謎る！さんま御殿!!" },
+        { "rank": 11, "title": "あちこちオードリー" },
+        { "rank": 12, "title": "世界の果てまでイッテQ！" },
+        { "rank": 13, "title": "夜の音 -TOKYO MIDNIGHT MUSIC-" }
+      ]
+    },
+    {
+      "type": "overall",
+      "label": "総合",
+      "currentRank": 24,
+      "elapsedHour": 36,
+      "elapsedRank": 32,
+      "currentPoints": [
+        { "hour": 11, "rank": 50 },
+        { "hour": 12, "rank": 47 },
+        { "hour": 13, "rank": 43 },
+        { "hour": 14, "rank": 38 },
+        { "hour": 15, "rank": 35 },
+        { "hour": 16, "rank": 31 },
+        { "hour": 17, "rank": 28 },
+        { "hour": 18, "rank": 25 },
+        { "hour": 19, "rank": 24 },
+        { "hour": 20, "rank": 24 },
+        { "hour": 21, "rank": 24 },
+        { "hour": 22, "rank": 24 },
+        { "hour": 23, "rank": 25 },
+        { "hour": 24, "rank": 25 },
+        { "hour": 25, "rank": 25 },
+        { "hour": 26, "rank": 26 },
+        { "hour": 27, "rank": 27 },
+        { "hour": 28, "rank": 27 },
+        { "hour": 29, "rank": 31 },
+        { "hour": 30, "rank": 32 },
+        { "hour": 31, "rank": 32 },
+        { "hour": 32, "rank": 32 }
+      ],
+      "previousPoints": [],
+      "nearbyRanking": [
+        { "rank": 29, "title": "102回目のプロポーズ" },
+        { "rank": 30, "title": "鍵のかかった部屋" },
+        { "rank": 31, "title": "今夜、秘密のキッチンで" },
+        { "rank": 32, "title": "夜の音 -TOKYO MIDNIGHT MUSIC-" }
+      ]
+    }
+  ]
 }
