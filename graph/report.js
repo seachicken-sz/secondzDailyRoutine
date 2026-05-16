@@ -9,7 +9,7 @@ const rankingThemeMap = {
     labelClass: "blue",
     bgClass: "blue-bg"
   },
-  overall: {
+  all: {
     color: "#ec2386",
     labelClass: "pink",
     bgClass: "pink-bg"
@@ -24,7 +24,7 @@ const defaultRankingTheme = {
 
 function getRankingThemeByIndex(index) {
   return index === 1
-    ? rankingThemeMap.overall
+    ? rankingThemeMap.all
     : rankingThemeMap.variety;
 }
 
