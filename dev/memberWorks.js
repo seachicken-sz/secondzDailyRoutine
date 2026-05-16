@@ -174,6 +174,10 @@ function buildRemainingText(item) {
 }
 
 function createWorkItemHtml(item, group) {
+  if (group.key === "tver") {
+    return createTverWorkItemHtml(item, group);
+  }
+
   return `
     <a
       class="member-work-link-card"
@@ -194,6 +198,35 @@ function createWorkItemHtml(item, group) {
       </span>
     </a>
   `;
+}
+
+function createTverWorkItemHtml(item, group) {
+  return `
+    <div class="member-work-link-card member-work-link-card-tver">
+      <span class="member-work-link-main member-work-link-main-tver">
+        <span class="member-work-link-title member-work-link-title-tver">
+          ${escapeHtml(getProgramDisplayName(item))}
+        </span>
+
+        ${buildRemainingText(item)}
+      </span>
+
+      <a
+        class="member-work-link-button member-work-link-button-tver"
+        href="${escapeHtml(item[group.urlKey])}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ${escapeHtml(getTverLinkText(item))}
+      </a>
+
+      <span class="member-work-link-reserved" aria-hidden="true"></span>
+    </div>
+  `;
+}
+
+function getTverLinkText(item) {
+  return item.platformLinkText || item.linkText || "TVer";
 }
 
 function getProgramDisplayName(item) {
