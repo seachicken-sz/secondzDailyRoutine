@@ -889,7 +889,6 @@ h1 {
   font-weight: 900;
   line-height: 1;
 }
-
 /* =========================
    カテゴリ別 微調整
 ========================= */
@@ -949,6 +948,14 @@ h1 {
 
 .member-work-link-reserved {
   min-width: 0;
+}
+
+.member-work-link-rank-area {
+  min-width: 0;
+}
+
+.member-work-link-button-rank {
+  width: 100%;
 }
 /* =========================
    テキストリンク
