@@ -43,7 +43,7 @@
   },
   {
     "listName": "ちょっと入力多いけどがんばろ！",
-    "lastFlag": true,
+    "lastFlag": false,
     "items": [
       {
         "id": "daily_lawson",
@@ -73,6 +73,71 @@
         "request-type": "text",
         "request-input": "メッセージ",
         "comment": "コーナーは「楽曲リクエスト」を選択！メッセージ欄にペースト！",
+        "input-flag": true
+      },
+      {
+        "id": "daily_alltimebest",
+        "name": "All-Time Best",
+        "short-name": "All-Time Best",
+        "url": "https://www.tfm.co.jp/f/atb/form",
+        "request-type": "text",
+        "request-input": "メッセージ&リクエスト",
+        "comment": "開いたらメッセージ&リクエスト欄にそのままペーストしてください！",
+        "input-flag": true
+      },
+      {
+        "id": "daily_tactyinthemoening",
+        "name": "FM802 TACTY IN THE MORNING",
+        "url": "https://funky802.com/service/Request/index/member/1106",
+        "request-type": "music",
+        "request-input": "リクエスト曲",
+        "comment": "開いたらリクエスト曲欄にそのままペーストしてください！",
+        "input-flag": true
+      }
+    ]
+  },
+  {
+    "listName": "もっといける？",
+    "lastFlag": true,
+    "items": [
+      {
+        "id": "daily_saturdayamusic",
+        "name": "FM802 SATURDAY AMUSIC ISLANDS  MORNING EDITION",
+        "short-name": "SATURDAY AMUSIC",
+        "url": "https://funky802.com/service/Request/index/member/1612",
+        "request-type": "music",
+        "request-input": "リクエスト曲",
+        "comment": "開いたらリクエスト曲欄にそのままペーストしてください！",
+        "input-flag": true
+      },
+      {
+        "id": "daily_osakanhot100",
+        "name": "FM802 OSAKAN HOT 100",
+        "short-name": "OSAKAN HOT 100",
+        "url": "https://funky802.com/service/Request/index/member/1712",
+        "request-type": "music",
+        "request-input": "リクエスト曲",
+        "comment": "開いたらリクエスト曲欄にそのままペーストしてください！",
+        "input-flag": true
+      },
+      {
+        "id": "daily_yakult1000music",
+        "name": "Kiss FM Yakult1000Music",
+        "short-name": "Yakult1000Music",
+        "url": "https://www.kiss-fm.co.jp/requestmessage/request/2779/",
+        "request-type": "music",
+        "request-input": "リクエスト曲",
+        "comment": "開いたらリクエスト曲欄にそのままペーストしてください！",
+        "input-flag": true
+      },
+      {
+        "id": "daily_allnightnippon",
+        "name": "オールナイトニッポン Music10",
+        "short-name": "オールナイトニッポン",
+        "url": "https://ssl.1242.com/aplform/form/aplform.php?fcode=m10&_ga=2.93010205.1251474916.1712812603-56772365.1712812603",
+        "request-type": "music",
+        "request-input": "リクエスト曲",
+        "comment": "開いたらリクエスト曲欄にそのままペーストしてください！",
         "input-flag": true
       }
     ]
