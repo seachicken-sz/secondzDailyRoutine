@@ -178,7 +178,7 @@
         <!--ホームのボタン-->
         <section class="home-button-area">
           <div class="text-link-row">
-            <button id="openHowToButton" class="text-link-button">導入方法</button>
+            <button id="openHowToButton" class="text-link-button">初回設定</button>
             <button id="openUsageButton" class="text-link-button">使い方</button>
             <button id="homeBottomShareButton" class="text-link-button">このツールを共有</button>
           </div>
@@ -534,60 +534,6 @@
     </section>
   </main>
 
-  <div id="howToModal" class="modal-overlay hidden">
-    <section class="modal-content" role="dialog" aria-modal="true" aria-labelledby="howToTitle">
-      <div class="modal-header">
-        <h2 id="howToTitle">初回設定</h2>
-        <button id="closeHowToButton" class="modal-close-button" type="button" aria-label="閉じる">
-          ×
-        </button>
-      </div>
-
-      <div class="modal-body">
-        <section class="how-to-section">
-          <p>
-            このツールは<strong>ホーム画面に追加</strong>することをお勧めします。 <br>          
-            ホーム画面に追加すると……
-          </p>
-          <ul>
-              <li>開くのが楽</li>
-              <li>アプリのように使えるので、USEN推しリクなどが終わったら左上の✖で閉じれば続きが超簡単</li>
-              <li>とにかく楽ちん</li>
-            </ul>
-          <p>以下にOS別の導入方法を記載しています。<br>
-            もし上手くいかないとき、難しいときはお気軽にお問い合わせください。<br>
-            <a href="https://mond.how/ja/tsunakan_r">mond</a>　<a href="https://x.com/tsunakan_r">X</a>
-          </p>
-        </section>
-        <section class="how-to-section">
-          <h3>iPhone(iPad) / iOS の場合</h3>
-          <ol>
-            <li>Safariでこのページを開く</li>
-            <li>「共有」ボタンを押す<br>「<i class="bi bi-box-arrow-up"></i>」こんなボタン</li>
-            <li>「<i class="bi bi-plus-square"></i>ホーム画面に追加」を選ぶ<br>表示されないときは「<i class="bi bi-chevron-down"></i>もっとみる」をタップし、探してみてください</li>
-            <li>「WEBアプリとして開く」の横が<i class="bi bi-toggle-on"></i>のようになっていること（オン状態）を確認し、右上の「追加」を押す</li>
-            <li>ホーム画面に「タムごとDaily」というアプリが追加されるので、それをタップして開いてください</li>
-          </ol>
-        </section>
-
-        <section class="how-to-section">
-          <h3>Android</h3>
-          <ol>
-            <li>Chromeでこのページを開く</li>
-            <li>右上のメニュー（<i class="bi bi-three-dots-vertical"></i>）を押す</li>
-            <li>「インストール」または「ホーム画面に追加」を選ぶ</li>
-            <li>「追加」または「はい」を選ぶ</li>
-            <li>ホーム画面に「タムごとDaily」というアプリが追加されるので、それをタップして開いてください</li>
-          </ol>
-        </section>
-
-        <p class="modal-note">
-          SpotifyやYouTubeがブラウザで開く場合は、各アプリを入れてログインしたうえで、Androidは対象アプリの「対応リンクを開く」をONにしてください。
-        </p>
-      </div>
-    </section>
-  </div>
-
   <div id="usageModal" class="modal-overlay hidden">
   <div class="modal-content">
     <div class="modal-header">
@@ -682,75 +628,7 @@
     </div>
   </div>
 </div>
-<div id="themeModal" class="modal-overlay hidden">
-  <div class="modal-content theme-modal-content" role="dialog" aria-modal="true" aria-labelledby="themeModalTitle">
-    <div class="modal-header">
-      <h2 id="themeModalTitle">テーマカラーチェンジ</h2>
-      <button type="button" id="closeThemeModalButton" class="modal-close-button" aria-label="閉じる">×</button>
-    </div>
-    <div class="modal-body">
-      <p class="theme-modal-description">
-        好きなカラーを選んでください。選んだカラーは自動で保存されます。
-      </p>
-      <div class="theme-heart-grid" aria-label="テーマカラー選択">
-        <button type="button" class="theme-heart-button" data-theme-button="red" aria-label="赤">
-          <span class="theme-heart-chip">
-            <span class="theme-heart-icon">♥</span>
-          </span>
-          <span class="theme-heart-label">Red</span>
-        </button>
-        <button type="button" class="theme-heart-button" data-theme-button="purple" aria-label="紫">
-            <span class="theme-heart-chip">
-              <span class="theme-heart-icon">♥</span>
-            </span>
-            <span class="theme-heart-label">Purple</span>
-          </button>
-          <button type="button" class="theme-heart-button" data-theme-button="green" aria-label="緑">
-            <span class="theme-heart-chip">
-              <span class="theme-heart-icon">♥</span>
-            </span>
-            <span class="theme-heart-label">Green</span>
-          </button>
-          <button type="button" class="theme-heart-button" data-theme-button="sky" aria-label="水色">
-            <span class="theme-heart-chip">
-              <span class="theme-heart-icon">♥</span>
-            </span>
-            <span class="theme-heart-label">Sky</span>
-          </button>
-          <button type="button" class="theme-heart-button" data-theme-button="lime" aria-label="黄緑">
-            <span class="theme-heart-chip">
-              <span class="theme-heart-icon">♥</span>
-            </span>
-              <span class="theme-heart-label">Yellow Green</span>
-          </button>
-          <button type="button" class="theme-heart-button" data-theme-button="pink" aria-label="ピンク">
-              <span class="theme-heart-chip">
-              <span class="theme-heart-icon">♥</span>
-            </span>
-            <span class="theme-heart-label">Pink</span>
-          </button>
-          <button type="button" class="theme-heart-button" data-theme-button="yellow" aria-label="黄色">
-            <span class="theme-heart-chip">
-              <span class="theme-heart-icon">♥</span>
-            </span>
-              <span class="theme-heart-label">Yellow</span>
-          </button>
-          <button type="button" class="theme-heart-button" data-theme-button="white" aria-label="白">
-            <span class="theme-heart-chip">
-              <span class="theme-heart-icon">♥</span>
-            </span>
-              <span class="theme-heart-label">White</span>
-          </button>
-          <button type="button" class="theme-heart-button theme-heart-button-hawaii" data-theme-button="normal" aria-label="ハワイ">
-            <span class="theme-heart-chip">
-              <span class="theme-heart-icon">🌺</span>
-            </span>
-            <span class="theme-heart-label">Emerald</span>
-          </button>
-        </div>  
-      </div>
-    </div>
-  </div>
+
   
   <div id="shareImageModal" class="modal-overlay hidden">
   <div class="modal-content share-image-modal-content" role="dialog" aria-modal="true" aria-labelledby="shareImageModalTitle">
