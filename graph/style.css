@@ -259,6 +259,40 @@ body {
   zoom: 1 !important;
 }
 
+.program-select-area {
+  width: min(720px, calc(100% - 32px));
+  margin: 18px auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.program-select-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #40536d;
+  white-space: nowrap;
+}
+
+.program-select {
+  width: min(420px, 100%);
+  border: 1px solid #c8d7e8;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #10213f;
+  padding: 10px 36px 10px 16px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(27, 70, 120, 0.14);
+}
+
+.program-select:focus {
+  outline: 2px solid rgba(8, 119, 223, 0.25);
+  border-color: #0877df;
+}
+
 /* スマホでは760pxの画像を縮小して見せる */
 @media (max-width: 760px) {
   .report {
