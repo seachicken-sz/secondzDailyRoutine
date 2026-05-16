@@ -1,7 +1,7 @@
 const MEMBER_WORK_LINK_GROUPS = [
   {
     key: "tver",
-    label: "TVer",
+    label: "TV",
     description: "TVerはいいねとあとで見るを押してね！",
     urlKey: "platformUrl",
     isTarget: (item) =>
