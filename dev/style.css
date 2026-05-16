@@ -909,6 +909,47 @@ h1 {
 .member-link-section-access .member-link-section-title::before {
   content: "🔗 ";
 }
+
+.member-work-link-card-tver {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(72px, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+}
+
+.member-work-link-main-tver {
+  min-width: 0;
+}
+
+.member-work-link-title-tver {
+  display: block;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.member-work-link-button-tver {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: var(--color-brand);
+  color: var(--color-on-brand, #fff);
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.member-work-link-reserved {
+  min-width: 0;
+}
 /* =========================
    テキストリンク
 ========================= */
