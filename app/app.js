@@ -740,7 +740,7 @@ function updateHomeInstallGuideVisibility() {
 async function init() {
   try {
     updateHomeInstallGuideVisibility();
-
+    initializeSetupGuide();
     const songs = await loadSpotifySongs();
     const recommendedSongs = songs.filter((song) => song.flag === true);
     const otherSongs = songs.filter((song) => song.flag !== true);
