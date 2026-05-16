@@ -23,15 +23,12 @@ const defaultRankingTheme = {
 };
 
 async function initializeReport() {
-  ensureReportScaleWrap();
-
   const response = await fetch("./tverRankingReport.json");
   const data = await response.json();
 
   reportData = data;
   renderReport(data);
   setupSaveImageButton();
-  fitReportScale();
 }
 
 function renderReport(data) {
@@ -51,10 +48,6 @@ function renderReport(data) {
   renderRankCards(data.rankings);
   renderCharts(data.rankings);
   renderNearbyRankingTables(data.rankings);
-
-  requestAnimationFrame(() => {
-    fitReportScale();
-  });
 }
 
 function renderRankCards(rankings) {
@@ -126,10 +119,6 @@ function renderCharts(rankings) {
     );
 
     rankingCharts.push(chart);
-  });
-
-  requestAnimationFrame(() => {
-    fitReportScale();
   });
 }
 
@@ -297,49 +286,6 @@ function createRankingChart(canvasId, currentData, previousData, color) {
   });
 }
 
-function ensureReportScaleWrap() {
-  const report = document.querySelector(".report");
-
-  if (!report) {
-    return null;
-  }
-
-  const existingWrap = report.closest(".report-scale-wrap");
-
-  if (existingWrap) {
-    return existingWrap;
-  }
-
-  const wrap = document.createElement("div");
-  wrap.className = "report-scale-wrap";
-
-  report.parentNode.insertBefore(wrap, report);
-  wrap.appendChild(report);
-
-  return wrap;
-}
-
-function fitReportScale() {
-  const report = document.querySelector(".report");
-
-  if (!report) {
-    return;
-  }
-
-  const wrap = ensureReportScaleWrap();
-
-  if (!wrap) {
-    return;
-  }
-
-  const baseWidth = 760;
-  const viewportWidth = document.documentElement.clientWidth;
-  const scale = Math.min(1, viewportWidth / baseWidth);
-
-  report.style.transform = `scale(${scale})`;
-  wrap.style.height = `${report.offsetHeight * scale}px`;
-}
-
 function setupSaveImageButton() {
   const button = document.getElementById("saveImageButton");
 
@@ -357,33 +303,11 @@ async function saveReportImage() {
     return;
   }
 
-  const originalTransform = target.style.transform;
-  const originalTransformOrigin = target.style.transformOrigin;
-  const originalWidth = target.style.width;
-  const originalMinWidth = target.style.minWidth;
-  const originalMaxWidth = target.style.maxWidth;
-
-  target.style.transform = "none";
-  target.style.transformOrigin = "top left";
-  target.style.width = "760px";
-  target.style.minWidth = "760px";
-  target.style.maxWidth = "760px";
-
-  await new Promise(resolve => requestAnimationFrame(resolve));
-
   const canvas = await html2canvas(target, {
     scale: 2,
     useCORS: true,
     backgroundColor: null
   });
-
-  target.style.transform = originalTransform;
-  target.style.transformOrigin = originalTransformOrigin;
-  target.style.width = originalWidth;
-  target.style.minWidth = originalMinWidth;
-  target.style.maxWidth = originalMaxWidth;
-
-  fitReportScale();
 
   const fileName = `${reportData.programTitle}_${reportData.broadcastDate}_ranking-report.png`
     .replace(/[\\/:*?"<>|]/g, "-");
@@ -393,8 +317,5 @@ async function saveReportImage() {
   link.href = canvas.toDataURL("image/png");
   link.click();
 }
-
-window.addEventListener("load", fitReportScale);
-window.addEventListener("resize", fitReportScale);
 
 initializeReport();
