@@ -3,20 +3,18 @@ body {
   font-family: system-ui, sans-serif;
   background: linear-gradient(135deg, #e8f7ff, #fff4fb);
   color: #10213f;
+  overflow-x: hidden;
 }
 
 .report {
-  width: 100%;
+  width: 760px;
+  max-width: none;
   margin: 0 auto;
   padding-bottom: 24px;
-  /*
-  background:
-    radial-gradient(#bde8ff 1px, transparent 1px),
-    linear-gradient(135deg, #ffffff 0%, #f2fbff 55%, #fff1fa 100%);
-  */
   background-image: url("../img/graph_bg_img.jpg");
   background-size: cover;
   overflow: hidden;
+  transform-origin: top center;
 }
 
 .top-bar {
@@ -251,4 +249,10 @@ body {
 
 .save-button:active {
   transform: scale(.98);
+}
+/* スマホでは760pxの画像を縮小して見せる */
+@media (max-width: 760px) {
+  .report {
+    transform: scale(calc(100vw / 760));
+  }
 }
