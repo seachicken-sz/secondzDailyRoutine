@@ -709,7 +709,7 @@ h1 {
   margin: 0 0 10px;
   font-size: 15px;
   line-height: 1.6;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--color-text);
   text-decoration: none;
 }
@@ -1662,7 +1662,6 @@ h1 {
   background: var(--color-page-bg);
 }
 
-
 /* ==================================================
    初回設定ガイドモーダル
 ================================================== */
@@ -1785,6 +1784,7 @@ h1 {
     transform: translateY(0);
   }
 }
+
 
 .hidden {
   display: none;

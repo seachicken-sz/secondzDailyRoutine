@@ -107,7 +107,7 @@ addClickEvent(openSpotifyButtonElement, () => {
     return;
   }
   // 選択中の曲からSpotify用URLを作成
-  const spotifyUrl = buildSpotifyUrl(state.selectedSong.url);
+  const spotifyUrl = buildSpotifyUrl(state.selectedSong);
   // Spotifyを開いた後に進めるよう、次へボタンを表示
   if (spotifyNextButtonElement) {
     spotifyNextButtonElement.classList.remove("hidden");
@@ -741,7 +741,6 @@ async function init() {
   try {
     updateHomeInstallGuideVisibility();
     initializeSetupGuide();
-
     const songs = await loadSpotifySongs();
     const recommendedSongs = songs.filter((song) => song.flag === true);
     const otherSongs = songs.filter((song) => song.flag !== true);
@@ -780,6 +779,7 @@ async function init() {
     updateStepTopActionBar();
   }
 }
+
 async function ensureDailyDataLoaded() {
   if (!state.requestTexts || Object.keys(state.requestTexts).length === 0) {
     state.requestTexts = await loadRequestTexts();
@@ -1096,7 +1096,7 @@ async function showRequestSongStep() {
     hideError(requestSongErrorAreaElement);
   } catch (error) {
     console.error(error);
-    showError(onceTaskRunErrorAreaElement, "リクエスト曲リストの読み込みに失敗しました。JSONの形式や配置を確認してください。");
+    showError(onceTaskRunErrorAreaElement, "※エラーが発生しました。アプリを立ち上げ直してください。ERROR:requestSong");
   }
 }
 
@@ -1119,7 +1119,7 @@ async function showDailyTaskStep(shouldInitialize = true) {
     renderCurrentDailyTask();
   } catch (error) {
     console.error(error);
-    showError(requestSongErrorAreaElement, "リクエストループの読み込みに失敗しました。JSONの形式や配置を確認してください。");
+    showError(requestSongErrorAreaElement, "※エラーが発生しました。アプリを立ち上げ直してください。ERROR:list");
   }
 }
 
@@ -1241,13 +1241,13 @@ function recordCompletedDailyItem(item) {
     return;
   }
 
-state.completedDailyItems.push({
-  key,
-  itemId: item.id,
-  name,
+  state.completedDailyItems.push({
+    key,
+    itemId: item.id,
+    name,
   shortName: item["short-name"] || item.shortName || "",
-  url,
-});
+    url,
+  });
 }
 
 function showPostAskStep() {
@@ -1297,7 +1297,7 @@ async function showYoutubeSelectStep() {
     hideError(youtubeErrorAreaElement);
   } catch (error) {
     console.error(error);
-    showError(youtubeErrorAreaElement, "YouTubeリストの読み込みに失敗しました。JSONの形式や配置を確認してください。");
+    showError(youtubeErrorAreaElement, "※エラーが発生しました。アプリを立ち上げ直してください。ERROR:youtube");
   }
 }
 

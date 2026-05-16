@@ -138,13 +138,13 @@
               全員
             </button>
             <button class="member-filter-chip" data-member="shori">
-              勝利
+              佐藤
             </button>
             <button class="member-filter-chip" data-member="fuma">
-              風磨
+              菊池
             </button>
             <button class="member-filter-chip" data-member="so">
-              聡
+              松島
             </button>
             <button class="member-filter-chip" data-member="teranishi">
               寺西
@@ -187,10 +187,11 @@
     <!--STEP 1 Spotify-->
     <section id="spotifyStep" class="step-screen hidden">
       <header class="header">
-        <h1>今日のBGM🎧</h1>
+        <h1>今日のSpotify再生</h1>
         <p class="description">
-          Spotifyが開いたら、曲が再生されます。<br>
-          <strong>再生されたら、バックでこのアプリ</strong>に戻ってきてね
+          1日1曲再生で<strong>月間リスナー数</strong>に貢献😊<br>
+          下のリストから好きな曲を選んで「Spotifyで開く」をタップするとSpotifyで再生されます。<br>
+          <strong>再生されたら、バックでこのアプリ</strong>に戻ってきてください。
         </p>
         <p id="spotifyListenerCount" class="spotify-listener-count"></p>
       </header>
@@ -239,7 +240,9 @@
         <h1>期間限定タスク🗒️</h1>
         <p class="description">
           これ終わってる？期間限定だから早めにやっちゃお👍<br>
-          今やるものにチェックをいれて「次へ」を押してください！
+          今やるものにチェックをいれて「次へ」を押してください！<br>
+          <br>
+          ※一人一回限定のものは、一度でもやるとチェックが外れます。
         </p>
       </header>
 
@@ -283,7 +286,8 @@
         <h1>本日のラジオリクエスト曲📻</h1>
         <p class="description">
           今日は何をリクエストする？<br>
-          曲を選んで<strong>「USEN推し活リクエスト」</strong>からリクエストしてね！
+          曲を選んで<strong>「ページを開く」</strong>をタップ！<br>
+          「USEN推し活リクエスト」でリクエストしよ！
         </p>
         <p id="usenRankingInfo" class="usen-ranking-info hidden"></p>
       </header>
@@ -367,7 +371,7 @@
       <header class="header">
         <h1>SNSシェア</h1>
         <p class="description">
-          今日やったタスクをSNSで共有する？
+          今日やったタスク、せっかくならSNSで共有しない？
         </p>
       </header>
 
@@ -386,7 +390,7 @@
       <header class="header">
         <h1>シェア文章作成📝</h1>
         <p class="description">
-          追加したい項目にチェックを入れてね！
+          投稿先を選んで、シェアしたい項目にチェックを入れてね！          
         </p>
       </header>
 
@@ -462,7 +466,7 @@
       <header class="header">
         <h1>YouTubeも見る？▶️</h1>
         <p class="description">
-          Spotifyの再生終わってたらついでにYoutubeも行っとく？
+          Spotifyの再生終わってたらついでにYoutubeも回す？
         </p>
       </header>
 
@@ -486,7 +490,7 @@
 
       <section class="scroll-area">
         <section class="youtube-section">
-          <h2>再生リスト</h2>
+          <h2>再生リスト(MV)</h2>
           <div id="youtubePlaylistRow" class="youtube-card-row"></div>
         </section>
 
@@ -518,7 +522,7 @@
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScsX4mHxLIRujrZy2bElGDuOfGI8OQgJapFwBiAcGQKPZCzWw/viewform?usp=sharing&ouid=105111966497500869107" target="_blank" rel="noopener noreferrer" class="primary-button feedback-link-button">追加リクエスト</a>
         <p class="feedback-text">
           <br>
-          困ったこと、感想、こんなことできる？などはこちらからお送りください。
+          困ったこと、感想、こんなことできる？ などはこちらからお送りください。
         </p>
         <a href="https://mond.how/ja/tsunakan_r" target="_blank" rel="noopener noreferrer" class="primary-button feedback-link-button">mond</a>
       </section>
@@ -533,7 +537,7 @@
   <div id="howToModal" class="modal-overlay hidden">
     <section class="modal-content" role="dialog" aria-modal="true" aria-labelledby="howToTitle">
       <div class="modal-header">
-        <h2 id="howToTitle">導入方法</h2>
+        <h2 id="howToTitle">初回設定</h2>
         <button id="closeHowToButton" class="modal-close-button" type="button" aria-label="閉じる">
           ×
         </button>
@@ -596,6 +600,7 @@
         <h3>基本の流れ</h3>
         <ol>
           <li><strong>SpotifyでBGMを選ぶ</strong><br>
+            1日1曲聞くだけで月間リスナーに貢献♪<br>
             最初に表示されたものの中に好みのものがなければ、「その他」をタップすると現在Spotifyで配信されている曲の一覧が表示されます。<br>
             画面上部に「Spotifyで再生する」ボタンが表示されるので、それをタップしてください。<br>
             曲が再生されたらアプリを切り替えて「タムごとDaily」に戻ってきてください。<br>
@@ -759,8 +764,8 @@
       >
         ×
       </button>
-    </div>    
-    
+    </div>
+
     <div class="modal-body">
       <div class="share-image-canvas-wrap">
         <canvas id="shareImageCanvas"></canvas>
@@ -835,7 +840,7 @@
   </div>
 </div>
 
-<div id="firstSetupModal" class="modal-overlay hidden">
+  <div id="firstSetupModal" class="modal-overlay hidden">
   <div class="modal-content setup-modal-content" role="dialog" aria-modal="true" aria-labelledby="firstSetupModalTitle">
     <div class="modal-header">
       <h2 id="firstSetupModalTitle">はじめに</h2>
@@ -872,23 +877,6 @@
       <strong>そのため、初回だけホーム画面に追加して、次回からは追加されたアイコンから開くのがおすすめです。</strong>
     </p>
   </div>
-
-  <details>
-    <summary>技術的な解説(読まなくても使えます)</summary>
-    <div>
-      <p>
-        当ツールではPWA(Progressive Web Apps)というWebサイトをアプリ化する方法を使用しています。<br>
-        これは基本的にブラウザで開けば通常のWEBページ同様に使用できますが、ユーザーがデバイスに保存することでアプリように使用できる仕組みです。<br>
-        ネイティブアプリ(App StoreやGoogle playで配信されているもの)とWEBページの中間の存在です。<br>
-        このアプリではアプリ内ブラウザの利用、キャッシュによる動作の高速化、<br>
-        端末への記録(テーマカラー・期間限定タスクの完了済みフラグなど)により、利用時の利便性向上のため推奨しています。<br>
-        ベースがWEBサイトなのでクロスプラットフォーム対応なのもよいところ。<br>
-        PWA化の恩恵でまず言われる通知機能はGithubの制約上使えないので事実上アプリ内ブラウザのためだけにPWA化したような感じです。<br>
-        <strong>ざっくり言うとサクサク使えてこのツールを見失いにくくなっています。</strong><br>
-        もっと詳しく！という人はXかThreadsからご連絡ください。        
-      </p>
-    </div>
-  </details>
 </details>
       </p>
 

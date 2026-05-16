@@ -1,12 +1,48 @@
 // ==================================================
 // Utils: URL生成
 // ==================================================
-function buildSpotifyUrl(trackIdOrUrl) {
-  if (trackIdOrUrl.startsWith("http://") || trackIdOrUrl.startsWith("https://")) {
-    return trackIdOrUrl;
+function buildSpotifyUrl(songOrTrackIdOrUrl) {
+  if (!songOrTrackIdOrUrl) {
+    return "";
   }
 
-  return SPOTIFY_TRACK_BASE_URL + encodeURIComponent(trackIdOrUrl);
+  if (typeof songOrTrackIdOrUrl === "string") {
+    if (
+      songOrTrackIdOrUrl.startsWith("http://") ||
+      songOrTrackIdOrUrl.startsWith("https://")
+    ) {
+      return songOrTrackIdOrUrl;
+    }
+
+    return SPOTIFY_TRACK_BASE_URL + encodeURIComponent(songOrTrackIdOrUrl);
+  }
+
+  const trackIdOrUrl = songOrTrackIdOrUrl.url;
+  const shareId = songOrTrackIdOrUrl.shareId;
+
+  if (!trackIdOrUrl) {
+    return "";
+  }
+
+  if (
+    trackIdOrUrl.startsWith("http://") ||
+    trackIdOrUrl.startsWith("https://")
+  ) {
+    if (!shareId) {
+      return trackIdOrUrl;
+    }
+
+    const baseUrl = trackIdOrUrl.split("?")[0];
+    return `${baseUrl}?si=${encodeURIComponent(shareId)}`;
+  }
+
+  const baseUrl = SPOTIFY_TRACK_BASE_URL + encodeURIComponent(trackIdOrUrl);
+
+  if (!shareId) {
+    return baseUrl;
+  }
+
+  return `${baseUrl}?si=${encodeURIComponent(shareId)}`;
 }
 
 function buildRequestSongUrl(url) {

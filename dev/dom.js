@@ -57,6 +57,9 @@ const closeUsageButtonElement = document.getElementById("closeUsageButton");
 
 // Spotifyステップ画面全体
 const spotifyStepElement = document.getElementById("spotifyStep");
+// リスナー表示
+const spotifyListenerInfoElement = document.getElementById("spotifyListenerInfo");
+const spotifyListenerCountElement = document.getElementById("spotifyListenerCount");
 // 選択中の曲表示エリア
 const selectedAreaElement = document.getElementById("selectedArea");
 // 選択中の曲名
@@ -115,6 +118,8 @@ const onceTaskRunErrorAreaElement = document.getElementById("onceTaskRunErrorAre
 // ==================================================
 // USEN推しリク曲選択画面全体
 const requestSongStepElement = document.getElementById("requestSongStep");
+// ランキング表示
+const usenRankingInfoElement = document.getElementById("usenRankingInfo");
 // 選択中のリクエスト曲表示エリア
 const selectedRequestSongAreaElement = document.getElementById("selectedRequestSongArea");
 // 選択中のリクエスト曲名
