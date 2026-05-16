@@ -785,9 +785,7 @@ h1 {
 .member-link-section {
   display: grid;
   gap: 10px;
-  padding: 14px;
-  box-shadow: var(--shadow-card-soft);
-  backdrop-filter: blur(12px);
+  padding: 14px 0;
 }
 
 .member-link-section-header {
