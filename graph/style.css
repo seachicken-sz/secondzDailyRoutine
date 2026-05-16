@@ -257,6 +257,6 @@ body {
 /* スマホでは760pxの画像を縮小して見せる */
 @media (max-width: 760px) {
   .report {
-    transform: scale(calc(100vw / 760px));
+    zoom: calc(100vw / 760px);
   }
 }
