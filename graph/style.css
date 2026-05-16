@@ -1,34 +1,15 @@
-html,
-body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
   background: linear-gradient(135deg, #e8f7ff, #fff4fb);
   color: #10213f;
-}
-
-.report-scale-wrap {
-  width: 100vw;
-  max-width: 100vw;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .report {
   width: 760px;
-  min-width: 760px;
-  max-width: 760px;
-  margin: 0;
+  max-width: none;
+  margin: 0 auto;
   padding-bottom: 24px;
   background-image: url("../img/graph_bg_img.jpg");
   background-size: cover;
@@ -85,13 +66,8 @@ body {
   font-size: 14px;
 }
 
-.blue {
-  background: #0877df;
-}
-
-.pink {
-  background: #ec2386;
-}
+.blue { background: #0877df; }
+.pink { background: #ec2386; }
 
 .rank-main {
   margin-top: 10px;
@@ -251,12 +227,10 @@ body {
 }
 
 .save-area {
-  width: 100%;
-  max-width: 100vw;
+  width:760px;
   display: flex;
   justify-content: center;
   margin: 24px 0 40px;
-  padding: 0 16px;
 }
 
 .save-button {
@@ -276,4 +250,10 @@ body {
 
 .save-button:active {
   transform: scale(.98);
+}
+/* スマホでは760pxの画像を縮小して見せる */
+@media (max-width: 760px) {
+  .report {
+    transform: scale(calc(100vw / 760));
+  }
 }
