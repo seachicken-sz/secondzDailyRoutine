@@ -1,8 +1,26 @@
 let reportData = null;
-let varietyChart = null;
-let overallChart = null;
+let rankingCharts = [];
 
 const labels = Array.from({ length: 48 }, (_, i) => i + 1);
+
+const rankingThemeMap = {
+  variety: {
+    color: "#0877df",
+    labelClass: "blue",
+    bgClass: "blue-bg"
+  },
+  overall: {
+    color: "#ec2386",
+    labelClass: "pink",
+    bgClass: "pink-bg"
+  }
+};
+
+const defaultRankingTheme = {
+  color: "#0877df",
+  labelClass: "blue",
+  bgClass: "blue-bg"
+};
 
 async function initializeReport() {
   const response = await fetch("./tverRankingReport.json");
@@ -22,52 +40,166 @@ function renderReport(data) {
     ${data.subtitle}
   `;
 
-  document.getElementById("varietyCurrentRank").innerHTML =
-    `${data.variety.currentRank}<span>位</span>`;
-  document.getElementById("varietyElapsedRank").textContent =
-    `${data.variety.elapsedHour}時間目　${data.variety.elapsedRank}　位`;
-
-  document.getElementById("overallCurrentRank").innerHTML =
-    `${data.overall.currentRank}<span>位</span>`;
-  document.getElementById("overallElapsedRank").textContent =
-    `${data.overall.elapsedHour}時間目　${data.overall.elapsedRank}　位`;
-
   document.getElementById("likeCount").textContent = data.likes;
   document.getElementById("favoriteCount").textContent = data.favorites;
 
-  renderNearbyRanking("varietyNearbyRanking", data.variety.nearbyRanking);
-  renderNearbyRanking("overallNearbyRanking", data.overall.nearbyRanking);
+  destroyRankingCharts();
 
-  if (varietyChart) {
-    varietyChart.destroy();
-  }
-
-  if (overallChart) {
-    overallChart.destroy();
-  }
-
-  varietyChart = createRankingChart(
-    "varietyChart",
-    data.variety.currentData,
-    data.variety.previousData,
-    "#0877df"
-  );
-
-  overallChart = createRankingChart(
-    "overallChart",
-    data.overall.currentData,
-    data.overall.previousData,
-    "#ec2386"
-  );
+  renderRankCards(data.rankings);
+  renderCharts(data.rankings);
+  renderNearbyRankingTables(data.rankings);
 }
 
-function renderNearbyRanking(elementId, rankingList) {
-  document.getElementById(elementId).innerHTML = rankingList.map(item => `
+function renderRankCards(rankings) {
+  const container = document.getElementById("rankCards");
+
+  if (!container) {
+    return;
+  }
+
+  if (!Array.isArray(rankings)) {
+    container.innerHTML = "";
+    return;
+  }
+
+  container.innerHTML = rankings.map((ranking) => {
+    const theme = getRankingTheme(ranking.type);
+
+    return `
+      <div class="card">
+        <div class="label ${theme.labelClass}">${ranking.label}ランキング</div>
+        <div class="rank-main" style="color:${theme.color};">
+          ${ranking.currentRank}<span>位</span>
+        </div>
+        <div class="sub-rank ${theme.bgClass}">
+          ${ranking.elapsedHour}時間目　${ranking.elapsedRank}　位
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+function renderCharts(rankings) {
+  const container = document.getElementById("charts");
+
+  if (!container) {
+    return;
+  }
+
+  if (!Array.isArray(rankings)) {
+    container.innerHTML = "";
+    return;
+  }
+
+  container.innerHTML = rankings.map((ranking, index) => {
+    const theme = getRankingTheme(ranking.type);
+    const canvasId = `rankingChart_${ranking.type || index}`;
+
+    return `
+      <div class="chart-box">
+        <div class="chart-title ${theme.labelClass}">${ranking.label}</div>
+        <div class="chart-canvas-wrap">
+          <canvas id="${canvasId}"></canvas>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  rankings.forEach((ranking, index) => {
+    const theme = getRankingTheme(ranking.type);
+    const canvasId = `rankingChart_${ranking.type || index}`;
+    const currentData = convertPointsTo48HourData(ranking.currentPoints);
+    const previousData = convertPointsTo48HourData(ranking.previousPoints);
+
+    const chart = createRankingChart(
+      canvasId,
+      currentData,
+      previousData,
+      theme.color
+    );
+
+    rankingCharts.push(chart);
+  });
+}
+
+function renderNearbyRankingTables(rankings) {
+  const container = document.getElementById("nearbyRankingTables");
+
+  if (!container) {
+    return;
+  }
+
+  if (!Array.isArray(rankings)) {
+    container.innerHTML = "";
+    return;
+  }
+
+  container.innerHTML = rankings.map((ranking) => {
+    const theme = getRankingTheme(ranking.type);
+
+    return `
+      <div>
+        <div class="table-title ${theme.labelClass}">${ranking.label}すぐ上ランキング</div>
+        <div>
+          ${createNearbyRankingHtml(ranking.nearbyRanking)}
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+function createNearbyRankingHtml(rankingList) {
+  if (!Array.isArray(rankingList)) {
+    return "";
+  }
+
+  return rankingList.map(item => `
     <div class="row">
       <span>${item.rank}</span>
       <span>${item.title}</span>
     </div>
   `).join("");
+}
+
+function convertPointsTo48HourData(points) {
+  const data = Array(48).fill(null);
+
+  if (!Array.isArray(points)) {
+    return data;
+  }
+
+  points.forEach((point) => {
+    const hour = Number(point.hour);
+    const rank = point.rank === null || point.rank === undefined
+      ? null
+      : Number(point.rank);
+
+    if (!Number.isInteger(hour)) {
+      return;
+    }
+
+    if (hour < 0 || hour >= 48) {
+      return;
+    }
+
+    data[hour] = Number.isFinite(rank) ? rank : null;
+  });
+
+  return data;
+}
+
+function getRankingTheme(type) {
+  return rankingThemeMap[type] || defaultRankingTheme;
+}
+
+function destroyRankingCharts() {
+  rankingCharts.forEach((chart) => {
+    if (chart) {
+      chart.destroy();
+    }
+  });
+
+  rankingCharts = [];
 }
 
 function createRankingChart(canvasId, currentData, previousData, color) {
@@ -85,7 +217,7 @@ function createRankingChart(canvasId, currentData, previousData, color) {
     }
   ];
 
-  if (Array.isArray(previousData) && previousData.length > 0) {
+  if (Array.isArray(previousData) && previousData.some(value => value !== null)) {
     datasets.push({
       label: "前回",
       data: previousData,
