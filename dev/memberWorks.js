@@ -288,7 +288,7 @@ function createTverRankingReportButtonHtml(item) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      ランク推移
+      Rank
     </a>
   `;
 }
