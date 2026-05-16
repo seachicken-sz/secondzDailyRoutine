@@ -254,6 +254,11 @@ body {
 .save-button:active {
   transform: scale(.98);
 }
+
+.report.is-capturing {
+  zoom: 1 !important;
+}
+
 /* スマホでは760pxの画像を縮小して見せる */
 @media (max-width: 760px) {
   .report {
