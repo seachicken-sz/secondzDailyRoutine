@@ -312,10 +312,36 @@ async function saveReportImage() {
   const fileName = `${reportData.programTitle}_${reportData.broadcastDate}_ranking-report.png`
     .replace(/[\\/:*?"<>|]/g, "-");
 
-  const link = document.createElement("a");
-  link.download = fileName;
-  link.href = canvas.toDataURL("image/png");
-  link.click();
+  canvas.toBlob(async (blob) => {
+    if (!blob) {
+      return;
+    }
+
+    const file = new File([blob], fileName, {
+      type: "image/png"
+    });
+
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      try {
+        await navigator.share({
+          files: [file],
+          title: "ランキング推移レポート",
+          text: "ランキング推移レポート画像です"
+        });
+        return;
+      } catch (error) {
+        console.log("共有がキャンセルされました", error);
+        return;
+      }
+    }
+
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.download = fileName;
+    link.href = url;
+    link.click();
+    URL.revokeObjectURL(url);
+  }, "image/png");
 }
 
 initializeReport();
