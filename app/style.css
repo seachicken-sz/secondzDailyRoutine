@@ -1662,6 +1662,130 @@ h1 {
   background: var(--color-page-bg);
 }
 
+/* ==================================================
+   初回設定ガイドモーダル
+================================================== */
+
+.setup-modal-content {
+  max-width: 560px;
+}
+
+.setup-modal-body {
+  display: grid;
+  gap: 18px;
+}
+
+.setup-modal-lead {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--color-text-sub);
+}
+
+.setup-question-block {
+  display: grid;
+  gap: 10px;
+}
+
+.setup-question-block h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--color-text-main);
+}
+
+.setup-choice-list {
+  display: grid;
+  gap: 10px;
+}
+
+.setup-choice-button {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 11px 14px;
+  background: var(--color-surface);
+  color: var(--color-text-main);
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: var(--shadow-card-soft);
+}
+
+.setup-choice-button:active {
+  transform: scale(0.98);
+}
+
+.setup-choice-button.active {
+  border-color: var(--color-brand);
+  background: var(--color-brand-soft);
+  color: var(--color-brand);
+  box-shadow: var(--shadow-card);
+}
+
+.setup-guide-area {
+  animation: setupGuideFadeIn 0.2s ease-out;
+}
+
+.setup-guide-card {
+  display: grid;
+  gap: 12px;
+  border-radius: var(--radius-card);
+  padding: 14px;
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-border);
+}
+
+.setup-guide-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--color-brand);
+}
+
+.setup-guide-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card-soft);
+}
+
+.setup-guide-note {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text-sub);
+}
+
+.setup-check-block {
+  display: grid;
+  gap: 12px;
+  margin-top: 6px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--color-border);
+}
+
+.setup-check-block h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--color-brand);
+}
+
+@keyframes setupGuideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 .hidden {
   display: none;
 }
