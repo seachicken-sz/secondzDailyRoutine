@@ -190,9 +190,7 @@
         <h1>今日のSpotify再生</h1>
         <p class="description">
           1日1曲再生で<strong>月間リスナー数</strong>に貢献😊<br>
-          下のリストから好きな曲を選んでください！<br>
-          <br>
-          曲を選んで「Spotifyで開く」をタップするとSpotifyで再生されます。<br>
+          下のリストから好きな曲を選んで「Spotifyで開く」をタップするとSpotifyで再生されます。<br>
           <strong>再生されたら、バックでこのアプリ</strong>に戻ってきてください。
         </p>
         <p id="spotifyListenerCount" class="spotify-listener-count"></p>
@@ -838,6 +836,85 @@
         </button>
       </div>
 
+    </div>
+  </div>
+</div>
+
+  <div id="firstSetupModal" class="modal-overlay hidden">
+  <div class="modal-content setup-modal-content" role="dialog" aria-modal="true" aria-labelledby="firstSetupModalTitle">
+    <div class="modal-header">
+      <h2 id="firstSetupModalTitle">はじめに</h2>
+      <button
+        type="button"
+        id="closeFirstSetupModalButton"
+        class="modal-close-button"
+        aria-label="閉じる"
+      >
+        ×
+      </button>
+    </div>
+
+    <div class="modal-body setup-modal-body">
+      <p class="setup-modal-lead">
+        ホーム画面に追加すると<strong>すごく便利になります</strong>。<br>
+        ぜひ以下の手順で追加してご利用ください。
+<details class="setup-detail-box">
+  <summary>ホーム画面に追加すると何が便利？</summary>
+
+  <div class="setup-detail-content">
+    <p>
+      特に役立つのはUSENリクエスト・各種タスクなどのリンクを開いたあとです。<br>
+      ホーム画面のアイコンから開いている場合、遷移先がアプリ内ブラウザのように表示されるため、
+      作業が終わったら画面を閉じるだけで、このツールに戻りやすくなります。
+    </p>
+    <p>
+      XやLINEの中でリンクを開いたときに、外部ページを閉じるだけで元の画面に戻れる感覚に近いです。<br>
+      毎日のタスクを続けてこなすときに、戻る操作やページの探し直しが少なくなります。<br>
+      SafariやChromeの普通のタブで開いたままだと、リンク先から戻るのが少し面倒になったり、<br>
+      途中でページを見失いやすくなることがあります。
+    </p>
+    <p>
+      <strong>そのため、初回だけホーム画面に追加して、次回からは追加されたアイコンから開くのがおすすめです。</strong>
+    </p>
+  </div>
+</details>
+      </p>
+
+      <div class="setup-question-block">
+        <h3>① 今このページをどう開いた？</h3>
+
+        <div class="setup-choice-list">
+          <button type="button" class="setup-choice-button" data-open-place="x">
+            Xのリンクタップで開いただけ
+          </button>
+
+          <button type="button" class="setup-choice-button" data-open-place="threads">
+            Threadsのリンクタップで開いたとだけ
+          </button>
+
+          <button type="button" class="setup-choice-button" data-open-place="browser">
+            Safari / Chromeなどブラウザで開いている
+          </button>
+        </div>
+      </div>
+
+      <div id="setupOpenPlaceGuideArea" class="setup-guide-area hidden"></div>
+
+      <div id="setupDeviceQuestion" class="setup-question-block hidden">
+        <h3>② 今使っているのは？</h3>
+
+        <div class="setup-choice-list">
+          <button type="button" class="setup-choice-button" data-device-type="ios">
+            iPhone / iPad
+          </button>
+
+          <button type="button" class="setup-choice-button" data-device-type="android">
+            Android
+          </button>
+        </div>
+      </div>
+
+      <div id="setupDeviceGuideArea" class="setup-guide-area hidden"></div>
     </div>
   </div>
 </div>
