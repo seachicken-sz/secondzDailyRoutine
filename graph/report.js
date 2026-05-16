@@ -3,29 +3,23 @@ let rankingCharts = [];
 
 const labels = Array.from({ length: 48 }, (_, i) => i + 1);
 
-const rankingThemeMap = {
-  variety: {
+const rankingThemes = [
+  {
     color: "#0877df",
     labelClass: "blue",
     bgClass: "blue-bg"
   },
-  all: {
+  {
     color: "#ec2386",
     labelClass: "pink",
     bgClass: "pink-bg"
   }
-};
+];
 
-const defaultRankingTheme = {
-  color: "#0877df",
-  labelClass: "blue",
-  bgClass: "blue-bg"
-};
+const defaultRankingTheme = rankingThemes[0];
 
 function getRankingThemeByIndex(index) {
-  return index === 1
-    ? rankingThemeMap.all
-    : rankingThemeMap.variety;
+  return rankingThemes[index] || defaultRankingTheme;
 }
 
 function formatRank(rank) {
@@ -84,7 +78,7 @@ function renderRankCards(rankings) {
           ${formatRank(ranking.currentRank)}<span>位</span>
         </div>
         <div class="sub-rank ${theme.bgClass}">
-          ${ranking.elapsedHour}時間目　${formatRank(ranking.elapsedRank)}　位
+          ${formatRank(ranking.elapsedHour)}時間目　${formatRank(ranking.elapsedRank)}　位
         </div>
       </div>
     `;
@@ -105,7 +99,7 @@ function renderCharts(rankings) {
 
   container.innerHTML = rankings.map((ranking, index) => {
     const theme = getRankingThemeByIndex(index);
-    const canvasId = `rankingChart_${ranking.type || index}`;
+    const canvasId = `rankingChart_${index}`;
 
     return `
       <div class="chart-box">
@@ -118,8 +112,8 @@ function renderCharts(rankings) {
   }).join("");
 
   rankings.forEach((ranking, index) => {
-    const theme = getRankingTheme(ranking.type);
-    const canvasId = `rankingChart_${ranking.type || index}`;
+    const theme = getRankingThemeByIndex(index);
+    const canvasId = `rankingChart_${index}`;
     const currentData = convertPointsTo48HourData(ranking.currentPoints);
     const previousData = convertPointsTo48HourData(ranking.previousPoints);
 
@@ -167,7 +161,7 @@ function createNearbyRankingHtml(rankingList) {
 
   return rankingList.map(item => `
     <div class="row">
-      <span>${item.rank}</span>
+      <span>${formatRank(item.rank)}</span>
       <span>${item.title}</span>
     </div>
   `).join("");
@@ -198,10 +192,6 @@ function convertPointsTo48HourData(points) {
   });
 
   return data;
-}
-
-function getRankingTheme(type) {
-  return rankingThemeMap[type] || defaultRankingTheme;
 }
 
 function destroyRankingCharts() {
