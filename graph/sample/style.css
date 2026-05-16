@@ -6,7 +6,7 @@ body {
 }
 
 .report {
-  width: 760px;
+  width: 100%;
   margin: 0 auto;
   padding-bottom: 24px;
   /*
@@ -15,8 +15,7 @@ body {
     linear-gradient(135deg, #ffffff 0%, #f2fbff 55%, #fff1fa 100%);
   */
   background-image: url("../../img/graph_bg_img.jpg");
-  background-size: 10px 10px, auto;
-  border-radius: 0 0 24px 24px;
+  background-size: cover;
   overflow: hidden;
 }
 
