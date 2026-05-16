@@ -37,6 +37,11 @@ const MEMBER_WORK_LINK_GROUPS = [
 
 let MEMBER_WORKS = [];
 
+const TVER_RANKING_REPORT_JSON_PATH = "../graph/tverRankingReport.json";
+const TVER_RANKING_REPORT_BASE_URL = "https://seachicken-sz.github.io/secondzDailyRoutine/graph/";
+
+let TVER_RANKING_REPORT_IDS = new Set();
+
 let selectedMembers = new Set(["all"]);
 
 const memberWorksArea = document.getElementById("memberWorksArea");
@@ -44,7 +49,16 @@ const memberFilterArea = document.getElementById("memberFilterArea");
 
 async function initializeMemberWorks() {
   try {
-    MEMBER_WORKS = await loadMemberWorks();
+    const [
+      memberWorks,
+      tverRankingReportIds
+    ] = await Promise.all([
+      loadMemberWorks(),
+      loadTverRankingReportIds()
+    ]);
+
+    MEMBER_WORKS = memberWorks;
+    TVER_RANKING_REPORT_IDS = tverRankingReportIds;
 
     renderMemberWorks();
 
@@ -53,6 +67,34 @@ async function initializeMemberWorks() {
       "メンバーお仕事読み込み失敗:",
       error
     );
+  }
+}
+
+async function loadTverRankingReportIds() {
+  try {
+    const response = await fetch(TVER_RANKING_REPORT_JSON_PATH, {
+      cache: "no-store"
+    });
+
+    if (!response.ok) {
+      throw new Error(`TVerランキングJSON読み込み失敗: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    if (!data || typeof data.reports !== "object" || data.reports === null) {
+      return new Set();
+    }
+
+    return new Set(Object.keys(data.reports));
+
+  } catch (error) {
+    console.warn(
+      "TVerランキングJSON読み込み失敗:",
+      error
+    );
+
+    return new Set();
   }
 }
 
@@ -220,13 +262,60 @@ function createTverWorkItemHtml(item, group) {
         ${escapeHtml(getTverLinkText(item))}
       </a>
 
-      <span class="member-work-link-reserved" aria-hidden="true"></span>
+      <span class="member-work-link-rank-area">
+        ${createTverRankingReportButtonHtml(item)}
+      </span>
     </div>
   `;
 }
-
 function getTverLinkText(item) {
   return item.platformLinkText || item.linkText || "TVer";
+}
+
+function createTverRankingReportButtonHtml(item) {
+  const episodeId = getTverEpisodeId(item.platformUrl);
+
+  if (!episodeId || !TVER_RANKING_REPORT_IDS.has(episodeId)) {
+    return "";
+  }
+
+  const reportUrl = `${TVER_RANKING_REPORT_BASE_URL}?id=${encodeURIComponent(episodeId)}`;
+
+  return `
+    <a
+      class="member-work-link-button member-work-link-button-tver member-work-link-button-rank"
+      href="${escapeHtml(reportUrl)}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      ランク推移
+    </a>
+  `;
+}
+
+function getTverEpisodeId(url) {
+  if (!url) {
+    return "";
+  }
+
+  const value = String(url).trim();
+
+  try {
+    const parsedUrl = new URL(value, window.location.href);
+    const pathParts = parsedUrl.pathname
+      .split("/")
+      .filter(Boolean);
+
+    return pathParts.at(-1) || "";
+
+  } catch (error) {
+    return value
+      .split("?")[0]
+      .split("#")[0]
+      .split("/")
+      .filter(Boolean)
+      .at(-1) || "";
+  }
 }
 
 function getProgramDisplayName(item) {
