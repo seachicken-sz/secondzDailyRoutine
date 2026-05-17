@@ -37,7 +37,7 @@ const MEMBER_WORK_LINK_GROUPS = [
     key: "youtube",
     label: "YouTube",
     description: "時間があったらメンバーごとの再生リストも再生しとこ！",
-    urlKey: "youtubeUrl",
+    urlKey: "platformUrl",
     isTarget: (item) =>
       Boolean(item.youtubeUrl)
   },
