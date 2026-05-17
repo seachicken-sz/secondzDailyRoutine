@@ -33,14 +33,7 @@ const MEMBER_WORK_LINK_GROUPS = [
     isTarget: (item) =>
       Boolean(item.accessUrl)
   },
-    {
-    key: "youtube",
-    label: "YouTube",
-    description: "時間があったらメンバーごとの再生リストも再生しとこ！",
-    urlKey: "youtubeUrl",
-    isTarget: (item) =>
-      Boolean(item.youtubeUrl)
-  },
+
     {
     key: "dreampass",
     label: "ドリパス",
