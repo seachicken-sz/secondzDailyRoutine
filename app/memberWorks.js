@@ -36,7 +36,7 @@ const MEMBER_WORK_LINK_GROUPS = [
     {
     key: "dreampass",
     label: "ドリパス",
-    description: "再上映のチャンス！見たい作品があれば投票しよ！",
+    description: "再上映のチャンス！見たい作品に投票しよ！",
     urlKey: "platformUrl",
     isTarget: (item) =>
       item.workType === "dreampass" &&
