@@ -39,7 +39,7 @@ const MEMBER_WORK_LINK_GROUPS = [
     description: "時間があったらメンバーごとの再生リストも再生しとこ！",
     urlKey: "platformUrl",
     isTarget: (item) =>
-      Boolean(item.youtubeUrl)
+      Boolean(item.platformUrl)
   },
     {
     key: "dreampass",
