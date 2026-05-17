@@ -950,6 +950,7 @@ h1 {
   display: flex;
   justify-content: center;
   min-width: 0;
+  color: var(--color-brand);
 }
 
 .member-work-link-button-rank {
