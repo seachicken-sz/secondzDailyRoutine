@@ -1,7 +1,7 @@
 const MEMBER_WORK_LINK_GROUPS = [
   {
     key: "tver",
-    label: "TVer",
+    label: "TV",
     description: "TVerはいいねとあとで見るを押してね！",
     urlKey: "platformUrl",
     isTarget: (item) =>
@@ -32,10 +32,24 @@ const MEMBER_WORK_LINK_GROUPS = [
     urlKey: "accessUrl",
     isTarget: (item) =>
       Boolean(item.accessUrl)
+  },
+    {
+    key: "dreampass",
+    label: "ドリパス",
+    description: "再上映のチャンス！見たい作品があればアカウント作って投票！",
+    urlKey: "platformUrl",
+    isTarget: (item) =>
+      item.workType === "dreampass" &&
+      Boolean(item.platformUrl)
   }
 ];
 
 let MEMBER_WORKS = [];
+
+const TVER_RANKING_REPORT_JSON_PATH = "../graph/tverRankingReport.json";
+const TVER_RANKING_REPORT_BASE_URL = "https://seachicken-sz.github.io/secondzDailyRoutine/graph/";
+
+let TVER_RANKING_REPORT_IDS = new Set();
 
 let selectedMembers = new Set(["all"]);
 
@@ -44,7 +58,16 @@ const memberFilterArea = document.getElementById("memberFilterArea");
 
 async function initializeMemberWorks() {
   try {
-    MEMBER_WORKS = await loadMemberWorks();
+    const [
+      memberWorks,
+      tverRankingReportIds
+    ] = await Promise.all([
+      loadMemberWorks(),
+      loadTverRankingReportIds()
+    ]);
+
+    MEMBER_WORKS = memberWorks;
+    TVER_RANKING_REPORT_IDS = tverRankingReportIds;
 
     renderMemberWorks();
 
@@ -53,6 +76,34 @@ async function initializeMemberWorks() {
       "メンバーお仕事読み込み失敗:",
       error
     );
+  }
+}
+
+async function loadTverRankingReportIds() {
+  try {
+    const response = await fetch(TVER_RANKING_REPORT_JSON_PATH, {
+      cache: "no-store"
+    });
+
+    if (!response.ok) {
+      throw new Error(`TVerランキングJSON読み込み失敗: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    if (!data || typeof data.reports !== "object" || data.reports === null) {
+      return new Set();
+    }
+
+    return new Set(Object.keys(data.reports));
+
+  } catch (error) {
+    console.warn(
+      "TVerランキングJSON読み込み失敗:",
+      error
+    );
+
+    return new Set();
   }
 }
 
@@ -174,6 +225,10 @@ function buildRemainingText(item) {
 }
 
 function createWorkItemHtml(item, group) {
+  if (group.key === "tver") {
+    return createTverWorkItemHtml(item, group);
+  }
+
   return `
     <a
       class="member-work-link-card"
@@ -194,6 +249,82 @@ function createWorkItemHtml(item, group) {
       </span>
     </a>
   `;
+}
+
+function createTverWorkItemHtml(item, group) {
+  return `
+    <div class="member-work-link-card member-work-link-card-tver">
+      <span class="member-work-link-main member-work-link-main-tver">
+        <span class="member-work-link-title member-work-link-title-tver">
+          ${escapeHtml(getProgramDisplayName(item))}
+        </span>
+
+        ${buildRemainingText(item)}
+      </span>
+
+      <a
+        class="member-work-link-button member-work-link-button-tver"
+        href="${escapeHtml(item[group.urlKey])}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ${escapeHtml(getTverLinkText(item))}
+      </a>
+
+      <span class="member-work-link-rank-area">
+        ${createTverRankingReportButtonHtml(item)}
+      </span>
+    </div>
+  `;
+}
+function getTverLinkText(item) {
+  return item.platformLinkText || item.linkText || "TVer";
+}
+
+function createTverRankingReportButtonHtml(item) {
+  const episodeId = getTverEpisodeId(item.platformUrl);
+
+  if (!episodeId || !TVER_RANKING_REPORT_IDS.has(episodeId)) {
+    return "";
+  }
+
+  const reportUrl = `${TVER_RANKING_REPORT_BASE_URL}?id=${encodeURIComponent(episodeId)}`;
+
+  return `
+    <a
+      class="member-work-link-button member-work-link-button-tver member-work-link-button-rank"
+      href="${escapeHtml(reportUrl)}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Rank
+    </a>
+  `;
+}
+
+function getTverEpisodeId(url) {
+  if (!url) {
+    return "";
+  }
+
+  const value = String(url).trim();
+
+  try {
+    const parsedUrl = new URL(value, window.location.href);
+    const pathParts = parsedUrl.pathname
+      .split("/")
+      .filter(Boolean);
+
+    return pathParts.at(-1) || "";
+
+  } catch (error) {
+    return value
+      .split("?")[0]
+      .split("#")[0]
+      .split("/")
+      .filter(Boolean)
+      .at(-1) || "";
+  }
 }
 
 function getProgramDisplayName(item) {
