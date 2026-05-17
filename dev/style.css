@@ -906,7 +906,9 @@ h1 {
 .member-link-section-access .member-link-section-title::before {
   content: "🔗 ";
 }
-
+.member-link-section-dreampass .member-link-section-title::before {
+  content: "🎬";
+}
 .member-work-link-card-tver {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(72px, 1fr) minmax(0, 1fr);
