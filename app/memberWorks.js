@@ -225,10 +225,6 @@ function buildRemainingText(item) {
 }
 
 function createWorkItemHtml(item, group) {
-  if (group.key === "tver") {
-    return createTverWorkItemHtml(item, group);
-  }
-
   return `
     <a
       class="member-work-link-card"
