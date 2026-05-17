@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026/05/17 18:58",
+  "updatedAt": "2026/05/18 00:58",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/05/15",
-      "updatedAt": "2026/05/17 18:02",
+      "updatedAt": "2026/05/17 21:02",
       "subtitle": "制限時間1分プレッシャーサーカス「タイムDEATH」",
-      "likes": "1万",
+      "likes": "1.1万",
       "favorites": "75万",
       "rankings": [
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 23,
-          "elapsedHour": 44,
-          "elapsedRank": 23,
+          "currentRank": 26,
+          "elapsedHour": 47,
+          "elapsedRank": 26,
           "currentPoints": [
             {
               "hour": 11,
@@ -151,6 +151,18 @@
             {
               "hour": 44,
               "rank": 23
+            },
+            {
+              "hour": 45,
+              "rank": 26
+            },
+            {
+              "hour": 46,
+              "rank": 27
+            },
+            {
+              "hour": 47,
+              "rank": 26
             }
           ],
           "previousPoints": [
@@ -317,19 +329,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 20,
-              "title": "マツコ＆有吉 かりそめ天国"
-            },
-            {
-              "rank": 21,
-              "title": "夫婦別姓刑事"
-            },
-            {
-              "rank": 22,
-              "title": "銀河の一票"
-            },
-            {
               "rank": 23,
+              "title": "10回切って倒れない木はない"
+            },
+            {
+              "rank": 24,
+              "title": "ハマダ歌謡祭★オオカミ少年"
+            },
+            {
+              "rank": 25,
+              "title": "サレタ側の復讐～同盟を結んだ妻たち～"
+            },
+            {
+              "rank": 26,
               "title": "タイムレスマン"
             }
           ]
@@ -337,9 +349,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 8,
-          "elapsedHour": 44,
-          "elapsedRank": 8,
+          "currentRank": 9,
+          "elapsedHour": 47,
+          "elapsedRank": 9,
           "currentPoints": [
             {
               "hour": 3,
@@ -508,6 +520,18 @@
             {
               "hour": 44,
               "rank": 8
+            },
+            {
+              "hour": 45,
+              "rank": 9
+            },
+            {
+              "hour": 46,
+              "rank": 9
+            },
+            {
+              "hour": 47,
+              "rank": 9
             }
           ],
           "previousPoints": [
@@ -698,12 +722,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 5,
-              "title": "月曜から夜ふかし"
-            },
-            {
               "rank": 6,
-              "title": "ハマダ歌謡祭★オオカミ少年"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 7,
@@ -711,6 +731,10 @@
             },
             {
               "rank": 8,
+              "title": "ハマダ歌謡祭★オオカミ少年"
+            },
+            {
+              "rank": 9,
               "title": "タイムレスマン"
             }
           ]
@@ -720,18 +744,35 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/05/17",
-      "updatedAt": "2026/05/17 18:02",
+      "updatedAt": "2026/05/18 00:02",
       "subtitle": "【令和の小学生の流行クイズ】文房具の昔との違いに驚き",
-      "likes": "3448",
-      "favorites": "31.8万",
+      "likes": "6688",
+      "favorites": "31.9万",
       "rankings": [
         {
           "type": "all",
           "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 28,
+          "elapsedHour": 10,
+          "elapsedRank": 28,
+          "currentPoints": [
+            {
+              "hour": 7,
+              "rank": 50
+            },
+            {
+              "hour": 8,
+              "rank": 41
+            },
+            {
+              "hour": 9,
+              "rank": 35
+            },
+            {
+              "hour": 10,
+              "rank": 28
+            }
+          ],
           "previousPoints": [
             {
               "hour": 6,
@@ -898,18 +939,59 @@
               "rank": 17
             }
           ],
-          "nearbyRanking": []
+          "nearbyRanking": [
+            {
+              "rank": 25,
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
+            },
+            {
+              "rank": 26,
+              "title": "ハマダ歌謡祭★オオカミ少年"
+            },
+            {
+              "rank": 27,
+              "title": "サレタ側の復讐～同盟を結んだ妻たち～"
+            },
+            {
+              "rank": 28,
+              "title": "timeleszファミリア"
+            }
+          ]
         },
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 40,
-          "elapsedHour": 4,
-          "elapsedRank": 40,
+          "currentRank": 11,
+          "elapsedHour": 10,
+          "elapsedRank": 11,
           "currentPoints": [
             {
               "hour": 4,
               "rank": 40
+            },
+            {
+              "hour": 5,
+              "rank": 32
+            },
+            {
+              "hour": 6,
+              "rank": 24
+            },
+            {
+              "hour": 7,
+              "rank": 18
+            },
+            {
+              "hour": 8,
+              "rank": 13
+            },
+            {
+              "hour": 9,
+              "rank": 12
+            },
+            {
+              "hour": 10,
+              "rank": 11
             }
           ],
           "previousPoints": [
@@ -1096,19 +1178,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 37,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "rank": 8,
+              "title": "世界の果てまでイッテQ！"
             },
             {
-              "rank": 38,
-              "title": "ぐるぐるナインティナイン"
+              "rank": 9,
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
-              "rank": 39,
-              "title": "何か“オモシロいコト”ないの？"
+              "rank": 10,
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
-              "rank": 40,
+              "rank": 11,
               "title": "timeleszファミリア"
             }
           ]
@@ -1120,7 +1202,7 @@
       "broadcastDate": "2026/05/05",
       "updatedAt": "2026/05/07 23:00",
       "subtitle": "「世界一黒い塗料で監視カメラを欺くことができるのか！？」に挑む！",
-      "likes": "9277",
+      "likes": "9307",
       "favorites": "4.6万",
       "rankings": [
         {
@@ -2309,7 +2391,7 @@
       "updatedAt": "2026/05/12 18:02",
       "subtitle": "捨てられる魚の皮で服作れるか?城島ファッションショー!",
       "likes": "9071",
-      "favorites": "51.1万",
+      "favorites": "51.2万",
       "rankings": [
         {
           "type": "variety",
@@ -3048,7 +3130,7 @@
       "broadcastDate": "2026/05/12",
       "updatedAt": "2026/05/14 18:02",
       "subtitle": "まさかの絶体絶命▽BBQで父絶叫!見えない火が顔に▽毒草で妻殺害",
-      "likes": "3148",
+      "likes": "3208",
       "favorites": "75.4万",
       "rankings": [
         {
@@ -4103,7 +4185,7 @@
       "broadcastDate": "2026/05/15",
       "updatedAt": "2026/05/17 00:02",
       "subtitle": "第127回 高橋克実の風磨クセモノマネでヒコロヒー翻弄！",
-      "likes": "4532",
+      "likes": "4648",
       "favorites": "71.5万",
       "rankings": [
         {
@@ -4639,7 +4721,7 @@
       "broadcastDate": "2026/05/09",
       "updatedAt": "2026/05/11 18:02",
       "subtitle": "宇宙人は実在した！Wしょうこ危機SP 前編",
-      "likes": "1827",
+      "likes": "1849",
       "favorites": "76.9万",
       "rankings": [
         {
@@ -5199,7 +5281,7 @@
       "broadcastDate": "2026/05/13",
       "updatedAt": "2026/05/15 20:02",
       "subtitle": "第5話 加害者家族の行方",
-      "likes": "7526",
+      "likes": "7688",
       "favorites": "37.1万",
       "rankings": [
         {
@@ -5981,17 +6063,17 @@
     "srookmi9gb": {
       "programTitle": "かまいたちの知らんけど",
       "broadcastDate": "2026/05/17",
-      "updatedAt": "2026/05/17 18:02",
+      "updatedAt": "2026/05/18 00:02",
       "subtitle": "timelesz篠塚ド緊張の初対面！古参信者イワクラからマウント!?",
-      "likes": "5819",
+      "likes": "6905",
       "favorites": "131.3万",
       "rankings": [
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 31,
-          "elapsedHour": 17,
-          "elapsedRank": 31,
+          "currentRank": 14,
+          "elapsedHour": 23,
+          "elapsedRank": 14,
           "currentPoints": [
             {
               "hour": 12,
@@ -6016,6 +6098,30 @@
             {
               "hour": 17,
               "rank": 31
+            },
+            {
+              "hour": 18,
+              "rank": 28
+            },
+            {
+              "hour": 19,
+              "rank": 24
+            },
+            {
+              "hour": 20,
+              "rank": 19
+            },
+            {
+              "hour": 21,
+              "rank": 17
+            },
+            {
+              "hour": 22,
+              "rank": 14
+            },
+            {
+              "hour": 23,
+              "rank": 14
             }
           ],
           "previousPoints": [
@@ -6158,19 +6264,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 28,
-              "title": "孤独のグルメ Season11"
+              "rank": 11,
+              "title": "上田と女が吠える夜"
             },
             {
-              "rank": 29,
-              "title": "君が死刑になる前に"
+              "rank": 12,
+              "title": "未解決の女　警視庁文書捜査官 Season３"
             },
             {
-              "rank": 30,
-              "title": "鍵のかかった部屋"
+              "rank": 13,
+              "title": "ＧＩＦＴ"
             },
             {
-              "rank": 31,
+              "rank": 14,
               "title": "かまいたちの知らんけど"
             }
           ]
@@ -6178,9 +6284,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 10,
-          "elapsedHour": 17,
-          "elapsedRank": 10,
+          "currentRank": 5,
+          "elapsedHour": 23,
+          "elapsedRank": 5,
           "currentPoints": [
             {
               "hour": 8,
@@ -6221,6 +6327,30 @@
             {
               "hour": 17,
               "rank": 10
+            },
+            {
+              "hour": 18,
+              "rank": 10
+            },
+            {
+              "hour": 19,
+              "rank": 8
+            },
+            {
+              "hour": 20,
+              "rank": 6
+            },
+            {
+              "hour": 21,
+              "rank": 6
+            },
+            {
+              "hour": 22,
+              "rank": 5
+            },
+            {
+              "hour": 23,
+              "rank": 5
             }
           ],
           "previousPoints": [
@@ -6383,19 +6513,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 7,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "rank": 2,
+              "title": "アメトーーク！"
             },
             {
-              "rank": 8,
-              "title": "タイムレスマン"
+              "rank": 3,
+              "title": "水曜日のダウンタウン"
             },
             {
-              "rank": 9,
-              "title": "世界の果てまでイッテQ！"
+              "rank": 4,
+              "title": "上田と女が吠える夜"
             },
             {
-              "rank": 10,
+              "rank": 5,
               "title": "かまいたちの知らんけど"
             }
           ]
