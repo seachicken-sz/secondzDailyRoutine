@@ -953,6 +953,10 @@ h1 {
   color: var(--color-brand);
 }
 
+.member-work-link-rank-area a{
+  color: var(--color-brand);
+}
+
 .member-work-link-button-rank {
   display: inline-flex;
   align-items: center;
