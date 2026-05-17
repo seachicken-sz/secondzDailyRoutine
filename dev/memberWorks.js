@@ -32,6 +32,15 @@ const MEMBER_WORK_LINK_GROUPS = [
     urlKey: "accessUrl",
     isTarget: (item) =>
       Boolean(item.accessUrl)
+  },
+    {
+    key: "dreampass",
+    label: "ドリパス",
+    description: "再上映のチャンス！見たい作品があればアカウント作って投票！",
+    urlKey: "platformUrl",
+    isTarget: (item) =>
+      item.workType === "dreampass" &&
+      Boolean(item.platformUrl)
   }
 ];
 
