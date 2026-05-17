@@ -301,12 +301,14 @@ function createTverRankingReportButtonHtml(item) {
 
   return `
     <a
-      class="member-work-link-button member-work-link-button-tver member-work-link-button-rank"
+      class="member-work-link-rank-button"
       href="${escapeHtml(reportUrl)}"
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="ランク推移"
+      title="ランク推移"
     >
-      Rank
+      <i class="bi bi-graph-up-arrow" aria-hidden="true"></i>
     </a>
   `;
 }
