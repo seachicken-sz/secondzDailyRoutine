@@ -232,7 +232,7 @@ body {
   width: min(100%, 720px);
   height: 100dvh;
   margin: 0 auto;
-  padding: 18px 0px;
+  padding: 0px;
   overflow: hidden;
 }
 
@@ -248,7 +248,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding: 0 20px;
+  padding: 18px 20px;
 }
 
 /*******************/
@@ -1113,8 +1113,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
-  padding: 0 8px;
+  padding: 18px 8px 0;
 }
 
 .back-step-button,
