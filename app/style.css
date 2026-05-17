@@ -906,6 +906,11 @@ h1 {
 .member-link-section-access .member-link-section-title::before {
   content: "🔗 ";
 }
+
+.member-link-section-youtube .member-link-section-title::before {
+  content: "▶️";
+}
+
 .member-link-section-dreampass .member-link-section-title::before {
   content: "🎬";
 }
