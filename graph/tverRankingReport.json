@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/05/17 13:00",
+  "updatedAt": "2026/05/17 13:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/05/15",
-      "updatedAt": "2026/05/17 12:02",
+      "updatedAt": "2026/05/17 13:02",
       "subtitle": "制限時間1分プレッシャーサーカス「タイムDEATH」",
       "likes": "1万",
       "favorites": "75万",
@@ -12,9 +12,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 18,
-          "elapsedHour": 38,
-          "elapsedRank": 18,
+          "currentRank": 20,
+          "elapsedHour": 39,
+          "elapsedRank": 20,
           "currentPoints": [
             {
               "hour": 11,
@@ -127,6 +127,10 @@
             {
               "hour": 38,
               "rank": 18
+            },
+            {
+              "hour": 39,
+              "rank": 20
             }
           ],
           "previousPoints": [
@@ -293,19 +297,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 15,
+              "rank": 17,
               "title": "マツコ＆有吉 かりそめ天国"
             },
             {
-              "rank": 16,
-              "title": "時すでにおスシ!?"
-            },
-            {
-              "rank": 17,
-              "title": "ターミネーターと恋しちゃったら"
-            },
-            {
               "rank": 18,
+              "title": "月曜から夜ふかし"
+            },
+            {
+              "rank": 19,
+              "title": "ＧＩＦＴ"
+            },
+            {
+              "rank": 20,
               "title": "タイムレスマン"
             }
           ]
@@ -313,9 +317,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 7,
-          "elapsedHour": 38,
-          "elapsedRank": 7,
+          "currentRank": 8,
+          "elapsedHour": 39,
+          "elapsedRank": 8,
           "currentPoints": [
             {
               "hour": 3,
@@ -460,6 +464,10 @@
             {
               "hour": 38,
               "rank": 7
+            },
+            {
+              "hour": 39,
+              "rank": 8
             }
           ],
           "previousPoints": [
@@ -650,12 +658,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 4,
-              "title": "ハマダ歌謡祭★オオカミ少年"
-            },
-            {
               "rank": 5,
-              "title": "THE SECOND～漫才トーナメント～2026"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
               "rank": 6,
@@ -663,6 +667,10 @@
             },
             {
               "rank": 7,
+              "title": "月曜から夜ふかし"
+            },
+            {
+              "rank": 8,
               "title": "タイムレスマン"
             }
           ]
@@ -6275,6 +6283,390 @@
             {
               "rank": 14,
               "title": "ボーダレス～広域移動捜査隊～"
+            }
+          ]
+        }
+      ]
+    },
+    "srookmi9gb": {
+      "programTitle": "かまいたちの知らんけど",
+      "broadcastDate": "2026/05/17",
+      "updatedAt": "2026/05/17 13:02",
+      "subtitle": "timelesz篠塚ド緊張の初対面！古参信者イワクラからマウント!?",
+      "likes": "3672",
+      "favorites": "131.3万",
+      "rankings": [
+        {
+          "type": "variety",
+          "label": "バラエティ",
+          "currentRank": 14,
+          "elapsedHour": 12,
+          "elapsedRank": 14,
+          "currentPoints": [
+            {
+              "hour": 8,
+              "rank": 36
+            },
+            {
+              "hour": 9,
+              "rank": 26
+            },
+            {
+              "hour": 10,
+              "rank": 24
+            },
+            {
+              "hour": 11,
+              "rank": 17
+            },
+            {
+              "hour": 12,
+              "rank": 14
+            }
+          ],
+          "previousPoints": [
+            {
+              "hour": 9,
+              "rank": 39
+            },
+            {
+              "hour": 10,
+              "rank": 32
+            },
+            {
+              "hour": 11,
+              "rank": 24
+            },
+            {
+              "hour": 12,
+              "rank": 20
+            },
+            {
+              "hour": 13,
+              "rank": 19
+            },
+            {
+              "hour": 14,
+              "rank": 16
+            },
+            {
+              "hour": 15,
+              "rank": 15
+            },
+            {
+              "hour": 16,
+              "rank": 15
+            },
+            {
+              "hour": 17,
+              "rank": 14
+            },
+            {
+              "hour": 18,
+              "rank": 12
+            },
+            {
+              "hour": 19,
+              "rank": 11
+            },
+            {
+              "hour": 20,
+              "rank": 9
+            },
+            {
+              "hour": 21,
+              "rank": 9
+            },
+            {
+              "hour": 22,
+              "rank": 8
+            },
+            {
+              "hour": 23,
+              "rank": 8
+            },
+            {
+              "hour": 24,
+              "rank": 9
+            },
+            {
+              "hour": 25,
+              "rank": 9
+            },
+            {
+              "hour": 26,
+              "rank": 9
+            },
+            {
+              "hour": 27,
+              "rank": 9
+            },
+            {
+              "hour": 28,
+              "rank": 9
+            },
+            {
+              "hour": 29,
+              "rank": 9
+            },
+            {
+              "hour": 30,
+              "rank": 10
+            },
+            {
+              "hour": 31,
+              "rank": 10
+            },
+            {
+              "hour": 32,
+              "rank": 10
+            },
+            {
+              "hour": 33,
+              "rank": 11
+            },
+            {
+              "hour": 34,
+              "rank": 11
+            },
+            {
+              "hour": 35,
+              "rank": 12
+            },
+            {
+              "hour": 36,
+              "rank": 12
+            },
+            {
+              "hour": 37,
+              "rank": 12
+            },
+            {
+              "hour": 38,
+              "rank": 12
+            },
+            {
+              "hour": 39,
+              "rank": 12
+            },
+            {
+              "hour": 40,
+              "rank": 14
+            },
+            {
+              "hour": 41,
+              "rank": 15
+            },
+            {
+              "hour": 42,
+              "rank": 15
+            },
+            {
+              "hour": 43,
+              "rank": 16
+            },
+            {
+              "hour": 44,
+              "rank": 16
+            },
+            {
+              "hour": 45,
+              "rank": 15
+            },
+            {
+              "hour": 46,
+              "rank": 15
+            },
+            {
+              "hour": 47,
+              "rank": 15
+            }
+          ],
+          "nearbyRanking": [
+            {
+              "rank": 11,
+              "title": "教えて！ニュースライブ　正義のミカタ"
+            },
+            {
+              "rank": 12,
+              "title": "なにわ男子の逆転男子"
+            },
+            {
+              "rank": 13,
+              "title": "テレビ千鳥"
+            },
+            {
+              "rank": 14,
+              "title": "かまいたちの知らんけど"
+            }
+          ]
+        },
+        {
+          "type": "all",
+          "label": "総合",
+          "currentRank": 47,
+          "elapsedHour": 12,
+          "elapsedRank": 47,
+          "currentPoints": [
+            {
+              "hour": 12,
+              "rank": 47
+            }
+          ],
+          "previousPoints": [
+            {
+              "hour": 14,
+              "rank": 49
+            },
+            {
+              "hour": 15,
+              "rank": 47
+            },
+            {
+              "hour": 16,
+              "rank": 45
+            },
+            {
+              "hour": 17,
+              "rank": 42
+            },
+            {
+              "hour": 18,
+              "rank": 37
+            },
+            {
+              "hour": 19,
+              "rank": 32
+            },
+            {
+              "hour": 20,
+              "rank": 28
+            },
+            {
+              "hour": 21,
+              "rank": 26
+            },
+            {
+              "hour": 22,
+              "rank": 22
+            },
+            {
+              "hour": 23,
+              "rank": 21
+            },
+            {
+              "hour": 24,
+              "rank": 22
+            },
+            {
+              "hour": 25,
+              "rank": 21
+            },
+            {
+              "hour": 26,
+              "rank": 22
+            },
+            {
+              "hour": 27,
+              "rank": 22
+            },
+            {
+              "hour": 28,
+              "rank": 22
+            },
+            {
+              "hour": 29,
+              "rank": 22
+            },
+            {
+              "hour": 30,
+              "rank": 23
+            },
+            {
+              "hour": 31,
+              "rank": 24
+            },
+            {
+              "hour": 32,
+              "rank": 26
+            },
+            {
+              "hour": 33,
+              "rank": 28
+            },
+            {
+              "hour": 34,
+              "rank": 28
+            },
+            {
+              "hour": 35,
+              "rank": 30
+            },
+            {
+              "hour": 36,
+              "rank": 32
+            },
+            {
+              "hour": 37,
+              "rank": 33
+            },
+            {
+              "hour": 38,
+              "rank": 33
+            },
+            {
+              "hour": 39,
+              "rank": 33
+            },
+            {
+              "hour": 40,
+              "rank": 35
+            },
+            {
+              "hour": 41,
+              "rank": 37
+            },
+            {
+              "hour": 42,
+              "rank": 37
+            },
+            {
+              "hour": 43,
+              "rank": 37
+            },
+            {
+              "hour": 44,
+              "rank": 36
+            },
+            {
+              "hour": 45,
+              "rank": 34
+            },
+            {
+              "hour": 46,
+              "rank": 35
+            },
+            {
+              "hour": 47,
+              "rank": 35
+            }
+          ],
+          "nearbyRanking": [
+            {
+              "rank": 44,
+              "title": "謎解きはディナーのあとで"
+            },
+            {
+              "rank": 45,
+              "title": "なにわ男子の逆転男子"
+            },
+            {
+              "rank": 46,
+              "title": "テレビ千鳥"
+            },
+            {
+              "rank": 47,
+              "title": "かまいたちの知らんけど"
             }
           ]
         }
