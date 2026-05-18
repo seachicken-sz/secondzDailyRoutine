@@ -132,6 +132,30 @@ function renderReport(data) {
   renderNearbyRankingTables(data.rankings);
 }
 
+function renderNewEpisodeLink(data) {
+  const linkArea = document.getElementById("newEpisodeLink");
+
+  if (!linkArea) {
+    return;
+  }
+
+  const episodeId = data.episodeId || "";
+
+  if (!episodeId) {
+    linkArea.innerHTML = "";
+    return;
+  }
+
+  const episodeUrl = `https://tver.jp/episodes/${encodeURIComponent(episodeId)}`;
+  const linkText = `${data.programTitle || ""} ${data.subtitle || ""}`.trim();
+
+  linkArea.innerHTML = `
+    <a href="${escapeHtml(episodeUrl)}" target="_blank" rel="noopener noreferrer">
+      ${escapeHtml(linkText || "最新話を見る")}
+    </a>
+  `;
+}
+
 function renderRankCards(rankings) {
   const container = document.getElementById("rankCards");
 
