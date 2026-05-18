@@ -125,6 +125,8 @@ function renderReport(data) {
   document.getElementById("likeCount").textContent = data.likes || "";
   document.getElementById("favoriteCount").textContent = data.favorites || "";
 
+  renderNewEpisodeLink(data);
+
   destroyRankingCharts();
 
   renderRankCards(data.rankings);
@@ -146,7 +148,7 @@ function renderNewEpisodeLink(data) {
     return;
   }
 
-  const episodeUrl = `https://tver.jp/episodes/${encodeURIComponent(episodeId)}`;
+  const episodeUrl = buildTverEpisodeUrl(episodeId);
   const linkText = `${data.programTitle || ""} ${data.subtitle || ""}`.trim();
 
   linkArea.innerHTML = `
@@ -154,6 +156,24 @@ function renderNewEpisodeLink(data) {
       ${escapeHtml(linkText || "最新話を見る")}
     </a>
   `;
+}
+
+function buildTverEpisodeUrl(episodeId) {
+  const value = String(episodeId || "").trim();
+
+  if (!value) {
+    return "";
+  }
+
+  if (/^https?:\/\//.test(value)) {
+    return value;
+  }
+
+  if (value.startsWith("episodes/")) {
+    return `https://tver.jp/${encodeURI(value)}`;
+  }
+
+  return `https://tver.jp/episodes/${encodeURIComponent(value)}`;
 }
 
 function renderRankCards(rankings) {
