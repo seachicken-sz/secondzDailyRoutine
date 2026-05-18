@@ -248,7 +248,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding: 18px 20px;
+  padding: 18px 12px;
 }
 
 /*******************/
@@ -906,17 +906,12 @@ h1 {
 .member-link-section-access .member-link-section-title::before {
   content: "🔗 ";
 }
-
-.member-link-section-youtube .member-link-section-title::before {
-  content: "▶️";
-}
-
 .member-link-section-dreampass .member-link-section-title::before {
   content: "🎬";
 }
 .member-work-link-card-tver {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(72px, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 2.5fr) minmax(72px, 1fr) minmax(32px, 0.5fr);
   align-items: center;
   gap: 8px;
 }
@@ -951,17 +946,34 @@ h1 {
   white-space: nowrap;
 }
 
-.member-work-link-reserved {
+.member-work-link-rank-area {
+  display: flex;
+  justify-content: center;
   min-width: 0;
+  color: var(--color-brand);
 }
 
-.member-work-link-rank-area {
-  min-width: 0;
-  display:none;
+.member-work-link-rank-area a{
+  color: var(--color-brand);
 }
 
 .member-work-link-button-rank {
-  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-brand);
+  font-size: 1.15rem;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.member-work-link-button-rank:active {
+  transform: scale(0.96);
 }
 /* =========================
    テキストリンク
