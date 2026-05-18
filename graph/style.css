@@ -5,7 +5,24 @@ body {
   color: #10213f;
   overflow-x: hidden;
 }
-
+.back-to-app-button {
+  position: sticky;
+  top: 12px;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #10213f;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(16, 33, 63, 0.16);
+  backdrop-filter: blur(10px);
+}
 .report {
   width: 760px;
   max-width: none;
