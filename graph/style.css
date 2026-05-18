@@ -295,6 +295,12 @@ body {
   border-color: #0877df;
 }
 
+#newEpisodeLink{
+  background-color: transparent;
+  margin: 20px auto;
+  text-align: center;
+}
+
 /* スマホでは760pxの画像を縮小して見せる */
 @media (max-width: 760px) {
   .report {
