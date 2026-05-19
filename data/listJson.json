@@ -86,20 +86,41 @@
         "input-flag": true
       },
       {
-        "id": "daily_tactyinthemoening",
-        "name": "FM802 TACTY IN THE MORNING",
-        "url": "https://funky802.com/service/Request/index/member/1106",
-        "request-type": "music",
-        "request-input": "リクエスト曲",
-        "comment": "開いたらリクエスト曲欄にそのままペーストしてください！",
+        "id": "daily_fightfortheradio",
+        "name": "ネオジャポのFight For The Radio",
+        "short-name": "Fight For The Radio",
+        "url": "https://form.jfn.co.jp/neojaponism/message",
+        "request-type": "text",
+        "request-input": "メッセージ&リクエスト",
+        "comment": "開いたらメッセージ&リクエスト欄にそのままペーストしてください！",
         "input-flag": true
       }
     ]
   },
   {
-    "listName": "もっといける？",
-    "lastFlag": true,
+    "listName": "もうちょい行けたりする？",
+    "lastFlag": false,
     "items": [
+      {
+        "id": "daily_sunsun",
+        "name": "パペットスンスンのDJ SUNSUN",
+        "short-name": "パペットスンスン",
+        "url": "https://www.tfm.co.jp/f/dj_sunsun/message",
+        "request-type": "text",
+        "request-input": "メッセージ&リクエスト",
+        "comment": "開いたらメッセージ&リクエスト欄にそのままペーストしてください！できたらスンスンにメッセージも！",
+        "input-flag": true
+      },
+      {
+        "id": "daily_tactyinthemoening",
+        "name": "FM802 TACTY IN THE MORNING",
+        "short-name": "TACTY IN THE MORNING",
+        "url": "https://funky802.com/service/Request/index/member/1106",
+        "request-type": "music",
+        "request-input": "リクエスト曲",
+        "comment": "開いたらリクエスト曲欄にそのままペーストしてください！",
+        "input-flag": true
+      },
       {
         "id": "daily_saturdayamusic",
         "name": "FM802 SATURDAY AMUSIC ISLANDS  MORNING EDITION",
@@ -138,6 +159,42 @@
         "request-type": "music-slash-artist",
         "request-input": "リクエスト曲",
         "comment": "開いたらリクエスト曲欄にそのままペーストしてください！",
+        "input-flag": true
+      }
+    ]
+  },
+  {
+    "listName": "結構めんどいけど今日は頑張っちゃう？",
+    "lastFlag": true,
+    "items": [
+      {
+        "id": "daily_pickupmytown",
+        "name": "日産神奈川 presents Pick up my town",
+        "short-name": "Pick up my town",
+        "url": "https://www.fmyokohama.co.jp/present/11794",
+        "request-type": "music",
+        "request-input": "曲名",
+        "comment": "開いたら曲名欄にそのままペースト＆ドライブエピソードを書こう！",
+        "input-flag": true
+      },
+      {
+        "id": "daily_soundbouquet",
+        "name": "神奈川ダイハツ presents サウンド ブーケ",
+        "short-name": "サウンドブーケ",
+        "url": "https://www.fmyokohama.co.jp/present/10065",
+        "request-type": "music",
+        "request-input": "曲名",
+        "comment": "開いたら曲名欄にそのままペースト＆ドライブやデートエピソードを書こう！",
+        "input-flag": true
+      },
+      {
+        "id": "daily_westsidetokyo",
+        "name": "WESTSIDE TOKYO",
+        "short-name": "WESTSIDE TOKYO",
+        "url": "https://www.fmfuji.jp/mail.php?cd=128",
+        "request-type": "music",
+        "request-input": "リクエスト曲名",
+        "comment": "開いたらリクエスト曲名欄にそのままペーストしてください！",
         "input-flag": true
       }
     ]
