@@ -85,10 +85,19 @@ body {
 .pink { background: #ec2386; }
 
 .rank-main {
+  position:relative;
   margin-top: 10px;
   font-size: 76px;
   font-weight: 800;
   line-height: 1;
+}
+.rank-main:before{
+  content: '最高';
+  font-size: 16px;
+  position: absolute;
+  top: 75%;
+  left: 45px;
+  color: slategray;
 }
 
 .rank-main span {
