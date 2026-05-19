@@ -29,24 +29,38 @@ function formatRank(rank) {
     : rank;
 }
 
-function getBestRankInPeriod(ranking) {
+function getBestRankInfoInPeriod(ranking) {
   if (!ranking || !Array.isArray(ranking.currentPoints)) {
-    return ranking && ranking.currentRank !== undefined
-      ? ranking.currentRank
-      : null;
+    return {
+      rank: ranking && ranking.currentRank !== undefined ? ranking.currentRank : null,
+      hour: ranking && ranking.elapsedHour !== undefined ? ranking.elapsedHour : null
+    };
   }
 
-  const ranks = ranking.currentPoints
-    .map((point) => Number(point.rank))
-    .filter((rank) => Number.isFinite(rank));
+  const validPoints = ranking.currentPoints
+    .map((point) => ({
+      hour: Number(point.hour),
+      rank: Number(point.rank)
+    }))
+    .filter((point) =>
+      Number.isFinite(point.hour) &&
+      Number.isFinite(point.rank)
+    );
 
-  if (ranks.length === 0) {
-    return ranking.currentRank !== undefined
-      ? ranking.currentRank
-      : null;
+  if (validPoints.length === 0) {
+    return {
+      rank: ranking.currentRank !== undefined ? ranking.currentRank : null,
+      hour: ranking.elapsedHour !== undefined ? ranking.elapsedHour : null
+    };
   }
 
-  return Math.min(...ranks);
+  return validPoints.reduce((bestPoint, currentPoint) => {
+    if (currentPoint.rank < bestPoint.rank) {
+      return currentPoint;
+    }
+
+    return bestPoint;
+  });
 }
 
 async function initializeReport() {
@@ -210,21 +224,22 @@ function renderRankCards(rankings) {
 
   container.innerHTML = rankings.map((ranking, index) => {
     const theme = getRankingThemeByIndex(index);
-    const bestRank = getBestRankInPeriod(ranking);
+    const bestRankInfo = getBestRankInfoInPeriod(ranking);
 
     return `
       <div class="card">
         <div class="label ${theme.labelClass}">${escapeHtml(ranking.label || "")}ランキング</div>
         <div class="rank-main" style="color:${theme.color};">
-          ${formatRank(bestRank)}<span>位</span>
+          ${formatRank(bestRankInfo.rank)}<span>位</span>
         </div>
         <div class="sub-rank ${theme.bgClass}">
-          ${formatRank(ranking.elapsedHour)}時間目　${formatRank(ranking.elapsedRank)}　位
+          ${formatRank(bestRankInfo.hour)}時間目
         </div>
       </div>
     `;
   }).join("");
 }
+
 function renderCharts(rankings) {
   const container = document.getElementById("charts");
 
