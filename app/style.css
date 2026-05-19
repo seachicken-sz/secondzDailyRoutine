@@ -1349,21 +1349,51 @@ h1 {
 /* =========================
    Share Image Modal - Theme Buttons
 ========================= */
+.share-image-theme-row-wrap {
+  position: relative;
+  max-width: 100%;
+  background-color: #fcfcfc;
+}
+
+/* 右端に「まだ続きがある」感を出す */
+.share-image-theme-row-wrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42px;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    to left,
+    #fcfcfc 0%,
+    rgba(252, 252, 252, 0.9) 35%,
+    rgba(252, 252, 252, 0) 100%
+  );
+}
+
 .share-image-theme-row {
   display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  background-color:#fcfcfc;
+  align-items: center;
+  background-color: #fcfcfc;
   gap: 8px;
   margin: 0 0 14px;
-  padding: 4px 2px 12px;
-  overflow-x: scroll;
+  padding: 4px 42px 12px 2px;
+  max-width: 100%;
+  overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
 
   /* Firefox */
   scrollbar-width: auto;
   scrollbar-color: var(--color-brand) var(--color-surface-soft);
+}
+
+.share-image-theme-row > .share-image-theme-button {
+  flex: 0 0 auto;
 }
 
 /* Chrome / Edge / Safari */
