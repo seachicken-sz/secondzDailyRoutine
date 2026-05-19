@@ -29,6 +29,26 @@ function formatRank(rank) {
     : rank;
 }
 
+function getBestRankInPeriod(ranking) {
+  if (!ranking || !Array.isArray(ranking.currentPoints)) {
+    return ranking && ranking.currentRank !== undefined
+      ? ranking.currentRank
+      : null;
+  }
+
+  const ranks = ranking.currentPoints
+    .map((point) => Number(point.rank))
+    .filter((rank) => Number.isFinite(rank));
+
+  if (ranks.length === 0) {
+    return ranking.currentRank !== undefined
+      ? ranking.currentRank
+      : null;
+  }
+
+  return Math.min(...ranks);
+}
+
 async function initializeReport() {
   const response = await fetch("./tverRankingReport.json");
   const data = await response.json();
@@ -190,12 +210,13 @@ function renderRankCards(rankings) {
 
   container.innerHTML = rankings.map((ranking, index) => {
     const theme = getRankingThemeByIndex(index);
+    const bestRank = getBestRankInPeriod(ranking);
 
     return `
       <div class="card">
         <div class="label ${theme.labelClass}">${escapeHtml(ranking.label || "")}ランキング</div>
         <div class="rank-main" style="color:${theme.color};">
-          ${formatRank(ranking.currentRank)}<span>位</span>
+          ${formatRank(bestRank)}<span>位</span>
         </div>
         <div class="sub-rank ${theme.bgClass}">
           ${formatRank(ranking.elapsedHour)}時間目　${formatRank(ranking.elapsedRank)}　位
@@ -204,7 +225,6 @@ function renderRankCards(rankings) {
     `;
   }).join("");
 }
-
 function renderCharts(rankings) {
   const container = document.getElementById("charts");
 
