@@ -33,16 +33,16 @@ const MEMBER_WORK_LINK_GROUPS = [
     isTarget: (item) =>
       Boolean(item.accessUrl)
   },
-{
-  key: "youtube",
-  label: "YouTube",
-  description: "時間があったらメンバーごとの再生リストも再生しとこ！",
-  urlKey: "platformUrl",
-  isTarget: (item) =>
-    item.workType === "youtube" &&
-    Boolean(item.platformUrl)
-},
-    {
+  {
+    key: "youtube",
+    label: "YouTube",
+    description: "時間があったらメンバーごとの再生リストも再生しとこ！",
+    urlKey: "platformUrl",
+    isTarget: (item) =>
+      item.workType === "youtube" &&
+      Boolean(item.platformUrl)
+  },
+  {
     key: "dreampass",
     label: "ドリパス",
     description: "再上映のチャンス！見たい作品に投票しよ！",
@@ -56,7 +56,8 @@ const MEMBER_WORK_LINK_GROUPS = [
 let MEMBER_WORKS = [];
 
 const TVER_RANKING_REPORT_JSON_PATH = "../graph/tverRankingReport.json";
-const TVER_RANKING_REPORT_BASE_URL = "https://seachicken-sz.github.io/secondzDailyRoutine/graph/";
+const TVER_RANKING_REPORT_BASE_URL =
+  "https://seachicken-sz.github.io/secondzDailyRoutine/graph/";
 
 let TVER_RANKING_REPORT_IDS = new Set();
 
@@ -65,6 +66,9 @@ let selectedMembers = new Set(["all"]);
 const memberWorksArea = document.getElementById("memberWorksArea");
 const memberFilterArea = document.getElementById("memberFilterArea");
 
+/**
+ * メンバーお仕事一覧を初期化
+ */
 async function initializeMemberWorks() {
   try {
     const [
@@ -88,6 +92,9 @@ async function initializeMemberWorks() {
   }
 }
 
+/**
+ * TVerランキングレポートが存在するID一覧を取得
+ */
 async function loadTverRankingReportIds() {
   try {
     const response = await fetch(TVER_RANKING_REPORT_JSON_PATH, {
@@ -116,7 +123,14 @@ async function loadTverRankingReportIds() {
   }
 }
 
+/**
+ * メンバーお仕事一覧を描画
+ */
 function renderMemberWorks() {
+  if (!memberWorksArea) {
+    return;
+  }
+
   const visibleItems = MEMBER_WORKS
     .filter(isVisibleMemberWork);
 
@@ -134,20 +148,52 @@ function renderMemberWorks() {
         <h3 class="member-link-section-title">
           ${escapeHtml(group.label)}
         </h3>
-    
+
         <p class="member-link-section-description">
           ${escapeHtml(group.description)}
         </p>
       </div>
-    
+
       <div class="member-link-list">
+        ${createYoutubeModalButtonHtml(group)}
         ${items.map((item) => createWorkItemHtml(item, group)).join("")}
       </div>
     `;
+
     memberWorksArea.appendChild(section);
   });
 }
 
+/**
+ * YouTubeセクション先頭に表示するモーダル起動ボタンを生成
+ */
+function createYoutubeModalButtonHtml(group) {
+  if (group.key !== "youtube") {
+    return "";
+  }
+
+  return `
+    <button
+      class="member-work-link-card"
+      type="button"
+      data-open-youtube-modal="true"
+    >
+      <span class="member-work-link-main">
+        <span class="member-work-link-title">
+          YouTubeリストを見る
+        </span>
+      </span>
+
+      <span class="member-work-link-arrow" aria-hidden="true">
+        ›
+      </span>
+    </button>
+  `;
+}
+
+/**
+ * リンク種別ごとに表示対象をグルーピング
+ */
 function groupByLinkType(items) {
   return MEMBER_WORK_LINK_GROUPS
     .map((group) => ({
@@ -157,6 +203,9 @@ function groupByLinkType(items) {
     .filter(({ items }) => items.length > 0);
 }
 
+/**
+ * 現在選択中のメンバー条件で表示対象か判定
+ */
 function isVisibleMemberWork(item) {
   if (item.to) {
     const today = getTodayYmd();
@@ -183,6 +232,9 @@ function isVisibleMemberWork(item) {
   );
 }
 
+/**
+ * 残り日数を取得
+ */
 function getRemainingDays(item) {
   if (!item.to) {
     return null;
@@ -203,6 +255,9 @@ function getRemainingDays(item) {
   return diffDays;
 }
 
+/**
+ * yyyymmdd から Date を作成
+ */
 function createDateFromYmd(value) {
   return new Date(
     Number(value.slice(0, 4)),
@@ -211,6 +266,9 @@ function createDateFromYmd(value) {
   );
 }
 
+/**
+ * 残り日数表示を生成
+ */
 function buildRemainingText(item) {
   const remainingDays = getRemainingDays(item);
 
@@ -233,6 +291,9 @@ function buildRemainingText(item) {
   `;
 }
 
+/**
+ * 通常リンクカードを生成
+ */
 function createWorkItemHtml(item, group) {
   if (group.key === "tver") {
     return createTverWorkItemHtml(item, group);
@@ -260,6 +321,9 @@ function createWorkItemHtml(item, group) {
   `;
 }
 
+/**
+ * TVer用リンクカードを生成
+ */
 function createTverWorkItemHtml(item, group) {
   return `
     <div class="member-work-link-card member-work-link-card-tver">
@@ -286,10 +350,17 @@ function createTverWorkItemHtml(item, group) {
     </div>
   `;
 }
+
+/**
+ * TVerリンク文言を取得
+ */
 function getTverLinkText(item) {
   return item.platformLinkText || item.linkText || "TVer";
 }
 
+/**
+ * TVerランキングレポートボタンを生成
+ */
 function createTverRankingReportButtonHtml(item) {
   const episodeId = getTverEpisodeId(item.platformUrl);
 
@@ -297,7 +368,8 @@ function createTverRankingReportButtonHtml(item) {
     return "";
   }
 
-  const reportUrl = `${TVER_RANKING_REPORT_BASE_URL}?id=${encodeURIComponent(episodeId)}`;
+  const reportUrl =
+    `${TVER_RANKING_REPORT_BASE_URL}?id=${encodeURIComponent(episodeId)}`;
 
   return `
     <a
@@ -313,6 +385,9 @@ function createTverRankingReportButtonHtml(item) {
   `;
 }
 
+/**
+ * TVer URLからepisodeIdを取得
+ */
 function getTverEpisodeId(url) {
   if (!url) {
     return "";
@@ -338,10 +413,16 @@ function getTverEpisodeId(url) {
   }
 }
 
+/**
+ * 表示名を取得
+ */
 function getProgramDisplayName(item) {
   return item.programName || item.program || item.title || "リンク";
 }
 
+/**
+ * 今日の日付を yyyymmdd 形式で取得
+ */
 function getTodayYmd() {
   const now = new Date();
 
@@ -352,6 +433,9 @@ function getTodayYmd() {
   return `${year}${month}${day}`;
 }
 
+/**
+ * HTMLエスケープ
+ */
 function escapeHtml(value) {
   return String(value ?? "")
     .replaceAll("&", "&amp;")
@@ -361,6 +445,9 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+/**
+ * メンバーフィルターを更新
+ */
 function handleMemberFilter(member) {
   if (member === "all") {
     selectedMembers = new Set(["all"]);
@@ -382,7 +469,14 @@ function handleMemberFilter(member) {
   renderMemberWorks();
 }
 
+/**
+ * メンバーフィルターUIを更新
+ */
 function updateFilterUi() {
+  if (!memberFilterArea) {
+    return;
+  }
+
   memberFilterArea
     .querySelectorAll("[data-member]")
     .forEach((button) => {
@@ -395,14 +489,38 @@ function updateFilterUi() {
     });
 }
 
-memberFilterArea.addEventListener("click", (event) => {
-  const button = event.target.closest("[data-member]");
+/**
+ * YouTubeモーダル起動ボタンのクリックイベント
+ */
+if (memberWorksArea) {
+  memberWorksArea.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-open-youtube-modal]");
 
-  if (!button) {
-    return;
-  }
+    if (!button) {
+      return;
+    }
 
-  handleMemberFilter(button.dataset.member);
-});
+    event.preventDefault();
+
+    if (typeof openYoutubeModal === "function") {
+      openYoutubeModal();
+    }
+  });
+}
+
+/**
+ * メンバーフィルターのクリックイベント
+ */
+if (memberFilterArea) {
+  memberFilterArea.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-member]");
+
+    if (!button) {
+      return;
+    }
+
+    handleMemberFilter(button.dataset.member);
+  });
+}
 
 initializeMemberWorks();
