@@ -180,7 +180,7 @@ function createYoutubeModalButtonHtml(group) {
     >
       <span class="member-work-link-main">
         <span class="member-work-link-title">
-          タムごと動画
+          タムごと
         </span>
       </span>
 
