@@ -20,6 +20,7 @@ const state = {
 
   youtubePlaylists: [],
   youtubeMvs: [],
+  youtubeOthers: [],
 
   stepHistory: [],
   currentStepElement: null,
