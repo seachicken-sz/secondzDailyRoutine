@@ -922,7 +922,7 @@ function renderYoutubeCardRow(container, items, type) {
     } else {
       const textCard = document.createElement("div");
       textCard.className = "youtube-text-card";
-      textCard.textContent = type === "playlist" ? "再生リスト" : "MV";
+      textCard.textContent = getYoutubeFallbackLabel(type);
       card.appendChild(textCard);
     }
 
@@ -1290,14 +1290,36 @@ async function showYoutubeSelectStep() {
       state.youtubeMvs = await loadYoutubeMvs();
     }
 
-    renderYoutubeCardRow(youtubePlaylistRowElement, state.youtubePlaylists, "playlist");
-    renderYoutubeCardRow(youtubeMvRowElement, state.youtubeMvs, "mv");
+    if (state.youtubeOthers.length === 0) {
+      state.youtubeOthers = await loadYoutubeOthers();
+    }
+
+    renderYoutubeCardRow(
+      youtubePlaylistRowElement,
+      state.youtubePlaylists,
+      "playlist"
+    );
+
+    renderYoutubeCardRow(
+      youtubeMvRowElement,
+      state.youtubeMvs,
+      "mv"
+    );
+
+    renderYoutubeCardRow(
+      youtubeOtherRowElement,
+      state.youtubeOthers,
+      "other"
+    );
 
     showOnlyStep(youtubeSelectStepElement);
     hideError(youtubeErrorAreaElement);
   } catch (error) {
     console.error(error);
-    showError(youtubeErrorAreaElement, "※エラーが発生しました。アプリを立ち上げ直してください。ERROR:youtube");
+    showError(
+      youtubeErrorAreaElement,
+      "※エラーが発生しました。アプリを立ち上げ直してください。ERROR:youtube"
+    );
   }
 }
 
@@ -1462,7 +1484,7 @@ function updateStepTopActionBar() {
 async function shareAppFromHome() {
   const shareData = {
     title: "タムごとDaily",
-    text: "推し活便利ツール「タムごとDaily」",
+    text: "3分でラジリク全部終わらせちゃおう！",
     url: "https://seachicken-sz.github.io/secondzDailyRoutine/app/",
   };
 
@@ -1482,4 +1504,16 @@ async function shareAppFromHome() {
     console.error(error);
     alert("共有に失敗しました。");
   }
+}
+
+function getYoutubeFallbackLabel(type) {
+  if (type === "playlist") {
+    return "再生リスト";
+  }
+
+  if (type === "other") {
+    return "その他";
+  }
+
+  return "MV";
 }
