@@ -812,6 +812,36 @@
     </div>
   </div>
 </div>
+
+  <div id="youtubeModal" class="modal-overlay hidden">
+  <div class="modal-content youtube-modal-content">
+    <button id="closeYoutubeModalButton" class="modal-close-button" type="button">
+      ×
+    </button>
+
+    <h2 class="modal-title">YouTubeリスト</h2>
+    <p class="modal-description">
+      今日の流れの最後で表示されるYouTubeリストを、ここから確認できます。
+    </p>
+
+    <section class="youtube-section">
+      <h3 class="youtube-section-title">再生リスト</h3>
+      <div id="youtubeModalPlaylistRow" class="youtube-card-row"></div>
+    </section>
+
+    <section class="youtube-section">
+      <h3 class="youtube-section-title">MV</h3>
+      <div id="youtubeModalMvRow" class="youtube-card-row"></div>
+    </section>
+
+    <section class="youtube-section">
+      <h3 class="youtube-section-title">その他動画</h3>
+      <div id="youtubeModalOtherRow" class="youtube-card-row"></div>
+    </section>
+
+    <p id="youtubeModalErrorArea" class="error-text hidden"></p>
+  </div>
+</div>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.js"></script>
 <script src="./config.js" defer></script>
 <script src="./state.js" defer></script>
