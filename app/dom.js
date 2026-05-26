@@ -256,6 +256,8 @@ const youtubeErrorAreaElement = document.getElementById("youtubeErrorArea");
 const youtubePlaylistRowElement = document.getElementById("youtubePlaylistRow");
 // YouTube MV表示行
 const youtubeMvRowElement = document.getElementById("youtubeMvRow");
+// その他動画行
+const youtubeOtherRowElement = document.getElementById("youtubeOtherRow");
 // YouTube選択画面から終了するボタン
 const finishFromYoutubeButtonElement = document.getElementById("finishFromYoutubeButton");
 
