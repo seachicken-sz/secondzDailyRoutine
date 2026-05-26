@@ -125,3 +125,14 @@ async function loadYoutubeMvs() {
 
   return mvs.filter((item) => item && item.name && item.url);
 }
+
+//YouTubeその他読み込み
+async function loadyoutubeOthers() {
+  const mvs = await loadJsonFile(DATA_PATHS.youtubeOthers, "youtubeOtherListJson.json");
+
+  if (!Array.isArray(mvs)) {
+    throw new Error("youtubeOtherListJson.json が配列形式ではありません。");
+  }
+
+  return mvs.filter((item) => item && item.name && item.url);
+}
