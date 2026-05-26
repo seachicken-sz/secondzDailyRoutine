@@ -21,6 +21,7 @@ const DATA_PATHS = {
   dailyGroups: "../data/listJson.json",
   youtubePlaylists: "../data/youtubePlayListJson.json",
   youtubeMvs: "../data/youtubeMVListJson.json",
+  youtubeOthers: "../data/youtubeOtherListJson.json",
   memberWorks: "../data/memberWorksJson.json",
 };
 
