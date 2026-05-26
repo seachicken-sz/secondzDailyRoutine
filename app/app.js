@@ -96,14 +96,6 @@ if (usageModalElement) {
     }
   });
 }
-addClickEvent(openYoutubeModalButtonElement, async () => {
-  if (!youtubeModalElement) {
-    return;
-  }
-
-  youtubeModalElement.classList.remove("hidden");
-  await renderYoutubeModalContent();
-});
 // ホーム画面Youtubeモーダルボタン押下時
 addClickEvent(closeYoutubeModalButtonElement, () => {
   if (!youtubeModalElement) {
@@ -1323,6 +1315,16 @@ async function ensureYoutubeDataLoaded() {
     state.youtubeOthers = await loadYoutubeOthers();
   }
 }
+// YouTubeモーダルを開く共通処理
+async function openYoutubeModal() {
+  if (!youtubeModalElement) {
+    return;
+  }
+
+  youtubeModalElement.classList.remove("hidden");
+  await renderYoutubeModalContent();
+}
+window.openYoutubeModal = openYoutubeModal;
 // Youtubeモーダル描画
 async function renderYoutubeModalContent() {
   try {
