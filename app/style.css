@@ -1177,11 +1177,6 @@ h1 {
   line-height: 1.4;
   font-weight: 700;
   color: var(--color-text);
-
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .feedback-card {
