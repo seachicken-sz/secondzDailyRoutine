@@ -1145,8 +1145,8 @@ h1 {
 /* モーダル内カードは横スクロール前提で幅固定 */
 .youtube-modal-card-row .youtube-card {
     flex: 0 0 160px;
-    width: 160px;
-    min-width: 160px;
+    width: 180px;
+    min-width: 180px;
 }
 
 /* サムネ */
