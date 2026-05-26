@@ -1121,11 +1121,11 @@ h1 {
 /* モーダル内の各YouTube区切り */
 .youtube-modal-section {
   margin-top: 18px;
-  padding: 0 0.25rem 0.25rem;
+  padding: 0 0.5rem 0.25rem;
 }
 
 .youtube-modal-section-title {
-  margin: 0 0 8px;
+  margin: 0 0.25rem 8px;
   font-size: 0.95rem;
   font-weight: 800;
   color: var(--color-text);
@@ -1144,9 +1144,9 @@ h1 {
 
 /* モーダル内カードは横スクロール前提で幅固定 */
 .youtube-modal-card-row .youtube-card {
-  flex: 0 0 132px;
-  width: 132px;
-  min-width: 132px;
+    flex: 0 0 160px;
+    width: 160px;
+    min-width: 160px;
 }
 
 /* サムネ */
