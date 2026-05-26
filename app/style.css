@@ -1111,7 +1111,76 @@ h1 {
   font-size: 13px;
   line-height: 1.7;
 }
+/* YouTubeモーダルだけ、少し縦に広めに使う */
+.youtube-modal-content {
+  max-height: 86vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
 
+/* モーダル内の各YouTube区切り */
+.youtube-modal-section {
+  margin-top: 18px;
+}
+
+.youtube-modal-section-title {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+/* モーダル内のYouTubeカード行 */
+.youtube-modal-card-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 2px 2px 12px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* モーダル内カードは横スクロール前提で幅固定 */
+.youtube-modal-card-row .youtube-card {
+  flex: 0 0 132px;
+  width: 132px;
+  min-width: 132px;
+}
+
+/* サムネ */
+.youtube-modal-card-row .youtube-thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* サムネなし */
+.youtube-modal-card-row .youtube-text-card {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--color-surface-soft);
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* タイトル */
+.youtube-modal-card-row .youtube-card-name {
+  margin: 8px 0 0;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  font-weight: 700;
+  color: var(--color-text);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 
 .feedback-card {
   margin-top: 16px;
