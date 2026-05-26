@@ -1174,12 +1174,12 @@ h1 {
 .youtube-modal-card-row .youtube-card-name {
   margin: 8px 0 0;
   font-size: 0.78rem;
-  line-height: 1.35;
+  line-height: 1.45;
   font-weight: 700;
   color: var(--color-text);
 
   display: block;
-  height: calc(0.78rem * 1.35 * 2);
+  max-height: 2.9em;
   overflow: hidden;
 }
 
