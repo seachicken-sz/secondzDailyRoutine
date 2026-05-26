@@ -1113,7 +1113,7 @@ h1 {
 }
 /* YouTubeモーダルだけ、少し縦に広めに使う */
 .youtube-modal-content {
-  max-height: 86vh;
+  max-height: 90vh;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -1121,6 +1121,7 @@ h1 {
 /* モーダル内の各YouTube区切り */
 .youtube-modal-section {
   margin-top: 18px;
+  padding: 0 0.25rem 0.25rem;
 }
 
 .youtube-modal-section-title {
