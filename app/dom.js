@@ -52,6 +52,29 @@ const usageModalElement = document.getElementById("usageModal");
 const closeUsageButtonElement = document.getElementById("closeUsageButton");
 
 // ==================================================
+// DOM: Yputubeモーダル
+// ==================================================
+const openYoutubeModalButtonElement =
+  document.getElementById("openYoutubeModalButton");
+
+const youtubeModalElement =
+  document.getElementById("youtubeModal");
+
+const closeYoutubeModalButtonElement =
+  document.getElementById("closeYoutubeModalButton");
+
+const youtubeModalPlaylistRowElement =
+  document.getElementById("youtubeModalPlaylistRow");
+
+const youtubeModalMvRowElement =
+  document.getElementById("youtubeModalMvRow");
+
+const youtubeModalOtherRowElement =
+  document.getElementById("youtubeModalOtherRow");
+
+const youtubeModalErrorAreaElement =
+  document.getElementById("youtubeModalErrorArea");
+// ==================================================
 // DOM: STEP 1 Spotify
 // ==================================================
 
