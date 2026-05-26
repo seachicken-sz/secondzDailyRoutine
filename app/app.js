@@ -96,6 +96,30 @@ if (usageModalElement) {
     }
   });
 }
+addClickEvent(openYoutubeModalButtonElement, async () => {
+  if (!youtubeModalElement) {
+    return;
+  }
+
+  youtubeModalElement.classList.remove("hidden");
+  await renderYoutubeModalContent();
+});
+// ホーム画面Youtubeモーダルボタン押下時
+addClickEvent(closeYoutubeModalButtonElement, () => {
+  if (!youtubeModalElement) {
+    return;
+  }
+
+  youtubeModalElement.classList.add("hidden");
+});
+
+if (youtubeModalElement) {
+  youtubeModalElement.addEventListener("click", (event) => {
+    if (event.target === youtubeModalElement) {
+      youtubeModalElement.classList.add("hidden");
+    }
+  });
+}
 // ==================================================
 // クリックイベント設定 - Spotify
 // ==================================================
@@ -893,7 +917,7 @@ async function restoreFlowStateOrHome() {
 
 
 
-function renderYoutubeCardRow(container, items, type) {
+function renderYoutubeCardRow(container, items, type, options = {}) {
   if (!container) {
     return;
   }
@@ -931,21 +955,27 @@ function renderYoutubeCardRow(container, items, type) {
     name.textContent = item.name;
     card.appendChild(name);
 
-card.addEventListener("click", () => {
-  sendYoutubeLog({
-    itemId: item.id || item.itemId || createYoutubeLogItemId(item),
-    title: item.name || item.title || "",
-    url: item.url || ""
-  }).catch((error) => {
-    console.error("youtubeLog送信失敗", error);
-  });
+    card.addEventListener("click", () => {
+      sendYoutubeLog({
+        itemId: item.id || item.itemId || createYoutubeLogItemId(item),
+        title: item.name || item.title || "",
+        url: item.url || "",
+      }).catch((error) => {
+        console.error("youtubeLog送信失敗", error);
+      });
 
-  showPlaceholderNextStep(MESSAGES.finish);
+      if (options.closeModalElement) {
+        options.closeModalElement.classList.add("hidden");
+      }
 
-  setTimeout(() => {
-    location.href = item.url;
-  }, 100);
-});
+      if (options.finishAfterClick !== false) {
+        showPlaceholderNextStep(MESSAGES.finish);
+      }
+
+      setTimeout(() => {
+        location.href = item.url;
+      }, 100);
+    });
 
     container.appendChild(card);
   });
@@ -1279,20 +1309,64 @@ function showPostEditStep() {
 async function showYoutubeAskStep() {
   showOnlyStep(youtubeAskStepElement);
 }
+// Youtube読み込み共通関数
+async function ensureYoutubeDataLoaded() {
+  if (!Array.isArray(state.youtubePlaylists) || state.youtubePlaylists.length === 0) {
+    state.youtubePlaylists = await loadYoutubePlaylists();
+  }
 
+  if (!Array.isArray(state.youtubeMvs) || state.youtubeMvs.length === 0) {
+    state.youtubeMvs = await loadYoutubeMvs();
+  }
+
+  if (!Array.isArray(state.youtubeOthers) || state.youtubeOthers.length === 0) {
+    state.youtubeOthers = await loadYoutubeOthers();
+  }
+}
+// Youtubeモーダル描画
+async function renderYoutubeModalContent() {
+  try {
+    await ensureYoutubeDataLoaded();
+
+    const modalOptions = {
+      finishAfterClick: false,
+      closeModalElement: youtubeModalElement,
+    };
+
+    renderYoutubeCardRow(
+      youtubeModalPlaylistRowElement,
+      state.youtubePlaylists,
+      "playlist",
+      modalOptions
+    );
+
+    renderYoutubeCardRow(
+      youtubeModalMvRowElement,
+      state.youtubeMvs,
+      "mv",
+      modalOptions
+    );
+
+    renderYoutubeCardRow(
+      youtubeModalOtherRowElement,
+      state.youtubeOthers,
+      "other",
+      modalOptions
+    );
+
+    hideError(youtubeModalErrorAreaElement);
+  } catch (error) {
+    console.error(error);
+    showError(
+      youtubeModalErrorAreaElement,
+      "YouTubeリストの読み込みに失敗しました。"
+    );
+  }
+}
+// タスクの流れで開くYoutubeページ描画
 async function showYoutubeSelectStep() {
   try {
-    if (state.youtubePlaylists.length === 0) {
-      state.youtubePlaylists = await loadYoutubePlaylists();
-    }
-
-    if (state.youtubeMvs.length === 0) {
-      state.youtubeMvs = await loadYoutubeMvs();
-    }
-
-    if (state.youtubeOthers.length === 0) {
-      state.youtubeOthers = await loadYoutubeOthers();
-    }
+    await ensureYoutubeDataLoaded();
 
     renderYoutubeCardRow(
       youtubePlaylistRowElement,
