@@ -813,30 +813,33 @@
   </div>
 </div>
 
-  <div id="youtubeModal" class="modal-overlay hidden">
+<div id="youtubeModal" class="modal-overlay hidden">
   <div class="modal-content youtube-modal-content">
-    <button id="closeYoutubeModalButton" class="modal-close-button" type="button">
-      ×
-    </button>
+    <div class="modal-header">
+      <h2 class="modal-title">タムごと</h2>
 
-    <h2 class="modal-title">YouTubeリスト</h2>
-    <p class="modal-description">
-      今日の流れの最後で表示されるYouTubeリストを、ここから確認できます。
-    </p>
-
-    <section class="youtube-section">
-      <h3 class="youtube-section-title">再生リスト</h3>
-      <div id="youtubeModalPlaylistRow" class="youtube-card-row"></div>
+      <button
+        id="closeYoutubeModalButton"
+        class="modal-close-button"
+        type="button"
+        aria-label="閉じる"
+      >
+        ×
+      </button>
+    </div>
+    <section class="youtube-modal-section">
+      <h3 class="youtube-modal-section-title">再生リスト</h3>
+      <div id="youtubeModalPlaylistRow" class="youtube-card-row youtube-modal-card-row"></div>
     </section>
 
-    <section class="youtube-section">
-      <h3 class="youtube-section-title">MV</h3>
-      <div id="youtubeModalMvRow" class="youtube-card-row"></div>
+    <section class="youtube-modal-section">
+      <h3 class="youtube-modal-section-title">MV</h3>
+      <div id="youtubeModalMvRow" class="youtube-card-row youtube-modal-card-row"></div>
     </section>
 
-    <section class="youtube-section">
-      <h3 class="youtube-section-title">その他動画</h3>
-      <div id="youtubeModalOtherRow" class="youtube-card-row"></div>
+    <section class="youtube-modal-section">
+      <h3 class="youtube-modal-section-title">その他</h3>
+      <div id="youtubeModalOtherRow" class="youtube-card-row youtube-modal-card-row"></div>
     </section>
 
     <p id="youtubeModalErrorArea" class="error-text hidden"></p>
