@@ -173,21 +173,21 @@ function createYoutubeModalButtonHtml(group) {
   }
 
   return `
-    <button
+    <a
       class="member-work-link-card"
-      type="button"
+      href="javascript:void(0)"
       data-open-youtube-modal="true"
     >
       <span class="member-work-link-main">
         <span class="member-work-link-title">
-          YouTubeリストを見る
+          タムごと動画
         </span>
       </span>
 
       <span class="member-work-link-arrow" aria-hidden="true">
         ›
       </span>
-    </button>
+    </a>
   `;
 }
 
