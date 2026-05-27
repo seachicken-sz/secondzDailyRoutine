@@ -524,6 +524,17 @@ function createRankingChart(canvasId, currentData, previousData, color, chartHou
       resizeDelay: 100,
       scales: {
         y: {
+          title: {
+            display: true,
+            text: "順位",
+            font: {
+              size: 11,
+              weight: "600"
+            },
+            padding: {
+              bottom: 6
+            }
+          },
           reverse: true,
           min: 1,
           max: 50,
@@ -538,12 +549,26 @@ function createRankingChart(canvasId, currentData, previousData, color, chartHou
           ticks: {
             stepSize: 10,
             padding: 8,
+            font: {
+              size: 10
+            },
             callback: function(value) {
-              return value;
+              return `${value}位`;
             }
           }
         },
         x: {
+          title: {
+            display: true,
+            text: "経過時間",
+            font: {
+              size: 11,
+              weight: "600"
+            },
+            padding: {
+              top: 6
+            }
+          },
           border: {
             display: false
           },
@@ -553,7 +578,15 @@ function createRankingChart(canvasId, currentData, previousData, color, chartHou
           },
           ticks: {
             maxTicksLimit: 8,
-            padding: 6
+            padding: 6,
+            font: {
+              size: 10
+            },
+            callback: function(value, index) {
+              const hour = index + 1;
+
+              return `${hour}h`;
+            }
           }
         }
       },
@@ -623,6 +656,17 @@ function createCombinedRankingChart(canvasId, rankings, chartHours) {
       resizeDelay: 100,
       scales: {
         y: {
+          title: {
+            display: true,
+            text: "順位",
+            font: {
+              size: 11,
+              weight: "600"
+            },
+            padding: {
+              bottom: 6
+            }
+          },
           reverse: true,
           min: 1,
           max: 50,
@@ -637,12 +681,26 @@ function createCombinedRankingChart(canvasId, rankings, chartHours) {
           ticks: {
             stepSize: 10,
             padding: 8,
+            font: {
+              size: 10
+            },
             callback: function(value) {
-              return value;
+              return `${value}位`;
             }
           }
         },
         x: {
+          title: {
+            display: true,
+            text: "経過時間",
+            font: {
+              size: 11,
+              weight: "600"
+            },
+            padding: {
+              top: 6
+            }
+          },
           border: {
             display: false
           },
@@ -660,6 +718,9 @@ function createCombinedRankingChart(canvasId, rankings, chartHours) {
             maxRotation: 0,
             minRotation: 0,
             padding: 6,
+            font: {
+              size: 10
+            },
             callback: function(value, index) {
               const hour = index + 1;
 
