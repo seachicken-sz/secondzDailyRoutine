@@ -19,130 +19,21 @@ window.addEventListener("pagehide", () => {
 addClickEvent(backStepButtonElement, () => {
   goBackStep();
 });
-
 // モーダル系イベント登録
 bindModalEvents();
-
 // ホーム画面イベント登録
 bindHomeEvents();
-
 // Spotify画面イベント登録
 bindSpotifyEvents();
-
 // 期間限定タスク画面イベント登録
 bindOnceTaskEvents();
-
 // USEN推しリク画面イベント登録
 bindRequestSongEvents();
-
 // デイリータスク画面イベント登録
 bindDailyTaskEvents();
-// ==================================================
-// クリックイベント設定 - SNSシェア
-// ==================================================
+// SNS共有画面イベント登録
+bindPostEvents();
 
-// SNS共有確認画面の「共有する！」ボタン押下時
-addClickEvent(makePostButtonElement, () => {
-  // 投稿文編集画面へ進む
-  showPostEditStep();
-});
-
-// SNS共有確認画面の「やめとく」ボタン押下時
-addClickEvent(skipPostButtonElement, () => {
-  // YouTube確認画面へ進む
-  showYoutubeAskStep();
-});
-
-// X版プレビュータブ押下時
-addClickEvent(postPreviewXTabButtonElement, () => {
-  setPostPreviewPlatform("x");
-});
-
-// Threads版プレビュータブ押下時
-addClickEvent(postPreviewThreadsTabButtonElement, () => {
-  setPostPreviewPlatform("threads");
-});
-
-// X版投稿文をコピーするボタン押下時
-addClickEvent(copyXPostTextButtonElement, async () => {
-  // X投稿では必ずX版の投稿文を使う
-  const postText = buildPostText("x");
-
-  // 投稿文が空の場合はエラー表示して処理を止める
-  if (!postText) {
-    showError(postErrorAreaElement, MESSAGES.errors.noCopyPostText);
-    return;
-  }
-
-  try {
-    // X版投稿文をクリップボードへコピー
-    await navigator.clipboard.writeText(postText);
-
-    // コピー成功後、ボタン文言を一時的に変更する
-    if (copyXPostTextButtonElement) {
-      copyXPostTextButtonElement.textContent = "コピーしました";
-    }
-
-    // コピー成功時はエラー表示を消す
-    hideError(postErrorAreaElement);
-  } catch (error) {
-    // コピーに失敗した場合は、手動コピーを促す
-    console.error(error);
-    showError(postErrorAreaElement, MESSAGES.errors.copyFailed);
-  }
-});
-
-// Xに投稿ボタン押下時
-addClickEvent(openXPostButtonElement, () => {
-  // X投稿では必ずX版の投稿文を使う
-  const postText = buildPostText("x");
-
-  // 投稿文が空の場合はエラー表示して処理を止める
-  if (!postText) {
-    showError(postErrorAreaElement, MESSAGES.errors.noPostText);
-    return;
-  }
-  sendSnsShareLog("x").catch((error) => {
-    console.error("snsShareLog送信失敗", error);
-  });
-  // X投稿画面用URLを作成して移動
-  const url = X_POST_URL + encodeURIComponent(postText);
-  location.href = url;
-});
-
-// Threadsを開くボタン押下時
-addClickEvent(openThreadsButtonElement, async () => {
-  // Threads投稿では必ずThreads版の投稿文を使う
-  const postText = buildPostText("threads");
-
-  // 投稿文が空の場合はエラー表示して処理を止める
-  if (!postText) {
-    showError(postErrorAreaElement, MESSAGES.errors.noPostText);
-    return;
-  }
-  try {
-    // Threadsは投稿文をURLに渡せないため、先にクリップボードへコピーする
-    await navigator.clipboard.writeText(postText);
-
-    // コピー成功時はエラー表示を消す
-    hideError(postErrorAreaElement);
-    sendSnsShareLog("threads").catch((error) => {
-      console.error("snsShareLog送信失敗", error);
-    });
-    // Threadsへ移動
-    location.href = THREADS_URL;
-  } catch (error) {
-    // コピーに失敗した場合は、手動コピーを促す
-    console.error(error);
-    showError(postErrorAreaElement, MESSAGES.errors.copyFailed);
-  }
-});
-
-// 投稿文編集画面の次へボタン押下時
-addClickEvent(postNextButtonElement, () => {
-  // YouTube確認画面へ進む
-  showYoutubeAskStep();
-});
 // ==================================================
 // クリックイベント設定 - SNSシェア画像出力
 // ==================================================
@@ -488,34 +379,6 @@ function renderYoutubeCardRow(container, items, type, options = {}) {
 
 
 
-
-
-function showPostAskStep() {
-  state.isFlowStateSaveDisabled = true;
-  clearFlowState();
-  
-  sendSheetLogOnPostAskStep();
-  showOnlyStep(postAskStepElement, { saveFlow: false });
-}
-
-function sendSheetLogOnPostAskStep() {
-  if (state.isSheetLogSentInCurrentFlow) {
-    return;
-  }
-
-  sendDailyTaskLog(state.completedDailyItems).catch((error) => {
-    console.error("dailyTaskLog送信失敗", error);
-  });
-
-  state.isSheetLogSentInCurrentFlow = true;
-}
-
-function showPostEditStep() {
-  state.postItems = buildPostItems();
-  renderPostItemList(state.postItems);
-  setPostPreviewPlatform("x");
-  showOnlyStep(postEditStepElement);
-}
 async function showYoutubeAskStep() {
   showOnlyStep(youtubeAskStepElement);
 }
