@@ -270,18 +270,22 @@ function getShareIdentifier() {
 function getAccessBrowserType() {
   const ua = navigator.userAgent || "";
   const lowerUa = ua.toLowerCase();
+  const referrer = document.referrer || "";
+  const lowerReferrer = referrer.toLowerCase();
 
   if (
     lowerUa.includes("twitter") ||
     lowerUa.includes("twitterios") ||
-    lowerUa.includes("twitterandroid")
+    lowerUa.includes("twitterandroid") ||
+    lowerReferrer.includes("t.co")
   ) {
     return "x_in_app";
   }
 
   if (
     lowerUa.includes("threads") ||
-    lowerUa.includes("barcelona")
+    lowerUa.includes("barcelona") ||
+    lowerReferrer.includes("l.threads.com")
   ) {
     return "threads_in_app";
   }
