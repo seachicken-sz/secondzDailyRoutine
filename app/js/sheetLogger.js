@@ -10,7 +10,8 @@ const SHEET_TASK_TYPES = [
   "requestSong",
   "start",
   "snsShare",
-  "youtube"
+  "youtube",
+  "access"
 ];
 
 /**
@@ -28,11 +29,7 @@ function getSheetPlatform() {
 
   const isAndroid = /Android/.test(ua);
 
-  const isStandalone =
-    window.matchMedia("(display-mode: standalone)").matches ||
-    window.matchMedia("(display-mode: fullscreen)").matches ||
-    window.matchMedia("(display-mode: minimal-ui)").matches ||
-    window.navigator.standalone === true;
+  const isStandalone = isSheetStandaloneMode();
 
   if (isIOS) {
     return isStandalone ? "ios/pwa" : "ios/browser";
@@ -51,6 +48,20 @@ function getSheetPlatform() {
   }
 
   return isStandalone ? "unknown/pwa" : "unknown/browser";
+}
+
+/**
+ * PWA起動状態かどうかを判定する
+ *
+ * @returns {boolean}
+ */
+function isSheetStandaloneMode() {
+  return (
+    window.matchMedia("(display-mode: standalone)").matches ||
+    window.matchMedia("(display-mode: fullscreen)").matches ||
+    window.matchMedia("(display-mode: minimal-ui)").matches ||
+    window.navigator.standalone === true
+  );
 }
 
 /**
@@ -219,6 +230,155 @@ async function sendSheetLog(groups) {
     console.error("sheetLog送信失敗", error);
     return false;
   }
+}
+
+/**
+ * shareパラメータを解析する
+ *
+ * 想定:
+ * ?share=x_20260528
+ * ?share=th_20260528
+ *
+ * @returns {{shareParam: string, shareSource: string, shareDate: string}}
+ */
+function getShareIdentifier() {
+  const params = new URLSearchParams(window.location.search);
+  const shareParam = params.get("share") || "";
+
+  const match = shareParam.match(/^(x|th)_(\d{8})$/);
+
+  if (!match) {
+    return {
+      shareParam,
+      shareSource: "",
+      shareDate: ""
+    };
+  }
+
+  return {
+    shareParam,
+    shareSource: match[1] === "x" ? "x" : "threads",
+    shareDate: match[2]
+  };
+}
+
+/**
+ * ブラウザ種別を判定する
+ *
+ * @returns {string}
+ */
+function getAccessBrowserType() {
+  const ua = navigator.userAgent || "";
+  const lowerUa = ua.toLowerCase();
+
+  if (
+    lowerUa.includes("twitter") ||
+    lowerUa.includes("twitterios") ||
+    lowerUa.includes("twitterandroid")
+  ) {
+    return "x_in_app";
+  }
+
+  if (lowerUa.includes("threads")) {
+    return "threads_in_app";
+  }
+
+  if (lowerUa.includes("line")) {
+    return "line_in_app";
+  }
+
+  if (lowerUa.includes("instagram")) {
+    return "instagram_in_app";
+  }
+
+  if (lowerUa.includes("fbav") || lowerUa.includes("fban")) {
+    return "facebook_in_app";
+  }
+
+  if (lowerUa.includes("crios")) {
+    return "chrome_ios";
+  }
+
+  if (lowerUa.includes("fxios") || lowerUa.includes("firefox")) {
+    return "firefox";
+  }
+
+  if (lowerUa.includes("edg")) {
+    return "edge";
+  }
+
+  if (lowerUa.includes("chrome")) {
+    return "chrome";
+  }
+
+  if (lowerUa.includes("safari")) {
+    return "safari";
+  }
+
+  return "other_browser";
+}
+
+/**
+ * アクセス時の情報を取得する
+ *
+ * @returns {Object}
+ */
+function getAccessLogInfo() {
+  const shareIdentifier = getShareIdentifier();
+
+  return {
+    browserType: getAccessBrowserType(),
+    shareParam: shareIdentifier.shareParam,
+    shareSource: shareIdentifier.shareSource,
+    shareDate: shareIdentifier.shareDate,
+    path: location.pathname,
+    query: location.search,
+    referrer: document.referrer || "",
+    userAgent: navigator.userAgent || ""
+  };
+}
+
+/**
+ * ブラウザアクセスログを送信する
+ *
+ * PWA起動時は対象外。
+ *
+ * @returns {Promise<boolean>}
+ */
+async function sendAccessLog() {
+  if (isSheetStandaloneMode()) {
+    return false;
+  }
+
+  const accessKey = `accessLogSent:${location.pathname}${location.search}`;
+
+  if (sessionStorage.getItem(accessKey)) {
+    return false;
+  }
+
+  sessionStorage.setItem(accessKey, "1");
+
+  const info = getAccessLogInfo();
+
+  const item = createSheetItem({}, {
+    itemId: `access_${info.browserType}`,
+    title: info.browserType,
+    url: location.href
+  });
+
+  return sendSheetLog({
+    access: [{
+      ...item,
+      browserType: info.browserType,
+      shareParam: info.shareParam,
+      shareSource: info.shareSource,
+      shareDate: info.shareDate,
+      path: info.path,
+      query: info.query,
+      referrer: info.referrer,
+      userAgent: info.userAgent
+    }]
+  });
 }
 
 /**
