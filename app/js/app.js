@@ -31,51 +31,9 @@ bindSpotifyEvents();
 
 // 期間限定タスク画面イベント登録
 bindOnceTaskEvents();
-// ==================================================
-// クリックイベント設定 - USEN推し活
-// ==================================================
-// USEN推しリクの「その他」開閉ボタン押下時
-addClickEvent(toggleOtherRequestSongsButtonElement, () => {
-  // その他リクエスト曲リストの開閉状態を反転する
-  state.isOtherRequestSongsOpen = !state.isOtherRequestSongsOpen;
-  // 反転後の状態を画面に反映する
-  updateOtherRequestSongsAccordion();
-});
-// USEN推しリクのページを開くボタン押下時
-addClickEvent(openRequestSongButtonElement, () => {
-  // リクエスト曲が未選択の場合はエラー表示して処理を止める
-  if (!state.selectedRequestSong) {
-    showError(requestSongErrorAreaElement, MESSAGES.errors.noRequestSongSelected);
-    return;
-  }
-  // 選択中の曲からUSEN推しリク用URLを作成
-  const requestUrl = buildRequestSongUrl(state.selectedRequestSong.url);
-  // ページを開いた後に進めるよう、次へボタンを表示
-  if (requestSongNextButtonElement) {
-    requestSongNextButtonElement.classList.remove("hidden");
-  }
-  // 開くボタンは押下済み表示、次へボタンを主ボタン表示にする
-  setButtonStyle(openRequestSongButtonElement, "gray");
-  setButtonStyle(requestSongNextButtonElement, "primary");
-  // USEN推しリク遷移後は曲リストを非表示にして、戻ってきた時の画面を簡略化する
-  setSongListVisibility(recommendedRequestSongsElement, false);
-  setSongListVisibility(otherRequestSongsWrapperElement, false);
-  setSongListVisibility(toggleOtherRequestSongsButtonElement, false);
-  // USEN推しリクを開いた状態として保存する
-  // アプリに戻ってきた時に次へボタン表示などを復元するため
-  state.openedAction = OPENED_ACTIONS.requestSong;
-  saveFlowState(state.openedAction, requestSongStepElement);
-  sendRequestSongLog(state.selectedRequestSong).catch((error) => {
-  console.error("requestSongLog送信失敗", error);
-});
-  // USEN推しリクページへ移動
-  location.href = requestUrl;
-});
-// USEN推しリクステップの次へボタン押下時
-addClickEvent(requestSongNextButtonElement, async () => {
-  // デイリータスクへ進む
-  await showDailyTaskStep();
-});
+
+// USEN推しリク画面イベント登録
+bindRequestSongEvents();
 // ==================================================
 // クリックイベント設定 - デイリータスク
 // ==================================================
@@ -609,54 +567,6 @@ function renderYoutubeCardRow(container, items, type, options = {}) {
   });
 }
 
-
-async function showRequestSongStep() {
-  try {
-    state.selectedRequestSong = null;
-    
-    if (selectedRequestSongAreaElement) {
-      selectedRequestSongAreaElement.classList.add("hidden");
-    }
-    
-    if (requestSongNextButtonElement) {
-      requestSongNextButtonElement.classList.add("hidden");
-    }
-    
-    setButtonStyle(openRequestSongButtonElement, "primary");
-    setButtonStyle(requestSongNextButtonElement, "secondary");
-    
-    setSongListVisibility(recommendedRequestSongsElement, true);
-    setSongListVisibility(toggleOtherRequestSongsButtonElement, true);
-    
-    updateOtherRequestSongsAccordion();
-    if (state.requestSongs.length === 0) {
-      state.requestSongs = await loadRequestSongs();
-    }
-
-    const recommendedRequestSongs = state.requestSongs.filter((song) => song.flag === true);
-    const otherRequestSongs = state.requestSongs.filter((song) => song.flag !== true);
-
-    renderRequestSongList(recommendedRequestSongsElement, recommendedRequestSongs);
-    renderRequestSongList(otherRequestSongsElement, otherRequestSongs);
-
-    if (recommendedRequestSongs.length === 0 && recommendedRequestSongsElement) {
-      recommendedRequestSongsElement.innerHTML = `<p class="empty-text">${MESSAGES.empty.recommendedSongs}</p>`;
-    }
-
-    if (otherRequestSongs.length === 0 && otherRequestSongsElement) {
-      otherRequestSongsElement.innerHTML = `<p class="empty-text">${MESSAGES.empty.otherSongs}</p>`;
-    }
-
-    updateOtherRequestSongsAccordion();
-
-    showOnlyStep(requestSongStepElement);
-
-    hideError(requestSongErrorAreaElement);
-  } catch (error) {
-    console.error(error);
-    showError(onceTaskRunErrorAreaElement, "※エラーが発生しました。アプリを立ち上げ直してください。ERROR:requestSong");
-  }
-}
 
 async function showDailyTaskStep(shouldInitialize = true) {
   try {
