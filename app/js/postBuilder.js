@@ -328,15 +328,21 @@ function buildPostText(platform = "x") {
         bottomShareLines.push(postText);
       }
 
+      // Threads用URL（?share=th_YYYYMMDD）を付与
       if (item.url) {
-        bottomShareLines.push(item.url);
+        bottomShareLines.push(
+          getAppShareUrlByPlatform(platform)
+        );
       }
 
       return;
     }
 
     // Spotify BGM とアプリシェアはチェックマークなし
-    if (item.id === "spotify-bgm" || item.id === "app-share") {
+    if (
+      item.id === "spotify-bgm" ||
+      item.id === "app-share"
+    ) {
       if (postText) {
         lines.push(postText);
       }
@@ -347,7 +353,15 @@ function buildPostText(platform = "x") {
 
     // URLがある項目は次の行にURLを追加する
     if (item.url) {
-      lines.push(item.url);
+      // アプリシェアURLだけは
+      // X/Threads別の識別子付きURLにする
+      if (item.id === "app-share") {
+        lines.push(
+          getAppShareUrlByPlatform(platform)
+        );
+      } else {
+        lines.push(item.url);
+      }
     }
   });
 
@@ -356,7 +370,10 @@ function buildPostText(platform = "x") {
   lines.push("クリックですぐ使えるよ▼");
 
   // Threadsの場合だけ、アプリシェア導線を末尾へ追加する
-  if (platform === "threads" && bottomShareLines.length > 0) {
+  if (
+    platform === "threads" &&
+    bottomShareLines.length > 0
+  ) {
     lines.push(...bottomShareLines);
   }
 
@@ -424,4 +441,58 @@ function getPostSpotifyUrl() {
 
   // BGM選択時は選択曲のSpotify URL
   return buildSpotifyUrl(state.selectedSong.url);
+}
+
+/**
+ * SNS共有用URLに付ける識別子を作成する
+ *
+ * 例:
+ * X       → x_20260529
+ * Threads → th_20260529
+ *
+ * @param {"x" | "threads"} platform 投稿先
+ * @returns {string}
+ */
+function getShareParamByPlatform(platform = "x") {
+  // Threadsは短縮して th、それ以外はX扱いで x にする
+  const prefix = platform === "threads" ? "th" : "x";
+
+  // URL識別子の日付に使う現在日付を取得
+  const now = new Date();
+
+  // YYYYMMDD形式に整形
+  const yyyy = now.getFullYear();
+  const mm = String(now.getMonth() + 1).padStart(2, "0");
+  const dd = String(now.getDate()).padStart(2, "0");
+
+  return `${prefix}_${yyyy}${mm}${dd}`;
+}
+
+/**
+ * 投稿先ごとのSNS共有用URLを作成する
+ *
+ * getAppShareUrl() の基本URLに、
+ * ?share=x_YYYYMMDD または
+ * ?share=th_YYYYMMDD を付与する。
+ *
+ * 相対URLでも絶対URLでも動くよう、
+ * window.location.origin を基準URLにする。
+ *
+ * @param {"x" | "threads"} platform 投稿先
+ * @returns {string}
+ */
+function getAppShareUrlByPlatform(platform = "x") {
+  // 相対URLでも落ちないように安全にURL化
+  const url = new URL(
+    getAppShareUrl(),
+    window.location.origin
+  );
+
+  // 投稿先ごとの識別子をshareパラメータとして付与
+  url.searchParams.set(
+    "share",
+    getShareParamByPlatform(platform)
+  );
+
+  return url.toString();
 }
