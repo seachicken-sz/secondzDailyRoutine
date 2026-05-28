@@ -279,7 +279,10 @@ function getAccessBrowserType() {
     return "x_in_app";
   }
 
-  if (lowerUa.includes("threads")) {
+  if (
+    lowerUa.includes("threads") ||
+    lowerUa.includes("barcelona")
+  ) {
     return "threads_in_app";
   }
 
