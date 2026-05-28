@@ -34,6 +34,7 @@ async function init() {
   try {
     // ホーム画面のPWA案内カード表示を更新
     updateHomeInstallGuideVisibility();
+    sendAccessLog();
 
     // 初回設定モーダル/案内まわりの初期化
     // setting.js 側で定義されている想定
