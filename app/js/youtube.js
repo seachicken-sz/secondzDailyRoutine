@@ -96,7 +96,7 @@ function renderYoutubeCardRow(container, items, type, options = {}) {
       // YouTubeクリックログを送信する
       // ログ送信に失敗しても遷移は止めない
       sendYoutubeLog({
-        itemId: item.id || item.itemId || createYoutubeLogItemId(item),
+        itemId: item.id || item.itemId || createLogItemId(`yt_${type}`, item.url || item.name),
         title: item.name || item.title || "",
         url: item.url || "",
       }).catch((error) => {
