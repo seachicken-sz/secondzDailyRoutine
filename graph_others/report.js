@@ -685,7 +685,7 @@ function createCombinedRankingChart(canvasId, rankings, chartHours) {
               size: 10
             },
             callback: function(value) {
-              return `${value}位`;
+              return `${value}`;
             }
           }
         },
@@ -724,7 +724,7 @@ function createCombinedRankingChart(canvasId, rankings, chartHours) {
             callback: function(value, index) {
               const hour = index + 1;
 
-              return hour % 24 === 0 ? `${hour}h` : "";
+              return hour % 24 === 0 ? `${hour}` : "";
             }
           }
         }
