@@ -19,19 +19,12 @@ window.addEventListener("pagehide", () => {
 addClickEvent(backStepButtonElement, () => {
   goBackStep();
 });
+
 // モーダル系イベント登録
 bindModalEvents();
-// 開始ボタン押下時
-addClickEvent(startRoutineButtonElement, () => {
-  sendStartLog().catch((error) => {
-    console.error("startError", error);
-  });
-  showOnlyStep(spotifyStepElement);
-});
-// SNSシェアボタン
-addClickEvent(homeTopShareButtonElement, shareAppFromHome);
-addClickEvent(homeBottomShareButtonElement, shareAppFromHome);
 
+// ホーム画面イベント登録
+bindHomeEvents();
 
 // ==================================================
 // クリックイベント設定 - Spotify
@@ -1187,31 +1180,6 @@ function getDailyTaskItemUrl(item) {
   }
 
   return item.url || "";
-}
-
-async function shareAppFromHome() {
-  const shareData = {
-    title: "タムごとDaily",
-    text: "3分でラジリク全部終わらせちゃおう！",
-    url: "https://seachicken-sz.github.io/secondzDailyRoutine/app/",
-  };
-
-  try {
-    if (navigator.share) {
-      await navigator.share(shareData);
-      return;
-    }
-
-    await navigator.clipboard.writeText(`${shareData.text}\n${shareData.url}`);
-    alert("共有が使えない環境のため、URLをコピーしました。");
-  } catch (error) {
-    if (error.name === "AbortError") {
-      return;
-    }
-
-    console.error(error);
-    alert("共有に失敗しました。");
-  }
 }
 
 function getYoutubeFallbackLabel(type) {
