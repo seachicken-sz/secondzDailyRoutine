@@ -19,6 +19,8 @@ window.addEventListener("pagehide", () => {
 addClickEvent(backStepButtonElement, () => {
   goBackStep();
 });
+// モーダル系イベント登録
+bindModalEvents();
 // 開始ボタン押下時
 addClickEvent(startRoutineButtonElement, () => {
   sendStartLog().catch((error) => {
@@ -30,78 +32,7 @@ addClickEvent(startRoutineButtonElement, () => {
 addClickEvent(homeTopShareButtonElement, shareAppFromHome);
 addClickEvent(homeBottomShareButtonElement, shareAppFromHome);
 
-// ==================================================
-// クリックイベント設定 - モーダル
-// ==================================================
-// 画面下部の初回設定ボタン押下時
-addClickEvent(openHowToButtonElement, () => {
-  if (howToModalElement) {
-    howToModalElement.classList.remove("hidden");
-  }
-});
-// 初回設定モーダルの閉じるボタン押下時
-addClickEvent(closeHowToButtonElement, () => {
-  if (howToModalElement) {
-    howToModalElement.classList.add("hidden");
-  }
-});
-// ホーム画面カード内の初回設定ボタン押下時
-addClickEvent(openHowToFromHomeCardButtonElement, () => {
-  if (howToModalElement) {
-    howToModalElement.classList.remove("hidden");
-  }
-});
-// 初回設定モーダルの外側タップ時
-// モーダル本文をタップした場合は閉じない
-if (howToModalElement) {
-  howToModalElement.addEventListener("click", (event) => {
-    if (event.target === howToModalElement) {
-      howToModalElement.classList.add("hidden");
-    }
-  });
-}
-// 使い方モーダルを開く共通処理
-// ホーム画面下部ボタン・ステップ上部ボタンの両方から使う
-const openUsageModal = () => {
-  if (usageModalElement) {
-    usageModalElement.classList.remove("hidden");
-  }
-};
-// ホーム画面下部の使い方ボタン押下時
-addClickEvent(openUsageButtonElement, openUsageModal);
-// ステップ画面上部の使い方ボタン押下時
-addClickEvent(stepUsageButtonElement, openUsageModal);
-// 使い方モーダルの閉じるボタン押下時
-addClickEvent(closeUsageButtonElement, () => {
-  if (usageModalElement) {
-    usageModalElement.classList.add("hidden");
-  }
-});
-// 使い方モーダルの外側タップ時
-// モーダル本文をタップした場合は閉じない
-if (usageModalElement) {
-  usageModalElement.addEventListener("click", (event) => {
-    if (event.target === usageModalElement) {
-      usageModalElement.classList.add("hidden");
-    }
-  });
-}
-// ホーム画面Youtubeモーダルボタン押下時
-addClickEvent(closeYoutubeModalButtonElement, () => {
-  if (!youtubeModalElement) {
-    return;
-  }
 
-  youtubeModalElement.classList.add("hidden");
-});
-
-if (youtubeModalElement) {
-  youtubeModalElement.addEventListener("click", (event) => {
-    if (event.target === youtubeModalElement) {
-      youtubeModalElement.classList.add("hidden");
-    }
-  });
-}
 // ==================================================
 // クリックイベント設定 - Spotify
 // ==================================================
