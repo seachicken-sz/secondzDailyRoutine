@@ -411,6 +411,17 @@ body {
   margin: 20px auto;
   text-align: center;
 }
+.like-timeline-section {
+  margin-top: 20px;
+}
+
+.like-chart-box {
+  border-top: 1px solid #edf2f7;
+}
+
+.like-chart-title {
+  color: #d97706;
+}
 
 /* スマホでは760pxの画像を縮小して見せる */
 @media (max-width: 760px) {
