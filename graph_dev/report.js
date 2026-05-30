@@ -1074,8 +1074,8 @@ function createCombinedRankingChart(canvasId, rankings, chartHours) {
             },
             callback: function(value, index) {
               const hour = index + 1;
-
-              return hour % 24 === 0 ? `${hour}` : "";
+            
+              return hour % 24 === 0 ? `${hour / 24}日` : "";
             }
           }
         }
