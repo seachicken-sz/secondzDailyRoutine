@@ -3550,5 +3550,339 @@
         }
       ]
     }
+  },
+    "test001": {
+      "programTitle": "テスト①",
+      "broadcastDate": "2026/05/30",
+      "updatedAt": "2026/05/30 19:06",
+      "episodeId": "eptest001",
+      "subtitle": "いいねのみ",
+      "likes": "1800",
+      "favorites": "12000",
+      "likePoints": [
+        { "hour": 1, "likes": 300 },
+        { "hour": 2, "likes": 520 },
+        { "hour": 4, "likes": 960 },
+        { "hour": 6, "likes": 1420 },
+        { "hour": 8, "likes": 1800 }
+      ],
+      "rankings": [
+        {
+          "type": "variety",
+          "label": "バラエティ",
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
+          "currentPoints": [],
+          "previousPoints": [],
+          "nearbyRanking": []
+        },
+        {
+          "type": "all",
+          "label": "総合",
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
+          "currentPoints": [],
+          "previousPoints": [],
+          "nearbyRanking": []
+        }
+      ]
+    },
+    "test002": {
+      "programTitle": "テスト②",
+      "broadcastDate": "2026/05/30",
+      "updatedAt": "2026/05/30 19:06",
+      "episodeId": "eptest002",
+      "subtitle": "いいね＋バラエティのみランクイン",
+      "likes": "3200",
+      "favorites": "18500",
+      "likePoints": [
+        { "hour": 1, "likes": 420 },
+        { "hour": 3, "likes": 900 },
+        { "hour": 6, "likes": 1650 },
+        { "hour": 9, "likes": 2500 },
+        { "hour": 12, "likes": 3200 }
+      ],
+      "rankings": [
+        {
+          "type": "variety",
+          "label": "バラエティ",
+          "currentRank": 37,
+          "elapsedHour": 12,
+          "elapsedRank": 37,
+          "currentPoints": [
+            { "hour": 10, "rank": 48 },
+            { "hour": 11, "rank": 42 },
+            { "hour": 12, "rank": 37 }
+          ],
+          "previousPoints": [],
+          "nearbyRanking": [
+            { "rank": 34, "title": "比較用バラエティA" },
+            { "rank": 35, "title": "比較用バラエティB" },
+            { "rank": 36, "title": "比較用バラエティC" },
+            { "rank": 37, "title": "テスト②" }
+          ]
+        },
+        {
+          "type": "all",
+          "label": "総合",
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
+          "currentPoints": [],
+          "previousPoints": [],
+          "nearbyRanking": []
+        }
+      ]
+    },
+    "test003": {
+      "programTitle": "テスト③",
+      "broadcastDate": "2026/05/30",
+      "updatedAt": "2026/05/30 19:06",
+      "episodeId": "eptest003",
+      "subtitle": "いいね＋バラエティ総合ランクイン",
+      "likes": "7600",
+      "favorites": "43000",
+      "likePoints": [
+        { "hour": 1, "likes": 600 },
+        { "hour": 4, "likes": 1400 },
+        { "hour": 8, "likes": 2600 },
+        { "hour": 12, "likes": 3900 },
+        { "hour": 18, "likes": 5900 },
+        { "hour": 24, "likes": 7600 }
+      ],
+      "rankings": [
+        {
+          "type": "variety",
+          "label": "バラエティ",
+          "currentRank": 12,
+          "elapsedHour": 24,
+          "elapsedRank": 12,
+          "currentPoints": [
+            { "hour": 8, "rank": 45 },
+            { "hour": 10, "rank": 34 },
+            { "hour": 12, "rank": 26 },
+            { "hour": 16, "rank": 18 },
+            { "hour": 20, "rank": 14 },
+            { "hour": 24, "rank": 12 }
+          ],
+          "previousPoints": [],
+          "nearbyRanking": [
+            { "rank": 9, "title": "比較用バラエティD" },
+            { "rank": 10, "title": "比較用バラエティE" },
+            { "rank": 11, "title": "比較用バラエティF" },
+            { "rank": 12, "title": "テスト③" }
+          ]
+        },
+        {
+          "type": "all",
+          "label": "総合",
+          "currentRank": 28,
+          "elapsedHour": 24,
+          "elapsedRank": 28,
+          "currentPoints": [
+            { "hour": 11, "rank": 49 },
+            { "hour": 13, "rank": 43 },
+            { "hour": 16, "rank": 38 },
+            { "hour": 20, "rank": 31 },
+            { "hour": 24, "rank": 28 }
+          ],
+          "previousPoints": [],
+          "nearbyRanking": [
+            { "rank": 25, "title": "比較用総合A" },
+            { "rank": 26, "title": "比較用総合B" },
+            { "rank": 27, "title": "比較用総合C" },
+            { "rank": 28, "title": "テスト③" }
+          ]
+        }
+      ]
+    },
+    "test004": {
+      "programTitle": "テスト④",
+      "broadcastDate": "2026/05/30",
+      "updatedAt": "2026/05/30 19:06",
+      "episodeId": "eptest004",
+      "subtitle": "いいね＋バラエティ総合ランクイン→総合ランクアウト",
+      "likes": "9800",
+      "favorites": "52000",
+      "likePoints": [
+        { "hour": 1, "likes": 750 },
+        { "hour": 6, "likes": 2100 },
+        { "hour": 12, "likes": 4200 },
+        { "hour": 18, "likes": 6100 },
+        { "hour": 24, "likes": 7900 },
+        { "hour": 30, "likes": 9000 },
+        { "hour": 36, "likes": 9800 }
+      ],
+      "rankings": [
+        {
+          "type": "variety",
+          "label": "バラエティ",
+          "currentRank": 18,
+          "elapsedHour": 36,
+          "elapsedRank": 18,
+          "currentPoints": [
+            { "hour": 9, "rank": 46 },
+            { "hour": 12, "rank": 35 },
+            { "hour": 18, "rank": 24 },
+            { "hour": 24, "rank": 19 },
+            { "hour": 30, "rank": 17 },
+            { "hour": 36, "rank": 18 }
+          ],
+          "previousPoints": [],
+          "nearbyRanking": [
+            { "rank": 15, "title": "比較用バラエティG" },
+            { "rank": 16, "title": "比較用バラエティH" },
+            { "rank": 17, "title": "比較用バラエティI" },
+            { "rank": 18, "title": "テスト④" }
+          ]
+        },
+        {
+          "type": "all",
+          "label": "総合",
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
+          "currentPoints": [
+            { "hour": 14, "rank": 48 },
+            { "hour": 18, "rank": 42 },
+            { "hour": 22, "rank": 36 },
+            { "hour": 26, "rank": 33 },
+            { "hour": 30, "rank": 39 }
+          ],
+          "previousPoints": [],
+          "nearbyRanking": []
+        }
+      ]
+    },
+    "test005": {
+      "programTitle": "テスト⑤",
+      "broadcastDate": "2026/05/30",
+      "updatedAt": "2026/05/30 19:06",
+      "episodeId": "eptest005",
+      "subtitle": "現在ランクアウト①",
+      "likes": "11200",
+      "favorites": "61000",
+      "likePoints": [
+        { "hour": 1, "likes": 800 },
+        { "hour": 6, "likes": 2500 },
+        { "hour": 12, "likes": 4800 },
+        { "hour": 18, "likes": 6900 },
+        { "hour": 24, "likes": 8500 },
+        { "hour": 32, "likes": 10200 },
+        { "hour": 40, "likes": 11200 }
+      ],
+      "rankings": [
+        {
+          "type": "variety",
+          "label": "バラエティ",
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
+          "currentPoints": [
+            { "hour": 10, "rank": 49 },
+            { "hour": 13, "rank": 41 },
+            { "hour": 16, "rank": 32 },
+            { "hour": 20, "rank": 28 },
+            { "hour": 24, "rank": 35 },
+            { "hour": 28, "rank": 47 }
+          ],
+          "previousPoints": [],
+          "nearbyRanking": []
+        },
+        {
+          "type": "all",
+          "label": "総合",
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
+          "currentPoints": [
+            { "hour": 15, "rank": 50 },
+            { "hour": 18, "rank": 44 },
+            { "hour": 21, "rank": 38 },
+            { "hour": 24, "rank": 42 },
+            { "hour": 27, "rank": 49 }
+          ],
+          "previousPoints": [],
+          "nearbyRanking": []
+        }
+      ]
+    },
+    "test006": {
+      "programTitle": "テスト⑥",
+      "broadcastDate": "2026/05/30",
+      "updatedAt": "2026/05/30 19:06",
+      "episodeId": "eptest006",
+      "subtitle": "現在ランクアウト②",
+      "likes": "14500",
+      "favorites": "83000",
+      "likePoints": [
+        { "hour": 1, "likes": 950 },
+        { "hour": 6, "likes": 3100 },
+        { "hour": 12, "likes": 5600 },
+        { "hour": 18, "likes": 7800 },
+        { "hour": 24, "likes": 9700 },
+        { "hour": 30, "likes": 11200 },
+        { "hour": 36, "likes": 12400 },
+        { "hour": 42, "likes": 13600 },
+        { "hour": 50, "likes": 14500 }
+      ],
+      "rankings": [
+        {
+          "type": "variety",
+          "label": "バラエティ",
+          "currentRank": 22,
+          "elapsedHour": 50,
+          "elapsedRank": 22,
+          "currentPoints": [
+            { "hour": 10, "rank": 48 },
+            { "hour": 16, "rank": 39 },
+            { "hour": 24, "rank": 31 },
+            { "hour": 32, "rank": 24 },
+            { "hour": 40, "rank": 21 },
+            { "hour": 50, "rank": 22 }
+          ],
+          "previousPoints": [
+            { "hour": 8, "rank": 44 },
+            { "hour": 16, "rank": 37 },
+            { "hour": 24, "rank": 30 },
+            { "hour": 32, "rank": 28 },
+            { "hour": 40, "rank": 33 },
+            { "hour": 48, "rank": 41 }
+          ],
+          "nearbyRanking": [
+            { "rank": 19, "title": "比較用バラエティJ" },
+            { "rank": 20, "title": "比較用バラエティK" },
+            { "rank": 21, "title": "比較用バラエティL" },
+            { "rank": 22, "title": "テスト⑥" }
+          ]
+        },
+        {
+          "type": "all",
+          "label": "総合",
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
+          "currentPoints": [
+            { "hour": 14, "rank": 49 },
+            { "hour": 20, "rank": 43 },
+            { "hour": 28, "rank": 35 },
+            { "hour": 36, "rank": 39 },
+            { "hour": 44, "rank": 47 }
+          ],
+          "previousPoints": [
+            { "hour": 12, "rank": 46 },
+            { "hour": 20, "rank": 40 },
+            { "hour": 28, "rank": 36 },
+            { "hour": 36, "rank": 38 },
+            { "hour": 44, "rank": 45 }
+          ],
+          "nearbyRanking": []
+        }
+      ]
+    }
   }
 }
+
+  
