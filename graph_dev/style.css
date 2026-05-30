@@ -328,6 +328,35 @@ body {
   font-weight: 700;
 }
 
+/* いいね数推移グラフ */
+.like-timeline-section {
+  margin-top: 14px;
+}
+
+.like-chart-box {
+  width: 100%;
+}
+
+/* いいねグラフ専用：ランキンググラフより縦に余裕を持たせる */
+.like-chart-canvas-wrap {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+
+/* Chart.js側で maintainAspectRatio:false にする前提 */
+.like-chart-canvas-wrap canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* 7日間表示では少しだけ高さを増やす */
+.report.is-long-report .like-chart-canvas-wrap {
+  height: 280px;
+}
+
 .footer {
   text-align: center;
   font-size: 11px;
@@ -410,17 +439,6 @@ body {
   background-color: transparent;
   margin: 20px auto;
   text-align: center;
-}
-.like-timeline-section {
-  margin-top: 20px;
-}
-
-.like-chart-box {
-  border-top: 1px solid #edf2f7;
-}
-
-.like-chart-title {
-  color: #d97706;
 }
 
 /* スマホでは760pxの画像を縮小して見せる */
