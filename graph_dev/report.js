@@ -156,6 +156,38 @@ function getRankInDurationHours(points, chartHours) {
   return data.filter((rank) => rank !== null).length;
 }
 
+/**
+ * 1つのランキング種別にランキングデータがあるか判定する
+ *
+ * currentPoints または previousPoints のどちらかに点があれば「データあり」。
+ * 片方だけ空の場合は、そのランキング種別自体は表示対象として残す。
+ */
+function hasRankingData(ranking) {
+  if (!ranking) {
+    return false;
+  }
+
+  const currentPoints = Array.isArray(ranking.currentPoints)
+    ? ranking.currentPoints
+    : [];
+
+  const previousPoints = Array.isArray(ranking.previousPoints)
+    ? ranking.previousPoints
+    : [];
+
+  return currentPoints.length > 0 || previousPoints.length > 0;
+}
+
+/**
+ * rankings 全体に1件でもランキングデータがあるか判定する
+ *
+ * false の場合だけ、
+ * rankCards / ランキング推移 / すぐ上ランキングをまとめて非表示にする。
+ */
+function hasAnyRankingData(rankings) {
+  return Array.isArray(rankings) && rankings.some(hasRankingData);
+}
+
 
 // ==============================
 // 初期化処理
@@ -346,13 +378,83 @@ function renderReport(data) {
   // 番組切り替え時に古いグラフを破棄
   destroyRankingCharts();
 
-  // 各エリアを描画
-  renderRankCards(data.rankings, chartHours);
-  renderCharts(data.rankings, chartHours);
-  renderBottomSection(data.rankings, chartHours);
+  const hasAnyRankings = hasAnyRankingData(data.rankings);
+
+  // 全ランキング種別にデータがない場合だけ、ランキング関連エリアを非表示にする
+  toggleRankingSections(hasAnyRankings);
+
+  if (hasAnyRankings) {
+    // 1種でもランキングデータがある場合は、全ランキング種別をそのまま描画する
+    // 片方だけデータなしの場合、ない方は -位 / 空グラフ / 空テーブルとして残る
+    renderRankCards(data.rankings, chartHours);
+    renderCharts(data.rankings, chartHours);
+    renderBottomSection(data.rankings, chartHours);
+  } else {
+    // 全部ない場合は、古い描画内容が残らないように中身も消す
+    clearRankingSections();
+  }
 
   // footerより上に、いいね数推移グラフを追加
+  // ランキングが全部なくても、likePoints があれば表示する
   renderLikeTimelineSection(data.likePoints, chartHours);
+}
+
+/**
+ * ランキング関連セクションの表示/非表示を切り替える
+ *
+ * 全ランキング種別にデータがない場合だけ非表示。
+ * 片方のランキング種別だけデータがない場合は非表示にしない。
+ */
+function toggleRankingSections(shouldShow) {
+  const rankCards = document.getElementById("rankCards");
+
+  // HTML側に id="rankingChartSection" がある場合はそれを優先する。
+  // なければ、既存HTML向けに #charts の直近の .chart-section を探す。
+  const charts = document.getElementById("charts");
+  const chartSection = document.getElementById("rankingChartSection") ||
+    (charts ? charts.closest(".chart-section") : null);
+
+  // HTML側に id="rankingTableSection" がある場合はそれを優先する。
+  // なければ、既存HTML向けに #nearbyRankingTables の直近の .table-section を探す。
+  const nearbyRankingTables = document.getElementById("nearbyRankingTables");
+  const tableSection = document.getElementById("rankingTableSection") ||
+    (nearbyRankingTables ? nearbyRankingTables.closest(".table-section") : null);
+
+  if (rankCards) {
+    rankCards.style.display = shouldShow ? "" : "none";
+  }
+
+  if (chartSection) {
+    chartSection.style.display = shouldShow ? "" : "none";
+  }
+
+  if (tableSection) {
+    tableSection.style.display = shouldShow ? "" : "none";
+  }
+}
+
+/**
+ * ランキング関連の中身を空にする
+ *
+ * 非表示にするだけでも見た目は消えるが、
+ * 番組切り替え時に古いHTMLが残らないよう中身も消す。
+ */
+function clearRankingSections() {
+  const rankCards = document.getElementById("rankCards");
+  const charts = document.getElementById("charts");
+  const nearbyRankingTables = document.getElementById("nearbyRankingTables");
+
+  if (rankCards) {
+    rankCards.innerHTML = "";
+  }
+
+  if (charts) {
+    charts.innerHTML = "";
+  }
+
+  if (nearbyRankingTables) {
+    nearbyRankingTables.innerHTML = "";
+  }
 }
 
 /**
