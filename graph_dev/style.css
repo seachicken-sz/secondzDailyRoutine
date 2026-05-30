@@ -6,8 +6,8 @@ body {
   color: #10213f;
   overflow-x: hidden;
 }
-
-.back-to-app-button {
+.back-to-app-button,
+.reload-data-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -23,24 +23,6 @@ body {
   box-shadow: 0 6px 18px rgba(16, 33, 63, 0.14);
   white-space: nowrap;
 }
-
-.reload-data-button {
-  border: none;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.92);
-  color: #10213f;
-  padding: 10px;
-  font-size: 13px;
-  font-weight: 800;
-  cursor: pointer;
-  box-shadow: 0 4px 14px rgba(27, 70, 120, 0.14);
-  white-space: nowrap;
-}
-
-.reload-data-button:active {
-  transform: scale(0.97);
-}
-
 .reload-data-button.is-loading {
   opacity: 0.6;
   pointer-events: none;
