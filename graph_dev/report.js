@@ -14,6 +14,9 @@ let reportBundle = null;
 // 番組切り替え時に古いグラフをdestroyするために使う
 let rankingCharts = [];
 
+// JSON再取得時にURLへ付与するキャッシュ回避用パラメータ
+let reportJsonCacheBust = "";
+
 
 // ==============================
 // ランキング表示テーマ
@@ -233,15 +236,59 @@ function isCurrentlyRanked(ranking) {
   return Number.isFinite(currentRank);
 }
 
+
 // ==============================
 // 初期化処理
 // ==============================
 
 /**
- * レポートJSONを読み込み、初期表示を行う
+ * 初期表示を行う
+ *
+ * 通常読み込み：
+ * - tverRankingReport.json をそのまま取得
+ *
+ * 更新ボタン押下時：
+ * - loadReportData(true) で cacheBust を付けて再取得
  */
 async function initializeReport() {
-  const response = await fetch("./tverRankingReport.json");
+  try {
+    await loadReportData(false);
+  } catch (error) {
+    console.error(error);
+    alert("レポートデータの読み込みに失敗しました。");
+  }
+
+  // 画像保存・共有ボタンのクリックイベントを設定
+  setupSaveImageButton();
+
+  // JSON再読み込みボタンのクリックイベントを設定
+  setupReloadDataButton();
+}
+
+/**
+ * レポートJSONを読み込み、画面に反映する
+ *
+ * forceReload=true の場合：
+ * - URLに時刻パラメータを付与
+ * - fetchのcache指定を no-store にする
+ */
+async function loadReportData(forceReload = false) {
+  if (forceReload) {
+    reportJsonCacheBust = String(Date.now());
+  }
+
+  const jsonUrl = reportJsonCacheBust
+    ? `./tverRankingReport.json?cacheBust=${encodeURIComponent(reportJsonCacheBust)}`
+    : "./tverRankingReport.json";
+
+  const response = await fetch(jsonUrl, {
+    cache: forceReload ? "no-store" : "default"
+  });
+
+  if (!response.ok) {
+    throw new Error(`JSONの読み込みに失敗しました: ${response.status}`);
+  }
+
   const data = await response.json();
 
   // 単一番組JSON / 複数番組JSONの差を吸収する
@@ -255,9 +302,6 @@ async function initializeReport() {
 
   // 選択中の番組レポートを描画
   renderSelectedReport(selectedProgramId);
-
-  // 画像保存・共有ボタンのクリックイベントを設定
-  setupSaveImageButton();
 }
 
 /**
@@ -329,12 +373,12 @@ function setupProgramSelect(reports, selectedProgramId) {
     `;
   }).join("");
 
-  // プルダウン変更時にURLと表示内容を更新
-  select.addEventListener("change", () => {
+  // 再読み込み時にchangeイベントが二重登録されないよう、古いイベントを置き換える
+  select.onchange = () => {
     const nextProgramId = select.value;
     updateUrlProgramId(nextProgramId);
     renderSelectedReport(nextProgramId);
-  });
+  };
 }
 
 /**
@@ -381,9 +425,7 @@ function renderReport(data) {
   const reportLabel = isLongReport
     ? "TVer 7日間ランキング推移レポート"
     : "TVer 48時間ランキング推移レポート";
-  const chartTitle = isLongReport
-    ? "ランキング推移"
-    : "ランキング推移";
+  const chartTitle = "ランキング推移";
 
   document.title = `${data.programTitle || ""} ${data.broadcastDate || ""}｜${reportLabel}`;
 
@@ -401,7 +443,7 @@ function renderReport(data) {
     reportTopBar.textContent = reportLabel;
   }
 
-  // グラフセクション見出しを48時間 / 7日間で切り替える
+  // グラフセクション見出し
   if (chartSectionTitle) {
     chartSectionTitle.textContent = chartTitle;
   }
@@ -1159,7 +1201,7 @@ function createCombinedRankingChart(canvasId, rankings, chartHours) {
             callback: function(value, index) {
               const hour = index + 1;
 
-              return hour % 24 === 0 ? `${hour / 24}日` : "";
+              return hour % 24 === 0 ? `${hour / 24}日目` : "";
             }
           }
         }
@@ -1406,6 +1448,44 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
           display: false
         }
       }
+    }
+  });
+}
+
+
+// ==============================
+// JSON再読み込み処理
+// ==============================
+
+/**
+ * JSON再読み込みボタンのイベントを設定する
+ *
+ * HTML側に以下のボタンがある前提：
+ * <button id="reloadDataButton" class="reload-data-button" type="button">更新</button>
+ */
+function setupReloadDataButton() {
+  const button = document.getElementById("reloadDataButton");
+
+  if (!button) {
+    return;
+  }
+
+  button.addEventListener("click", async () => {
+    button.classList.add("is-loading");
+    button.textContent = "更新中";
+
+    try {
+      await loadReportData(true);
+      button.textContent = "更新済";
+    } catch (error) {
+      console.error(error);
+      button.textContent = "失敗";
+      alert("データの更新に失敗しました。時間を置いて再試行してください。");
+    } finally {
+      setTimeout(() => {
+        button.classList.remove("is-loading");
+        button.textContent = "更新";
+      }, 1200);
     }
   });
 }
