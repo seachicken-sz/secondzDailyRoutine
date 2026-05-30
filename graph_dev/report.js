@@ -234,19 +234,35 @@ function renderLikeTimelineSection(likePoints, chartHours = 48) {
 
     container = document.createElement("section");
     container.id = "likeTimelineSection";
-    container.className = "like-timeline-section";
 
-    report.appendChild(container);
+    // 他のグラフエリアと同じ背景・余白を使う
+    container.className = "chart-section like-timeline-section";
+
+    // footerより上に差し込む
+    const footer = report.querySelector("footer, .footer, #footer, .report-footer");
+
+    if (footer) {
+      report.insertBefore(container, footer);
+    } else {
+      report.appendChild(container);
+    }
   }
 
   if (!Array.isArray(likePoints) || likePoints.length === 0) {
     container.innerHTML = "";
+    container.style.display = "none";
     return;
   }
 
+  container.style.display = "";
+
   container.innerHTML = `
+    <div class="section-heading">
+      <h2>いいね数推移</h2>
+    </div>
+
     <div class="chart-box chart-box-wide like-chart-box">
-      <div class="chart-title like-chart-title">いいね数推移</div>
+      <div class="chart-title like-chart-title">いいね数</div>
       <div class="chart-canvas-wrap-wide">
         <canvas id="likeTimelineChart"></canvas>
       </div>
@@ -263,7 +279,6 @@ function renderLikeTimelineSection(likePoints, chartHours = 48) {
 
   rankingCharts.push(chart);
 }
-
 function convertLikePointsToHourData(points, chartHours) {
   const data = Array(chartHours).fill(null);
 
