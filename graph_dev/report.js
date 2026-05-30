@@ -1472,19 +1472,19 @@ function setupReloadDataButton() {
 
   button.addEventListener("click", async () => {
     button.classList.add("is-loading");
-    button.textContent = "<i class="bi bi-arrow-repeat"></i>"; //更新中
-
+    button.innerHTML = '<i class="bi bi-arrow-repeat"></i>'; // 更新中
+  
     try {
       await loadReportData(true);
-      button.textContent = "<i class="bi bi-check-lg"></i>"; //更新済み
+      button.innerHTML = '<i class="bi bi-check-lg"></i>'; // 更新済み
     } catch (error) {
       console.error(error);
-      button.textContent = "<i class="bi bi-x-lg"></i>"; //失敗
+      button.innerHTML = '<i class="bi bi-x-lg"></i>'; // 失敗
       alert("データの更新に失敗しました。時間を置いて再試行してください。");
     } finally {
       setTimeout(() => {
         button.classList.remove("is-loading");
-        button.textContent = "<i class="bi bi-arrow-clockwise"></i>"; //元の更新に戻す
+        button.innerHTML = '<i class="bi bi-arrow-clockwise"></i>'; // 元の更新に戻す
       }, 1200);
     }
   });
