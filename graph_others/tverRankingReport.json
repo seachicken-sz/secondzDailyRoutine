@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026/05/30 18:06",
+  "updatedAt": "2026/05/30 18:47",
   "reports": {
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/05/24",
-      "updatedAt": "2026/05/30 18:06",
+      "updatedAt": "2026/05/30 18:47",
       "episodeId": "epp4fwkqmn",
       "subtitle": "城島茂怒涛の3日間に密着!リアルドキュメントを大公開",
-      "likes": "5730",
+      "likes": "5742",
       "favorites": "51.4万",
       "likePoints": [
         {
@@ -193,15 +193,19 @@
         {
           "hour": 142,
           "likes": 5730
+        },
+        {
+          "hour": 143,
+          "likes": 5742
         }
       ],
       "rankings": [
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 37,
-          "elapsedHour": 142,
-          "elapsedRank": 37,
+          "currentRank": 38,
+          "elapsedHour": 143,
+          "elapsedRank": 38,
           "currentPoints": [
             {
               "hour": 78,
@@ -462,24 +466,28 @@
             {
               "hour": 142,
               "rank": 37
+            },
+            {
+              "hour": 143,
+              "rank": 38
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
-            {
-              "rank": 34,
-              "title": "バナナマンのせっかくグルメ!!"
-            },
             {
               "rank": 35,
               "title": "IMP.の「できません」は言いません"
             },
             {
               "rank": 36,
-              "title": "THE神業チャレンジ"
+              "title": "くりぃむしちゅーの熊本どぎゃん!?"
             },
             {
               "rank": 37,
+              "title": "大阪ほんわかテレビ"
+            },
+            {
+              "rank": 38,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -499,10 +507,10 @@
     "sroqs1gopx": {
       "programTitle": "ゲストはROIROM",
       "broadcastDate": "2026/05/29",
-      "updatedAt": "2026/05/30 18:06",
+      "updatedAt": "2026/05/30 18:47",
       "episodeId": "ep4xm5p1y8",
       "subtitle": "MCは実力派芸人 友近",
-      "likes": "1858",
+      "likes": "1869",
       "favorites": "9862",
       "likePoints": [
         {
@@ -668,15 +676,19 @@
         {
           "hour": 40,
           "likes": 1858
+        },
+        {
+          "hour": 41,
+          "likes": 1869
         }
       ],
       "rankings": [
         {
           "type": "talk",
           "label": "トーク",
-          "currentRank": 50,
-          "elapsedHour": 32,
-          "elapsedRank": 50,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 20,
@@ -732,24 +744,7 @@
             }
           ],
           "previousPoints": [],
-          "nearbyRanking": [
-            {
-              "rank": 47,
-              "title": "和田明日香とゆる宅飲み"
-            },
-            {
-              "rank": 48,
-              "title": "教えて！ニュースライブ 正義のミカタ"
-            },
-            {
-              "rank": 49,
-              "title": "ハマダ歌謡祭★オオカミ少年"
-            },
-            {
-              "rank": 50,
-              "title": "ゲストはROIROM"
-            }
-          ]
+          "nearbyRanking": []
         },
         {
           "type": "variety",
@@ -766,10 +761,10 @@
     "srleu4lcwn": {
       "programTitle": "それSnow Manにやらせて下さい",
       "broadcastDate": "2026/05/29",
-      "updatedAt": "2026/05/30 18:06",
+      "updatedAt": "2026/05/30 18:47",
       "episodeId": "epa9lcu6d9",
       "subtitle": "Snow Man×ユニクロ！初コラボで“初夏の親子お出かけコーデ”対決▼目黒蓮の私服抜き打ちチェック",
-      "likes": "8010",
+      "likes": "8284",
       "favorites": "372.4万",
       "likePoints": [
         {
@@ -855,6 +850,10 @@
         {
           "hour": 22,
           "likes": 8010
+        },
+        {
+          "hour": 23,
+          "likes": 8284
         }
       ],
       "rankings": [
@@ -862,7 +861,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 3,
-          "elapsedHour": 22,
+          "elapsedHour": 23,
           "elapsedRank": 3,
           "currentPoints": [
             {
@@ -944,6 +943,10 @@
             {
               "hour": 22,
               "rank": 3
+            },
+            {
+              "hour": 23,
+              "rank": 3
             }
           ],
           "previousPoints": [],
@@ -965,9 +968,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 6,
-          "elapsedHour": 22,
-          "elapsedRank": 6,
+          "currentRank": 5,
+          "elapsedHour": 23,
+          "elapsedRank": 5,
           "currentPoints": [
             {
               "hour": 4,
@@ -1044,10 +1047,18 @@
             {
               "hour": 22,
               "rank": 6
+            },
+            {
+              "hour": 23,
+              "rank": 5
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
+            {
+              "rank": 2,
+              "title": "今夜、秘密のキッチンで"
+            },
             {
               "rank": 3,
               "title": "アメトーーク！"
@@ -1058,10 +1069,6 @@
             },
             {
               "rank": 5,
-              "title": "余命３ヶ月のサレ夫"
-            },
-            {
-              "rank": 6,
               "title": "それSnow Manにやらせて下さい"
             }
           ]
@@ -1071,10 +1078,10 @@
     "srfgxtv5sb": {
       "programTitle": "いたジャン！",
       "broadcastDate": "2026/05/28",
-      "updatedAt": "2026/05/30 18:06",
+      "updatedAt": "2026/05/30 18:47",
       "episodeId": "epmlok34pw",
       "subtitle": "第98回 ▽裏切りガッシャン！FINALラウンド",
-      "likes": "5022",
+      "likes": "5068",
       "favorites": "30.1万",
       "likePoints": [
         {
@@ -1260,15 +1267,19 @@
         {
           "hour": 65,
           "likes": 5022
+        },
+        {
+          "hour": 66,
+          "likes": 5068
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 48,
-          "elapsedHour": 35,
-          "elapsedRank": 48,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 19,
@@ -1340,24 +1351,7 @@
             }
           ],
           "previousPoints": [],
-          "nearbyRanking": [
-            {
-              "rank": 45,
-              "title": "テレビ×ミセス"
-            },
-            {
-              "rank": 46,
-              "title": "かまいたちの知らんけど"
-            },
-            {
-              "rank": 47,
-              "title": "Aぇ! groupのQ＆Aぇ!"
-            },
-            {
-              "rank": 48,
-              "title": "いたジャン！"
-            }
-          ]
+          "nearbyRanking": []
         },
         {
           "type": "all",
@@ -1374,7 +1368,7 @@
     "sracdkj75t": {
       "programTitle": "Golden SixTONES",
       "broadcastDate": "2026/05/24",
-      "updatedAt": "2026/05/30 18:06",
+      "updatedAt": "2026/05/30 18:47",
       "episodeId": "epkaior3ga",
       "subtitle": "最新AIモンスター軍団vs中村倫也&劇団ひとり&ザキヤマ",
       "likes": "1.5万",
@@ -1563,15 +1557,19 @@
         {
           "hour": 140,
           "likes": 15000
+        },
+        {
+          "hour": 141,
+          "likes": 15000
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 48,
-          "elapsedHour": 118,
-          "elapsedRank": 48,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 76,
@@ -1747,24 +1745,7 @@
             }
           ],
           "previousPoints": [],
-          "nearbyRanking": [
-            {
-              "rank": 45,
-              "title": "テレビ×ミセス"
-            },
-            {
-              "rank": 46,
-              "title": "かまいたちの知らんけど"
-            },
-            {
-              "rank": 47,
-              "title": "オモウマい店"
-            },
-            {
-              "rank": 48,
-              "title": "Golden SixTONES"
-            }
-          ]
+          "nearbyRanking": []
         },
         {
           "type": "all",
@@ -1781,7 +1762,7 @@
     "srz5hf6qnt": {
       "programTitle": "Aぇ! groupのQ＆Aぇ!",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/05/30 18:06",
+      "updatedAt": "2026/05/30 18:47",
       "episodeId": "epu8oj8rh5",
       "subtitle": "ドレミファドンへの道！街ブラ＆イントロドン",
       "likes": "1.3万",
@@ -1970,15 +1951,19 @@
         {
           "hour": 89,
           "likes": 13000
+        },
+        {
+          "hour": 90,
+          "likes": 13000
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 50,
-          "elapsedHour": 63,
-          "elapsedRank": 50,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 24,
@@ -2142,31 +2127,14 @@
             }
           ],
           "previousPoints": [],
-          "nearbyRanking": [
-            {
-              "rank": 47,
-              "title": "かまいたちの知らんけど"
-            },
-            {
-              "rank": 48,
-              "title": "Golden SixTONES"
-            },
-            {
-              "rank": 49,
-              "title": "ラヴィット！"
-            },
-            {
-              "rank": 50,
-              "title": "Aぇ! groupのQ＆Aぇ!"
-            }
-          ]
+          "nearbyRanking": []
         },
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 50,
-          "elapsedHour": 31,
-          "elapsedRank": 50,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 24,
@@ -2202,34 +2170,17 @@
             }
           ],
           "previousPoints": [],
-          "nearbyRanking": [
-            {
-              "rank": 47,
-              "title": "こないだおばさんって言われたよ"
-            },
-            {
-              "rank": 48,
-              "title": "花より男子2(リターンズ)"
-            },
-            {
-              "rank": 49,
-              "title": "トークィーンズ"
-            },
-            {
-              "rank": 50,
-              "title": "Aぇ! groupのQ＆Aぇ!"
-            }
-          ]
+          "nearbyRanking": []
         }
       ]
     },
     "srfdyr4f12": {
       "programTitle": "なにわ男子の逆転男子",
       "broadcastDate": "2026/05/30",
-      "updatedAt": "2026/05/30 18:06",
+      "updatedAt": "2026/05/30 18:47",
       "episodeId": "ep45pg124v",
       "subtitle": "番組初イベント舞台裏に完全密着！楽屋の素顔＆初心LOVEコラボ",
-      "likes": "1649",
+      "likes": "2265",
       "favorites": "59.6万",
       "likePoints": [
         {
@@ -2239,6 +2190,10 @@
         {
           "hour": 2,
           "likes": 1649
+        },
+        {
+          "hour": 3,
+          "likes": 2265
         }
       ],
       "rankings": [
@@ -2267,10 +2222,10 @@
     "sr64ope7a7": {
       "programTitle": "限界突破！やってM!LK",
       "broadcastDate": "2026/05/29",
-      "updatedAt": "2026/05/30 18:06",
+      "updatedAt": "2026/05/30 18:47",
       "episodeId": "eplhm2knbz",
       "subtitle": "共感力をつけろ！世間の投票で5人の価値観が浮き彫りに！",
-      "likes": "7554",
+      "likes": "7652",
       "favorites": "31.5万",
       "likePoints": [
         {
@@ -2436,6 +2391,10 @@
         {
           "hour": 40,
           "likes": 7554
+        },
+        {
+          "hour": 41,
+          "likes": 7652
         }
       ],
       "rankings": [
@@ -2443,7 +2402,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 10,
-          "elapsedHour": 40,
+          "elapsedHour": 41,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -2581,6 +2540,10 @@
             {
               "hour": 40,
               "rank": 10
+            },
+            {
+              "hour": 41,
+              "rank": 10
             }
           ],
           "previousPoints": [
@@ -2624,7 +2587,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 33,
-          "elapsedHour": 40,
+          "elapsedHour": 41,
           "elapsedRank": 33,
           "currentPoints": [
             {
@@ -2742,13 +2705,17 @@
             {
               "hour": 40,
               "rank": 33
+            },
+            {
+              "hour": 41,
+              "rank": 33
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 30,
-              "title": "孤独のグルメ Season11"
+              "title": "産まない女はダメですか？ DINKsのトツキトオカ"
             },
             {
               "rank": 31,
@@ -2769,7 +2736,7 @@
     "sra5n6j0w3": {
       "programTitle": "テレビ×ミセス",
       "broadcastDate": "2026/05/18",
-      "updatedAt": "2026/05/30 18:06",
+      "updatedAt": "2026/05/30 18:47",
       "episodeId": "eps31h36p8",
       "subtitle": "「好きすぎて滅！」コラボSP！爆裂ブレイク中★M!LK×ミセス",
       "likes": "3.1万",
@@ -2801,10 +2768,10 @@
     "sr91aqd0qa": {
       "programTitle": "ニノなのに",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/05/30 18:06",
+      "updatedAt": "2026/05/30 18:47",
       "episodeId": "eprneumoqn",
       "subtitle": "司会はバラエティ7年ぶりの錦戸亮！3日間1000円企画で予測不能な展開に！？",
-      "likes": "4567",
+      "likes": "4592",
       "favorites": "26.7万",
       "likePoints": [
         {
@@ -2990,6 +2957,10 @@
         {
           "hour": 68,
           "likes": 4567
+        },
+        {
+          "hour": 69,
+          "likes": 4592
         }
       ],
       "rankings": [
@@ -2997,7 +2968,7 @@
           "type": "talk",
           "label": "トーク",
           "currentRank": 9,
-          "elapsedHour": 68,
+          "elapsedHour": 69,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -3259,6 +3230,10 @@
             {
               "hour": 68,
               "rank": 9
+            },
+            {
+              "hour": 69,
+              "rank": 9
             }
           ],
           "previousPoints": [],
@@ -3284,9 +3259,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 21,
-          "elapsedHour": 68,
-          "elapsedRank": 21,
+          "currentRank": 22,
+          "elapsedHour": 69,
+          "elapsedRank": 22,
           "currentPoints": [
             {
               "hour": 4,
@@ -3547,14 +3522,14 @@
             {
               "hour": 68,
               "rank": 21
+            },
+            {
+              "hour": 69,
+              "rank": 22
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
-            {
-              "rank": 18,
-              "title": "坂上どうぶつ王国"
-            },
             {
               "rank": 19,
               "title": "クレイジージャーニー"
@@ -3565,6 +3540,10 @@
             },
             {
               "rank": 21,
+              "title": "テレビ千鳥"
+            },
+            {
+              "rank": 22,
               "title": "ニノなのに"
             }
           ]
