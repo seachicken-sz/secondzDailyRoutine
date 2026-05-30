@@ -382,8 +382,8 @@ function renderReport(data) {
     ? "TVer 7日間ランキング推移レポート"
     : "TVer 48時間ランキング推移レポート";
   const chartTitle = isLongReport
-    ? "ランキング推移（7日間）"
-    : "ランキング推移（48時間）";
+    ? "ランキング推移"
+    : "ランキング推移";
 
   document.title = `${data.programTitle || ""} ${data.broadcastDate || ""}｜${reportLabel}`;
 
