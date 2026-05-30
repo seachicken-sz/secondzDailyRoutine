@@ -603,7 +603,7 @@ function renderRankCards(rankings, chartHours = 48) {
           ${formatRank(currentBest.rank)}<span>位</span>
         </div>
         <div class="sub-rank ${theme.bgClass}">
-          ${formatRank(currentBest.hour)}時間目
+          到達：${formatRank(currentBest.hour)}時間目
         </div>
       </div>
     `;
