@@ -1461,7 +1461,7 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
  * JSON再読み込みボタンのイベントを設定する
  *
  * HTML側に以下のボタンがある前提：
- * <button id="reloadDataButton" class="reload-data-button" type="button">更新</button>
+ * <button id="reloadDataButton" class="reload-data-button" type="button"><i class="bi bi-arrow-clockwise"></i></button>
  */
 function setupReloadDataButton() {
   const button = document.getElementById("reloadDataButton");
@@ -1472,19 +1472,19 @@ function setupReloadDataButton() {
 
   button.addEventListener("click", async () => {
     button.classList.add("is-loading");
-    button.textContent = "更新中";
+    button.textContent = "<i class="bi bi-arrow-repeat"></i>"; //更新中
 
     try {
       await loadReportData(true);
-      button.textContent = "更新済";
+      button.textContent = "<i class="bi bi-check-lg"></i>"; //更新済み
     } catch (error) {
       console.error(error);
-      button.textContent = "失敗";
+      button.textContent = "<i class="bi bi-x-lg"></i>"; //失敗
       alert("データの更新に失敗しました。時間を置いて再試行してください。");
     } finally {
       setTimeout(() => {
         button.classList.remove("is-loading");
-        button.textContent = "更新";
+        button.textContent = "<i class="bi bi-arrow-clockwise"></i>"; //元の更新に戻す
       }, 1200);
     }
   });
