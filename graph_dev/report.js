@@ -869,7 +869,7 @@ function createRankingChart(canvasId, currentData, previousData, color, chartHou
         y: {
           title: {
             display: true,
-            text: "順位",
+            text: "",
             font: {
               size: 11,
               weight: "600"
@@ -1214,7 +1214,7 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
       labels: chartLabels,
       datasets: [
         {
-          label: "いいね数",
+          label: "",
           data: likeData,
           borderColor: "#ff9f1c",
           backgroundColor: "#ff9f1c",
