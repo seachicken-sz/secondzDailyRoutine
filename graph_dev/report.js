@@ -34,11 +34,10 @@ function getReportChartHours(rankings) {
     return 48;
   }
 
-  const hasOver48HourPoint = rankings.some((ranking) => {
-    const points = [
-      ...(Array.isArray(ranking.currentPoints) ? ranking.currentPoints : []),
-      ...(Array.isArray(ranking.previousPoints) ? ranking.previousPoints : [])
-    ];
+  const hasCurrentOver48HourPoint = rankings.some((ranking) => {
+    const points = Array.isArray(ranking.currentPoints)
+      ? ranking.currentPoints
+      : [];
 
     return points.some((point) => {
       const hour = Number(point.hour);
@@ -47,7 +46,7 @@ function getReportChartHours(rankings) {
     });
   });
 
-  return hasOver48HourPoint ? 168 : 48;
+  return hasCurrentOver48HourPoint ? 168 : 48;
 }
 
 function getBestRankInfoInPeriod(points, chartHours) {
