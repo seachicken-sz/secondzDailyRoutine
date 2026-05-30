@@ -733,10 +733,11 @@ function renderCharts(rankings, chartHours = 48) {
  * すぐ上ランキング / 維持時間エリアを描画する
  *
  * 48時間表示：
- * - すぐ上ランキング
+ * - 現時点でランキング圏内のものだけ、すぐ上ランキングを表示する
+ * - 現時点で全部ランキング圏外なら、すぐ上ランキングエリア自体を非表示にする
  *
  * 7日間表示：
- * - ランクイン維持時間
+ * - すぐ上ランキングではなく、ランクイン維持時間を表示する
  */
 function renderBottomSection(rankings, chartHours = 48) {
   const container = document.getElementById("nearbyRankingTables");
@@ -750,8 +751,15 @@ function renderBottomSection(rankings, chartHours = 48) {
     return;
   }
 
+  const tableSection = document.getElementById("rankingTableSection") ||
+    container.closest(".table-section");
+
   // 7日間表示では、すぐ上ランキングではなく維持時間を表示する
   if (chartHours > 48) {
+    if (tableSection) {
+      tableSection.style.display = "";
+    }
+
     container.className = "duration-cards";
 
     container.innerHTML = rankings.map((ranking, index) => {
@@ -777,24 +785,35 @@ function renderBottomSection(rankings, chartHours = 48) {
     return;
   }
 
-   // 48時間表示では、現時点でランキング圏内のものだけ「すぐ上ランキング」を表示する
+  // 48時間表示では、現時点でランキング圏内のものだけ「すぐ上ランキング」を表示する
   const currentRankedEntries = rankings
     .map((ranking, index) => ({
       ranking,
       index
     }))
     .filter(({ ranking }) => isCurrentlyRanked(ranking));
-  
+
   container.className = "tables";
-  
+
+  // 現時点でどのランキングにも入っていない場合は、すぐ上ランキング枠ごと非表示
   if (currentRankedEntries.length === 0) {
     container.innerHTML = "";
+
+    if (tableSection) {
+      tableSection.style.display = "none";
+    }
+
     return;
   }
-  
+
+  // ランクイン中のランキングがある場合は、すぐ上ランキング枠を表示
+  if (tableSection) {
+    tableSection.style.display = "";
+  }
+
   container.innerHTML = currentRankedEntries.map(({ ranking, index }) => {
     const theme = getRankingThemeByIndex(index);
-  
+
     return `
       <div>
         <div class="table-title ${theme.labelClass}">${escapeHtml(ranking.label || "")}すぐ上ランキング</div>
