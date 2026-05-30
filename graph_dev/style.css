@@ -22,6 +22,7 @@ body {
   text-decoration: none;
   box-shadow: 0 6px 18px rgba(16, 33, 63, 0.14);
   white-space: nowrap;
+  border:none;
 }
 .reload-data-button.is-loading {
   opacity: 0.6;
