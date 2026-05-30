@@ -215,11 +215,210 @@ function renderReport(data) {
   renderNewEpisodeLink(data);
 
   destroyRankingCharts();
-
+  
   renderRankCards(data.rankings, chartHours);
   renderCharts(data.rankings, chartHours);
   renderBottomSection(data.rankings, chartHours);
+  renderLikeTimelineSection(data.likePoints, chartHours);
 }
+
+function renderLikeTimelineSection(likePoints, chartHours = 48) {
+  let container = document.getElementById("likeTimelineSection");
+
+  if (!container) {
+    const report = document.getElementById("reportCaptureArea");
+
+    if (!report) {
+      return;
+    }
+
+    container = document.createElement("section");
+    container.id = "likeTimelineSection";
+    container.className = "like-timeline-section";
+
+    report.appendChild(container);
+  }
+
+  if (!Array.isArray(likePoints) || likePoints.length === 0) {
+    container.innerHTML = "";
+    return;
+  }
+
+  container.innerHTML = `
+    <div class="chart-box chart-box-wide like-chart-box">
+      <div class="chart-title like-chart-title">いいね数推移</div>
+      <div class="chart-canvas-wrap-wide">
+        <canvas id="likeTimelineChart"></canvas>
+      </div>
+    </div>
+  `;
+
+  const likeData = convertLikePointsToHourData(likePoints, chartHours);
+
+  const chart = createLikeTimelineChart(
+    "likeTimelineChart",
+    likeData,
+    chartHours
+  );
+
+  rankingCharts.push(chart);
+}
+
+function convertLikePointsToHourData(points, chartHours) {
+  const data = Array(chartHours).fill(null);
+
+  if (!Array.isArray(points)) {
+    return data;
+  }
+
+  points.forEach((point) => {
+    const hour = Number(point.hour);
+    const likes = point.likes === null || point.likes === undefined
+      ? null
+      : Number(point.likes);
+
+    if (!Number.isInteger(hour)) {
+      return;
+    }
+
+    if (hour < 0 || hour >= chartHours) {
+      return;
+    }
+
+    data[hour] = Number.isFinite(likes) ? likes : null;
+  });
+
+  return data;
+}
+
+function createLikeTimelineChart(canvasId, likeData, chartHours) {
+  const chartLabels = Array.from({ length: chartHours }, (_, i) => i + 1);
+
+  return new Chart(document.getElementById(canvasId), {
+    type: "line",
+    data: {
+      labels: chartLabels,
+      datasets: [
+        {
+          label: "いいね数",
+          data: likeData,
+          borderColor: "#ff9f1c",
+          backgroundColor: "#ff9f1c",
+          tension: 0.32,
+          pointRadius: 2,
+          pointHoverRadius: 3,
+          borderWidth: 2,
+          spanGaps: true
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      aspectRatio: chartHours > 48 ? 2.15 : 1.8,
+      resizeDelay: 100,
+      scales: {
+        y: {
+          title: {
+            display: true,
+            text: "いいね数",
+            font: {
+              size: 11,
+              weight: "600"
+            },
+            padding: {
+              bottom: 6
+            }
+          },
+          beginAtZero: false,
+          border: {
+            display: false
+          },
+          grid: {
+            display: true,
+            color: "#e5edf5",
+            drawTicks: false
+          },
+          ticks: {
+            padding: 8,
+            font: {
+              size: 10
+            },
+            callback: function(value) {
+              return formatCompactNumber(value);
+            }
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: "経過時間",
+            font: {
+              size: 11,
+              weight: "600"
+            },
+            padding: {
+              top: 6
+            }
+          },
+          border: {
+            display: false
+          },
+          grid: {
+            display: chartHours > 48,
+            color: function(context) {
+              const hour = context.index + 1;
+
+              return hour % 24 === 0 ? "#e5edf5" : "transparent";
+            },
+            drawTicks: false
+          },
+          ticks: {
+            autoSkip: chartHours <= 48,
+            maxTicksLimit: chartHours > 48 ? undefined : 8,
+            maxRotation: 0,
+            minRotation: 0,
+            padding: 6,
+            font: {
+              size: 10
+            },
+            callback: function(value, index) {
+              const hour = index + 1;
+
+              if (chartHours > 48) {
+                return hour % 24 === 0 ? `${hour}` : "";
+              }
+
+              return `${hour}h`;
+            }
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: false
+        }
+      }
+    }
+  });
+}
+
+function formatCompactNumber(value) {
+  const number = Number(value);
+
+  if (!Number.isFinite(number)) {
+    return "";
+  }
+
+  if (number >= 10000) {
+    const man = number / 10000;
+
+    return `${Number.isInteger(man) ? man : man.toFixed(1)}万`;
+  }
+
+  return String(Math.round(number));
+}
+
 
 function renderNewEpisodeLink(data) {
   const linkArea = document.getElementById("newEpisodeLink");
