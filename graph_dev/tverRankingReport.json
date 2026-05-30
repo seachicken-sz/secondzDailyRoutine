@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/05/30 21:06",
+  "updatedAt": "2026/05/30 22:06",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/05/29",
-      "updatedAt": "2026/05/30 21:06",
+      "updatedAt": "2026/05/30 22:06",
       "episodeId": "epqhlsu653",
       "subtitle": "【timelesz×相葉雅紀】サシトーク",
       "likes": "1.3万",
@@ -97,6 +97,10 @@
         {
           "hour": 22,
           "likes": 13000
+        },
+        {
+          "hour": 23,
+          "likes": 13000
         }
       ],
       "rankings": [
@@ -104,7 +108,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 4,
-          "elapsedHour": 22,
+          "elapsedHour": 23,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -189,6 +193,10 @@
             },
             {
               "hour": 22,
+              "rank": 4
+            },
+            {
+              "hour": 23,
               "rank": 4
             }
           ],
@@ -397,7 +405,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 10,
-          "elapsedHour": 22,
+          "elapsedHour": 23,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -455,6 +463,10 @@
             {
               "hour": 22,
               "rank": 10
+            },
+            {
+              "hour": 23,
+              "rank": 10
             }
           ],
           "previousPoints": [],
@@ -482,7 +494,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/05/24",
-      "updatedAt": "2026/05/30 21:06",
+      "updatedAt": "2026/05/30 22:06",
       "episodeId": "ep055g84rk",
       "subtitle": "【超便利!生活変わる最新ロボット】未来の乗りもの登場",
       "likes": "1.7万",
@@ -683,6 +695,10 @@
         {
           "hour": 150,
           "likes": 17000
+        },
+        {
+          "hour": 151,
+          "likes": 17000
         }
       ],
       "rankings": [
@@ -690,7 +706,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 49,
-          "elapsedHour": 150,
+          "elapsedHour": 151,
           "elapsedRank": 49,
           "currentPoints": [
             {
@@ -964,6 +980,10 @@
             {
               "hour": 150,
               "rank": 49
+            },
+            {
+              "hour": 151,
+              "rank": 49
             }
           ],
           "previousPoints": [],
@@ -978,7 +998,7 @@
             },
             {
               "rank": 48,
-              "title": "櫻井･有吉THE夜会"
+              "title": "ニカゲーム"
             },
             {
               "rank": 49,
@@ -1001,10 +1021,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/05/30 21:06",
+      "updatedAt": "2026/05/30 22:06",
       "episodeId": "ept68blopm",
       "subtitle": "チョコプラ・timeleszが「世界一の強度の糸で世界一長い糸電話作り」に挑戦！",
-      "likes": "7562",
+      "likes": "7581",
       "favorites": "4.8万",
       "likePoints": [
         {
@@ -1202,15 +1222,19 @@
         {
           "hour": 92,
           "likes": 7562
+        },
+        {
+          "hour": 93,
+          "likes": 7581
         }
       ],
       "rankings": [
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 48,
-          "elapsedHour": 92,
-          "elapsedRank": 48,
+          "currentRank": 49,
+          "elapsedHour": 93,
+          "elapsedRank": 49,
           "currentPoints": [
             {
               "hour": 25,
@@ -1483,24 +1507,28 @@
             {
               "hour": 92,
               "rank": 48
+            },
+            {
+              "hour": 93,
+              "rank": 49
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
-            {
-              "rank": 45,
-              "title": "有吉くんの正直さんぽ"
-            },
             {
               "rank": 46,
               "title": "ふぉ〜ゆ〜って、だれ？"
             },
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "草彅やすともの うさぎとかめ"
             },
             {
               "rank": 48,
+              "title": "本日はダイアンなり！シーズン3"
+            },
+            {
+              "rank": 49,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -1569,7 +1597,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/05/28",
-      "updatedAt": "2026/05/30 21:06",
+      "updatedAt": "2026/05/30 22:06",
       "episodeId": "ep896gk3yi",
       "subtitle": "【モテ算】モテの方程式を作れ！",
       "likes": "1.2万",
@@ -1766,15 +1794,19 @@
         {
           "hour": 66,
           "likes": 12000
+        },
+        {
+          "hour": 67,
+          "likes": 12000
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 45,
-          "elapsedHour": 66,
-          "elapsedRank": 45,
+          "currentRank": 48,
+          "elapsedHour": 67,
+          "elapsedRank": 48,
           "currentPoints": [
             {
               "hour": 7,
@@ -2015,24 +2047,28 @@
             {
               "hour": 66,
               "rank": 45
+            },
+            {
+              "hour": 67,
+              "rank": 48
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 42,
-              "title": "家、ついて行ってイイですか？"
-            },
-            {
-              "rank": 43,
-              "title": "林修の今知りたいでしょ！"
-            },
-            {
-              "rank": 44,
+              "rank": 45,
               "title": "THE突破ファイル"
             },
             {
-              "rank": 45,
+              "rank": 46,
+              "title": "あちこちオードリー"
+            },
+            {
+              "rank": 47,
+              "title": "テレビ×ミセス"
+            },
+            {
+              "rank": 48,
               "title": "ニカゲーム"
             }
           ]
@@ -2185,10 +2221,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/05/30 21:06",
+      "updatedAt": "2026/05/30 22:06",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "3186",
+      "likes": "3192",
       "favorites": "75.8万",
       "likePoints": [
         {
@@ -2386,6 +2422,10 @@
         {
           "hour": 95,
           "likes": 3186
+        },
+        {
+          "hour": 96,
+          "likes": 3192
         }
       ],
       "rankings": [
@@ -2732,10 +2772,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/05/30 21:06",
+      "updatedAt": "2026/05/30 22:06",
       "episodeId": "ep32i5e7ln",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！BOYNEXTDOOR登場",
-      "likes": "3471",
+      "likes": "3481",
       "favorites": "6.4万",
       "likePoints": [
         {
@@ -2933,6 +2973,10 @@
         {
           "hour": 92,
           "likes": 3471
+        },
+        {
+          "hour": 93,
+          "likes": 3481
         }
       ],
       "rankings": [
@@ -2994,10 +3038,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/05/29",
-      "updatedAt": "2026/05/30 21:06",
+      "updatedAt": "2026/05/30 22:06",
       "episodeId": "ep9iknamnl",
       "subtitle": "第129回 風磨・長谷川初MC対決！本気あっち向いてホイ",
-      "likes": "4402",
+      "likes": "4427",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -3175,15 +3219,19 @@
         {
           "hour": 44,
           "likes": 4402
+        },
+        {
+          "hour": 45,
+          "likes": 4427
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 38,
-          "elapsedHour": 43,
-          "elapsedRank": 38,
+          "currentRank": 40,
+          "elapsedHour": 44,
+          "elapsedRank": 40,
           "currentPoints": [
             {
               "hour": 11,
@@ -3316,24 +3364,28 @@
             {
               "hour": 43,
               "rank": 38
+            },
+            {
+              "hour": 44,
+              "rank": 40
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 35,
-              "title": "夫が寝たあとに"
-            },
-            {
-              "rank": 36,
+              "rank": 37,
               "title": "相席食堂"
             },
             {
-              "rank": 37,
+              "rank": 38,
               "title": "有吉クイズ"
             },
             {
-              "rank": 38,
+              "rank": 39,
+              "title": "マツコの知らない世界"
+            },
+            {
+              "rank": 40,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -3397,13 +3449,18 @@
     },
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
-      "broadcastDate": "2026/05/09",
-      "updatedAt": "2026/05/30 21:06",
-      "episodeId": "epilc7px8q",
-      "subtitle": "宇宙人は実在した！Wしょうこ危機SP 後編",
-      "likes": "1933",
+      "broadcastDate": "2026/05/30",
+      "updatedAt": "2026/05/30 22:06",
+      "episodeId": "epq6vlnbyh",
+      "subtitle": "マッサマンvs錦鯉マッサノリマンSP後編",
+      "likes": "132",
       "favorites": "77.0万",
-      "likePoints": [],
+      "likePoints": [
+        {
+          "hour": 2,
+          "likes": 132
+        }
+      ],
       "rankings": [
         {
           "type": "variety",
@@ -3430,11 +3487,11 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/05/30 21:06",
+      "updatedAt": "2026/05/30 22:06",
       "episodeId": "epohycztrr",
       "subtitle": "第7話 移動捜査課の使命",
-      "likes": "7049",
-      "favorites": "37.0万",
+      "likes": "7081",
+      "favorites": "36.9万",
       "likePoints": [
         {
           "hour": 4,
@@ -3631,15 +3688,19 @@
         {
           "hour": 71,
           "likes": 7049
+        },
+        {
+          "hour": 72,
+          "likes": 7081
         }
       ],
       "rankings": [
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 20,
-          "elapsedHour": 71,
-          "elapsedRank": 20,
+          "currentRank": 21,
+          "elapsedHour": 72,
+          "elapsedRank": 21,
           "currentPoints": [
             {
               "hour": 4,
@@ -3912,24 +3973,28 @@
             {
               "hour": 71,
               "rank": 20
+            },
+            {
+              "hour": 72,
+              "rank": 21
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 17,
-              "title": "銀河の一票"
-            },
-            {
               "rank": 18,
-              "title": "あの夜、社長の子供を授かりました"
-            },
-            {
-              "rank": 19,
               "title": "鬼女の棲む家"
             },
             {
+              "rank": 19,
+              "title": "あの夜、社長の子供を授かりました"
+            },
+            {
               "rank": 20,
+              "title": "産まない女はダメですか？ DINKsのトツキトオカ"
+            },
+            {
+              "rank": 21,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -3937,9 +4002,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 27,
-          "elapsedHour": 71,
-          "elapsedRank": 27,
+          "currentRank": 28,
+          "elapsedHour": 72,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 4,
@@ -4212,24 +4277,28 @@
             {
               "hour": 71,
               "rank": 27
+            },
+            {
+              "hour": 72,
+              "rank": 28
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 24,
-              "title": "銀河の一票"
-            },
-            {
               "rank": 25,
-              "title": "あの夜、社長の子供を授かりました"
-            },
-            {
-              "rank": 26,
               "title": "鬼女の棲む家"
             },
             {
+              "rank": 26,
+              "title": "あの夜、社長の子供を授かりました"
+            },
+            {
               "rank": 27,
+              "title": "産まない女はダメですか？ DINKsのトツキトオカ"
+            },
+            {
+              "rank": 28,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -4239,10 +4308,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/05/30 21:06",
+      "updatedAt": "2026/05/30 22:06",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "4487",
+      "likes": "4510",
       "favorites": "1.3万",
       "likePoints": [
         {
@@ -4440,6 +4509,10 @@
         {
           "hour": 90,
           "likes": 4487
+        },
+        {
+          "hour": 91,
+          "likes": 4510
         }
       ],
       "rankings": [
