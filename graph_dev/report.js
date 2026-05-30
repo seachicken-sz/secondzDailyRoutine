@@ -217,6 +217,21 @@ function hasAnyRankingData(rankings) {
   return Array.isArray(rankings) && rankings.some(hasRankingData);
 }
 
+/**
+ * 現時点でランキング圏内か判定する
+ *
+ * currentRank が数値なら、最新取得時点でランクイン中とみなす。
+ * currentPoints が過去にあっても、currentRank が null なら現時点では圏外扱い。
+ */
+function isCurrentlyRanked(ranking) {
+  if (!ranking) {
+    return false;
+  }
+
+  const currentRank = Number(ranking.currentRank);
+
+  return Number.isFinite(currentRank);
+}
 
 // ==============================
 // 初期化処理
@@ -762,12 +777,24 @@ function renderBottomSection(rankings, chartHours = 48) {
     return;
   }
 
-  // 48時間表示では、すぐ上ランキングを表示する
+   // 48時間表示では、現時点でランキング圏内のものだけ「すぐ上ランキング」を表示する
+  const currentRankedEntries = rankings
+    .map((ranking, index) => ({
+      ranking,
+      index
+    }))
+    .filter(({ ranking }) => isCurrentlyRanked(ranking));
+  
   container.className = "tables";
-
-  container.innerHTML = rankings.map((ranking, index) => {
+  
+  if (currentRankedEntries.length === 0) {
+    container.innerHTML = "";
+    return;
+  }
+  
+  container.innerHTML = currentRankedEntries.map(({ ranking, index }) => {
     const theme = getRankingThemeByIndex(index);
-
+  
     return `
       <div>
         <div class="table-title ${theme.labelClass}">${escapeHtml(ranking.label || "")}すぐ上ランキング</div>
