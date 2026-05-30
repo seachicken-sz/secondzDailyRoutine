@@ -63,6 +63,35 @@ function formatRank(rank) {
 }
 
 /**
+ * 表示用の数値を3桁区切りにする
+ *
+ * 例：
+ * 1672 → 1,672
+ * 12000 → 12,000
+ * "1.1万" のような表示文字列はそのまま返す
+ */
+function formatDisplayNumber(value) {
+  if (value === null || value === undefined || value === "") {
+    return "";
+  }
+
+  const text = String(value).trim();
+
+  // 「1.1万」「75.4万」など、数字以外を含む表示文字列はそのまま返す
+  if (!/^\d+(\.\d+)?$/.test(text)) {
+    return text;
+  }
+
+  const number = Number(text);
+
+  if (!Number.isFinite(number)) {
+    return text;
+  }
+
+  return number.toLocaleString("ja-JP");
+}
+
+/**
  * HTMLに埋め込む文字列をエスケープする
  * innerHTMLで文字列を入れる箇所の安全対策
  */
@@ -338,8 +367,8 @@ function renderReport(data) {
     ? "TVer 7日間ランキング推移レポート"
     : "TVer 48時間ランキング推移レポート";
   const chartTitle = isLongReport
-    ? "ランキング推移"
-    : "ランキング推移";
+    ? "ランキング推移（7日間）"
+    : "ランキング推移（48時間）";
 
   document.title = `${data.programTitle || ""} ${data.broadcastDate || ""}｜${reportLabel}`;
 
@@ -369,7 +398,7 @@ function renderReport(data) {
     ${data.subtitle || ""}
   `;
 
-  document.getElementById("likeCount").textContent = data.likes || "";
+  document.getElementById("likeCount").textContent = formatDisplayNumber(data.likes);
   document.getElementById("favoriteCount").textContent = data.favorites || "";
 
   // TVer最新話リンクを描画
@@ -869,7 +898,7 @@ function createRankingChart(canvasId, currentData, previousData, color, chartHou
         y: {
           title: {
             display: true,
-            text: "",
+            text: "順位",
             font: {
               size: 11,
               weight: "600"
@@ -1043,7 +1072,7 @@ function createCombinedRankingChart(canvasId, rankings, chartHours) {
         x: {
           title: {
             display: true,
-            text: "経過時間",
+            text: "経過日数",
             font: {
               size: 11,
               weight: "600"
@@ -1074,8 +1103,8 @@ function createCombinedRankingChart(canvasId, rankings, chartHours) {
             },
             callback: function(value, index) {
               const hour = index + 1;
-            
-              return hour % 24 === 0 ? `${hour / 24}日目` : "";
+
+              return hour % 24 === 0 ? `${hour / 24}日` : "";
             }
           }
         }
@@ -1214,7 +1243,7 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
       labels: chartLabels,
       datasets: [
         {
-          label: "",
+          label: "いいね数",
           data: likeData,
           borderColor: "#ff9f1c",
           backgroundColor: "#ff9f1c",
@@ -1270,14 +1299,14 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
               size: 10
             },
             callback: function(value) {
-              return formatCompactNumber(value);
+              return formatDisplayNumber(value);
             }
           }
         },
         x: {
           title: {
             display: true,
-            text: "経過時間",
+            text: chartHours > 48 ? "経過日数" : "経過時間",
             font: {
               size: 11,
               weight: "600"
@@ -1305,8 +1334,7 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
               const hour = index + 1;
 
               if (chartHours > 48) {
-                const hour = index + 1;
-                return hour % 24 === 0 ? `${hour / 24}日目` : "";
+                return hour % 24 === 0 ? `${hour / 24}日` : "";
               }
 
               if (hour === 1 || hour % 12 === 0 || hour === chartHours) {
@@ -1325,29 +1353,6 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
       }
     }
   });
-}
-
-/**
- * 大きな数値をグラフ軸表示用に短くする
- *
- * 例：
- * 12000 → 1.2万
- * 9500 → 9500
- */
-function formatCompactNumber(value) {
-  const number = Number(value);
-
-  if (!Number.isFinite(number)) {
-    return "";
-  }
-
-  if (number >= 10000) {
-    const man = number / 10000;
-
-    return `${Number.isInteger(man) ? man : man.toFixed(1)}万`;
-  }
-
-  return String(Math.round(number));
 }
 
 
