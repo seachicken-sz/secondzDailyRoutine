@@ -399,7 +399,7 @@ function renderReport(data) {
   `;
 
   document.getElementById("likeCount").textContent = formatDisplayNumber(data.likes);
-  document.getElementById("favoriteCount").textContent = data.favorites || "";
+  document.getElementById("favoriteCount").textContent = formatDisplayNumber(data.favorites);
 
   // TVer最新話リンクを描画
   renderNewEpisodeLink(data);
