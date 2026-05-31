@@ -1,6 +1,22 @@
 // ==================================================
 // 描画処理
 // ==================================================
+function renderHomeOnceTaskList(tasks) {
+  if (!homeOnceTaskListElement) {
+    return;
+  }
+  homeOnceTaskListElement.innerHTML = "";
+  if (!tasks || tasks.length === 0) {
+    homeOnceTaskListElement.innerHTML = `<p class="empty-text">${MESSAGES.empty.onceTasks}</p>`;
+    return;
+  }
+  tasks.forEach((task) => {
+    const item = document.createElement("div");
+    item.className = "home-list-item";
+    item.textContent = `～${formatTaskLimitDate(task.to)} ${task.name}`;
+    homeOnceTaskListElement.appendChild(item);
+  });
+}
 
 function renderHomeInfoList(items) {
   if (!homeInfoListElement) {
