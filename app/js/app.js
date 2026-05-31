@@ -52,6 +52,63 @@ addClickEvent(backHomeButtonElement, () => {
   // 履歴を追加せずにホーム画面へ戻る
   showOnlyStep(homeStepElement, { recordHistory: false });
 });
+]
 
+// ==================================================
+// 日次表示制御
+// ==================================================
+document.addEventListener("DOMContentLoaded", () => {
+  applyDateVisibleBlocks();
+});
+
+/**
+ * data-fromdate / data-todate の範囲内だけブロックを表示する
+ *
+ * 対象例：
+ * <div class="date-visible-block" data-fromdate="2026-06-01 00:00" data-todate="2026-06-30 23:59">
+ */
+function applyDateVisibleBlocks() {
+  const now = new Date();
+
+  document.querySelectorAll(".date-visible-block").forEach((block) => {
+    const fromText = block.dataset.fromdate;
+    const toText = block.dataset.todate;
+
+    const fromDate = fromText ? parseDateText(fromText) : null;
+    const toDate = toText ? parseDateText(toText) : null;
+
+    // 日付形式が不正な場合は安全側で非表示
+    if ((fromText && !fromDate) || (toText && !toDate)) {
+      block.classList.remove("is-visible");
+      return;
+    }
+
+    const isAfterFrom = !fromDate || now >= fromDate;
+    const isBeforeTo = !toDate || now <= toDate;
+
+    if (isAfterFrom && isBeforeTo) {
+      block.classList.add("is-visible");
+    } else {
+      block.classList.remove("is-visible");
+    }
+  });
+}
+
+/**
+ * "2026-06-01 00:00" / "2026/06/01 00:00" / "2026-06-01T00:00"
+ * あたりを Date に変換する
+ */
+function parseDateText(text) {
+  if (!text) return null;
+
+  const normalized = text
+    .trim()
+    .replace(/\//g, "-")
+    .replace(" ", "T");
+
+  const date = new Date(normalized);
+
+  return Number.isNaN(date.getTime()) ? null : date;
+}
 
 
