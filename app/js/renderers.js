@@ -30,42 +30,44 @@ function renderHomeInfoList(items) {
     return;
   }
 
-  // YYYY-MM-DD / YYYY-MM-DDTHH:mm:ss+09:00 を安全に日時化する
-  const getDateTimeValue = (dateValue) => {
-    if (!dateValue) {
-      return Number.MAX_SAFE_INTEGER;
-    }
-
-    const value = String(dateValue).trim();
-
+  // YYYYMMDDHHmm / YYYYMMDD / 通常の日付文字列を並び替え用の数値に変換する
+  const getDateTimeValue = (value) => {
     if (!value) {
       return Number.MAX_SAFE_INTEGER;
     }
 
-    // YYYY-MM-DD だけなら日本時間の0時として扱う
-    const normalizedValue = /^\d{4}-\d{2}-\d{2}$/.test(value)
-      ? `${value}T00:00:00+09:00`
-      : value;
+    const text = String(value).trim();
 
-    const date = new Date(normalizedValue);
+    // 例: 202606051900
+    if (/^\d{12}$/.test(text)) {
+      return Number(text);
+    }
+
+    // 例: 20260605
+    if (/^\d{8}$/.test(text)) {
+      return Number(`${text}0000`);
+    }
+
+    // 例: 2026-06-05 / 2026-06-05T19:00:00
+    const date = new Date(text);
 
     if (Number.isNaN(date.getTime())) {
       return Number.MAX_SAFE_INTEGER;
     }
 
-    return date.getTime();
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    const hour = String(date.getHours()).padStart(2, "0");
+    const minute = String(date.getMinutes()).padStart(2, "0");
+
+    return Number(`${year}${month}${day}${hour}${minute}`);
   };
 
-  // 画面に表示したい日付を並び替え基準にする
-  // displayDate があれば最優先
-  // なければ従来項目から拾う
+  // 画面に表示する日付と同じ基準で並び替える
+  // 優先順位：release → from → to → 日付なしは最後尾
   const getHomeInfoDisplayDateTime = (item) => {
-    return getDateTimeValue(
-      item.displayDate ||
-      item.release ||
-      item.from ||
-      item.to
-    );
+    return getDateTimeValue(item.release || item.from || item.to);
   };
 
   // 表示日が古い順に並べる
