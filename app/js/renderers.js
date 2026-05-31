@@ -30,16 +30,24 @@ function renderHomeInfoList(items) {
     return;
   }
 
-  // ホーム表示で使う日付に合わせて、並び替え用の日付を取得する
-  // 優先順位：release → from → to → 日付なしは最後尾
-  const getHomeInfoDisplayDateTime = (item) => {
-    const dateValue = item.release || item.from || item.to;
-
+  // YYYY-MM-DD / YYYY-MM-DDTHH:mm:ss+09:00 を安全に日時化する
+  const getDateTimeValue = (dateValue) => {
     if (!dateValue) {
       return Number.MAX_SAFE_INTEGER;
     }
 
-    const date = new Date(dateValue);
+    const value = String(dateValue).trim();
+
+    if (!value) {
+      return Number.MAX_SAFE_INTEGER;
+    }
+
+    // YYYY-MM-DD だけなら日本時間の0時として扱う
+    const normalizedValue = /^\d{4}-\d{2}-\d{2}$/.test(value)
+      ? `${value}T00:00:00+09:00`
+      : value;
+
+    const date = new Date(normalizedValue);
 
     if (Number.isNaN(date.getTime())) {
       return Number.MAX_SAFE_INTEGER;
@@ -48,8 +56,19 @@ function renderHomeInfoList(items) {
     return date.getTime();
   };
 
+  // 画面に表示したい日付を並び替え基準にする
+  // displayDate があれば最優先
+  // なければ従来項目から拾う
+  const getHomeInfoDisplayDateTime = (item) => {
+    return getDateTimeValue(
+      item.displayDate ||
+      item.release ||
+      item.from ||
+      item.to
+    );
+  };
+
   // 表示日が古い順に並べる
-  // items本体を壊さないようにコピーしてからsortする
   const sortedItems = [...items].sort((a, b) => {
     return getHomeInfoDisplayDateTime(a) - getHomeInfoDisplayDateTime(b);
   });
