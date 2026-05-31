@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026/06/01 00:58",
+  "updatedAt": "2026/06/01 06:58",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
@@ -733,18 +733,18 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/05/31",
-      "updatedAt": "2026/06/01 00:02",
+      "updatedAt": "2026/06/01 06:02",
       "episodeId": "epi4thbfbk",
       "subtitle": "【TOYOTAの最新ロボの秘密】衝撃!!食べられる機械",
-      "likes": "4939",
+      "likes": "5714",
       "favorites": "32.5万",
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 20,
-          "elapsedHour": 10,
-          "elapsedRank": 20,
+          "currentRank": 15,
+          "elapsedHour": 16,
+          "elapsedRank": 15,
           "currentPoints": [
             {
               "hour": 6,
@@ -765,6 +765,30 @@
             {
               "hour": 10,
               "rank": 20
+            },
+            {
+              "hour": 11,
+              "rank": 19
+            },
+            {
+              "hour": 12,
+              "rank": 19
+            },
+            {
+              "hour": 13,
+              "rank": 19
+            },
+            {
+              "hour": 14,
+              "rank": 18
+            },
+            {
+              "hour": 15,
+              "rank": 17
+            },
+            {
+              "hour": 16,
+              "rank": 15
             }
           ],
           "previousPoints": [
@@ -947,19 +971,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 17,
-              "title": "教えて！ニュースライブ　正義のミカタ"
+              "rank": 12,
+              "title": "世界の果てまでイッテQ！"
             },
             {
-              "rank": 18,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "rank": 13,
+              "title": "ゴッドタン"
             },
             {
-              "rank": 19,
-              "title": "上田と女がDEEPに吠える夜"
+              "rank": 14,
+              "title": "華大さんと千鳥くん"
             },
             {
-              "rank": 20,
+              "rank": 15,
               "title": "timeleszファミリア"
             }
           ]
@@ -967,10 +991,35 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 43,
+          "elapsedHour": 16,
+          "elapsedRank": 43,
+          "currentPoints": [
+            {
+              "hour": 11,
+              "rank": 48
+            },
+            {
+              "hour": 12,
+              "rank": 47
+            },
+            {
+              "hour": 13,
+              "rank": 47
+            },
+            {
+              "hour": 14,
+              "rank": 46
+            },
+            {
+              "hour": 15,
+              "rank": 45
+            },
+            {
+              "hour": 16,
+              "rank": 43
+            }
+          ],
           "previousPoints": [
             {
               "hour": 7,
@@ -1133,7 +1182,24 @@
               "rank": 20
             }
           ],
-          "nearbyRanking": []
+          "nearbyRanking": [
+            {
+              "rank": 40,
+              "title": "君が死刑になる前に"
+            },
+            {
+              "rank": 41,
+              "title": "クレヨンしんちゃん"
+            },
+            {
+              "rank": 42,
+              "title": "華大さんと千鳥くん"
+            },
+            {
+              "rank": 43,
+              "title": "timeleszファミリア"
+            }
+          ]
         }
       ]
     },
