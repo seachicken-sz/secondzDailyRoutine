@@ -11,7 +11,8 @@ const SHEET_TASK_TYPES = [
   "start",
   "snsShare",
   "youtube",
-  "access"
+  "access",
+  "memberLink"
 ];
 
 /**
@@ -586,4 +587,52 @@ function createYoutubeItemId(url) {
   }
 
   return createLogItemId("yt", url);
+}
+
+/**
+ * メンバーごとの便利リンク集クリックログを送信する
+ *
+ * @param {Object} data クリックされたリンク情報
+ * @param {string} data.groupKey リンク種別
+ * @param {string} data.title 表示タイトル
+ * @param {string} data.url 遷移URL
+ * @param {string} [data.workType] お仕事種別
+ * @param {string} [data.programId] 番組IDなど
+ * @param {string} [data.episodeId] エピソードIDなど
+ * @param {string} [data.members] メンバー情報
+ * @returns {Promise<boolean>}
+ */
+async function sendMemberWorkLinkLog(data) {
+  if (!data || !data.url) {
+    return false;
+  }
+
+  const groupKey = data.groupKey || "unknown";
+  const itemId =
+    data.itemId ||
+    createLogItemId(
+      "member",
+      `${groupKey}_${data.programId || data.episodeId || data.title || data.url}`
+    );
+
+  const item = createSheetItem({}, {
+    itemId,
+    title: data.title || "",
+    url: data.url || ""
+  });
+
+  if (!item) {
+    return false;
+  }
+
+  return sendSheetLog({
+    memberLink: [{
+      ...item,
+      groupKey,
+      workType: data.workType || "",
+      programId: data.programId || "",
+      episodeId: data.episodeId || "",
+      members: data.members || ""
+    }]
+  });
 }
