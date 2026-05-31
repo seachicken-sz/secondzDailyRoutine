@@ -30,9 +30,9 @@ function renderHomeInfoList(items) {
     return;
   }
 
-  // 表示日として使う日付を取得
-  // 優先順位：release → from → to
-  const getHomeInfoSortDate = (item) => {
+  // ホーム表示で使う日付に合わせて、並び替え用の日付を取得する
+  // 優先順位：release → from → to → 日付なしは最後尾
+  const getHomeInfoDisplayDateTime = (item) => {
     const dateValue = item.release || item.from || item.to;
 
     if (!dateValue) {
@@ -48,10 +48,10 @@ function renderHomeInfoList(items) {
     return date.getTime();
   };
 
-  // 表示日が近い順に並び替え
-  // 元の items を直接壊さないようにコピーしてから sort
+  // 表示日が古い順に並べる
+  // items本体を壊さないようにコピーしてからsortする
   const sortedItems = [...items].sort((a, b) => {
-    return getHomeInfoSortDate(a) - getHomeInfoSortDate(b);
+    return getHomeInfoDisplayDateTime(a) - getHomeInfoDisplayDateTime(b);
   });
 
   sortedItems.forEach((item) => {
