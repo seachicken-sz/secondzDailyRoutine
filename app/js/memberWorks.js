@@ -300,12 +300,20 @@ function createWorkItemHtml(item, group) {
   }
 
   return `
-    <a
-      class="member-work-link-card"
-      href="${escapeHtml(item[group.urlKey])}"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+      <a
+        class="member-work-link-card"
+        href="${escapeHtml(item[group.urlKey])}"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-member-work-link="true"
+        data-member-work-group-key="${escapeHtml(group.key)}"
+        data-member-work-title="${escapeHtml(getProgramDisplayName(item))}"
+        data-member-work-url="${escapeHtml(item[group.urlKey])}"
+        data-member-work-work-type="${escapeHtml(item.workType || "")}"
+        data-member-work-program-id="${escapeHtml(item.programId || item.seriesId || "")}"
+        data-member-work-episode-id="${escapeHtml(item.episodeId || "")}"
+        data-member-work-members="${escapeHtml(Array.isArray(item.members) ? item.members.join(",") : "")}"
+      >
       <span class="member-work-link-main">
         <span class="member-work-link-title">
           ${escapeHtml(getProgramDisplayName(item))}
@@ -340,6 +348,14 @@ function createTverWorkItemHtml(item, group) {
         href="${escapeHtml(item[group.urlKey])}"
         target="_blank"
         rel="noopener noreferrer"
+        data-member-work-link="true"
+        data-member-work-group-key="${escapeHtml(group.key)}"
+        data-member-work-title="${escapeHtml(getProgramDisplayName(item))}"
+        data-member-work-url="${escapeHtml(item[group.urlKey])}"
+        data-member-work-work-type="${escapeHtml(item.workType || "")}"
+        data-member-work-program-id="${escapeHtml(item.programId || item.seriesId || "")}"
+        data-member-work-episode-id="${escapeHtml(item.episodeId || getTverEpisodeId(item.platformUrl) || "")}"
+        data-member-work-members="${escapeHtml(Array.isArray(item.members) ? item.members.join(",") : "")}"
       >
         ${escapeHtml(getTverLinkText(item))}
       </a>
@@ -494,16 +510,34 @@ function updateFilterUi() {
  */
 if (memberWorksArea) {
   memberWorksArea.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-open-youtube-modal]");
+    const youtubeModalButton = event.target.closest("[data-open-youtube-modal]");
 
-    if (!button) {
+    if (youtubeModalButton) {
+      event.preventDefault();
+
+      if (typeof openYoutubeModal === "function") {
+        openYoutubeModal();
+      }
+
       return;
     }
 
-    event.preventDefault();
+    const link = event.target.closest("[data-member-work-link]");
 
-    if (typeof openYoutubeModal === "function") {
-      openYoutubeModal();
+    if (!link) {
+      return;
+    }
+
+    if (typeof sendMemberWorkLinkLog === "function") {
+      sendMemberWorkLinkLog({
+        groupKey: link.dataset.memberWorkGroupKey || "",
+        title: link.dataset.memberWorkTitle || "",
+        url: link.dataset.memberWorkUrl || link.href || "",
+        workType: link.dataset.memberWorkWorkType || "",
+        programId: link.dataset.memberWorkProgramId || "",
+        episodeId: link.dataset.memberWorkEpisodeId || "",
+        members: link.dataset.memberWorkMembers || ""
+      });
     }
   });
 }
