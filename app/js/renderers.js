@@ -2,26 +2,6 @@
 // 描画処理
 // ==================================================
 
-function renderHomeOnceTaskList(tasks) {
-  if (!homeOnceTaskListElement) {
-    return;
-  }
-
-  homeOnceTaskListElement.innerHTML = "";
-
-  if (!tasks || tasks.length === 0) {
-    homeOnceTaskListElement.innerHTML = `<p class="empty-text">${MESSAGES.empty.onceTasks}</p>`;
-    return;
-  }
-
-  tasks.forEach((task) => {
-    const item = document.createElement("div");
-    item.className = "home-list-item";
-    item.textContent = `～${formatTaskLimitDate(task.to)} ${task.name}`;
-    homeOnceTaskListElement.appendChild(item);
-  });
-}
-
 function renderHomeInfoList(items) {
   if (!homeInfoListElement) {
     return;
@@ -34,7 +14,31 @@ function renderHomeInfoList(items) {
     return;
   }
 
-  items.forEach((item) => {
+  // 表示日として使う日付を取得
+  // 優先順位：release → from → to
+  const getHomeInfoSortDate = (item) => {
+    const dateValue = item.release || item.from || item.to;
+
+    if (!dateValue) {
+      return Number.MAX_SAFE_INTEGER;
+    }
+
+    const date = new Date(dateValue);
+
+    if (Number.isNaN(date.getTime())) {
+      return Number.MAX_SAFE_INTEGER;
+    }
+
+    return date.getTime();
+  };
+
+  // 表示日が近い順に並び替え
+  // 元の items を直接壊さないようにコピーしてから sort
+  const sortedItems = [...items].sort((a, b) => {
+    return getHomeInfoSortDate(a) - getHomeInfoSortDate(b);
+  });
+
+  sortedItems.forEach((item) => {
     const dateLabel = formatHomeInfoDateLabel(item);
     const text = dateLabel ? `${dateLabel} ${item.name}` : item.name;
     const hasUrl = item.url && String(item.url).trim() !== "";
