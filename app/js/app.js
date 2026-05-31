@@ -52,7 +52,6 @@ addClickEvent(backHomeButtonElement, () => {
   // 履歴を追加せずにホーム画面へ戻る
   showOnlyStep(homeStepElement, { recordHistory: false });
 });
-]
 
 // ==================================================
 // 日次表示制御
