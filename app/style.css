@@ -1333,6 +1333,14 @@ h1 {
   color: var(--color-link-hover);
 }
 
+.date-visible-block {
+  display: none;
+}
+
+.date-visible-block.is-visible {
+  display: block;
+}
+
 .request-ranking-card {
   flex-shrink: 0;
   margin: 0 0 12px;
