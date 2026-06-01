@@ -18,7 +18,7 @@
         "url": "https://tfm.co.jp/f/countdownjapan/message",
         "request-type": "text",
         "request-input": "メッセージ&リクエスト",
-        "comment": "開いたらメッセージ&リクエスト欄にそのままペーストしてください！",
+        "comment": "①メアドなどを入力\\n②「メッセージ&リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります。",
         "input-flag": true
       },
       {
@@ -28,7 +28,7 @@
         "url": "https://www.nack5.co.jp/message/270/",
         "request-type": "music",
         "request-input": "タイトル",
-        "comment": "ページが開くまで少し時間がかかります。入力できないときは少し待ってね。",
+        "comment": "※ページが開くまで時間がかかる場合があります。\\n\n①ラジオネーム、アーティストを入力\\n\n②「タイトル」にペーストまたは貼り付けを行うと曲名が入ります",
         "input-flag": true
       },
       {
@@ -70,7 +70,7 @@
         "url": "https://fmfukuoka.co.jp/message/?m=reform",
         "request-type": "music-slash-artist",
         "request-input": "リクエスト(曲名／アーティスト名)",
-        "comment": "番組名は「BUTCH COUNTDOWN RADIO」を選択！リクエスト欄にペースト！",
+        "comment": "①番組名は「BUTCH COUNTDOWN RADIO」を選択\\n②「リクエスト」にペーストまたは貼り付けを行うと曲名が入ります",
         "input-flag": true
       },
       {
@@ -80,7 +80,7 @@
         "url": "https://www.tfm.co.jp/f/sc/message",
         "request-type": "text",
         "request-input": "メッセージ",
-        "comment": "コーナーは「楽曲リクエスト」を選択！メッセージ欄にペースト！",
+        "comment": "①コーナーは「楽曲リクエスト」を選択\\n②「メッセージ」にペーストまたは貼り付けを行うと曲名が入ります",
         "input-flag": true
       },
       {
@@ -90,7 +90,7 @@
         "url": "https://www.tfm.co.jp/f/atb/form",
         "request-type": "text",
         "request-input": "メッセージ&リクエスト",
-        "comment": "開いたらメッセージ&リクエスト欄にそのままペーストしてください！",
+        "comment": "①メアドなどを入力\\n②「メッセージ&リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります。",
         "input-flag": true
       },
       {
@@ -100,7 +100,7 @@
         "url": "https://form.jfn.co.jp/neojaponism/message",
         "request-type": "text",
         "request-input": "メッセージ&リクエスト",
-        "comment": "開いたらメッセージ&リクエスト欄にそのままペーストしてください！",
+        "comment": "①メアドなどを入力\\n②「メッセージ&リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります。",
         "input-flag": true
       },
       {
@@ -108,7 +108,7 @@
         "name": "推し楽",
         "short-name": "推し楽",
         "url": "https://fan.books.rakuten.co.jp/tags/25743/news",
-        "comment": "①楽天アカウントでログイン\n②ニュースを選ぶ\n③「心の声を届ける(画面上部の♡)」からリアクションを送ろう！(1日10回まで)",
+        "comment": "①楽天アカウントでログイン\\n②ニュースを選ぶ\\n③「心の声を届ける(画面上部の♡)」からリアクションを送ろう！(1日10回まで)",
         "input-flag": false
       }
     ]
@@ -124,7 +124,7 @@
         "url": "https://www.tfm.co.jp/f/dj_sunsun/message",
         "request-type": "text",
         "request-input": "メッセージ&リクエスト",
-        "comment": "開いたらメッセージ&リクエスト欄にそのままペーストしてください！できたらスンスンにメッセージも！",
+        "comment": "①メアドなどを入力\\n②「メッセージ&リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります。\\n③できたらスンスンにメッセージを入れましょう",
         "input-flag": true
       },
       {
@@ -134,7 +134,7 @@
         "url": "https://funky802.com/service/Request/index/member/1106",
         "request-type": "music",
         "request-input": "リクエスト曲",
-        "comment": "開いたらリクエスト曲欄にそのままペーストしてください！",
+        "comment": "①メアドなどを入力\\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります。",
         "input-flag": true
       },
       {
@@ -144,7 +144,7 @@
         "url": "https://funky802.com/service/Request/index/member/1612",
         "request-type": "music",
         "request-input": "リクエスト曲",
-        "comment": "開いたらリクエスト曲欄にそのままペーストしてください！",
+        "comment": "①メアドなどを入力\\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります。",
         "input-flag": true
       },
       {
@@ -154,7 +154,7 @@
         "url": "https://funky802.com/service/Request/index/member/1712",
         "request-type": "music",
         "request-input": "リクエスト曲",
-        "comment": "開いたらリクエスト曲欄にそのままペーストしてください！",
+        "comment": "①メアドなどを入力\\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります。",
         "input-flag": true
       },
       {
@@ -164,7 +164,7 @@
         "url": "https://www.kiss-fm.co.jp/requestmessage/request/2779/",
         "request-type": "music",
         "request-input": "リクエスト曲",
-        "comment": "開いたらリクエスト曲欄にそのままペーストしてください！",
+        "comment": "①メアドなどを入力\\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります。",
         "input-flag": true
       },
       {
@@ -174,7 +174,7 @@
         "url": "https://ssl.1242.com/aplform/form/aplform.php?fcode=m10&_ga=2.93010205.1251474916.1712812603-56772365.1712812603",
         "request-type": "music-slash-artist",
         "request-input": "リクエスト曲",
-        "comment": "開いたらリクエスト曲欄にそのままペーストしてください！",
+        "comment": "①メアドなどを入力\\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります。",
         "input-flag": true
       }
     ]
@@ -190,7 +190,7 @@
         "url": "https://www.fmyokohama.co.jp/present/11794",
         "request-type": "music",
         "request-input": "曲名",
-        "comment": "開いたら曲名欄にそのままペースト＆ドライブエピソードを書こう！",
+        "comment": "①メアドなどを入力\\n②「曲名」にペーストまたは貼り付けを行うと曲名が自動で入ります\\n③ドライブエピソードを記入",
         "input-flag": true
       },
       {
@@ -200,7 +200,7 @@
         "url": "https://www.fmyokohama.co.jp/present/10065",
         "request-type": "music",
         "request-input": "曲名",
-        "comment": "開いたら曲名欄にそのままペースト＆ドライブやデートエピソードを書こう！",
+        "comment": "①メアドなどを入力\\n②「曲名」にペーストまたは貼り付けを行うと曲名が自動で入ります\\n③ドライブやデートエピソードを記入",
         "input-flag": true
       },
       {
@@ -210,7 +210,7 @@
         "url": "https://www.fmfuji.jp/mail.php?cd=128",
         "request-type": "music",
         "request-input": "リクエスト曲名",
-        "comment": "開いたらリクエスト曲名欄にそのままペーストしてください！",
+        "comment": "①メアドなどを入力\\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります。",
         "input-flag": true
       }
     ]
