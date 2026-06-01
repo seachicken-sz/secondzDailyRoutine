@@ -188,7 +188,8 @@ function renderCurrentOnceTask() {
 
   // 注意文・補足文を表示
   if (onceTaskMessageAreaElement) {
-    onceTaskMessageAreaElement.textContent = buildOnceTaskMessage(task);
+    onceTaskMessageAreaElement.textContent =
+  normalizeDisplayNewlines(buildOnceTaskMessage(task));
   }
 
   // URLがあるタスクの場合は「ページを開く」ボタンを表示
