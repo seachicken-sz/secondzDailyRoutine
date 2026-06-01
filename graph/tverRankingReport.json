@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026/06/01 18:58",
+  "updatedAt": "2026/06/02 00:58",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
@@ -733,17 +733,17 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/05/31",
-      "updatedAt": "2026/06/01 18:02",
+      "updatedAt": "2026/06/02 00:02",
       "episodeId": "epi4thbfbk",
       "subtitle": "【TOYOTAの最新ロボの秘密】衝撃!!食べられる機械",
-      "likes": "8390",
+      "likes": "9600",
       "favorites": "32.5万",
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 9,
-          "elapsedHour": 28,
+          "elapsedHour": 34,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -836,6 +836,30 @@
             },
             {
               "hour": 28,
+              "rank": 9
+            },
+            {
+              "hour": 29,
+              "rank": 10
+            },
+            {
+              "hour": 30,
+              "rank": 9
+            },
+            {
+              "hour": 31,
+              "rank": 8
+            },
+            {
+              "hour": 32,
+              "rank": 9
+            },
+            {
+              "hour": 33,
+              "rank": 9
+            },
+            {
+              "hour": 34,
               "rank": 9
             }
           ],
@@ -1020,7 +1044,7 @@
           "nearbyRanking": [
             {
               "rank": 6,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 7,
@@ -1039,9 +1063,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 22,
-          "elapsedHour": 28,
-          "elapsedRank": 22,
+          "currentRank": 23,
+          "elapsedHour": 34,
+          "elapsedRank": 23,
           "currentPoints": [
             {
               "hour": 11,
@@ -1114,6 +1138,30 @@
             {
               "hour": 28,
               "rank": 22
+            },
+            {
+              "hour": 29,
+              "rank": 23
+            },
+            {
+              "hour": 30,
+              "rank": 22
+            },
+            {
+              "hour": 31,
+              "rank": 21
+            },
+            {
+              "hour": 32,
+              "rank": 23
+            },
+            {
+              "hour": 33,
+              "rank": 23
+            },
+            {
+              "hour": 34,
+              "rank": 23
             }
           ],
           "previousPoints": [
@@ -1280,10 +1328,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 19,
-              "title": "リボーン ～最後のヒーロー～"
-            },
-            {
               "rank": 20,
               "title": "月曜から夜ふかし"
             },
@@ -1293,6 +1337,10 @@
             },
             {
               "rank": 22,
+              "title": "最後の約束"
+            },
+            {
+              "rank": 23,
               "title": "timeleszファミリア"
             }
           ]
