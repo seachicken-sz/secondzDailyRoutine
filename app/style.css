@@ -482,6 +482,12 @@ h1 {
   font-weight: 600;
 }
 
+/* JSON内の \n を画面上の改行として表示する */
+#dailyTaskCommentArea,
+#onceTaskMessageArea {
+  white-space: pre-line;
+}
+
 .copy-area {
   margin: 0 0 14px;
   padding: 14px;
