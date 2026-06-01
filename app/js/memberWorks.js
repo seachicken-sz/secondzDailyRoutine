@@ -395,6 +395,14 @@ function createTverRankingReportButtonHtml(item) {
       rel="noopener noreferrer"
       aria-label="ランク推移"
       title="ランク推移"
+      data-member-work-link="true"
+      data-member-work-group-key="tverGraph"
+      data-member-work-title="${escapeHtml(getProgramDisplayName(item))}"
+      data-member-work-url="${escapeHtml(reportUrl)}"
+      data-member-work-work-type="${escapeHtml(item.workType || "tv")}"
+      data-member-work-program-id="${escapeHtml(item.programId || item.seriesId || "")}"
+      data-member-work-episode-id="${escapeHtml(episodeId)}"
+      data-member-work-members="${escapeHtml(Array.isArray(item.members) ? item.members.join(",") : "")}"
     >
       <i class="bi bi-graph-up-arrow" aria-hidden="true"></i>
     </a>
