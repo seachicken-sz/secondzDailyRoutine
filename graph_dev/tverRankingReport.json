@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/02 07:20",
+  "updatedAt": "2026/06/02 08:21",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/05/29",
-      "updatedAt": "2026/06/02 07:20",
+      "updatedAt": "2026/06/02 08:21",
       "episodeId": "epqhlsu653",
       "subtitle": "【timelesz×相葉雅紀】サシトーク",
       "likes": "1.9万",
@@ -241,6 +241,10 @@
         {
           "hour": 81,
           "likes": 19000
+        },
+        {
+          "hour": 82,
+          "likes": 19000
         }
       ],
       "rankings": [
@@ -248,7 +252,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 8,
-          "elapsedHour": 81,
+          "elapsedHour": 82,
           "elapsedRank": 8,
           "currentPoints": [
             {
@@ -570,6 +574,10 @@
             {
               "hour": 81,
               "rank": 8
+            },
+            {
+              "hour": 82,
+              "rank": 8
             }
           ],
           "previousPoints": [
@@ -776,9 +784,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 24,
-          "elapsedHour": 81,
-          "elapsedRank": 24,
+          "currentRank": 23,
+          "elapsedHour": 82,
+          "elapsedRank": 23,
           "currentPoints": [
             {
               "hour": 9,
@@ -1071,10 +1079,18 @@
             {
               "hour": 81,
               "rank": 24
+            },
+            {
+              "hour": 82,
+              "rank": 23
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
+            {
+              "rank": 20,
+              "title": "時すでにおスシ!?"
+            },
             {
               "rank": 21,
               "title": "月曜から夜ふかし"
@@ -1085,10 +1101,6 @@
             },
             {
               "rank": 23,
-              "title": "刑事、ふりだしに戻る"
-            },
-            {
-              "rank": 24,
               "title": "タイムレスマン"
             }
           ]
@@ -1098,10 +1110,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/05/31",
-      "updatedAt": "2026/06/02 07:20",
+      "updatedAt": "2026/06/02 08:21",
       "episodeId": "epi4thbfbk",
       "subtitle": "【TOYOTAの最新ロボの秘密】衝撃!!食べられる機械",
-      "likes": "9895",
+      "likes": "9972",
       "favorites": "32.5万",
       "likePoints": [
         {
@@ -1219,6 +1231,10 @@
         {
           "hour": 41,
           "likes": 9895
+        },
+        {
+          "hour": 42,
+          "likes": 9972
         }
       ],
       "rankings": [
@@ -1226,7 +1242,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 9,
-          "elapsedHour": 41,
+          "elapsedHour": 42,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -1371,6 +1387,10 @@
             },
             {
               "hour": 41,
+              "rank": 9
+            },
+            {
+              "hour": 42,
               "rank": 9
             }
           ],
@@ -1739,7 +1759,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 27,
-          "elapsedHour": 41,
+          "elapsedHour": 42,
           "elapsedRank": 27,
           "currentPoints": [
             {
@@ -1865,13 +1885,17 @@
             {
               "hour": 41,
               "rank": 27
+            },
+            {
+              "hour": 42,
+              "rank": 27
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 24,
-              "title": "タイムレスマン"
+              "title": "刑事、ふりだしに戻る"
             },
             {
               "rank": 25,
@@ -1892,10 +1916,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/02 07:20",
+      "updatedAt": "2026/06/02 08:21",
       "episodeId": "ept68blopm",
       "subtitle": "チョコプラ・timeleszが「世界一の強度の糸で世界一長い糸電話作り」に挑戦！",
-      "likes": "8125",
+      "likes": "8130",
       "favorites": "4.8万",
       "likePoints": [
         {
@@ -2241,15 +2265,19 @@
         {
           "hour": 151,
           "likes": 8125
+        },
+        {
+          "hour": 152,
+          "likes": 8130
         }
       ],
       "rankings": [
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 49,
-          "elapsedHour": 151,
-          "elapsedRank": 49,
+          "currentRank": 47,
+          "elapsedHour": 152,
+          "elapsedRank": 47,
           "currentPoints": [
             {
               "hour": 25,
@@ -2622,24 +2650,28 @@
             {
               "hour": 151,
               "rank": 49
+            },
+            {
+              "hour": 152,
+              "rank": 47
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 46,
+              "rank": 44,
+              "title": "ザ！鉄腕！DASH!!"
+            },
+            {
+              "rank": 45,
               "title": "小峠地蔵とお狐風磨"
             },
             {
+              "rank": 46,
+              "title": "アンタッチャブルでやらせてもらってます"
+            },
+            {
               "rank": 47,
-              "title": "なりゆき街道旅"
-            },
-            {
-              "rank": 48,
-              "title": "秋山の楽しすぎる約30分"
-            },
-            {
-              "rank": 49,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -2708,7 +2740,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/05/28",
-      "updatedAt": "2026/06/02 07:20",
+      "updatedAt": "2026/06/02 08:21",
       "episodeId": "ep896gk3yi",
       "subtitle": "【モテ算】モテの方程式を作れ！",
       "likes": "1.3万",
@@ -3048,6 +3080,10 @@
         },
         {
           "hour": 125,
+          "likes": 13000
+        },
+        {
+          "hour": 126,
           "likes": 13000
         }
       ],
@@ -3459,10 +3495,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/02 07:20",
+      "updatedAt": "2026/06/02 08:21",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "3516",
+      "likes": "3518",
       "favorites": "75.8万",
       "likePoints": [
         {
@@ -3808,6 +3844,10 @@
         {
           "hour": 154,
           "likes": 3516
+        },
+        {
+          "hour": 155,
+          "likes": 3518
         }
       ],
       "rankings": [
@@ -4154,10 +4194,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/02 07:20",
+      "updatedAt": "2026/06/02 08:21",
       "episodeId": "ep32i5e7ln",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！BOYNEXTDOOR登場",
-      "likes": "3816",
+      "likes": "3820",
       "favorites": "6.4万",
       "likePoints": [
         {
@@ -4499,6 +4539,10 @@
         {
           "hour": 150,
           "likes": 3816
+        },
+        {
+          "hour": 151,
+          "likes": 3820
         }
       ],
       "rankings": [
@@ -4560,10 +4604,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/05/29",
-      "updatedAt": "2026/06/02 07:20",
+      "updatedAt": "2026/06/02 08:21",
       "episodeId": "ep9iknamnl",
       "subtitle": "第129回 風磨・長谷川初MC対決！本気あっち向いてホイ",
-      "likes": "5938",
+      "likes": "5940",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -4889,6 +4933,10 @@
         {
           "hour": 102,
           "likes": 5938
+        },
+        {
+          "hour": 103,
+          "likes": 5940
         }
       ],
       "rankings": [
@@ -5139,10 +5187,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/05/30",
-      "updatedAt": "2026/06/02 07:20",
+      "updatedAt": "2026/06/02 08:21",
       "episodeId": "epq6vlnbyh",
       "subtitle": "マッサマンvs錦鯉マッサノリマンSP後編",
-      "likes": "1747",
+      "likes": "1754",
       "favorites": "77.1万",
       "likePoints": [
         {
@@ -5292,6 +5340,10 @@
         {
           "hour": 60,
           "likes": 1747
+        },
+        {
+          "hour": 61,
+          "likes": 1754
         }
       ],
       "rankings": [
@@ -5320,10 +5372,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/02 07:20",
+      "updatedAt": "2026/06/02 08:21",
       "episodeId": "epohycztrr",
       "subtitle": "第7話 移動捜査課の使命",
-      "likes": "8439",
+      "likes": "8447",
       "favorites": "36.9万",
       "likePoints": [
         {
@@ -5665,6 +5717,10 @@
         {
           "hour": 130,
           "likes": 8439
+        },
+        {
+          "hour": 131,
+          "likes": 8447
         }
       ],
       "rankings": [
@@ -5672,7 +5728,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 21,
-          "elapsedHour": 130,
+          "elapsedHour": 131,
           "elapsedRank": 21,
           "currentPoints": [
             {
@@ -6182,6 +6238,10 @@
             {
               "hour": 130,
               "rank": 21
+            },
+            {
+              "hour": 131,
+              "rank": 21
             }
           ],
           "previousPoints": [],
@@ -6208,7 +6268,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 42,
-          "elapsedHour": 130,
+          "elapsedHour": 131,
           "elapsedRank": 42,
           "currentPoints": [
             {
@@ -6690,17 +6750,21 @@
             {
               "hour": 130,
               "rank": 42
+            },
+            {
+              "hour": 131,
+              "rank": 42
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 39,
-              "title": "千鳥の鬼レンチャン"
+              "title": "情熱大陸"
             },
             {
               "rank": 40,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 41,
@@ -6717,10 +6781,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/02 07:20",
+      "updatedAt": "2026/06/02 08:21",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "4940",
+      "likes": "4944",
       "favorites": "1.3万",
       "likePoints": [
         {
@@ -7070,6 +7134,10 @@
         {
           "hour": 149,
           "likes": 4940
+        },
+        {
+          "hour": 150,
+          "likes": 4944
         }
       ],
       "rankings": [
@@ -7275,10 +7343,10 @@
     "srbkekw9oj": {
       "programTitle": "ネプリーグ",
       "broadcastDate": "2026/06/01",
-      "updatedAt": "2026/06/02 07:20",
+      "updatedAt": "2026/06/02 08:21",
       "episodeId": "ep9yhege0b",
       "subtitle": "20周年イヤーの難クイズを林先生が徹底解説！",
-      "likes": "628",
+      "likes": "656",
       "favorites": "17.0万",
       "likePoints": [
         {
@@ -7324,6 +7392,10 @@
         {
           "hour": 12,
           "likes": 628
+        },
+        {
+          "hour": 13,
+          "likes": 656
         }
       ],
       "rankings": [
