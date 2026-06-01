@@ -244,10 +244,10 @@ body {
 
 /*メインコンテンツ表示*/
 .step-screen {
-  height: 100%;
+  height: calc(100% - 60px);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: scroll;
   padding: 18px 12px;
 }
 
