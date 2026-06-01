@@ -231,7 +231,9 @@ function renderCurrentDailyTask() {
   // タスクコメントを表示
   if (dailyTaskCommentAreaElement) {
     dailyTaskCommentAreaElement.textContent =
-      item.comment || "ページを開いてタスクを完了してください。";
+      normalizeDisplayNewlines(
+        item.comment || "ページを開いてタスクを完了してください。"
+      );
   }
 
   // URLがあるタスクの場合は「ページを開く」ボタンを表示
