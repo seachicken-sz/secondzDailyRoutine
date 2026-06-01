@@ -491,3 +491,8 @@ function setButtonStyle(buttonElement, styleType) {
   // デフォルトはサブアクション用のボタン表示
   buttonElement.classList.add("secondary-button");
 }
+
+// JSON内の改行表現を画面表示用の改行にそろえる
+function normalizeDisplayNewlines(value) {
+  return String(value || "").replaceAll("\\n", "\n");
+}
