@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026/06/02 12:58",
+  "updatedAt": "2026/06/02 18:58",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
@@ -733,7 +733,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/05/31",
-      "updatedAt": "2026/06/02 12:02",
+      "updatedAt": "2026/06/02 13:02",
       "episodeId": "epi4thbfbk",
       "subtitle": "【TOYOTAの最新ロボの秘密】衝撃!!食べられる機械",
       "likes": "1万",
@@ -743,7 +743,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 10,
-          "elapsedHour": 46,
+          "elapsedHour": 47,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -908,6 +908,10 @@
             },
             {
               "hour": 46,
+              "rank": 10
+            },
+            {
+              "hour": 47,
               "rank": 10
             }
           ],
@@ -1111,9 +1115,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 30,
-          "elapsedHour": 46,
-          "elapsedRank": 30,
+          "currentRank": 31,
+          "elapsedHour": 47,
+          "elapsedRank": 31,
           "currentPoints": [
             {
               "hour": 11,
@@ -1258,6 +1262,10 @@
             {
               "hour": 46,
               "rank": 30
+            },
+            {
+              "hour": 47,
+              "rank": 31
             }
           ],
           "previousPoints": [
@@ -1424,10 +1432,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 27,
-              "title": "ターミネーターと恋しちゃったら"
-            },
-            {
               "rank": 28,
               "title": "未解決の女　警視庁文書捜査官 Season３"
             },
@@ -1437,6 +1441,10 @@
             },
             {
               "rank": 30,
+              "title": "ターミネーターと恋しちゃったら"
+            },
+            {
+              "rank": 31,
               "title": "timeleszファミリア"
             }
           ]
@@ -4186,6 +4194,67 @@
               "title": "ふぉ〜ゆ〜って、だれ？"
             }
           ]
+        }
+      ]
+    },
+    "srbkekw9oj": {
+      "programTitle": "ネプリーグ",
+      "broadcastDate": "2026/06/01",
+      "updatedAt": "2026/06/02 18:02",
+      "episodeId": "ep9yhege0b",
+      "subtitle": "20周年イヤーの難クイズを林先生が徹底解説！",
+      "likes": "877",
+      "favorites": "17.1万",
+      "rankings": [
+        {
+          "type": "variety",
+          "label": "バラエティ",
+          "currentRank": 41,
+          "elapsedHour": 23,
+          "elapsedRank": 41,
+          "currentPoints": [
+            {
+              "hour": 21,
+              "rank": 50
+            },
+            {
+              "hour": 22,
+              "rank": 46
+            },
+            {
+              "hour": 23,
+              "rank": 41
+            }
+          ],
+          "previousPoints": [],
+          "nearbyRanking": [
+            {
+              "rank": 38,
+              "title": "有吉の壁"
+            },
+            {
+              "rank": 39,
+              "title": "出川哲朗の充電させてもらえませんか？"
+            },
+            {
+              "rank": 40,
+              "title": "マツコの知らない世界"
+            },
+            {
+              "rank": 41,
+              "title": "ネプリーグ"
+            }
+          ]
+        },
+        {
+          "type": "all",
+          "label": "総合",
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
+          "currentPoints": [],
+          "previousPoints": [],
+          "nearbyRanking": []
         }
       ]
     }
