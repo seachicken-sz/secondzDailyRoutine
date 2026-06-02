@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026/06/03 00:58",
+  "updatedAt": "2026/06/03 06:58",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
@@ -1453,20 +1453,26 @@
     },
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
-      "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/05/28 23:02",
-      "episodeId": "ept68blopm",
-      "subtitle": "「世界一の強度の糸で世界一長い糸電話作り」に挑戦！",
-      "likes": "6744",
-      "favorites": "4.8万",
+      "broadcastDate": "2026/06/02",
+      "updatedAt": "2026/06/03 06:02",
+      "episodeId": "epbxaud3gs",
+      "subtitle": "チョコプラ・timeleszがデスソースの浄水に挑戦！",
+      "likes": "1328",
+      "favorites": "4.9万",
       "rankings": [
         {
           "type": "vtr",
           "label": "VTR",
-          "currentRank": 15,
-          "elapsedHour": 47,
-          "elapsedRank": 15,
+          "currentRank": 45,
+          "elapsedHour": 6,
+          "elapsedRank": 45,
           "currentPoints": [
+            {
+              "hour": 6,
+              "rank": 45
+            }
+          ],
+          "previousPoints": [
             {
               "hour": 7,
               "rank": 37
@@ -1632,187 +1638,21 @@
               "rank": 15
             }
           ],
-          "previousPoints": [
-            {
-              "hour": 7,
-              "rank": 39
-            },
-            {
-              "hour": 8,
-              "rank": 32
-            },
-            {
-              "hour": 9,
-              "rank": 26
-            },
-            {
-              "hour": 10,
-              "rank": 22
-            },
-            {
-              "hour": 11,
-              "rank": 21
-            },
-            {
-              "hour": 12,
-              "rank": 18
-            },
-            {
-              "hour": 13,
-              "rank": 14
-            },
-            {
-              "hour": 14,
-              "rank": 13
-            },
-            {
-              "hour": 15,
-              "rank": 13
-            },
-            {
-              "hour": 16,
-              "rank": 12
-            },
-            {
-              "hour": 17,
-              "rank": 12
-            },
-            {
-              "hour": 18,
-              "rank": 11
-            },
-            {
-              "hour": 19,
-              "rank": 10
-            },
-            {
-              "hour": 20,
-              "rank": 9
-            },
-            {
-              "hour": 21,
-              "rank": 9
-            },
-            {
-              "hour": 22,
-              "rank": 7
-            },
-            {
-              "hour": 23,
-              "rank": 7
-            },
-            {
-              "hour": 24,
-              "rank": 6
-            },
-            {
-              "hour": 25,
-              "rank": 6
-            },
-            {
-              "hour": 26,
-              "rank": 6
-            },
-            {
-              "hour": 27,
-              "rank": 6
-            },
-            {
-              "hour": 28,
-              "rank": 6
-            },
-            {
-              "hour": 29,
-              "rank": 6
-            },
-            {
-              "hour": 30,
-              "rank": 7
-            },
-            {
-              "hour": 31,
-              "rank": 7
-            },
-            {
-              "hour": 32,
-              "rank": 8
-            },
-            {
-              "hour": 33,
-              "rank": 8
-            },
-            {
-              "hour": 34,
-              "rank": 9
-            },
-            {
-              "hour": 35,
-              "rank": 10
-            },
-            {
-              "hour": 36,
-              "rank": 11
-            },
-            {
-              "hour": 37,
-              "rank": 12
-            },
-            {
-              "hour": 38,
-              "rank": 12
-            },
-            {
-              "hour": 39,
-              "rank": 12
-            },
-            {
-              "hour": 40,
-              "rank": 12
-            },
-            {
-              "hour": 41,
-              "rank": 12
-            },
-            {
-              "hour": 42,
-              "rank": 12
-            },
-            {
-              "hour": 43,
-              "rank": 13
-            },
-            {
-              "hour": 44,
-              "rank": 13
-            },
-            {
-              "hour": 45,
-              "rank": 13
-            },
-            {
-              "hour": 46,
-              "rank": 14
-            },
-            {
-              "hour": 47,
-              "rank": 15
-            }
-          ],
           "nearbyRanking": [
             {
-              "rank": 12,
-              "title": "有吉ゼミ"
+              "rank": 42,
+              "title": "ゴルフ侍、見参！"
             },
             {
-              "rank": 13,
-              "title": "それSnow Manにやらせて下さい"
+              "rank": 43,
+              "title": "いくらかわかる金？"
             },
             {
-              "rank": 14,
-              "title": "よるのブランチ"
+              "rank": 44,
+              "title": "やすとも・友近のキメツケ！あくまで個人の感想です"
             },
             {
-              "rank": 15,
+              "rank": 45,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -1820,10 +1660,11 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 50,
-          "elapsedHour": 37,
-          "elapsedRank": 50,
-          "currentPoints": [
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
+          "currentPoints": [],
+          "previousPoints": [
             {
               "hour": 20,
               "rank": 46
@@ -1897,106 +1738,7 @@
               "rank": 50
             }
           ],
-          "previousPoints": [
-            {
-              "hour": 19,
-              "rank": 49
-            },
-            {
-              "hour": 20,
-              "rank": 47
-            },
-            {
-              "hour": 21,
-              "rank": 41
-            },
-            {
-              "hour": 22,
-              "rank": 37
-            },
-            {
-              "hour": 23,
-              "rank": 35
-            },
-            {
-              "hour": 24,
-              "rank": 35
-            },
-            {
-              "hour": 25,
-              "rank": 35
-            },
-            {
-              "hour": 26,
-              "rank": 35
-            },
-            {
-              "hour": 27,
-              "rank": 35
-            },
-            {
-              "hour": 28,
-              "rank": 35
-            },
-            {
-              "hour": 29,
-              "rank": 35
-            },
-            {
-              "hour": 30,
-              "rank": 36
-            },
-            {
-              "hour": 31,
-              "rank": 37
-            },
-            {
-              "hour": 32,
-              "rank": 39
-            },
-            {
-              "hour": 33,
-              "rank": 42
-            },
-            {
-              "hour": 34,
-              "rank": 44
-            },
-            {
-              "hour": 35,
-              "rank": 47
-            },
-            {
-              "hour": 36,
-              "rank": 49
-            },
-            {
-              "hour": 37,
-              "rank": 50
-            },
-            {
-              "hour": 38,
-              "rank": 50
-            }
-          ],
-          "nearbyRanking": [
-            {
-              "rank": 47,
-              "title": "マツコ＆有吉 かりそめ天国"
-            },
-            {
-              "rank": 48,
-              "title": "これ余談なんですけど・・・"
-            },
-            {
-              "rank": 49,
-              "title": "にけつッ!!"
-            },
-            {
-              "rank": 50,
-              "title": "地球まるごと大実験 ネイチャーティーチャー"
-            }
-          ]
+          "nearbyRanking": []
         }
       ]
     },
@@ -2642,245 +2384,6 @@
               "title": "ニカゲーム"
             }
           ]
-        }
-      ]
-    },
-    "srv5ck6m6m": {
-      "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
-      "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/05/28 08:02",
-      "episodeId": "ep32i5e7ln",
-      "subtitle": "BOYNEXTDOOR登場",
-      "likes": "3007",
-      "favorites": "6.3万",
-      "rankings": [
-        {
-          "type": "variety",
-          "label": "バラエティ",
-          "currentRank": 50,
-          "elapsedHour": 31,
-          "elapsedRank": 50,
-          "currentPoints": [
-            {
-              "hour": 20,
-              "rank": 46
-            },
-            {
-              "hour": 21,
-              "rank": 42
-            },
-            {
-              "hour": 22,
-              "rank": 39
-            },
-            {
-              "hour": 23,
-              "rank": 40
-            },
-            {
-              "hour": 24,
-              "rank": 41
-            },
-            {
-              "hour": 25,
-              "rank": 42
-            },
-            {
-              "hour": 26,
-              "rank": 42
-            },
-            {
-              "hour": 27,
-              "rank": 43
-            },
-            {
-              "hour": 28,
-              "rank": 43
-            },
-            {
-              "hour": 29,
-              "rank": 45
-            },
-            {
-              "hour": 30,
-              "rank": 47
-            },
-            {
-              "hour": 31,
-              "rank": 50
-            }
-          ],
-          "previousPoints": [
-            {
-              "hour": 15,
-              "rank": 48
-            },
-            {
-              "hour": 16,
-              "rank": 46
-            },
-            {
-              "hour": 17,
-              "rank": 44
-            },
-            {
-              "hour": 18,
-              "rank": 40
-            },
-            {
-              "hour": 19,
-              "rank": 36
-            },
-            {
-              "hour": 20,
-              "rank": 30
-            },
-            {
-              "hour": 21,
-              "rank": 24
-            },
-            {
-              "hour": 22,
-              "rank": 23
-            },
-            {
-              "hour": 23,
-              "rank": 22
-            },
-            {
-              "hour": 24,
-              "rank": 23
-            },
-            {
-              "hour": 25,
-              "rank": 24
-            },
-            {
-              "hour": 26,
-              "rank": 25
-            },
-            {
-              "hour": 27,
-              "rank": 24
-            },
-            {
-              "hour": 28,
-              "rank": 25
-            },
-            {
-              "hour": 29,
-              "rank": 24
-            },
-            {
-              "hour": 30,
-              "rank": 25
-            },
-            {
-              "hour": 31,
-              "rank": 25
-            },
-            {
-              "hour": 32,
-              "rank": 26
-            },
-            {
-              "hour": 33,
-              "rank": 26
-            },
-            {
-              "hour": 34,
-              "rank": 28
-            },
-            {
-              "hour": 35,
-              "rank": 30
-            },
-            {
-              "hour": 36,
-              "rank": 30
-            },
-            {
-              "hour": 37,
-              "rank": 31
-            },
-            {
-              "hour": 38,
-              "rank": 32
-            },
-            {
-              "hour": 39,
-              "rank": 34
-            },
-            {
-              "hour": 40,
-              "rank": 34
-            },
-            {
-              "hour": 41,
-              "rank": 35
-            },
-            {
-              "hour": 42,
-              "rank": 37
-            },
-            {
-              "hour": 43,
-              "rank": 39
-            },
-            {
-              "hour": 44,
-              "rank": 40
-            },
-            {
-              "hour": 45,
-              "rank": 45
-            },
-            {
-              "hour": 46,
-              "rank": 46
-            },
-            {
-              "hour": 47,
-              "rank": 48
-            }
-          ],
-          "nearbyRanking": [
-            {
-              "rank": 47,
-              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
-            },
-            {
-              "rank": 48,
-              "title": "マツコ＆有吉 かりそめ天国"
-            },
-            {
-              "rank": 49,
-              "title": "嗚呼!!みんなの動物園"
-            },
-            {
-              "rank": 50,
-              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
-            }
-          ]
-        },
-        {
-          "type": "all",
-          "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
-          "previousPoints": [
-            {
-              "hour": 23,
-              "rank": 50
-            },
-            {
-              "hour": 24,
-              "rank": 49
-            }
-          ],
-          "nearbyRanking": []
         }
       ]
     },
@@ -4200,18 +3703,18 @@
     "srbkekw9oj": {
       "programTitle": "ネプリーグ",
       "broadcastDate": "2026/06/01",
-      "updatedAt": "2026/06/03 00:02",
+      "updatedAt": "2026/06/03 05:02",
       "episodeId": "ep9yhege0b",
       "subtitle": "20周年イヤーの難クイズを林先生が徹底解説！",
-      "likes": "1036",
+      "likes": "1090",
       "favorites": "17.1万",
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 48,
-          "elapsedHour": 29,
-          "elapsedRank": 48,
+          "currentRank": 49,
+          "elapsedHour": 34,
+          "elapsedRank": 49,
           "currentPoints": [
             {
               "hour": 21,
@@ -4248,24 +3751,44 @@
             {
               "hour": 29,
               "rank": 48
+            },
+            {
+              "hour": 30,
+              "rank": 48
+            },
+            {
+              "hour": 31,
+              "rank": 47
+            },
+            {
+              "hour": 32,
+              "rank": 48
+            },
+            {
+              "hour": 33,
+              "rank": 49
+            },
+            {
+              "hour": 34,
+              "rank": 49
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
-            {
-              "rank": 45,
-              "title": "出川哲朗の充電させてもらえませんか？"
-            },
             {
               "rank": 46,
               "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 47,
-              "title": "相葉◎×部"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 48,
+              "title": "やすとものどこいこ！？"
+            },
+            {
+              "rank": 49,
               "title": "ネプリーグ"
             }
           ]
