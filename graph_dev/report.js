@@ -189,10 +189,11 @@ function getRankInDurationHours(points, chartHours) {
 }
 
 /**
- * 1つのランキング種別にランキングデータがあるか判定する
+ * 1つのランキング種別に最新話ランキングデータがあるか判定する
  *
- * currentPoints または previousPoints のどちらかに点があれば「データあり」。
- * 片方だけ空の場合は、そのランキング種別自体は表示対象として残す。
+ * currentPoints に点がある場合だけ「データあり」。
+ * previousPoints だけに点がある場合は、前回比較用データは存在しても
+ * 最新話ランキングなしとして表示対象にしない。
  */
 function hasRankingData(ranking) {
   if (!ranking) {
@@ -203,11 +204,17 @@ function hasRankingData(ranking) {
     ? ranking.currentPoints
     : [];
 
-  const previousPoints = Array.isArray(ranking.previousPoints)
-    ? ranking.previousPoints
-    : [];
+  return currentPoints.length > 0;
+}
 
-  return currentPoints.length > 0 || previousPoints.length > 0;
+/**
+ * rankings 全体に1件でも最新話ランキングデータがあるか判定する
+ *
+ * false の場合だけ、
+ * rankCards / ランキング推移 / すぐ上ランキングをまとめて非表示にする。
+ */
+function hasAnyRankingData(rankings) {
+  return Array.isArray(rankings) && rankings.some(hasRankingData);
 }
 
 /**
