@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/03 06:20",
+  "updatedAt": "2026/06/03 07:22",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/05/29",
-      "updatedAt": "2026/06/03 06:20",
+      "updatedAt": "2026/06/03 07:22",
       "episodeId": "epqhlsu653",
       "subtitle": "【timelesz×相葉雅紀】サシトーク",
       "likes": "2.1万",
@@ -333,15 +333,19 @@
         {
           "hour": 104,
           "likes": 21000
+        },
+        {
+          "hour": 105,
+          "likes": 21000
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 13,
-          "elapsedHour": 104,
-          "elapsedRank": 13,
+          "currentRank": 12,
+          "elapsedHour": 105,
+          "elapsedRank": 12,
           "currentPoints": [
             {
               "hour": 2,
@@ -750,6 +754,10 @@
             {
               "hour": 104,
               "rank": 13
+            },
+            {
+              "hour": 105,
+              "rank": 12
             }
           ],
           "previousPoints": [
@@ -936,6 +944,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 9,
+              "title": "テレビ×ミセス"
+            },
+            {
               "rank": 10,
               "title": "突然ですが占ってもいいですか？"
             },
@@ -945,10 +957,6 @@
             },
             {
               "rank": 12,
-              "title": "CDTV ライブ! ライブ!"
-            },
-            {
-              "rank": 13,
               "title": "タイムレスマン"
             }
           ]
@@ -956,9 +964,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 34,
-          "elapsedHour": 104,
-          "elapsedRank": 34,
+          "currentRank": 33,
+          "elapsedHour": 105,
+          "elapsedRank": 33,
           "currentPoints": [
             {
               "hour": 9,
@@ -1339,10 +1347,18 @@
             {
               "hour": 104,
               "rank": 34
+            },
+            {
+              "hour": 105,
+              "rank": 33
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
+            {
+              "rank": 30,
+              "title": "ワンピース"
+            },
             {
               "rank": 31,
               "title": "未解決の女 警視庁文書捜査官 Season３"
@@ -1353,10 +1369,6 @@
             },
             {
               "rank": 33,
-              "title": "CDTV ライブ! ライブ!"
-            },
-            {
-              "rank": 34,
               "title": "タイムレスマン"
             }
           ]
@@ -1366,11 +1378,11 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/05/31",
-      "updatedAt": "2026/06/03 06:20",
+      "updatedAt": "2026/06/03 07:22",
       "episodeId": "epi4thbfbk",
       "subtitle": "【TOYOTAの最新ロボの秘密】衝撃!!食べられる機械",
       "likes": "1.1万",
-      "favorites": "32.5万",
+      "favorites": "32.6万",
       "likePoints": [
         {
           "hour": 13,
@@ -1579,6 +1591,10 @@
         {
           "hour": 64,
           "likes": 11000
+        },
+        {
+          "hour": 65,
+          "likes": 11000
         }
       ],
       "rankings": [
@@ -1586,7 +1602,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 14,
-          "elapsedHour": 64,
+          "elapsedHour": 65,
           "elapsedRank": 14,
           "currentPoints": [
             {
@@ -1819,6 +1835,10 @@
             },
             {
               "hour": 64,
+              "rank": 14
+            },
+            {
+              "hour": 65,
               "rank": 14
             }
           ],
@@ -2171,11 +2191,11 @@
             },
             {
               "rank": 12,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "タイムレスマン"
             },
             {
               "rank": 13,
-              "title": "タイムレスマン"
+              "title": "CDTV ライブ! ライブ!"
             },
             {
               "rank": 14,
@@ -2187,7 +2207,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 40,
-          "elapsedHour": 64,
+          "elapsedHour": 65,
           "elapsedRank": 40,
           "currentPoints": [
             {
@@ -2401,13 +2421,17 @@
             {
               "hour": 64,
               "rank": 40
+            },
+            {
+              "hour": 65,
+              "rank": 40
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 37,
-              "title": "サレタ側の復讐～同盟を結んだ妻たち～"
+              "title": "刑事、ふりだしに戻る"
             },
             {
               "rank": 38,
@@ -2428,10 +2452,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/02",
-      "updatedAt": "2026/06/03 06:20",
+      "updatedAt": "2026/06/03 07:22",
       "episodeId": "epbxaud3gs",
       "subtitle": "チョコプラ・timeleszがデスソースの浄水に挑戦！",
-      "likes": "1353",
+      "likes": "1326",
       "favorites": "4.9万",
       "likePoints": [
         {
@@ -2457,15 +2481,19 @@
         {
           "hour": 6,
           "likes": 1353
+        },
+        {
+          "hour": 7,
+          "likes": 1326
         }
       ],
       "rankings": [
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 45,
-          "elapsedHour": 6,
-          "elapsedRank": 45,
+          "currentRank": 38,
+          "elapsedHour": 7,
+          "elapsedRank": 38,
           "currentPoints": [
             {
               "hour": 5,
@@ -2474,6 +2502,10 @@
             {
               "hour": 6,
               "rank": 45
+            },
+            {
+              "hour": 7,
+              "rank": 38
             }
           ],
           "previousPoints": [
@@ -2912,19 +2944,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 42,
-              "title": "ゴルフ侍、見参！"
+              "rank": 35,
+              "title": "草彅やすともの うさぎとかめ"
             },
             {
-              "rank": 43,
-              "title": "いくらかわかる金？"
+              "rank": 36,
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
-              "rank": 44,
-              "title": "やすとも・友近のキメツケ！あくまで個人の感想です"
+              "rank": 37,
+              "title": "がっちりマンデー!!"
             },
             {
-              "rank": 45,
+              "rank": 38,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -2993,7 +3025,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/05/28",
-      "updatedAt": "2026/06/03 06:20",
+      "updatedAt": "2026/06/03 07:22",
       "episodeId": "ep896gk3yi",
       "subtitle": "【モテ算】モテの方程式を作れ！",
       "likes": "1.4万",
@@ -3426,6 +3458,10 @@
         {
           "hour": 148,
           "likes": 14000
+        },
+        {
+          "hour": 149,
+          "likes": 14000
         }
       ],
       "rankings": [
@@ -3836,10 +3872,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/03 06:20",
+      "updatedAt": "2026/06/03 07:22",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "3631",
+      "likes": "3634",
       "favorites": "75.9万",
       "likePoints": [
         {
@@ -4595,10 +4631,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/03 06:20",
+      "updatedAt": "2026/06/03 07:22",
       "episodeId": "epref0f8o9",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！山下智久登場",
-      "likes": "1084",
+      "likes": "1045",
       "favorites": "6.6万",
       "likePoints": [
         {
@@ -4608,6 +4644,10 @@
         {
           "hour": 5,
           "likes": 1084
+        },
+        {
+          "hour": 6,
+          "likes": 1045
         }
       ],
       "rankings": [
@@ -4669,10 +4709,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/05/29",
-      "updatedAt": "2026/06/03 06:20",
+      "updatedAt": "2026/06/03 07:22",
       "episodeId": "ep9iknamnl",
       "subtitle": "第129回 風磨・長谷川初MC対決！本気あっち向いてホイ",
-      "likes": "6466",
+      "likes": "6465",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -5090,6 +5130,10 @@
         {
           "hour": 125,
           "likes": 6466
+        },
+        {
+          "hour": 126,
+          "likes": 6465
         }
       ],
       "rankings": [
@@ -5340,10 +5384,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/05/30",
-      "updatedAt": "2026/06/03 06:20",
+      "updatedAt": "2026/06/03 07:22",
       "episodeId": "epq6vlnbyh",
       "subtitle": "マッサマンvs錦鯉マッサノリマンSP後編",
-      "likes": "1927",
+      "likes": "1928",
       "favorites": "77.1万",
       "likePoints": [
         {
@@ -5585,6 +5629,10 @@
         {
           "hour": 83,
           "likes": 1927
+        },
+        {
+          "hour": 84,
+          "likes": 1928
         }
       ],
       "rankings": [
@@ -5927,10 +5975,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/03 06:20",
+      "updatedAt": "2026/06/03 07:22",
       "episodeId": "epohycztrr",
       "subtitle": "第7話 移動捜査課の使命",
-      "likes": "9302",
+      "likes": "9300",
       "favorites": "36.8万",
       "likePoints": [
         {
@@ -6364,6 +6412,10 @@
         {
           "hour": 153,
           "likes": 9302
+        },
+        {
+          "hour": 154,
+          "likes": 9300
         }
       ],
       "rankings": [
@@ -6371,7 +6423,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 24,
-          "elapsedHour": 153,
+          "elapsedHour": 154,
           "elapsedRank": 24,
           "currentPoints": [
             {
@@ -6969,6 +7021,10 @@
             {
               "hour": 153,
               "rank": 24
+            },
+            {
+              "hour": 154,
+              "rank": 24
             }
           ],
           "previousPoints": [],
@@ -6979,11 +7035,11 @@
             },
             {
               "rank": 22,
-              "title": "刑事、ふりだしに戻る"
+              "title": "サレタ側の復讐～同盟を結んだ妻たち～"
             },
             {
               "rank": 23,
-              "title": "サレタ側の復讐～同盟を結んだ妻たち～"
+              "title": "刑事、ふりだしに戻る"
             },
             {
               "rank": 24,
@@ -6995,7 +7051,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 38,
-          "elapsedHour": 153,
+          "elapsedHour": 154,
           "elapsedRank": 38,
           "currentPoints": [
             {
@@ -7565,6 +7621,10 @@
             {
               "hour": 153,
               "rank": 38
+            },
+            {
+              "hour": 154,
+              "rank": 38
             }
           ],
           "previousPoints": [],
@@ -7575,11 +7635,11 @@
             },
             {
               "rank": 36,
-              "title": "刑事、ふりだしに戻る"
+              "title": "サレタ側の復讐～同盟を結んだ妻たち～"
             },
             {
               "rank": 37,
-              "title": "サレタ側の復讐～同盟を結んだ妻たち～"
+              "title": "刑事、ふりだしに戻る"
             },
             {
               "rank": 38,
@@ -7592,10 +7652,10 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/03 06:20",
+      "updatedAt": "2026/06/03 07:22",
       "episodeId": "ep24dk5lx2",
       "subtitle": "“ハプニング対応力講座”",
-      "likes": "1386",
+      "likes": "1319",
       "favorites": "20.3万",
       "likePoints": [
         {
@@ -7605,6 +7665,10 @@
         {
           "hour": 3,
           "likes": 1386
+        },
+        {
+          "hour": 4,
+          "likes": 1319
         }
       ],
       "rankings": [
@@ -7633,10 +7697,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/03 06:20",
+      "updatedAt": "2026/06/03 07:22",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "5075",
+      "likes": "5083",
       "favorites": "1.4万",
       "likePoints": [
         {
@@ -8275,10 +8339,10 @@
     "srbkekw9oj": {
       "programTitle": "ネプリーグ",
       "broadcastDate": "2026/06/01",
-      "updatedAt": "2026/06/03 06:20",
+      "updatedAt": "2026/06/03 07:22",
       "episodeId": "ep9yhege0b",
       "subtitle": "20周年イヤーの難クイズを林先生が徹底解説！",
-      "likes": "1091",
+      "likes": "1089",
       "favorites": "17.1万",
       "likePoints": [
         {
@@ -8416,6 +8480,10 @@
         {
           "hour": 35,
           "likes": 1091
+        },
+        {
+          "hour": 36,
+          "likes": 1089
         }
       ],
       "rankings": [
