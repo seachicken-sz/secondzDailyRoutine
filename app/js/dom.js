@@ -35,6 +35,12 @@ const homeTopShareButtonElement = document.getElementById("homeTopShareButton");
 const homeBottomShareButtonElement = document.getElementById("homeBottomShareButton");
 // ホーム目次
 const homeIndexListElement = document.getElementById("homeIndexList");
+// おかわりDaily
+const homeDailyExtraCardElement = document.getElementById("homeDailyExtraCard");
+const homeDailyExtraListElement = document.getElementById("homeDailyExtraList");
+// おかわり期間限定
+const homeOnceMoreCardElement = document.getElementById("homeOnceMoreCard");
+const homeOnceMoreListElement = document.getElementById("homeOnceMoreList");
 // ホーム右下の上に戻るボタン
 const homeBackToTopButtonElement = document.getElementById("homeBackToTopButton");
 
@@ -56,32 +62,32 @@ const usageModalElement = document.getElementById("usageModal");
 const closeUsageButtonElement = document.getElementById("closeUsageButton");
 
 // ==================================================
-// DOM: Yputubeモーダル
+// DOM: Youtubeモーダル
 // ==================================================
+// Youtubeモーダル開くボタン
 const openYoutubeModalButtonElement =
   document.getElementById("openYoutubeModalButton");
-
+// youtubeモーダル
 const youtubeModalElement =
   document.getElementById("youtubeModal");
-
+// youtubeモーダル閉じるボタン
 const closeYoutubeModalButtonElement =
   document.getElementById("closeYoutubeModalButton");
-
+//プレイリスト表示エリア
 const youtubeModalPlaylistRowElement =
   document.getElementById("youtubeModalPlaylistRow");
-
+//MV表示エリア
 const youtubeModalMvRowElement =
   document.getElementById("youtubeModalMvRow");
-
+//その他動画表示エリア
 const youtubeModalOtherRowElement =
   document.getElementById("youtubeModalOtherRow");
-
+//エラーメッセージ表示エリア
 const youtubeModalErrorAreaElement =
   document.getElementById("youtubeModalErrorArea");
 // ==================================================
 // DOM: STEP 1 Spotify
 // ==================================================
-
 // Spotifyステップ画面全体
 const spotifyStepElement = document.getElementById("spotifyStep");
 // リスナー表示
@@ -215,37 +221,30 @@ const skipPostButtonElement = document.getElementById("skipPostButton");
 // ==================================================
 // DOM: STEP 5 投稿文編集
 // ==================================================
-
 // 投稿文編集画面全体
 const postEditStepElement = document.getElementById("postEditStep");
 // 投稿文編集画面のエラー表示エリア
 const postErrorAreaElement = document.getElementById("postErrorArea");
-
 // X版投稿文プレビュータブ
 const postPreviewXTabButtonElement = document.getElementById("postPreviewXTabButton");
 // Threads版投稿文プレビュータブ
 const postPreviewThreadsTabButtonElement = document.getElementById("postPreviewThreadsTabButton");
-
 // X版投稿文パネル
 const postPreviewXPanelElement = document.getElementById("postPreviewXPanel");
 // Threads版投稿文パネル
 const postPreviewThreadsPanelElement = document.getElementById("postPreviewThreadsPanel");
-
 // X版チェックリスト
 const postItemXListElement = document.getElementById("postItemXList");
 // Threads版チェックリスト
 const postItemThreadsListElement = document.getElementById("postItemThreadsList");
-
 // X版文字数表示
 const xPostTextCountElement = document.getElementById("xPostTextCount");
 // Threads版リンク数表示
 const threadsPostLinkCountElement = document.getElementById("threadsPostLinkCount");
-
 // X版投稿文表示エリア
 const generatedXPostTextElement = document.getElementById("generatedXPostText");
 // Threads版投稿文表示エリア
 const generatedThreadsPostTextElement = document.getElementById("generatedThreadsPostText");
-
 // X版投稿文をコピーするボタン
 const copyXPostTextButtonElement = document.getElementById("copyXPostTextButton");
 // X投稿画面を開くボタン
