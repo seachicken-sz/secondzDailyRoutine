@@ -541,15 +541,12 @@ function bindHomeExtraListEvents(container) {
 
 async function openHomeExtraTaskPage(task, source) {
   const taskUrl = getHomeExtraTaskUrl(task, source);
-
   if (!taskUrl) {
     return;
   }
-
   // デイリーで入力補助が必要な場合は、通常フローと同じようにコピーする
   if (source === "daily" && task["input-flag"] === true) {
     const copyText = buildDailyTaskCopyText(task);
-
     if (copyText) {
       try {
         await navigator.clipboard.writeText(copyText);
@@ -560,23 +557,43 @@ async function openHomeExtraTaskPage(task, source) {
       }
     }
   }
-
+  if (typeof sendHomeTaskLog === "function") {
+    sendHomeTaskLog(task, {
+      source,
+      url: taskUrl
+    }).catch((error) => {
+      console.error("homeTaskLog送信失敗", error);
+    });
+  }
   // 期間限定 once は、ホームから開いた時点で実行済みにする
   if (source === "once" && getHomeTaskRepeatType(task) === "once") {
     markHomeOnceTaskDone(task);
     renderHomeOnceMoreList(state.onceTasks || []);
   }
-
   location.href = taskUrl;
 }
 
 function openHomeExtraTaskXPost(task, source) {
   const postText = buildHomeExtraTaskShareText(task, source, "x");
-
   if (!postText) {
     return;
   }
-
+  const taskUrl = getHomeExtraTaskUrl(task, source);
+  // ホームタスクのSNSシェアログを送信する
+  // シェア対象タスクURLも snsShareLog に入れる
+  if (typeof sendSnsShareLog === "function") {
+    sendSnsShareLog("x", {
+      source: `homeTask:${source}`,
+      itemId:
+        task.itemId ||
+        task.id ||
+        createLogItemId("home_share", `${source}_${getHomeExtraTaskName(task, source)}_${taskUrl}`),
+      title: getHomeExtraTaskName(task, source),
+      url: taskUrl
+    }).catch((error) => {
+      console.error("snsShareLog送信失敗", error);
+    });
+  }
   location.href = X_POST_URL + encodeURIComponent(postText);
 }
 
@@ -587,8 +604,23 @@ async function openHomeExtraTaskThreads(task, source) {
     return;
   }
 
+  const taskUrl = getHomeExtraTaskUrl(task, source);
+
   try {
     await navigator.clipboard.writeText(postText);
+    if (typeof sendSnsShareLog === "function") {
+      sendSnsShareLog("threads", {
+        source: `homeTask:${source}`,
+        itemId:
+          task.itemId ||
+          task.id ||
+          createLogItemId("home_share", `${source}_${getHomeExtraTaskName(task, source)}_${taskUrl}`),
+        title: getHomeExtraTaskName(task, source),
+        url: taskUrl
+      }).catch((error) => {
+        console.error("snsShareLog送信失敗", error);
+      });
+    }
     location.href = THREADS_URL;
   } catch (error) {
     console.error(error);
