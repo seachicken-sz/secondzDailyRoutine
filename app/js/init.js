@@ -63,6 +63,7 @@ async function init() {
     try {
       state.requestTexts = await loadRequestTexts();
       state.dailyGroups = await loadDailyGroups();
+      state.requestSongs = await loadRequestSongs();
     } catch (dailyLoadError) {
       console.error("ホーム用デイリータスク読み込み失敗", dailyLoadError);
       state.requestTexts = {};
@@ -74,6 +75,8 @@ async function init() {
     const homeInfoList = await loadHomeInfoList();
     // ホーム画面のお知らせ/Information一覧を描画
     renderHomeInfoList(homeInfoList);   
+    // ホーム用リクエスト曲プルダウンを描画
+    initializeHomeRequestSongSelect();
     // ホームのおかわりDailyを描画
     renderHomeDailyExtraList(state.dailyGroups);
     // ホームの期間限定タスクを描画
