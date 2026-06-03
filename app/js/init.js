@@ -72,9 +72,6 @@ async function init() {
     // 一人一回系タスクなど、保存済み完了データのうち不要なものを整理
     cleanupOnceTaskDoneMap(state.onceTasks);
 
-    // ホーム画面の期間限定タスク一覧を描画
-    renderHomeOnceTaskList(state.onceTasks);
-
     // ホーム画面のお知らせ/Information一覧を読み込み
     const homeInfoList = await loadHomeInfoList();
 
@@ -97,8 +94,7 @@ async function init() {
     // Spotify画面のエラー表示エリアに初期読み込み失敗を表示
     showError(spotifyErrorAreaElement, MESSAGES.errors.initialLoadFailed);
 
-    // ホームの期間限定タスク/お知らせは空配列で描画して落ちないようにする
-    renderHomeOnceTaskList([]);
+    // ホームのお知らせは空配列で描画して落ちないようにする
     renderHomeInfoList([]);
 
     // 現在画面をホーム扱いにする
