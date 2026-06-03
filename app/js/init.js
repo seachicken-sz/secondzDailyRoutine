@@ -75,13 +75,18 @@ async function init() {
     // 保存済みの途中再開データがあれば復元
     // なければホーム画面を表示
     await restoreFlowStateOrHome();
-  } catch (error) {
+} catch (error) {
     // 初期化中に何か失敗した場合は、最低限ホームが壊れないようにする
     console.error(error);
     // Spotify画面のエラー表示エリアに初期読み込み失敗を表示
     showError(spotifyErrorAreaElement, MESSAGES.errors.initialLoadFailed);
     // ホームのお知らせは空配列で描画して落ちないようにする
     renderHomeInfoList([]);
+    // ホーム目次も最低限描画する
+    // 現時点では「最近のタムごと」だけ出る想定
+    if (typeof updateHomeIndex === "function") {
+      updateHomeIndex();
+    }
     // 現在画面をホーム扱いにする
     state.currentStepElement = homeStepElement;
     // 上部ナビゲーションバーの表示状態を更新
