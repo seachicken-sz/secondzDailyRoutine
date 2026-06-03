@@ -35,71 +35,55 @@ async function init() {
     // ホーム画面のPWA案内カード表示を更新
     updateHomeInstallGuideVisibility();
     sendAccessLog();
-
     // 初回設定モーダル/案内まわりの初期化
     // setting.js 側で定義されている想定
     initializeSetupGuide();
-
     // Spotify曲一覧JSONを読み込む
     const songs = await loadSpotifySongs();
-
     // flag === true の曲をおすすめ欄へ、それ以外を「その他」欄へ分ける
     const recommendedSongs = songs.filter((song) => song.flag === true);
     const otherSongs = songs.filter((song) => song.flag !== true);
-
     // Spotifyおすすめ曲リストを描画
     renderSpotifySongList(recommendedSongsElement, recommendedSongs);
-
     // Spotifyその他曲リストを描画
     renderSpotifySongList(otherSongsElement, otherSongs);
-
     // おすすめ曲が0件の場合の空表示
     if (recommendedSongs.length === 0 && recommendedSongsElement) {
       recommendedSongsElement.innerHTML = `<p>${MESSAGES.empty.recommendedSongs}</p>`;
     }
-
     // その他曲が0件の場合の空表示
     if (otherSongs.length === 0 && otherSongsElement) {
       otherSongsElement.innerHTML = `<p>${MESSAGES.empty.otherSongs}</p>`;
     }
-
     // Spotify「その他」アコーディオンの開閉状態を画面に反映
     updateOtherSongsAccordion();
-
     // 期間限定タスクJSONを読み込んで state に保持
     state.onceTasks = await loadOnceTasks();
-
     // 一人一回系タスクなど、保存済み完了データのうち不要なものを整理
     cleanupOnceTaskDoneMap(state.onceTasks);
-
     // ホーム画面のお知らせ/Information一覧を読み込み
     const homeInfoList = await loadHomeInfoList();
-
     // ホーム画面のお知らせ/Information一覧を描画
     renderHomeInfoList(homeInfoList);
-
+    // ホーム目次を描画
+    updateHomeIndex();
     // USENランキング表示処理が存在する場合だけ実行
     // musicTop.js 側などで loadRequestRanking が定義されている想定
     if (typeof loadRequestRanking === "function") {
       await loadRequestRanking();
     }
-
     // 保存済みの途中再開データがあれば復元
     // なければホーム画面を表示
     await restoreFlowStateOrHome();
   } catch (error) {
     // 初期化中に何か失敗した場合は、最低限ホームが壊れないようにする
     console.error(error);
-
     // Spotify画面のエラー表示エリアに初期読み込み失敗を表示
     showError(spotifyErrorAreaElement, MESSAGES.errors.initialLoadFailed);
-
     // ホームのお知らせは空配列で描画して落ちないようにする
     renderHomeInfoList([]);
-
     // 現在画面をホーム扱いにする
     state.currentStepElement = homeStepElement;
-
     // 上部ナビゲーションバーの表示状態を更新
     updateStepTopActionBar();
   }
