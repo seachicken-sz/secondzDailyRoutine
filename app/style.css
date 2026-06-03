@@ -907,6 +907,37 @@ h1 {
 }
 
 /* =========================
+   ホーム コピー用リクエスト曲選択
+========================= */
+.home-request-song-select-area {
+  display: grid;
+  gap: 6px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-brand-border);
+  border-radius: 14px;
+  background: var(--color-brand-soft);
+}
+
+.home-request-song-label {
+  color: var(--color-accent-text);
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+.home-request-song-select {
+  width: 100%;
+  min-height: 38px;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* =========================
    リンクカード風
 ========================= */
 .card-link a {
