@@ -6,6 +6,7 @@ const SHEET_CLIENT_ID_KEY = "secondzDailyRoutineClientId";
 const SHEET_TASK_TYPES = [
   "onceList",
   "list",
+  "homeTask",
   "spotify",
   "requestSong",
   "start",
@@ -507,22 +508,93 @@ async function sendDailyTaskLog(completedItems) {
 }
 
 /**
+ * ホームのおかわりタスク実行ログを送信する
+ *
+ * 通常フローの taskLog/list とは分けて、homeTaskLog 用に送る。
+ *
+ * @param {Object} task
+ * @param {Object} options
+ * @param {"daily" | "once"} options.source ホームタスク種別
+ * @param {string} [options.url] 実行URL
+ * @returns {Promise<boolean>}
+ */
+async function sendHomeTaskLog(task, options = {}) {
+  if (!task) {
+    return false;
+  }
+
+  const source = options.source || "unknown";
+  const url = options.url || task.url || "";
+  const title =
+    task.name ||
+    task.title ||
+    task.listName ||
+    "名称未設定";
+
+  const itemId =
+    task.itemId ||
+    task.id ||
+    createLogItemId("home", `${source}_${title}_${url}`);
+
+  const item = createSheetItem(task, {
+    itemId,
+    title,
+    url
+  });
+
+  if (!item) {
+    return false;
+  }
+
+  return sendSheetLog({
+    homeTask: [{
+      ...item,
+      source,
+      repeatType: task.type || task.repeatType || "",
+      requestType: task["request-type"] || "",
+      inputFlag: task["input-flag"] === true
+    }]
+  });
+}
+
+/**
  * SNSシェアボタン押下ログを送信する
  *
  * @param {"x" | "threads"} platform
+ * @param {Object} [data] シェア対象情報
+ * @param {string} [data.itemId] 対象ID
+ * @param {string} [data.title] 対象タイトル
+ * @param {string} [data.url] 対象URL
+ * @param {string} [data.source] シェア元
  * @returns {Promise<boolean>}
  */
-async function sendSnsShareLog(platform) {
+async function sendSnsShareLog(platform, data = {}) {
   const normalizedPlatform = platform === "threads" ? "threads" : "x";
+  const source = data.source || "post";
 
   const item = createSheetItem({}, {
-    itemId: `sns_${normalizedPlatform}`,
-    title: normalizedPlatform === "threads" ? "Threadsシェア" : "Xシェア",
-    url: ""
+    itemId:
+      data.itemId ||
+      createLogItemId(
+        `sns_${normalizedPlatform}`,
+        `${source}_${data.title || data.url || "share"}`
+      ),
+    title:
+      data.title ||
+      (normalizedPlatform === "threads" ? "Threadsシェア" : "Xシェア"),
+    url: data.url || ""
   });
 
+  if (!item) {
+    return false;
+  }
+
   return sendSheetLog({
-    snsShare: [item]
+    snsShare: [{
+      ...item,
+      platform: normalizedPlatform,
+      source
+    }]
   });
 }
 
