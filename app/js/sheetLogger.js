@@ -562,7 +562,6 @@ async function sendHomeTaskLog(task, options = {}) {
  *
  * @param {"x" | "threads"} platform
  * @param {Object} [data] シェア対象情報
- * @param {string} [data.itemId] 対象ID
  * @param {string} [data.title] 対象タイトル
  * @param {string} [data.url] 対象URL
  * @param {string} [data.source] シェア元
@@ -573,12 +572,7 @@ async function sendSnsShareLog(platform, data = {}) {
   const source = data.source || "post";
 
   const item = createSheetItem({}, {
-    itemId:
-      data.itemId ||
-      createLogItemId(
-        `sns_${normalizedPlatform}`,
-        `${source}_${data.title || data.url || "share"}`
-      ),
+    itemId: normalizedPlatform === "threads" ? "threads_share" : "x_share",
     title:
       data.title ||
       (normalizedPlatform === "threads" ? "Threadsシェア" : "Xシェア"),
@@ -592,8 +586,8 @@ async function sendSnsShareLog(platform, data = {}) {
   return sendSheetLog({
     snsShare: [{
       ...item,
-      platform: normalizedPlatform,
-      source
+      source,
+      sharePlatform: normalizedPlatform
     }]
   });
 }
