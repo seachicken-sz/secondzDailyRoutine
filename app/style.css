@@ -769,6 +769,65 @@ h1 {
 }
 
 /* =========================
+   ホーム目次
+========================= */
+.home-index-card {
+  gap: 10px;
+}
+
+.home-index-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.home-index-button {
+  min-height: 32px;
+  padding: 0 11px;
+  border: 1px solid var(--color-brand-border);
+  border-radius: 999px;
+  background: var(--color-brand-soft);
+  color: var(--color-accent-text);
+  font-size: 12px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.home-index-button:active {
+  transform: scale(0.97);
+}
+
+/* =========================
+   ホーム限定 上に戻るボタン
+========================= */
+.home-back-to-top-button {
+  position: fixed;
+  right: max(16px, calc((100vw - 720px) / 2 + 16px));
+  bottom: 18px;
+  z-index: 900;
+
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 999px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--color-brand);
+  color: var(--color-text-inverse);
+  box-shadow: var(--shadow-card-strong);
+
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.home-back-to-top-button:active {
+  transform: scale(0.94);
+}
+
+/* =========================
    リンクカード風
 ========================= */
 .card-link a {
