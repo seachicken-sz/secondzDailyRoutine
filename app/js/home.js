@@ -38,7 +38,6 @@ function bindHomeEvents() {
   // ホーム目次
   // ==================================================
   bindHomeIndexEvents();
-
   // ==================================================
   // ホーム限定：上に戻るボタン
   // ==================================================
@@ -47,6 +46,10 @@ function bindHomeEvents() {
   // ホームのおかわりタスク操作
   // ==================================================
   bindHomeExtraTaskEvents();
+  // ==================================================
+  // ホーム用リクエスト曲選択
+  // ==================================================
+  bindHomeRequestSongSelectEvents();
 }
 
 // ==================================================
@@ -651,4 +654,98 @@ function buildHomeExtraTaskShareText(task, source, platform = "x") {
   lines.push(getAppShareUrlByPlatform(platform));
 
   return lines.join("\n");
+}
+
+// ==================================================
+// ホーム：コピー用リクエスト曲選択
+// ==================================================
+
+function initializeHomeRequestSongSelect() {
+  if (!homeRequestSongSelectElement || !homeRequestSongSelectAreaElement) {
+    return;
+  }
+
+  homeRequestSongSelectElement.innerHTML = "";
+
+  if (!Array.isArray(state.requestSongs) || state.requestSongs.length === 0) {
+    state.homeSelectedRequestSong = null;
+    homeRequestSongSelectAreaElement.classList.add("hidden");
+    return;
+  }
+
+  const defaultSong =
+    state.requestSongs.find((song) => song && song.flag === true) ||
+    state.requestSongs.find((song) => song && song.name) ||
+    null;
+
+  state.homeSelectedRequestSong = state.homeSelectedRequestSong || defaultSong;
+
+  state.requestSongs.forEach((song, index) => {
+    if (!song || !song.name) {
+      return;
+    }
+
+    const option = document.createElement("option");
+    option.value = String(index);
+    option.textContent = song.name;
+
+    if (
+      state.homeSelectedRequestSong &&
+      song.name === state.homeSelectedRequestSong.name &&
+      song.url === state.homeSelectedRequestSong.url
+    ) {
+      option.selected = true;
+    }
+
+    homeRequestSongSelectElement.appendChild(option);
+  });
+
+  homeRequestSongSelectAreaElement.classList.remove("hidden");
+}
+
+function bindHomeRequestSongSelectEvents() {
+  if (!homeRequestSongSelectElement) {
+    return;
+  }
+
+  homeRequestSongSelectElement.addEventListener("change", () => {
+    const selectedIndex = Number(homeRequestSongSelectElement.value);
+
+    if (Number.isNaN(selectedIndex)) {
+      state.homeSelectedRequestSong = null;
+      return;
+    }
+
+    state.homeSelectedRequestSong = state.requestSongs[selectedIndex] || null;
+  });
+}
+
+function getHomeSelectedRequestSongName() {
+  if (state.homeSelectedRequestSong?.name) {
+    return state.homeSelectedRequestSong.name;
+  }
+
+  const defaultSong =
+    state.requestSongs.find((song) => song && song.flag === true) ||
+    state.requestSongs.find((song) => song && song.name) ||
+    null;
+
+  return defaultSong?.name || "";
+}
+
+function buildHomeDailyTaskCopyText(item) {
+  const requestType = item["request-type"];
+  const template = state.requestTexts[requestType];
+
+  if (!requestType || !template) {
+    return "";
+  }
+
+  const musicName = getHomeSelectedRequestSongName();
+
+  if (!musicName) {
+    return "";
+  }
+
+  return template.replaceAll("musicname", musicName);
 }
