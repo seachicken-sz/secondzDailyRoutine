@@ -541,12 +541,15 @@ function bindHomeExtraListEvents(container) {
 
 async function openHomeExtraTaskPage(task, source) {
   const taskUrl = getHomeExtraTaskUrl(task, source);
+
   if (!taskUrl) {
     return;
   }
-  // デイリーで入力補助が必要な場合は、通常フローと同じようにコピーする
+
+  // デイリーで入力補助が必要な場合は、ホーム用の曲名でコピーする
   if (source === "daily" && task["input-flag"] === true) {
-    const copyText = buildDailyTaskCopyText(task);
+    const copyText = buildHomeDailyTaskCopyText(task);
+
     if (copyText) {
       try {
         await navigator.clipboard.writeText(copyText);
@@ -557,19 +560,26 @@ async function openHomeExtraTaskPage(task, source) {
       }
     }
   }
+
+  // ホームからタスクを開いたログを送信する
+  // 遷移直前なので、ここだけはawaitしてから移動する
   if (typeof sendHomeTaskLog === "function") {
-    sendHomeTaskLog(task, {
-      source,
-      url: taskUrl
-    }).catch((error) => {
+    try {
+      await sendHomeTaskLog(task, {
+        source,
+        url: taskUrl
+      });
+    } catch (error) {
       console.error("homeTaskLog送信失敗", error);
-    });
+    }
   }
+
   // 期間限定 once は、ホームから開いた時点で実行済みにする
   if (source === "once" && getHomeTaskRepeatType(task) === "once") {
     markHomeOnceTaskDone(task);
     renderHomeOnceMoreList(state.onceTasks || []);
   }
+
   location.href = taskUrl;
 }
 
