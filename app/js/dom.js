@@ -38,6 +38,9 @@ const homeIndexListElement = document.getElementById("homeIndexList");
 // おかわりDaily
 const homeDailyExtraCardElement = document.getElementById("homeDailyExtraCard");
 const homeDailyExtraListElement = document.getElementById("homeDailyExtraList");
+// ホーム用リクエスト曲選択
+const homeRequestSongSelectAreaElement = document.getElementById("homeRequestSongSelectArea");
+const homeRequestSongSelectElement = document.getElementById("homeRequestSongSelect");
 // おかわり期間限定
 const homeOnceMoreCardElement = document.getElementById("homeOnceMoreCard");
 const homeOnceMoreListElement = document.getElementById("homeOnceMoreList");
