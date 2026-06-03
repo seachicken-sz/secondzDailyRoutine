@@ -828,6 +828,85 @@ h1 {
 }
 
 /* =========================
+   ホーム おかわりタスク
+========================= */
+.home-extra-task-card {
+  gap: 10px;
+}
+
+.home-extra-description {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.home-extra-task-list {
+  display: grid;
+  gap: 10px;
+}
+
+.home-extra-group {
+  border: 1px solid var(--color-border-soft);
+  border-radius: 14px;
+  background: var(--color-page-bg);
+  overflow: hidden;
+}
+
+.home-extra-group-summary {
+  padding: 13px 14px;
+  color: var(--color-brand);
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.home-extra-group-body {
+  display: grid;
+  gap: 8px;
+  padding: 0 10px 10px;
+}
+
+.home-extra-task-detail {
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.home-extra-task-summary {
+  padding: 13px 14px;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 850;
+  line-height: 1.45;
+  cursor: pointer;
+}
+
+.home-extra-task-body {
+  padding: 0 12px 12px;
+}
+
+.home-extra-task-comment {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.home-extra-task-actions {
+  display: grid;
+  gap: 8px;
+}
+
+.home-extra-task-actions .primary-button,
+.home-extra-task-actions .secondary-button {
+  margin-top: 0;
+  padding: 11px 12px;
+  font-size: 14px;
+}
+
+/* =========================
    リンクカード風
 ========================= */
 .card-link a {
