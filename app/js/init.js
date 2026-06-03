@@ -59,12 +59,27 @@ async function init() {
     updateOtherSongsAccordion();
     // 期間限定タスクJSONを読み込んで state に保持
     state.onceTasks = await loadOnceTasks();
+    // ホームのおかわりDaily表示に使うため、デイリータスク系も初期読み込みする
+    try {
+      state.requestTexts = await loadRequestTexts();
+      state.dailyGroups = await loadDailyGroups();
+    } catch (dailyLoadError) {
+      console.error("ホーム用デイリータスク読み込み失敗", dailyLoadError);
+      state.requestTexts = {};
+      state.dailyGroups = [];
+    }
     // 一人一回系タスクなど、保存済み完了データのうち不要なものを整理
     cleanupOnceTaskDoneMap(state.onceTasks);
     // ホーム画面のお知らせ/Information一覧を読み込み
     const homeInfoList = await loadHomeInfoList();
     // ホーム画面のお知らせ/Information一覧を描画
-    renderHomeInfoList(homeInfoList);
+    renderHomeInfoList(homeInfoList);   
+    // ホームのおかわりDailyを描画
+    renderHomeDailyExtraList(state.dailyGroups);
+    // ホームの期間限定タスクを描画
+    renderHomeOnceMoreList(state.onceTasks);
+    // ホーム目次を描画
+    updateHomeIndex();
     // ホーム目次を描画
     updateHomeIndex();
     // USENランキング表示処理が存在する場合だけ実行
@@ -75,23 +90,30 @@ async function init() {
     // 保存済みの途中再開データがあれば復元
     // なければホーム画面を表示
     await restoreFlowStateOrHome();
-} catch (error) {
-    // 初期化中に何か失敗した場合は、最低限ホームが壊れないようにする
-    console.error(error);
-    // Spotify画面のエラー表示エリアに初期読み込み失敗を表示
-    showError(spotifyErrorAreaElement, MESSAGES.errors.initialLoadFailed);
-    // ホームのお知らせは空配列で描画して落ちないようにする
-    renderHomeInfoList([]);
-    // ホーム目次も最低限描画する
-    // 現時点では「最近のタムごと」だけ出る想定
-    if (typeof updateHomeIndex === "function") {
-      updateHomeIndex();
+    } catch (error) {
+      // 初期化中に何か失敗した場合は、最低限ホームが壊れないようにする
+      console.error(error);
+      // Spotify画面のエラー表示エリアに初期読み込み失敗を表示
+      showError(spotifyErrorAreaElement, MESSAGES.errors.initialLoadFailed);
+      // ホームのお知らせは空配列で描画して落ちないようにする
+      renderHomeInfoList([]);
+      // おかわりDailyは非表示にする
+      if (typeof renderHomeDailyExtraList === "function") {
+        renderHomeDailyExtraList([]);
+      }
+      // 期間限定も非表示にする
+      if (typeof renderHomeOnceMoreList === "function") {
+        renderHomeOnceMoreList([]);
+      }
+      // ホーム目次も最低限描画
+      if (typeof updateHomeIndex === "function") {
+        updateHomeIndex();
+      }
+      // 現在画面をホーム扱いにする
+      state.currentStepElement = homeStepElement;
+      // 上部ナビゲーションバーの表示状態を更新
+      updateStepTopActionBar();
     }
-    // 現在画面をホーム扱いにする
-    state.currentStepElement = homeStepElement;
-    // 上部ナビゲーションバーの表示状態を更新
-    updateStepTopActionBar();
-  }
 }
 
 // ==================================================
