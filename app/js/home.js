@@ -43,6 +43,10 @@ function bindHomeEvents() {
   // ホーム限定：上に戻るボタン
   // ==================================================
   bindHomeBackToTopButton();
+  // ==================================================
+  // ホームのおかわりタスク操作
+  // ==================================================
+  bindHomeExtraTaskEvents();
 }
 
 // ==================================================
@@ -369,4 +373,255 @@ function createHomeExtraTaskDetail({ task, source, index }) {
   details.appendChild(body);
 
   return details;
+}
+
+// ==================================================
+// ホーム：おかわりDaily
+// ==================================================
+
+function renderHomeDailyExtraList(groups) {
+  if (!homeDailyExtraListElement) {
+    return;
+  }
+
+  HOME_EXTRA_DAILY_TASKS = [];
+  homeDailyExtraListElement.innerHTML = "";
+
+  if (!Array.isArray(groups) || groups.length === 0) {
+    toggleHomeExtraSection(homeDailyExtraCardElement, false);
+    updateHomeIndex();
+    return;
+  }
+
+  groups.forEach((group) => {
+    const items = getDailyGroupItems(group);
+
+    if (items.length === 0) {
+      return;
+    }
+
+    const groupDetails = document.createElement("details");
+    groupDetails.className = "home-extra-group";
+
+    const summary = document.createElement("summary");
+    summary.className = "home-extra-group-summary";
+    summary.textContent = group.listName || "グループ未設定";
+
+    const taskList = document.createElement("div");
+    taskList.className = "home-extra-group-body";
+
+    items.forEach((item) => {
+      const index = HOME_EXTRA_DAILY_TASKS.length;
+      HOME_EXTRA_DAILY_TASKS.push(item);
+
+      taskList.appendChild(
+        createHomeExtraTaskDetail({
+          task: item,
+          source: "daily",
+          index,
+        })
+      );
+    });
+
+    groupDetails.appendChild(summary);
+    groupDetails.appendChild(taskList);
+    homeDailyExtraListElement.appendChild(groupDetails);
+  });
+
+  const hasTasks = HOME_EXTRA_DAILY_TASKS.length > 0;
+
+  toggleHomeExtraSection(homeDailyExtraCardElement, hasTasks);
+  updateHomeIndex();
+}
+
+// ==================================================
+// ホーム：期間限定
+// ==================================================
+
+function renderHomeOnceMoreList(tasks) {
+  if (!homeOnceMoreListElement) {
+    return;
+  }
+
+  HOME_EXTRA_ONCE_TASKS = [];
+  homeOnceMoreListElement.innerHTML = "";
+
+  const executableTasks = getExecutableHomeOnceMoreTasks(tasks);
+
+  if (executableTasks.length === 0) {
+    toggleHomeExtraSection(homeOnceMoreCardElement, false);
+    updateHomeIndex();
+    return;
+  }
+
+  executableTasks.forEach((task) => {
+    const index = HOME_EXTRA_ONCE_TASKS.length;
+    HOME_EXTRA_ONCE_TASKS.push(task);
+
+    homeOnceMoreListElement.appendChild(
+      createHomeExtraTaskDetail({
+        task,
+        source: "once",
+        index,
+      })
+    );
+  });
+
+  toggleHomeExtraSection(homeOnceMoreCardElement, true);
+  updateHomeIndex();
+}
+
+function getExecutableHomeOnceMoreTasks(tasks) {
+  if (!Array.isArray(tasks)) {
+    return [];
+  }
+
+  return tasks.filter((task) => {
+    if (!task || !task.name) {
+      return false;
+    }
+
+    // loadOnceTasks() でも期間内に絞っているが、念のためここでも判定
+    if (!isWithinPeriod(task.from, task.to)) {
+      return false;
+    }
+
+    const repeatType = getHomeTaskRepeatType(task);
+
+    // onceは一度も実行していないものだけ
+    if (repeatType === "once") {
+      return !isHomeOnceTaskDone(task);
+    }
+
+    // dailyは期間内なら表示
+    return repeatType === "daily";
+  });
+}
+
+// ==================================================
+// ホーム：おかわりタスク操作
+// ==================================================
+
+function bindHomeExtraTaskEvents() {
+  bindHomeExtraListEvents(homeDailyExtraListElement);
+  bindHomeExtraListEvents(homeOnceMoreListElement);
+}
+
+function bindHomeExtraListEvents(container) {
+  if (!container) {
+    return;
+  }
+
+  container.addEventListener("click", async (event) => {
+    const button = event.target.closest("[data-home-extra-action]");
+
+    if (!button) {
+      return;
+    }
+
+    const task = getHomeExtraTaskBySource(
+      button.dataset.source,
+      button.dataset.index
+    );
+
+    if (!task) {
+      return;
+    }
+
+    const action = button.dataset.homeExtraAction;
+
+    if (action === "open") {
+      await openHomeExtraTaskPage(task, button.dataset.source);
+      return;
+    }
+
+    if (action === "share-x") {
+      openHomeExtraTaskXPost(task, button.dataset.source);
+      return;
+    }
+
+    if (action === "share-threads") {
+      await openHomeExtraTaskThreads(task, button.dataset.source);
+    }
+  });
+}
+
+async function openHomeExtraTaskPage(task, source) {
+  const taskUrl = getHomeExtraTaskUrl(task, source);
+
+  if (!taskUrl) {
+    return;
+  }
+
+  // デイリーで入力補助が必要な場合は、通常フローと同じようにコピーする
+  if (source === "daily" && task["input-flag"] === true) {
+    const copyText = buildDailyTaskCopyText(task);
+
+    if (copyText) {
+      try {
+        await navigator.clipboard.writeText(copyText);
+      } catch (error) {
+        console.error(error);
+        alert("コピーに失敗しました。ページを開く前にもう一度試してください。");
+        return;
+      }
+    }
+  }
+
+  // 期間限定 once は、ホームから開いた時点で実行済みにする
+  if (source === "once" && getHomeTaskRepeatType(task) === "once") {
+    markHomeOnceTaskDone(task);
+    renderHomeOnceMoreList(state.onceTasks || []);
+  }
+
+  location.href = taskUrl;
+}
+
+function openHomeExtraTaskXPost(task, source) {
+  const postText = buildHomeExtraTaskShareText(task, source, "x");
+
+  if (!postText) {
+    return;
+  }
+
+  location.href = X_POST_URL + encodeURIComponent(postText);
+}
+
+async function openHomeExtraTaskThreads(task, source) {
+  const postText = buildHomeExtraTaskShareText(task, source, "threads");
+
+  if (!postText) {
+    return;
+  }
+
+  try {
+    await navigator.clipboard.writeText(postText);
+    location.href = THREADS_URL;
+  } catch (error) {
+    console.error(error);
+    alert("コピーに失敗しました。もう一度試してください。");
+  }
+}
+
+function buildHomeExtraTaskShareText(task, source, platform = "x") {
+  const taskName =
+    task?.["short-name"] ||
+    task?.shortName ||
+    getHomeExtraTaskName(task, source);
+
+  const taskUrl = getHomeExtraTaskUrl(task, source);
+
+  const lines = [
+    `✅${taskName}`,
+  ];
+
+  if (taskUrl) {
+    lines.push(taskUrl);
+  }
+
+  lines.push("");
+  lines.push("タムごとDailyから応援中👍");
+  lines.push(getAppShareUrlByPlatform(platform));
+
+  return lines.join("\n");
 }
