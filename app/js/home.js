@@ -200,3 +200,173 @@ function bindHomeBackToTopButton() {
     });
   });
 }
+
+// ==================================================
+// ホーム：おかわりタスク共通
+// ==================================================
+
+let HOME_EXTRA_DAILY_TASKS = [];
+let HOME_EXTRA_ONCE_TASKS = [];
+
+// sectionを表示/非表示にする
+function toggleHomeExtraSection(cardElement, shouldShow) {
+  if (!cardElement) {
+    return;
+  }
+
+  cardElement.classList.toggle("hidden", !shouldShow);
+}
+
+// タスク名取得
+function getHomeExtraTaskName(task, source) {
+  if (source === "daily") {
+    return getDailyTaskItemName(task);
+  }
+
+  return task?.name || "名称未設定";
+}
+
+// タスクURL取得
+function getHomeExtraTaskUrl(task, source) {
+  if (source === "daily") {
+    return getDailyTaskItemUrl(task);
+  }
+
+  return task?.url || "";
+}
+
+// タスク説明文取得
+function getHomeExtraTaskComment(task, source) {
+  if (source === "daily") {
+    return task?.comment || "ページを開いてタスクを完了してください。";
+  }
+
+  return buildOnceTaskMessage(task);
+}
+
+// once/daily判定
+// 既存JSONの repeatType と、今後の type の両方に対応する
+function getHomeTaskRepeatType(task) {
+  return task?.type || task?.repeatType || "daily";
+}
+
+// ホーム用：一度きりタスクが完了済みか判定
+function isHomeOnceTaskDone(task) {
+  if (getHomeTaskRepeatType(task) !== "once") {
+    return false;
+  }
+
+  const taskId = getTaskStorageId(task);
+
+  if (!taskId) {
+    return false;
+  }
+
+  const doneMap = loadOnceTaskDoneMap();
+
+  return Boolean(doneMap[taskId]);
+}
+
+// ホーム用：一度きりタスクを完了済みにする
+function markHomeOnceTaskDone(task) {
+  if (getHomeTaskRepeatType(task) !== "once") {
+    return;
+  }
+
+  const taskId = getTaskStorageId(task);
+
+  if (!taskId) {
+    console.warn("type/repeatType: once のタスクに id がありません", task);
+    return;
+  }
+
+  const doneMap = loadOnceTaskDoneMap();
+
+  doneMap[taskId] = {
+    doneAt: new Date().toISOString(),
+    expiresAt: getOnceTaskExpiresAt(task),
+  };
+
+  saveOnceTaskDoneMap(doneMap);
+}
+
+// source/index からタスク取得
+function getHomeExtraTaskBySource(source, index) {
+  const taskIndex = Number(index);
+
+  if (Number.isNaN(taskIndex)) {
+    return null;
+  }
+
+  if (source === "daily") {
+    return HOME_EXTRA_DAILY_TASKS[taskIndex] || null;
+  }
+
+  if (source === "once") {
+    return HOME_EXTRA_ONCE_TASKS[taskIndex] || null;
+  }
+
+  return null;
+}
+
+// タスク詳細DOMを作る
+function createHomeExtraTaskDetail({ task, source, index }) {
+  const details = document.createElement("details");
+  details.className = "home-extra-task-detail";
+
+  const summary = document.createElement("summary");
+  summary.className = "home-extra-task-summary";
+  summary.textContent = getHomeExtraTaskName(task, source);
+
+  const body = document.createElement("div");
+  body.className = "home-extra-task-body";
+
+  const comment = document.createElement("div");
+  comment.className = "notice-box home-extra-task-comment";
+  comment.textContent = normalizeDisplayNewlines(getHomeExtraTaskComment(task, source));
+
+  const actionArea = document.createElement("div");
+  actionArea.className = "home-extra-task-actions";
+
+  const openButton = document.createElement("button");
+  openButton.type = "button";
+  openButton.className = "primary-button compact-button";
+  openButton.textContent = "ページを開く";
+  openButton.dataset.homeExtraAction = "open";
+  openButton.dataset.source = source;
+  openButton.dataset.index = String(index);
+
+  const shareXButton = document.createElement("button");
+  shareXButton.type = "button";
+  shareXButton.className = "secondary-button compact-button";
+  shareXButton.textContent = "このタスクをXでシェア";
+  shareXButton.dataset.homeExtraAction = "share-x";
+  shareXButton.dataset.source = source;
+  shareXButton.dataset.index = String(index);
+
+  const shareThreadsButton = document.createElement("button");
+  shareThreadsButton.type = "button";
+  shareThreadsButton.className = "secondary-button compact-button";
+  shareThreadsButton.textContent = "コピーしてThreadsを開く";
+  shareThreadsButton.dataset.homeExtraAction = "share-threads";
+  shareThreadsButton.dataset.source = source;
+  shareThreadsButton.dataset.index = String(index);
+
+  const taskUrl = getHomeExtraTaskUrl(task, source);
+
+  if (!taskUrl) {
+    openButton.classList.add("hidden");
+  }
+
+  actionArea.appendChild(openButton);
+  actionArea.appendChild(shareXButton);
+  actionArea.appendChild(shareThreadsButton);
+
+  body.appendChild(comment);
+  body.appendChild(actionArea);
+
+  details.appendChild(summary);
+  details.appendChild(body);
+
+  return details;
+}
