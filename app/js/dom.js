@@ -33,6 +33,10 @@ const openUsageButtonElement = document.getElementById("openUsageButton");
 //ホームのSNSシェアボタン
 const homeTopShareButtonElement = document.getElementById("homeTopShareButton");
 const homeBottomShareButtonElement = document.getElementById("homeBottomShareButton");
+// ホーム目次
+const homeIndexListElement = document.getElementById("homeIndexList");
+// ホーム右下の上に戻るボタン
+const homeBackToTopButtonElement = document.getElementById("homeBackToTopButton");
 
 // ==================================================
 // DOM: 初回設定モーダル
