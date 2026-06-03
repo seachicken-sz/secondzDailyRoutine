@@ -728,6 +728,45 @@ h1 {
 .home-list-link:last-child {
   margin-bottom: 0;
 }
+.home-index-card {
+  gap: 10px;
+}
+
+.home-index-block {
+  display: grid;
+  gap: 7px;
+}
+
+.home-index-label {
+  margin: 0;
+  color: var(--color-brand);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.home-index-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.home-index-button {
+  min-height: 32px;
+  padding: 0 11px;
+  border: 1px solid var(--color-brand-border);
+  border-radius: 999px;
+  background: var(--color-brand-soft);
+  color: var(--color-accent-text);
+  font-size: 12px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.home-index-list-main {
+  padding-top: 2px;
+  border-top: 1px dashed var(--color-border-soft);
+}
 
 /* =========================
    リンクカード風
