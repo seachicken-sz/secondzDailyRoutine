@@ -166,14 +166,10 @@
         </section>
       
         <!--目次-->
-        <section class="home-card home-index-card hidden">               
-          <div class="home-index-list home-index-list-main">
-            <p class="home-index-label">おかわりタスク(仮)</p>
-            <small>「たくさんやるのは無理だけどタスクひとつだけなら……」「逆にリクエストおかわりしたい」そんな日に！</small>
-            <button class="home-index-button">おかわりDaily</button>
-            <button class="home-index-button">期間限定</button>
-            <button class="home-index-button">最近のタムごと</button>
-          </div>
+        <!--ホーム目次-->
+        <section id="homeIndexCard" class="home-card home-index-card hidden">
+          <h2 class="ruby-h"><ruby>目次<rt>index</rt></ruby></h2>
+          <div id="homeIndexList" class="home-index-list"></div>
         </section>
       
         <!--メンバーごと-->
@@ -216,7 +212,7 @@
         </section>
 
         <!--homeInfoJsonの期限内のものを表示-->
-        <section class="home-card home-information-area">
+        <section class="home-card home-information-area" id="homeInfoCard">
           <h2 class="ruby-h"><ruby>最近のタムごと<rt>information</rt></rt></ruby></h2>
           <div id="homeInfoList" class="home-list-box"></div>
         </section>
@@ -229,6 +225,10 @@
             <button id="homeBottomShareButton" class="text-link-button">このツールを共有</button>
           </div>
         </section>
+        <!--上に戻るボタン-->
+        <button id="homeBackToTopButton" class="home-back-to-top-button hidden hidden" type="button" aria-label="上に戻る">
+          <i class="bi bi-arrow-up"></i>
+        </button>
     </section>
     <!--STEP 1 Spotify-->
     <section id="spotifyStep" class="step-screen hidden">
