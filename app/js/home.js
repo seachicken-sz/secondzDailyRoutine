@@ -594,10 +594,6 @@ function openHomeExtraTaskXPost(task, source) {
   if (typeof sendSnsShareLog === "function") {
     sendSnsShareLog("x", {
       source: `homeTask:${source}`,
-      itemId:
-        task.itemId ||
-        task.id ||
-        createLogItemId("home_share", `${source}_${getHomeExtraTaskName(task, source)}_${taskUrl}`),
       title: getHomeExtraTaskName(task, source),
       url: taskUrl
     }).catch((error) => {
@@ -621,10 +617,6 @@ async function openHomeExtraTaskThreads(task, source) {
     if (typeof sendSnsShareLog === "function") {
       sendSnsShareLog("threads", {
         source: `homeTask:${source}`,
-        itemId:
-          task.itemId ||
-          task.id ||
-          createLogItemId("home_share", `${source}_${getHomeExtraTaskName(task, source)}_${taskUrl}`),
         title: getHomeExtraTaskName(task, source),
         url: taskUrl
       }).catch((error) => {
