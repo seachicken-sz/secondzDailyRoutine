@@ -97,37 +97,26 @@ function updateHomeIndex() {
   if (!homeIndexListElement) {
     return;
   }
-
   const indexItems = [];
-
-  // おかわりDaily
-  // 後で該当sectionを追加したら自動で目次に出る
-  if (document.getElementById("homeDailyExtraCard")) {
+  if (isVisibleHomeSection("homeDailyExtraCard")) {
     indexItems.push({
       label: "おかわりDaily",
       targetId: "homeDailyExtraCard",
     });
   }
-
-  // 期間限定
-  // 後で該当sectionを追加したら自動で目次に出る
-  if (document.getElementById("homeOnceMoreCard")) {
+  if (isVisibleHomeSection("homeOnceMoreCard")) {
     indexItems.push({
       label: "期間限定",
       targetId: "homeOnceMoreCard",
     });
   }
-
-  // 最近のタムごと
-  if (document.getElementById("homeInfoCard")) {
+  if (isVisibleHomeSection("homeInfoCard")) {
     indexItems.push({
       label: "最近のタムごと",
       targetId: "homeInfoCard",
     });
   }
-
   homeIndexListElement.innerHTML = "";
-
   if (indexItems.length === 0) {
     homeIndexListElement.innerHTML = `<p class="empty-text">表示できる項目はありません。</p>`;
     return;
@@ -143,7 +132,11 @@ function updateHomeIndex() {
     homeIndexListElement.appendChild(button);
   });
 }
+function isVisibleHomeSection(id) {
+  const element = document.getElementById(id);
 
+  return Boolean(element && !element.classList.contains("hidden"));
+}
 // ホーム目次クリックイベント
 function bindHomeIndexEvents() {
   if (!homeIndexListElement) {
