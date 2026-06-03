@@ -8,6 +8,7 @@ const state = {
 
   requestSongs: [],
   selectedRequestSong: null,
+  homeSelectedRequestSong: null,
   isOtherRequestSongsOpen: false,
 
   requestTexts: {},
