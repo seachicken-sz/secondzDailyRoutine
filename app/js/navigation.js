@@ -48,6 +48,7 @@ function showOnlyStep(activeStepElement, options = {}) {
     onceListSelectStepElement,
     onceTaskRunStepElement,
     requestSongStepElement,
+    radioRequestSongOverrideStepElement,
     dailyTaskStepElement,
     dailyGroupEndStepElement,
     postAskStepElement,
