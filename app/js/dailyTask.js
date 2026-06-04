@@ -287,16 +287,13 @@ function buildDailyTaskCopyText(item) {
 // ==================================================
 // デイリータスク画面上部に表示する「今日のリクエスト曲」を作成する
 function buildDailyTaskHeaderDescription() {
-  // 選択中のUSEN推しリク曲名
-  const selectedRequestSongName = getSelectedRequestSongName();
+  const selectedRadioRequestSongName = getSelectedRadioRequestSongName();
 
-  // 曲名がない場合は何も表示しない
-  if (!selectedRequestSongName) {
+  if (!selectedRadioRequestSongName) {
     return "";
   }
 
-  // ヘッダー用文言を返す
-  return `今日のリクエスト曲: ${selectedRequestSongName}\n`;
+  return `今日のラジオリクエスト曲: ${selectedRadioRequestSongName}\n`;
 }
 
 // ==================================================
