@@ -938,7 +938,7 @@ h1 {
 }
 
 .home-extra-group.is-daily-done {
-  opacity: 0.62;
+  background-color:var(--color-surface-media);
 }
 
 .home-extra-group-summary {
