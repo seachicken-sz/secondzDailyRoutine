@@ -29,6 +29,8 @@ bindSpotifyEvents();
 bindOnceTaskEvents();
 // USEN推しリク画面イベント登録
 bindRequestSongEvents();
+// ラジオリクエスト曲切替画面イベント登録
+bindRadioRequestSongOverrideEvents();
 // デイリータスク画面イベント登録
 bindDailyTaskEvents();
 // SNS共有画面イベント登録
