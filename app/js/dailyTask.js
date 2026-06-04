@@ -276,7 +276,7 @@ function buildDailyTaskCopyText(item) {
   }
 
   // 選択中のUSEN推しリク曲名
-  const musicName = getSelectedRequestSongName();
+  const musicName = getSelectedRadioRequestSongName();
 
   // テンプレート内の musicname を選択曲名で置換する
   return template.replaceAll("musicname", musicName);
