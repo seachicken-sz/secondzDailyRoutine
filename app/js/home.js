@@ -756,9 +756,9 @@ function getHomeSelectedRequestSongName() {
 
 function buildHomeDailyTaskCopyText(item) {
   const requestType = item["request-type"];
-  const template = state.requestTexts[requestType];
+  const templateValue = state.requestTexts[requestType];
 
-  if (!requestType || !template) {
+  if (!requestType || !templateValue) {
     return "";
   }
 
@@ -768,5 +768,13 @@ function buildHomeDailyTaskCopyText(item) {
     return "";
   }
 
-  return template.replaceAll("musicname", musicName);
+  const template = pickRequestTextTemplate(templateValue, `home_${requestType}`);
+
+  if (!template) {
+    return "";
+  }
+
+  return template
+    .replaceAll("musicname", musicName)
+    .replaceAll("\\n", "\n");
 }
