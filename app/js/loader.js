@@ -54,7 +54,10 @@ async function loadRequestSongs() {
     throw new Error("requestSongJson.json が配列形式ではありません。");
   }
 
-  return songs.filter((song) => song && song.name && song.url);
+  // 曲名があるものはすべて読み込む
+  return songs.filter((song) => {
+    return song && String(song.name || "").trim() !== "";
+  });
 }
 
 //リクエスト文章読み込み
