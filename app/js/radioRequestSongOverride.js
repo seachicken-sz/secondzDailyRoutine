@@ -89,7 +89,11 @@ function renderRadioRequestSongOverrideButtons(songs) {
         name: songName,
         source: "override",
       };
-
+    
+      sendNewSongRequestLog(state.selectedRadioRequestSong).catch((error) => {
+        console.error("newSong requestSongログ送信失敗", error);
+      });
+    
       await showDailyTaskStep();
     });
 
