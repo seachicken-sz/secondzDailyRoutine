@@ -972,6 +972,21 @@ h1 {
   display: none !important;
 }
 
+
+/* 今日、dailyグループが1つ以上完了しているときだけ表示 */
+.show-when-daily-started {
+  display: none !important;
+}
+
+.daily-started-today .show-when-daily-started {
+  display: block !important;
+}
+
+/* 今日、dailyグループが1つ以上完了しているときだけ非表示 */
+.daily-started-today .hide-when-daily-started {
+  display: none !important;
+}
+
 /* =========================
    リンクカード風
 ========================= */
