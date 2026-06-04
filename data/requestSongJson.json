@@ -1,60 +1,355 @@
 [
-  {"id":"rq_6884871","name":"GOOD TOGETHER","url":"6884871","flag":true},
-  {"id":"rq_6884887","name":"4分間だけ時間をください","url":"6884887","flag":true},
-  {"id":"rq_6884891","name":"あくび","url":"6884891","flag":true},
-  {"id":"rq_6884889","name":"We’re on the Top","url":"6884889","flag":false},
-  {"id":"rq_6884888","name":"No Map Just Vibes","url":"6884888","flag":false},
-  {"id":"rq_6884886","name":"君の傘","url":"6884886","flag":false},
-  {"id":"rq_6884885","name":"Funny or Fake","url":"6884885","flag":false},
-  {"id":"rq_6884884","name":"No Doubt!","url":"6884884","flag":false},
-  {"id":"rq_6884883","name":"柔な理性","url":"6884883","flag":false},
-  {"id":"rq_6884882","name":"MightyBeast","url":"6884882","flag":false},
-  {"id":"rq_6884881","name":"オーシャンビュー","url":"6884881","flag":false},
-  {"id":"rq_6884880","name":"Love Letter","url":"6884880","flag":false},
-  {"id":"rq_6884879","name":"Believers","url":"6884879","flag":false},
-  {"id":"rq_6884876","name":"スーパーウーマン","url":"6884876","flag":false},
-  {"id":"rq_6884890","name":"half&half","url":"6884890","flag":false},
-  {"id":"rq_6802761","name":"ピアノフォルテ","url":"6802761","flag":false},
-  {"id":"rq_6802778","name":"Countdown","url":"6802778","flag":false},
-  {"id":"rq_6802717","name":"Steal The Show","url":"6802717","flag":false},
-  {"id":"rq_6802720","name":"レシピ","url":"6802720","flag":false},
-  {"id":"rq_6802723","name":"Limited Nights","url":"6802723","flag":false},
-  {"id":"rq_6802725","name":"かりそめの言葉","url":"6802725","flag":false},
-  {"id":"rq_6584072","name":"We’re timelesz","url":"6584072","flag":false},
-  {"id":"rq_6584004","name":"New phase","url":"6584004","flag":false},
-  {"id":"rq_6584001","name":"革命のDancin’night","url":"6584001","flag":false},
-  {"id":"rq_6584003","name":"SWEET","url":"6584003","flag":false},
-  {"id":"rq_6583985","name":"手をたたけ愛ならせ","url":"6583985","flag":false},
-  {"id":"rq_6583983","name":"Popcoooooooorn!","url":"6583983","flag":false},
-  {"id":"rq_6583980","name":"君へ","url":"6583980","flag":false},
-  {"id":"rq_6583987","name":"I’m Home","url":"6583987","flag":false},
-  {"id":"rq_6583976","name":"ワンアンドオンリー","url":"6583976","flag":false},
-  {"id":"rq_6583975","name":"HONEY ALMOND","url":"6583975","flag":false},
-  {"id":"rq_6583972","name":"Flavor","url":"6583972","flag":false},
-  {"id":"rq_6583970","name":"HeadUp","url":"6583970","flag":false},
-  {"id":"rq_6583979","name":"Scent of No.9","url":"6583979","flag":false},
-  {"id":"rq_6583968","name":"Do Me Do Me","url":"6583968","flag":false},
-  {"id":"rq_6583964","name":"Baby What’s Your Name?","url":"6583964","flag":false},
-  {"id":"rq_6480464","name":"because","url":"6480464","flag":false},
-  {"id":"rq_6488316","name":"KNOCK KNOCK KNOCK","url":"6488316","flag":false},
-  {"id":"rq_6488292","name":"Birthday","url":"6488292","flag":false},
-  {"id":"rq_6488291","name":"snowwonderland","url":"6488291","flag":false},
-  {"id":"rq_6488290","name":"HOMIES","url":"6488290","flag":false},
-  {"id":"rq_6488299","name":"Stepout","url":"6488299","flag":false},
-  {"id":"rq_6418120","name":"Selfish Love","url":"6418120","flag":false},
-  {"id":"rq_6418121","name":"VIVID SUMMERDAYS","url":"6418121","flag":false},
-  {"id":"rq_6418119","name":"dilemma","url":"6418119","flag":false},
-  {"id":"rq_6403773","name":"Anthem","url":"6403773","flag":false},
-  {"id":"rq_6285895","name":"本音と建前","url":"6285895","flag":false},
-  {"id":"rq_6232781","name":"Purple Rain","url":"6232781","flag":false},
-  {"id":"rq_6217627","name":"timeless","url":"6217627","flag":false},
-  {"id":"rq_6052944","name":"Forever Gold","url":"6052944","flag":false},
-  {"id":"rq_6055399","name":"Summer Ride","url":"6055399","flag":false},
-  {"id":"rq_5814141","name":"RIGHT NEXT TO YOU","url":"5814141","flag":false},
-  {"id":"rq_5648048","name":"RUN","url":"5648048","flag":false},
-  {"id":"rq_5369340","name":"make me bright","url":"5369340","flag":false},
-  {"id":"rq_5316980","name":"冬が来たよ","url":"5316980","flag":false},
-  {"id":"rq_5196724","name":"Twilight Sunset","url":"5196724","flag":false},
-  {"id":"rq_5089947","name":"名脇役","url":"5089947","flag":false},
-  {"id":"rq_4979308","name":"ぎゅっと","url":"4979308","flag":false}
+  {
+    "id": "rq_new",
+    "name": "消えない花火",
+    "flag": true
+  },
+  {
+    "id": "rq_6884871",
+    "name": "GOOD TOGETHER",
+    "url": "6884871",
+    "flag": true
+  },
+  {
+    "id": "rq_6884887",
+    "name": "4分間だけ時間をください",
+    "url": "6884887",
+    "flag": true
+  },
+  {
+    "id": "rq_6884891",
+    "name": "あくび",
+    "url": "6884891",
+    "flag": true
+  },
+  {
+    "id": "rq_6884889",
+    "name": "We’re on the Top",
+    "url": "6884889",
+    "flag": false
+  },
+  {
+    "id": "rq_6884888",
+    "name": "No Map Just Vibes",
+    "url": "6884888",
+    "flag": false
+  },
+  {
+    "id": "rq_6884886",
+    "name": "君の傘",
+    "url": "6884886",
+    "flag": false
+  },
+  {
+    "id": "rq_6884885",
+    "name": "Funny or Fake",
+    "url": "6884885",
+    "flag": false
+  },
+  {
+    "id": "rq_6884884",
+    "name": "No Doubt!",
+    "url": "6884884",
+    "flag": false
+  },
+  {
+    "id": "rq_6884883",
+    "name": "柔な理性",
+    "url": "6884883",
+    "flag": false
+  },
+  {
+    "id": "rq_6884882",
+    "name": "MightyBeast",
+    "url": "6884882",
+    "flag": false
+  },
+  {
+    "id": "rq_6884881",
+    "name": "オーシャンビュー",
+    "url": "6884881",
+    "flag": false
+  },
+  {
+    "id": "rq_6884880",
+    "name": "Love Letter",
+    "url": "6884880",
+    "flag": false
+  },
+  {
+    "id": "rq_6884879",
+    "name": "Believers",
+    "url": "6884879",
+    "flag": false
+  },
+  {
+    "id": "rq_6884876",
+    "name": "スーパーウーマン",
+    "url": "6884876",
+    "flag": false
+  },
+  {
+    "id": "rq_6884890",
+    "name": "half&half",
+    "url": "6884890",
+    "flag": false
+  },
+  {
+    "id": "rq_6802761",
+    "name": "ピアノフォルテ",
+    "url": "6802761",
+    "flag": false
+  },
+  {
+    "id": "rq_6802778",
+    "name": "Countdown",
+    "url": "6802778",
+    "flag": false
+  },
+  {
+    "id": "rq_6802717",
+    "name": "Steal The Show",
+    "url": "6802717",
+    "flag": false
+  },
+  {
+    "id": "rq_6802720",
+    "name": "レシピ",
+    "url": "6802720",
+    "flag": false
+  },
+  {
+    "id": "rq_6802723",
+    "name": "Limited Nights",
+    "url": "6802723",
+    "flag": false
+  },
+  {
+    "id": "rq_6802725",
+    "name": "かりそめの言葉",
+    "url": "6802725",
+    "flag": false
+  },
+  {
+    "id": "rq_6584072",
+    "name": "We’re timelesz",
+    "url": "6584072",
+    "flag": false
+  },
+  {
+    "id": "rq_6584004",
+    "name": "New phase",
+    "url": "6584004",
+    "flag": false
+  },
+  {
+    "id": "rq_6584001",
+    "name": "革命のDancin’night",
+    "url": "6584001",
+    "flag": false
+  },
+  {
+    "id": "rq_6584003",
+    "name": "SWEET",
+    "url": "6584003",
+    "flag": false
+  },
+  {
+    "id": "rq_6583985",
+    "name": "手をたたけ愛ならせ",
+    "url": "6583985",
+    "flag": false
+  },
+  {
+    "id": "rq_6583983",
+    "name": "Popcoooooooorn!",
+    "url": "6583983",
+    "flag": false
+  },
+  {
+    "id": "rq_6583980",
+    "name": "君へ",
+    "url": "6583980",
+    "flag": false
+  },
+  {
+    "id": "rq_6583987",
+    "name": "I’m Home",
+    "url": "6583987",
+    "flag": false
+  },
+  {
+    "id": "rq_6583976",
+    "name": "ワンアンドオンリー",
+    "url": "6583976",
+    "flag": false
+  },
+  {
+    "id": "rq_6583975",
+    "name": "HONEY ALMOND",
+    "url": "6583975",
+    "flag": false
+  },
+  {
+    "id": "rq_6583972",
+    "name": "Flavor",
+    "url": "6583972",
+    "flag": false
+  },
+  {
+    "id": "rq_6583970",
+    "name": "HeadUp",
+    "url": "6583970",
+    "flag": false
+  },
+  {
+    "id": "rq_6583979",
+    "name": "Scent of No.9",
+    "url": "6583979",
+    "flag": false
+  },
+  {
+    "id": "rq_6583968",
+    "name": "Do Me Do Me",
+    "url": "6583968",
+    "flag": false
+  },
+  {
+    "id": "rq_6583964",
+    "name": "Baby What’s Your Name?",
+    "url": "6583964",
+    "flag": false
+  },
+  {
+    "id": "rq_6480464",
+    "name": "because",
+    "url": "6480464",
+    "flag": false
+  },
+  {
+    "id": "rq_6488316",
+    "name": "KNOCK KNOCK KNOCK",
+    "url": "6488316",
+    "flag": false
+  },
+  {
+    "id": "rq_6488292",
+    "name": "Birthday",
+    "url": "6488292",
+    "flag": false
+  },
+  {
+    "id": "rq_6488291",
+    "name": "snowwonderland",
+    "url": "6488291",
+    "flag": false
+  },
+  {
+    "id": "rq_6488290",
+    "name": "HOMIES",
+    "url": "6488290",
+    "flag": false
+  },
+  {
+    "id": "rq_6488299",
+    "name": "Stepout",
+    "url": "6488299",
+    "flag": false
+  },
+  {
+    "id": "rq_6418120",
+    "name": "Selfish Love",
+    "url": "6418120",
+    "flag": false
+  },
+  {
+    "id": "rq_6418121",
+    "name": "VIVID SUMMERDAYS",
+    "url": "6418121",
+    "flag": false
+  },
+  {
+    "id": "rq_6418119",
+    "name": "dilemma",
+    "url": "6418119",
+    "flag": false
+  },
+  {
+    "id": "rq_6403773",
+    "name": "Anthem",
+    "url": "6403773",
+    "flag": false
+  },
+  {
+    "id": "rq_6285895",
+    "name": "本音と建前",
+    "url": "6285895",
+    "flag": false
+  },
+  {
+    "id": "rq_6232781",
+    "name": "Purple Rain",
+    "url": "6232781",
+    "flag": false
+  },
+  {
+    "id": "rq_6217627",
+    "name": "timeless",
+    "url": "6217627",
+    "flag": false
+  },
+  {
+    "id": "rq_6052944",
+    "name": "Forever Gold",
+    "url": "6052944",
+    "flag": false
+  },
+  {
+    "id": "rq_6055399",
+    "name": "Summer Ride",
+    "url": "6055399",
+    "flag": false
+  },
+  {
+    "id": "rq_5814141",
+    "name": "RIGHT NEXT TO YOU",
+    "url": "5814141",
+    "flag": false
+  },
+  {
+    "id": "rq_5648048",
+    "name": "RUN",
+    "url": "5648048",
+    "flag": false
+  },
+  {
+    "id": "rq_5369340",
+    "name": "make me bright",
+    "url": "5369340",
+    "flag": false
+  },
+  {
+    "id": "rq_5316980",
+    "name": "冬が来たよ",
+    "url": "5316980",
+    "flag": false
+  },
+  {
+    "id": "rq_5196724",
+    "name": "Twilight Sunset",
+    "url": "5196724",
+    "flag": false
+  },
+  {
+    "id": "rq_5089947",
+    "name": "名脇役",
+    "url": "5089947",
+    "flag": false
+  },
+  {
+    "id": "rq_4979308",
+    "name": "ぎゅっと",
+    "url": "4979308",
+    "flag": false
+  }
 ]
