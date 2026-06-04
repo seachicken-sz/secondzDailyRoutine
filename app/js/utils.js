@@ -496,3 +496,30 @@ function setButtonStyle(buttonElement, styleType) {
 function normalizeDisplayNewlines(value) {
   return String(value || "").replaceAll("\\n", "\n");
 }
+
+// リクエストテキストランダム化
+function pickRequestTextTemplate(value, requestType) {
+  // 既存形式：文字列ならそのまま使う
+  if (!Array.isArray(value)) {
+    return String(value || "");
+  }
+  // 新形式：配列なら候補からランダム
+  const candidates = value
+    .map(text => String(text || "").trim())
+    .filter(Boolean);
+  if (candidates.length === 0) {
+    return "";
+  }
+  if (candidates.length === 1) {
+    return candidates[0];
+  }
+  // 連続で同じ文になりにくくする
+  const storageKey = `lastRequestTextIndex_${requestType}`;
+  const lastIndex = Number(localStorage.getItem(storageKey));
+  let index = Math.floor(Math.random() * candidates.length);
+  if (index === lastIndex) {
+    index = (index + 1) % candidates.length;
+  }
+  localStorage.setItem(storageKey, String(index));
+  return candidates[index];
+}
