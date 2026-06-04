@@ -41,6 +41,10 @@ const homeDailyExtraListElement = document.getElementById("homeDailyExtraList");
 // ホーム用リクエスト曲選択
 const homeRequestSongSelectAreaElement = document.getElementById("homeRequestSongSelectArea");
 const homeRequestSongSelectElement = document.getElementById("homeRequestSongSelect");
+// ホーム用USEN推し活リクエスト
+const homeUsenRequestAreaElement = document.getElementById("homeUsenRequestArea");
+const homeUsenRequestMessageElement = document.getElementById("homeUsenRequestMessage");
+const homeOpenUsenRequestButtonElement = document.getElementById("homeOpenUsenRequestButton");
 // おかわり期間限定
 const homeOnceMoreCardElement = document.getElementById("homeOnceMoreCard");
 const homeOnceMoreListElement = document.getElementById("homeOnceMoreList");
