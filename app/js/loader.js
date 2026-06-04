@@ -60,6 +60,27 @@ async function loadRequestSongs() {
   });
 }
 
+// ラジオリクエスト曲切替候補読み込み
+async function loadRadioRequestSongOverrides() {
+  const songs = await loadJsonFile(
+    DATA_PATHS.radioRequestSongOverrides,
+    "radioRequestSongOverrideJson.json"
+  );
+
+  if (!Array.isArray(songs)) {
+    throw new Error("radioRequestSongOverrideJson.json が配列形式ではありません。");
+  }
+
+  return songs.filter((song) => {
+    return (
+      song &&
+      song.active === true &&
+      String(song.songName || "").trim() !== "" &&
+      isWithinPeriod(song.from, song.to)
+    );
+  });
+}
+
 //リクエスト文章読み込み
 async function loadRequestTexts() {
   const requestTexts = await loadJsonFile(DATA_PATHS.requestTexts, "requestTextJson.json");
