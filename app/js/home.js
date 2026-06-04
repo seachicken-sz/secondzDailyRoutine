@@ -564,17 +564,33 @@ async function openHomeExtraTaskPage(task, source) {
     }
   }
 
-  // ホームからタスクを開いたログを送信する
-  // 遷移直前なので、ここだけはawaitしてから移動する
-  if (typeof sendHomeTaskLog === "function") {
-    try {
-      await sendHomeTaskLog(task, {
-        source,
-        url: taskUrl
-      });
-    } catch (error) {
-      console.error("homeTaskLog送信失敗", error);
+  try {
+    const logPromises = [];  
+    if (typeof sendHomeTaskLog === "function") {
+      logPromises.push(
+        sendHomeTaskLog(task, {
+          source,
+          url: taskUrl
+        })
+      );
     }
+    if (
+      source === "daily" &&
+      task["input-flag"] === true &&
+      typeof sendRequestSongLog === "function"
+    ) {
+      const selectedSong = getHomeSelectedRequestSong();
+  
+      if (selectedSong) {
+        logPromises.push(sendRequestSongLog(selectedSong));
+      }
+    }
+  
+    if (logPromises.length > 0) {
+      await Promise.allSettled(logPromises);
+    }
+  } catch (error) {
+    console.error("homeTask/requestSongログ送信失敗", error);
   }
 
   // 期間限定 once は、ホームから開いた時点で実行済みにする
@@ -720,17 +736,22 @@ function bindHomeRequestSongSelectEvents() {
   });
 }
 
-function getHomeSelectedRequestSongName() {
+function getHomeSelectedRequestSong() {
   if (state.homeSelectedRequestSong?.name) {
-    return state.homeSelectedRequestSong.name;
+    return state.homeSelectedRequestSong;
   }
 
-  const defaultSong =
+  return (
     state.requestSongs.find((song) => song && song.flag === true) ||
     state.requestSongs.find((song) => song && song.name) ||
-    null;
+    null
+  );
+}
 
-  return defaultSong?.name || "";
+function getHomeSelectedRequestSongName() {
+  const song = getHomeSelectedRequestSong();
+
+  return song?.name || "";
 }
 
 function buildHomeDailyTaskCopyText(item) {
