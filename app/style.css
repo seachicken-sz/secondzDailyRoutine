@@ -958,27 +958,39 @@ h1 {
   line-height: 1;
 }
 
-.home-usen-request-area {
-  display: grid;
-  gap: 8px;
-  padding-top: 8px;
+.home-extra-task-actions .primary-button:disabled,
+.home-extra-task-actions .primary-button.is-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
 }
 
-.home-usen-request-message {
-  margin: 0;
-  color: var(--color-text-muted);
-  font-size: 12px;
-  font-weight: 800;
-  line-height: 1.5;
+#homeUsenExtraList {
+  margin-top: 2px;
 }
 
-.homeOpenUsenRequestButton,
-.home-usen-request-area .primary-button {
-  margin-top: 0;
+.home-usen-extra-body {
+  padding: 0 10px 10px;
 }
 
-.home-usen-request-area .primary-button:disabled,
-.home-usen-request-area .primary-button.is-disabled {
+.home-usen-task-title {
+  margin: 0 0 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 850;
+  line-height: 1.45;
+}
+
+.home-usen-extra-body .home-extra-task-comment {
+  margin-bottom: 10px;
+}
+
+.home-extra-task-actions .primary-button:disabled,
+.home-extra-task-actions .primary-button.is-disabled {
   opacity: 0.5;
   cursor: not-allowed;
   transform: none;
@@ -1014,12 +1026,7 @@ h1 {
 }
 
 
-.home-extra-task-actions .primary-button:disabled,
-.home-extra-task-actions .primary-button.is-disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  transform: none;
-}
+
 
 /* =========================
    リンクカード風
