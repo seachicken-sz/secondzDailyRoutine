@@ -11,6 +11,9 @@ const state = {
   homeSelectedRequestSong: null,
   isOtherRequestSongsOpen: false,
 
+  radioRequestSongOverrides: [],
+  selectedRadioRequestSong: null,
+
   requestTexts: {},
   dailyGroups: [],
   currentDailyGroupIndex: 0,
