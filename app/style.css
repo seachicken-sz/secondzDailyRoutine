@@ -768,6 +768,28 @@ h1 {
   border-top: 1px dashed var(--color-border-soft);
 }
 
+.home-daily-jump-area {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 4px;
+}
+
+.home-daily-jump-button {
+  text-align: center;
+}
+
+.show-when-daily-started {
+  display: none !important;
+}
+
+.daily-started-today .show-when-daily-started {
+  display: inline !important;
+}
+
+.daily-started-today .hide-when-daily-started {
+  display: none !important;
+}
+
 /* =========================
    ホーム目次
 ========================= */
