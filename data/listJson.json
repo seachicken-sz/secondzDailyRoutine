@@ -40,14 +40,6 @@
         "request-input": "メッセージ&リクエスト",
         "comment": "①メアドなどを入力\n②「メッセージ&リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります！。",
         "input-flag": true
-      },
-      {
-        "id": "daily_andshino",
-        "name": "&シノ",
-        "short-name": "&シノ",
-        "url": "https://www.tbsradio.jp/articles/program/and/",
-        "comment": "最新記事をタップ！アクセスランクがあがるよ！",
-        "input-flag": false
       }
     ]
   },
@@ -121,6 +113,14 @@
     "listName": "もうちょい行けたりする？",
     "lastFlag": false,
     "items": [
+      {
+        "id": "daily_andshino",
+        "name": "&シノ",
+        "short-name": "&シノ",
+        "url": "https://www.tbsradio.jp/articles/program/and/",
+        "comment": "最新記事をタップ！アクセスランクがあがるよ！",
+        "input-flag": false
+      },
       {
         "id": "daily_sunsun",
         "name": "パペットスンスンのDJ SUNSUN",
