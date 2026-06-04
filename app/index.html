@@ -393,6 +393,30 @@
         </section>
       </section>
     </section>
+
+    <!--STEP 3.5 ラジオリクエスト曲切替-->
+    <section id="radioRequestSongOverrideStep" class="step-screen hidden">
+      <header class="header">
+        <h1>ラジオリクエスト曲📻</h1>
+        <p class="description">
+          よかったらラジオリクエスト曲を新曲に切り替えませんか？
+        </p>
+      </header>
+    
+      <section class="task-card">
+        <p class="selected-label">現在</p>
+        <p id="currentRadioRequestSongName" class="selected-song"></p>
+    
+        <div id="radioRequestSongOverrideButtonList" class="song-list"></div>
+    
+        <button id="keepCurrentRadioRequestSongButton" class="secondary-button">
+          現在の曲をリクエストする
+        </button>
+      </section>
+    
+      <section id="radioRequestSongOverrideErrorArea" class="error-area hidden"></section>
+    </section>
+        
     <!--STEP 4 デイリータスク-->
     <section id="dailyTaskStep" class="step-screen hidden">
       <header class="header">
