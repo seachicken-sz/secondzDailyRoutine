@@ -114,9 +114,14 @@ async function showRequestSongStep() {
       state.requestSongs = await loadRequestSongs();
     }
 
+    // URLがない新曲は、dailyコピペ用には使うがUSENボタンには出さない
+    const requestableSongs = state.requestSongs.filter((song) => {
+      return String(song.url || "").trim() !== "";
+    });
+    
     // flag === true の曲をおすすめ欄へ、それ以外を「その他」欄へ分ける
-    const recommendedRequestSongs = state.requestSongs.filter((song) => song.flag === true);
-    const otherRequestSongs = state.requestSongs.filter((song) => song.flag !== true);
+    const recommendedRequestSongs = requestableSongs.filter((song) => song.flag === true);
+    const otherRequestSongs = requestableSongs.filter((song) => song.flag !== true);
 
     // おすすめリクエスト曲リストを描画
     renderRequestSongList(recommendedRequestSongsElement, recommendedRequestSongs);
