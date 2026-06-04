@@ -8,6 +8,153 @@ function getTodayKey() {
   ].join("");
 }
 
+function formatDateKey(date) {
+  return [
+    date.getFullYear(),
+    String(date.getMonth() + 1).padStart(2, "0"),
+    String(date.getDate()).padStart(2, "0")
+  ].join("");
+}
+
+// デイリータスク用の日付キー
+// 18:00〜翌17:59 を同じ日として扱う
+function getDailyTaskDayKey(date = new Date()) {
+  const targetDate = new Date(date);
+
+  if (targetDate.getHours() < DAILY_TASK_DAY_SWITCH_HOUR) {
+    targetDate.setDate(targetDate.getDate() - 1);
+  }
+
+  return formatDateKey(targetDate);
+}
+
+function loadDailyTaskDoneMap() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEYS.dailyTaskDoneMap);
+
+    if (!raw) {
+      return {};
+    }
+
+    const parsed = JSON.parse(raw);
+
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+      return {};
+    }
+
+    return parsed;
+  } catch (error) {
+    console.error("dailyTaskDoneMap読込失敗", error);
+    return {};
+  }
+}
+
+function saveDailyTaskDoneMap(doneMap) {
+  localStorage.setItem(STORAGE_KEYS.dailyTaskDoneMap, JSON.stringify(doneMap));
+}
+
+function getDailyTaskStorageKey(item) {
+  if (!item) {
+    return "";
+  }
+
+  if (item.id) {
+    return String(item.id);
+  }
+
+  const name =
+    typeof getDailyTaskItemName === "function"
+      ? getDailyTaskItemName(item)
+      : item.name || item.title || item.listName || "";
+
+  const url =
+    typeof getDailyTaskItemUrl === "function"
+      ? getDailyTaskItemUrl(item)
+      : item.url || "";
+
+  return `${name}_${url}`;
+}
+
+function isDailyTaskDone(item) {
+  const taskKey = getDailyTaskStorageKey(item);
+
+  if (!taskKey) {
+    return false;
+  }
+
+  const dayKey = getDailyTaskDayKey();
+  const doneMap = loadDailyTaskDoneMap();
+
+  return Boolean(doneMap?.[dayKey]?.[taskKey]);
+}
+
+function markDailyTaskDone(item, source = "") {
+  const taskKey = getDailyTaskStorageKey(item);
+
+  if (!taskKey) {
+    return;
+  }
+
+  const dayKey = getDailyTaskDayKey();
+  const doneMap = loadDailyTaskDoneMap();
+
+  if (!doneMap[dayKey]) {
+    doneMap[dayKey] = {};
+  }
+
+  doneMap[dayKey][taskKey] = {
+    doneAt: new Date().toISOString(),
+    source,
+  };
+
+  saveDailyTaskDoneMap(doneMap);
+}
+
+// 古いdaily完了データを軽く掃除する
+// 7日分保持
+function cleanupDailyTaskDoneMap(keepDays = 7) {
+  const doneMap = loadDailyTaskDoneMap();
+  const todayKey = getDailyTaskDayKey();
+  const keepKeys = new Set();
+
+  for (let i = 0; i < keepDays; i += 1) {
+    const date = new Date();
+    date.setDate(date.getDate() - i);
+
+    // getDailyTaskDayKey() に渡す時点の日付が朝だとズレるので、
+    // 18時以降の時刻に固定してキーを作る
+    date.setHours(DAILY_TASK_DAY_SWITCH_HOUR, 0, 0, 0);
+
+    keepKeys.add(getDailyTaskDayKey(date));
+  }
+
+  let hasChanged = false;
+
+  Object.keys(doneMap).forEach((key) => {
+    if (!keepKeys.has(key) && key !== todayKey) {
+      delete doneMap[key];
+      hasChanged = true;
+    }
+  });
+
+  if (hasChanged) {
+    saveDailyTaskDoneMap(doneMap);
+  }
+}
+
+function isDailyGroupDone(group) {
+  const items =
+    typeof getDailyGroupItems === "function"
+      ? getDailyGroupItems(group)
+      : group?.items || [];
+
+  if (!Array.isArray(items) || items.length === 0) {
+    return false;
+  }
+
+  return items.every((item) => isDailyTaskDone(item));
+}
+
 function saveFlowState(openedAction = state.openedAction || "", stepElement = state.currentStepElement) {
   if (state.isFlowStateSaveDisabled) {
     return;
