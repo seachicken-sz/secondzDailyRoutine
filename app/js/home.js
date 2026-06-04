@@ -452,6 +452,7 @@ function renderHomeDailyExtraList(groups) {
   const hasTasks = HOME_EXTRA_DAILY_TASKS.length > 0;
 
   toggleHomeExtraSection(homeDailyExtraCardElement, hasTasks);
+  updateDailyStartedTodayClass();
   updateHomeIndex();
 }
 
