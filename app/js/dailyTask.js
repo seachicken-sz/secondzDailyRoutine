@@ -356,7 +356,7 @@ function recordCompletedDailyItem(item) {
     return;
   }
 
-  // 完了済みタスクとして保存
+    // 完了済みタスクとして保存
   state.completedDailyItems.push({
     key,
     itemId: item.id,
@@ -364,6 +364,12 @@ function recordCompletedDailyItem(item) {
     shortName: item["short-name"] || item.shortName || "",
     url,
   });
+
+  // ホーム画面の「本日実行済み」判定にも使うため、18時切替の完了データに保存する
+  if (typeof markDailyTaskDone === "function") {
+    markDailyTaskDone(item, "mainFlow");
+  }
+  
 }
 
 // ==================================================
