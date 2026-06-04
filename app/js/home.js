@@ -396,12 +396,27 @@ function renderHomeDailyExtraList(groups) {
       return;
     }
 
+    const isGroupDone =
+      typeof isDailyGroupDone === "function" && isDailyGroupDone(group);
+
     const groupDetails = document.createElement("details");
     groupDetails.className = "home-extra-group";
+    groupDetails.classList.toggle("is-daily-done", isGroupDone);
 
     const summary = document.createElement("summary");
     summary.className = "home-extra-group-summary";
-    summary.textContent = group.listName || "グループ未設定";
+
+    const summaryLabel = document.createElement("span");
+    summaryLabel.className = "home-extra-group-summary-label";
+    summaryLabel.textContent = group.listName || "グループ未設定";
+
+    const doneMark = document.createElement("span");
+    doneMark.className = "home-extra-group-done-mark show-when-daily-done";
+    doneMark.textContent = "✅";
+    doneMark.setAttribute("aria-label", "本日実行済み");
+
+    summary.appendChild(summaryLabel);
+    summary.appendChild(doneMark);
 
     const taskList = document.createElement("div");
     taskList.className = "home-extra-group-body";
@@ -592,6 +607,12 @@ async function openHomeExtraTaskPage(task, source) {
   } catch (error) {
     console.error("homeTask/requestSongログ送信失敗", error);
   }
+
+  // ホームのおかわりDailyから開いたdailyも、18時切替の本日実行済みにする
+    if (source === "daily" && typeof markDailyTaskDone === "function") {
+      markDailyTaskDone(task, "home");
+      renderHomeDailyExtraList(state.dailyGroups || []);
+    }
 
   // 期間限定 once は、ホームから開いた時点で実行済みにする
   if (source === "once" && getHomeTaskRepeatType(task) === "once") {
