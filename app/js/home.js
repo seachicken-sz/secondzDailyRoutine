@@ -510,7 +510,7 @@ function buildHomeUsenTaskFromSelectedSong() {
   const hasUrl = rawUrl !== "";
 
   return {
-    id: `home_usen_${song.id || song.name}`,
+    id: "home_usen_request",
     name: `USEN推し活リクエスト：${song.name}`,
     shortName: "USEN推し活リクエスト",
     songName: song.name,
