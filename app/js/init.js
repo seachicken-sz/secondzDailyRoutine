@@ -167,7 +167,10 @@ async function restoreFlowStateOrHome() {
 
   // USEN推しリクで選択していた曲
   state.selectedRequestSong = flowState.selectedRequestSong || null;
-
+  
+  // ラジオリクエストで実際に使う曲
+  state.selectedRadioRequestSong = flowState.selectedRadioRequestSong || null;
+  
   // デイリータスクの現在グループ位置
   state.currentDailyGroupIndex = Number(flowState.currentDailyGroupIndex) || 0;
 
@@ -263,7 +266,15 @@ async function restoreFlowStateOrHome() {
 
     return;
   }
-
+  
+  // ==================================================
+  // ラジオリクエスト曲切替画面の復元
+  // ==================================================
+  if (flowState.currentStepId === "radioRequestSongOverrideStep") {
+    await showRadioRequestSongOverrideStep();
+    return;
+  }
+  
   // ==================================================
   // デイリータスク画面の復元
   // ==================================================
