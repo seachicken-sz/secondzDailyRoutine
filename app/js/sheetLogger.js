@@ -702,3 +702,27 @@ async function sendMemberWorkLinkLog(data) {
     }]
   });
 }
+/**
+ * ラジオリクエスト用の新曲切り替えログを送信する
+ *
+ * taskType は requestSong のまま、
+ * itemId は固定で newSong にする。
+ *
+ * @param {Object} song
+ * @returns {Promise<boolean>}
+ */
+async function sendNewSongRequestLog(song) {
+  if (!song || !song.name) {
+    return false;
+  }
+
+  const item = createSheetItem({}, {
+    itemId: "newSong",
+    title: song.name,
+    url: ""
+  });
+
+  return sendSheetLog({
+    requestSong: [item]
+  });
+}
