@@ -155,6 +155,14 @@ function isDailyGroupDone(group) {
   return items.every((item) => isDailyTaskDone(item));
 }
 
+function isAnyDailyGroupDoneToday(groups) {
+  if (!Array.isArray(groups) || groups.length === 0) {
+    return false;
+  }
+
+  return groups.some((group) => isDailyGroupDone(group));
+}
+
 function saveFlowState(openedAction = state.openedAction || "", stepElement = state.currentStepElement) {
   if (state.isFlowStateSaveDisabled) {
     return;
