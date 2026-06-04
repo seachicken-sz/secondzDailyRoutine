@@ -18,6 +18,9 @@ const homeStepElement = document.getElementById("homeStep");
 const homeLogoImageElement = document.getElementById("homeLogoImage");
 // 開始ボタン
 const startRoutineButtonElement = document.getElementById("startRoutineButton");
+// おかわりdailyボタン
+const homeDailyJumpAreaElement = document.getElementById("homeDailyJumpArea");
+const homeDailyJumpButtonElement = document.getElementById("homeDailyJumpButton");
 // ホーム画面の導入案内カード（ブラウザ限定）
 const homeInstallGuideCardElement = document.getElementById("homeInstallGuideCard");
 // 導入案内カード内の「詳しくはこちら」ボタン（ブラウザ限定）
