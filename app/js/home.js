@@ -220,6 +220,10 @@ let HOME_EXTRA_DAILY_TASKS = [];
 let HOME_EXTRA_ONCE_TASKS = [];
 let HOME_EXTRA_USEN_TASKS = [];
 
+// USEN疑似タスクGroupの開閉状態
+// プルダウン変更で再描画しても、開いていたら開いたままにする
+let HOME_USEN_EXTRA_GROUP_OPEN = false;
+
 // sectionを表示/非表示にする
 function toggleHomeExtraSection(cardElement, shouldShow) {
   if (!cardElement) {
@@ -342,6 +346,7 @@ function getHomeExtraTaskBySource(source, index) {
 }
 
 // タスク詳細DOMを作る
+// 通常Daily/期間限定用。USEN疑似タスクは1段表示にしたいため専用描画で作る。
 function createHomeExtraTaskDetail({ task, source, index }) {
   const details = document.createElement("details");
   details.className = "home-extra-task-detail";
@@ -387,13 +392,7 @@ function createHomeExtraTaskDetail({ task, source, index }) {
   const taskUrl = getHomeExtraTaskUrl(task, source);
 
   if (!taskUrl) {
-    if (source === "usen") {
-      openButton.disabled = true;
-      openButton.classList.add("is-disabled");
-      openButton.textContent = "USEN非対応";
-    } else {
-      openButton.classList.add("hidden");
-    }
+    openButton.classList.add("hidden");
   }
 
   actionArea.appendChild(openButton);
@@ -544,8 +543,13 @@ function renderHomeUsenExtraList() {
     typeof isDailyTaskDone === "function" && isDailyTaskDone(task);
 
   const groupDetails = document.createElement("details");
-  groupDetails.className = "home-extra-group";
+  groupDetails.className = "home-extra-group home-usen-extra-group";
   groupDetails.classList.toggle("is-daily-done", isGroupDone);
+  groupDetails.open = HOME_USEN_EXTRA_GROUP_OPEN;
+
+  groupDetails.addEventListener("toggle", () => {
+    HOME_USEN_EXTRA_GROUP_OPEN = groupDetails.open;
+  });
 
   const summary = document.createElement("summary");
   summary.className = "home-extra-group-summary";
@@ -562,22 +566,62 @@ function renderHomeUsenExtraList() {
   summary.appendChild(summaryLabel);
   summary.appendChild(doneMark);
 
-  const taskList = document.createElement("div");
-  taskList.className = "home-extra-group-body";
+  const taskBody = document.createElement("div");
+  taskBody.className = "home-extra-group-body home-usen-extra-body";
+
+  const taskTitle = document.createElement("p");
+  taskTitle.className = "home-usen-task-title";
+  taskTitle.textContent = task.name;
+
+  const comment = document.createElement("div");
+  comment.className = "notice-box home-extra-task-comment";
+  comment.textContent = normalizeDisplayNewlines(getHomeExtraTaskComment(task, "usen"));
+
+  const actionArea = document.createElement("div");
+  actionArea.className = "home-extra-task-actions";
 
   const index = HOME_EXTRA_USEN_TASKS.length;
   HOME_EXTRA_USEN_TASKS.push(task);
 
-  taskList.appendChild(
-    createHomeExtraTaskDetail({
-      task,
-      source: "usen",
-      index,
-    })
-  );
+  const openButton = document.createElement("button");
+  openButton.type = "button";
+  openButton.className = "primary-button compact-button";
+  openButton.textContent = task.url ? "ページを開く" : "USEN非対応";
+  openButton.dataset.homeExtraAction = "open";
+  openButton.dataset.source = "usen";
+  openButton.dataset.index = String(index);
+
+  if (!task.url) {
+    openButton.disabled = true;
+    openButton.classList.add("is-disabled");
+  }
+
+  const shareXButton = document.createElement("button");
+  shareXButton.type = "button";
+  shareXButton.className = "secondary-button compact-button";
+  shareXButton.textContent = "このタスクをXでシェア";
+  shareXButton.dataset.homeExtraAction = "share-x";
+  shareXButton.dataset.source = "usen";
+  shareXButton.dataset.index = String(index);
+
+  const shareThreadsButton = document.createElement("button");
+  shareThreadsButton.type = "button";
+  shareThreadsButton.className = "secondary-button compact-button";
+  shareThreadsButton.textContent = "コピーしてThreadsを開く";
+  shareThreadsButton.dataset.homeExtraAction = "share-threads";
+  shareThreadsButton.dataset.source = "usen";
+  shareThreadsButton.dataset.index = String(index);
+
+  actionArea.appendChild(openButton);
+  actionArea.appendChild(shareXButton);
+  actionArea.appendChild(shareThreadsButton);
+
+  taskBody.appendChild(taskTitle);
+  taskBody.appendChild(comment);
+  taskBody.appendChild(actionArea);
 
   groupDetails.appendChild(summary);
-  groupDetails.appendChild(taskList);
+  groupDetails.appendChild(taskBody);
   homeUsenExtraListElement.appendChild(groupDetails);
 
   const hasDailyTasks = HOME_EXTRA_DAILY_TASKS.length > 0;
