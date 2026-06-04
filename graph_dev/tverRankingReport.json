@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/04 22:23",
+  "updatedAt": "2026/06/04 23:23",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/05/29",
-      "updatedAt": "2026/06/04 22:23",
+      "updatedAt": "2026/06/04 23:23",
       "episodeId": "epqhlsu653",
       "subtitle": "【timelesz×相葉雅紀】サシトーク",
       "likes": "2.3万",
@@ -493,6 +493,10 @@
         {
           "hour": 144,
           "likes": 23000
+        },
+        {
+          "hour": 145,
+          "likes": 23000
         }
       ],
       "rankings": [
@@ -500,7 +504,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 20,
-          "elapsedHour": 144,
+          "elapsedHour": 145,
           "elapsedRank": 20,
           "currentPoints": [
             {
@@ -1070,6 +1074,10 @@
             {
               "hour": 144,
               "rank": 20
+            },
+            {
+              "hour": 145,
+              "rank": 20
             }
           ],
           "previousPoints": [
@@ -1276,9 +1284,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 43,
-          "elapsedHour": 144,
-          "elapsedRank": 43,
+          "currentRank": 42,
+          "elapsedHour": 145,
+          "elapsedRank": 42,
           "currentPoints": [
             {
               "hour": 9,
@@ -1819,24 +1827,28 @@
             {
               "hour": 144,
               "rank": 43
+            },
+            {
+              "hour": 145,
+              "rank": 42
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
+              "rank": 39,
+              "title": "巷のウワサ大検証！それって実際どうなの会"
+            },
+            {
               "rank": 40,
-              "title": "余命３ヶ月のサレ夫"
-            },
-            {
-              "rank": 41,
-              "title": "犬飼さんは隠れ溺愛上司"
-            },
-            {
-              "rank": 42,
               "title": "君が死刑になる前に"
             },
             {
-              "rank": 43,
+              "rank": 41,
+              "title": "余命３ヶ月のサレ夫"
+            },
+            {
+              "rank": 42,
               "title": "タイムレスマン"
             }
           ]
@@ -1846,7 +1858,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/05/31",
-      "updatedAt": "2026/06/04 22:23",
+      "updatedAt": "2026/06/04 23:23",
       "episodeId": "epi4thbfbk",
       "subtitle": "【TOYOTAの最新ロボの秘密】衝撃!!食べられる機械",
       "likes": "1.3万",
@@ -2219,15 +2231,19 @@
         {
           "hour": 104,
           "likes": 13000
+        },
+        {
+          "hour": 105,
+          "likes": 13000
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 40,
-          "elapsedHour": 104,
-          "elapsedRank": 40,
+          "currentRank": 39,
+          "elapsedHour": 105,
+          "elapsedRank": 39,
           "currentPoints": [
             {
               "hour": 6,
@@ -2620,6 +2636,10 @@
             {
               "hour": 104,
               "rank": 40
+            },
+            {
+              "hour": 105,
+              "rank": 39
             }
           ],
           "previousPoints": [
@@ -2966,8 +2986,12 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 37,
+              "rank": 36,
               "title": "永野＆くるまのひっかかりニーチェ"
+            },
+            {
+              "rank": 37,
+              "title": "奇跡体験！アンビリバボー"
             },
             {
               "rank": 38,
@@ -2975,10 +2999,6 @@
             },
             {
               "rank": 39,
-              "title": "日曜日の初耳学"
-            },
-            {
-              "rank": 40,
               "title": "timeleszファミリア"
             }
           ]
@@ -3243,10 +3263,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/02",
-      "updatedAt": "2026/06/04 22:23",
+      "updatedAt": "2026/06/04 23:23",
       "episodeId": "epbxaud3gs",
       "subtitle": "チョコプラ・timeleszがデスソースの浄水に挑戦！",
-      "likes": "8156",
+      "likes": "8230",
       "favorites": "4.9万",
       "likePoints": [
         {
@@ -3432,6 +3452,10 @@
         {
           "hour": 46,
           "likes": 8156
+        },
+        {
+          "hour": 47,
+          "likes": 8230
         }
       ],
       "rankings": [
@@ -3439,7 +3463,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 13,
-          "elapsedHour": 46,
+          "elapsedHour": 47,
           "elapsedRank": 13,
           "currentPoints": [
             {
@@ -3608,6 +3632,10 @@
             },
             {
               "hour": 46,
+              "rank": 13
+            },
+            {
+              "hour": 47,
               "rank": 13
             }
           ],
@@ -4048,7 +4076,7 @@
           "nearbyRanking": [
             {
               "rank": 10,
-              "title": "限界突破！やってM!LK"
+              "title": "Aぇ! groupのQ＆Aぇ!"
             },
             {
               "rank": 11,
@@ -4241,10 +4269,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/04",
-      "updatedAt": "2026/06/04 22:23",
+      "updatedAt": "2026/06/04 23:23",
       "episodeId": "ep1tx7r71f",
       "subtitle": "【名物企画】英語で曲当てクイズ/ケムリがあまりにもカッコいい",
-      "likes": "7789",
+      "likes": "7781",
       "favorites": "21.8万",
       "likePoints": [
         {
@@ -4326,6 +4354,10 @@
         {
           "hour": 20,
           "likes": 7789
+        },
+        {
+          "hour": 21,
+          "likes": 7781
         }
       ],
       "rankings": [
@@ -4333,7 +4365,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 12,
-          "elapsedHour": 20,
+          "elapsedHour": 21,
           "elapsedRank": 12,
           "currentPoints": [
             {
@@ -4386,6 +4418,10 @@
             },
             {
               "hour": 20,
+              "rank": 12
+            },
+            {
+              "hour": 21,
               "rank": 12
             }
           ],
@@ -4642,11 +4678,11 @@
           "nearbyRanking": [
             {
               "rank": 9,
-              "title": "マツコの知らない世界"
+              "title": "かまいガチ"
             },
             {
               "rank": 10,
-              "title": "かまいガチ"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 11,
@@ -4662,7 +4698,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 29,
-          "elapsedHour": 20,
+          "elapsedHour": 21,
           "elapsedRank": 29,
           "currentPoints": [
             {
@@ -4699,6 +4735,10 @@
             },
             {
               "hour": 20,
+              "rank": 29
+            },
+            {
+              "hour": 21,
               "rank": 29
             }
           ],
@@ -4860,10 +4900,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/04 22:23",
+      "updatedAt": "2026/06/04 23:23",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "3807",
+      "likes": "3812",
       "favorites": "75.9万",
       "likePoints": [
         {
@@ -5619,10 +5659,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/04 22:23",
+      "updatedAt": "2026/06/04 23:23",
       "episodeId": "epref0f8o9",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！山下智久登場",
-      "likes": "6480",
+      "likes": "6538",
       "favorites": "6.8万",
       "likePoints": [
         {
@@ -5792,15 +5832,19 @@
         {
           "hour": 45,
           "likes": 6480
+        },
+        {
+          "hour": 46,
+          "likes": 6538
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 44,
-          "elapsedHour": 45,
-          "elapsedRank": 44,
+          "currentRank": 46,
+          "elapsedHour": 46,
+          "elapsedRank": 46,
           "currentPoints": [
             {
               "hour": 13,
@@ -5933,6 +5977,10 @@
             {
               "hour": 45,
               "rank": 44
+            },
+            {
+              "hour": 46,
+              "rank": 46
             }
           ],
           "previousPoints": [
@@ -5971,19 +6019,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 41,
-              "title": "家、ついて行ってイイですか？"
-            },
-            {
-              "rank": 42,
-              "title": "いろはに千鳥"
-            },
-            {
               "rank": 43,
-              "title": "かまいたちの掟"
+              "title": "いたジャン！"
             },
             {
               "rank": 44,
+              "title": "いろはに千鳥"
+            },
+            {
+              "rank": 45,
+              "title": "STAR"
+            },
+            {
+              "rank": 46,
               "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
@@ -6040,10 +6088,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/05/29",
-      "updatedAt": "2026/06/04 22:23",
+      "updatedAt": "2026/06/04 23:23",
       "episodeId": "ep9iknamnl",
       "subtitle": "第129回 風磨・長谷川初MC対決！本気あっち向いてホイ",
-      "likes": "7163",
+      "likes": "7216",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -6621,6 +6669,10 @@
         {
           "hour": 165,
           "likes": 7163
+        },
+        {
+          "hour": 166,
+          "likes": 7216
         }
       ],
       "rankings": [
@@ -6871,10 +6923,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/05/30",
-      "updatedAt": "2026/06/04 22:23",
+      "updatedAt": "2026/06/04 23:23",
       "episodeId": "epdpoawq6d",
       "subtitle": "マッサマンvs錦鯉マッサノリマンSP前編",
-      "likes": "2110",
+      "likes": "2112",
       "favorites": "77.2万",
       "likePoints": [
         {
@@ -7052,6 +7104,10 @@
         {
           "hour": 123,
           "likes": 2110
+        },
+        {
+          "hour": 124,
+          "likes": 2112
         }
       ],
       "rankings": [
@@ -7394,10 +7450,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/04 22:23",
+      "updatedAt": "2026/06/04 23:23",
       "episodeId": "ep6a50091q",
       "subtitle": "第8話 走る身代金",
-      "likes": "5324",
+      "likes": "5303",
       "favorites": "36.9万",
       "likePoints": [
         {
@@ -7499,6 +7555,10 @@
         {
           "hour": 25,
           "likes": 5324
+        },
+        {
+          "hour": 26,
+          "likes": 5303
         }
       ],
       "rankings": [
@@ -7506,7 +7566,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 7,
-          "elapsedHour": 25,
+          "elapsedHour": 26,
           "elapsedRank": 7,
           "currentPoints": [
             {
@@ -7603,6 +7663,10 @@
             },
             {
               "hour": 25,
+              "rank": 7
+            },
+            {
+              "hour": 26,
               "rank": 7
             }
           ],
@@ -8287,7 +8351,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 9,
-          "elapsedHour": 25,
+          "elapsedHour": 26,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -8380,6 +8444,10 @@
             },
             {
               "hour": 25,
+              "rank": 9
+            },
+            {
+              "hour": 26,
               "rank": 9
             }
           ],
@@ -9016,15 +9084,15 @@
           "nearbyRanking": [
             {
               "rank": 6,
-              "title": "リボーン ～最後のヒーロー～"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 7,
-              "title": "時すでにおスシ!?"
+              "title": "リボーン ～最後のヒーロー～"
             },
             {
               "rank": 8,
-              "title": "上田と女が吠える夜"
+              "title": "時すでにおスシ!?"
             },
             {
               "rank": 9,
@@ -9037,11 +9105,11 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/04 22:23",
+      "updatedAt": "2026/06/04 23:23",
       "episodeId": "ep24dk5lx2",
       "subtitle": "“ハプニング対応力講座”",
       "likes": "1.3万",
-      "favorites": "21.0万",
+      "favorites": "21.1万",
       "likePoints": [
         {
           "hour": 2,
@@ -9210,15 +9278,19 @@
         {
           "hour": 43,
           "likes": 13000
+        },
+        {
+          "hour": 44,
+          "likes": 13000
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 21,
-          "elapsedHour": 43,
-          "elapsedRank": 21,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 9,
@@ -9362,31 +9434,14 @@
             }
           ],
           "previousPoints": [],
-          "nearbyRanking": [
-            {
-              "rank": 18,
-              "title": "大悟の芸人領収書"
-            },
-            {
-              "rank": 19,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
-            },
-            {
-              "rank": 20,
-              "title": "タイムレスマン"
-            },
-            {
-              "rank": 21,
-              "title": "バラバラマンスリー"
-            }
-          ]
+          "nearbyRanking": []
         },
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 44,
-          "elapsedHour": 43,
-          "elapsedRank": 44,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 16,
@@ -9502,34 +9557,17 @@
             }
           ],
           "previousPoints": [],
-          "nearbyRanking": [
-            {
-              "rank": 41,
-              "title": "犬飼さんは隠れ溺愛上司"
-            },
-            {
-              "rank": 42,
-              "title": "君が死刑になる前に"
-            },
-            {
-              "rank": 43,
-              "title": "タイムレスマン"
-            },
-            {
-              "rank": 44,
-              "title": "バラバラマンスリー"
-            }
-          ]
+          "nearbyRanking": []
         }
       ]
     },
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/04 22:23",
+      "updatedAt": "2026/06/04 23:23",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "5347",
+      "likes": "5354",
       "favorites": "1.4万",
       "likePoints": [
         {
@@ -10168,10 +10206,10 @@
     "srbkekw9oj": {
       "programTitle": "ネプリーグ",
       "broadcastDate": "2026/06/01",
-      "updatedAt": "2026/06/04 22:23",
+      "updatedAt": "2026/06/04 23:23",
       "episodeId": "ep9yhege0b",
       "subtitle": "20周年イヤーの難クイズを林先生が徹底解説！",
-      "likes": "1479",
+      "likes": "1528",
       "favorites": "17.1万",
       "likePoints": [
         {
@@ -10469,6 +10507,10 @@
         {
           "hour": 75,
           "likes": 1479
+        },
+        {
+          "hour": 76,
+          "likes": 1528
         }
       ],
       "rankings": [
