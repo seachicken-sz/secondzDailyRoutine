@@ -386,11 +386,11 @@ function buildPostText(platform = "x") {
 // ==================================================
 // 投稿文の冒頭に必ず入れる固定文を作る
 function buildFixedPostLines() {
-  const selectedRequestSongName = getSelectedRequestSongName();
+  const selectedRadioRequestSongName = getSelectedRadioRequestSongName();
 
   return [
     `${formatMonthDay(new Date())}「タムごとDaily」タスク完了👍`,
-    `${selectedRequestSongName}をリクエストしたよ😊`,
+    `${selectedRadioRequestSongName}をリクエストしたよ😊`,
   ];
 }
 
