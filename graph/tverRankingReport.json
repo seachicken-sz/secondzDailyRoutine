@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026/06/05 00:58",
+  "updatedAt": "2026/06/05 06:58",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
@@ -2035,7 +2035,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/04",
-      "updatedAt": "2026/06/05 00:02",
+      "updatedAt": "2026/06/05 06:02",
       "episodeId": "ep1tx7r71f",
       "subtitle": "【名物企画】英語で曲当てクイズ/ケムリがあまりにもカッコいい",
       "likes": "5214",
@@ -2044,9 +2044,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 12,
-          "elapsedHour": 22,
-          "elapsedRank": 12,
+          "currentRank": 11,
+          "elapsedHour": 28,
+          "elapsedRank": 11,
           "currentPoints": [
             {
               "hour": 8,
@@ -2107,6 +2107,30 @@
             {
               "hour": 22,
               "rank": 12
+            },
+            {
+              "hour": 23,
+              "rank": 12
+            },
+            {
+              "hour": 24,
+              "rank": 11
+            },
+            {
+              "hour": 25,
+              "rank": 11
+            },
+            {
+              "hour": 26,
+              "rank": 11
+            },
+            {
+              "hour": 27,
+              "rank": 11
+            },
+            {
+              "hour": 28,
+              "rank": 11
             }
           ],
           "previousPoints": [
@@ -2277,6 +2301,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 8,
+              "title": "ホンマでっか！？TV"
+            },
+            {
               "rank": 9,
               "title": "ニノなのに"
             },
@@ -2286,10 +2314,6 @@
             },
             {
               "rank": 11,
-              "title": "アメトーーク！"
-            },
-            {
-              "rank": 12,
               "title": "ニカゲーム"
             }
           ]
@@ -2297,9 +2321,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 27,
-          "elapsedHour": 22,
-          "elapsedRank": 27,
+          "currentRank": 28,
+          "elapsedHour": 28,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 13,
@@ -2340,6 +2364,30 @@
             {
               "hour": 22,
               "rank": 27
+            },
+            {
+              "hour": 23,
+              "rank": 28
+            },
+            {
+              "hour": 24,
+              "rank": 27
+            },
+            {
+              "hour": 25,
+              "rank": 27
+            },
+            {
+              "hour": 26,
+              "rank": 28
+            },
+            {
+              "hour": 27,
+              "rank": 28
+            },
+            {
+              "hour": 28,
+              "rank": 28
             }
           ],
           "previousPoints": [
@@ -2478,19 +2526,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 24,
-              "title": "10回切って倒れない木はない"
-            },
-            {
               "rank": 25,
-              "title": "マツコの知らない世界"
+              "title": "ニノなのに"
             },
             {
               "rank": 26,
-              "title": "アメトーーク！"
+              "title": "10回切って倒れない木はない"
             },
             {
               "rank": 27,
+              "title": "マツコの知らない世界"
+            },
+            {
+              "rank": 28,
               "title": "ニカゲーム"
             }
           ]
@@ -2788,7 +2836,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/05 00:02",
+      "updatedAt": "2026/06/05 06:02",
       "episodeId": "ep6a50091q",
       "subtitle": "第8話 走る身代金",
       "likes": "3794",
@@ -2798,7 +2846,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 7,
-          "elapsedHour": 27,
+          "elapsedHour": 33,
           "elapsedRank": 7,
           "currentPoints": [
             {
@@ -2903,6 +2951,30 @@
             },
             {
               "hour": 27,
+              "rank": 7
+            },
+            {
+              "hour": 28,
+              "rank": 7
+            },
+            {
+              "hour": 29,
+              "rank": 7
+            },
+            {
+              "hour": 30,
+              "rank": 7
+            },
+            {
+              "hour": 31,
+              "rank": 7
+            },
+            {
+              "hour": 32,
+              "rank": 7
+            },
+            {
+              "hour": 33,
               "rank": 7
             }
           ],
@@ -3115,7 +3187,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 9,
-          "elapsedHour": 27,
+          "elapsedHour": 33,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -3212,6 +3284,30 @@
             },
             {
               "hour": 27,
+              "rank": 9
+            },
+            {
+              "hour": 28,
+              "rank": 9
+            },
+            {
+              "hour": 29,
+              "rank": 9
+            },
+            {
+              "hour": 30,
+              "rank": 9
+            },
+            {
+              "hour": 31,
+              "rank": 9
+            },
+            {
+              "hour": 32,
+              "rank": 9
+            },
+            {
+              "hour": 33,
               "rank": 9
             }
           ],
@@ -3409,483 +3505,6 @@
             {
               "rank": 9,
               "title": "ボーダレス～広域移動捜査隊～"
-            }
-          ]
-        }
-      ]
-    },
-    "srajiec0m4": {
-      "programTitle": "何か“オモシロいコト”ないの？",
-      "broadcastDate": "2026/05/29",
-      "updatedAt": "2026/05/31 00:02",
-      "episodeId": "ep9iknamnl",
-      "subtitle": "第129回 風磨・長谷川初MC対決！本気あっち向いてホイ",
-      "likes": "4521",
-      "favorites": "71.6万",
-      "rankings": [
-        {
-          "type": "variety",
-          "label": "バラエティ",
-          "currentRank": 44,
-          "elapsedHour": 47,
-          "elapsedRank": 44,
-          "currentPoints": [
-            {
-              "hour": 11,
-              "rank": 42
-            },
-            {
-              "hour": 12,
-              "rank": 39
-            },
-            {
-              "hour": 13,
-              "rank": 36
-            },
-            {
-              "hour": 14,
-              "rank": 35
-            },
-            {
-              "hour": 15,
-              "rank": 33
-            },
-            {
-              "hour": 16,
-              "rank": 32
-            },
-            {
-              "hour": 17,
-              "rank": 28
-            },
-            {
-              "hour": 18,
-              "rank": 27
-            },
-            {
-              "hour": 19,
-              "rank": 28
-            },
-            {
-              "hour": 20,
-              "rank": 24
-            },
-            {
-              "hour": 21,
-              "rank": 18
-            },
-            {
-              "hour": 22,
-              "rank": 16
-            },
-            {
-              "hour": 23,
-              "rank": 17
-            },
-            {
-              "hour": 24,
-              "rank": 17
-            },
-            {
-              "hour": 25,
-              "rank": 17
-            },
-            {
-              "hour": 26,
-              "rank": 17
-            },
-            {
-              "hour": 27,
-              "rank": 16
-            },
-            {
-              "hour": 28,
-              "rank": 16
-            },
-            {
-              "hour": 29,
-              "rank": 17
-            },
-            {
-              "hour": 30,
-              "rank": 18
-            },
-            {
-              "hour": 31,
-              "rank": 19
-            },
-            {
-              "hour": 32,
-              "rank": 22
-            },
-            {
-              "hour": 33,
-              "rank": 23
-            },
-            {
-              "hour": 34,
-              "rank": 23
-            },
-            {
-              "hour": 35,
-              "rank": 25
-            },
-            {
-              "hour": 36,
-              "rank": 27
-            },
-            {
-              "hour": 37,
-              "rank": 28
-            },
-            {
-              "hour": 38,
-              "rank": 30
-            },
-            {
-              "hour": 39,
-              "rank": 31
-            },
-            {
-              "hour": 40,
-              "rank": 33
-            },
-            {
-              "hour": 41,
-              "rank": 36
-            },
-            {
-              "hour": 42,
-              "rank": 37
-            },
-            {
-              "hour": 43,
-              "rank": 38
-            },
-            {
-              "hour": 44,
-              "rank": 40
-            },
-            {
-              "hour": 45,
-              "rank": 41
-            },
-            {
-              "hour": 46,
-              "rank": 42
-            },
-            {
-              "hour": 47,
-              "rank": 44
-            }
-          ],
-          "previousPoints": [
-            {
-              "hour": 9,
-              "rank": 47
-            },
-            {
-              "hour": 10,
-              "rank": 41
-            },
-            {
-              "hour": 11,
-              "rank": 37
-            },
-            {
-              "hour": 12,
-              "rank": 31
-            },
-            {
-              "hour": 13,
-              "rank": 29
-            },
-            {
-              "hour": 14,
-              "rank": 27
-            },
-            {
-              "hour": 15,
-              "rank": 24
-            },
-            {
-              "hour": 16,
-              "rank": 23
-            },
-            {
-              "hour": 17,
-              "rank": 21
-            },
-            {
-              "hour": 18,
-              "rank": 20
-            },
-            {
-              "hour": 19,
-              "rank": 17
-            },
-            {
-              "hour": 20,
-              "rank": 17
-            },
-            {
-              "hour": 21,
-              "rank": 16
-            },
-            {
-              "hour": 22,
-              "rank": 15
-            },
-            {
-              "hour": 23,
-              "rank": 14
-            },
-            {
-              "hour": 24,
-              "rank": 14
-            },
-            {
-              "hour": 25,
-              "rank": 14
-            },
-            {
-              "hour": 26,
-              "rank": 14
-            },
-            {
-              "hour": 27,
-              "rank": 14
-            },
-            {
-              "hour": 28,
-              "rank": 14
-            },
-            {
-              "hour": 29,
-              "rank": 14
-            },
-            {
-              "hour": 30,
-              "rank": 16
-            },
-            {
-              "hour": 31,
-              "rank": 17
-            },
-            {
-              "hour": 32,
-              "rank": 18
-            },
-            {
-              "hour": 33,
-              "rank": 20
-            },
-            {
-              "hour": 34,
-              "rank": 20
-            },
-            {
-              "hour": 35,
-              "rank": 20
-            },
-            {
-              "hour": 36,
-              "rank": 20
-            },
-            {
-              "hour": 37,
-              "rank": 22
-            },
-            {
-              "hour": 38,
-              "rank": 22
-            },
-            {
-              "hour": 39,
-              "rank": 22
-            },
-            {
-              "hour": 40,
-              "rank": 24
-            },
-            {
-              "hour": 41,
-              "rank": 25
-            },
-            {
-              "hour": 42,
-              "rank": 26
-            },
-            {
-              "hour": 43,
-              "rank": 27
-            },
-            {
-              "hour": 44,
-              "rank": 30
-            },
-            {
-              "hour": 45,
-              "rank": 33
-            },
-            {
-              "hour": 46,
-              "rank": 34
-            },
-            {
-              "hour": 47,
-              "rank": 35
-            }
-          ],
-          "nearbyRanking": [
-            {
-              "rank": 41,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 42,
-              "title": "かまいたちの机上の空論城"
-            },
-            {
-              "rank": 43,
-              "title": "家、ついて行ってイイですか？"
-            },
-            {
-              "rank": 44,
-              "title": "何か“オモシロいコト”ないの？"
-            }
-          ]
-        },
-        {
-          "type": "all",
-          "label": "総合",
-          "currentRank": 48,
-          "elapsedHour": 31,
-          "elapsedRank": 48,
-          "currentPoints": [
-            {
-              "hour": 21,
-              "rank": 44
-            },
-            {
-              "hour": 22,
-              "rank": 43
-            },
-            {
-              "hour": 23,
-              "rank": 44
-            },
-            {
-              "hour": 24,
-              "rank": 43
-            },
-            {
-              "hour": 25,
-              "rank": 44
-            },
-            {
-              "hour": 26,
-              "rank": 44
-            },
-            {
-              "hour": 27,
-              "rank": 43
-            },
-            {
-              "hour": 28,
-              "rank": 43
-            },
-            {
-              "hour": 29,
-              "rank": 45
-            },
-            {
-              "hour": 30,
-              "rank": 47
-            },
-            {
-              "hour": 31,
-              "rank": 48
-            }
-          ],
-          "previousPoints": [
-            {
-              "hour": 18,
-              "rank": 49
-            },
-            {
-              "hour": 19,
-              "rank": 45
-            },
-            {
-              "hour": 20,
-              "rank": 45
-            },
-            {
-              "hour": 21,
-              "rank": 42
-            },
-            {
-              "hour": 22,
-              "rank": 41
-            },
-            {
-              "hour": 23,
-              "rank": 40
-            },
-            {
-              "hour": 24,
-              "rank": 40
-            },
-            {
-              "hour": 25,
-              "rank": 41
-            },
-            {
-              "hour": 26,
-              "rank": 41
-            },
-            {
-              "hour": 27,
-              "rank": 42
-            },
-            {
-              "hour": 28,
-              "rank": 42
-            },
-            {
-              "hour": 29,
-              "rank": 42
-            },
-            {
-              "hour": 30,
-              "rank": 45
-            },
-            {
-              "hour": 31,
-              "rank": 46
-            },
-            {
-              "hour": 32,
-              "rank": 47
-            }
-          ],
-          "nearbyRanking": [
-            {
-              "rank": 45,
-              "title": "しゃべくり007"
-            },
-            {
-              "rank": 46,
-              "title": "タツキ先生は甘すぎる！"
-            },
-            {
-              "rank": 47,
-              "title": "クレイジージャーニー"
-            },
-            {
-              "rank": 48,
-              "title": "何か“オモシロいコト”ないの？"
             }
           ]
         }
