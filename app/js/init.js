@@ -71,6 +71,7 @@ async function init() {
     }
     // 一人一回系タスクなど、保存済み完了データのうち不要なものを整理
     cleanupOnceTaskDoneMap(state.onceTasks);
+    cleanupDailyTaskDoneMap();
     // ホーム画面のお知らせ/Information一覧を読み込み
     const homeInfoList = await loadHomeInfoList();
     // ホーム画面のお知らせ/Information一覧を描画
