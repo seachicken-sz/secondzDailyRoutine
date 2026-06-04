@@ -371,6 +371,16 @@ function createHomeExtraTaskDetail({ task, source, index }) {
   return details;
 }
 
+
+function updateDailyStartedTodayClass() {
+  const isStarted =
+    typeof isAnyDailyGroupDoneToday === "function" &&
+    isAnyDailyGroupDoneToday(state.dailyGroups || []);
+
+  document.body.classList.toggle("daily-started-today", isStarted);
+}
+
+
 // ==================================================
 // ホーム：おかわりDaily
 // ==================================================
