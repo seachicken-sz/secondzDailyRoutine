@@ -86,6 +86,7 @@ async function showRequestSongStep() {
   try {
     // 前回選択していたリクエスト曲をリセットする
     state.selectedRequestSong = null;
+    state.selectedRadioRequestSong = null;
 
     // 選択済み曲の表示エリアを非表示に戻す
     if (selectedRequestSongAreaElement) {
