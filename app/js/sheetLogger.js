@@ -458,18 +458,23 @@ async function sendOnceListLog(tasks) {
 /**
  * リクエスト曲ログを送信する
  *
+ * URLありのUSEN曲はURL付きで送信し、
+ * URLなしの曲も曲名ベースでrequestSongログとして送信する。
+ *
  * @param {Object} song
  * @returns {Promise<boolean>}
  */
 async function sendRequestSongLog(song) {
-  if (!song || !song.url) {
+  if (!song || !song.name) {
     return false;
   }
 
+  const songUrl = String(song.url || "").trim();
+
   const item = createSheetItem(song, {
-    itemId: song.id || createLogItemId("rq", song.url),
+    itemId: song.id || createLogItemId("rq", songUrl || song.name),
     title: song.name || "",
-    url: buildRequestSongUrl(song.url)
+    url: songUrl ? buildRequestSongUrl(songUrl) : ""
   });
 
   return sendSheetLog({
