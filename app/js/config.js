@@ -32,7 +32,14 @@ const DATA_PATHS = {
 const STORAGE_KEYS = {
   flowState: "secondzDailyRoutineFlowState",
   onceTaskDoneMap: "secondzDailyRoutineOnceTaskDoneMap",
+  dailyTaskDoneMap: "secondzDailyRoutineDailyTaskDoneMap",
 };
+
+// ==================================================
+// 定数 - デイリータスク日付切替
+// ==================================================
+// 18:00〜翌17:59 を同じ「本日」扱いにする
+const DAILY_TASK_DAY_SWITCH_HOUR = 18;
 
 // ==================================================
 // 定数 - 画面ID
