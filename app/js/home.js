@@ -50,6 +50,8 @@ function bindHomeEvents() {
   // ホーム用リクエスト曲選択
   // ==================================================
   bindHomeRequestSongSelectEvents();
+  // ホーム用USEN推し活リクエスト
+  bindHomeUsenRequestEvents();
 }
 
 // ==================================================
@@ -749,6 +751,7 @@ function initializeHomeRequestSongSelect() {
   });
 
   homeRequestSongSelectAreaElement.classList.remove("hidden");
+  updateHomeUsenRequestArea();
 }
 
 function bindHomeRequestSongSelectEvents() {
@@ -758,13 +761,15 @@ function bindHomeRequestSongSelectEvents() {
 
   homeRequestSongSelectElement.addEventListener("change", () => {
     const selectedIndex = Number(homeRequestSongSelectElement.value);
-
+  
     if (Number.isNaN(selectedIndex)) {
       state.homeSelectedRequestSong = null;
+      updateHomeUsenRequestArea();
       return;
     }
-
+  
     state.homeSelectedRequestSong = state.requestSongs[selectedIndex] || null;
+    updateHomeUsenRequestArea();
   });
 }
 
@@ -809,4 +814,79 @@ function buildHomeDailyTaskCopyText(item) {
   return template
     .replaceAll("musicname", musicName)
     .replaceAll("\\n", "\n");
+}
+
+
+function hasHomeSelectedRequestSongUrl() {
+  const song = getHomeSelectedRequestSong();
+  return Boolean(song && String(song.url || "").trim() !== "");
+}
+
+function getHomeSelectedRequestSongUsenUrl() {
+  const song = getHomeSelectedRequestSong();
+
+  if (!song || !String(song.url || "").trim()) {
+    return "";
+  }
+
+  return buildRequestSongUrl(String(song.url).trim());
+}
+
+function updateHomeUsenRequestArea() {
+  if (!homeUsenRequestAreaElement) {
+    return;
+  }
+
+  const song = getHomeSelectedRequestSong();
+
+  if (!song || !song.name) {
+    homeUsenRequestAreaElement.classList.add("hidden");
+    return;
+  }
+
+  homeUsenRequestAreaElement.classList.remove("hidden");
+
+  const hasUrl = hasHomeSelectedRequestSongUrl();
+
+  if (homeUsenRequestMessageElement) {
+    homeUsenRequestMessageElement.textContent = hasUrl
+      ? `${song.name}をUSEN推し活リクエストできます。`
+      : `${song.name}はUSEN推し活リクエスト非対応です。`;
+  }
+
+  if (homeOpenUsenRequestButtonElement) {
+    homeOpenUsenRequestButtonElement.disabled = !hasUrl;
+    homeOpenUsenRequestButtonElement.classList.toggle("is-disabled", !hasUrl);
+  }
+}
+
+function bindHomeUsenRequestEvents() {
+  addClickEvent(homeOpenUsenRequestButtonElement, () => {
+    const song = getHomeSelectedRequestSong();
+
+    if (!song || !song.name) {
+      alert("リクエスト曲が選択されていません。");
+      return;
+    }
+
+    if (!hasHomeSelectedRequestSongUrl()) {
+      alert(`${song.name}はUSEN推し活リクエスト非対応です。`);
+      return;
+    }
+
+    const requestUrl = getHomeSelectedRequestSongUsenUrl();
+
+    if (!requestUrl) {
+      alert(`${song.name}はUSEN推し活リクエスト非対応です。`);
+      return;
+    }
+
+    if (typeof sendRequestSongLog === "function") {
+      sendRequestSongLog(song).catch((error) => {
+        console.error("home USEN requestSongLog送信失敗", error);
+      });
+    }
+
+    location.href = requestUrl;
+  });
 }
