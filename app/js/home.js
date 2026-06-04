@@ -38,20 +38,21 @@ function bindHomeEvents() {
   // ホーム目次
   // ==================================================
   bindHomeIndexEvents();
+
   // ==================================================
   // ホーム限定：上に戻るボタン
   // ==================================================
   bindHomeBackToTopButton();
+
   // ==================================================
   // ホームのおかわりタスク操作
   // ==================================================
   bindHomeExtraTaskEvents();
+
   // ==================================================
   // ホーム用リクエスト曲選択
   // ==================================================
   bindHomeRequestSongSelectEvents();
-  // ホーム用USEN推し活リクエスト
-  bindHomeUsenRequestEvents();
 }
 
 // ==================================================
@@ -102,26 +103,32 @@ function updateHomeIndex() {
   if (!homeIndexListElement) {
     return;
   }
+
   const indexItems = [];
+
   if (isVisibleHomeSection("homeDailyExtraCard")) {
     indexItems.push({
       label: "おかわりDaily",
       targetId: "homeDailyExtraCard",
     });
   }
+
   if (isVisibleHomeSection("homeOnceMoreCard")) {
     indexItems.push({
       label: "期間限定",
       targetId: "homeOnceMoreCard",
     });
   }
+
   if (isVisibleHomeSection("homeInfoCard")) {
     indexItems.push({
       label: "最近のタムごと",
       targetId: "homeInfoCard",
     });
   }
+
   homeIndexListElement.innerHTML = "";
+
   if (indexItems.length === 0) {
     homeIndexListElement.innerHTML = `<p class="empty-text">表示できる項目はありません。</p>`;
     return;
@@ -137,11 +144,13 @@ function updateHomeIndex() {
     homeIndexListElement.appendChild(button);
   });
 }
+
 function isVisibleHomeSection(id) {
   const element = document.getElementById(id);
 
   return Boolean(element && !element.classList.contains("hidden"));
 }
+
 // ホーム目次クリックイベント
 function bindHomeIndexEvents() {
   if (!homeIndexListElement) {
@@ -245,6 +254,7 @@ function getHomeExtraTaskUrl(task, source) {
 
   return task?.url || "";
 }
+
 // タスク説明文取得
 function getHomeExtraTaskComment(task, source) {
   if (source === "daily") {
@@ -253,7 +263,7 @@ function getHomeExtraTaskComment(task, source) {
 
   if (source === "usen") {
     if (task?.url) {
-      return `${task.songName}をUSEN推し活リクエストできます。ページを開いてリクエストしてください。`;
+      return `${task.songName}をUSEN推し活リクエストできます。\nページを開いてリクエストしてください。`;
     }
 
     return `${task.songName}はUSEN推し活リクエスト非対応です。`;
@@ -377,7 +387,13 @@ function createHomeExtraTaskDetail({ task, source, index }) {
   const taskUrl = getHomeExtraTaskUrl(task, source);
 
   if (!taskUrl) {
-    openButton.classList.add("hidden");
+    if (source === "usen") {
+      openButton.disabled = true;
+      openButton.classList.add("is-disabled");
+      openButton.textContent = "USEN非対応";
+    } else {
+      openButton.classList.add("hidden");
+    }
   }
 
   actionArea.appendChild(openButton);
@@ -393,7 +409,7 @@ function createHomeExtraTaskDetail({ task, source, index }) {
   return details;
 }
 
-
+// 今日、dailyグループが1つ以上完了しているかをbodyクラスへ反映する
 function updateDailyStartedTodayClass() {
   const isStarted =
     typeof isAnyDailyGroupDoneToday === "function" &&
@@ -401,7 +417,6 @@ function updateDailyStartedTodayClass() {
 
   document.body.classList.toggle("daily-started-today", isStarted);
 }
-
 
 // ==================================================
 // ホーム：おかわりDaily
@@ -416,7 +431,9 @@ function renderHomeDailyExtraList(groups) {
   homeDailyExtraListElement.innerHTML = "";
 
   if (!Array.isArray(groups) || groups.length === 0) {
-    toggleHomeExtraSection(homeDailyExtraCardElement, false);
+    const hasUsenTasks = HOME_EXTRA_USEN_TASKS.length > 0;
+    toggleHomeExtraSection(homeDailyExtraCardElement, hasUsenTasks);
+    updateDailyStartedTodayClass();
     updateHomeIndex();
     return;
   }
@@ -471,10 +488,102 @@ function renderHomeDailyExtraList(groups) {
     homeDailyExtraListElement.appendChild(groupDetails);
   });
 
-  const hasTasks = HOME_EXTRA_DAILY_TASKS.length > 0;
+  const hasDailyTasks = HOME_EXTRA_DAILY_TASKS.length > 0;
+  const hasUsenTasks = HOME_EXTRA_USEN_TASKS.length > 0;
 
-  toggleHomeExtraSection(homeDailyExtraCardElement, hasTasks);
+  toggleHomeExtraSection(homeDailyExtraCardElement, hasDailyTasks || hasUsenTasks);
   updateDailyStartedTodayClass();
+  updateHomeIndex();
+}
+
+// ==================================================
+// ホーム：USEN推し活リクエスト疑似タスク
+// ==================================================
+
+function buildHomeUsenTaskFromSelectedSong() {
+  const song = getHomeSelectedRequestSong();
+
+  if (!song || !song.name) {
+    return null;
+  }
+
+  const rawUrl = String(song.url || "").trim();
+  const hasUrl = rawUrl !== "";
+
+  return {
+    id: `home_usen_${song.id || song.name}`,
+    name: `USEN推し活リクエスト：${song.name}`,
+    shortName: "USEN推し活リクエスト",
+    songName: song.name,
+    song,
+    url: hasUrl ? buildRequestSongUrl(rawUrl) : "",
+    repeatType: "daily",
+    inputFlag: false,
+    isUsenTask: true,
+  };
+}
+
+function renderHomeUsenExtraList() {
+  if (!homeUsenExtraListElement) {
+    return;
+  }
+
+  HOME_EXTRA_USEN_TASKS = [];
+  homeUsenExtraListElement.innerHTML = "";
+
+  const task = buildHomeUsenTaskFromSelectedSong();
+
+  if (!task) {
+    const hasDailyTasks = HOME_EXTRA_DAILY_TASKS.length > 0;
+    toggleHomeExtraSection(homeDailyExtraCardElement, hasDailyTasks);
+    updateHomeIndex();
+    return;
+  }
+
+  const isGroupDone =
+    typeof isDailyTaskDone === "function" && isDailyTaskDone(task);
+
+  const groupDetails = document.createElement("details");
+  groupDetails.className = "home-extra-group";
+  groupDetails.classList.toggle("is-daily-done", isGroupDone);
+
+  const summary = document.createElement("summary");
+  summary.className = "home-extra-group-summary";
+
+  const summaryLabel = document.createElement("span");
+  summaryLabel.className = "home-extra-group-summary-label";
+  summaryLabel.textContent = "USEN推し活リクエスト";
+
+  const doneMark = document.createElement("span");
+  doneMark.className = "home-extra-group-done-mark show-when-daily-done";
+  doneMark.textContent = "✅";
+  doneMark.setAttribute("aria-label", "本日実行済み");
+
+  summary.appendChild(summaryLabel);
+  summary.appendChild(doneMark);
+
+  const taskList = document.createElement("div");
+  taskList.className = "home-extra-group-body";
+
+  const index = HOME_EXTRA_USEN_TASKS.length;
+  HOME_EXTRA_USEN_TASKS.push(task);
+
+  taskList.appendChild(
+    createHomeExtraTaskDetail({
+      task,
+      source: "usen",
+      index,
+    })
+  );
+
+  groupDetails.appendChild(summary);
+  groupDetails.appendChild(taskList);
+  homeUsenExtraListElement.appendChild(groupDetails);
+
+  const hasDailyTasks = HOME_EXTRA_DAILY_TASKS.length > 0;
+  const hasUsenTasks = HOME_EXTRA_USEN_TASKS.length > 0;
+
+  toggleHomeExtraSection(homeDailyExtraCardElement, hasDailyTasks || hasUsenTasks);
   updateHomeIndex();
 }
 
@@ -547,6 +656,7 @@ function getExecutableHomeOnceMoreTasks(tasks) {
 // ==================================================
 
 function bindHomeExtraTaskEvents() {
+  bindHomeExtraListEvents(homeUsenExtraListElement);
   bindHomeExtraListEvents(homeDailyExtraListElement);
   bindHomeExtraListEvents(homeOnceMoreListElement);
 }
@@ -593,6 +703,11 @@ function bindHomeExtraListEvents(container) {
 async function openHomeExtraTaskPage(task, source) {
   const taskUrl = getHomeExtraTaskUrl(task, source);
 
+  if (source === "usen" && !taskUrl) {
+    alert(`${task.songName || "この曲"}はUSEN推し活リクエスト非対応です。`);
+    return;
+  }
+
   if (!taskUrl) {
     return;
   }
@@ -613,27 +728,37 @@ async function openHomeExtraTaskPage(task, source) {
   }
 
   try {
-    const logPromises = [];  
+    const logPromises = [];
+
     if (typeof sendHomeTaskLog === "function") {
       logPromises.push(
         sendHomeTaskLog(task, {
           source,
-          url: taskUrl
+          url: taskUrl,
         })
       );
     }
+
     if (
       source === "daily" &&
       task["input-flag"] === true &&
       typeof sendRequestSongLog === "function"
     ) {
       const selectedSong = getHomeSelectedRequestSong();
-  
+
       if (selectedSong) {
         logPromises.push(sendRequestSongLog(selectedSong));
       }
     }
-  
+
+    if (
+      source === "usen" &&
+      task.song &&
+      typeof sendRequestSongLog === "function"
+    ) {
+      logPromises.push(sendRequestSongLog(task.song));
+    }
+
     if (logPromises.length > 0) {
       await Promise.allSettled(logPromises);
     }
@@ -641,11 +766,15 @@ async function openHomeExtraTaskPage(task, source) {
     console.error("homeTask/requestSongログ送信失敗", error);
   }
 
-  // ホームのおかわりDailyから開いたdailyも、18時切替の本日実行済みにする
-    if (source === "daily" && typeof markDailyTaskDone === "function") {
-      markDailyTaskDone(task, "home");
-      renderHomeDailyExtraList(state.dailyGroups || []);
-    }
+  // ホームのおかわりDaily/USENから開いたタスクも、18時切替の本日実行済みにする
+  if (
+    (source === "daily" || source === "usen") &&
+    typeof markDailyTaskDone === "function"
+  ) {
+    markDailyTaskDone(task, source === "usen" ? "homeUsen" : "home");
+    renderHomeUsenExtraList();
+    renderHomeDailyExtraList(state.dailyGroups || []);
+  }
 
   // 期間限定 once は、ホームから開いた時点で実行済みにする
   if (source === "once" && getHomeTaskRepeatType(task) === "once") {
@@ -658,21 +787,25 @@ async function openHomeExtraTaskPage(task, source) {
 
 function openHomeExtraTaskXPost(task, source) {
   const postText = buildHomeExtraTaskShareText(task, source, "x");
+
   if (!postText) {
     return;
   }
+
   const taskUrl = getHomeExtraTaskUrl(task, source);
+
   // ホームタスクのSNSシェアログを送信する
   // シェア対象タスクURLも snsShareLog に入れる
   if (typeof sendSnsShareLog === "function") {
     sendSnsShareLog("x", {
       source: `homeTask:${source}`,
       title: getHomeExtraTaskName(task, source),
-      url: taskUrl
+      url: taskUrl,
     }).catch((error) => {
       console.error("snsShareLog送信失敗", error);
     });
   }
+
   location.href = X_POST_URL + encodeURIComponent(postText);
 }
 
@@ -687,15 +820,17 @@ async function openHomeExtraTaskThreads(task, source) {
 
   try {
     await navigator.clipboard.writeText(postText);
+
     if (typeof sendSnsShareLog === "function") {
       sendSnsShareLog("threads", {
         source: `homeTask:${source}`,
         title: getHomeExtraTaskName(task, source),
-        url: taskUrl
+        url: taskUrl,
       }).catch((error) => {
         console.error("snsShareLog送信失敗", error);
       });
     }
+
     location.href = THREADS_URL;
   } catch (error) {
     console.error(error);
@@ -704,6 +839,21 @@ async function openHomeExtraTaskThreads(task, source) {
 }
 
 function buildHomeExtraTaskShareText(task, source, platform = "x") {
+  if (source === "usen") {
+    const taskUrl = getHomeExtraTaskUrl(task, source);
+    const lines = [`✅${task.songName}をUSEN推し活リクエスト`];
+
+    if (taskUrl) {
+      lines.push(taskUrl);
+    }
+
+    lines.push("");
+    lines.push("タムごとDailyから応援中👍");
+    lines.push(getAppShareUrlByPlatform(platform));
+
+    return lines.join("\n");
+  }
+
   const taskName =
     task?.["short-name"] ||
     task?.shortName ||
@@ -711,9 +861,7 @@ function buildHomeExtraTaskShareText(task, source, platform = "x") {
 
   const taskUrl = getHomeExtraTaskUrl(task, source);
 
-  const lines = [
-    `✅${taskName}`,
-  ];
+  const lines = [`✅${taskName}`];
 
   if (taskUrl) {
     lines.push(taskUrl);
@@ -740,6 +888,7 @@ function initializeHomeRequestSongSelect() {
   if (!Array.isArray(state.requestSongs) || state.requestSongs.length === 0) {
     state.homeSelectedRequestSong = null;
     homeRequestSongSelectAreaElement.classList.add("hidden");
+    renderHomeUsenExtraList();
     return;
   }
 
@@ -771,7 +920,7 @@ function initializeHomeRequestSongSelect() {
   });
 
   homeRequestSongSelectAreaElement.classList.remove("hidden");
-  updateHomeUsenRequestArea();
+  renderHomeUsenExtraList();
 }
 
 function bindHomeRequestSongSelectEvents() {
@@ -781,15 +930,15 @@ function bindHomeRequestSongSelectEvents() {
 
   homeRequestSongSelectElement.addEventListener("change", () => {
     const selectedIndex = Number(homeRequestSongSelectElement.value);
-  
+
     if (Number.isNaN(selectedIndex)) {
       state.homeSelectedRequestSong = null;
-      updateHomeUsenRequestArea();
+      renderHomeUsenExtraList();
       return;
     }
-  
+
     state.homeSelectedRequestSong = state.requestSongs[selectedIndex] || null;
-    updateHomeUsenRequestArea();
+    renderHomeUsenExtraList();
   });
 }
 
@@ -834,101 +983,4 @@ function buildHomeDailyTaskCopyText(item) {
   return template
     .replaceAll("musicname", musicName)
     .replaceAll("\\n", "\n");
-}
-
-
-function hasHomeSelectedRequestSongUrl() {
-  const song = getHomeSelectedRequestSong();
-  return Boolean(song && String(song.url || "").trim() !== "");
-}
-
-function getHomeSelectedRequestSongUsenUrl() {
-  const song = getHomeSelectedRequestSong();
-
-  if (!song || !String(song.url || "").trim()) {
-    return "";
-  }
-
-  return buildRequestSongUrl(String(song.url).trim());
-}
-
-function updateHomeUsenRequestArea() {
-  if (!homeUsenRequestAreaElement) {
-    return;
-  }
-
-  const song = getHomeSelectedRequestSong();
-
-  if (!song || !song.name) {
-    homeUsenRequestAreaElement.classList.add("hidden");
-    return;
-  }
-
-  homeUsenRequestAreaElement.classList.remove("hidden");
-
-  const hasUrl = hasHomeSelectedRequestSongUrl();
-
-  if (homeUsenRequestMessageElement) {
-    homeUsenRequestMessageElement.textContent = hasUrl
-      ? `${song.name}をUSEN推し活リクエストできます。`
-      : `${song.name}はUSEN推し活リクエスト非対応です。`;
-  }
-
-  if (homeOpenUsenRequestButtonElement) {
-    homeOpenUsenRequestButtonElement.disabled = !hasUrl;
-    homeOpenUsenRequestButtonElement.classList.toggle("is-disabled", !hasUrl);
-  }
-}
-
-function bindHomeUsenRequestEvents() {
-  addClickEvent(homeOpenUsenRequestButtonElement, () => {
-    const song = getHomeSelectedRequestSong();
-
-    if (!song || !song.name) {
-      alert("リクエスト曲が選択されていません。");
-      return;
-    }
-
-    if (!hasHomeSelectedRequestSongUrl()) {
-      alert(`${song.name}はUSEN推し活リクエスト非対応です。`);
-      return;
-    }
-
-    const requestUrl = getHomeSelectedRequestSongUsenUrl();
-
-    if (!requestUrl) {
-      alert(`${song.name}はUSEN推し活リクエスト非対応です。`);
-      return;
-    }
-
-    if (typeof sendRequestSongLog === "function") {
-      sendRequestSongLog(song).catch((error) => {
-        console.error("home USEN requestSongLog送信失敗", error);
-      });
-    }
-
-    location.href = requestUrl;
-  });
-}
-function buildHomeUsenTaskFromSelectedSong() {
-  const song = getHomeSelectedRequestSong();
-
-  if (!song || !song.name) {
-    return null;
-  }
-
-  const rawUrl = String(song.url || "").trim();
-  const hasUrl = rawUrl !== "";
-
-  return {
-    id: `home_usen_${song.id || song.name}`,
-    name: `USEN推し活リクエスト：${song.name}`,
-    shortName: `USEN推し活リクエスト`,
-    songName: song.name,
-    song,
-    url: hasUrl ? buildRequestSongUrl(rawUrl) : "",
-    repeatType: "daily",
-    inputFlag: false,
-    isUsenTask: true,
-  };
 }
