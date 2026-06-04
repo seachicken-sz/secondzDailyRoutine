@@ -642,10 +642,6 @@ h1 {
   display: block;
   margin: 0 auto;
 }
-.home-color-change-area{
-  text-align: center;
-  margin-bottom: 3.5rem;
-}
 .home-card {
   flex-shrink: 0;
   margin: 0 0 12px;
@@ -772,6 +768,7 @@ h1 {
   display: flex;
   justify-content: center;
   padding: 8px 0 4px;
+  margin-bottom:1.5rem;
 }
 
 .home-daily-jump-button {
@@ -2005,6 +2002,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .theme-heart-button {
