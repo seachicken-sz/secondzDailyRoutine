@@ -209,6 +209,7 @@ function bindHomeBackToTopButton() {
 
 let HOME_EXTRA_DAILY_TASKS = [];
 let HOME_EXTRA_ONCE_TASKS = [];
+let HOME_EXTRA_USEN_TASKS = [];
 
 // sectionを表示/非表示にする
 function toggleHomeExtraSection(cardElement, shouldShow) {
@@ -225,6 +226,10 @@ function getHomeExtraTaskName(task, source) {
     return getDailyTaskItemName(task);
   }
 
+  if (source === "usen") {
+    return task?.name || "USEN推し活リクエスト";
+  }
+
   return task?.name || "名称未設定";
 }
 
@@ -234,13 +239,24 @@ function getHomeExtraTaskUrl(task, source) {
     return getDailyTaskItemUrl(task);
   }
 
+  if (source === "usen") {
+    return task?.url || "";
+  }
+
   return task?.url || "";
 }
-
 // タスク説明文取得
 function getHomeExtraTaskComment(task, source) {
   if (source === "daily") {
     return task?.comment || "ページを開いてタスクを完了してください。";
+  }
+
+  if (source === "usen") {
+    if (task?.url) {
+      return `${task.songName}をUSEN推し活リクエストできます。ページを開いてリクエストしてください。`;
+    }
+
+    return `${task.songName}はUSEN推し活リクエスト非対応です。`;
   }
 
   return buildOnceTaskMessage(task);
@@ -306,6 +322,10 @@ function getHomeExtraTaskBySource(source, index) {
 
   if (source === "once") {
     return HOME_EXTRA_ONCE_TASKS[taskIndex] || null;
+  }
+
+  if (source === "usen") {
+    return HOME_EXTRA_USEN_TASKS[taskIndex] || null;
   }
 
   return null;
@@ -889,4 +909,26 @@ function bindHomeUsenRequestEvents() {
 
     location.href = requestUrl;
   });
+}
+function buildHomeUsenTaskFromSelectedSong() {
+  const song = getHomeSelectedRequestSong();
+
+  if (!song || !song.name) {
+    return null;
+  }
+
+  const rawUrl = String(song.url || "").trim();
+  const hasUrl = rawUrl !== "";
+
+  return {
+    id: `home_usen_${song.id || song.name}`,
+    name: `USEN推し活リクエスト：${song.name}`,
+    shortName: `USEN推し活リクエスト`,
+    songName: song.name,
+    song,
+    url: hasUrl ? buildRequestSongUrl(rawUrl) : "",
+    repeatType: "daily",
+    inputFlag: false,
+    isUsenTask: true,
+  };
 }
