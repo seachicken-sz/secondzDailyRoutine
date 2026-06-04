@@ -1,6 +1,6 @@
 [
   {
-    "listName": "お手軽簡単、できたら毎日やろ",
+    "listName": "新曲リリース期間🎶ラジリクがんばろ！",
     "lastFlag": false,
     "items": [
       {
@@ -32,35 +32,47 @@
         "input-flag": true
       },
       {
+        "id": "daily_alltimebest",
+        "name": "All-Time Best",
+        "short-name": "All-Time Best",
+        "url": "https://www.tfm.co.jp/f/atb/form",
+        "request-type": "text",
+        "request-input": "メッセージ&リクエスト",
+        "comment": "①メアドなどを入力\n②「メッセージ&リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります！。",
+        "input-flag": true
+      },
+      {
         "id": "daily_andshino",
         "name": "&シノ",
         "short-name": "&シノ",
         "url": "https://www.tbsradio.jp/articles/program/and/",
         "comment": "最新記事をタップ！アクセスランクがあがるよ！",
         "input-flag": false
-      },
-      {
-        "id": "daily_pj202605",
-        "name": "マイナビ ピーチジョン💚",
-        "short-name": "マイナビ PJ",
-        "url": "https://news.mynavi.jp/article/20260529-4516128/",
-        "comment": "アクセスランクが上がるよ💚",
-        "input-flag": false
       }
     ]
   },
   {
-    "listName": "ちょっと入力多いけどがんばろ！",
+    "listName": "新曲応援！できたらここまで！",
     "lastFlag": false,
     "items": [
       {
-        "id": "daily_lawson",
-        "name": "ローソン店内BGMリクエスト",
-        "short-name": "ローソン",
-        "url": "https://www.lawson.co.jp/lab/cshotstation/art/1308047_7551.html",
-        "request-type": "music",
-        "request-input": "■曲名",
-        "comment": "①「>>リクエストの登録はこちら！」をタップ\n②「■曲名」欄にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "id": "daily_fmnigata_gogo",
+        "name": "FM新潟  GO！GO！PARTY！",
+        "short-name": "GO！GO！PARTY！",
+        "url": "https://www.fmniigata.com/program/517/request_message/58695",
+        "request-type": "kienai-hanabi",
+        "request-input": "リクエスト曲をどうぞ！",
+        "comment": "①名前・住所などを入力\n※マイページ登録で省略できるようになります\n②メッセージにペースト\n（例文が入るので編集してください）\n③「リクエスト曲をどうぞ！」に「消えない花火」を入力",
+        "input-flag": true
+      },
+      {
+        "id": "daily_fightfortheradio",
+        "name": "ネオジャポのFight For The Radio",
+        "short-name": "Fight For The Radio",
+        "url": "https://form.jfn.co.jp/neojaponism/message",
+        "request-type": "text",
+        "request-input": "メッセージ&リクエスト",
+        "comment": "①メアドなどを入力\n②「メッセージ&リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります！。",
         "input-flag": true
       },
       {
@@ -84,32 +96,24 @@
         "input-flag": true
       },
       {
-        "id": "daily_alltimebest",
-        "name": "All-Time Best",
-        "short-name": "All-Time Best",
-        "url": "https://www.tfm.co.jp/f/atb/form",
-        "request-type": "text",
-        "request-input": "メッセージ&リクエスト",
-        "comment": "①メアドなどを入力\n②「メッセージ&リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります！。",
+        "id": "daily_lawson",
+        "name": "ローソン店内BGMリクエスト",
+        "short-name": "ローソン",
+        "url": "https://www.lawson.co.jp/lab/cshotstation/art/1308047_7551.html",
+        "request-type": "music",
+        "request-input": "■曲名",
+        "comment": "①「>>リクエストの登録はこちら！」をタップ\n②「■曲名」欄にペーストまたは貼り付けを行うと曲名が自動で入ります！",
         "input-flag": true
       },
       {
-        "id": "daily_fightfortheradio",
-        "name": "ネオジャポのFight For The Radio",
-        "short-name": "Fight For The Radio",
-        "url": "https://form.jfn.co.jp/neojaponism/message",
-        "request-type": "text",
-        "request-input": "メッセージ&リクエスト",
-        "comment": "①メアドなどを入力\n②「メッセージ&リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります！。",
+        "id": "daily_allnightnippon",
+        "name": "オールナイトニッポン Music10",
+        "short-name": "オールナイトニッポン",
+        "url": "https://ssl.1242.com/aplform/form/aplform.php?fcode=m10&_ga=2.93010205.1251474916.1712812603-56772365.1712812603",
+        "request-type": "music-slash-artist",
+        "request-input": "リクエスト曲",
+        "comment": "①メアドなどを入力\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります！。",
         "input-flag": true
-      },
-      {
-        "id": "daily_oshiraku_suikun",
-        "name": "推し楽",
-        "short-name": "推し楽",
-        "url": "https://fan.books.rakuten.co.jp/tags/25743/news",
-        "comment": "①楽天アカウントでログイン\n②ニュースを選ぶ\n③「心の声を届ける(画面上部の♡)」からリアクションを送ろう！(1日10回まで)",
-        "input-flag": false
       }
     ]
   },
@@ -168,14 +172,12 @@
         "input-flag": true
       },
       {
-        "id": "daily_allnightnippon",
-        "name": "オールナイトニッポン Music10",
-        "short-name": "オールナイトニッポン",
-        "url": "https://ssl.1242.com/aplform/form/aplform.php?fcode=m10&_ga=2.93010205.1251474916.1712812603-56772365.1712812603",
-        "request-type": "music-slash-artist",
-        "request-input": "リクエスト曲",
-        "comment": "①メアドなどを入力\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります！。",
-        "input-flag": true
+        "id": "daily_oshiraku_suikun",
+        "name": "推し楽",
+        "short-name": "推し楽",
+        "url": "https://fan.books.rakuten.co.jp/tags/25743/news",
+        "comment": "①楽天アカウントでログイン\n②ニュースを選ぶ\n③「心の声を届ける(画面上部の♡)」からリアクションを送ろう！(1日10回まで)",
+        "input-flag": false
       }
     ]
   },
