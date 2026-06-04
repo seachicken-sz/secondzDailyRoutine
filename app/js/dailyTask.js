@@ -261,25 +261,51 @@ function renderCurrentDailyTask() {
 // ==================================================
 // デイリータスク用コピー文作成
 // ==================================================
-// dailyTask の request-type に対応するテンプレートを取得し、
-// 選択中のUSEN推しリク曲名を差し込んだコピー文を返す
 function buildDailyTaskCopyText(item) {
   // dailyTaskJson 側の request-type
   const requestType = item["request-type"];
-
   // requestTextJson 側のテンプレート
-  const template = state.requestTexts[requestType];
-
+  // 文字列 or 配列のどちらもありえる
+  const templateValue = state.requestTexts[requestType];
   // request-type またはテンプレートがない場合はコピー文なし
-  if (!requestType || !template) {
+  if (!requestType || !templateValue) {
     return "";
   }
-
-  // 選択中のUSEN推しリク曲名
+  // 複数候補がある場合だけランダムに1つ選ぶ
+  const template = pickRequestTextTemplate(templateValue, requestType);
+  if (!template) {
+    return "";
+  }
+  // 選択中のラジオリクエスト曲名
   const musicName = getSelectedRadioRequestSongName();
-
   // テンプレート内の musicname を選択曲名で置換する
   return template.replaceAll("musicname", musicName);
+}
+
+function pickRequestTextTemplate(value, requestType) {
+  // 既存形式：文字列ならそのまま使う
+  if (!Array.isArray(value)) {
+    return String(value || "");
+  }
+  // 新形式：配列なら候補からランダム
+  const candidates = value
+    .map(text => String(text || "").trim())
+    .filter(Boolean);
+  if (candidates.length === 0) {
+    return "";
+  }
+  if (candidates.length === 1) {
+    return candidates[0];
+  }
+  // 連続で同じ文になりにくくする
+  const storageKey = `lastRequestTextIndex_${requestType}`;
+  const lastIndex = Number(localStorage.getItem(storageKey));
+  let index = Math.floor(Math.random() * candidates.length);
+  if (index === lastIndex) {
+    index = (index + 1) % candidates.length;
+  }
+  localStorage.setItem(storageKey, String(index));
+  return candidates[index];
 }
 
 // ==================================================
