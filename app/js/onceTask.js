@@ -259,3 +259,17 @@ function buildOnceTaskMessage(task) {
   // 複数文言がある場合は空行区切りで返す
   return messages.join("\n\n");
 }
+// ==================================================
+// 期間限定タスク選択画面表示 or スキップ
+// ==================================================
+// 対象の期間限定タスクがない場合は、選択画面を表示せずUSEN推しリクへ進む
+async function showOnceTaskSelectStepOrSkip() {
+  if (!Array.isArray(state.onceTasks) || state.onceTasks.length === 0) {
+    state.selectedOnceTasks = [];
+    state.currentOnceTaskIndex = 0;
+    await showRequestSongStep();
+    return;
+  }
+
+  await showOnceTaskSelectStepOrSkip();
+}
