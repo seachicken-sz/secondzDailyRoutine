@@ -23,6 +23,7 @@ function saveFlowState(openedAction = state.openedAction || "", stepElement = st
     selectedOnceTasks: state.selectedOnceTasks,
     currentOnceTaskIndex: state.currentOnceTaskIndex,
     selectedRequestSong: state.selectedRequestSong,
+    selectedRadioRequestSong: state.selectedRadioRequestSong,
     currentDailyGroupIndex: state.currentDailyGroupIndex,
     currentDailyTaskIndex: state.currentDailyTaskIndex,
     completedDailyItems: state.completedDailyItems,
