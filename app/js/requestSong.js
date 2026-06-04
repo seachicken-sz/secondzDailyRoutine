@@ -71,8 +71,9 @@ function bindRequestSongEvents() {
 
   // USEN推しリクステップの次へボタン押下時
   addClickEvent(requestSongNextButtonElement, async () => {
-    // デイリータスクへ進む
-    await showDailyTaskStep();
+  addClickEvent(requestSongNextButtonElement, async () => {
+    // ラジオリクエスト用の曲切替確認へ進む
+    await showRadioRequestSongOverrideStep();
   });
 }
 
