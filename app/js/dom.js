@@ -178,6 +178,30 @@ const otherRequestSongsWrapperElement = document.getElementById("otherRequestSon
 const otherRequestSongsElement = document.getElementById("otherRequestSongs");
 
 // ==================================================
+// DOM: STEP 3.5 ラジオリクエスト曲切替
+// ==================================================
+
+// ラジオリクエスト曲切替画面全体
+const radioRequestSongOverrideStepElement =
+  document.getElementById("radioRequestSongOverrideStep");
+
+// 現在のラジオリクエスト曲名
+const currentRadioRequestSongNameElement =
+  document.getElementById("currentRadioRequestSongName");
+
+// 切替候補ボタンリスト
+const radioRequestSongOverrideButtonListElement =
+  document.getElementById("radioRequestSongOverrideButtonList");
+
+// 現在の曲を使うボタン
+const keepCurrentRadioRequestSongButtonElement =
+  document.getElementById("keepCurrentRadioRequestSongButton");
+
+// エラー表示エリア
+const radioRequestSongOverrideErrorAreaElement =
+  document.getElementById("radioRequestSongOverrideErrorArea");
+
+// ==================================================
 // DOM: STEP 4 デイリータスク
 // ==================================================
 // デイリータスク画面全体
