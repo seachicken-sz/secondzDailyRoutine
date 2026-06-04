@@ -81,7 +81,7 @@ function renderRadioRequestSongOverrideButtons(songs) {
 
     const button = document.createElement("button");
     button.type = "button";
-    button.className = "song-button";
+    button.className = "primary-button";
     button.textContent = `「${songName}」に切り替える`;
 
     button.addEventListener("click", async () => {
