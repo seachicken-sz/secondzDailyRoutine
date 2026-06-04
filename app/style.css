@@ -1013,6 +1013,14 @@ h1 {
   display: none !important;
 }
 
+
+.home-extra-task-actions .primary-button:disabled,
+.home-extra-task-actions .primary-button.is-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
 /* =========================
    リンクカード風
 ========================= */
