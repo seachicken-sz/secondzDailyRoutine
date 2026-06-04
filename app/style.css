@@ -937,6 +937,41 @@ h1 {
   font-weight: 700;
 }
 
+.home-extra-group.is-daily-done {
+  opacity: 0.62;
+}
+
+.home-extra-group-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.home-extra-group-summary-label {
+  min-width: 0;
+}
+
+.home-extra-group-done-mark {
+  flex-shrink: 0;
+  font-size: 15px;
+  line-height: 1;
+}
+
+/* daily実行済みのときだけ表示したい要素 */
+.show-when-daily-done {
+  display: none !important;
+}
+
+.is-daily-done .show-when-daily-done {
+  display: inline-flex !important;
+}
+
+/* daily実行済みのときだけ非表示にしたい要素 */
+.is-daily-done .hide-when-daily-done {
+  display: none !important;
+}
+
 /* =========================
    リンクカード風
 ========================= */
