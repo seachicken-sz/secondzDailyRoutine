@@ -18,11 +18,13 @@ function bindRadioRequestSongOverrideEvents() {
 // ==================================================
 async function showRadioRequestSongOverrideStep() {
   try {
-    useCurrentRequestSongForRadio();
+    // まだラジオ用の曲が決まっていない場合だけ、USEN選択曲を初期値にする
+    if (!state.selectedRadioRequestSong) {
+      useCurrentRequestSongForRadio();
+    }
 
     const overrideSongs = await getActiveRadioRequestSongOverrides();
 
-    // 有効な切替候補がなければ、確認画面を挟まずデイリーへ進む
     if (overrideSongs.length === 0) {
       await showDailyTaskStep();
       return;
