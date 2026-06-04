@@ -958,6 +958,32 @@ h1 {
   line-height: 1;
 }
 
+.home-usen-request-area {
+  display: grid;
+  gap: 8px;
+  padding-top: 8px;
+}
+
+.home-usen-request-message {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.homeOpenUsenRequestButton,
+.home-usen-request-area .primary-button {
+  margin-top: 0;
+}
+
+.home-usen-request-area .primary-button:disabled,
+.home-usen-request-area .primary-button.is-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
 /* daily実行済みのときだけ表示したい要素 */
 .show-when-daily-done {
   display: none !important;
