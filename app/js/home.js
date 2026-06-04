@@ -40,6 +40,11 @@ function bindHomeEvents() {
   bindHomeIndexEvents();
 
   // ==================================================
+  // おかわりDaily直行リンク
+  // ==================================================
+  bindHomeDailyJumpEvents();
+
+  // ==================================================
   // ホーム限定：上に戻るボタン
   // ==================================================
   bindHomeBackToTopButton();
@@ -165,6 +170,28 @@ function bindHomeIndexEvents() {
     }
 
     scrollHomeToElement(button.dataset.homeIndexTarget);
+  });
+}
+
+// おかわりDaily直行リンク表示制御
+function updateHomeDailyJumpVisibility() {
+  if (!homeDailyJumpAreaElement) {
+    return;
+  }
+
+  const shouldShow = isVisibleHomeSection("homeDailyExtraCard");
+
+  homeDailyJumpAreaElement.classList.toggle("hidden", !shouldShow);
+}
+
+// おかわりDaily直行リンククリックイベント
+function bindHomeDailyJumpEvents() {
+  if (!homeDailyJumpButtonElement) {
+    return;
+  }
+
+  homeDailyJumpButtonElement.addEventListener("click", () => {
+    scrollHomeToElement("homeDailyExtraCard");
   });
 }
 
@@ -408,11 +435,18 @@ function createHomeExtraTaskDetail({ task, source, index }) {
   return details;
 }
 
-// 今日、dailyグループが1つ以上完了しているかをbodyクラスへ反映する
+// 今日、daily系グループが1つ以上完了しているかをbodyクラスへ反映する
 function updateDailyStartedTodayClass() {
-  const isStarted =
+  const hasDoneDailyGroup =
     typeof isAnyDailyGroupDoneToday === "function" &&
     isAnyDailyGroupDoneToday(state.dailyGroups || []);
+
+  const hasDoneUsenGroup =
+    HOME_EXTRA_USEN_TASKS.some((task) => {
+      return typeof isDailyTaskDone === "function" && isDailyTaskDone(task);
+    });
+
+  const isStarted = hasDoneDailyGroup || hasDoneUsenGroup;
 
   document.body.classList.toggle("daily-started-today", isStarted);
 }
@@ -433,6 +467,7 @@ function renderHomeDailyExtraList(groups) {
     const hasUsenTasks = HOME_EXTRA_USEN_TASKS.length > 0;
     toggleHomeExtraSection(homeDailyExtraCardElement, hasUsenTasks);
     updateDailyStartedTodayClass();
+    updateHomeDailyJumpVisibility();
     updateHomeIndex();
     return;
   }
@@ -492,6 +527,7 @@ function renderHomeDailyExtraList(groups) {
 
   toggleHomeExtraSection(homeDailyExtraCardElement, hasDailyTasks || hasUsenTasks);
   updateDailyStartedTodayClass();
+  updateHomeDailyJumpVisibility();
   updateHomeIndex();
 }
 
@@ -510,6 +546,7 @@ function buildHomeUsenTaskFromSelectedSong() {
   const hasUrl = rawUrl !== "";
 
   return {
+    // USENは曲ごとではなく、18時切替の1日単位で「1回でもやったら完了」にする
     id: "home_usen_request",
     name: `USEN推し活リクエスト：${song.name}`,
     shortName: "USEN推し活リクエスト",
@@ -535,6 +572,8 @@ function renderHomeUsenExtraList() {
   if (!task) {
     const hasDailyTasks = HOME_EXTRA_DAILY_TASKS.length > 0;
     toggleHomeExtraSection(homeDailyExtraCardElement, hasDailyTasks);
+    updateDailyStartedTodayClass();
+    updateHomeDailyJumpVisibility();
     updateHomeIndex();
     return;
   }
@@ -628,6 +667,8 @@ function renderHomeUsenExtraList() {
   const hasUsenTasks = HOME_EXTRA_USEN_TASKS.length > 0;
 
   toggleHomeExtraSection(homeDailyExtraCardElement, hasDailyTasks || hasUsenTasks);
+  updateDailyStartedTodayClass();
+  updateHomeDailyJumpVisibility();
   updateHomeIndex();
 }
 
