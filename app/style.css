@@ -614,6 +614,7 @@ h1 {
 
 #homeStep {
   overflow-y: scroll;
+  height:100%;
 }
 
 .home-header {
