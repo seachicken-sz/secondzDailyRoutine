@@ -1379,7 +1379,6 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
         y: {
           title: {
             display: true,
-            text: "",
             font: {
               size: 11,
               weight: "600"
@@ -1431,7 +1430,7 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
             autoSkip: false,
             maxRotation: 0,
             minRotation: 0,
-            padding: 6,
+            padding: 3,
             font: {
               size: 10
             },
