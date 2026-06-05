@@ -633,17 +633,21 @@ function buildImageShareText() {
 
   if (programTitle) {
     lines.push(programTitle);
+    lines.push("");
   }
 
   if (rankingLines.length > 0) {
     lines.push(...rankingLines);
+    lines.push("");
   }
 
   if (likeLine) {
     lines.push(likeLine);
+    lines.push("");
   }
 
   lines.push("TVerで見よう！");
+  lines.push("");
 
   if (episodeUrl) {
     lines.push(episodeUrl);
