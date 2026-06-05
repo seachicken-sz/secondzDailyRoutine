@@ -1,7 +1,9 @@
 body {
   margin: 0;
+  padding-bottom:50px;
   font-family: system-ui, sans-serif;
-  background: linear-gradient(135deg, #e8f7ff, #fff4fb);
+  /*background: linear-gradient(135deg, #e8f7ff, #fff4fb);*/
+  background-color:#fdfdfd;
   color: #10213f;
   overflow-x: hidden;
 }
@@ -9,11 +11,14 @@ body {
   text-align:center;
 }
 a img{
-  width:100%;
-  max-width:760px;
-  margin:1rem auto;
+  width:40%;
+  max-width:680px;
+  min-width: 320px;
+  margin:1rem auto 3rem;
+  border-radius:20px;
 }
-.back-to-app-button {
+.back-to-app-button,
+.reload-data-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -28,20 +33,27 @@ a img{
   text-decoration: none;
   box-shadow: 0 6px 18px rgba(16, 33, 63, 0.14);
   white-space: nowrap;
+  border:none;
 }
+.reload-data-button.is-loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 .report {
   width: 760px;
   max-width: none;
   margin: 0 auto;
   padding-bottom: 24px;
-  background-image: url("../img/graph_bg_img.jpg");
+  /*background-image: url("../img/graph_bg_img.jpg");*/
+  background-color:#f8f8f8;
   background-size: cover;
   overflow: hidden;
   transform-origin: top center;
 }
 
 .top-bar {
-  background: #071d54;
+  background: #575757;
   color: white;
   text-align: center;
   font-weight: 700;
@@ -51,7 +63,7 @@ a img{
 
 .hero {
   text-align: center;
-  padding: 22px 24px 14px;
+  padding: 18px 18px 14px;
 }
 
 .program-title {
@@ -89,17 +101,23 @@ a img{
   font-size: 14px;
 }
 
-.blue { background: #0877df; }
-.pink { background: #ec2386; }
+.blue {
+  background: #0877df;
+}
+
+.pink {
+  background: #ec2386;
+}
 
 .rank-main {
-  position:relative;
+  position: relative;
   margin-top: 10px;
   font-size: 76px;
   font-weight: 800;
   line-height: 1;
 }
-.rank-main:before{
+
+.rank-main:before {
   content: '最高';
   font-size: 16px;
   position: absolute;
@@ -129,6 +147,10 @@ a img{
 .sub-rank.pink-bg {
   background: #fff0f7;
   color: #ec2386;
+}
+
+.report.is-long-report .sub-rank {
+  font-size: 14px;
 }
 
 .stats {
@@ -190,9 +212,15 @@ a img{
 }
 
 .section-title {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 800;
   margin-bottom: 12px;
+}
+
+.report.is-long-report .section-title::after {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6c7a90;
 }
 
 .charts {
@@ -228,6 +256,35 @@ a img{
   aspect-ratio: 3 / 1.8;
 }
 
+/* 168時間：グラフを1枠に統合 */
+.report.is-long-report .charts {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.chart-box-wide {
+  width: 100%;
+}
+
+.combined-chart-title {
+  background: linear-gradient(135deg, #0877df, #ec2386);
+  color: #fff;
+}
+
+.chart-canvas-wrap-wide {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+}
+
+.chart-canvas-wrap-wide canvas {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 7;
+}
+
 .tables {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -251,18 +308,84 @@ a img{
   margin-bottom: 4px;
 }
 
-.footer {
+/* 168時間：すぐ上ランキングの代わりに維持時間 */
+.duration-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.duration-card {
+  background: #f6f8fb;
+  border-radius: 12px;
+  padding: 16px 14px;
   text-align: center;
+}
+
+.duration-title {
+  display: inline-block;
+  color: #fff;
+  border-radius: 999px;
+  padding: 6px 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.duration-main {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #10213f;
+}
+
+.duration-sub {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #6c7a90;
+  font-weight: 700;
+}
+
+/* いいね数推移グラフ */
+.like-timeline-section {
+  margin-top: 14px;
+}
+
+.like-chart-box {
+  width: 100%;
+}
+
+/* いいねグラフ専用：ランキンググラフより縦に余裕を持たせる */
+.like-chart-canvas-wrap {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+/* Chart.js側で maintainAspectRatio:false にする前提 */
+.like-chart-canvas-wrap canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* 7日間表示では少しだけ高さを増やす */
+.report.is-long-report .like-chart-canvas-wrap {
+  height: 280px;
+}
+
+.footer {
+  text-align: left;
   font-size: 11px;
   color: #6c7a90;
   padding: 4px 20px 0;
 }
 
 .save-area {
-  position:fixed;
-  bottom:0;
-  left:0;
-  width:100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
   margin: 24px 0 12px;
@@ -281,12 +404,12 @@ a img{
   align-items: center;
   gap: 8px;
   box-shadow: 0 8px 20px rgba(8,119,223,.22);
-  opacity:0.8;
+  opacity: 0.8;
 }
 
 .save-button:active {
   transform: scale(.98);
-  opacity:0.9;
+  opacity: 0.9;
 }
 
 .report.is-capturing {
@@ -320,7 +443,7 @@ a img{
   font-size: 14px;
   font-weight: 700;
   box-shadow: 0 4px 14px rgba(27, 70, 120, 0.14);
-    min-width: 0;
+  min-width: 0;
   max-width: 100%;
 }
 
@@ -329,7 +452,7 @@ a img{
   border-color: #0877df;
 }
 
-#newEpisodeLink{
+#newEpisodeLink {
   background-color: transparent;
   margin: 20px auto;
   text-align: center;
