@@ -5,7 +5,11 @@ body {
   color: #10213f;
   overflow-x: hidden;
 }
-
+a img{
+  width:100%;
+  max-width:760px;
+  margin:1rem auto;
+}
 .back-to-app-button {
   display: inline-flex;
   align-items: center;
