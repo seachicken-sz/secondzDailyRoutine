@@ -34,7 +34,7 @@ body {
   max-width: none;
   margin: 0 auto;
   padding-bottom: 24px;
-  background-image: url("../img/graph_bg_img.jpg");
+  /*background-image: url("../img/graph_bg_img.jpg");*/
   background-size: cover;
   overflow: hidden;
   transform-origin: top center;
