@@ -60,6 +60,7 @@ function initializeSetupGuide() {
       renderOpenPlaceGuide();
       clearDeviceGuide();
       showSetupDeviceQuestion();
+      scrollSetupGuideIntoView(document.getElementById("setupDeviceQuestion"));
     });
   });
 
@@ -69,6 +70,7 @@ function initializeSetupGuide() {
 
       setActiveSetupButton(deviceTypeButtons, button);
       renderDeviceGuide();
+      scrollSetupGuideIntoView(document.getElementById("setupDeviceGuideArea"));
     });
   });
 }
@@ -247,4 +249,17 @@ function resetSetupGuide() {
   hideSetupDeviceQuestion();
   clearOpenPlaceGuide();
   clearDeviceGuide();
+}
+
+function scrollSetupGuideIntoView(targetElement) {
+  if (!targetElement) {
+    return;
+  }
+
+  window.setTimeout(() => {
+    targetElement.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+    });
+  }, 80);
 }
