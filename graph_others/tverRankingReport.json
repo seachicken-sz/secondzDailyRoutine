@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026/06/06 06:20",
+  "updatedAt": "2026/06/06 07:23",
   "reports": {
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/05/24",
-      "updatedAt": "2026/06/06 06:20",
+      "updatedAt": "2026/06/06 07:23",
       "episodeId": "epp4fwkqmn",
       "subtitle": "城島茂怒涛の3日間に密着!リアルドキュメントを大公開",
-      "likes": "6833",
+      "likes": "6837",
       "favorites": "51.5万",
       "likePoints": [
         {
@@ -628,15 +628,15 @@
             },
             {
               "rank": 48,
-              "title": "おぎやはぎのハピキャン"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 49,
-              "title": "５時に夢中！"
+              "title": "おぎやはぎのハピキャン"
             },
             {
               "rank": 50,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "ダイアンのガチで！ごめんやす"
             }
           ]
         },
@@ -651,19 +651,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ×ミセス"
+              "title": "A-Studio＋"
             },
             {
               "rank": 48,
-              "title": "サクラミーツ"
+              "title": "街グルメをマジ探索！かまいまち"
             },
             {
               "rank": 49,
-              "title": "家、ついて行ってイイですか？"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         }
@@ -672,10 +672,10 @@
     "sroqs1gopx": {
       "programTitle": "ゲストはROIROM",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/06 06:20",
+      "updatedAt": "2026/06/06 07:23",
       "episodeId": "ephnx0go75",
       "subtitle": "MCは芸歴33年ベテラン芸人岡田圭右",
-      "likes": "1190",
+      "likes": "1198",
       "favorites": "1.0万",
       "likePoints": [
         {
@@ -793,6 +793,10 @@
         {
           "hour": 29,
           "likes": 1190
+        },
+        {
+          "hour": 30,
+          "likes": 1198
         }
       ],
       "rankings": [
@@ -892,19 +896,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ×ミセス"
+              "title": "A-Studio＋"
             },
             {
               "rank": 48,
-              "title": "サクラミーツ"
+              "title": "街グルメをマジ探索！かまいまち"
             },
             {
               "rank": 49,
-              "title": "家、ついて行ってイイですか？"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         }
@@ -913,10 +917,10 @@
     "srleu4lcwn": {
       "programTitle": "それSnow Manにやらせて下さい",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/06 06:20",
+      "updatedAt": "2026/06/06 07:23",
       "episodeId": "epsvn7uf1y",
       "subtitle": "未成年の主張＆Googleの立入禁止エリアに初潜入",
-      "likes": "3083",
+      "likes": "3242",
       "favorites": "373.1万",
       "likePoints": [
         {
@@ -958,15 +962,19 @@
         {
           "hour": 11,
           "likes": 3083
+        },
+        {
+          "hour": 12,
+          "likes": 3242
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 11,
-          "elapsedHour": 11,
-          "elapsedRank": 11,
+          "currentRank": 9,
+          "elapsedHour": 12,
+          "elapsedRank": 9,
           "currentPoints": [
             {
               "hour": 3,
@@ -1003,6 +1011,10 @@
             {
               "hour": 11,
               "rank": 11
+            },
+            {
+              "hour": 12,
+              "rank": 9
             }
           ],
           "previousPoints": [
@@ -1665,19 +1677,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 6,
+              "title": "徹子の部屋"
+            },
+            {
+              "rank": 7,
+              "title": "限界突破！やってM!LK"
+            },
+            {
               "rank": 8,
               "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 9,
-              "title": "華大さんと千鳥くん"
-            },
-            {
-              "rank": 10,
-              "title": "ホンマでっか！？TV"
-            },
-            {
-              "rank": 11,
               "title": "それSnow Manにやらせて下さい"
             }
           ]
@@ -1685,9 +1697,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 36,
-          "elapsedHour": 11,
-          "elapsedRank": 36,
+          "currentRank": 30,
+          "elapsedHour": 12,
+          "elapsedRank": 30,
           "currentPoints": [
             {
               "hour": 4,
@@ -1720,6 +1732,10 @@
             {
               "hour": 11,
               "rank": 36
+            },
+            {
+              "hour": 12,
+              "rank": 30
             }
           ],
           "previousPoints": [
@@ -2378,19 +2394,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 33,
-              "title": "惡の華"
+              "rank": 27,
+              "title": "産まない女はダメですか？ DINKsのトツキトオカ"
             },
             {
-              "rank": 34,
-              "title": "華大さんと千鳥くん"
+              "rank": 28,
+              "title": "銀河の一票"
             },
             {
-              "rank": 35,
-              "title": "ホンマでっか！？TV"
+              "rank": 29,
+              "title": "102回目のプロポーズ"
             },
             {
-              "rank": 36,
+              "rank": 30,
               "title": "それSnow Manにやらせて下さい"
             }
           ]
@@ -2400,10 +2416,10 @@
     "srfgxtv5sb": {
       "programTitle": "いたジャン！",
       "broadcastDate": "2026/06/04",
-      "updatedAt": "2026/06/06 06:20",
+      "updatedAt": "2026/06/06 07:23",
       "episodeId": "epunyb6uhz",
       "subtitle": "第99回 ▽知念が下町のスナックに潜入！",
-      "likes": "4302",
+      "likes": "4314",
       "favorites": "30.2万",
       "likePoints": [
         {
@@ -2621,6 +2637,10 @@
         {
           "hour": 53,
           "likes": 4302
+        },
+        {
+          "hour": 54,
+          "likes": 4314
         }
       ],
       "rankings": [
@@ -2753,19 +2773,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ×ミセス"
+              "title": "A-Studio＋"
             },
             {
               "rank": 48,
-              "title": "サクラミーツ"
+              "title": "街グルメをマジ探索！かまいまち"
             },
             {
               "rank": 49,
-              "title": "家、ついて行ってイイですか？"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         },
@@ -2780,7 +2800,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 48,
@@ -2788,11 +2808,11 @@
             },
             {
               "rank": 49,
-              "title": "フェイクファクトリップス"
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
               "rank": 50,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "フェイクファクトリップス"
             }
           ]
         }
@@ -2801,7 +2821,7 @@
     "sracdkj75t": {
       "programTitle": "Golden SixTONES",
       "broadcastDate": "2026/05/24",
-      "updatedAt": "2026/06/06 06:20",
+      "updatedAt": "2026/06/06 07:23",
       "episodeId": "epkaior3ga",
       "subtitle": "最新AIモンスター軍団vs中村倫也&劇団ひとり&ザキヤマ",
       "likes": "1.7万",
@@ -3221,19 +3241,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ×ミセス"
+              "title": "A-Studio＋"
             },
             {
               "rank": 48,
-              "title": "サクラミーツ"
+              "title": "街グルメをマジ探索！かまいまち"
             },
             {
               "rank": 49,
-              "title": "家、ついて行ってイイですか？"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         },
@@ -3248,7 +3268,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 48,
@@ -3256,11 +3276,11 @@
             },
             {
               "rank": 49,
-              "title": "フェイクファクトリップス"
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
               "rank": 50,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "フェイクファクトリップス"
             }
           ]
         }
@@ -3269,7 +3289,7 @@
     "srz5hf6qnt": {
       "programTitle": "Aぇ! groupのQ＆Aぇ!",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/06 06:20",
+      "updatedAt": "2026/06/06 07:23",
       "episodeId": "epgbd5ok4e",
       "subtitle": "令和の時短料理！美味しい料理10分で作れる？",
       "likes": "1.3万",
@@ -3585,6 +3605,10 @@
         },
         {
           "hour": 77,
+          "likes": 13000
+        },
+        {
+          "hour": 78,
           "likes": 13000
         }
       ],
@@ -3978,19 +4002,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ×ミセス"
+              "title": "A-Studio＋"
             },
             {
               "rank": 48,
-              "title": "サクラミーツ"
+              "title": "街グルメをマジ探索！かまいまち"
             },
             {
               "rank": 49,
-              "title": "家、ついて行ってイイですか？"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         },
@@ -4091,7 +4115,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 48,
@@ -4099,11 +4123,11 @@
             },
             {
               "rank": 49,
-              "title": "フェイクファクトリップス"
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
               "rank": 50,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "フェイクファクトリップス"
             }
           ]
         }
@@ -4112,7 +4136,7 @@
     "srfdyr4f12": {
       "programTitle": "なにわ男子の逆転男子",
       "broadcastDate": "2026/05/30",
-      "updatedAt": "2026/06/06 06:20",
+      "updatedAt": "2026/06/06 07:23",
       "episodeId": "ep45pg124v",
       "subtitle": "番組初イベント舞台裏に完全密着！楽屋の素顔＆初心LOVEコラボ",
       "likes": "1.2万",
@@ -4661,6 +4685,10 @@
         {
           "hour": 158,
           "likes": 12000
+        },
+        {
+          "hour": 159,
+          "likes": 12000
         }
       ],
       "rankings": [
@@ -4844,19 +4872,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ×ミセス"
+              "title": "A-Studio＋"
             },
             {
               "rank": 48,
-              "title": "サクラミーツ"
+              "title": "街グルメをマジ探索！かまいまち"
             },
             {
               "rank": 49,
-              "title": "家、ついて行ってイイですか？"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         },
@@ -4908,7 +4936,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 48,
@@ -4916,11 +4944,11 @@
             },
             {
               "rank": 49,
-              "title": "フェイクファクトリップス"
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
               "rank": 50,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "フェイクファクトリップス"
             }
           ]
         }
@@ -4929,10 +4957,10 @@
     "sr64ope7a7": {
       "programTitle": "限界突破！やってM!LK",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/06 06:20",
+      "updatedAt": "2026/06/06 07:23",
       "episodeId": "ep7hm9e5rz",
       "subtitle": "世間に共感されろ！胸キュン台詞といえば…？塩﨑ガチ照れ",
-      "likes": "6469",
+      "likes": "6511",
       "favorites": "32.2万",
       "likePoints": [
         {
@@ -5050,15 +5078,19 @@
         {
           "hour": 29,
           "likes": 6469
+        },
+        {
+          "hour": 30,
+          "likes": 6511
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 6,
-          "elapsedHour": 29,
-          "elapsedRank": 6,
+          "currentRank": 7,
+          "elapsedHour": 30,
+          "elapsedRank": 7,
           "currentPoints": [
             {
               "hour": 7,
@@ -5151,6 +5183,10 @@
             {
               "hour": 29,
               "rank": 6
+            },
+            {
+              "hour": 30,
+              "rank": 7
             }
           ],
           "previousPoints": [
@@ -5709,10 +5745,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 3,
-              "title": "上田と女が吠える夜"
-            },
-            {
               "rank": 4,
               "title": "テレビ千鳥"
             },
@@ -5722,6 +5754,10 @@
             },
             {
               "rank": 6,
+              "title": "徹子の部屋"
+            },
+            {
+              "rank": 7,
               "title": "限界突破！やってM!LK"
             }
           ]
@@ -5729,9 +5765,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 21,
-          "elapsedHour": 29,
-          "elapsedRank": 21,
+          "currentRank": 23,
+          "elapsedHour": 30,
+          "elapsedRank": 23,
           "currentPoints": [
             {
               "hour": 10,
@@ -5812,6 +5848,10 @@
             {
               "hour": 29,
               "rank": 21
+            },
+            {
+              "hour": 30,
+              "rank": 23
             }
           ],
           "previousPoints": [
@@ -6002,19 +6042,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 18,
-              "title": "夫婦別姓刑事"
-            },
-            {
-              "rank": 19,
-              "title": "ボーダレス～広域移動捜査隊～"
-            },
-            {
               "rank": 20,
               "title": "トークィーンズ"
             },
             {
               "rank": 21,
+              "title": "ＧＩＦＴ"
+            },
+            {
+              "rank": 22,
+              "title": "徹子の部屋"
+            },
+            {
+              "rank": 23,
               "title": "限界突破！やってM!LK"
             }
           ]
@@ -6024,10 +6064,10 @@
     "sra5n6j0w3": {
       "programTitle": "テレビ×ミセス",
       "broadcastDate": "2026/06/01",
-      "updatedAt": "2026/06/06 06:20",
+      "updatedAt": "2026/06/06 07:23",
       "episodeId": "ep6ima98nc",
       "subtitle": "出川＆モー娘。OG テレビベテラン軍が登場★番組初のトラブル発生！？",
-      "likes": "5207",
+      "likes": "5216",
       "favorites": "39.8万",
       "likePoints": [
         {
@@ -6441,15 +6481,19 @@
         {
           "hour": 105,
           "likes": 5207
+        },
+        {
+          "hour": 106,
+          "likes": 5216
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 47,
-          "elapsedHour": 105,
-          "elapsedRank": 47,
+          "currentRank": 46,
+          "elapsedHour": 106,
+          "elapsedRank": 46,
           "currentPoints": [
             {
               "hour": 4,
@@ -6854,10 +6898,18 @@
             {
               "hour": 105,
               "rank": 47
+            },
+            {
+              "hour": 106,
+              "rank": 46
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
+            {
+              "rank": 43,
+              "title": "嗚呼!!みんなの動物園"
+            },
             {
               "rank": 44,
               "title": "巷のウワサ大検証！それって実際どうなの会"
@@ -6868,10 +6920,6 @@
             },
             {
               "rank": 46,
-              "title": "街グルメをマジ探索！かまいまち"
-            },
-            {
-              "rank": 47,
               "title": "テレビ×ミセス"
             }
           ]
@@ -7100,7 +7148,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 48,
@@ -7108,11 +7156,11 @@
             },
             {
               "rank": 49,
-              "title": "フェイクファクトリップス"
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
               "rank": 50,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "フェイクファクトリップス"
             }
           ]
         }
@@ -7121,7 +7169,7 @@
     "sr91aqd0qa": {
       "programTitle": "ニノなのに",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/06 06:20",
+      "updatedAt": "2026/06/06 07:23",
       "episodeId": "epglspbshg",
       "subtitle": "司会は賀来賢人 Aぇ! groupがスマホなしでモノ作りに挑戦！",
       "likes": "1.3万",
@@ -7354,15 +7402,19 @@
         {
           "hour": 57,
           "likes": 13000
+        },
+        {
+          "hour": 58,
+          "likes": 13000
         }
       ],
       "rankings": [
         {
           "type": "talk",
           "label": "トーク",
-          "currentRank": 6,
-          "elapsedHour": 57,
-          "elapsedRank": 6,
+          "currentRank": 7,
+          "elapsedHour": 58,
+          "elapsedRank": 7,
           "currentPoints": [
             {
               "hour": 2,
@@ -7587,6 +7639,10 @@
             {
               "hour": 57,
               "rank": 6
+            },
+            {
+              "hour": 58,
+              "rank": 7
             }
           ],
           "previousPoints": [
@@ -8245,10 +8301,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 3,
-              "title": "上田と女がDEEPに吠える夜"
-            },
-            {
               "rank": 4,
               "title": "夫が寝たあとに"
             },
@@ -8258,6 +8310,10 @@
             },
             {
               "rank": 6,
+              "title": "マツコの知らない世界"
+            },
+            {
+              "rank": 7,
               "title": "ニノなのに"
             }
           ]
@@ -8265,9 +8321,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 16,
-          "elapsedHour": 57,
-          "elapsedRank": 16,
+          "currentRank": 17,
+          "elapsedHour": 58,
+          "elapsedRank": 17,
           "currentPoints": [
             {
               "hour": 4,
@@ -8484,6 +8540,10 @@
             {
               "hour": 57,
               "rank": 16
+            },
+            {
+              "hour": 58,
+              "rank": 17
             }
           ],
           "previousPoints": [
@@ -9142,10 +9202,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 13,
-              "title": "かまいガチ"
-            },
-            {
               "rank": 14,
               "title": "飯島直子の今夜一杯いっちゃう？"
             },
@@ -9155,6 +9211,10 @@
             },
             {
               "rank": 16,
+              "title": "マツコの知らない世界"
+            },
+            {
+              "rank": 17,
               "title": "ニノなのに"
             }
           ]
