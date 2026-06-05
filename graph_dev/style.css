@@ -2,7 +2,8 @@ body {
   margin: 0;
   padding-bottom:50px;
   font-family: system-ui, sans-serif;
-  background: linear-gradient(135deg, #e8f7ff, #fff4fb);
+  /*background: linear-gradient(135deg, #e8f7ff, #fff4fb);*/
+  background-color:#ececec;
   color: #10213f;
   overflow-x: hidden;
 }
