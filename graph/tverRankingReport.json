@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026/06/06 07:23",
+  "updatedAt": "2026/06/06 08:22",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/06 07:23",
+      "updatedAt": "2026/06/06 08:22",
       "episodeId": "ep6vuu9nxm",
       "subtitle": "timelesz100",
-      "likes": "4260",
+      "likes": "4894",
       "favorites": "76.0万",
       "likePoints": [
         {
@@ -45,15 +45,19 @@
         {
           "hour": 9,
           "likes": 4260
+        },
+        {
+          "hour": 10,
+          "likes": 4894
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 21,
-          "elapsedHour": 9,
-          "elapsedRank": 21,
+          "currentRank": 16,
+          "elapsedHour": 10,
+          "elapsedRank": 16,
           "currentPoints": [
             {
               "hour": 3,
@@ -82,6 +86,10 @@
             {
               "hour": 9,
               "rank": 21
+            },
+            {
+              "hour": 10,
+              "rank": 16
             }
           ],
           "previousPoints": [
@@ -748,19 +756,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 18,
-              "title": "THE突破ファイル"
+              "rank": 13,
+              "title": "かまいガチ"
             },
             {
-              "rank": 19,
-              "title": "月曜から夜ふかし"
+              "rank": 14,
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
-              "rank": 20,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "rank": 15,
+              "title": "あざとくて何が悪いの？"
             },
             {
-              "rank": 21,
+              "rank": 16,
               "title": "タイムレスマン"
             }
           ]
@@ -768,10 +776,15 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 45,
+          "elapsedHour": 10,
+          "elapsedRank": 45,
+          "currentPoints": [
+            {
+              "hour": 10,
+              "rank": 45
+            }
+          ],
           "previousPoints": [
             {
               "hour": 9,
@@ -1408,20 +1421,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "THE突破ファイル"
+              "rank": 42,
+              "title": "最後の約束"
             },
             {
-              "rank": 48,
-              "title": "月曜から夜ふかし"
+              "rank": 43,
+              "title": "タツキ先生は甘すぎる！"
             },
             {
-              "rank": 49,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "rank": 44,
+              "title": "あざとくて何が悪いの？"
             },
             {
-              "rank": 50,
-              "title": "フェイクファクトリップス"
+              "rank": 45,
+              "title": "タイムレスマン"
             }
           ]
         }
@@ -1430,7 +1443,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/05/31",
-      "updatedAt": "2026/06/06 07:23",
+      "updatedAt": "2026/06/06 08:22",
       "episodeId": "epi4thbfbk",
       "subtitle": "【TOYOTAの最新ロボの秘密】衝撃!!食べられる機械",
       "likes": "1.4万",
@@ -1935,6 +1948,10 @@
         {
           "hour": 137,
           "likes": 14000
+        },
+        {
+          "hour": 138,
+          "likes": 14000
         }
       ],
       "rankings": [
@@ -2811,15 +2828,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "A-Studio＋"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 48,
-              "title": "街グルメをマジ探索！かまいまち"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
               "rank": 49,
-              "title": "探偵！ナイトスクープ"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
@@ -3083,19 +3100,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 48,
               "title": "月曜から夜ふかし"
             },
             {
+              "rank": 48,
+              "title": "THE突破ファイル"
+            },
+            {
               "rank": 49,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "ニノなのに"
             },
             {
               "rank": 50,
-              "title": "フェイクファクトリップス"
+              "title": "ニンゲン観察バラエティ モニタリング"
             }
           ]
         }
@@ -3104,10 +3121,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/02",
-      "updatedAt": "2026/06/06 07:23",
+      "updatedAt": "2026/06/06 08:22",
       "episodeId": "epbxaud3gs",
       "subtitle": "チョコプラ・timeleszがデスソースの浄水に挑戦！",
-      "likes": "8887",
+      "likes": "8891",
       "favorites": "5.0万",
       "likePoints": [
         {
@@ -3425,15 +3442,19 @@
         {
           "hour": 79,
           "likes": 8887
+        },
+        {
+          "hour": 80,
+          "likes": 8891
         }
       ],
       "rankings": [
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 23,
-          "elapsedHour": 79,
-          "elapsedRank": 23,
+          "currentRank": 24,
+          "elapsedHour": 80,
+          "elapsedRank": 24,
           "currentPoints": [
             {
               "hour": 5,
@@ -3734,6 +3755,10 @@
             {
               "hour": 79,
               "rank": 23
+            },
+            {
+              "hour": 80,
+              "rank": 24
             }
           ],
           "previousPoints": [
@@ -4172,10 +4197,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 20,
-              "title": "ポツンと一軒家"
-            },
-            {
               "rank": 21,
               "title": "かまいたちの机上の空論城"
             },
@@ -4185,6 +4206,10 @@
             },
             {
               "rank": 23,
+              "title": "ゴールデンホリデぇ！"
+            },
+            {
+              "rank": 24,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -4362,15 +4387,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "A-Studio＋"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 48,
-              "title": "街グルメをマジ探索！かまいまち"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
               "rank": 49,
-              "title": "探偵！ナイトスクープ"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
@@ -4383,7 +4408,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/04",
-      "updatedAt": "2026/06/06 07:23",
+      "updatedAt": "2026/06/06 08:22",
       "episodeId": "ep1tx7r71f",
       "subtitle": "【名物企画】英語で曲当てクイズ/ケムリがあまりにもカッコいい",
       "likes": "1.0万",
@@ -4600,15 +4625,19 @@
         {
           "hour": 53,
           "likes": 10000
+        },
+        {
+          "hour": 54,
+          "likes": 10000
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 25,
-          "elapsedHour": 53,
-          "elapsedRank": 25,
+          "currentRank": 26,
+          "elapsedHour": 54,
+          "elapsedRank": 26,
           "currentPoints": [
             {
               "hour": 8,
@@ -4793,6 +4822,10 @@
             {
               "hour": 53,
               "rank": 25
+            },
+            {
+              "hour": 54,
+              "rank": 26
             }
           ],
           "previousPoints": [
@@ -5047,10 +5080,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 22,
-              "title": "見取り図じゃん"
-            },
-            {
               "rank": 23,
               "title": "何か“オモシロいコト”ないの？"
             },
@@ -5060,6 +5089,10 @@
             },
             {
               "rank": 25,
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+            },
+            {
+              "rank": 26,
               "title": "ニカゲーム"
             }
           ]
@@ -5345,19 +5378,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 48,
               "title": "月曜から夜ふかし"
             },
             {
+              "rank": 48,
+              "title": "THE突破ファイル"
+            },
+            {
               "rank": 49,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "ニノなのに"
             },
             {
               "rank": 50,
-              "title": "フェイクファクトリップス"
+              "title": "ニンゲン観察バラエティ モニタリング"
             }
           ]
         }
@@ -5366,10 +5399,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/06 07:23",
+      "updatedAt": "2026/06/06 08:22",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "3901",
+      "likes": "3899",
       "favorites": "75.9万",
       "likePoints": [
         {
@@ -6030,15 +6063,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "A-Studio＋"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 48,
-              "title": "街グルメをマジ探索！かまいまち"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
               "rank": 49,
-              "title": "探偵！ナイトスクープ"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
@@ -6138,19 +6171,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 48,
               "title": "月曜から夜ふかし"
             },
             {
+              "rank": 48,
+              "title": "THE突破ファイル"
+            },
+            {
               "rank": 49,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "ニノなのに"
             },
             {
               "rank": 50,
-              "title": "フェイクファクトリップス"
+              "title": "ニンゲン観察バラエティ モニタリング"
             }
           ]
         }
@@ -6159,10 +6192,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/06 07:23",
+      "updatedAt": "2026/06/06 08:22",
       "episodeId": "epref0f8o9",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！山下智久登場",
-      "likes": "7086",
+      "likes": "7093",
       "favorites": "6.8万",
       "likePoints": [
         {
@@ -6464,6 +6497,10 @@
         {
           "hour": 78,
           "likes": 7086
+        },
+        {
+          "hour": 79,
+          "likes": 7093
         }
       ],
       "rankings": [
@@ -6656,15 +6693,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "A-Studio＋"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 48,
-              "title": "街グルメをマジ探索！かまいまち"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
               "rank": 49,
-              "title": "探偵！ナイトスクープ"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
@@ -6720,19 +6757,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 48,
               "title": "月曜から夜ふかし"
             },
             {
+              "rank": 48,
+              "title": "THE突破ファイル"
+            },
+            {
               "rank": 49,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "ニノなのに"
             },
             {
               "rank": 50,
-              "title": "フェイクファクトリップス"
+              "title": "ニンゲン観察バラエティ モニタリング"
             }
           ]
         }
@@ -6741,10 +6778,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/06 07:23",
+      "updatedAt": "2026/06/06 08:22",
       "episodeId": "eps7bm6mup",
       "subtitle": "第130回 真剣勝負あっち向いてホイ！ついに王者が決定！",
-      "likes": "2968",
+      "likes": "2985",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -6870,6 +6907,10 @@
         {
           "hour": 30,
           "likes": 2968
+        },
+        {
+          "hour": 31,
+          "likes": 2985
         }
       ],
       "rankings": [
@@ -6877,7 +6918,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 23,
-          "elapsedHour": 31,
+          "elapsedHour": 32,
           "elapsedRank": 23,
           "currentPoints": [
             {
@@ -6958,6 +6999,10 @@
             },
             {
               "hour": 31,
+              "rank": 23
+            },
+            {
+              "hour": 32,
               "rank": 23
             }
           ],
@@ -7142,11 +7187,11 @@
           "nearbyRanking": [
             {
               "rank": 20,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "ニノなのに"
             },
             {
               "rank": 21,
-              "title": "タイムレスマン"
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
               "rank": 22,
@@ -7231,19 +7276,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 48,
               "title": "月曜から夜ふかし"
             },
             {
+              "rank": 48,
+              "title": "THE突破ファイル"
+            },
+            {
               "rank": 49,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "ニノなのに"
             },
             {
               "rank": 50,
-              "title": "フェイクファクトリップス"
+              "title": "ニンゲン観察バラエティ モニタリング"
             }
           ]
         }
@@ -7252,10 +7297,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/05/30",
-      "updatedAt": "2026/06/06 07:23",
+      "updatedAt": "2026/06/06 08:22",
       "episodeId": "epdpoawq6d",
       "subtitle": "マッサマンvs錦鯉マッサノリマンSP前編",
-      "likes": "2201",
+      "likes": "2205",
       "favorites": "77.2万",
       "likePoints": [
         {
@@ -7565,6 +7610,10 @@
         {
           "hour": 156,
           "likes": 2201
+        },
+        {
+          "hour": 157,
+          "likes": 2205
         }
       ],
       "rankings": [
@@ -7820,15 +7869,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "A-Studio＋"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 48,
-              "title": "街グルメをマジ探索！かまいまち"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
               "rank": 49,
-              "title": "探偵！ナイトスクープ"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
@@ -7920,19 +7969,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 48,
               "title": "月曜から夜ふかし"
             },
             {
+              "rank": 48,
+              "title": "THE突破ファイル"
+            },
+            {
               "rank": 49,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "ニノなのに"
             },
             {
               "rank": 50,
-              "title": "フェイクファクトリップス"
+              "title": "ニンゲン観察バラエティ モニタリング"
             }
           ]
         }
@@ -7941,10 +7990,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/06 07:23",
+      "updatedAt": "2026/06/06 08:22",
       "episodeId": "ep6a50091q",
       "subtitle": "第8話 走る身代金",
-      "likes": "7013",
+      "likes": "7031",
       "favorites": "36.8万",
       "likePoints": [
         {
@@ -8178,15 +8227,19 @@
         {
           "hour": 58,
           "likes": 7013
+        },
+        {
+          "hour": 59,
+          "likes": 7031
         }
       ],
       "rankings": [
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 15,
-          "elapsedHour": 58,
-          "elapsedRank": 15,
+          "currentRank": 16,
+          "elapsedHour": 59,
+          "elapsedRank": 16,
           "currentPoints": [
             {
               "hour": 2,
@@ -8411,6 +8464,10 @@
             {
               "hour": 58,
               "rank": 15
+            },
+            {
+              "hour": 59,
+              "rank": 16
             }
           ],
           "previousPoints": [
@@ -9073,19 +9130,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 12,
-              "title": "鬼女の棲む家"
-            },
-            {
               "rank": 13,
               "title": "その天才様は偽装彼女に執着する"
             },
             {
               "rank": 14,
-              "title": "夫婦別姓刑事"
+              "title": "余命３ヶ月のサレ夫"
             },
             {
               "rank": 15,
+              "title": "夫婦別姓刑事"
+            },
+            {
+              "rank": 16,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -9093,9 +9150,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 19,
-          "elapsedHour": 58,
-          "elapsedRank": 19,
+          "currentRank": 20,
+          "elapsedHour": 59,
+          "elapsedRank": 20,
           "currentPoints": [
             {
               "hour": 3,
@@ -9320,6 +9377,10 @@
             {
               "hour": 58,
               "rank": 19
+            },
+            {
+              "hour": 59,
+              "rank": 20
             }
           ],
           "previousPoints": [
@@ -9954,19 +10015,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 16,
+              "rank": 17,
               "title": "その天才様は偽装彼女に執着する"
             },
             {
-              "rank": 17,
-              "title": "テレビ千鳥"
-            },
-            {
               "rank": 18,
-              "title": "夫婦別姓刑事"
+              "title": "余命３ヶ月のサレ夫"
             },
             {
               "rank": 19,
+              "title": "夫婦別姓刑事"
+            },
+            {
+              "rank": 20,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -9976,7 +10037,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/06 07:23",
+      "updatedAt": "2026/06/06 08:22",
       "episodeId": "ep24dk5lx2",
       "subtitle": "“ハプニング対応力講座”",
       "likes": "1.4万",
@@ -10281,6 +10342,10 @@
         {
           "hour": 76,
           "likes": 14000
+        },
+        {
+          "hour": 77,
+          "likes": 14000
         }
       ],
       "rankings": [
@@ -10452,15 +10517,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "A-Studio＋"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 48,
-              "title": "街グルメをマジ探索！かまいまち"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
               "rank": 49,
-              "title": "探偵！ナイトスクープ"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
@@ -10592,19 +10657,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 48,
               "title": "月曜から夜ふかし"
             },
             {
+              "rank": 48,
+              "title": "THE突破ファイル"
+            },
+            {
               "rank": 49,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "ニノなのに"
             },
             {
               "rank": 50,
-              "title": "フェイクファクトリップス"
+              "title": "ニンゲン観察バラエティ モニタリング"
             }
           ]
         }
@@ -10613,10 +10678,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/06 07:23",
+      "updatedAt": "2026/06/06 08:22",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "5464",
+      "likes": "5468",
       "favorites": "1.4万",
       "likePoints": [
         {
@@ -11241,19 +11306,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Golden SixTONES"
+              "title": "にけつッ!!"
             },
             {
               "rank": 48,
-              "title": "ゴールデンホリデぇ！"
-            },
-            {
-              "rank": 49,
               "title": "滝沢カレン＆和田明日香のフィーリンきっちん"
             },
             {
+              "rank": 49,
+              "title": "ゴールデンホリデぇ！"
+            },
+            {
               "rank": 50,
-              "title": "ありえへん∞世界"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             }
           ]
         },
@@ -11268,15 +11333,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "A-Studio＋"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 48,
-              "title": "街グルメをマジ探索！かまいまち"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
               "rank": 49,
-              "title": "探偵！ナイトスクープ"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
@@ -11289,10 +11354,10 @@
     "srbkekw9oj": {
       "programTitle": "ネプリーグ",
       "broadcastDate": "2026/06/01",
-      "updatedAt": "2026/06/06 07:23",
+      "updatedAt": "2026/06/06 08:22",
       "episodeId": "ep9yhege0b",
       "subtitle": "20周年イヤーの難クイズを林先生が徹底解説！",
-      "likes": "1878",
+      "likes": "1883",
       "favorites": "17.1万",
       "likePoints": [
         {
@@ -11722,6 +11787,10 @@
         {
           "hour": 108,
           "likes": 1878
+        },
+        {
+          "hour": 109,
+          "likes": 1883
         }
       ],
       "rankings": [
@@ -11793,15 +11862,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "A-Studio＋"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 48,
-              "title": "街グルメをマジ探索！かまいまち"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
               "rank": 49,
-              "title": "探偵！ナイトスクープ"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
@@ -11820,19 +11889,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 48,
               "title": "月曜から夜ふかし"
             },
             {
+              "rank": 48,
+              "title": "THE突破ファイル"
+            },
+            {
               "rank": 49,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "ニノなのに"
             },
             {
               "rank": 50,
-              "title": "フェイクファクトリップス"
+              "title": "ニンゲン観察バラエティ モニタリング"
             }
           ]
         }
