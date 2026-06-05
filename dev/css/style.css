@@ -182,16 +182,13 @@
   background: var(--color-brand);
   color: var(--color-text-inverse);
 }
-
 :root[data-theme="white"] .selected-area,
 :root[data-theme="white"] .task-card,
 :root[data-theme="white"] .check-control-area,
-:root[data-theme="white"] .bottom-action-area,
 :root[data-theme="white"] .home-card,
 :root[data-theme="white"] .request-ranking-card {
-  border: 1px solid var(--color-border);
+  box-shadow: inset 0 0 0 1px var(--color-brand);
 }
-
 :root[data-theme="white"] .home-list-box,
 :root[data-theme="white"] .request-ranking-item,
 :root[data-theme="white"] .song-6f6f6button,
@@ -200,7 +197,6 @@
 :root[data-theme="white"] .youtube-card {
   border-color: var(--color-border);
 }
-
 :root[data-theme="white"] .song-button.selected,
 :root[data-theme="white"] .theme-button.active,
 :root[data-theme="white"] .request-ranking-rank {
