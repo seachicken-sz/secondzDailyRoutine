@@ -208,27 +208,22 @@
   background: var(--color-page-bg);
 }
 
-
-
-/*******************/
-/*共通設定 - 画面*/
-/*******************/
+/* =========================
+   共通 - 画面設定
+========================= */
 * {
   box-sizing: border-box;
 }
-
 html,
 body {
   height: 100%;
 }
-
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: var(--color-page-bg);
   color: var(--color-text);
 }
-
 .app {
   width: min(100%, 720px);
   height: 100dvh;
@@ -236,13 +231,11 @@ body {
   padding: 0px;
   overflow: hidden;
 }
-
 /*タイトル表示*/
 .header {
   flex-shrink: 0;
   margin-bottom: 14px;
 }
-
 /*メインコンテンツ表示*/
 .step-screen {
   height: calc(100% - 60px);
@@ -252,21 +245,19 @@ body {
   padding: 18px 12px;
 }
 
-/*******************/
-/*共通設定 - パーツ*/
-/*******************/
+/* =========================
+   共通 - パーツ
+========================= */
 h1 {
   margin: 0;
   font-size: 24px;
   line-height: 1.4;
 }
-
 .description {
   margin: 10px 0 0;
   color: var(--color-text-description);
   line-height: 1.7;
 }
-
 .selected-area,
 .task-card {
   flex-shrink: 0;
@@ -276,68 +267,6 @@ h1 {
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
 }
-
-.selected-label {
-  margin: 0 0 4px;
-  font-size: 13px;
-  color: var(--color-text-muted);
-}
-
-.selected-song {
-  margin: 0 0 14px;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.scroll-area {
-  flex: 1;
-  min-height: 0;
-  overflow-y: auto;
-  margin: 0 -10px;
-  padding: 2px 8px 24px 8px;
-}
-
-.song-section {
-  margin-top: 18px;
-}
-
-.song-section:first-child {
-  margin-top: 0;
-}
-
-.song-section:last-child {
-  margin-bottom: 18px;
-}
-
-.song-section h2,
-.youtube-section h2 {
-  margin: 0 0 12px;
-  font-size: 18px;
-}
-
-.song-list {
-  display: grid;
-  gap: 10px;
-}
-
-.song-button {
-  width: 100%;
-  padding: 14px 16px;
-  border: 1px solid var(--color-border);
-  border-radius: 14px;
-  background: var(--color-surface);
-  color: var(--color-text);
-  font-size: 16px;
-  text-align: left;
-  cursor: pointer;
-}
-
-.song-button.selected {
-  border-color: var(--color-brand);
-  background: var(--color-brand-soft);
-  font-weight: 700;
-}
-
 .primary-button,
 .secondary-button,
 .gray-button {
@@ -349,48 +278,39 @@ h1 {
   font-weight: 700;
   cursor: pointer;
 }
-
 .primary-button {
   border: none;
   background: var(--color-brand);
   color: var(--color-text-inverse);
 }
-
 .secondary-button {
   border: 1px solid var(--color-border);
   background: var(--color-surface);
   color: var(--color-text);
 }
-
 .gray-button {
   border: 1px solid var(--color-border);
   background: var(--color-button-gray-bg);
   color: var(--color-button-gray-text);
 }
-
 .gray-button:active {
   transform: scale(0.98);
 }
-
 .gray-button:disabled {
   opacity: 0.7;
 }
-
 .no-margin-button {
   margin-top: 0;
 }
-
 .button-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
-
 .compact-button {
   margin-top: 0;
   border-radius: 14px;
 }
-
 .accordion-button {
   width: 100%;
   padding: 14px 16px;
@@ -405,11 +325,9 @@ h1 {
   justify-content: space-between;
   cursor: pointer;
 }
-
 .accordion-content {
   margin-top: 12px;
 }
-
 .check-control-area {
   margin: 0 0 14px;
   padding: 16px;
@@ -417,12 +335,10 @@ h1 {
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
 }
-
 .check-list {
   display: grid;
   gap: 10px;
 }
-
 .check-item {
   display: flex;
   align-items: center;
@@ -433,19 +349,16 @@ h1 {
   background: var(--color-surface);
   cursor: pointer;
 }
-
 .check-item input {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
 }
-
 .check-item-name {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
 }
-
 .bottom-action-area {
   margin: 14px 0 20px;
   padding: 10px 16px 16px 16px;
@@ -453,11 +366,6 @@ h1 {
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
 }
-
-.spotify-skip-area {
-  margin-bottom: 18px;
-}
-
 .group-label {
   margin: 0 0 8px;
   color: var(--color-brand);
@@ -466,173 +374,23 @@ h1 {
   line-height: 1.5;
 }
 
-.task-title {
-  margin: 0 0 14px;
-  font-size: 22px;
-  line-height: 1.4;
-}
-
-.notice-box {
-  margin: 0 0 14px;
-  padding: 14px;
-  border-radius: 12px;
-  background: var(--color-page-bg);
-  color: var(--color-text-sub);
-  line-height: 1.7;
-  white-space: pre-wrap;
-  font-weight: 600;
-}
-
-/* JSON内の \n を画面上の改行として表示する */
-#dailyTaskCommentArea,
-#onceTaskMessageArea {
-  white-space: pre-line;
-}
-
-.copy-area {
-  margin: 0 0 14px;
-  padding: 14px;
-  border-radius: 12px;
-  background: var(--color-brand-soft);
-  border: 1px solid var(--color-brand-border);
-}
-
-.copy-text {
-  margin: 0 0 12px;
-  padding: 12px;
-  border-radius: 10px;
-  background: var(--color-page-bg);
-  color: var(--color-text);
-  line-height: 1.7;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-.post-preview-tabs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  margin: 8px 0 12px;
-  padding: 4px;
-  border-radius: var(--radius-button);
-  background: var(--color-page-bg);
-}
-
-.post-preview-tab {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid var(--color-transparent);
-  border-radius: var(--radius-button);
-  background: var(--color-transparent);
-  color: var(--color-text-muted);
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.post-preview-tab.active {
-  border-color: var(--color-brand);
-  background: var(--color-surface);
-  color: var(--color-brand);
-  box-shadow: var(--shadow-card);
-}
-
-.post-preview-panel {
-  margin-top: 8px;
-}
-
-.post-item-list {
-  margin-bottom: 24px;
-}
-
-.post-check-card {
-  margin-top: 0;
-  margin-bottom: 24px;
-}
-
-.post-action-button {
-  margin-top: 18px;
-}
-
-.youtube-section {
-  margin-top: 22px;
-}
-
-.youtube-section:first-child {
-  margin-top: 0;
-}
-
-.youtube-card-row {
-  display: flex;
-  gap: 12px;
-  overflow-x: auto;
-  padding: 2px 0 12px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.youtube-card {
-  min-width: 180px;
-  max-width: 180px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-card);
-  background: var(--color-page-bg);
-  overflow: hidden;
-  cursor: pointer;
-  flex-shrink: 0;
-  box-shadow: var(--shadow-card-soft);
-}
-
-.youtube-thumbnail {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  display: block;
-  background: var(--color-surface-media);
-}
-
-.youtube-text-card {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  padding: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-brand-soft);
-  color: var(--color-accent-text);
-  font-weight: 700;
-  text-align: center;
-  line-height: 1.5;
-}
-
-.youtube-card-name {
-  margin: 0;
-  padding: 10px 12px 12px;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.45;
-  color: var(--color-text);
-}
-
 /* =========================
    Feedback
 ========================= */
 .feedback-card {
   margin-top: 16px;
 }
-
 .feedback-text {
   margin: 0 0 16px;
   font-size: 15px;
   line-height: 1.8;
   color: var(--color-text-description);
 }
-
 .feedback-link-button {
   display: block;
   text-align: center;
   text-decoration: none;
 }
-
 .error-area {
   flex-shrink: 0;
   margin: 0 0 14px;
@@ -641,70 +399,6 @@ h1 {
   background: var(--color-surface-danger);
   color: var(--color-danger);
   line-height: 1.6;
-}
-
-.back-step-button {
-  flex-shrink: 0;
-  width: fit-content;
-  margin: 0 0 10px;
-  padding: 6px 10px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-button);
-  background: var(--color-page-bg);
-  color: var(--color-text-sub);
-  font-size: 12px;
-  font-weight: 700;
-  cursor: pointer;
-  box-shadow: var(--shadow-card);
-}
-
-.empty-text {
-  margin: 0;
-  padding: 12px;
-  color: var(--color-text-muted);
-  background: var(--color-surface);
-  border-radius: 12px;
-}
-
-.warning-text {
-  color: var(--color-danger);
-  font-weight: 700;
-}
-
-.step-top-action-bar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 8px 0;
-}
-
-.back-step-button,
-.step-usage-button {
-  width: fit-content;
-  padding: 6px 10px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-button);
-  background: var(--color-page-bg);
-  color: var(--color-text-sub);
-  font-size: 12px;
-  font-weight: 700;
-  cursor: pointer;
-  box-shadow: var(--shadow-card);
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.step-usage-button {
-  margin-left: auto;
-  border: none;
-  background: var(--color-transparent);
-  box-shadow: none;
-  color: var(--color-text-muted);
-  padding: 6px 4px;
-  margin-bottom: 10px;
-  font-size: 18px;
 }
 
 
