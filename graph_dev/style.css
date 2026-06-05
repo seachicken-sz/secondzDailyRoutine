@@ -11,9 +11,10 @@ body {
   text-align:center;
 }
 a img{
-  width:80%%;
+  width:75%;
   max-width:680px;
   margin:1rem auto 3rem;
+  border-radius:10px;
 }
 .back-to-app-button,
 .reload-data-button {
