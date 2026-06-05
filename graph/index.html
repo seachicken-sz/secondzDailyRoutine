@@ -6,7 +6,7 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <title>TVer 48時間ランキング推移レポート</title>
+  <title>TVerランキング推移レポート</title>
 
   <link rel="stylesheet" href="./style.css" />
 
@@ -20,12 +20,17 @@
     <a class="back-to-app-button" href="../app/">
       ←
     </a>
+  
     <label for="programSelect" class="program-select-label">番組を選ぶ</label>
     <select id="programSelect" class="program-select"></select>
+  
+    <button id="reloadDataButton" class="reload-data-button" type="button">
+      <i class="bi bi-arrow-clockwise"></i>
+    </button>
   </div>
 
   <main class="report" id="reportCaptureArea">
-    <div class="top-bar">TVer 48時間ランキング推移レポート</div>
+    <div class="top-bar" id="reportTopBar">TVerランキング推移レポート</div>
 
     <section class="hero">
       <div id="programTitle" class="program-title"></div>
@@ -49,26 +54,27 @@
     </section>
 
     <section class="chart-section">
-      <div class="section-title">ランキング推移（48時間）</div>
-
+      <div class="section-title" id="chartSectionTitle">ランキング推移</div>
       <div id="charts" class="charts"></div>
     </section>
 
-    <section class="table-section">
+    <section class="table-section" id="bottomSection">
       <div id="nearbyRankingTables" class="tables"></div>
     </section>
 
     <div class="footer">
-      データ出典：TVer 本データは個人がTVerをより楽しむために作成された資料であり、公式とは一切関係がありません。<br>※6時間ごと更新
+      データ出典：TVer<br>本データは個人がTVerをより楽しむために作成された資料であり、公式とは一切関係がありません。<br>※1時間ごと更新
     </div>
   </main>
+
   <div id="newEpisodeLink"></div>
+
   <div class="link-wrap">
     <a href="https://seachicken-sz.github.io/secondzDailyRoutine/app/">
       <img src="https://seachicken-sz.github.io/secondzDailyRoutine/img/link-card.jpg">
     </a>
   </div>
-
+  
   <div class="save-area">
     <button id="saveImageButton" class="save-button" type="button">
       <i class="bi bi-box-arrow-down"></i>
