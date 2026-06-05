@@ -371,7 +371,7 @@ a img{
 
 /* 7日間表示では少しだけ高さを増やす */
 .report.is-long-report .like-chart-canvas-wrap {
-  height: 280px;
+  height: 180px;
 }
 
 .footer {
