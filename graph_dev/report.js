@@ -626,15 +626,24 @@ function buildImageShareText() {
 
   const programTitle = reportData.programTitle || "";
   const episodeUrl = buildTverEpisodeUrl(reportData.episodeUrl || reportData.episodeId || "");
-  const rankingLine = buildCurrentRankingShareLine();
+  const rankingLines = buildCurrentRankingShareLines();
+  const likeLine = buildLikeShareLine();
 
   const lines = [];
 
-  lines.push(`${programTitle}をTVerで見よう！`);
-
-  if (rankingLine) {
-    lines.push(rankingLine);
+  if (programTitle) {
+    lines.push(programTitle);
   }
+
+  if (rankingLines.length > 0) {
+    lines.push(...rankingLines);
+  }
+
+  if (likeLine) {
+    lines.push(likeLine);
+  }
+
+  lines.push("TVerで見よう！");
 
   if (episodeUrl) {
     lines.push(episodeUrl);
@@ -643,9 +652,9 @@ function buildImageShareText() {
   return lines.join("\n");
 }
 
-function buildCurrentRankingShareLine() {
+function buildCurrentRankingShareLines() {
   if (!reportData || !Array.isArray(reportData.rankings)) {
-    return "";
+    return [];
   }
 
   const activeRankings = reportData.rankings
@@ -661,10 +670,28 @@ function buildCurrentRankingShareLine() {
     });
 
   if (activeRankings.length === 0) {
+    return [];
+  }
+
+  return activeRankings.map((text, index) => {
+    return index === activeRankings.length - 1
+      ? `${text}！`
+      : text;
+  });
+}
+
+function buildLikeShareLine() {
+  if (!reportData) {
     return "";
   }
 
-  return `現在 ${activeRankings.join(" ")}！`;
+  const likes = reportData.likes;
+
+  if (likes === null || likes === undefined || likes === "") {
+    return "";
+  }
+
+  return `いいね数：${formatDisplayNumber(likes)}`;
 }
 
 /**
@@ -677,7 +704,6 @@ function buildImageShareTitle() {
 
   return `${reportData.programTitle}をTVerで見よう！`;
 }
-
 
 // ==============================
 // 最高順位カード描画
