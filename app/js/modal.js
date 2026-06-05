@@ -114,3 +114,16 @@ function openUsageModal() {
     usageModalElement.classList.remove("hidden");
   }
 }
+
+
+// モーダル内を下にスクロール
+function scrollSetupGuideIntoView(targetElement) {
+  if (!targetElement) return;
+
+  window.setTimeout(() => {
+    targetElement.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest"
+    });
+  }, 80);
+}
