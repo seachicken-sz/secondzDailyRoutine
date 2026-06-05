@@ -178,7 +178,7 @@
 }
 :root[data-theme="white"] .post-preview-tab.active,
 :root[data-theme="white"] .primary-button {
-  box-shadow: inset 0 0 0 1px var(--color-brand);
+  box-shadow: inset 0 0 0 1px var(--color-border-soft);
   background: var(--color-brand);
   color: var(--color-text-inverse);
 }
@@ -187,7 +187,7 @@
 :root[data-theme="white"] .check-control-area,
 :root[data-theme="white"] .home-card,
 :root[data-theme="white"] .request-ranking-card {
-  box-shadow: inset 0 0 0 1px var(--color-brand);
+  box-shadow: inset 0 0 0 1px var(--color-border-soft);
 }
 :root[data-theme="white"] .home-list-box,
 :root[data-theme="white"] .request-ranking-item,
