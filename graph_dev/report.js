@@ -1002,15 +1002,7 @@ function createRankingChart(canvasId, currentData, previousData, color, chartHou
       scales: {
         y: {
           title: {
-            display: true,
-            text: "",
-            font: {
-              size: 11,
-              weight: "600"
-            },
-            padding: {
-              bottom: 6
-            }
+            display: false
           },
           reverse: true,
           min: 1,
@@ -1142,16 +1134,7 @@ function createCombinedRankingChart(canvasId, rankings, chartHours) {
       scales: {
         y: {
           title: {
-            display: true,
-            text: "",
-            font: {
-              size: 11,
-              weight: "600"
-            },
-            padding: {
-              bottom: 6
-            }
-          },
+            display: false},
           reverse: true,
           min: 1,
           max: 50,
@@ -1362,8 +1345,6 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
     },
     options: {
       responsive: true,
-
-      // CSS側の高さを使う。横伸び・縦潰れ対策。
       maintainAspectRatio: false,
 
       resizeDelay: 100,
@@ -1378,15 +1359,7 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
       scales: {
         y: {
           title: {
-            display: true,
-            font: {
-              size: 11,
-              weight: "600"
-            },
-            padding: {
-              bottom: 6
-            }
-          },
+            display: false },
           beginAtZero: false,
           border: {
             display: false
