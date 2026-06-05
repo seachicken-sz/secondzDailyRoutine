@@ -36,6 +36,9 @@
 .modal-header h2 {
   margin: 0;
   font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 .modal-close-button {
   width: 36px;
