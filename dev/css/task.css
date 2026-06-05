@@ -230,6 +230,7 @@
   cursor: pointer;
   flex-shrink: 0;
   box-shadow: var(--shadow-card-soft);
+  padding: .5rem 0;
 }
 
 .youtube-thumbnail {
