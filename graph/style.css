@@ -5,6 +5,9 @@ body {
   color: #10213f;
   overflow-x: hidden;
 }
+.link-wrap{
+  text-align:center;
+}
 a img{
   width:100%;
   max-width:760px;
