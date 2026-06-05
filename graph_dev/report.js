@@ -1336,7 +1336,7 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
           borderColor: "#36bfd0",
           backgroundColor: "#36bfd0",
           tension: 0.32,
-          pointRadius: 2,
+          pointRadius: 1,
           pointHoverRadius: 2,
           borderWidth: 2,
           spanGaps: true
