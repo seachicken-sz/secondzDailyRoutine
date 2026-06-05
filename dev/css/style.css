@@ -732,15 +732,7 @@ h1 {
 .home-daily-jump-button {
   text-align: center;
 }
-.show-when-daily-started {
-  display: none !important;
-}
-.daily-started-today .show-when-daily-started {
-  display: inline !important;
-}
-.daily-started-today .hide-when-daily-started {
-  display: none !important;
-}
+
 
 /* ホーム 上に戻るボタン*/
 .home-back-to-top-button {
@@ -910,29 +902,6 @@ h1 {
   cursor: not-allowed;
   transform: none;
 }
-/* daily実行済みのときだけ表示したい要素 */
-.show-when-daily-done {
-  display: none !important;
-}
-.is-daily-done .show-when-daily-done {
-  display: inline-flex !important;
-}
-/* daily実行済みのときだけ非表示にしたい要素 */
-.is-daily-done .hide-when-daily-done {
-  display: none !important;
-}
-/* 今日、dailyグループが1つ以上完了しているときだけ表示 */
-.show-when-daily-started {
-  display: none !important;
-}
-.daily-started-today .show-when-daily-started {
-  display: block !important;
-}
-/* 今日、dailyグループが1つ以上完了しているときだけ非表示 */
-.daily-started-today .hide-when-daily-started {
-  display: none !important;
-}
-
 /* リンクカード風表示　お知らせ、スケジュール表示 */
 .card-link a {
   display: flex;
@@ -2316,8 +2285,3 @@ h1 {
   margin-bottom: 0;
 }
 
-
-
-.hidden {
-  display: none;
-}
