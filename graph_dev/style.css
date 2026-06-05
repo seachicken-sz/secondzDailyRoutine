@@ -218,7 +218,6 @@ a img{
 }
 
 .report.is-long-report .section-title::after {
-  content: "　※24時間ごとの目盛りで表示";
   font-size: 12px;
   font-weight: 700;
   color: #6c7a90;
