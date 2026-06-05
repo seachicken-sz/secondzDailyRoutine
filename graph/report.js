@@ -3,6 +3,7 @@
 // ==============================
 
 // 現在表示中の番組レポートデータ
+// 画像保存・共有時のファイル名や共有テキスト生成にも使う
 let reportData = null;
 
 // JSON全体のデータ
@@ -10,23 +11,29 @@ let reportData = null;
 let reportBundle = null;
 
 // Chart.jsで生成したグラフインスタンスを保持する配列
-// 番組切り替え時にdestroyするために使う
+// 番組切り替え時に古いグラフをdestroyするために使う
 let rankingCharts = [];
 
-// グラフ横軸ラベル
-// 1〜48時間目を表示する
-const labels = Array.from({ length: 48 }, (_, i) => i + 1);
+// JSON再取得時にURLへ付与するキャッシュ回避用パラメータ
+let reportJsonCacheBust = "";
+
+
+// ==============================
+// ランキング表示テーマ
+// ==============================
 
 // ランキング種別ごとのテーマ設定
 // 1つ目：青系、2つ目：ピンク系
 const rankingThemes = [
   {
     color: "#0877df",
+    previousColor: "#b8c9d9",
     labelClass: "blue",
     bgClass: "blue-bg"
   },
   {
     color: "#ec2386",
+    previousColor: "#d9bcc9",
     labelClass: "pink",
     bgClass: "pink-bg"
   }
@@ -59,6 +66,35 @@ function formatRank(rank) {
 }
 
 /**
+ * 表示用の数値を3桁区切りにする
+ *
+ * 例：
+ * 1672 → 1,672
+ * 12000 → 12,000
+ * "1.1万" のような表示文字列はそのまま返す
+ */
+function formatDisplayNumber(value) {
+  if (value === null || value === undefined || value === "") {
+    return "";
+  }
+
+  const text = String(value).trim();
+
+  // 「1.1万」「75.4万」など、数字以外を含む表示文字列はそのまま返す
+  if (!/^\d+(\.\d+)?$/.test(text)) {
+    return text;
+  }
+
+  const number = Number(text);
+
+  if (!Number.isFinite(number)) {
+    return text;
+  }
+
+  return number.toLocaleString("ja-JP");
+}
+
+/**
  * HTMLに埋め込む文字列をエスケープする
  * innerHTMLで文字列を入れる箇所の安全対策
  */
@@ -73,14 +109,193 @@ function escapeHtml(value) {
 
 
 // ==============================
+// 48時間 / 7日間 判定
+// ==============================
+
+/**
+ * 48時間 / 7日間の切り替え判定
+ *
+ * latest/currentPoints だけを見る。
+ * previousPoints に48時間以降のデータがあっても、それだけでは7日間扱いにしない。
+ */
+function getReportChartHours(rankings) {
+  if (!Array.isArray(rankings)) {
+    return 48;
+  }
+
+  const hasCurrentOver48HourPoint = rankings.some((ranking) => {
+    const points = Array.isArray(ranking.currentPoints)
+      ? ranking.currentPoints
+      : [];
+
+    return points.some((point) => {
+      const hour = Number(point.hour);
+
+      return Number.isFinite(hour) && hour >= 48;
+    });
+  });
+
+  return hasCurrentOver48HourPoint ? 168 : 48;
+}
+
+/**
+ * 指定期間内の最高順位を取得する
+ * 順位は数字が小さいほど良い
+ */
+function getBestRankInfoInPeriod(points, chartHours) {
+  if (!Array.isArray(points)) {
+    return {
+      rank: null,
+      hour: null
+    };
+  }
+
+  const validPoints = points
+    .map((point) => ({
+      hour: Number(point.hour),
+      rank: Number(point.rank)
+    }))
+    .filter((point) =>
+      Number.isInteger(point.hour) &&
+      point.hour >= 0 &&
+      point.hour < chartHours &&
+      Number.isFinite(point.rank)
+    );
+
+  if (validPoints.length === 0) {
+    return {
+      rank: null,
+      hour: null
+    };
+  }
+
+  return validPoints.reduce((bestPoint, currentPoint) => {
+    if (currentPoint.rank < bestPoint.rank) {
+      return currentPoint;
+    }
+
+    return bestPoint;
+  });
+}
+
+/**
+ * ランキングに入っていた時間数を取得する
+ * currentPoints / previousPoints の存在するhour数を維持時間として数える
+ */
+function getRankInDurationHours(points, chartHours) {
+  const data = convertPointsToHourData(points, chartHours);
+
+  return data.filter((rank) => rank !== null).length;
+}
+
+/**
+ * 1つのランキング種別に最新話ランキングデータがあるか判定する
+ *
+ * currentPoints に点がある場合だけ「データあり」。
+ * previousPoints だけに点がある場合は、前回比較用データは存在しても
+ * 最新話ランキングなしとして表示対象にしない。
+ */
+function hasRankingData(ranking) {
+  if (!ranking) {
+    return false;
+  }
+
+  const currentPoints = Array.isArray(ranking.currentPoints)
+    ? ranking.currentPoints
+    : [];
+
+  return currentPoints.length > 0;
+}
+
+/**
+ * rankings 全体に1件でも最新話ランキングデータがあるか判定する
+ *
+ * false の場合だけ、
+ * rankCards / ランキング推移 / すぐ上ランキングをまとめて非表示にする。
+ */
+function hasAnyRankingData(rankings) {
+  return Array.isArray(rankings) && rankings.some(hasRankingData);
+}
+
+/**
+ * rankings 全体に1件でもランキングデータがあるか判定する
+ *
+ * false の場合だけ、
+ * rankCards / ランキング推移 / すぐ上ランキングをまとめて非表示にする。
+ */
+function hasAnyRankingData(rankings) {
+  return Array.isArray(rankings) && rankings.some(hasRankingData);
+}
+
+/**
+ * 現時点でランキング圏内か判定する
+ *
+ * currentRank が数値なら、最新取得時点でランクイン中とみなす。
+ * currentPoints が過去にあっても、currentRank が null なら現時点では圏外扱い。
+ */
+function isCurrentlyRanked(ranking) {
+  if (!ranking) {
+    return false;
+  }
+
+  const currentRank = Number(ranking.currentRank);
+
+  return Number.isFinite(currentRank);
+}
+
+
+// ==============================
 // 初期化処理
 // ==============================
 
 /**
- * レポートJSONを読み込み、初期表示を行う
+ * 初期表示を行う
+ *
+ * 通常読み込み：
+ * - tverRankingReport.json をそのまま取得
+ *
+ * 更新ボタン押下時：
+ * - loadReportData(true) で cacheBust を付けて再取得
  */
 async function initializeReport() {
-  const response = await fetch("./tverRankingReport.json");
+  try {
+    await loadReportData(false);
+  } catch (error) {
+    console.error(error);
+    alert("レポートデータの読み込みに失敗しました。");
+  }
+
+  // 画像保存・共有ボタンのクリックイベントを設定
+  setupSaveImageButton();
+
+  // JSON再読み込みボタンのクリックイベントを設定
+  setupReloadDataButton();
+}
+
+/**
+ * レポートJSONを読み込み、画面に反映する
+ *
+ * forceReload=true の場合：
+ * - URLに時刻パラメータを付与
+ * - fetchのcache指定を no-store にする
+ */
+async function loadReportData(forceReload = false) {
+  if (forceReload) {
+    reportJsonCacheBust = String(Date.now());
+  }
+
+  const jsonUrl = reportJsonCacheBust
+    ? `./tverRankingReport.json?cacheBust=${encodeURIComponent(reportJsonCacheBust)}`
+    : "./tverRankingReport.json";
+
+  const response = await fetch(jsonUrl, {
+    cache: forceReload ? "no-store" : "default"
+  });
+
+  if (!response.ok) {
+    throw new Error(`JSONの読み込みに失敗しました: ${response.status}`);
+  }
+
   const data = await response.json();
 
   // 単一番組JSON / 複数番組JSONの差を吸収する
@@ -94,9 +309,6 @@ async function initializeReport() {
 
   // 選択中の番組レポートを描画
   renderSelectedReport(selectedProgramId);
-
-  // 画像共有ボタンのクリックイベントを設定
-  setupSaveImageButton();
 }
 
 /**
@@ -168,12 +380,12 @@ function setupProgramSelect(reports, selectedProgramId) {
     `;
   }).join("");
 
-  // プルダウン変更時にURLと表示内容を更新
-  select.addEventListener("change", () => {
+  // 再読み込み時にchangeイベントが二重登録されないよう、古いイベントを置き換える
+  select.onchange = () => {
     const nextProgramId = select.value;
     updateUrlProgramId(nextProgramId);
     renderSelectedReport(nextProgramId);
-  });
+  };
 }
 
 /**
@@ -215,17 +427,44 @@ function updateUrlProgramId(programId) {
  * レポート全体を描画する
  */
 function renderReport(data) {
-  document.title = `${data.programTitle} ${data.broadcastDate}｜TVer 48時間ランキング推移レポート`;
+  const chartHours = getReportChartHours(data.rankings);
+  const isLongReport = chartHours > 48;
+  const reportLabel = isLongReport
+    ? "TVer 7日間ランキング推移レポート"
+    : "TVer 48時間ランキング推移レポート";
+  const chartTitle = "ランキング推移";
+
+  document.title = `${data.programTitle || ""} ${data.broadcastDate || ""}｜${reportLabel}`;
+
+  const report = document.getElementById("reportCaptureArea");
+  const reportTopBar = document.getElementById("reportTopBar");
+  const chartSectionTitle = document.getElementById("chartSectionTitle");
+
+  // 7日間表示かどうかでCSSを切り替える
+  if (report) {
+    report.classList.toggle("is-long-report", isLongReport);
+  }
+
+  // 上部バーの文言を48時間 / 7日間で切り替える
+  if (reportTopBar) {
+    reportTopBar.textContent = reportLabel;
+  }
+
+  // グラフセクション見出し
+  if (chartSectionTitle) {
+    chartSectionTitle.textContent = chartTitle;
+  }
 
   document.getElementById("programTitle").textContent = data.programTitle || "";
 
   document.getElementById("programMeta").innerHTML = `
-    ${data.broadcastDate || ""}　放送　（ <i class="ph ph-clock"></i> ${data.updatedAt || ""}　更新 ）<br>
-    ${data.subtitle || ""}
+    ${data.broadcastDate || ""} 放送　${data.subtitle || ""}<br>
+    （ <i class="ph ph-clock"></i> ${data.updatedAt || ""} 更新 ）
+    
   `;
 
-  document.getElementById("likeCount").textContent = data.likes || "";
-  document.getElementById("favoriteCount").textContent = data.favorites || "";
+  document.getElementById("likeCount").textContent = formatDisplayNumber(data.likes);
+  document.getElementById("favoriteCount").textContent = formatDisplayNumber(data.favorites);
 
   // TVer最新話リンクを描画
   renderNewEpisodeLink(data);
@@ -233,10 +472,83 @@ function renderReport(data) {
   // 番組切り替え時に古いグラフを破棄
   destroyRankingCharts();
 
-  // 各エリアを描画
-  renderRankCards(data.rankings);
-  renderCharts(data.rankings);
-  renderNearbyRankingTables(data.rankings);
+  const hasAnyRankings = hasAnyRankingData(data.rankings);
+
+  // 全ランキング種別にデータがない場合だけ、ランキング関連エリアを非表示にする
+  toggleRankingSections(hasAnyRankings);
+
+  if (hasAnyRankings) {
+    // 1種でもランキングデータがある場合は、全ランキング種別をそのまま描画する
+    // 片方だけデータなしの場合、ない方は -位 / 空グラフ / 空テーブルとして残る
+    renderRankCards(data.rankings, chartHours);
+    renderCharts(data.rankings, chartHours);
+    renderBottomSection(data.rankings, chartHours);
+  } else {
+    // 全部ない場合は、古い描画内容が残らないように中身も消す
+    clearRankingSections();
+  }
+
+  // footerより上に、いいね数推移グラフを追加
+  // ランキングが全部なくても、likePoints があれば表示する
+  renderLikeTimelineSection(data.likePoints, chartHours);
+}
+
+/**
+ * ランキング関連セクションの表示/非表示を切り替える
+ *
+ * 全ランキング種別にデータがない場合だけ非表示。
+ * 片方のランキング種別だけデータがない場合は非表示にしない。
+ */
+function toggleRankingSections(shouldShow) {
+  const rankCards = document.getElementById("rankCards");
+
+  // HTML側に id="rankingChartSection" がある場合はそれを優先する。
+  // なければ、既存HTML向けに #charts の直近の .chart-section を探す。
+  const charts = document.getElementById("charts");
+  const chartSection = document.getElementById("rankingChartSection") ||
+    (charts ? charts.closest(".chart-section") : null);
+
+  // HTML側に id="rankingTableSection" がある場合はそれを優先する。
+  // なければ、既存HTML向けに #nearbyRankingTables の直近の .table-section を探す。
+  const nearbyRankingTables = document.getElementById("nearbyRankingTables");
+  const tableSection = document.getElementById("rankingTableSection") ||
+    (nearbyRankingTables ? nearbyRankingTables.closest(".table-section") : null);
+
+  if (rankCards) {
+    rankCards.style.display = shouldShow ? "" : "none";
+  }
+
+  if (chartSection) {
+    chartSection.style.display = shouldShow ? "" : "none";
+  }
+
+  if (tableSection) {
+    tableSection.style.display = shouldShow ? "" : "none";
+  }
+}
+
+/**
+ * ランキング関連の中身を空にする
+ *
+ * 非表示にするだけでも見た目は消えるが、
+ * 番組切り替え時に古いHTMLが残らないよう中身も消す。
+ */
+function clearRankingSections() {
+  const rankCards = document.getElementById("rankCards");
+  const charts = document.getElementById("charts");
+  const nearbyRankingTables = document.getElementById("nearbyRankingTables");
+
+  if (rankCards) {
+    rankCards.innerHTML = "";
+  }
+
+  if (charts) {
+    charts.innerHTML = "";
+  }
+
+  if (nearbyRankingTables) {
+    nearbyRankingTables.innerHTML = "";
+  }
 }
 
 /**
@@ -267,7 +579,7 @@ function renderNewEpisodeLink(data) {
 }
 
 /**
- * episodeId からTVerエピソードURLを生成する
+ * episodeId / episodeUrl からTVerエピソードURLを生成する
  *
  * 対応形式：
  * - epxxxx
@@ -304,8 +616,8 @@ function buildTverEpisodeUrl(episodeId) {
  * 画像共有ボタン押下時に使う共有テキストを生成する
  *
  * 出力例：
- * 番組名をTVerで見よう！
- * https://tver.jp/episodes/epxxxxxxx
+ * タイムレスマンをTVerで見よう！
+ * https://tver.jp/episodes/epqhlsu653
  */
 function buildImageShareText() {
   if (!reportData) {
@@ -313,14 +625,73 @@ function buildImageShareText() {
   }
 
   const programTitle = reportData.programTitle || "";
-  const episodeUrl = buildTverEpisodeUrl(reportData.episodeId || reportData.episodeUrl || "");
+  const episodeUrl = buildTverEpisodeUrl(reportData.episodeUrl || reportData.episodeId || "");
+  const rankingLines = buildCurrentRankingShareLines();
+  const likeLine = buildLikeShareLine();
 
-  // URLが取れない場合でも番組名だけは共有できるようにする
-  if (!episodeUrl) {
-    return `${programTitle}をTVerで見よう！`;
+  const lines = [];
+
+  if (programTitle) {
+    lines.push(programTitle);
   }
 
-  return `${programTitle}をTVerで見よう！\n${episodeUrl}`;
+  if (rankingLines.length > 0) {
+    lines.push(...rankingLines);
+  }
+
+  if (likeLine) {
+    lines.push(likeLine);
+  }
+
+  lines.push("TVerで見よう！");
+
+  if (episodeUrl) {
+    lines.push(episodeUrl);
+  }
+
+  return lines.join("\n");
+}
+
+function buildCurrentRankingShareLines() {
+  if (!reportData || !Array.isArray(reportData.rankings)) {
+    return [];
+  }
+
+  const activeRankings = reportData.rankings
+    .filter((ranking) => {
+      return ranking
+        && ranking.currentRank !== null
+        && ranking.currentRank !== undefined
+        && ranking.currentRank !== "";
+    })
+    .map((ranking) => {
+      const label = ranking.label || ranking.type || "ランキング";
+      return `${label}${ranking.currentRank}位`;
+    });
+
+  if (activeRankings.length === 0) {
+    return [];
+  }
+
+  return activeRankings.map((text, index) => {
+    return index === activeRankings.length - 1
+      ? `${text}！`
+      : text;
+  });
+}
+
+function buildLikeShareLine() {
+  if (!reportData) {
+    return "";
+  }
+
+  const likes = reportData.likes;
+
+  if (likes === null || likes === undefined || likes === "") {
+    return "";
+  }
+
+  return `いいね数：${formatDisplayNumber(likes)}`;
 }
 
 /**
@@ -334,53 +705,14 @@ function buildImageShareTitle() {
   return `${reportData.programTitle}をTVerで見よう！`;
 }
 
-
 // ==============================
 // 最高順位カード描画
 // ==============================
 
 /**
- * currentPoints の中から最高順位を取得する
- * 順位は数字が小さいほど良い
- */
-function getBestRankInfoInPeriod(ranking) {
-  if (!ranking || !Array.isArray(ranking.currentPoints)) {
-    return {
-      rank: ranking && ranking.currentRank !== undefined ? ranking.currentRank : null,
-      hour: ranking && ranking.elapsedHour !== undefined ? ranking.elapsedHour : null
-    };
-  }
-
-  const validPoints = ranking.currentPoints
-    .map((point) => ({
-      hour: Number(point.hour),
-      rank: Number(point.rank)
-    }))
-    .filter((point) =>
-      Number.isFinite(point.hour) &&
-      Number.isFinite(point.rank)
-    );
-
-  if (validPoints.length === 0) {
-    return {
-      rank: ranking.currentRank !== undefined ? ranking.currentRank : null,
-      hour: ranking.elapsedHour !== undefined ? ranking.elapsedHour : null
-    };
-  }
-
-  return validPoints.reduce((bestPoint, currentPoint) => {
-    if (currentPoint.rank < bestPoint.rank) {
-      return currentPoint;
-    }
-
-    return bestPoint;
-  });
-}
-
-/**
  * 最高順位カードを描画する
  */
-function renderRankCards(rankings) {
+function renderRankCards(rankings, chartHours = 48) {
   const container = document.getElementById("rankCards");
 
   if (!container) {
@@ -392,18 +724,38 @@ function renderRankCards(rankings) {
     return;
   }
 
+  const isLongReport = chartHours > 48;
+
   container.innerHTML = rankings.map((ranking, index) => {
     const theme = getRankingThemeByIndex(index);
-    const bestRankInfo = getBestRankInfoInPeriod(ranking);
+    const currentBest = getBestRankInfoInPeriod(ranking.currentPoints, chartHours);
 
+    // 7日間表示では、最高順位カードに前回最高順位も表示する
+    if (isLongReport) {
+      const previousBest = getBestRankInfoInPeriod(ranking.previousPoints, chartHours);
+
+      return `
+        <div class="card">
+          <div class="label ${theme.labelClass}">${escapeHtml(ranking.label || "")}ランキング</div>
+          <div class="rank-main" style="color:${theme.color};">
+            ${formatRank(currentBest.rank)}<span>位</span>
+          </div>
+          <div class="sub-rank ${theme.bgClass}">
+            前回　${formatRank(previousBest.rank)}位
+          </div>
+        </div>
+      `;
+    }
+
+    // 48時間表示では、最高順位の時間を表示する
     return `
       <div class="card">
         <div class="label ${theme.labelClass}">${escapeHtml(ranking.label || "")}ランキング</div>
         <div class="rank-main" style="color:${theme.color};">
-          ${formatRank(bestRankInfo.rank)}<span>位</span>
+          ${formatRank(currentBest.rank)}<span>位</span>
         </div>
         <div class="sub-rank ${theme.bgClass}">
-          ${formatRank(bestRankInfo.hour)}時間目
+          到達：${formatRank(currentBest.hour)}時間目
         </div>
       </div>
     `;
@@ -412,13 +764,13 @@ function renderRankCards(rankings) {
 
 
 // ==============================
-// グラフ描画
+// ランキンググラフ描画
 // ==============================
 
 /**
  * ランキンググラフエリアを描画する
  */
-function renderCharts(rankings) {
+function renderCharts(rankings, chartHours = 48) {
   const container = document.getElementById("charts");
 
   if (!container) {
@@ -430,7 +782,28 @@ function renderCharts(rankings) {
     return;
   }
 
-  // canvas要素を生成
+  // 7日間表示では、ランキング種別を1つのグラフに統合する
+  if (chartHours > 48) {
+    container.innerHTML = `
+      <div class="chart-box chart-box-wide">
+        <div class="chart-title combined-chart-title">ランキング推移</div>
+        <div class="chart-canvas-wrap-wide">
+          <canvas id="rankingChart_combined"></canvas>
+        </div>
+      </div>
+    `;
+
+    const chart = createCombinedRankingChart(
+      "rankingChart_combined",
+      rankings,
+      chartHours
+    );
+
+    rankingCharts.push(chart);
+    return;
+  }
+
+  // 48時間表示では、ランキング種別ごとにグラフを分ける
   container.innerHTML = rankings.map((ranking, index) => {
     const theme = getRankingThemeByIndex(index);
     const canvasId = `rankingChart_${index}`;
@@ -449,15 +822,15 @@ function renderCharts(rankings) {
   rankings.forEach((ranking, index) => {
     const theme = getRankingThemeByIndex(index);
     const canvasId = `rankingChart_${index}`;
-
-    const currentData = convertPointsTo48HourData(ranking.currentPoints);
-    const previousData = convertPointsTo48HourData(ranking.previousPoints);
+    const currentData = convertPointsToHourData(ranking.currentPoints, chartHours);
+    const previousData = convertPointsToHourData(ranking.previousPoints, chartHours);
 
     const chart = createRankingChart(
       canvasId,
       currentData,
       previousData,
-      theme.color
+      theme.color,
+      chartHours
     );
 
     rankingCharts.push(chart);
@@ -465,167 +838,97 @@ function renderCharts(rankings) {
 }
 
 /**
- * ranking points を48時間分の配列に変換する
+ * すぐ上ランキング / 維持時間エリアを描画する
  *
- * Chart.js用：
- * [
- *   1時間目の順位,
- *   2時間目の順位,
- *   ...
- * ]
+ * 48時間表示：
+ * - 現時点でランキング圏内のものだけ、すぐ上ランキングを表示する
+ * - すぐ上ランキング対象が1件もない場合は、エリアごと非表示にする
  *
- * データがない時間は null
+ * 7日間表示：
+ * - すぐ上ランキングではなく、ランクイン維持時間を表示する
  */
-function convertPointsTo48HourData(points) {
-  const data = Array(48).fill(null);
-
-  if (!Array.isArray(points)) {
-    return data;
-  }
-
-  points.forEach((point) => {
-    const hour = Number(point.hour);
-    const rank = point.rank === null || point.rank === undefined
-      ? null
-      : Number(point.rank);
-
-    if (!Number.isInteger(hour)) {
-      return;
-    }
-
-    if (hour < 0 || hour >= 48) {
-      return;
-    }
-
-    data[hour] = Number.isFinite(rank) ? rank : null;
-  });
-
-  return data;
-}
-
-/**
- * 既存のChart.jsインスタンスを破棄する
- * 番組切り替え時に古いグラフが残るのを防ぐ
- */
-function destroyRankingCharts() {
-  rankingCharts.forEach((chart) => {
-    if (chart) {
-      chart.destroy();
-    }
-  });
-
-  rankingCharts = [];
-}
-
-/**
- * Chart.jsでランキング推移グラフを作成する
- */
-function createRankingChart(canvasId, currentData, previousData, color) {
-  const datasets = [
-    {
-      label: "最新回",
-      data: currentData,
-      borderColor: color,
-      backgroundColor: color,
-      tension: 0.35,
-      pointRadius: 2,
-      pointHoverRadius: 2,
-      borderWidth: 1.5,
-      spanGaps: true
-    }
-  ];
-
-  // 前回データがある場合のみ追加
-  if (Array.isArray(previousData) && previousData.some(value => value !== null)) {
-    datasets.push({
-      label: "前回",
-      data: previousData,
-      borderColor: "#aab3bd",
-      backgroundColor: "#aab3bd",
-      tension: 0.35,
-      pointRadius: 2,
-      pointHoverRadius: 2,
-      borderWidth: 1.5,
-      spanGaps: true
-    });
-  }
-
-  return new Chart(document.getElementById(canvasId), {
-    type: "line",
-    data: {
-      labels,
-      datasets
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: true,
-      aspectRatio: 1.5,
-      resizeDelay: 100,
-      scales: {
-        y: {
-          reverse: true,
-          min: 1,
-          max: 50,
-          border: {
-            display: false
-          },
-          grid: {
-            display: true,
-            color: "#e5edf5",
-            drawTicks: false
-          },
-          ticks: {
-            stepSize: 10,
-            padding: 8,
-            callback: function(value) {
-              return value;
-            }
-          }
-        },
-        x: {
-          border: {
-            display: false
-          },
-          grid: {
-            display: false,
-            drawTicks: false
-          },
-          ticks: {
-            maxTicksLimit: 8,
-            padding: 6
-          }
-        }
-      },
-      plugins: {
-        legend: {
-          display: false
-        }
-      }
-    }
-  });
-}
-
-
-// ==============================
-// すぐ上ランキング描画
-// ==============================
-
-/**
- * すぐ上ランキングテーブルを描画する
- */
-function renderNearbyRankingTables(rankings) {
+function renderBottomSection(rankings, chartHours = 48) {
   const container = document.getElementById("nearbyRankingTables");
 
   if (!container) {
     return;
   }
 
+  const tableSection = document.getElementById("rankingTableSection") ||
+    container.closest(".table-section");
+
   if (!Array.isArray(rankings)) {
     container.innerHTML = "";
+
+    if (tableSection) {
+      tableSection.style.display = "none";
+    }
+
     return;
   }
 
-  container.innerHTML = rankings.map((ranking, index) => {
+  // 7日間表示では、すぐ上ランキングではなく維持時間を表示する
+  if (chartHours > 48) {
+    if (tableSection) {
+      tableSection.style.display = "";
+    }
+
+    container.className = "duration-cards";
+
+    container.innerHTML = rankings.map((ranking, index) => {
+      const theme = getRankingThemeByIndex(index);
+      const currentDuration = getRankInDurationHours(ranking.currentPoints, chartHours);
+      const previousDuration = getRankInDurationHours(ranking.previousPoints, chartHours);
+
+      return `
+        <div class="duration-card">
+          <div class="duration-title ${theme.labelClass}">
+            ${escapeHtml(ranking.label || "")}維持時間
+          </div>
+          <div class="duration-main">
+            ${currentDuration}時間
+          </div>
+          <div class="duration-sub">
+            前回　${previousDuration}時間
+          </div>
+        </div>
+      `;
+    }).join("");
+
+    return;
+  }
+
+  // 48時間表示では、現時点でランキング圏内かつ nearbyRanking があるものだけ表示する
+  const currentRankedEntries = rankings
+    .map((ranking, index) => ({
+      ranking,
+      index
+    }))
+    .filter(({ ranking }) => {
+      return isCurrentlyRanked(ranking) &&
+        Array.isArray(ranking.nearbyRanking) &&
+        ranking.nearbyRanking.length > 0;
+    });
+
+  container.className = "tables";
+
+  // すぐ上ランキングが1件もない場合は、白背景エリアごと非表示
+  if (currentRankedEntries.length === 0) {
+    container.innerHTML = "";
+
+    if (tableSection) {
+      tableSection.style.display = "none";
+    }
+
+    return;
+  }
+
+  // すぐ上ランキングがある場合だけ、エリアを表示
+  if (tableSection) {
+    tableSection.style.display = "";
+  }
+
+  container.innerHTML = currentRankedEntries.map(({ ranking, index }) => {
     const theme = getRankingThemeByIndex(index);
 
     return `
@@ -655,6 +958,576 @@ function createNearbyRankingHtml(rankingList) {
   `).join("");
 }
 
+/**
+ * ranking points を指定時間分の配列に変換する
+ *
+ * Chart.js用：
+ * [
+ *   0時間目の順位,
+ *   1時間目の順位,
+ *   ...
+ * ]
+ *
+ * データがない時間は null
+ */
+function convertPointsToHourData(points, chartHours) {
+  const data = Array(chartHours).fill(null);
+
+  if (!Array.isArray(points)) {
+    return data;
+  }
+
+  points.forEach((point) => {
+    const hour = Number(point.hour);
+    const rank = point.rank === null || point.rank === undefined
+      ? null
+      : Number(point.rank);
+
+    if (!Number.isInteger(hour)) {
+      return;
+    }
+
+    if (hour < 0 || hour >= chartHours) {
+      return;
+    }
+
+    data[hour] = Number.isFinite(rank) ? rank : null;
+  });
+
+  return data;
+}
+
+/**
+ * 既存のChart.jsインスタンスを破棄する
+ * 番組切り替え時に古いグラフが残るのを防ぐ
+ */
+function destroyRankingCharts() {
+  rankingCharts.forEach((chart) => {
+    if (chart) {
+      chart.destroy();
+    }
+  });
+
+  rankingCharts = [];
+}
+
+/**
+ * Chart.jsで48時間用ランキング推移グラフを作成する
+ */
+function createRankingChart(canvasId, currentData, previousData, color, chartHours) {
+  const chartLabels = Array.from({ length: chartHours }, (_, i) => i + 1);
+
+  const datasets = [
+    {
+      label: "最新回",
+      data: currentData,
+      borderColor: color,
+      backgroundColor: color,
+      tension: 0.35,
+      pointRadius: 2,
+      pointHoverRadius: 2,
+      borderWidth: 1.5,
+      spanGaps: false
+    }
+  ];
+
+  // 前回データがある場合のみ追加
+  if (Array.isArray(previousData) && previousData.some(value => value !== null)) {
+    datasets.push({
+      label: "前回",
+      data: previousData,
+      borderColor: "#aab3bd",
+      backgroundColor: "#aab3bd",
+      tension: 0.35,
+      pointRadius: 2,
+      pointHoverRadius: 2,
+      borderWidth: 1.5,
+      spanGaps: false
+    });
+  }
+
+  return new Chart(document.getElementById(canvasId), {
+    type: "line",
+    data: {
+      labels: chartLabels,
+      datasets
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      aspectRatio: 1.5,
+      resizeDelay: 100,
+      scales: {
+        y: {
+          title: {
+            display: false
+          },
+          reverse: true,
+          min: 1,
+          max: 50,
+          border: {
+            display: false
+          },
+          grid: {
+            display: true,
+            color: "#e5edf5",
+            drawTicks: false
+          },
+          ticks: {
+            stepSize: 10,
+            padding: 8,
+            font: {
+              size: 10
+            },
+            callback: function(value) {
+              return `${value}位`;
+            }
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: "経過時間",
+            font: {
+              size: 11,
+              weight: "600"
+            },
+            padding: {
+              top: 6
+            }
+          },
+          border: {
+            display: false
+          },
+          grid: {
+            display: false,
+            drawTicks: false
+          },
+          ticks: {
+            maxTicksLimit: 8,
+            padding: 6,
+            font: {
+              size: 10
+            },
+            callback: function(value, index) {
+              const hour = index + 1;
+
+              return `${hour}h`;
+            }
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: false
+        }
+      }
+    }
+  });
+}
+
+/**
+ * Chart.jsで7日間用の統合ランキング推移グラフを作成する
+ *
+ * 前回線を先に追加し、最新回線を後から追加することで、
+ * 最新回線を見やすくする
+ */
+function createCombinedRankingChart(canvasId, rankings, chartHours) {
+  const chartLabels = Array.from({ length: chartHours }, (_, i) => i + 1);
+  const datasets = [];
+
+  // 前回データを先に追加
+  rankings.forEach((ranking, index) => {
+    const theme = getRankingThemeByIndex(index);
+    const previousData = convertPointsToHourData(ranking.previousPoints, chartHours);
+
+    if (previousData.some(value => value !== null)) {
+      datasets.push({
+        label: `${ranking.label || `ランキング${index + 1}`} 前回`,
+        data: previousData,
+        borderColor: theme.previousColor,
+        backgroundColor: theme.previousColor,
+        tension: 0.28,
+        pointRadius: 0,
+        pointHoverRadius: 3,
+        borderWidth: 1.2,
+        spanGaps: false,
+        order: 2
+      });
+    }
+  });
+
+  // 最新回データを後から追加
+  rankings.forEach((ranking, index) => {
+    const theme = getRankingThemeByIndex(index);
+    const currentData = convertPointsToHourData(ranking.currentPoints, chartHours);
+
+    if (currentData.some(value => value !== null)) {
+      datasets.push({
+        label: `${ranking.label || `ランキング${index + 1}`} 最新回`,
+        data: currentData,
+        borderColor: theme.color,
+        backgroundColor: theme.color,
+        tension: 0.28,
+        pointRadius: 0,
+        pointHoverRadius: 3,
+        borderWidth: 2,
+        spanGaps: false,
+        order: 1
+      });
+    }
+  });
+
+  return new Chart(document.getElementById(canvasId), {
+    type: "line",
+    data: {
+      labels: chartLabels,
+      datasets
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      aspectRatio: 2.15,
+      resizeDelay: 100,
+      scales: {
+        y: {
+          title: {
+            display: false},
+          reverse: true,
+          min: 1,
+          max: 50,
+          border: {
+            display: false
+          },
+          grid: {
+            display: true,
+            color: "#e5edf5",
+            drawTicks: false
+          },
+          ticks: {
+            stepSize: 10,
+            padding: 8,
+            font: {
+              size: 10
+            },
+            callback: function(value) {
+              return `${value}`;
+            }
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: "経過日数",
+            font: {
+              size: 11,
+              weight: "600"
+            },
+            padding: {
+              top: 6
+            }
+          },
+          border: {
+            display: false
+          },
+          grid: {
+            display: true,
+            color: function(context) {
+              const hour = context.index + 1;
+
+              return hour % 24 === 0 ? "#e5edf5" : "transparent";
+            },
+            drawTicks: false
+          },
+          ticks: {
+            autoSkip: false,
+            maxRotation: 0,
+            minRotation: 0,
+            padding: 6,
+            font: {
+              size: 10
+            },
+            callback: function(value, index) {
+              const hour = index + 1;
+
+              return hour % 24 === 0 ? `${hour / 24}日目` : "";
+            }
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: true,
+          position: "top",
+          labels: {
+            boxWidth: 14,
+            boxHeight: 14,
+            padding: 12,
+            font: {
+              size: 12
+            }
+          }
+        }
+      }
+    }
+  });
+}
+
+
+// ==============================
+// いいね数推移グラフ描画
+// ==============================
+
+/**
+ * いいね数推移セクション
+ *
+ * reportCaptureArea内のfooterより上に差し込む。
+ * chart-sectionクラスを使い、他のグラフエリアと同じ白背景にする。
+ */
+function renderLikeTimelineSection(likePoints, chartHours = 48) {
+  let container = document.getElementById("likeTimelineSection");
+
+  if (!container) {
+    const report = document.getElementById("reportCaptureArea");
+
+    if (!report) {
+      return;
+    }
+
+    container = document.createElement("section");
+    container.id = "likeTimelineSection";
+    container.className = "chart-section like-timeline-section";
+
+    // footerより上に挿入する
+    const footer = report.querySelector("footer, .footer, #footer, .report-footer");
+
+    if (footer) {
+      report.insertBefore(container, footer);
+    } else {
+      report.appendChild(container);
+    }
+  }
+
+  // いいね時系列がない場合は、空グラフを出さずに非表示
+  if (!Array.isArray(likePoints) || likePoints.length === 0) {
+    container.innerHTML = "";
+    container.style.display = "none";
+    return;
+  }
+
+  container.style.display = "";
+
+  container.innerHTML = `
+    <div class="section-title">いいね数推移</div>
+
+    <div class="chart-box like-chart-box">
+      <div class="like-chart-canvas-wrap">
+        <canvas id="likeTimelineChart"></canvas>
+      </div>
+    </div>
+  `;
+
+  const likeData = convertLikePointsToHourData(likePoints, chartHours);
+
+  const chart = createLikeTimelineChart(
+    "likeTimelineChart",
+    likeData,
+    chartHours
+  );
+
+  rankingCharts.push(chart);
+}
+
+/**
+ * likePoints をChart.js用の配列に変換する
+ *
+ * JSON形式：
+ * [
+ *   { hour: 0, likes: 1200 },
+ *   { hour: 1, likes: 1300 }
+ * ]
+ */
+function convertLikePointsToHourData(points, chartHours) {
+  const data = Array(chartHours).fill(null);
+
+  if (!Array.isArray(points)) {
+    return data;
+  }
+
+  points.forEach((point) => {
+    const hour = Number(point.hour);
+    const likes = point.likes === null || point.likes === undefined
+      ? null
+      : Number(point.likes);
+
+    if (!Number.isInteger(hour)) {
+      return;
+    }
+
+    if (hour < 0 || hour >= chartHours) {
+      return;
+    }
+
+    data[hour] = Number.isFinite(likes) ? likes : null;
+  });
+
+  return data;
+}
+
+/**
+ * Chart.jsでいいね数推移グラフを作成する
+ *
+ * maintainAspectRatio:false にして、
+ * CSSの .like-chart-canvas-wrap の高さを優先する。
+ */
+function createLikeTimelineChart(canvasId, likeData, chartHours) {
+  const chartLabels = Array.from({ length: chartHours }, (_, i) => i + 1);
+
+  return new Chart(document.getElementById(canvasId), {
+    type: "line",
+    data: {
+      labels: chartLabels,
+      datasets: [
+        {
+          label: "",
+          data: likeData,
+          borderColor: "#36bfd0",
+          backgroundColor: "#36bfd0",
+          tension: 0.32,
+          pointRadius: 0,
+          pointHoverRadius: 0,
+          borderWidth: 2,
+          spanGaps: true
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+
+      resizeDelay: 100,
+      layout: {
+        padding: {
+          top: 6,
+          right: 8,
+          bottom: 0,
+          left: 0
+        }
+      },
+      scales: {
+        y: {
+          title: {
+            display: false },
+          beginAtZero: false,
+          border: {
+            display: false
+          },
+          grid: {
+            display: true,
+            color: "#e5edf5",
+            drawTicks: false
+          },
+          ticks: {
+            maxTicksLimit: 5,
+            padding: 8,
+            font: {
+              size: 10
+            },
+            callback: function(value) {
+              return formatDisplayNumber(value);
+            }
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: chartHours > 48 ? "経過日数" : "経過時間",
+            font: {
+              size: 11,
+              weight: "600"
+            },
+            padding: {
+              top: 6
+            }
+          },
+          border: {
+            display: false
+          },
+          grid: {
+            display: false,
+            drawTicks: false
+          },
+          ticks: {
+            autoSkip: false,
+            maxRotation: 0,
+            minRotation: 0,
+            padding: 3,
+            font: {
+              size: 10
+            },
+            callback: function(value, index) {
+              const hour = index + 1;
+
+              if (chartHours > 48) {
+                return hour % 24 === 0 ? `${hour / 24}日` : "";
+              }
+
+              if (hour === 1 || hour % 12 === 0 || hour === chartHours) {
+                return `${hour}h`;
+              }
+
+              return "";
+            }
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: false
+        }
+      }
+    }
+  });
+}
+
+
+// ==============================
+// JSON再読み込み処理
+// ==============================
+
+/**
+ * JSON再読み込みボタンのイベントを設定する
+ *
+ * HTML側に以下のボタンがある前提：
+ * <button id="reloadDataButton" class="reload-data-button" type="button"><i class="bi bi-arrow-clockwise"></i></button>
+ */
+function setupReloadDataButton() {
+  const button = document.getElementById("reloadDataButton");
+
+  if (!button) {
+    return;
+  }
+
+  button.addEventListener("click", async () => {
+    button.classList.add("is-loading");
+    button.innerHTML = '<i class="bi bi-arrow-repeat"></i>'; // 更新中
+  
+    try {
+      await loadReportData(true);
+      button.innerHTML = '<i class="bi bi-check-lg"></i>'; // 更新済み
+    } catch (error) {
+      console.error(error);
+      button.innerHTML = '<i class="bi bi-x-lg"></i>'; // 失敗
+      alert("データの更新に失敗しました。時間を置いて再試行してください。");
+    } finally {
+      setTimeout(() => {
+        button.classList.remove("is-loading");
+        button.innerHTML = '<i class="bi bi-arrow-clockwise"></i>'; // 元の更新に戻す
+      }, 1200);
+    }
+  });
+}
+
 
 // ==============================
 // 画像保存・共有処理
@@ -677,7 +1550,7 @@ function setupSaveImageButton() {
  * レポート部分を画像化して共有する
  *
  * 共有対応端末：
- * - 画像ファイル + テキストを共有
+ * - 画像ファイル + 番組名 + TVer URL を共有
  *
  * 共有非対応端末：
  * - PNGとしてダウンロード
@@ -718,7 +1591,7 @@ async function saveReportImage() {
       type: "image/png"
     });
 
-    // 共有時のテキスト用
+    // 共有時のタイトル・本文
     const shareTitle = buildImageShareTitle();
     const shareText = buildImageShareText();
 
