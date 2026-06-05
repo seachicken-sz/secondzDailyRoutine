@@ -1372,7 +1372,7 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
           top: 6,
           right: 8,
           bottom: 0,
-          left: 4
+          left: 0
         }
       },
       scales: {
