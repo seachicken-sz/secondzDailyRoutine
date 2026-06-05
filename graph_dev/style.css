@@ -35,14 +35,14 @@ body {
   margin: 0 auto;
   padding-bottom: 24px;
   /*background-image: url("../img/graph_bg_img.jpg");*/
-  background-color:#fff;
+  background-color:#f8f8f8;
   background-size: cover;
   overflow: hidden;
   transform-origin: top center;
 }
 
 .top-bar {
-  background: #071d54;
+  background: #575757;
   color: white;
   text-align: center;
   font-weight: 700;
@@ -52,7 +52,7 @@ body {
 
 .hero {
   text-align: center;
-  padding: 22px 24px 14px;
+  padding: 18px 18px 14px;
 }
 
 .program-title {
@@ -201,7 +201,7 @@ body {
 }
 
 .section-title {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 800;
   margin-bottom: 12px;
 }
