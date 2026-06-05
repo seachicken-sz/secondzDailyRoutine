@@ -29,6 +29,13 @@
 .daily-started-today .hide-when-daily-started {
   display: none !important;
 }
+/*時限表示*/
+.date-visible-block {
+  display: none;
+}
+.date-visible-block.is-visible {
+  display: block;
+}
 .hidden {
   display: none !important;
 }
