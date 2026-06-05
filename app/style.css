@@ -2324,6 +2324,164 @@ h1 {
   }
 }
 
+/* =========================
+   First Setup Modal
+========================= */
+.setup-modal-content {
+  width: min(100%, 430px);
+}
+
+.setup-modal-body {
+  display: grid;
+  gap: 16px;
+}
+
+.setup-intro-card {
+  padding: 18px 16px;
+  border: 1px solid var(--color-brand-border);
+  border-radius: var(--radius-card);
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-brand-soft) 0%,
+      var(--color-surface) 100%
+    );
+  box-shadow: var(--shadow-card-soft);
+}
+
+.setup-intro-title {
+  margin: 0 0 10px;
+  color: var(--color-brand);
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.setup-intro-text {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.setup-intro-text strong {
+  font-weight: 900;
+  color: var(--color-accent-text);
+}
+
+.setup-howto-block {
+  display: grid;
+  gap: 14px;
+}
+
+.setup-howto-title {
+  margin: 0;
+  padding: 0 2px;
+  color: var(--color-text);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.setup-detail-box {
+  padding: 12px 14px;
+  border: 1px solid var(--color-border-soft);
+  border-radius: 14px;
+  background: var(--color-surface);
+}
+
+.setup-detail-box summary {
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.setup-detail-content {
+  margin-top: 12px;
+  color: var(--color-text-description);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.setup-detail-content p {
+  margin: 0 0 12px;
+}
+
+.setup-detail-content p:last-child {
+  margin-bottom: 0;
+}
+
+.setup-question-block {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--color-border-soft);
+  border-radius: 14px;
+  background: var(--color-page-bg);
+}
+
+.setup-question-block h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.setup-choice-list {
+  display: grid;
+  gap: 10px;
+}
+
+.setup-choice-button {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.setup-choice-button:active {
+  transform: scale(0.98);
+}
+
+.setup-choice-button.is-selected,
+.setup-choice-button.active {
+  border-color: var(--color-brand);
+  background: var(--color-brand-soft);
+  color: var(--color-accent-text);
+}
+
+.setup-guide-area {
+  padding: 14px;
+  border: 1px solid var(--color-brand-border);
+  border-radius: 14px;
+  background: var(--color-brand-soft);
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.setup-guide-area p {
+  margin: 0 0 10px;
+}
+
+.setup-guide-area p:last-child {
+  margin-bottom: 0;
+}
+
+
 
 .hidden {
   display: none;
