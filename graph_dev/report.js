@@ -969,7 +969,7 @@ function createRankingChart(canvasId, currentData, previousData, color, chartHou
       pointRadius: 2,
       pointHoverRadius: 2,
       borderWidth: 1.5,
-      spanGaps: true
+      spanGaps: false
     }
   ];
 
@@ -984,7 +984,7 @@ function createRankingChart(canvasId, currentData, previousData, color, chartHou
       pointRadius: 2,
       pointHoverRadius: 2,
       borderWidth: 1.5,
-      spanGaps: true
+      spanGaps: false
     });
   }
 
@@ -1093,7 +1093,7 @@ function createCombinedRankingChart(canvasId, rankings, chartHours) {
         pointRadius: 0,
         pointHoverRadius: 3,
         borderWidth: 1.2,
-        spanGaps: true,
+        spanGaps: false,
         order: 2
       });
     }
@@ -1114,7 +1114,7 @@ function createCombinedRankingChart(canvasId, rankings, chartHours) {
         pointRadius: 0,
         pointHoverRadius: 3,
         borderWidth: 2,
-        spanGaps: true,
+        spanGaps: false,
         order: 1
       });
     }
