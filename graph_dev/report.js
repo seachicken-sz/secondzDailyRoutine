@@ -626,13 +626,45 @@ function buildImageShareText() {
 
   const programTitle = reportData.programTitle || "";
   const episodeUrl = buildTverEpisodeUrl(reportData.episodeUrl || reportData.episodeId || "");
+  const rankingLine = buildCurrentRankingShareLine();
 
-  // URLが取れない場合でも番組名だけは共有できるようにする
-  if (!episodeUrl) {
-    return `${programTitle}をTVerで見よう！`;
+  const lines = [];
+
+  lines.push(`${programTitle}をTVerで見よう！`);
+
+  if (rankingLine) {
+    lines.push(rankingLine);
   }
 
-  return `${programTitle}をTVerで見よう！\n${episodeUrl}`;
+  if (episodeUrl) {
+    lines.push(episodeUrl);
+  }
+
+  return lines.join("\n");
+}
+
+function buildCurrentRankingShareLine() {
+  if (!reportData || !Array.isArray(reportData.rankings)) {
+    return "";
+  }
+
+  const activeRankings = reportData.rankings
+    .filter((ranking) => {
+      return ranking
+        && ranking.currentRank !== null
+        && ranking.currentRank !== undefined
+        && ranking.currentRank !== "";
+    })
+    .map((ranking) => {
+      const label = ranking.label || ranking.type || "ランキング";
+      return `${label}${ranking.currentRank}位`;
+    });
+
+  if (activeRankings.length === 0) {
+    return "";
+  }
+
+  return `現在 ${activeRankings.join(" ")}！`;
 }
 
 /**
