@@ -183,7 +183,6 @@
   color: var(--color-text-inverse);
 }
 :root[data-theme="white"] .selected-area,
-:root[data-theme="white"] .task-card,
 :root[data-theme="white"] .check-control-area,
 :root[data-theme="white"] .home-card,
 :root[data-theme="white"] .request-ranking-card {
@@ -193,8 +192,7 @@
 :root[data-theme="white"] .request-ranking-item,
 :root[data-theme="white"] .song-6f6f6button,
 :root[data-theme="white"] .accordion-button,
-:root[data-theme="white"] .check-item,
-:root[data-theme="white"] .youtube-card {
+:root[data-theme="white"] .check-item {
   border-color: var(--color-border);
 }
 :root[data-theme="white"] .song-button.selected,
