@@ -2334,10 +2334,7 @@ h1 {
 }
 
 .setup-guide-area {
-  padding: 14px;
-  border: 1px solid var(--color-brand-border);
   border-radius: 14px;
-  background: var(--color-brand-soft);
   color: var(--color-text);
   font-size: 14px;
   font-weight: 600;
