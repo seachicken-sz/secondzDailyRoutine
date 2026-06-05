@@ -17,7 +17,6 @@ const SHARE_IMAGE_THEMES = {
     subText: "#333333",
     muted: "#666666",
   },
-
   red: {
     name: "red",
     bg1: "#fff1f2",
@@ -125,14 +124,14 @@ const SHARE_IMAGE_THEMES = {
 
   white: {
     name: "white",
-    bg1: "#ffffff",
+    bg1: "#fcfcfc",
     bg2: "#c5c5c5",
     brand: "#111827",
     accent: "#111827",
     accentText: "#111827",
     surface: "#ffffff",
     surfaceSoft: "#ffffff",
-    border: "#111827",
+    border: "#ffffff",
     text: "#111827",
     subText: "#111827",
     muted: "#4b5563",
