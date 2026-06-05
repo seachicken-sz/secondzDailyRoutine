@@ -458,8 +458,9 @@ function renderReport(data) {
   document.getElementById("programTitle").textContent = data.programTitle || "";
 
   document.getElementById("programMeta").innerHTML = `
-    ${data.broadcastDate || ""} 放送　（ <i class="ph ph-clock"></i> ${data.updatedAt || ""} 更新 ）<br>
-    ${data.subtitle || ""}
+    ${data.broadcastDate || ""} 放送　${data.subtitle || ""}<br>
+    （ <i class="ph ph-clock"></i> ${data.updatedAt || ""} 更新 ）
+    
   `;
 
   document.getElementById("likeCount").textContent = formatDisplayNumber(data.likes);
