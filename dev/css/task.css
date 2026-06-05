@@ -230,7 +230,7 @@
   cursor: pointer;
   flex-shrink: 0;
   box-shadow: var(--shadow-card-soft);
-  padding: .5rem 0;
+  padding: .5rem;
 }
 
 .youtube-thumbnail {
@@ -261,5 +261,6 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 1.45;
+  height:3rem;
   color: var(--color-text);
 }
