@@ -183,7 +183,7 @@
 :root[data-theme="white"] .check-control-area,
 :root[data-theme="white"] .home-card,
 :root[data-theme="white"] .request-ranking-card {
-  box-shadow: inset 0 0 0 1px var(--color-border-soft);
+  box-shadow: 0 0px 2px var(--color-border-soft);
 }
 :root[data-theme="white"] .home-list-box,
 :root[data-theme="white"] .request-ranking-item,
