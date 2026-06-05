@@ -1379,7 +1379,7 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
         y: {
           title: {
             display: true,
-            text: "いいね数",
+            text: "",
             font: {
               size: 11,
               weight: "600"
