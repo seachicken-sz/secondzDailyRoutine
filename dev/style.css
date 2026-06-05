@@ -244,10 +244,10 @@ body {
 
 /*メインコンテンツ表示*/
 .step-screen {
-  height: 100%;
+  height: calc(100% - 60px);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: scroll;
   padding: 18px 12px;
 }
 
@@ -482,6 +482,12 @@ h1 {
   font-weight: 600;
 }
 
+/* JSON内の \n を画面上の改行として表示する */
+#dailyTaskCommentArea,
+#onceTaskMessageArea {
+  white-space: pre-line;
+}
+
 .copy-area {
   margin: 0 0 14px;
   padding: 14px;
@@ -606,10 +612,15 @@ h1 {
   color: var(--color-text);
 }
 
+/* =========================
+   ホーム画面
+========================= */
+/*ホーム画面全体*/
 #homeStep {
   overflow-y: scroll;
+  height:100%;
 }
-
+/*ホーム画面上部*/
 .home-header {
   flex-shrink: 0;
   min-height: 20%;
@@ -618,28 +629,23 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-
+/*ロゴ*/
 .home-logo-area {
   width: 100%;
   text-align: center;
 }
-
 .home-logo-area h1 {
   margin: 0;
   font-size: 28px;
   font-weight: 800;
   line-height: 1.25;
 }
-
 .home-logo-area img {
   height: 120px;
   display: block;
   margin: 0 auto;
 }
-.home-color-change-area{
-  text-align: center;
-  margin-bottom: 3.5rem;
-}
+/*ホーム画面各エリア表示*/
 .home-card {
   flex-shrink: 0;
   margin: 0 0 12px;
@@ -650,20 +656,18 @@ h1 {
   display: flex;
   flex-direction: column;
 }
-
 .home-card h2 {
   flex-shrink: 0;
   margin: 0 0 5px;
   font-size: 17px;
   font-weight: 800;
 }
-
 .ruby-h rt {
   color: var(--color-accent);
   padding-bottom: 0.3rem;
   letter-spacing: 0.18rem;
 }
-
+/*開始ボタン*/
 .home-action-area {
   display: flex;
   align-items: center;
@@ -674,25 +678,17 @@ h1 {
   background: var(--color-transparent);
   border-radius: var(--radius-card);
 }
-
 .home-action-area button {
   box-shadow: var(--shadow-card-strong);
 }
-
+/*ランキング表示*/
 .home-now-request-area {
   height: auto;
 }
-
+/*情報表示*/
 .home-information-area {
   height: auto;
 }
-
-.home-button-area {
-  height: 3rem;
-  background-color: var(--color-transparent);
-  box-shadow: none;
-}
-
 .home-list-box {
   flex: 1;
   min-height: 3rem;
@@ -702,7 +698,6 @@ h1 {
   border: 1px solid var(--color-border-soft);
   border-radius: 14px;
 }
-
 .home-list-item,
 .home-list-link {
   display: block;
@@ -713,19 +708,268 @@ h1 {
   color: var(--color-text);
   text-decoration: none;
 }
-
 .home-list-link {
   text-decoration: underline;
 }
-
 .home-list-item:last-child,
 .home-list-link:last-child {
   margin-bottom: 0;
 }
+/*フッター*/
+.home-button-area {
+  height: 3rem;
+  background-color: var(--color-transparent);
+  box-shadow: none;
+}
+
+/*目次*/
+.home-index-card {
+  gap: 10px;
+}
+.home-index-block {
+  display: grid;
+  gap: 7px;
+}
+.home-index-label {
+  margin: 0;
+  color: var(--color-brand);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+.home-index-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.home-index-button {
+  min-height: 32px;
+  padding: 0 11px;
+  border: 1px solid var(--color-brand-border);
+  border-radius: 999px;
+  background: var(--color-brand-soft);
+  color: var(--color-accent-text);
+  font-size: 12px;
+  font-weight: 850;
+  cursor: pointer;
+}
+.home-index-list-main {
+  padding-top: 2px;
+  border-top: 1px dashed var(--color-border-soft);
+}
+
+/*おかわりデイリーへのリンク*/
+.home-daily-jump-area {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 4px;
+  margin-bottom:1.5rem;
+}
+.home-daily-jump-button {
+  text-align: center;
+}
+.show-when-daily-started {
+  display: none !important;
+}
+.daily-started-today .show-when-daily-started {
+  display: inline !important;
+}
+.daily-started-today .hide-when-daily-started {
+  display: none !important;
+}
+
+/* ホーム 上に戻るボタン*/
+.home-back-to-top-button {
+  position: fixed;
+  right: max(16px, calc((100vw - 720px) / 2 + 16px));
+  bottom: 18px;
+  z-index: 900;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-brand);
+  color: var(--color-text-inverse);
+  box-shadow: var(--shadow-card-strong);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.home-back-to-top-button:active {
+  transform: scale(0.94);
+}
 
 /* =========================
-   リンクカード風
+   ホーム おかわりデイリー
 ========================= */
+.home-extra-task-card {
+  gap: 10px;
+}
+.home-extra-description {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+.home-extra-task-list {
+  display: grid;
+  gap: 10px;
+}
+.home-extra-group {
+  border: 1px solid var(--color-border-soft);
+  border-radius: 14px;
+  background: var(--color-page-bg);
+  overflow: hidden;
+}
+.home-extra-group-summary {
+  padding: 13px 14px;
+  color: var(--color-brand);
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.home-extra-group-body {
+  display: grid;
+  gap: 8px;
+  padding: 0 10px 10px;
+}
+.home-extra-task-detail {
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-surface);
+  overflow: hidden;
+}
+.home-extra-task-summary {
+  padding: 13px 14px;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 850;
+  line-height: 1.45;
+  cursor: pointer;
+}
+.home-extra-task-body {
+  padding: 0 12px 12px;
+}
+.home-extra-task-comment {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+.home-extra-task-actions {
+  display: grid;
+  gap: 8px;
+}
+.home-extra-task-actions .primary-button,
+.home-extra-task-actions .secondary-button {
+  margin-top: 0;
+  padding: 11px 12px;
+  font-size: 14px;
+}
+
+/*おかわりデイリーリクエスト曲*/
+.home-request-song-select-area {
+  display: grid;
+  gap: 6px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-brand-border);
+  border-radius: 14px;
+  background: var(--color-brand-soft);
+}
+.home-request-song-label {
+  color: var(--color-accent-text);
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+.home-request-song-select {
+  width: 100%;
+  min-height: 38px;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 700;
+}
+.home-extra-group.is-daily-done {
+  background-color:var(--color-surface-media);
+}
+.home-extra-group-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.home-extra-group-summary-label {
+  min-width: 0;
+}
+.home-extra-group-done-mark {
+  flex-shrink: 0;
+  font-size: 15px;
+  line-height: 1;
+}
+.home-extra-task-actions .primary-button:disabled,
+.home-extra-task-actions .primary-button.is-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+/*おかわりデイリーUSEN推しリク*/
+#homeUsenExtraList {
+  margin-top: 2px;
+}
+.home-usen-extra-body {
+  padding: 0 10px 10px;
+}
+.home-usen-task-title {
+  margin: 0 0 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 850;
+  line-height: 1.45;
+}
+.home-usen-extra-body .home-extra-task-comment {
+  margin-bottom: 10px;
+}
+.home-extra-task-actions .primary-button:disabled,
+.home-extra-task-actions .primary-button.is-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+/* daily実行済みのときだけ表示したい要素 */
+.show-when-daily-done {
+  display: none !important;
+}
+.is-daily-done .show-when-daily-done {
+  display: inline-flex !important;
+}
+/* daily実行済みのときだけ非表示にしたい要素 */
+.is-daily-done .hide-when-daily-done {
+  display: none !important;
+}
+/* 今日、dailyグループが1つ以上完了しているときだけ表示 */
+.show-when-daily-started {
+  display: none !important;
+}
+.daily-started-today .show-when-daily-started {
+  display: block !important;
+}
+/* 今日、dailyグループが1つ以上完了しているときだけ非表示 */
+.daily-started-today .hide-when-daily-started {
+  display: none !important;
+}
+
+/* リンクカード風表示　お知らせ、スケジュール表示 */
 .card-link a {
   display: flex;
   align-items: center;
@@ -734,7 +978,6 @@ h1 {
   color: inherit;
   text-decoration: none;
 }
-
 .card-link img {
   width: 56px;
   height: 56px;
@@ -743,44 +986,36 @@ h1 {
   object-fit: cover;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
-
 .card-link-text {
   display: flex;
   flex-direction: column;
   min-width: 0;
   gap: 4px;
 }
-
 .card-link-text strong {
   font-size: 0.95rem;
   font-weight: 700;
   line-height: 1.3;
 }
-
 .card-link-text small {
   font-size: 0.8rem;
   color: var(--color-text-muted, #666);
   line-height: 1.4;
 }
-
 /* =========================
-   メンバーお仕事
+   メンバーお仕事エリア
 ========================= */
 .member-works-card {
   display: grid;
   gap: 16px;
 }
 
-/* =========================
-   フィルター
-========================= */
-
+/*フィルター*/
 .member-filter-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
-
 .member-filter-chip {
   min-height: 34px;
   padding: 0 14px;
@@ -798,7 +1033,6 @@ h1 {
     color 0.2s ease,
     transform 0.2s ease;
 }
-
 .member-filter-chip.active {
   background: var(--color-brand);
   border-color: var(--color-brand);
@@ -811,29 +1045,23 @@ h1 {
   display: grid;
   gap: 2px;
 }
-
 .member-work-link-limit {
   color: #e11d48;
   font-size: 12px;
   font-weight: 900;
   line-height: 1.3;
 }
-/* =========================
-   リンクカテゴリ
-========================= */
-
+/*リンクカテゴリ*/
 .member-link-section {
   display: grid;
   gap: 10px;
   padding: 14px 0;
 }
-
 .member-link-section-header {
   display: grid;
   align-items: center;
   justify-content: space-between;
 }
-
 .member-link-section-title {
   margin: 0;
   color: var(--color-brand);
@@ -841,7 +1069,6 @@ h1 {
   font-weight: 900;
   letter-spacing: 0.12em;
 }
-
 .member-link-section-description {
   margin: 0;
   color: var(--color-text-muted);
@@ -849,56 +1076,44 @@ h1 {
   font-weight: 700;
   line-height: 1.5;
 }
-
 .member-link-list {
   display: grid;
   gap: 8px;
 }
 
-/* =========================
-   リンクカード
-========================= */
-
+/*TVer用*/
 .member-work-link-card {
   min-width: 0;
   min-height: 44px;
   padding: 11px 12px 11px 14px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 16px;
-
   background:
     linear-gradient(
       135deg,
       rgba(255, 255, 255, 0.92),
       rgba(255, 255, 255, 0.62)
     );
-
   color: var(--color-text);
   text-decoration: none;
-
   box-shadow:
     0 8px 18px rgba(0, 0, 0, 0.04),
     inset 0 1px 0 rgba(255, 255, 255, 0.86);
-
   transition:
     transform 0.16s ease,
     box-shadow 0.16s ease,
     border-color 0.16s ease;
 }
-
 .member-work-link-card:active {
   transform: scale(0.98);
   box-shadow:
     0 4px 10px rgba(0, 0, 0, 0.04),
     inset 0 1px 0 rgba(255, 255, 255, 0.86);
 }
-
 .member-work-link-title {
   min-width: 0;
   color: var(--color-text);
@@ -909,42 +1124,35 @@ h1 {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
 .member-work-link-arrow {
   flex-shrink: 0;
   width: 22px;
   height: 22px;
   border-radius: 999px;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   background: var(--color-brand);
   color: var(--color-text-inverse);
-
   font-size: 18px;
   font-weight: 900;
   line-height: 1;
 }
-/* =========================
-   カテゴリ別 微調整
-========================= */
-
+/*カテゴリ別 微調整*/
 .member-link-section-tver .member-link-section-title::before {
   content: "📺 ";
 }
-
 .member-link-section-radiko .member-link-section-title::before {
   content: "📻 ";
 }
-
 .member-link-section-message .member-link-section-title::before {
   content: "💌 ";
 }
-
 .member-link-section-access .member-link-section-title::before {
   content: "🔗 ";
+}
+.member-link-section-youtube .member-link-section-title::before {
+  content: "▶️ ";
 }
 .member-link-section-dreampass .member-link-section-title::before {
   content: "🎬";
@@ -955,11 +1163,9 @@ h1 {
   align-items: center;
   gap: 8px;
 }
-
 .member-work-link-main-tver {
   min-width: 0;
 }
-
 .member-work-link-title-tver {
   display: block;
   max-width: 100%;
@@ -968,7 +1174,6 @@ h1 {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
 .member-work-link-button-tver {
   display: inline-flex;
   align-items: center;
@@ -985,18 +1190,15 @@ h1 {
   text-decoration: none;
   white-space: nowrap;
 }
-
 .member-work-link-rank-area {
   display: flex;
   justify-content: center;
   min-width: 0;
   color: var(--color-brand);
 }
-
 .member-work-link-rank-area a{
   color: var(--color-brand);
 }
-
 .member-work-link-button-rank {
   display: inline-flex;
   align-items: center;
@@ -1011,7 +1213,6 @@ h1 {
   line-height: 1;
   text-decoration: none;
 }
-
 .member-work-link-button-rank:active {
   transform: scale(0.96);
 }
@@ -1031,7 +1232,9 @@ h1 {
   text-decoration: underline;
   cursor: pointer;
 }
-
+/* =========================
+   モーダル共通
+========================= */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -1042,7 +1245,6 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-
 .modal-content {
   width: min(100%, 520px);
   max-height: min(80dvh, 640px);
@@ -1053,7 +1255,9 @@ h1 {
   display: flex;
   flex-direction: column;
 }
-
+.modal-content img{
+  max-width:100%;
+}
 .modal-header {
   flex-shrink: 0;
   padding: 16px 16px 10px;
@@ -1063,12 +1267,10 @@ h1 {
   gap: 12px;
   border-bottom: 1px solid var(--color-border-light);
 }
-
 .modal-header h2 {
   margin: 0;
   font-size: 20px;
 }
-
 .modal-close-button {
   width: 36px;
   height: 36px;
@@ -1080,28 +1282,27 @@ h1 {
   line-height: 1;
   cursor: pointer;
 }
-
 .modal-body {
   overflow-y: auto;
   padding: 16px;
   -webkit-overflow-scrolling: touch;
 }
 
+/* =========================
+   モーダル　使用方法
+========================= */
 .how-to-section {
   margin-bottom: 18px;
 }
-
 .how-to-section h3 {
   margin: 0 0 8px;
   font-size: 16px;
 }
-
 .how-to-section ol {
   margin: 0;
   padding-left: 1.4em;
   line-height: 1.8;
 }
-
 .modal-note {
   margin: 10px 0 0;
   padding: 12px;
@@ -1111,8 +1312,71 @@ h1 {
   font-size: 13px;
   line-height: 1.7;
 }
-
-
+/* =========================
+   モーダルYouTube
+========================= */
+.youtube-modal-content {
+  max-height: 90vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* モーダル内の各YouTube区切り */
+.youtube-modal-section {
+  margin-top: 18px;
+  padding: 0 0.5rem 0.25rem;
+}
+.youtube-modal-section-title {
+  margin: 0 0.25rem 8px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+/* モーダル内のYouTubeカード行 */
+.youtube-modal-card-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 2px 2px 12px;
+  -webkit-overflow-scrolling: touch;
+}
+/* モーダル内カードは横スクロール前提で幅固定 */
+.youtube-modal-card-row .youtube-card {
+    flex: 0 0 160px;
+    width: 180px;
+    min-width: 180px;
+}
+/* サムネ */
+.youtube-modal-card-row .youtube-thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+}
+/* サムネなし */
+.youtube-modal-card-row .youtube-text-card {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--color-surface-soft);
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+/* タイトル */
+.youtube-modal-card-row .youtube-card-name {
+  margin: 8px 0 0;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  font-weight: 700;
+  color: var(--color-text);
+}
+/* =========================
+   Feedback
+========================= */
 .feedback-card {
   margin-top: 16px;
 }
@@ -1188,7 +1452,6 @@ h1 {
   font-weight: 700;
   cursor: pointer;
   box-shadow: var(--shadow-card);
-
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -1201,6 +1464,8 @@ h1 {
   box-shadow: none;
   color: var(--color-text-muted);
   padding: 6px 4px;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .text-link-row {
@@ -1265,6 +1530,14 @@ h1 {
 
 .home-install-link:hover {
   color: var(--color-link-hover);
+}
+
+.date-visible-block {
+  display: none;
+}
+
+.date-visible-block.is-visible {
+  display: block;
 }
 
 .request-ranking-card {
@@ -1389,21 +1662,51 @@ h1 {
 /* =========================
    Share Image Modal - Theme Buttons
 ========================= */
+.share-image-theme-row-wrap {
+  position: relative;
+  max-width: 100%;
+  background-color: #fcfcfc;
+}
+
+/* 右端に「まだ続きがある」感を出す */
+.share-image-theme-row-wrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42px;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    to left,
+    #fcfcfc 0%,
+    rgba(252, 252, 252, 0.9) 35%,
+    rgba(252, 252, 252, 0) 100%
+  );
+}
+
 .share-image-theme-row {
   display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  background-color:#fcfcfc;
+  align-items: center;
+  background-color: #fcfcfc;
   gap: 8px;
   margin: 0 0 14px;
-  padding: 4px 2px 12px;
-  overflow-x: scroll;
+  padding: 4px 42px 12px 2px;
+  max-width: 100%;
+  overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
 
   /* Firefox */
   scrollbar-width: auto;
   scrollbar-color: var(--color-brand) var(--color-surface-soft);
+}
+
+.share-image-theme-row > .share-image-theme-button {
+  flex: 0 0 auto;
 }
 
 /* Chrome / Edge / Safari */
@@ -1570,6 +1873,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .theme-heart-button {
@@ -1889,6 +2194,164 @@ h1 {
     transform: translateY(0);
   }
 }
+
+/* =========================
+   First Setup Modal
+========================= */
+.setup-modal-content {
+  width: min(100%, 430px);
+}
+
+.setup-modal-body {
+  display: grid;
+  gap: 16px;
+}
+
+.setup-intro-card {
+  padding: 18px 16px;
+  border: 1px solid var(--color-brand-border);
+  border-radius: var(--radius-card);
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-brand-soft) 0%,
+      var(--color-surface) 100%
+    );
+  box-shadow: var(--shadow-card-soft);
+}
+
+.setup-intro-title {
+  margin: 0 0 10px;
+  color: var(--color-brand);
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.setup-intro-text {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.setup-intro-text strong {
+  font-weight: 900;
+  color: var(--color-accent-text);
+}
+
+.setup-howto-block {
+  display: grid;
+  gap: 14px;
+}
+
+.setup-howto-title {
+  margin: 0;
+  padding: 0 2px;
+  color: var(--color-text);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.setup-detail-box {
+  padding: 12px 14px;
+  border: 1px solid var(--color-border-soft);
+  border-radius: 14px;
+  background: var(--color-surface);
+}
+
+.setup-detail-box summary {
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.setup-detail-content {
+  margin-top: 12px;
+  color: var(--color-text-description);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.setup-detail-content p {
+  margin: 0 0 12px;
+}
+
+.setup-detail-content p:last-child {
+  margin-bottom: 0;
+}
+
+.setup-question-block {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--color-border-soft);
+  border-radius: 14px;
+  background: var(--color-page-bg);
+}
+
+.setup-question-block h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.setup-choice-list {
+  display: grid;
+  gap: 10px;
+}
+
+.setup-choice-button {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.setup-choice-button:active {
+  transform: scale(0.98);
+}
+
+.setup-choice-button.is-selected,
+.setup-choice-button.active {
+  border-color: var(--color-brand);
+  background: var(--color-brand-soft);
+  color: var(--color-accent-text);
+}
+
+.setup-guide-area {
+  padding: 14px;
+  border: 1px solid var(--color-brand-border);
+  border-radius: 14px;
+  background: var(--color-brand-soft);
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.setup-guide-area p {
+  margin: 0 0 10px;
+}
+
+.setup-guide-area p:last-child {
+  margin-bottom: 0;
+}
+
 
 
 .hidden {

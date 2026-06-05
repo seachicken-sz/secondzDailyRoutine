@@ -19,7 +19,8 @@
   <meta name="twitter:title" content="タムごとDaily">
   <meta name="twitter:description" content="3分でラジリク終わらせちゃおう！">
   <meta name="twitter:image" content="https://seachicken-sz.github.io/secondzDailyRoutine/img/link-card.jpg">
-
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="./style.css" />
   <link rel="manifest" href="../manifest.json">
@@ -107,6 +108,17 @@
           </button>
         </div> 
         </section>
+
+      <section id="homeDailyJumpArea" class="home-daily-jump-area hidden">
+        <button
+          id="homeDailyJumpButton"
+          type="button"
+          class="text-link-button home-daily-jump-button"
+        >
+          <span class="hide-when-daily-started">今日はひとつだけやる？</span>
+          <span class="show-when-daily-started">おかわりする？</span>
+        </button>
+      </section>
         
         <section id="homeInstallGuideCard" class="home-card home-install-guide-area">
           <h2 class="ruby-h"><ruby>はじめに<rt>first step</rt></ruby></h2>
@@ -128,19 +140,49 @@
             <p class="request-ranking-loading">読み込み中...</p>
           </div>
         </section>
-        <!--スケジュール-->
-        <section class="home-card schedule-timely">
-          <h2 class="ruby-h"><ruby>スケジュール<rt>schedule</rt></ruby></h2>
+
+            <!--期間限定お知らせ事-->
+      <section class="home-card date-visible-block" data-fromdate="2026-06-11T00:00:00+09:00" data-todate="2026-06-11T23:59:59+09:00">
+          <h2 class="ruby-h"><ruby>リマインド<rt>remind</rt></ruby></h2>
           <div class="card-link">
-            <a href="https://timely-iota-eight.vercel.app/">
-              <img src="https://timely-iota-eight.vercel.app/icon-192.png" alt="Timely">
+            <a href="https://store.universal-music.co.jp/products/pdcj5127" tartget="_blank">
+              <img src="../img/icon/icon_20260611_kienaihanabi.png" alt="花火">
               <span class="card-link-text">
-                <strong>Timely</strong>
-                <small>タムたちの予定を確認できるsecondz向けの非公式サポートアプリ。今日は何がTimelyかな？</small>
+                <strong>「消えない花火」ユニバ盤予約締切日</strong>
+                <small>
+                  ギリ生きの民の皆さん、予約は済んでますか？<br>
+                  念のため確認しとこ！<br>
+                  <br>
+                  ユニバ盤限定収録内容：<br>
+                  ・オリジナルトレーディングカード ver.D<br>
+                  ・スペシャルバラエティ映像②
+                </small>
               </span>
             </a>
           </div>
         </section>
+      
+       <!--スケジュール-->
+        <section class="home-card schedule-timely">
+          <h2 class="ruby-h"><ruby>スケジュール<rt>schedule</rt></ruby></h2>
+          <div class="card-link">
+            <a href="https://timely-iota-eight.vercel.app/" tartget="_blank">
+              <img src="https://timely-iota-eight.vercel.app/icon-192.png" alt="Timely">
+              <span class="card-link-text">
+                <strong>Timely</strong>
+                <small>タムたちの予定を確認できるsecondz向けの非公式サポートアプリ。今日は何がTimelyかな？<br>作成：かなで(@knd12310104)さん</small>
+              </span>
+            </a>
+          </div>
+        </section>
+      
+        <!--目次-->
+        <!--ホーム目次-->
+        <section id="homeIndexCard" class="home-card home-index-card hidden">
+          <h2 class="ruby-h"><ruby>目次<rt>index</rt></ruby></h2>
+          <div id="homeIndexList" class="home-index-list"></div>
+        </section>
+      
         <!--メンバーごと-->
         <section class="home-card member-works-card">
           <div class="member-works-header">
@@ -176,18 +218,53 @@
               篠塚
             </button>
           </div>
-
+          <!--ここにメンバーごと便利リンク集生成-->
           <div id="memberWorksArea" class="member-works-list"></div>
         </section>
-        <!--onceListJsonの期限内のものを表示-->
-        <section class="home-card home-now-request-area hidden">
-          <h2 class="ruby-h"><ruby>期間限定<rt>limited task</rt></ruby></h2>
-          <div id="homeOnceTaskList" class="home-list-box"></div>
+
+        <!--おかわりDaily-->
+        <section id="homeDailyExtraCard" class="home-card home-extra-task-card hidden">
+          <h2 class="ruby-h"><ruby>おかわりDaily<rt>one more daily</rt></ruby></h2>
+          <p class="home-extra-description">
+            もう少し応援したいとき、ちょっとだけ頑張りたいとき、タスクをSNSにシェアしたいときに。
+          </p>
+          <div id="homeRequestSongSelectArea" class="home-request-song-select-area hidden">
+            <label class="home-request-song-label" for="homeRequestSongSelect">
+              リクエスト曲
+            </label>
+            <select id="homeRequestSongSelect" class="home-request-song-select"></select>
+          </div>
+          <div id="homeUsenExtraList" class="home-extra-task-list"></div>
+          <div id="homeDailyExtraList" class="home-extra-task-list"></div>
         </section>
+        
+        <!--期間限定-->
+        <section id="homeOnceMoreCard" class="home-card home-extra-task-card hidden">
+          <h2 class="ruby-h"><ruby>期間限定<rt>limited task</rt></ruby></h2>
+          <p class="home-extra-description">
+            やり忘れはない？
+          </p>
+          <div id="homeOnceMoreList" class="home-extra-task-list"></div>
+        </section>
+
         <!--homeInfoJsonの期限内のものを表示-->
-        <section class="home-card home-information-area">
+        <section class="home-card home-information-area" id="homeInfoCard">
           <h2 class="ruby-h"><ruby>最近のタムごと<rt>information</rt></rt></ruby></h2>
           <div id="homeInfoList" class="home-list-box"></div>
+        </section>
+        <!--フィードバック-->
+        <section class="home-card">
+          <h2 class="ruby-h"><ruby>ご意見ご感想<rt>Feedback</rt></rt></ruby></h2>
+          <p class="feedback-text">
+            投票系、ラジオリクエスト先、その他etc…<br>
+            「みんなで毎日これやりたい！」という方はぜひこちらからお送りください。
+          </p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScsX4mHxLIRujrZy2bElGDuOfGI8OQgJapFwBiAcGQKPZCzWw/viewform?usp=sharing&amp;ouid=105111966497500869107" target="_blank" rel="noopener noreferrer" class="primary-button feedback-link-button">追加リクエスト</a>
+          <p class="feedback-text">
+            <br>
+            やっていて困ったこと、感想、こんなことできる？ などはこちらからお送りください。
+          </p>
+          <a href="https://mond.how/ja/tsunakan_r" target="_blank" rel="noopener noreferrer" class="primary-button feedback-link-button">mond</a>
         </section>
         <!--ホームのボタン-->
         <section class="home-button-area">
@@ -197,6 +274,10 @@
             <button id="homeBottomShareButton" class="text-link-button">このツールを共有</button>
           </div>
         </section>
+        <!--上に戻るボタン-->
+        <button id="homeBackToTopButton" class="home-back-to-top-button hidden hidden" type="button" aria-label="上に戻る">
+          <i class="bi bi-arrow-up"></i>
+        </button>
     </section>
     <!--STEP 1 Spotify-->
     <section id="spotifyStep" class="step-screen hidden">
@@ -297,9 +378,8 @@
     <!--STEP 3 USEN推しリク-->
     <section id="requestSongStep" class="step-screen hidden">
       <header class="header">
-        <h1>本日のラジオリクエスト曲📻</h1>
+        <h1>USEN推し活リクエスト📻</h1>
         <p class="description">
-          今日は何をリクエストする？<br>
           曲を選んで<strong>「ページを開く」</strong>をタップ！<br>
           「USEN推し活リクエスト」でリクエストしよ！
         </p>
@@ -338,6 +418,28 @@
         </section>
       </section>
     </section>
+
+    <!--STEP 3.5 ラジオリクエスト曲切替-->
+    <section id="radioRequestSongOverrideStep" class="step-screen hidden">
+      <header class="header">
+        <h1>ラジオリクエスト曲📻</h1>
+        <p class="description">
+          よかったらラジオリクエスト曲を新曲に切り替えませんか？<br>
+          現在：<span id="currentRadioRequestSongName"></span>
+        </p>
+      </header>
+    
+      <section class="task-card">
+        <div id="radioRequestSongOverrideButtonList" class="song-list"></div>
+    
+        <button id="keepCurrentRadioRequestSongButton" class="secondary-button">
+          現在の曲をリクエストする
+        </button>
+      </section>
+    
+      <section id="radioRequestSongOverrideErrorArea" class="error-area hidden"></section>
+    </section>
+        
     <!--STEP 4 デイリータスク-->
     <section id="dailyTaskStep" class="step-screen hidden">
       <header class="header">
@@ -513,6 +615,11 @@
           <div id="youtubeMvRow" class="youtube-card-row"></div>
         </section>
 
+        <section class="youtube-section">
+          <h3 class="youtube-section-title">その他</h3>
+          <div id="youtubeOtherRow" class="youtube-card-row"></div>
+        </section>
+
         <section class="bottom-action-area">
           <button id="finishFromYoutubeButton" class="primary-button">
             今日はここまで
@@ -548,284 +655,314 @@
     </section>
   </main>
 
+  <!--使い方モーダル-->
   <div id="usageModal" class="modal-overlay hidden">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h2>使い方</h2>
-      <button id="closeUsageButton" class="modal-close-button" type="button">×</button>
-    </div>
-
-    <div class="modal-body">
-      <section class="how-to-section">
-        <h3>基本の流れ</h3>
-        <ol>
-          <li><strong>SpotifyでBGMを選ぶ</strong><br>
-            1日1曲聞くだけで月間リスナーに貢献♪<br>
-            最初に表示されたものの中に好みのものがなければ、「その他」をタップすると現在Spotifyで配信されている曲の一覧が表示されます。<br>
-            画面上部に「Spotifyで再生する」ボタンが表示されるので、それをタップしてください。<br>
-            曲が再生されたらアプリを切り替えて「タムごとDaily」に戻ってきてください。<br>
-            もし曲を再生したくないときは「BGMなし」を選ぶと次に進みます。
-          </li>
-          <li><strong>期間限定タスク</strong><br>
-            〇日までなど、期間限定系のタスクが表示されます。<br>
-            終わってないもので今投票/リクエストなどしたいものがあったら✅をいれて「次へ」を押してください。<br>
-            <ul>
-              <li>アプリ遷移するもの(SpotifyやYouTubeなど)の場合<br>
-                おそらく自動で遷移します。(しない場合は既定ブラウザで開くと遷移します)<br>
-                タスクが完了したらSpotify同様にアプリを切り替えて「タムごとDaily」に戻ってきてください。
-              </li>
-              <li>アプリ遷移しないもの(アプリが切り替わらずWEBページが表示される)場合<br>
-                タスクが完了したら✖や完了などで閉じてください。<br>
-                XやLINEなどで開いたWEBページを閉じるときと同じ要領です。
-              </li>
-              <li>曲名を入力する必要があるもの<br>
-                ページを開くとき、各フォームに合わせた形でクリップボードにコピーされます。<br>
-                例：timeleszのRock this Partyをリクエストします！, timelesz/Rock this Party など<br>
-                もしフォームや入力方法の変更などがあった場合はご連絡ください。
-              </li>
-            </ul>
-            タスクが完了してアプリに戻ったりWEBページを閉じたりすると、「次へ」ボタンが表示されます。<br>
-            最後のタスクが完了すると次に移動します。
-          </li>
-          <li><strong>デイリータスク</strong><br>
-            毎日やれるタスクが表示されます。<br>
-            ページを開く前に注意事項ややり方が簡単に表示されるのでそれを参考にしてください。<br>
-            分かりにくいときはご連絡ください。
-            <ul>
-              <li>アプリ遷移するもの(SpotifyやYouTubeなど)の場合<br>
-                おそらく自動で遷移します。(しない場合は既定ブラウザで開くと遷移します)<br>
-                タスクが完了したらSpotify同様にアプリを切り替えて「タムごとDaily」に戻ってきてください。
-              </li>
-              <li>アプリ遷移しないもの(アプリが切り替わらずWEBページが表示される)場合<br>
-                タスクが完了したら✖や完了などで閉じてください。<br>
-                XやLINEなどで開いたWEBページを閉じるときと同じ要領です。
-              </li>
-              <li>曲名を入力する必要があるもの<br>
-                ページを開くとき、各フォームに合わせた形でクリップボードにコピーされます。<br>
-                例：timeleszのRock this Partyをリクエストします！, timelesz/Rock this Party など<br>
-                もしフォームや入力方法の変更などがあった場合はご連絡ください。
-              </li>
-            </ul>
-            タスクが完了してアプリに戻ったりWEBページを閉じたりすると、「次へ」ボタンが表示されます。<br>
-            最後のタスクが完了すると、続けるかどうかの質問が出ます。(出ないときもあります)<br>
-            続けるときはまたタスクが表示されます。<br>
-            これまでと同じ要領で進めてください。<br>
-            続けないときは次に進みます。
-          </li>
-          <li><strong>SNS共有</strong><br>
-            こなしたタスクをSNSに共有できます。<br>
-            共有したいものを選択して希望のボタンを押してください。<br>
-            各SNSアプリで投稿が終わったらこのアプリに戻り、「次へ」ボタンを押してください。
-          </li>
-          <li><strong>YouTube再生</strong><br>
-            もし余力があったらYouTubeも再生していってください。<br>
-            再生リストや動画のの追加リクエストはmondまたはDMまたはリプライで受け付けています。
-          </li>
-        </ol>
-      </section>
-      <p class="modal-note">
-        お問い合わせ・質問はこちら<br>
-        <a href ="https://docs.google.com/forms/d/12qZFvckxN_fbIT6Uq_UwXGPCx6hl8sglsRoRuRqY5xE/edit">タムごとDaily追加リクエストフォーム</a>
-        <a href="https://mond.how/ja/tsunakan_r">mond</a>
-        <a href="https://x.com/tsunakan_r">X</a>
-      </p>
-      <p class="modal-note">
-        <strong>このツールについて</strong><br>
-        「タムごとDaily」は、timeleszを応援する毎日の行動をまとめて確認できる非公式ファンメイドツールです。<br>
-        Spotifyを聴く、USEN推しリクをする、SNSでシェアする、期間限定のタスクを確認するなど、日々の推し活を少しでも忘れず・楽しく続けられるように作成しています。<br>
-        掲載している情報やリンクはできるだけ確認していますが、手動管理のため内容が古くなる場合があります。<br>
-        大事なお知らせや期限については、必ず公式情報もあわせてご確認ください。<br><br>
-        このツールは個人による非公式ツールです。<br>
-        所属事務所、各サービスとは関係ありません。<br><br>
-        またこのツールで個人の特定につながる情報を収集することはありません。
-      </p>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>使い方</h2>
+        <button id="closeUsageButton" class="modal-close-button" type="button">×</button>
+      </div>
+      <div class="modal-body">
+        <section class="how-to-section">
+          <h3>基本の流れ</h3>
+          <ol>
+            <li><strong>SpotifyでBGMを選ぶ</strong><br>
+              1日1曲聞くだけで月間リスナーに貢献♪<br>
+              最初に表示されたものの中に好みのものがなければ、「その他」をタップすると現在Spotifyで配信されている曲の一覧が表示されます。<br>
+              画面上部に「Spotifyで再生する」ボタンが表示されるので、それをタップしてください。<br>
+              曲が再生されたらアプリを切り替えて「タムごとDaily」に戻ってきてください。<br>
+              もし曲を再生したくないときは「BGMなし」を選ぶと次に進みます。
+            </li>
+            <li><strong>期間限定タスク</strong><br>
+              〇日までなど、期間限定系のタスクが表示されます。<br>
+              終わってないもので今投票/リクエストなどしたいものがあったら✅をいれて「次へ」を押してください。<br>
+              <ul>
+                <li>アプリ遷移するもの(SpotifyやYouTubeなど)の場合<br>
+                  おそらく自動で遷移します。(しない場合は既定ブラウザで開くと遷移します)<br>
+                  タスクが完了したらSpotify同様にアプリを切り替えて「タムごとDaily」に戻ってきてください。
+                </li>
+                <li>アプリ遷移しないもの(アプリが切り替わらずWEBページが表示される)場合<br>
+                  タスクが完了したら✖や完了などで閉じてください。<br>
+                  XやLINEなどで開いたWEBページを閉じるときと同じ要領です。
+                </li>
+                <li>曲名を入力する必要があるもの<br>
+                  ページを開くとき、各フォームに合わせた形でクリップボードにコピーされます。<br>
+                  例：timeleszのRock this Partyをリクエストします！, timelesz/Rock this Party など<br>
+                  もしフォームや入力方法の変更などがあった場合はご連絡ください。
+                </li>
+              </ul>
+              タスクが完了してアプリに戻ったりWEBページを閉じたりすると、「次へ」ボタンが表示されます。<br>
+              最後のタスクが完了すると次に移動します。
+            </li>
+            <li><strong>デイリータスク</strong><br>
+              毎日やれるタスクが表示されます。<br>
+              ページを開く前に注意事項ややり方が簡単に表示されるのでそれを参考にしてください。<br>
+              分かりにくいときはご連絡ください。
+              <ul>
+                <li>アプリ遷移するもの(SpotifyやYouTubeなど)の場合<br>
+                  おそらく自動で遷移します。(しない場合は既定ブラウザで開くと遷移します)<br>
+                  タスクが完了したらSpotify同様にアプリを切り替えて「タムごとDaily」に戻ってきてください。
+                </li>
+                <li>アプリ遷移しないもの(アプリが切り替わらずWEBページが表示される)場合<br>
+                  タスクが完了したら✖や完了などで閉じてください。<br>
+                  XやLINEなどで開いたWEBページを閉じるときと同じ要領です。
+                </li>
+                <li>曲名を入力する必要があるもの<br>
+                  ページを開くとき、各フォームに合わせた形でクリップボードにコピーされます。<br>
+                  例：timeleszのRock this Partyをリクエストします！, timelesz/Rock this Party など<br>
+                  もしフォームや入力方法の変更などがあった場合はご連絡ください。
+                </li>
+              </ul>
+              タスクが完了してアプリに戻ったりWEBページを閉じたりすると、「次へ」ボタンが表示されます。<br>
+              最後のタスクが完了すると、続けるかどうかの質問が出ます。(出ないときもあります)<br>
+              続けるときはまたタスクが表示されます。<br>
+              これまでと同じ要領で進めてください。<br>
+              続けないときは次に進みます。
+            </li>
+            <li><strong>SNS共有</strong><br>
+              こなしたタスクをSNSに共有できます。<br>
+              共有したいものを選択して希望のボタンを押してください。<br>
+              各SNSアプリで投稿が終わったらこのアプリに戻り、「次へ」ボタンを押してください。
+            </li>
+            <li><strong>YouTube再生</strong><br>
+              もし余力があったらYouTubeも再生していってください。<br>
+              再生リストや動画のの追加リクエストはmondまたはDMまたはリプライで受け付けています。
+            </li>
+          </ol>
+        </section>
+        <p class="modal-note">
+          お問い合わせ・質問はこちら<br>
+          <a href ="https://docs.google.com/forms/d/12qZFvckxN_fbIT6Uq_UwXGPCx6hl8sglsRoRuRqY5xE/edit">タムごとDaily追加リクエストフォーム</a>
+          <a href="https://mond.how/ja/tsunakan_r">mond</a>
+          <a href="https://x.com/tsunakan_r">X</a>
+        </p>
+        <p class="modal-note">
+          <strong>このツールについて</strong><br>
+          「タムごとDaily」は、timeleszを応援する毎日の行動をまとめて確認できる非公式ファンメイドツールです。<br>
+          Spotifyを聴く、USEN推しリクをする、SNSでシェアする、期間限定のタスクを確認するなど、日々の推し活を少しでも忘れず・楽しく続けられるように作成しています。<br>
+          掲載している情報やリンクはできるだけ確認していますが、手動管理のため内容が古くなる場合があります。<br>
+          大事なお知らせや期限については、必ず公式情報もあわせてご確認ください。<br><br>
+          このツールは個人による非公式ツールです。<br>
+          所属事務所、各サービスとは関係ありません。<br><br>
+          またこのツールで個人の特定につながる情報を収集することはありません。
+        </p>
+      </div>
     </div>
   </div>
-</div>
 
-  
+  <!--シェア画像生成モーダル-->
   <div id="shareImageModal" class="modal-overlay hidden">
-  <div class="modal-content share-image-modal-content" role="dialog" aria-modal="true" aria-labelledby="shareImageModalTitle">
-    <div class="modal-header">
-      <h2 id="shareImageModalTitle">シェア画像</h2>
-      <button
-        type="button"
-        id="closeShareImageModalButton"
-        class="modal-close-button"
-        aria-label="閉じる"
-      >
-        ×
-      </button>
-    </div>
-
-    <div class="modal-body">
-      <div class="share-image-canvas-wrap">
-        <canvas id="shareImageCanvas"></canvas>
+    <div class="modal-content share-image-modal-content" role="dialog" aria-modal="true" aria-labelledby="shareImageModalTitle">
+      <div class="modal-header">
+        <h2 id="shareImageModalTitle">シェア画像</h2>
+        <button type="button" id="closeShareImageModalButton" class="modal-close-button" aria-label="閉じる">×</button>
       </div>
-      
-      <div class="share-image-action-row">
-        <button type="button" id="downloadShareImageButton" class="primary-button">
-          画像を保存
-        </button>
+  
+      <div class="modal-body">
+        <div class="share-image-canvas-wrap">
+          <canvas id="shareImageCanvas"></canvas>
+        </div>
+        
+        <div class="share-image-action-row">
+          <button type="button" id="downloadShareImageButton" class="primary-button">
+            画像を保存
+          </button>
+        </div>
+        <p class="share-image-note">
+          カラーを選ぶと画像が再生成されます<br>
+          全8色＋1です。
+        </p>
+        <div class="share-image-theme-row-wrap">
+          <div class="share-image-theme-row" aria-label="画像カラー選択">
+            <button type="button" class="share-image-theme-button share-image-theme-button-red" data-share-image-theme="red" aria-label="赤">
+              <span class="share-image-theme-chip">
+                <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
+              </span>
+            </button>
+          
+            <button type="button" class="share-image-theme-button share-image-theme-button-purple" data-share-image-theme="purple" aria-label="紫">
+              <span class="share-image-theme-chip">
+                <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
+              </span>
+            </button>
+          
+            <button type="button" class="share-image-theme-button share-image-theme-button-green" data-share-image-theme="green" aria-label="緑">
+              <span class="share-image-theme-chip">
+                <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
+              </span>
+            </button>
+          
+            <button type="button" class="share-image-theme-button share-image-theme-button-blue" data-share-image-theme="blue" aria-label="水色">
+              <span class="share-image-theme-chip">
+                <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
+              </span>
+            </button>
+          
+            <button type="button" class="share-image-theme-button share-image-theme-button-lime" data-share-image-theme="lime" aria-label="黄緑">
+              <span class="share-image-theme-chip">
+                <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
+              </span>
+            </button>
+          
+            <button type="button" class="share-image-theme-button share-image-theme-button-pink" data-share-image-theme="pink" aria-label="ピンク">
+              <span class="share-image-theme-chip">
+                <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
+              </span>
+            </button>
+          
+            <button type="button" class="share-image-theme-button share-image-theme-button-yellow" data-share-image-theme="yellow" aria-label="黄色">
+              <span class="share-image-theme-chip">
+                <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
+              </span>
+            </button>
+          
+            <button type="button" class="share-image-theme-button share-image-theme-button-white" data-share-image-theme="white" aria-label="白">
+              <span class="share-image-theme-chip">
+                <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
+              </span>
+            </button>
+          
+            <button type="button" class="share-image-theme-button share-image-theme-button-normal" data-share-image-theme="normal" aria-label="通常">
+              <span class="share-image-theme-chip">
+                <span class="share-image-theme-icon"><i class="bi bi-star-fill"></i></span>
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
-      <p class="share-image-note">
-        カラーを選ぶと画像が再生成されます<br>
-        全8色＋1です。
-      </p>
-      <div class="share-image-theme-row" aria-label="画像カラー選択">
-        <button type="button" class="share-image-theme-button share-image-theme-button-red" data-share-image-theme="red" aria-label="赤">
-          <span class="share-image-theme-chip">
-            <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
-          </span>
-        </button>
-      
-        <button type="button" class="share-image-theme-button share-image-theme-button-purple" data-share-image-theme="purple" aria-label="紫">
-          <span class="share-image-theme-chip">
-            <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
-          </span>
-        </button>
-      
-        <button type="button" class="share-image-theme-button share-image-theme-button-green" data-share-image-theme="green" aria-label="緑">
-          <span class="share-image-theme-chip">
-            <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
-          </span>
-        </button>
-      
-        <button type="button" class="share-image-theme-button share-image-theme-button-blue" data-share-image-theme="blue" aria-label="水色">
-          <span class="share-image-theme-chip">
-            <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
-          </span>
-        </button>
-      
-        <button type="button" class="share-image-theme-button share-image-theme-button-lime" data-share-image-theme="lime" aria-label="黄緑">
-          <span class="share-image-theme-chip">
-            <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
-          </span>
-        </button>
-      
-        <button type="button" class="share-image-theme-button share-image-theme-button-pink" data-share-image-theme="pink" aria-label="ピンク">
-          <span class="share-image-theme-chip">
-            <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
-          </span>
-        </button>
-      
-        <button type="button" class="share-image-theme-button share-image-theme-button-yellow" data-share-image-theme="yellow" aria-label="黄色">
-          <span class="share-image-theme-chip">
-            <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
-          </span>
-        </button>
-      
-        <button type="button" class="share-image-theme-button share-image-theme-button-white" data-share-image-theme="white" aria-label="白">
-          <span class="share-image-theme-chip">
-            <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
-          </span>
-        </button>
-      
-        <button type="button" class="share-image-theme-button share-image-theme-button-normal" data-share-image-theme="normal" aria-label="通常">
-          <span class="share-image-theme-chip">
-            <span class="share-image-theme-icon"><i class="bi bi-star-fill"></i></span>
-          </span>
-        </button>
-      </div>
-
     </div>
   </div>
-</div>
-
+  <!--初回導入モーダル-->
   <div id="firstSetupModal" class="modal-overlay hidden">
   <div class="modal-content setup-modal-content" role="dialog" aria-modal="true" aria-labelledby="firstSetupModalTitle">
     <div class="modal-header">
-      <h2 id="firstSetupModalTitle">はじめに</h2>
-      <button
-        type="button"
-        id="closeFirstSetupModalButton"
-        class="modal-close-button"
-        aria-label="閉じる"
-      >
-        ×
-      </button>
+      <h2 id="firstSetupModalTitle">ホーム画面に追加しよう！</h2>
+      <button type="button" id="closeFirstSetupModalButton" class="modal-close-button" aria-label="閉じる">×</button>
     </div>
-
     <div class="modal-body setup-modal-body">
-      <p class="setup-modal-lead">
-        ホーム画面に追加すると<strong>すごく便利になります</strong>。<br>
-        ぜひ以下の手順で追加してご利用ください。
-<details class="setup-detail-box">
-  <summary>ホーム画面に追加すると何が便利？</summary>
-
-  <div class="setup-detail-content">
-    <p>
-      特に役立つのはUSENリクエスト・各種タスクなどのリンクを開いたあとです。<br>
-      ホーム画面のアイコンから開いている場合、遷移先がアプリ内ブラウザのように表示されるため、
-      作業が終わったら画面を閉じるだけで、このツールに戻りやすくなります。
-    </p>
-    <p>
-      XやLINEの中でリンクを開いたときに、外部ページを閉じるだけで元の画面に戻れる感覚に近いです。<br>
-      毎日のタスクを続けてこなすときに、戻る操作やページの探し直しが少なくなります。<br>
-      SafariやChromeの普通のタブで開いたままだと、リンク先から戻るのが少し面倒になったり、<br>
-      途中でページを見失いやすくなることがあります。
-    </p>
-    <p>
-      <strong>そのため、初回だけホーム画面に追加して、次回からは追加されたアイコンから開くのがおすすめです。</strong>
-    </p>
-  </div>
-</details>
-      </p>
-
-      <div class="setup-question-block">
-        <h3>① 今このページをどう開いた？</h3>
-
-        <div class="setup-choice-list">
-          <button type="button" class="setup-choice-button" data-open-place="x">
-            Xのリンクタップで開いただけ
-          </button>
-
-          <button type="button" class="setup-choice-button" data-open-place="threads">
-            Threadsのリンクタップで開いたとだけ
-          </button>
-
-          <button type="button" class="setup-choice-button" data-open-place="browser">
-            Safari / Chromeなどブラウザで開いている
-          </button>
+      <section class="setup-intro-card">
+        <p class="setup-intro-title">
+          毎日の応援をもっと簡単に！
+        </p>
+        <p class="setup-intro-text">
+          <strong>ホーム画面に追加する</strong>と、タスク消化も超簡単！<br>
+          アプリ感覚でサクサク使えます！
+        </p>
+      </section>
+      <details class="setup-detail-box">
+        <summary>ホーム画面に追加すると何が便利？</summary>
+        <div class="setup-detail-content">
+          <img src="../img/setting/setting_whypwa.png" alt="ホーム画面に追加するとページを開いた後にツールに戻るのがとっても楽！">
+        </div>
+      </details>
+      <h3 class="setup-howto-title">ホーム画面に追加する方法</h3>
+      <p>当てはまるものを選んで進めてください！</p>
+            <div class="setup-question-block">
+              <h3>① 今このページをどう開いた？</h3>
+      
+              <div class="setup-choice-list">
+                <button type="button" class="setup-choice-button" data-open-place="x">
+                  Xのリンクタップで開いただけ
+                </button>
+      
+                <button type="button" class="setup-choice-button" data-open-place="threads">
+                  Threadsのリンクタップで開いただけ
+                </button>
+      
+                <button type="button" class="setup-choice-button" data-open-place="browser">
+                  Safari / Chromeなどブラウザで開いている
+                </button>
+              </div>
+            </div>
+      
+            <div id="setupOpenPlaceGuideArea" class="setup-guide-area hidden"></div>
+      
+            <div id="setupDeviceQuestion" class="setup-question-block hidden">
+              <h3>② 今使っているのは？</h3>
+      
+              <div class="setup-choice-list">
+                <button type="button" class="setup-choice-button" data-device-type="ios">
+                  iPhone / iPad
+                </button>
+      
+                <button type="button" class="setup-choice-button" data-device-type="android">
+                  Android
+                </button>
+              </div>
+            </div>
+      
+            <div id="setupDeviceGuideArea" class="setup-guide-area hidden"></div>
+          </div>
         </div>
       </div>
-
-      <div id="setupOpenPlaceGuideArea" class="setup-guide-area hidden"></div>
-
-      <div id="setupDeviceQuestion" class="setup-question-block hidden">
-        <h3>② 今使っているのは？</h3>
-
-        <div class="setup-choice-list">
-          <button type="button" class="setup-choice-button" data-device-type="ios">
-            iPhone / iPad
-          </button>
-
-          <button type="button" class="setup-choice-button" data-device-type="android">
-            Android
-          </button>
-        </div>
+  <!--YouTubeリストモーダル-->
+  <div id="youtubeModal" class="modal-overlay hidden">
+    <div class="modal-content youtube-modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">タムごと</h2>
+  
+        <button
+          id="closeYoutubeModalButton"
+          class="modal-close-button"
+          type="button"
+          aria-label="閉じる"
+        >
+          ×
+        </button>
       </div>
-
-      <div id="setupDeviceGuideArea" class="setup-guide-area hidden"></div>
+      <section class="youtube-modal-section">
+        <h3 class="youtube-modal-section-title">再生リスト</h3>
+        <div id="youtubeModalPlaylistRow" class="youtube-card-row youtube-modal-card-row"></div>
+      </section>
+  
+      <section class="youtube-modal-section">
+        <h3 class="youtube-modal-section-title">MV</h3>
+        <div id="youtubeModalMvRow" class="youtube-card-row youtube-modal-card-row"></div>
+      </section>
+  
+      <section class="youtube-modal-section">
+        <h3 class="youtube-modal-section-title">その他</h3>
+        <div id="youtubeModalOtherRow" class="youtube-card-row youtube-modal-card-row"></div>
+      </section>
+  
+      <p id="youtubeModalErrorArea" class="error-text hidden"></p>
     </div>
   </div>
-</div>
-
-<script src="./config.js" defer></script>
-<script src="./state.js" defer></script>
-<script src="./dom.js" defer></script>
-<script src="./utils.js" defer></script>
-<script src="./loader.js" defer></script>
-<script src="./sheetLogger.js" defer></script>
-<script src="./storage.js" defer></script>
-<script src="./postBuilder.js" defer></script>
-<script src="./renderers.js" defer></script>
-<script src="./selectors.js" defer></script>
-<script src="./musicTop.js" defer></script>
-<script src="./theme.js" defer></script>
-<script src="./canvas.js" defer></script>
-<script src="./memberWorks.js" defer></script>
-<script src="./setting.js" defer></script>
-<script src="./app.js" defer></script>
+  
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.js"></script>
+<!-- 基本・共通 -->
+<script src="./js/config.js" defer></script>
+<script src="./js/state.js" defer></script>
+<script src="./js/dom.js" defer></script>
+<script src="./js/utils.js" defer></script>
+<!-- データ・保存・ログ -->
+<script src="./js/loader.js" defer></script>
+<script src="./js/sheetLogger.js" defer></script>
+<script src="./js/storage.js" defer></script>
+<!-- 描画・UI補助 -->
+<script src="./js/postBuilder.js" defer></script>
+<script src="./js/renderers.js" defer></script>
+<script src="./js/selectors.js" defer></script>
+<script src="./js/musicTop.js" defer></script>
+<script src="./js/theme.js" defer></script>
+<script src="./js/canvas.js" defer></script>
+<script src="./js/memberWorks.js" defer></script>
+<script src="./js/setting.js" defer></script>
+<!-- 遷移・初期化 -->
+<script src="./js/navigation.js" defer></script>
+<script src="./js/init.js" defer></script>
+<script src="./js/modal.js" defer></script>
+<!-- 画面別 -->
+<script src="./js/home.js" defer></script>
+<script src="./js/spotify.js" defer></script>
+<script src="./js/onceTask.js" defer></script>
+<script src="./js/requestSong.js" defer></script>
+<script src="./js/radioRequestSongOverride.js" defer></script>
+<script src="./js/dailyTask.js" defer></script>
+<script src="./js/post.js" defer></script>
+<script src="./js/shareImage.js" defer></script>
+<script src="./js/youtube.js" defer></script>
+<!-- 起動 -->
+<script src="./js/app.js" defer></script>
 </body>
 </html>
