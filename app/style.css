@@ -1452,7 +1452,6 @@ h1 {
   font-weight: 700;
   cursor: pointer;
   box-shadow: var(--shadow-card);
-
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -1465,6 +1464,8 @@ h1 {
   box-shadow: none;
   color: var(--color-text-muted);
   padding: 6px 4px;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .text-link-row {
