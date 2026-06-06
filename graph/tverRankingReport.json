@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026/06/06 23:19",
+  "updatedAt": "2026/06/07 00:22",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/06 23:19",
+      "updatedAt": "2026/06/07 00:22",
       "episodeId": "ep6vuu9nxm",
       "subtitle": "timelesz100",
-      "likes": "1.0万",
+      "likes": "1.1万",
       "favorites": "76.0万",
       "likePoints": [
         {
@@ -109,6 +109,10 @@
         {
           "hour": 25,
           "likes": 10000
+        },
+        {
+          "hour": 26,
+          "likes": 11000
         }
       ],
       "rankings": [
@@ -116,7 +120,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 4,
-          "elapsedHour": 25,
+          "elapsedHour": 26,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -209,6 +213,10 @@
             },
             {
               "hour": 25,
+              "rank": 4
+            },
+            {
+              "hour": 26,
               "rank": 4
             }
           ],
@@ -897,7 +905,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 10,
-          "elapsedHour": 25,
+          "elapsedHour": 26,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -962,6 +970,10 @@
             },
             {
               "hour": 25,
+              "rank": 10
+            },
+            {
+              "hour": 26,
               "rank": 10
             }
           ],
@@ -1623,7 +1635,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/05/31",
-      "updatedAt": "2026/06/06 23:19",
+      "updatedAt": "2026/06/07 00:22",
       "episodeId": "epi4thbfbk",
       "subtitle": "【TOYOTAの最新ロボの秘密】衝撃!!食べられる機械",
       "likes": "1.4万",
@@ -2192,15 +2204,19 @@
         {
           "hour": 153,
           "likes": 14000
+        },
+        {
+          "hour": 154,
+          "likes": 14000
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
+          "currentRank": 48,
+          "elapsedHour": 154,
+          "elapsedRank": 48,
           "currentPoints": [
             {
               "hour": 6,
@@ -2737,6 +2753,10 @@
             {
               "hour": 148,
               "rank": 48
+            },
+            {
+              "hour": 154,
+              "rank": 48
             }
           ],
           "previousPoints": [
@@ -3083,20 +3103,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
+              "rank": 45,
+              "title": "家、ついて行ってイイですか？"
+            },
+            {
+              "rank": 46,
               "title": "何か“オモシロいコト”ないの？"
             },
             {
-              "rank": 48,
+              "rank": 47,
               "title": "秘密のケンミンSHOW極"
             },
             {
-              "rank": 49,
-              "title": "かまいたちの瞬間回答～60秒でお悩み解決～"
-            },
-            {
-              "rank": 50,
-              "title": "ウワサのお客さま"
+              "rank": 48,
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -3356,11 +3376,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "水曜日、私の夫に抱かれてください"
+              "title": "好きな人がいること"
             },
             {
               "rank": 49,
@@ -3368,7 +3388,7 @@
             },
             {
               "rank": 50,
-              "title": "ホンマでっか！？TV"
+              "title": "水曜日、私の夫に抱かれてください"
             }
           ]
         }
@@ -3377,10 +3397,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/02",
-      "updatedAt": "2026/06/06 23:19",
+      "updatedAt": "2026/06/07 00:22",
       "episodeId": "epbxaud3gs",
       "subtitle": "チョコプラ・timeleszがデスソースの浄水に挑戦！",
-      "likes": "9167",
+      "likes": "9192",
       "favorites": "5.0万",
       "likePoints": [
         {
@@ -3762,15 +3782,19 @@
         {
           "hour": 95,
           "likes": 9167
+        },
+        {
+          "hour": 96,
+          "likes": 9192
         }
       ],
       "rankings": [
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 44,
-          "elapsedHour": 95,
-          "elapsedRank": 44,
+          "currentRank": 46,
+          "elapsedHour": 96,
+          "elapsedRank": 46,
           "currentPoints": [
             {
               "hour": 5,
@@ -4135,6 +4159,10 @@
             {
               "hour": 95,
               "rank": 44
+            },
+            {
+              "hour": 96,
+              "rank": 46
             }
           ],
           "previousPoints": [
@@ -4573,19 +4601,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 41,
-              "title": "がっちりマンデー!!"
-            },
-            {
-              "rank": 42,
-              "title": "ヒロシのぼっちキャンプ Season13"
-            },
-            {
               "rank": 43,
               "title": "本日はダイアンなり！シーズン3"
             },
             {
               "rank": 44,
+              "title": "ヒロシのぼっちキャンプ Season13"
+            },
+            {
+              "rank": 45,
+              "title": "帰れマンデー見っけ隊!!"
+            },
+            {
+              "rank": 46,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -4763,19 +4791,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "何か“オモシロいコト”ないの？"
-            },
-            {
-              "rank": 48,
               "title": "秘密のケンミンSHOW極"
             },
             {
+              "rank": 48,
+              "title": "timeleszファミリア"
+            },
+            {
               "rank": 49,
-              "title": "かまいたちの瞬間回答～60秒でお悩み解決～"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
-              "title": "ウワサのお客さま"
+              "title": "かまいたちの瞬間回答～60秒でお悩み解決～"
             }
           ]
         }
@@ -4784,7 +4812,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/04",
-      "updatedAt": "2026/06/06 23:19",
+      "updatedAt": "2026/06/07 00:22",
       "episodeId": "ep1tx7r71f",
       "subtitle": "【名物企画】英語で曲当てクイズ/ケムリがあまりにもカッコいい",
       "likes": "1.1万",
@@ -5065,15 +5093,19 @@
         {
           "hour": 69,
           "likes": 11000
+        },
+        {
+          "hour": 70,
+          "likes": 11000
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 41,
-          "elapsedHour": 69,
-          "elapsedRank": 41,
+          "currentRank": 40,
+          "elapsedHour": 70,
+          "elapsedRank": 40,
           "currentPoints": [
             {
               "hour": 8,
@@ -5322,6 +5354,10 @@
             {
               "hour": 69,
               "rank": 41
+            },
+            {
+              "hour": 70,
+              "rank": 40
             }
           ],
           "previousPoints": [
@@ -5576,19 +5612,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 37,
+              "title": "見取り図じゃん"
+            },
+            {
               "rank": 38,
               "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 39,
-              "title": "突然ですが占ってもいいですか？"
-            },
-            {
-              "rank": 40,
               "title": "あちこちオードリー"
             },
             {
-              "rank": 41,
+              "rank": 40,
               "title": "ニカゲーム"
             }
           ]
@@ -5874,11 +5910,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "水曜日、私の夫に抱かれてください"
+              "title": "好きな人がいること"
             },
             {
               "rank": 49,
@@ -5886,7 +5922,7 @@
             },
             {
               "rank": 50,
-              "title": "ホンマでっか！？TV"
+              "title": "水曜日、私の夫に抱かれてください"
             }
           ]
         }
@@ -5895,10 +5931,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/06 23:19",
+      "updatedAt": "2026/06/07 00:22",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "3958",
+      "likes": "3961",
       "favorites": "75.9万",
       "likePoints": [
         {
@@ -6559,19 +6595,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "何か“オモシロいコト”ないの？"
-            },
-            {
-              "rank": 48,
               "title": "秘密のケンミンSHOW極"
             },
             {
+              "rank": 48,
+              "title": "timeleszファミリア"
+            },
+            {
               "rank": 49,
-              "title": "かまいたちの瞬間回答～60秒でお悩み解決～"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
-              "title": "ウワサのお客さま"
+              "title": "かまいたちの瞬間回答～60秒でお悩み解決～"
             }
           ]
         },
@@ -6667,11 +6703,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "水曜日、私の夫に抱かれてください"
+              "title": "好きな人がいること"
             },
             {
               "rank": 49,
@@ -6679,7 +6715,7 @@
             },
             {
               "rank": 50,
-              "title": "ホンマでっか！？TV"
+              "title": "水曜日、私の夫に抱かれてください"
             }
           ]
         }
@@ -6688,10 +6724,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/06 23:19",
+      "updatedAt": "2026/06/07 00:22",
       "episodeId": "epref0f8o9",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！山下智久登場",
-      "likes": "7370",
+      "likes": "7387",
       "favorites": "6.8万",
       "likePoints": [
         {
@@ -7057,6 +7093,10 @@
         {
           "hour": 94,
           "likes": 7370
+        },
+        {
+          "hour": 95,
+          "likes": 7387
         }
       ],
       "rankings": [
@@ -7249,19 +7289,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "何か“オモシロいコト”ないの？"
-            },
-            {
-              "rank": 48,
               "title": "秘密のケンミンSHOW極"
             },
             {
+              "rank": 48,
+              "title": "timeleszファミリア"
+            },
+            {
               "rank": 49,
-              "title": "かまいたちの瞬間回答～60秒でお悩み解決～"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
-              "title": "ウワサのお客さま"
+              "title": "かまいたちの瞬間回答～60秒でお悩み解決～"
             }
           ]
         },
@@ -7313,11 +7353,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "水曜日、私の夫に抱かれてください"
+              "title": "好きな人がいること"
             },
             {
               "rank": 49,
@@ -7325,7 +7365,7 @@
             },
             {
               "rank": 50,
-              "title": "ホンマでっか！？TV"
+              "title": "水曜日、私の夫に抱かれてください"
             }
           ]
         }
@@ -7334,10 +7374,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/06 23:19",
+      "updatedAt": "2026/06/07 00:22",
       "episodeId": "eps7bm6mup",
       "subtitle": "第130回 真剣勝負あっち向いてホイ！ついに王者が決定！",
-      "likes": "3756",
+      "likes": "3767",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -7527,15 +7567,19 @@
         {
           "hour": 46,
           "likes": 3756
+        },
+        {
+          "hour": 47,
+          "likes": 3767
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 47,
-          "elapsedHour": 47,
-          "elapsedRank": 47,
+          "currentRank": 46,
+          "elapsedHour": 48,
+          "elapsedRank": 46,
           "currentPoints": [
             {
               "hour": 12,
@@ -7680,6 +7724,10 @@
             {
               "hour": 47,
               "rank": 47
+            },
+            {
+              "hour": 48,
+              "rank": 46
             }
           ],
           "previousPoints": [
@@ -7862,19 +7910,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 43,
+              "title": "突然ですが占ってもいいですか？"
+            },
+            {
               "rank": 44,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 45,
-              "title": "夜明けのラヴィット！"
-            },
-            {
-              "rank": 46,
               "title": "家、ついて行ってイイですか？"
             },
             {
-              "rank": 47,
+              "rank": 46,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -7952,11 +8000,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "水曜日、私の夫に抱かれてください"
+              "title": "好きな人がいること"
             },
             {
               "rank": 49,
@@ -7964,7 +8012,7 @@
             },
             {
               "rank": 50,
-              "title": "ホンマでっか！？TV"
+              "title": "水曜日、私の夫に抱かれてください"
             }
           ]
         }
@@ -7973,10 +8021,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/05/30",
-      "updatedAt": "2026/06/06 23:19",
+      "updatedAt": "2026/06/07 00:22",
       "episodeId": "epdpoawq6d",
       "subtitle": "マッサマンvs錦鯉マッサノリマンSP前編",
-      "likes": "2288",
+      "likes": "2293",
       "favorites": "77.2万",
       "likePoints": [
         {
@@ -8597,19 +8645,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "何か“オモシロいコト”ないの？"
-            },
-            {
-              "rank": 48,
               "title": "秘密のケンミンSHOW極"
             },
             {
+              "rank": 48,
+              "title": "timeleszファミリア"
+            },
+            {
               "rank": 49,
-              "title": "かまいたちの瞬間回答～60秒でお悩み解決～"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
-              "title": "ウワサのお客さま"
+              "title": "かまいたちの瞬間回答～60秒でお悩み解決～"
             }
           ]
         },
@@ -8697,11 +8745,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "水曜日、私の夫に抱かれてください"
+              "title": "好きな人がいること"
             },
             {
               "rank": 49,
@@ -8709,7 +8757,7 @@
             },
             {
               "rank": 50,
-              "title": "ホンマでっか！？TV"
+              "title": "水曜日、私の夫に抱かれてください"
             }
           ]
         }
@@ -8718,10 +8766,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/06 23:19",
+      "updatedAt": "2026/06/07 00:22",
       "episodeId": "ep6a50091q",
       "subtitle": "第8話 走る身代金",
-      "likes": "7618",
+      "likes": "7655",
       "favorites": "36.8万",
       "likePoints": [
         {
@@ -9019,15 +9067,19 @@
         {
           "hour": 74,
           "likes": 7618
+        },
+        {
+          "hour": 75,
+          "likes": 7655
         }
       ],
       "rankings": [
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 21,
-          "elapsedHour": 74,
-          "elapsedRank": 21,
+          "currentRank": 20,
+          "elapsedHour": 75,
+          "elapsedRank": 20,
           "currentPoints": [
             {
               "hour": 2,
@@ -9316,6 +9368,10 @@
             {
               "hour": 74,
               "rank": 21
+            },
+            {
+              "hour": 75,
+              "rank": 20
             }
           ],
           "previousPoints": [
@@ -9978,19 +10034,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 18,
-              "title": "あの夜、社長の子供を授かりました"
+              "rank": 17,
+              "title": "鬼女の棲む家"
             },
             {
-              "rank": 19,
+              "rank": 18,
               "title": "VIVANT"
             },
             {
-              "rank": 20,
+              "rank": 19,
               "title": "10回切って倒れない木はない"
             },
             {
-              "rank": 21,
+              "rank": 20,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -9998,9 +10054,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 32,
-          "elapsedHour": 74,
-          "elapsedRank": 32,
+          "currentRank": 31,
+          "elapsedHour": 75,
+          "elapsedRank": 31,
           "currentPoints": [
             {
               "hour": 3,
@@ -10289,6 +10345,10 @@
             {
               "hour": 74,
               "rank": 32
+            },
+            {
+              "hour": 75,
+              "rank": 31
             }
           ],
           "previousPoints": [
@@ -10923,19 +10983,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 29,
-              "title": "上田と女がDEEPに吠える夜"
-            },
-            {
-              "rank": 30,
+              "rank": 28,
               "title": "VIVANT"
             },
             {
-              "rank": 31,
+              "rank": 29,
               "title": "10回切って倒れない木はない"
             },
             {
-              "rank": 32,
+              "rank": 30,
+              "title": "上田と女がDEEPに吠える夜"
+            },
+            {
+              "rank": 31,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -10945,7 +11005,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/06 23:19",
+      "updatedAt": "2026/06/07 00:22",
       "episodeId": "ep24dk5lx2",
       "subtitle": "“ハプニング対応力講座”",
       "likes": "1.4万",
@@ -11314,6 +11374,10 @@
         {
           "hour": 92,
           "likes": 14000
+        },
+        {
+          "hour": 93,
+          "likes": 14000
         }
       ],
       "rankings": [
@@ -11485,19 +11549,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "何か“オモシロいコト”ないの？"
-            },
-            {
-              "rank": 48,
               "title": "秘密のケンミンSHOW極"
             },
             {
+              "rank": 48,
+              "title": "timeleszファミリア"
+            },
+            {
               "rank": 49,
-              "title": "かまいたちの瞬間回答～60秒でお悩み解決～"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
-              "title": "ウワサのお客さま"
+              "title": "かまいたちの瞬間回答～60秒でお悩み解決～"
             }
           ]
         },
@@ -11625,11 +11689,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "水曜日、私の夫に抱かれてください"
+              "title": "好きな人がいること"
             },
             {
               "rank": 49,
@@ -11637,7 +11701,7 @@
             },
             {
               "rank": 50,
-              "title": "ホンマでっか！？TV"
+              "title": "水曜日、私の夫に抱かれてください"
             }
           ]
         }
@@ -11646,10 +11710,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/06 23:19",
+      "updatedAt": "2026/06/07 00:22",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "5525",
+      "likes": "5534",
       "favorites": "1.4万",
       "likePoints": [
         {
@@ -12301,19 +12365,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "何か“オモシロいコト”ないの？"
-            },
-            {
-              "rank": 48,
               "title": "秘密のケンミンSHOW極"
             },
             {
+              "rank": 48,
+              "title": "timeleszファミリア"
+            },
+            {
               "rank": 49,
-              "title": "かまいたちの瞬間回答～60秒でお悩み解決～"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
-              "title": "ウワサのお客さま"
+              "title": "かまいたちの瞬間回答～60秒でお悩み解決～"
             }
           ]
         }
@@ -12322,10 +12386,10 @@
     "srbkekw9oj": {
       "programTitle": "ネプリーグ",
       "broadcastDate": "2026/06/01",
-      "updatedAt": "2026/06/06 23:19",
+      "updatedAt": "2026/06/07 00:22",
       "episodeId": "ep9yhege0b",
       "subtitle": "20周年イヤーの難クイズを林先生が徹底解説！",
-      "likes": "2017",
+      "likes": "2020",
       "favorites": "17.1万",
       "likePoints": [
         {
@@ -12819,6 +12883,10 @@
         {
           "hour": 124,
           "likes": 2017
+        },
+        {
+          "hour": 125,
+          "likes": 2020
         }
       ],
       "rankings": [
@@ -12890,19 +12958,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "何か“オモシロいコト”ないの？"
-            },
-            {
-              "rank": 48,
               "title": "秘密のケンミンSHOW極"
             },
             {
+              "rank": 48,
+              "title": "timeleszファミリア"
+            },
+            {
               "rank": 49,
-              "title": "かまいたちの瞬間回答～60秒でお悩み解決～"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
-              "title": "ウワサのお客さま"
+              "title": "かまいたちの瞬間回答～60秒でお悩み解決～"
             }
           ]
         },
@@ -12917,11 +12985,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "水曜日、私の夫に抱かれてください"
+              "title": "好きな人がいること"
             },
             {
               "rank": 49,
@@ -12929,7 +12997,7 @@
             },
             {
               "rank": 50,
-              "title": "ホンマでっか！？TV"
+              "title": "水曜日、私の夫に抱かれてください"
             }
           ]
         }
