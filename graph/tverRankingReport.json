@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/06 22:19",
+  "updatedAt": "2026/06/06 23:19",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/06 22:19",
+      "updatedAt": "2026/06/06 23:19",
       "episodeId": "ep6vuu9nxm",
       "subtitle": "timelesz100",
       "likes": "1.0万",
@@ -105,6 +105,10 @@
         {
           "hour": 24,
           "likes": 10000
+        },
+        {
+          "hour": 25,
+          "likes": 10000
         }
       ],
       "rankings": [
@@ -112,7 +116,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 4,
-          "elapsedHour": 24,
+          "elapsedHour": 25,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -201,6 +205,10 @@
             },
             {
               "hour": 24,
+              "rank": 4
+            },
+            {
+              "hour": 25,
               "rank": 4
             }
           ],
@@ -889,7 +897,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 10,
-          "elapsedHour": 24,
+          "elapsedHour": 25,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -950,6 +958,10 @@
             },
             {
               "hour": 24,
+              "rank": 10
+            },
+            {
+              "hour": 25,
               "rank": 10
             }
           ],
@@ -1611,7 +1623,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/05/31",
-      "updatedAt": "2026/06/06 22:19",
+      "updatedAt": "2026/06/06 23:19",
       "episodeId": "epi4thbfbk",
       "subtitle": "【TOYOTAの最新ロボの秘密】衝撃!!食べられる機械",
       "likes": "1.4万",
@@ -2175,6 +2187,10 @@
         },
         {
           "hour": 152,
+          "likes": 14000
+        },
+        {
+          "hour": 153,
           "likes": 14000
         }
       ],
@@ -3068,7 +3084,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "家、ついて行ってイイですか？"
+              "title": "何か“オモシロいコト”ないの？"
             },
             {
               "rank": 48,
@@ -3340,19 +3356,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "水曜日、私の夫に抱かれてください"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "最後の約束"
+              "title": "水曜日、私の夫に抱かれてください"
             },
             {
               "rank": 49,
-              "title": "ホンマでっか！？TV"
+              "title": "最後の約束"
             },
             {
               "rank": 50,
-              "title": "名探偵プリキュア！"
+              "title": "ホンマでっか！？TV"
             }
           ]
         }
@@ -3361,10 +3377,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/02",
-      "updatedAt": "2026/06/06 22:19",
+      "updatedAt": "2026/06/06 23:19",
       "episodeId": "epbxaud3gs",
       "subtitle": "チョコプラ・timeleszがデスソースの浄水に挑戦！",
-      "likes": "9147",
+      "likes": "9167",
       "favorites": "5.0万",
       "likePoints": [
         {
@@ -3742,15 +3758,19 @@
         {
           "hour": 94,
           "likes": 9147
+        },
+        {
+          "hour": 95,
+          "likes": 9167
         }
       ],
       "rankings": [
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 42,
-          "elapsedHour": 94,
-          "elapsedRank": 42,
+          "currentRank": 44,
+          "elapsedHour": 95,
+          "elapsedRank": 44,
           "currentPoints": [
             {
               "hour": 5,
@@ -4111,6 +4131,10 @@
             {
               "hour": 94,
               "rank": 42
+            },
+            {
+              "hour": 95,
+              "rank": 44
             }
           ],
           "previousPoints": [
@@ -4549,19 +4573,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 39,
-              "title": "ヒロシのぼっちキャンプ Season13"
-            },
-            {
-              "rank": 40,
+              "rank": 41,
               "title": "がっちりマンデー!!"
             },
             {
-              "rank": 41,
-              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
+              "rank": 42,
+              "title": "ヒロシのぼっちキャンプ Season13"
             },
             {
-              "rank": 42,
+              "rank": 43,
+              "title": "本日はダイアンなり！シーズン3"
+            },
+            {
+              "rank": 44,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -4739,7 +4763,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "家、ついて行ってイイですか？"
+              "title": "何か“オモシロいコト”ないの？"
             },
             {
               "rank": 48,
@@ -4760,7 +4784,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/04",
-      "updatedAt": "2026/06/06 22:19",
+      "updatedAt": "2026/06/06 23:19",
       "episodeId": "ep1tx7r71f",
       "subtitle": "【名物企画】英語で曲当てクイズ/ケムリがあまりにもカッコいい",
       "likes": "1.1万",
@@ -5037,6 +5061,10 @@
         {
           "hour": 68,
           "likes": 11000
+        },
+        {
+          "hour": 69,
+          "likes": 11000
         }
       ],
       "rankings": [
@@ -5044,7 +5072,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 41,
-          "elapsedHour": 68,
+          "elapsedHour": 69,
           "elapsedRank": 41,
           "currentPoints": [
             {
@@ -5289,6 +5317,10 @@
             },
             {
               "hour": 68,
+              "rank": 41
+            },
+            {
+              "hour": 69,
               "rank": 41
             }
           ],
@@ -5842,19 +5874,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "水曜日、私の夫に抱かれてください"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "最後の約束"
+              "title": "水曜日、私の夫に抱かれてください"
             },
             {
               "rank": 49,
-              "title": "ホンマでっか！？TV"
+              "title": "最後の約束"
             },
             {
               "rank": 50,
-              "title": "名探偵プリキュア！"
+              "title": "ホンマでっか！？TV"
             }
           ]
         }
@@ -5863,10 +5895,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/06 22:19",
+      "updatedAt": "2026/06/06 23:19",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "3952",
+      "likes": "3958",
       "favorites": "75.9万",
       "likePoints": [
         {
@@ -6527,7 +6559,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "家、ついて行ってイイですか？"
+              "title": "何か“オモシロいコト”ないの？"
             },
             {
               "rank": 48,
@@ -6635,19 +6667,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "水曜日、私の夫に抱かれてください"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "最後の約束"
+              "title": "水曜日、私の夫に抱かれてください"
             },
             {
               "rank": 49,
-              "title": "ホンマでっか！？TV"
+              "title": "最後の約束"
             },
             {
               "rank": 50,
-              "title": "名探偵プリキュア！"
+              "title": "ホンマでっか！？TV"
             }
           ]
         }
@@ -6656,10 +6688,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/06 22:19",
+      "updatedAt": "2026/06/06 23:19",
       "episodeId": "epref0f8o9",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！山下智久登場",
-      "likes": "7349",
+      "likes": "7370",
       "favorites": "6.8万",
       "likePoints": [
         {
@@ -7021,6 +7053,10 @@
         {
           "hour": 93,
           "likes": 7349
+        },
+        {
+          "hour": 94,
+          "likes": 7370
         }
       ],
       "rankings": [
@@ -7213,7 +7249,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "家、ついて行ってイイですか？"
+              "title": "何か“オモシロいコト”ないの？"
             },
             {
               "rank": 48,
@@ -7277,19 +7313,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "水曜日、私の夫に抱かれてください"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "最後の約束"
+              "title": "水曜日、私の夫に抱かれてください"
             },
             {
               "rank": 49,
-              "title": "ホンマでっか！？TV"
+              "title": "最後の約束"
             },
             {
               "rank": 50,
-              "title": "名探偵プリキュア！"
+              "title": "ホンマでっか！？TV"
             }
           ]
         }
@@ -7298,10 +7334,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/06 22:19",
+      "updatedAt": "2026/06/06 23:19",
       "episodeId": "eps7bm6mup",
       "subtitle": "第130回 真剣勝負あっち向いてホイ！ついに王者が決定！",
-      "likes": "3687",
+      "likes": "3756",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -7487,15 +7523,19 @@
         {
           "hour": 45,
           "likes": 3687
+        },
+        {
+          "hour": 46,
+          "likes": 3756
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 45,
-          "elapsedHour": 46,
-          "elapsedRank": 45,
+          "currentRank": 47,
+          "elapsedHour": 47,
+          "elapsedRank": 47,
           "currentPoints": [
             {
               "hour": 12,
@@ -7636,6 +7676,10 @@
             {
               "hour": 46,
               "rank": 45
+            },
+            {
+              "hour": 47,
+              "rank": 47
             }
           ],
           "previousPoints": [
@@ -7818,19 +7862,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 42,
-              "title": "かまいたちの知らんけど"
-            },
-            {
-              "rank": 43,
-              "title": "クレイジージャーニー"
-            },
-            {
               "rank": 44,
-              "title": "ラヴィット！"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 45,
+              "title": "夜明けのラヴィット！"
+            },
+            {
+              "rank": 46,
+              "title": "家、ついて行ってイイですか？"
+            },
+            {
+              "rank": 47,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -7908,19 +7952,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "水曜日、私の夫に抱かれてください"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "最後の約束"
+              "title": "水曜日、私の夫に抱かれてください"
             },
             {
               "rank": 49,
-              "title": "ホンマでっか！？TV"
+              "title": "最後の約束"
             },
             {
               "rank": 50,
-              "title": "名探偵プリキュア！"
+              "title": "ホンマでっか！？TV"
             }
           ]
         }
@@ -7929,10 +7973,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/05/30",
-      "updatedAt": "2026/06/06 22:19",
+      "updatedAt": "2026/06/06 23:19",
       "episodeId": "epdpoawq6d",
       "subtitle": "マッサマンvs錦鯉マッサノリマンSP前編",
-      "likes": "2282",
+      "likes": "2288",
       "favorites": "77.2万",
       "likePoints": [
         {
@@ -8553,7 +8597,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "家、ついて行ってイイですか？"
+              "title": "何か“オモシロいコト”ないの？"
             },
             {
               "rank": 48,
@@ -8653,19 +8697,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "水曜日、私の夫に抱かれてください"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "最後の約束"
+              "title": "水曜日、私の夫に抱かれてください"
             },
             {
               "rank": 49,
-              "title": "ホンマでっか！？TV"
+              "title": "最後の約束"
             },
             {
               "rank": 50,
-              "title": "名探偵プリキュア！"
+              "title": "ホンマでっか！？TV"
             }
           ]
         }
@@ -8674,10 +8718,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/06 22:19",
+      "updatedAt": "2026/06/06 23:19",
       "episodeId": "ep6a50091q",
       "subtitle": "第8話 走る身代金",
-      "likes": "7569",
+      "likes": "7618",
       "favorites": "36.8万",
       "likePoints": [
         {
@@ -8971,15 +9015,19 @@
         {
           "hour": 73,
           "likes": 7569
+        },
+        {
+          "hour": 74,
+          "likes": 7618
         }
       ],
       "rankings": [
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 19,
-          "elapsedHour": 73,
-          "elapsedRank": 19,
+          "currentRank": 21,
+          "elapsedHour": 74,
+          "elapsedRank": 21,
           "currentPoints": [
             {
               "hour": 2,
@@ -9264,6 +9312,10 @@
             {
               "hour": 73,
               "rank": 19
+            },
+            {
+              "hour": 74,
+              "rank": 21
             }
           ],
           "previousPoints": [
@@ -9926,19 +9978,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 16,
-              "title": "鬼女の棲む家"
-            },
-            {
-              "rank": 17,
+              "rank": 18,
               "title": "あの夜、社長の子供を授かりました"
             },
             {
-              "rank": 18,
-              "title": "銀河の一票"
+              "rank": 19,
+              "title": "VIVANT"
             },
             {
-              "rank": 19,
+              "rank": 20,
+              "title": "10回切って倒れない木はない"
+            },
+            {
+              "rank": 21,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -9946,9 +9998,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 30,
-          "elapsedHour": 73,
-          "elapsedRank": 30,
+          "currentRank": 32,
+          "elapsedHour": 74,
+          "elapsedRank": 32,
           "currentPoints": [
             {
               "hour": 3,
@@ -10233,6 +10285,10 @@
             {
               "hour": 73,
               "rank": 30
+            },
+            {
+              "hour": 74,
+              "rank": 32
             }
           ],
           "previousPoints": [
@@ -10867,19 +10923,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 27,
-              "title": "銀河の一票"
-            },
-            {
-              "rank": 28,
+              "rank": 29,
               "title": "上田と女がDEEPに吠える夜"
             },
             {
-              "rank": 29,
-              "title": "A-Studio＋"
+              "rank": 30,
+              "title": "VIVANT"
             },
             {
-              "rank": 30,
+              "rank": 31,
+              "title": "10回切って倒れない木はない"
+            },
+            {
+              "rank": 32,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -10889,7 +10945,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/06 22:19",
+      "updatedAt": "2026/06/06 23:19",
       "episodeId": "ep24dk5lx2",
       "subtitle": "“ハプニング対応力講座”",
       "likes": "1.4万",
@@ -11254,6 +11310,10 @@
         {
           "hour": 91,
           "likes": 14000
+        },
+        {
+          "hour": 92,
+          "likes": 14000
         }
       ],
       "rankings": [
@@ -11425,7 +11485,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "家、ついて行ってイイですか？"
+              "title": "何か“オモシロいコト”ないの？"
             },
             {
               "rank": 48,
@@ -11565,19 +11625,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "水曜日、私の夫に抱かれてください"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "最後の約束"
+              "title": "水曜日、私の夫に抱かれてください"
             },
             {
               "rank": 49,
-              "title": "ホンマでっか！？TV"
+              "title": "最後の約束"
             },
             {
               "rank": 50,
-              "title": "名探偵プリキュア！"
+              "title": "ホンマでっか！？TV"
             }
           ]
         }
@@ -11586,10 +11646,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/06 22:19",
+      "updatedAt": "2026/06/06 23:19",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "5522",
+      "likes": "5525",
       "favorites": "1.4万",
       "likePoints": [
         {
@@ -12214,19 +12274,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "相葉◎×部"
-            },
-            {
-              "rank": 48,
               "title": "開運！なんでも鑑定団"
             },
             {
+              "rank": 48,
+              "title": "ゴールデンホリデぇ！"
+            },
+            {
               "rank": 49,
-              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 50,
-              "title": "ゴールデンホリデぇ！"
+              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
             }
           ]
         },
@@ -12241,7 +12301,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "家、ついて行ってイイですか？"
+              "title": "何か“オモシロいコト”ないの？"
             },
             {
               "rank": 48,
@@ -12262,10 +12322,10 @@
     "srbkekw9oj": {
       "programTitle": "ネプリーグ",
       "broadcastDate": "2026/06/01",
-      "updatedAt": "2026/06/06 22:19",
+      "updatedAt": "2026/06/06 23:19",
       "episodeId": "ep9yhege0b",
       "subtitle": "20周年イヤーの難クイズを林先生が徹底解説！",
-      "likes": "2010",
+      "likes": "2017",
       "favorites": "17.1万",
       "likePoints": [
         {
@@ -12755,6 +12815,10 @@
         {
           "hour": 123,
           "likes": 2010
+        },
+        {
+          "hour": 124,
+          "likes": 2017
         }
       ],
       "rankings": [
@@ -12826,7 +12890,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "家、ついて行ってイイですか？"
+              "title": "何か“オモシロいコト”ないの？"
             },
             {
               "rank": 48,
@@ -12853,19 +12917,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "水曜日、私の夫に抱かれてください"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "最後の約束"
+              "title": "水曜日、私の夫に抱かれてください"
             },
             {
               "rank": 49,
-              "title": "ホンマでっか！？TV"
+              "title": "最後の約束"
             },
             {
               "rank": 50,
-              "title": "名探偵プリキュア！"
+              "title": "ホンマでっか！？TV"
             }
           ]
         }
