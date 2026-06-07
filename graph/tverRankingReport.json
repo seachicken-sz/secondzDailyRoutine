@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/07 20:20",
+  "updatedAt": "2026/06/07 21:21",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/07 20:20",
+      "updatedAt": "2026/06/07 21:21",
       "episodeId": "ep6vuu9nxm",
       "subtitle": "timelesz100",
       "likes": "1.3万",
@@ -193,6 +193,10 @@
         {
           "hour": 46,
           "likes": 13000
+        },
+        {
+          "hour": 47,
+          "likes": 13000
         }
       ],
       "rankings": [
@@ -200,7 +204,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 5,
-          "elapsedHour": 46,
+          "elapsedHour": 47,
           "elapsedRank": 5,
           "currentPoints": [
             {
@@ -377,6 +381,10 @@
             },
             {
               "hour": 46,
+              "rank": 5
+            },
+            {
+              "hour": 47,
               "rank": 5
             }
           ],
@@ -1064,9 +1072,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 15,
-          "elapsedHour": 46,
-          "elapsedRank": 15,
+          "currentRank": 14,
+          "elapsedHour": 47,
+          "elapsedRank": 14,
           "currentPoints": [
             {
               "hour": 10,
@@ -1215,6 +1223,10 @@
             {
               "hour": 46,
               "rank": 15
+            },
+            {
+              "hour": 47,
+              "rank": 14
             }
           ],
           "previousPoints": [
@@ -1853,19 +1865,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 12,
-              "title": "ＧＩＦＴ"
+              "rank": 11,
+              "title": "それSnow Manにやらせて下さい"
             },
             {
-              "rank": 13,
+              "rank": 12,
               "title": "未解決の女 警視庁文書捜査官 Season３"
             },
             {
-              "rank": 14,
+              "rank": 13,
               "title": "上田と女が吠える夜"
             },
             {
-              "rank": 15,
+              "rank": 14,
               "title": "タイムレスマン"
             }
           ]
@@ -1875,10 +1887,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/07 20:20",
+      "updatedAt": "2026/06/07 21:21",
       "episodeId": "ep67r77z31",
       "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
-      "likes": "5376",
+      "likes": "6192",
       "favorites": "32.7万",
       "likePoints": [
         {
@@ -1904,15 +1916,19 @@
         {
           "hour": 6,
           "likes": 5376
+        },
+        {
+          "hour": 7,
+          "likes": 6192
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 19,
-          "elapsedHour": 6,
-          "elapsedRank": 19,
+          "currentRank": 17,
+          "elapsedHour": 7,
+          "elapsedRank": 17,
           "currentPoints": [
             {
               "hour": 3,
@@ -1929,6 +1945,10 @@
             {
               "hour": 6,
               "rank": 19
+            },
+            {
+              "hour": 7,
+              "rank": 17
             }
           ],
           "previousPoints": [
@@ -2527,19 +2547,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 16,
-              "title": "A-Studio＋"
+              "rank": 14,
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
-              "rank": 17,
+              "rank": 15,
               "title": "ゴッドタン"
             },
             {
-              "rank": 18,
-              "title": "トークィーンズ"
+              "rank": 16,
+              "title": "華大さんと千鳥くん"
             },
             {
-              "rank": 19,
+              "rank": 17,
               "title": "timeleszファミリア"
             }
           ]
@@ -2547,10 +2567,15 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 46,
+          "elapsedHour": 7,
+          "elapsedRank": 46,
+          "currentPoints": [
+            {
+              "hour": 7,
+              "rank": 46
+            }
+          ],
           "previousPoints": [
             {
               "hour": 11,
@@ -2799,20 +2824,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "ゴッドタン"
+              "rank": 43,
+              "title": "ディープリベンジ-顔を捨てた家政婦-"
             },
             {
-              "rank": 48,
-              "title": "あの夜、社長の子供を授かりました"
+              "rank": 44,
+              "title": "エラー"
             },
             {
-              "rank": 49,
-              "title": "トークィーンズ"
+              "rank": 45,
+              "title": "華大さんと千鳥くん"
             },
             {
-              "rank": 50,
-              "title": "仮面ライダー ゼッツ"
+              "rank": 46,
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -2821,10 +2846,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/02",
-      "updatedAt": "2026/06/07 20:20",
+      "updatedAt": "2026/06/07 21:21",
       "episodeId": "epbxaud3gs",
       "subtitle": "チョコプラ・timeleszがデスソースの浄水に挑戦！",
-      "likes": "9426",
+      "likes": "9454",
       "favorites": "5.0万",
       "likePoints": [
         {
@@ -3290,6 +3315,10 @@
         {
           "hour": 116,
           "likes": 9426
+        },
+        {
+          "hour": 117,
+          "likes": 9454
         }
       ],
       "rankings": [
@@ -4154,7 +4183,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上沼・高田のクギズケ！"
+              "title": "ザ！世界仰天ニュース"
             },
             {
               "rank": 48,
@@ -4162,11 +4191,11 @@
             },
             {
               "rank": 49,
-              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
+              "title": "グッと！地球便"
             },
             {
               "rank": 50,
-              "title": "知識の扉よ開け！ドア×ドア クエスト"
+              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
             }
           ]
         },
@@ -4343,7 +4372,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夜明けのラヴィット！"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 48,
@@ -4351,11 +4380,11 @@
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 50,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "クレイジージャーニー"
             }
           ]
         }
@@ -4364,7 +4393,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/04",
-      "updatedAt": "2026/06/07 20:20",
+      "updatedAt": "2026/06/07 21:21",
       "episodeId": "ep1tx7r71f",
       "subtitle": "【名物企画】英語で曲当てクイズ/ケムリがあまりにもカッコいい",
       "likes": "1.2万",
@@ -4728,6 +4757,10 @@
         },
         {
           "hour": 90,
+          "likes": 12000
+        },
+        {
+          "hour": 91,
           "likes": 12000
         }
       ],
@@ -5317,7 +5350,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夜明けのラヴィット！"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 48,
@@ -5325,11 +5358,11 @@
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 50,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "クレイジージャーニー"
             }
           ]
         },
@@ -5614,19 +5647,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ゴッドタン"
+              "title": "A-Studio＋"
             },
             {
               "rank": 48,
-              "title": "あの夜、社長の子供を授かりました"
+              "title": "仮面ライダー ゼッツ"
             },
             {
               "rank": 49,
-              "title": "トークィーンズ"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 50,
-              "title": "仮面ライダー ゼッツ"
+              "title": "あの夜、社長の子供を授かりました"
             }
           ]
         }
@@ -5635,10 +5668,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/07 20:20",
+      "updatedAt": "2026/06/07 21:21",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "3985",
+      "likes": "3988",
       "favorites": "75.9万",
       "likePoints": [
         {
@@ -6299,7 +6332,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夜明けのラヴィット！"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 48,
@@ -6307,11 +6340,11 @@
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 50,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "クレイジージャーニー"
             }
           ]
         },
@@ -6407,19 +6440,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ゴッドタン"
+              "title": "A-Studio＋"
             },
             {
               "rank": 48,
-              "title": "あの夜、社長の子供を授かりました"
+              "title": "仮面ライダー ゼッツ"
             },
             {
               "rank": 49,
-              "title": "トークィーンズ"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 50,
-              "title": "仮面ライダー ゼッツ"
+              "title": "あの夜、社長の子供を授かりました"
             }
           ]
         }
@@ -6428,10 +6461,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/07 20:20",
+      "updatedAt": "2026/06/07 21:21",
       "episodeId": "epref0f8o9",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！山下智久登場",
-      "likes": "7628",
+      "likes": "7651",
       "favorites": "6.8万",
       "likePoints": [
         {
@@ -6881,6 +6914,10 @@
         {
           "hour": 115,
           "likes": 7628
+        },
+        {
+          "hour": 116,
+          "likes": 7651
         }
       ],
       "rankings": [
@@ -7073,7 +7110,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夜明けのラヴィット！"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 48,
@@ -7081,11 +7118,11 @@
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 50,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "クレイジージャーニー"
             }
           ]
         },
@@ -7137,19 +7174,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ゴッドタン"
+              "title": "A-Studio＋"
             },
             {
               "rank": 48,
-              "title": "あの夜、社長の子供を授かりました"
+              "title": "仮面ライダー ゼッツ"
             },
             {
               "rank": 49,
-              "title": "トークィーンズ"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 50,
-              "title": "仮面ライダー ゼッツ"
+              "title": "あの夜、社長の子供を授かりました"
             }
           ]
         }
@@ -7158,10 +7195,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/07 20:20",
+      "updatedAt": "2026/06/07 21:21",
       "episodeId": "eps7bm6mup",
       "subtitle": "第130回 真剣勝負あっち向いてホイ！ついに王者が決定！",
-      "likes": "4495",
+      "likes": "4539",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -7427,6 +7464,10 @@
         {
           "hour": 67,
           "likes": 4495
+        },
+        {
+          "hour": 68,
+          "likes": 4539
         }
       ],
       "rankings": [
@@ -7799,7 +7840,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夜明けのラヴィット！"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 48,
@@ -7807,11 +7848,11 @@
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 50,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "クレイジージャーニー"
             }
           ]
         },
@@ -7888,19 +7929,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ゴッドタン"
+              "title": "A-Studio＋"
             },
             {
               "rank": 48,
-              "title": "あの夜、社長の子供を授かりました"
+              "title": "仮面ライダー ゼッツ"
             },
             {
               "rank": 49,
-              "title": "トークィーンズ"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 50,
-              "title": "仮面ライダー ゼッツ"
+              "title": "あの夜、社長の子供を授かりました"
             }
           ]
         }
@@ -7909,10 +7950,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/05/30",
-      "updatedAt": "2026/06/07 20:20",
+      "updatedAt": "2026/06/07 21:21",
       "episodeId": "epdpoawq6d",
       "subtitle": "マッサマンvs錦鯉マッサノリマンSP前編",
-      "likes": "2355",
+      "likes": "2358",
       "favorites": "77.2万",
       "likePoints": [
         {
@@ -8533,7 +8574,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夜明けのラヴィット！"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 48,
@@ -8541,11 +8582,11 @@
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 50,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "クレイジージャーニー"
             }
           ]
         },
@@ -8633,19 +8674,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ゴッドタン"
+              "title": "A-Studio＋"
             },
             {
               "rank": 48,
-              "title": "あの夜、社長の子供を授かりました"
+              "title": "仮面ライダー ゼッツ"
             },
             {
               "rank": 49,
-              "title": "トークィーンズ"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 50,
-              "title": "仮面ライダー ゼッツ"
+              "title": "あの夜、社長の子供を授かりました"
             }
           ]
         }
@@ -8654,10 +8695,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/07 20:20",
+      "updatedAt": "2026/06/07 21:21",
       "episodeId": "ep6a50091q",
       "subtitle": "第8話 走る身代金",
-      "likes": "8193",
+      "likes": "8245",
       "favorites": "36.7万",
       "likePoints": [
         {
@@ -9039,15 +9080,19 @@
         {
           "hour": 95,
           "likes": 8193
+        },
+        {
+          "hour": 96,
+          "likes": 8245
         }
       ],
       "rankings": [
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 21,
-          "elapsedHour": 95,
-          "elapsedRank": 21,
+          "currentRank": 20,
+          "elapsedHour": 96,
+          "elapsedRank": 20,
           "currentPoints": [
             {
               "hour": 2,
@@ -9420,6 +9465,10 @@
             {
               "hour": 95,
               "rank": 21
+            },
+            {
+              "hour": 96,
+              "rank": 20
             }
           ],
           "previousPoints": [
@@ -10082,19 +10131,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 18,
-              "title": "銀河の一票"
+              "rank": 17,
+              "title": "君が死刑になる前に"
             },
             {
-              "rank": 19,
+              "rank": 18,
               "title": "VIVANT"
             },
             {
-              "rank": 20,
+              "rank": 19,
               "title": "サレタ側の復讐～同盟を結んだ妻たち～"
             },
             {
-              "rank": 21,
+              "rank": 20,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -10102,9 +10151,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 35,
-          "elapsedHour": 95,
-          "elapsedRank": 35,
+          "currentRank": 32,
+          "elapsedHour": 96,
+          "elapsedRank": 32,
           "currentPoints": [
             {
               "hour": 3,
@@ -10477,6 +10526,10 @@
             {
               "hour": 95,
               "rank": 35
+            },
+            {
+              "hour": 96,
+              "rank": 32
             }
           ],
           "previousPoints": [
@@ -11111,19 +11164,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 32,
-              "title": "徹子の部屋"
+              "rank": 29,
+              "title": "クレヨンしんちゃん"
             },
             {
-              "rank": 33,
+              "rank": 30,
               "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
-              "rank": 34,
-              "title": "名探偵プリキュア！"
+              "rank": 31,
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
-              "rank": 35,
+              "rank": 32,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -11133,7 +11186,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/07 20:20",
+      "updatedAt": "2026/06/07 21:21",
       "episodeId": "ep24dk5lx2",
       "subtitle": "“ハプニング対応力講座”",
       "likes": "1.5万",
@@ -11586,6 +11639,10 @@
         {
           "hour": 113,
           "likes": 15000
+        },
+        {
+          "hour": 114,
+          "likes": 15000
         }
       ],
       "rankings": [
@@ -11757,7 +11814,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夜明けのラヴィット！"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 48,
@@ -11765,11 +11822,11 @@
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 50,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "クレイジージャーニー"
             }
           ]
         },
@@ -11897,19 +11954,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ゴッドタン"
+              "title": "A-Studio＋"
             },
             {
               "rank": 48,
-              "title": "あの夜、社長の子供を授かりました"
+              "title": "仮面ライダー ゼッツ"
             },
             {
               "rank": 49,
-              "title": "トークィーンズ"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 50,
-              "title": "仮面ライダー ゼッツ"
+              "title": "あの夜、社長の子供を授かりました"
             }
           ]
         }
@@ -11918,10 +11975,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/07 20:20",
+      "updatedAt": "2026/06/07 21:21",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "5589",
+      "likes": "5595",
       "favorites": "1.4万",
       "likePoints": [
         {
@@ -12546,15 +12603,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "リア突WEST.レボリューション"
+              "title": "人生が変わる1分間の深イイ話"
             },
             {
               "rank": 48,
-              "title": "草彅やすともの うさぎとかめ"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 49,
-              "title": "いろはに千鳥"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 50,
@@ -12573,7 +12630,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夜明けのラヴィット！"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 48,
@@ -12581,11 +12638,11 @@
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 50,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "クレイジージャーニー"
             }
           ]
         }
@@ -12594,10 +12651,10 @@
     "srbkekw9oj": {
       "programTitle": "ネプリーグ",
       "broadcastDate": "2026/06/01",
-      "updatedAt": "2026/06/07 20:20",
+      "updatedAt": "2026/06/07 21:21",
       "episodeId": "ep9yhege0b",
       "subtitle": "20周年イヤーの難クイズを林先生が徹底解説！",
-      "likes": "2141",
+      "likes": "2162",
       "favorites": "17.1万",
       "likePoints": [
         {
@@ -13175,6 +13232,10 @@
         {
           "hour": 145,
           "likes": 2141
+        },
+        {
+          "hour": 146,
+          "likes": 2162
         }
       ],
       "rankings": [
@@ -13246,7 +13307,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夜明けのラヴィット！"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 48,
@@ -13254,11 +13315,11 @@
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 50,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "クレイジージャーニー"
             }
           ]
         },
@@ -13273,19 +13334,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ゴッドタン"
+              "title": "A-Studio＋"
             },
             {
               "rank": 48,
-              "title": "あの夜、社長の子供を授かりました"
+              "title": "仮面ライダー ゼッツ"
             },
             {
               "rank": 49,
-              "title": "トークィーンズ"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 50,
-              "title": "仮面ライダー ゼッツ"
+              "title": "あの夜、社長の子供を授かりました"
             }
           ]
         }
