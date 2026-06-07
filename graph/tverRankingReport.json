@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/07 13:20",
+  "updatedAt": "2026/06/07 14:22",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/07 13:20",
+      "updatedAt": "2026/06/07 14:22",
       "episodeId": "ep6vuu9nxm",
       "subtitle": "timelesz100",
       "likes": "1.2万",
@@ -165,6 +165,10 @@
         {
           "hour": 39,
           "likes": 12000
+        },
+        {
+          "hour": 40,
+          "likes": 12000
         }
       ],
       "rankings": [
@@ -172,7 +176,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 4,
-          "elapsedHour": 39,
+          "elapsedHour": 40,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -321,6 +325,10 @@
             },
             {
               "hour": 39,
+              "rank": 4
+            },
+            {
+              "hour": 40,
               "rank": 4
             }
           ],
@@ -1009,7 +1017,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 13,
-          "elapsedHour": 39,
+          "elapsedHour": 40,
           "elapsedRank": 13,
           "currentPoints": [
             {
@@ -1130,6 +1138,10 @@
             },
             {
               "hour": 39,
+              "rank": 13
+            },
+            {
+              "hour": 40,
               "rank": 13
             }
           ],
@@ -1774,11 +1786,11 @@
             },
             {
               "rank": 11,
-              "title": "未解決の女 警視庁文書捜査官 Season３"
+              "title": "ターミネーターと恋しちゃったら"
             },
             {
               "rank": 12,
-              "title": "ターミネーターと恋しちゃったら"
+              "title": "未解決の女 警視庁文書捜査官 Season３"
             },
             {
               "rank": 13,
@@ -1791,7 +1803,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/05/31",
-      "updatedAt": "2026/06/07 13:20",
+      "updatedAt": "2026/06/07 14:22",
       "episodeId": "epi4thbfbk",
       "subtitle": "【TOYOTAの最新ロボの秘密】衝撃!!食べられる機械",
       "likes": "1.5万",
@@ -2422,9 +2434,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 43,
-          "elapsedHour": 167,
-          "elapsedRank": 43,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 6,
@@ -3363,20 +3375,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 40,
-              "title": "これ余談なんですけど・・・"
+              "rank": 47,
+              "title": "朝だ！生です旅サラダ"
             },
             {
-              "rank": 41,
-              "title": "クレイジージャーニー"
+              "rank": 48,
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
-              "rank": 42,
-              "title": "THE トークワン"
+              "rank": 49,
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
-              "rank": 43,
-              "title": "timeleszファミリア"
+              "rank": 50,
+              "title": "あちこちオードリー"
             }
           ]
         },
@@ -3636,19 +3648,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 48,
-              "title": "最後の約束"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "最後の約束"
             },
             {
               "rank": 50,
-              "title": "その天才様は偽装彼女に執着する"
+              "title": "ドラえもん"
             }
           ]
         }
@@ -3657,10 +3669,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/02",
-      "updatedAt": "2026/06/07 13:20",
+      "updatedAt": "2026/06/07 14:22",
       "episodeId": "epbxaud3gs",
       "subtitle": "チョコプラ・timeleszがデスソースの浄水に挑戦！",
-      "likes": "9314",
+      "likes": "9322",
       "favorites": "5.0万",
       "likePoints": [
         {
@@ -4098,15 +4110,19 @@
         {
           "hour": 109,
           "likes": 9314
+        },
+        {
+          "hour": 110,
+          "likes": 9322
         }
       ],
       "rankings": [
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
+          "currentRank": 50,
+          "elapsedHour": 110,
+          "elapsedRank": 50,
           "currentPoints": [
             {
               "hour": 5,
@@ -4514,6 +4530,10 @@
             },
             {
               "hour": 108,
+              "rank": 50
+            },
+            {
+              "hour": 110,
               "rank": 50
             }
           ],
@@ -4958,15 +4978,15 @@
             },
             {
               "rank": 48,
-              "title": "帰れマンデー見っけ隊!!"
+              "title": "ザ！鉄腕！DASH!!"
             },
             {
               "rank": 49,
-              "title": "出川・伊沢のニッポンＹＡＢＡデータ"
+              "title": "小峠地蔵とお狐風磨"
             },
             {
               "rank": 50,
-              "title": "ウラマヨ！"
+              "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
         },
@@ -5143,15 +5163,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 48,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 49,
-              "title": "朝だ！生です旅サラダ"
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
               "rank": 50,
@@ -5164,7 +5184,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/04",
-      "updatedAt": "2026/06/07 13:20",
+      "updatedAt": "2026/06/07 14:22",
       "episodeId": "ep1tx7r71f",
       "subtitle": "【名物企画】英語で曲当てクイズ/ケムリがあまりにもカッコいい",
       "likes": "1.1万",
@@ -5501,6 +5521,10 @@
         {
           "hour": 83,
           "likes": 11000
+        },
+        {
+          "hour": 84,
+          "likes": 11000
         }
       ],
       "rankings": [
@@ -5508,7 +5532,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 45,
-          "elapsedHour": 83,
+          "elapsedHour": 84,
           "elapsedRank": 45,
           "currentPoints": [
             {
@@ -5814,6 +5838,10 @@
             {
               "hour": 83,
               "rank": 45
+            },
+            {
+              "hour": 84,
+              "rank": 45
             }
           ],
           "previousPoints": [
@@ -6069,15 +6097,15 @@
           "nearbyRanking": [
             {
               "rank": 42,
-              "title": "THE トークワン"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 43,
-              "title": "timeleszファミリア"
+              "title": "突然ですが占ってもいいですか？"
             },
             {
               "rank": 44,
-              "title": "突然ですが占ってもいいですか？"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 45,
@@ -6366,19 +6394,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 48,
-              "title": "最後の約束"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "最後の約束"
             },
             {
               "rank": 50,
-              "title": "その天才様は偽装彼女に執着する"
+              "title": "ドラえもん"
             }
           ]
         }
@@ -6387,10 +6415,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/07 13:20",
+      "updatedAt": "2026/06/07 14:22",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "3970",
+      "likes": "3979",
       "favorites": "75.9万",
       "likePoints": [
         {
@@ -7051,15 +7079,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 48,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 49,
-              "title": "朝だ！生です旅サラダ"
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
               "rank": 50,
@@ -7159,19 +7187,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 48,
-              "title": "最後の約束"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "最後の約束"
             },
             {
               "rank": 50,
-              "title": "その天才様は偽装彼女に執着する"
+              "title": "ドラえもん"
             }
           ]
         }
@@ -7180,10 +7208,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/07 13:20",
+      "updatedAt": "2026/06/07 14:22",
       "episodeId": "epref0f8o9",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！山下智久登場",
-      "likes": "7518",
+      "likes": "7526",
       "favorites": "6.8万",
       "likePoints": [
         {
@@ -7605,6 +7633,10 @@
         {
           "hour": 108,
           "likes": 7518
+        },
+        {
+          "hour": 109,
+          "likes": 7526
         }
       ],
       "rankings": [
@@ -7797,15 +7829,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 48,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 49,
-              "title": "朝だ！生です旅サラダ"
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
               "rank": 50,
@@ -7861,19 +7893,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 48,
-              "title": "最後の約束"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "最後の約束"
             },
             {
               "rank": 50,
-              "title": "その天才様は偽装彼女に執着する"
+              "title": "ドラえもん"
             }
           ]
         }
@@ -7882,10 +7914,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/07 13:20",
+      "updatedAt": "2026/06/07 14:22",
       "episodeId": "eps7bm6mup",
       "subtitle": "第130回 真剣勝負あっち向いてホイ！ついに王者が決定！",
-      "likes": "4409",
+      "likes": "4402",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -8127,6 +8159,10 @@
         {
           "hour": 60,
           "likes": 4409
+        },
+        {
+          "hour": 61,
+          "likes": 4402
         }
       ],
       "rankings": [
@@ -8499,15 +8535,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 48,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 49,
-              "title": "朝だ！生です旅サラダ"
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
               "rank": 50,
@@ -8588,19 +8624,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 48,
-              "title": "最後の約束"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "最後の約束"
             },
             {
               "rank": 50,
-              "title": "その天才様は偽装彼女に執着する"
+              "title": "ドラえもん"
             }
           ]
         }
@@ -8609,10 +8645,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/05/30",
-      "updatedAt": "2026/06/07 13:20",
+      "updatedAt": "2026/06/07 14:22",
       "episodeId": "epdpoawq6d",
       "subtitle": "マッサマンvs錦鯉マッサノリマンSP前編",
-      "likes": "2326",
+      "likes": "2328",
       "favorites": "77.2万",
       "likePoints": [
         {
@@ -9233,15 +9269,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 48,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 49,
-              "title": "朝だ！生です旅サラダ"
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
               "rank": 50,
@@ -9333,19 +9369,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 48,
-              "title": "最後の約束"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "最後の約束"
             },
             {
               "rank": 50,
-              "title": "その天才様は偽装彼女に執着する"
+              "title": "ドラえもん"
             }
           ]
         }
@@ -9354,10 +9390,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/07 13:20",
+      "updatedAt": "2026/06/07 14:22",
       "episodeId": "ep6a50091q",
       "subtitle": "第8話 走る身代金",
-      "likes": "7969",
+      "likes": "8016",
       "favorites": "36.8万",
       "likePoints": [
         {
@@ -9711,15 +9747,19 @@
         {
           "hour": 88,
           "likes": 7969
+        },
+        {
+          "hour": 89,
+          "likes": 8016
         }
       ],
       "rankings": [
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 20,
-          "elapsedHour": 88,
-          "elapsedRank": 20,
+          "currentRank": 21,
+          "elapsedHour": 89,
+          "elapsedRank": 21,
           "currentPoints": [
             {
               "hour": 2,
@@ -10064,6 +10104,10 @@
             {
               "hour": 88,
               "rank": 20
+            },
+            {
+              "hour": 89,
+              "rank": 21
             }
           ],
           "previousPoints": [
@@ -10726,10 +10770,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 17,
-              "title": "10回切って倒れない木はない"
-            },
-            {
               "rank": 18,
               "title": "銀河の一票"
             },
@@ -10739,6 +10779,10 @@
             },
             {
               "rank": 20,
+              "title": "時光代理人"
+            },
+            {
+              "rank": 21,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -10746,9 +10790,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 33,
-          "elapsedHour": 88,
-          "elapsedRank": 33,
+          "currentRank": 34,
+          "elapsedHour": 89,
+          "elapsedRank": 34,
           "currentPoints": [
             {
               "hour": 3,
@@ -11093,6 +11137,10 @@
             {
               "hour": 88,
               "rank": 33
+            },
+            {
+              "hour": 89,
+              "rank": 34
             }
           ],
           "previousPoints": [
@@ -11727,19 +11775,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 30,
-              "title": "教えて！ニュースライブ 正義のミカタ"
-            },
-            {
               "rank": 31,
-              "title": "上田と女がDEEPに吠える夜"
-            },
-            {
-              "rank": 32,
               "title": "名探偵プリキュア！"
             },
             {
+              "rank": 32,
+              "title": "上田と女がDEEPに吠える夜"
+            },
+            {
               "rank": 33,
+              "title": "時光代理人"
+            },
+            {
+              "rank": 34,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -11749,10 +11797,10 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/07 13:20",
+      "updatedAt": "2026/06/07 14:22",
       "episodeId": "ep24dk5lx2",
       "subtitle": "“ハプニング対応力講座”",
-      "likes": "1.4万",
+      "likes": "1.5万",
       "favorites": "21.4万",
       "likePoints": [
         {
@@ -12174,6 +12222,10 @@
         {
           "hour": 106,
           "likes": 14000
+        },
+        {
+          "hour": 107,
+          "likes": 15000
         }
       ],
       "rankings": [
@@ -12345,15 +12397,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 48,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 49,
-              "title": "朝だ！生です旅サラダ"
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
               "rank": 50,
@@ -12485,19 +12537,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 48,
-              "title": "最後の約束"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "最後の約束"
             },
             {
               "rank": 50,
-              "title": "その天才様は偽装彼女に執着する"
+              "title": "ドラえもん"
             }
           ]
         }
@@ -12506,10 +12558,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/07 13:20",
+      "updatedAt": "2026/06/07 14:22",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "5556",
+      "likes": "5559",
       "favorites": "1.4万",
       "likePoints": [
         {
@@ -13134,19 +13186,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "いろはに千鳥"
-            },
-            {
-              "rank": 48,
-              "title": "おしゃれクリップ"
-            },
-            {
-              "rank": 49,
               "title": "バラバラマンスリー"
             },
             {
-              "rank": 50,
+              "rank": 48,
               "title": "吉田と粗品と"
+            },
+            {
+              "rank": 49,
+              "title": "開運！なんでも鑑定団"
+            },
+            {
+              "rank": 50,
+              "title": "ゴールデンホリデぇ！"
             }
           ]
         },
@@ -13161,15 +13213,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 48,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 49,
-              "title": "朝だ！生です旅サラダ"
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
               "rank": 50,
@@ -13182,10 +13234,10 @@
     "srbkekw9oj": {
       "programTitle": "ネプリーグ",
       "broadcastDate": "2026/06/01",
-      "updatedAt": "2026/06/07 13:20",
+      "updatedAt": "2026/06/07 14:22",
       "episodeId": "ep9yhege0b",
       "subtitle": "20周年イヤーの難クイズを林先生が徹底解説！",
-      "likes": "2072",
+      "likes": "2081",
       "favorites": "17.1万",
       "likePoints": [
         {
@@ -13735,6 +13787,10 @@
         {
           "hour": 138,
           "likes": 2072
+        },
+        {
+          "hour": 139,
+          "likes": 2081
         }
       ],
       "rankings": [
@@ -13806,15 +13862,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 48,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 49,
-              "title": "朝だ！生です旅サラダ"
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
               "rank": 50,
@@ -13833,19 +13889,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 48,
-              "title": "最後の約束"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "最後の約束"
             },
             {
               "rank": 50,
-              "title": "その天才様は偽装彼女に執着する"
+              "title": "ドラえもん"
             }
           ]
         }
