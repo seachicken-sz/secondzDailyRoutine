@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/08 02:22",
+  "updatedAt": "2026/06/08 03:23",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/08 02:22",
+      "updatedAt": "2026/06/08 03:23",
       "episodeId": "ep6vuu9nxm",
       "subtitle": "timelesz100",
       "likes": "1.3万",
@@ -217,6 +217,10 @@
         {
           "hour": 52,
           "likes": 13000
+        },
+        {
+          "hour": 53,
+          "likes": 13000
         }
       ],
       "rankings": [
@@ -224,7 +228,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 7,
-          "elapsedHour": 52,
+          "elapsedHour": 53,
           "elapsedRank": 7,
           "currentPoints": [
             {
@@ -425,6 +429,10 @@
             },
             {
               "hour": 52,
+              "rank": 7
+            },
+            {
+              "hour": 53,
               "rank": 7
             }
           ],
@@ -1112,9 +1120,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 19,
-          "elapsedHour": 52,
-          "elapsedRank": 19,
+          "currentRank": 20,
+          "elapsedHour": 53,
+          "elapsedRank": 20,
           "currentPoints": [
             {
               "hour": 10,
@@ -1287,6 +1295,10 @@
             {
               "hour": 52,
               "rank": 19
+            },
+            {
+              "hour": 53,
+              "rank": 20
             }
           ],
           "previousPoints": [
@@ -1925,19 +1937,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 16,
-              "title": "時すでにおスシ!?"
-            },
-            {
               "rank": 17,
               "title": "テレビ千鳥"
             },
             {
               "rank": 18,
-              "title": "かまいたちの知らんけど"
+              "title": "リボーン ～最後のヒーロー～"
             },
             {
               "rank": 19,
+              "title": "かまいたちの知らんけど"
+            },
+            {
+              "rank": 20,
               "title": "タイムレスマン"
             }
           ]
@@ -1947,10 +1959,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/08 02:22",
+      "updatedAt": "2026/06/08 03:23",
       "episodeId": "ep67r77z31",
       "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
-      "likes": "8145",
+      "likes": "8213",
       "favorites": "32.7万",
       "likePoints": [
         {
@@ -2000,6 +2012,10 @@
         {
           "hour": 12,
           "likes": 8145
+        },
+        {
+          "hour": 13,
+          "likes": 8213
         }
       ],
       "rankings": [
@@ -2007,7 +2023,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 8,
-          "elapsedHour": 12,
+          "elapsedHour": 13,
           "elapsedRank": 8,
           "currentPoints": [
             {
@@ -2048,6 +2064,10 @@
             },
             {
               "hour": 12,
+              "rank": 8
+            },
+            {
+              "hour": 13,
               "rank": 8
             }
           ],
@@ -2668,7 +2688,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 23,
-          "elapsedHour": 12,
+          "elapsedHour": 13,
           "elapsedRank": 23,
           "currentPoints": [
             {
@@ -2693,6 +2713,10 @@
             },
             {
               "hour": 12,
+              "rank": 23
+            },
+            {
+              "hour": 13,
               "rank": 23
             }
           ],
@@ -2945,7 +2969,7 @@
           "nearbyRanking": [
             {
               "rank": 20,
-              "title": "リボーン ～最後のヒーロー～"
+              "title": "タイムレスマン"
             },
             {
               "rank": 21,
@@ -2966,10 +2990,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/02",
-      "updatedAt": "2026/06/08 02:22",
+      "updatedAt": "2026/06/08 03:23",
       "episodeId": "epbxaud3gs",
       "subtitle": "チョコプラ・timeleszがデスソースの浄水に挑戦！",
-      "likes": "9534",
+      "likes": "9538",
       "favorites": "5.0万",
       "likePoints": [
         {
@@ -3459,6 +3483,10 @@
         {
           "hour": 122,
           "likes": 9534
+        },
+        {
+          "hour": 123,
+          "likes": 9538
         }
       ],
       "rankings": [
@@ -4335,7 +4363,7 @@
             },
             {
               "rank": 50,
-              "title": "シューイチ"
+              "title": "帰れマンデー見っけ隊!!"
             }
           ]
         },
@@ -4512,7 +4540,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 48,
@@ -4524,7 +4552,7 @@
             },
             {
               "rank": 50,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             }
           ]
         }
@@ -4533,15 +4561,19 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/08",
-      "updatedAt": "2026/06/08 02:22",
+      "updatedAt": "2026/06/08 03:23",
       "episodeId": "ep3cvn8amg",
       "subtitle": "【1時間SP】オカシーパラダイスからの招待状",
-      "likes": "2186",
+      "likes": "2304",
       "favorites": "22.0万",
       "likePoints": [
         {
           "hour": 0,
           "likes": 2186
+        },
+        {
+          "hour": 1,
+          "likes": 2304
         }
       ],
       "rankings": [
@@ -4881,7 +4913,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 48,
@@ -4893,7 +4925,7 @@
             },
             {
               "rank": 50,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             }
           ]
         },
@@ -5053,11 +5085,11 @@
             },
             {
               "rank": 49,
-              "title": "ディープリベンジ-顔を捨てた家政婦-"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "世界の果てまでイッテQ！"
+              "title": "ディープリベンジ-顔を捨てた家政婦-"
             }
           ]
         }
@@ -5066,10 +5098,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/08 02:22",
+      "updatedAt": "2026/06/08 03:23",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "3993",
+      "likes": "3994",
       "favorites": "75.9万",
       "likePoints": [
         {
@@ -5730,7 +5762,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 48,
@@ -5742,7 +5774,7 @@
             },
             {
               "rank": 50,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             }
           ]
         },
@@ -5846,11 +5878,11 @@
             },
             {
               "rank": 49,
-              "title": "ディープリベンジ-顔を捨てた家政婦-"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "世界の果てまでイッテQ！"
+              "title": "ディープリベンジ-顔を捨てた家政婦-"
             }
           ]
         }
@@ -5859,10 +5891,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/08 02:22",
+      "updatedAt": "2026/06/08 03:23",
       "episodeId": "epref0f8o9",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！山下智久登場",
-      "likes": "7706",
+      "likes": "7711",
       "favorites": "6.8万",
       "likePoints": [
         {
@@ -6336,6 +6368,10 @@
         {
           "hour": 121,
           "likes": 7706
+        },
+        {
+          "hour": 122,
+          "likes": 7711
         }
       ],
       "rankings": [
@@ -6528,7 +6564,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 48,
@@ -6540,7 +6576,7 @@
             },
             {
               "rank": 50,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             }
           ]
         },
@@ -6600,11 +6636,11 @@
             },
             {
               "rank": 49,
-              "title": "ディープリベンジ-顔を捨てた家政婦-"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "世界の果てまでイッテQ！"
+              "title": "ディープリベンジ-顔を捨てた家政婦-"
             }
           ]
         }
@@ -6613,10 +6649,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/08 02:22",
+      "updatedAt": "2026/06/08 03:23",
       "episodeId": "eps7bm6mup",
       "subtitle": "第130回 真剣勝負あっち向いてホイ！ついに王者が決定！",
-      "likes": "4641",
+      "likes": "4679",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -6906,6 +6942,10 @@
         {
           "hour": 73,
           "likes": 4641
+        },
+        {
+          "hour": 74,
+          "likes": 4679
         }
       ],
       "rankings": [
@@ -7278,7 +7318,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 48,
@@ -7290,7 +7330,7 @@
             },
             {
               "rank": 50,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             }
           ]
         },
@@ -7375,11 +7415,11 @@
             },
             {
               "rank": 49,
-              "title": "ディープリベンジ-顔を捨てた家政婦-"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "世界の果てまでイッテQ！"
+              "title": "ディープリベンジ-顔を捨てた家政婦-"
             }
           ]
         }
@@ -7388,10 +7428,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/05/30",
-      "updatedAt": "2026/06/08 02:22",
+      "updatedAt": "2026/06/08 03:23",
       "episodeId": "epdpoawq6d",
       "subtitle": "マッサマンvs錦鯉マッサノリマンSP前編",
-      "likes": "2376",
+      "likes": "2377",
       "favorites": "77.2万",
       "likePoints": [
         {
@@ -8012,7 +8052,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 48,
@@ -8024,7 +8064,7 @@
             },
             {
               "rank": 50,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             }
           ]
         },
@@ -8120,11 +8160,11 @@
             },
             {
               "rank": 49,
-              "title": "ディープリベンジ-顔を捨てた家政婦-"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "世界の果てまでイッテQ！"
+              "title": "ディープリベンジ-顔を捨てた家政婦-"
             }
           ]
         }
@@ -8133,10 +8173,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/08 02:22",
+      "updatedAt": "2026/06/08 03:23",
       "episodeId": "ep6a50091q",
       "subtitle": "第8話 走る身代金",
-      "likes": "8381",
+      "likes": "8391",
       "favorites": "36.7万",
       "likePoints": [
         {
@@ -8542,6 +8582,10 @@
         {
           "hour": 101,
           "likes": 8381
+        },
+        {
+          "hour": 102,
+          "likes": 8391
         }
       ],
       "rankings": [
@@ -8549,7 +8593,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 23,
-          "elapsedHour": 101,
+          "elapsedHour": 102,
           "elapsedRank": 23,
           "currentPoints": [
             {
@@ -8946,6 +8990,10 @@
             },
             {
               "hour": 101,
+              "rank": 23
+            },
+            {
+              "hour": 102,
               "rank": 23
             }
           ],
@@ -9629,9 +9677,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 41,
-          "elapsedHour": 101,
-          "elapsedRank": 41,
+          "currentRank": 42,
+          "elapsedHour": 102,
+          "elapsedRank": 42,
           "currentPoints": [
             {
               "hour": 3,
@@ -10028,6 +10076,10 @@
             {
               "hour": 101,
               "rank": 41
+            },
+            {
+              "hour": 102,
+              "rank": 42
             }
           ],
           "previousPoints": [
@@ -10662,10 +10714,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 38,
-              "title": "産まない女はダメですか？ DINKsのトツキトオカ"
-            },
-            {
               "rank": 39,
               "title": "一茂×かまいたち ゲンバ"
             },
@@ -10675,6 +10723,10 @@
             },
             {
               "rank": 41,
+              "title": "名探偵プリキュア！"
+            },
+            {
+              "rank": 42,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -10684,7 +10736,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/08 02:22",
+      "updatedAt": "2026/06/08 03:23",
       "episodeId": "ep24dk5lx2",
       "subtitle": "“ハプニング対応力講座”",
       "likes": "1.5万",
@@ -11161,6 +11213,10 @@
         {
           "hour": 119,
           "likes": 15000
+        },
+        {
+          "hour": 120,
+          "likes": 15000
         }
       ],
       "rankings": [
@@ -11332,7 +11388,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 48,
@@ -11344,7 +11400,7 @@
             },
             {
               "rank": 50,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             }
           ]
         },
@@ -11480,11 +11536,11 @@
             },
             {
               "rank": 49,
-              "title": "ディープリベンジ-顔を捨てた家政婦-"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "世界の果てまでイッテQ！"
+              "title": "ディープリベンジ-顔を捨てた家政婦-"
             }
           ]
         }
@@ -11493,10 +11549,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/08 02:22",
+      "updatedAt": "2026/06/08 03:23",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "5611",
+      "likes": "5613",
       "favorites": "1.4万",
       "likePoints": [
         {
@@ -12148,7 +12204,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 48,
@@ -12160,7 +12216,7 @@
             },
             {
               "rank": 50,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             }
           ]
         }
@@ -12169,10 +12225,10 @@
     "srbkekw9oj": {
       "programTitle": "ネプリーグ",
       "broadcastDate": "2026/06/01",
-      "updatedAt": "2026/06/08 02:22",
+      "updatedAt": "2026/06/08 03:23",
       "episodeId": "ep9yhege0b",
       "subtitle": "20周年イヤーの難クイズを林先生が徹底解説！",
-      "likes": "2236",
+      "likes": "2239",
       "favorites": "17.1万",
       "likePoints": [
         {
@@ -12774,6 +12830,10 @@
         {
           "hour": 151,
           "likes": 2236
+        },
+        {
+          "hour": 152,
+          "likes": 2239
         }
       ],
       "rankings": [
@@ -12845,7 +12905,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 48,
@@ -12857,7 +12917,7 @@
             },
             {
               "rank": 50,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             }
           ]
         },
@@ -12880,11 +12940,11 @@
             },
             {
               "rank": 49,
-              "title": "ディープリベンジ-顔を捨てた家政婦-"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "世界の果てまでイッテQ！"
+              "title": "ディープリベンジ-顔を捨てた家政婦-"
             }
           ]
         }
