@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/07 08:20",
+  "updatedAt": "2026/06/07 09:23",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/07 08:20",
+      "updatedAt": "2026/06/07 09:23",
       "episodeId": "ep6vuu9nxm",
       "subtitle": "timelesz100",
       "likes": "1.1万",
@@ -145,6 +145,10 @@
         {
           "hour": 34,
           "likes": 11000
+        },
+        {
+          "hour": 35,
+          "likes": 11000
         }
       ],
       "rankings": [
@@ -152,7 +156,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 4,
-          "elapsedHour": 34,
+          "elapsedHour": 35,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -281,6 +285,10 @@
             },
             {
               "hour": 34,
+              "rank": 4
+            },
+            {
+              "hour": 35,
               "rank": 4
             }
           ],
@@ -968,9 +976,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 10,
-          "elapsedHour": 34,
-          "elapsedRank": 10,
+          "currentRank": 11,
+          "elapsedHour": 35,
+          "elapsedRank": 11,
           "currentPoints": [
             {
               "hour": 10,
@@ -1071,6 +1079,10 @@
             {
               "hour": 34,
               "rank": 10
+            },
+            {
+              "hour": 35,
+              "rank": 11
             }
           ],
           "previousPoints": [
@@ -1709,19 +1721,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 7,
-              "title": "それSnow Manにやらせて下さい"
-            },
-            {
               "rank": 8,
               "title": "月夜行路 ―答えは名作の中に―"
             },
             {
               "rank": 9,
-              "title": "未解決の女 警視庁文書捜査官 Season３"
+              "title": "名探偵コナン"
             },
             {
               "rank": 10,
+              "title": "未解決の女 警視庁文書捜査官 Season３"
+            },
+            {
+              "rank": 11,
               "title": "タイムレスマン"
             }
           ]
@@ -1731,10 +1743,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/05/31",
-      "updatedAt": "2026/06/07 08:20",
+      "updatedAt": "2026/06/07 09:23",
       "episodeId": "epi4thbfbk",
       "subtitle": "【TOYOTAの最新ロボの秘密】衝撃!!食べられる機械",
-      "likes": "1.4万",
+      "likes": "1.5万",
       "favorites": "32.6万",
       "likePoints": [
         {
@@ -2336,15 +2348,19 @@
         {
           "hour": 162,
           "likes": 14000
+        },
+        {
+          "hour": 163,
+          "likes": 15000
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 47,
-          "elapsedHour": 162,
-          "elapsedRank": 47,
+          "currentRank": 48,
+          "elapsedHour": 163,
+          "elapsedRank": 48,
           "currentPoints": [
             {
               "hour": 6,
@@ -2917,6 +2933,10 @@
             {
               "hour": 162,
               "rank": 47
+            },
+            {
+              "hour": 163,
+              "rank": 48
             }
           ],
           "previousPoints": [
@@ -3263,12 +3283,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 44,
-              "title": "さんまのお笑い向上委員会"
-            },
-            {
               "rank": 45,
-              "title": "家、ついて行ってイイですか？"
+              "title": "あちこちオードリー"
             },
             {
               "rank": 46,
@@ -3276,6 +3292,10 @@
             },
             {
               "rank": 47,
+              "title": "家、ついて行ってイイですか？"
+            },
+            {
+              "rank": 48,
               "title": "timeleszファミリア"
             }
           ]
@@ -3536,7 +3556,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "限界突破！やってM!LK"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 48,
@@ -3557,10 +3577,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/02",
-      "updatedAt": "2026/06/07 08:20",
+      "updatedAt": "2026/06/07 09:23",
       "episodeId": "epbxaud3gs",
       "subtitle": "チョコプラ・timeleszがデスソースの浄水に挑戦！",
-      "likes": "9224",
+      "likes": "9241",
       "favorites": "5.0万",
       "likePoints": [
         {
@@ -3978,15 +3998,19 @@
         {
           "hour": 104,
           "likes": 9224
+        },
+        {
+          "hour": 105,
+          "likes": 9241
         }
       ],
       "rankings": [
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 48,
-          "elapsedHour": 104,
-          "elapsedRank": 48,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 5,
@@ -4825,20 +4849,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 45,
-              "title": "草彅やすともの うさぎとかめ"
-            },
-            {
-              "rank": 46,
-              "title": "フットマップ"
-            },
-            {
               "rank": 47,
-              "title": "一攫千金！宝の山"
+              "title": "バナナマンの早起きせっかくグルメ!!"
             },
             {
               "rank": 48,
-              "title": "地球まるごと大実験 ネイチャーティーチャー"
+              "title": "一攫千金！宝の山"
+            },
+            {
+              "rank": 49,
+              "title": "がっちりマンデー!!"
+            },
+            {
+              "rank": 50,
+              "title": "帰れマンデー見っけ隊!!"
             }
           ]
         },
@@ -5015,19 +5039,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "timeleszファミリア"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "1億人の大質問!?笑ってコラえて！"
             }
           ]
         }
@@ -5036,7 +5060,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/04",
-      "updatedAt": "2026/06/07 08:20",
+      "updatedAt": "2026/06/07 09:23",
       "episodeId": "ep1tx7r71f",
       "subtitle": "【名物企画】英語で曲当てクイズ/ケムリがあまりにもカッコいい",
       "likes": "1.1万",
@@ -5353,15 +5377,19 @@
         {
           "hour": 78,
           "likes": 11000
+        },
+        {
+          "hour": 79,
+          "likes": 11000
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 41,
-          "elapsedHour": 78,
-          "elapsedRank": 41,
+          "currentRank": 42,
+          "elapsedHour": 79,
+          "elapsedRank": 42,
           "currentPoints": [
             {
               "hour": 8,
@@ -5646,6 +5674,10 @@
             {
               "hour": 78,
               "rank": 41
+            },
+            {
+              "hour": 79,
+              "rank": 42
             }
           ],
           "previousPoints": [
@@ -5900,19 +5932,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 38,
-              "title": "クレイジージャーニー"
-            },
-            {
               "rank": 39,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 40,
-              "title": "見取り図じゃん"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 41,
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+            },
+            {
+              "rank": 42,
               "title": "ニカゲーム"
             }
           ]
@@ -6198,7 +6230,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "限界突破！やってM!LK"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 48,
@@ -6219,7 +6251,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/07 08:20",
+      "updatedAt": "2026/06/07 09:23",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
       "likes": "3963",
@@ -6883,19 +6915,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "timeleszファミリア"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "1億人の大質問!?笑ってコラえて！"
             }
           ]
         },
@@ -6991,7 +7023,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "限界突破！やってM!LK"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 48,
@@ -7012,10 +7044,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/07 08:20",
+      "updatedAt": "2026/06/07 09:23",
       "episodeId": "epref0f8o9",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！山下智久登場",
-      "likes": "7441",
+      "likes": "7450",
       "favorites": "6.8万",
       "likePoints": [
         {
@@ -7417,6 +7449,10 @@
         {
           "hour": 103,
           "likes": 7441
+        },
+        {
+          "hour": 104,
+          "likes": 7450
         }
       ],
       "rankings": [
@@ -7609,19 +7645,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "timeleszファミリア"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "1億人の大質問!?笑ってコラえて！"
             }
           ]
         },
@@ -7673,7 +7709,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "限界突破！やってM!LK"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 48,
@@ -7694,10 +7730,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/07 08:20",
+      "updatedAt": "2026/06/07 09:23",
       "episodeId": "eps7bm6mup",
       "subtitle": "第130回 真剣勝負あっち向いてホイ！ついに王者が決定！",
-      "likes": "3812",
+      "likes": "3827",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -7923,15 +7959,19 @@
         {
           "hour": 55,
           "likes": 3812
+        },
+        {
+          "hour": 56,
+          "likes": 3827
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 49,
-          "elapsedHour": 56,
-          "elapsedRank": 49,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 12,
@@ -8294,20 +8334,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 46,
-              "title": "突然ですが占ってもいいですか？"
-            },
-            {
               "rank": 47,
-              "title": "timeleszファミリア"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "朝だ！生です旅サラダ"
+            },
+            {
+              "rank": 50,
+              "title": "1億人の大質問!?笑ってコラえて！"
             }
           ]
         },
@@ -8384,7 +8424,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "限界突破！やってM!LK"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 48,
@@ -8405,10 +8445,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/05/30",
-      "updatedAt": "2026/06/07 08:20",
+      "updatedAt": "2026/06/07 09:23",
       "episodeId": "epdpoawq6d",
       "subtitle": "マッサマンvs錦鯉マッサノリマンSP前編",
-      "likes": "2309",
+      "likes": "2311",
       "favorites": "77.2万",
       "likePoints": [
         {
@@ -9029,19 +9069,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "timeleszファミリア"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "1億人の大質問!?笑ってコラえて！"
             }
           ]
         },
@@ -9129,7 +9169,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "限界突破！やってM!LK"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 48,
@@ -9150,10 +9190,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/07 08:20",
+      "updatedAt": "2026/06/07 09:23",
       "episodeId": "ep6a50091q",
       "subtitle": "第8話 走る身代金",
-      "likes": "7754",
+      "likes": "7784",
       "favorites": "36.8万",
       "likePoints": [
         {
@@ -9487,6 +9527,10 @@
         {
           "hour": 83,
           "likes": 7754
+        },
+        {
+          "hour": 84,
+          "likes": 7784
         }
       ],
       "rankings": [
@@ -9494,7 +9538,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 22,
-          "elapsedHour": 83,
+          "elapsedHour": 84,
           "elapsedRank": 22,
           "currentPoints": [
             {
@@ -9819,6 +9863,10 @@
             },
             {
               "hour": 83,
+              "rank": 22
+            },
+            {
+              "hour": 84,
               "rank": 22
             }
           ],
@@ -10502,9 +10550,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 32,
-          "elapsedHour": 83,
-          "elapsedRank": 32,
+          "currentRank": 33,
+          "elapsedHour": 84,
+          "elapsedRank": 33,
           "currentPoints": [
             {
               "hour": 3,
@@ -10829,6 +10877,10 @@
             {
               "hour": 83,
               "rank": 32
+            },
+            {
+              "hour": 84,
+              "rank": 33
             }
           ],
           "previousPoints": [
@@ -11463,10 +11515,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 29,
-              "title": "ディープリベンジ-顔を捨てた家政婦-"
-            },
-            {
               "rank": 30,
               "title": "鬼女の棲む家"
             },
@@ -11476,6 +11524,10 @@
             },
             {
               "rank": 32,
+              "title": "上田と女がDEEPに吠える夜"
+            },
+            {
+              "rank": 33,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -11485,7 +11537,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/07 08:20",
+      "updatedAt": "2026/06/07 09:23",
       "episodeId": "ep24dk5lx2",
       "subtitle": "“ハプニング対応力講座”",
       "likes": "1.4万",
@@ -11890,6 +11942,10 @@
         {
           "hour": 101,
           "likes": 14000
+        },
+        {
+          "hour": 102,
+          "likes": 14000
         }
       ],
       "rankings": [
@@ -12061,19 +12117,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "timeleszファミリア"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "1億人の大質問!?笑ってコラえて！"
             }
           ]
         },
@@ -12201,7 +12257,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "限界突破！やってM!LK"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 48,
@@ -12222,7 +12278,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/07 08:20",
+      "updatedAt": "2026/06/07 09:23",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
       "likes": "5544",
@@ -12858,11 +12914,11 @@
             },
             {
               "rank": 49,
-              "title": "相葉◎×部"
+              "title": "スクール革命！"
             },
             {
               "rank": 50,
-              "title": "開運！なんでも鑑定団"
+              "title": "相葉◎×部"
             }
           ]
         },
@@ -12877,19 +12933,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "timeleszファミリア"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "1億人の大質問!?笑ってコラえて！"
             }
           ]
         }
@@ -12898,10 +12954,10 @@
     "srbkekw9oj": {
       "programTitle": "ネプリーグ",
       "broadcastDate": "2026/06/01",
-      "updatedAt": "2026/06/07 08:20",
+      "updatedAt": "2026/06/07 09:23",
       "episodeId": "ep9yhege0b",
       "subtitle": "20周年イヤーの難クイズを林先生が徹底解説！",
-      "likes": "2035",
+      "likes": "2038",
       "favorites": "17.1万",
       "likePoints": [
         {
@@ -13431,6 +13487,10 @@
         {
           "hour": 133,
           "likes": 2035
+        },
+        {
+          "hour": 134,
+          "likes": 2038
         }
       ],
       "rankings": [
@@ -13502,19 +13562,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "timeleszファミリア"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "1億人の大質問!?笑ってコラえて！"
             }
           ]
         },
@@ -13529,7 +13589,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "限界突破！やってM!LK"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 48,
