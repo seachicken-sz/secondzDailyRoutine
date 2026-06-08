@@ -118,7 +118,7 @@
   top: 0;
   right: 0;
   z-index: 100;
-  width: min(82vw, 320px);
+  width: min(82vw, 720px);
   height: 100dvh;
   padding: calc(env(safe-area-inset-top) + 20px) 0 12px 24px;
   background: var(--color-surface);
