@@ -51,10 +51,13 @@ const homeOnceMoreListElement = document.getElementById("homeOnceMoreList");
 const homeBackToTopButtonElement = document.getElementById("homeBackToTopButton");
 // ホームメニューボタン
 const homeMenuButtonElement = document.getElementById("homeMenuButton");
+//ホームメニュー
 const homeMenuOverlayElement = document.getElementById("homeMenuOverlay");
 const homeSlideMenuElement = document.getElementById("homeSlideMenu");
 const closeHomeMenuButtonElement = document.getElementById("closeHomeMenuButton");
-
+//ホームメニュー内初回設定メニュー
+const homeInstallGuideMenuElement = document.getElementById("homeInstallGuideMenu");
+// ホーム画面メニュー内モーダルを開くボタン
 const homeMenuSetupButtonElement = document.getElementById("homeMenuSetupButton");
 const homeMenuUsageButtonElement = document.getElementById("homeMenuUsageButton");
 const homeMenuShareButtonElement = document.getElementById("homeMenuShareButton");
