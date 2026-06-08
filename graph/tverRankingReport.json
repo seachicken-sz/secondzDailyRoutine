@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/08 14:24",
+  "updatedAt": "2026/06/08 15:23",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/08 14:24",
+      "updatedAt": "2026/06/08 15:23",
       "episodeId": "ep6vuu9nxm",
       "subtitle": "timelesz100",
       "likes": "1.4万",
@@ -261,6 +261,10 @@
         {
           "hour": 64,
           "likes": 14000
+        },
+        {
+          "hour": 65,
+          "likes": 14000
         }
       ],
       "rankings": [
@@ -268,7 +272,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 10,
-          "elapsedHour": 64,
+          "elapsedHour": 65,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -517,6 +521,10 @@
             },
             {
               "hour": 64,
+              "rank": 10
+            },
+            {
+              "hour": 65,
               "rank": 10
             }
           ],
@@ -1185,15 +1193,15 @@
           "nearbyRanking": [
             {
               "rank": 7,
-              "title": "かまいたちの知らんけど"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 8,
-              "title": "突然ですが占ってもいいですか？"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 9,
-              "title": "マルコポロリ！"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 10,
@@ -1204,9 +1212,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 24,
-          "elapsedHour": 64,
-          "elapsedRank": 24,
+          "currentRank": 25,
+          "elapsedHour": 65,
+          "elapsedRank": 25,
           "currentPoints": [
             {
               "hour": 10,
@@ -1427,6 +1435,10 @@
             {
               "hour": 64,
               "rank": 24
+            },
+            {
+              "hour": 65,
+              "rank": 25
             }
           ],
           "previousPoints": [
@@ -2065,19 +2077,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 21,
-              "title": "かまいたちの知らんけど"
-            },
-            {
               "rank": 22,
-              "title": "突然ですが占ってもいいですか？"
-            },
-            {
-              "rank": 23,
               "title": "マルコポロリ！"
             },
             {
+              "rank": 23,
+              "title": "かまいたちの知らんけど"
+            },
+            {
               "rank": 24,
+              "title": "銀河の一票"
+            },
+            {
+              "rank": 25,
               "title": "タイムレスマン"
             }
           ]
@@ -2087,7 +2099,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/08 14:24",
+      "updatedAt": "2026/06/08 15:23",
       "episodeId": "ep67r77z31",
       "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
       "likes": "1.0万",
@@ -2184,6 +2196,10 @@
         {
           "hour": 24,
           "likes": 10000
+        },
+        {
+          "hour": 25,
+          "likes": 10000
         }
       ],
       "rankings": [
@@ -2191,7 +2207,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 3,
-          "elapsedHour": 24,
+          "elapsedHour": 25,
           "elapsedRank": 3,
           "currentPoints": [
             {
@@ -2280,6 +2296,10 @@
             },
             {
               "hour": 24,
+              "rank": 3
+            },
+            {
+              "hour": 25,
               "rank": 3
             }
           ],
@@ -2895,9 +2915,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 9,
-          "elapsedHour": 24,
-          "elapsedRank": 9,
+          "currentRank": 8,
+          "elapsedHour": 25,
+          "elapsedRank": 8,
           "currentPoints": [
             {
               "hour": 7,
@@ -2970,6 +2990,10 @@
             {
               "hour": 24,
               "rank": 9
+            },
+            {
+              "hour": 25,
+              "rank": 8
             }
           ],
           "previousPoints": [
@@ -3220,6 +3244,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 5,
+              "title": "タツキ先生は甘すぎる！"
+            },
+            {
               "rank": 6,
               "title": "水曜日のダウンタウン"
             },
@@ -3229,10 +3257,6 @@
             },
             {
               "rank": 8,
-              "title": "余命３ヶ月のサレ夫"
-            },
-            {
-              "rank": 9,
               "title": "timeleszファミリア"
             }
           ]
@@ -3242,10 +3266,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/02",
-      "updatedAt": "2026/06/08 14:24",
+      "updatedAt": "2026/06/08 15:23",
       "episodeId": "epbxaud3gs",
       "subtitle": "チョコプラ・timeleszがデスソースの浄水に挑戦！",
-      "likes": "9700",
+      "likes": "9733",
       "favorites": "5.0万",
       "likePoints": [
         {
@@ -3779,6 +3803,10 @@
         {
           "hour": 134,
           "likes": 9700
+        },
+        {
+          "hour": 135,
+          "likes": 9733
         }
       ],
       "rankings": [
@@ -4643,11 +4671,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サタプラ"
+              "title": "ザ！世界仰天ニュース"
             },
             {
               "rank": 48,
-              "title": "ザ！世界仰天ニュース"
+              "title": "ナンデモ特命係 発見らくちゃく！"
             },
             {
               "rank": 49,
@@ -4655,7 +4683,7 @@
             },
             {
               "rank": 50,
-              "title": "なりゆき街道旅"
+              "title": "日本くらべてみたら"
             }
           ]
         },
@@ -4832,19 +4860,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "相席食堂"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 49,
-              "title": "スクール革命！"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             },
             {
               "rank": 50,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "あざとくて何が悪いの？"
             }
           ]
         }
@@ -4853,10 +4881,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/08",
-      "updatedAt": "2026/06/08 14:24",
+      "updatedAt": "2026/06/08 15:23",
       "episodeId": "ep3cvn8amg",
       "subtitle": "【1時間SP】オカシーパラダイスからの招待状",
-      "likes": "6192",
+      "likes": "6435",
       "favorites": "22.0万",
       "likePoints": [
         {
@@ -4906,15 +4934,19 @@
         {
           "hour": 12,
           "likes": 6192
+        },
+        {
+          "hour": 13,
+          "likes": 6435
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 22,
-          "elapsedHour": 12,
-          "elapsedRank": 22,
+          "currentRank": 21,
+          "elapsedHour": 13,
+          "elapsedRank": 21,
           "currentPoints": [
             {
               "hour": 7,
@@ -4939,6 +4971,10 @@
             {
               "hour": 12,
               "rank": 22
+            },
+            {
+              "hour": 13,
+              "rank": 21
             }
           ],
           "previousPoints": [
@@ -5269,8 +5305,12 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 19,
+              "rank": 18,
               "title": "やすとものどこいこ！？"
+            },
+            {
+              "rank": 19,
+              "title": "ゴッドタン"
             },
             {
               "rank": 20,
@@ -5278,10 +5318,6 @@
             },
             {
               "rank": 21,
-              "title": "華大さんと千鳥くん"
-            },
-            {
-              "rank": 22,
               "title": "ニカゲーム"
             }
           ]
@@ -5289,10 +5325,15 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 49,
+          "elapsedHour": 13,
+          "elapsedRank": 49,
+          "currentPoints": [
+            {
+              "hour": 13,
+              "rank": 49
+            }
+          ],
           "previousPoints": [
             {
               "hour": 12,
@@ -5433,20 +5474,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "世界の果てまでイッテQ！"
-            },
-            {
-              "rank": 48,
+              "rank": 46,
               "title": "そこまで言って委員会NP"
             },
             {
-              "rank": 49,
-              "title": "華大さんと千鳥くん"
+              "rank": 47,
+              "title": "ゴッドタン"
             },
             {
-              "rank": 50,
-              "title": "鬼女の棲む家"
+              "rank": 48,
+              "title": "世界の果てまでイッテQ！"
+            },
+            {
+              "rank": 49,
+              "title": "ニカゲーム"
             }
           ]
         }
@@ -5455,10 +5496,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/08 14:24",
+      "updatedAt": "2026/06/08 15:23",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "4026",
+      "likes": "4030",
       "favorites": "75.9万",
       "likePoints": [
         {
@@ -6119,19 +6160,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "相席食堂"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 49,
-              "title": "スクール革命！"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             },
             {
               "rank": 50,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "あざとくて何が悪いの？"
             }
           ]
         },
@@ -6227,19 +6268,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "世界の果てまでイッテQ！"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "そこまで言って委員会NP"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 49,
-              "title": "華大さんと千鳥くん"
+              "title": "ニカゲーム"
             },
             {
               "rank": 50,
-              "title": "鬼女の棲む家"
+              "title": "千鳥の鬼レンチャン"
             }
           ]
         }
@@ -6248,10 +6289,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/08 14:24",
+      "updatedAt": "2026/06/08 15:23",
       "episodeId": "epref0f8o9",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！山下智久登場",
-      "likes": "7808",
+      "likes": "7821",
       "favorites": "6.8万",
       "likePoints": [
         {
@@ -6769,6 +6810,10 @@
         {
           "hour": 133,
           "likes": 7808
+        },
+        {
+          "hour": 134,
+          "likes": 7821
         }
       ],
       "rankings": [
@@ -6961,19 +7006,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "相席食堂"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 49,
-              "title": "スクール革命！"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             },
             {
               "rank": 50,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "あざとくて何が悪いの？"
             }
           ]
         },
@@ -7025,19 +7070,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "世界の果てまでイッテQ！"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "そこまで言って委員会NP"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 49,
-              "title": "華大さんと千鳥くん"
+              "title": "ニカゲーム"
             },
             {
               "rank": 50,
-              "title": "鬼女の棲む家"
+              "title": "千鳥の鬼レンチャン"
             }
           ]
         }
@@ -7046,10 +7091,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/08 14:24",
+      "updatedAt": "2026/06/08 15:23",
       "episodeId": "eps7bm6mup",
       "subtitle": "第130回 真剣勝負あっち向いてホイ！ついに王者が決定！",
-      "likes": "4962",
+      "likes": "5017",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -7383,6 +7428,10 @@
         {
           "hour": 85,
           "likes": 4962
+        },
+        {
+          "hour": 86,
+          "likes": 5017
         }
       ],
       "rankings": [
@@ -7755,19 +7804,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "相席食堂"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 49,
-              "title": "スクール革命！"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             },
             {
               "rank": 50,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "あざとくて何が悪いの？"
             }
           ]
         },
@@ -7844,19 +7893,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "世界の果てまでイッテQ！"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "そこまで言って委員会NP"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 49,
-              "title": "華大さんと千鳥くん"
+              "title": "ニカゲーム"
             },
             {
               "rank": 50,
-              "title": "鬼女の棲む家"
+              "title": "千鳥の鬼レンチャン"
             }
           ]
         }
@@ -7865,10 +7914,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/05/30",
-      "updatedAt": "2026/06/08 14:24",
+      "updatedAt": "2026/06/08 15:23",
       "episodeId": "epdpoawq6d",
       "subtitle": "マッサマンvs錦鯉マッサノリマンSP前編",
-      "likes": "2394",
+      "likes": "2399",
       "favorites": "77.2万",
       "likePoints": [
         {
@@ -8489,19 +8538,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "相席食堂"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 49,
-              "title": "スクール革命！"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             },
             {
               "rank": 50,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "あざとくて何が悪いの？"
             }
           ]
         },
@@ -8589,19 +8638,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "世界の果てまでイッテQ！"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "そこまで言って委員会NP"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 49,
-              "title": "華大さんと千鳥くん"
+              "title": "ニカゲーム"
             },
             {
               "rank": 50,
-              "title": "鬼女の棲む家"
+              "title": "千鳥の鬼レンチャン"
             }
           ]
         }
@@ -8610,10 +8659,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/08 14:24",
+      "updatedAt": "2026/06/08 15:23",
       "episodeId": "ep6a50091q",
       "subtitle": "第8話 走る身代金",
-      "likes": "8588",
+      "likes": "8614",
       "favorites": "36.7万",
       "likePoints": [
         {
@@ -9063,6 +9112,10 @@
         {
           "hour": 113,
           "likes": 8588
+        },
+        {
+          "hour": 114,
+          "likes": 8614
         }
       ],
       "rankings": [
@@ -9070,7 +9123,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 23,
-          "elapsedHour": 113,
+          "elapsedHour": 114,
           "elapsedRank": 23,
           "currentPoints": [
             {
@@ -9515,6 +9568,10 @@
             },
             {
               "hour": 113,
+              "rank": 23
+            },
+            {
+              "hour": 114,
               "rank": 23
             }
           ],
@@ -10199,7 +10256,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 44,
-          "elapsedHour": 113,
+          "elapsedHour": 114,
           "elapsedRank": 44,
           "currentPoints": [
             {
@@ -10644,6 +10701,10 @@
             },
             {
               "hour": 113,
+              "rank": 44
+            },
+            {
+              "hour": 114,
               "rank": 44
             }
           ],
@@ -11301,7 +11362,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/08 14:24",
+      "updatedAt": "2026/06/08 15:23",
       "episodeId": "ep24dk5lx2",
       "subtitle": "“ハプニング対応力講座”",
       "likes": "1.5万",
@@ -11822,6 +11883,10 @@
         {
           "hour": 131,
           "likes": 15000
+        },
+        {
+          "hour": 132,
+          "likes": 15000
         }
       ],
       "rankings": [
@@ -11993,19 +12058,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "相席食堂"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 49,
-              "title": "スクール革命！"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             },
             {
               "rank": 50,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "あざとくて何が悪いの？"
             }
           ]
         },
@@ -12133,19 +12198,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "世界の果てまでイッテQ！"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "そこまで言って委員会NP"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 49,
-              "title": "華大さんと千鳥くん"
+              "title": "ニカゲーム"
             },
             {
               "rank": 50,
-              "title": "鬼女の棲む家"
+              "title": "千鳥の鬼レンチャン"
             }
           ]
         }
@@ -12154,10 +12219,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/08 14:24",
+      "updatedAt": "2026/06/08 15:23",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "5632",
+      "likes": "5634",
       "favorites": "1.4万",
       "likePoints": [
         {
@@ -12782,19 +12847,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "いろはに千鳥"
-            },
-            {
-              "rank": 48,
               "title": "リア突WEST.レボリューション"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "朝だ！生です旅サラダ"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "やすとものいたって真剣です"
+            },
+            {
+              "rank": 50,
+              "title": "吉田と粗品と"
             }
           ]
         },
@@ -12809,19 +12874,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "相席食堂"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 49,
-              "title": "スクール革命！"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             },
             {
               "rank": 50,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "あざとくて何が悪いの？"
             }
           ]
         }
@@ -12830,10 +12895,10 @@
     "srbkekw9oj": {
       "programTitle": "ネプリーグ",
       "broadcastDate": "2026/06/01",
-      "updatedAt": "2026/06/08 14:24",
+      "updatedAt": "2026/06/08 15:23",
       "episodeId": "ep9yhege0b",
       "subtitle": "20周年イヤーの難クイズを林先生が徹底解説！",
-      "likes": "2332",
+      "likes": "2351",
       "favorites": "17.1万",
       "likePoints": [
         {
@@ -13479,6 +13544,10 @@
         {
           "hour": 163,
           "likes": 2332
+        },
+        {
+          "hour": 164,
+          "likes": 2351
         }
       ],
       "rankings": [
@@ -13550,19 +13619,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "相席食堂"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 49,
-              "title": "スクール革命！"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             },
             {
               "rank": 50,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "あざとくて何が悪いの？"
             }
           ]
         },
@@ -13577,19 +13646,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "世界の果てまでイッテQ！"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "そこまで言って委員会NP"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 49,
-              "title": "華大さんと千鳥くん"
+              "title": "ニカゲーム"
             },
             {
               "rank": 50,
-              "title": "鬼女の棲む家"
+              "title": "千鳥の鬼レンチャン"
             }
           ]
         }
