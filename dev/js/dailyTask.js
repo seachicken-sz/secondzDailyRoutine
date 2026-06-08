@@ -62,7 +62,7 @@ function bindDailyTaskEvents() {
     saveFlowState(state.openedAction, dailyTaskStepElement);
 
     // デイリータスクのURLへ移動
-    location.href = itemUrl;
+    openExternalTaskUrl(itemUrl);
   });
 
   // ==================================================
