@@ -49,9 +49,28 @@
     </div>
     <!--ホーム-->
     <section id="homeStep" class="step-screen">
+      <button id="homeMenuButton" class="home-menu-button" type="button" aria-label="メニューを開く">
+        <i class="bi bi-list"></i>
+      </button>
+      
+      <div id="homeMenuOverlay" class="home-menu-overlay hidden"></div>
+      
+      <nav id="homeSlideMenu" class="home-slide-menu hidden" aria-label="ホームメニュー">
+        <button id="closeHomeMenuButton" class="home-menu-close-button" type="button" aria-label="メニューを閉じる">
+          ×
+        </button>
+      
+        <h2 class="home-menu-title">メニュー</h2>
+      
+        <button type="button" class="home-menu-item" id="homeMenuSetupButton">初回設定</button>
+        <button type="button" class="home-menu-item" id="homeMenuUsageButton">使い方</button>
+        <button type="button" class="home-menu-item" id="homeMenuShareButton">このツールを共有</button>
+      </nav>
+      <!--
       <div id="home-top-share-btn-wrap">
         <button id="homeTopShareButton" type="button" class="button secondary home-share-button"><i class="bi bi-box-arrow-up"></i></button>
       </div>
+      -->
       <header class="home-header">
         <!--ロゴ-->
         <div class="home-logo-area">
