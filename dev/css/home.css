@@ -131,6 +131,7 @@
 }
 .home-slide-menu img{
    max-width:100%;
+}
 .home-menu-close-button {
   position: absolute;
   top: calc(env(safe-area-inset-top) + 12px);
