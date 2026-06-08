@@ -69,6 +69,8 @@ const homeMenuShareButtonElement = document.getElementById("homeMenuShareButton"
 const howToModalElement = document.getElementById("firstSetupModal");
 // 初回設定モーダルの閉じるボタン
 const closeHowToButtonElement = document.getElementById("closeFirstSetupModalButton");
+// ブラウザ名
+const userBrowserElement = document.getElementById("userBrowser");
 
 // ==================================================
 // DOM: 使い方モーダル
