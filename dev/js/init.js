@@ -82,10 +82,6 @@ async function init() {
     renderHomeDailyExtraList(state.dailyGroups);
     // ホームの期間限定タスクを描画
     renderHomeOnceMoreList(state.onceTasks);
-    // ホーム目次を描画
-    updateHomeIndex();
-    // ホーム目次を描画
-    updateHomeIndex();
     // USENランキング表示処理が存在する場合だけ実行
     // musicTop.js 側などで loadRequestRanking が定義されている想定
     if (typeof loadRequestRanking === "function") {
@@ -110,10 +106,6 @@ async function init() {
       // 期間限定も非表示にする
       if (typeof renderHomeOnceMoreList === "function") {
         renderHomeOnceMoreList([]);
-      }
-      // ホーム目次も最低限描画
-      if (typeof updateHomeIndex === "function") {
-        updateHomeIndex();
       }
       // 現在画面をホーム扱いにする
       state.currentStepElement = homeStepElement;
