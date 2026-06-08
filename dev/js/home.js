@@ -40,6 +40,8 @@ function bindHomeEvents() {
   addClickEvent(homeMenuButtonElement, openHomeMenu);
   addClickEvent(closeHomeMenuButtonElement, closeHomeMenu);
   addClickEvent(homeMenuOverlayElement, closeHomeMenu);
+
+  bindHomeMenuAccordionEvents();
   
   addClickEvent(homeMenuSetupButtonElement, () => {
     closeHomeMenu();
@@ -1100,4 +1102,28 @@ function openHomeMenu() {
 function closeHomeMenu() {
   homeMenuOverlayElement?.classList.add("hidden");
   homeSlideMenuElement?.classList.add("hidden");
+}
+
+function bindHomeMenuAccordionEvents() {
+  const accordionButtons = document.querySelectorAll("[data-home-menu-accordion]");
+
+  accordionButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const key = button.dataset.homeMenuAccordion;
+      const detail = document.querySelector(`[data-home-menu-detail="${key}"]`);
+      const arrow = button.querySelector(".home-menu-arrow");
+
+      if (!detail) {
+        return;
+      }
+
+      const isOpen = !detail.classList.contains("hidden");
+
+      detail.classList.toggle("hidden", isOpen);
+
+      if (arrow) {
+        arrow.textContent = isOpen ? "＋" : "−";
+      }
+    });
+  });
 }
