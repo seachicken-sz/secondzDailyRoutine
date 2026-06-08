@@ -63,7 +63,7 @@ function bindRequestSongEvents() {
     });
 
     // USEN推しリクページへ移動
-    location.href = requestUrl;
+    openExternalTaskUrl(requestUrl);
   });
 
   // ==================================================
