@@ -13,6 +13,13 @@ const THEME_LOGO_MAP = {
   white: "../img/logo-white.png",
 };
 
+function preloadThemeLogoImages() {
+  Object.values(THEME_LOGO_MAP).forEach((path) => {
+    const image = new Image();
+    image.src = path;
+  });
+}
+
 function updateThemeLogo(themeName) {
   if (!homeLogoImageElement) {
     return;
@@ -149,6 +156,7 @@ function setupThemeButtons() {
 }
 
 function setupTheme() {
+  preloadThemeLogoImages();
   setupThemeModal();
   setupThemeButtons();
   applyTheme(getSavedTheme());
