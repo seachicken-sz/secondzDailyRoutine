@@ -139,7 +139,7 @@ const SHARE_IMAGE_THEMES = {
 };
 
 const SHARE_IMAGE_LOGO_PATHS = {
-  normal: "../img/logo-normal.png",
+  normal: "../img/logo.png",
   red: "../img/logo-red.png",
   purple: "../img/logo-purple.png",
   green: "../img/logo-green.png",
@@ -330,7 +330,7 @@ async function drawShareImage(canvas, options = {}) {
   
   const logoImage = await loadImage(logoPath);
   
-  const logoWidth = 120;
+  const logoWidth = 280;
   const logoHeight = logoImage
     ? logoWidth * (logoImage.height / logoImage.width)
     : 0;
