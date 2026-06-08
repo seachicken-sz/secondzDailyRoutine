@@ -562,7 +562,13 @@ async function drawShareImage(canvas, options = {}) {
   const imageStyle = getShareImageStyle(themeKey, options.imageStyle);
   const isIllustrated = imageStyle === "illustrated";
 
-  const fontFamily = isIllustrated
+  const fontStyle = options.fontStyle === "handwritten"
+    ? "handwritten"
+    : "default";
+  
+  const isHandwrittenFont = fontStyle === "handwritten";
+  
+  const fontFamily = isHandwrittenFont
     ? SHARE_IMAGE_ILLUSTRATED_FONT_FAMILY
     : SHARE_IMAGE_SIMPLE_FONT_FAMILY;
 
