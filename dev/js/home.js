@@ -1084,3 +1084,26 @@ function bindHomeMenuAccordionEvents() {
     });
   });
 }
+
+// 通常ルートでUSENを実行したときも、ホームのおかわりDaily側USENを完了扱いにする
+function markHomeUsenTaskDoneFromRoutine() {
+  if (typeof markDailyTaskDone !== "function") {
+    return;
+  }
+
+  const task = buildHomeUsenTaskFromSelectedSong();
+
+  if (!task) {
+    return;
+  }
+
+  markDailyTaskDone(task, "homeUsen");
+
+  if (typeof renderHomeUsenExtraList === "function") {
+    renderHomeUsenExtraList();
+  }
+
+  if (typeof updateDailyStartedTodayClass === "function") {
+    updateDailyStartedTodayClass();
+  }
+}
