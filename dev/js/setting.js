@@ -279,7 +279,7 @@ function openFirstSetupModal() {
 
 function shouldAutoOpenFirstSetupModal() {
   const alreadyShown =
-    localStorage.getItem(STORAGE_KEYS.firstSetupModalShown) === "true";
+    localStorage.getItem(STORAGE_KEYS.browserFirstVisitModalShown) === "true";
 
   return !isStandaloneMode() && !alreadyShown;
 }
@@ -290,7 +290,7 @@ function autoOpenFirstSetupModalIfNeeded() {
   }
 
   openFirstVisitModal();
-  localStorage.setItem(STORAGE_KEYS.firstSetupModalShown, "true");
+  localStorage.setItem(STORAGE_KEYS.browserFirstVisitModalShown, "true");
 }
 
 function openFirstVisitModal() {
@@ -333,4 +333,54 @@ function renderUserBrowserInfo() {
   const browserName = getBrowserDisplayName(browserType);
 
   userBrowserElement.innerHTML = `たぶん今の状態は「<strong>${browserName}</strong>」です。`;
+}
+
+function openPwaFirstVisitModal() {
+  pwaFirstVisitModalElement?.classList.remove("hidden");
+}
+
+function closePwaFirstVisitModal() {
+  pwaFirstVisitModalElement?.classList.add("hidden");
+}
+
+function hasExistingTaskHistory() {
+  return hasValidStorageObject(STORAGE_KEYS.onceTaskDoneMap) ||
+    hasValidStorageObject(STORAGE_KEYS.dailyTaskDoneMap);
+}
+
+function hasValidStorageObject(storageKey) {
+  try {
+    const raw = localStorage.getItem(storageKey);
+
+    if (!raw) {
+      return false;
+    }
+
+    const parsed = JSON.parse(raw);
+
+    return parsed &&
+      typeof parsed === "object" &&
+      !Array.isArray(parsed) &&
+      Object.keys(parsed).length > 0;
+  } catch (error) {
+    return false;
+  }
+}
+
+function shouldAutoOpenPwaFirstVisitModal() {
+  const alreadyShown =
+    localStorage.getItem(STORAGE_KEYS.pwaFirstVisitModalShown) === "true";
+
+  return isStandaloneMode() &&
+    !alreadyShown &&
+    !hasExistingTaskHistory();
+}
+
+function autoOpenPwaFirstVisitModalIfNeeded() {
+  if (!shouldAutoOpenPwaFirstVisitModal()) {
+    return;
+  }
+
+  openPwaFirstVisitModal();
+  localStorage.setItem(STORAGE_KEYS.pwaFirstVisitModalShown, "true");
 }
