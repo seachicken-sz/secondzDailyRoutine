@@ -640,7 +640,13 @@ async function drawShareImage(canvas, options = {}) {
   const logoPath = getShareImageLogoPath(themeKey, imageStyle);
   const logoImage = await loadImage(logoPath);
 
-  const logoWidth = 330;
+  const simpleLogoWidth = 280;
+  const illustratedLogoWidth = simpleLogoWidth * (1200 / 1081);
+  
+  const logoWidth = isIllustrated
+    ? illustratedLogoWidth
+    : simpleLogoWidth;
+  
   const logoHeight = logoImage
     ? logoWidth * (logoImage.height / logoImage.width)
     : 0;
