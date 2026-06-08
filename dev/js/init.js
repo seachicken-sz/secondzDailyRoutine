@@ -94,6 +94,8 @@ async function init() {
     // 保存済みの途中再開データがあれば復元
     // なければホーム画面を表示
     await restoreFlowStateOrHome();
+    // ブラウザアクセスかつ初回のみ初回設定モーダル表示
+    autoOpenFirstSetupModalIfNeeded();
     } catch (error) {
       // 初期化中に何か失敗した場合は、最低限ホームが壊れないようにする
       console.error(error);
