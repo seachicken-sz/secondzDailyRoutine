@@ -1,4 +1,4 @@
-const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbx5Crht2hqlM4i6X5Oaxj_5biEbqyULuYUvzlBWuSGH_wRg7AzhUcSamoOUYfdEVjfx/exec";
+const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzaXmITsQ0eZlBZGEefRCzihLjgkdOPSNPmUqXkFAIln8CrIdn4JDYZlcYH_0cpm7xF/exec";
 const SHEET_TOKEN = "test-token";
 const SHEET_APP_NAME = "secondzDailyRoutine";
 const SHEET_CLIENT_ID_KEY = "secondzDailyRoutineClientId";
@@ -88,6 +88,15 @@ function getSheetClientId() {
 }
 
 /**
+ * 現在選択されているテーマ色を取得する
+ *
+ * @returns {string}
+ */
+function getSheetSelectedTheme() {
+  return localStorage.getItem("selectedTheme") || "normal";
+}
+
+/**
  * crypto.randomUUID が使えない環境向けの代替ID生成
  *
  * @returns {string}
@@ -149,12 +158,13 @@ function createSheetItem(item, options = {}) {
  * @returns {Object}
  */
 function createSheetPayload(groups) {
-  const payload = {
-    token: SHEET_TOKEN,
-    app: SHEET_APP_NAME,
-    platform: getSheetPlatform(),
-    clientId: getSheetClientId()
-  };
+const payload = {
+  token: SHEET_TOKEN,
+  app: SHEET_APP_NAME,
+  platform: getSheetPlatform(),
+  clientId: getSheetClientId(),
+  theme: getSheetSelectedTheme()
+};
 
   SHEET_TASK_TYPES.forEach((taskType) => {
     const rawItems = Array.isArray(groups[taskType]) ? groups[taskType] : [];
