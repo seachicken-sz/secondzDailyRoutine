@@ -181,6 +181,16 @@ function bindShareImageEvents() {
     });
   }
 
+  const shareImageHandwrittenFontCheckboxElement =
+    getShareImageHandwrittenFontCheckboxElement();
+  
+  if (shareImageHandwrittenFontCheckboxElement) {
+    shareImageHandwrittenFontCheckboxElement.addEventListener("change", () => {
+      currentShareImageFontStyle = getCurrentShareImageFontStyle();
+      renderShareImage(currentShareImageTheme);
+    });
+  }
+
   // ==================================================
   // シェア画像保存/共有
   // ==================================================
@@ -453,19 +463,34 @@ async function renderShareImage(themeKey = currentShareImageTheme) {
 
   // 現在の画像スタイルを取得
   currentShareImageStyle = getCurrentShareImageStyle();
+  currentShareImageFontStyle = getCurrentShareImageFontStyle();
 
   // canvas.js の drawShareImage() で実際に描画する
-  await drawShareImage(shareImageCanvasElement, {
-    themeKey: currentShareImageTheme,
-    imageStyle: currentShareImageStyle,
-    dateText: getShareImageDateText(),
-    appName: "タムごとDaily",
-    title: "タスク完了！",
-    requestText: getShareImageRequestText(),
-    bgmText: getShareImageBgmText(),
-    items,
-  });
+await drawShareImage(shareImageCanvasElement, {
+  themeKey: currentShareImageTheme,
+  imageStyle: currentShareImageStyle,
+  fontStyle: currentShareImageFontStyle,
+  dateText: getShareImageDateText(),
+  appName: "タムごとDaily",
+  title: "タスク完了！",
+  requestText: getShareImageRequestText(),
+  bgmText: getShareImageBgmText(),
+  items,
+});
 
   // 描画成功時はエラー表示を消す
   hideError(postErrorAreaElement);
+}
+function getShareImageHandwrittenFontCheckboxElement() {
+  return document.getElementById("shareImageHandwrittenFontCheckbox");
+}
+
+function getCurrentShareImageFontStyle() {
+  const checkbox = getShareImageHandwrittenFontCheckboxElement();
+
+  if (!checkbox) {
+    return "default";
+  }
+
+  return checkbox.checked ? "handwritten" : "default";
 }
