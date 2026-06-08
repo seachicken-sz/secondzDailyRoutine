@@ -53,7 +53,7 @@ function bindHomeEvents() {
   
   addClickEvent(homeMenuShareButtonElement, () => {
     closeHomeMenu();
-    openHomeShare();
+    shareAppFromHome();
   });
 
   // ==================================================
