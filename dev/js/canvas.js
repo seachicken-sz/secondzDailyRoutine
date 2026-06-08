@@ -361,8 +361,8 @@ async function drawShareImage(canvas, options = {}) {
   // =========================
 
   const bgGradient = ctx.createLinearGradient(0, 0, width, height);
-  bgGradient.addColorStop(0, theme.bg1);
-  bgGradient.addColorStop(1, theme.bg2);
+  bgGradient.addColorStop(0, theme.bg2);
+  bgGradient.addColorStop(1, theme.bg1);
 
   ctx.fillStyle = bgGradient;
   drawRoundRect(ctx, 0, 0, width, height, 28);
