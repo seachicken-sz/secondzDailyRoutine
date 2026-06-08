@@ -8,6 +8,31 @@
 // ==================================================
 // app.js から呼び出して、モーダル関連のクリックイベントをまとめて登録する
 function bindModalEvents() {
+
+  // ==================================================
+// 初回訪問モーダル
+// ==================================================
+addClickEvent(closeFirstVisitModalButtonElement, closeFirstVisitModal);
+addClickEvent(firstVisitCloseOnlyButtonElement, closeFirstVisitModal);
+
+addClickEvent(firstVisitOpenSetupButtonElement, () => {
+  closeFirstVisitModal();
+  openFirstSetupModal();
+});
+
+addClickEvent(firstVisitOpenUsageButtonElement, () => {
+  closeFirstVisitModal();
+  openUsageModal();
+});
+
+if (firstVisitModalElement) {
+  firstVisitModalElement.addEventListener("click", (event) => {
+    if (event.target === firstVisitModalElement) {
+      closeFirstVisitModal();
+    }
+  });
+}
+  
   // ==================================================
   // 初回設定モーダル
   // ==================================================
@@ -114,3 +139,4 @@ function openUsageModal() {
     usageModalElement.classList.remove("hidden");
   }
 }
+
