@@ -13,7 +13,7 @@
 }
 .modal-content {
   width: min(100%, 520px);
-  max-height: min(80dvh, 840px);
+  max-height: min(90dvh, 840px);
   background: var(--color-page-bg);
   border-radius: 18px;
   box-shadow: var(--shadow-modal);
