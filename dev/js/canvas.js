@@ -792,10 +792,8 @@ async function drawShareImage(canvas, options = {}) {
   // =========================
 
   if (logoImage) {
-    const logoXOffset = isIllustrated ? 18 : 0;
 
-    const logoX =
-      innerX + (innerWidth - logoWidth) / 2 + logoXOffset;
+    const logoX = innerX + (innerWidth - logoWidth) / 2;
 
     const logoY = Math.max(
       currentY + logoTopMargin,
