@@ -599,3 +599,7 @@
 .firstvisit-modal-content strong {
     color: var(--color-brand);
 }
+
+#firstVisitModal p{
+   text-align:center;
+}
