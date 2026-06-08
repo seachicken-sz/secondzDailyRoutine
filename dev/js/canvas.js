@@ -359,15 +359,15 @@ function drawShareImageIllustratedBackground(ctx, width, height, theme) {
   const isWhiteTheme = theme.name === "white";
 
   const bgGradient = ctx.createLinearGradient(0, 0, width, height);
-
+  
   if (isWhiteTheme) {
     bgGradient.addColorStop(0, "#ffffff");
-    bgGradient.addColorStop(0.55, "#f4f4f5");
+    bgGradient.addColorStop(0.55, "#f8fafc");
     bgGradient.addColorStop(1, "#e5e7eb");
   } else {
-    bgGradient.addColorStop(0, theme.bg2);
-    bgGradient.addColorStop(0.58, theme.brand);
-    bgGradient.addColorStop(1, theme.bg1);
+    bgGradient.addColorStop(0, theme.bg1);
+    bgGradient.addColorStop(0.62, theme.surfaceSoft);
+    bgGradient.addColorStop(1, hexToRgba(theme.brand, 0.16));
   }
 
   ctx.fillStyle = bgGradient;
@@ -718,7 +718,7 @@ async function drawShareImage(canvas, options = {}) {
   // Title
   // =========================
 
-  ctx.font = `600 24px ${titleFontFamily}`;
+  ctx.font = `600 24px ${fontFamily}`;
   ctx.fillStyle = theme.text;
   ctx.fillText(options.title || "タスク完了！", innerX, titleY);
 
@@ -787,8 +787,16 @@ async function drawShareImage(canvas, options = {}) {
   // Logo
   // =========================
 
+  // =========================
+  // Logo
+  // =========================
+
   if (logoImage) {
-    const logoX = innerX + (innerWidth - logoWidth) / 2;
+    const logoXOffset = isIllustrated ? 18 : 0;
+
+    const logoX =
+      innerX + (innerWidth - logoWidth) / 2 + logoXOffset;
+
     const logoY = Math.max(
       currentY + logoTopMargin,
       cardY + cardHeight - innerPaddingBottom - logoHeight - logoBottomMargin
