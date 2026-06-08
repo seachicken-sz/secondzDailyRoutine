@@ -120,7 +120,7 @@
   z-index: 100;
   width: min(82vw, 320px);
   height: 100dvh;
-  padding: calc(env(safe-area-inset-top) + 20px) 18px 24px;
+  padding: calc(env(safe-area-inset-top) + 20px) 0 12px 24px;
   background: var(--color-surface);
   box-shadow: -8px 0 24px rgba(0, 0, 0, 0.16);
   display: flex;
@@ -153,6 +153,7 @@
   -webkit-overflow-scrolling: touch;
 }
 .home-menu-accordion {
+   margin-right:12px;
   border-bottom: 1px solid var(--color-border-soft);
 }
 
