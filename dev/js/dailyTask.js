@@ -26,9 +26,9 @@ function bindDailyTaskEvents() {
       return;
     }
 
-    // 入力補助が必要なタスクの場合は、ページを開く前にコピー文を作成してクリップボードへ入れる
+    // 入力補助が必要なタスクの場合はコピー文をクリップボードへ入れる
     if (item["input-flag"] === true) {
-      const copyText = buildDailyTaskCopyText(item);
+      const copyText = item._preparedCopyText || "";
 
       // コピー文が作れた場合だけクリップボードへコピーする
       if (copyText) {
@@ -234,6 +234,12 @@ function renderCurrentDailyTask() {
       normalizeDisplayNewlines(
         item.comment || "ページを開いてタスクを完了してください。"
       );
+  }
+  // 入力補助が必要なタスクは、表示時点でコピー文を確定する
+  if (item["input-flag"] === true) {
+    item._preparedCopyText = buildDailyTaskCopyText(item);
+  } else {
+    item._preparedCopyText = "";
   }
 
   // URLがあるタスクの場合は「ページを開く」ボタンを表示
