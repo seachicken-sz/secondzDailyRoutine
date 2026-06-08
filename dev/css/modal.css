@@ -315,6 +315,23 @@
     0 0 0 3px var(--share-image-theme-border),
     var(--shadow-card);
 }
+
+.share-image-style-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--color-text-sub);
+}
+
+.share-image-style-checkbox-label.is-disabled {
+  opacity: 0.45;
+}
+
+.share-image-style-checkbox-label input:disabled {
+  cursor: not-allowed;
+}
+
 /* カラー定義 */
 .share-image-theme-button-red {
   --share-image-theme-color: #ef4444;
