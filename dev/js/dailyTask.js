@@ -241,6 +241,7 @@ function renderCurrentDailyTask() {
   } else {
     item._preparedCopyText = "";
   }
+  updateDailyTaskCopyPreview(item);
 
   // URLがあるタスクの場合は「ページを開く」ボタンを表示
   if (itemUrl) {
@@ -443,4 +444,31 @@ function getDailyTaskItemUrl(item) {
 
   // URLがあれば返し、なければ空文字
   return item.url || "";
+}
+
+function updateDailyTaskCopyPreview(item) {
+  const previewArea = document.getElementById("dailyTaskCopyPreviewArea");
+  const previewText = document.getElementById("dailyTaskCopyPreviewText");
+  const pasteTarget = document.getElementById("dailyTaskCopyPreviewPasteTarget");
+
+  if (!previewArea || !previewText || !pasteTarget) {
+    return;
+  }
+
+  const copyText = item?._preparedCopyText || "";
+  const requestInput = item?.["request-input"] || "";
+
+  if (item?.["input-flag"] !== true || !copyText) {
+    previewArea.classList.add("hidden");
+    previewText.textContent = "";
+    pasteTarget.textContent = "";
+    return;
+  }
+
+  previewText.textContent = copyText;
+  pasteTarget.textContent = requestInput
+    ? `${requestInput}にペーストしてください。`
+    : "指定の入力欄にペーストしてください。";
+
+  previewArea.classList.remove("hidden");
 }
