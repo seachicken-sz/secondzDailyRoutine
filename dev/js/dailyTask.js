@@ -467,7 +467,7 @@ function updateDailyTaskCopyPreview(item) {
 
   previewText.textContent = copyText;
   pasteTarget.textContent = requestInput
-    ? `${requestInput}にペーストしてください。`
+    ? `「${requestInput}」にペーストしてください。`
     : "指定の入力欄にペーストしてください。";
 
   previewArea.classList.remove("hidden");
