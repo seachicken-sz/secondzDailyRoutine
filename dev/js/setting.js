@@ -304,17 +304,17 @@ function closeFirstVisitModal() {
 
 function getBrowserDisplayName(browserType) {
   const browserNameMap = {
-    x_in_app: "X",
-    threads_in_app: "Threads",
-    line_in_app: "LINE",
-    instagram_in_app: "Instagram",
-    facebook_in_app: "Facebook",
-    chrome_ios: "Chrome",
-    chrome: "Chrome",
-    safari: "Safari",
-    edge: "Edge",
-    firefox: "Firefox",
-    other_browser: "その他のブラウザ",
+    x_in_app: "Xのリンクタップで開いた",
+    threads_in_app: "Threadsのリンクタップで開いた",
+    line_in_app: "LINEのリンクタップで開いた",
+    instagram_in_app: "Instagramのリンクタップで開いた",
+    facebook_in_app: "Facebookのリンクタップで開いた",
+    chrome_ios: "Chromeで開いている",
+    chrome: "Chromeで開いている",
+    safari: "Safariで開いている",
+    edge: "Edgeで開いている",
+    firefox: "Firefoxで開いている",
+    other_browser: "その他のブラウザで開いている",
   };
 
   return browserNameMap[browserType] || "その他のブラウザ";
@@ -332,5 +332,5 @@ function renderUserBrowserInfo() {
 
   const browserName = getBrowserDisplayName(browserType);
 
-  userBrowserElement.innerHTML = `たぶんあなたのブラウザは「<strong>${browserName}</strong>」です。`;
+  userBrowserElement.innerHTML = `たぶん今の状態は「<strong>${browserName}</strong>」です。`;
 }
