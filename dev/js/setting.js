@@ -294,9 +294,43 @@ function autoOpenFirstSetupModalIfNeeded() {
 }
 
 function openFirstVisitModal() {
+  renderUserBrowserInfo();
   firstVisitModalElement?.classList.remove("hidden");
 }
 
 function closeFirstVisitModal() {
   firstVisitModalElement?.classList.add("hidden");
+}
+
+function getBrowserDisplayName(browserType) {
+  const browserNameMap = {
+    x_in_app: "X",
+    threads_in_app: "Threads",
+    line_in_app: "LINE",
+    instagram_in_app: "Instagram",
+    facebook_in_app: "Facebook",
+    chrome_ios: "Chrome",
+    chrome: "Chrome",
+    safari: "Safari",
+    edge: "Edge",
+    firefox: "Firefox",
+    other_browser: "その他のブラウザ",
+  };
+
+  return browserNameMap[browserType] || "その他のブラウザ";
+}
+
+function renderUserBrowserInfo() {
+  if (!userBrowserElement) {
+    return;
+  }
+
+  const browserType =
+    typeof getAccessBrowserType === "function"
+      ? getAccessBrowserType()
+      : "other_browser";
+
+  const browserName = getBrowserDisplayName(browserType);
+
+  userBrowserElement.innerHTML = `たぶんあなたのブラウザは「<strong>${browserName}</strong>」です。`;
 }
