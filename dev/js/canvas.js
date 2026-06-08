@@ -139,15 +139,15 @@ const SHARE_IMAGE_THEMES = {
 };
 
 const SHARE_IMAGE_LOGO_PATHS = {
-  normal: "../img/logo/logo-normal.png",
-  red: "../img/logo/logo-red.png",
-  purple: "../img/logo/logo-purple.png",
-  green: "../img/logo/logo-green.png",
-  blue: "../img/logo/logo-blue.png",
-  lime: "../img/logo/logo-lime.png",
-  pink: "../img/logo/logo-pink.png",
-  yellow: "../img/logo/logo-yellow.png",
-  white: "../img/logo/logo-white.png",
+  normal: "../img/logo-normal.png",
+  red: "../img/logo-red.png",
+  purple: "../img/logo-purple.png",
+  green: "../img/logo-green.png",
+  blue: "../img/logo-blue.png",
+  lime: "../img/logo-lime.png",
+  pink: "../img/logo-pink.png",
+  yellow: "../img/logo-yellow.png",
+  white: "../img/logo-white.png",
 };
 
 const SHARE_IMAGE_FONT_FAMILY =
