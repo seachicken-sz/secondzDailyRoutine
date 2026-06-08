@@ -9,20 +9,22 @@
 // PWAとしてホーム画面から起動済みの場合、
 // ホーム画面の「まずはホーム画面に追加」カードを非表示にする
 function updateHomeInstallGuideVisibility() {
-  // 初回設定カードがHTMLに存在しない場合は何もしない
-  if (!homeInstallGuideCardElement) {
-    return;
-  }
+  const installGuideElements = [
+    homeInstallGuideCardElement,
+    homeInstallGuideMenuElement,
+  ];
 
-  // PWAとしてホーム画面から起動されているか判定する
-  // iOS Safariは navigator.standalone を使うため、両方チェックする
   const isStandalone =
     window.matchMedia("(display-mode: standalone)").matches ||
     window.navigator.standalone === true;
 
-  // PWA起動済みの場合は初回設定カードを非表示にする
-  // ブラウザ起動の場合は表示する
-  homeInstallGuideCardElement.classList.toggle("hidden", isStandalone);
+  installGuideElements.forEach((element) => {
+    if (!element) {
+      return;
+    }
+
+    element.classList.toggle("hidden", isStandalone);
+  });
 }
 
 // ==================================================
