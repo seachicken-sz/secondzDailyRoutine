@@ -62,8 +62,8 @@ const SHARE_IMAGE_THEMES = {
     muted: "#666666",
   },
 
-  blue: {
-    name: "blue",
+  sky: {
+    name: "sky",
     bg1: "#f0f9ff",
     bg2: "#38bdf8",
     brand: "#38bdf8",
@@ -148,35 +148,35 @@ const SHARE_IMAGE_LOGO_PATHS = {
   },
   red: {
     simple: "../img/logo-red.png",
-    illustrated: "../img/logo-red-illust.png",
+    illustrated: "../img/logo/logo-red-illust.png",
   },
   purple: {
     simple: "../img/logo-purple.png",
-    illustrated: "../img/logo-purple-illust.png",
+    illustrated: "../img/logo/logo-purple-illust.png",
   },
   green: {
     simple: "../img/logo-green.png",
-    illustrated: "../img/logo-green-illust.png",
+    illustrated: "../img/logo/logo-green-illust.png",
   },
-  blue: {
-    simple: "../img/logo-blue.png",
-    illustrated: "../img/logo-blue-illust.png",
+  sky: {
+    simple: "../img/logo-sky.png",
+    illustrated: "../img/logo/logo-sky-illust.png",
   },
   lime: {
     simple: "../img/logo-lime.png",
-    illustrated: "../img/logo-lime-illust.png",
+    illustrated: "../img/logo/logo-lime-illust.png",
   },
   pink: {
     simple: "../img/logo-pink.png",
-    illustrated: "../img/logo-pink-illust.png",
+    illustrated: "../img/logo/logo-pink-illust.png",
   },
   yellow: {
     simple: "../img/logo-yellow.png",
-    illustrated: "../img/logo-yellow-illust.png",
+    illustrated: "../img/logo/logo-yellow-illust.png",
   },
   white: {
     simple: "../img/logo-white.png",
-    illustrated: "../img/logo-white-illust.png",
+    illustrated: "../img/logo/logo-white-illust.png",
   },
 };
 
