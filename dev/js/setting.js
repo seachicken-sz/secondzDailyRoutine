@@ -289,6 +289,14 @@ function autoOpenFirstSetupModalIfNeeded() {
     return;
   }
 
-  openFirstSetupModal();
+  openFirstVisitModal();
   localStorage.setItem(STORAGE_KEYS.firstSetupModalShown, "true");
+}
+
+function openFirstVisitModal() {
+  firstVisitModalElement?.classList.remove("hidden");
+}
+
+function closeFirstVisitModal() {
+  firstVisitModalElement?.classList.add("hidden");
 }
