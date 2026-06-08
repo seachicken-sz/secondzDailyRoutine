@@ -850,7 +850,7 @@ async function openHomeExtraTaskPage(task, source) {
     renderHomeOnceMoreList(state.onceTasks || []);
   }
 
-  location.href = taskUrl;
+  openExternalTaskUrl(taskUrl);
 }
 
 function openHomeExtraTaskXPost(task, source) {
