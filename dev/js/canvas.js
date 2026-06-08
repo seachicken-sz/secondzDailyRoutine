@@ -350,11 +350,20 @@ function drawShareImageIllustratedBackground(ctx, width, height, theme) {
   // ベース背景
   // =========================
 
+  const isWhiteTheme = theme.name === "white";
+  
   const bgGradient = ctx.createLinearGradient(0, 0, width, height);
-  bgGradient.addColorStop(0, theme.bg2);
-  bgGradient.addColorStop(0.58, theme.brand);
-  bgGradient.addColorStop(1, theme.bg1);
-
+  
+  if (isWhiteTheme) {
+    bgGradient.addColorStop(0, "#ffffff");
+    bgGradient.addColorStop(0.55, "#f4f4f5");
+    bgGradient.addColorStop(1, "#e5e7eb");
+  } else {
+    bgGradient.addColorStop(0, theme.bg2);
+    bgGradient.addColorStop(0.58, theme.brand);
+    bgGradient.addColorStop(1, theme.bg1);
+  }
+  
   ctx.fillStyle = bgGradient;
   drawRoundRect(ctx, 0, 0, width, height, 28);
   ctx.fill();
@@ -610,7 +619,7 @@ async function drawShareImage(canvas, options = {}) {
   const logoPath = getShareImageLogoPath(themeKey, imageStyle);
   const logoImage = await loadImage(logoPath);
 
-  const logoWidth = 280;
+  const logoWidth = 380;
   const logoHeight = logoImage
     ? logoWidth * (logoImage.height / logoImage.width)
     : 0;
