@@ -35,6 +35,28 @@ function bindHomeEvents() {
   addClickEvent(homeBottomShareButtonElement, shareAppFromHome);
 
   // ==================================================
+  //ホームメニュー
+  // ==================================================
+  addClickEvent(homeMenuButtonElement, openHomeMenu);
+  addClickEvent(closeHomeMenuButtonElement, closeHomeMenu);
+  addClickEvent(homeMenuOverlayElement, closeHomeMenu);
+  
+  addClickEvent(homeMenuSetupButtonElement, () => {
+    closeHomeMenu();
+    openFirstSetupModal();
+  });
+  
+  addClickEvent(homeMenuUsageButtonElement, () => {
+    closeHomeMenu();
+    openUsageModal();
+  });
+  
+  addClickEvent(homeMenuShareButtonElement, () => {
+    closeHomeMenu();
+    openHomeShare();
+  });
+
+  // ==================================================
   // ホーム目次
   // ==================================================
   bindHomeIndexEvents();
@@ -1068,4 +1090,14 @@ function buildHomeDailyTaskCopyText(item) {
   return template
     .replaceAll("musicname", musicName)
     .replaceAll("\\n", "\n");
+}
+
+function openHomeMenu() {
+  homeMenuOverlayElement?.classList.remove("hidden");
+  homeSlideMenuElement?.classList.remove("hidden");
+}
+
+function closeHomeMenu() {
+  homeMenuOverlayElement?.classList.add("hidden");
+  homeSlideMenuElement?.classList.add("hidden");
 }
