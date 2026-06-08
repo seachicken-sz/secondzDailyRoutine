@@ -176,8 +176,8 @@
 }
 .home-menu-item i{
    color: var(--color-brand);
-   margin-right:0.25rem;
-   font-size:105%;
+   margin-right:0.5rem;
+   font-size:120%;
 }
 .home-menu-arrow {
   flex: 0 0 auto;
