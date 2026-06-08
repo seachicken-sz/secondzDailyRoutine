@@ -456,6 +456,7 @@ function renderHomeDailyExtraList(groups) {
     const hasUsenTasks = HOME_EXTRA_USEN_TASKS.length > 0;
     toggleHomeExtraSection(homeDailyExtraCardElement, hasUsenTasks);
     updateDailyStartedTodayClass();
+    updateHomeDailyJumpVisibility();
     return;
   }
 
@@ -511,9 +512,10 @@ function renderHomeDailyExtraList(groups) {
 
   const hasDailyTasks = HOME_EXTRA_DAILY_TASKS.length > 0;
   const hasUsenTasks = HOME_EXTRA_USEN_TASKS.length > 0;
-
+  
   toggleHomeExtraSection(homeDailyExtraCardElement, hasDailyTasks || hasUsenTasks);
   updateDailyStartedTodayClass();
+  updateHomeDailyJumpVisibility();
 }
 
 // ==================================================
@@ -558,6 +560,7 @@ function renderHomeUsenExtraList() {
     const hasDailyTasks = HOME_EXTRA_DAILY_TASKS.length > 0;
     toggleHomeExtraSection(homeDailyExtraCardElement, hasDailyTasks);
     updateDailyStartedTodayClass();
+    updateHomeDailyJumpVisibility();
     return;
   }
 
@@ -651,6 +654,7 @@ function renderHomeUsenExtraList() {
 
   toggleHomeExtraSection(homeDailyExtraCardElement, hasDailyTasks || hasUsenTasks);
   updateDailyStartedTodayClass();
+  updateHomeDailyJumpVisibility();
 }
 
 // ==================================================
@@ -1083,6 +1087,16 @@ function bindHomeMenuAccordionEvents() {
       }
     });
   });
+}
+
+function updateHomeDailyJumpVisibility() {
+  if (!homeDailyJumpAreaElement) {
+    return;
+  }
+
+  const shouldShow = isVisibleHomeSection("homeDailyExtraCard");
+
+  homeDailyJumpAreaElement.classList.toggle("hidden", !shouldShow);
 }
 
 // 通常ルートでUSENを実行したときも、ホームのおかわりDaily側USENを完了扱いにする
