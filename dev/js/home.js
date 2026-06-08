@@ -42,17 +42,17 @@ function bindHomeEvents() {
   addClickEvent(homeMenuOverlayElement, closeHomeMenu);
 
   bindHomeMenuAccordionEvents();
-  
+
   addClickEvent(homeMenuSetupButtonElement, () => {
     closeHomeMenu();
     openFirstSetupModal();
   });
-  
+
   addClickEvent(homeMenuUsageButtonElement, () => {
     closeHomeMenu();
     openUsageModal();
   });
-  
+
   addClickEvent(homeMenuShareButtonElement, () => {
     closeHomeMenu();
     shareAppFromHome();
@@ -323,6 +323,14 @@ function createHomeExtraTaskDetail({ task, source, index }) {
   comment.className = "notice-box home-extra-task-comment";
   comment.textContent = normalizeDisplayNewlines(getHomeExtraTaskComment(task, source));
 
+  if (source === "daily" && task["input-flag"] === true) {
+    task._preparedHomeCopyText = buildHomeDailyTaskCopyText(task);
+  } else {
+    task._preparedHomeCopyText = "";
+  }
+
+  const copyPreview = createHomeDailyTaskCopyPreview(task, source);
+
   const actionArea = document.createElement("div");
   actionArea.className = "home-extra-task-actions";
 
@@ -361,12 +369,59 @@ function createHomeExtraTaskDetail({ task, source, index }) {
   actionArea.appendChild(shareThreadsButton);
 
   body.appendChild(comment);
+
+  if (copyPreview) {
+    body.appendChild(copyPreview);
+  }
+
   body.appendChild(actionArea);
 
   details.appendChild(summary);
   details.appendChild(body);
 
   return details;
+}
+
+// おかわりDaily用：コピー内容プレビューDOMを作る
+function createHomeDailyTaskCopyPreview(task, source) {
+  if (source !== "daily") {
+    return null;
+  }
+
+  if (task?.["input-flag"] !== true) {
+    return null;
+  }
+
+  const copyText = task._preparedHomeCopyText || "";
+
+  if (!copyText) {
+    return null;
+  }
+
+  const requestInput = task["request-input"] || "";
+
+  const previewArea = document.createElement("div");
+  previewArea.className = "daily-task-copy-preview";
+
+  const beforeNote = document.createElement("p");
+  beforeNote.className = "daily-task-copy-preview-note";
+  beforeNote.textContent = "「ページを開く」を押すと以下がコピーされます。";
+
+  const previewText = document.createElement("div");
+  previewText.className = "daily-task-copy-preview-text";
+  previewText.textContent = copyText;
+
+  const afterNote = document.createElement("p");
+  afterNote.className = "daily-task-copy-preview-note";
+  afterNote.textContent = requestInput
+    ? `${requestInput}にペーストしてください。`
+    : "指定の入力欄にペーストしてください。";
+
+  previewArea.appendChild(beforeNote);
+  previewArea.appendChild(previewText);
+  previewArea.appendChild(afterNote);
+
+  return previewArea;
 }
 
 // 今日、daily系グループが1つ以上完了しているかをbodyクラスへ反映する
@@ -721,9 +776,9 @@ async function openHomeExtraTaskPage(task, source) {
     return;
   }
 
-  // デイリーで入力補助が必要な場合は、ホーム用の曲名でコピーする
+  // デイリーで入力補助が必要な場合は、表示時点で確定済みのコピー文を使う
   if (source === "daily" && task["input-flag"] === true) {
-    const copyText = buildHomeDailyTaskCopyText(task);
+    const copyText = task._preparedHomeCopyText || "";
 
     if (copyText) {
       try {
@@ -898,6 +953,7 @@ function initializeHomeRequestSongSelect() {
     state.homeSelectedRequestSong = null;
     homeRequestSongSelectAreaElement.classList.add("hidden");
     renderHomeUsenExtraList();
+    renderHomeDailyExtraList(state.dailyGroups || []);
     return;
   }
 
@@ -930,6 +986,7 @@ function initializeHomeRequestSongSelect() {
 
   homeRequestSongSelectAreaElement.classList.remove("hidden");
   renderHomeUsenExtraList();
+  renderHomeDailyExtraList(state.dailyGroups || []);
 }
 
 function bindHomeRequestSongSelectEvents() {
@@ -942,12 +999,12 @@ function bindHomeRequestSongSelectEvents() {
 
     if (Number.isNaN(selectedIndex)) {
       state.homeSelectedRequestSong = null;
-      renderHomeUsenExtraList();
-      return;
+    } else {
+      state.homeSelectedRequestSong = state.requestSongs[selectedIndex] || null;
     }
 
-    state.homeSelectedRequestSong = state.requestSongs[selectedIndex] || null;
     renderHomeUsenExtraList();
+    renderHomeDailyExtraList(state.dailyGroups || []);
   });
 }
 
