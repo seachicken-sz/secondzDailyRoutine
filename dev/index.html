@@ -978,43 +978,68 @@
     </div>
   </div>
 
+   <!--ブラウザ初回モーダル-->
   <div id="firstVisitModal" class="modal-overlay hidden">
-  <div class="modal-content firstvisit-modal-content" role="dialog" aria-modal="true" aria-labelledby="firstVisitModalTitle">
-    <div class="modal-header">
-      <h2 id="firstVisitModalTitle">はじめての方へ</h2>
-      <button type="button" id="closeFirstVisitModalButton" class="modal-close-button" aria-label="閉じる">×</button>
-    </div>
-
-    <!--初回設定モーダル-->
-    <div class="modal-body setup-modal-body">
-      <section class="setup-intro-card">
-        <p class="setup-intro-title">タムごとDailyへようこそ！</p>
-        <p class="setup-intro-text">
-          3分間だけ時間をください！推し活全部終わらせよう！
+    <div class="modal-content firstvisit-modal-content" role="dialog" aria-modal="true" aria-labelledby="firstVisitModalTitle">
+      <div class="modal-header">
+        <h2 id="firstVisitModalTitle">はじめての方へ</h2>
+        <button type="button" id="closeFirstVisitModalButton" class="modal-close-button" aria-label="閉じる">×</button>
+      </div>
+  
+      <div class="modal-body setup-modal-body">
+        <section class="setup-intro-card">
+          <p class="setup-intro-title">タムごとDailyへようこそ！</p>
+          <p class="setup-intro-text">
+            3分間だけ時間をください！推し活全部終わらせよう！
+          </p>
+        </section>
+        <p>
+          このツールではSpotifyで1曲聞いている間に<br>
+          <strong>ラジオリクエスト・USEN推し活リクエスト</strong>など、<br>
+          日々の推し活を一気に終わらせることができます！<br>
+          <br>
+          ラジオリクエスト、USEN推しリクを頑張ると<br>
+          <strong>timeleszの曲がもっと街中で流れるようになるかも……？</strong><br>
+          <br>
+          その日のテンションと時間に合わせて楽しく推し活していきましょう！
         </p>
-      </section>
-      <p>
-        このツールではSpotifyで1曲聞いている間に<br>
-        <strong>ラジオリクエスト・USEN推し活リクエスト</strong>など、<br>
-        日々の推し活を一気に終わらせることができます！<br>
-        <br>
-        ラジオリクエスト、USEN推しリクを頑張ると<br>
-        <strong>timeleszの曲がもっと街中で流れるようになるかも……？</strong><br>
-        <br>
-        その日のテンションと時間に合わせて楽しく推し活していきましょう！
-      </p>
-      <p>まずはこのツールを、<br>
-        <strong>スマホのホーム画面に追加</strong>から始めましょう！</p>
-      <button type="button" class="primary-button" id="firstVisitOpenSetupButton">
-        始める
-      </button>
-      <button type="button" class="text-link-button" id="firstVisitCloseOnlyButton">
-        閉じる
-      </button>
+        <p>まずはこのツールを、<br>
+          <strong>スマホのホーム画面に追加</strong>から始めましょう！</p>
+        <button type="button" class="primary-button" id="firstVisitOpenSetupButton">
+          始める
+        </button>
+        <button type="button" class="text-link-button" id="firstVisitCloseOnlyButton">
+          閉じる
+        </button>
+      </div>
     </div>
   </div>
-</div>
+  <!--PWA初回モーダル-->
+  <div id="pwaFirstVisitModal" class="modal-overlay hidden">
+    <div class="modal-content firstvisit-modal-content" role="dialog" aria-modal="true" aria-labelledby="pwaFirstVisitModalTitle">
+      <div class="modal-header">
+        <h2 id="pwaFirstVisitModalTitle">タムごとDailyにようこそ！</h2>
+        <button type="button" id="closePwaFirstVisitModalButton" class="modal-close-button" aria-label="閉じる">×</button>
+      </div>
+      <div class="modal-body setup-modal-body">
+        <p>
+          <strong>ホーム画面に追加完了です！</strong><br>
+          お疲れ様でした！<br>
+          <br>
+          <strong>では早速始めて行きましょう！</strong>
+        </p>
   
+        <button type="button" class="primary-button" id="pwaFirstVisitOpenUsageButton">
+          使い方を見てから始める
+        </button>
+  
+        <button type="button" class="secondary-button" id="pwaFirstVisitCloseOnlyButton">
+          このままはじめる
+        </button>
+      </div>
+    </div>
+  </div>
+    
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.js"></script>
 <!-- 基本・共通 -->
 <script src="./js/config.js" defer></script>
