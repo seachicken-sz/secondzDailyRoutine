@@ -495,7 +495,10 @@ async function drawShareImage(canvas, options = {}) {
 
   if (logoImage) {
     const logoX = innerX + (innerWidth - logoWidth) / 2;
-    const logoY = currentY + logoTopMargin;
+    const logoY = Math.max(
+        currentY + logoTopMargin,
+        cardY + cardHeight - innerPaddingBottom - logoHeight - logoBottomMargin
+      );
 
     ctx.drawImage(
       logoImage,
