@@ -140,6 +140,9 @@
   font-size: 13px;
   line-height: 1.7;
 }
+#usageModal img{
+   border-radius:16px;
+}
 /* =========================
    モーダルYouTube
 ========================= */
