@@ -180,8 +180,14 @@ const SHARE_IMAGE_LOGO_PATHS = {
   },
 };
 
-const SHARE_IMAGE_FONT_FAMILY =
+const SHARE_IMAGE_SIMPLE_FONT_FAMILY =
   "'Hiragino Maru Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif";
+
+const SHARE_IMAGE_ILLUSTRATED_FONT_FAMILY =
+  "'Yomogi', 'Hiragino Maru Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif";
+
+const SHARE_IMAGE_ILLUSTRATED_TITLE_FONT_FAMILY =
+  "'Hachi Maru Pop', 'Yomogi', 'Hiragino Maru Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif";
 
 function loadImage(src) {
   return new Promise((resolve) => {
@@ -351,9 +357,9 @@ function drawShareImageIllustratedBackground(ctx, width, height, theme) {
   // =========================
 
   const isWhiteTheme = theme.name === "white";
-  
+
   const bgGradient = ctx.createLinearGradient(0, 0, width, height);
-  
+
   if (isWhiteTheme) {
     bgGradient.addColorStop(0, "#ffffff");
     bgGradient.addColorStop(0.55, "#f4f4f5");
@@ -363,7 +369,7 @@ function drawShareImageIllustratedBackground(ctx, width, height, theme) {
     bgGradient.addColorStop(0.58, theme.brand);
     bgGradient.addColorStop(1, theme.bg1);
   }
-  
+
   ctx.fillStyle = bgGradient;
   drawRoundRect(ctx, 0, 0, width, height, 28);
   ctx.fill();
@@ -447,7 +453,9 @@ function drawShareImageIllustratedBackground(ctx, width, height, theme) {
   // テーマ色の薄い丸
   // =========================
 
-  ctx.fillStyle = hexToRgba(theme.brand, 0.16);
+  ctx.fillStyle = isWhiteTheme
+    ? "rgba(17, 24, 39, 0.06)"
+    : hexToRgba(theme.brand, 0.16);
 
   ctx.beginPath();
   ctx.arc(width - 56, height - 52, 46, 0, Math.PI * 2);
@@ -458,10 +466,12 @@ function drawShareImageIllustratedBackground(ctx, width, height, theme) {
   ctx.fill();
 
   // =========================
-  // 白ドット
+  // ドット
   // =========================
 
-  ctx.fillStyle = "rgba(255, 255, 255, 0.58)";
+  ctx.fillStyle = isWhiteTheme
+    ? "rgba(17, 24, 39, 0.12)"
+    : "rgba(255, 255, 255, 0.58)";
 
   const dots = [
     [42, 42, 3],
@@ -484,7 +494,9 @@ function drawShareImageIllustratedBackground(ctx, width, height, theme) {
   // キラキラ
   // =========================
 
-  ctx.strokeStyle = "rgba(255, 255, 255, 0.62)";
+  ctx.strokeStyle = isWhiteTheme
+    ? "rgba(17, 24, 39, 0.16)"
+    : "rgba(255, 255, 255, 0.62)";
   ctx.lineWidth = 1.4;
 
   drawSparkle(ctx, 304, 72, 8);
@@ -549,6 +561,15 @@ async function drawShareImage(canvas, options = {}) {
   const theme = getShareImageTheme(themeKey);
   const imageStyle = getShareImageStyle(themeKey, options.imageStyle);
   const isIllustrated = imageStyle === "illustrated";
+
+  const fontFamily = isIllustrated
+    ? SHARE_IMAGE_ILLUSTRATED_FONT_FAMILY
+    : SHARE_IMAGE_SIMPLE_FONT_FAMILY;
+
+  const titleFontFamily = isIllustrated
+    ? SHARE_IMAGE_ILLUSTRATED_TITLE_FONT_FAMILY
+    : SHARE_IMAGE_SIMPLE_FONT_FAMILY;
+
   const items = buildShareImageDisplayItems(options);
 
   // CSS preview: 390 x 487 を高解像度化
@@ -592,7 +613,7 @@ async function drawShareImage(canvas, options = {}) {
 
   const measureCanvas = document.createElement("canvas");
   const measureCtx = measureCanvas.getContext("2d");
-  measureCtx.font = `500 ${itemFontSize}px ${SHARE_IMAGE_FONT_FAMILY}`;
+  measureCtx.font = `500 ${itemFontSize}px ${fontFamily}`;
 
   const itemHeights = items.map((item) => {
     const text = String(item || "").trim();
@@ -619,7 +640,7 @@ async function drawShareImage(canvas, options = {}) {
   const logoPath = getShareImageLogoPath(themeKey, imageStyle);
   const logoImage = await loadImage(logoPath);
 
-  const logoWidth = 360;
+  const logoWidth = 330;
   const logoHeight = logoImage
     ? logoWidth * (logoImage.height / logoImage.width)
     : 0;
@@ -673,7 +694,7 @@ async function drawShareImage(canvas, options = {}) {
   ctx.restore();
 
   ctx.strokeStyle = isIllustrated
-    ? hexToRgba(theme.brand, 0.34)
+    ? hexToRgba(theme.brand, theme.name === "white" ? 0.18 : 0.34)
     : hexToRgba(theme.border, 0.92);
   ctx.lineWidth = 1;
   drawRoundRect(ctx, cardX, cardY, cardWidth, cardHeight, 24);
@@ -683,12 +704,12 @@ async function drawShareImage(canvas, options = {}) {
   // Head Wrap
   // =========================
 
-  ctx.font = `600 14px ${SHARE_IMAGE_FONT_FAMILY}`;
+  ctx.font = `600 14px ${fontFamily}`;
   ctx.fillStyle = hexToRgba(theme.accentText, 0.6);
   ctx.fillText(options.dateText || "", innerX, innerY);
 
   const label = "Today's Log";
-  ctx.font = `600 13px ${SHARE_IMAGE_FONT_FAMILY}`;
+  ctx.font = `600 13px ${fontFamily}`;
   ctx.fillStyle = theme.accent;
   const labelWidth = ctx.measureText(label).width;
   ctx.fillText(label, innerX + innerWidth - labelWidth, innerY);
@@ -697,7 +718,7 @@ async function drawShareImage(canvas, options = {}) {
   // Title
   // =========================
 
-  ctx.font = `600 24px ${SHARE_IMAGE_FONT_FAMILY}`;
+  ctx.font = `600 24px ${titleFontFamily}`;
   ctx.fillStyle = theme.text;
   ctx.fillText(options.title || "タスク完了！", innerX, titleY);
 
@@ -727,7 +748,7 @@ async function drawShareImage(canvas, options = {}) {
     // チェックマーク
     ctx.save();
     ctx.fillStyle = theme.surfaceSoft;
-    ctx.font = `700 13px ${SHARE_IMAGE_FONT_FAMILY}`;
+    ctx.font = `700 13px ${fontFamily}`;
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText("✓", checkX + checkSize / 2, checkY + checkSize / 2 + 0.5);
@@ -735,7 +756,7 @@ async function drawShareImage(canvas, options = {}) {
 
     // テキスト
     ctx.fillStyle = theme.subText;
-    ctx.font = `500 ${itemFontSize}px ${SHARE_IMAGE_FONT_FAMILY}`;
+    ctx.font = `500 ${itemFontSize}px ${fontFamily}`;
     ctx.textAlign = "left";
     ctx.textBaseline = "top";
 
