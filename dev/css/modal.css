@@ -104,7 +104,7 @@
 }
 
 .modal-detail-body {
-  padding: 12px 0;
+  padding: 12px 0 0;
   color: var(--color-text-sub);
   font-size: 0.9rem;
   line-height: 1.7;
@@ -112,6 +112,9 @@
 
 .modal-detail-body p {
   margin: 0;
+}
+.modal-detail-body img{
+   border-radius:16px;
 }
 /* =========================
    モーダル　使用方法
@@ -602,9 +605,4 @@
 
 #firstVisitModal p{
    text-align:center;
-}
-
-
-#usageModal img{
-   border-radius:16px;
 }
