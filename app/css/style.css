@@ -1,0 +1,403 @@
+:root {
+  /* =========================
+     テーマ：デフォルト
+  ========================= */
+  /* Brand / Accent */
+  --color-brand: #02b9a5;
+  --color-brand-soft: #ecfff3;
+  --color-brand-border: #bdebcf;
+  --color-accent: #00b7c2;
+  --color-accent-text: #1b6b3a;
+  /* Page / Surface */
+  --color-page-bg: #f6f6f6;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f2f2f2;
+  --color-surface-accent: #f4fffc;
+  --color-surface-danger: #fff0f0;
+  --color-surface-media: #eaeaea;
+  /* Text */
+  --color-text: #222;
+  --color-text-sub: #333;
+  --color-text-muted: #666;
+  --color-text-description: #555;
+  --color-text-inverse: #ffffff;
+  /* Link */
+  --color-link: #5ea999;
+  --color-link-hover: #4d8f81;
+  /* Border */
+  --color-border: #ddd;
+  --color-border-soft: #d9d9d9;
+  --color-border-light: #eee;
+  --color-border-accent: #d7efe8;
+  /* Button */
+  --color-button-gray-bg: #e5e7eb;
+  --color-button-gray-text: #6b7280;
+  /* Status */
+  --color-danger: #b00020;
+  /* Overlay */
+  --color-overlay: rgba(0, 0, 0, 0.42);
+  --color-transparent: transparent;
+  /* Shadow */
+  --shadow-card: 0 4px 14px rgba(0, 0, 0, 0.06);
+  --shadow-card-soft: 0 4px 14px rgba(0, 0, 0, 0.04);
+  --shadow-card-strong: 0 4px 14px rgba(0, 0, 0, 0.241);
+  --shadow-modal: 0 10px 32px rgba(0, 0, 0, 0.22);
+  /* Radius */
+  --radius-card: 16px;
+  --radius-button: 999px;
+}
+
+/* =========================
+   テーマ：勝利
+========================= */
+:root[data-theme="red"] {
+  --color-brand: #ef4444;
+  --color-brand-soft: #fff1f2;
+  --color-brand-border: #fecdd3;
+  --color-accent: #f43f5e;
+  --color-accent-text: #991b1b;
+  --color-link: #dc2626;
+  --color-link-hover: #b91c1c;
+  --color-surface-accent: #fff1f2;
+  --color-border-accent: #fecdd3;
+}
+
+/* =========================
+   テーマ：風磨
+========================= */
+:root[data-theme="purple"] {
+  --color-brand: #8b5cf6;
+  --color-brand-soft: #f5f3ff;
+  --color-brand-border: #ddd6fe;
+  --color-accent: #a78bfa;
+  --color-accent-text: #5b21b6;
+  --color-link: #7c3aed;
+  --color-link-hover: #6d28d9;
+  --color-surface-accent: #f5f3ff;
+  --color-border-accent: #ddd6fe;
+}
+
+/* =========================
+   テーマ：聡ちゃん
+========================= */
+:root[data-theme="green"] {
+  --color-brand: #22c55e;
+  --color-brand-soft: #f0fdf4;
+  --color-brand-border: #bbf7d0;
+  --color-accent: #16a34a;
+  --color-accent-text: #166534;
+  --color-link: #16a34a;
+  --color-link-hover: #15803d;
+  --color-surface-accent: #f0fdf4;
+  --color-border-accent: #bbf7d0;
+}
+
+/* =========================
+   テーマ：寺
+========================= */
+:root[data-theme="sky"] {
+  --color-brand: #38bdf8;
+  --color-brand-soft: #f0f9ff;
+  --color-brand-border: #bae6fd;
+  --color-accent: #0ea5e9;
+  --color-accent-text: #075985;
+  --color-link: #0284c7;
+  --color-link-hover: #0369a1;
+  --color-surface-accent: #f0f9ff;
+  --color-border-accent: #bae6fd;
+}
+
+/* =========================
+   テーマ：原ちゃん
+========================= */
+:root[data-theme="lime"] {
+  --color-brand: #84cc16;
+  --color-brand-soft: #f7fee7;
+  --color-brand-border: #d9f99d;
+  --color-accent: #65a30d;
+  --color-accent-text: #365314;
+  --color-link: #65a30d;
+  --color-link-hover: #4d7c0f;
+  --color-surface-accent: #f7fee7;
+  --color-border-accent: #d9f99d;
+}
+
+/* =========================
+   テーマ：将生
+========================= */
+:root[data-theme="pink"] {
+  --color-brand: #f472b6;
+  --color-brand-soft: #fff0f7;
+  --color-brand-border: #f9c5df;
+  --color-accent: #fb7185;
+  --color-accent-text: #9d174d;
+  --color-link: #db2777;
+  --color-link-hover: #be185d;
+  --color-surface-accent: #fff5f9;
+  --color-border-accent: #f9c5df;
+}
+/* =========================
+   テーマ：周杜
+========================= */
+:root[data-theme="yellow"] {
+  --color-brand: #ffde22;
+  --color-brand-soft: #fefce8;
+  --color-brand-border: #fde68a;
+  --color-accent: #eab308;
+  --color-accent-text: #713f12;
+  --color-link: #ca8a04;
+  --color-link-hover: #a16207;
+  --color-surface-accent: #fefce8;
+  --color-border-accent: #fde68a;
+}
+
+/* =========================
+   テーマ：しの
+========================= */
+:root[data-theme="white"] {
+  --color-brand: #666666;
+  --color-brand-soft: #ffffff;
+  --color-brand-border: #666666;
+  --color-accent: #666666;
+  --color-accent-text: #666666;
+  --color-page-bg: #f6f6f6;
+  --color-surface: #ffffff;
+  --color-text: #111827;
+  --color-text-sub: #434343;
+  --color-text-muted: #4b5563;
+  --color-text-description: #374151;
+  --color-link: #111827;
+  --color-link-hover: #000000;
+  --color-border-accent: #666666;
+  --shadow-card: none;
+  --shadow-card-soft: none;
+  --shadow-card-strong: none;
+}
+:root[data-theme="white"] .post-preview-tab.active,
+:root[data-theme="white"] .primary-button {
+  box-shadow: inset 0 0 0 1px var(--color-border-soft);
+  background: var(--color-brand);
+  color: var(--color-text-inverse);
+}
+:root[data-theme="white"] .selected-area,
+:root[data-theme="white"] .check-control-area,
+:root[data-theme="white"] .home-card,
+:root[data-theme="white"] .request-ranking-card {
+  box-shadow: 0 0px 2px var(--color-border-soft);
+}
+:root[data-theme="white"] .home-list-box,
+:root[data-theme="white"] .request-ranking-item,
+:root[data-theme="white"] .song-6f6f6button,
+:root[data-theme="white"] .accordion-button,
+:root[data-theme="white"] .check-item {
+  border-color: var(--color-border);
+}
+:root[data-theme="white"] .song-button.selected,
+:root[data-theme="white"] .theme-button.active,
+:root[data-theme="white"] .request-ranking-rank {
+  border-color: var(--color-brand);
+  background: var(--color-surface);
+  color: var(--color-brand);
+}
+:root[data-theme="white"] .post-preview-tabs {
+  background: var(--color-page-bg);
+}
+
+/* =========================
+   共通 - 画面設定
+========================= */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--color-page-bg);
+  color: var(--color-text);
+}
+.app {
+  width: min(100%, 720px);
+  height: 100dvh;
+  margin: 0 auto;
+  padding: 0px;
+  overflow: hidden;
+}
+/*タイトル表示*/
+.header {
+  flex-shrink: 0;
+  margin-bottom: 14px;
+}
+/*メインコンテンツ表示*/
+.step-screen {
+  height: calc(100% - 60px);
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 18px 12px;
+}
+
+/* =========================
+   共通 - パーツ
+========================= */
+h1 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.4;
+}
+.description {
+  margin: 10px 0 0;
+  color: var(--color-text-description);
+  line-height: 1.7;
+}
+.selected-area,
+.task-card {
+  flex-shrink: 0;
+  margin: 0 0 14px;
+  padding: 16px;
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+.primary-button,
+.secondary-button,
+.gray-button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px 16px;
+  border-radius: var(--radius-button);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.primary-button {
+  border: none;
+  background: var(--color-brand);
+  color: var(--color-text-inverse);
+}
+.secondary-button {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+.gray-button {
+  border: 1px solid var(--color-border);
+  background: var(--color-button-gray-bg);
+  color: var(--color-button-gray-text);
+}
+.gray-button:active {
+  transform: scale(0.98);
+}
+.gray-button:disabled {
+  opacity: 0.7;
+}
+.no-margin-button {
+  margin-top: 0;
+}
+.button-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.compact-button {
+  margin-top: 0;
+  border-radius: 14px;
+}
+.accordion-button {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 17px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.accordion-content {
+  margin-top: 12px;
+}
+.check-control-area {
+  margin: 0 0 14px;
+  padding: 16px;
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+.check-list {
+  display: grid;
+  gap: 10px;
+}
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-surface);
+  cursor: pointer;
+}
+.check-item input {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.check-item-name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.bottom-action-area {
+  margin: 14px 0 20px;
+  padding: 10px 16px 16px 16px;
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+.group-label {
+  margin: 0 0 8px;
+  color: var(--color-brand);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* =========================
+   Feedback
+========================= */
+.feedback-card {
+  margin-top: 16px;
+}
+.feedback-text {
+  margin: 0 0 16px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--color-text-description);
+}
+.feedback-link-button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+.error-area {
+  flex-shrink: 0;
+  margin: 0 0 14px;
+  padding: 14px;
+  border-radius: 12px;
+  background: var(--color-surface-danger);
+  color: var(--color-danger);
+  line-height: 1.6;
+}
+
+
+
+
+
+
