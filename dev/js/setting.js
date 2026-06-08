@@ -263,3 +263,32 @@ function scrollSetupGuideIntoView(targetElement) {
     });
   }, 80);
 }
+
+function isStandaloneMode() {
+  return (
+    window.matchMedia("(display-mode: standalone)").matches ||
+    window.navigator.standalone === true
+  );
+}
+
+function openFirstSetupModal() {
+  if (howToModalElement) {
+    howToModalElement.classList.remove("hidden");
+  }
+}
+
+function shouldAutoOpenFirstSetupModal() {
+  const alreadyShown =
+    localStorage.getItem(STORAGE_KEYS.firstSetupModalShown) === "true";
+
+  return !isStandaloneMode() && !alreadyShown;
+}
+
+function autoOpenFirstSetupModalIfNeeded() {
+  if (!shouldAutoOpenFirstSetupModal()) {
+    return;
+  }
+
+  openFirstSetupModal();
+  localStorage.setItem(STORAGE_KEYS.firstSetupModalShown, "true");
+}
