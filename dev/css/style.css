@@ -220,7 +220,7 @@ body {
   color: var(--color-text);
 }
 .app {
-  width: min(100%, 720px);
+  width: min(100%, 820px);
   height: 100dvh;
   margin: 0 auto;
   padding: 0px;
