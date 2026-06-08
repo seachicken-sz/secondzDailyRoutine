@@ -414,7 +414,7 @@ function createHomeDailyTaskCopyPreview(task, source) {
   const afterNote = document.createElement("p");
   afterNote.className = "daily-task-copy-preview-note";
   afterNote.textContent = requestInput
-    ? `${requestInput}にペーストしてください。`
+    ? `「${requestInput}」にペーストしてください。`
     : "指定の入力欄にペーストしてください。";
 
   previewArea.appendChild(beforeNote);
