@@ -94,6 +94,8 @@ async function init() {
     await restoreFlowStateOrHome();
     // ブラウザアクセスかつ初回のみ初回設定モーダル表示
     autoOpenFirstSetupModalIfNeeded();
+    //PWA用初回モーダル表示
+    autoOpenPwaFirstVisitModalIfNeeded();
     } catch (error) {
       // 初期化中に何か失敗した場合は、最低限ホームが壊れないようにする
       console.error(error);
