@@ -49,22 +49,46 @@
     </div>
     <!--ホーム-->
     <section id="homeStep" class="step-screen">
-      <button id="homeMenuButton" class="home-menu-button" type="button" aria-label="メニューを開く">
-        <i class="bi bi-list"></i>
-      </button>
-      
-      <div id="homeMenuOverlay" class="home-menu-overlay hidden"></div>
-      
+      <!--メニュー画面-->
       <nav id="homeSlideMenu" class="home-slide-menu hidden" aria-label="ホームメニュー">
-        <button id="closeHomeMenuButton" class="home-menu-close-button" type="button" aria-label="メニューを閉じる">
-          ×
-        </button>
+        <button id="closeHomeMenuButton" class="home-menu-close-button" type="button" aria-label="メニューを閉じる">×</button>
       
         <h2 class="home-menu-title">メニュー</h2>
       
-        <button type="button" class="home-menu-item" id="homeMenuSetupButton">初回設定</button>
-        <button type="button" class="home-menu-item" id="homeMenuUsageButton">使い方</button>
-        <button type="button" class="home-menu-item" id="homeMenuShareButton">このツールを共有</button>
+        <div class="home-menu-scroll">
+          <section class="home-menu-accordion">
+            <button type="button" class="home-menu-item" data-home-menu-accordion="setup">
+              <span>初回設定</span>
+              <span class="home-menu-arrow">＋</span>
+            </button>
+            <div class="home-menu-detail hidden" data-home-menu-detail="setup">
+              <p>ホーム画面に追加する方法を確認できます。ブラウザで開いている人は最初にここを見るのがおすすめです。</p>
+              <button type="button" class="text-link-button" id="homeMenuSetupButton">初回設定を開く</button>
+            </div>
+          </section>
+      
+          <section class="home-menu-accordion">
+            <button type="button" class="home-menu-item" data-home-menu-accordion="usage">
+              <span>使い方</span>
+              <span class="home-menu-arrow">＋</span>
+            </button>
+            <div class="home-menu-detail hidden" data-home-menu-detail="usage">
+              <p>Spotify、USEN、デイリータスク、SNSシェアまでの流れを確認できます。</p>
+              <button type="button" class="text-link-button" id="homeMenuUsageButton">使い方を開く</button>
+            </div>
+          </section>
+      
+          <section class="home-menu-accordion">
+            <button type="button" class="home-menu-item" data-home-menu-accordion="share">
+              <span>このツールを共有</span>
+              <span class="home-menu-arrow">＋</span>
+            </button>
+            <div class="home-menu-detail hidden" data-home-menu-detail="share">
+              <p>タムごとDailyをSNSやDMで共有できます。布教用にどうぞ。</p>
+              <button type="button" class="text-link-button" id="homeMenuShareButton">共有する</button>
+            </div>
+          </section>
+        </div>
       </nav>
       <!--
       <div id="home-top-share-btn-wrap">
