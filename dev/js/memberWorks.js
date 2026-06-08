@@ -185,7 +185,7 @@ function createYoutubeModalButtonHtml(group) {
       </span>
 
       <span class="member-work-link-arrow" aria-hidden="true">
-        ›
+        <i class="bi bi-chevron-right"></i>
       </span>
     </a>
   `;
