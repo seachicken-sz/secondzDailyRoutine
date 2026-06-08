@@ -503,7 +503,6 @@ function renderHomeUsenExtraList() {
     const hasDailyTasks = HOME_EXTRA_DAILY_TASKS.length > 0;
     toggleHomeExtraSection(homeDailyExtraCardElement, hasDailyTasks);
     updateDailyStartedTodayClass();
-    updateHomeIndex();
     return;
   }
 
@@ -615,7 +614,6 @@ function renderHomeOnceMoreList(tasks) {
 
   if (executableTasks.length === 0) {
     toggleHomeExtraSection(homeOnceMoreCardElement, false);
-    updateHomeIndex();
     return;
   }
 
@@ -633,7 +631,6 @@ function renderHomeOnceMoreList(tasks) {
   });
 
   toggleHomeExtraSection(homeOnceMoreCardElement, true);
-  updateHomeIndex();
 }
 
 function getExecutableHomeOnceMoreTasks(tasks) {
