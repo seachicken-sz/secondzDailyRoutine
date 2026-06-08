@@ -59,11 +59,6 @@ function bindHomeEvents() {
   });
 
   // ==================================================
-  // ホーム目次
-  // ==================================================
-  bindHomeIndexEvents();
-
-  // ==================================================
   // おかわりDaily直行リンク
   // ==================================================
   bindHomeDailyJumpEvents();
@@ -123,79 +118,6 @@ async function shareAppFromHome() {
   }
 }
 
-// ==================================================
-// ホーム目次
-// ==================================================
-
-// ホーム目次を現在存在するホーム内セクションから作る
-function updateHomeIndex() {
-  if (!homeIndexListElement) {
-    return;
-  }
-
-  const indexItems = [];
-
-  if (isVisibleHomeSection("homeDailyExtraCard")) {
-    indexItems.push({
-      label: "おかわりDaily",
-      targetId: "homeDailyExtraCard",
-    });
-  }
-
-  if (isVisibleHomeSection("homeOnceMoreCard")) {
-    indexItems.push({
-      label: "期間限定",
-      targetId: "homeOnceMoreCard",
-    });
-  }
-
-  if (isVisibleHomeSection("homeInfoCard")) {
-    indexItems.push({
-      label: "最近のタムごと",
-      targetId: "homeInfoCard",
-    });
-  }
-
-  homeIndexListElement.innerHTML = "";
-
-  if (indexItems.length === 0) {
-    homeIndexListElement.innerHTML = `<p class="empty-text">表示できる項目はありません。</p>`;
-    return;
-  }
-
-  indexItems.forEach((item) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "home-index-button";
-    button.textContent = item.label;
-    button.dataset.homeIndexTarget = item.targetId;
-
-    homeIndexListElement.appendChild(button);
-  });
-}
-
-function isVisibleHomeSection(id) {
-  const element = document.getElementById(id);
-
-  return Boolean(element && !element.classList.contains("hidden"));
-}
-
-// ホーム目次クリックイベント
-function bindHomeIndexEvents() {
-  if (!homeIndexListElement) {
-    return;
-  }
-
-  homeIndexListElement.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-home-index-target]");
-
-    if (!button) {
-      return;
-    }
-
-    scrollHomeToElement(button.dataset.homeIndexTarget);
-  });
-}
 
 // おかわりDaily直行リンク表示制御
 function updateHomeDailyJumpVisibility() {
