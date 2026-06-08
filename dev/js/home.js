@@ -401,8 +401,6 @@ function renderHomeDailyExtraList(groups) {
     const hasUsenTasks = HOME_EXTRA_USEN_TASKS.length > 0;
     toggleHomeExtraSection(homeDailyExtraCardElement, hasUsenTasks);
     updateDailyStartedTodayClass();
-    updateHomeDailyJumpVisibility();
-    updateHomeIndex();
     return;
   }
 
@@ -461,8 +459,6 @@ function renderHomeDailyExtraList(groups) {
 
   toggleHomeExtraSection(homeDailyExtraCardElement, hasDailyTasks || hasUsenTasks);
   updateDailyStartedTodayClass();
-  updateHomeDailyJumpVisibility();
-  updateHomeIndex();
 }
 
 // ==================================================
@@ -507,7 +503,6 @@ function renderHomeUsenExtraList() {
     const hasDailyTasks = HOME_EXTRA_DAILY_TASKS.length > 0;
     toggleHomeExtraSection(homeDailyExtraCardElement, hasDailyTasks);
     updateDailyStartedTodayClass();
-    updateHomeDailyJumpVisibility();
     updateHomeIndex();
     return;
   }
@@ -602,8 +597,6 @@ function renderHomeUsenExtraList() {
 
   toggleHomeExtraSection(homeDailyExtraCardElement, hasDailyTasks || hasUsenTasks);
   updateDailyStartedTodayClass();
-  updateHomeDailyJumpVisibility();
-  updateHomeIndex();
 }
 
 // ==================================================
