@@ -1099,6 +1099,13 @@ function updateHomeDailyJumpVisibility() {
   homeDailyJumpAreaElement.classList.toggle("hidden", !shouldShow);
 }
 
+// ホーム内セクション表示判定
+function isVisibleHomeSection(id) {
+  const element = document.getElementById(id);
+
+  return Boolean(element && !element.classList.contains("hidden"));
+}
+
 // 通常ルートでUSENを実行したときも、ホームのおかわりDaily側USENを完了扱いにする
 function markHomeUsenTaskDoneFromRoutine() {
   if (typeof markDailyTaskDone !== "function") {
