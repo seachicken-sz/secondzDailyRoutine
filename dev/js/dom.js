@@ -103,6 +103,15 @@ const youtubeModalOtherRowElement =
 //エラーメッセージ表示エリア
 const youtubeModalErrorAreaElement =
   document.getElementById("youtubeModalErrorArea");
+
+// ==================================================
+// DOM: ブラウザ初回表示モーダル
+// ==================================================
+const firstVisitModalElement = document.getElementById("firstVisitModal");
+const closeFirstVisitModalButtonElement = document.getElementById("closeFirstVisitModalButton");
+const firstVisitOpenSetupButtonElement = document.getElementById("firstVisitOpenSetupButton");
+const firstVisitOpenUsageButtonElement = document.getElementById("firstVisitOpenUsageButton");
+const firstVisitCloseOnlyButtonElement = document.getElementById("firstVisitCloseOnlyButton");
 // ==================================================
 // DOM: STEP 1 Spotify
 // ==================================================
