@@ -54,6 +54,7 @@ function bindRequestSongEvents() {
     // アプリに戻ってきた時に次へボタン表示などを復元するため
     state.openedAction = OPENED_ACTIONS.requestSong;
     saveFlowState(state.openedAction, requestSongStepElement);
+    markHomeUsenTaskDoneFromRoutine();
 
     // USEN推しリクのログを送信する
     // ログ送信に失敗してもユーザー操作は止めない
