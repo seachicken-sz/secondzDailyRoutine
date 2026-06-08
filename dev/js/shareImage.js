@@ -15,6 +15,8 @@ let currentShareImageTheme = getCurrentThemeKeyForShareImage();
 // simple: 通常版
 // illustrated: イラスト版
 let currentShareImageStyle = "simple";
+//テキスト
+let currentShareImageFontStyle = "default";
 
 // ==================================================
 // シェア画像スタイル用チェックボックス取得
