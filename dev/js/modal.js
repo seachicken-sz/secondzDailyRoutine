@@ -32,6 +32,25 @@ if (firstVisitModalElement) {
     }
   });
 }
+
+  // ==================================================
+// PWA初回訪問モーダル
+// ==================================================
+addClickEvent(closePwaFirstVisitModalButtonElement, closePwaFirstVisitModal);
+addClickEvent(pwaFirstVisitCloseOnlyButtonElement, closePwaFirstVisitModal);
+
+addClickEvent(pwaFirstVisitOpenUsageButtonElement, () => {
+  closePwaFirstVisitModal();
+  openUsageModal();
+});
+
+if (pwaFirstVisitModalElement) {
+  pwaFirstVisitModalElement.addEventListener("click", (event) => {
+    if (event.target === pwaFirstVisitModalElement) {
+      closePwaFirstVisitModal();
+    }
+  });
+}
   
   // ==================================================
   // 初回設定モーダル
