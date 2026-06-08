@@ -578,6 +578,9 @@
   font-size: 1.05rem;
   color: var(--color-brand);
 }
+#userBrowser{
+   margin:0;
+}
 
 @keyframes setupGuideFadeIn {
   from {
