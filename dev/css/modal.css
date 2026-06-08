@@ -84,6 +84,11 @@
   font-size: 1rem;
   font-weight: 700;
 }
+.modal-detail-summary i{
+   color:var(--color-brand);
+   font-size:120%;
+   margin-right:0.5rem;
+}
 
 .modal-detail-summary::-webkit-details-marker {
   display: none;
