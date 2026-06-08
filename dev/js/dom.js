@@ -36,8 +36,6 @@ const openUsageButtonElement = document.getElementById("openUsageButton");
 //ホームのSNSシェアボタン
 const homeTopShareButtonElement = document.getElementById("homeTopShareButton");
 const homeBottomShareButtonElement = document.getElementById("homeBottomShareButton");
-// ホーム目次
-const homeIndexListElement = document.getElementById("homeIndexList");
 // おかわりDaily
 const homeDailyExtraCardElement = document.getElementById("homeDailyExtraCard");
 const homeDailyExtraListElement = document.getElementById("homeDailyExtraList");
@@ -51,6 +49,15 @@ const homeOnceMoreCardElement = document.getElementById("homeOnceMoreCard");
 const homeOnceMoreListElement = document.getElementById("homeOnceMoreList");
 // ホーム右下の上に戻るボタン
 const homeBackToTopButtonElement = document.getElementById("homeBackToTopButton");
+// ホームメニューボタン
+const homeMenuButtonElement = document.getElementById("homeMenuButton");
+const homeMenuOverlayElement = document.getElementById("homeMenuOverlay");
+const homeSlideMenuElement = document.getElementById("homeSlideMenu");
+const closeHomeMenuButtonElement = document.getElementById("closeHomeMenuButton");
+
+const homeMenuSetupButtonElement = document.getElementById("homeMenuSetupButton");
+const homeMenuUsageButtonElement = document.getElementById("homeMenuUsageButton");
+const homeMenuShareButtonElement = document.getElementById("homeMenuShareButton");
 
 // ==================================================
 // DOM: 初回設定モーダル
