@@ -118,18 +118,6 @@ async function shareAppFromHome() {
   }
 }
 
-
-// おかわりDaily直行リンク表示制御
-function updateHomeDailyJumpVisibility() {
-  if (!homeDailyJumpAreaElement) {
-    return;
-  }
-
-  const shouldShow = isVisibleHomeSection("homeDailyExtraCard");
-
-  homeDailyJumpAreaElement.classList.toggle("hidden", !shouldShow);
-}
-
 // おかわりDaily直行リンククリックイベント
 function bindHomeDailyJumpEvents() {
   if (!homeDailyJumpButtonElement) {
