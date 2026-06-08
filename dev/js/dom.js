@@ -114,6 +114,15 @@ const closeFirstVisitModalButtonElement = document.getElementById("closeFirstVis
 const firstVisitOpenSetupButtonElement = document.getElementById("firstVisitOpenSetupButton");
 const firstVisitOpenUsageButtonElement = document.getElementById("firstVisitOpenUsageButton");
 const firstVisitCloseOnlyButtonElement = document.getElementById("firstVisitCloseOnlyButton");
+
+// ==================================================
+// DOM: PWA初回訪問モーダル
+// ==================================================
+const pwaFirstVisitModalElement = document.getElementById("pwaFirstVisitModal");
+const closePwaFirstVisitModalButtonElement = document.getElementById("closePwaFirstVisitModalButton");
+const pwaFirstVisitOpenUsageButtonElement = document.getElementById("pwaFirstVisitOpenUsageButton");
+const pwaFirstVisitCloseOnlyButtonElement = document.getElementById("pwaFirstVisitCloseOnlyButton");
+
 // ==================================================
 // DOM: STEP 1 Spotify
 // ==================================================
