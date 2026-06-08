@@ -90,13 +90,11 @@
 /* =========================
   ホーム画面メニュー
 ========================= */
-
 .home-menu-button {
   position: fixed;
   top: calc(env(safe-area-inset-top) + 14px);
   right: 16px;
   z-index: 80;
-
   width: 44px;
   height: 44px;
   border: 1px solid var(--color-brand-border);
@@ -122,27 +120,15 @@
   top: 0;
   right: 0;
   z-index: 100;
-
   width: min(82vw, 320px);
   height: 100dvh;
   padding: calc(env(safe-area-inset-top) + 20px) 18px 24px;
-
   background: var(--color-surface);
   box-shadow: -8px 0 24px rgba(0, 0, 0, 0.16);
-
   transform: translateX(0);
   transition: transform 0.22s ease;
 }
 
-.home-slide-menu.hidden {
-  display: block;
-  transform: translateX(105%);
-  pointer-events: none;
-}
-
-.home-menu-overlay.hidden {
-  display: none;
-}
 
 .home-menu-close-button {
   position: absolute;
