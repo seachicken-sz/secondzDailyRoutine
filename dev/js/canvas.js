@@ -138,8 +138,42 @@ const SHARE_IMAGE_THEMES = {
   },
 };
 
+const SHARE_IMAGE_LOGO_PATHS = {
+  normal: "img/logo/logo-normal.png",
+  red: "img/logo/logo-red.png",
+  purple: "img/logo/logo-purple.png",
+  green: "img/logo/logo-green.png",
+  blue: "img/logo/logo-blue.png",
+  lime: "img/logo/logo-lime.png",
+  pink: "img/logo/logo-pink.png",
+  yellow: "img/logo/logo-yellow.png",
+  white: "img/logo/logo-white.png",
+};
+
 const SHARE_IMAGE_FONT_FAMILY =
   "'Hiragino Maru Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif";
+
+function loadImage(src) {
+  return new Promise((resolve) => {
+    if (!src) {
+      resolve(null);
+      return;
+    }
+
+    const image = new Image();
+
+    image.onload = () => {
+      resolve(image);
+    };
+
+    image.onerror = () => {
+      resolve(null);
+    };
+
+    image.src = src;
+  });
+}
+
 
 function getShareImageTheme(themeKey) {
   return SHARE_IMAGE_THEMES[themeKey] || SHARE_IMAGE_THEMES.normal;
@@ -218,7 +252,7 @@ function getWrappedLineCount(ctx, text, maxWidth, maxLines) {
 
   return Math.min(lines.length, maxLines);
 }
-function drawShareImage(canvas, options = {}) {
+async function drawShareImage(canvas, options = {}) {
   if (!canvas) {
     return;
   }
@@ -290,9 +324,25 @@ function drawShareImage(canvas, options = {}) {
   });
 
   const listHeight = itemHeights.reduce((total, height) => total + height, 0);
+  const logoPath =
+    SHARE_IMAGE_LOGO_PATHS[options.themeKey] ||
+    SHARE_IMAGE_LOGO_PATHS.normal;
+  
+  const logoImage = await loadImage(logoPath);
+  
+  const logoWidth = 120;
+  const logoHeight = logoImage
+    ? logoWidth * (logoImage.height / logoImage.width)
+    : 0;
+  
+  const logoTopMargin = logoImage ? 18 : 0;
+  const logoBottomMargin = logoImage ? 4 : 0;
+  const logoAreaHeight = logoImage
+    ? logoTopMargin + logoHeight + logoBottomMargin
+    : 0;
   const cardHeight = Math.max(
     minHeight - outerPadding * 2,
-    listStartY - cardY + listHeight + innerPaddingBottom
+    listStartY - cardY + listHeight + logoAreaHeight + innerPaddingBottom
   );
   const height = Math.max(minHeight, cardHeight + outerPadding * 2);
 
@@ -439,6 +489,23 @@ function drawShareImage(canvas, options = {}) {
 
     currentY = lineY + itemGap;
   });
+    // =========================
+  // Logo
+  // =========================
+
+  if (logoImage) {
+    const logoX = innerX + (innerWidth - logoWidth) / 2;
+    const logoY = currentY + logoTopMargin;
+
+    ctx.drawImage(
+      logoImage,
+      logoX,
+      logoY,
+      logoWidth,
+      logoHeight
+    );
+  }
+  
 }
 
 function buildShareImageDisplayItems(options = {}) {
