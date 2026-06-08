@@ -103,9 +103,9 @@ function bindShareImageEvents() {
         await navigator.share({
           files: [file],
           title: "タムごとDaily",
-          text: "今日の推し活ログ",
+          text: `タムごとDaily 本日のタスク完了👍
+        ${location.origin}${location.pathname}`,
         });
-
         // 成功時はエラー表示を消す
         hideError(postErrorAreaElement);
         return;
