@@ -427,6 +427,7 @@ h1 {
   white-space: pre-wrap;
   word-break: break-word;
   box-shadow: 0 0 1px 1px var(--color-border-light);
+  font-weight: 500;
 }
 
 
