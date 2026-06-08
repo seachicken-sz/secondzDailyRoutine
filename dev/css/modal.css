@@ -404,6 +404,7 @@
   gap: 18px;
   display: grid;
   gap: 16px;
+   padding:10px;
 }
 .setup-modal-lead {
   margin: 0;
