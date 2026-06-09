@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/09 09:20",
+  "updatedAt": "2026/06/09 10:23",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/09 09:20",
+      "updatedAt": "2026/06/09 10:23",
       "episodeId": "ep6vuu9nxm",
       "subtitle": "timelesz100",
       "likes": "1.5万",
@@ -337,6 +337,10 @@
         {
           "hour": 83,
           "likes": 15000
+        },
+        {
+          "hour": 84,
+          "likes": 15000
         }
       ],
       "rankings": [
@@ -344,7 +348,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 17,
-          "elapsedHour": 83,
+          "elapsedHour": 84,
           "elapsedRank": 17,
           "currentPoints": [
             {
@@ -669,6 +673,10 @@
             },
             {
               "hour": 83,
+              "rank": 17
+            },
+            {
+              "hour": 84,
               "rank": 17
             }
           ],
@@ -1356,9 +1364,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 38,
-          "elapsedHour": 83,
-          "elapsedRank": 38,
+          "currentRank": 39,
+          "elapsedHour": 84,
+          "elapsedRank": 39,
           "currentPoints": [
             {
               "hour": 10,
@@ -1651,6 +1659,10 @@
             {
               "hour": 83,
               "rank": 38
+            },
+            {
+              "hour": 84,
+              "rank": 39
             }
           ],
           "previousPoints": [
@@ -2289,19 +2301,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 35,
-              "title": "サレタ側の復讐～同盟を結んだ妻たち～"
-            },
-            {
               "rank": 36,
               "title": "おしゃれクリップ"
             },
             {
               "rank": 37,
-              "title": "マルコポロリ！"
+              "title": "犬飼さんは隠れ溺愛上司"
             },
             {
               "rank": 38,
+              "title": "マルコポロリ！"
+            },
+            {
+              "rank": 39,
               "title": "タイムレスマン"
             }
           ]
@@ -2311,7 +2323,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/09 09:20",
+      "updatedAt": "2026/06/09 10:23",
       "episodeId": "ep67r77z31",
       "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
       "likes": "1.2万",
@@ -2484,6 +2496,10 @@
         {
           "hour": 43,
           "likes": 12000
+        },
+        {
+          "hour": 44,
+          "likes": 12000
         }
       ],
       "rankings": [
@@ -2491,7 +2507,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 6,
-          "elapsedHour": 43,
+          "elapsedHour": 44,
           "elapsedRank": 6,
           "currentPoints": [
             {
@@ -2656,6 +2672,10 @@
             },
             {
               "hour": 43,
+              "rank": 6
+            },
+            {
+              "hour": 44,
               "rank": 6
             }
           ],
@@ -3276,7 +3296,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 19,
-          "elapsedHour": 43,
+          "elapsedHour": 44,
           "elapsedRank": 19,
           "currentPoints": [
             {
@@ -3421,6 +3441,10 @@
             },
             {
               "hour": 43,
+              "rank": 19
+            },
+            {
+              "hour": 44,
               "rank": 19
             }
           ],
@@ -3673,15 +3697,15 @@
           "nearbyRanking": [
             {
               "rank": 16,
-              "title": "時すでにおスシ!?"
+              "title": "今夜、秘密のキッチンで"
             },
             {
               "rank": 17,
-              "title": "余命３ヶ月のサレ夫"
+              "title": "リボーン ～最後のヒーロー～"
             },
             {
               "rank": 18,
-              "title": "リボーン ～最後のヒーロー～"
+              "title": "余命３ヶ月のサレ夫"
             },
             {
               "rank": 19,
@@ -3694,7 +3718,7 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/02",
-      "updatedAt": "2026/06/09 09:20",
+      "updatedAt": "2026/06/09 10:23",
       "episodeId": "epbxaud3gs",
       "subtitle": "チョコプラ・timeleszがデスソースの浄水に挑戦！",
       "likes": "1.0万",
@@ -4307,15 +4331,19 @@
         {
           "hour": 153,
           "likes": 10000
+        },
+        {
+          "hour": 154,
+          "likes": 10000
         }
       ],
       "rankings": [
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 45,
-          "elapsedHour": 153,
-          "elapsedRank": 45,
+          "currentRank": 44,
+          "elapsedHour": 154,
+          "elapsedRank": 44,
           "currentPoints": [
             {
               "hour": 5,
@@ -4792,6 +4820,10 @@
             {
               "hour": 153,
               "rank": 45
+            },
+            {
+              "hour": 154,
+              "rank": 44
             }
           ],
           "previousPoints": [
@@ -5230,6 +5262,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 41,
+              "title": "かまいたちの机上の空論城"
+            },
+            {
               "rank": 42,
               "title": "おぎやはぎの愛車遍歴 NO CAR,NO LIFE！"
             },
@@ -5239,10 +5275,6 @@
             },
             {
               "rank": 44,
-              "title": "上沼・高田のクギズケ！"
-            },
-            {
-              "rank": 45,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -5420,7 +5452,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
+              "title": "幹事Xと名店の夜"
             },
             {
               "rank": 48,
@@ -5428,11 +5460,11 @@
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "あざとくて何が悪いの？"
+              "title": "かのサンド"
             }
           ]
         }
@@ -5441,7 +5473,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/08",
-      "updatedAt": "2026/06/09 09:20",
+      "updatedAt": "2026/06/09 10:23",
       "episodeId": "ep3cvn8amg",
       "subtitle": "【1時間SP】オカシーパラダイスからの招待状",
       "likes": "1.0万",
@@ -5570,6 +5602,10 @@
         {
           "hour": 31,
           "likes": 10000
+        },
+        {
+          "hour": 32,
+          "likes": 10000
         }
       ],
       "rankings": [
@@ -5577,7 +5613,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 9,
-          "elapsedHour": 31,
+          "elapsedHour": 32,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -5678,6 +5714,10 @@
             },
             {
               "hour": 31,
+              "rank": 9
+            },
+            {
+              "hour": 32,
               "rank": 9
             }
           ],
@@ -6030,7 +6070,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 25,
-          "elapsedHour": 31,
+          "elapsedHour": 32,
           "elapsedRank": 25,
           "currentPoints": [
             {
@@ -6103,6 +6143,10 @@
             },
             {
               "hour": 31,
+              "rank": 25
+            },
+            {
+              "hour": 32,
               "rank": 25
             }
           ],
@@ -6247,11 +6291,11 @@
           "nearbyRanking": [
             {
               "rank": 22,
-              "title": "有吉クイズ"
+              "title": "夫婦別姓刑事"
             },
             {
               "rank": 23,
-              "title": "夫婦別姓刑事"
+              "title": "有吉クイズ"
             },
             {
               "rank": 24,
@@ -6268,10 +6312,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/09 09:20",
+      "updatedAt": "2026/06/09 10:23",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "4061",
+      "likes": "4062",
       "favorites": "75.9万",
       "likePoints": [
         {
@@ -6932,7 +6976,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
+              "title": "幹事Xと名店の夜"
             },
             {
               "rank": 48,
@@ -6940,11 +6984,11 @@
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "あざとくて何が悪いの？"
+              "title": "かのサンド"
             }
           ]
         },
@@ -7040,19 +7084,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ・ノンフィクション"
+              "title": "君が死刑になる前に"
             },
             {
               "rank": 48,
-              "title": "しゃべくり007"
+              "title": "CDTV ライブ! ライブ!"
             },
             {
               "rank": 49,
-              "title": "孤独のグルメ Season11"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 50,
-              "title": "華大さんと千鳥くん"
+              "title": "ザ・ノンフィクション"
             }
           ]
         }
@@ -7061,10 +7105,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/09 09:20",
+      "updatedAt": "2026/06/09 10:23",
       "episodeId": "epref0f8o9",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！山下智久登場",
-      "likes": "8046",
+      "likes": "8060",
       "favorites": "6.8万",
       "likePoints": [
         {
@@ -7658,6 +7702,10 @@
         {
           "hour": 152,
           "likes": 8046
+        },
+        {
+          "hour": 153,
+          "likes": 8060
         }
       ],
       "rankings": [
@@ -7850,7 +7898,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
+              "title": "幹事Xと名店の夜"
             },
             {
               "rank": 48,
@@ -7858,11 +7906,11 @@
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "あざとくて何が悪いの？"
+              "title": "かのサンド"
             }
           ]
         },
@@ -7914,19 +7962,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ・ノンフィクション"
+              "title": "君が死刑になる前に"
             },
             {
               "rank": 48,
-              "title": "しゃべくり007"
+              "title": "CDTV ライブ! ライブ!"
             },
             {
               "rank": 49,
-              "title": "孤独のグルメ Season11"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 50,
-              "title": "華大さんと千鳥くん"
+              "title": "ザ・ノンフィクション"
             }
           ]
         }
@@ -7935,10 +7983,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/09 09:20",
+      "updatedAt": "2026/06/09 10:23",
       "episodeId": "eps7bm6mup",
       "subtitle": "第130回 真剣勝負あっち向いてホイ！ついに王者が決定！",
-      "likes": "5165",
+      "likes": "5167",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -8348,6 +8396,10 @@
         {
           "hour": 104,
           "likes": 5165
+        },
+        {
+          "hour": 105,
+          "likes": 5167
         }
       ],
       "rankings": [
@@ -8720,7 +8772,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
+              "title": "幹事Xと名店の夜"
             },
             {
               "rank": 48,
@@ -8728,11 +8780,11 @@
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "あざとくて何が悪いの？"
+              "title": "かのサンド"
             }
           ]
         },
@@ -8809,19 +8861,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ・ノンフィクション"
+              "title": "君が死刑になる前に"
             },
             {
               "rank": 48,
-              "title": "しゃべくり007"
+              "title": "CDTV ライブ! ライブ!"
             },
             {
               "rank": 49,
-              "title": "孤独のグルメ Season11"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 50,
-              "title": "華大さんと千鳥くん"
+              "title": "ザ・ノンフィクション"
             }
           ]
         }
@@ -8830,10 +8882,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/05/30",
-      "updatedAt": "2026/06/09 09:20",
+      "updatedAt": "2026/06/09 10:23",
       "episodeId": "epdpoawq6d",
       "subtitle": "マッサマンvs錦鯉マッサノリマンSP前編",
-      "likes": "2443",
+      "likes": "2445",
       "favorites": "77.2万",
       "likePoints": [
         {
@@ -9454,7 +9506,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
+              "title": "幹事Xと名店の夜"
             },
             {
               "rank": 48,
@@ -9462,11 +9514,11 @@
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "あざとくて何が悪いの？"
+              "title": "かのサンド"
             }
           ]
         },
@@ -9554,19 +9606,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ・ノンフィクション"
+              "title": "君が死刑になる前に"
             },
             {
               "rank": 48,
-              "title": "しゃべくり007"
+              "title": "CDTV ライブ! ライブ!"
             },
             {
               "rank": 49,
-              "title": "孤独のグルメ Season11"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 50,
-              "title": "華大さんと千鳥くん"
+              "title": "ザ・ノンフィクション"
             }
           ]
         }
@@ -9575,10 +9627,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/09 09:20",
+      "updatedAt": "2026/06/09 10:23",
       "episodeId": "ep6a50091q",
       "subtitle": "第8話 走る身代金",
-      "likes": "9079",
+      "likes": "9104",
       "favorites": "36.6万",
       "likePoints": [
         {
@@ -10104,15 +10156,19 @@
         {
           "hour": 132,
           "likes": 9079
+        },
+        {
+          "hour": 133,
+          "likes": 9104
         }
       ],
       "rankings": [
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 20,
-          "elapsedHour": 132,
-          "elapsedRank": 20,
+          "currentRank": 21,
+          "elapsedHour": 133,
+          "elapsedRank": 21,
           "currentPoints": [
             {
               "hour": 2,
@@ -10633,6 +10689,10 @@
             {
               "hour": 132,
               "rank": 20
+            },
+            {
+              "hour": 133,
+              "rank": 21
             }
           ],
           "previousPoints": [
@@ -11295,19 +11355,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 17,
-              "title": "LOVED ONE"
-            },
-            {
               "rank": 18,
               "title": "サレタ側の復讐～同盟を結んだ妻たち～"
             },
             {
               "rank": 19,
-              "title": "VIVANT"
+              "title": "犬飼さんは隠れ溺愛上司"
             },
             {
               "rank": 20,
+              "title": "VIVANT"
+            },
+            {
+              "rank": 21,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -11315,9 +11375,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 41,
-          "elapsedHour": 132,
-          "elapsedRank": 41,
+          "currentRank": 42,
+          "elapsedHour": 133,
+          "elapsedRank": 42,
           "currentPoints": [
             {
               "hour": 3,
@@ -11834,6 +11894,10 @@
             {
               "hour": 132,
               "rank": 41
+            },
+            {
+              "hour": 133,
+              "rank": 42
             }
           ],
           "previousPoints": [
@@ -12468,19 +12532,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 38,
+              "rank": 39,
               "title": "タイムレスマン"
             },
             {
-              "rank": 39,
+              "rank": 40,
               "title": "VIVANT"
             },
             {
-              "rank": 40,
+              "rank": 41,
               "title": "千鳥の鬼レンチャン"
             },
             {
-              "rank": 41,
+              "rank": 42,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -12490,7 +12554,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/09 09:20",
+      "updatedAt": "2026/06/09 10:23",
       "episodeId": "ep24dk5lx2",
       "subtitle": "“ハプニング対応力講座”",
       "likes": "1.5万",
@@ -13087,6 +13151,10 @@
         {
           "hour": 150,
           "likes": 15000
+        },
+        {
+          "hour": 151,
+          "likes": 15000
         }
       ],
       "rankings": [
@@ -13258,7 +13326,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
+              "title": "幹事Xと名店の夜"
             },
             {
               "rank": 48,
@@ -13266,11 +13334,11 @@
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "あざとくて何が悪いの？"
+              "title": "かのサンド"
             }
           ]
         },
@@ -13398,19 +13466,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ・ノンフィクション"
+              "title": "君が死刑になる前に"
             },
             {
               "rank": 48,
-              "title": "しゃべくり007"
+              "title": "CDTV ライブ! ライブ!"
             },
             {
               "rank": 49,
-              "title": "孤独のグルメ Season11"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 50,
-              "title": "華大さんと千鳥くん"
+              "title": "ザ・ノンフィクション"
             }
           ]
         }
@@ -13419,10 +13487,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/09 09:20",
+      "updatedAt": "2026/06/09 10:23",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "5674",
+      "likes": "5678",
       "favorites": "1.4万",
       "likePoints": [
         {
@@ -14074,7 +14142,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
+              "title": "幹事Xと名店の夜"
             },
             {
               "rank": 48,
@@ -14082,11 +14150,11 @@
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "あざとくて何が悪いの？"
+              "title": "かのサンド"
             }
           ]
         }
