@@ -340,6 +340,42 @@ function buildShareImageCanvasTasks(items) {
 }
 
 // ==================================================
+// シェア画像スタイル読み込み待ち
+// ==================================================
+function waitShareImageStylesLoaded() {
+  return new Promise((resolve) => {
+    if (window.shareImageStylesLoaded) {
+      resolve();
+      return;
+    }
+
+    window.addEventListener("shareImageStylesLoaded", () => {
+      resolve();
+    }, { once: true });
+  });
+}
+
+// ==================================================
+// シェア画像フォント読み込み待ち
+// ==================================================
+async function waitShareImageFontsLoaded() {
+  if (!document.fonts) {
+    return;
+  }
+
+  await Promise.all([
+    document.fonts.load('400 32px "Zen Maru Gothic"'),
+    document.fonts.load('500 32px "Zen Maru Gothic"'),
+    document.fonts.load('700 32px "Zen Maru Gothic"'),
+    document.fonts.load('400 32px "Yomogi"'),
+    document.fonts.load('400 42px "Hachi Maru Pop"'),
+    document.fonts.load('400 42px "Darumadrop One"'),
+    document.fonts.load('400 32px "Klee One"'),
+    document.fonts.ready
+  ]);
+}
+
+// ==================================================
 // シェア画像描画
 // ==================================================
 async function renderShareImage(themeKey = currentShareImageTheme) {
@@ -347,7 +383,8 @@ async function renderShareImage(themeKey = currentShareImageTheme) {
     return;
   }
 
-  await document.fonts.ready;
+  await waitShareImageStylesLoaded();
+  await waitShareImageFontsLoaded();
 
   const items = getCheckedPostItemsForShareImage();
   const tasks = buildShareImageCanvasTasks(items);
