@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/10 08:23",
+  "updatedAt": "2026/06/10 09:24",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/10 08:23",
+      "updatedAt": "2026/06/10 09:24",
       "episodeId": "ep6vuu9nxm",
       "subtitle": "timelesz100",
       "likes": "1.6万",
@@ -429,15 +429,19 @@
         {
           "hour": 106,
           "likes": 16000
+        },
+        {
+          "hour": 107,
+          "likes": 16000
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 23,
-          "elapsedHour": 106,
-          "elapsedRank": 23,
+          "currentRank": 24,
+          "elapsedHour": 107,
+          "elapsedRank": 24,
           "currentPoints": [
             {
               "hour": 3,
@@ -854,6 +858,10 @@
             {
               "hour": 106,
               "rank": 23
+            },
+            {
+              "hour": 107,
+              "rank": 24
             }
           ],
           "previousPoints": [
@@ -1520,10 +1528,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 20,
-              "title": "上田と女がDEEPに吠える夜"
-            },
-            {
               "rank": 21,
               "title": "かまいガチ"
             },
@@ -1533,6 +1537,10 @@
             },
             {
               "rank": 23,
+              "title": "ロンドンハーツ"
+            },
+            {
+              "rank": 24,
               "title": "タイムレスマン"
             }
           ]
@@ -1540,9 +1548,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 50,
-          "elapsedHour": 106,
-          "elapsedRank": 50,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 10,
@@ -2566,19 +2574,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "share"
+              "title": "ターミネーターと恋しちゃったら"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 49,
               "title": "テレビ千鳥"
             },
             {
+              "rank": 49,
+              "title": "ロンドンハーツ"
+            },
+            {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "share"
             }
           ]
         }
@@ -2587,7 +2595,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/10 08:23",
+      "updatedAt": "2026/06/10 09:24",
       "episodeId": "ep67r77z31",
       "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
       "likes": "1.4万",
@@ -2852,15 +2860,19 @@
         {
           "hour": 66,
           "likes": 14000
+        },
+        {
+          "hour": 67,
+          "likes": 14000
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 13,
-          "elapsedHour": 66,
-          "elapsedRank": 13,
+          "currentRank": 15,
+          "elapsedHour": 67,
+          "elapsedRank": 15,
           "currentPoints": [
             {
               "hour": 3,
@@ -3117,6 +3129,10 @@
             {
               "hour": 66,
               "rank": 13
+            },
+            {
+              "hour": 67,
+              "rank": 15
             }
           ],
           "previousPoints": [
@@ -3715,19 +3731,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 10,
-              "title": "華大さんと千鳥くん"
-            },
-            {
-              "rank": 11,
-              "title": "Golden SixTONES"
-            },
-            {
               "rank": 12,
               "title": "幹事Xと名店の夜"
             },
             {
               "rank": 13,
+              "title": "踊る！さんま御殿!!"
+            },
+            {
+              "rank": 14,
+              "title": "それSnow Manにやらせて下さい"
+            },
+            {
+              "rank": 15,
               "title": "timeleszファミリア"
             }
           ]
@@ -3735,9 +3751,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 34,
-          "elapsedHour": 66,
-          "elapsedRank": 34,
+          "currentRank": 36,
+          "elapsedHour": 67,
+          "elapsedRank": 36,
           "currentPoints": [
             {
               "hour": 7,
@@ -3974,6 +3990,10 @@
             {
               "hour": 66,
               "rank": 34
+            },
+            {
+              "hour": 67,
+              "rank": 36
             }
           ],
           "previousPoints": [
@@ -4224,19 +4244,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 31,
-              "title": "ワンピース"
-            },
-            {
-              "rank": 32,
+              "rank": 33,
               "title": "余命３ヶ月のサレ夫"
             },
             {
-              "rank": 33,
+              "rank": 34,
               "title": "刑事、ふりだしに戻る"
             },
             {
-              "rank": 34,
+              "rank": 35,
+              "title": "それSnow Manにやらせて下さい"
+            },
+            {
+              "rank": 36,
               "title": "timeleszファミリア"
             }
           ]
@@ -4246,10 +4266,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/09",
-      "updatedAt": "2026/06/10 08:23",
+      "updatedAt": "2026/06/10 09:24",
       "episodeId": "epu815zrtp",
       "subtitle": "チョコプラ・timeleszが「手作り巨大メガホンなら1km先の好きな人に告白できる？」に挑む！",
-      "likes": "2229",
+      "likes": "2736",
       "favorites": "5.0万",
       "likePoints": [
         {
@@ -4283,15 +4303,19 @@
         {
           "hour": 8,
           "likes": 2229
+        },
+        {
+          "hour": 9,
+          "likes": 2736
         }
       ],
       "rankings": [
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 24,
-          "elapsedHour": 8,
-          "elapsedRank": 24,
+          "currentRank": 21,
+          "elapsedHour": 9,
+          "elapsedRank": 21,
           "currentPoints": [
             {
               "hour": 6,
@@ -4304,6 +4328,10 @@
             {
               "hour": 8,
               "rank": 24
+            },
+            {
+              "hour": 9,
+              "rank": 21
             }
           ],
           "previousPoints": [
@@ -4842,19 +4870,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 21,
+              "rank": 18,
               "title": "Aぇ! groupのQ＆Aぇ!"
             },
             {
-              "rank": 22,
-              "title": "あっちこっちAぇ!"
+              "rank": 19,
+              "title": "かのサンド"
             },
             {
-              "rank": 23,
-              "title": "５時に夢中！"
+              "rank": 20,
+              "title": "ＪＡＰＡＮをスーツケースにつめ込んで！～世界に日本を持ってった～"
             },
             {
-              "rank": 24,
+              "rank": 21,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -4983,19 +5011,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あちこちオードリー"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 49,
-              "title": "ポツンと一軒家"
+              "title": "ゴッドタン"
             },
             {
               "rank": 50,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "ポツンと一軒家"
             }
           ]
         }
@@ -5004,7 +5032,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/08",
-      "updatedAt": "2026/06/10 08:23",
+      "updatedAt": "2026/06/10 09:24",
       "episodeId": "ep3cvn8amg",
       "subtitle": "【1時間SP】オカシーパラダイスからの招待状",
       "likes": "1.2万",
@@ -5225,15 +5253,19 @@
         {
           "hour": 54,
           "likes": 12000
+        },
+        {
+          "hour": 55,
+          "likes": 12000
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 18,
-          "elapsedHour": 54,
-          "elapsedRank": 18,
+          "currentRank": 19,
+          "elapsedHour": 55,
+          "elapsedRank": 19,
           "currentPoints": [
             {
               "hour": 7,
@@ -5426,6 +5458,10 @@
             {
               "hour": 54,
               "rank": 18
+            },
+            {
+              "hour": 55,
+              "rank": 19
             }
           ],
           "previousPoints": [
@@ -5756,19 +5792,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 15,
+              "rank": 16,
               "title": "※女性は見ないでください"
             },
             {
-              "rank": 16,
-              "title": "踊る！さんま御殿!!"
-            },
-            {
               "rank": 17,
-              "title": "日曜日の初耳学"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 18,
+              "title": "日曜日の初耳学"
+            },
+            {
+              "rank": 19,
               "title": "ニカゲーム"
             }
           ]
@@ -5776,9 +5812,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 41,
-          "elapsedHour": 54,
-          "elapsedRank": 41,
+          "currentRank": 42,
+          "elapsedHour": 55,
+          "elapsedRank": 42,
           "currentPoints": [
             {
               "hour": 13,
@@ -5943,6 +5979,10 @@
             {
               "hour": 54,
               "rank": 41
+            },
+            {
+              "hour": 55,
+              "rank": 42
             }
           ],
           "previousPoints": [
@@ -6085,19 +6125,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 38,
+              "rank": 39,
               "title": "ボーダレス～広域移動捜査隊～"
             },
             {
-              "rank": 39,
+              "rank": 40,
               "title": "サレタ側の復讐～同盟を結んだ妻たち～"
             },
             {
-              "rank": 40,
+              "rank": 41,
               "title": "日曜日の初耳学"
             },
             {
-              "rank": 41,
+              "rank": 42,
               "title": "ニカゲーム"
             }
           ]
@@ -6107,10 +6147,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/10 08:23",
+      "updatedAt": "2026/06/10 09:24",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "4114",
+      "likes": "4115",
       "favorites": "75.9万",
       "likePoints": [
         {
@@ -6771,19 +6811,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あちこちオードリー"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 49,
-              "title": "ポツンと一軒家"
+              "title": "ゴッドタン"
             },
             {
               "rank": 50,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "ポツンと一軒家"
             }
           ]
         },
@@ -6879,19 +6919,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "share"
+              "title": "ターミネーターと恋しちゃったら"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 49,
               "title": "テレビ千鳥"
             },
             {
+              "rank": 49,
+              "title": "ロンドンハーツ"
+            },
+            {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "share"
             }
           ]
         }
@@ -6900,10 +6940,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/10 08:23",
+      "updatedAt": "2026/06/10 09:24",
       "episodeId": "eptfjnm7md",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！緑黄色社会登場",
-      "likes": "586",
+      "likes": "711",
       "favorites": "6.9万",
       "likePoints": [
         {
@@ -6937,6 +6977,10 @@
         {
           "hour": 7,
           "likes": 586
+        },
+        {
+          "hour": 8,
+          "likes": 711
         }
       ],
       "rankings": [
@@ -7096,19 +7140,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あちこちオードリー"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 49,
-              "title": "ポツンと一軒家"
+              "title": "ゴッドタン"
             },
             {
               "rank": 50,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "ポツンと一軒家"
             }
           ]
         },
@@ -7160,19 +7204,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "share"
+              "title": "ターミネーターと恋しちゃったら"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 49,
               "title": "テレビ千鳥"
             },
             {
+              "rank": 49,
+              "title": "ロンドンハーツ"
+            },
+            {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "share"
             }
           ]
         }
@@ -7181,10 +7225,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/10 08:23",
+      "updatedAt": "2026/06/10 09:24",
       "episodeId": "eps7bm6mup",
       "subtitle": "第130回 真剣勝負あっち向いてホイ！ついに王者が決定！",
-      "likes": "6037",
+      "likes": "6043",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -7686,6 +7730,10 @@
         {
           "hour": 127,
           "likes": 6037
+        },
+        {
+          "hour": 128,
+          "likes": 6043
         }
       ],
       "rankings": [
@@ -8058,19 +8106,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あちこちオードリー"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 49,
-              "title": "ポツンと一軒家"
+              "title": "ゴッドタン"
             },
             {
               "rank": 50,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "ポツンと一軒家"
             }
           ]
         },
@@ -8147,19 +8195,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "share"
+              "title": "ターミネーターと恋しちゃったら"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 49,
               "title": "テレビ千鳥"
             },
             {
+              "rank": 49,
+              "title": "ロンドンハーツ"
+            },
+            {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "share"
             }
           ]
         }
@@ -8168,10 +8216,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/05/30",
-      "updatedAt": "2026/06/10 08:23",
+      "updatedAt": "2026/06/10 09:24",
       "episodeId": "epdpoawq6d",
       "subtitle": "マッサマンvs錦鯉マッサノリマンSP前編",
-      "likes": "2509",
+      "likes": "2510",
       "favorites": "77.2万",
       "likePoints": [
         {
@@ -8792,19 +8840,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あちこちオードリー"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 49,
-              "title": "ポツンと一軒家"
+              "title": "ゴッドタン"
             },
             {
               "rank": 50,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "ポツンと一軒家"
             }
           ]
         },
@@ -8892,19 +8940,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "share"
+              "title": "ターミネーターと恋しちゃったら"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 49,
               "title": "テレビ千鳥"
             },
             {
+              "rank": 49,
+              "title": "ロンドンハーツ"
+            },
+            {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "share"
             }
           ]
         }
@@ -8913,10 +8961,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/03",
-      "updatedAt": "2026/06/10 08:23",
+      "updatedAt": "2026/06/10 09:24",
       "episodeId": "ep6a50091q",
       "subtitle": "第8話 走る身代金",
-      "likes": "9765",
+      "likes": "9802",
       "favorites": "36.6万",
       "likePoints": [
         {
@@ -9534,6 +9582,10 @@
         {
           "hour": 155,
           "likes": 9765
+        },
+        {
+          "hour": 156,
+          "likes": 9802
         }
       ],
       "rankings": [
@@ -9541,7 +9593,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 21,
-          "elapsedHour": 155,
+          "elapsedHour": 156,
           "elapsedRank": 21,
           "currentPoints": [
             {
@@ -10154,6 +10206,10 @@
             },
             {
               "hour": 155,
+              "rank": 21
+            },
+            {
+              "hour": 156,
               "rank": 21
             }
           ],
@@ -10837,9 +10893,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 38,
-          "elapsedHour": 155,
-          "elapsedRank": 38,
+          "currentRank": 39,
+          "elapsedHour": 156,
+          "elapsedRank": 39,
           "currentPoints": [
             {
               "hour": 3,
@@ -11448,6 +11504,10 @@
             {
               "hour": 155,
               "rank": 38
+            },
+            {
+              "hour": 156,
+              "rank": 39
             }
           ],
           "previousPoints": [
@@ -12082,19 +12142,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 35,
-              "title": "それSnow Manにやらせて下さい"
-            },
-            {
               "rank": 36,
-              "title": "※女性は見ないでください"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 37,
-              "title": "踊る！さんま御殿!!"
+              "title": "※女性は見ないでください"
             },
             {
               "rank": 38,
+              "title": "マツコの知らない世界"
+            },
+            {
+              "rank": 39,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -12104,10 +12164,10 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/10 08:23",
+      "updatedAt": "2026/06/10 09:24",
       "episodeId": "epg027ir46",
       "subtitle": "“なぞかけ講座”",
-      "likes": "2041",
+      "likes": "2750",
       "favorites": "21.6万",
       "likePoints": [
         {
@@ -12133,6 +12193,10 @@
         {
           "hour": 5,
           "likes": 2041
+        },
+        {
+          "hour": 6,
+          "likes": 2750
         }
       ],
       "rankings": [
@@ -12304,19 +12368,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あちこちオードリー"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 49,
-              "title": "ポツンと一軒家"
+              "title": "ゴッドタン"
             },
             {
               "rank": 50,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "ポツンと一軒家"
             }
           ]
         },
@@ -12444,19 +12508,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "share"
+              "title": "ターミネーターと恋しちゃったら"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 49,
               "title": "テレビ千鳥"
             },
             {
+              "rank": 49,
+              "title": "ロンドンハーツ"
+            },
+            {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "share"
             }
           ]
         }
@@ -12465,10 +12529,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/10 08:23",
+      "updatedAt": "2026/06/10 09:24",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "5722",
+      "likes": "5724",
       "favorites": "1.4万",
       "likePoints": [
         {
@@ -13093,15 +13157,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
+              "title": "にけつッ!!"
             },
             {
               "rank": 48,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "超調査チューズデイ～気になる答え今夜出します～"
             },
             {
               "rank": 49,
-              "title": "にけつッ!!"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 50,
@@ -13120,19 +13184,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あちこちオードリー"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 49,
-              "title": "ポツンと一軒家"
+              "title": "ゴッドタン"
             },
             {
               "rank": 50,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "ポツンと一軒家"
             }
           ]
         }
