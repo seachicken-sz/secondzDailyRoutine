@@ -36,6 +36,18 @@
 .date-visible-block.is-visible {
   display: block;
 }
+/*非表示汎用*/
 .hidden {
   display: none !important;
+}
+
+/*メニュー*/
+.home-slide-menu.hidden {
+  display: block;
+  transform: translateX(105%);
+  pointer-events: none;
+}
+
+.home-menu-overlay.hidden {
+  display: none;
 }

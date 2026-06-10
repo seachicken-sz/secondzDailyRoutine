@@ -8,6 +8,7 @@
 #homeStep {
   overflow-y: scroll;
   height:100%;
+   padding-bottom:60px;
 }
 .home-card {
   flex-shrink: 0;
@@ -85,6 +86,114 @@
   justify-content: center;
   gap: 14px;
   margin: 12px auto 0;
+}
+
+/* =========================
+  ホーム画面メニュー
+========================= */
+.home-menu-button {
+  position: fixed;
+  top: calc(env(safe-area-inset-top) + 14px);
+  right: 16px;
+  z-index: 80;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-brand-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-brand);
+  box-shadow: var(--shadow-card-soft);
+
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+}
+.home-menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(0, 0, 0, 0.35);
+}
+.home-slide-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: min(90vw, 720px);
+  height: 100dvh;
+  padding: calc(env(safe-area-inset-top) + 20px) 0 12px 24px;
+  background: var(--color-surface);
+  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.16);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateX(0);
+  transition: transform 0.22s ease;
+}
+.home-slide-menu img{
+   max-width:100%;
+   border-radius:16px;
+}
+.home-menu-close-button {
+  position: absolute;
+  top: calc(env(safe-area-inset-top) + 12px);
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  color: var(--color-text);
+  font-size: 1.8rem;
+}
+.home-menu-title {
+  flex: 0 0 auto;
+  margin: 12px 0 20px;
+  font-size: 1.2rem;
+}
+
+.home-menu-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 24px);
+  -webkit-overflow-scrolling: touch;
+}
+.home-menu-accordion {
+   margin-right:12px;
+  border-bottom: 1px solid var(--color-border-soft);
+}
+
+.home-menu-item {
+  width: 100%;
+  padding: 14px 12px;
+  border: none;
+  background: transparent;
+  color: var(--color-text);
+  text-align: left;
+  font-size: 1rem;
+   line-height:2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.home-menu-item i{
+   color: var(--color-brand);
+   margin-right:0.5rem;
+   font-size:120%;
+}
+.home-menu-arrow {
+  flex: 0 0 auto;
+  color: var(--color-brand);
+  font-weight: 700;
+}
+.home-menu-detail {
+  padding: 0 12px 16px;
+  color: var(--color-text-sub);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.home-menu-detail p {
+  margin: 0 0 10px;
 }
 
 /* =========================
@@ -426,7 +535,7 @@
   justify-content: center;
   background: var(--color-brand);
   color: var(--color-text-inverse);
-  font-size: 18px;
+  font-size: 10px;
   font-weight: 900;
   line-height: 1;
 }
@@ -650,6 +759,21 @@
   opacity: 0.5;
   cursor: not-allowed;
   transform: none;
+}
+
+.home-extra-task-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.home-extra-task-summary-label {
+  min-width: 0;
+}
+
+.home-extra-task-done-mark {
+  flex: 0 0 auto;
 }
 /* =========================
   最近のタムごと表示

@@ -5,7 +5,7 @@
   position: fixed;
   inset: 0;
   z-index: 1000;
-  padding: 20px;
+  padding: 5px;
   background: var(--color-overlay);
   display: flex;
   align-items: center;
@@ -13,7 +13,7 @@
 }
 .modal-content {
   width: min(100%, 520px);
-  max-height: min(80dvh, 640px);
+  max-height: min(90dvh, 840px);
   background: var(--color-page-bg);
   border-radius: 18px;
   box-shadow: var(--shadow-modal);
@@ -57,6 +57,65 @@
   -webkit-overflow-scrolling: touch;
 }
 
+
+.modal-detail-list {
+  display: grid;
+  gap: 10px;
+}
+
+.modal-detail {
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.modal-detail-summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.modal-detail-summary i{
+   color:var(--color-brand);
+   font-size:120%;
+   margin-right:0.5rem;
+}
+
+.modal-detail-summary::-webkit-details-marker {
+  display: none;
+}
+
+.modal-detail-arrow {
+  color: var(--color-brand);
+  font-weight: 700;
+}
+
+.modal-detail[open] .modal-detail-arrow {
+  transform: rotate(45deg);
+}
+
+.modal-detail-body {
+  padding: 12px 0 0;
+  color: var(--color-text-sub);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.modal-detail-body p {
+  margin: 0;
+}
+.modal-detail-body img{
+   border-radius:16px;
+}
 /* =========================
    モーダル　使用方法
 ========================= */
@@ -80,6 +139,9 @@
   color: var(--color-text-description);
   font-size: 13px;
   line-height: 1.7;
+}
+#usageModal img{
+   border-radius:16px;
 }
 /* =========================
    モーダルYouTube
@@ -174,7 +236,7 @@
   justify-content: flex-start;
   align-items: center;
   background-color: #fcfcfc;
-  gap: 8px;
+  gap: 4px;
   margin: 0 0 14px;
   padding: 4px 42px 12px 2px;
   max-width: 100%;
@@ -253,6 +315,47 @@
     0 0 0 3px var(--share-image-theme-border),
     var(--shadow-card);
 }
+
+.share-image-control-area {
+  display: grid;
+  gap: 6px;
+  margin: 0 12px 14px;
+}
+
+.share-image-control-label {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--color-text-sub);
+}
+
+.share-image-select {
+  width: 100%;
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-brand-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.share-image-input {
+  width: 100%;
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-brand-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.share-image-input::placeholder {
+  color: var(--color-text-sub);
+  opacity: 0.72;
+}
+
 /* カラー定義 */
 .share-image-theme-button-red {
   --share-image-theme-color: #ef4444;
@@ -269,7 +372,7 @@
   --share-image-theme-soft: #f0fdf4;
   --share-image-theme-border: #bbf7d0;
 }
-.share-image-theme-button-blue {
+.share-image-theme-button-sky {
   --share-image-theme-color: #38bdf8;
   --share-image-theme-soft: #f0f9ff;
   --share-image-theme-border: #bae6fd;
@@ -318,13 +421,14 @@
 ================================================== */
 .setup-modal-content {
   max-width: 560px;
-  width: min(100%, 430px);
+  width: min(100%, 520px);
 }
 .setup-modal-body {
   display: grid;
   gap: 18px;
   display: grid;
   gap: 16px;
+   padding:10px;
 }
 .setup-modal-lead {
   margin: 0;
@@ -485,12 +589,12 @@
   display: grid;
   gap: 12px;
   border-radius: var(--radius-card);
-  padding: 14px;
   background: var(--color-surface-soft);
   border: 1px solid var(--color-border);
 }
 .setup-guide-card h3 {
-  margin: 0;
+   margin: 0.5rem;
+   padding: 0 0.5rem;
   font-size: 1.05rem;
   color: var(--color-brand);
 }
@@ -504,7 +608,7 @@
   box-shadow: var(--shadow-card-soft);
 }
 .setup-guide-note {
-  margin: 0;
+  margin: 0.5rem;
   font-size: 0.9rem;
   line-height: 1.7;
   color: var(--color-text-sub);
@@ -522,6 +626,9 @@
   font-size: 1.05rem;
   color: var(--color-brand);
 }
+#userBrowser{
+   margin:0;
+}
 
 @keyframes setupGuideFadeIn {
   from {
@@ -532,4 +639,21 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ==================================================
+   モーダル　初回訪問browser
+================================================== */
+.firstvisit-modal-content{
+   background-color:var(--color-surface);
+}
+#pwaFirstVisitModalTitle p{
+   text-align:center;
+}
+.firstvisit-modal-content strong {
+    color: var(--color-brand);
+}
+
+#firstVisitModal p{
+   text-align:center;
 }
