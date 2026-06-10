@@ -421,7 +421,7 @@
 ================================================== */
 .setup-modal-content {
   max-width: 560px;
-  width: min(100%, 430px);
+  width: min(100%, 520px);
 }
 .setup-modal-body {
   display: grid;
