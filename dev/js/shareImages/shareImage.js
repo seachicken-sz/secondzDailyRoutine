@@ -12,7 +12,9 @@ let currentShareImageTheme = getCurrentThemeKeyForShareImage();
 // シェア画像の現在スタイル
 // ==================================================
 let currentShareImageStyle = "yumekawaGradient";
+
 let currentShareImageCharacter = null;
+let shareImageRenderToken = 0;
 
 // ==================================================
 // SNS共有画像イベント登録
@@ -55,9 +57,11 @@ function bindShareImageEvents() {
   });
 
   if (typeof shareImageStyleSelectElement !== "undefined" && shareImageStyleSelectElement) {
-    shareImageStyleSelectElement.addEventListener("change", () => {
+    shareImageStyleSelectElement.addEventListener("change", async () => {
       currentShareImageStyle = shareImageStyleSelectElement.value || "yumekawaGradient";
-      renderShareImage(currentShareImageTheme);
+      await waitShareImageStyleFontsLoaded(currentShareImageStyle);
+      await new Promise((resolve) => requestAnimationFrame(resolve));
+      await renderShareImage(currentShareImageTheme);
     });
   }
   if (typeof shareImageUserNameInputElement !== "undefined" && shareImageUserNameInputElement) {
@@ -444,17 +448,52 @@ async function waitShareImageFontsLoaded() {
     document.fonts.ready
   ]);
 }
+async function waitShareImageStyleFontsLoaded(styleKey) {
+  if (!document.fonts) return;
 
+  const fontLoads = [
+    document.fonts.load('400 32px "Zen Maru Gothic"'),
+    document.fonts.load('500 32px "Zen Maru Gothic"'),
+    document.fonts.load('700 32px "Zen Maru Gothic"')
+  ];
+
+  if (styleKey === "yumekawaGradient") {
+    fontLoads.push(document.fonts.load('400 62px "Hachi Maru Pop"'));
+    fontLoads.push(document.fonts.load('400 62px "Yomogi"'));
+  }
+
+  if (styleKey === "paperWood") {
+    fontLoads.push(document.fonts.load('400 34px "Yomogi"'));
+  }
+
+  if (styleKey === "characterPhotoList") {
+    fontLoads.push(document.fonts.load('400 62px "Darumadrop One"'));
+    fontLoads.push(document.fonts.load('700 31px "Zen Maru Gothic"'));
+    fontLoads.push(document.fonts.load('500 30px "Caveat"'));
+    fontLoads.push(document.fonts.load('600 30px "Caveat"'));
+  }
+
+  if (styleKey === "characterSimpleCard") {
+    fontLoads.push(document.fonts.load('400 64px "Darumadrop One"'));
+    fontLoads.push(document.fonts.load('700 34px "Zen Maru Gothic"'));
+  }
+
+  await Promise.all(fontLoads);
+  await document.fonts.ready;
+}
 // ==================================================
 // シェア画像描画
 // ==================================================
 async function renderShareImage(themeKey = currentShareImageTheme) {
+  const renderToken = ++shareImageRenderToken;
   if (!shareImageCanvasElement) {
     return;
   }
 
   await waitShareImageStylesLoaded();
   await waitShareImageFontsLoaded();
+
+  if (renderToken !== shareImageRenderToken) return;
 
   const items = getCheckedPostItemsForShareImage();
   const tasks = buildShareImageCanvasTasks(items);
@@ -469,6 +508,10 @@ async function renderShareImage(themeKey = currentShareImageTheme) {
   if (typeof shareImageStyleSelectElement !== "undefined" && shareImageStyleSelectElement) {
     currentShareImageStyle = shareImageStyleSelectElement.value || currentShareImageStyle;
   }
+
+  await waitShareImageStyleFontsLoaded(currentShareImageStyle);
+  await new Promise((resolve) => requestAnimationFrame(resolve));
+  if (renderToken !== shareImageRenderToken) return;
 
   const ctx = shareImageCanvasElement.getContext("2d");
   const renderer =
