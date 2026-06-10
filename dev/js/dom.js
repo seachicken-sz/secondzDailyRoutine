@@ -322,6 +322,7 @@ const closeShareImageModalButtonElement = document.getElementById("closeShareIma
 const shareImageCanvasElement = document.getElementById("shareImageCanvas");
 const shareImageThemeButtonElements = document.querySelectorAll("[data-share-image-theme]");
 const downloadShareImageButtonElement = document.getElementById("downloadShareImageButton");
+const shareImageStyleSelectElement = document.getElementById("shareImageStyleSelect");
 
 // ==================================================
 // DOM: STEP 6 YouTube確認
