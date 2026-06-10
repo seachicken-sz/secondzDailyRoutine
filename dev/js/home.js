@@ -441,6 +441,122 @@ function updateDailyStartedTodayClass() {
 }
 
 // ==================================================
+// ホーム：おかわりDaily シェア画像
+// ==================================================
+
+// おかわりDaily用：完了済みタスクだけをシェア画像用に集める
+function buildCompletedHomeDailyShareImageItems() {
+  const items = [];
+
+  (state.dailyGroups || []).forEach((group) => {
+    const groupItems = getDailyGroupItems(group);
+
+    groupItems.forEach((task) => {
+      const isDone =
+        typeof isDailyTaskDone === "function" &&
+        isDailyTaskDone(task);
+
+      if (!isDone) {
+        return;
+      }
+
+      const name =
+        task?.imageText ||
+        task?.["short-name"] ||
+        task?.shortName ||
+        getHomeExtraTaskName(task, "daily");
+
+      if (!name) {
+        return;
+      }
+
+      items.push({
+        label: name,
+        name,
+        group: group?.listName || "",
+        done: true,
+        type: "homeDaily",
+      });
+    });
+  });
+
+  HOME_EXTRA_USEN_TASKS.forEach((task) => {
+    const isDone =
+      typeof isDailyTaskDone === "function" &&
+      isDailyTaskDone(task);
+
+    if (!isDone) {
+      return;
+    }
+
+    const name =
+      task?.imageText ||
+      task?.shortName ||
+      task?.name ||
+      "USEN推し活リクエスト";
+
+    items.push({
+      label: name,
+      name,
+      group: "USEN推し活リクエスト",
+      done: true,
+      type: "homeUsen",
+    });
+  });
+
+  return items;
+}
+
+// おかわりDaily用：シェア画像ボタンを作る
+function createHomeDailyShareImageButton() {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "primary-button";
+  button.textContent = "完了画像を作る";
+
+  button.addEventListener("click", () => {
+    const completedItems = buildCompletedHomeDailyShareImageItems();
+
+    if (completedItems.length === 0) {
+      alert("完了済みのタスクがまだありません。");
+      return;
+    }
+
+    if (typeof window.openShareImageModal !== "function") {
+      alert("画像作成機能の読み込みに失敗しました。ページを再読み込みしてください。");
+      return;
+    }
+
+    window.openShareImageModal({
+      source: "homeDaily",
+      titleText: "おかわりDaily完了！",
+      items: completedItems,
+    });
+  });
+
+  return button;
+}
+
+// おかわりDaily用：シェア画像ボタンをリスト末尾に追加
+function appendHomeDailyShareImageButton() {
+  if (!homeDailyExtraListElement) {
+    return;
+  }
+
+  const completedItems = buildCompletedHomeDailyShareImageItems();
+
+  if (completedItems.length === 0) {
+    return;
+  }
+
+  const buttonArea = document.createElement("div");
+  buttonArea.className = "home-extra-task-actions";
+
+  buttonArea.appendChild(createHomeDailyShareImageButton());
+  homeDailyExtraListElement.appendChild(buttonArea);
+}
+
+// ==================================================
 // ホーム：おかわりDaily
 // ==================================================
 
@@ -455,6 +571,7 @@ function renderHomeDailyExtraList(groups) {
   if (!Array.isArray(groups) || groups.length === 0) {
     const hasUsenTasks = HOME_EXTRA_USEN_TASKS.length > 0;
     toggleHomeExtraSection(homeDailyExtraCardElement, hasUsenTasks);
+    appendHomeDailyShareImageButton();
     updateDailyStartedTodayClass();
     updateHomeDailyJumpVisibility();
     return;
@@ -510,9 +627,11 @@ function renderHomeDailyExtraList(groups) {
     homeDailyExtraListElement.appendChild(groupDetails);
   });
 
+  appendHomeDailyShareImageButton();
+
   const hasDailyTasks = HOME_EXTRA_DAILY_TASKS.length > 0;
   const hasUsenTasks = HOME_EXTRA_USEN_TASKS.length > 0;
-  
+
   toggleHomeExtraSection(homeDailyExtraCardElement, hasDailyTasks || hasUsenTasks);
   updateDailyStartedTodayClass();
   updateHomeDailyJumpVisibility();
