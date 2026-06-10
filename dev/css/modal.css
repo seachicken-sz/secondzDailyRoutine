@@ -644,6 +644,9 @@
 /* ==================================================
    モーダル　初回訪問browser
 ================================================== */
+.firstvisit-modal-content{
+   background-color:var(--color-surface);
+}
 .firstvisit-modal-content strong {
     color: var(--color-brand);
 }
