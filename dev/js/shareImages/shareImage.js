@@ -24,6 +24,7 @@ function bindShareImageEvents() {
 
     shareImageModalElement.classList.remove("hidden");
     syncShareImageStyleSelect();
+    restoreShareImageUserName();
     renderShareImage();
   });
 
@@ -58,7 +59,12 @@ function bindShareImageEvents() {
       renderShareImage(currentShareImageTheme);
     });
   }
-
+  if (typeof shareImageUserNameInputElement !== "undefined" && shareImageUserNameInputElement) {
+    shareImageUserNameInputElement.addEventListener("input", () => {
+      saveShareImageUserName();
+      renderShareImage(currentShareImageTheme);
+    });
+  }
   addClickEvent(downloadShareImageButtonElement, async () => {
     await renderShareImage(currentShareImageTheme);
 
@@ -126,7 +132,39 @@ function syncShareImageStyleSelect() {
 
   shareImageStyleSelectElement.value = currentShareImageStyle;
 }
+// ==================================================
+// 表示名を復元
+// ==================================================
+function restoreShareImageUserName() {
+  if (typeof shareImageUserNameInputElement === "undefined" || !shareImageUserNameInputElement) {
+    return;
+  }
 
+  const savedName = localStorage.getItem("shareImageUserName") || "";
+  shareImageUserNameInputElement.value = savedName;
+}
+
+// ==================================================
+// 表示名を保存
+// ==================================================
+function saveShareImageUserName() {
+  if (typeof shareImageUserNameInputElement === "undefined" || !shareImageUserNameInputElement) {
+    return;
+  }
+
+  localStorage.setItem("shareImageUserName", shareImageUserNameInputElement.value.trim());
+}
+
+// ==================================================
+// シェア画像用表示名取得
+// ==================================================
+function getShareImageUserName() {
+  if (typeof shareImageUserNameInputElement === "undefined" || !shareImageUserNameInputElement) {
+    return localStorage.getItem("shareImageUserName") || "";
+  }
+
+  return shareImageUserNameInputElement.value.trim();
+}
 // ==================================================
 // canvasから画像Blobを取得
 // ==================================================
@@ -343,7 +381,7 @@ async function renderShareImage(themeKey = currentShareImageTheme) {
     dateText: getShareImageDateText(),
     titleText: "タスク完了！",
     tasks,
-    userName: ""
+    userName: getShareImageUserName()
   });
 
   hideError(postErrorAreaElement);
