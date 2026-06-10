@@ -319,7 +319,7 @@
 .share-image-control-area {
   display: grid;
   gap: 6px;
-  margin: 14px 0 12px;
+  margin: 0 12px 14px;
 }
 
 .share-image-control-label {
