@@ -35,9 +35,28 @@ function bindHomeEvents() {
   addClickEvent(homeBottomShareButtonElement, shareAppFromHome);
 
   // ==================================================
-  // ホーム目次
+  //ホームメニュー
   // ==================================================
-  bindHomeIndexEvents();
+  addClickEvent(homeMenuButtonElement, openHomeMenu);
+  addClickEvent(closeHomeMenuButtonElement, closeHomeMenu);
+  addClickEvent(homeMenuOverlayElement, closeHomeMenu);
+
+  bindHomeMenuAccordionEvents();
+
+  addClickEvent(homeMenuSetupButtonElement, () => {
+    closeHomeMenu();
+    openFirstSetupModal();
+  });
+
+  addClickEvent(homeMenuUsageButtonElement, () => {
+    closeHomeMenu();
+    openUsageModal();
+  });
+
+  addClickEvent(homeMenuShareButtonElement, () => {
+    closeHomeMenu();
+    shareAppFromHome();
+  });
 
   // ==================================================
   // おかわりDaily直行リンク
@@ -97,91 +116,6 @@ async function shareAppFromHome() {
     console.error(error);
     alert("共有に失敗しました。");
   }
-}
-
-// ==================================================
-// ホーム目次
-// ==================================================
-
-// ホーム目次を現在存在するホーム内セクションから作る
-function updateHomeIndex() {
-  if (!homeIndexListElement) {
-    return;
-  }
-
-  const indexItems = [];
-
-  if (isVisibleHomeSection("homeDailyExtraCard")) {
-    indexItems.push({
-      label: "おかわりDaily",
-      targetId: "homeDailyExtraCard",
-    });
-  }
-
-  if (isVisibleHomeSection("homeOnceMoreCard")) {
-    indexItems.push({
-      label: "期間限定",
-      targetId: "homeOnceMoreCard",
-    });
-  }
-
-  if (isVisibleHomeSection("homeInfoCard")) {
-    indexItems.push({
-      label: "最近のタムごと",
-      targetId: "homeInfoCard",
-    });
-  }
-
-  homeIndexListElement.innerHTML = "";
-
-  if (indexItems.length === 0) {
-    homeIndexListElement.innerHTML = `<p class="empty-text">表示できる項目はありません。</p>`;
-    return;
-  }
-
-  indexItems.forEach((item) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "home-index-button";
-    button.textContent = item.label;
-    button.dataset.homeIndexTarget = item.targetId;
-
-    homeIndexListElement.appendChild(button);
-  });
-}
-
-function isVisibleHomeSection(id) {
-  const element = document.getElementById(id);
-
-  return Boolean(element && !element.classList.contains("hidden"));
-}
-
-// ホーム目次クリックイベント
-function bindHomeIndexEvents() {
-  if (!homeIndexListElement) {
-    return;
-  }
-
-  homeIndexListElement.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-home-index-target]");
-
-    if (!button) {
-      return;
-    }
-
-    scrollHomeToElement(button.dataset.homeIndexTarget);
-  });
-}
-
-// おかわりDaily直行リンク表示制御
-function updateHomeDailyJumpVisibility() {
-  if (!homeDailyJumpAreaElement) {
-    return;
-  }
-
-  const shouldShow = isVisibleHomeSection("homeDailyExtraCard");
-
-  homeDailyJumpAreaElement.classList.toggle("hidden", !shouldShow);
 }
 
 // おかわりDaily直行リンククリックイベント
@@ -250,6 +184,13 @@ let HOME_EXTRA_USEN_TASKS = [];
 // USEN疑似タスクGroupの開閉状態
 // プルダウン変更で再描画しても、開いていたら開いたままにする
 let HOME_USEN_EXTRA_GROUP_OPEN = false;
+// おかわりDailyのグループ開閉状態
+// 再描画しても開いていたグループを開いたままにする
+const HOME_DAILY_EXTRA_GROUP_OPEN_MAP = {};
+
+// おかわりDailyのタスク詳細開閉状態
+// 再描画しても開いていたタスクを開いたままにする
+const HOME_DAILY_EXTRA_TASK_OPEN_MAP = {};
 
 // sectionを表示/非表示にする
 function toggleHomeExtraSection(cardElement, shouldShow) {
@@ -372,15 +313,67 @@ function getHomeExtraTaskBySource(source, index) {
   return null;
 }
 
+// おかわりDaily用：グループ開閉状態キー
+function getHomeDailyExtraGroupOpenKey(group, groupIndex) {
+  return group?.id || group?.listName || `group_${groupIndex}`;
+}
+
+// おかわりDaily用：タスク詳細開閉状態キー
+function getHomeDailyExtraTaskOpenKey(task, source, index) {
+  const taskId =
+    task?.id ||
+    task?.itemId ||
+    task?.["short-name"] ||
+    task?.shortName ||
+    task?.name ||
+    "";
+
+  return `${source}_${taskId || index}`;
+}
+
+// タスク詳細DOMを作る
+// 通常Daily/期間限定用。USEN疑似タスクは1段表示にしたいため専用描画で作る。
 // タスク詳細DOMを作る
 // 通常Daily/期間限定用。USEN疑似タスクは1段表示にしたいため専用描画で作る。
 function createHomeExtraTaskDetail({ task, source, index }) {
   const details = document.createElement("details");
   details.className = "home-extra-task-detail";
 
+  const taskOpenKey = getHomeDailyExtraTaskOpenKey(task, source, index);
+
+  if (source === "daily") {
+    details.open = Boolean(HOME_DAILY_EXTRA_TASK_OPEN_MAP[taskOpenKey]);
+  }
+
+  const isDone =
+    source === "daily" &&
+    typeof isDailyTaskDone === "function" &&
+    isDailyTaskDone(task);
+
+  details.classList.toggle("is-daily-done", isDone);
+
+  details.addEventListener("toggle", () => {
+    if (source !== "daily") {
+      return;
+    }
+
+    HOME_DAILY_EXTRA_TASK_OPEN_MAP[taskOpenKey] = details.open;
+  });
+
   const summary = document.createElement("summary");
   summary.className = "home-extra-task-summary";
-  summary.textContent = getHomeExtraTaskName(task, source);
+
+  const summaryLabel = document.createElement("span");
+  summaryLabel.className = "home-extra-task-summary-label";
+  summaryLabel.textContent = getHomeExtraTaskName(task, source);
+
+  const doneMark = document.createElement("span");
+  doneMark.className = "home-extra-task-done-mark show-when-daily-done";
+  doneMark.textContent = "✅";
+  doneMark.setAttribute("aria-label", "本日実行済み");
+
+  summary.appendChild(summaryLabel);
+  summary.appendChild(doneMark);
 
   const body = document.createElement("div");
   body.className = "home-extra-task-body";
@@ -388,6 +381,14 @@ function createHomeExtraTaskDetail({ task, source, index }) {
   const comment = document.createElement("div");
   comment.className = "notice-box home-extra-task-comment";
   comment.textContent = normalizeDisplayNewlines(getHomeExtraTaskComment(task, source));
+
+  if (source === "daily" && task["input-flag"] === true) {
+    task._preparedHomeCopyText = buildHomeDailyTaskCopyText(task);
+  } else {
+    task._preparedHomeCopyText = "";
+  }
+
+  const copyPreview = createHomeDailyTaskCopyPreview(task, source);
 
   const actionArea = document.createElement("div");
   actionArea.className = "home-extra-task-actions";
@@ -427,12 +428,59 @@ function createHomeExtraTaskDetail({ task, source, index }) {
   actionArea.appendChild(shareThreadsButton);
 
   body.appendChild(comment);
+
+  if (copyPreview) {
+    body.appendChild(copyPreview);
+  }
+
   body.appendChild(actionArea);
 
   details.appendChild(summary);
   details.appendChild(body);
 
   return details;
+}
+
+// おかわりDaily用：コピー内容プレビューDOMを作る
+function createHomeDailyTaskCopyPreview(task, source) {
+  if (source !== "daily") {
+    return null;
+  }
+
+  if (task?.["input-flag"] !== true) {
+    return null;
+  }
+
+  const copyText = task._preparedHomeCopyText || "";
+
+  if (!copyText) {
+    return null;
+  }
+
+  const requestInput = task["request-input"] || "";
+
+  const previewArea = document.createElement("div");
+  previewArea.className = "daily-task-copy-preview";
+
+  const beforeNote = document.createElement("p");
+  beforeNote.className = "daily-task-copy-preview-note";
+  beforeNote.textContent = "「ページを開く」を押すと以下がコピーされます。";
+
+  const previewText = document.createElement("div");
+  previewText.className = "daily-task-copy-preview-text";
+  previewText.textContent = copyText;
+
+  const afterNote = document.createElement("p");
+  afterNote.className = "daily-task-copy-preview-note";
+  afterNote.textContent = requestInput
+    ? `「${requestInput}」にペーストしてください。`
+    : "指定の入力欄にペーストしてください。";
+
+  previewArea.appendChild(beforeNote);
+  previewArea.appendChild(previewText);
+  previewArea.appendChild(afterNote);
+
+  return previewArea;
 }
 
 // 今日、daily系グループが1つ以上完了しているかをbodyクラスへ反映する
@@ -452,6 +500,122 @@ function updateDailyStartedTodayClass() {
 }
 
 // ==================================================
+// ホーム：おかわりDaily シェア画像
+// ==================================================
+
+// おかわりDaily用：完了済みタスクだけをシェア画像用に集める
+function buildCompletedHomeDailyShareImageItems() {
+  const items = [];
+
+  (state.dailyGroups || []).forEach((group) => {
+    const groupItems = getDailyGroupItems(group);
+
+    groupItems.forEach((task) => {
+      const isDone =
+        typeof isDailyTaskDone === "function" &&
+        isDailyTaskDone(task);
+
+      if (!isDone) {
+        return;
+      }
+
+      const name =
+        task?.imageText ||
+        task?.["short-name"] ||
+        task?.shortName ||
+        getHomeExtraTaskName(task, "daily");
+
+      if (!name) {
+        return;
+      }
+
+      items.push({
+        label: name,
+        name,
+        group: group?.listName || "",
+        done: true,
+        type: "homeDaily",
+      });
+    });
+  });
+
+  HOME_EXTRA_USEN_TASKS.forEach((task) => {
+    const isDone =
+      typeof isDailyTaskDone === "function" &&
+      isDailyTaskDone(task);
+
+    if (!isDone) {
+      return;
+    }
+
+    const name =
+      task?.imageText ||
+      task?.shortName ||
+      task?.name ||
+      "USEN推し活リクエスト";
+
+    items.push({
+      label: name,
+      name,
+      group: "USEN推し活リクエスト",
+      done: true,
+      type: "homeUsen",
+    });
+  });
+
+  return items;
+}
+
+// おかわりDaily用：シェア画像ボタンを作る
+function createHomeDailyShareImageButton() {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "primary-button";
+  button.textContent = "画像で共有する";
+
+  button.addEventListener("click", () => {
+    const completedItems = buildCompletedHomeDailyShareImageItems();
+
+    if (completedItems.length === 0) {
+      alert("完了済みのタスクがまだありません。");
+      return;
+    }
+
+    if (typeof window.openShareImageModal !== "function") {
+      alert("画像作成機能の読み込みに失敗しました。ページを再読み込みしてください。");
+      return;
+    }
+
+    window.openShareImageModal({
+      source: "homeDaily",
+      titleText: "タスク完了！",
+      items: completedItems,
+    });
+  });
+
+  return button;
+}
+
+// おかわりDaily用：シェア画像ボタンをリスト末尾に追加
+function appendHomeDailyShareImageButton() {
+  if (!homeDailyExtraListElement) {
+    return;
+  }
+
+  const completedItems = buildCompletedHomeDailyShareImageItems();
+
+  if (completedItems.length === 0) {
+    return;
+  }
+
+  const buttonArea = document.createElement("div");
+  buttonArea.className = "home-extra-task-actions";
+
+  buttonArea.appendChild(createHomeDailyShareImageButton());
+  homeDailyExtraListElement.appendChild(buttonArea);
+}
+
+// ==================================================
 // ホーム：おかわりDaily
 // ==================================================
 
@@ -466,13 +630,13 @@ function renderHomeDailyExtraList(groups) {
   if (!Array.isArray(groups) || groups.length === 0) {
     const hasUsenTasks = HOME_EXTRA_USEN_TASKS.length > 0;
     toggleHomeExtraSection(homeDailyExtraCardElement, hasUsenTasks);
+    appendHomeDailyShareImageButton();
     updateDailyStartedTodayClass();
     updateHomeDailyJumpVisibility();
-    updateHomeIndex();
     return;
   }
 
-  groups.forEach((group) => {
+  groups.forEach((group, groupIndex) => {
     const items = getDailyGroupItems(group);
 
     if (items.length === 0) {
@@ -485,6 +649,14 @@ function renderHomeDailyExtraList(groups) {
     const groupDetails = document.createElement("details");
     groupDetails.className = "home-extra-group";
     groupDetails.classList.toggle("is-daily-done", isGroupDone);
+
+    const groupOpenKey = getHomeDailyExtraGroupOpenKey(group, groupIndex);
+
+    groupDetails.open = Boolean(HOME_DAILY_EXTRA_GROUP_OPEN_MAP[groupOpenKey]);
+    
+    groupDetails.addEventListener("toggle", () => {
+      HOME_DAILY_EXTRA_GROUP_OPEN_MAP[groupOpenKey] = groupDetails.open;
+    });
 
     const summary = document.createElement("summary");
     summary.className = "home-extra-group-summary";
@@ -522,13 +694,14 @@ function renderHomeDailyExtraList(groups) {
     homeDailyExtraListElement.appendChild(groupDetails);
   });
 
+  appendHomeDailyShareImageButton();
+
   const hasDailyTasks = HOME_EXTRA_DAILY_TASKS.length > 0;
   const hasUsenTasks = HOME_EXTRA_USEN_TASKS.length > 0;
 
   toggleHomeExtraSection(homeDailyExtraCardElement, hasDailyTasks || hasUsenTasks);
   updateDailyStartedTodayClass();
   updateHomeDailyJumpVisibility();
-  updateHomeIndex();
 }
 
 // ==================================================
@@ -574,7 +747,6 @@ function renderHomeUsenExtraList() {
     toggleHomeExtraSection(homeDailyExtraCardElement, hasDailyTasks);
     updateDailyStartedTodayClass();
     updateHomeDailyJumpVisibility();
-    updateHomeIndex();
     return;
   }
 
@@ -669,7 +841,6 @@ function renderHomeUsenExtraList() {
   toggleHomeExtraSection(homeDailyExtraCardElement, hasDailyTasks || hasUsenTasks);
   updateDailyStartedTodayClass();
   updateHomeDailyJumpVisibility();
-  updateHomeIndex();
 }
 
 // ==================================================
@@ -688,7 +859,6 @@ function renderHomeOnceMoreList(tasks) {
 
   if (executableTasks.length === 0) {
     toggleHomeExtraSection(homeOnceMoreCardElement, false);
-    updateHomeIndex();
     return;
   }
 
@@ -706,7 +876,6 @@ function renderHomeOnceMoreList(tasks) {
   });
 
   toggleHomeExtraSection(homeOnceMoreCardElement, true);
-  updateHomeIndex();
 }
 
 function getExecutableHomeOnceMoreTasks(tasks) {
@@ -797,9 +966,9 @@ async function openHomeExtraTaskPage(task, source) {
     return;
   }
 
-  // デイリーで入力補助が必要な場合は、ホーム用の曲名でコピーする
+  // デイリーで入力補助が必要な場合は、表示時点で確定済みのコピー文を使う
   if (source === "daily" && task["input-flag"] === true) {
-    const copyText = buildHomeDailyTaskCopyText(task);
+    const copyText = task._preparedHomeCopyText || "";
 
     if (copyText) {
       try {
@@ -867,7 +1036,7 @@ async function openHomeExtraTaskPage(task, source) {
     renderHomeOnceMoreList(state.onceTasks || []);
   }
 
-  location.href = taskUrl;
+  openExternalTaskUrl(taskUrl);
 }
 
 function openHomeExtraTaskXPost(task, source) {
@@ -974,6 +1143,7 @@ function initializeHomeRequestSongSelect() {
     state.homeSelectedRequestSong = null;
     homeRequestSongSelectAreaElement.classList.add("hidden");
     renderHomeUsenExtraList();
+    renderHomeDailyExtraList(state.dailyGroups || []);
     return;
   }
 
@@ -1006,6 +1176,7 @@ function initializeHomeRequestSongSelect() {
 
   homeRequestSongSelectAreaElement.classList.remove("hidden");
   renderHomeUsenExtraList();
+  renderHomeDailyExtraList(state.dailyGroups || []);
 }
 
 function bindHomeRequestSongSelectEvents() {
@@ -1018,12 +1189,12 @@ function bindHomeRequestSongSelectEvents() {
 
     if (Number.isNaN(selectedIndex)) {
       state.homeSelectedRequestSong = null;
-      renderHomeUsenExtraList();
-      return;
+    } else {
+      state.homeSelectedRequestSong = state.requestSongs[selectedIndex] || null;
     }
 
-    state.homeSelectedRequestSong = state.requestSongs[selectedIndex] || null;
     renderHomeUsenExtraList();
+    renderHomeDailyExtraList(state.dailyGroups || []);
   });
 }
 
@@ -1068,4 +1239,78 @@ function buildHomeDailyTaskCopyText(item) {
   return template
     .replaceAll("musicname", musicName)
     .replaceAll("\\n", "\n");
+}
+
+function openHomeMenu() {
+  homeMenuOverlayElement?.classList.remove("hidden");
+  homeSlideMenuElement?.classList.remove("hidden");
+}
+
+function closeHomeMenu() {
+  homeMenuOverlayElement?.classList.add("hidden");
+  homeSlideMenuElement?.classList.add("hidden");
+}
+
+function bindHomeMenuAccordionEvents() {
+  const accordionButtons = document.querySelectorAll("[data-home-menu-accordion]");
+
+  accordionButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const key = button.dataset.homeMenuAccordion;
+      const detail = document.querySelector(`[data-home-menu-detail="${key}"]`);
+      const arrow = button.querySelector(".home-menu-arrow");
+
+      if (!detail) {
+        return;
+      }
+
+      const isOpen = !detail.classList.contains("hidden");
+
+      detail.classList.toggle("hidden", isOpen);
+
+      if (arrow) {
+        arrow.textContent = isOpen ? "＋" : "−";
+      }
+    });
+  });
+}
+
+function updateHomeDailyJumpVisibility() {
+  if (!homeDailyJumpAreaElement) {
+    return;
+  }
+
+  const shouldShow = isVisibleHomeSection("homeDailyExtraCard");
+
+  homeDailyJumpAreaElement.classList.toggle("hidden", !shouldShow);
+}
+
+// ホーム内セクション表示判定
+function isVisibleHomeSection(id) {
+  const element = document.getElementById(id);
+
+  return Boolean(element && !element.classList.contains("hidden"));
+}
+
+// 通常ルートでUSENを実行したときも、ホームのおかわりDaily側USENを完了扱いにする
+function markHomeUsenTaskDoneFromRoutine() {
+  if (typeof markDailyTaskDone !== "function") {
+    return;
+  }
+
+  const task = buildHomeUsenTaskFromSelectedSong();
+
+  if (!task) {
+    return;
+  }
+
+  markDailyTaskDone(task, "homeUsen");
+
+  if (typeof renderHomeUsenExtraList === "function") {
+    renderHomeUsenExtraList();
+  }
+
+  if (typeof updateDailyStartedTodayClass === "function") {
+    updateDailyStartedTodayClass();
+  }
 }

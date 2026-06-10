@@ -9,20 +9,22 @@
 // PWAとしてホーム画面から起動済みの場合、
 // ホーム画面の「まずはホーム画面に追加」カードを非表示にする
 function updateHomeInstallGuideVisibility() {
-  // 初回設定カードがHTMLに存在しない場合は何もしない
-  if (!homeInstallGuideCardElement) {
-    return;
-  }
+  const installGuideElements = [
+    homeInstallGuideCardElement,
+    homeInstallGuideMenuElement,
+  ];
 
-  // PWAとしてホーム画面から起動されているか判定する
-  // iOS Safariは navigator.standalone を使うため、両方チェックする
   const isStandalone =
     window.matchMedia("(display-mode: standalone)").matches ||
     window.navigator.standalone === true;
 
-  // PWA起動済みの場合は初回設定カードを非表示にする
-  // ブラウザ起動の場合は表示する
-  homeInstallGuideCardElement.classList.toggle("hidden", isStandalone);
+  installGuideElements.forEach((element) => {
+    if (!element) {
+      return;
+    }
+
+    element.classList.toggle("hidden", isStandalone);
+  });
 }
 
 // ==================================================
@@ -82,10 +84,6 @@ async function init() {
     renderHomeDailyExtraList(state.dailyGroups);
     // ホームの期間限定タスクを描画
     renderHomeOnceMoreList(state.onceTasks);
-    // ホーム目次を描画
-    updateHomeIndex();
-    // ホーム目次を描画
-    updateHomeIndex();
     // USENランキング表示処理が存在する場合だけ実行
     // musicTop.js 側などで loadRequestRanking が定義されている想定
     if (typeof loadRequestRanking === "function") {
@@ -94,6 +92,10 @@ async function init() {
     // 保存済みの途中再開データがあれば復元
     // なければホーム画面を表示
     await restoreFlowStateOrHome();
+    // ブラウザアクセスかつ初回のみ初回設定モーダル表示
+    autoOpenFirstSetupModalIfNeeded();
+    //PWA用初回モーダル表示
+    autoOpenPwaFirstVisitModalIfNeeded();
     } catch (error) {
       // 初期化中に何か失敗した場合は、最低限ホームが壊れないようにする
       console.error(error);
@@ -108,10 +110,6 @@ async function init() {
       // 期間限定も非表示にする
       if (typeof renderHomeOnceMoreList === "function") {
         renderHomeOnceMoreList([]);
-      }
-      // ホーム目次も最低限描画
-      if (typeof updateHomeIndex === "function") {
-        updateHomeIndex();
       }
       // 現在画面をホーム扱いにする
       state.currentStepElement = homeStepElement;

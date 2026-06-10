@@ -68,7 +68,7 @@ function bindOnceTaskEvents() {
     saveFlowState(state.openedAction, onceTaskRunStepElement);
 
     // 期間限定タスクのURLへ移動
-    location.href = task.url;
+    openExternalTaskUrl(task.url);
   });
 
   // ==================================================

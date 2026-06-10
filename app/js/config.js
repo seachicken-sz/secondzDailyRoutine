@@ -33,6 +33,9 @@ const STORAGE_KEYS = {
   flowState: "secondzDailyRoutineFlowState",
   onceTaskDoneMap: "secondzDailyRoutineOnceTaskDoneMap",
   dailyTaskDoneMap: "secondzDailyRoutineDailyTaskDoneMap",
+  //FirstSetupModalShown: "secondzDailyRoutineFirstSetupModalShown",
+  browserFirstVisitModalShown: "secondzDailyRoutineBrowserFirstVisitModalShown",
+  pwaFirstVisitModalShown: "secondzDailyRoutinePwaFirstVisitModalShown",
 };
 
 // ==================================================

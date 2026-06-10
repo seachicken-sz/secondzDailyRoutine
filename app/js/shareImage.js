@@ -10,6 +10,87 @@
 let currentShareImageTheme = getCurrentThemeKeyForShareImage();
 
 // ==================================================
+// シェア画像の現在スタイル
+// ==================================================
+// simple: 通常版
+// illustrated: イラスト版
+let currentShareImageStyle = "simple";
+//テキスト
+let currentShareImageFontStyle = "default";
+
+// ==================================================
+// シェア画像スタイル用チェックボックス取得
+// ==================================================
+function getShareImageIllustratedCheckboxElement() {
+  return document.getElementById("shareImageIllustratedCheckbox");
+}
+
+// ==================================================
+// シェア画像スタイル用チェックボックスのラベル取得
+// ==================================================
+function getShareImageIllustratedCheckboxLabelElement() {
+  const checkbox = getShareImageIllustratedCheckboxElement();
+
+  if (!checkbox) {
+    return null;
+  }
+
+  return checkbox.closest("label");
+}
+
+// ==================================================
+// シェア画像スタイル取得
+// ==================================================
+function getCurrentShareImageStyle() {
+  // normalテーマは必ずシンプル
+  if (currentShareImageTheme === "normal") {
+    return "simple";
+  }
+
+  const checkbox = getShareImageIllustratedCheckboxElement();
+
+  if (!checkbox) {
+    return "simple";
+  }
+
+  return checkbox.checked ? "illustrated" : "simple";
+}
+
+// ==================================================
+// シェア画像スタイルチェックボックス更新
+// ==================================================
+function updateShareImageStyleCheckbox() {
+  const checkbox = getShareImageIllustratedCheckboxElement();
+  const label = getShareImageIllustratedCheckboxLabelElement();
+
+  if (!checkbox) {
+    currentShareImageStyle = "simple";
+    return;
+  }
+
+  // normalテーマはイラスト版なし
+  if (currentShareImageTheme === "normal") {
+    checkbox.checked = false;
+    checkbox.disabled = true;
+    currentShareImageStyle = "simple";
+
+    if (label) {
+      label.classList.add("is-disabled");
+    }
+
+    return;
+  }
+
+  checkbox.disabled = false;
+
+  if (label) {
+    label.classList.remove("is-disabled");
+  }
+
+  currentShareImageStyle = checkbox.checked ? "illustrated" : "simple";
+}
+
+// ==================================================
 // SNS共有画像イベント登録
 // ==================================================
 // app.js から呼び出して、共有画像モーダル関連のイベントをまとめて登録する
@@ -27,6 +108,9 @@ function bindShareImageEvents() {
 
     // シェア画像モーダルを表示する
     shareImageModalElement.classList.remove("hidden");
+
+    // テーマに応じてスタイルチェックボックスを更新する
+    updateShareImageStyleCheckbox();
 
     // 現在の投稿項目・テーマで画像を描画する
     renderShareImage();
@@ -69,10 +153,43 @@ function bindShareImageEvents() {
       const themeKey =
         button.dataset.shareImageTheme || getCurrentThemeKeyForShareImage();
 
+      // 現在テーマを更新
+      currentShareImageTheme = themeKey;
+
+      // normalならチェック不可・シンプル固定にする
+      updateShareImageStyleCheckbox();
+
       // 選択テーマで画像を再描画する
-      renderShareImage(themeKey);
+      renderShareImage(currentShareImageTheme);
     });
   });
+
+  // ==================================================
+  // シェア画像スタイル切り替え
+  // ==================================================
+
+  const shareImageIllustratedCheckboxElement =
+    getShareImageIllustratedCheckboxElement();
+
+  if (shareImageIllustratedCheckboxElement) {
+    shareImageIllustratedCheckboxElement.addEventListener("change", () => {
+      // チェック状態を currentShareImageStyle に反映
+      updateShareImageStyleCheckbox();
+
+      // 現在テーマ・現在スタイルで再描画
+      renderShareImage(currentShareImageTheme);
+    });
+  }
+
+  const shareImageHandwrittenFontCheckboxElement =
+    getShareImageHandwrittenFontCheckboxElement();
+  
+  if (shareImageHandwrittenFontCheckboxElement) {
+    shareImageHandwrittenFontCheckboxElement.addEventListener("change", () => {
+      currentShareImageFontStyle = getCurrentShareImageFontStyle();
+      renderShareImage(currentShareImageTheme);
+    });
+  }
 
   // ==================================================
   // シェア画像保存/共有
@@ -80,8 +197,8 @@ function bindShareImageEvents() {
 
   // 画像保存ボタン押下時
   addClickEvent(downloadShareImageButtonElement, async () => {
-    // 保存前に現在テーマで画像を再描画する
-    renderShareImage(currentShareImageTheme);
+    // 保存前に現在テーマ・現在スタイルで画像を再描画する
+    await renderShareImage(currentShareImageTheme);
 
     // canvasから画像Blobを取得する
     const blob = await getShareImageBlob();
@@ -103,7 +220,8 @@ function bindShareImageEvents() {
         await navigator.share({
           files: [file],
           title: "タムごとDaily",
-          text: "今日の推し活ログ",
+          text: `タムごとDaily 本日のタスク完了👍
+        ${location.origin}${location.pathname}`,
         });
 
         // 成功時はエラー表示を消す
@@ -173,8 +291,7 @@ function getCurrentThemeKeyForShareImage() {
     red: "red",
     purple: "purple",
     green: "green",
-    sky: "blue",
-    blue: "blue",
+    sky: "sky",
     lime: "lime",
     pink: "pink",
     yellow: "yellow",
@@ -323,7 +440,7 @@ function getCheckedPostItemsForShareImage() {
 // シェア画像描画
 // ==================================================
 // 現在の投稿項目・選択曲・テーマをもとにcanvasへ画像を描画する
-function renderShareImage(themeKey = currentShareImageTheme) {
+async function renderShareImage(themeKey = currentShareImageTheme) {
   // canvasがない場合は何もしない
   if (!shareImageCanvasElement) {
     return;
@@ -341,17 +458,39 @@ function renderShareImage(themeKey = currentShareImageTheme) {
   // 現在選択中の画像テーマを更新
   currentShareImageTheme = themeKey;
 
+  // テーマに応じてチェックボックス状態を反映
+  updateShareImageStyleCheckbox();
+
+  // 現在の画像スタイルを取得
+  currentShareImageStyle = getCurrentShareImageStyle();
+  currentShareImageFontStyle = getCurrentShareImageFontStyle();
+
   // canvas.js の drawShareImage() で実際に描画する
-  drawShareImage(shareImageCanvasElement, {
-    themeKey: currentShareImageTheme,
-    dateText: getShareImageDateText(),
-    appName: "タムごとDaily",
-    title: "タスク完了！",
-    requestText: getShareImageRequestText(),
-    bgmText: getShareImageBgmText(),
-    items,
-  });
+await drawShareImage(shareImageCanvasElement, {
+  themeKey: currentShareImageTheme,
+  imageStyle: currentShareImageStyle,
+  fontStyle: currentShareImageFontStyle,
+  dateText: getShareImageDateText(),
+  appName: "タムごとDaily",
+  title: "タスク完了！",
+  requestText: getShareImageRequestText(),
+  bgmText: getShareImageBgmText(),
+  items,
+});
 
   // 描画成功時はエラー表示を消す
   hideError(postErrorAreaElement);
+}
+function getShareImageHandwrittenFontCheckboxElement() {
+  return document.getElementById("shareImageHandwrittenFontCheckbox");
+}
+
+function getCurrentShareImageFontStyle() {
+  const checkbox = getShareImageHandwrittenFontCheckboxElement();
+
+  if (!checkbox) {
+    return "default";
+  }
+
+  return checkbox.checked ? "handwritten" : "default";
 }

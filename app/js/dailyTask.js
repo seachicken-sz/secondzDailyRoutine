@@ -26,9 +26,9 @@ function bindDailyTaskEvents() {
       return;
     }
 
-    // 入力補助が必要なタスクの場合は、ページを開く前にコピー文を作成してクリップボードへ入れる
+    // 入力補助が必要なタスクの場合はコピー文をクリップボードへ入れる
     if (item["input-flag"] === true) {
-      const copyText = buildDailyTaskCopyText(item);
+      const copyText = item._preparedCopyText || "";
 
       // コピー文が作れた場合だけクリップボードへコピーする
       if (copyText) {
@@ -62,7 +62,7 @@ function bindDailyTaskEvents() {
     saveFlowState(state.openedAction, dailyTaskStepElement);
 
     // デイリータスクのURLへ移動
-    location.href = itemUrl;
+    openExternalTaskUrl(itemUrl);
   });
 
   // ==================================================
@@ -235,6 +235,13 @@ function renderCurrentDailyTask() {
         item.comment || "ページを開いてタスクを完了してください。"
       );
   }
+  // 入力補助が必要なタスクは、表示時点でコピー文を確定する
+  if (item["input-flag"] === true) {
+    item._preparedCopyText = buildDailyTaskCopyText(item);
+  } else {
+    item._preparedCopyText = "";
+  }
+  updateDailyTaskCopyPreview(item);
 
   // URLがあるタスクの場合は「ページを開く」ボタンを表示
   if (itemUrl) {
@@ -437,4 +444,31 @@ function getDailyTaskItemUrl(item) {
 
   // URLがあれば返し、なければ空文字
   return item.url || "";
+}
+
+function updateDailyTaskCopyPreview(item) {
+  const previewArea = document.getElementById("dailyTaskCopyPreviewArea");
+  const previewText = document.getElementById("dailyTaskCopyPreviewText");
+  const pasteTarget = document.getElementById("dailyTaskCopyPreviewPasteTarget");
+
+  if (!previewArea || !previewText || !pasteTarget) {
+    return;
+  }
+
+  const copyText = item?._preparedCopyText || "";
+  const requestInput = item?.["request-input"] || "";
+
+  if (item?.["input-flag"] !== true || !copyText) {
+    previewArea.classList.add("hidden");
+    previewText.textContent = "";
+    pasteTarget.textContent = "";
+    return;
+  }
+
+  previewText.textContent = copyText;
+  pasteTarget.textContent = requestInput
+    ? `「${requestInput}」にペーストしてください。`
+    : "指定の入力欄にペーストしてください。";
+
+  previewArea.classList.remove("hidden");
 }

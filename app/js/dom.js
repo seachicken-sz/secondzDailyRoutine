@@ -36,8 +36,6 @@ const openUsageButtonElement = document.getElementById("openUsageButton");
 //ホームのSNSシェアボタン
 const homeTopShareButtonElement = document.getElementById("homeTopShareButton");
 const homeBottomShareButtonElement = document.getElementById("homeBottomShareButton");
-// ホーム目次
-const homeIndexListElement = document.getElementById("homeIndexList");
 // おかわりDaily
 const homeDailyExtraCardElement = document.getElementById("homeDailyExtraCard");
 const homeDailyExtraListElement = document.getElementById("homeDailyExtraList");
@@ -51,6 +49,18 @@ const homeOnceMoreCardElement = document.getElementById("homeOnceMoreCard");
 const homeOnceMoreListElement = document.getElementById("homeOnceMoreList");
 // ホーム右下の上に戻るボタン
 const homeBackToTopButtonElement = document.getElementById("homeBackToTopButton");
+// ホームメニューボタン
+const homeMenuButtonElement = document.getElementById("homeMenuButton");
+//ホームメニュー
+const homeMenuOverlayElement = document.getElementById("homeMenuOverlay");
+const homeSlideMenuElement = document.getElementById("homeSlideMenu");
+const closeHomeMenuButtonElement = document.getElementById("closeHomeMenuButton");
+//ホームメニュー内初回設定メニュー
+const homeInstallGuideMenuElement = document.getElementById("homeInstallGuideMenu");
+// ホーム画面メニュー内モーダルを開くボタン
+const homeMenuSetupButtonElement = document.getElementById("homeMenuSetupButton");
+const homeMenuUsageButtonElement = document.getElementById("homeMenuUsageButton");
+const homeMenuShareButtonElement = document.getElementById("homeMenuShareButton");
 
 // ==================================================
 // DOM: 初回設定モーダル
@@ -59,6 +69,8 @@ const homeBackToTopButtonElement = document.getElementById("homeBackToTopButton"
 const howToModalElement = document.getElementById("firstSetupModal");
 // 初回設定モーダルの閉じるボタン
 const closeHowToButtonElement = document.getElementById("closeFirstSetupModalButton");
+// ブラウザ名
+const userBrowserElement = document.getElementById("userBrowser");
 
 // ==================================================
 // DOM: 使い方モーダル
@@ -93,6 +105,24 @@ const youtubeModalOtherRowElement =
 //エラーメッセージ表示エリア
 const youtubeModalErrorAreaElement =
   document.getElementById("youtubeModalErrorArea");
+
+// ==================================================
+// DOM: ブラウザ初回表示モーダル
+// ==================================================
+const firstVisitModalElement = document.getElementById("firstVisitModal");
+const closeFirstVisitModalButtonElement = document.getElementById("closeFirstVisitModalButton");
+const firstVisitOpenSetupButtonElement = document.getElementById("firstVisitOpenSetupButton");
+const firstVisitOpenUsageButtonElement = document.getElementById("firstVisitOpenUsageButton");
+const firstVisitCloseOnlyButtonElement = document.getElementById("firstVisitCloseOnlyButton");
+
+// ==================================================
+// DOM: PWA初回訪問モーダル
+// ==================================================
+const pwaFirstVisitModalElement = document.getElementById("pwaFirstVisitModal");
+const closePwaFirstVisitModalButtonElement = document.getElementById("closePwaFirstVisitModalButton");
+const pwaFirstVisitOpenUsageButtonElement = document.getElementById("pwaFirstVisitOpenUsageButton");
+const pwaFirstVisitCloseOnlyButtonElement = document.getElementById("pwaFirstVisitCloseOnlyButton");
+
 // ==================================================
 // DOM: STEP 1 Spotify
 // ==================================================
@@ -292,6 +322,8 @@ const closeShareImageModalButtonElement = document.getElementById("closeShareIma
 const shareImageCanvasElement = document.getElementById("shareImageCanvas");
 const shareImageThemeButtonElements = document.querySelectorAll("[data-share-image-theme]");
 const downloadShareImageButtonElement = document.getElementById("downloadShareImageButton");
+const shareImageStyleSelectElement = document.getElementById("shareImageStyleSelect");
+const shareImageUserNameInputElement = document.getElementById("shareImageUserNameInput");
 
 // ==================================================
 // DOM: STEP 6 YouTube確認

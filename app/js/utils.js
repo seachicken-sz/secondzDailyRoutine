@@ -407,6 +407,43 @@ function createYoutubeLogItemId(item) {
 }
 
 // ==================================================
+// Utils: 起動環境判定
+// ==================================================
+
+/**
+ * PWAとして起動しているかどうかを判定する
+ *
+ * @returns {boolean}
+ */
+function isStandaloneMode() {
+  return (
+    window.matchMedia("(display-mode: standalone)").matches ||
+    window.matchMedia("(display-mode: fullscreen)").matches ||
+    window.matchMedia("(display-mode: minimal-ui)").matches ||
+    window.navigator.standalone === true
+  );
+}
+
+/**
+ * 外部タスクURLを開く。
+ * PWA起動時は同じ画面、通常ブラウザ時は別タブで開く。
+ *
+ * @param {string} url
+ */
+function openExternalTaskUrl(url) {
+  if (!url) {
+    return;
+  }
+
+  if (isStandaloneMode()) {
+    location.href = url;
+    return;
+  }
+
+  window.open(url, "_blank", "noopener,noreferrer");
+}
+
+// ==================================================
 // Utils: UI補助
 // ==================================================
 

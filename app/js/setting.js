@@ -263,3 +263,124 @@ function scrollSetupGuideIntoView(targetElement) {
     });
   }, 80);
 }
+
+function isStandaloneMode() {
+  return (
+    window.matchMedia("(display-mode: standalone)").matches ||
+    window.navigator.standalone === true
+  );
+}
+
+function openFirstSetupModal() {
+  if (howToModalElement) {
+    howToModalElement.classList.remove("hidden");
+  }
+}
+
+function shouldAutoOpenFirstSetupModal() {
+  const alreadyShown =
+    localStorage.getItem(STORAGE_KEYS.browserFirstVisitModalShown) === "true";
+
+  return !isStandaloneMode() && !alreadyShown;
+}
+
+function autoOpenFirstSetupModalIfNeeded() {
+  if (!shouldAutoOpenFirstSetupModal()) {
+    return;
+  }
+
+  openFirstVisitModal();
+  localStorage.setItem(STORAGE_KEYS.browserFirstVisitModalShown, "true");
+}
+
+function openFirstVisitModal() {
+  renderUserBrowserInfo();
+  firstVisitModalElement?.classList.remove("hidden");
+}
+
+function closeFirstVisitModal() {
+  firstVisitModalElement?.classList.add("hidden");
+}
+
+function getBrowserDisplayName(browserType) {
+  const browserNameMap = {
+    x_in_app: "Xのリンクタップで開いた",
+    threads_in_app: "Threadsのリンクタップで開いた",
+    line_in_app: "LINEのリンクタップで開いた",
+    instagram_in_app: "Instagramのリンクタップで開いた",
+    facebook_in_app: "Facebookのリンクタップで開いた",
+    chrome_ios: "Chromeで開いている",
+    chrome: "Chromeで開いている",
+    safari: "Safariで開いている",
+    edge: "Edgeで開いている",
+    firefox: "Firefoxで開いている",
+    other_browser: "その他のブラウザで開いている",
+  };
+
+  return browserNameMap[browserType] || "その他のブラウザ";
+}
+
+function renderUserBrowserInfo() {
+  if (!userBrowserElement) {
+    return;
+  }
+
+  const browserType =
+    typeof getAccessBrowserType === "function"
+      ? getAccessBrowserType()
+      : "other_browser";
+
+  const browserName = getBrowserDisplayName(browserType);
+
+  userBrowserElement.innerHTML = `たぶん今の状態は「<strong>${browserName}</strong>」です。`;
+}
+
+function openPwaFirstVisitModal() {
+  pwaFirstVisitModalElement?.classList.remove("hidden");
+}
+
+function closePwaFirstVisitModal() {
+  pwaFirstVisitModalElement?.classList.add("hidden");
+}
+
+function hasExistingTaskHistory() {
+  return hasValidStorageObject(STORAGE_KEYS.onceTaskDoneMap) ||
+    hasValidStorageObject(STORAGE_KEYS.dailyTaskDoneMap);
+}
+
+function hasValidStorageObject(storageKey) {
+  try {
+    const raw = localStorage.getItem(storageKey);
+
+    if (!raw) {
+      return false;
+    }
+
+    const parsed = JSON.parse(raw);
+
+    return parsed &&
+      typeof parsed === "object" &&
+      !Array.isArray(parsed) &&
+      Object.keys(parsed).length > 0;
+  } catch (error) {
+    return false;
+  }
+}
+
+function shouldAutoOpenPwaFirstVisitModal() {
+  const alreadyShown =
+    localStorage.getItem(STORAGE_KEYS.pwaFirstVisitModalShown) === "true";
+
+  return isStandaloneMode() &&
+    !alreadyShown &&
+    !hasExistingTaskHistory();
+}
+
+function autoOpenPwaFirstVisitModalIfNeeded() {
+  if (!shouldAutoOpenPwaFirstVisitModal()) {
+    return;
+  }
+
+  openPwaFirstVisitModal();
+  localStorage.setItem(STORAGE_KEYS.pwaFirstVisitModalShown, "true");
+}
