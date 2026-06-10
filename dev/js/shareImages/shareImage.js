@@ -17,18 +17,41 @@ let currentShareImageCharacter = null;
 let shareImageRenderToken = 0;
 
 // ==================================================
+// シェア画像の呼び出し元・外部項目
+// ==================================================
+let currentShareImageSource = "normal";
+let currentShareImageExternalItems = null;
+let currentShareImageTitleText = "タスク完了！";
+
+// ==================================================
+// シェア画像モーダルを開く
+// 呼び出し元：通常SNS共有 / おかわりdaily
+// ==================================================
+function openShareImageModal(options = {}) {
+  if (!shareImageModalElement) {
+    return;
+  }
+
+  currentShareImageSource = options.source || "normal";
+  currentShareImageExternalItems = Array.isArray(options.items) ? options.items : null;
+  currentShareImageTitleText = options.titleText || "タスク完了！";
+
+  shareImageModalElement.classList.remove("hidden");
+  syncShareImageStyleSelect();
+  restoreShareImageUserName();
+  renderShareImage(currentShareImageTheme);
+}
+
+// ==================================================
 // SNS共有画像イベント登録
 // ==================================================
 function bindShareImageEvents() {
   addClickEvent(openShareImageModalButtonElement, () => {
-    if (!shareImageModalElement) {
-      return;
-    }
-
-    shareImageModalElement.classList.remove("hidden");
-    syncShareImageStyleSelect();
-    restoreShareImageUserName();
-    renderShareImage();
+    openShareImageModal({
+      source: "normal",
+      items: null,
+      titleText: "タスク完了！",
+    });
   });
 
   addClickEvent(closeShareImageModalButtonElement, () => {
@@ -64,12 +87,14 @@ function bindShareImageEvents() {
       await renderShareImage(currentShareImageTheme);
     });
   }
+
   if (typeof shareImageUserNameInputElement !== "undefined" && shareImageUserNameInputElement) {
     shareImageUserNameInputElement.addEventListener("input", () => {
       saveShareImageUserName();
       renderShareImage(currentShareImageTheme);
     });
   }
+
   addClickEvent(downloadShareImageButtonElement, async () => {
     await renderShareImage(currentShareImageTheme);
 
@@ -137,6 +162,7 @@ function syncShareImageStyleSelect() {
 
   shareImageStyleSelectElement.value = currentShareImageStyle;
 }
+
 // ==================================================
 // 表示名を復元
 // ==================================================
@@ -170,6 +196,7 @@ function getShareImageUserName() {
 
   return shareImageUserNameInputElement.value.trim();
 }
+
 // ==================================================
 // キャラ画像があるテーマキー一覧を取得
 // ==================================================
@@ -238,6 +265,7 @@ function loadShareImageAsset(src) {
     image.src = src;
   });
 }
+
 // ==================================================
 // canvasから画像Blobを取得
 // ==================================================
@@ -388,6 +416,60 @@ function getCheckedPostItemsForShareImage() {
 }
 
 // ==================================================
+// 外部から渡されたシェア画像用項目を文字列配列に変換
+// おかわりdailyでは完了済みだけを home.js 側で渡す想定
+// ==================================================
+function getExternalItemsForShareImage() {
+  const items = [];
+
+  if (!Array.isArray(currentShareImageExternalItems)) {
+    return items;
+  }
+
+  currentShareImageExternalItems.forEach((item) => {
+    if (!item) {
+      return;
+    }
+
+    if (typeof item === "string") {
+      if (item.trim()) {
+        items.push(item.trim());
+      }
+      return;
+    }
+
+    const name =
+      item.imageText ||
+      item["short-name"] ||
+      item.shortName ||
+      item.label ||
+      item.title ||
+      item.name ||
+      item.postText ||
+      "";
+
+    if (name) {
+      items.push(name);
+    }
+  });
+
+  return items;
+}
+
+// ==================================================
+// シェア画像用項目を取得
+// 通常SNS共有：チェック済み投稿項目
+// おかわりdaily：外部から渡された完了済み項目
+// ==================================================
+function getShareImageItemsForCurrentSource() {
+  if (Array.isArray(currentShareImageExternalItems)) {
+    return getExternalItemsForShareImage();
+  }
+
+  return getCheckedPostItemsForShareImage();
+}
+
+// ==================================================
 // シェア画像用タスク配列作成
 // ==================================================
 function buildShareImageCanvasTasks(items) {
@@ -448,6 +530,7 @@ async function waitShareImageFontsLoaded() {
     document.fonts.ready
   ]);
 }
+
 async function waitShareImageStyleFontsLoaded(styleKey) {
   if (!document.fonts) return;
 
@@ -481,6 +564,7 @@ async function waitShareImageStyleFontsLoaded(styleKey) {
   await Promise.all(fontLoads);
   await document.fonts.ready;
 }
+
 // ==================================================
 // シェア画像描画
 // ==================================================
@@ -495,7 +579,7 @@ async function renderShareImage(themeKey = currentShareImageTheme) {
 
   if (renderToken !== shareImageRenderToken) return;
 
-  const items = getCheckedPostItemsForShareImage();
+  const items = getShareImageItemsForCurrentSource();
   const tasks = buildShareImageCanvasTasks(items);
 
   if (tasks.length === 0) {
@@ -522,11 +606,28 @@ async function renderShareImage(themeKey = currentShareImageTheme) {
   const theme =
     SHARE_IMAGE_THEMES[currentShareImageTheme] ||
     SHARE_IMAGE_THEMES.normal;
-  
+
   const character = getCurrentShareImageCharacter(currentShareImageTheme);
   const characterImage = await loadShareImageAsset(character?.imagePath || "");
 
-  await renderer({ canvas: shareImageCanvasElement, ctx, theme, themeKey: currentShareImageTheme, dateText: getShareImageDateText(), titleText: "タスク完了！", tasks, userName: getShareImageUserName(), characterImage, characterThemeKey: character?.themeKey || currentShareImageTheme });
+  await renderer({
+    canvas: shareImageCanvasElement,
+    ctx,
+    theme,
+    themeKey: currentShareImageTheme,
+    dateText: getShareImageDateText(),
+    titleText: currentShareImageTitleText,
+    tasks,
+    userName: getShareImageUserName(),
+    characterImage,
+    characterThemeKey: character?.themeKey || currentShareImageTheme
+  });
 
   hideError(postErrorAreaElement);
 }
+
+// ==================================================
+// 外部ファイルからシェア画像モーダルを開けるようにする
+// home.js のおかわりdailyなどから使用
+// ==================================================
+window.openShareImageModal = openShareImageModal;
