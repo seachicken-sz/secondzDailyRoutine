@@ -489,8 +489,8 @@ function renderReport(data) {
   }
 
   // footerより上に、いいね数推移グラフを追加
-  // ランキングが全部なくても、likePoints があれば表示する
-  renderLikeTimelineSection(data.likePoints, chartHours);
+  // ランキングが全部なくても、likePoints / previousLikePoints があれば表示する
+  renderLikeTimelineSection({ likePoints: data.likePoints, previousLikePoints: data.previousLikePoints, chartHours });
 }
 
 /**
@@ -1287,8 +1287,14 @@ function createCombinedRankingChart(canvasId, rankings, chartHours) {
  *
  * reportCaptureArea内のfooterより上に差し込む。
  * chart-sectionクラスを使い、他のグラフエリアと同じ白背景にする。
+ *
+ * 最新回 likePoints と前回 previousLikePoints を同じグラフに表示する。
  */
-function renderLikeTimelineSection(likePoints, chartHours = 48) {
+function renderLikeTimelineSection({
+  likePoints,
+  previousLikePoints,
+  chartHours = 48
+}) {
   let container = document.getElementById("likeTimelineSection");
 
   if (!container) {
@@ -1312,8 +1318,11 @@ function renderLikeTimelineSection(likePoints, chartHours = 48) {
     }
   }
 
-  // いいね時系列がない場合は、空グラフを出さずに非表示
-  if (!Array.isArray(likePoints) || likePoints.length === 0) {
+  const hasCurrentLikePoints = Array.isArray(likePoints) && likePoints.length > 0;
+  const hasPreviousLikePoints = Array.isArray(previousLikePoints) && previousLikePoints.length > 0;
+
+  // 最新回・前回どちらも時系列がない場合は、空グラフを出さずに非表示
+  if (!hasCurrentLikePoints && !hasPreviousLikePoints) {
     container.innerHTML = "";
     container.style.display = "none";
     return;
@@ -1332,10 +1341,12 @@ function renderLikeTimelineSection(likePoints, chartHours = 48) {
   `;
 
   const likeData = convertLikePointsToHourData(likePoints, chartHours);
+  const previousLikeData = convertLikePointsToHourData(previousLikePoints, chartHours);
 
   const chart = createLikeTimelineChart(
     "likeTimelineChart",
     likeData,
+    previousLikeData,
     chartHours
   );
 
@@ -1383,27 +1394,52 @@ function convertLikePointsToHourData(points, chartHours) {
  *
  * maintainAspectRatio:false にして、
  * CSSの .like-chart-canvas-wrap の高さを優先する。
+ *
+ * 最新回：既存の水色
+ * 前回：水色をグレー寄りにした淡い青みグレー
  */
-function createLikeTimelineChart(canvasId, likeData, chartHours) {
+function createLikeTimelineChart(canvasId, likeData, previousLikeData, chartHours) {
   const chartLabels = Array.from({ length: chartHours }, (_, i) => i + 1);
+
+  const datasets = [];
+
+  // 前回線を先に描画する。
+  // 最新回と重なったときに、最新回の線を優先して見せるため。
+  if (Array.isArray(previousLikeData) && previousLikeData.some(value => value !== null)) {
+    datasets.push({
+      label: "前回",
+      data: previousLikeData,
+      borderColor: "#a9c4ca",
+      backgroundColor: "#a9c4ca",
+      tension: 0.32,
+      pointRadius: 0,
+      pointHoverRadius: 0,
+      borderWidth: 1.7,
+      spanGaps: true,
+      order: 2
+    });
+  }
+
+  if (Array.isArray(likeData) && likeData.some(value => value !== null)) {
+    datasets.push({
+      label: "最新回",
+      data: likeData,
+      borderColor: "#36bfd0",
+      backgroundColor: "#36bfd0",
+      tension: 0.32,
+      pointRadius: 0,
+      pointHoverRadius: 0,
+      borderWidth: 2,
+      spanGaps: true,
+      order: 1
+    });
+  }
 
   return new Chart(document.getElementById(canvasId), {
     type: "line",
     data: {
       labels: chartLabels,
-      datasets: [
-        {
-          label: "",
-          data: likeData,
-          borderColor: "#36bfd0",
-          backgroundColor: "#36bfd0",
-          tension: 0.32,
-          pointRadius: 0,
-          pointHoverRadius: 0,
-          borderWidth: 2,
-          spanGaps: true
-        }
-      ]
+      datasets
     },
     options: {
       responsive: true,
@@ -1421,7 +1457,8 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
       scales: {
         y: {
           title: {
-            display: false },
+            display: false
+          },
           beginAtZero: false,
           border: {
             display: false
@@ -1458,7 +1495,12 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
             display: false
           },
           grid: {
-            display: false,
+            display: chartHours > 48,
+            color: function(context) {
+              const hour = context.index + 1;
+
+              return hour % 24 === 0 ? "#e5edf5" : "transparent";
+            },
             drawTicks: false
           },
           ticks: {
@@ -1487,7 +1529,17 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
       },
       plugins: {
         legend: {
-          display: false
+          // 前回線があるときだけ凡例を出す
+          display: datasets.length > 1,
+          position: "top",
+          labels: {
+            boxWidth: 14,
+            boxHeight: 14,
+            padding: 12,
+            font: {
+              size: 12
+            }
+          }
         }
       }
     }
