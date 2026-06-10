@@ -184,6 +184,13 @@ let HOME_EXTRA_USEN_TASKS = [];
 // USEN疑似タスクGroupの開閉状態
 // プルダウン変更で再描画しても、開いていたら開いたままにする
 let HOME_USEN_EXTRA_GROUP_OPEN = false;
+// おかわりDailyのグループ開閉状態
+// 再描画しても開いていたグループを開いたままにする
+const HOME_DAILY_EXTRA_GROUP_OPEN_MAP = {};
+
+// おかわりDailyのタスク詳細開閉状態
+// 再描画しても開いていたタスクを開いたままにする
+const HOME_DAILY_EXTRA_TASK_OPEN_MAP = {};
 
 // sectionを表示/非表示にする
 function toggleHomeExtraSection(cardElement, shouldShow) {
@@ -306,15 +313,67 @@ function getHomeExtraTaskBySource(source, index) {
   return null;
 }
 
+// おかわりDaily用：グループ開閉状態キー
+function getHomeDailyExtraGroupOpenKey(group, groupIndex) {
+  return group?.id || group?.listName || `group_${groupIndex}`;
+}
+
+// おかわりDaily用：タスク詳細開閉状態キー
+function getHomeDailyExtraTaskOpenKey(task, source, index) {
+  const taskId =
+    task?.id ||
+    task?.itemId ||
+    task?.["short-name"] ||
+    task?.shortName ||
+    task?.name ||
+    "";
+
+  return `${source}_${taskId || index}`;
+}
+
+// タスク詳細DOMを作る
+// 通常Daily/期間限定用。USEN疑似タスクは1段表示にしたいため専用描画で作る。
 // タスク詳細DOMを作る
 // 通常Daily/期間限定用。USEN疑似タスクは1段表示にしたいため専用描画で作る。
 function createHomeExtraTaskDetail({ task, source, index }) {
   const details = document.createElement("details");
   details.className = "home-extra-task-detail";
 
+  const taskOpenKey = getHomeDailyExtraTaskOpenKey(task, source, index);
+
+  if (source === "daily") {
+    details.open = Boolean(HOME_DAILY_EXTRA_TASK_OPEN_MAP[taskOpenKey]);
+  }
+
+  const isDone =
+    source === "daily" &&
+    typeof isDailyTaskDone === "function" &&
+    isDailyTaskDone(task);
+
+  details.classList.toggle("is-daily-done", isDone);
+
+  details.addEventListener("toggle", () => {
+    if (source !== "daily") {
+      return;
+    }
+
+    HOME_DAILY_EXTRA_TASK_OPEN_MAP[taskOpenKey] = details.open;
+  });
+
   const summary = document.createElement("summary");
   summary.className = "home-extra-task-summary";
-  summary.textContent = getHomeExtraTaskName(task, source);
+
+  const summaryLabel = document.createElement("span");
+  summaryLabel.className = "home-extra-task-summary-label";
+  summaryLabel.textContent = getHomeExtraTaskName(task, source);
+
+  const doneMark = document.createElement("span");
+  doneMark.className = "home-extra-task-done-mark show-when-daily-done";
+  doneMark.textContent = "✅";
+  doneMark.setAttribute("aria-label", "本日実行済み");
+
+  summary.appendChild(summaryLabel);
+  summary.appendChild(doneMark);
 
   const body = document.createElement("div");
   body.className = "home-extra-task-body";
@@ -577,7 +636,7 @@ function renderHomeDailyExtraList(groups) {
     return;
   }
 
-  groups.forEach((group) => {
+  groups.forEach((group, groupIndex) => {
     const items = getDailyGroupItems(group);
 
     if (items.length === 0) {
@@ -590,6 +649,14 @@ function renderHomeDailyExtraList(groups) {
     const groupDetails = document.createElement("details");
     groupDetails.className = "home-extra-group";
     groupDetails.classList.toggle("is-daily-done", isGroupDone);
+
+    const groupOpenKey = getHomeDailyExtraGroupOpenKey(group, groupIndex);
+
+    groupDetails.open = Boolean(HOME_DAILY_EXTRA_GROUP_OPEN_MAP[groupOpenKey]);
+    
+    groupDetails.addEventListener("toggle", () => {
+      HOME_DAILY_EXTRA_GROUP_OPEN_MAP[groupOpenKey] = groupDetails.open;
+    });
 
     const summary = document.createElement("summary");
     summary.className = "home-extra-group-summary";
