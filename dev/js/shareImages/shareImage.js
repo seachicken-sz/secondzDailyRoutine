@@ -12,6 +12,7 @@ let currentShareImageTheme = getCurrentThemeKeyForShareImage();
 // シェア画像の現在スタイル
 // ==================================================
 let currentShareImageStyle = "yumekawaGradient";
+let currentShareImageCharacter = null;
 
 // ==================================================
 // SNS共有画像イベント登録
@@ -47,8 +48,8 @@ function bindShareImageEvents() {
   shareImageThemeButtonElements.forEach((button) => {
     button.addEventListener("click", () => {
       const themeKey = button.dataset.shareImageTheme || getCurrentThemeKeyForShareImage();
-
       currentShareImageTheme = themeKey;
+      regenerateShareImageCharacter(currentShareImageTheme);
       renderShareImage(currentShareImageTheme);
     });
   });
@@ -164,6 +165,74 @@ function getShareImageUserName() {
   }
 
   return shareImageUserNameInputElement.value.trim();
+}
+// ==================================================
+// キャラ画像があるテーマキー一覧を取得
+// ==================================================
+function getShareImageCharacterThemeKeys() {
+  return Object.keys(SHARE_IMAGE_THEMES).filter((themeKey) => themeKey !== "normal").filter((themeKey) => {
+    const theme = SHARE_IMAGE_THEMES[themeKey];
+    return theme && Array.isArray(theme.characterImagePaths) && theme.characterImagePaths.length > 0;
+  });
+}
+
+// ==================================================
+// 配列からランダム取得
+// ==================================================
+function getRandomArrayItem(items) {
+  if (!Array.isArray(items) || items.length === 0) return null;
+  return items[Math.floor(Math.random() * items.length)];
+}
+
+// ==================================================
+// シェア画像キャラを抽選
+// ==================================================
+function generateShareImageCharacter(themeKey) {
+  let characterThemeKey = themeKey;
+  if (themeKey === "normal") characterThemeKey = getRandomArrayItem(getShareImageCharacterThemeKeys());
+
+  const characterTheme = SHARE_IMAGE_THEMES[characterThemeKey];
+  if (!characterTheme || !Array.isArray(characterTheme.characterImagePaths)) {
+    currentShareImageCharacter = null;
+    return null;
+  }
+
+  const imagePath = getRandomArrayItem(characterTheme.characterImagePaths);
+  currentShareImageCharacter = { themeKey: characterThemeKey, imagePath };
+  return currentShareImageCharacter;
+}
+
+// ==================================================
+// 現在のシェア画像キャラを取得
+// ==================================================
+function getCurrentShareImageCharacter(themeKey) {
+  if (!currentShareImageCharacter) return generateShareImageCharacter(themeKey);
+  return currentShareImageCharacter;
+}
+
+// ==================================================
+// シェア画像キャラを再抽選
+// ==================================================
+function regenerateShareImageCharacter(themeKey) {
+  currentShareImageCharacter = null;
+  return generateShareImageCharacter(themeKey);
+}
+
+// ==================================================
+// シェア画像用画像読み込み
+// ==================================================
+function loadShareImageAsset(src) {
+  return new Promise((resolve) => {
+    if (!src) {
+      resolve(null);
+      return;
+    }
+
+    const image = new Image();
+    image.onload = () => resolve(image);
+    image.onerror = () => resolve(null);
+    image.src = src;
+  });
 }
 // ==================================================
 // canvasから画像Blobを取得
@@ -371,6 +440,7 @@ async function waitShareImageFontsLoaded() {
     document.fonts.load('400 42px "Hachi Maru Pop"'),
     document.fonts.load('400 42px "Darumadrop One"'),
     document.fonts.load('400 32px "Klee One"'),
+    document.fonts.load('500 30px "Caveat"'),
     document.fonts.ready
   ]);
 }
@@ -409,17 +479,11 @@ async function renderShareImage(themeKey = currentShareImageTheme) {
   const theme =
     SHARE_IMAGE_THEMES[currentShareImageTheme] ||
     SHARE_IMAGE_THEMES.normal;
+  
+  const character = getCurrentShareImageCharacter(currentShareImageTheme);
+  const characterImage = await loadShareImageAsset(character?.imagePath || "");
 
-  renderer({
-    canvas: shareImageCanvasElement,
-    ctx,
-    theme,
-    themeKey: currentShareImageTheme,
-    dateText: getShareImageDateText(),
-    titleText: "タスク完了！",
-    tasks,
-    userName: getShareImageUserName()
-  });
+  await renderer({ canvas: shareImageCanvasElement, ctx, theme, themeKey: currentShareImageTheme, dateText: getShareImageDateText(), titleText: "タスク完了！", tasks, userName: getShareImageUserName(), characterImage, characterThemeKey: character?.themeKey || currentShareImageTheme });
 
   hideError(postErrorAreaElement);
 }
