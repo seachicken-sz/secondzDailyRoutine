@@ -512,7 +512,7 @@ function createHomeDailyShareImageButton() {
   const button = document.createElement("button");
   button.type = "button";
   button.className = "primary-button";
-  button.textContent = "完了画像を作る";
+  button.textContent = "画像で共有する";
 
   button.addEventListener("click", () => {
     const completedItems = buildCompletedHomeDailyShareImageItems();
@@ -529,7 +529,7 @@ function createHomeDailyShareImageButton() {
 
     window.openShareImageModal({
       source: "homeDaily",
-      titleText: "おかわりDaily完了！",
+      titleText: "タスク完了！",
       items: completedItems,
     });
   });
