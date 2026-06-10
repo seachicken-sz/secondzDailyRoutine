@@ -857,21 +857,18 @@
       </div>
   
       <div class="modal-body">
-        <div class="share-image-canvas-wrap">
-          <canvas id="shareImageCanvas"></canvas>
+        <div class="share-image-control-area">
+          <label class="share-image-control-label" for="shareImageStyleSelect">
+            画像スタイル
+          </label>
+          <select id="shareImageStyleSelect" class="share-image-select">
+            <option value="yumekawaGradient" selected>ゆめかわグラデ</option>
+            <option value="simple">シンプル</option>
+            <option value="paperWood">木目＋紙</option>
+            <option value="minimalMemo">ミニマルメモ</option>
+            <option value="stationeryPlanner">文具プランナー</option>
+          </select>
         </div>
-        
-        <div class="share-image-action-row">
-          <button type="button" id="downloadShareImageButton" class="primary-button">
-            画像を投稿する
-          </button>
-        </div>
-        <p class="share-image-note">
-          ↑のボタンを押して、投稿したいSNSを選ぶと投稿画面に移動します。<br>
-          <br>
-          以下からカラーを選ぶと画像が再生成されます<br>
-          全8色＋1です。
-        </p>
         <div class="share-image-theme-row-wrap">
           <div class="share-image-theme-row" aria-label="画像カラー選択">
             <button type="button" class="share-image-theme-button share-image-theme-button-red" data-share-image-theme="red" aria-label="赤">
@@ -879,49 +876,49 @@
                 <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
               </span>
             </button>
-          
+  
             <button type="button" class="share-image-theme-button share-image-theme-button-purple" data-share-image-theme="purple" aria-label="紫">
               <span class="share-image-theme-chip">
                 <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
               </span>
             </button>
-          
+  
             <button type="button" class="share-image-theme-button share-image-theme-button-green" data-share-image-theme="green" aria-label="緑">
               <span class="share-image-theme-chip">
                 <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
               </span>
             </button>
-          
+  
             <button type="button" class="share-image-theme-button share-image-theme-button-sky" data-share-image-theme="sky" aria-label="水色">
               <span class="share-image-theme-chip">
                 <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
               </span>
             </button>
-          
+  
             <button type="button" class="share-image-theme-button share-image-theme-button-lime" data-share-image-theme="lime" aria-label="黄緑">
               <span class="share-image-theme-chip">
                 <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
               </span>
             </button>
-          
+  
             <button type="button" class="share-image-theme-button share-image-theme-button-pink" data-share-image-theme="pink" aria-label="ピンク">
               <span class="share-image-theme-chip">
                 <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
               </span>
             </button>
-          
+  
             <button type="button" class="share-image-theme-button share-image-theme-button-yellow" data-share-image-theme="yellow" aria-label="黄色">
               <span class="share-image-theme-chip">
                 <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
               </span>
             </button>
-          
+  
             <button type="button" class="share-image-theme-button share-image-theme-button-white" data-share-image-theme="white" aria-label="白">
               <span class="share-image-theme-chip">
                 <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
               </span>
             </button>
-          
+  
             <button type="button" class="share-image-theme-button share-image-theme-button-normal" data-share-image-theme="normal" aria-label="通常">
               <span class="share-image-theme-chip">
                 <span class="share-image-theme-icon"><i class="bi bi-star-fill"></i></span>
@@ -929,20 +926,15 @@
             </button>
           </div>
         </div>
-        <label class="share-image-style-checkbox-label">
-          <input
-            type="checkbox"
-            id="shareImageIllustratedCheckbox"
-          >
-          イラストバージョンにする
-        </label>
-        <label class="share-image-style-checkbox-label">
-          <input
-            type="checkbox"
-            id="shareImageHandwrittenFontCheckbox"
-          >
-          手書き風フォントにする
-        </label>
+        <div class="share-image-canvas-wrap">
+          <canvas id="shareImageCanvas"></canvas>
+        </div>
+  
+        <div class="share-image-action-row">
+          <button type="button" id="downloadShareImageButton" class="primary-button">
+            画像を投稿する
+          </button>
+        </div>
       </div>
     </div>
   </div>
