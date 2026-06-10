@@ -20,8 +20,12 @@
   <meta name="twitter:description" content="3分でラジリク終わらせちゃおう！">
   <meta name="twitter:image" content="https://seachicken-sz.github.io/secondzDailyRoutine/img/link-card.jpg">
   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Darumadrop+One&family=Hachi+Maru+Pop&family=Klee+One:wght@400;600&family=Yomogi&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  
   <!--CSS読み込み-->
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/modal.css" />
@@ -49,9 +53,94 @@
     </div>
     <!--ホーム-->
     <section id="homeStep" class="step-screen">
+      <!--メニュー画面-->
+      <button id="homeMenuButton" class="home-menu-button" type="button" aria-label="メニューを開く">
+        <i class="bi bi-list"></i>
+      </button>
+      <nav id="homeSlideMenu" class="home-slide-menu hidden" aria-label="ホームメニュー">
+        <button id="closeHomeMenuButton" class="home-menu-close-button" type="button" aria-label="メニューを閉じる">×</button>
+      
+        <h2 class="home-menu-title">メニュー</h2>
+      
+        <div class="home-menu-scroll">
+          <section class="home-menu-accordion">
+            <button type="button" class="home-menu-item" data-home-menu-accordion="about">
+              <span><i class="bi bi-info-circle"></i>タムごとDaily とは</span>
+              <span class="home-menu-arrow">＋</span>
+            </button>
+            <div class="home-menu-detail hidden" data-home-menu-detail="about">
+              <p>
+                <img loading="lazy" decoding="async" src="../img/about/about_1.png" alt="3分間だけ時間をください！ラジリク全部終わらせよう！①Spotify再生 月間リスナー数に貢献 ②忘れがちな投票系もリマインド　新曲機関の投票や期間限定応援も忘れない！　③USEN推し活リクエスト　毎日の推し活リクエストも　④デイリータスクラジオリクエスト　曲名コピー済み！ペーストだけで楽！　終わったらSNSでシェア！毎日の推し活3分で完了！">
+                <img loading="lazy" decoding="async" src="../img/about/about_2.png" alt="こんなsecondzにおすすめ♪">
+                詳しくは下の「使い方」をチェック！<br>
+              </p>
+              <details>
+                  <summary>もっと詳しく見る</summary>
+                「タムごとDaily」は、timeleszを応援する毎日の行動をまとめて確認できる非公式ファンメイドツールです。<br>
+                Spotifyを聴く、USEN推しリクをする、SNSでシェアする、期間限定のタスクを確認するなど、日々の推し活を少しでも忘れず・楽しく続けられるように作成しています。<br>
+                利用料は一切かかりません。<br><br>
+                掲載している情報やリンクはできるだけ確認していますが、手動管理のため内容が古くなる場合があります。<br>
+                大事なお知らせや期限については、必ず公式情報もあわせてご確認ください。<br><br>
+                このツールは個人による非公式ツールです。<br>
+                所属事務所、各公式サービスとは一切関係ありません。<br><br>
+                またこのツールで個人の特定につながる情報を収集することはありません。
+                問い合わせはすべて作成者(<a class="text-link-button" href="https://x.com/tsunakan_r" target="_blank">ツナ缶 - X</a>)までお願いいたします。
+                </details>
+            </div>
+          </section>
+          <section class="home-menu-accordion" id="homeInstallGuideMenu">
+            <button type="button" class="home-menu-item" data-home-menu-accordion="setup">
+              <span><i class="bi bi-plus-circle"></i>初回設定</span>
+              <span class="home-menu-arrow">＋</span>
+            </button>
+            <div class="home-menu-detail hidden" data-home-menu-detail="setup">
+              <img loading="lazy" decoding="async" src="../img/setting/setting_whypwa.png" alt="ホーム画面に追加するとページを開いた後にツールに戻るのがとっても楽！">
+              <button type="button" class="primary-button" id="homeMenuSetupButton">詳しく見る</button>
+            </div>
+          </section>
+      
+          <section class="home-menu-accordion">
+            <button type="button" class="home-menu-item" data-home-menu-accordion="usage">
+              <span><i class="bi bi-question-circle"></i>使い方</span>
+              <span class="home-menu-arrow">＋</span>
+            </button>
+            <div class="home-menu-detail hidden" data-home-menu-detail="usage">
+              <img loading="lazy" decoding="async" src="../img/usage/usage_0.jpg" alt="Spotify、USEN、デイリータスク、SNSシェアまでの流れを確認できます。">
+              <button type="button" class="primary-button" id="homeMenuUsageButton">詳しく見る</button>
+            </div>
+          </section>
+      
+          <section class="home-menu-accordion">
+            <button type="button" class="home-menu-item" data-home-menu-accordion="share">
+              <span><i class="bi bi-box-arrow-up"></i>このツールを共有</span>
+              <span class="home-menu-arrow">＋</span>
+            </button>
+            <div class="home-menu-detail hidden" data-home-menu-detail="share">
+              <p>タムごとDailyをSNSやDMで共有できます。</p>
+              <button type="button" class="primary-button" id="homeMenuShareButton">共有する</button>
+            </div>
+          </section>
+
+          <section class="home-menu-accordion">
+            <button type="button" class="home-menu-item" data-home-menu-accordion="feedback">
+              <span><i class="bi bi-send"></i>お問い合わせ</span>
+              <span class="home-menu-arrow">＋</span>
+            </button>
+            <div class="home-menu-detail hidden" data-home-menu-detail="feedback">
+              <p>お問い合わせ・ご要望・ご感想は以下からお願いいたします。</p>
+              <a class="primary-button" href="https://mond.how/ja/tsunakan_r" target="_blank">ご意見・ご感想</a>
+              <a class="primary-button" href="https://docs.google.com/forms/d/e/1FAIpQLScsX4mHxLIRujrZy2bElGDuOfGI8OQgJapFwBiAcGQKPZCzWw/viewform?usp=sharing&amp;ouid=105111966497500869107" target="_blank">タスク追加のご要望</a>
+              <p><br>返信をご希望の方はXのDMからお願いいたします。</p>
+              <a href="https://x.com/tsunakan_r" target="_blank" class="text-link-button">ツナ缶 - X</a>
+            </div>
+          </section>
+        </div>
+      </nav>
+      <!--
       <div id="home-top-share-btn-wrap">
         <button id="homeTopShareButton" type="button" class="button secondary home-share-button"><i class="bi bi-box-arrow-up"></i></button>
       </div>
+      -->
       <header class="home-header">
         <!--ロゴ-->
         <div class="home-logo-area">
@@ -180,13 +269,6 @@
               </span>
             </a>
           </div>
-        </section>
-      
-        <!--目次-->
-        <!--ホーム目次-->
-        <section id="homeIndexCard" class="home-card home-index-card hidden">
-          <h2 class="ruby-h"><ruby>目次<rt>index</rt></ruby></h2>
-          <div id="homeIndexList" class="home-index-list"></div>
         </section>
       
         <!--メンバーごと-->
@@ -458,7 +540,15 @@
         <h2 id="dailyTaskName" class="task-title"></h2>
 
         <div id="dailyTaskCommentArea" class="notice-box"></div>
-
+        <div id="dailyTaskCopyPreviewArea" class="daily-task-copy-preview hidden">
+          <p class="daily-task-copy-preview-note">
+            「ページを開く」を押すと以下がコピーされます。
+          </p>
+        
+          <div id="dailyTaskCopyPreviewText" class="daily-task-copy-preview-text"></div>
+        
+          <p id="dailyTaskCopyPreviewPasteTarget" class="daily-task-copy-preview-note"></p>
+        </div>
         <button id="openDailyTaskUrlButton" class="primary-button">
           ページを開く
         </button>
@@ -669,79 +759,80 @@
         <button id="closeUsageButton" class="modal-close-button" type="button">×</button>
       </div>
       <div class="modal-body">
-        <section class="how-to-section">
-          <h3>基本の流れ</h3>
-          <ol>
-            <li><strong>SpotifyでBGMを選ぶ</strong><br>
-              1日1曲聞くだけで月間リスナーに貢献♪<br>
-              最初に表示されたものの中に好みのものがなければ、「その他」をタップすると現在Spotifyで配信されている曲の一覧が表示されます。<br>
-              画面上部に「Spotifyで再生する」ボタンが表示されるので、それをタップしてください。<br>
-              曲が再生されたらアプリを切り替えて「タムごとDaily」に戻ってきてください。<br>
-              もし曲を再生したくないときは「BGMなし」を選ぶと次に進みます。
-            </li>
-            <li><strong>期間限定タスク</strong><br>
-              〇日までなど、期間限定系のタスクが表示されます。<br>
-              終わってないもので今投票/リクエストなどしたいものがあったら✅をいれて「次へ」を押してください。<br>
-              <ul>
-                <li>アプリ遷移するもの(SpotifyやYouTubeなど)の場合<br>
-                  おそらく自動で遷移します。(しない場合は既定ブラウザで開くと遷移します)<br>
-                  タスクが完了したらSpotify同様にアプリを切り替えて「タムごとDaily」に戻ってきてください。
-                </li>
-                <li>アプリ遷移しないもの(アプリが切り替わらずWEBページが表示される)場合<br>
-                  タスクが完了したら✖や完了などで閉じてください。<br>
-                  XやLINEなどで開いたWEBページを閉じるときと同じ要領です。
-                </li>
-                <li>曲名を入力する必要があるもの<br>
-                  ページを開くとき、各フォームに合わせた形でクリップボードにコピーされます。<br>
-                  例：timeleszのRock this Partyをリクエストします！, timelesz/Rock this Party など<br>
-                  もしフォームや入力方法の変更などがあった場合はご連絡ください。
-                </li>
-              </ul>
-              タスクが完了してアプリに戻ったりWEBページを閉じたりすると、「次へ」ボタンが表示されます。<br>
-              最後のタスクが完了すると次に移動します。
-            </li>
-            <li><strong>デイリータスク</strong><br>
-              毎日やれるタスクが表示されます。<br>
-              ページを開く前に注意事項ややり方が簡単に表示されるのでそれを参考にしてください。<br>
-              分かりにくいときはご連絡ください。
-              <ul>
-                <li>アプリ遷移するもの(SpotifyやYouTubeなど)の場合<br>
-                  おそらく自動で遷移します。(しない場合は既定ブラウザで開くと遷移します)<br>
-                  タスクが完了したらSpotify同様にアプリを切り替えて「タムごとDaily」に戻ってきてください。
-                </li>
-                <li>アプリ遷移しないもの(アプリが切り替わらずWEBページが表示される)場合<br>
-                  タスクが完了したら✖や完了などで閉じてください。<br>
-                  XやLINEなどで開いたWEBページを閉じるときと同じ要領です。
-                </li>
-                <li>曲名を入力する必要があるもの<br>
-                  ページを開くとき、各フォームに合わせた形でクリップボードにコピーされます。<br>
-                  例：timeleszのRock this Partyをリクエストします！, timelesz/Rock this Party など<br>
-                  もしフォームや入力方法の変更などがあった場合はご連絡ください。
-                </li>
-              </ul>
-              タスクが完了してアプリに戻ったりWEBページを閉じたりすると、「次へ」ボタンが表示されます。<br>
-              最後のタスクが完了すると、続けるかどうかの質問が出ます。(出ないときもあります)<br>
-              続けるときはまたタスクが表示されます。<br>
-              これまでと同じ要領で進めてください。<br>
-              続けないときは次に進みます。
-            </li>
-            <li><strong>SNS共有</strong><br>
-              こなしたタスクをSNSに共有できます。<br>
-              共有したいものを選択して希望のボタンを押してください。<br>
-              各SNSアプリで投稿が終わったらこのアプリに戻り、「次へ」ボタンを押してください。
-            </li>
-            <li><strong>YouTube再生</strong><br>
-              もし余力があったらYouTubeも再生していってください。<br>
-              再生リストや動画のの追加リクエストはmondまたはDMまたはリプライで受け付けています。
-            </li>
-          </ol>
-        </section>
-        <p class="modal-note">
-          お問い合わせ・質問はこちら<br>
-          <a href ="https://docs.google.com/forms/d/12qZFvckxN_fbIT6Uq_UwXGPCx6hl8sglsRoRuRqY5xE/edit">タムごとDaily追加リクエストフォーム</a>
-          <a href="https://mond.how/ja/tsunakan_r">mond</a>
-          <a href="https://x.com/tsunakan_r">X</a>
+        <p>
+           <img loading="lazy" decoding="async" src="../img/usage/usage_0.jpg" alt="Spotify、USEN、デイリータスク、SNSシェアまでの流れを確認できます。">
         </p>
+          <section class="modal-detail-list">         
+            <details class="modal-detail">
+              <summary class="modal-detail-summary">
+                <span><i class="bi bi-headphones"></i>Spotify再生</span>
+                <span class="modal-detail-arrow">＋</span>
+              </summary>
+              <div class="modal-detail-body">
+                <img  loading="lazy" decoding="async" src="../img/usage/usage_1.jpg" alt="">
+              </div>
+            </details>
+             <details class="modal-detail">
+              <summary class="modal-detail-summary">
+                <span><i class="bi bi-music-note-list"></i>USEN推し活リクエスト</span>
+                <span class="modal-detail-arrow">＋</span>
+              </summary>
+              <div class="modal-detail-body">
+                <img  loading="lazy" decoding="async" src="../img/usage/usage_2.jpg" alt="">
+              </div>
+            </details>
+            <details class="modal-detail">
+              <summary class="modal-detail-summary">
+                <span><i class="bi bi-clock"></i>期間限定タスク</span>
+                <span class="modal-detail-arrow">＋</span>
+              </summary>
+              <div class="modal-detail-body">
+                <img  loading="lazy" decoding="async" src="../img/usage/usage_3.jpg" alt="">
+              </div>
+            </details>
+            <details class="modal-detail">
+              <summary class="modal-detail-summary">
+                <span><i class="bi bi-calendar-date"></i>デイリータスク</span>
+                <span class="modal-detail-arrow">＋</span>
+              </summary>
+              <div class="modal-detail-body">
+                <img  loading="lazy" decoding="async" src="../img/usage/usage_4.jpg" alt="">
+              </div>
+            </details>
+            <details class="modal-detail">
+              <summary class="modal-detail-summary">
+                <span><i class="bi bi-box-arrow-up"></i>SNSシェア</span>
+                <span class="modal-detail-arrow">＋</span>
+              </summary>
+              <div class="modal-detail-body">
+                <img  loading="lazy" decoding="async" src="../img/usage/usage_5.jpg" alt="">
+              </div>
+            </details>
+            <details class="modal-detail">
+              <summary class="modal-detail-summary">
+                <span><i class="bi bi-people"></i>おまけ：メンバーごと便利リンク集</span>
+                <span class="modal-detail-arrow">＋</span>
+              </summary>
+              <div class="modal-detail-body">
+                <img  loading="lazy" decoding="async" src="../img/usage/usage_7.jpg" alt="">
+              </div>
+            </details>
+            <details class="modal-detail">
+              <summary class="modal-detail-summary">
+                <span><i class="bi bi-arrow-repeat"></i>おまけ：おかわりdaily</span>
+                <span class="modal-detail-arrow">＋</span>
+              </summary>
+              <div class="modal-detail-body">
+                <img  loading="lazy" decoding="async" src="../img/usage/usage_6.jpg" alt="">
+              </div>
+            </details>
+            
+          </section>         
+        <p class="modal-note">お問い合わせ・ご要望・ご感想は以下からお願いいたします。</p>
+        <a class="primary-button" href="https://mond.how/ja/tsunakan_r" target="_blank">ご意見・ご感想</a>
+        <a class="primary-button" href="https://docs.google.com/forms/d/e/1FAIpQLScsX4mHxLIRujrZy2bElGDuOfGI8OQgJapFwBiAcGQKPZCzWw/viewform?usp=sharing&amp;ouid=105111966497500869107" target="_blank">タスク追加のご要望</a>
+        <p class="modal-note">返信をご希望の方はXのDMからお願いいたします。</p>
+        <a href="https://x.com/tsunakan_r" target="_blank" class="text-link-button">ツナ缶 - X</a>
         <p class="modal-note">
           <strong>このツールについて</strong><br>
           「タムごとDaily」は、timeleszを応援する毎日の行動をまとめて確認できる非公式ファンメイドツールです。<br>
@@ -765,19 +856,23 @@
       </div>
   
       <div class="modal-body">
-        <div class="share-image-canvas-wrap">
-          <canvas id="shareImageCanvas"></canvas>
+        <div class="share-image-control-area">
+          <label class="share-image-control-label" for="shareImageStyleSelect">
+            画像スタイル
+          </label>
+          <select id="shareImageStyleSelect" class="share-image-select">
+            <option value="simple" selected>シンプルA</option>
+            <option value="minimalMemo">シンプルB</option>
+            <option value="stationeryPlanner">シンプルC</option>
+            <option value="paperWood">natural</option>
+            <option value="characterPhotoList">ミニキャラA</option>
+            <option value="characterSimpleCard">ミニキャラB</option>
+          </select>
         </div>
-        
-        <div class="share-image-action-row">
-          <button type="button" id="downloadShareImageButton" class="primary-button">
-            画像を保存
-          </button>
+        <div class="share-image-control-area">
+          <label class="share-image-control-label" for="shareImageUserNameInput">名前(任意)</label>
+          <input type="text" id="shareImageUserNameInput" class="share-image-input" placeholder="例:たむたん@tamtam" maxlength="24">
         </div>
-        <p class="share-image-note">
-          カラーを選ぶと画像が再生成されます<br>
-          全8色＋1です。
-        </p>
         <div class="share-image-theme-row-wrap">
           <div class="share-image-theme-row" aria-label="画像カラー選択">
             <button type="button" class="share-image-theme-button share-image-theme-button-red" data-share-image-theme="red" aria-label="赤">
@@ -785,55 +880,64 @@
                 <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
               </span>
             </button>
-          
+  
             <button type="button" class="share-image-theme-button share-image-theme-button-purple" data-share-image-theme="purple" aria-label="紫">
               <span class="share-image-theme-chip">
                 <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
               </span>
             </button>
-          
+  
             <button type="button" class="share-image-theme-button share-image-theme-button-green" data-share-image-theme="green" aria-label="緑">
               <span class="share-image-theme-chip">
                 <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
               </span>
             </button>
-          
-            <button type="button" class="share-image-theme-button share-image-theme-button-blue" data-share-image-theme="blue" aria-label="水色">
+  
+            <button type="button" class="share-image-theme-button share-image-theme-button-sky" data-share-image-theme="sky" aria-label="水色">
               <span class="share-image-theme-chip">
                 <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
               </span>
             </button>
-          
+  
             <button type="button" class="share-image-theme-button share-image-theme-button-lime" data-share-image-theme="lime" aria-label="黄緑">
               <span class="share-image-theme-chip">
                 <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
               </span>
             </button>
-          
+  
             <button type="button" class="share-image-theme-button share-image-theme-button-pink" data-share-image-theme="pink" aria-label="ピンク">
               <span class="share-image-theme-chip">
                 <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
               </span>
             </button>
-          
+  
             <button type="button" class="share-image-theme-button share-image-theme-button-yellow" data-share-image-theme="yellow" aria-label="黄色">
               <span class="share-image-theme-chip">
                 <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
               </span>
             </button>
-          
+  
             <button type="button" class="share-image-theme-button share-image-theme-button-white" data-share-image-theme="white" aria-label="白">
               <span class="share-image-theme-chip">
                 <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
               </span>
             </button>
-          
+  
             <button type="button" class="share-image-theme-button share-image-theme-button-normal" data-share-image-theme="normal" aria-label="通常">
               <span class="share-image-theme-chip">
                 <span class="share-image-theme-icon"><i class="bi bi-star-fill"></i></span>
               </span>
             </button>
           </div>
+        </div>
+        <div class="share-image-canvas-wrap">
+          <canvas id="shareImageCanvas"></canvas>
+        </div>
+  
+        <div class="share-image-action-row">
+          <button type="button" id="downloadShareImageButton" class="primary-button">
+            画像を投稿する
+          </button>
         </div>
       </div>
     </div>
@@ -855,8 +959,9 @@
           アプリ感覚でサクサク使えます！
         </p>
       </section>
-      <img src="../img/setting/setting_whypwa.png" alt="ホーム画面に追加するとページを開いた後にツールに戻るのがとっても楽！">
-      <h3 class="setup-howto-title">ホーム画面に追加する方法</h3>
+      <img  loading="lazy" decoding="async" src="../img/setting/setting_whypwa.png" alt="ホーム画面に追加するとページを開いた後にツールに戻るのがとっても楽！">
+      <h3 class="setup-howto-title">ホーム画面に追加</h3>
+      <p id="userBrowser"></p>
       <p>あてはまるものを選んで進めてください！</p>
             <div class="setup-question-block">
               <h3>① 今このページをどう開いた？</h3>
@@ -929,7 +1034,70 @@
       <p id="youtubeModalErrorArea" class="error-text hidden"></p>
     </div>
   </div>
+
+   <!--ブラウザ初回モーダル-->
+  <div id="firstVisitModal" class="modal-overlay hidden">
+    <div class="modal-content firstvisit-modal-content" role="dialog" aria-modal="true" aria-labelledby="firstVisitModalTitle">
+      <div class="modal-header">
+        <h2 id="firstVisitModalTitle">はじめての方へ</h2>
+        <button type="button" id="closeFirstVisitModalButton" class="modal-close-button" aria-label="閉じる">×</button>
+      </div>
   
+      <div class="modal-body setup-modal-body">
+        <section class="setup-intro-card">
+          <p class="setup-intro-title">タムごとDailyへようこそ！</p>
+          <p class="setup-intro-text">
+            3分間だけ時間をください！<br>
+            推し活全部終わらせよう！
+          </p>
+        </section>
+        <p>
+          このツールではSpotifyで1曲聞いている間に<br>
+          <strong>ラジオリクエスト・期間限定投票</strong>など、<br>
+          日々の推し活をまとめてできちゃいます！<br>
+          <br>
+          ラジオリクエストを頑張ると、<br>
+          <strong>timeleszの曲が、<br>
+            今よりもっと街中で流れるようになるかも……？</strong><br>
+          <br>
+          その日のテンションと時間に合わせて、<br>楽しく推し活していきましょう！
+        </p>
+        <p>まずはこのツールを、<br>
+          <strong>スマホのホーム画面に追加</strong>から始めましょう！</p>
+        <button type="button" class="primary-button" id="firstVisitOpenSetupButton">
+          始める
+        </button>
+        <button type="button" class="text-link-button" id="firstVisitCloseOnlyButton">
+          閉じる
+        </button>
+      </div>
+    </div>
+  </div>
+  <!--PWA初回モーダル-->
+  <div id="pwaFirstVisitModal" class="modal-overlay hidden">
+    <div class="modal-content firstvisit-modal-content" role="dialog" aria-modal="true" aria-labelledby="pwaFirstVisitModalTitle">
+      <div class="modal-header">
+        <h2 id="pwaFirstVisitModalTitle">タムごとDailyにようこそ！</h2>
+        <button type="button" id="closePwaFirstVisitModalButton" class="modal-close-button" aria-label="閉じる">×</button>
+      </div>
+      <div class="modal-body setup-modal-body">
+        <p>
+          <strong>ホーム画面に追加完了です！</strong><br>
+          お疲れ様でした！<br>
+          <strong>では早速始めて行きましょう！</strong>
+        </p>
+  
+        <button type="button" class="primary-button" id="pwaFirstVisitOpenUsageButton">
+          使い方を見てから始める
+        </button>
+  
+        <button type="button" class="secondary-button" id="pwaFirstVisitCloseOnlyButton">
+          このままはじめる
+        </button>
+      </div>
+    </div>
+  </div>
+    
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.js"></script>
 <!-- 基本・共通 -->
 <script src="./js/config.js" defer></script>
@@ -946,9 +1114,13 @@
 <script src="./js/selectors.js" defer></script>
 <script src="./js/musicTop.js" defer></script>
 <script src="./js/theme.js" defer></script>
-<script src="./js/canvas.js" defer></script>
 <script src="./js/memberWorks.js" defer></script>
 <script src="./js/setting.js" defer></script>
+<!-- シェア画像 -->
+<script src="./js/shareImages/shareImageThemes.js" defer></script>
+<script src="./js/shareImages/shareImageUtils.js" defer></script>
+<script src="./js/shareImages/index.js" defer></script>
+<script src="./js/shareImages/shareImage.js" defer></script>
 <!-- 遷移・初期化 -->
 <script src="./js/navigation.js" defer></script>
 <script src="./js/init.js" defer></script>
@@ -961,7 +1133,6 @@
 <script src="./js/radioRequestSongOverride.js" defer></script>
 <script src="./js/dailyTask.js" defer></script>
 <script src="./js/post.js" defer></script>
-<script src="./js/shareImage.js" defer></script>
 <script src="./js/youtube.js" defer></script>
 <!-- 起動 -->
 <script src="./js/app.js" defer></script>
