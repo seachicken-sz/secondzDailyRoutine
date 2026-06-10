@@ -284,9 +284,9 @@ function getShareImageBlob() {
 
 // ==================================================
 // 現在のアプリテーマからシェア画像テーマを取得
+// 優先順位：localStorage.selectedTheme → documentElement の data-theme → normal
 // ==================================================
 function getCurrentThemeKeyForShareImage() {
-  const savedTheme = localStorage.getItem("selectedTheme");
   const themeMap = {
     red: "red",
     purple: "purple",
@@ -299,7 +299,19 @@ function getCurrentThemeKeyForShareImage() {
     normal: "normal",
   };
 
-  return themeMap[savedTheme] || "normal";
+  const savedTheme = localStorage.getItem("selectedTheme");
+
+  if (themeMap[savedTheme]) {
+    return themeMap[savedTheme];
+  }
+
+  const currentTheme = document.documentElement.dataset.theme || "normal";
+
+  if (themeMap[currentTheme]) {
+    return themeMap[currentTheme];
+  }
+
+  return "normal";
 }
 
 // ==================================================
