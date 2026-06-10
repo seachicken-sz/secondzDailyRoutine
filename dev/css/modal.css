@@ -236,7 +236,7 @@
   justify-content: flex-start;
   align-items: center;
   background-color: #fcfcfc;
-  gap: 8px;
+  gap: 4px;
   margin: 0 0 14px;
   padding: 4px 42px 12px 2px;
   max-width: 100%;
@@ -316,20 +316,27 @@
     var(--shadow-card);
 }
 
-.share-image-style-checkbox-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
+.share-image-control-area {
+  display: grid;
+  gap: 6px;
+  margin: 14px 0 12px;
+}
+
+.share-image-control-label {
+  font-size: 0.86rem;
+  font-weight: 700;
   color: var(--color-text-sub);
 }
 
-.share-image-style-checkbox-label.is-disabled {
-  opacity: 0.45;
-}
-
-.share-image-style-checkbox-label input:disabled {
-  cursor: not-allowed;
+.share-image-select {
+  width: 100%;
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-brand-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
 }
 
 /* カラー定義 */
