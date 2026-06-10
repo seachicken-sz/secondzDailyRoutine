@@ -647,6 +647,9 @@
 .firstvisit-modal-content{
    background-color:var(--color-surface);
 }
+#pwaFirstVisitModalTitle p{
+   text-align:center;
+}
 .firstvisit-modal-content strong {
     color: var(--color-brand);
 }
