@@ -759,6 +759,21 @@
   cursor: not-allowed;
   transform: none;
 }
+
+.home-extra-task-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.home-extra-task-summary-label {
+  min-width: 0;
+}
+
+.home-extra-task-done-mark {
+  flex: 0 0 auto;
+}
 /* =========================
   最近のタムごと表示
 ========================= */
