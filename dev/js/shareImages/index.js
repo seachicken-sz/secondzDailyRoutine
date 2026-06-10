@@ -1,10 +1,12 @@
 (function loadShareImageStyles() {
   const styleFiles = [
-    "simple.js",
-    "paperWood.js",
-    "minimalMemo.js",
-    "stationeryPlanner.js",
-    "yumekawaGradient.js"
+    "styles/simple.js",
+    "styles/paperWood.js",
+    "styles/minimalMemo.js",
+    "styles/stationeryPlanner.js",
+    "styles/yumekawaGradient.js",
+    "styles/characterPhotoList.js",
+    "styles/characterSimpleCard.js"
   ];
 
   const currentScript = document.currentScript;
