@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/11 10:23",
+  "updatedAt": "2026/06/11 11:21",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/11 10:23",
+      "updatedAt": "2026/06/11 11:21",
       "episodeId": "ep6vuu9nxm",
       "subtitle": "timelesz100",
       "likes": "1.7万",
@@ -532,6 +532,10 @@
         },
         {
           "hour": 132,
+          "likes": 17000
+        },
+        {
+          "hour": 133,
           "likes": 17000
         }
       ],
@@ -1118,7 +1122,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 36,
-          "elapsedHour": 132,
+          "elapsedHour": 133,
           "elapsedRank": 36,
           "currentPoints": [
             {
@@ -1635,6 +1639,10 @@
             },
             {
               "hour": 132,
+              "rank": 36
+            },
+            {
+              "hour": 133,
               "rank": 36
             }
           ],
@@ -2303,15 +2311,15 @@
           "nearbyRanking": [
             {
               "rank": 33,
-              "title": "いろはに千鳥"
-            },
-            {
-              "rank": 34,
               "title": "ニカゲーム"
             },
             {
+              "rank": 34,
+              "title": "いろはに千鳥"
+            },
+            {
               "rank": 35,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "開運！なんでも鑑定団"
             },
             {
               "rank": 36,
@@ -3348,19 +3356,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バラバラマンスリー"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "バラバラマンスリー"
             },
             {
               "rank": 49,
-              "title": "バナナサンド"
+              "title": "ワンピース"
             },
             {
               "rank": 50,
-              "title": "ワンピース"
+              "title": "君が死刑になる前に"
             }
           ]
         }
@@ -3369,7 +3377,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/11 10:23",
+      "updatedAt": "2026/06/11 11:21",
       "episodeId": "ep67r77z31",
       "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
       "likes": "1.5万",
@@ -3737,6 +3745,10 @@
         },
         {
           "hour": 92,
+          "likes": 15000
+        },
+        {
+          "hour": 93,
           "likes": 15000
         }
       ],
@@ -4366,9 +4378,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 37,
-          "elapsedHour": 92,
-          "elapsedRank": 37,
+          "currentRank": 38,
+          "elapsedHour": 93,
+          "elapsedRank": 38,
           "currentPoints": [
             {
               "hour": 3,
@@ -4725,6 +4737,10 @@
             {
               "hour": 92,
               "rank": 37
+            },
+            {
+              "hour": 93,
+              "rank": 38
             }
           ],
           "previousPoints": [
@@ -5323,12 +5339,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 34,
-              "title": "ニカゲーム"
-            },
-            {
               "rank": 35,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "開運！なんでも鑑定団"
             },
             {
               "rank": 36,
@@ -5336,6 +5348,10 @@
             },
             {
               "rank": 37,
+              "title": "かまいガチ"
+            },
+            {
+              "rank": 38,
               "title": "timeleszファミリア"
             }
           ]
@@ -5873,19 +5889,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バラバラマンスリー"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "バラバラマンスリー"
             },
             {
               "rank": 49,
-              "title": "バナナサンド"
+              "title": "ワンピース"
             },
             {
               "rank": 50,
-              "title": "ワンピース"
+              "title": "君が死刑になる前に"
             }
           ]
         }
@@ -5894,10 +5910,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/09",
-      "updatedAt": "2026/06/11 10:23",
+      "updatedAt": "2026/06/11 11:21",
       "episodeId": "epu815zrtp",
       "subtitle": "チョコプラ・timeleszが「手作り巨大メガホンなら1km先の好きな人に告白できる？」に挑む！",
-      "likes": "6813",
+      "likes": "6862",
       "favorites": "5.1万",
       "likePoints": [
         {
@@ -6035,6 +6051,10 @@
         {
           "hour": 34,
           "likes": 6813
+        },
+        {
+          "hour": 35,
+          "likes": 6862
         }
       ],
       "previousLikePoints": [
@@ -6708,7 +6728,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 7,
-          "elapsedHour": 34,
+          "elapsedHour": 35,
           "elapsedRank": 7,
           "currentPoints": [
             {
@@ -6821,6 +6841,10 @@
             },
             {
               "hour": 34,
+              "rank": 7
+            },
+            {
+              "hour": 35,
               "rank": 7
             }
           ],
@@ -7381,7 +7405,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 43,
-          "elapsedHour": 34,
+          "elapsedHour": 35,
           "elapsedRank": 43,
           "currentPoints": [
             {
@@ -7450,6 +7474,10 @@
             },
             {
               "hour": 34,
+              "rank": 43
+            },
+            {
+              "hour": 35,
               "rank": 43
             }
           ],
@@ -7570,15 +7598,15 @@
           "nearbyRanking": [
             {
               "rank": 40,
-              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
+              "title": "幹事Xと名店の夜"
             },
             {
               "rank": 41,
-              "title": "日曜日の初耳学"
+              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
             },
             {
               "rank": 42,
-              "title": "かまいガチ"
+              "title": "日曜日の初耳学"
             },
             {
               "rank": 43,
@@ -7591,10 +7619,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/11",
-      "updatedAt": "2026/06/11 10:23",
+      "updatedAt": "2026/06/11 11:21",
       "episodeId": "epjy83fa3a",
       "subtitle": "【1時間SP延長戦】オカシーパラダイスからの招待状",
-      "likes": "2960",
+      "likes": "3246",
       "favorites": "22.2万",
       "likePoints": [
         {
@@ -7628,6 +7656,10 @@
         {
           "hour": 8,
           "likes": 2960
+        },
+        {
+          "hour": 9,
+          "likes": 3246
         }
       ],
       "previousLikePoints": [
@@ -7950,6 +7982,10 @@
         {
           "hour": 80,
           "likes": 13000
+        },
+        {
+          "hour": 81,
+          "likes": 13000
         }
       ],
       "rankings": [
@@ -8252,6 +8288,10 @@
             {
               "hour": 80,
               "rank": 34
+            },
+            {
+              "hour": 81,
+              "rank": 33
             }
           ],
           "nearbyRanking": [
@@ -8265,11 +8305,11 @@
             },
             {
               "rank": 49,
-              "title": "にけつッ!!"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 50,
-              "title": "かまいたちの知らんけど"
+              "title": "にけつッ!!"
             }
           ]
         },
@@ -8473,19 +8513,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バラバラマンスリー"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "バラバラマンスリー"
             },
             {
               "rank": 49,
-              "title": "バナナサンド"
+              "title": "ワンピース"
             },
             {
               "rank": 50,
-              "title": "ワンピース"
+              "title": "君が死刑になる前に"
             }
           ]
         }
@@ -8494,10 +8534,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/11 10:23",
+      "updatedAt": "2026/06/11 11:21",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "4169",
+      "likes": "4171",
       "favorites": "76.0万",
       "likePoints": [
         {
@@ -9167,11 +9207,11 @@
             },
             {
               "rank": 49,
-              "title": "にけつッ!!"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 50,
-              "title": "かまいたちの知らんけど"
+              "title": "にけつッ!!"
             }
           ]
         },
@@ -9267,19 +9307,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バラバラマンスリー"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "バラバラマンスリー"
             },
             {
               "rank": 49,
-              "title": "バナナサンド"
+              "title": "ワンピース"
             },
             {
               "rank": 50,
-              "title": "ワンピース"
+              "title": "君が死刑になる前に"
             }
           ]
         }
@@ -9288,10 +9328,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/11 10:23",
+      "updatedAt": "2026/06/11 11:21",
       "episodeId": "eptfjnm7md",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！緑黄色社会登場",
-      "likes": "2066",
+      "likes": "2095",
       "favorites": "6.9万",
       "likePoints": [
         {
@@ -9429,6 +9469,10 @@
         {
           "hour": 33,
           "likes": 2066
+        },
+        {
+          "hour": 34,
+          "likes": 2095
         }
       ],
       "previousLikePoints": [
@@ -10250,11 +10294,11 @@
             },
             {
               "rank": 49,
-              "title": "にけつッ!!"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 50,
-              "title": "かまいたちの知らんけど"
+              "title": "にけつッ!!"
             }
           ]
         },
@@ -10306,19 +10350,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バラバラマンスリー"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "バラバラマンスリー"
             },
             {
               "rank": 49,
-              "title": "バナナサンド"
+              "title": "ワンピース"
             },
             {
               "rank": 50,
-              "title": "ワンピース"
+              "title": "君が死刑になる前に"
             }
           ]
         }
@@ -10327,10 +10371,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/05",
-      "updatedAt": "2026/06/11 10:23",
+      "updatedAt": "2026/06/11 11:21",
       "episodeId": "eps7bm6mup",
       "subtitle": "第130回 真剣勝負あっち向いてホイ！ついに王者が決定！",
-      "likes": "7044",
+      "likes": "7056",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -10924,6 +10968,10 @@
         {
           "hour": 153,
           "likes": 7044
+        },
+        {
+          "hour": 154,
+          "likes": 7056
         }
       ],
       "previousLikePoints": [
@@ -11890,11 +11938,11 @@
             },
             {
               "rank": 49,
-              "title": "にけつッ!!"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 50,
-              "title": "かまいたちの知らんけど"
+              "title": "にけつッ!!"
             }
           ]
         },
@@ -11971,19 +12019,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バラバラマンスリー"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "バラバラマンスリー"
             },
             {
               "rank": 49,
-              "title": "バナナサンド"
+              "title": "ワンピース"
             },
             {
               "rank": 50,
-              "title": "ワンピース"
+              "title": "君が死刑になる前に"
             }
           ]
         }
@@ -11992,7 +12040,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/05/30",
-      "updatedAt": "2026/06/11 10:23",
+      "updatedAt": "2026/06/11 11:21",
       "episodeId": "epdpoawq6d",
       "subtitle": "マッサマンvs錦鯉マッサノリマンSP前編",
       "likes": "2580",
@@ -12625,11 +12673,11 @@
             },
             {
               "rank": 49,
-              "title": "にけつッ!!"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 50,
-              "title": "かまいたちの知らんけど"
+              "title": "にけつッ!!"
             }
           ]
         },
@@ -12717,19 +12765,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バラバラマンスリー"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "バラバラマンスリー"
             },
             {
               "rank": 49,
-              "title": "バナナサンド"
+              "title": "ワンピース"
             },
             {
               "rank": 50,
-              "title": "ワンピース"
+              "title": "君が死刑になる前に"
             }
           ]
         }
@@ -12738,11 +12786,11 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/11 10:23",
+      "updatedAt": "2026/06/11 11:21",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
-      "likes": "3635",
-      "favorites": "35.8万",
+      "likes": "3795",
+      "favorites": "35.6万",
       "likePoints": [
         {
           "hour": 1,
@@ -12795,6 +12843,10 @@
         {
           "hour": 13,
           "likes": 3635
+        },
+        {
+          "hour": 14,
+          "likes": 3795
         }
       ],
       "previousLikePoints": [
@@ -13471,9 +13523,9 @@
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 7,
-          "elapsedHour": 13,
-          "elapsedRank": 7,
+          "currentRank": 8,
+          "elapsedHour": 14,
+          "elapsedRank": 8,
           "currentPoints": [
             {
               "hour": 2,
@@ -13518,6 +13570,10 @@
             {
               "hour": 13,
               "rank": 7
+            },
+            {
+              "hour": 14,
+              "rank": 8
             }
           ],
           "previousPoints": [
@@ -14188,10 +14244,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 4,
-              "title": "月夜行路 ―答えは名作の中に―"
-            },
-            {
               "rank": 5,
               "title": "産まない女はダメですか？ DINKsのトツキトオカ"
             },
@@ -14201,6 +14253,10 @@
             },
             {
               "rank": 7,
+              "title": "サレタ側の復讐～同盟を結んだ妻たち～"
+            },
+            {
+              "rank": 8,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -14209,7 +14265,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 12,
-          "elapsedHour": 13,
+          "elapsedHour": 14,
           "elapsedRank": 12,
           "currentPoints": [
             {
@@ -14254,6 +14310,10 @@
             },
             {
               "hour": 13,
+              "rank": 12
+            },
+            {
+              "hour": 14,
               "rank": 12
             }
           ],
@@ -14930,7 +14990,7 @@
             },
             {
               "rank": 11,
-              "title": "テレビ千鳥"
+              "title": "サレタ側の復讐～同盟を結んだ妻たち～"
             },
             {
               "rank": 12,
@@ -14943,10 +15003,10 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/11 10:23",
+      "updatedAt": "2026/06/11 11:21",
       "episodeId": "epg027ir46",
       "subtitle": "“なぞかけ講座”",
-      "likes": "8332",
+      "likes": "8405",
       "favorites": "21.7万",
       "likePoints": [
         {
@@ -15076,6 +15136,10 @@
         {
           "hour": 31,
           "likes": 8332
+        },
+        {
+          "hour": 32,
+          "likes": 8405
         }
       ],
       "previousLikePoints": [
@@ -15756,9 +15820,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 21,
-          "elapsedHour": 31,
-          "elapsedRank": 21,
+          "currentRank": 22,
+          "elapsedHour": 32,
+          "elapsedRank": 22,
           "currentPoints": [
             {
               "hour": 10,
@@ -15843,6 +15907,10 @@
             {
               "hour": 31,
               "rank": 21
+            },
+            {
+              "hour": 32,
+              "rank": 22
             }
           ],
           "previousPoints": [
@@ -16005,12 +16073,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 18,
-              "title": "オモウマい店"
-            },
-            {
               "rank": 19,
-              "title": "ホンマでっか！？TV"
+              "title": "オモウマい店"
             },
             {
               "rank": 20,
@@ -16018,6 +16082,10 @@
             },
             {
               "rank": 21,
+              "title": "ラヴィット！"
+            },
+            {
+              "rank": 22,
               "title": "バラバラマンスリー"
             }
           ]
@@ -16025,9 +16093,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 47,
-          "elapsedHour": 31,
-          "elapsedRank": 47,
+          "currentRank": 48,
+          "elapsedHour": 32,
+          "elapsedRank": 48,
           "currentPoints": [
             {
               "hour": 19,
@@ -16076,6 +16144,10 @@
             {
               "hour": 31,
               "rank": 47
+            },
+            {
+              "hour": 32,
+              "rank": 48
             }
           ],
           "previousPoints": [
@@ -16194,10 +16266,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 44,
-              "title": "こないだおばさんって言われたよ"
-            },
-            {
               "rank": 45,
               "title": "スモークブルーの雨のち晴れ"
             },
@@ -16207,6 +16275,10 @@
             },
             {
               "rank": 47,
+              "title": "ラヴィット！"
+            },
+            {
+              "rank": 48,
               "title": "バラバラマンスリー"
             }
           ]
@@ -16216,10 +16288,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/11 10:23",
+      "updatedAt": "2026/06/11 11:21",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "5775",
+      "likes": "5777",
       "favorites": "1.4万",
       "likePoints": [
         {
@@ -16849,11 +16921,11 @@
             },
             {
               "rank": 48,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "やすとも・友近のキメツケ！あくまで個人の感想です"
             },
             {
               "rank": 49,
-              "title": "いたジャン！"
+              "title": "５時に夢中！"
             },
             {
               "rank": 50,
@@ -16880,11 +16952,11 @@
             },
             {
               "rank": 49,
-              "title": "にけつッ!!"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 50,
-              "title": "かまいたちの知らんけど"
+              "title": "にけつッ!!"
             }
           ]
         }
