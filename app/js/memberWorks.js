@@ -299,6 +299,10 @@ function createWorkItemHtml(item, group) {
     return createTverWorkItemHtml(item, group);
   }
 
+  if (group.key === "radiko") {
+    return createRadikoWorkItemHtml(item, group);
+  }
+
   return `
       <a
         class="member-work-link-card"
@@ -364,6 +368,82 @@ function createTverWorkItemHtml(item, group) {
         ${createTverRankingReportButtonHtml(item)}
       </span>
     </div>
+  `;
+}
+
+/**
+ * radiko用リンクカードを生成
+ */
+function createRadikoWorkItemHtml(item, group) {
+  return `
+    <div class="member-work-link-card member-work-link-card-radiko">
+      <span class="member-work-link-main member-work-link-main-radiko">
+        <span class="member-work-link-title member-work-link-title-radiko">
+          ${escapeHtml(getProgramDisplayName(item))}
+        </span>
+
+        ${buildRemainingText(item)}
+      </span>
+
+      <a
+        class="member-work-link-button member-work-link-button-radiko"
+        href="${escapeHtml(item[group.urlKey])}"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-member-work-link="true"
+        data-member-work-group-key="${escapeHtml(group.key)}"
+        data-member-work-title="${escapeHtml(getProgramDisplayName(item))}"
+        data-member-work-url="${escapeHtml(item[group.urlKey])}"
+        data-member-work-work-type="${escapeHtml(item.workType || "")}"
+        data-member-work-program-id="${escapeHtml(item.programId || item.seriesId || "")}"
+        data-member-work-episode-id="${escapeHtml(item.episodeId || "")}"
+        data-member-work-members="${escapeHtml(Array.isArray(item.members) ? item.members.join(",") : "")}"
+      >
+        radiko
+      </a>
+
+      <span class="member-work-link-rank-area">
+        ${createRadikoHashtagPostButtonHtml(item)}
+      </span>
+    </div>
+  `;
+}
+
+/**
+ * radikoハッシュタグ投稿ボタンを生成
+ */
+function createRadikoHashtagPostButtonHtml(item) {
+  if (!item.hashtag) {
+    return "";
+  }
+
+  const postText = [
+    getProgramDisplayName(item),
+    item.hashtag
+  ].filter(Boolean).join("\n");
+
+  const postUrl =
+    `https://twitter.com/intent/tweet?text=${encodeURIComponent(postText)}`;
+
+  return `
+    <a
+      class="member-work-link-rank-button member-work-link-x-button"
+      href="${escapeHtml(postUrl)}"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Xにポスト"
+      title="Xにポスト"
+      data-member-work-link="true"
+      data-member-work-group-key="radikoHashtag"
+      data-member-work-title="${escapeHtml(getProgramDisplayName(item))}"
+      data-member-work-url="${escapeHtml(postUrl)}"
+      data-member-work-work-type="${escapeHtml(item.workType || "radio")}"
+      data-member-work-program-id="${escapeHtml(item.programId || item.seriesId || "")}"
+      data-member-work-episode-id="${escapeHtml(item.episodeId || "")}"
+      data-member-work-members="${escapeHtml(Array.isArray(item.members) ? item.members.join(",") : "")}"
+    >
+      <i class="bi bi-twitter-x" aria-hidden="true"></i>
+    </a>
   `;
 }
 
