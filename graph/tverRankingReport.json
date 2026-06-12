@@ -1,18 +1,22 @@
 {
-  "updatedAt": "2026/06/12 23:24",
+  "updatedAt": "2026/06/13 00:24",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/12 23:24",
+      "updatedAt": "2026/06/13 00:24",
       "episodeId": "epq089zr8c",
       "subtitle": "【2本立てSP！】NEO麻辣湯＆ランク付け",
-      "likes": "612",
+      "likes": "1719",
       "favorites": "76.1万",
       "likePoints": [
         {
           "hour": 1,
           "likes": 612
+        },
+        {
+          "hour": 2,
+          "likes": 1719
         }
       ],
       "previousLikePoints": [
@@ -1358,11 +1362,11 @@
             },
             {
               "rank": 49,
-              "title": "探偵！ナイトスクープ"
+              "title": "オモウマい店"
             },
             {
               "rank": 50,
-              "title": "オモウマい店"
+              "title": "やすとものいたって真剣です"
             }
           ]
         },
@@ -1762,19 +1766,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 48,
               "title": "VIVANT"
             },
             {
+              "rank": 48,
+              "title": "秘密のケンミンSHOW極"
+            },
+            {
               "rank": 49,
-              "title": "あちこちオードリー"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
-              "title": "プレバト！！"
+              "title": "あちこちオードリー"
             }
           ]
         }
@@ -1783,7 +1787,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/12 23:24",
+      "updatedAt": "2026/06/13 00:24",
       "episodeId": "ep67r77z31",
       "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
       "likes": "1.5万",
@@ -2299,6 +2303,10 @@
         },
         {
           "hour": 129,
+          "likes": 15000
+        },
+        {
+          "hour": 130,
           "likes": 15000
         }
       ],
@@ -2929,7 +2937,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 46,
-          "elapsedHour": 129,
+          "elapsedHour": 130,
           "elapsedRank": 46,
           "currentPoints": [
             {
@@ -3434,6 +3442,10 @@
             },
             {
               "hour": 129,
+              "rank": 46
+            },
+            {
+              "hour": 130,
               "rank": 46
             }
           ],
@@ -4034,15 +4046,15 @@
           "nearbyRanking": [
             {
               "rank": 43,
-              "title": "Golden SixTONES"
+              "title": "この世界は1ダフル"
             },
             {
               "rank": 44,
-              "title": "世界の果てまでイッテQ！"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 45,
-              "title": "坂上どうぶつ王国"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 46,
@@ -4583,19 +4595,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 48,
               "title": "VIVANT"
             },
             {
+              "rank": 48,
+              "title": "秘密のケンミンSHOW極"
+            },
+            {
               "rank": 49,
-              "title": "あちこちオードリー"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
-              "title": "プレバト！！"
+              "title": "あちこちオードリー"
             }
           ]
         }
@@ -4604,10 +4616,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/09",
-      "updatedAt": "2026/06/12 23:24",
+      "updatedAt": "2026/06/13 00:24",
       "episodeId": "epu815zrtp",
       "subtitle": "チョコプラ・timeleszが「手作り巨大メガホンなら1km先の好きな人に告白できる？」に挑む！",
-      "likes": "7952",
+      "likes": "7962",
       "favorites": "5.1万",
       "likePoints": [
         {
@@ -4893,6 +4905,10 @@
         {
           "hour": 71,
           "likes": 7952
+        },
+        {
+          "hour": 72,
+          "likes": 7962
         }
       ],
       "previousLikePoints": [
@@ -5565,9 +5581,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 26,
-          "elapsedHour": 71,
-          "elapsedRank": 26,
+          "currentRank": 25,
+          "elapsedHour": 72,
+          "elapsedRank": 25,
           "currentPoints": [
             {
               "hour": 6,
@@ -5828,6 +5844,10 @@
             {
               "hour": 71,
               "rank": 26
+            },
+            {
+              "hour": 72,
+              "rank": 25
             }
           ],
           "previousPoints": [
@@ -6366,8 +6386,12 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 23,
+              "rank": 22,
               "title": "ポツンと一軒家"
+            },
+            {
+              "rank": 23,
+              "title": "かのサンド"
             },
             {
               "rank": 24,
@@ -6375,10 +6399,6 @@
             },
             {
               "rank": 25,
-              "title": "かのサンド"
-            },
-            {
-              "rank": 26,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -6608,11 +6628,11 @@
             },
             {
               "rank": 49,
-              "title": "探偵！ナイトスクープ"
+              "title": "オモウマい店"
             },
             {
               "rank": 50,
-              "title": "オモウマい店"
+              "title": "やすとものいたって真剣です"
             }
           ]
         }
@@ -6621,10 +6641,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/11",
-      "updatedAt": "2026/06/12 23:24",
+      "updatedAt": "2026/06/13 00:24",
       "episodeId": "epjy83fa3a",
       "subtitle": "【1時間SP延長戦】オカシーパラダイスからの招待状",
-      "likes": "8640",
+      "likes": "8725",
       "favorites": "22.3万",
       "likePoints": [
         {
@@ -6806,6 +6826,10 @@
         {
           "hour": 45,
           "likes": 8640
+        },
+        {
+          "hour": 46,
+          "likes": 8725
         }
       ],
       "previousLikePoints": [
@@ -7276,15 +7300,19 @@
         {
           "hour": 117,
           "likes": 15000
+        },
+        {
+          "hour": 118,
+          "likes": 15000
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 30,
-          "elapsedHour": 45,
-          "elapsedRank": 30,
+          "currentRank": 32,
+          "elapsedHour": 46,
+          "elapsedRank": 32,
           "currentPoints": [
             {
               "hour": 13,
@@ -7417,6 +7445,10 @@
             {
               "hour": 45,
               "rank": 30
+            },
+            {
+              "hour": 46,
+              "rank": 32
             }
           ],
           "previousPoints": [
@@ -7731,19 +7763,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 27,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
-            },
-            {
-              "rank": 28,
+              "rank": 29,
               "title": "見取り図じゃん"
             },
             {
-              "rank": 29,
+              "rank": 30,
               "title": "ゴールデンホリデぇ！"
             },
             {
-              "rank": 30,
+              "rank": 31,
+              "title": "有吉の壁"
+            },
+            {
+              "rank": 32,
               "title": "ニカゲーム"
             }
           ]
@@ -8065,19 +8097,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 48,
               "title": "VIVANT"
             },
             {
+              "rank": 48,
+              "title": "秘密のケンミンSHOW極"
+            },
+            {
               "rank": 49,
-              "title": "あちこちオードリー"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
-              "title": "プレバト！！"
+              "title": "あちこちオードリー"
             }
           ]
         }
@@ -8086,10 +8118,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/12 23:24",
+      "updatedAt": "2026/06/13 00:24",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "4239",
+      "likes": "4243",
       "favorites": "76.0万",
       "likePoints": [
         {
@@ -8759,11 +8791,11 @@
             },
             {
               "rank": 49,
-              "title": "探偵！ナイトスクープ"
+              "title": "オモウマい店"
             },
             {
               "rank": 50,
-              "title": "オモウマい店"
+              "title": "やすとものいたって真剣です"
             }
           ]
         },
@@ -8859,19 +8891,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 48,
               "title": "VIVANT"
             },
             {
+              "rank": 48,
+              "title": "秘密のケンミンSHOW極"
+            },
+            {
               "rank": 49,
-              "title": "あちこちオードリー"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
-              "title": "プレバト！！"
+              "title": "あちこちオードリー"
             }
           ]
         }
@@ -8880,10 +8912,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/12 23:24",
+      "updatedAt": "2026/06/13 00:24",
       "episodeId": "eptfjnm7md",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！緑黄色社会登場",
-      "likes": "2517",
+      "likes": "2531",
       "favorites": "6.9万",
       "likePoints": [
         {
@@ -9169,6 +9201,10 @@
         {
           "hour": 70,
           "likes": 2517
+        },
+        {
+          "hour": 71,
+          "likes": 2531
         }
       ],
       "previousLikePoints": [
@@ -9990,11 +10026,11 @@
             },
             {
               "rank": 49,
-              "title": "探偵！ナイトスクープ"
+              "title": "オモウマい店"
             },
             {
               "rank": 50,
-              "title": "オモウマい店"
+              "title": "やすとものいたって真剣です"
             }
           ]
         },
@@ -10046,19 +10082,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 48,
               "title": "VIVANT"
             },
             {
+              "rank": 48,
+              "title": "秘密のケンミンSHOW極"
+            },
+            {
               "rank": 49,
-              "title": "あちこちオードリー"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
-              "title": "プレバト！！"
+              "title": "あちこちオードリー"
             }
           ]
         }
@@ -10067,10 +10103,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/12 23:24",
+      "updatedAt": "2026/06/13 00:24",
       "episodeId": "epqyavv4lw",
       "subtitle": "第131回 風磨が目指す憧れの男・梅沢富美男が大暴走！？",
-      "likes": "3130",
+      "likes": "3197",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -10152,6 +10188,10 @@
         {
           "hour": 22,
           "likes": 3130
+        },
+        {
+          "hour": 24,
+          "likes": 3197
         }
       ],
       "previousLikePoints": [
@@ -10805,7 +10845,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 13,
-          "elapsedHour": 23,
+          "elapsedHour": 24,
           "elapsedRank": 13,
           "currentPoints": [
             {
@@ -10862,6 +10902,10 @@
             },
             {
               "hour": 23,
+              "rank": 13
+            },
+            {
+              "hour": 24,
               "rank": 13
             }
           ],
@@ -11050,11 +11094,11 @@
           "nearbyRanking": [
             {
               "rank": 10,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "トークィーンズ"
             },
             {
               "rank": 11,
-              "title": "トークィーンズ"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 12,
@@ -11069,9 +11113,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 33,
-          "elapsedHour": 23,
-          "elapsedRank": 33,
+          "currentRank": 34,
+          "elapsedHour": 24,
+          "elapsedRank": 34,
           "currentPoints": [
             {
               "hour": 16,
@@ -11104,6 +11148,10 @@
             {
               "hour": 23,
               "rank": 33
+            },
+            {
+              "hour": 24,
+              "rank": 34
             }
           ],
           "previousPoints": [
@@ -11126,19 +11174,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 30,
-              "title": "トークィーンズ"
-            },
-            {
               "rank": 31,
-              "title": "マツコの知らない世界"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 32,
-              "title": "10回切って倒れない木はない"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 33,
+              "title": "10回切って倒れない木はない"
+            },
+            {
+              "rank": 34,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -11148,10 +11196,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/05/30",
-      "updatedAt": "2026/06/12 23:24",
+      "updatedAt": "2026/06/13 00:24",
       "episodeId": "epdpoawq6d",
       "subtitle": "マッサマンvs錦鯉マッサノリマンSP前編",
-      "likes": "2732",
+      "likes": "2743",
       "favorites": "77.2万",
       "likePoints": [
         {
@@ -11781,11 +11829,11 @@
             },
             {
               "rank": 49,
-              "title": "探偵！ナイトスクープ"
+              "title": "オモウマい店"
             },
             {
               "rank": 50,
-              "title": "オモウマい店"
+              "title": "やすとものいたって真剣です"
             }
           ]
         },
@@ -11873,19 +11921,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 48,
               "title": "VIVANT"
             },
             {
+              "rank": 48,
+              "title": "秘密のケンミンSHOW極"
+            },
+            {
               "rank": 49,
-              "title": "あちこちオードリー"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
-              "title": "プレバト！！"
+              "title": "あちこちオードリー"
             }
           ]
         }
@@ -11894,10 +11942,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/12 23:24",
+      "updatedAt": "2026/06/13 00:24",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
-      "likes": "7416",
+      "likes": "7451",
       "favorites": "33.4万",
       "likePoints": [
         {
@@ -12099,6 +12147,10 @@
         {
           "hour": 50,
           "likes": 7416
+        },
+        {
+          "hour": 51,
+          "likes": 7451
         }
       ],
       "previousLikePoints": [
@@ -12775,9 +12827,9 @@
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 11,
-          "elapsedHour": 50,
-          "elapsedRank": 11,
+          "currentRank": 12,
+          "elapsedHour": 51,
+          "elapsedRank": 12,
           "currentPoints": [
             {
               "hour": 2,
@@ -12970,6 +13022,10 @@
             {
               "hour": 50,
               "rank": 11
+            },
+            {
+              "hour": 51,
+              "rank": 12
             }
           ],
           "previousPoints": [
@@ -13640,10 +13696,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 8,
-              "title": "時すでにおスシ!?"
-            },
-            {
               "rank": 9,
               "title": "リボーン ～最後のヒーロー～"
             },
@@ -13653,6 +13705,10 @@
             },
             {
               "rank": 11,
+              "title": "夫婦別姓刑事"
+            },
+            {
+              "rank": 12,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -13660,9 +13716,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 15,
-          "elapsedHour": 50,
-          "elapsedRank": 15,
+          "currentRank": 16,
+          "elapsedHour": 51,
+          "elapsedRank": 16,
           "currentPoints": [
             {
               "hour": 2,
@@ -13855,6 +13911,10 @@
             {
               "hour": 50,
               "rank": 15
+            },
+            {
+              "hour": 51,
+              "rank": 16
             }
           ],
           "previousPoints": [
@@ -14521,19 +14581,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 12,
-              "title": "リボーン ～最後のヒーロー～"
-            },
-            {
               "rank": 13,
-              "title": "ぐるぐるナインティナイン"
-            },
-            {
-              "rank": 14,
               "title": "その天才様は偽装彼女に執着する"
             },
             {
+              "rank": 14,
+              "title": "ぐるぐるナインティナイン"
+            },
+            {
               "rank": 15,
+              "title": "夫婦別姓刑事"
+            },
+            {
+              "rank": 16,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -14543,7 +14603,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/12 23:24",
+      "updatedAt": "2026/06/13 00:24",
       "episodeId": "epg027ir46",
       "subtitle": "“なぞかけ講座”",
       "likes": "1.0万",
@@ -14823,6 +14883,10 @@
         },
         {
           "hour": 68,
+          "likes": 10000
+        },
+        {
+          "hour": 69,
           "likes": 10000
         }
       ],
@@ -15850,11 +15914,11 @@
             },
             {
               "rank": 49,
-              "title": "探偵！ナイトスクープ"
+              "title": "オモウマい店"
             },
             {
               "rank": 50,
-              "title": "オモウマい店"
+              "title": "やすとものいたって真剣です"
             }
           ]
         },
@@ -16051,19 +16115,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 48,
               "title": "VIVANT"
             },
             {
+              "rank": 48,
+              "title": "秘密のケンミンSHOW極"
+            },
+            {
               "rank": 49,
-              "title": "あちこちオードリー"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
-              "title": "プレバト！！"
+              "title": "あちこちオードリー"
             }
           ]
         }
@@ -16072,7 +16136,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/12 23:24",
+      "updatedAt": "2026/06/13 00:24",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
       "likes": "5822",
@@ -16701,19 +16765,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ×ミセス"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 48,
-              "title": "ニノなのに"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "にけつッ!!"
+              "title": "金曜ミステリークラブ!!!"
             },
             {
               "rank": 50,
-              "title": "金曜ミステリークラブ!!!"
+              "title": "ニノなのに"
             }
           ]
         },
@@ -16736,11 +16800,11 @@
             },
             {
               "rank": 49,
-              "title": "探偵！ナイトスクープ"
+              "title": "オモウマい店"
             },
             {
               "rank": 50,
-              "title": "オモウマい店"
+              "title": "やすとものいたって真剣です"
             }
           ]
         }
