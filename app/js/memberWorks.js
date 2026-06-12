@@ -417,10 +417,7 @@ function createRadikoHashtagPostButtonHtml(item) {
     return "";
   }
 
-  const postText = [
-    getProgramDisplayName(item),
-    item.hashtag
-  ].filter(Boolean).join("\n");
+  const postText = item.hashtag;
 
   const postUrl =
     `https://twitter.com/intent/tweet?text=${encodeURIComponent(postText)}`;
