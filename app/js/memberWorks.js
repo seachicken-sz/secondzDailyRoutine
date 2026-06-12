@@ -11,7 +11,7 @@ const MEMBER_WORK_LINK_GROUPS = [
   {
     key: "radiko",
     label: "radiko",
-    description: "radikoはSNSシェアを押してね！",
+    description: "radikoはアプリからシェアラジコ！Xでハッシュタグ付きで感想も投稿しよう！",
     urlKey: "platformUrl",
     isTarget: (item) =>
       item.workType === "radio" &&
