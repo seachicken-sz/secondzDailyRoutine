@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026/06/13 08:24",
+  "updatedAt": "2026/06/13 09:22",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/13 08:24",
+      "updatedAt": "2026/06/13 09:22",
       "episodeId": "epq089zr8c",
       "subtitle": "【2本立てSP！】NEO麻辣湯＆ランク付け",
-      "likes": "5013",
+      "likes": "5646",
       "favorites": "76.1万",
       "likePoints": [
         {
@@ -49,6 +49,10 @@
         {
           "hour": 10,
           "likes": 5013
+        },
+        {
+          "hour": 11,
+          "likes": 5646
         }
       ],
       "previousLikePoints": [
@@ -721,9 +725,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 16,
-          "elapsedHour": 10,
-          "elapsedRank": 16,
+          "currentRank": 14,
+          "elapsedHour": 11,
+          "elapsedRank": 14,
           "currentPoints": [
             {
               "hour": 3,
@@ -756,6 +760,10 @@
             {
               "hour": 10,
               "rank": 16
+            },
+            {
+              "hour": 11,
+              "rank": 14
             }
           ],
           "previousPoints": [
@@ -1418,19 +1426,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 11,
+              "title": "トークィーンズ"
+            },
+            {
+              "rank": 12,
+              "title": "マツコの知らない世界"
+            },
+            {
               "rank": 13,
               "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
               "rank": 14,
-              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
-            },
-            {
-              "rank": 15,
-              "title": "何か“オモシロいコト”ないの？"
-            },
-            {
-              "rank": 16,
               "title": "タイムレスマン"
             }
           ]
@@ -1438,9 +1446,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 41,
-          "elapsedHour": 10,
-          "elapsedRank": 41,
+          "currentRank": 37,
+          "elapsedHour": 11,
+          "elapsedRank": 37,
           "currentPoints": [
             {
               "hour": 9,
@@ -1449,6 +1457,10 @@
             {
               "hour": 10,
               "rank": 41
+            },
+            {
+              "hour": 11,
+              "rank": 37
             }
           ],
           "previousPoints": [
@@ -1839,19 +1851,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 38,
+              "rank": 34,
+              "title": "マツコの知らない世界"
+            },
+            {
+              "rank": 35,
+              "title": "惡の華"
+            },
+            {
+              "rank": 36,
               "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
-              "rank": 39,
-              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
-            },
-            {
-              "rank": 40,
-              "title": "何か“オモシロいコト”ないの？"
-            },
-            {
-              "rank": 41,
+              "rank": 37,
               "title": "タイムレスマン"
             }
           ]
@@ -1861,7 +1873,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/13 08:24",
+      "updatedAt": "2026/06/13 09:22",
       "episodeId": "ep67r77z31",
       "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
       "likes": "1.5万",
@@ -2413,6 +2425,10 @@
         },
         {
           "hour": 138,
+          "likes": 15000
+        },
+        {
+          "hour": 139,
           "likes": 15000
         }
       ],
@@ -3042,9 +3058,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 50,
-          "elapsedHour": 138,
-          "elapsedRank": 50,
+          "currentRank": 49,
+          "elapsedHour": 139,
+          "elapsedRank": 49,
           "currentPoints": [
             {
               "hour": 3,
@@ -3585,6 +3601,10 @@
             {
               "hour": 138,
               "rank": 50
+            },
+            {
+              "hour": 139,
+              "rank": 49
             }
           ],
           "previousPoints": [
@@ -4183,19 +4203,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "サクラミーツ"
+              "rank": 46,
+              "title": "STAR"
             },
             {
-              "rank": 48,
+              "rank": 47,
               "title": "Golden SixTONES"
             },
             {
-              "rank": 49,
-              "title": "この世界は1ダフル"
+              "rank": 48,
+              "title": "サクラミーツ"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "timeleszファミリア"
             }
           ]
@@ -4733,11 +4753,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 49,
@@ -4745,7 +4765,7 @@
             },
             {
               "rank": 50,
-              "title": "櫻井･有吉THE夜会"
+              "title": "名探偵コナン"
             }
           ]
         }
@@ -4754,10 +4774,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/09",
-      "updatedAt": "2026/06/13 08:24",
+      "updatedAt": "2026/06/13 09:22",
       "episodeId": "epu815zrtp",
       "subtitle": "チョコプラ・timeleszが「手作り巨大メガホンなら1km先の好きな人に告白できる？」に挑む！",
-      "likes": "8006",
+      "likes": "8026",
       "favorites": "5.1万",
       "likePoints": [
         {
@@ -5079,6 +5099,10 @@
         {
           "hour": 80,
           "likes": 8006
+        },
+        {
+          "hour": 81,
+          "likes": 8026
         }
       ],
       "previousLikePoints": [
@@ -5751,9 +5775,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 30,
-          "elapsedHour": 80,
-          "elapsedRank": 30,
+          "currentRank": 31,
+          "elapsedHour": 81,
+          "elapsedRank": 31,
           "currentPoints": [
             {
               "hour": 6,
@@ -6050,6 +6074,10 @@
             {
               "hour": 80,
               "rank": 30
+            },
+            {
+              "hour": 81,
+              "rank": 31
             }
           ],
           "previousPoints": [
@@ -6588,19 +6616,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 27,
-              "title": "ニノなのに"
-            },
-            {
               "rank": 28,
-              "title": "長嶋一茂＆サバンナ高橋のザワつく！路線バスで寄り道の旅"
+              "title": "知識の扉よ開け！ドア×ドア クエスト"
             },
             {
               "rank": 29,
-              "title": "あっちこっちAぇ!"
+              "title": "長嶋一茂＆サバンナ高橋のザワつく！路線バスで寄り道の旅"
             },
             {
               "rank": 30,
+              "title": "あっちこっちAぇ!"
+            },
+            {
+              "rank": 31,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -6822,19 +6850,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サクラミーツ"
-            },
-            {
-              "rank": 48,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 48,
+              "title": "サクラミーツ"
+            },
+            {
               "rank": 49,
-              "title": "この世界は1ダフル"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "この世界は1ダフル"
             }
           ]
         }
@@ -6843,10 +6871,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/11",
-      "updatedAt": "2026/06/13 08:24",
+      "updatedAt": "2026/06/13 09:22",
       "episodeId": "epjy83fa3a",
       "subtitle": "【1時間SP延長戦】オカシーパラダイスからの招待状",
-      "likes": "8915",
+      "likes": "8958",
       "favorites": "22.4万",
       "likePoints": [
         {
@@ -7064,6 +7092,10 @@
         {
           "hour": 54,
           "likes": 8915
+        },
+        {
+          "hour": 55,
+          "likes": 8958
         }
       ],
       "previousLikePoints": [
@@ -7570,15 +7602,19 @@
         {
           "hour": 126,
           "likes": 15000
+        },
+        {
+          "hour": 127,
+          "likes": 15000
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 36,
-          "elapsedHour": 54,
-          "elapsedRank": 36,
+          "currentRank": 38,
+          "elapsedHour": 55,
+          "elapsedRank": 38,
           "currentPoints": [
             {
               "hour": 13,
@@ -7747,6 +7783,10 @@
             {
               "hour": 54,
               "rank": 36
+            },
+            {
+              "hour": 55,
+              "rank": 38
             }
           ],
           "previousPoints": [
@@ -8061,19 +8101,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 33,
+              "rank": 35,
               "title": "プレバト！！"
             },
             {
-              "rank": 34,
-              "title": "ゴールデンホリデぇ！"
-            },
-            {
-              "rank": 35,
+              "rank": 36,
               "title": "突然ですが占ってもいいですか？"
             },
             {
-              "rank": 36,
+              "rank": 37,
+              "title": "ゴールデンホリデぇ！"
+            },
+            {
+              "rank": 38,
               "title": "ニカゲーム"
             }
           ]
@@ -8395,11 +8435,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 49,
@@ -8407,7 +8447,7 @@
             },
             {
               "rank": 50,
-              "title": "櫻井･有吉THE夜会"
+              "title": "名探偵コナン"
             }
           ]
         }
@@ -8416,10 +8456,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/13 08:24",
+      "updatedAt": "2026/06/13 09:22",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "4260",
+      "likes": "4264",
       "favorites": "76.0万",
       "likePoints": [
         {
@@ -9081,19 +9121,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サクラミーツ"
-            },
-            {
-              "rank": 48,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 48,
+              "title": "サクラミーツ"
+            },
+            {
               "rank": 49,
-              "title": "この世界は1ダフル"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "この世界は1ダフル"
             }
           ]
         },
@@ -9189,11 +9229,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 49,
@@ -9201,7 +9241,7 @@
             },
             {
               "rank": 50,
-              "title": "櫻井･有吉THE夜会"
+              "title": "名探偵コナン"
             }
           ]
         }
@@ -9210,10 +9250,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/13 08:24",
+      "updatedAt": "2026/06/13 09:22",
       "episodeId": "eptfjnm7md",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！緑黄色社会登場",
-      "likes": "2564",
+      "likes": "2569",
       "favorites": "6.9万",
       "likePoints": [
         {
@@ -9535,6 +9575,10 @@
         {
           "hour": 79,
           "likes": 2564
+        },
+        {
+          "hour": 80,
+          "likes": 2569
         }
       ],
       "previousLikePoints": [
@@ -10348,19 +10392,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サクラミーツ"
-            },
-            {
-              "rank": 48,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 48,
+              "title": "サクラミーツ"
+            },
+            {
               "rank": 49,
-              "title": "この世界は1ダフル"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "この世界は1ダフル"
             }
           ]
         },
@@ -10412,11 +10456,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 49,
@@ -10424,7 +10468,7 @@
             },
             {
               "rank": 50,
-              "title": "櫻井･有吉THE夜会"
+              "title": "名探偵コナン"
             }
           ]
         }
@@ -10433,10 +10477,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/13 08:24",
+      "updatedAt": "2026/06/13 09:22",
       "episodeId": "epqyavv4lw",
       "subtitle": "第131回 風磨が目指す憧れの男・梅沢富美男が大暴走！？",
-      "likes": "3428",
+      "likes": "3478",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -10542,6 +10586,10 @@
         {
           "hour": 31,
           "likes": 3428
+        },
+        {
+          "hour": 32,
+          "likes": 3478
         }
       ],
       "previousLikePoints": [
@@ -11194,9 +11242,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 15,
-          "elapsedHour": 32,
-          "elapsedRank": 15,
+          "currentRank": 17,
+          "elapsedHour": 33,
+          "elapsedRank": 17,
           "currentPoints": [
             {
               "hour": 10,
@@ -11289,6 +11337,10 @@
             {
               "hour": 32,
               "rank": 15
+            },
+            {
+              "hour": 33,
+              "rank": 17
             }
           ],
           "previousPoints": [
@@ -11475,19 +11527,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 12,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 13,
-              "title": "ハマダ歌謡祭★オオカミ少年"
-            },
-            {
               "rank": 14,
-              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
+              "title": "タイムレスマン"
             },
             {
               "rank": 15,
+              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
+            },
+            {
+              "rank": 16,
+              "title": "マツコ＆有吉 かりそめ天国"
+            },
+            {
+              "rank": 17,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -11495,9 +11547,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 40,
-          "elapsedHour": 32,
-          "elapsedRank": 40,
+          "currentRank": 42,
+          "elapsedHour": 33,
+          "elapsedRank": 42,
           "currentPoints": [
             {
               "hour": 16,
@@ -11566,6 +11618,10 @@
             {
               "hour": 32,
               "rank": 40
+            },
+            {
+              "hour": 33,
+              "rank": 42
             }
           ],
           "previousPoints": [
@@ -11588,19 +11644,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 37,
-              "title": "VIVANT"
-            },
-            {
-              "rank": 38,
-              "title": "ハマダ歌謡祭★オオカミ少年"
-            },
-            {
               "rank": 39,
               "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
             },
             {
               "rank": 40,
+              "title": "サバ缶、宇宙へ行く"
+            },
+            {
+              "rank": 41,
+              "title": "マツコ＆有吉 かりそめ天国"
+            },
+            {
+              "rank": 42,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -11610,10 +11666,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/05/30",
-      "updatedAt": "2026/06/13 08:24",
+      "updatedAt": "2026/06/13 09:22",
       "episodeId": "epdpoawq6d",
       "subtitle": "マッサマンvs錦鯉マッサノリマンSP前編",
-      "likes": "2777",
+      "likes": "2785",
       "favorites": "77.2万",
       "likePoints": [
         {
@@ -12235,19 +12291,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サクラミーツ"
-            },
-            {
-              "rank": 48,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 48,
+              "title": "サクラミーツ"
+            },
+            {
               "rank": 49,
-              "title": "この世界は1ダフル"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "この世界は1ダフル"
             }
           ]
         },
@@ -12335,11 +12391,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 49,
@@ -12347,7 +12403,7 @@
             },
             {
               "rank": 50,
-              "title": "櫻井･有吉THE夜会"
+              "title": "名探偵コナン"
             }
           ]
         }
@@ -12356,10 +12412,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/13 08:24",
+      "updatedAt": "2026/06/13 09:22",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
-      "likes": "7597",
+      "likes": "7635",
       "favorites": "33.2万",
       "likePoints": [
         {
@@ -12597,6 +12653,10 @@
         {
           "hour": 59,
           "likes": 7597
+        },
+        {
+          "hour": 60,
+          "likes": 7635
         }
       ],
       "previousLikePoints": [
@@ -13274,7 +13334,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 15,
-          "elapsedHour": 59,
+          "elapsedHour": 60,
           "elapsedRank": 15,
           "currentPoints": [
             {
@@ -13503,6 +13563,10 @@
             },
             {
               "hour": 59,
+              "rank": 15
+            },
+            {
+              "hour": 60,
               "rank": 15
             }
           ],
@@ -14175,7 +14239,7 @@
           "nearbyRanking": [
             {
               "rank": 12,
-              "title": "その天才様は偽装彼女に執着する"
+              "title": "刑事、ふりだしに戻る"
             },
             {
               "rank": 13,
@@ -14183,7 +14247,7 @@
             },
             {
               "rank": 14,
-              "title": "刑事、ふりだしに戻る"
+              "title": "その天才様は偽装彼女に執着する"
             },
             {
               "rank": 15,
@@ -14195,7 +14259,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 20,
-          "elapsedHour": 59,
+          "elapsedHour": 60,
           "elapsedRank": 20,
           "currentPoints": [
             {
@@ -14424,6 +14488,10 @@
             },
             {
               "hour": 59,
+              "rank": 20
+            },
+            {
+              "hour": 60,
               "rank": 20
             }
           ],
@@ -15092,15 +15160,15 @@
           "nearbyRanking": [
             {
               "rank": 17,
-              "title": "夫婦別姓刑事"
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 18,
-              "title": "刑事、ふりだしに戻る"
+              "title": "夫婦別姓刑事"
             },
             {
               "rank": 19,
-              "title": "月曜から夜ふかし"
+              "title": "その天才様は偽装彼女に執着する"
             },
             {
               "rank": 20,
@@ -15113,7 +15181,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/13 08:24",
+      "updatedAt": "2026/06/13 09:22",
       "episodeId": "epg027ir46",
       "subtitle": "“なぞかけ講座”",
       "likes": "1.0万",
@@ -15429,6 +15497,10 @@
         },
         {
           "hour": 77,
+          "likes": 10000
+        },
+        {
+          "hour": 78,
           "likes": 10000
         }
       ],
@@ -16448,19 +16520,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サクラミーツ"
-            },
-            {
-              "rank": 48,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 48,
+              "title": "サクラミーツ"
+            },
+            {
               "rank": 49,
-              "title": "この世界は1ダフル"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "この世界は1ダフル"
             }
           ]
         },
@@ -16657,11 +16729,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 49,
@@ -16669,7 +16741,7 @@
             },
             {
               "rank": 50,
-              "title": "櫻井･有吉THE夜会"
+              "title": "名探偵コナン"
             }
           ]
         }
@@ -16678,7 +16750,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/13 08:24",
+      "updatedAt": "2026/06/13 09:22",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
       "likes": "5827",
@@ -17307,7 +17379,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 48,
@@ -17315,11 +17387,11 @@
             },
             {
               "rank": 49,
-              "title": "ポツンと一軒家"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "ポツンと一軒家"
             }
           ]
         },
@@ -17334,19 +17406,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サクラミーツ"
-            },
-            {
-              "rank": 48,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 48,
+              "title": "サクラミーツ"
+            },
+            {
               "rank": 49,
-              "title": "この世界は1ダフル"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "この世界は1ダフル"
             }
           ]
         }
