@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026/06/13 18:22",
+  "updatedAt": "2026/06/13 19:23",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/13 18:22",
+      "updatedAt": "2026/06/13 19:23",
       "episodeId": "epq089zr8c",
       "subtitle": "【2本立てSP！】NEO麻辣湯＆ランク付け",
-      "likes": "9335",
+      "likes": "9615",
       "favorites": "76.2万",
       "likePoints": [
         {
@@ -89,6 +89,10 @@
         {
           "hour": 20,
           "likes": 9335
+        },
+        {
+          "hour": 21,
+          "likes": 9615
         }
       ],
       "previousLikePoints": [
@@ -762,7 +766,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 3,
-          "elapsedHour": 20,
+          "elapsedHour": 21,
           "elapsedRank": 3,
           "currentPoints": [
             {
@@ -835,6 +839,10 @@
             },
             {
               "hour": 20,
+              "rank": 3
+            },
+            {
+              "hour": 21,
               "rank": 3
             }
           ],
@@ -1514,9 +1522,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 10,
-          "elapsedHour": 20,
-          "elapsedRank": 10,
+          "currentRank": 9,
+          "elapsedHour": 21,
+          "elapsedRank": 9,
           "currentPoints": [
             {
               "hour": 9,
@@ -1565,6 +1573,10 @@
             {
               "hour": 20,
               "rank": 10
+            },
+            {
+              "hour": 21,
+              "rank": 9
             }
           ],
           "previousPoints": [
@@ -1955,6 +1967,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 6,
+              "title": "月夜行路 ―答えは名作の中に―"
+            },
+            {
               "rank": 7,
               "title": "未解決の女 警視庁文書捜査官 Season３"
             },
@@ -1964,10 +1980,6 @@
             },
             {
               "rank": 9,
-              "title": "LOVED ONE"
-            },
-            {
-              "rank": 10,
               "title": "タイムレスマン"
             }
           ]
@@ -1977,7 +1989,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/13 18:22",
+      "updatedAt": "2026/06/13 19:23",
       "episodeId": "ep67r77z31",
       "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
       "likes": "1.6万",
@@ -2569,6 +2581,10 @@
         },
         {
           "hour": 148,
+          "likes": 16000
+        },
+        {
+          "hour": 149,
           "likes": 16000
         }
       ],
@@ -4368,19 +4384,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 48,
-              "title": "プレバト！！"
-            },
-            {
-              "rank": 49,
               "title": "CDTV ライブ! ライブ!"
             },
             {
+              "rank": 49,
+              "title": "千鳥かまいたちゴールデンアワー"
+            },
+            {
               "rank": 50,
-              "title": "沸騰ワード10"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             }
           ]
         },
@@ -4917,19 +4933,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
+              "title": "好きな人がいること"
             },
             {
               "rank": 48,
-              "title": "惡の華"
+              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
             },
             {
               "rank": 49,
-              "title": "踊る！さんま御殿!!"
+              "title": "惡の華"
             },
             {
               "rank": 50,
-              "title": "好きな人がいること"
+              "title": "踊る！さんま御殿!!"
             }
           ]
         }
@@ -4938,10 +4954,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/09",
-      "updatedAt": "2026/06/13 18:22",
+      "updatedAt": "2026/06/13 19:23",
       "episodeId": "epu815zrtp",
       "subtitle": "チョコプラ・timeleszが「手作り巨大メガホンなら1km先の好きな人に告白できる？」に挑む！",
-      "likes": "8190",
+      "likes": "8200",
       "favorites": "5.1万",
       "likePoints": [
         {
@@ -5303,6 +5319,10 @@
         {
           "hour": 90,
           "likes": 8190
+        },
+        {
+          "hour": 91,
+          "likes": 8200
         }
       ],
       "previousLikePoints": [
@@ -5975,9 +5995,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 41,
-          "elapsedHour": 90,
-          "elapsedRank": 41,
+          "currentRank": 43,
+          "elapsedHour": 91,
+          "elapsedRank": 43,
           "currentPoints": [
             {
               "hour": 6,
@@ -6314,6 +6334,10 @@
             {
               "hour": 90,
               "rank": 41
+            },
+            {
+              "hour": 91,
+              "rank": 43
             }
           ],
           "previousPoints": [
@@ -6852,19 +6876,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 38,
-              "title": "シューイチ"
-            },
-            {
-              "rank": 39,
-              "title": "有田哲平とコスられない街"
-            },
-            {
               "rank": 40,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "IMP.の「できません」は言いません"
             },
             {
               "rank": 41,
+              "title": "かまいたちの机上の空論城"
+            },
+            {
+              "rank": 42,
+              "title": "巷のウワサ大検証！それって実際どうなの会"
+            },
+            {
+              "rank": 43,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -7086,19 +7110,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 48,
-              "title": "プレバト！！"
-            },
-            {
-              "rank": 49,
               "title": "CDTV ライブ! ライブ!"
             },
             {
+              "rank": 49,
+              "title": "千鳥かまいたちゴールデンアワー"
+            },
+            {
               "rank": 50,
-              "title": "沸騰ワード10"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             }
           ]
         }
@@ -7107,10 +7131,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/11",
-      "updatedAt": "2026/06/13 18:22",
+      "updatedAt": "2026/06/13 19:23",
       "episodeId": "epjy83fa3a",
       "subtitle": "【1時間SP延長戦】オカシーパラダイスからの招待状",
-      "likes": "9463",
+      "likes": "9503",
       "favorites": "22.4万",
       "likePoints": [
         {
@@ -7368,6 +7392,10 @@
         {
           "hour": 64,
           "likes": 9463
+        },
+        {
+          "hour": 65,
+          "likes": 9503
         }
       ],
       "previousLikePoints": [
@@ -7914,15 +7942,19 @@
         {
           "hour": 136,
           "likes": 15000
+        },
+        {
+          "hour": 137,
+          "likes": 15000
         }
       ],
       "rankings": [
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 42,
-          "elapsedHour": 64,
-          "elapsedRank": 42,
+          "currentRank": 44,
+          "elapsedHour": 65,
+          "elapsedRank": 44,
           "currentPoints": [
             {
               "hour": 13,
@@ -8131,6 +8163,10 @@
             {
               "hour": 64,
               "rank": 42
+            },
+            {
+              "hour": 65,
+              "rank": 44
             }
           ],
           "previousPoints": [
@@ -8445,19 +8481,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 39,
-              "title": "大悟の芸人領収書"
-            },
-            {
-              "rank": 40,
-              "title": "これ余談なんですけど・・・"
-            },
-            {
               "rank": 41,
               "title": "Golden SixTONES"
             },
             {
               "rank": 42,
+              "title": "これ余談なんですけど・・・"
+            },
+            {
+              "rank": 43,
+              "title": "※女性は見ないでください"
+            },
+            {
+              "rank": 44,
               "title": "ニカゲーム"
             }
           ]
@@ -8779,19 +8815,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
+              "title": "好きな人がいること"
             },
             {
               "rank": 48,
-              "title": "惡の華"
+              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
             },
             {
               "rank": 49,
-              "title": "踊る！さんま御殿!!"
+              "title": "惡の華"
             },
             {
               "rank": 50,
-              "title": "好きな人がいること"
+              "title": "踊る！さんま御殿!!"
             }
           ]
         }
@@ -8800,10 +8836,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/13 18:22",
+      "updatedAt": "2026/06/13 19:23",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "4283",
+      "likes": "4286",
       "favorites": "76.0万",
       "likePoints": [
         {
@@ -9465,19 +9501,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 48,
-              "title": "プレバト！！"
-            },
-            {
-              "rank": 49,
               "title": "CDTV ライブ! ライブ!"
             },
             {
+              "rank": 49,
+              "title": "千鳥かまいたちゴールデンアワー"
+            },
+            {
               "rank": 50,
-              "title": "沸騰ワード10"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             }
           ]
         },
@@ -9573,19 +9609,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
+              "title": "好きな人がいること"
             },
             {
               "rank": 48,
-              "title": "惡の華"
+              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
             },
             {
               "rank": 49,
-              "title": "踊る！さんま御殿!!"
+              "title": "惡の華"
             },
             {
               "rank": 50,
-              "title": "好きな人がいること"
+              "title": "踊る！さんま御殿!!"
             }
           ]
         }
@@ -9594,10 +9630,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/13 18:22",
+      "updatedAt": "2026/06/13 19:23",
       "episodeId": "eptfjnm7md",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！緑黄色社会登場",
-      "likes": "2670",
+      "likes": "2680",
       "favorites": "6.9万",
       "likePoints": [
         {
@@ -9959,6 +9995,10 @@
         {
           "hour": 89,
           "likes": 2670
+        },
+        {
+          "hour": 90,
+          "likes": 2680
         }
       ],
       "previousLikePoints": [
@@ -10772,19 +10812,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 48,
-              "title": "プレバト！！"
-            },
-            {
-              "rank": 49,
               "title": "CDTV ライブ! ライブ!"
             },
             {
+              "rank": 49,
+              "title": "千鳥かまいたちゴールデンアワー"
+            },
+            {
               "rank": 50,
-              "title": "沸騰ワード10"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             }
           ]
         },
@@ -10836,19 +10876,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
+              "title": "好きな人がいること"
             },
             {
               "rank": 48,
-              "title": "惡の華"
+              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
             },
             {
               "rank": 49,
-              "title": "踊る！さんま御殿!!"
+              "title": "惡の華"
             },
             {
               "rank": 50,
-              "title": "好きな人がいること"
+              "title": "踊る！さんま御殿!!"
             }
           ]
         }
@@ -10857,10 +10897,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/13 18:22",
+      "updatedAt": "2026/06/13 19:23",
       "episodeId": "epqyavv4lw",
       "subtitle": "第131回 風磨が目指す憧れの男・梅沢富美男が大暴走！？",
-      "likes": "3841",
+      "likes": "3893",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -11006,6 +11046,10 @@
         {
           "hour": 41,
           "likes": 3841
+        },
+        {
+          "hour": 42,
+          "likes": 3893
         }
       ],
       "previousLikePoints": [
@@ -11658,9 +11702,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 23,
-          "elapsedHour": 42,
-          "elapsedRank": 23,
+          "currentRank": 24,
+          "elapsedHour": 43,
+          "elapsedRank": 24,
           "currentPoints": [
             {
               "hour": 10,
@@ -11793,6 +11837,10 @@
             {
               "hour": 42,
               "rank": 23
+            },
+            {
+              "hour": 43,
+              "rank": 24
             }
           ],
           "previousPoints": [
@@ -11979,10 +12027,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 20,
-              "title": "かまいガチ"
-            },
-            {
               "rank": 21,
               "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
             },
@@ -11992,6 +12036,10 @@
             },
             {
               "rank": 23,
+              "title": "デカ盛りハンター"
+            },
+            {
+              "rank": 24,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -12117,19 +12165,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
+              "title": "好きな人がいること"
             },
             {
               "rank": 48,
-              "title": "惡の華"
+              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
             },
             {
               "rank": 49,
-              "title": "踊る！さんま御殿!!"
+              "title": "惡の華"
             },
             {
               "rank": 50,
-              "title": "好きな人がいること"
+              "title": "踊る！さんま御殿!!"
             }
           ]
         }
@@ -12138,7 +12186,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/05/30",
-      "updatedAt": "2026/06/13 18:22",
+      "updatedAt": "2026/06/13 19:23",
       "episodeId": "epdpoawq6d",
       "subtitle": "マッサマンvs錦鯉マッサノリマンSP前編",
       "likes": "2941",
@@ -12763,19 +12811,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 48,
-              "title": "プレバト！！"
-            },
-            {
-              "rank": 49,
               "title": "CDTV ライブ! ライブ!"
             },
             {
+              "rank": 49,
+              "title": "千鳥かまいたちゴールデンアワー"
+            },
+            {
               "rank": 50,
-              "title": "沸騰ワード10"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             }
           ]
         },
@@ -12863,19 +12911,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
+              "title": "好きな人がいること"
             },
             {
               "rank": 48,
-              "title": "惡の華"
+              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
             },
             {
               "rank": 49,
-              "title": "踊る！さんま御殿!!"
+              "title": "惡の華"
             },
             {
               "rank": 50,
-              "title": "好きな人がいること"
+              "title": "踊る！さんま御殿!!"
             }
           ]
         }
@@ -12884,11 +12932,11 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/13 18:22",
+      "updatedAt": "2026/06/13 19:23",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
-      "likes": "8033",
-      "favorites": "32.9万",
+      "likes": "8053",
+      "favorites": "32.8万",
       "likePoints": [
         {
           "hour": 1,
@@ -13165,6 +13213,10 @@
         {
           "hour": 69,
           "likes": 8033
+        },
+        {
+          "hour": 70,
+          "likes": 8053
         }
       ],
       "previousLikePoints": [
@@ -13842,7 +13894,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 18,
-          "elapsedHour": 69,
+          "elapsedHour": 70,
           "elapsedRank": 18,
           "currentPoints": [
             {
@@ -14111,6 +14163,10 @@
             },
             {
               "hour": 69,
+              "rank": 18
+            },
+            {
+              "hour": 70,
               "rank": 18
             }
           ],
@@ -14787,11 +14843,11 @@
             },
             {
               "rank": 16,
-              "title": "VIVANT"
+              "title": "孤独のグルメ Season11"
             },
             {
               "rank": 17,
-              "title": "孤独のグルメ Season11"
+              "title": "VIVANT"
             },
             {
               "rank": 18,
@@ -14803,7 +14859,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 26,
-          "elapsedHour": 69,
+          "elapsedHour": 70,
           "elapsedRank": 26,
           "currentPoints": [
             {
@@ -15072,6 +15128,10 @@
             },
             {
               "hour": 69,
+              "rank": 26
+            },
+            {
+              "hour": 70,
               "rank": 26
             }
           ],
@@ -15744,11 +15804,11 @@
             },
             {
               "rank": 24,
-              "title": "VIVANT"
+              "title": "孤独のグルメ Season11"
             },
             {
               "rank": 25,
-              "title": "孤独のグルメ Season11"
+              "title": "VIVANT"
             },
             {
               "rank": 26,
@@ -15761,7 +15821,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/13 18:22",
+      "updatedAt": "2026/06/13 19:23",
       "episodeId": "epg027ir46",
       "subtitle": "“なぞかけ講座”",
       "likes": "1.0万",
@@ -16117,6 +16177,10 @@
         },
         {
           "hour": 87,
+          "likes": 10000
+        },
+        {
+          "hour": 88,
           "likes": 10000
         }
       ],
@@ -17136,19 +17200,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 48,
-              "title": "プレバト！！"
-            },
-            {
-              "rank": 49,
               "title": "CDTV ライブ! ライブ!"
             },
             {
+              "rank": 49,
+              "title": "千鳥かまいたちゴールデンアワー"
+            },
+            {
               "rank": 50,
-              "title": "沸騰ワード10"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             }
           ]
         },
@@ -17345,19 +17409,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
+              "title": "好きな人がいること"
             },
             {
               "rank": 48,
-              "title": "惡の華"
+              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
             },
             {
               "rank": 49,
-              "title": "踊る！さんま御殿!!"
+              "title": "惡の華"
             },
             {
               "rank": 50,
-              "title": "好きな人がいること"
+              "title": "踊る！さんま御殿!!"
             }
           ]
         }
@@ -17366,10 +17430,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/13 18:22",
+      "updatedAt": "2026/06/13 19:23",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "5849",
+      "likes": "5853",
       "favorites": "1.4万",
       "likePoints": [
         {
@@ -17995,11 +18059,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "長嶋一茂＆サバンナ高橋のザワつく！路線バスで寄り道の旅"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 48,
-              "title": "見取り図の間取り図ミステリー"
+              "title": "長嶋一茂＆サバンナ高橋のザワつく！路線バスで寄り道の旅"
             },
             {
               "rank": 49,
@@ -18007,7 +18071,7 @@
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "見取り図の間取り図ミステリー"
             }
           ]
         },
@@ -18022,19 +18086,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 48,
-              "title": "プレバト！！"
-            },
-            {
-              "rank": 49,
               "title": "CDTV ライブ! ライブ!"
             },
             {
+              "rank": 49,
+              "title": "千鳥かまいたちゴールデンアワー"
+            },
+            {
               "rank": 50,
-              "title": "沸騰ワード10"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             }
           ]
         }
