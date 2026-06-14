@@ -122,6 +122,16 @@
   line-height: 1.4;
 }
 
+.daily-task-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.daily-task-title-row #dailyTaskName {
+  flex: 1;
+  min-width: 0;
+}
 .notice-box {
   margin: 0 0 14px;
   padding: 14px;

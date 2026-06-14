@@ -657,3 +657,43 @@
 #firstVisitModal p{
    text-align:center;
 }
+
+/* ==================================================
+   モーダル　解説
+================================================== */
+.step-help-modal-content {
+  width: min(100%, 430px);
+  max-height: min(90vh, 760px);
+   padding-top: 40px;
+  overflow: hidden;
+   position: relative;
+    background: transparent;
+       box-shadow: none;
+}
+.step-help-close-button {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  z-index: 2;
+   border-radius:5px 5px 0 0;
+}
+.step-help-modal-body {
+  display: grid;
+  gap: 0;
+  max-height: calc(90vh - 36px);
+  padding: 10px;
+   background-color:#fff;
+  overflow-y: auto;
+   border-radius:18px 0 18px 18px;
+}
+.step-help-modal-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-card);
+}
+.step-help-modal-button-area {
+  display: grid;
+  gap: 10px;
+  padding: 0 16px 16px;
+}
