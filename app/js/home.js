@@ -1277,10 +1277,10 @@ function bindHomeMenuAccordionEvents() {
 }
 
 function bindHomeMenuAnchorEvents() {
-  const anchorButtons = document.querySelectorAll("[data-home-menu-scroll]");
+  const anchorButtons = document.querySelectorAll("[data-home-menu-scroll-target]");
   anchorButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      const targetId = button.dataset.homeMenuScroll;
+      const targetId = button.dataset.homeMenuScrollTarget;
       closeHomeMenu();
       requestAnimationFrame(() => {
         scrollHomeToElement(targetId);
