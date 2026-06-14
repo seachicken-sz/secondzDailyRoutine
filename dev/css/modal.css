@@ -667,22 +667,24 @@
    padding-top: 36px;
   overflow: hidden;
    position: relative;
-    background: #fff;
+    background: transparent;
        box-shadow: none;
 }
 .step-help-close-button {
   position: absolute;
-  top: 36px;
+  top: 0;
   right: 0;
   z-index: 2;
-   border-rudius:10px;
+   border-radius:18px;
 }
 .step-help-modal-body {
   display: grid;
   gap: 0;
   max-height: calc(90vh - 36px);
   padding: 10px;
+   background-color:#fff;
   overflow-y: auto;
+      border-radius:18px;
 }
 .step-help-modal-image {
   display: block;
