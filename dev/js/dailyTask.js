@@ -183,6 +183,9 @@ function renderCurrentDailyTask() {
   // 現在のタスクを取得
   const item = getCurrentDailyTaskItem();
 
+  // 現在のタスクに合わせて、やり方モーダルの画像を切り替える
+  setDailyTaskStepHelpKey(item);
+
   // 前回表示されていたエラーを消す
   hideError(dailyTaskErrorAreaElement);
 
@@ -235,12 +238,14 @@ function renderCurrentDailyTask() {
         item.comment || "ページを開いてタスクを完了してください。"
       );
   }
+
   // 入力補助が必要なタスクは、表示時点でコピー文を確定する
   if (item["input-flag"] === true) {
     item._preparedCopyText = buildDailyTaskCopyText(item);
   } else {
     item._preparedCopyText = "";
   }
+
   updateDailyTaskCopyPreview(item);
 
   // URLがあるタスクの場合は「ページを開く」ボタンを表示
@@ -263,6 +268,23 @@ function renderCurrentDailyTask() {
   // ボタン表示を初期状態に戻す
   setButtonStyle(openDailyTaskUrlButtonElement, "primary");
   setButtonStyle(dailyTaskNextButtonElement, "secondary");
+}
+
+// ==================================================
+// デイリータスク用やり方ボタン設定
+// ==================================================
+// input-flag があるタスクは入力補助あり版、それ以外は通常版の解説画像を表示する
+function setDailyTaskStepHelpKey(item) {
+  const dailyTaskHelpButtonElement = document.getElementById("dailyTaskHelpButton");
+
+  if (!dailyTaskHelpButtonElement) {
+    return;
+  }
+
+  dailyTaskHelpButtonElement.dataset.stepHelpKey =
+    item && item["input-flag"] === true
+      ? "dailyTask_02"
+      : "dailyTask_01";
 }
 
 // ==================================================
@@ -363,7 +385,7 @@ function recordCompletedDailyItem(item) {
     return;
   }
 
-    // 完了済みタスクとして保存
+  // 完了済みタスクとして保存
   state.completedDailyItems.push({
     key,
     itemId: item.id,
@@ -376,7 +398,6 @@ function recordCompletedDailyItem(item) {
   if (typeof markDailyTaskDone === "function") {
     markDailyTaskDone(item, "mainFlow");
   }
-  
 }
 
 // ==================================================
