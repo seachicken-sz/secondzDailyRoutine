@@ -45,18 +45,22 @@ const STEP_HELP_MODAL_CONFIG = {
     buttons: []
   }
 };
+
 function openStepHelpModal(helpKey, option = {}) {
-  const resolvedHelpKey = resolveStepHelpKey(helpKey, option);
   const modalElement = document.getElementById("stepHelpModal");
   const bodyElement = document.getElementById("stepHelpModalBody");
   const buttonAreaElement = document.getElementById("stepHelpModalButtonArea");
-  const config = STEP_HELP_MODAL_CONFIG[resolvedHelpKey];
+  const config = STEP_HELP_MODAL_CONFIG[helpKey];
+
   if (!modalElement || !bodyElement || !buttonAreaElement || !config) {
     return;
   }
+
   bodyElement.innerHTML = "";
   buttonAreaElement.innerHTML = "";
+
   const images = Array.isArray(config.images) ? config.images : [];
+
   images.forEach((imageName) => {
     const imageElement = document.createElement("img");
     imageElement.className = "step-help-modal-image";
@@ -66,7 +70,9 @@ function openStepHelpModal(helpKey, option = {}) {
     imageElement.alt = "";
     bodyElement.appendChild(imageElement);
   });
+
   const buttons = buildStepHelpModalButtons(config, option);
+
   if (buttons.length > 0) {
     buttons.forEach((button) => {
       const linkElement = document.createElement("a");
@@ -77,52 +83,32 @@ function openStepHelpModal(helpKey, option = {}) {
       linkElement.rel = "noopener noreferrer";
       buttonAreaElement.appendChild(linkElement);
     });
+
     buttonAreaElement.classList.remove("hidden");
   } else {
     buttonAreaElement.classList.add("hidden");
   }
+
   modalElement.classList.remove("hidden");
 }
+
 function closeStepHelpModal() {
   const modalElement = document.getElementById("stepHelpModal");
+
   if (!modalElement) {
     return;
   }
+
   modalElement.classList.add("hidden");
 }
-function resolveStepHelpKey(helpKey, option = {}) {
-  if (helpKey !== "dailyTask") {
-    return helpKey;
-  }
-  if (typeof option.hasInputFlag === "boolean") {
-    return option.hasInputFlag ? "dailyTask_02" : "dailyTask_01";
-  }
-  return hasCurrentDailyTaskInputFlag() ? "dailyTask_02" : "dailyTask_01";
-}
-function hasCurrentDailyTaskInputFlag() {
-  const currentTask = getCurrentDailyTaskForStepHelp();
-  return Boolean(currentTask && currentTask["input-flag"]);
-}
-function getCurrentDailyTaskForStepHelp() {
-  if (typeof currentDailyTask !== "undefined" && currentDailyTask) {
-    return currentDailyTask;
-  }
-  if (typeof selectedDailyTask !== "undefined" && selectedDailyTask) {
-    return selectedDailyTask;
-  }
-  if (typeof currentTask !== "undefined" && currentTask) {
-    return currentTask;
-  }
-  if (typeof dailyTaskList !== "undefined" && typeof currentDailyTaskIndex !== "undefined") {
-    return dailyTaskList[currentDailyTaskIndex] || null;
-  }
-  return null;
-}
+
 function buildStepHelpModalButtons(config, option) {
   const buttons = [];
+
   if (Array.isArray(config.buttons)) {
     buttons.push(...config.buttons);
   }
+
   if (option.url) {
     buttons.push({
       label: option.label || "ページを開く",
@@ -130,14 +116,18 @@ function buildStepHelpModalButtons(config, option) {
       className: option.className || "primary-button"
     });
   }
+
   return buttons.filter((button) => button && button.label && button.url);
 }
+
 function bindStepHelpModalEvents() {
   const closeButtonElement = document.getElementById("closeStepHelpModalButton");
   const modalElement = document.getElementById("stepHelpModal");
+
   if (closeButtonElement) {
     closeButtonElement.addEventListener("click", closeStepHelpModal);
   }
+
   if (modalElement) {
     modalElement.addEventListener("click", (event) => {
       if (event.target === modalElement) {
@@ -145,20 +135,23 @@ function bindStepHelpModalEvents() {
       }
     });
   }
+
   document.addEventListener("click", (event) => {
     const triggerElement = event.target.closest("[data-step-help-key]");
+
     if (!triggerElement) {
       return;
     }
+
     const helpKey = triggerElement.dataset.stepHelpKey;
     const helpUrl = triggerElement.dataset.stepHelpUrl || "";
     const helpLabel = triggerElement.dataset.stepHelpLabel || "";
-    const hasInputFlag = triggerElement.dataset.stepHelpInputFlag === "true" ? true : triggerElement.dataset.stepHelpInputFlag === "false" ? false : undefined;
+
     openStepHelpModal(helpKey, {
       url: helpUrl,
-      label: helpLabel,
-      hasInputFlag
+      label: helpLabel
     });
   });
 }
+
 document.addEventListener("DOMContentLoaded", bindStepHelpModalEvents);
