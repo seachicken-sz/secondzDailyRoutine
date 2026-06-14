@@ -1337,7 +1337,7 @@ function markHomeUsenTaskDoneFromRoutine() {
 // ホーム：新規更新のお知らせ
 // ==================================================
 
-const HOME_UPDATE_NOTICE_JSON_PATH = "./data/updateNoticeJson.json";
+const HOME_UPDATE_NOTICE_JSON_PATH = "../data/updateNoticeJson.json";
 const HOME_UPDATE_NOTICE_READ_STORAGE_KEY = "homeUpdateNoticeReadIds";
 const HOME_UPDATE_NOTICE_KEEP_DAYS = 7;
 let HOME_UPDATE_NOTICE_LIST = [];
