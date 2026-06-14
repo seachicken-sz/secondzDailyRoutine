@@ -61,7 +61,17 @@
         <button id="closeHomeMenuButton" class="home-menu-close-button" type="button" aria-label="メニューを閉じる">×</button>
       
         <h2 class="home-menu-title">メニュー</h2>
-      
+        <section class="home-menu-accordion home-menu-page-index">
+          <button type="button" class="home-menu-item home-menu-page-link" data-home-menu-scroll-target="memberWorksCard">
+            <span><i class="bi bi-link-45deg"></i>メンバーごと便利リンク集</span>
+          </button>
+          <button type="button" class="home-menu-item home-menu-page-link" data-home-menu-scroll-target="homeDailyExtraCard">
+            <span><i class="bi bi-stars"></i>おかわりDaily</span>
+          </button>
+          <button type="button" class="home-menu-item home-menu-page-link" data-home-menu-scroll-target="homeInfoCard">
+            <span><i class="bi bi-calendar-heart"></i>最近のタムごと</span>
+          </button>
+        </section>
         <div class="home-menu-scroll">
           <section class="home-menu-accordion">
             <button type="button" class="home-menu-item" data-home-menu-accordion="about">
@@ -237,20 +247,16 @@
         </section>
 
             <!--期間限定お知らせ事-->
-      <section class="home-card date-visible-block" data-fromdate="2026-06-11T00:00:00+09:00" data-todate="2026-06-11T23:59:59+09:00">
-          <h2 class="ruby-h"><ruby>リマインド<rt>remind</rt></ruby></h2>
+      <section class="home-card date-visible-block" data-fromdate="2026-06-13T00:00:00+09:00" data-todate="2026-06-15T23:59:59+09:00">
+          <h2 class="ruby-h"><ruby>当落アンケート<rt>questionnaire</rt></ruby></h2>
           <div class="card-link">
-            <a href="https://store.universal-music.co.jp/products/pdcj5127" tartget="_blank">
-              <img src="../img/icon/icon_20260611_kienaihanabi.png" alt="花火">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdiYeQJw2fSNGlHY92P7BzUFbDCZZNkwyAqvuv_nCVP6CelBQ/viewform" tartget="_blank">
+              <img src="../img/icon/icon_questionnaire.png" alt="花火">
               <span class="card-link-text">
-                <strong>「消えない花火」ユニバ盤予約締切日</strong>
+                <strong>千葉公演 制作開放 当落アンケート</strong>
                 <small>
-                  ギリ生きの民の皆さん、予約は済んでますか？<br>
-                  念のため確認しとこ！<br>
-                  <br>
-                  ユニバ盤限定収録内容：<br>
-                  ・オリジナルトレーディングカード ver.D<br>
-                  ・スペシャルバラエティ映像②
+                  制作開放メールが届いた方、ぜひアンケートにご協力ください。<br>
+                  作成：みみ(@mimitam2025)さん
                 </small>
               </span>
             </a>
@@ -272,7 +278,7 @@
         </section>
       
         <!--メンバーごと-->
-        <section class="home-card member-works-card">
+        <section class="home-card member-works-card" id="memberWorksCard">
           <div class="member-works-header">
             <h2>メンバーごとの便利リンク集</h2>
           </div>
