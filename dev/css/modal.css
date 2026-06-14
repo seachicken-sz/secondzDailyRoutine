@@ -664,7 +664,7 @@
 .step-help-modal-content {
   width: min(100%, 430px);
   max-height: min(90vh, 760px);
-   padding-top: 36px;
+   padding-top: 40px;
   overflow: hidden;
    position: relative;
     background: transparent;
@@ -672,10 +672,10 @@
 }
 .step-help-close-button {
   position: absolute;
-  top: 0;
+  top: 4px;
   right: 0;
   z-index: 2;
-   border-radius:18px;
+   border-radius:5px 5px 0 0;
 }
 .step-help-modal-body {
   display: grid;
@@ -684,7 +684,7 @@
   padding: 10px;
    background-color:#fff;
   overflow-y: auto;
-      border-radius:18px;
+   border-radius:18px 0 18px 18px;
 }
 .step-help-modal-image {
   display: block;
