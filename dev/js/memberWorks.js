@@ -149,9 +149,10 @@ function renderMemberWorks() {
           ${escapeHtml(group.label)}
         </h3>
         <p class="member-link-section-description">
-          ${escapeHtml(group.description)}
+          ${escapeHtml(group.description)}<br>
+          ${createMemberWorkHelpButtonHtml(group)}
         </p>
-        ${createMemberWorkHelpButtonHtml(group)}
+        
       </div>
 
       <div class="member-link-list">
