@@ -42,6 +42,7 @@ function bindHomeEvents() {
   addClickEvent(homeMenuOverlayElement, closeHomeMenu);
 
   bindHomeMenuAccordionEvents();
+  bindHomeMenuAnchorEvents();
 
   addClickEvent(homeMenuSetupButtonElement, () => {
     closeHomeMenu();
@@ -1275,6 +1276,19 @@ function bindHomeMenuAccordionEvents() {
   });
 }
 
+function bindHomeMenuAnchorEvents() {
+  const anchorButtons = document.querySelectorAll("[data-home-menu-scroll]");
+  anchorButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const targetId = button.dataset.homeMenuScroll;
+      closeHomeMenu();
+      requestAnimationFrame(() => {
+        scrollHomeToElement(targetId);
+      });
+    });
+  });
+}
+
 function updateHomeDailyJumpVisibility() {
   if (!homeDailyJumpAreaElement) {
     return;
@@ -1314,3 +1328,5 @@ function markHomeUsenTaskDoneFromRoutine() {
     updateDailyStartedTodayClass();
   }
 }
+
+
