@@ -1360,7 +1360,6 @@ async function initHomeUpdateNotice() {
     HOME_UPDATE_NOTICE_LIST = filterRecentHomeUpdateNotices(notices);
     cleanupHomeUpdateNoticeReadIds();
     updateHomeUpdateNoticeBellState();
-    updateNoticeButtonElement.classList.toggle("hidden", HOME_UPDATE_NOTICE_LIST.length === 0);
   } catch (error) {
     console.error("updateNotice取得失敗", error);
     updateNoticeButtonElement.classList.add("hidden");
