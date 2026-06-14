@@ -943,6 +943,15 @@ function bindHomeExtraListEvents(container) {
 
     const action = button.dataset.homeExtraAction;
 
+    if (
+      button.disabled ||
+      (button.dataset.source === "usen" &&
+        (action === "share-x" || action === "share-threads") &&
+        !getHomeExtraTaskUrl(task, "usen"))
+    ) {
+      return;
+    }
+
     if (action === "open") {
       await openHomeExtraTaskPage(task, button.dataset.source);
       return;
