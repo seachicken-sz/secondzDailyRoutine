@@ -672,8 +672,8 @@
 }
 .step-help-close-button {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 36px;
+  right: 0;
   z-index: 2;
    border-rudius:10px;
 }
