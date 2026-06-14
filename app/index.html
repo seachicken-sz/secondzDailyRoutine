@@ -146,11 +146,9 @@
           </section>
         </div>
       </nav>
-      <!--
       <div id="home-top-share-btn-wrap">
-        <button id="homeTopShareButton" type="button" class="button secondary home-share-button"><i class="bi bi-box-arrow-up"></i></button>
+        <button id="updateNoticeButton" type="button" class="button secondary update-notice-button"><i class="bi bi-bell"></i></button>
       </div>
-      -->
       <header class="home-header">
         <!--ロゴ-->
         <div class="home-logo-area">
@@ -321,6 +319,11 @@
           <h2 class="ruby-h"><ruby>おかわりDaily<rt>one more daily</rt></ruby></h2>
           <p class="home-extra-description">
             もう少し応援したいとき、ちょっとだけ頑張りたいとき、タスクをSNSにシェアしたいときに。
+          <br>
+            ↓↓やり方をチェック！↓↓<br>
+          <button class="task-help-button" type="button" data-step-help-key="homeUsen">USEN推しリク</button>
+          <button id="dailyTaskHelpButton" class="task-help-button" type="button" data-step-help-key="dailyTask_01">デイリー(入力無)</button>
+          <button id="dailyTaskHelpButton" class="task-help-button" type="button" data-step-help-key="dailyTask_02">デイリー(入力有)</button>
           </p>
           <div id="homeRequestSongSelectArea" class="home-request-song-select-area hidden">
             <label class="home-request-song-label" for="homeRequestSongSelect">
@@ -382,6 +385,7 @@
           下のリストから好きな曲を選んで「Spotifyで開く」をタップするとSpotifyで再生されます。<br>
           <strong>再生されたら、バックでこのアプリ</strong>に戻ってきてください。
         </p>
+        <button class="task-help-button" type="button" data-step-help-key="spotify">やり方をチェック</button>
         <p id="spotifyListenerCount" class="spotify-listener-count"></p>
       </header>
 
@@ -433,6 +437,7 @@
           <br>
           ※一人一回限定のものは、一度でもやるとチェックが外れます。
         </p>
+        <button class="task-help-button" type="button" data-step-help-key="limitedTask">やり方をチェック</button>
       </header>
 
       <section id="onceListErrorArea" class="error-area hidden"></section>
@@ -477,6 +482,7 @@
           曲を選んで<strong>「ページを開く」</strong>をタップ！<br>
           「USEN推し活リクエスト」でリクエストしよ！
         </p>
+        <button class="task-help-button" type="button" data-step-help-key="usenRequest">やり方をチェック</button>
         <p id="usenRankingInfo" class="usen-ranking-info hidden"></p>
       </header>
 
@@ -543,7 +549,10 @@
       <section class="task-card">
         <p id="dailyTaskGroupName" class="group-label"></p>
         <p id="dailyTaskProgress" class="description"></p>
-        <h2 id="dailyTaskName" class="task-title"></h2>
+        <h2 class="task-title daily-task-title-row">
+          <span id="dailyTaskName"></span>
+          <button id="dailyTaskHelpButton" class="task-help-button" type="button" data-step-help-key="dailyTask_01">やり方をチェック</button>
+        </h2>
 
         <div id="dailyTaskCommentArea" class="notice-box"></div>
         <div id="dailyTaskCopyPreviewArea" class="daily-task-copy-preview hidden">
@@ -775,16 +784,7 @@
                 <span class="modal-detail-arrow">＋</span>
               </summary>
               <div class="modal-detail-body">
-                <img  loading="lazy" decoding="async" src="../img/usage/usage_1.jpg" alt="">
-              </div>
-            </details>
-             <details class="modal-detail">
-              <summary class="modal-detail-summary">
-                <span><i class="bi bi-music-note-list"></i>USEN推し活リクエスト</span>
-                <span class="modal-detail-arrow">＋</span>
-              </summary>
-              <div class="modal-detail-body">
-                <img  loading="lazy" decoding="async" src="../img/usage/usage_2.jpg" alt="">
+                <img  loading="lazy" decoding="async" src="../img/stepHelp/step_spotify_01.png" alt="">
               </div>
             </details>
             <details class="modal-detail">
@@ -793,7 +793,17 @@
                 <span class="modal-detail-arrow">＋</span>
               </summary>
               <div class="modal-detail-body">
-                <img  loading="lazy" decoding="async" src="../img/usage/usage_3.jpg" alt="">
+                <img  loading="lazy" decoding="async" src="../img/stepHelp/step_limited_01.png" alt="">
+              </div>
+            </details>
+            <details class="modal-detail">
+              <summary class="modal-detail-summary">
+                <span><i class="bi bi-music-note-list"></i>USEN推し活リクエスト</span>
+                <span class="modal-detail-arrow">＋</span>
+              </summary>
+              <div class="modal-detail-body">
+                <img  loading="lazy" decoding="async" src="../img/stepHelp/step_usen_01.png" alt="">
+                <img  loading="lazy" decoding="async" src="../img/stepHelp/step_usen_02.png" alt="">
               </div>
             </details>
             <details class="modal-detail">
@@ -802,7 +812,7 @@
                 <span class="modal-detail-arrow">＋</span>
               </summary>
               <div class="modal-detail-body">
-                <img  loading="lazy" decoding="async" src="../img/usage/usage_4.jpg" alt="">
+                <img  loading="lazy" decoding="async" src="../img/stepHelp/step_daily_01.png" alt="">
               </div>
             </details>
             <details class="modal-detail">
@@ -811,7 +821,7 @@
                 <span class="modal-detail-arrow">＋</span>
               </summary>
               <div class="modal-detail-body">
-                <img  loading="lazy" decoding="async" src="../img/usage/usage_5.jpg" alt="">
+                <img  loading="lazy" decoding="async" src="../img/stepHelp/step_sns_01.png" alt="">
               </div>
             </details>
             <details class="modal-detail">
@@ -820,19 +830,12 @@
                 <span class="modal-detail-arrow">＋</span>
               </summary>
               <div class="modal-detail-body">
-                <img  loading="lazy" decoding="async" src="../img/usage/usage_7.jpg" alt="">
+                <img  loading="lazy" decoding="async" src="../img/stepHelp/tver_01.png" alt="">
+                <img  loading="lazy" decoding="async" src="../img/stepHelp/radiko_01.png" alt="">
+                <img  loading="lazy" decoding="async" src="../img/stepHelp/youtube_01.png" alt="">
+                <img  loading="lazy" decoding="async" src="../img/stepHelp/dreampass_01.png" alt="">
               </div>
-            </details>
-            <details class="modal-detail">
-              <summary class="modal-detail-summary">
-                <span><i class="bi bi-arrow-repeat"></i>おまけ：おかわりdaily</span>
-                <span class="modal-detail-arrow">＋</span>
-              </summary>
-              <div class="modal-detail-body">
-                <img  loading="lazy" decoding="async" src="../img/usage/usage_6.jpg" alt="">
-              </div>
-            </details>
-            
+            </details>            
           </section>         
         <p class="modal-note">お問い合わせ・ご要望・ご感想は以下からお願いいたします。</p>
         <a class="primary-button" href="https://mond.how/ja/tsunakan_r" target="_blank">ご意見・ご感想</a>
@@ -1045,36 +1048,17 @@
   <div id="firstVisitModal" class="modal-overlay hidden">
     <div class="modal-content firstvisit-modal-content" role="dialog" aria-modal="true" aria-labelledby="firstVisitModalTitle">
       <div class="modal-header">
-        <h2 id="firstVisitModalTitle">はじめての方へ</h2>
+        <h2 id="firstVisitModalTitle"></h2>
         <button type="button" id="closeFirstVisitModalButton" class="modal-close-button" aria-label="閉じる">×</button>
       </div>
   
       <div class="modal-body setup-modal-body">
-        <section class="setup-intro-card">
-          <p class="setup-intro-title">タムごとDailyへようこそ！</p>
-          <p class="setup-intro-text">
-            3分間だけ時間をください！<br>
-            推し活全部終わらせよう！
-          </p>
-        </section>
-        <p>
-          このツールではSpotifyで1曲聞いている間に<br>
-          <strong>ラジオリクエスト・期間限定投票</strong>など、<br>
-          日々の推し活をまとめてできちゃいます！<br>
-          <br>
-          ラジオリクエストを頑張ると、<br>
-          <strong>timeleszの曲が、<br>
-            今よりもっと街中で流れるようになるかも……？</strong><br>
-          <br>
-          その日のテンションと時間に合わせて、<br>楽しく推し活していきましょう！
-        </p>
-        <p>まずはこのツールを、<br>
-          <strong>スマホのホーム画面に追加</strong>から始めましょう！</p>
+        <img src="../img/stepHelp/browser_first.png">
         <button type="button" class="primary-button" id="firstVisitOpenSetupButton">
-          始める
+          ホーム画面に追加する
         </button>
         <button type="button" class="text-link-button" id="firstVisitCloseOnlyButton">
-          閉じる
+          このまま始める
         </button>
       </div>
     </div>
@@ -1083,27 +1067,41 @@
   <div id="pwaFirstVisitModal" class="modal-overlay hidden">
     <div class="modal-content firstvisit-modal-content" role="dialog" aria-modal="true" aria-labelledby="pwaFirstVisitModalTitle">
       <div class="modal-header">
-        <h2 id="pwaFirstVisitModalTitle">タムごとDailyにようこそ！</h2>
+        <h2 id="pwaFirstVisitModalTitle"></h2>
         <button type="button" id="closePwaFirstVisitModalButton" class="modal-close-button" aria-label="閉じる">×</button>
       </div>
       <div class="modal-body setup-modal-body">
-        <p>
-          <strong>ホーム画面に追加完了です！</strong><br>
-          お疲れ様でした！<br>
-          <strong>では早速始めて行きましょう！</strong>
-        </p>
-  
+        <img src="../img/stepHelp/pwa_first.png">
         <button type="button" class="primary-button" id="pwaFirstVisitOpenUsageButton">
           使い方を見てから始める
         </button>
-  
         <button type="button" class="secondary-button" id="pwaFirstVisitCloseOnlyButton">
           このままはじめる
         </button>
       </div>
     </div>
   </div>
-    
+
+  <!--ステップ別解説モーダル-->
+  <div id="stepHelpModal" class="modal-overlay hidden">
+    <div class="modal-content step-help-modal-content" role="dialog" aria-modal="true" aria-label="使い方">
+      <button type="button" id="closeStepHelpModalButton" class="modal-close-button step-help-close-button" aria-label="閉じる">×</button>
+      <div id="stepHelpModalBody" class="modal-body step-help-modal-body"></div>
+      <div id="stepHelpModalButtonArea" class="step-help-modal-button-area hidden"></div>
+    </div>
+  </div>
+  <!--お知らせ-->
+  <div id="updateNoticeModal" class="modal-overlay hidden">
+    <div class="modal-content update-notice-modal-content" role="dialog" aria-modal="true" aria-labelledby="updateNoticeModalTitle">
+      <div class="modal-header">
+        <h2 id="updateNoticeModalTitle" class="modal-title">お知らせ</h2>
+        <button id="updateNoticeCloseButton" class="modal-close-button" type="button" aria-label="閉じる">×</button>
+      </div>
+      <div class="modal-body">
+        <div id="updateNoticeList" class="update-notice-list"></div>
+      </div>
+    </div>
+  </div>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.js"></script>
 <!-- 基本・共通 -->
 <script src="./js/config.js" defer></script>
@@ -1131,6 +1129,7 @@
 <script src="./js/navigation.js" defer></script>
 <script src="./js/init.js" defer></script>
 <script src="./js/modal.js" defer></script>
+<script src="./js/stepHelpModal.js" defer></script> 
 <!-- 画面別 -->
 <script src="./js/home.js" defer></script>
 <script src="./js/spotify.js" defer></script>
