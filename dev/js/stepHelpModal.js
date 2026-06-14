@@ -13,15 +13,19 @@ const STEP_HELP_MODAL_CONFIG = {
     buttons: []
   },
   usenRequest: {
-    images: ["step_usen_01.png", "step_usen_02.png"],
+    images: ["step_usen_01.png", "usen_01.png"],
     buttons: []
   },
-  dailyTask: {
+  dailyTask_01: {
     images: ["step_daily_01.png"],
     buttons: []
   },
+  dailyTask_02: {
+    images: ["step_daily_02.png"],
+    buttons: []
+  },
   homeUsen: {
-    images: ["step_usen_01.png", "step_usen_02.png"],
+    images: ["usen_01.png"],
     buttons: []
   },
   memberTver: {
@@ -33,7 +37,7 @@ const STEP_HELP_MODAL_CONFIG = {
     buttons: []
   },
   memberYoutube: {
-    images: ["youtube_01.png"],
+    images: ["youtube_01.png", "youtube_02.png"],
     buttons: []
   },
   memberDreampass: {
@@ -42,10 +46,11 @@ const STEP_HELP_MODAL_CONFIG = {
   }
 };
 function openStepHelpModal(helpKey, option = {}) {
+  const resolvedHelpKey = resolveStepHelpKey(helpKey, option);
   const modalElement = document.getElementById("stepHelpModal");
   const bodyElement = document.getElementById("stepHelpModalBody");
   const buttonAreaElement = document.getElementById("stepHelpModalButtonArea");
-  const config = STEP_HELP_MODAL_CONFIG[helpKey];
+  const config = STEP_HELP_MODAL_CONFIG[resolvedHelpKey];
   if (!modalElement || !bodyElement || !buttonAreaElement || !config) {
     return;
   }
@@ -85,6 +90,34 @@ function closeStepHelpModal() {
   }
   modalElement.classList.add("hidden");
 }
+function resolveStepHelpKey(helpKey, option = {}) {
+  if (helpKey !== "dailyTask") {
+    return helpKey;
+  }
+  if (typeof option.hasInputFlag === "boolean") {
+    return option.hasInputFlag ? "dailyTask_02" : "dailyTask_01";
+  }
+  return hasCurrentDailyTaskInputFlag() ? "dailyTask_02" : "dailyTask_01";
+}
+function hasCurrentDailyTaskInputFlag() {
+  const currentTask = getCurrentDailyTaskForStepHelp();
+  return Boolean(currentTask && currentTask["input-flag"]);
+}
+function getCurrentDailyTaskForStepHelp() {
+  if (typeof currentDailyTask !== "undefined" && currentDailyTask) {
+    return currentDailyTask;
+  }
+  if (typeof selectedDailyTask !== "undefined" && selectedDailyTask) {
+    return selectedDailyTask;
+  }
+  if (typeof currentTask !== "undefined" && currentTask) {
+    return currentTask;
+  }
+  if (typeof dailyTaskList !== "undefined" && typeof currentDailyTaskIndex !== "undefined") {
+    return dailyTaskList[currentDailyTaskIndex] || null;
+  }
+  return null;
+}
 function buildStepHelpModalButtons(config, option) {
   const buttons = [];
   if (Array.isArray(config.buttons)) {
@@ -120,9 +153,11 @@ function bindStepHelpModalEvents() {
     const helpKey = triggerElement.dataset.stepHelpKey;
     const helpUrl = triggerElement.dataset.stepHelpUrl || "";
     const helpLabel = triggerElement.dataset.stepHelpLabel || "";
+    const hasInputFlag = triggerElement.dataset.stepHelpInputFlag === "true" ? true : triggerElement.dataset.stepHelpInputFlag === "false" ? false : undefined;
     openStepHelpModal(helpKey, {
       url: helpUrl,
-      label: helpLabel
+      label: helpLabel,
+      hasInputFlag
     });
   });
 }
