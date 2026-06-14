@@ -667,7 +667,7 @@
    padding-top: 36px;
   overflow: hidden;
    position: relative;
-    background: transparent;
+    background: #fff;
 }
 }
 .step-help-close-button {
@@ -681,7 +681,7 @@
   display: grid;
   gap: 0;
   max-height: calc(90vh - 36px);
-  padding: 0;
+  padding: 10px;
   overflow-y: auto;
 }
 .step-help-modal-image {
