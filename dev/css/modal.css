@@ -668,6 +668,7 @@
   overflow: hidden;
    position: relative;
     background: #fff;
+       box-shadow: none;
 }
 }
 .step-help-close-button {
