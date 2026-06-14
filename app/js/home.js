@@ -23,7 +23,10 @@ function bindHomeEvents() {
     // Spotify画面へ進む
     showOnlyStep(spotifyStepElement);
   });
-
+    // ==================================================
+  // ホーム画面のお知らせボタン
+  // ==================================================
+  initHomeUpdateNotice();
   // ==================================================
   // ホーム画面のSNS共有ボタン
   // ==================================================
@@ -33,6 +36,7 @@ function bindHomeEvents() {
 
   // ホーム下部の「このツールを共有」ボタン押下時
   addClickEvent(homeBottomShareButtonElement, shareAppFromHome);
+  
 
   // ==================================================
   //ホームメニュー
@@ -939,6 +943,15 @@ function bindHomeExtraListEvents(container) {
 
     const action = button.dataset.homeExtraAction;
 
+    if (
+      button.disabled ||
+      (button.dataset.source === "usen" &&
+        (action === "share-x" || action === "share-threads") &&
+        !getHomeExtraTaskUrl(task, "usen"))
+    ) {
+      return;
+    }
+
     if (action === "open") {
       await openHomeExtraTaskPage(task, button.dataset.source);
       return;
@@ -1329,4 +1342,217 @@ function markHomeUsenTaskDoneFromRoutine() {
   }
 }
 
+// ==================================================
+// ホーム：新規更新のお知らせ
+// ==================================================
 
+const HOME_UPDATE_NOTICE_JSON_PATH = "../data/updateNoticeJson.json";
+const HOME_UPDATE_NOTICE_READ_STORAGE_KEY = "homeUpdateNoticeReadIds";
+const HOME_UPDATE_NOTICE_KEEP_DAYS = 7;
+let HOME_UPDATE_NOTICE_LIST = [];
+
+async function initHomeUpdateNotice() {
+  if (!updateNoticeButtonElement || !updateNoticeModalElement || !updateNoticeListElement) {
+    return;
+  }
+
+  addClickEvent(updateNoticeButtonElement, openHomeUpdateNoticeModal);
+  addClickEvent(updateNoticeCloseButtonElement, closeHomeUpdateNoticeModal);
+  addClickEvent(updateNoticeModalElement, (event) => {
+    if (event.target === updateNoticeModalElement) {
+      closeHomeUpdateNoticeModal();
+    }
+  });
+
+  try {
+    const notices = await fetchHomeUpdateNoticeList();
+    HOME_UPDATE_NOTICE_LIST = filterRecentHomeUpdateNotices(notices);
+    cleanupHomeUpdateNoticeReadIds();
+    updateHomeUpdateNoticeBellState();
+  } catch (error) {
+    console.error("updateNotice取得失敗", error);
+    updateNoticeButtonElement.classList.add("hidden");
+  }
+}
+
+async function fetchHomeUpdateNoticeList() {
+  const response = await fetch(HOME_UPDATE_NOTICE_JSON_PATH, {
+    cache: "no-store",
+  });
+
+  if (!response.ok) {
+    throw new Error(`updateNoticeJson取得失敗: ${response.status}`);
+  }
+
+  const notices = await response.json();
+
+  if (!Array.isArray(notices)) {
+    return [];
+  }
+
+  return notices;
+}
+
+function filterRecentHomeUpdateNotices(notices) {
+  const today = getHomeUpdateNoticeDateOnly(new Date());
+
+  return notices.filter((notice) => {
+    if (!notice || !notice.id || !notice.date || !notice.title) {
+      return false;
+    }
+
+    const noticeDate = parseHomeUpdateNoticeDate(notice.date);
+
+    if (!noticeDate) {
+      return false;
+    }
+
+    const diffDays = Math.floor((today.getTime() - noticeDate.getTime()) / 86400000);
+
+    return diffDays >= 0 && diffDays <= HOME_UPDATE_NOTICE_KEEP_DAYS;
+  });
+}
+
+function getHomeUpdateNoticeReadIds() {
+  try {
+    const value = localStorage.getItem(HOME_UPDATE_NOTICE_READ_STORAGE_KEY);
+    const ids = JSON.parse(value || "[]");
+
+    if (!Array.isArray(ids)) {
+      return [];
+    }
+
+    return ids.filter((id) => typeof id === "string" && id);
+  } catch (error) {
+    console.error("updateNotice既読ID取得失敗", error);
+    return [];
+  }
+}
+
+function saveHomeUpdateNoticeReadIds(ids) {
+  localStorage.setItem(
+    HOME_UPDATE_NOTICE_READ_STORAGE_KEY,
+    JSON.stringify(Array.from(new Set(ids)))
+  );
+}
+
+function cleanupHomeUpdateNoticeReadIds() {
+  const recentIds = HOME_UPDATE_NOTICE_LIST.map((notice) => notice.id);
+  const readIds = getHomeUpdateNoticeReadIds();
+  const cleanedIds = readIds.filter((id) => recentIds.includes(id));
+
+  saveHomeUpdateNoticeReadIds(cleanedIds);
+}
+
+function hasUnreadHomeUpdateNotice() {
+  const readIds = getHomeUpdateNoticeReadIds();
+
+  return HOME_UPDATE_NOTICE_LIST.some((notice) => !readIds.includes(notice.id));
+}
+
+function updateHomeUpdateNoticeBellState() {
+  if (!updateNoticeButtonElement) {
+    return;
+  }
+
+  updateNoticeButtonElement.classList.toggle("has-unread", hasUnreadHomeUpdateNotice());
+}
+
+function openHomeUpdateNoticeModal() {
+  if (!updateNoticeModalElement || !updateNoticeListElement) {
+    return;
+  }
+
+  renderHomeUpdateNoticeList();
+  markHomeUpdateNoticeAsRead();
+  updateHomeUpdateNoticeBellState();
+  updateNoticeModalElement.classList.remove("hidden");
+}
+
+function closeHomeUpdateNoticeModal() {
+  updateNoticeModalElement?.classList.add("hidden");
+}
+
+function renderHomeUpdateNoticeList() {
+  if (!updateNoticeListElement) {
+    return;
+  }
+
+  updateNoticeListElement.innerHTML = "";
+
+  if (HOME_UPDATE_NOTICE_LIST.length === 0) {
+    const emptyText = document.createElement("p");
+    emptyText.className = "update-notice-empty";
+    emptyText.textContent = "現在、新しいお知らせはありません。";
+    updateNoticeListElement.appendChild(emptyText);
+    return;
+  }
+
+  HOME_UPDATE_NOTICE_LIST.forEach((notice) => {
+    const item = document.createElement("article");
+    item.className = "update-notice-item";
+
+    const date = document.createElement("p");
+    date.className = "update-notice-date";
+    date.textContent = formatHomeUpdateNoticeDate(notice.date);
+
+    const title = document.createElement("h3");
+    title.className = "update-notice-title";
+    title.textContent = notice.title;
+
+    const body = document.createElement("p");
+    body.className = "update-notice-body";
+    body.textContent = notice.body || "";
+
+    item.appendChild(date);
+    item.appendChild(title);
+
+    if (notice.body) {
+      item.appendChild(body);
+    }
+
+    updateNoticeListElement.appendChild(item);
+  });
+}
+
+function markHomeUpdateNoticeAsRead() {
+  const readIds = getHomeUpdateNoticeReadIds();
+  const visibleIds = HOME_UPDATE_NOTICE_LIST.map((notice) => notice.id);
+
+  saveHomeUpdateNoticeReadIds(readIds.concat(visibleIds));
+}
+
+function parseHomeUpdateNoticeDate(value) {
+  const parts = String(value || "").split("-");
+
+  if (parts.length !== 3) {
+    return null;
+  }
+
+  const year = Number(parts[0]);
+  const month = Number(parts[1]);
+  const day = Number(parts[2]);
+
+  if (!year || !month || !day) {
+    return null;
+  }
+
+  return new Date(year, month - 1, day);
+}
+
+function getHomeUpdateNoticeDateOnly(date) {
+  return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+}
+
+function formatHomeUpdateNoticeDate(value) {
+  const date = parseHomeUpdateNoticeDate(value);
+
+  if (!date) {
+    return value || "";
+  }
+
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+
+  return `${date.getFullYear()}/${month}/${day}`;
+}

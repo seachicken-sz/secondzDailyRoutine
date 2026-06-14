@@ -36,6 +36,14 @@ const openUsageButtonElement = document.getElementById("openUsageButton");
 //ホームのSNSシェアボタン
 const homeTopShareButtonElement = document.getElementById("homeTopShareButton");
 const homeBottomShareButtonElement = document.getElementById("homeBottomShareButton");
+// ホーム新規更新のお知らせボタン
+const updateNoticeButtonElement = document.getElementById("updateNoticeButton");
+// ホーム新規更新のお知らせモーダル
+const updateNoticeModalElement = document.getElementById("updateNoticeModal");
+// ホーム新規更新のお知らせモーダル閉じるボタン
+const updateNoticeCloseButtonElement = document.getElementById("updateNoticeCloseButton");
+// ホーム新規更新のお知らせリスト
+const updateNoticeListElement = document.getElementById("updateNoticeList");
 // おかわりDaily
 const homeDailyExtraCardElement = document.getElementById("homeDailyExtraCard");
 const homeDailyExtraListElement = document.getElementById("homeDailyExtraList");

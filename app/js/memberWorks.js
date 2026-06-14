@@ -148,10 +148,11 @@ function renderMemberWorks() {
         <h3 class="member-link-section-title">
           ${escapeHtml(group.label)}
         </h3>
-
         <p class="member-link-section-description">
-          ${escapeHtml(group.description)}
+          ${escapeHtml(group.description)}<br>
+          ${createMemberWorkHelpButtonHtml(group)}
         </p>
+        
       </div>
 
       <div class="member-link-list">
@@ -640,6 +641,24 @@ if (memberFilterArea) {
 
     handleMemberFilter(button.dataset.member);
   });
+}
+
+function createMemberWorkHelpButtonHtml(group) {
+  const helpKeyMap = {
+    tver: "memberTver",
+    radiko: "memberRadiko",
+    youtube: "memberYoutube",
+    dreampass: "memberDreampass"
+  };
+  const helpKey = helpKeyMap[group.key];
+  if (!helpKey) {
+    return "";
+  }
+  return `
+    <button class="task-help-button" type="button" data-step-help-key="${escapeHtml(helpKey)}">
+      やり方をチェック
+    </button>
+  `;
 }
 
 initializeMemberWorks();
