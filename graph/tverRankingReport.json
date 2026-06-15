@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/16 02:25",
+  "updatedAt": "2026/06/16 03:28",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/16 02:25",
+      "updatedAt": "2026/06/16 03:28",
       "episodeId": "epq089zr8c",
       "subtitle": "【2本立てSP！】NEO麻辣湯＆ランク付け",
       "likes": "1.5万",
@@ -308,6 +308,10 @@
         },
         {
           "hour": 76,
+          "likes": 15000
+        },
+        {
+          "hour": 77,
           "likes": 15000
         }
       ],
@@ -982,7 +986,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 12,
-          "elapsedHour": 76,
+          "elapsedHour": 77,
           "elapsedRank": 12,
           "currentPoints": [
             {
@@ -1279,6 +1283,10 @@
             },
             {
               "hour": 76,
+              "rank": 12
+            },
+            {
+              "hour": 77,
               "rank": 12
             }
           ],
@@ -1962,9 +1970,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 26,
-          "elapsedHour": 76,
-          "elapsedRank": 26,
+          "currentRank": 27,
+          "elapsedHour": 77,
+          "elapsedRank": 27,
           "currentPoints": [
             {
               "hour": 9,
@@ -2237,6 +2245,10 @@
             {
               "hour": 76,
               "rank": 26
+            },
+            {
+              "hour": 77,
+              "rank": 27
             }
           ],
           "previousPoints": [
@@ -2627,19 +2639,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 23,
-              "title": "夫婦別姓刑事"
-            },
-            {
               "rank": 24,
-              "title": "有吉クイズ"
-            },
-            {
-              "rank": 25,
               "title": "LOVED ONE"
             },
             {
+              "rank": 25,
+              "title": "有吉クイズ"
+            },
+            {
               "rank": 26,
+              "title": "サバ缶、宇宙へ行く"
+            },
+            {
+              "rank": 27,
               "title": "タイムレスマン"
             }
           ]
@@ -2649,7 +2661,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/16 02:25",
+      "updatedAt": "2026/06/16 03:28",
       "episodeId": "ep67r77z31",
       "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
       "likes": "1.6万",
@@ -5124,7 +5136,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ぽかぽか"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 48,
@@ -5681,11 +5693,11 @@
             },
             {
               "rank": 49,
-              "title": "人生最高レストラン"
+              "title": "ディープリベンジ-顔を捨てた家政婦-"
             },
             {
               "rank": 50,
-              "title": "ディープリベンジ-顔を捨てた家政婦-"
+              "title": "人生最高レストラン"
             }
           ]
         }
@@ -5694,10 +5706,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/09",
-      "updatedAt": "2026/06/16 02:25",
+      "updatedAt": "2026/06/16 03:28",
       "episodeId": "epu815zrtp",
       "subtitle": "チョコプラ・timeleszが「手作り巨大メガホンなら1km先の好きな人に告白できる？」に挑む！",
-      "likes": "8732",
+      "likes": "8739",
       "favorites": "5.1万",
       "likePoints": [
         {
@@ -6279,6 +6291,10 @@
         {
           "hour": 146,
           "likes": 8732
+        },
+        {
+          "hour": 147,
+          "likes": 8739
         }
       ],
       "previousLikePoints": [
@@ -7861,7 +7877,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "アンタッチャブルでやらせてもらってます"
+              "title": "知識の扉よ開け！ドア×ドア クエスト"
             },
             {
               "rank": 48,
@@ -7869,11 +7885,11 @@
             },
             {
               "rank": 49,
-              "title": "かまいたちの机上の空論城"
+              "title": "５時に夢中！"
             },
             {
               "rank": 50,
-              "title": "５時に夢中！"
+              "title": "かまいたちの机上の空論城"
             }
           ]
         },
@@ -8094,7 +8110,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ぽかぽか"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 48,
@@ -8115,7 +8131,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/11",
-      "updatedAt": "2026/06/16 02:25",
+      "updatedAt": "2026/06/16 03:28",
       "episodeId": "epjy83fa3a",
       "subtitle": "【1時間SP延長戦】オカシーパラダイスからの招待状",
       "likes": "1.1万",
@@ -8595,6 +8611,10 @@
         },
         {
           "hour": 120,
+          "likes": 11000
+        },
+        {
+          "hour": 121,
           "likes": 11000
         }
       ],
@@ -9838,7 +9858,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ぽかぽか"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 48,
@@ -10179,11 +10199,11 @@
             },
             {
               "rank": 49,
-              "title": "人生最高レストラン"
+              "title": "ディープリベンジ-顔を捨てた家政婦-"
             },
             {
               "rank": 50,
-              "title": "ディープリベンジ-顔を捨てた家政婦-"
+              "title": "人生最高レストラン"
             }
           ]
         }
@@ -10192,10 +10212,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/16 02:25",
+      "updatedAt": "2026/06/16 03:28",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "4468",
+      "likes": "4492",
       "favorites": "76.0万",
       "likePoints": [
         {
@@ -10857,7 +10877,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ぽかぽか"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 48,
@@ -10973,11 +10993,11 @@
             },
             {
               "rank": 49,
-              "title": "人生最高レストラン"
+              "title": "ディープリベンジ-顔を捨てた家政婦-"
             },
             {
               "rank": 50,
-              "title": "ディープリベンジ-顔を捨てた家政婦-"
+              "title": "人生最高レストラン"
             }
           ]
         }
@@ -10986,10 +11006,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/16 02:25",
+      "updatedAt": "2026/06/16 03:28",
       "episodeId": "eptfjnm7md",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！緑黄色社会登場",
-      "likes": "2992",
+      "likes": "3006",
       "favorites": "6.9万",
       "likePoints": [
         {
@@ -11571,6 +11591,10 @@
         {
           "hour": 145,
           "likes": 2992
+        },
+        {
+          "hour": 146,
+          "likes": 3006
         }
       ],
       "previousLikePoints": [
@@ -12384,7 +12408,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ぽかぽか"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 48,
@@ -12456,11 +12480,11 @@
             },
             {
               "rank": 49,
-              "title": "人生最高レストラン"
+              "title": "ディープリベンジ-顔を捨てた家政婦-"
             },
             {
               "rank": 50,
-              "title": "ディープリベンジ-顔を捨てた家政婦-"
+              "title": "人生最高レストラン"
             }
           ]
         }
@@ -12469,10 +12493,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/16 02:25",
+      "updatedAt": "2026/06/16 03:28",
       "episodeId": "epqyavv4lw",
       "subtitle": "第131回 風磨が目指す憧れの男・梅沢富美男が大暴走！？",
-      "likes": "4850",
+      "likes": "4863",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -12830,6 +12854,10 @@
         {
           "hour": 98,
           "likes": 4850
+        },
+        {
+          "hour": 99,
+          "likes": 4863
         }
       ],
       "previousLikePoints": [
@@ -13900,7 +13928,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ぽかぽか"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 48,
@@ -14045,11 +14073,11 @@
             },
             {
               "rank": 49,
-              "title": "人生最高レストラン"
+              "title": "ディープリベンジ-顔を捨てた家政婦-"
             },
             {
               "rank": 50,
-              "title": "ディープリベンジ-顔を捨てた家政婦-"
+              "title": "人生最高レストラン"
             }
           ]
         }
@@ -14058,10 +14086,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/13",
-      "updatedAt": "2026/06/16 02:25",
+      "updatedAt": "2026/06/16 03:28",
       "episodeId": "ep2vosbupv",
       "subtitle": "お泊りロケの家族は指名手配（秘）犯人SP後編",
-      "likes": "6386",
+      "likes": "6428",
       "favorites": "77.6万",
       "likePoints": [
         {
@@ -14275,6 +14303,10 @@
         {
           "hour": 55,
           "likes": 6386
+        },
+        {
+          "hour": 56,
+          "likes": 6428
         }
       ],
       "previousLikePoints": [
@@ -14896,7 +14928,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ぽかぽか"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 48,
@@ -15004,11 +15036,11 @@
             },
             {
               "rank": 49,
-              "title": "人生最高レストラン"
+              "title": "ディープリベンジ-顔を捨てた家政婦-"
             },
             {
               "rank": 50,
-              "title": "ディープリベンジ-顔を捨てた家政婦-"
+              "title": "人生最高レストラン"
             }
           ]
         }
@@ -15017,11 +15049,11 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/16 02:25",
+      "updatedAt": "2026/06/16 03:28",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
-      "likes": "9240",
-      "favorites": "31.3万",
+      "likes": "9264",
+      "favorites": "31.2万",
       "likePoints": [
         {
           "hour": 1,
@@ -15518,6 +15550,10 @@
         {
           "hour": 125,
           "likes": 9240
+        },
+        {
+          "hour": 126,
+          "likes": 9264
         }
       ],
       "previousLikePoints": [
@@ -16195,7 +16231,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 22,
-          "elapsedHour": 125,
+          "elapsedHour": 126,
           "elapsedRank": 22,
           "currentPoints": [
             {
@@ -16688,6 +16724,10 @@
             },
             {
               "hour": 125,
+              "rank": 22
+            },
+            {
+              "hour": 126,
               "rank": 22
             }
           ],
@@ -17360,7 +17400,7 @@
           "nearbyRanking": [
             {
               "rank": 19,
-              "title": "産まない女はダメですか？ DINKsのトツキトオカ"
+              "title": "時光代理人"
             },
             {
               "rank": 20,
@@ -18481,11 +18521,11 @@
             },
             {
               "rank": 49,
-              "title": "人生最高レストラン"
+              "title": "ディープリベンジ-顔を捨てた家政婦-"
             },
             {
               "rank": 50,
-              "title": "ディープリベンジ-顔を捨てた家政婦-"
+              "title": "人生最高レストラン"
             }
           ]
         }
@@ -18494,7 +18534,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/16 02:25",
+      "updatedAt": "2026/06/16 03:28",
       "episodeId": "epg027ir46",
       "subtitle": "“なぞかけ講座”",
       "likes": "1.1万",
@@ -19070,6 +19110,10 @@
         },
         {
           "hour": 143,
+          "likes": 11000
+        },
+        {
+          "hour": 144,
           "likes": 11000
         }
       ],
@@ -20089,7 +20133,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ぽかぽか"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 48,
@@ -20306,11 +20350,11 @@
             },
             {
               "rank": 49,
-              "title": "人生最高レストラン"
+              "title": "ディープリベンジ-顔を捨てた家政婦-"
             },
             {
               "rank": 50,
-              "title": "ディープリベンジ-顔を捨てた家政婦-"
+              "title": "人生最高レストラン"
             }
           ]
         }
@@ -20319,10 +20363,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/16 02:25",
+      "updatedAt": "2026/06/16 03:28",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "5947",
+      "likes": "5950",
       "favorites": "1.4万",
       "likePoints": [
         {
@@ -20948,19 +20992,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "ニノなのに"
             },
             {
               "rank": 48,
-              "title": "世界くらべてみたら"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 49,
-              "title": "マルコポロリ！"
+              "title": "世界くらべてみたら"
             },
             {
               "rank": 50,
-              "title": "吉田と粗品と"
+              "title": "マルコポロリ！"
             }
           ]
         },
@@ -20975,7 +21019,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ぽかぽか"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 48,
