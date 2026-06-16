@@ -564,7 +564,7 @@
   width: 8px;
   height: 8px;
   border-radius: 999px;
-  background: var(--theme-color, #ff7aa2);
+  background: var(--color-brand);
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.85);
   pointer-events: none;
 }
