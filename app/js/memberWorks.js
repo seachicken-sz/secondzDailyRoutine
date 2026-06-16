@@ -53,6 +53,9 @@ const MEMBER_WORK_LINK_GROUPS = [
   }
 ];
 
+const TVER_VIEWED_EPISODE_MAP_STORAGE_KEY =
+  "secondzDailyRoutineTverViewedEpisodeMap";
+
 let MEMBER_WORKS = [];
 
 const TVER_RANKING_REPORT_JSON_PATH = "../graph/tverRankingReport.json";
@@ -338,14 +341,29 @@ function createWorkItemHtml(item, group) {
  * TVer用リンクカードを生成
  */
 function createTverWorkItemHtml(item, group) {
+  const episodeId =
+    item.episodeId || getTverEpisodeId(item.platformUrl) || "";
+
+  const isViewed = isTverEpisodeViewed(episodeId);
+
   return `
-    <div class="member-work-link-card member-work-link-card-tver">
+    <div class="member-work-link-card member-work-link-card-tver ${isViewed ? "is-tver-viewed" : "is-tver-new"}">
       <span class="member-work-link-main member-work-link-main-tver">
         <span class="member-work-link-title member-work-link-title-tver">
           ${escapeHtml(getProgramDisplayName(item))}
         </span>
 
         ${buildRemainingText(item)}
+
+        ${isViewed ? `
+          <span class="member-work-link-viewed">
+            視聴済み
+          </span>
+        ` : `
+          <span class="member-work-link-new">
+            NEW
+          </span>
+        `}
       </span>
 
       <a
@@ -359,7 +377,7 @@ function createTverWorkItemHtml(item, group) {
         data-member-work-url="${escapeHtml(item[group.urlKey])}"
         data-member-work-work-type="${escapeHtml(item.workType || "")}"
         data-member-work-program-id="${escapeHtml(item.programId || item.seriesId || "")}"
-        data-member-work-episode-id="${escapeHtml(item.episodeId || getTverEpisodeId(item.platformUrl) || "")}"
+        data-member-work-episode-id="${escapeHtml(episodeId)}"
         data-member-work-members="${escapeHtml(Array.isArray(item.members) ? item.members.join(",") : "")}"
       >
         ${escapeHtml(getTverLinkText(item))}
@@ -513,6 +531,84 @@ function getTverEpisodeId(url) {
       .filter(Boolean)
       .at(-1) || "";
   }
+}
+
+/**
+ * TVer閲覧履歴Mapを取得
+ */
+function getTverViewedEpisodeMap() {
+  try {
+    const raw = localStorage.getItem(TVER_VIEWED_EPISODE_MAP_STORAGE_KEY);
+
+    if (!raw) {
+      return {};
+    }
+
+    const parsed = JSON.parse(raw);
+
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+      return {};
+    }
+
+    return parsed;
+
+  } catch (error) {
+    console.warn("TVer閲覧履歴取得失敗:", error);
+    return {};
+  }
+}
+
+/**
+ * TVer閲覧履歴Mapを保存
+ */
+function saveTverViewedEpisodeMap(viewedMap) {
+  try {
+    localStorage.setItem(
+      TVER_VIEWED_EPISODE_MAP_STORAGE_KEY,
+      JSON.stringify(viewedMap)
+    );
+
+  } catch (error) {
+    console.warn("TVer閲覧履歴保存失敗:", error);
+  }
+}
+
+/**
+ * TVer episodeId が閲覧済みか判定
+ */
+function isTverEpisodeViewed(episodeId) {
+  if (!episodeId) {
+    return false;
+  }
+
+  const viewedMap = getTverViewedEpisodeMap();
+
+  return Boolean(viewedMap[episodeId]);
+}
+
+/**
+ * TVer episodeId を閲覧済みとして保存
+ */
+function markTverEpisodeViewed({
+  episodeId,
+  programId = "",
+  title = "",
+  url = ""
+}) {
+  if (!episodeId) {
+    return;
+  }
+
+  const viewedMap = getTverViewedEpisodeMap();
+
+  viewedMap[episodeId] = {
+    viewedAt: new Date().toISOString(),
+    programId,
+    title,
+    url
+  };
+
+  saveTverViewedEpisodeMap(viewedMap);
 }
 
 /**
