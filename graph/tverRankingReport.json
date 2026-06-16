@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/17 02:23",
+  "updatedAt": "2026/06/17 03:27",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/17 02:23",
+      "updatedAt": "2026/06/17 03:27",
       "episodeId": "epq089zr8c",
       "subtitle": "【2本立てSP！】NEO麻辣湯＆ランク付け",
       "likes": "1.6万",
@@ -404,6 +404,10 @@
         },
         {
           "hour": 100,
+          "likes": 16000
+        },
+        {
+          "hour": 101,
           "likes": 16000
         }
       ],
@@ -1078,7 +1082,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 16,
-          "elapsedHour": 100,
+          "elapsedHour": 101,
           "elapsedRank": 16,
           "currentPoints": [
             {
@@ -1471,6 +1475,10 @@
             },
             {
               "hour": 100,
+              "rank": 16
+            },
+            {
+              "hour": 101,
               "rank": 16
             }
           ],
@@ -2155,7 +2163,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 39,
-          "elapsedHour": 100,
+          "elapsedHour": 101,
           "elapsedRank": 39,
           "currentPoints": [
             {
@@ -2524,6 +2532,10 @@
             },
             {
               "hour": 100,
+              "rank": 39
+            },
+            {
+              "hour": 101,
               "rank": 39
             }
           ],
@@ -2937,7 +2949,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/17 02:23",
+      "updatedAt": "2026/06/17 03:27",
       "episodeId": "ep67r77z31",
       "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
       "likes": "1.7万",
@@ -5424,7 +5436,7 @@
             },
             {
               "rank": 50,
-              "title": "やすとものどこいこ！？"
+              "title": "THE神業チャレンジ"
             }
           ]
         },
@@ -5961,15 +5973,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉クイズ"
+              "title": "102回目のプロポーズ"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "有吉クイズ"
             },
             {
               "rank": 49,
-              "title": "102回目のプロポーズ"
+              "title": "ゴッドタン"
             },
             {
               "rank": 50,
@@ -5982,10 +5994,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/09",
-      "updatedAt": "2026/06/17 02:23",
+      "updatedAt": "2026/06/17 03:27",
       "episodeId": "epu815zrtp",
       "subtitle": "チョコプラ・timeleszが「手作り巨大メガホンなら1km先の好きな人に告白できる？」に挑む！",
-      "likes": "8945",
+      "likes": "8952",
       "favorites": "5.1万",
       "likePoints": [
         {
@@ -7335,9 +7347,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 48,
-          "elapsedHour": 170,
-          "elapsedRank": 48,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 6,
@@ -8288,20 +8300,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 45,
-              "title": "ナンデモ特命係 発見らくちゃく！"
-            },
-            {
-              "rank": 46,
-              "title": "ゴルフ侍、見参！"
-            },
-            {
               "rank": 47,
               "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 48,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
+            },
+            {
+              "rank": 49,
+              "title": "沸騰ワード10"
+            },
+            {
+              "rank": 50,
+              "title": "オードリー春日の知らない街で自腹せんべろ"
             }
           ]
         },
@@ -8534,7 +8546,7 @@
             },
             {
               "rank": 50,
-              "title": "やすとものどこいこ！？"
+              "title": "THE神業チャレンジ"
             }
           ]
         }
@@ -8543,7 +8555,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/11",
-      "updatedAt": "2026/06/17 02:23",
+      "updatedAt": "2026/06/17 03:27",
       "episodeId": "epjy83fa3a",
       "subtitle": "【1時間SP延長戦】オカシーパラダイスからの招待状",
       "likes": "1.1万",
@@ -9119,6 +9131,10 @@
         },
         {
           "hour": 144,
+          "likes": 11000
+        },
+        {
+          "hour": 145,
           "likes": 11000
         }
       ],
@@ -10374,7 +10390,7 @@
             },
             {
               "rank": 50,
-              "title": "やすとものどこいこ！？"
+              "title": "THE神業チャレンジ"
             }
           ]
         },
@@ -10695,15 +10711,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉クイズ"
+              "title": "102回目のプロポーズ"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "有吉クイズ"
             },
             {
               "rank": 49,
-              "title": "102回目のプロポーズ"
+              "title": "ゴッドタン"
             },
             {
               "rank": 50,
@@ -10716,10 +10732,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/06/17 02:23",
+      "updatedAt": "2026/06/17 03:27",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
-      "likes": "471",
+      "likes": "519",
       "favorites": "76.1万",
       "likePoints": [
         {
@@ -10737,6 +10753,10 @@
         {
           "hour": 5,
           "likes": 471
+        },
+        {
+          "hour": 6,
+          "likes": 519
         }
       ],
       "previousLikePoints": [
@@ -11410,7 +11430,7 @@
             },
             {
               "rank": 50,
-              "title": "やすとものどこいこ！？"
+              "title": "THE神業チャレンジ"
             }
           ]
         },
@@ -11506,15 +11526,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉クイズ"
+              "title": "102回目のプロポーズ"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "有吉クイズ"
             },
             {
               "rank": 49,
-              "title": "102回目のプロポーズ"
+              "title": "ゴッドタン"
             },
             {
               "rank": 50,
@@ -11527,11 +11547,11 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/17",
-      "updatedAt": "2026/06/17 02:23",
+      "updatedAt": "2026/06/17 03:27",
       "episodeId": "ep8zku54gr",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！YUTA登場",
-      "likes": "403",
-      "favorites": "6.9万",
+      "likes": "458",
+      "favorites": "7.0万",
       "likePoints": [
         {
           "hour": 0,
@@ -11540,6 +11560,10 @@
         {
           "hour": 1,
           "likes": 403
+        },
+        {
+          "hour": 2,
+          "likes": 458
         }
       ],
       "previousLikePoints": [
@@ -12236,7 +12260,7 @@
             },
             {
               "rank": 50,
-              "title": "やすとものどこいこ！？"
+              "title": "THE神業チャレンジ"
             }
           ]
         },
@@ -12251,15 +12275,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉クイズ"
+              "title": "102回目のプロポーズ"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "有吉クイズ"
             },
             {
               "rank": 49,
-              "title": "102回目のプロポーズ"
+              "title": "ゴッドタン"
             },
             {
               "rank": 50,
@@ -12272,10 +12296,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/17 02:23",
+      "updatedAt": "2026/06/17 03:27",
       "episodeId": "epqyavv4lw",
       "subtitle": "第131回 風磨が目指す憧れの男・梅沢富美男が大暴走！？",
-      "likes": "5131",
+      "likes": "5137",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -12721,6 +12745,10 @@
         {
           "hour": 121,
           "likes": 5131
+        },
+        {
+          "hour": 122,
+          "likes": 5137
         }
       ],
       "previousLikePoints": [
@@ -13803,7 +13831,7 @@
             },
             {
               "rank": 50,
-              "title": "やすとものどこいこ！？"
+              "title": "THE神業チャレンジ"
             }
           ]
         },
@@ -13928,15 +13956,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉クイズ"
+              "title": "102回目のプロポーズ"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "有吉クイズ"
             },
             {
               "rank": 49,
-              "title": "102回目のプロポーズ"
+              "title": "ゴッドタン"
             },
             {
               "rank": 50,
@@ -13949,10 +13977,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/13",
-      "updatedAt": "2026/06/17 02:23",
+      "updatedAt": "2026/06/17 03:27",
       "episodeId": "epq7u4dq8k",
       "subtitle": "お泊りロケの家族は指名手配（秘）犯人SP前編",
-      "likes": "7438",
+      "likes": "7442",
       "favorites": "77.6万",
       "likePoints": [
         {
@@ -13982,6 +14010,10 @@
         {
           "hour": 79,
           "likes": 7438
+        },
+        {
+          "hour": 80,
+          "likes": 7442
         }
       ],
       "previousLikePoints": [
@@ -14355,7 +14387,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 28,
-          "elapsedHour": 79,
+          "elapsedHour": 80,
           "elapsedRank": 28,
           "currentPoints": [
             {
@@ -14660,6 +14692,10 @@
             },
             {
               "hour": 79,
+              "rank": 28
+            },
+            {
+              "hour": 80,
               "rank": 28
             }
           ],
@@ -15265,15 +15301,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉クイズ"
+              "title": "102回目のプロポーズ"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "有吉クイズ"
             },
             {
               "rank": 49,
-              "title": "102回目のプロポーズ"
+              "title": "ゴッドタン"
             },
             {
               "rank": 50,
@@ -15286,10 +15322,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/17 02:23",
+      "updatedAt": "2026/06/17 03:27",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
-      "likes": "9689",
+      "likes": "9681",
       "favorites": "30.7万",
       "likePoints": [
         {
@@ -15883,6 +15919,10 @@
         {
           "hour": 149,
           "likes": 9689
+        },
+        {
+          "hour": 150,
+          "likes": 9681
         }
       ],
       "previousLikePoints": [
@@ -16560,7 +16600,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 23,
-          "elapsedHour": 149,
+          "elapsedHour": 150,
           "elapsedRank": 23,
           "currentPoints": [
             {
@@ -17149,6 +17189,10 @@
             },
             {
               "hour": 149,
+              "rank": 23
+            },
+            {
+              "hour": 150,
               "rank": 23
             }
           ],
@@ -17841,7 +17885,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 50,
-          "elapsedHour": 149,
+          "elapsedHour": 150,
           "elapsedRank": 50,
           "currentPoints": [
             {
@@ -18306,6 +18350,10 @@
             },
             {
               "hour": 149,
+              "rank": 50
+            },
+            {
+              "hour": 150,
               "rank": 50
             }
           ],
@@ -18974,15 +19022,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉クイズ"
+              "title": "102回目のプロポーズ"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "有吉クイズ"
             },
             {
               "rank": 49,
-              "title": "102回目のプロポーズ"
+              "title": "ゴッドタン"
             },
             {
               "rank": 50,
@@ -18994,13 +19042,19 @@
     },
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
-      "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/17 02:23",
-      "episodeId": "epg027ir46",
-      "subtitle": "“なぞかけ講座”",
-      "likes": "1.1万",
+      "broadcastDate": "2026/06/17",
+      "updatedAt": "2026/06/17 03:27",
+      "episodeId": "eps2mzuwl8",
+      "subtitle": "“わかりやすく伝える力講座”",
+      "likes": "248",
       "favorites": "22.0万",
       "likePoints": [
+        {
+          "hour": 0,
+          "likes": 248
+        }
+      ],
+      "previousLikePoints": [
         {
           "hour": 0,
           "likes": 244
@@ -19668,680 +19722,10 @@
         {
           "hour": 167,
           "likes": 11000
-        }
-      ],
-      "previousLikePoints": [
-        {
-          "hour": 2,
-          "likes": 951
-        },
-        {
-          "hour": 3,
-          "likes": 1386
-        },
-        {
-          "hour": 4,
-          "likes": 1319
-        },
-        {
-          "hour": 5,
-          "likes": 2274
-        },
-        {
-          "hour": 6,
-          "likes": 3145
-        },
-        {
-          "hour": 7,
-          "likes": 4545
-        },
-        {
-          "hour": 8,
-          "likes": 5064
-        },
-        {
-          "hour": 9,
-          "likes": 5775
-        },
-        {
-          "hour": 10,
-          "likes": 6503
-        },
-        {
-          "hour": 11,
-          "likes": 6895
-        },
-        {
-          "hour": 12,
-          "likes": 7240
-        },
-        {
-          "hour": 13,
-          "likes": 7773
-        },
-        {
-          "hour": 14,
-          "likes": 7925
-        },
-        {
-          "hour": 15,
-          "likes": 8293
-        },
-        {
-          "hour": 16,
-          "likes": 8786
-        },
-        {
-          "hour": 17,
-          "likes": 9307
-        },
-        {
-          "hour": 18,
-          "likes": 9858
-        },
-        {
-          "hour": 19,
-          "likes": 10000
-        },
-        {
-          "hour": 20,
-          "likes": 10000
-        },
-        {
-          "hour": 21,
-          "likes": 11000
-        },
-        {
-          "hour": 22,
-          "likes": 11000
-        },
-        {
-          "hour": 23,
-          "likes": 11000
-        },
-        {
-          "hour": 24,
-          "likes": 11000
-        },
-        {
-          "hour": 25,
-          "likes": 11000
-        },
-        {
-          "hour": 26,
-          "likes": 11000
-        },
-        {
-          "hour": 27,
-          "likes": 11000
-        },
-        {
-          "hour": 28,
-          "likes": 11000
-        },
-        {
-          "hour": 29,
-          "likes": 11000
-        },
-        {
-          "hour": 30,
-          "likes": 11000
-        },
-        {
-          "hour": 31,
-          "likes": 12000
-        },
-        {
-          "hour": 32,
-          "likes": 12000
-        },
-        {
-          "hour": 33,
-          "likes": 12000
-        },
-        {
-          "hour": 34,
-          "likes": 12000
-        },
-        {
-          "hour": 35,
-          "likes": 12000
-        },
-        {
-          "hour": 36,
-          "likes": 12000
-        },
-        {
-          "hour": 37,
-          "likes": 12000
-        },
-        {
-          "hour": 38,
-          "likes": 12000
-        },
-        {
-          "hour": 39,
-          "likes": 12000
-        },
-        {
-          "hour": 40,
-          "likes": 12000
-        },
-        {
-          "hour": 41,
-          "likes": 12000
-        },
-        {
-          "hour": 42,
-          "likes": 13000
-        },
-        {
-          "hour": 43,
-          "likes": 13000
-        },
-        {
-          "hour": 44,
-          "likes": 13000
-        },
-        {
-          "hour": 45,
-          "likes": 13000
-        },
-        {
-          "hour": 46,
-          "likes": 13000
-        },
-        {
-          "hour": 47,
-          "likes": 13000
-        },
-        {
-          "hour": 48,
-          "likes": 13000
-        },
-        {
-          "hour": 49,
-          "likes": 13000
-        },
-        {
-          "hour": 50,
-          "likes": 13000
-        },
-        {
-          "hour": 51,
-          "likes": 13000
-        },
-        {
-          "hour": 52,
-          "likes": 13000
-        },
-        {
-          "hour": 53,
-          "likes": 13000
-        },
-        {
-          "hour": 54,
-          "likes": 13000
-        },
-        {
-          "hour": 55,
-          "likes": 13000
-        },
-        {
-          "hour": 56,
-          "likes": 13000
-        },
-        {
-          "hour": 57,
-          "likes": 13000
-        },
-        {
-          "hour": 58,
-          "likes": 13000
-        },
-        {
-          "hour": 59,
-          "likes": 13000
-        },
-        {
-          "hour": 60,
-          "likes": 13000
-        },
-        {
-          "hour": 61,
-          "likes": 14000
-        },
-        {
-          "hour": 62,
-          "likes": 14000
-        },
-        {
-          "hour": 63,
-          "likes": 14000
-        },
-        {
-          "hour": 64,
-          "likes": 14000
-        },
-        {
-          "hour": 65,
-          "likes": 14000
-        },
-        {
-          "hour": 66,
-          "likes": 14000
-        },
-        {
-          "hour": 67,
-          "likes": 14000
-        },
-        {
-          "hour": 68,
-          "likes": 14000
-        },
-        {
-          "hour": 69,
-          "likes": 14000
-        },
-        {
-          "hour": 70,
-          "likes": 14000
-        },
-        {
-          "hour": 71,
-          "likes": 14000
-        },
-        {
-          "hour": 72,
-          "likes": 14000
-        },
-        {
-          "hour": 73,
-          "likes": 14000
-        },
-        {
-          "hour": 74,
-          "likes": 14000
-        },
-        {
-          "hour": 75,
-          "likes": 14000
-        },
-        {
-          "hour": 76,
-          "likes": 14000
-        },
-        {
-          "hour": 77,
-          "likes": 14000
-        },
-        {
-          "hour": 78,
-          "likes": 14000
-        },
-        {
-          "hour": 79,
-          "likes": 14000
-        },
-        {
-          "hour": 80,
-          "likes": 14000
-        },
-        {
-          "hour": 81,
-          "likes": 14000
-        },
-        {
-          "hour": 82,
-          "likes": 14000
-        },
-        {
-          "hour": 83,
-          "likes": 14000
-        },
-        {
-          "hour": 84,
-          "likes": 14000
-        },
-        {
-          "hour": 85,
-          "likes": 14000
-        },
-        {
-          "hour": 86,
-          "likes": 14000
-        },
-        {
-          "hour": 87,
-          "likes": 14000
-        },
-        {
-          "hour": 88,
-          "likes": 14000
-        },
-        {
-          "hour": 89,
-          "likes": 14000
-        },
-        {
-          "hour": 90,
-          "likes": 14000
-        },
-        {
-          "hour": 91,
-          "likes": 14000
-        },
-        {
-          "hour": 92,
-          "likes": 14000
-        },
-        {
-          "hour": 93,
-          "likes": 14000
-        },
-        {
-          "hour": 94,
-          "likes": 14000
-        },
-        {
-          "hour": 95,
-          "likes": 14000
-        },
-        {
-          "hour": 96,
-          "likes": 14000
-        },
-        {
-          "hour": 97,
-          "likes": 14000
-        },
-        {
-          "hour": 98,
-          "likes": 14000
-        },
-        {
-          "hour": 99,
-          "likes": 14000
-        },
-        {
-          "hour": 100,
-          "likes": 14000
-        },
-        {
-          "hour": 101,
-          "likes": 14000
-        },
-        {
-          "hour": 102,
-          "likes": 14000
-        },
-        {
-          "hour": 103,
-          "likes": 14000
-        },
-        {
-          "hour": 104,
-          "likes": 14000
-        },
-        {
-          "hour": 105,
-          "likes": 14000
-        },
-        {
-          "hour": 106,
-          "likes": 14000
-        },
-        {
-          "hour": 107,
-          "likes": 15000
-        },
-        {
-          "hour": 108,
-          "likes": 15000
-        },
-        {
-          "hour": 109,
-          "likes": 15000
-        },
-        {
-          "hour": 110,
-          "likes": 15000
-        },
-        {
-          "hour": 111,
-          "likes": 15000
-        },
-        {
-          "hour": 112,
-          "likes": 15000
-        },
-        {
-          "hour": 113,
-          "likes": 15000
-        },
-        {
-          "hour": 114,
-          "likes": 15000
-        },
-        {
-          "hour": 115,
-          "likes": 15000
-        },
-        {
-          "hour": 116,
-          "likes": 15000
-        },
-        {
-          "hour": 117,
-          "likes": 15000
-        },
-        {
-          "hour": 118,
-          "likes": 15000
-        },
-        {
-          "hour": 119,
-          "likes": 15000
-        },
-        {
-          "hour": 120,
-          "likes": 15000
-        },
-        {
-          "hour": 121,
-          "likes": 15000
-        },
-        {
-          "hour": 122,
-          "likes": 15000
-        },
-        {
-          "hour": 123,
-          "likes": 15000
-        },
-        {
-          "hour": 124,
-          "likes": 15000
-        },
-        {
-          "hour": 125,
-          "likes": 15000
-        },
-        {
-          "hour": 126,
-          "likes": 15000
-        },
-        {
-          "hour": 127,
-          "likes": 15000
-        },
-        {
-          "hour": 128,
-          "likes": 15000
-        },
-        {
-          "hour": 130,
-          "likes": 15000
-        },
-        {
-          "hour": 131,
-          "likes": 15000
-        },
-        {
-          "hour": 132,
-          "likes": 15000
-        },
-        {
-          "hour": 133,
-          "likes": 15000
-        },
-        {
-          "hour": 134,
-          "likes": 15000
-        },
-        {
-          "hour": 135,
-          "likes": 15000
-        },
-        {
-          "hour": 136,
-          "likes": 15000
-        },
-        {
-          "hour": 137,
-          "likes": 15000
-        },
-        {
-          "hour": 138,
-          "likes": 15000
-        },
-        {
-          "hour": 139,
-          "likes": 15000
-        },
-        {
-          "hour": 140,
-          "likes": 15000
-        },
-        {
-          "hour": 141,
-          "likes": 15000
-        },
-        {
-          "hour": 142,
-          "likes": 15000
-        },
-        {
-          "hour": 143,
-          "likes": 15000
-        },
-        {
-          "hour": 144,
-          "likes": 15000
-        },
-        {
-          "hour": 145,
-          "likes": 15000
-        },
-        {
-          "hour": 146,
-          "likes": 15000
-        },
-        {
-          "hour": 147,
-          "likes": 15000
-        },
-        {
-          "hour": 148,
-          "likes": 15000
-        },
-        {
-          "hour": 149,
-          "likes": 15000
-        },
-        {
-          "hour": 150,
-          "likes": 15000
-        },
-        {
-          "hour": 151,
-          "likes": 15000
-        },
-        {
-          "hour": 152,
-          "likes": 15000
-        },
-        {
-          "hour": 153,
-          "likes": 15000
-        },
-        {
-          "hour": 154,
-          "likes": 15000
-        },
-        {
-          "hour": 155,
-          "likes": 15000
-        },
-        {
-          "hour": 156,
-          "likes": 15000
-        },
-        {
-          "hour": 157,
-          "likes": 15000
-        },
-        {
-          "hour": 158,
-          "likes": 15000
-        },
-        {
-          "hour": 159,
-          "likes": 15000
-        },
-        {
-          "hour": 160,
-          "likes": 15000
-        },
-        {
-          "hour": 161,
-          "likes": 15000
-        },
-        {
-          "hour": 162,
-          "likes": 15000
-        },
-        {
-          "hour": 163,
-          "likes": 15000
-        },
-        {
-          "hour": 164,
-          "likes": 15000
-        },
-        {
-          "hour": 165,
-          "likes": 15000
-        },
-        {
-          "hour": 166,
-          "likes": 15000
-        },
-        {
-          "hour": 167,
-          "likes": 15000
         },
         {
           "hour": 168,
-          "likes": 15000
-        },
-        {
-          "hour": 169,
-          "likes": 15000
-        },
-        {
-          "hour": 170,
-          "likes": 15000
+          "likes": 11000
         }
       ],
       "rankings": [
@@ -20351,7 +19735,8 @@
           "currentRank": null,
           "elapsedHour": null,
           "elapsedRank": null,
-          "currentPoints": [
+          "currentPoints": [],
+          "previousPoints": [
             {
               "hour": 10,
               "rank": 50
@@ -20525,164 +19910,6 @@
               "rank": 49
             }
           ],
-          "previousPoints": [
-            {
-              "hour": 9,
-              "rank": 49
-            },
-            {
-              "hour": 10,
-              "rank": 38
-            },
-            {
-              "hour": 11,
-              "rank": 35
-            },
-            {
-              "hour": 12,
-              "rank": 33
-            },
-            {
-              "hour": 13,
-              "rank": 31
-            },
-            {
-              "hour": 14,
-              "rank": 28
-            },
-            {
-              "hour": 15,
-              "rank": 26
-            },
-            {
-              "hour": 16,
-              "rank": 22
-            },
-            {
-              "hour": 17,
-              "rank": 20
-            },
-            {
-              "hour": 18,
-              "rank": 17
-            },
-            {
-              "hour": 19,
-              "rank": 14
-            },
-            {
-              "hour": 20,
-              "rank": 12
-            },
-            {
-              "hour": 21,
-              "rank": 12
-            },
-            {
-              "hour": 22,
-              "rank": 13
-            },
-            {
-              "hour": 23,
-              "rank": 13
-            },
-            {
-              "hour": 24,
-              "rank": 13
-            },
-            {
-              "hour": 25,
-              "rank": 13
-            },
-            {
-              "hour": 26,
-              "rank": 13
-            },
-            {
-              "hour": 27,
-              "rank": 13
-            },
-            {
-              "hour": 28,
-              "rank": 14
-            },
-            {
-              "hour": 29,
-              "rank": 14
-            },
-            {
-              "hour": 30,
-              "rank": 14
-            },
-            {
-              "hour": 31,
-              "rank": 14
-            },
-            {
-              "hour": 32,
-              "rank": 14
-            },
-            {
-              "hour": 33,
-              "rank": 14
-            },
-            {
-              "hour": 34,
-              "rank": 15
-            },
-            {
-              "hour": 35,
-              "rank": 16
-            },
-            {
-              "hour": 36,
-              "rank": 16
-            },
-            {
-              "hour": 37,
-              "rank": 16
-            },
-            {
-              "hour": 38,
-              "rank": 17
-            },
-            {
-              "hour": 39,
-              "rank": 18
-            },
-            {
-              "hour": 40,
-              "rank": 19
-            },
-            {
-              "hour": 41,
-              "rank": 20
-            },
-            {
-              "hour": 42,
-              "rank": 20
-            },
-            {
-              "hour": 43,
-              "rank": 21
-            },
-            {
-              "hour": 66,
-              "rank": 44
-            },
-            {
-              "hour": 67,
-              "rank": 43
-            },
-            {
-              "hour": 68,
-              "rank": 45
-            },
-            {
-              "hour": 69,
-              "rank": 49
-            }
-          ],
           "nearbyRanking": [
             {
               "rank": 47,
@@ -20698,7 +19925,7 @@
             },
             {
               "rank": 50,
-              "title": "やすとものどこいこ！？"
+              "title": "THE神業チャレンジ"
             }
           ]
         },
@@ -20708,7 +19935,8 @@
           "currentRank": null,
           "elapsedHour": null,
           "elapsedRank": null,
-          "currentPoints": [
+          "currentPoints": [],
+          "previousPoints": [
             {
               "hour": 19,
               "rank": 46
@@ -20778,132 +20006,18 @@
               "rank": 50
             }
           ],
-          "previousPoints": [
-            {
-              "hour": 16,
-              "rank": 48
-            },
-            {
-              "hour": 17,
-              "rank": 45
-            },
-            {
-              "hour": 18,
-              "rank": 38
-            },
-            {
-              "hour": 19,
-              "rank": 30
-            },
-            {
-              "hour": 20,
-              "rank": 27
-            },
-            {
-              "hour": 21,
-              "rank": 27
-            },
-            {
-              "hour": 22,
-              "rank": 27
-            },
-            {
-              "hour": 23,
-              "rank": 28
-            },
-            {
-              "hour": 24,
-              "rank": 28
-            },
-            {
-              "hour": 25,
-              "rank": 29
-            },
-            {
-              "hour": 26,
-              "rank": 29
-            },
-            {
-              "hour": 27,
-              "rank": 29
-            },
-            {
-              "hour": 28,
-              "rank": 31
-            },
-            {
-              "hour": 29,
-              "rank": 33
-            },
-            {
-              "hour": 30,
-              "rank": 34
-            },
-            {
-              "hour": 31,
-              "rank": 34
-            },
-            {
-              "hour": 32,
-              "rank": 35
-            },
-            {
-              "hour": 33,
-              "rank": 34
-            },
-            {
-              "hour": 34,
-              "rank": 35
-            },
-            {
-              "hour": 35,
-              "rank": 37
-            },
-            {
-              "hour": 36,
-              "rank": 37
-            },
-            {
-              "hour": 37,
-              "rank": 36
-            },
-            {
-              "hour": 38,
-              "rank": 37
-            },
-            {
-              "hour": 39,
-              "rank": 40
-            },
-            {
-              "hour": 40,
-              "rank": 42
-            },
-            {
-              "hour": 41,
-              "rank": 43
-            },
-            {
-              "hour": 42,
-              "rank": 44
-            },
-            {
-              "hour": 43,
-              "rank": 44
-            }
-          ],
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉クイズ"
+              "title": "102回目のプロポーズ"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "有吉クイズ"
             },
             {
               "rank": 49,
-              "title": "102回目のプロポーズ"
+              "title": "ゴッドタン"
             },
             {
               "rank": 50,
@@ -20916,10 +20030,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/17 02:23",
+      "updatedAt": "2026/06/17 03:27",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "6011",
+      "likes": "6012",
       "favorites": "1.5万",
       "likePoints": [
         {
@@ -21545,7 +20659,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "５時に夢中！"
+              "title": "じっくり聞いタロウ～スター近況（秘）報告～"
             },
             {
               "rank": 48,
@@ -21584,7 +20698,7 @@
             },
             {
               "rank": 50,
-              "title": "やすとものどこいこ！？"
+              "title": "THE神業チャレンジ"
             }
           ]
         }
@@ -21593,10 +20707,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/06/17 02:23",
+      "updatedAt": "2026/06/17 03:27",
       "episodeId": "ephdx5d5p3",
       "subtitle": "本木雅弘VS偽絵＆MC松尾×timelesz原！神業ダンス",
-      "likes": "2454",
+      "likes": "2536",
       "favorites": "12.0万",
       "likePoints": [
         {
@@ -21626,6 +20740,10 @@
         {
           "hour": 7,
           "likes": 2454
+        },
+        {
+          "hour": 8,
+          "likes": 2536
         }
       ],
       "previousLikePoints": [],
@@ -21633,10 +20751,15 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 50,
+          "elapsedHour": 8,
+          "elapsedRank": 50,
+          "currentPoints": [
+            {
+              "hour": 8,
+              "rank": 50
+            }
+          ],
           "previousPoints": [],
           "nearbyRanking": [
             {
@@ -21653,7 +20776,7 @@
             },
             {
               "rank": 50,
-              "title": "やすとものどこいこ！？"
+              "title": "THE神業チャレンジ"
             }
           ]
         },
@@ -21668,15 +20791,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉クイズ"
+              "title": "102回目のプロポーズ"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "有吉クイズ"
             },
             {
               "rank": 49,
-              "title": "102回目のプロポーズ"
+              "title": "ゴッドタン"
             },
             {
               "rank": 50,
