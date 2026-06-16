@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/16 15:22",
+  "updatedAt": "2026/06/16 16:23",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/16 15:22",
+      "updatedAt": "2026/06/16 16:23",
       "episodeId": "epq089zr8c",
       "subtitle": "【2本立てSP！】NEO麻辣湯＆ランク付け",
       "likes": "1.5万",
@@ -360,6 +360,10 @@
         },
         {
           "hour": 89,
+          "likes": 15000
+        },
+        {
+          "hour": 90,
           "likes": 15000
         }
       ],
@@ -1034,7 +1038,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 13,
-          "elapsedHour": 89,
+          "elapsedHour": 90,
           "elapsedRank": 13,
           "currentPoints": [
             {
@@ -1383,6 +1387,10 @@
             },
             {
               "hour": 89,
+              "rank": 13
+            },
+            {
+              "hour": 90,
               "rank": 13
             }
           ],
@@ -2066,9 +2074,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 32,
-          "elapsedHour": 89,
-          "elapsedRank": 32,
+          "currentRank": 33,
+          "elapsedHour": 90,
+          "elapsedRank": 33,
           "currentPoints": [
             {
               "hour": 9,
@@ -2393,6 +2401,10 @@
             {
               "hour": 89,
               "rank": 32
+            },
+            {
+              "hour": 90,
+              "rank": 33
             }
           ],
           "previousPoints": [
@@ -2783,19 +2795,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 29,
+              "rank": 30,
               "title": "未解決の女 警視庁文書捜査官 Season３"
             },
             {
-              "rank": 30,
-              "title": "有吉ゼミ"
-            },
-            {
               "rank": 31,
-              "title": "時すでにおスシ!?"
+              "title": "好きな人がいること"
             },
             {
               "rank": 32,
+              "title": "時すでにおスシ!?"
+            },
+            {
+              "rank": 33,
               "title": "タイムレスマン"
             }
           ]
@@ -2805,7 +2817,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/16 15:22",
+      "updatedAt": "2026/06/16 16:23",
       "episodeId": "ep67r77z31",
       "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
       "likes": "1.7万",
@@ -5280,11 +5292,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "探偵！ナイトスクープ"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "ラヴィット！"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 49,
@@ -5829,19 +5841,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
-            },
-            {
-              "rank": 48,
               "title": "おしゃれクリップ"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "そこまで言って委員会NP"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "嗚呼!!みんなの動物園"
+            },
+            {
+              "rank": 50,
+              "title": "孤独のグルメ Season11"
             }
           ]
         }
@@ -5850,10 +5862,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/09",
-      "updatedAt": "2026/06/16 15:22",
+      "updatedAt": "2026/06/16 16:23",
       "episodeId": "epu815zrtp",
       "subtitle": "チョコプラ・timeleszが「手作り巨大メガホンなら1km先の好きな人に告白できる？」に挑む！",
-      "likes": "8823",
+      "likes": "8832",
       "favorites": "5.1万",
       "likePoints": [
         {
@@ -6487,6 +6499,10 @@
         {
           "hour": 159,
           "likes": 8823
+        },
+        {
+          "hour": 160,
+          "likes": 8832
         }
       ],
       "previousLikePoints": [
@@ -7159,9 +7175,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 50,
-          "elapsedHour": 159,
-          "elapsedRank": 50,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 6,
@@ -8073,19 +8089,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "沸騰ワード10"
-            },
-            {
-              "rank": 48,
-              "title": "かまいたちの机上の空論城"
-            },
-            {
-              "rank": 49,
               "title": "やすとも・友近のキメツケ！あくまで個人の感想です"
             },
             {
+              "rank": 48,
+              "title": "沸騰ワード10"
+            },
+            {
+              "rank": 49,
+              "title": "かまいたちの机上の空論城"
+            },
+            {
               "rank": 50,
-              "title": "地球まるごと大実験 ネイチャーティーチャー"
+              "title": "エンターティーチャー 限界弟子入り中！"
             }
           ]
         },
@@ -8306,11 +8322,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "探偵！ナイトスクープ"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "ラヴィット！"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 49,
@@ -8327,7 +8343,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/11",
-      "updatedAt": "2026/06/16 15:22",
+      "updatedAt": "2026/06/16 16:23",
       "episodeId": "epjy83fa3a",
       "subtitle": "【1時間SP延長戦】オカシーパラダイスからの招待状",
       "likes": "1.1万",
@@ -8859,6 +8875,10 @@
         },
         {
           "hour": 133,
+          "likes": 11000
+        },
+        {
+          "hour": 134,
           "likes": 11000
         }
       ],
@@ -10102,11 +10122,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "探偵！ナイトスクープ"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "ラヴィット！"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 49,
@@ -10435,19 +10455,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
-            },
-            {
-              "rank": 48,
               "title": "おしゃれクリップ"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "そこまで言って委員会NP"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "嗚呼!!みんなの動物園"
+            },
+            {
+              "rank": 50,
+              "title": "孤独のグルメ Season11"
             }
           ]
         }
@@ -10456,10 +10476,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/16 15:22",
+      "updatedAt": "2026/06/16 16:23",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "4584",
+      "likes": "4597",
       "favorites": "76.0万",
       "likePoints": [
         {
@@ -11121,11 +11141,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "探偵！ナイトスクープ"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "ラヴィット！"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 49,
@@ -11229,19 +11249,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
-            },
-            {
-              "rank": 48,
               "title": "おしゃれクリップ"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "そこまで言って委員会NP"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "嗚呼!!みんなの動物園"
+            },
+            {
+              "rank": 50,
+              "title": "孤独のグルメ Season11"
             }
           ]
         }
@@ -11250,10 +11270,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/16 15:22",
+      "updatedAt": "2026/06/16 16:23",
       "episodeId": "eptfjnm7md",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！緑黄色社会登場",
-      "likes": "3068",
+      "likes": "3081",
       "favorites": "6.9万",
       "likePoints": [
         {
@@ -11887,6 +11907,10 @@
         {
           "hour": 158,
           "likes": 3068
+        },
+        {
+          "hour": 159,
+          "likes": 3081
         }
       ],
       "previousLikePoints": [
@@ -12700,11 +12724,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "探偵！ナイトスクープ"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "ラヴィット！"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 49,
@@ -12764,19 +12788,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
-            },
-            {
-              "rank": 48,
               "title": "おしゃれクリップ"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "そこまで言って委員会NP"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "嗚呼!!みんなの動物園"
+            },
+            {
+              "rank": 50,
+              "title": "孤独のグルメ Season11"
             }
           ]
         }
@@ -12785,10 +12809,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/16 15:22",
+      "updatedAt": "2026/06/16 16:23",
       "episodeId": "epqyavv4lw",
       "subtitle": "第131回 風磨が目指す憧れの男・梅沢富美男が大暴走！？",
-      "likes": "4987",
+      "likes": "4998",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -13190,6 +13214,10 @@
         {
           "hour": 110,
           "likes": 4987
+        },
+        {
+          "hour": 111,
+          "likes": 4998
         }
       ],
       "previousLikePoints": [
@@ -14260,11 +14288,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "探偵！ナイトスクープ"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "ラヴィット！"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 49,
@@ -14397,19 +14425,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
-            },
-            {
-              "rank": 48,
               "title": "おしゃれクリップ"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "そこまで言って委員会NP"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "嗚呼!!みんなの動物園"
+            },
+            {
+              "rank": 50,
+              "title": "孤独のグルメ Season11"
             }
           ]
         }
@@ -14418,10 +14446,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/13",
-      "updatedAt": "2026/06/16 15:22",
+      "updatedAt": "2026/06/16 16:23",
       "episodeId": "ep2vosbupv",
       "subtitle": "お泊りロケの家族は指名手配（秘）犯人SP後編",
-      "likes": "6743",
+      "likes": "6765",
       "favorites": "77.6万",
       "likePoints": [
         {
@@ -14687,6 +14715,10 @@
         {
           "hour": 68,
           "likes": 6743
+        },
+        {
+          "hour": 69,
+          "likes": 6765
         }
       ],
       "previousLikePoints": [
@@ -15308,11 +15340,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "探偵！ナイトスクープ"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "ラヴィット！"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 49,
@@ -15408,19 +15440,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
-            },
-            {
-              "rank": 48,
               "title": "おしゃれクリップ"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "そこまで言って委員会NP"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "嗚呼!!みんなの動物園"
+            },
+            {
+              "rank": 50,
+              "title": "孤独のグルメ Season11"
             }
           ]
         }
@@ -15429,10 +15461,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/16 15:22",
+      "updatedAt": "2026/06/16 16:23",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
-      "likes": "9465",
+      "likes": "9481",
       "favorites": "31.0万",
       "likePoints": [
         {
@@ -15982,6 +16014,10 @@
         {
           "hour": 138,
           "likes": 9465
+        },
+        {
+          "hour": 139,
+          "likes": 9481
         }
       ],
       "previousLikePoints": [
@@ -16658,9 +16694,9 @@
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 24,
-          "elapsedHour": 138,
-          "elapsedRank": 24,
+          "currentRank": 23,
+          "elapsedHour": 139,
+          "elapsedRank": 23,
           "currentPoints": [
             {
               "hour": 2,
@@ -17205,6 +17241,10 @@
             {
               "hour": 138,
               "rank": 24
+            },
+            {
+              "hour": 139,
+              "rank": 23
             }
           ],
           "previousPoints": [
@@ -17875,19 +17915,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 20,
+              "title": "サレタ側の復讐～同盟を結んだ妻たち～"
+            },
+            {
               "rank": 21,
               "title": "時光代理人"
             },
             {
               "rank": 22,
-              "title": "韓国ドラマ「テプンの花嫁～愛と復讐の羅針盤」"
-            },
-            {
-              "rank": 23,
               "title": "孤独のグルメ Season11"
             },
             {
-              "rank": 24,
+              "rank": 23,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -19009,19 +19049,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
-            },
-            {
-              "rank": 48,
               "title": "おしゃれクリップ"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "そこまで言って委員会NP"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "嗚呼!!みんなの動物園"
+            },
+            {
+              "rank": 50,
+              "title": "孤独のグルメ Season11"
             }
           ]
         }
@@ -19030,7 +19070,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/16 15:22",
+      "updatedAt": "2026/06/16 16:23",
       "episodeId": "epg027ir46",
       "subtitle": "“なぞかけ講座”",
       "likes": "1.1万",
@@ -19658,6 +19698,10 @@
         },
         {
           "hour": 156,
+          "likes": 11000
+        },
+        {
+          "hour": 157,
           "likes": 11000
         }
       ],
@@ -20677,11 +20721,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "探偵！ナイトスクープ"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "ラヴィット！"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 49,
@@ -20886,19 +20930,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
-            },
-            {
-              "rank": 48,
               "title": "おしゃれクリップ"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "そこまで言って委員会NP"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "嗚呼!!みんなの動物園"
+            },
+            {
+              "rank": 50,
+              "title": "孤独のグルメ Season11"
             }
           ]
         }
@@ -20907,10 +20951,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/16 15:22",
+      "updatedAt": "2026/06/16 16:23",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "5960",
+      "likes": "5963",
       "favorites": "1.4万",
       "likePoints": [
         {
@@ -21536,11 +21580,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ニノなのに"
+              "title": "痛快！明石家電視台"
             },
             {
               "rank": 48,
-              "title": "滝沢カレン＆和田明日香のフィーリンきっちん"
+              "title": "ニノなのに"
             },
             {
               "rank": 49,
@@ -21563,11 +21607,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "探偵！ナイトスクープ"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "ラヴィット！"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 49,
