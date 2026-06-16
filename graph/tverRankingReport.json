@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/16 20:35",
+  "updatedAt": "2026/06/16 21:25",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/16 20:35",
+      "updatedAt": "2026/06/16 21:25",
       "episodeId": "epq089zr8c",
       "subtitle": "【2本立てSP！】NEO麻辣湯＆ランク付け",
       "likes": "1.5万",
@@ -380,6 +380,10 @@
         },
         {
           "hour": 94,
+          "likes": 15000
+        },
+        {
+          "hour": 95,
           "likes": 15000
         }
       ],
@@ -1054,7 +1058,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 15,
-          "elapsedHour": 94,
+          "elapsedHour": 95,
           "elapsedRank": 15,
           "currentPoints": [
             {
@@ -1423,6 +1427,10 @@
             },
             {
               "hour": 94,
+              "rank": 15
+            },
+            {
+              "hour": 95,
               "rank": 15
             }
           ],
@@ -2091,11 +2099,11 @@
             },
             {
               "rank": 13,
-              "title": "Golden SixTONES"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 14,
-              "title": "EIGHT-JAM"
+              "title": "くりぃむナンタラ"
             },
             {
               "rank": 15,
@@ -2106,9 +2114,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 35,
-          "elapsedHour": 94,
-          "elapsedRank": 35,
+          "currentRank": 34,
+          "elapsedHour": 95,
+          "elapsedRank": 34,
           "currentPoints": [
             {
               "hour": 9,
@@ -2453,6 +2461,10 @@
             {
               "hour": 94,
               "rank": 35
+            },
+            {
+              "hour": 95,
+              "rank": 34
             }
           ],
           "previousPoints": [
@@ -2843,19 +2855,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 32,
+              "rank": 31,
               "title": "時すでにおスシ!?"
             },
             {
+              "rank": 32,
+              "title": "テレビ×ミセス"
+            },
+            {
               "rank": 33,
-              "title": "Golden SixTONES"
+              "title": "くりぃむナンタラ"
             },
             {
               "rank": 34,
-              "title": "EIGHT-JAM"
-            },
-            {
-              "rank": 35,
               "title": "タイムレスマン"
             }
           ]
@@ -2865,7 +2877,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/16 20:35",
+      "updatedAt": "2026/06/16 21:25",
       "episodeId": "ep67r77z31",
       "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
       "likes": "1.7万",
@@ -5340,19 +5352,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "YOUは何しに日本へ？"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 48,
-              "title": "ラヴィット！"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 49,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "YOUは何しに日本へ？"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "出川哲朗の充電させてもらえませんか？"
             }
           ]
         },
@@ -5889,11 +5901,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "鍵のかかった部屋"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 49,
@@ -5901,7 +5913,7 @@
             },
             {
               "rank": 50,
-              "title": "時光代理人"
+              "title": "世界まる見え！テレビ特捜部"
             }
           ]
         }
@@ -5910,7 +5922,7 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/09",
-      "updatedAt": "2026/06/16 20:35",
+      "updatedAt": "2026/06/16 21:25",
       "episodeId": "epu815zrtp",
       "subtitle": "チョコプラ・timeleszが「手作り巨大メガホンなら1km先の好きな人に告白できる？」に挑む！",
       "likes": "8872",
@@ -6566,6 +6578,10 @@
         },
         {
           "hour": 164,
+          "likes": 8872
+        },
+        {
+          "hour": 165,
           "likes": 8872
         }
       ],
@@ -7239,9 +7255,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 44,
-          "elapsedHour": 164,
-          "elapsedRank": 44,
+          "currentRank": 45,
+          "elapsedHour": 165,
+          "elapsedRank": 45,
           "currentPoints": [
             {
               "hour": 6,
@@ -7630,6 +7646,10 @@
             {
               "hour": 164,
               "rank": 44
+            },
+            {
+              "hour": 165,
+              "rank": 45
             }
           ],
           "previousPoints": [
@@ -8168,12 +8188,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 41,
-              "title": "バナナマンの早起きせっかくグルメ!!"
-            },
-            {
               "rank": 42,
-              "title": "ゴルフ侍、見参！"
+              "title": "バナナマンの早起きせっかくグルメ!!"
             },
             {
               "rank": 43,
@@ -8181,6 +8197,10 @@
             },
             {
               "rank": 44,
+              "title": "ゴルフ侍、見参！"
+            },
+            {
+              "rank": 45,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -8402,19 +8422,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "YOUは何しに日本へ？"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 48,
-              "title": "ラヴィット！"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 49,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "YOUは何しに日本へ？"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "出川哲朗の充電させてもらえませんか？"
             }
           ]
         }
@@ -8423,7 +8443,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/11",
-      "updatedAt": "2026/06/16 20:35",
+      "updatedAt": "2026/06/16 21:25",
       "episodeId": "epjy83fa3a",
       "subtitle": "【1時間SP延長戦】オカシーパラダイスからの招待状",
       "likes": "1.1万",
@@ -8975,6 +8995,10 @@
         },
         {
           "hour": 138,
+          "likes": 11000
+        },
+        {
+          "hour": 139,
           "likes": 11000
         }
       ],
@@ -10218,19 +10242,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "YOUは何しに日本へ？"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 48,
-              "title": "ラヴィット！"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 49,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "YOUは何しに日本へ？"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "出川哲朗の充電させてもらえませんか？"
             }
           ]
         },
@@ -10551,11 +10575,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "鍵のかかった部屋"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 49,
@@ -10563,7 +10587,7 @@
             },
             {
               "rank": 50,
-              "title": "時光代理人"
+              "title": "世界まる見え！テレビ特捜部"
             }
           ]
         }
@@ -10572,7 +10596,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/16 20:35",
+      "updatedAt": "2026/06/16 21:25",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
       "likes": "4704",
@@ -11237,19 +11261,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "YOUは何しに日本へ？"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 48,
-              "title": "ラヴィット！"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 49,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "YOUは何しに日本へ？"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "出川哲朗の充電させてもらえませんか？"
             }
           ]
         },
@@ -11345,11 +11369,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "鍵のかかった部屋"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 49,
@@ -11357,7 +11381,7 @@
             },
             {
               "rank": 50,
-              "title": "時光代理人"
+              "title": "世界まる見え！テレビ特捜部"
             }
           ]
         }
@@ -11366,10 +11390,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/16 20:35",
+      "updatedAt": "2026/06/16 21:25",
       "episodeId": "eptfjnm7md",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！緑黄色社会登場",
-      "likes": "3130",
+      "likes": "3129",
       "favorites": "6.9万",
       "likePoints": [
         {
@@ -12026,7 +12050,7 @@
         },
         {
           "hour": 164,
-          "likes": 3130
+          "likes": 3129
         }
       ],
       "previousLikePoints": [
@@ -12840,19 +12864,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "YOUは何しに日本へ？"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 48,
-              "title": "ラヴィット！"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 49,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "YOUは何しに日本へ？"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "出川哲朗の充電させてもらえませんか？"
             }
           ]
         },
@@ -12904,11 +12928,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "鍵のかかった部屋"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 49,
@@ -12916,7 +12940,7 @@
             },
             {
               "rank": 50,
-              "title": "時光代理人"
+              "title": "世界まる見え！テレビ特捜部"
             }
           ]
         }
@@ -12925,10 +12949,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/16 20:35",
+      "updatedAt": "2026/06/16 21:25",
       "episodeId": "epqyavv4lw",
       "subtitle": "第131回 風磨が目指す憧れの男・梅沢富美男が大暴走！？",
-      "likes": "5056",
+      "likes": "5051",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -13354,6 +13378,10 @@
         {
           "hour": 116,
           "likes": 5056
+        },
+        {
+          "hour": 117,
+          "likes": 5051
         }
       ],
       "previousLikePoints": [
@@ -14424,19 +14452,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "YOUは何しに日本へ？"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 48,
-              "title": "ラヴィット！"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 49,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "YOUは何しに日本へ？"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "出川哲朗の充電させてもらえませんか？"
             }
           ]
         },
@@ -14561,11 +14589,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "鍵のかかった部屋"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 49,
@@ -14573,7 +14601,7 @@
             },
             {
               "rank": 50,
-              "title": "時光代理人"
+              "title": "世界まる見え！テレビ特捜部"
             }
           ]
         }
@@ -14582,15 +14610,19 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/13",
-      "updatedAt": "2026/06/16 20:35",
+      "updatedAt": "2026/06/16 21:25",
       "episodeId": "epq7u4dq8k",
       "subtitle": "お泊りロケの家族は指名手配（秘）犯人SP前編",
-      "likes": "7282",
+      "likes": "7279",
       "favorites": "77.6万",
       "likePoints": [
         {
           "hour": 73,
           "likes": 7282
+        },
+        {
+          "hour": 74,
+          "likes": 7279
         }
       ],
       "previousLikePoints": [
@@ -14963,9 +14995,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 26,
-          "elapsedHour": 73,
-          "elapsedRank": 26,
+          "currentRank": 27,
+          "elapsedHour": 74,
+          "elapsedRank": 27,
           "currentPoints": [
             {
               "hour": 4,
@@ -15246,6 +15278,10 @@
             {
               "hour": 73,
               "rank": 26
+            },
+            {
+              "hour": 74,
+              "rank": 27
             }
           ],
           "previousPoints": [
@@ -15492,10 +15528,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 23,
-              "title": "テレビ千鳥"
-            },
-            {
               "rank": 24,
               "title": "マツコ＆有吉 かりそめ天国"
             },
@@ -15505,6 +15537,10 @@
             },
             {
               "rank": 26,
+              "title": "ロンドンハーツ"
+            },
+            {
+              "rank": 27,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -15513,7 +15549,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 49,
-          "elapsedHour": 73,
+          "elapsedHour": 74,
           "elapsedRank": 49,
           "currentPoints": [
             {
@@ -15763,6 +15799,10 @@
             {
               "hour": 73,
               "rank": 49
+            },
+            {
+              "hour": 74,
+              "rank": 49
             }
           ],
           "previousPoints": [
@@ -15846,11 +15886,11 @@
             },
             {
               "rank": 47,
-              "title": "鍵のかかった部屋"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 49,
@@ -15863,10 +15903,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/16 20:35",
+      "updatedAt": "2026/06/16 21:25",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
-      "likes": "9572",
+      "likes": "9566",
       "favorites": "30.9万",
       "likePoints": [
         {
@@ -16436,6 +16476,10 @@
         {
           "hour": 143,
           "likes": 9572
+        },
+        {
+          "hour": 144,
+          "likes": 9566
         }
       ],
       "previousLikePoints": [
@@ -17112,9 +17156,9 @@
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 23,
-          "elapsedHour": 143,
-          "elapsedRank": 23,
+          "currentRank": 22,
+          "elapsedHour": 144,
+          "elapsedRank": 22,
           "currentPoints": [
             {
               "hour": 2,
@@ -17679,6 +17723,10 @@
             {
               "hour": 143,
               "rank": 23
+            },
+            {
+              "hour": 144,
+              "rank": 22
             }
           ],
           "previousPoints": [
@@ -18349,19 +18397,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 20,
+              "rank": 19,
               "title": "サレタ側の復讐～同盟を結んだ妻たち～"
             },
             {
-              "rank": 21,
+              "rank": 20,
               "title": "鍵のかかった部屋"
             },
             {
-              "rank": 22,
+              "rank": 21,
               "title": "時光代理人"
             },
             {
-              "rank": 23,
+              "rank": 22,
               "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
@@ -19487,11 +19535,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "鍵のかかった部屋"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 49,
@@ -19499,7 +19547,7 @@
             },
             {
               "rank": 50,
-              "title": "時光代理人"
+              "title": "世界まる見え！テレビ特捜部"
             }
           ]
         }
@@ -19508,7 +19556,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/16 20:35",
+      "updatedAt": "2026/06/16 21:25",
       "episodeId": "epg027ir46",
       "subtitle": "“なぞかけ講座”",
       "likes": "1.1万",
@@ -20156,6 +20204,10 @@
         },
         {
           "hour": 161,
+          "likes": 11000
+        },
+        {
+          "hour": 162,
           "likes": 11000
         }
       ],
@@ -21175,19 +21227,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "YOUは何しに日本へ？"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 48,
-              "title": "ラヴィット！"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 49,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "YOUは何しに日本へ？"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "出川哲朗の充電させてもらえませんか？"
             }
           ]
         },
@@ -21384,11 +21436,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "鍵のかかった部屋"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 49,
@@ -21396,7 +21448,7 @@
             },
             {
               "rank": 50,
-              "title": "時光代理人"
+              "title": "世界まる見え！テレビ特捜部"
             }
           ]
         }
@@ -21405,10 +21457,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/16 20:35",
+      "updatedAt": "2026/06/16 21:25",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "5979",
+      "likes": "5971",
       "favorites": "1.4万",
       "likePoints": [
         {
@@ -22034,19 +22086,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "痛快！明石家電視台"
+              "title": "鶴瓶ちゃんとサワコちゃん～昭和の大先輩とおかしな２人～"
             },
             {
               "rank": 48,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "開運！なんでも鑑定団"
             },
             {
               "rank": 49,
-              "title": "草彅やすともの うさぎとかめ"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 50,
-              "title": "鶴瓶ちゃんとサワコちゃん～昭和の大先輩とおかしな２人～"
+              "title": "草彅やすともの うさぎとかめ"
             }
           ]
         },
@@ -22061,19 +22113,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "YOUは何しに日本へ？"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 48,
-              "title": "ラヴィット！"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 49,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "YOUは何しに日本へ？"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "出川哲朗の充電させてもらえませんか？"
             }
           ]
         }
@@ -22081,13 +22133,22 @@
     },
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
-      "broadcastDate": "",
-      "updatedAt": "2026/06/16 20:35",
+      "broadcastDate": "2026/06/16",
+      "updatedAt": "2026/06/16 21:25",
       "episodeId": "ephdx5d5p3",
       "subtitle": "本木雅弘VS偽絵＆MC松尾×timelesz原！神業ダンス",
-      "likes": "494",
+      "likes": "128",
       "favorites": "12.0万",
-      "likePoints": [],
+      "likePoints": [
+        {
+          "hour": 1,
+          "likes": 494
+        },
+        {
+          "hour": 2,
+          "likes": 128
+        }
+      ],
       "previousLikePoints": [],
       "rankings": [
         {
@@ -22101,19 +22162,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "YOUは何しに日本へ？"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 48,
-              "title": "ラヴィット！"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 49,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "YOUは何しに日本へ？"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "出川哲朗の充電させてもらえませんか？"
             }
           ]
         },
@@ -22128,11 +22189,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "鍵のかかった部屋"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 49,
@@ -22140,7 +22201,7 @@
             },
             {
               "rank": 50,
-              "title": "時光代理人"
+              "title": "世界まる見え！テレビ特捜部"
             }
           ]
         }
