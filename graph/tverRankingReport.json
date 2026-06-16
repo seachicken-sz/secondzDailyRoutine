@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/16 16:23",
+  "updatedAt": "2026/06/16 17:22",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/16 16:23",
+      "updatedAt": "2026/06/16 17:22",
       "episodeId": "epq089zr8c",
       "subtitle": "【2本立てSP！】NEO麻辣湯＆ランク付け",
       "likes": "1.5万",
@@ -364,6 +364,10 @@
         },
         {
           "hour": 90,
+          "likes": 15000
+        },
+        {
+          "hour": 91,
           "likes": 15000
         }
       ],
@@ -1038,7 +1042,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 13,
-          "elapsedHour": 90,
+          "elapsedHour": 91,
           "elapsedRank": 13,
           "currentPoints": [
             {
@@ -1391,6 +1395,10 @@
             },
             {
               "hour": 90,
+              "rank": 13
+            },
+            {
+              "hour": 91,
               "rank": 13
             }
           ],
@@ -2055,15 +2063,15 @@
           "nearbyRanking": [
             {
               "rank": 10,
-              "title": "EIGHT-JAM"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 11,
-              "title": "Golden SixTONES"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 12,
-              "title": "有吉ゼミ"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 13,
@@ -2075,7 +2083,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 33,
-          "elapsedHour": 90,
+          "elapsedHour": 91,
           "elapsedRank": 33,
           "currentPoints": [
             {
@@ -2404,6 +2412,10 @@
             },
             {
               "hour": 90,
+              "rank": 33
+            },
+            {
+              "hour": 91,
               "rank": 33
             }
           ],
@@ -2817,7 +2829,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/16 16:23",
+      "updatedAt": "2026/06/16 17:22",
       "episodeId": "ep67r77z31",
       "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
       "likes": "1.7万",
@@ -5292,7 +5304,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 48,
@@ -5304,7 +5316,7 @@
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "あのちゃんねる"
             }
           ]
         },
@@ -5849,11 +5861,11 @@
             },
             {
               "rank": 49,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "孤独のグルメ Season11"
             },
             {
               "rank": 50,
-              "title": "孤独のグルメ Season11"
+              "title": "※女性は見ないでください"
             }
           ]
         }
@@ -5862,10 +5874,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/09",
-      "updatedAt": "2026/06/16 16:23",
+      "updatedAt": "2026/06/16 17:22",
       "episodeId": "epu815zrtp",
       "subtitle": "チョコプラ・timeleszが「手作り巨大メガホンなら1km先の好きな人に告白できる？」に挑む！",
-      "likes": "8832",
+      "likes": "8843",
       "favorites": "5.1万",
       "likePoints": [
         {
@@ -6503,6 +6515,10 @@
         {
           "hour": 160,
           "likes": 8832
+        },
+        {
+          "hour": 161,
+          "likes": 8843
         }
       ],
       "previousLikePoints": [
@@ -7175,9 +7191,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
+          "currentRank": 50,
+          "elapsedHour": 161,
+          "elapsedRank": 50,
           "currentPoints": [
             {
               "hour": 6,
@@ -7549,6 +7565,10 @@
             },
             {
               "hour": 159,
+              "rank": 50
+            },
+            {
+              "hour": 161,
               "rank": 50
             }
           ],
@@ -8089,7 +8109,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "やすとも・友近のキメツケ！あくまで個人の感想です"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 48,
@@ -8097,11 +8117,11 @@
             },
             {
               "rank": 49,
-              "title": "かまいたちの机上の空論城"
+              "title": "エンターティーチャー 限界弟子入り中！"
             },
             {
               "rank": 50,
-              "title": "エンターティーチャー 限界弟子入り中！"
+              "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
         },
@@ -8322,7 +8342,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 48,
@@ -8334,7 +8354,7 @@
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "あのちゃんねる"
             }
           ]
         }
@@ -8343,7 +8363,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/11",
-      "updatedAt": "2026/06/16 16:23",
+      "updatedAt": "2026/06/16 17:22",
       "episodeId": "epjy83fa3a",
       "subtitle": "【1時間SP延長戦】オカシーパラダイスからの招待状",
       "likes": "1.1万",
@@ -8879,6 +8899,10 @@
         },
         {
           "hour": 134,
+          "likes": 11000
+        },
+        {
+          "hour": 135,
           "likes": 11000
         }
       ],
@@ -10122,7 +10146,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 48,
@@ -10134,7 +10158,7 @@
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "あのちゃんねる"
             }
           ]
         },
@@ -10463,11 +10487,11 @@
             },
             {
               "rank": 49,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "孤独のグルメ Season11"
             },
             {
               "rank": 50,
-              "title": "孤独のグルメ Season11"
+              "title": "※女性は見ないでください"
             }
           ]
         }
@@ -10476,10 +10500,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/05/26",
-      "updatedAt": "2026/06/16 16:23",
+      "updatedAt": "2026/06/16 17:22",
       "episodeId": "ep8fvsqzvy",
       "subtitle": "宝くじ3億当せん月給27万円会社員!幸せ?不幸?衝撃人生の結末",
-      "likes": "4597",
+      "likes": "4616",
       "favorites": "76.0万",
       "likePoints": [
         {
@@ -11141,7 +11165,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 48,
@@ -11153,7 +11177,7 @@
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "あのちゃんねる"
             }
           ]
         },
@@ -11257,11 +11281,11 @@
             },
             {
               "rank": 49,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "孤独のグルメ Season11"
             },
             {
               "rank": 50,
-              "title": "孤独のグルメ Season11"
+              "title": "※女性は見ないでください"
             }
           ]
         }
@@ -11270,10 +11294,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/16 16:23",
+      "updatedAt": "2026/06/16 17:22",
       "episodeId": "eptfjnm7md",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！緑黄色社会登場",
-      "likes": "3081",
+      "likes": "3091",
       "favorites": "6.9万",
       "likePoints": [
         {
@@ -11911,6 +11935,10 @@
         {
           "hour": 159,
           "likes": 3081
+        },
+        {
+          "hour": 160,
+          "likes": 3091
         }
       ],
       "previousLikePoints": [
@@ -12724,7 +12752,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 48,
@@ -12736,7 +12764,7 @@
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "あのちゃんねる"
             }
           ]
         },
@@ -12796,11 +12824,11 @@
             },
             {
               "rank": 49,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "孤独のグルメ Season11"
             },
             {
               "rank": 50,
-              "title": "孤独のグルメ Season11"
+              "title": "※女性は見ないでください"
             }
           ]
         }
@@ -12809,10 +12837,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/16 16:23",
+      "updatedAt": "2026/06/16 17:22",
       "episodeId": "epqyavv4lw",
       "subtitle": "第131回 風磨が目指す憧れの男・梅沢富美男が大暴走！？",
-      "likes": "4998",
+      "likes": "5014",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -13218,6 +13246,10 @@
         {
           "hour": 111,
           "likes": 4998
+        },
+        {
+          "hour": 112,
+          "likes": 5014
         }
       ],
       "previousLikePoints": [
@@ -14288,7 +14320,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 48,
@@ -14300,7 +14332,7 @@
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "あのちゃんねる"
             }
           ]
         },
@@ -14433,11 +14465,11 @@
             },
             {
               "rank": 49,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "孤独のグルメ Season11"
             },
             {
               "rank": 50,
-              "title": "孤独のグルメ Season11"
+              "title": "※女性は見ないでください"
             }
           ]
         }
@@ -14446,10 +14478,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/13",
-      "updatedAt": "2026/06/16 16:23",
+      "updatedAt": "2026/06/16 17:22",
       "episodeId": "ep2vosbupv",
       "subtitle": "お泊りロケの家族は指名手配（秘）犯人SP後編",
-      "likes": "6765",
+      "likes": "6801",
       "favorites": "77.6万",
       "likePoints": [
         {
@@ -14719,6 +14751,10 @@
         {
           "hour": 69,
           "likes": 6765
+        },
+        {
+          "hour": 70,
+          "likes": 6801
         }
       ],
       "previousLikePoints": [
@@ -15340,7 +15376,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 48,
@@ -15352,7 +15388,7 @@
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "あのちゃんねる"
             }
           ]
         },
@@ -15448,11 +15484,11 @@
             },
             {
               "rank": 49,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "孤独のグルメ Season11"
             },
             {
               "rank": 50,
-              "title": "孤独のグルメ Season11"
+              "title": "※女性は見ないでください"
             }
           ]
         }
@@ -15461,10 +15497,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/16 16:23",
+      "updatedAt": "2026/06/16 17:22",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
-      "likes": "9481",
+      "likes": "9501",
       "favorites": "31.0万",
       "likePoints": [
         {
@@ -16018,6 +16054,10 @@
         {
           "hour": 139,
           "likes": 9481
+        },
+        {
+          "hour": 140,
+          "likes": 9501
         }
       ],
       "previousLikePoints": [
@@ -16695,7 +16735,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 23,
-          "elapsedHour": 139,
+          "elapsedHour": 140,
           "elapsedRank": 23,
           "currentPoints": [
             {
@@ -17244,6 +17284,10 @@
             },
             {
               "hour": 139,
+              "rank": 23
+            },
+            {
+              "hour": 140,
               "rank": 23
             }
           ],
@@ -19057,11 +19101,11 @@
             },
             {
               "rank": 49,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "孤独のグルメ Season11"
             },
             {
               "rank": 50,
-              "title": "孤独のグルメ Season11"
+              "title": "※女性は見ないでください"
             }
           ]
         }
@@ -19070,7 +19114,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/16 16:23",
+      "updatedAt": "2026/06/16 17:22",
       "episodeId": "epg027ir46",
       "subtitle": "“なぞかけ講座”",
       "likes": "1.1万",
@@ -19702,6 +19746,10 @@
         },
         {
           "hour": 157,
+          "likes": 11000
+        },
+        {
+          "hour": 158,
           "likes": 11000
         }
       ],
@@ -20721,7 +20769,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 48,
@@ -20733,7 +20781,7 @@
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "あのちゃんねる"
             }
           ]
         },
@@ -20938,11 +20986,11 @@
             },
             {
               "rank": 49,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "孤独のグルメ Season11"
             },
             {
               "rank": 50,
-              "title": "孤独のグルメ Season11"
+              "title": "※女性は見ないでください"
             }
           ]
         }
@@ -20951,10 +20999,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/16 16:23",
+      "updatedAt": "2026/06/16 17:22",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "5963",
+      "likes": "5965",
       "favorites": "1.4万",
       "likePoints": [
         {
@@ -21607,7 +21655,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 48,
@@ -21619,7 +21667,7 @@
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "あのちゃんねる"
             }
           ]
         }
