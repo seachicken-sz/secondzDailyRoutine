@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/16 23:25",
+  "updatedAt": "2026/06/17 00:25",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/16 23:25",
+      "updatedAt": "2026/06/17 00:25",
       "episodeId": "epq089zr8c",
       "subtitle": "【2本立てSP！】NEO麻辣湯＆ランク付け",
       "likes": "1.6万",
@@ -392,6 +392,10 @@
         },
         {
           "hour": 97,
+          "likes": 16000
+        },
+        {
+          "hour": 98,
           "likes": 16000
         }
       ],
@@ -1066,7 +1070,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 16,
-          "elapsedHour": 97,
+          "elapsedHour": 98,
           "elapsedRank": 16,
           "currentPoints": [
             {
@@ -1447,6 +1451,10 @@
             },
             {
               "hour": 97,
+              "rank": 16
+            },
+            {
+              "hour": 98,
               "rank": 16
             }
           ],
@@ -2111,15 +2119,15 @@
           "nearbyRanking": [
             {
               "rank": 13,
-              "title": "くりぃむナンタラ"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 14,
-              "title": "アーティスト別モノマネ頂上決戦 俺にアイツを歌わせたら右に出るものはいない"
+              "title": "※女性は見ないでください"
             },
             {
               "rank": 15,
-              "title": "※女性は見ないでください"
+              "title": "アーティスト別モノマネ頂上決戦 俺にアイツを歌わせたら右に出るものはいない"
             },
             {
               "rank": 16,
@@ -2130,9 +2138,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 38,
-          "elapsedHour": 97,
-          "elapsedRank": 38,
+          "currentRank": 39,
+          "elapsedHour": 98,
+          "elapsedRank": 39,
           "currentPoints": [
             {
               "hour": 9,
@@ -2489,6 +2497,10 @@
             {
               "hour": 97,
               "rank": 38
+            },
+            {
+              "hour": 98,
+              "rank": 39
             }
           ],
           "previousPoints": [
@@ -2879,19 +2891,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 35,
-              "title": "未解決の女 警視庁文書捜査官 Season３"
-            },
-            {
               "rank": 36,
               "title": "サレタ側の復讐～同盟を結んだ妻たち～"
             },
             {
               "rank": 37,
-              "title": "リボーン ～最後のヒーロー～"
+              "title": "鍵のかかった部屋"
             },
             {
               "rank": 38,
+              "title": "リボーン ～最後のヒーロー～"
+            },
+            {
+              "rank": 39,
               "title": "タイムレスマン"
             }
           ]
@@ -2901,7 +2913,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/16 23:25",
+      "updatedAt": "2026/06/17 00:25",
       "episodeId": "ep67r77z31",
       "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
       "likes": "1.7万",
@@ -5376,11 +5388,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "ぽかぽか"
             },
             {
               "rank": 48,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 49,
@@ -5388,7 +5400,7 @@
             },
             {
               "rank": 50,
-              "title": "探偵！ナイトスクープ"
+              "title": "真剣遊戯！THE バトル SHOW"
             }
           ]
         },
@@ -5925,19 +5937,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ロンドンハーツ"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
-            },
-            {
-              "rank": 49,
               "title": "ゴッドタン"
             },
             {
-              "rank": 50,
-              "title": "あのちゃんねる"
+              "rank": 49,
+              "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
         }
@@ -5946,10 +5954,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/09",
-      "updatedAt": "2026/06/16 23:25",
+      "updatedAt": "2026/06/17 00:25",
       "episodeId": "epu815zrtp",
       "subtitle": "チョコプラ・timeleszが「手作り巨大メガホンなら1km先の好きな人に告白できる？」に挑む！",
-      "likes": "8924",
+      "likes": "8931",
       "favorites": "5.1万",
       "likePoints": [
         {
@@ -6615,6 +6623,10 @@
         {
           "hour": 167,
           "likes": 8924
+        },
+        {
+          "hour": 168,
+          "likes": 8931
         }
       ],
       "previousLikePoints": [
@@ -7287,9 +7299,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 46,
-          "elapsedHour": 167,
-          "elapsedRank": 46,
+          "currentRank": 45,
+          "elapsedHour": 168,
+          "elapsedRank": 45,
           "currentPoints": [
             {
               "hour": 6,
@@ -7690,6 +7702,10 @@
             {
               "hour": 167,
               "rank": 46
+            },
+            {
+              "hour": 168,
+              "rank": 45
             }
           ],
           "previousPoints": [
@@ -8228,8 +8244,12 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 42,
+              "title": "バナナマンの早起きせっかくグルメ!!"
+            },
+            {
               "rank": 43,
-              "title": "ちゃちゃ入れマンデー"
+              "title": "ナンデモ特命係 発見らくちゃく！"
             },
             {
               "rank": 44,
@@ -8237,10 +8257,6 @@
             },
             {
               "rank": 45,
-              "title": "かまいたちの机上の空論城"
-            },
-            {
-              "rank": 46,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -8462,11 +8478,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "ぽかぽか"
             },
             {
               "rank": 48,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 49,
@@ -8474,7 +8490,7 @@
             },
             {
               "rank": 50,
-              "title": "探偵！ナイトスクープ"
+              "title": "真剣遊戯！THE バトル SHOW"
             }
           ]
         }
@@ -8483,7 +8499,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/11",
-      "updatedAt": "2026/06/16 23:25",
+      "updatedAt": "2026/06/17 00:25",
       "episodeId": "epjy83fa3a",
       "subtitle": "【1時間SP延長戦】オカシーパラダイスからの招待状",
       "likes": "1.1万",
@@ -9047,6 +9063,10 @@
         },
         {
           "hour": 141,
+          "likes": 11000
+        },
+        {
+          "hour": 142,
           "likes": 11000
         }
       ],
@@ -10290,11 +10310,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "ぽかぽか"
             },
             {
               "rank": 48,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 49,
@@ -10302,7 +10322,7 @@
             },
             {
               "rank": 50,
-              "title": "探偵！ナイトスクープ"
+              "title": "真剣遊戯！THE バトル SHOW"
             }
           ]
         },
@@ -10623,19 +10643,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ロンドンハーツ"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
-            },
-            {
-              "rank": 49,
               "title": "ゴッドタン"
             },
             {
-              "rank": 50,
-              "title": "あのちゃんねる"
+              "rank": 49,
+              "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
         }
@@ -10644,15 +10660,19 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/06/16 23:25",
+      "updatedAt": "2026/06/17 00:25",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
-      "likes": "61",
+      "likes": "240",
       "favorites": "76.1万",
       "likePoints": [
         {
           "hour": 2,
           "likes": 61
+        },
+        {
+          "hour": 3,
+          "likes": 240
         }
       ],
       "previousLikePoints": [
@@ -11314,11 +11334,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "ぽかぽか"
             },
             {
               "rank": 48,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 49,
@@ -11326,7 +11346,7 @@
             },
             {
               "rank": 50,
-              "title": "探偵！ナイトスクープ"
+              "title": "真剣遊戯！THE バトル SHOW"
             }
           ]
         },
@@ -11422,19 +11442,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ロンドンハーツ"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
-            },
-            {
-              "rank": 49,
               "title": "ゴッドタン"
             },
             {
-              "rank": 50,
-              "title": "あのちゃんねる"
+              "rank": 49,
+              "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
         }
@@ -11443,10 +11459,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/16 23:25",
+      "updatedAt": "2026/06/17 00:25",
       "episodeId": "eptfjnm7md",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！緑黄色社会登場",
-      "likes": "3190",
+      "likes": "3242",
       "favorites": "6.9万",
       "likePoints": [
         {
@@ -12112,6 +12128,10 @@
         {
           "hour": 166,
           "likes": 3190
+        },
+        {
+          "hour": 167,
+          "likes": 3242
         }
       ],
       "previousLikePoints": [
@@ -12925,11 +12945,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "ぽかぽか"
             },
             {
               "rank": 48,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 49,
@@ -12937,7 +12957,7 @@
             },
             {
               "rank": 50,
-              "title": "探偵！ナイトスクープ"
+              "title": "真剣遊戯！THE バトル SHOW"
             }
           ]
         },
@@ -12989,19 +13009,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ロンドンハーツ"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
-            },
-            {
-              "rank": 49,
               "title": "ゴッドタン"
             },
             {
-              "rank": 50,
-              "title": "あのちゃんねる"
+              "rank": 49,
+              "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
         }
@@ -13010,10 +13026,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/16 23:25",
+      "updatedAt": "2026/06/17 00:25",
       "episodeId": "epqyavv4lw",
       "subtitle": "第131回 風磨が目指す憧れの男・梅沢富美男が大暴走！？",
-      "likes": "5105",
+      "likes": "5120",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -13447,6 +13463,10 @@
         {
           "hour": 118,
           "likes": 5105
+        },
+        {
+          "hour": 119,
+          "likes": 5120
         }
       ],
       "previousLikePoints": [
@@ -14517,11 +14537,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "ぽかぽか"
             },
             {
               "rank": 48,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 49,
@@ -14529,7 +14549,7 @@
             },
             {
               "rank": 50,
-              "title": "探偵！ナイトスクープ"
+              "title": "真剣遊戯！THE バトル SHOW"
             }
           ]
         },
@@ -14654,19 +14674,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ロンドンハーツ"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
-            },
-            {
-              "rank": 49,
               "title": "ゴッドタン"
             },
             {
-              "rank": 50,
-              "title": "あのちゃんねる"
+              "rank": 49,
+              "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
         }
@@ -14675,10 +14691,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/13",
-      "updatedAt": "2026/06/16 23:25",
+      "updatedAt": "2026/06/17 00:25",
       "episodeId": "epq7u4dq8k",
       "subtitle": "お泊りロケの家族は指名手配（秘）犯人SP前編",
-      "likes": "7384",
+      "likes": "7407",
       "favorites": "77.6万",
       "likePoints": [
         {
@@ -14696,6 +14712,10 @@
         {
           "hour": 76,
           "likes": 7384
+        },
+        {
+          "hour": 77,
+          "likes": 7407
         }
       ],
       "previousLikePoints": [
@@ -15068,9 +15088,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 28,
-          "elapsedHour": 76,
-          "elapsedRank": 28,
+          "currentRank": 27,
+          "elapsedHour": 77,
+          "elapsedRank": 27,
           "currentPoints": [
             {
               "hour": 4,
@@ -15363,6 +15383,10 @@
             {
               "hour": 76,
               "rank": 28
+            },
+            {
+              "hour": 77,
+              "rank": 27
             }
           ],
           "previousPoints": [
@@ -15609,19 +15633,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 25,
-              "title": "相席食堂"
+              "rank": 24,
+              "title": "有吉クイズ"
             },
             {
-              "rank": 26,
+              "rank": 25,
               "title": "ゴッドタン"
             },
             {
-              "rank": 27,
-              "title": "あのちゃんねる"
+              "rank": 26,
+              "title": "夫が寝たあとに"
             },
             {
-              "rank": 28,
+              "rank": 27,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -15967,19 +15991,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ロンドンハーツ"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
-            },
-            {
-              "rank": 49,
               "title": "ゴッドタン"
             },
             {
-              "rank": 50,
-              "title": "あのちゃんねる"
+              "rank": 49,
+              "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
         }
@@ -15988,10 +16008,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/16 23:25",
+      "updatedAt": "2026/06/17 00:25",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
-      "likes": "9648",
+      "likes": "9660",
       "favorites": "30.8万",
       "likePoints": [
         {
@@ -16573,6 +16593,10 @@
         {
           "hour": 146,
           "likes": 9648
+        },
+        {
+          "hour": 147,
+          "likes": 9660
         }
       ],
       "previousLikePoints": [
@@ -17250,7 +17274,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 22,
-          "elapsedHour": 146,
+          "elapsedHour": 147,
           "elapsedRank": 22,
           "currentPoints": [
             {
@@ -17827,6 +17851,10 @@
             },
             {
               "hour": 146,
+              "rank": 22
+            },
+            {
+              "hour": 147,
               "rank": 22
             }
           ],
@@ -18503,11 +18531,11 @@
             },
             {
               "rank": 20,
-              "title": "リボーン ～最後のヒーロー～"
+              "title": "鍵のかかった部屋"
             },
             {
               "rank": 21,
-              "title": "鍵のかかった部屋"
+              "title": "リボーン ～最後のヒーロー～"
             },
             {
               "rank": 22,
@@ -18518,9 +18546,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
+          "currentRank": 49,
+          "elapsedHour": 147,
+          "elapsedRank": 49,
           "currentPoints": [
             {
               "hour": 2,
@@ -18973,6 +19001,10 @@
             {
               "hour": 145,
               "rank": 50
+            },
+            {
+              "hour": 147,
+              "rank": 49
             }
           ],
           "previousPoints": [
@@ -19639,20 +19671,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
+              "rank": 46,
               "title": "ロンドンハーツ"
             },
             {
-              "rank": 48,
-              "title": "相席食堂"
+              "rank": 47,
+              "title": "有吉クイズ"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "ゴッドタン"
             },
             {
-              "rank": 50,
-              "title": "あのちゃんねる"
+              "rank": 49,
+              "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
         }
@@ -19661,7 +19693,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/16 23:25",
+      "updatedAt": "2026/06/17 00:25",
       "episodeId": "epg027ir46",
       "subtitle": "“なぞかけ講座”",
       "likes": "1.1万",
@@ -20321,6 +20353,10 @@
         },
         {
           "hour": 164,
+          "likes": 11000
+        },
+        {
+          "hour": 165,
           "likes": 11000
         }
       ],
@@ -21340,11 +21376,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "ぽかぽか"
             },
             {
               "rank": 48,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 49,
@@ -21352,7 +21388,7 @@
             },
             {
               "rank": 50,
-              "title": "探偵！ナイトスクープ"
+              "title": "真剣遊戯！THE バトル SHOW"
             }
           ]
         },
@@ -21549,19 +21585,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ロンドンハーツ"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
-            },
-            {
-              "rank": 49,
               "title": "ゴッドタン"
             },
             {
-              "rank": 50,
-              "title": "あのちゃんねる"
+              "rank": 49,
+              "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
         }
@@ -21570,10 +21602,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/16 23:25",
+      "updatedAt": "2026/06/17 00:25",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
-      "likes": "6000",
+      "likes": "6009",
       "favorites": "1.5万",
       "likePoints": [
         {
@@ -22199,19 +22231,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "開運！なんでも鑑定団"
+              "title": "ミキティダイニング"
             },
             {
               "rank": 48,
-              "title": "痛快！明石家電視台"
-            },
-            {
-              "rank": 49,
               "title": "５時に夢中！"
             },
             {
+              "rank": 49,
+              "title": "超調査チューズデイ～気になる答え今夜出します～"
+            },
+            {
               "rank": 50,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "痛快！明石家電視台"
             }
           ]
         },
@@ -22226,11 +22258,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "ぽかぽか"
             },
             {
               "rank": 48,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 49,
@@ -22238,7 +22270,7 @@
             },
             {
               "rank": 50,
-              "title": "探偵！ナイトスクープ"
+              "title": "真剣遊戯！THE バトル SHOW"
             }
           ]
         }
@@ -22247,10 +22279,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/06/16 23:25",
+      "updatedAt": "2026/06/17 00:25",
       "episodeId": "ephdx5d5p3",
       "subtitle": "本木雅弘VS偽絵＆MC松尾×timelesz原！神業ダンス",
-      "likes": "1803",
+      "likes": "2098",
       "favorites": "12.0万",
       "likePoints": [
         {
@@ -22268,6 +22300,10 @@
         {
           "hour": 4,
           "likes": 1803
+        },
+        {
+          "hour": 5,
+          "likes": 2098
         }
       ],
       "previousLikePoints": [],
@@ -22283,11 +22319,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "ぽかぽか"
             },
             {
               "rank": 48,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 49,
@@ -22295,7 +22331,7 @@
             },
             {
               "rank": 50,
-              "title": "探偵！ナイトスクープ"
+              "title": "真剣遊戯！THE バトル SHOW"
             }
           ]
         },
@@ -22310,19 +22346,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ロンドンハーツ"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
-            },
-            {
-              "rank": 49,
               "title": "ゴッドタン"
             },
             {
-              "rank": 50,
-              "title": "あのちゃんねる"
+              "rank": 49,
+              "title": "ボーダレス～広域移動捜査隊～"
             }
           ]
         }
