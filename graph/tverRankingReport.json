@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/17 01:24",
+  "updatedAt": "2026/06/17 02:23",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/17 01:24",
+      "updatedAt": "2026/06/17 02:23",
       "episodeId": "epq089zr8c",
       "subtitle": "【2本立てSP！】NEO麻辣湯＆ランク付け",
       "likes": "1.6万",
@@ -400,6 +400,10 @@
         },
         {
           "hour": 99,
+          "likes": 16000
+        },
+        {
+          "hour": 100,
           "likes": 16000
         }
       ],
@@ -1074,7 +1078,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 16,
-          "elapsedHour": 99,
+          "elapsedHour": 100,
           "elapsedRank": 16,
           "currentPoints": [
             {
@@ -1463,6 +1467,10 @@
             },
             {
               "hour": 99,
+              "rank": 16
+            },
+            {
+              "hour": 100,
               "rank": 16
             }
           ],
@@ -2147,7 +2155,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 39,
-          "elapsedHour": 99,
+          "elapsedHour": 100,
           "elapsedRank": 39,
           "currentPoints": [
             {
@@ -2512,6 +2520,10 @@
             },
             {
               "hour": 99,
+              "rank": 39
+            },
+            {
+              "hour": 100,
               "rank": 39
             }
           ],
@@ -2908,11 +2920,11 @@
             },
             {
               "rank": 37,
-              "title": "鍵のかかった部屋"
+              "title": "リボーン ～最後のヒーロー～"
             },
             {
               "rank": 38,
-              "title": "リボーン ～最後のヒーロー～"
+              "title": "鍵のかかった部屋"
             },
             {
               "rank": 39,
@@ -2925,7 +2937,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/17 01:24",
+      "updatedAt": "2026/06/17 02:23",
       "episodeId": "ep67r77z31",
       "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
       "likes": "1.7万",
@@ -5404,15 +5416,15 @@
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
-            },
-            {
-              "rank": 49,
               "title": "YOUは何しに日本へ？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "真剣遊戯！THE バトル SHOW"
+            },
+            {
+              "rank": 50,
+              "title": "やすとものどこいこ！？"
             }
           ]
         },
@@ -5970,10 +5982,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/09",
-      "updatedAt": "2026/06/17 01:24",
+      "updatedAt": "2026/06/17 02:23",
       "episodeId": "epu815zrtp",
       "subtitle": "チョコプラ・timeleszが「手作り巨大メガホンなら1km先の好きな人に告白できる？」に挑む！",
-      "likes": "8942",
+      "likes": "8945",
       "favorites": "5.1万",
       "likePoints": [
         {
@@ -6647,6 +6659,10 @@
         {
           "hour": 169,
           "likes": 8942
+        },
+        {
+          "hour": 170,
+          "likes": 8945
         }
       ],
       "previousLikePoints": [
@@ -7319,9 +7335,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 46,
-          "elapsedHour": 169,
-          "elapsedRank": 46,
+          "currentRank": 48,
+          "elapsedHour": 170,
+          "elapsedRank": 48,
           "currentPoints": [
             {
               "hour": 6,
@@ -7730,6 +7746,10 @@
             {
               "hour": 169,
               "rank": 46
+            },
+            {
+              "hour": 170,
+              "rank": 48
             }
           ],
           "previousPoints": [
@@ -8268,19 +8288,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 43,
-              "title": "黄金のワンスプーン！"
-            },
-            {
-              "rank": 44,
+              "rank": 45,
               "title": "ナンデモ特命係 発見らくちゃく！"
             },
             {
-              "rank": 45,
+              "rank": 46,
               "title": "ゴルフ侍、見参！"
             },
             {
-              "rank": 46,
+              "rank": 47,
+              "title": "かまいたちの机上の空論城"
+            },
+            {
+              "rank": 48,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -8506,15 +8526,15 @@
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
-            },
-            {
-              "rank": 49,
               "title": "YOUは何しに日本へ？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "真剣遊戯！THE バトル SHOW"
+            },
+            {
+              "rank": 50,
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
@@ -8523,7 +8543,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/11",
-      "updatedAt": "2026/06/17 01:24",
+      "updatedAt": "2026/06/17 02:23",
       "episodeId": "epjy83fa3a",
       "subtitle": "【1時間SP延長戦】オカシーパラダイスからの招待状",
       "likes": "1.1万",
@@ -9095,6 +9115,10 @@
         },
         {
           "hour": 143,
+          "likes": 11000
+        },
+        {
+          "hour": 144,
           "likes": 11000
         }
       ],
@@ -10342,15 +10366,15 @@
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
-            },
-            {
-              "rank": 49,
               "title": "YOUは何しに日本へ？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "真剣遊戯！THE バトル SHOW"
+            },
+            {
+              "rank": 50,
+              "title": "やすとものどこいこ！？"
             }
           ]
         },
@@ -10692,10 +10716,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/06/17 01:24",
+      "updatedAt": "2026/06/17 02:23",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
-      "likes": "404",
+      "likes": "471",
       "favorites": "76.1万",
       "likePoints": [
         {
@@ -10709,6 +10733,10 @@
         {
           "hour": 4,
           "likes": 404
+        },
+        {
+          "hour": 5,
+          "likes": 471
         }
       ],
       "previousLikePoints": [
@@ -11374,15 +11402,15 @@
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
-            },
-            {
-              "rank": 49,
               "title": "YOUは何しに日本へ？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "真剣遊戯！THE バトル SHOW"
+            },
+            {
+              "rank": 50,
+              "title": "やすとものどこいこ！？"
             }
           ]
         },
@@ -11499,15 +11527,19 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/17",
-      "updatedAt": "2026/06/17 01:24",
+      "updatedAt": "2026/06/17 02:23",
       "episodeId": "ep8zku54gr",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！YUTA登場",
-      "likes": "171",
+      "likes": "403",
       "favorites": "6.9万",
       "likePoints": [
         {
           "hour": 0,
           "likes": 171
+        },
+        {
+          "hour": 1,
+          "likes": 403
         }
       ],
       "previousLikePoints": [
@@ -12196,15 +12228,15 @@
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
-            },
-            {
-              "rank": 49,
               "title": "YOUは何しに日本へ？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "真剣遊戯！THE バトル SHOW"
+            },
+            {
+              "rank": 50,
+              "title": "やすとものどこいこ！？"
             }
           ]
         },
@@ -12240,10 +12272,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/17 01:24",
+      "updatedAt": "2026/06/17 02:23",
       "episodeId": "epqyavv4lw",
       "subtitle": "第131回 風磨が目指す憧れの男・梅沢富美男が大暴走！？",
-      "likes": "5129",
+      "likes": "5131",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -12685,6 +12717,10 @@
         {
           "hour": 120,
           "likes": 5129
+        },
+        {
+          "hour": 121,
+          "likes": 5131
         }
       ],
       "previousLikePoints": [
@@ -13759,15 +13795,15 @@
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
-            },
-            {
-              "rank": 49,
               "title": "YOUは何しに日本へ？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "真剣遊戯！THE バトル SHOW"
+            },
+            {
+              "rank": 50,
+              "title": "やすとものどこいこ！？"
             }
           ]
         },
@@ -13913,10 +13949,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/13",
-      "updatedAt": "2026/06/17 01:24",
+      "updatedAt": "2026/06/17 02:23",
       "episodeId": "epq7u4dq8k",
       "subtitle": "お泊りロケの家族は指名手配（秘）犯人SP前編",
-      "likes": "7432",
+      "likes": "7438",
       "favorites": "77.6万",
       "likePoints": [
         {
@@ -13942,6 +13978,10 @@
         {
           "hour": 78,
           "likes": 7432
+        },
+        {
+          "hour": 79,
+          "likes": 7438
         }
       ],
       "previousLikePoints": [
@@ -14314,9 +14354,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 27,
-          "elapsedHour": 78,
-          "elapsedRank": 27,
+          "currentRank": 28,
+          "elapsedHour": 79,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 4,
@@ -14617,6 +14657,10 @@
             {
               "hour": 78,
               "rank": 27
+            },
+            {
+              "hour": 79,
+              "rank": 28
             }
           ],
           "previousPoints": [
@@ -14863,10 +14907,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 24,
-              "title": "有吉クイズ"
-            },
-            {
               "rank": 25,
               "title": "ゴッドタン"
             },
@@ -14876,6 +14916,10 @@
             },
             {
               "rank": 27,
+              "title": "かまいガチ"
+            },
+            {
+              "rank": 28,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -15242,10 +15286,10 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/17 01:24",
+      "updatedAt": "2026/06/17 02:23",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
-      "likes": "9671",
+      "likes": "9689",
       "favorites": "30.7万",
       "likePoints": [
         {
@@ -15835,6 +15879,10 @@
         {
           "hour": 148,
           "likes": 9671
+        },
+        {
+          "hour": 149,
+          "likes": 9689
         }
       ],
       "previousLikePoints": [
@@ -16512,7 +16560,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 23,
-          "elapsedHour": 148,
+          "elapsedHour": 149,
           "elapsedRank": 23,
           "currentPoints": [
             {
@@ -17097,6 +17145,10 @@
             },
             {
               "hour": 148,
+              "rank": 23
+            },
+            {
+              "hour": 149,
               "rank": 23
             }
           ],
@@ -17769,11 +17821,11 @@
           "nearbyRanking": [
             {
               "rank": 20,
-              "title": "鍵のかかった部屋"
+              "title": "リボーン ～最後のヒーロー～"
             },
             {
               "rank": 21,
-              "title": "リボーン ～最後のヒーロー～"
+              "title": "鍵のかかった部屋"
             },
             {
               "rank": 22,
@@ -17789,7 +17841,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 50,
-          "elapsedHour": 148,
+          "elapsedHour": 149,
           "elapsedRank": 50,
           "currentPoints": [
             {
@@ -18250,6 +18302,10 @@
             },
             {
               "hour": 148,
+              "rank": 50
+            },
+            {
+              "hour": 149,
               "rank": 50
             }
           ],
@@ -18939,7 +18995,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/17 01:24",
+      "updatedAt": "2026/06/17 02:23",
       "episodeId": "epg027ir46",
       "subtitle": "“なぞかけ講座”",
       "likes": "1.1万",
@@ -19607,6 +19663,10 @@
         },
         {
           "hour": 166,
+          "likes": 11000
+        },
+        {
+          "hour": 167,
           "likes": 11000
         }
       ],
@@ -20630,15 +20690,15 @@
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
-            },
-            {
-              "rank": 49,
               "title": "YOUは何しに日本へ？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "真剣遊戯！THE バトル SHOW"
+            },
+            {
+              "rank": 50,
+              "title": "やすとものどこいこ！？"
             }
           ]
         },
@@ -20856,7 +20916,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/05/27",
-      "updatedAt": "2026/06/17 01:24",
+      "updatedAt": "2026/06/17 02:23",
       "episodeId": "epr1q56nyh",
       "subtitle": "【4人の休日に密着】",
       "likes": "6011",
@@ -21497,7 +21557,7 @@
             },
             {
               "rank": 50,
-              "title": "鶴瓶ちゃんとサワコちゃん～昭和の大先輩とおかしな２人～"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             }
           ]
         },
@@ -21516,15 +21576,15 @@
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
-            },
-            {
-              "rank": 49,
               "title": "YOUは何しに日本へ？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "真剣遊戯！THE バトル SHOW"
+            },
+            {
+              "rank": 50,
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
@@ -21533,10 +21593,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/06/17 01:24",
+      "updatedAt": "2026/06/17 02:23",
       "episodeId": "ephdx5d5p3",
       "subtitle": "本木雅弘VS偽絵＆MC松尾×timelesz原！神業ダンス",
-      "likes": "2362",
+      "likes": "2454",
       "favorites": "12.0万",
       "likePoints": [
         {
@@ -21562,6 +21622,10 @@
         {
           "hour": 6,
           "likes": 2362
+        },
+        {
+          "hour": 7,
+          "likes": 2454
         }
       ],
       "previousLikePoints": [],
@@ -21581,15 +21645,15 @@
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
-            },
-            {
-              "rank": 49,
               "title": "YOUは何しに日本へ？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "真剣遊戯！THE バトル SHOW"
+            },
+            {
+              "rank": 50,
+              "title": "やすとものどこいこ！？"
             }
           ]
         },
