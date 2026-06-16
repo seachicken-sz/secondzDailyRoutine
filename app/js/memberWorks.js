@@ -155,7 +155,6 @@ function renderMemberWorks() {
           ${escapeHtml(group.description)}<br>
           ${createMemberWorkHelpButtonHtml(group)}
         </p>
-        
       </div>
 
       <div class="member-link-list">
@@ -308,20 +307,20 @@ function createWorkItemHtml(item, group) {
   }
 
   return `
-      <a
-        class="member-work-link-card"
-        href="${escapeHtml(item[group.urlKey])}"
-        target="_blank"
-        rel="noopener noreferrer"
-        data-member-work-link="true"
-        data-member-work-group-key="${escapeHtml(group.key)}"
-        data-member-work-title="${escapeHtml(getProgramDisplayName(item))}"
-        data-member-work-url="${escapeHtml(item[group.urlKey])}"
-        data-member-work-work-type="${escapeHtml(item.workType || "")}"
-        data-member-work-program-id="${escapeHtml(item.programId || item.seriesId || "")}"
-        data-member-work-episode-id="${escapeHtml(item.episodeId || "")}"
-        data-member-work-members="${escapeHtml(Array.isArray(item.members) ? item.members.join(",") : "")}"
-      >
+    <a
+      class="member-work-link-card"
+      href="${escapeHtml(item[group.urlKey])}"
+      target="_blank"
+      rel="noopener noreferrer"
+      data-member-work-link="true"
+      data-member-work-group-key="${escapeHtml(group.key)}"
+      data-member-work-title="${escapeHtml(getProgramDisplayName(item))}"
+      data-member-work-url="${escapeHtml(item[group.urlKey])}"
+      data-member-work-work-type="${escapeHtml(item.workType || "")}"
+      data-member-work-program-id="${escapeHtml(item.programId || item.seriesId || "")}"
+      data-member-work-episode-id="${escapeHtml(item.episodeId || "")}"
+      data-member-work-members="${escapeHtml(Array.isArray(item.members) ? item.members.join(",") : "")}"
+    >
       <span class="member-work-link-main">
         <span class="member-work-link-title">
           ${escapeHtml(getProgramDisplayName(item))}
@@ -354,16 +353,6 @@ function createTverWorkItemHtml(item, group) {
         </span>
 
         ${buildRemainingText(item)}
-
-        ${isViewed ? `
-          <span class="member-work-link-viewed">
-            視聴済み
-          </span>
-        ` : `
-          <span class="member-work-link-new">
-            NEW
-          </span>
-        `}
       </span>
 
       <a
@@ -474,7 +463,8 @@ function getTverLinkText(item) {
  * TVerランキングレポートボタンを生成
  */
 function createTverRankingReportButtonHtml(item) {
-  const episodeId = getTverEpisodeId(item.platformUrl);
+  const episodeId =
+    item.episodeId || getTverEpisodeId(item.platformUrl) || "";
 
   if (!episodeId || !TVER_RANKING_REPORT_IDS.has(episodeId)) {
     return "";
@@ -688,7 +678,7 @@ function updateFilterUi() {
 }
 
 /**
- * YouTubeモーダル起動ボタンのクリックイベント
+ * YouTubeモーダル起動ボタン・メンバーリンクのクリックイベント
  */
 if (memberWorksArea) {
   memberWorksArea.addEventListener("click", (event) => {
@@ -708,6 +698,19 @@ if (memberWorksArea) {
 
     if (!link) {
       return;
+    }
+
+    if (link.dataset.memberWorkGroupKey === "tver") {
+      markTverEpisodeViewed({
+        episodeId: link.dataset.memberWorkEpisodeId || "",
+        programId: link.dataset.memberWorkProgramId || "",
+        title: link.dataset.memberWorkTitle || "",
+        url: link.dataset.memberWorkUrl || link.href || ""
+      });
+
+      setTimeout(() => {
+        renderMemberWorks();
+      }, 100);
     }
 
     if (typeof sendMemberWorkLinkLog === "function") {
@@ -739,6 +742,9 @@ if (memberFilterArea) {
   });
 }
 
+/**
+ * メンバーお仕事ヘルプボタンHTMLを生成
+ */
 function createMemberWorkHelpButtonHtml(group) {
   const helpKeyMap = {
     tver: "memberTver",
@@ -746,10 +752,13 @@ function createMemberWorkHelpButtonHtml(group) {
     youtube: "memberYoutube",
     dreampass: "memberDreampass"
   };
+
   const helpKey = helpKeyMap[group.key];
+
   if (!helpKey) {
     return "";
   }
+
   return `
     <button class="task-help-button" type="button" data-step-help-key="${escapeHtml(helpKey)}">
       やり方をチェック
