@@ -548,12 +548,12 @@
 }
 
 .member-work-link-card-tver.is-tver-new {
-  background: var(--color-surface-accent);
+  background-color: var(--color-surface-accent);
   border-color: var(--color-brand-border);
 }
 
 .member-work-link-card-tver.is-tver-viewed {
-  background: var(--color-surface);
+  background-color: var(--color-surface);
 }
 
 
