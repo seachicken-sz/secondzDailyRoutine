@@ -556,17 +556,8 @@
   position: relative;
 }
 
-.member-work-link-card-tver.is-tver-new::before {
-  content: "";
-  position: absolute;
-   top: calc(50% - 4px);
-   left: 2px;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--color-brand);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.85);
-  pointer-events: none;
+.member-work-link-card-tver.is-tver-new{
+  background-color:var(--color-surface);
 }
 /*カテゴリ別 微調整*/
 .member-link-section-tver .member-link-section-title::before {
