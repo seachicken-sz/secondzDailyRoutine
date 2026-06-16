@@ -505,12 +505,7 @@
   gap: 10px;
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 16px;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.92),
-      rgba(255, 255, 255, 0.62)
-    );
+  background-color:rgba(255, 255, 255,0.92);
   color: var(--color-text);
   text-decoration: none;
   box-shadow:
