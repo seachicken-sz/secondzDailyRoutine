@@ -623,6 +623,27 @@ a img{
   white-space: nowrap;
 }
 
+.current-ranking-report .stats .stat {
+  position: relative;
+}
+
+.current-ranking-report .stats .stat-icon,
+.current-ranking-report .stats .stat strong {
+  color: #36bfd0;
+}
+
+.current-ranking-report .stat-diff {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(54, 191, 208, 0.14);
+  color: #36bfd0;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+}
+
 @media (max-width: 760px) {
   .current-ranking-preview-section {
     width: 100%;
