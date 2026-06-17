@@ -491,6 +491,8 @@ function renderReport(data) {
   // footerより上に、いいね数推移グラフを追加
   // ランキングが全部なくても、likePoints があれば表示する
   renderLikeTimelineSection(data.likePoints, chartHours);
+
+   renderCurrentRankingPreview(data);
 }
 
 /**
@@ -1890,6 +1892,33 @@ function downloadBlobAsFile(blob, fileName) {
   URL.revokeObjectURL(url);
 }
 
+function renderCurrentRankingPreview(data) {
+  const preview = document.getElementById("currentRankingPreview");
+  const previewSection = document.getElementById("currentRankingPreviewSection");
+
+  if (!preview) {
+    return;
+  }
+
+  if (!data) {
+    preview.innerHTML = "";
+
+    if (previewSection) {
+      previewSection.style.display = "none";
+    }
+
+    return;
+  }
+
+  const element = createCurrentRankingSummaryElement(data);
+
+  preview.innerHTML = "";
+  preview.appendChild(element);
+
+  if (previewSection) {
+    previewSection.style.display = "";
+  }
+}
 
 // ==============================
 // 実行開始
