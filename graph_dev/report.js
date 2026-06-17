@@ -107,6 +107,138 @@ function escapeHtml(value) {
     .replace(/'/g, "&#39;");
 }
 
+/**
+ * 有効な数値に変換する
+ */
+function getFiniteNumber(value) {
+  const number = Number(value);
+
+  return Number.isFinite(number) ? number : null;
+}
+
+/**
+ * 指定points内で、hourが最大の数値pointを取得する
+ */
+function getLatestNumericPoint(points, valueKey) {
+  if (!Array.isArray(points)) {
+    return null;
+  }
+
+  return points.reduce((latestPoint, point) => {
+    const hour = getFiniteNumber(point.hour);
+    const value = getFiniteNumber(point[valueKey]);
+
+    if (hour === null || value === null) {
+      return latestPoint;
+    }
+
+    if (!latestPoint || hour > latestPoint.hour) {
+      return {
+        hour,
+        value
+      };
+    }
+
+    return latestPoint;
+  }, null);
+}
+
+/**
+ * 指定hourの数値pointを取得する
+ */
+function getNumericPointByHour(points, valueKey, targetHour) {
+  if (!Array.isArray(points)) {
+    return null;
+  }
+
+  const foundPoint = points.find((point) => {
+    return getFiniteNumber(point.hour) === targetHour;
+  });
+
+  if (!foundPoint) {
+    return null;
+  }
+
+  const value = getFiniteNumber(foundPoint[valueKey]);
+
+  if (value === null) {
+    return null;
+  }
+
+  return {
+    hour: targetHour,
+    value
+  };
+}
+
+/**
+ * 最新hourと1時間前の差分を取得する
+ */
+function getLatestDiffFromPreviousHour(points, valueKey) {
+  const latestPoint = getLatestNumericPoint(points, valueKey);
+
+  if (!latestPoint) {
+    return null;
+  }
+
+  const previousPoint = getNumericPointByHour(
+    points,
+    valueKey,
+    latestPoint.hour - 1
+  );
+
+  if (!previousPoint) {
+    return null;
+  }
+
+  return latestPoint.value - previousPoint.value;
+}
+
+/**
+ * ランキングが1時間前より上がっている場合だけUP文言を返す
+ * 順位は数字が小さいほど良いので、前回 - 最新 がプラスなら上昇
+ */
+function getRankUpText(ranking) {
+  if (!ranking || !Array.isArray(ranking.currentPoints)) {
+    return "";
+  }
+
+  const latestPoint = getLatestNumericPoint(ranking.currentPoints, "rank");
+
+  if (!latestPoint) {
+    return "";
+  }
+
+  const previousPoint = getNumericPointByHour(
+    ranking.currentPoints,
+    "rank",
+    latestPoint.hour - 1
+  );
+
+  if (!previousPoint) {
+    return "";
+  }
+
+  const rankUp = previousPoint.value - latestPoint.value;
+
+  if (rankUp <= 0) {
+    return "";
+  }
+
+  return `↑${rankUp}位UP!`;
+}
+
+/**
+ * 正の差分だけ + 表示にする
+ */
+function getPositiveDiffText(diff) {
+  if (diff === null || diff === undefined || diff <= 0) {
+    return "";
+  }
+
+  return `＋${formatDisplayNumber(diff)}`;
+}
+
 
 // ==============================
 // 48時間 / 7日間 判定
@@ -218,16 +350,6 @@ function hasAnyRankingData(rankings) {
 }
 
 /**
- * rankings 全体に1件でもランキングデータがあるか判定する
- *
- * false の場合だけ、
- * rankCards / ランキング推移 / すぐ上ランキングをまとめて非表示にする。
- */
-function hasAnyRankingData(rankings) {
-  return Array.isArray(rankings) && rankings.some(hasRankingData);
-}
-
-/**
  * 現時点でランキング圏内か判定する
  *
  * currentRank が数値なら、最新取得時点でランクイン中とみなす。
@@ -252,7 +374,7 @@ function isCurrentlyRanked(ranking) {
  * 初期表示を行う
  *
  * 通常読み込み：
- * - tverRankingReport.json をそのまま取得
+ * - ../graph/tverRankingReport.json を取得
  *
  * 更新ボタン押下時：
  * - loadReportData(true) で cacheBust を付けて再取得
@@ -460,7 +582,6 @@ function renderReport(data) {
   document.getElementById("programMeta").innerHTML = `
     ${data.broadcastDate || ""} 放送　${data.subtitle || ""}<br>
     （ <i class="ph ph-clock"></i> ${data.updatedAt || ""} 更新 ）
-    
   `;
 
   document.getElementById("likeCount").textContent = formatDisplayNumber(data.likes);
@@ -492,7 +613,8 @@ function renderReport(data) {
   // ランキングが全部なくても、likePoints があれば表示する
   renderLikeTimelineSection(data.likePoints, chartHours);
 
-   renderCurrentRankingPreview(data);
+  // 2枚目プレビューを描画する
+  renderCurrentRankingPreview(data);
 }
 
 /**
@@ -618,8 +740,11 @@ function buildTverEpisodeUrl(episodeId) {
  * 画像共有ボタン押下時に使う共有テキストを生成する
  *
  * 出力例：
- * タイムレスマンをTVerで見よう！
- * https://tver.jp/episodes/epqhlsu653
+ * タイムレスマン
+ * バラエティ12位
+ * いいね数：12,345
+ * TVerで見よう！
+ * https://tver.jp/episodes/epxxxx
  */
 function buildImageShareText() {
   if (!reportData) {
@@ -706,6 +831,7 @@ function buildImageShareTitle() {
 
   return `${reportData.programTitle}をTVerで見よう！`;
 }
+
 
 // ==============================
 // 最高順位カード描画
@@ -1194,7 +1320,8 @@ function createCombinedRankingChart(canvasId, rankings, chartHours) {
       scales: {
         y: {
           title: {
-            display: false},
+            display: false
+          },
           reverse: true,
           min: 1,
           max: 50,
@@ -1406,7 +1533,6 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
     options: {
       responsive: true,
       maintainAspectRatio: false,
-
       resizeDelay: 100,
       layout: {
         padding: {
@@ -1419,7 +1545,8 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
       scales: {
         y: {
           title: {
-            display: false },
+            display: false
+          },
           beginAtZero: false,
           border: {
             display: false
@@ -1494,156 +1621,22 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
 
 
 // ==============================
-// JSON再読み込み処理
+// 2枚目 現在ランキングプレビュー描画
 // ==============================
 
 /**
- * JSON再読み込みボタンのイベントを設定する
+ * 2枚目画像に表示する項目を作る
  *
- * HTML側に以下のボタンがある前提：
- * <button id="reloadDataButton" class="reload-data-button" type="button"><i class="bi bi-arrow-clockwise"></i></button>
+ * 表示対象：
+ * - currentRankが存在するランキングだけ
+ * - likesが存在する場合だけ
+ * - favoritesが存在する場合だけ
+ *
+ * 差分：
+ * - ランキングは1時間前より上がっている場合だけ ↑n位UP!
+ * - いいね数は1時間前より増えている場合だけ ＋n
+ * - お気に入り数は favoritePoints が存在し、1時間前より増えている場合だけ ＋n
  */
-function setupReloadDataButton() {
-  const button = document.getElementById("reloadDataButton");
-
-  if (!button) {
-    return;
-  }
-
-  button.addEventListener("click", async () => {
-    button.classList.add("is-loading");
-    button.innerHTML = '<i class="bi bi-arrow-repeat"></i>'; // 更新中
-  
-    try {
-      await loadReportData(true);
-      button.innerHTML = '<i class="bi bi-check-lg"></i>'; // 更新済み
-    } catch (error) {
-      console.error(error);
-      button.innerHTML = '<i class="bi bi-x-lg"></i>'; // 失敗
-      alert("データの更新に失敗しました。時間を置いて再試行してください。");
-    } finally {
-      setTimeout(() => {
-        button.classList.remove("is-loading");
-        button.innerHTML = '<i class="bi bi-arrow-clockwise"></i>'; // 元の更新に戻す
-      }, 1200);
-    }
-  });
-}
-
-
-function getFiniteNumber(value) {
-  const number = Number(value);
-
-  return Number.isFinite(number) ? number : null;
-}
-
-function getLatestNumericPoint(points, valueKey) {
-  if (!Array.isArray(points)) {
-    return null;
-  }
-
-  return points.reduce((latestPoint, point) => {
-    const hour = getFiniteNumber(point.hour);
-    const value = getFiniteNumber(point[valueKey]);
-
-    if (hour === null || value === null) {
-      return latestPoint;
-    }
-
-    if (!latestPoint || hour > latestPoint.hour) {
-      return {
-        hour,
-        value
-      };
-    }
-
-    return latestPoint;
-  }, null);
-}
-
-function getNumericPointByHour(points, valueKey, targetHour) {
-  if (!Array.isArray(points)) {
-    return null;
-  }
-
-  const foundPoint = points.find((point) => {
-    return getFiniteNumber(point.hour) === targetHour;
-  });
-
-  if (!foundPoint) {
-    return null;
-  }
-
-  const value = getFiniteNumber(foundPoint[valueKey]);
-
-  if (value === null) {
-    return null;
-  }
-
-  return {
-    hour: targetHour,
-    value
-  };
-}
-
-function getLatestDiffFromPreviousHour(points, valueKey) {
-  const latestPoint = getLatestNumericPoint(points, valueKey);
-
-  if (!latestPoint) {
-    return null;
-  }
-
-  const previousPoint = getNumericPointByHour(
-    points,
-    valueKey,
-    latestPoint.hour - 1
-  );
-
-  if (!previousPoint) {
-    return null;
-  }
-
-  return latestPoint.value - previousPoint.value;
-}
-
-function getRankUpText(ranking) {
-  if (!ranking || !Array.isArray(ranking.currentPoints)) {
-    return "";
-  }
-
-  const latestPoint = getLatestNumericPoint(ranking.currentPoints, "rank");
-
-  if (!latestPoint) {
-    return "";
-  }
-
-  const previousPoint = getNumericPointByHour(
-    ranking.currentPoints,
-    "rank",
-    latestPoint.hour - 1
-  );
-
-  if (!previousPoint) {
-    return "";
-  }
-
-  const rankUp = previousPoint.value - latestPoint.value;
-
-  if (rankUp <= 0) {
-    return "";
-  }
-
-  return `↑${rankUp}位UP!`;
-}
-
-function getPositiveDiffText(diff) {
-  if (diff === null || diff === undefined || diff <= 0) {
-    return "";
-  }
-
-  return `＋${formatDisplayNumber(diff)}`;
-}
-
 function buildCurrentRankingSummaryItems(data) {
   const items = [];
 
@@ -1693,6 +1686,9 @@ function buildCurrentRankingSummaryItems(data) {
   return items;
 }
 
+/**
+ * 2枚目画像用DOMを生成する
+ */
 function createCurrentRankingSummaryElement(data) {
   const items = buildCurrentRankingSummaryItems(data);
 
@@ -1749,44 +1745,73 @@ function createCurrentRankingSummaryElement(data) {
   return element;
 }
 
-function canvasToPngBlob(canvas) {
-  return new Promise((resolve) => {
-    canvas.toBlob((blob) => {
-      resolve(blob);
-    }, "image/png");
-  });
-}
+/**
+ * 2枚目プレビューを画面に描画する
+ */
+function renderCurrentRankingPreview(data) {
+  const preview = document.getElementById("currentRankingPreview");
+  const previewSection = document.getElementById("currentRankingPreviewSection");
 
-async function captureElementToPngBlob(target, options = {}) {
-  const canvas = await html2canvas(target, {
-    scale: 2,
-    useCORS: true,
-    backgroundColor: null,
-    width: 760,
-    windowWidth: 760,
-    ...options
-  });
-
-  return canvasToPngBlob(canvas);
-}
-
-async function captureTemporaryElementToPngBlob(element) {
-  const wrapper = document.createElement("div");
-
-  wrapper.style.position = "fixed";
-  wrapper.style.left = "-9999px";
-  wrapper.style.top = "0";
-  wrapper.style.width = "760px";
-  wrapper.style.zIndex = "-1";
-  wrapper.appendChild(element);
-
-  document.body.appendChild(wrapper);
-
-  try {
-    return await captureElementToPngBlob(element);
-  } finally {
-    wrapper.remove();
+  if (!preview) {
+    return;
   }
+
+  if (!data) {
+    preview.innerHTML = "";
+
+    if (previewSection) {
+      previewSection.style.display = "none";
+    }
+
+    return;
+  }
+
+  const element = createCurrentRankingSummaryElement(data);
+
+  preview.innerHTML = "";
+  preview.appendChild(element);
+
+  if (previewSection) {
+    previewSection.style.display = "";
+  }
+}
+
+
+// ==============================
+// JSON再読み込み処理
+// ==============================
+
+/**
+ * JSON再読み込みボタンのイベントを設定する
+ *
+ * HTML側に以下のボタンがある前提：
+ * <button id="reloadDataButton" class="reload-data-button" type="button"><i class="bi bi-arrow-clockwise"></i></button>
+ */
+function setupReloadDataButton() {
+  const button = document.getElementById("reloadDataButton");
+
+  if (!button) {
+    return;
+  }
+
+  button.addEventListener("click", async () => {
+    button.classList.add("is-loading");
+    button.innerHTML = '<i class="bi bi-arrow-repeat"></i>'; // 更新中
+
+    try {
+      await loadReportData(true);
+      button.innerHTML = '<i class="bi bi-check-lg"></i>'; // 更新済み
+    } catch (error) {
+      console.error(error);
+      button.innerHTML = '<i class="bi bi-x-lg"></i>'; // 失敗
+      alert("データの更新に失敗しました。時間を置いて再試行してください。");
+    } finally {
+      setTimeout(() => {
+        button.classList.remove("is-loading");
+        button.innerHTML = '<i class="bi bi-arrow-clockwise"></i>'; // 元の更新に戻す
+      }, 1200);
+    }
+  });
 }
 
 
@@ -1808,13 +1833,78 @@ function setupSaveImageButton() {
 }
 
 /**
+ * canvasをpng blobへ変換する
+ */
+function canvasToPngBlob(canvas) {
+  return new Promise((resolve) => {
+    canvas.toBlob((blob) => {
+      resolve(blob);
+    }, "image/png");
+  });
+}
+
+/**
+ * 指定要素をPNG Blobに変換する
+ */
+async function captureElementToPngBlob(target, options = {}) {
+  const canvas = await html2canvas(target, {
+    scale: 2,
+    useCORS: true,
+    backgroundColor: null,
+    width: 760,
+    windowWidth: 760,
+    ...options
+  });
+
+  return canvasToPngBlob(canvas);
+}
+
+/**
+ * 一時DOMを画面外でPNG Blobに変換する
+ * プレビューHTMLがない場合の保険用
+ */
+async function captureTemporaryElementToPngBlob(element) {
+  const wrapper = document.createElement("div");
+
+  wrapper.style.position = "fixed";
+  wrapper.style.left = "-9999px";
+  wrapper.style.top = "0";
+  wrapper.style.width = "760px";
+  wrapper.style.zIndex = "-1";
+  wrapper.appendChild(element);
+
+  document.body.appendChild(wrapper);
+
+  try {
+    return await captureElementToPngBlob(element);
+  } finally {
+    wrapper.remove();
+  }
+}
+
+/**
+ * Blobをファイルとしてダウンロードする
+ */
+function downloadBlobAsFile(blob, fileName) {
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+
+  link.download = fileName;
+  link.href = url;
+  link.click();
+
+  URL.revokeObjectURL(url);
+}
+
+/**
  * レポート部分を画像化して共有する
  *
  * 共有対応端末：
- * - 画像ファイル + 番組名 + TVer URL を共有
+ * - 1枚目：既存レポート画像
+ * - 2枚目：現在ランキング画像
  *
  * 共有非対応端末：
- * - PNGとしてダウンロード
+ * - PNGとして2枚ダウンロード
  */
 async function saveReportImage() {
   const target = document.getElementById("reportCaptureArea");
@@ -1840,8 +1930,20 @@ async function saveReportImage() {
     return;
   }
 
-  const summaryElement = createCurrentRankingSummaryElement(reportData);
-  const summaryBlob = await captureTemporaryElementToPngBlob(summaryElement);
+  let summaryTarget = document.querySelector("#currentRankingPreview .current-ranking-capture-area");
+  let summaryBlob = null;
+
+  if (!summaryTarget) {
+    renderCurrentRankingPreview(reportData);
+    summaryTarget = document.querySelector("#currentRankingPreview .current-ranking-capture-area");
+  }
+
+  if (summaryTarget) {
+    summaryBlob = await captureElementToPngBlob(summaryTarget);
+  } else {
+    const summaryElement = createCurrentRankingSummaryElement(reportData);
+    summaryBlob = await captureTemporaryElementToPngBlob(summaryElement);
+  }
 
   if (!summaryBlob) {
     return;
@@ -1881,44 +1983,6 @@ async function saveReportImage() {
   downloadBlobAsFile(summaryBlob, `${safeBaseFileName}_current-ranking.png`);
 }
 
-function downloadBlobAsFile(blob, fileName) {
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement("a");
-
-  link.download = fileName;
-  link.href = url;
-  link.click();
-
-  URL.revokeObjectURL(url);
-}
-
-function renderCurrentRankingPreview(data) {
-  const preview = document.getElementById("currentRankingPreview");
-  const previewSection = document.getElementById("currentRankingPreviewSection");
-
-  if (!preview) {
-    return;
-  }
-
-  if (!data) {
-    preview.innerHTML = "";
-
-    if (previewSection) {
-      previewSection.style.display = "none";
-    }
-
-    return;
-  }
-
-  const element = createCurrentRankingSummaryElement(data);
-
-  preview.innerHTML = "";
-  preview.appendChild(element);
-
-  if (previewSection) {
-    previewSection.style.display = "";
-  }
-}
 
 // ==============================
 // 実行開始
