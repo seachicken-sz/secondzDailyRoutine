@@ -786,10 +786,9 @@ function buildCurrentRankingShareLines() {
 
   const activeRankings = reportData.rankings
     .filter((ranking) => {
-      return ranking
-        && ranking.currentRank !== null
-        && ranking.currentRank !== undefined
-        && ranking.currentRank !== "";
+      const currentRank = getFiniteNumber(ranking && ranking.currentRank);
+
+      return currentRank !== null && currentRank > 0 && currentRank <= 50;
     })
     .map((ranking) => {
       const label = ranking.label || ranking.type || "ランキング";
@@ -1628,7 +1627,7 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
  * 2枚目画像に表示する項目を作る
  *
  * 表示対象：
- * - currentRankが存在するランキングだけ
+ * - currentRankが1〜50位のランキングだけ
  * - likesが存在する場合だけ
  * - favoritesが存在する場合だけ
  *
@@ -1648,7 +1647,8 @@ function buildCurrentRankingSummaryItems(data) {
 
       const currentRank = getFiniteNumber(ranking.currentRank);
 
-      if (currentRank === null) {
+      // currentRank がない / 0以下 / 50位より下は2枚目には出さない
+      if (currentRank === null || currentRank <= 0 || currentRank > 50) {
         return;
       }
 
@@ -1656,6 +1656,7 @@ function buildCurrentRankingSummaryItems(data) {
       const diffText = getRankUpText(ranking);
 
       items.push({
+        kind: "ranking",
         label,
         value: `${formatDisplayNumber(currentRank)}位`,
         diffText
@@ -1667,6 +1668,7 @@ function buildCurrentRankingSummaryItems(data) {
     const likeDiff = getLatestDiffFromPreviousHour(data.likePoints, "likes");
 
     items.push({
+      kind: "metric",
       label: "いいね数",
       value: formatDisplayNumber(data.likes),
       diffText: getPositiveDiffText(likeDiff)
@@ -1677,6 +1679,7 @@ function buildCurrentRankingSummaryItems(data) {
     const favoriteDiff = getLatestDiffFromPreviousHour(data.favoritePoints, "favorites");
 
     items.push({
+      kind: "metric",
       label: "お気に入り数",
       value: formatDisplayNumber(data.favorites),
       diffText: getPositiveDiffText(favoriteDiff)
@@ -1692,6 +1695,14 @@ function buildCurrentRankingSummaryItems(data) {
 function createCurrentRankingSummaryElement(data) {
   const items = buildCurrentRankingSummaryItems(data);
 
+  const rankingItems = items.filter((item) => {
+    return item.kind === "ranking";
+  });
+
+  const metricItems = items.filter((item) => {
+    return item.kind === "metric";
+  });
+
   const element = document.createElement("div");
   element.className = "current-ranking-capture-area";
 
@@ -1706,38 +1717,71 @@ function createCurrentRankingSummaryElement(data) {
     </div>
 
     <div class="current-ranking-body">
-      <h1 class="current-ranking-program-title">
-        ${escapeHtml(data.programTitle || "")}
-      </h1>
+      <div class="current-ranking-program-box">
+        <h1 class="current-ranking-program-title">
+          ${escapeHtml(data.programTitle || "")}
+        </h1>
 
-      <div class="current-ranking-program-meta">
-        ${programMetaLines.map((line) => escapeHtml(line)).join("<br>")}
+        <div class="current-ranking-program-meta">
+          ${programMetaLines.map((line) => escapeHtml(line)).join("<br>")}
+        </div>
       </div>
 
-      <ul class="current-ranking-list">
-        ${items.map((item) => `
-          <li class="current-ranking-item">
-            <span class="current-ranking-label">
-              ${escapeHtml(item.label)}
-            </span>
+      ${rankingItems.length > 0 ? `
+        <div class="current-ranking-section-title">
+          ランキング
+        </div>
 
-            <span class="current-ranking-value-wrap">
-              <span class="current-ranking-value">
-                ${escapeHtml(item.value)}
+        <div class="current-ranking-cards">
+          ${rankingItems.map((item, index) => {
+            const theme = getRankingThemeByIndex(index);
+            const rankText = String(item.value || "").replace("位", "");
+
+            return `
+              <div class="card">
+                <div class="label ${theme.labelClass}">
+                  ${escapeHtml(item.label)}
+                </div>
+
+                <div class="rank-main" style="color:${theme.color};">
+                  ${escapeHtml(rankText)}<span>位</span>
+                </div>
+
+                <div class="sub-rank ${theme.bgClass}">
+                  ${item.diffText ? escapeHtml(item.diffText) : "現在ランクイン中"}
+                </div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      ` : ""}
+
+      ${metricItems.length > 0 ? `
+        <div class="current-ranking-metrics">
+          ${metricItems.map((item) => `
+            <div class="current-ranking-metric-card">
+              <span class="current-ranking-metric-label">
+                ${escapeHtml(item.label)}
               </span>
 
-              ${item.diffText ? `
-                <span class="current-ranking-diff">
-                  ${escapeHtml(item.diffText)}
+              <span class="current-ranking-metric-value-wrap">
+                <span class="current-ranking-metric-value">
+                  ${escapeHtml(item.value)}
                 </span>
-              ` : ""}
-            </span>
-          </li>
-        `).join("")}
-      </ul>
+
+                ${item.diffText ? `
+                  <span class="current-ranking-metric-diff">
+                    ${escapeHtml(item.diffText)}
+                  </span>
+                ` : ""}
+              </span>
+            </div>
+          `).join("")}
+        </div>
+      ` : ""}
 
       <div class="current-ranking-footer">
-        TVerで見よう！
+        データ出典：TVer　※1時間ごと更新
       </div>
     </div>
   `;
