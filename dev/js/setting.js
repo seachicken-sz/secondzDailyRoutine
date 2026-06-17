@@ -294,7 +294,6 @@ function autoOpenFirstSetupModalIfNeeded() {
 }
 
 function openFirstVisitModal() {
-  renderUserBrowserInfo();
   firstVisitModalElement?.classList.remove("hidden");
 }
 
@@ -320,19 +319,9 @@ function getBrowserDisplayName(browserType) {
   return browserNameMap[browserType] || "その他のブラウザ";
 }
 
-function renderUserBrowserInfo() {
-  if (!userBrowserElement) {
-    return;
-  }
-
-  const browserType =
-    typeof getAccessBrowserType === "function"
-      ? getAccessBrowserType()
-      : "other_browser";
-
-  const browserName = getBrowserDisplayName(browserType);
-
-  userBrowserElement.innerHTML = `たぶん今の状態は「<strong>${browserName}</strong>」です。`;
+function openCurrentPageInAndroidChrome() {
+  const urlWithoutScheme = location.href.replace(/^https?:\/\//, "");
+  location.href = `intent://${urlWithoutScheme}#Intent;scheme=https;package=com.android.chrome;end`;
 }
 
 function openPwaFirstVisitModal() {
