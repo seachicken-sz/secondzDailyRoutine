@@ -1712,7 +1712,7 @@ function createCurrentRankingSummaryElement(data) {
   ].filter(Boolean);
 
   element.innerHTML = `
-    <div class="current-ranking-top-bar">
+    <div class="top-bar">
       TVer現在のランキング
     </div>
 
