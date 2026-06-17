@@ -9,9 +9,12 @@
 // PWAとしてホーム画面から起動済みの場合、
 // ホーム画面の「まずはホーム画面に追加」カードを非表示にする
 function updateHomeInstallGuideVisibility() {
+  const firstVisitModalSnsElement = document.getElementById("firstVisitModalSns");
+
   const installGuideElements = [
     homeInstallGuideCardElement,
     homeInstallGuideMenuElement,
+    firstVisitModalSnsElement,
   ];
 
   const isStandalone =
@@ -40,6 +43,7 @@ function updateHomeInstallGuideVisibility() {
 
   if (shouldShowInstallGuide) {
     updateHomeInstallGuideContent(platform, browserType);
+    updateFirstVisitModalSnsContent(firstVisitModalSnsElement, platform, browserType);
   }
 
   installGuideElements.forEach((element) => {
@@ -51,6 +55,95 @@ function updateHomeInstallGuideVisibility() {
   });
 }
 //プラットフォーム×ブラウザで分岐、SNS内ブラウザ時に案内を出す
+function updateFirstVisitModalSnsContent(targetElement, platform, browserType) {
+  if (!targetElement) {
+    return;
+  }
+
+  targetElement.innerHTML = `
+    <p class="home-install-title"></p>
+    <p class="home-install-text"></p>
+  `;
+
+  const titleElement = targetElement.querySelector(".home-install-title");
+  const textElement = targetElement.querySelector(".home-install-text");
+
+  if (!titleElement || !textElement) {
+    return;
+  }
+
+  const isIOS = platform.startsWith("ios/");
+  const isAndroid = platform.startsWith("android/");
+
+  if (isIOS) {
+    const iosGuideMap = {
+      x_in_app: {
+        title: "<strong>⚠️今の状態ちょっと使いにくいかも！</strong>",
+        text: `
+          もしかして画面の下の方に、こんなの見えてませんか？<br>
+          <img src="../img/setting/setting_ios_x.jpeg">
+          もし見えていたら一番最初に、
+          <ol>
+            <li>画像の赤枠の<strong>「github.io」</strong>をタップ</li>
+            <li><strong>ブラウザで開く</strong>をタップ</li>
+          </ol>
+          をやってみてください！
+        `,
+      },
+      threads_in_app: {
+        title: "<strong>⚠️今の状態ちょっと使いにくいかも！</strong>",
+        text: `
+          もしかして画面の上の方に、こんなの見えてませんか？<br>
+          <img src="../img/setting/setting_ios_threads.jpeg">
+          もし見えていたら一番最初に、
+          <ol>
+            <li>画像の赤枠の<strong>「<i class="bi bi-three-dots"></i>」</strong>をタップ</li>
+            <li><strong>外部ブラウザで開く</strong>をタップ</li>
+          </ol>
+          をやってみてください！
+        `,
+      },
+      line_in_app: {
+        title: "<strong>⚠️今の状態ちょっと使いにくいかも！</strong>",
+        text: `
+          もしかして画面の下の方に、こんなの見えてませんか？<br>
+          <img src="../img/setting/setting_ios_line.jpeg">
+          もし見えていたら一番最初に、
+          <ol>
+            <li>画像の赤枠の<strong>「<i class="bi bi-three-dots-vertical"></i>」</strong>をタップ</li>
+            <li><strong>ブラウザで開く</strong>をタップ</li>
+          </ol>
+          をやってみてください！
+        `,
+      },
+    };
+
+    const guide = iosGuideMap[browserType];
+
+    if (!guide) {
+      return;
+    }
+
+    titleElement.innerHTML = guide.title;
+    textElement.innerHTML = guide.text;
+    return;
+  }
+
+  if (isAndroid) {
+    titleElement.innerHTML = "<strong>⚠️今の状態ちょっと使いにくいかも！</strong>";
+    textElement.innerHTML = `
+      SNS内ブラウザで開いているかもしれません。<br>
+      一番最初に、下のボタンを押してみてください！<br>
+      <button id="openChromeFromFirstVisitModalButton" class="primary-button home-install-link" type="button">
+        このページをChromeで開く
+      </button>
+    `;
+
+    document
+      .getElementById("openChromeFromFirstVisitModalButton")
+      ?.addEventListener("click", openCurrentPageInAndroidChrome);
+  }
+}
 function updateHomeInstallGuideContent(platform, browserType) {
   if (!homeInstallGuideCardElement) {
     return;
