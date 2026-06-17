@@ -1,3 +1,471 @@
+body {
+  margin: 0;
+  padding-bottom: 50px;
+  font-family: system-ui, sans-serif;
+  background-color: #fdfdfd;
+  color: #10213f;
+  overflow-x: hidden;
+}
+
+.link-wrap {
+  text-align: center;
+}
+
+a img {
+  width: 40%;
+  max-width: 680px;
+  min-width: 320px;
+  margin: 1rem auto 3rem;
+  border-radius: 20px;
+}
+
+.back-to-app-button,
+.reload-data-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 8px 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #10213f;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(16, 33, 63, 0.14);
+  white-space: nowrap;
+  border: none;
+}
+
+.reload-data-button.is-loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.report {
+  width: 760px;
+  max-width: none;
+  margin: 0 auto;
+  padding-bottom: 24px;
+  background-color: #f8f8f8;
+  background-size: cover;
+  overflow: hidden;
+  transform-origin: top center;
+}
+
+.top-bar {
+  background: #575757;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  padding: 6px;
+  font-size: 18px;
+}
+
+.hero {
+  text-align: center;
+  padding: 18px 18px 14px;
+}
+
+.program-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.meta {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.rank-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 0 28px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(27, 70, 120, 0.22);
+  padding: 16px;
+  text-align: center;
+}
+
+.label {
+  display: inline-block;
+  color: white;
+  padding: 6px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.blue {
+  background: #0877df;
+}
+
+.pink {
+  background: #ec2386;
+}
+
+.rank-main {
+  position: relative;
+  margin-top: 10px;
+  font-size: 76px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.rank-main:before {
+  content: "最高";
+  font-size: 16px;
+  position: absolute;
+  top: 75%;
+  left: 45px;
+  color: slategray;
+}
+
+.rank-main span {
+  font-size: 36px;
+  margin-left: 8px;
+}
+
+.sub-rank {
+  margin: 10px auto 0;
+  width: 220px;
+  border-radius: 8px;
+  padding: 6px;
+  font-weight: 700;
+}
+
+.sub-rank.blue-bg {
+  background: #e9f4ff;
+  color: #0877df;
+}
+
+.sub-rank.pink-bg {
+  background: #fff0f7;
+  color: #ec2386;
+}
+
+.report.is-long-report .sub-rank {
+  font-size: 14px;
+}
+
+.stats {
+  margin: 14px 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(27, 70, 120, 0.22);
+  overflow: hidden;
+  font-weight: 700;
+}
+
+.stat {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 18px;
+}
+
+.stat + .stat {
+  border-left: 1px solid #d6e4ef;
+}
+
+.stat-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #edf4fa;
+  color: #5b9eea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.stat-label {
+  font-weight: 700;
+  color: #40536d;
+}
+
+.stat strong {
+  margin-left: 4px;
+  font-size: 28px;
+  color: #36bfd0;
+}
+
+.chart-section,
+.table-section {
+  margin: 14px 28px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(27, 70, 120, 0.22);
+  padding: 18px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.report.is-long-report .section-title::after {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6c7a90;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.chart-box {
+  min-width: 0;
+}
+
+.chart-title {
+  color: white;
+  text-align: center;
+  border-radius: 999px;
+  padding: 6px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.chart-canvas-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.chart-canvas-wrap canvas {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 3 / 1.8;
+}
+
+.report.is-long-report .charts {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.chart-box-wide {
+  width: 100%;
+}
+
+.combined-chart-title {
+  background: linear-gradient(135deg, #0877df, #ec2386);
+  color: #fff;
+}
+
+.chart-canvas-wrap-wide {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+}
+
+.chart-canvas-wrap-wide canvas {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 7;
+}
+
+.tables {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.table-title {
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  padding: 9px 12px;
+  font-size: 14px;
+  background: #f6f8fb;
+  margin-bottom: 4px;
+}
+
+.duration-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.duration-card {
+  background: #f6f8fb;
+  border-radius: 12px;
+  padding: 16px 14px;
+  text-align: center;
+}
+
+.duration-title {
+  display: inline-block;
+  color: #fff;
+  border-radius: 999px;
+  padding: 6px 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.duration-main {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #10213f;
+}
+
+.duration-sub {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #6c7a90;
+  font-weight: 700;
+}
+
+.like-timeline-section {
+  margin-top: 14px;
+}
+
+.like-chart-box {
+  width: 100%;
+}
+
+.like-chart-canvas-wrap {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.like-chart-canvas-wrap canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.report.is-long-report .like-chart-canvas-wrap {
+  height: 180px;
+}
+
+.footer {
+  text-align: left;
+  font-size: 11px;
+  color: #6c7a90;
+  padding: 4px 20px 0;
+}
+
+.save-area {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 24px 0 12px;
+  z-index: 20;
+}
+
+.save-button {
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0877df, #59b7ff);
+  color: white;
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 20px rgba(8, 119, 223, 0.22);
+  opacity: 0.8;
+}
+
+.save-button:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+.report.is-capturing {
+  zoom: 1 !important;
+}
+
+.program-select-area {
+  width: min(720px, calc(100% - 32px));
+  margin: 18px auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.program-select-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #40536d;
+  white-space: nowrap;
+}
+
+.program-select {
+  width: min(420px, 100%);
+  border: 1px solid #c8d7e8;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #10213f;
+  padding: 10px 36px 10px 16px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(27, 70, 120, 0.14);
+  min-width: 0;
+  max-width: 100%;
+}
+
+.program-select:focus {
+  outline: 2px solid rgba(8, 119, 223, 0.25);
+  border-color: #0877df;
+}
+
+#newEpisodeLink {
+  background-color: transparent;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* スマホでは通常表示の760px画像を縮小して見せる */
+@media (max-width: 760px) {
+  .report {
+    zoom: calc(100vw / 760px);
+  }
+}
+
+/* ==============================
+  画像プレビュー：左右スワイプ
+============================== */
+
 .image-preview-section {
   width: 100%;
   max-width: 860px;
@@ -109,8 +577,18 @@
   background: #36bfd0;
 }
 
+/* ==============================
+  2枚目：現在ランキング画像
+============================== */
+
+.current-ranking-report .top-bar {
+  background: #575757;
+}
+
 .current-ranking-report .stats .stat {
   position: relative;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .current-ranking-report .stats .stat-icon,
@@ -118,9 +596,17 @@
   color: #36bfd0;
 }
 
+.current-ranking-report .stats .stat-icon {
+  background: rgba(54, 191, 208, 0.12);
+}
+
+.current-ranking-report .stat strong {
+  margin-left: 0;
+}
+
 .current-ranking-report .stat-diff {
   display: inline-block;
-  margin-top: 6px;
+  margin-top: 4px;
   padding: 4px 10px;
   border-radius: 999px;
   background: rgba(54, 191, 208, 0.14);
@@ -133,6 +619,14 @@
 .current-ranking-report .sub-rank.is-empty {
   visibility: hidden;
 }
+
+.current-ranking-report .rank-main:before {
+  content: "";
+}
+
+/* ==============================
+  スマホ調整
+============================== */
 
 @media (max-width: 760px) {
   .image-preview-section {
@@ -150,5 +644,10 @@
 
   .image-preview-page {
     flex-basis: 760px;
+  }
+
+  .image-preview-page .report,
+  .image-preview-page .current-ranking-report {
+    zoom: calc((100vw - 28px) / 760px);
   }
 }
