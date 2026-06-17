@@ -84,7 +84,8 @@ function updateFirstVisitModalSnsContent(targetElement, platform, browserType) {
           <img src="../img/setting/setting_ios_x.jpeg">
           もし見えていたら一番最初に、
           <ol>
-            <li>画像の赤枠の<strong>「github.io」</strong>をタップ</li>
+            <li>画面の下にある<strong>「github.io」</strong>をタップ<br>
+            （画像の赤枠のところ）</li>
             <li><strong>ブラウザで開く</strong>をタップ</li>
           </ol>
           をやってみてください！
@@ -97,7 +98,8 @@ function updateFirstVisitModalSnsContent(targetElement, platform, browserType) {
           <img src="../img/setting/setting_ios_threads.jpeg">
           もし見えていたら一番最初に、
           <ol>
-            <li>画像の赤枠の<strong>「<i class="bi bi-three-dots"></i>」</strong>をタップ</li>
+            <li>画面の右上にある<strong>「<i class="bi bi-three-dots"></i>」</strong>をタップ<br>
+            （画像の赤枠のところ）</li>
             <li><strong>外部ブラウザで開く</strong>をタップ</li>
           </ol>
           をやってみてください！
@@ -110,7 +112,8 @@ function updateFirstVisitModalSnsContent(targetElement, platform, browserType) {
           <img src="../img/setting/setting_ios_line.jpeg">
           もし見えていたら一番最初に、
           <ol>
-            <li>画像の赤枠の<strong>「<i class="bi bi-three-dots-vertical"></i>」</strong>をタップ</li>
+            <li>画面の右下にある<strong>「<i class="bi bi-three-dots-vertical"></i>」</strong>をタップ<br>
+            （画像の赤枠のところ）</li>
             <li><strong>ブラウザで開く</strong>をタップ</li>
           </ol>
           をやってみてください！
@@ -171,7 +174,8 @@ function updateHomeInstallGuideContent(platform, browserType) {
           <img src="../img/setting/setting_ios_x.jpeg">
           もし見えていたら「開始」を押す前に、
           <ol>
-            <li>画像の赤枠の<strong>「github.io」</strong>をタップ</li>
+            <li>画面の下の<strong>「github.io」</strong>をタップ<br>
+            （画像の赤枠のところ）</li>
             <li><strong>ブラウザで開く</strong>をタップ</li>
           </ol>
           をやってみてください！
@@ -184,7 +188,8 @@ function updateHomeInstallGuideContent(platform, browserType) {
          <img src="../img/setting/setting_ios_threads.jpeg">
          もし見えていたら「開始」を押す前に、
           <ol>
-            <li>画像の赤枠の<strong>「<i class="bi bi-three-dots"></i>」</strong>をタップ</li>
+            <li>画面の右上の<strong>「<i class="bi bi-three-dots"></i>」</strong>をタップ<br>
+            （画像の赤枠のところ）</li>
             <li><strong>外部ブラウザで開く</strong>をタップ</li>
           </ol>
           をやってみてください！
@@ -197,7 +202,8 @@ function updateHomeInstallGuideContent(platform, browserType) {
           <img src="../img/setting/setting_ios_line.jpeg">
           もし見えていたら「開始」を押す前に、
           <ol>
-            <li>画像の赤枠の<strong>「<i class="bi bi-three-dots-vertical"></i>」</strong>をタップ</li>
+            <li>画面の右下の<strong>「<i class="bi bi-three-dots-vertical"></i>」</strong>をタップ<br>
+            （画像の赤枠のところ）</li>
             <li><strong>ブラウザで開く</strong>をタップ</li>
           </ol>
           をやってみてください！
