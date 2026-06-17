@@ -78,9 +78,9 @@ function updateFirstVisitModalSnsContent(targetElement, platform, browserType) {
   if (isIOS) {
     const iosGuideMap = {
       x_in_app: {
-        title: "<strong>⚠️今の状態ちょっと使いにくいかも！</strong>",
+        title: "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>",
         text: `
-          もしかして画面の下の方に、こんなの見えてませんか？<br>
+          画面の下の方にこんなの見えてませんか？<br>
           <img src="../img/setting/setting_ios_x.jpeg">
           もし見えていたら一番最初に、
           <ol>
@@ -88,13 +88,14 @@ function updateFirstVisitModalSnsContent(targetElement, platform, browserType) {
             （画像の赤枠のところ）</li>
             <li><strong>ブラウザで開く</strong>をタップ</li>
           </ol>
-          をやってみてください！
+          をやってみてください！<br>
+          ページが開き直されて、「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」が消えていたらOKです！
         `,
       },
       threads_in_app: {
-        title: "<strong>⚠️今の状態ちょっと使いにくいかも！</strong>",
+        title: "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>",
         text: `
-          もしかして画面の上の方に、こんなの見えてませんか？<br>
+          画面の上の方にこんなの見えてませんか？<br>
           <img src="../img/setting/setting_ios_threads.jpeg">
           もし見えていたら一番最初に、
           <ol>
@@ -102,13 +103,14 @@ function updateFirstVisitModalSnsContent(targetElement, platform, browserType) {
             （画像の赤枠のところ）</li>
             <li><strong>外部ブラウザで開く</strong>をタップ</li>
           </ol>
-          をやってみてください！
+          をやってみてください！<br>
+          ページが開き直されて、「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」が消えていたらOKです！
         `,
       },
       line_in_app: {
-        title: "<strong>⚠️今の状態ちょっと使いにくいかも！</strong>",
+        title: "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>",
         text: `
-          もしかして画面の下の方に、こんなの見えてませんか？<br>
+          画面の下の方にこんなの見えてませんか？<br>
           <img src="../img/setting/setting_ios_line.jpeg">
           もし見えていたら一番最初に、
           <ol>
@@ -116,7 +118,8 @@ function updateFirstVisitModalSnsContent(targetElement, platform, browserType) {
             （画像の赤枠のところ）</li>
             <li><strong>ブラウザで開く</strong>をタップ</li>
           </ol>
-          をやってみてください！
+          をやってみてください！<br>
+          ページが開き直されて、「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」が消えていたらOKです！
         `,
       },
     };
@@ -133,7 +136,7 @@ function updateFirstVisitModalSnsContent(targetElement, platform, browserType) {
   }
 
   if (isAndroid) {
-    titleElement.innerHTML = "<strong>⚠️今の状態ちょっと使いにくいかも！</strong>";
+    titleElement.innerHTML = "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>";
     textElement.innerHTML = `
       SNS内ブラウザで開いているかもしれません。<br>
       一番最初に、下のボタンを押してみてください！<br>
@@ -168,45 +171,48 @@ function updateHomeInstallGuideContent(platform, browserType) {
   if (isIOS) {
     const iosGuideMap = {
       x_in_app: {
-        title: "<strong>⚠️今の状態ちょっと使いにくいかも！</strong>",
+        title: "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>",
         text: `
-          もしかして画面の下の方に、こんなの見えてませんか？<br>
-          <img src="../img/setting/setting_ios_x.jpeg">
+          画面の下の方にこんなの見えてませんか？<br>
+          <img src="../img/setting/setting_ios_x.jpeg"><br>
           もし見えていたら「開始」を押す前に、
           <ol>
             <li>画面の下の<strong>「github.io」</strong>をタップ<br>
             （画像の赤枠のところ）</li>
             <li><strong>ブラウザで開く</strong>をタップ</li>
           </ol>
-          をやってみてください！
+          をやってみてください！<br>
+          ページが開き直されて、「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」が消えていたらOKです！
         `,
       },
       threads_in_app: {
-        title: "<strong>⚠️今の状態ちょっと使いにくいかも！</strong>",
+        title: "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>",
         text: `
          もしかして画面の上の方に、こんなの見えてませんか？<br>
-         <img src="../img/setting/setting_ios_threads.jpeg">
+         <img src="../img/setting/setting_ios_threads.jpeg"><br>
          もし見えていたら「開始」を押す前に、
           <ol>
             <li>画面の右上の<strong>「<i class="bi bi-three-dots"></i>」</strong>をタップ<br>
             （画像の赤枠のところ）</li>
             <li><strong>外部ブラウザで開く</strong>をタップ</li>
           </ol>
-          をやってみてください！
+          をやってみてください！<br>
+          ページが開き直されて、「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」が消えていたらOKです！
         `,
       },
       line_in_app: {
-        title: "<strong>⚠️今の状態ちょっと使いにくいかも！</strong>",
+        title: "<strong>⚠️今あなたの状態ちょっと使いにくいかも！</strong>",
         text: `
           もしかして画面の下の方に、こんなの見えてませんか？<br>
-          <img src="../img/setting/setting_ios_line.jpeg">
+          <img src="../img/setting/setting_ios_line.jpeg"><br>
           もし見えていたら「開始」を押す前に、
           <ol>
             <li>画面の右下の<strong>「<i class="bi bi-three-dots-vertical"></i>」</strong>をタップ<br>
             （画像の赤枠のところ）</li>
             <li><strong>ブラウザで開く</strong>をタップ</li>
           </ol>
-          をやってみてください！
+          をやってみてください！<br>
+          ページが開き直されて、「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」が消えていたらOKです！
         `,
       },
     };
@@ -233,7 +239,7 @@ function updateHomeInstallGuideContent(platform, browserType) {
 
     const snsName = snsNameMap[browserType] || "SNS";
 
-    titleElement.innerHTML = "<strong>⚠️今の状態ちょっと使いにくいかも！</strong>";
+    titleElement.innerHTML = "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>";
     textElement.innerHTML = `
       SNS内ブラウザで開いているかもしれません。<br>
       「開始」を押す前に下のボタンを押してみてください！
