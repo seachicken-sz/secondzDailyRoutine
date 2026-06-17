@@ -294,7 +294,30 @@ function autoOpenFirstSetupModalIfNeeded() {
 }
 
 function openFirstVisitModal() {
+  renderUserBrowserInfo();
+  updateFirstVisitOpenSetupButtonVisibility();
   firstVisitModalElement?.classList.remove("hidden");
+}
+
+function updateFirstVisitOpenSetupButtonVisibility() {
+  if (!firstVisitOpenSetupButtonElement) {
+    return;
+  }
+
+  const browserType =
+    typeof getAccessBrowserType === "function"
+      ? getAccessBrowserType()
+      : "other_browser";
+
+  const isSnsInAppBrowser = [
+    "x_in_app",
+    "threads_in_app",
+    "line_in_app",
+    "instagram_in_app",
+    "facebook_in_app",
+  ].includes(browserType);
+
+  firstVisitOpenSetupButtonElement.classList.toggle("hidden", isSnsInAppBrowser);
 }
 
 function closeFirstVisitModal() {
