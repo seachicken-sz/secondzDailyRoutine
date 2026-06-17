@@ -1,50 +1,7 @@
 // ==================================================
 // debug.js
-// SNSアプリ内ブラウザ検証用
+// storage/cache/service worker削除検証用
 // ==================================================
-
-function isDebugSnsInAppBrowser() {
-  if (typeof getAccessBrowserType !== "function") {
-    return false;
-  }
-
-  return [
-    "x_in_app",
-    "threads_in_app",
-    "line_in_app",
-    "instagram_in_app",
-    "facebook_in_app",
-  ].includes(getAccessBrowserType());
-}
-
-function createDebugStorageClearButton() {
-  if (!isDebugSnsInAppBrowser()) {
-    return;
-  }
-
-  if (document.getElementById("debugStorageClearButton")) {
-    return;
-  }
-
-  const button = document.createElement("button");
-  button.id = "debugStorageClearButton";
-  button.type = "button";
-  button.textContent = "debug: storage削除";
-  button.style.position = "fixed";
-  button.style.right = "12px";
-  button.style.bottom = "12px";
-  button.style.zIndex = "9999";
-  button.style.padding = "10px 12px";
-  button.style.borderRadius = "999px";
-  button.style.border = "none";
-  button.style.background = "#333";
-  button.style.color = "#fff";
-  button.style.fontSize = "12px";
-
-  button.addEventListener("click", clearDebugStorageAndReload);
-
-  document.body.appendChild(button);
-}
 
 async function clearDebugStorageAndReload() {
   try {
@@ -69,4 +26,8 @@ async function clearDebugStorageAndReload() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", createDebugStorageClearButton);
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .getElementById("debugStorageClearButton")
+    ?.addEventListener("click", clearDebugStorageAndReload);
+});
