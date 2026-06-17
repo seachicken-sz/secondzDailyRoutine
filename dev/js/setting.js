@@ -294,7 +294,6 @@ function autoOpenFirstSetupModalIfNeeded() {
 }
 
 function openFirstVisitModal() {
-  renderUserBrowserInfo();
   updateFirstVisitOpenSetupButtonVisibility();
   firstVisitModalElement?.classList.remove("hidden");
 }
