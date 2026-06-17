@@ -611,7 +611,11 @@ function renderReport(data) {
 
   // footerより上に、いいね数推移グラフを追加
   // ランキングが全部なくても、likePoints があれば表示する
-  renderLikeTimelineSection(data.likePoints, chartHours);
+  renderLikeTimelineSection({
+    likePoints: data.likePoints,
+    previousLikePoints: data.previousLikePoints,
+    chartHours
+  });
 
   // 2枚目プレビューを描画する
   renderCurrentRankingPreview(data);
@@ -1412,7 +1416,11 @@ function createCombinedRankingChart(canvasId, rankings, chartHours) {
  * reportCaptureArea内のfooterより上に差し込む。
  * chart-sectionクラスを使い、他のグラフエリアと同じ白背景にする。
  */
-function renderLikeTimelineSection(likePoints, chartHours = 48) {
+function renderLikeTimelineSection({
+  likePoints,
+  previousLikePoints,
+  chartHours = 48
+}) {
   let container = document.getElementById("likeTimelineSection");
 
   if (!container) {
@@ -1426,7 +1434,6 @@ function renderLikeTimelineSection(likePoints, chartHours = 48) {
     container.id = "likeTimelineSection";
     container.className = "chart-section like-timeline-section";
 
-    // footerより上に挿入する
     const footer = report.querySelector("footer, .footer, #footer, .report-footer");
 
     if (footer) {
@@ -1436,8 +1443,10 @@ function renderLikeTimelineSection(likePoints, chartHours = 48) {
     }
   }
 
-  // いいね時系列がない場合は、空グラフを出さずに非表示
-  if (!Array.isArray(likePoints) || likePoints.length === 0) {
+  const hasCurrentLikePoints = Array.isArray(likePoints) && likePoints.length > 0;
+  const hasPreviousLikePoints = Array.isArray(previousLikePoints) && previousLikePoints.length > 0;
+
+  if (!hasCurrentLikePoints && !hasPreviousLikePoints) {
     container.innerHTML = "";
     container.style.display = "none";
     return;
@@ -1456,10 +1465,12 @@ function renderLikeTimelineSection(likePoints, chartHours = 48) {
   `;
 
   const likeData = convertLikePointsToHourData(likePoints, chartHours);
+  const previousLikeData = convertLikePointsToHourData(previousLikePoints, chartHours);
 
   const chart = createLikeTimelineChart(
     "likeTimelineChart",
     likeData,
+    previousLikeData,
     chartHours
   );
 
