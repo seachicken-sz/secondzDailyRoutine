@@ -1751,29 +1751,29 @@ function createCurrentRankingSummaryElement(data) {
       </section>
     ` : ""}
 
-    ${metricItems.length > 0 ? `
+   ${metricItems.length > 0 ? `
       <section class="stats">
         ${metricItems.map((item) => {
           const iconClass = item.label === "お気に入り数"
             ? "bi bi-heart"
             : "bi bi-hand-thumbs-up-fill";
-
+    
           return `
             <div class="stat">
               <span class="stat-icon">
                 <i class="${iconClass}"></i>
               </span>
-
+    
               <span class="stat-label">
                 ${escapeHtml(item.label)}
               </span>
-
+    
               <strong>
                 ${escapeHtml(item.value)}
               </strong>
-
+    
               ${item.diffText ? `
-                <span class="sub-rank blue-bg">
+                <span class="stat-diff">
                   ${escapeHtml(item.diffText)}
                 </span>
               ` : ""}
