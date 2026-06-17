@@ -89,7 +89,7 @@ function updateFirstVisitModalSnsContent(targetElement, platform, browserType) {
             <li><strong>ブラウザで開く</strong>をタップ</li>
           </ol>
           をやってみてください！<br>
-          ページが開き直されて、「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」が消えていたらOKです！
+          ページが開き直されて、<br>「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」<br>が消えていたらOKです！
         `,
       },
       threads_in_app: {
@@ -104,7 +104,7 @@ function updateFirstVisitModalSnsContent(targetElement, platform, browserType) {
             <li><strong>外部ブラウザで開く</strong>をタップ</li>
           </ol>
           をやってみてください！<br>
-          ページが開き直されて、「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」が消えていたらOKです！
+          ページが開き直されて、<br>「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」<br>が消えていたらOKです！
         `,
       },
       line_in_app: {
@@ -119,10 +119,15 @@ function updateFirstVisitModalSnsContent(targetElement, platform, browserType) {
             <li><strong>ブラウザで開く</strong>をタップ</li>
           </ol>
           をやってみてください！<br>
-          ページが開き直されて、「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」が消えていたらOKです！
+          ページが開き直されて、<br>「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」<br>が消えていたらOKです！
         `,
       },
     };
+
+    const normalizedBrowserType =
+    browserType === "instagram_in_app"
+      ? "threads_in_app"
+      : browserType;
 
     const guide = iosGuideMap[browserType];
 
@@ -182,7 +187,7 @@ function updateHomeInstallGuideContent(platform, browserType) {
             <li><strong>ブラウザで開く</strong>をタップ</li>
           </ol>
           をやってみてください！<br>
-          ページが開き直されて、「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」が消えていたらOKです！
+          ページが開き直されて、<br>「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」<br>が消えていたらOKです！
         `,
       },
       threads_in_app: {
@@ -197,7 +202,7 @@ function updateHomeInstallGuideContent(platform, browserType) {
             <li><strong>外部ブラウザで開く</strong>をタップ</li>
           </ol>
           をやってみてください！<br>
-          ページが開き直されて、「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」が消えていたらOKです！
+          ページが開き直されて、<br>「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」<br>が消えていたらOKです！
         `,
       },
       line_in_app: {
@@ -212,10 +217,15 @@ function updateHomeInstallGuideContent(platform, browserType) {
             <li><strong>ブラウザで開く</strong>をタップ</li>
           </ol>
           をやってみてください！<br>
-          ページが開き直されて、「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」が消えていたらOKです！
+          ページが開き直されて、<br>「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」<br>が消えていたらOKです！
         `,
       },
     };
+
+    const normalizedBrowserType =
+    browserType === "instagram_in_app"
+      ? "threads_in_app"
+      : browserType;
 
     const guide = iosGuideMap[browserType];
 
