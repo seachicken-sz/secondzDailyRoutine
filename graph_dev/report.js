@@ -1529,6 +1529,265 @@ function setupReloadDataButton() {
 }
 
 
+function getFiniteNumber(value) {
+  const number = Number(value);
+
+  return Number.isFinite(number) ? number : null;
+}
+
+function getLatestNumericPoint(points, valueKey) {
+  if (!Array.isArray(points)) {
+    return null;
+  }
+
+  return points.reduce((latestPoint, point) => {
+    const hour = getFiniteNumber(point.hour);
+    const value = getFiniteNumber(point[valueKey]);
+
+    if (hour === null || value === null) {
+      return latestPoint;
+    }
+
+    if (!latestPoint || hour > latestPoint.hour) {
+      return {
+        hour,
+        value
+      };
+    }
+
+    return latestPoint;
+  }, null);
+}
+
+function getNumericPointByHour(points, valueKey, targetHour) {
+  if (!Array.isArray(points)) {
+    return null;
+  }
+
+  const foundPoint = points.find((point) => {
+    return getFiniteNumber(point.hour) === targetHour;
+  });
+
+  if (!foundPoint) {
+    return null;
+  }
+
+  const value = getFiniteNumber(foundPoint[valueKey]);
+
+  if (value === null) {
+    return null;
+  }
+
+  return {
+    hour: targetHour,
+    value
+  };
+}
+
+function getLatestDiffFromPreviousHour(points, valueKey) {
+  const latestPoint = getLatestNumericPoint(points, valueKey);
+
+  if (!latestPoint) {
+    return null;
+  }
+
+  const previousPoint = getNumericPointByHour(
+    points,
+    valueKey,
+    latestPoint.hour - 1
+  );
+
+  if (!previousPoint) {
+    return null;
+  }
+
+  return latestPoint.value - previousPoint.value;
+}
+
+function getRankUpText(ranking) {
+  if (!ranking || !Array.isArray(ranking.currentPoints)) {
+    return "";
+  }
+
+  const latestPoint = getLatestNumericPoint(ranking.currentPoints, "rank");
+
+  if (!latestPoint) {
+    return "";
+  }
+
+  const previousPoint = getNumericPointByHour(
+    ranking.currentPoints,
+    "rank",
+    latestPoint.hour - 1
+  );
+
+  if (!previousPoint) {
+    return "";
+  }
+
+  const rankUp = previousPoint.value - latestPoint.value;
+
+  if (rankUp <= 0) {
+    return "";
+  }
+
+  return `↑${rankUp}位UP!`;
+}
+
+function getPositiveDiffText(diff) {
+  if (diff === null || diff === undefined || diff <= 0) {
+    return "";
+  }
+
+  return `＋${formatDisplayNumber(diff)}`;
+}
+
+function buildCurrentRankingSummaryItems(data) {
+  const items = [];
+
+  if (Array.isArray(data.rankings)) {
+    data.rankings.forEach((ranking) => {
+      if (!ranking) {
+        return;
+      }
+
+      const currentRank = getFiniteNumber(ranking.currentRank);
+
+      if (currentRank === null) {
+        return;
+      }
+
+      const label = ranking.label || ranking.type || "ランキング";
+      const diffText = getRankUpText(ranking);
+
+      items.push({
+        label,
+        value: `${formatDisplayNumber(currentRank)}位`,
+        diffText
+      });
+    });
+  }
+
+  if (data.likes !== null && data.likes !== undefined && data.likes !== "") {
+    const likeDiff = getLatestDiffFromPreviousHour(data.likePoints, "likes");
+
+    items.push({
+      label: "いいね数",
+      value: formatDisplayNumber(data.likes),
+      diffText: getPositiveDiffText(likeDiff)
+    });
+  }
+
+  if (data.favorites !== null && data.favorites !== undefined && data.favorites !== "") {
+    const favoriteDiff = getLatestDiffFromPreviousHour(data.favoritePoints, "favorites");
+
+    items.push({
+      label: "お気に入り数",
+      value: formatDisplayNumber(data.favorites),
+      diffText: getPositiveDiffText(favoriteDiff)
+    });
+  }
+
+  return items;
+}
+
+function createCurrentRankingSummaryElement(data) {
+  const items = buildCurrentRankingSummaryItems(data);
+
+  const element = document.createElement("div");
+  element.className = "current-ranking-capture-area";
+
+  const programMetaLines = [
+    `${data.broadcastDate || ""} 放送　${data.subtitle || ""}`.trim(),
+    data.updatedAt ? `（ ${data.updatedAt} 更新 ）` : ""
+  ].filter(Boolean);
+
+  element.innerHTML = `
+    <div class="current-ranking-top-bar">
+      TVer現在のランキング
+    </div>
+
+    <div class="current-ranking-body">
+      <h1 class="current-ranking-program-title">
+        ${escapeHtml(data.programTitle || "")}
+      </h1>
+
+      <div class="current-ranking-program-meta">
+        ${programMetaLines.map((line) => escapeHtml(line)).join("<br>")}
+      </div>
+
+      <ul class="current-ranking-list">
+        ${items.map((item) => `
+          <li class="current-ranking-item">
+            <span class="current-ranking-label">
+              ${escapeHtml(item.label)}
+            </span>
+
+            <span class="current-ranking-value-wrap">
+              <span class="current-ranking-value">
+                ${escapeHtml(item.value)}
+              </span>
+
+              ${item.diffText ? `
+                <span class="current-ranking-diff">
+                  ${escapeHtml(item.diffText)}
+                </span>
+              ` : ""}
+            </span>
+          </li>
+        `).join("")}
+      </ul>
+
+      <div class="current-ranking-footer">
+        TVerで見よう！
+      </div>
+    </div>
+  `;
+
+  return element;
+}
+
+function canvasToPngBlob(canvas) {
+  return new Promise((resolve) => {
+    canvas.toBlob((blob) => {
+      resolve(blob);
+    }, "image/png");
+  });
+}
+
+async function captureElementToPngBlob(target, options = {}) {
+  const canvas = await html2canvas(target, {
+    scale: 2,
+    useCORS: true,
+    backgroundColor: null,
+    width: 760,
+    windowWidth: 760,
+    ...options
+  });
+
+  return canvasToPngBlob(canvas);
+}
+
+async function captureTemporaryElementToPngBlob(element) {
+  const wrapper = document.createElement("div");
+
+  wrapper.style.position = "fixed";
+  wrapper.style.left = "-9999px";
+  wrapper.style.top = "0";
+  wrapper.style.width = "760px";
+  wrapper.style.zIndex = "-1";
+  wrapper.appendChild(element);
+
+  document.body.appendChild(wrapper);
+
+  try {
+    return await captureElementToPngBlob(element);
+  } finally {
+    wrapper.remove();
+  }
+}
+
+
 // ==============================
 // 画像保存・共有処理
 // ==============================
@@ -1562,14 +1821,10 @@ async function saveReportImage() {
     return;
   }
 
-  const canvas = await html2canvas(target, {
-    scale: 2,
-    useCORS: true,
-    backgroundColor: null,
-    width: 760,
-    windowWidth: 760,
+  const safeBaseFileName = `${reportData.programTitle}_${reportData.broadcastDate}_ranking-report`
+    .replace(/[\\/:*?"<>|]/g, "-");
 
-    // キャプチャ時だけ見た目調整用classを付与する
+  const mainBlob = await captureElementToPngBlob(target, {
     onclone: (clonedDocument) => {
       const clonedTarget = clonedDocument.getElementById("reportCaptureArea");
 
@@ -1579,48 +1834,60 @@ async function saveReportImage() {
     }
   });
 
-  const fileName = `${reportData.programTitle}_${reportData.broadcastDate}_ranking-report.png`
-    .replace(/[\\/:*?"<>|]/g, "-");
+  if (!mainBlob) {
+    return;
+  }
 
-  canvas.toBlob(async (blob) => {
-    if (!blob) {
+  const summaryElement = createCurrentRankingSummaryElement(reportData);
+  const summaryBlob = await captureTemporaryElementToPngBlob(summaryElement);
+
+  if (!summaryBlob) {
+    return;
+  }
+
+  const mainFile = new File([mainBlob], `${safeBaseFileName}.png`, {
+    type: "image/png"
+  });
+
+  const summaryFile = new File([summaryBlob], `${safeBaseFileName}_current-ranking.png`, {
+    type: "image/png"
+  });
+
+  const files = [
+    mainFile,
+    summaryFile
+  ];
+
+  const shareTitle = buildImageShareTitle();
+  const shareText = buildImageShareText();
+
+  if (navigator.canShare && navigator.canShare({ files })) {
+    try {
+      await navigator.share({
+        files,
+        title: shareTitle,
+        text: shareText
+      });
+      return;
+    } catch (error) {
+      console.log("共有がキャンセルされました", error);
       return;
     }
+  }
 
-    const file = new File([blob], fileName, {
-      type: "image/png"
-    });
+  downloadBlobAsFile(mainBlob, `${safeBaseFileName}.png`);
+  downloadBlobAsFile(summaryBlob, `${safeBaseFileName}_current-ranking.png`);
+}
 
-    // 共有時のタイトル・本文
-    const shareTitle = buildImageShareTitle();
-    const shareText = buildImageShareText();
+function downloadBlobAsFile(blob, fileName) {
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
 
-    // Web Share APIで画像共有できる場合
-    if (navigator.canShare && navigator.canShare({ files: [file] })) {
-      try {
-        await navigator.share({
-          files: [file],
-          title: shareTitle,
-          text: shareText
-        });
-        return;
-      } catch (error) {
-        // ユーザーが共有をキャンセルした場合もここに来る
-        console.log("共有がキャンセルされました", error);
-        return;
-      }
-    }
+  link.download = fileName;
+  link.href = url;
+  link.click();
 
-    // 画像共有に対応していない環境では画像をダウンロードする
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-
-    link.download = fileName;
-    link.href = url;
-    link.click();
-
-    URL.revokeObjectURL(url);
-  }, "image/png");
+  URL.revokeObjectURL(url);
 }
 
 
