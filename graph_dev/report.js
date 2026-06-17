@@ -1703,94 +1703,90 @@ function createCurrentRankingSummaryElement(data) {
     return item.kind === "metric";
   });
 
-  const element = document.createElement("div");
-  element.className = "current-ranking-capture-area";
+  const element = document.createElement("main");
+  element.className = "report current-ranking-report";
 
-  const programMetaLines = [
-    `${data.broadcastDate || ""} 放送　${data.subtitle || ""}`.trim(),
-    data.updatedAt ? `（ ${data.updatedAt} 更新 ）` : ""
-  ].filter(Boolean);
+  const programMetaHtml = `
+    ${escapeHtml(data.broadcastDate || "")} 放送　${escapeHtml(data.subtitle || "")}<br>
+    （ <i class="ph ph-clock"></i> ${escapeHtml(data.updatedAt || "")} 更新 ）
+  `;
 
   element.innerHTML = `
     <div class="top-bar">
       TVer現在のランキング
     </div>
 
-    <div class="current-ranking-body">
-      <div class="current-ranking-program-box">
-        <h1 class="current-ranking-program-title">
-          ${escapeHtml(data.programTitle || "")}
-        </h1>
-
-        <div class="current-ranking-program-meta">
-          ${programMetaLines.map((line) => escapeHtml(line)).join("<br>")}
-        </div>
+    <section class="hero">
+      <div class="program-title">
+        ${escapeHtml(data.programTitle || "")}
       </div>
 
-      ${rankingItems.length > 0 ? `
-        <div class="current-ranking-section-title">
-          ランキング
-        </div>
+      <div class="meta">
+        ${programMetaHtml}
+      </div>
+    </section>
 
-        <div class="current-ranking-cards">
-          ${rankingItems.map((item, index) => {
-            const theme = getRankingThemeByIndex(index);
-            const rankText = String(item.value || "").replace("位", "");
+    ${rankingItems.length > 0 ? `
+      <section class="rank-cards">
+        ${rankingItems.map((item, index) => {
+          const theme = getRankingThemeByIndex(index);
+          const rankText = String(item.value || "").replace("位", "");
 
-            return `
-              <div class="card">
-                <div class="label ${theme.labelClass}">
-                  ${escapeHtml(item.label)}
-                </div>
-
-                <div class="rank-main" style="color:${theme.color};">
-                  ${escapeHtml(rankText)}<span>位</span>
-                </div>
-
-                <div class="sub-rank ${theme.bgClass}">
-                  ${item.diffText ? escapeHtml(item.diffText) : "現在ランクイン中"}
-                </div>
+          return `
+            <div class="card">
+              <div class="label ${theme.labelClass}">
+                ${escapeHtml(item.label)}ランキング
               </div>
-            `;
-          }).join("")}
-        </div>
-      ` : ""}
 
-      ${metricItems.length > 0 ? `
-        <div class="current-ranking-section-title">
-          反応数
-        </div>
-      
-        <div class="current-ranking-metrics">
-          ${metricItems.map((item) => `
-            <div class="current-ranking-metric-card">
-              <div class="current-ranking-metric-label">
-                ${escapeHtml(item.label)}
+              <div class="rank-main" style="color:${theme.color};">
+                ${escapeHtml(rankText)}<span>位</span>
               </div>
-      
-              <div class="current-ranking-metric-value-wrap">
-                <div class="current-ranking-metric-value">
-                  ${escapeHtml(item.value)}
-                </div>
-      
-                ${item.diffText ? `
-                  <div class="current-ranking-metric-diff">
-                    ${escapeHtml(item.diffText)}
-                  </div>
-                ` : `
-                  <div class="current-ranking-metric-sub">
-                    現在
-                  </div>
-                `}
+
+              <div class="sub-rank ${theme.bgClass}${item.diffText ? "" : " is-empty"}">
+                ${item.diffText ? escapeHtml(item.diffText) : "現在"}
               </div>
             </div>
-          `).join("")}
-        </div>
-      ` : ""}
+          `;
+        }).join("")}
+      </section>
+    ` : ""}
 
-      <div class="current-ranking-footer">
-        データ出典：TVer　※1時間ごと更新
-      </div>
+    ${metricItems.length > 0 ? `
+      <section class="stats">
+        ${metricItems.map((item) => {
+          const iconClass = item.label === "お気に入り数"
+            ? "bi bi-heart"
+            : "bi bi-hand-thumbs-up-fill";
+
+          return `
+            <div class="stat">
+              <span class="stat-icon">
+                <i class="${iconClass}"></i>
+              </span>
+
+              <span class="stat-label">
+                ${escapeHtml(item.label)}
+              </span>
+
+              <strong>
+                ${escapeHtml(item.value)}
+              </strong>
+
+              ${item.diffText ? `
+                <span class="sub-rank blue-bg">
+                  ${escapeHtml(item.diffText)}
+                </span>
+              ` : ""}
+            </div>
+          `;
+        }).join("")}
+      </section>
+    ` : ""}
+
+    <div class="footer">
+      データ出典：TVer<br>
+      本データは個人がTVerをより楽しむために作成された資料であり、公式とは一切関係がありません。<br>
+      ※1時間ごと更新
     </div>
   `;
 
