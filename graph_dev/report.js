@@ -1757,24 +1757,32 @@ function createCurrentRankingSummaryElement(data) {
       ` : ""}
 
       ${metricItems.length > 0 ? `
+        <div class="current-ranking-section-title">
+          反応数
+        </div>
+      
         <div class="current-ranking-metrics">
           ${metricItems.map((item) => `
             <div class="current-ranking-metric-card">
-              <span class="current-ranking-metric-label">
+              <div class="current-ranking-metric-label">
                 ${escapeHtml(item.label)}
-              </span>
-
-              <span class="current-ranking-metric-value-wrap">
-                <span class="current-ranking-metric-value">
+              </div>
+      
+              <div class="current-ranking-metric-value-wrap">
+                <div class="current-ranking-metric-value">
                   ${escapeHtml(item.value)}
-                </span>
-
+                </div>
+      
                 ${item.diffText ? `
-                  <span class="current-ranking-metric-diff">
+                  <div class="current-ranking-metric-diff">
                     ${escapeHtml(item.diffText)}
-                  </span>
-                ` : ""}
-              </span>
+                  </div>
+                ` : `
+                  <div class="current-ranking-metric-sub">
+                    現在
+                  </div>
+                `}
+              </div>
             </div>
           `).join("")}
         </div>
