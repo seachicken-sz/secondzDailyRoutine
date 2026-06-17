@@ -558,3 +558,27 @@ a img{
   font-weight: 600;
   text-align: center;
 }
+
+.current-ranking-preview-section {
+  width: 760px;
+  max-width: 100%;
+  margin: 24px auto 0;
+}
+
+.current-ranking-preview-section .current-ranking-capture-area {
+  transform-origin: top center;
+}
+
+@media (max-width: 820px) {
+  .current-ranking-preview-section {
+    width: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+
+  .current-ranking-preview-section .current-ranking-capture-area {
+    width: 760px;
+    transform: scale(calc((100vw - 24px) / 760));
+    margin-bottom: calc((100vw - 24px) / 760 * -1px);
+  }
+}
