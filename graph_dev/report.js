@@ -1519,26 +1519,45 @@ function convertLikePointsToHourData(points, chartHours) {
  * maintainAspectRatio:false にして、
  * CSSの .like-chart-canvas-wrap の高さを優先する。
  */
-function createLikeTimelineChart(canvasId, likeData, chartHours) {
+function createLikeTimelineChart(canvasId, likeData, previousLikeData, chartHours) {
   const chartLabels = Array.from({ length: chartHours }, (_, i) => i + 1);
+  const datasets = [];
+
+  if (Array.isArray(previousLikeData) && previousLikeData.some(value => value !== null)) {
+    datasets.push({
+      label: "前回",
+      data: previousLikeData,
+      borderColor: "#a9c4ca",
+      backgroundColor: "#a9c4ca",
+      tension: 0.32,
+      pointRadius: 0,
+      pointHoverRadius: 0,
+      borderWidth: 1.7,
+      spanGaps: true,
+      order: 2
+    });
+  }
+
+  if (Array.isArray(likeData) && likeData.some(value => value !== null)) {
+    datasets.push({
+      label: "最新回",
+      data: likeData,
+      borderColor: "#36bfd0",
+      backgroundColor: "#36bfd0",
+      tension: 0.32,
+      pointRadius: 0,
+      pointHoverRadius: 0,
+      borderWidth: 2,
+      spanGaps: true,
+      order: 1
+    });
+  }
 
   return new Chart(document.getElementById(canvasId), {
     type: "line",
     data: {
       labels: chartLabels,
-      datasets: [
-        {
-          label: "",
-          data: likeData,
-          borderColor: "#36bfd0",
-          backgroundColor: "#36bfd0",
-          tension: 0.32,
-          pointRadius: 0,
-          pointHoverRadius: 0,
-          borderWidth: 2,
-          spanGaps: true
-        }
-      ]
+      datasets
     },
     options: {
       responsive: true,
@@ -1593,7 +1612,11 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
             display: false
           },
           grid: {
-            display: false,
+            display: chartHours > 48,
+            color: function(context) {
+              const hour = context.index + 1;
+              return hour % 24 === 0 ? "#e5edf5" : "transparent";
+            },
             drawTicks: false
           },
           ticks: {
@@ -1622,7 +1645,16 @@ function createLikeTimelineChart(canvasId, likeData, chartHours) {
       },
       plugins: {
         legend: {
-          display: false
+          display: datasets.length > 1,
+          position: "top",
+          labels: {
+            boxWidth: 14,
+            boxHeight: 14,
+            padding: 12,
+            font: {
+              size: 12
+            }
+          }
         }
       }
     }
