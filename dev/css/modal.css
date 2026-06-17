@@ -660,6 +660,9 @@
 #firstVisitModalSns{
    text-align:left;
 }
+#firstVisitModalSns img{
+   border:1px solid #888;
+}
 
 /* ==================================================
    モーダル　解説
