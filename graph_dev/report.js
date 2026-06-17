@@ -17,6 +17,9 @@ let rankingCharts = [];
 // JSON再取得時にURLへ付与するキャッシュ回避用パラメータ
 let reportJsonCacheBust = "";
 
+// 画像プレビューの現在ページ
+let currentImagePreviewIndex = 0;
+
 
 // ==============================
 // ランキング表示テーマ
@@ -392,6 +395,9 @@ async function initializeReport() {
 
   // JSON再読み込みボタンのクリックイベントを設定
   setupReloadDataButton();
+
+  // 画像プレビューの左右スワイプを設定
+  setupImagePreviewSlider();
 }
 
 /**
@@ -1774,11 +1780,14 @@ function createCurrentRankingSummaryElement(data) {
         ${rankingItems.map((item, index) => {
           const theme = getRankingThemeByIndex(index);
           const rankText = String(item.value || "").replace("位", "");
+          const labelText = String(item.label || "").endsWith("ランキング")
+            ? item.label
+            : `${item.label}ランキング`;
 
           return `
             <div class="card">
               <div class="label ${theme.labelClass}">
-                ${escapeHtml(item.label)}ランキング
+                ${escapeHtml(labelText)}
               </div>
 
               <div class="rank-main" style="color:${theme.color};">
@@ -1794,27 +1803,27 @@ function createCurrentRankingSummaryElement(data) {
       </section>
     ` : ""}
 
-   ${metricItems.length > 0 ? `
+    ${metricItems.length > 0 ? `
       <section class="stats">
         ${metricItems.map((item) => {
           const iconClass = item.label === "お気に入り数"
             ? "bi bi-heart"
             : "bi bi-hand-thumbs-up-fill";
-    
+
           return `
             <div class="stat">
               <span class="stat-icon">
                 <i class="${iconClass}"></i>
               </span>
-    
+
               <span class="stat-label">
                 ${escapeHtml(item.label)}
               </span>
-    
+
               <strong>
                 ${escapeHtml(item.value)}
               </strong>
-    
+
               ${item.diffText ? `
                 <span class="stat-diff">
                   ${escapeHtml(item.diffText)}
@@ -1841,7 +1850,6 @@ function createCurrentRankingSummaryElement(data) {
  */
 function renderCurrentRankingPreview(data) {
   const preview = document.getElementById("currentRankingPreview");
-  const previewSection = document.getElementById("currentRankingPreviewSection");
 
   if (!preview) {
     return;
@@ -1849,11 +1857,6 @@ function renderCurrentRankingPreview(data) {
 
   if (!data) {
     preview.innerHTML = "";
-
-    if (previewSection) {
-      previewSection.style.display = "none";
-    }
-
     return;
   }
 
@@ -1861,10 +1864,132 @@ function renderCurrentRankingPreview(data) {
 
   preview.innerHTML = "";
   preview.appendChild(element);
+}
 
-  if (previewSection) {
-    previewSection.style.display = "";
+
+// ==============================
+// 画像プレビュー左右スワイプ
+// ==============================
+
+/**
+ * 投稿画像プレビューの左右スワイプ・矢印・ドットを設定する
+ */
+function setupImagePreviewSlider() {
+  const slider = document.getElementById("imagePreviewSlider");
+  const dots = Array.from(document.querySelectorAll("#imagePreviewDots .image-preview-dot"));
+  const prevButton = document.getElementById("imagePreviewPrevButton");
+  const nextButton = document.getElementById("imagePreviewNextButton");
+  const pageText = document.getElementById("imagePreviewPageText");
+
+  if (!slider) {
+    return;
   }
+
+  const getPages = () => {
+    return Array.from(slider.querySelectorAll(".image-preview-page"));
+  };
+
+  const updateImagePreviewState = (index) => {
+    const pages = getPages();
+
+    currentImagePreviewIndex = index;
+
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle("is-active", dotIndex === index);
+    });
+
+    if (prevButton) {
+      prevButton.disabled = index <= 0;
+    }
+
+    if (nextButton) {
+      nextButton.disabled = index >= pages.length - 1;
+    }
+
+    if (pageText) {
+      pageText.textContent = `${index + 1} / ${pages.length}`;
+    }
+  };
+
+  const scrollToPreviewPage = (index) => {
+    const pages = getPages();
+
+    if (pages.length === 0) {
+      return;
+    }
+
+    const safeIndex = Math.max(0, Math.min(index, pages.length - 1));
+    const targetPage = pages[safeIndex];
+
+    slider.scrollTo({
+      left: targetPage.offsetLeft - slider.offsetLeft,
+      behavior: "smooth"
+    });
+
+    updateImagePreviewState(safeIndex);
+  };
+
+  const getActiveIndexFromScroll = () => {
+    const pages = getPages();
+    const sliderCenter = slider.scrollLeft + slider.clientWidth / 2;
+    let activeIndex = 0;
+    let minDistance = Infinity;
+
+    pages.forEach((page, index) => {
+      const pageCenter = page.offsetLeft + page.clientWidth / 2;
+      const distance = Math.abs(sliderCenter - pageCenter);
+
+      if (distance < minDistance) {
+        minDistance = distance;
+        activeIndex = index;
+      }
+    });
+
+    return activeIndex;
+  };
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      const index = Number(dot.dataset.previewIndex);
+
+      if (!Number.isInteger(index)) {
+        return;
+      }
+
+      scrollToPreviewPage(index);
+    });
+  });
+
+  if (prevButton) {
+    prevButton.addEventListener("click", () => {
+      scrollToPreviewPage(currentImagePreviewIndex - 1);
+    });
+  }
+
+  if (nextButton) {
+    nextButton.addEventListener("click", () => {
+      scrollToPreviewPage(currentImagePreviewIndex + 1);
+    });
+  }
+
+  let scrollTimer = null;
+
+  slider.addEventListener("scroll", () => {
+    const activeIndex = getActiveIndexFromScroll();
+    updateImagePreviewState(activeIndex);
+
+    if (scrollTimer) {
+      clearTimeout(scrollTimer);
+    }
+
+    scrollTimer = setTimeout(() => {
+      updateImagePreviewState(getActiveIndexFromScroll());
+    }, 120);
+  }, {
+    passive: true
+  });
+
+  updateImagePreviewState(0);
 }
 
 
@@ -1892,6 +2017,9 @@ function setupReloadDataButton() {
     try {
       await loadReportData(true);
       button.innerHTML = '<i class="bi bi-check-lg"></i>'; // 更新済み
+      setTimeout(() => {
+        scrollImagePreviewToFirstPage();
+      }, 0);
     } catch (error) {
       console.error(error);
       button.innerHTML = '<i class="bi bi-x-lg"></i>'; // 失敗
@@ -1903,6 +2031,46 @@ function setupReloadDataButton() {
       }, 1200);
     }
   });
+}
+
+/**
+ * JSON再読み込み後などに、プレビューを1枚目へ戻す
+ */
+function scrollImagePreviewToFirstPage() {
+  const slider = document.getElementById("imagePreviewSlider");
+
+  if (!slider) {
+    return;
+  }
+
+  slider.scrollTo({
+    left: 0,
+    behavior: "auto"
+  });
+
+  currentImagePreviewIndex = 0;
+
+  const dots = Array.from(document.querySelectorAll("#imagePreviewDots .image-preview-dot"));
+  const prevButton = document.getElementById("imagePreviewPrevButton");
+  const nextButton = document.getElementById("imagePreviewNextButton");
+  const pageText = document.getElementById("imagePreviewPageText");
+  const pages = Array.from(slider.querySelectorAll(".image-preview-page"));
+
+  dots.forEach((dot, index) => {
+    dot.classList.toggle("is-active", index === 0);
+  });
+
+  if (prevButton) {
+    prevButton.disabled = true;
+  }
+
+  if (nextButton) {
+    nextButton.disabled = pages.length <= 1;
+  }
+
+  if (pageText) {
+    pageText.textContent = `1 / ${pages.length}`;
+  }
 }
 
 
@@ -2021,12 +2189,12 @@ async function saveReportImage() {
     return;
   }
 
-  let summaryTarget = document.querySelector("#currentRankingPreview .current-ranking-capture-area");
+  let summaryTarget = document.querySelector("#currentRankingPreview .current-ranking-report");
   let summaryBlob = null;
 
   if (!summaryTarget) {
     renderCurrentRankingPreview(reportData);
-    summaryTarget = document.querySelector("#currentRankingPreview .current-ranking-capture-area");
+    summaryTarget = document.querySelector("#currentRankingPreview .current-ranking-report");
   }
 
   if (summaryTarget) {
