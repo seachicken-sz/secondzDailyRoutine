@@ -285,8 +285,8 @@ async function loadReportData(forceReload = false) {
   }
 
   const jsonUrl = reportJsonCacheBust
-    ? `./tverRankingReport.json?cacheBust=${encodeURIComponent(reportJsonCacheBust)}`
-    : "./tverRankingReport.json";
+    ? `../graph/tverRankingReport.json?cacheBust=${encodeURIComponent(reportJsonCacheBust)}`
+    : "../graph/tverRankingReport.json";
 
   const response = await fetch(jsonUrl, {
     cache: forceReload ? "no-store" : "default"
