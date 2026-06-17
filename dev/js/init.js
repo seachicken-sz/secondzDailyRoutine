@@ -38,6 +38,10 @@ function updateHomeInstallGuideVisibility() {
     isMobile &&
     isSnsInAppBrowser;
 
+  if (shouldShowInstallGuide) {
+    updateHomeInstallGuideContent(platform, browserType);
+  }
+
   installGuideElements.forEach((element) => {
     if (!element) {
       return;
@@ -73,7 +77,7 @@ function updateHomeInstallGuideContent(platform, browserType) {
           もしかして画面の下の方に、こんなの見えてませんか？<br>
           <img src="../img/setting/setting_ios_x.jpeg">
           もし見えていたら「開始」を押す前に、
-          <oi>
+          <ol>
             <li>画像の赤枠の<strong>「github.io」</strong>をタップ</li>
             <li><strong>ブラウザで開く</strong>をタップ</li>
           </ol>
@@ -86,7 +90,7 @@ function updateHomeInstallGuideContent(platform, browserType) {
          もしかして画面の上の方に、こんなの見えてませんか？<br>
          <img src="../img/setting/setting_ios_x.jpeg">
          もし見えていたら「開始」を押す前に、
-          <oi>
+          <ol>
             <li>画像の赤枠の<strong>「<i class="bi bi-three-dots"></i>」</strong>をタップ</li>
             <li><strong>外部ブラウザで開く</strong>をタップ</li>
           </ol>
@@ -99,7 +103,7 @@ function updateHomeInstallGuideContent(platform, browserType) {
           もしかして画面の下の方に、こんなの見えてませんか？<br>
           <img src="../img/setting/setting_ios_line.jpeg">
           もし見えていたら「開始」を押す前に、
-          <oi>
+          <ol>
             <li>画像の赤枠の<strong>「<i class="bi bi-three-dots-vertical"></i>」</strong>をタップ</li>
             <li><strong>ブラウザで開く</strong>をタップ</li>
           </ol>
