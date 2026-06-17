@@ -516,6 +516,17 @@
     box-shadow 0.16s ease,
     border-color 0.16s ease;
 }
+/*既読未読*/
+/*
+.member-work-link-card-tver.is-tver-new {
+  background-color: var(--color-surface-accent);
+  border-color: var(--color-brand-border);
+}
+
+.member-work-link-card-tver.is-tver-viewed {
+  background-color: var(--color-surface);
+}
+*/
 .member-work-link-card:active {
   transform: scale(0.98);
   box-shadow:
@@ -547,14 +558,7 @@
   line-height: 1;
 }
 
-.member-work-link-card-tver.is-tver-new {
-  background-color: var(--color-surface-accent);
-  border-color: var(--color-brand-border);
-}
 
-.member-work-link-card-tver.is-tver-viewed {
-  background-color: var(--color-surface);
-}
 
 
 /*カテゴリ別 微調整*/
