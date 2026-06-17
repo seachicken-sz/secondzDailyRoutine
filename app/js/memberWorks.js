@@ -63,6 +63,7 @@ const TVER_RANKING_REPORT_BASE_URL =
   "https://seachicken-sz.github.io/secondzDailyRoutine/graph/";
 
 let TVER_RANKING_REPORT_IDS = new Set();
+let TVER_RANKING_REPORT_MAP = {};
 
 let selectedMembers = new Set(["all"]);
 
@@ -76,14 +77,15 @@ async function initializeMemberWorks() {
   try {
     const [
       memberWorks,
-      tverRankingReportIds
+      tverRankingReportData
     ] = await Promise.all([
       loadMemberWorks(),
-      loadTverRankingReportIds()
+      loadTverRankingReportData()
     ]);
 
     MEMBER_WORKS = memberWorks;
-    TVER_RANKING_REPORT_IDS = tverRankingReportIds;
+    TVER_RANKING_REPORT_IDS = tverRankingReportData.ids;
+    TVER_RANKING_REPORT_MAP = tverRankingReportData.map;
 
     renderMemberWorks();
 
@@ -96,9 +98,9 @@ async function initializeMemberWorks() {
 }
 
 /**
- * TVerランキングレポートが存在するID一覧を取得
+ * TVerランキングレポート情報を取得
  */
-async function loadTverRankingReportIds() {
+async function loadTverRankingReportData() {
   try {
     const response = await fetch(TVER_RANKING_REPORT_JSON_PATH, {
       cache: "no-store"
@@ -111,10 +113,16 @@ async function loadTverRankingReportIds() {
     const data = await response.json();
 
     if (!data || typeof data.reports !== "object" || data.reports === null) {
-      return new Set();
+      return {
+        ids: new Set(),
+        map: {}
+      };
     }
 
-    return new Set(Object.keys(data.reports));
+    return {
+      ids: new Set(Object.keys(data.reports)),
+      map: data.reports
+    };
 
   } catch (error) {
     console.warn(
@@ -122,7 +130,10 @@ async function loadTverRankingReportIds() {
       error
     );
 
-    return new Set();
+    return {
+      ids: new Set(),
+      map: {}
+    };
   }
 }
 
@@ -340,10 +351,14 @@ function createWorkItemHtml(item, group) {
  * TVer用リンクカードを生成
  */
 function createTverWorkItemHtml(item, group) {
-  const episodeId =
-    item.episodeId || getTverEpisodeId(item.platformUrl) || "";
+  const programId =
+    item.programId || item.seriesId || getTverSeriesId(item.platformUrl) || "";
 
-  const isViewed = isTverEpisodeViewed(episodeId);
+  const episodeId =
+    item.episodeId || getLatestTverEpisodeIdByProgramId(programId) || "";
+
+  const isViewed =
+    episodeId ? isTverEpisodeViewed(episodeId) : true;
 
   return `
     <div class="member-work-link-card member-work-link-card-tver ${isViewed ? "is-tver-viewed" : "is-tver-new"}">
@@ -365,7 +380,7 @@ function createTverWorkItemHtml(item, group) {
         data-member-work-title="${escapeHtml(getProgramDisplayName(item))}"
         data-member-work-url="${escapeHtml(item[group.urlKey])}"
         data-member-work-work-type="${escapeHtml(item.workType || "")}"
-        data-member-work-program-id="${escapeHtml(item.programId || item.seriesId || "")}"
+        data-member-work-program-id="${escapeHtml(programId)}"
         data-member-work-episode-id="${escapeHtml(episodeId)}"
         data-member-work-members="${escapeHtml(Array.isArray(item.members) ? item.members.join(",") : "")}"
       >
@@ -463,15 +478,18 @@ function getTverLinkText(item) {
  * TVerランキングレポートボタンを生成
  */
 function createTverRankingReportButtonHtml(item) {
-  const episodeId =
-    item.episodeId || getTverEpisodeId(item.platformUrl) || "";
+  const programId =
+    item.programId || item.seriesId || getTverSeriesId(item.platformUrl) || "";
 
-  if (!episodeId || !TVER_RANKING_REPORT_IDS.has(episodeId)) {
+  const episodeId =
+    item.episodeId || getLatestTverEpisodeIdByProgramId(programId) || "";
+
+  if (!programId || !TVER_RANKING_REPORT_IDS.has(programId)) {
     return "";
   }
 
   const reportUrl =
-    `${TVER_RANKING_REPORT_BASE_URL}?id=${encodeURIComponent(episodeId)}`;
+    `${TVER_RANKING_REPORT_BASE_URL}?id=${encodeURIComponent(programId)}`;
 
   return `
     <a
@@ -486,13 +504,50 @@ function createTverRankingReportButtonHtml(item) {
       data-member-work-title="${escapeHtml(getProgramDisplayName(item))}"
       data-member-work-url="${escapeHtml(reportUrl)}"
       data-member-work-work-type="${escapeHtml(item.workType || "tv")}"
-      data-member-work-program-id="${escapeHtml(item.programId || item.seriesId || "")}"
+      data-member-work-program-id="${escapeHtml(programId)}"
       data-member-work-episode-id="${escapeHtml(episodeId)}"
       data-member-work-members="${escapeHtml(Array.isArray(item.members) ? item.members.join(",") : "")}"
     >
       <i class="bi bi-graph-up-arrow" aria-hidden="true"></i>
     </a>
   `;
+}
+
+/**
+ * TVer URLからseriesIdを取得
+ */
+function getTverSeriesId(url) {
+  if (!url) {
+    return "";
+  }
+
+  const value = String(url).trim();
+
+  try {
+    const parsedUrl = new URL(value, window.location.href);
+    const pathParts = parsedUrl.pathname
+      .split("/")
+      .filter(Boolean);
+
+    if (pathParts.at(-2) !== "series") {
+      return "";
+    }
+
+    return pathParts.at(-1) || "";
+
+  } catch (error) {
+    const pathParts = value
+      .split("?")[0]
+      .split("#")[0]
+      .split("/")
+      .filter(Boolean);
+
+    if (pathParts.at(-2) !== "series") {
+      return "";
+    }
+
+    return pathParts.at(-1) || "";
+  }
 }
 
 /**
@@ -511,16 +566,42 @@ function getTverEpisodeId(url) {
       .split("/")
       .filter(Boolean);
 
+    if (pathParts.at(-2) !== "episodes") {
+      return "";
+    }
+
     return pathParts.at(-1) || "";
 
   } catch (error) {
-    return value
+    const pathParts = value
       .split("?")[0]
       .split("#")[0]
       .split("/")
-      .filter(Boolean)
-      .at(-1) || "";
+      .filter(Boolean);
+
+    if (pathParts.at(-2) !== "episodes") {
+      return "";
+    }
+
+    return pathParts.at(-1) || "";
   }
+}
+
+/**
+ * programIdから最新episodeIdを取得
+ */
+function getLatestTverEpisodeIdByProgramId(programId) {
+  if (!programId) {
+    return "";
+  }
+
+  const report = TVER_RANKING_REPORT_MAP[programId];
+
+  if (!report || typeof report !== "object") {
+    return "";
+  }
+
+  return report.episodeId || "";
 }
 
 /**
