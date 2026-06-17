@@ -576,8 +576,8 @@ a img{
   display: inline-block;
   font-size: 15px;
   font-weight: 800;
-  color: #0877df;
-  background: #eaf5ff;
+  color: #36bfd0;
+  background: rgba(54, 191, 208, 0.12);
   border-radius: 999px;
   padding: 5px 14px;
   margin-bottom: 10px;
@@ -592,7 +592,7 @@ a img{
   font-size: 42px;
   font-weight: 900;
   line-height: 1.1;
-  color: #0877df;
+  color: #36bfd0;
 }
 
 .current-ranking-metric-diff {
@@ -602,15 +602,11 @@ a img{
   margin-top: 10px;
   padding: 5px 12px;
   border-radius: 999px;
-  background: #fde8f3;
-  color: #ec2386;
+  background: rgba(54, 191, 208, 0.12);
+  color: #36bfd0;
   font-size: 15px;
   font-weight: 900;
   white-space: nowrap;
-}
-
-.current-ranking-metric-diff:empty {
-  display: none;
 }
 
 .current-ranking-metric-sub {
@@ -620,25 +616,11 @@ a img{
   margin-top: 10px;
   padding: 5px 12px;
   border-radius: 999px;
-  background: #eaf5ff;
-  color: #0877df;
+  background: rgba(54, 191, 208, 0.12);
+  color: #36bfd0;
   font-size: 14px;
   font-weight: 800;
   white-space: nowrap;
-}
-
-.current-ranking-metric-card:nth-child(2) .current-ranking-metric-label {
-  color: #ec2386;
-  background: #fde8f3;
-}
-
-.current-ranking-metric-card:nth-child(2) .current-ranking-metric-value {
-  color: #ec2386;
-}
-
-.current-ranking-metric-card:nth-child(2) .current-ranking-metric-sub {
-  color: #ec2386;
-  background: #fde8f3;
 }
 
 @media (max-width: 760px) {
