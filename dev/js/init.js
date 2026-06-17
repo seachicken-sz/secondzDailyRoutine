@@ -88,7 +88,7 @@ function updateHomeInstallGuideContent(platform, browserType) {
         title: "<strong>⚠️今の状態ちょっと使いにくいかも！</strong>",
         text: `
          もしかして画面の上の方に、こんなの見えてませんか？<br>
-         <img src="../img/setting/setting_ios_x.jpeg">
+         <img src="../img/setting/setting_ios_threads.jpeg">
          もし見えていたら「開始」を押す前に、
           <ol>
             <li>画像の赤枠の<strong>「<i class="bi bi-three-dots"></i>」</strong>をタップ</li>
