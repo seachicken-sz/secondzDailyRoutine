@@ -87,6 +87,8 @@ async function initializeMemberWorks() {
     TVER_RANKING_REPORT_IDS = tverRankingReportData.ids;
     TVER_RANKING_REPORT_MAP = tverRankingReportData.map;
 
+    cleanupTverViewedEpisodeMap();
+
     renderMemberWorks();
 
   } catch (error) {
@@ -847,4 +849,42 @@ function createMemberWorkHelpButtonHtml(group) {
   `;
 }
 
+/**
+ * 古いTVer閲覧履歴を掃除
+ */
+function cleanupTverViewedEpisodeMap(keepDays = 60) {
+  const viewedMap = getTverViewedEpisodeMap();
+
+  const now = Date.now();
+  const keepTime = keepDays * 24 * 60 * 60 * 1000;
+
+  let hasChanged = false;
+
+  Object.keys(viewedMap).forEach((episodeId) => {
+    const viewedAtTime = viewedMap[episodeId]?.viewedAt
+      ? new Date(viewedMap[episodeId].viewedAt).getTime()
+      : null;
+
+    const isInvalid =
+      !viewedAtTime ||
+      Number.isNaN(viewedAtTime);
+
+    const isExpired =
+      typeof viewedAtTime === "number" &&
+      !Number.isNaN(viewedAtTime) &&
+      now - viewedAtTime > keepTime;
+
+    if (isInvalid || isExpired) {
+      delete viewedMap[episodeId];
+      hasChanged = true;
+    }
+  });
+
+  if (hasChanged) {
+    saveTverViewedEpisodeMap(viewedMap);
+  }
+}
+
 initializeMemberWorks();
+
+
