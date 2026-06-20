@@ -33,7 +33,7 @@
   <link rel="stylesheet" href="./css/task.css" />
   <link rel="stylesheet" href="./css/utility.css" />
   
-  <link rel="manifest" href="../manifest.json">
+  <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" href="../img/icon-180.png">
   <link rel="icon" type="image/png" href="../img/icon-180.png">
   <meta name="theme-color" content="#ffffff">
@@ -161,7 +161,7 @@
           開始する
         </button>
         </section>
-    
+    <button id="debugStorageClearButton" type="button" class="text-link-button">debug: storage削除</button>
         <section class="home-color-change-area">
       <div class="theme-heart-grid" aria-label="テーマカラー選択">
         <button type="button" class="theme-heart-button" data-theme-button="red" aria-label="赤">
@@ -223,7 +223,7 @@
         </button>
       </section>
         
-        <section id="homeInstallGuideCard" class="home-card home-install-guide-area">
+        <section id="homeInstallGuideCard" class="home-card home-install-guide-area hidden">
           <h2 class="ruby-h"><ruby>はじめに<rt>first step</rt></ruby></h2>
         
           <p class="home-install-title">🔰まずは「ホーム画面に追加」する</p>
@@ -245,7 +245,7 @@
         </section>
 
             <!--期間限定お知らせ事-->
-      <section class="home-card date-visible-block" data-fromdate="2026-06-13T00:00:00+09:00" data-todate="2026-06-14T23:59:59+09:00">
+      <section class="home-card date-visible-block" data-fromdate="2026-06-13T00:00:00+09:00" data-todate="2026-06-15T23:59:59+09:00">
           <h2 class="ruby-h"><ruby>当落アンケート<rt>questionnaire</rt></ruby></h2>
           <div class="card-link">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdiYeQJw2fSNGlHY92P7BzUFbDCZZNkwyAqvuv_nCVP6CelBQ/viewform" tartget="_blank">
@@ -618,7 +618,7 @@
       <header class="header">
         <h1>シェア文章作成📝</h1>
         <p class="description">
-          投稿先を選んで、シェアしたい項目にチェックを入れてね！ 
+          投稿先を選んで、シェアしたい項目にチェックを入れてね！          
           <button class="task-help-button" type="button" data-step-help-key="snsShare">やり方をチェック</button>
         </p>
       </header>
@@ -1056,6 +1056,7 @@
   
       <div class="modal-body setup-modal-body">
         <img src="../img/stepHelp/browser_first.png">
+        <div id="firstVisitModalSns" class="firstvisit-sns-guide hidden"></div>
         <button type="button" class="primary-button" id="firstVisitOpenSetupButton">
           ホーム画面に追加する
         </button>
@@ -1142,6 +1143,8 @@
 <script src="./js/post.js" defer></script>
 <script src="./js/youtube.js" defer></script>
 <!-- 起動 -->
+
+  <script src="./js/debug.js" defer></script>
 <script src="./js/app.js" defer></script>
 </body>
 </html>
