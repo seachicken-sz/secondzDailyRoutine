@@ -104,43 +104,72 @@
   transform: translateX(16px);
 }
 
+/* ==================================================
+   開始画面
+   元ホームと同じロゴ + 開始ボタン構成
+   ================================================== */
+
+.quick-page.is-quick-start .quick-topbar {
+  display: none;
+}
+
+.quick-page.is-quick-start .quick-app {
+  padding-top: 0;
+}
+
+.quick-start-step {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  padding-top: 0;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.quick-start-home-header {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.quick-start-home-header .home-logo-area {
+  width: min(82vw, 360px);
+}
+
+.quick-start-home-header .home-logo-area img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.quick-start-action-area {
+  padding:
+    0
+    24px
+    calc(28px + env(safe-area-inset-bottom));
+}
+
+.quick-start-action-area .primary-button {
+  min-height: 54px;
+}
+
+/* ==================================================
+   各ステップ
+   ================================================== */
+
 .quick-step-screen {
   min-height: calc(100dvh - 58px);
   padding-top: 20px;
   padding-bottom: calc(32px + env(safe-area-inset-bottom));
 }
 
-.quick-start-header {
-  padding-top: clamp(54px, 16vh, 128px);
-}
-
-.quick-start-eyebrow,
 .quick-step-label {
   margin: 0 0 10px;
   color: var(--color-brand, #f06d88);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-}
-
-.quick-start-title {
-  font-family: "Darumadrop One", sans-serif;
-  font-size: clamp(2rem, 8vw, 3rem);
-  line-height: 1.35;
-}
-
-.quick-start-description {
-  margin-top: 18px;
-  line-height: 1.8;
-}
-
-.quick-start-card {
-  margin-top: 38px;
-}
-
-.quick-start-card .primary-button {
-  min-height: 54px;
-  font-size: 1.05rem;
 }
 
 .quick-no-bgm-card {
@@ -224,6 +253,10 @@
 .quick-pwa-complete-card {
   text-align: center;
 }
+
+/* ==================================================
+   ホーム画面追加モーダル
+   ================================================== */
 
 .quick-setup-guide {
   display: grid;
