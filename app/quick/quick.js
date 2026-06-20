@@ -479,8 +479,8 @@ function renderQuickDailyTask() {
 
   if (quickElements.dailyActionDescription) {
     quickElements.dailyActionDescription.textContent = requiresCopy
-      ? "「ページを開く」を押すと、入力する内容がコピーされます。"
-      : "「ページを開く」を押して、ページ内の案内どおりに応援してね。";
+      ? ""
+      : "";
   }
 
   if (quickElements.dailyTaskProgress) {
