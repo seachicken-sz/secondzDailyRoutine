@@ -121,6 +121,9 @@ document.addEventListener("DOMContentLoaded", initQuickApp);
 
 async function initQuickApp() {
   restoreQuickSession();
+  if (quickState.screen === "complete") {
+    clearQuickSession();
+  }
   restoreTutorialSetting();
   bindQuickEvents();
 
@@ -1412,4 +1415,12 @@ function showQuickFatalError() {
     "データの読み込みに失敗しました。ページを再読み込みしてください。";
 
   startStep.appendChild(message);
+}
+function clearQuickSession() {
+  sessionStorage.removeItem(QUICK_STORAGE_KEYS.session);
+
+  Object.assign(
+    quickState,
+    QUICK_STATE_DEFAULT
+  );
 }
