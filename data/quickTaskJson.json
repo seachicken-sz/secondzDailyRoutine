@@ -1,0 +1,33 @@
+{
+  "active": true,
+  "items": [
+    {
+      "id": "daily_mon",
+      "name": "エムオン！",
+      "short-name": "エムオン！",
+      "url": "https://www.m-on.jp/request/?action_request_search=True&artist_id=19237",
+      "comment": "「timeleszの楽曲一覧」の下からリクエストしたい曲をタップ！",
+      "input-flag": false
+    },
+    {
+      "id": "daily_nack5",
+      "name": "NACK5",
+      "short-name": "NACK5",
+      "url": "https://www.nack5.co.jp/message/270/",
+      "request-type": "music",
+      "request-input": "タイトル",
+      "comment": "※ページが開くまで時間がかかる場合があります。\n①ラジオネーム、アーティストを入力\n②「タイトル」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+      "input-flag": true
+    },
+    {
+      "id": "daily_lawson",
+      "name": "ローソン店内BGMリクエスト",
+      "short-name": "ローソン",
+      "url": "https://www.lawson.co.jp/lab/cshotstation/art/1308047_7551.html",
+      "request-type": "music",
+      "request-input": "■曲名",
+      "comment": "①「>>リクエストの登録はこちら！」をタップ\n②「■曲名」欄にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+      "input-flag": true
+    }
+  ]
+}
