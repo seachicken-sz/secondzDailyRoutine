@@ -1794,8 +1794,8 @@ function createCurrentRankingSummaryElement(data) {
                 ${escapeHtml(rankText)}<span>位</span>
               </div>
 
-              <div class="sub-rank ${theme.bgClass}${item.diffText ? "" : " is-empty"}">
-                ${item.diffText ? escapeHtml(item.diffText) : "現在"}
+              <div class="sub-rank ${theme.bgClass}">
+                現在${escapeHtml(rankText)}位${item.diffText ? `　${escapeHtml(item.diffText)}` : ""}
               </div>
             </div>
           `;
