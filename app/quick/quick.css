@@ -338,3 +338,7 @@ p.quick-start-note-text{
 .home-card strong{
    color:var(--color-brand);
 }
+
+#quickInstallGuideCard img{
+   width:100%;
+}
