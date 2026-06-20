@@ -1789,14 +1789,16 @@ function createCurrentRankingSummaryElement(data) {
               <div class="label ${theme.labelClass}">
                 ${escapeHtml(labelText)}
               </div>
-
-              <div class="rank-main" style="color:${theme.color};">
+          
+              <div class="rank-main current-rank-main" style="color:${theme.color};">
                 ${escapeHtml(rankText)}<span>位</span>
               </div>
-
-              <div class="sub-rank ${theme.bgClass}">
-                現在${escapeHtml(rankText)}位${item.diffText ? `　${escapeHtml(item.diffText)}` : ""}
-              </div>
+          
+              ${item.diffText ? `
+                <div class="sub-rank ${theme.bgClass}">
+                  ${escapeHtml(item.diffText)}
+                </div>
+              ` : ""}
             </div>
           `;
         }).join("")}
