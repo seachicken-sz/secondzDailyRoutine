@@ -312,6 +312,10 @@
   pointer-events: none;
 }
 
+.quick-tutorial-overlay.is-active {
+  pointer-events: auto;
+}
+
 .quick-tutorial-spotlight {
   position: fixed;
   z-index: 1;
