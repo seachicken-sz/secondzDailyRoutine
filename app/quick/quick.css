@@ -155,10 +155,22 @@
 }
 
 .quick-start-action-area {
-  padding:
-    0
-    24px
-    calc(28px + env(safe-area-inset-bottom));
+  padding: 0 24px;
+}
+
+.quick-start-note {
+  box-sizing: border-box;
+  min-height: clamp(190px, 26vh, 240px);
+  padding: 46px 24px 0;
+  text-align: center;
+}
+
+.quick-start-note-text {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.7;
 }
 
 .quick-start-action-area .primary-button {
