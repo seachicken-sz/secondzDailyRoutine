@@ -407,7 +407,7 @@ function renderQuickSongList(container, songs) {
       renderQuickSpotify();
 
       startQuickTutorial(
-        ["この曲でOK？","「Spotifyで開く」をタップすると曲が流れるよ。","流れたらアプリ切り替えで戻ってきてね。"],
+        ["この曲でOK？","「Spotifyで開く」をタップすると曲が流れるよ。","流れたら「アプリ切り替え」で戻ってきてね。"],
         "#quickSpotifySelectedArea"
       );
     });
@@ -1238,12 +1238,12 @@ function startTutorialForCurrentScreen() {
     ? [
       "「ページを開く」を押すと、入力する内容がコピーされて、新しいタブでページが開くよ。",
       `ページが開いたら「${currentDailyTask["request-input"] || "入力欄"}」に貼り付けてね。`,
-      "終わったらタブ切り替えで戻ってきてね！",
+      "終わったらタブ切り替えで戻ってきて、「次へ」ボタンを押して次に進もう！",
     ]
     : [
       "このタスクのやり方はここに書いてあるよ！",
       "「ページを開く」を押すと、新しいタブでページが開くよ。",
-      "終わったらタブ切り替えで戻ってきてね！",
+      "終わったらタブ切り替えで戻ってきて、「次へ」ボタンを押して次に進もう！",
     ];
 
   const tutorialMap = {
@@ -1251,7 +1251,7 @@ function startTutorialForCurrentScreen() {
       target: "#quickRecommendedSongs",
       messages: [
         "下のリストから好きな曲を選んでみよう。",
-        "Spotifyを入れていない人は「BGMなし」を押して次へ進めるよ。",
+        "Spotifyを入れていない人は下にスクロールして、「BGMなし」を押して次へ進めるよ。",
       ],
     },
     daily: {
@@ -1268,15 +1268,16 @@ function startTutorialForCurrentScreen() {
     postEdit: {
       target: "#quickPostItemXList",
       messages: [
-        "投稿先を選んで、シェアしたい項目にチェックを入れてね。",
+        "投稿先を選んで、シェアしたい項目にチェックを入れてください。",
         "投稿しない場合は「次へ」を押してね。",
       ],
     },
     complete: {
       target: "#quickInstallGuideCard",
       messages: [
-        "お疲れ様さまでした☺️Big Love💚",
-        "ホーム画面に追加すると、アプリ感覚でサクサク使えるよ。",
+        "お疲れ様さまでした☺️",
+        "ホーム画面に追加すると、もっと便利に使えます！",
+        "ぜひ試してみてね💚"
       ],
     },
   };
@@ -1372,8 +1373,8 @@ function completeQuickTutorialTyping(message) {
     const hasNextMessage = quickState.tutorial.index < quickState.tutorial.messages.length - 1;
 
     quickElements.tutorialHint.textContent = hasNextMessage
-      ? "タップで次へ"
-      : "案内はここまで";
+      ? "次へ"
+      : "次へ";
   }
 }
 
