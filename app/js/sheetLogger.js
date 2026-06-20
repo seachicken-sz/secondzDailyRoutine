@@ -13,7 +13,8 @@ const SHEET_TASK_TYPES = [
   "snsShare",
   "youtube",
   "access",
-  "memberLink"
+  "memberLink",
+  "quick"
 ];
 
 /**
@@ -58,7 +59,14 @@ function getSheetPlatform() {
  * @returns {boolean}
  */
 function isSheetStandaloneMode() {
-  return isStandaloneMode();
+  if (typeof isStandaloneMode === "function") {
+    return isStandaloneMode();
+  }
+
+  return Boolean(
+    window.matchMedia?.("(display-mode: standalone)")?.matches ||
+    window.navigator.standalone === true
+  );
 }
 
 /**
@@ -152,14 +160,14 @@ function createSheetItem(item, options = {}) {
  * @param {Object} groups
  * @returns {Object}
  */
-function createSheetPayload(groups) {
-const payload = {
-  token: SHEET_TOKEN,
-  app: SHEET_APP_NAME,
-  platform: getSheetPlatform(),
-  clientId: getSheetClientId(),
-  theme: getSheetSelectedTheme()
-};
+function createSheetPayload(groups, options = {}) {
+  const payload = {
+    token: SHEET_TOKEN,
+    app: options.app || SHEET_APP_NAME,
+    platform: getSheetPlatform(),
+    clientId: getSheetClientId(),
+    theme: getSheetSelectedTheme()
+  };
 
   SHEET_TASK_TYPES.forEach((taskType) => {
     const rawItems = Array.isArray(groups[taskType]) ? groups[taskType] : [];
@@ -205,7 +213,7 @@ async function sendSheetLog(groups) {
     return false;
   }
 
-  const payload = createSheetPayload(groups || {});
+  const payload = createSheetPayload(groups || {}, options);
 
   if (!hasSheetItems(payload)) {
     return false;
@@ -409,6 +417,45 @@ async function sendStartLog() {
 
   return sendSheetLog({
     start: [item]
+  });
+}
+
+/**
+ * ショート版の操作ログを送信する
+ *
+ * @param {"start" | "spotifyOpen" | "taskOpen" | "complete"} eventType
+ * @param {Object} data
+ * @param {string} data.sessionId
+ * @param {string} data.itemId
+ * @param {string} data.title
+ * @param {string} data.url
+ * @param {boolean} data.tutorialEnabled
+ * @returns {Promise<boolean>}
+ */
+async function sendQuickLog(eventType, data = {}) {
+  if (!eventType || !data.sessionId) {
+    return false;
+  }
+
+  const item = createSheetItem({}, {
+    itemId: data.itemId || `quick_${eventType}`,
+    title: data.title || "",
+    url: data.url || ""
+  });
+
+  if (!item) {
+    return false;
+  }
+
+  return sendSheetLog({
+    quick: [{
+      ...item,
+      eventType,
+      sessionId: data.sessionId,
+      tutorialEnabled: data.tutorialEnabled === true
+    }]
+  }, {
+    app: "secondzDailyRoutineQuick"
   });
 }
 
