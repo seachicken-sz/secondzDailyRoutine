@@ -291,7 +291,9 @@
     transition: none;
   }
 }
-quick-return-guide-section{
+
+
+.quick-return-guide-section{
    padding-top: 18px;
 }
 
@@ -324,4 +326,7 @@ quick-return-guide-section{
   box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
+}
+.home-card strong{
+   color:var(--color-brand);
 }
