@@ -1192,10 +1192,10 @@ function handleQuickTutorialDocumentTap(event) {
     quickState.tutorial.index <
     quickState.tutorial.messages.length - 1;
 
-  if (!hasNextMessage) {
-    quickElements.tutorialOverlay?.classList.add("is-message-hidden");
-    return;
-  }
+if (!hasNextMessage) {
+  stopQuickTutorial();
+  return;
+}
 
   quickState.tutorial.index += 1;
 
