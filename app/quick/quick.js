@@ -1514,9 +1514,15 @@ function updateTutorialTarget(selector) {
 }
 
 function updateTutorialSpotlight() {
-  const target = document.querySelector(quickState.tutorial.targetSelector);
+  const selector = quickState.tutorial.targetSelector;
 
-  if (!target || target.closest(".hidden") || !quickElements.tutorialSpotlight) {
+  if (!selector || !quickElements.tutorialSpotlight) {
+    return;
+  }
+
+  const target = document.querySelector(selector);
+
+  if (!target || target.closest(".hidden")) {
     return;
   }
 
