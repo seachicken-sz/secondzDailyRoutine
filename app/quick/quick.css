@@ -317,7 +317,7 @@
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
 }
 
-.quick-start-note-text{
+p.quick-start-note-text{
    margi:0 auto;
 }
 .home-card {
@@ -329,6 +329,9 @@
   box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
+}
+.home-card ul{
+   margin:0;
 }
 .home-card strong{
    color:var(--color-brand);
