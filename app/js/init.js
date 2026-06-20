@@ -9,22 +9,272 @@
 // PWAとしてホーム画面から起動済みの場合、
 // ホーム画面の「まずはホーム画面に追加」カードを非表示にする
 function updateHomeInstallGuideVisibility() {
+  const firstVisitModalSnsElement = document.getElementById("firstVisitModalSns");
+
   const installGuideElements = [
     homeInstallGuideCardElement,
     homeInstallGuideMenuElement,
+    firstVisitModalSnsElement,
   ];
 
   const isStandalone =
     window.matchMedia("(display-mode: standalone)").matches ||
     window.navigator.standalone === true;
 
+  const platform = getSheetPlatform();
+  const browserType = getAccessBrowserType();
+
+  const isMobile =
+    platform.startsWith("ios/") ||
+    platform.startsWith("android/");
+
+  const isSnsInAppBrowser = [
+    "x_in_app",
+    "threads_in_app",
+    "line_in_app",
+    "instagram_in_app",
+    "facebook_in_app",
+  ].includes(browserType);
+
+  const shouldShowInstallGuide =
+    !isStandalone &&
+    isMobile &&
+    isSnsInAppBrowser;
+
+  if (shouldShowInstallGuide) {
+    updateHomeInstallGuideContent(platform, browserType);
+    updateFirstVisitModalSnsContent(firstVisitModalSnsElement, platform, browserType);
+  }
+
   installGuideElements.forEach((element) => {
     if (!element) {
       return;
     }
 
-    element.classList.toggle("hidden", isStandalone);
+    element.classList.toggle("hidden", !shouldShowInstallGuide);
   });
+}
+//プラットフォーム×ブラウザで分岐、SNS内ブラウザ時に案内を出す
+function updateFirstVisitModalSnsContent(targetElement, platform, browserType) {
+  if (!targetElement) {
+    return;
+  }
+
+  targetElement.innerHTML = `
+    <p class="home-install-title"></p>
+    <p class="home-install-text"></p>
+  `;
+
+  const titleElement = targetElement.querySelector(".home-install-title");
+  const textElement = targetElement.querySelector(".home-install-text");
+
+  if (!titleElement || !textElement) {
+    return;
+  }
+
+  const isIOS = platform.startsWith("ios/");
+  const isAndroid = platform.startsWith("android/");
+
+  if (isIOS) {
+    const iosGuideMap = {
+      x_in_app: {
+        title: "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>",
+        text: `
+          画面の下の方にこんなの見えてませんか？<br>
+          <img src="../img/setting/setting_ios_x.jpeg">
+          もし見えていたら一番最初に、
+          <ol>
+            <li>画面の下にある<strong>「github.io」</strong>をタップ<br>
+            （画像の赤枠のところ）</li>
+            <li><strong>ブラウザで開く</strong>をタップ</li>
+          </ol>
+          をやってみてください！<br>
+          ページが開き直されて、<br>「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」<br>が消えていたらOKです！
+        `,
+      },
+      threads_in_app: {
+        title: "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>",
+        text: `
+          画面の上の方にこんなの見えてませんか？<br>
+          <img src="../img/setting/setting_ios_threads.jpeg">
+          もし見えていたら一番最初に、
+          <ol>
+            <li>画面の右上にある<strong>「<i class="bi bi-three-dots"></i>」</strong>をタップ<br>
+            （画像の赤枠のところ）</li>
+            <li><strong>外部ブラウザで開く</strong>をタップ</li>
+          </ol>
+          をやってみてください！<br>
+          ページが開き直されて、<br>「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」<br>が消えていたらOKです！
+        `,
+      },
+      line_in_app: {
+        title: "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>",
+        text: `
+          画面の下の方にこんなの見えてませんか？<br>
+          <img src="../img/setting/setting_ios_line.jpeg">
+          もし見えていたら一番最初に、
+          <ol>
+            <li>画面の右下にある<strong>「<i class="bi bi-three-dots-vertical"></i>」</strong>をタップ<br>
+            （画像の赤枠のところ）</li>
+            <li><strong>ブラウザで開く</strong>をタップ</li>
+          </ol>
+          をやってみてください！<br>
+          ページが開き直されて、<br>「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」<br>が消えていたらOKです！
+        `,
+      },
+    };
+
+    const normalizedBrowserType =
+    browserType === "instagram_in_app"
+      ? "threads_in_app"
+      : browserType;
+
+    const guide = iosGuideMap[browserType];
+
+    if (!guide) {
+      return;
+    }
+
+    titleElement.innerHTML = guide.title;
+    textElement.innerHTML = guide.text;
+    return;
+  }
+
+  if (isAndroid) {
+    titleElement.innerHTML = "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>";
+    textElement.innerHTML = `
+      SNS内ブラウザで開いているかもしれません。<br>
+      一番最初に、下のボタンを押してみてください！<br>
+      <button id="openChromeFromFirstVisitModalButton" class="primary-button home-install-link" type="button">
+        このページをChromeで開く
+      </button>
+    `;
+
+    document
+      .getElementById("openChromeFromFirstVisitModalButton")
+      ?.addEventListener("click", openCurrentPageInAndroidChrome);
+  }
+}
+function updateHomeInstallGuideContent(platform, browserType) {
+  if (!homeInstallGuideCardElement) {
+    return;
+  }
+
+  const titleElement = homeInstallGuideCardElement.querySelector(".home-install-title");
+  const textElement = homeInstallGuideCardElement.querySelector(".home-install-text");
+  const linkButtonElement = homeInstallGuideCardElement.querySelector("#openHowToFromHomeCardButton");
+
+  if (!titleElement || !textElement) {
+    return;
+  }
+
+  const isIOS = platform.startsWith("ios/");
+  const isAndroid = platform.startsWith("android/");
+
+  linkButtonElement?.classList.remove("hidden");
+
+  if (isIOS) {
+    const iosGuideMap = {
+      x_in_app: {
+        title: "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>",
+        text: `
+          画面の下の方にこんなの見えてませんか？<br>
+          <img src="../img/setting/setting_ios_x.jpeg"><br>
+          もし見えていたら「開始」を押す前に、
+          <ol>
+            <li>画面の下の<strong>「github.io」</strong>をタップ<br>
+            （画像の赤枠のところ）</li>
+            <li><strong>ブラウザで開く</strong>をタップ</li>
+          </ol>
+          をやってみてください！<br>
+          ページが開き直されて、<br>「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」<br>が消えていたらOKです！
+        `,
+      },
+      threads_in_app: {
+        title: "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>",
+        text: `
+         もしかして画面の上の方に、こんなの見えてませんか？<br>
+         <img src="../img/setting/setting_ios_threads.jpeg"><br>
+         もし見えていたら「開始」を押す前に、
+          <ol>
+            <li>画面の右上の<strong>「<i class="bi bi-three-dots"></i>」</strong>をタップ<br>
+            （画像の赤枠のところ）</li>
+            <li><strong>外部ブラウザで開く</strong>をタップ</li>
+          </ol>
+          をやってみてください！<br>
+          ページが開き直されて、<br>「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」<br>が消えていたらOKです！
+        `,
+      },
+      line_in_app: {
+        title: "<strong>⚠️今あなたの状態ちょっと使いにくいかも！</strong>",
+        text: `
+          もしかして画面の下の方に、こんなの見えてませんか？<br>
+          <img src="../img/setting/setting_ios_line.jpeg"><br>
+          もし見えていたら「開始」を押す前に、
+          <ol>
+            <li>画面の右下の<strong>「<i class="bi bi-three-dots-vertical"></i>」</strong>をタップ<br>
+            （画像の赤枠のところ）</li>
+            <li><strong>ブラウザで開く</strong>をタップ</li>
+          </ol>
+          をやってみてください！<br>
+          ページが開き直されて、<br>「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」<br>が消えていたらOKです！
+        `,
+      },
+    };
+
+    const normalizedBrowserType =
+    browserType === "instagram_in_app"
+      ? "threads_in_app"
+      : browserType;
+
+    const guide = iosGuideMap[browserType];
+
+    if (!guide) {
+      return;
+    }
+
+    titleElement.innerHTML = guide.title;
+    textElement.innerHTML = guide.text;
+    return;
+  }
+
+  if (isAndroid) {
+    const snsNameMap = {
+      x_in_app: "X",
+      threads_in_app: "Threads",
+      line_in_app: "LINE",
+      instagram_in_app: "Instagram",
+      facebook_in_app: "Facebook",
+    };
+
+    const snsName = snsNameMap[browserType] || "SNS";
+
+    titleElement.innerHTML = "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>";
+    textElement.innerHTML = `
+      SNS内ブラウザで開いているかもしれません。<br>
+      「開始」を押す前に下のボタンを押してみてください！
+    `;
+
+    if (!document.getElementById("openChromeFromHomeInstallGuideButton")) {
+      linkButtonElement?.insertAdjacentHTML(
+        "beforebegin",
+        `
+          <button id="openChromeFromHomeInstallGuideButton" class="primary-button home-install-link" type="button">
+            このページをChromeで開く
+          </button>
+        `
+      );
+    }
+
+    document
+      .getElementById("openChromeFromHomeInstallGuideButton")
+      ?.addEventListener("click", openCurrentPageInAndroidChrome);
+  }
+}
+
+function openCurrentPageInAndroidChrome() {
+  const urlWithoutScheme = location.href.replace(/^https?:\/\//, "");
+  location.href = `intent://${urlWithoutScheme}#Intent;scheme=https;package=com.android.chrome;end`;
 }
 
 // ==================================================

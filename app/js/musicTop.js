@@ -111,7 +111,7 @@ function renderUsenRankingInfo(items) {
   const rankingItems = Array.isArray(items)
     ? items.filter((item) => {
         const rank = Number(item.rank);
-        return rank >= 1 && rank <= 20;
+        return rank >= 1 && rank <= 10;
       })
     : [];
 
@@ -134,8 +134,7 @@ function renderUsenRankingInfo(items) {
 
       return `
         <span class="usen-ranking-line">
-          ${hour}現在 USEN推し活リクエスト <strong>${rank}位！<br>
-          このまま水曜18時までキープで再生対象になるよ♪</strong>
+          ${hour}現在 USEN推し活リクエスト <strong>${rank}位！</strong>
         </span>
 
         <span class="usen-ranking-song">

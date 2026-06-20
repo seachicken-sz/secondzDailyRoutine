@@ -24,10 +24,6 @@ const STEP_HELP_MODAL_CONFIG = {
     images: ["step_daily_02.png"],
     buttons: []
   },
-  snsShare: {
-    images: ["step_sns_01.png"],
-    buttons: []
-  },
   homeUsen: {
     images: ["usen_01.png"],
     buttons: []

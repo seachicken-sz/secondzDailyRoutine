@@ -294,8 +294,29 @@ function autoOpenFirstSetupModalIfNeeded() {
 }
 
 function openFirstVisitModal() {
-  renderUserBrowserInfo();
+  updateFirstVisitOpenSetupButtonVisibility();
   firstVisitModalElement?.classList.remove("hidden");
+}
+
+function updateFirstVisitOpenSetupButtonVisibility() {
+  if (!firstVisitOpenSetupButtonElement) {
+    return;
+  }
+
+  const browserType =
+    typeof getAccessBrowserType === "function"
+      ? getAccessBrowserType()
+      : "other_browser";
+
+  const isSnsInAppBrowser = [
+    "x_in_app",
+    "threads_in_app",
+    "line_in_app",
+    "instagram_in_app",
+    "facebook_in_app",
+  ].includes(browserType);
+
+  firstVisitOpenSetupButtonElement.classList.toggle("hidden", isSnsInAppBrowser);
 }
 
 function closeFirstVisitModal() {
@@ -320,19 +341,9 @@ function getBrowserDisplayName(browserType) {
   return browserNameMap[browserType] || "その他のブラウザ";
 }
 
-function renderUserBrowserInfo() {
-  if (!userBrowserElement) {
-    return;
-  }
-
-  const browserType =
-    typeof getAccessBrowserType === "function"
-      ? getAccessBrowserType()
-      : "other_browser";
-
-  const browserName = getBrowserDisplayName(browserType);
-
-  userBrowserElement.innerHTML = `たぶん今の状態は「<strong>${browserName}</strong>」です。`;
+function openCurrentPageInAndroidChrome() {
+  const urlWithoutScheme = location.href.replace(/^https?:\/\//, "");
+  location.href = `intent://${urlWithoutScheme}#Intent;scheme=https;package=com.android.chrome;end`;
 }
 
 function openPwaFirstVisitModal() {
