@@ -1,6 +1,6 @@
 /* ==================================================
    quick.css
-   30秒だけ時間をください：専用画面
+   タムごとDailyお試しモード
    ================================================== */
 
 :root {
@@ -15,41 +15,14 @@
 
 .quick-app {
   min-height: 100dvh;
-  padding-top: 58px;
+  padding-top: 0;
 }
 
-.quick-topbar {
+.quick-tutorial-toggle-area {
   position: fixed;
-  top: 0;
-  left: 50%;
-  z-index: 20;
-  display: grid;
-  grid-template-columns: 44px 1fr auto;
-  align-items: center;
-  width: min(100%, 540px);
-  min-height: 58px;
-  padding: env(safe-area-inset-top) 12px 0;
-  transform: translateX(-50%);
-  background: color-mix(in srgb, var(--color-bg, #fff) 92%, transparent);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid color-mix(in srgb, var(--color-text, #222) 10%, transparent);
-}
-
-.quick-home-link {
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  color: inherit;
-  font-size: 1.1rem;
-  text-decoration: none;
-}
-
-.quick-topbar-title {
-  margin: 0;
-  font-family: "Darumadrop One", sans-serif;
-  font-size: 1rem;
-  text-align: center;
+  top: calc(12px + env(safe-area-inset-top));
+  right: 16px;
+  z-index: 30;
 }
 
 .quick-tutorial-toggle {
@@ -78,8 +51,8 @@
   position: relative;
   width: 38px;
   height: 22px;
-  border-radius: 999px;
   background: #b8b8b8;
+  border-radius: 999px;
   transition: background 0.2s ease;
 }
 
@@ -106,29 +79,15 @@
 
 /* ==================================================
    開始画面
-   元ホームと同じロゴ + 開始ボタン構成
    ================================================== */
 
-.quick-page.is-quick-start .quick-topbar {
-  display: flex;
-  justify-content: flex-end;
-  min-height: auto;
-  padding: calc(12px + env(safe-area-inset-top)) 16px 0;
-  background: transparent;
-  backdrop-filter: none;
-  border-bottom: 0;
+.quick-step-screen {
+  min-height: 100dvh;
+  padding-top: calc(58px + env(safe-area-inset-top));
+  padding-bottom: calc(32px + env(safe-area-inset-bottom));
 }
 
-.quick-page.is-quick-start .quick-home-link,
-.quick-page.is-quick-start .quick-topbar-title {
-  display: none;
-}
-
-.quick-page.is-quick-start .quick-app {
-  padding-top: 0;
-}
-
-.quick-start-step {
+.quick-step-screen.quick-start-step {
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
@@ -155,22 +114,7 @@
 }
 
 .quick-start-action-area {
-  padding: 0 24px;
-}
-
-.quick-start-note {
-  box-sizing: border-box;
-  min-height: clamp(190px, 26vh, 240px);
-  padding: 46px 24px 0;
-  text-align: center;
-}
-
-.quick-start-note-text {
-  margin: 0;
-  color: var(--color-text);
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.7;
+  padding: 0 24px calc(28px + env(safe-area-inset-bottom));
 }
 
 .quick-start-action-area .primary-button {
@@ -181,40 +125,16 @@
    各ステップ
    ================================================== */
 
-.quick-step-screen {
-  min-height: calc(100dvh - 58px);
-  padding-top: 20px;
-  padding-bottom: calc(32px + env(safe-area-inset-bottom));
-}
-
-.quick-step-label {
-  margin: 0 0 10px;
-  color: var(--color-brand, #f06d88);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-.quick-no-bgm-card {
-  margin-top: 20px;
-}
-
-.quick-no-bgm-text {
-  margin: 0 0 14px;
-  line-height: 1.7;
-  text-align: center;
-}
-
 .quick-spotify-scroll-area {
   max-height: none;
 }
 
 .quick-daily-task-title-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  flex-wrap: wrap;
 }
 
 .quick-daily-task-title-row .task-help-button {
@@ -262,19 +182,9 @@
   padding-top: clamp(48px, 12vh, 100px);
 }
 
-.quick-complete-icon {
-  margin: 0 0 10px;
-  color: var(--color-brand, #f06d88);
-  font-size: 2.2rem;
-}
-
 .quick-install-guide-card {
   display: grid;
   gap: 12px;
-}
-
-.quick-pwa-complete-card {
-  text-align: center;
 }
 
 /* ==================================================
@@ -303,8 +213,9 @@
 }
 
 /* ==================================================
-   チュートリアル表示
+   チュートリアル
    ================================================== */
+
 .quick-tutorial-overlay {
   position: fixed;
   inset: 0;
@@ -371,6 +282,7 @@
 .quick-tutorial-target {
   border-radius: 16px;
 }
+
 @media (prefers-reduced-motion: reduce) {
   .quick-tutorial-spotlight,
   .quick-tutorial-message,
