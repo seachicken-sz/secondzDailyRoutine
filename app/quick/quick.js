@@ -646,8 +646,8 @@ function renderQuickDailyTask() {
   if (quickElements.dailyTaskNextButton) {
     quickElements.dailyTaskNextButton.textContent =
       quickState.dailyTaskIndex >= taskCount - 1
-        ? "できた！SNSシェアへ"
-        : "できた！次へ";
+        ? "SNSシェアへ"
+        : "次へ";
   }
 }
 
