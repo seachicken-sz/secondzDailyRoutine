@@ -17,6 +17,9 @@ let rankingCharts = [];
 // JSON再取得時にURLへ付与するキャッシュ回避用パラメータ
 let reportJsonCacheBust = "";
 
+// 画像プレビューの現在ページ
+let currentImagePreviewIndex = 0;
+
 
 // ==============================
 // ランキング表示テーマ
@@ -105,6 +108,138 @@ function escapeHtml(value) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
+}
+
+/**
+ * 有効な数値に変換する
+ */
+function getFiniteNumber(value) {
+  const number = Number(value);
+
+  return Number.isFinite(number) ? number : null;
+}
+
+/**
+ * 指定points内で、hourが最大の数値pointを取得する
+ */
+function getLatestNumericPoint(points, valueKey) {
+  if (!Array.isArray(points)) {
+    return null;
+  }
+
+  return points.reduce((latestPoint, point) => {
+    const hour = getFiniteNumber(point.hour);
+    const value = getFiniteNumber(point[valueKey]);
+
+    if (hour === null || value === null) {
+      return latestPoint;
+    }
+
+    if (!latestPoint || hour > latestPoint.hour) {
+      return {
+        hour,
+        value
+      };
+    }
+
+    return latestPoint;
+  }, null);
+}
+
+/**
+ * 指定hourの数値pointを取得する
+ */
+function getNumericPointByHour(points, valueKey, targetHour) {
+  if (!Array.isArray(points)) {
+    return null;
+  }
+
+  const foundPoint = points.find((point) => {
+    return getFiniteNumber(point.hour) === targetHour;
+  });
+
+  if (!foundPoint) {
+    return null;
+  }
+
+  const value = getFiniteNumber(foundPoint[valueKey]);
+
+  if (value === null) {
+    return null;
+  }
+
+  return {
+    hour: targetHour,
+    value
+  };
+}
+
+/**
+ * 最新hourと1時間前の差分を取得する
+ */
+function getLatestDiffFromPreviousHour(points, valueKey) {
+  const latestPoint = getLatestNumericPoint(points, valueKey);
+
+  if (!latestPoint) {
+    return null;
+  }
+
+  const previousPoint = getNumericPointByHour(
+    points,
+    valueKey,
+    latestPoint.hour - 1
+  );
+
+  if (!previousPoint) {
+    return null;
+  }
+
+  return latestPoint.value - previousPoint.value;
+}
+
+/**
+ * ランキングが1時間前より上がっている場合だけUP文言を返す
+ * 順位は数字が小さいほど良いので、前回 - 最新 がプラスなら上昇
+ */
+function getRankUpText(ranking) {
+  if (!ranking || !Array.isArray(ranking.currentPoints)) {
+    return "";
+  }
+
+  const latestPoint = getLatestNumericPoint(ranking.currentPoints, "rank");
+
+  if (!latestPoint) {
+    return "";
+  }
+
+  const previousPoint = getNumericPointByHour(
+    ranking.currentPoints,
+    "rank",
+    latestPoint.hour - 1
+  );
+
+  if (!previousPoint) {
+    return "";
+  }
+
+  const rankUp = previousPoint.value - latestPoint.value;
+
+  if (rankUp <= 0) {
+    return "";
+  }
+
+  return `↑${rankUp}位UP!`;
+}
+
+/**
+ * 正の差分だけ + 表示にする
+ */
+function getPositiveDiffText(diff) {
+  if (diff === null || diff === undefined || diff <= 0) {
+    return "";
+  }
+
+  return `＋${formatDisplayNumber(diff)}`;
 }
 
 
@@ -218,16 +353,6 @@ function hasAnyRankingData(rankings) {
 }
 
 /**
- * rankings 全体に1件でもランキングデータがあるか判定する
- *
- * false の場合だけ、
- * rankCards / ランキング推移 / すぐ上ランキングをまとめて非表示にする。
- */
-function hasAnyRankingData(rankings) {
-  return Array.isArray(rankings) && rankings.some(hasRankingData);
-}
-
-/**
  * 現時点でランキング圏内か判定する
  *
  * currentRank が数値なら、最新取得時点でランクイン中とみなす。
@@ -252,7 +377,7 @@ function isCurrentlyRanked(ranking) {
  * 初期表示を行う
  *
  * 通常読み込み：
- * - tverRankingReport.json をそのまま取得
+ * - ../graph/tverRankingReport.json を取得
  *
  * 更新ボタン押下時：
  * - loadReportData(true) で cacheBust を付けて再取得
@@ -270,6 +395,9 @@ async function initializeReport() {
 
   // JSON再読み込みボタンのクリックイベントを設定
   setupReloadDataButton();
+
+  // 画像プレビューの左右スワイプを設定
+  setupImagePreviewSlider();
 }
 
 /**
@@ -460,7 +588,6 @@ function renderReport(data) {
   document.getElementById("programMeta").innerHTML = `
     ${data.broadcastDate || ""} 放送　${data.subtitle || ""}<br>
     （ <i class="ph ph-clock"></i> ${data.updatedAt || ""} 更新 ）
-    
   `;
 
   document.getElementById("likeCount").textContent = formatDisplayNumber(data.likes);
@@ -489,8 +616,15 @@ function renderReport(data) {
   }
 
   // footerより上に、いいね数推移グラフを追加
-  // ランキングが全部なくても、likePoints / previousLikePoints があれば表示する
-  renderLikeTimelineSection({ likePoints: data.likePoints, previousLikePoints: data.previousLikePoints, chartHours });
+  // ランキングが全部なくても、likePoints があれば表示する
+  renderLikeTimelineSection({
+    likePoints: data.likePoints,
+    previousLikePoints: data.previousLikePoints,
+    chartHours
+  });
+
+  // 2枚目プレビューを描画する
+  renderCurrentRankingPreview(data);
 }
 
 /**
@@ -616,8 +750,11 @@ function buildTverEpisodeUrl(episodeId) {
  * 画像共有ボタン押下時に使う共有テキストを生成する
  *
  * 出力例：
- * タイムレスマンをTVerで見よう！
- * https://tver.jp/episodes/epqhlsu653
+ * タイムレスマン
+ * バラエティ12位
+ * いいね数：12,345
+ * TVerで見よう！
+ * https://tver.jp/episodes/epxxxx
  */
 function buildImageShareText() {
   if (!reportData) {
@@ -633,21 +770,17 @@ function buildImageShareText() {
 
   if (programTitle) {
     lines.push(programTitle);
-    lines.push("");
   }
 
   if (rankingLines.length > 0) {
     lines.push(...rankingLines);
-    lines.push("");
   }
 
   if (likeLine) {
     lines.push(likeLine);
-    lines.push("");
   }
 
   lines.push("TVerで見よう！");
-  lines.push("");
 
   if (episodeUrl) {
     lines.push(episodeUrl);
@@ -663,10 +796,9 @@ function buildCurrentRankingShareLines() {
 
   const activeRankings = reportData.rankings
     .filter((ranking) => {
-      return ranking
-        && ranking.currentRank !== null
-        && ranking.currentRank !== undefined
-        && ranking.currentRank !== "";
+      const currentRank = getFiniteNumber(ranking && ranking.currentRank);
+
+      return currentRank !== null && currentRank > 0 && currentRank <= 50;
     })
     .map((ranking) => {
       const label = ranking.label || ranking.type || "ランキング";
@@ -708,6 +840,7 @@ function buildImageShareTitle() {
 
   return `${reportData.programTitle}をTVerで見よう！`;
 }
+
 
 // ==============================
 // 最高順位カード描画
@@ -1196,7 +1329,8 @@ function createCombinedRankingChart(canvasId, rankings, chartHours) {
       scales: {
         y: {
           title: {
-            display: false},
+            display: false
+          },
           reverse: true,
           min: 1,
           max: 50,
@@ -1287,8 +1421,6 @@ function createCombinedRankingChart(canvasId, rankings, chartHours) {
  *
  * reportCaptureArea内のfooterより上に差し込む。
  * chart-sectionクラスを使い、他のグラフエリアと同じ白背景にする。
- *
- * 最新回 likePoints と前回 previousLikePoints を同じグラフに表示する。
  */
 function renderLikeTimelineSection({
   likePoints,
@@ -1308,7 +1440,6 @@ function renderLikeTimelineSection({
     container.id = "likeTimelineSection";
     container.className = "chart-section like-timeline-section";
 
-    // footerより上に挿入する
     const footer = report.querySelector("footer, .footer, #footer, .report-footer");
 
     if (footer) {
@@ -1321,7 +1452,6 @@ function renderLikeTimelineSection({
   const hasCurrentLikePoints = Array.isArray(likePoints) && likePoints.length > 0;
   const hasPreviousLikePoints = Array.isArray(previousLikePoints) && previousLikePoints.length > 0;
 
-  // 最新回・前回どちらも時系列がない場合は、空グラフを出さずに非表示
   if (!hasCurrentLikePoints && !hasPreviousLikePoints) {
     container.innerHTML = "";
     container.style.display = "none";
@@ -1394,17 +1524,11 @@ function convertLikePointsToHourData(points, chartHours) {
  *
  * maintainAspectRatio:false にして、
  * CSSの .like-chart-canvas-wrap の高さを優先する。
- *
- * 最新回：既存の水色
- * 前回：水色をグレー寄りにした淡い青みグレー
  */
 function createLikeTimelineChart(canvasId, likeData, previousLikeData, chartHours) {
   const chartLabels = Array.from({ length: chartHours }, (_, i) => i + 1);
-
   const datasets = [];
 
-  // 前回線を先に描画する。
-  // 最新回と重なったときに、最新回の線を優先して見せるため。
   if (Array.isArray(previousLikeData) && previousLikeData.some(value => value !== null)) {
     datasets.push({
       label: "前回",
@@ -1444,7 +1568,6 @@ function createLikeTimelineChart(canvasId, likeData, previousLikeData, chartHour
     options: {
       responsive: true,
       maintainAspectRatio: false,
-
       resizeDelay: 100,
       layout: {
         padding: {
@@ -1498,7 +1621,6 @@ function createLikeTimelineChart(canvasId, likeData, previousLikeData, chartHour
             display: chartHours > 48,
             color: function(context) {
               const hour = context.index + 1;
-
               return hour % 24 === 0 ? "#e5edf5" : "transparent";
             },
             drawTicks: false
@@ -1529,7 +1651,6 @@ function createLikeTimelineChart(canvasId, likeData, previousLikeData, chartHour
       },
       plugins: {
         legend: {
-          // 前回線があるときだけ凡例を出す
           display: datasets.length > 1,
           position: "top",
           labels: {
@@ -1544,6 +1665,331 @@ function createLikeTimelineChart(canvasId, likeData, previousLikeData, chartHour
       }
     }
   });
+}
+
+
+// ==============================
+// 2枚目 現在ランキングプレビュー描画
+// ==============================
+
+/**
+ * 2枚目画像に表示する項目を作る
+ *
+ * 表示対象：
+ * - currentRankが1〜50位のランキングだけ
+ * - likesが存在する場合だけ
+ * - favoritesが存在する場合だけ
+ *
+ * 差分：
+ * - ランキングは1時間前より上がっている場合だけ ↑n位UP!
+ * - いいね数は1時間前より増えている場合だけ ＋n
+ * - お気に入り数は favoritePoints が存在し、1時間前より増えている場合だけ ＋n
+ */
+function buildCurrentRankingSummaryItems(data) {
+  const items = [];
+
+  if (Array.isArray(data.rankings)) {
+    data.rankings.forEach((ranking) => {
+      if (!ranking) {
+        return;
+      }
+
+      const currentRank = getFiniteNumber(ranking.currentRank);
+
+      // currentRank がない / 0以下 / 50位より下は2枚目には出さない
+      if (currentRank === null || currentRank <= 0 || currentRank > 50) {
+        return;
+      }
+
+      const label = ranking.label || ranking.type || "ランキング";
+      const diffText = getRankUpText(ranking);
+
+      items.push({
+        kind: "ranking",
+        label,
+        value: `${formatDisplayNumber(currentRank)}位`,
+        diffText
+      });
+    });
+  }
+
+  if (data.likes !== null && data.likes !== undefined && data.likes !== "") {
+    const likeDiff = getLatestDiffFromPreviousHour(data.likePoints, "likes");
+
+    items.push({
+      kind: "metric",
+      label: "いいね数",
+      value: formatDisplayNumber(data.likes),
+      diffText: getPositiveDiffText(likeDiff)
+    });
+  }
+
+  if (data.favorites !== null && data.favorites !== undefined && data.favorites !== "") {
+    const favoriteDiff = getLatestDiffFromPreviousHour(data.favoritePoints, "favorites");
+
+    items.push({
+      kind: "metric",
+      label: "お気に入り数",
+      value: formatDisplayNumber(data.favorites),
+      diffText: getPositiveDiffText(favoriteDiff)
+    });
+  }
+
+  return items;
+}
+
+/**
+ * 2枚目画像用DOMを生成する
+ */
+function createCurrentRankingSummaryElement(data) {
+  const items = buildCurrentRankingSummaryItems(data);
+
+  const rankingItems = items.filter((item) => {
+    return item.kind === "ranking";
+  });
+
+  const metricItems = items.filter((item) => {
+    return item.kind === "metric";
+  });
+
+  const element = document.createElement("main");
+  element.className = "report current-ranking-report";
+
+  const programMetaHtml = `
+    ${escapeHtml(data.broadcastDate || "")} 放送　${escapeHtml(data.subtitle || "")}<br>
+    （ <i class="ph ph-clock"></i> ${escapeHtml(data.updatedAt || "")} 更新 ）
+  `;
+
+  element.innerHTML = `
+    <div class="top-bar">
+      TVer現在のランキング
+    </div>
+
+    <section class="hero">
+      <div class="program-title">
+        ${escapeHtml(data.programTitle || "")}
+      </div>
+
+      <div class="meta">
+        ${programMetaHtml}
+      </div>
+    </section>
+
+    ${rankingItems.length > 0 ? `
+      <section class="rank-cards">
+        ${rankingItems.map((item, index) => {
+          const theme = getRankingThemeByIndex(index);
+          const rankText = String(item.value || "").replace("位", "");
+          const labelText = String(item.label || "").endsWith("ランキング")
+            ? item.label
+            : `${item.label}ランキング`;
+
+          return `
+            <div class="card">
+              <div class="label ${theme.labelClass}">
+                ${escapeHtml(labelText)}
+              </div>
+
+              <div class="rank-main" style="color:${theme.color};">
+                ${escapeHtml(rankText)}<span>位</span>
+              </div>
+
+              <div class="sub-rank ${theme.bgClass}${item.diffText ? "" : " is-empty"}">
+                ${item.diffText ? escapeHtml(item.diffText) : "現在"}
+              </div>
+            </div>
+          `;
+        }).join("")}
+      </section>
+    ` : ""}
+
+    ${metricItems.length > 0 ? `
+      <section class="stats">
+        ${metricItems.map((item) => {
+          const iconClass = item.label === "お気に入り数"
+            ? "bi bi-heart"
+            : "bi bi-hand-thumbs-up-fill";
+
+          return `
+            <div class="stat">
+              <span class="stat-icon">
+                <i class="${iconClass}"></i>
+              </span>
+
+              <span class="stat-label">
+                ${escapeHtml(item.label)}
+              </span>
+
+              <strong>
+                ${escapeHtml(item.value)}
+              </strong>
+
+              ${item.diffText ? `
+                <span class="stat-diff">
+                  ${escapeHtml(item.diffText)}
+                </span>
+              ` : ""}
+            </div>
+          `;
+        }).join("")}
+      </section>
+    ` : ""}
+
+    <div class="footer">
+      データ出典：TVer<br>
+      本データは個人がTVerをより楽しむために作成された資料であり、公式とは一切関係がありません。<br>
+      ※1時間ごと更新
+    </div>
+  `;
+
+  return element;
+}
+
+/**
+ * 2枚目プレビューを画面に描画する
+ */
+function renderCurrentRankingPreview(data) {
+  const preview = document.getElementById("currentRankingPreview");
+
+  if (!preview) {
+    return;
+  }
+
+  if (!data) {
+    preview.innerHTML = "";
+    return;
+  }
+
+  const element = createCurrentRankingSummaryElement(data);
+
+  preview.innerHTML = "";
+  preview.appendChild(element);
+}
+
+
+// ==============================
+// 画像プレビュー左右スワイプ
+// ==============================
+
+/**
+ * 投稿画像プレビューの左右スワイプ・矢印・ドットを設定する
+ */
+function setupImagePreviewSlider() {
+  const slider = document.getElementById("imagePreviewSlider");
+  const dots = Array.from(document.querySelectorAll("#imagePreviewDots .image-preview-dot"));
+  const prevButton = document.getElementById("imagePreviewPrevButton");
+  const nextButton = document.getElementById("imagePreviewNextButton");
+  const pageText = document.getElementById("imagePreviewPageText");
+
+  if (!slider) {
+    return;
+  }
+
+  const getPages = () => {
+    return Array.from(slider.querySelectorAll(".image-preview-page"));
+  };
+
+  const updateImagePreviewState = (index) => {
+    const pages = getPages();
+
+    currentImagePreviewIndex = index;
+
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle("is-active", dotIndex === index);
+    });
+
+    if (prevButton) {
+      prevButton.disabled = index <= 0;
+    }
+
+    if (nextButton) {
+      nextButton.disabled = index >= pages.length - 1;
+    }
+
+    if (pageText) {
+      pageText.textContent = `${index + 1} / ${pages.length}`;
+    }
+  };
+
+  const scrollToPreviewPage = (index) => {
+    const pages = getPages();
+
+    if (pages.length === 0) {
+      return;
+    }
+
+    const safeIndex = Math.max(0, Math.min(index, pages.length - 1));
+    const targetPage = pages[safeIndex];
+
+    slider.scrollTo({
+      left: targetPage.offsetLeft - slider.offsetLeft,
+      behavior: "smooth"
+    });
+
+    updateImagePreviewState(safeIndex);
+  };
+
+  const getActiveIndexFromScroll = () => {
+    const pages = getPages();
+    const sliderCenter = slider.scrollLeft + slider.clientWidth / 2;
+    let activeIndex = 0;
+    let minDistance = Infinity;
+
+    pages.forEach((page, index) => {
+      const pageCenter = page.offsetLeft + page.clientWidth / 2;
+      const distance = Math.abs(sliderCenter - pageCenter);
+
+      if (distance < minDistance) {
+        minDistance = distance;
+        activeIndex = index;
+      }
+    });
+
+    return activeIndex;
+  };
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      const index = Number(dot.dataset.previewIndex);
+
+      if (!Number.isInteger(index)) {
+        return;
+      }
+
+      scrollToPreviewPage(index);
+    });
+  });
+
+  if (prevButton) {
+    prevButton.addEventListener("click", () => {
+      scrollToPreviewPage(currentImagePreviewIndex - 1);
+    });
+  }
+
+  if (nextButton) {
+    nextButton.addEventListener("click", () => {
+      scrollToPreviewPage(currentImagePreviewIndex + 1);
+    });
+  }
+
+  let scrollTimer = null;
+
+  slider.addEventListener("scroll", () => {
+    const activeIndex = getActiveIndexFromScroll();
+    updateImagePreviewState(activeIndex);
+
+    if (scrollTimer) {
+      clearTimeout(scrollTimer);
+    }
+
+    scrollTimer = setTimeout(() => {
+      updateImagePreviewState(getActiveIndexFromScroll());
+    }, 120);
+  }, {
+    passive: true
+  });
+
+  updateImagePreviewState(0);
 }
 
 
@@ -1567,10 +2013,13 @@ function setupReloadDataButton() {
   button.addEventListener("click", async () => {
     button.classList.add("is-loading");
     button.innerHTML = '<i class="bi bi-arrow-repeat"></i>'; // 更新中
-  
+
     try {
       await loadReportData(true);
       button.innerHTML = '<i class="bi bi-check-lg"></i>'; // 更新済み
+      setTimeout(() => {
+        scrollImagePreviewToFirstPage();
+      }, 0);
     } catch (error) {
       console.error(error);
       button.innerHTML = '<i class="bi bi-x-lg"></i>'; // 失敗
@@ -1582,6 +2031,46 @@ function setupReloadDataButton() {
       }, 1200);
     }
   });
+}
+
+/**
+ * JSON再読み込み後などに、プレビューを1枚目へ戻す
+ */
+function scrollImagePreviewToFirstPage() {
+  const slider = document.getElementById("imagePreviewSlider");
+
+  if (!slider) {
+    return;
+  }
+
+  slider.scrollTo({
+    left: 0,
+    behavior: "auto"
+  });
+
+  currentImagePreviewIndex = 0;
+
+  const dots = Array.from(document.querySelectorAll("#imagePreviewDots .image-preview-dot"));
+  const prevButton = document.getElementById("imagePreviewPrevButton");
+  const nextButton = document.getElementById("imagePreviewNextButton");
+  const pageText = document.getElementById("imagePreviewPageText");
+  const pages = Array.from(slider.querySelectorAll(".image-preview-page"));
+
+  dots.forEach((dot, index) => {
+    dot.classList.toggle("is-active", index === 0);
+  });
+
+  if (prevButton) {
+    prevButton.disabled = true;
+  }
+
+  if (nextButton) {
+    nextButton.disabled = pages.length <= 1;
+  }
+
+  if (pageText) {
+    pageText.textContent = `1 / ${pages.length}`;
+  }
 }
 
 
@@ -1603,13 +2092,78 @@ function setupSaveImageButton() {
 }
 
 /**
+ * canvasをpng blobへ変換する
+ */
+function canvasToPngBlob(canvas) {
+  return new Promise((resolve) => {
+    canvas.toBlob((blob) => {
+      resolve(blob);
+    }, "image/png");
+  });
+}
+
+/**
+ * 指定要素をPNG Blobに変換する
+ */
+async function captureElementToPngBlob(target, options = {}) {
+  const canvas = await html2canvas(target, {
+    scale: 2,
+    useCORS: true,
+    backgroundColor: null,
+    width: 760,
+    windowWidth: 760,
+    ...options
+  });
+
+  return canvasToPngBlob(canvas);
+}
+
+/**
+ * 一時DOMを画面外でPNG Blobに変換する
+ * プレビューHTMLがない場合の保険用
+ */
+async function captureTemporaryElementToPngBlob(element) {
+  const wrapper = document.createElement("div");
+
+  wrapper.style.position = "fixed";
+  wrapper.style.left = "-9999px";
+  wrapper.style.top = "0";
+  wrapper.style.width = "760px";
+  wrapper.style.zIndex = "-1";
+  wrapper.appendChild(element);
+
+  document.body.appendChild(wrapper);
+
+  try {
+    return await captureElementToPngBlob(element);
+  } finally {
+    wrapper.remove();
+  }
+}
+
+/**
+ * Blobをファイルとしてダウンロードする
+ */
+function downloadBlobAsFile(blob, fileName) {
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+
+  link.download = fileName;
+  link.href = url;
+  link.click();
+
+  URL.revokeObjectURL(url);
+}
+
+/**
  * レポート部分を画像化して共有する
  *
  * 共有対応端末：
- * - 画像ファイル + 番組名 + TVer URL を共有
+ * - 1枚目：既存レポート画像
+ * - 2枚目：現在ランキング画像
  *
  * 共有非対応端末：
- * - PNGとしてダウンロード
+ * - PNGとして2枚ダウンロード
  */
 async function saveReportImage() {
   const target = document.getElementById("reportCaptureArea");
@@ -1618,14 +2172,10 @@ async function saveReportImage() {
     return;
   }
 
-  const canvas = await html2canvas(target, {
-    scale: 2,
-    useCORS: true,
-    backgroundColor: null,
-    width: 760,
-    windowWidth: 760,
+  const safeBaseFileName = `${reportData.programTitle}_${reportData.broadcastDate}_ranking-report`
+    .replace(/[\\/:*?"<>|]/g, "-");
 
-    // キャプチャ時だけ見た目調整用classを付与する
+  const mainBlob = await captureElementToPngBlob(target, {
     onclone: (clonedDocument) => {
       const clonedTarget = clonedDocument.getElementById("reportCaptureArea");
 
@@ -1635,48 +2185,61 @@ async function saveReportImage() {
     }
   });
 
-  const fileName = `${reportData.programTitle}_${reportData.broadcastDate}_ranking-report.png`
-    .replace(/[\\/:*?"<>|]/g, "-");
+  if (!mainBlob) {
+    return;
+  }
 
-  canvas.toBlob(async (blob) => {
-    if (!blob) {
+  let summaryTarget = document.querySelector("#currentRankingPreview .current-ranking-report");
+  let summaryBlob = null;
+
+  if (!summaryTarget) {
+    renderCurrentRankingPreview(reportData);
+    summaryTarget = document.querySelector("#currentRankingPreview .current-ranking-report");
+  }
+
+  if (summaryTarget) {
+    summaryBlob = await captureElementToPngBlob(summaryTarget);
+  } else {
+    const summaryElement = createCurrentRankingSummaryElement(reportData);
+    summaryBlob = await captureTemporaryElementToPngBlob(summaryElement);
+  }
+
+  if (!summaryBlob) {
+    return;
+  }
+
+  const mainFile = new File([mainBlob], `${safeBaseFileName}.png`, {
+    type: "image/png"
+  });
+
+  const summaryFile = new File([summaryBlob], `${safeBaseFileName}_current-ranking.png`, {
+    type: "image/png"
+  });
+
+  const files = [
+    mainFile,
+    summaryFile
+  ];
+
+  const shareTitle = buildImageShareTitle();
+  const shareText = buildImageShareText();
+
+  if (navigator.canShare && navigator.canShare({ files })) {
+    try {
+      await navigator.share({
+        files,
+        title: shareTitle,
+        text: shareText
+      });
+      return;
+    } catch (error) {
+      console.log("共有がキャンセルされました", error);
       return;
     }
+  }
 
-    const file = new File([blob], fileName, {
-      type: "image/png"
-    });
-
-    // 共有時のタイトル・本文
-    const shareTitle = buildImageShareTitle();
-    const shareText = buildImageShareText();
-
-    // Web Share APIで画像共有できる場合
-    if (navigator.canShare && navigator.canShare({ files: [file] })) {
-      try {
-        await navigator.share({
-          files: [file],
-          title: shareTitle,
-          text: shareText
-        });
-        return;
-      } catch (error) {
-        // ユーザーが共有をキャンセルした場合もここに来る
-        console.log("共有がキャンセルされました", error);
-        return;
-      }
-    }
-
-    // 画像共有に対応していない環境では画像をダウンロードする
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-
-    link.download = fileName;
-    link.href = url;
-    link.click();
-
-    URL.revokeObjectURL(url);
-  }, "image/png");
+  downloadBlobAsFile(mainBlob, `${safeBaseFileName}.png`);
+  downloadBlobAsFile(summaryBlob, `${safeBaseFileName}_current-ranking.png`);
 }
 
 
