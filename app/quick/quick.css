@@ -178,10 +178,6 @@
   outline-offset: 2px;
 }
 
-.quick-complete-header {
-  padding-top: clamp(48px, 12vh, 100px);
-}
-
 .quick-install-guide-card {
   display: grid;
   gap: 12px;
