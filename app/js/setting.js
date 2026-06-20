@@ -12,15 +12,15 @@ const setupGuideState = {
 const SETUP_GUIDE_IMAGE_BASE_PATH = "../img/setting/";
 
 const SETUP_GUIDE_IMAGES = {
-  iosSafariBottom: {
-    title: "タイプ①：共有ボタンが画面下にある場合",
-    src: `${SETUP_GUIDE_IMAGE_BASE_PATH}setup-ios-safari-bottom.png`,
-    alt: "Safariの共有ボタンが画面下にある場合のホーム画面追加手順",
+  iosSafariType01: {
+    title: "タイプ①：コンパクトモードの場合",
+    src: `${SETUP_GUIDE_IMAGE_BASE_PATH}setup-ios-safari-type01.png`,
+    alt: "Safariコンパクトモードの場合のホーム画面追加手順",
   },
-  iosSafariTop: {
-    title: "タイプ②：共有ボタンが画面上にある場合",
-    src: `${SETUP_GUIDE_IMAGE_BASE_PATH}setup-ios-safari-top.png`,
-    alt: "Safariの共有ボタンが画面上にある場合のホーム画面追加手順",
+  iosSafariType02: {
+    title: "タイプ②：共有ボタンが画面にある場合",
+    src: `${SETUP_GUIDE_IMAGE_BASE_PATH}setup-ios-safari-type02.png`,
+    alt: "Safariの共有ボタンが画面にある場合のホーム画面追加手順",
   },
   iosChrome: {
     title: "iPhone・iPadでChromeを使用している場合",
@@ -108,12 +108,12 @@ function getDeviceGuideImage() {
     return null;
   }
 
-  if (setupGuideState.iosDisplayType === "safari-bottom") {
-    return SETUP_GUIDE_IMAGES.iosSafariBottom;
+  if (setupGuideState.iosDisplayType === "safari-type01") {
+    return SETUP_GUIDE_IMAGES.iosSafariType01;
   }
 
-  if (setupGuideState.iosDisplayType === "safari-top") {
-    return SETUP_GUIDE_IMAGES.iosSafariTop;
+  if (setupGuideState.iosDisplayType === "safari-type02") {
+    return SETUP_GUIDE_IMAGES.iosSafariType02;
   }
 
   if (setupGuideState.iosDisplayType === "chrome") {
