@@ -279,57 +279,41 @@
         <h2 id="quickSetupModalTitle">ホーム画面に追加しよう！</h2>
         <button id="quickCloseSetupButton" class="modal-close-button" type="button" aria-label="閉じる">×</button>
       </div>
-
+  
       <div id="quickSetupModalBody" class="modal-body setup-modal-body">
-        <!-- ホーム画面追加案内 -->
-        <div id="quickSetupModal" class="modal-overlay hidden" aria-hidden="true">
-          <div class="modal-content setup-modal-content" role="dialog" aria-modal="true" aria-labelledby="quickSetupModalTitle">
-            <div class="modal-header">
-              <h2 id="quickSetupModalTitle">ホーム画面に追加しよう！</h2>
-              <button id="quickCloseSetupButton" class="modal-close-button" type="button" aria-label="閉じる">×</button>
-            </div>
-        
-            <div class="modal-body setup-modal-body">
-              <section class="setup-intro-card">
-                <p class="setup-intro-title">毎日の応援をもっと簡単に！</p>
-                <p class="setup-intro-text"><strong>ホーム画面に追加</strong>でタスク消化も超簡単！<br>アプリ感覚でサクサク使えます！</p>
-              </section>
-        
-              <img loading="lazy" decoding="async" src="../../img/setting/setting_whypwa.png" alt="ホーム画面に追加するとページを開いた後にツールへ戻るのがとっても楽">
-        
-              <h3 class="setup-howto-title">ホーム画面に追加</h3>
-        
-              <div id="setupDeviceQuestion" class="setup-question-block">
-                <h3>① 今使っているのは？</h3>
-        
-                <div class="setup-choice-list">
-                  <button type="button" class="setup-choice-button" data-device-type="ios">iPhone / iPad</button>
-                  <button type="button" class="setup-choice-button" data-device-type="android">Android</button>
-                </div>
-              </div>
-        
-              <div id="setupIosDisplayQuestion" class="setup-question-block hidden">
-                <h3>② Safariの場合、画面の下にはどっちが表示されていますか？</h3>
-        
-                <div class="setup-choice-list setup-ios-display-choice-list">
-                  <button type="button" class="setup-choice-button setup-ios-display-button" data-ios-display-type="safari-type01">
-                    <img src="../../img/setting/setup-ios-type01.png" alt="タイプ①">
-                    <span>タイプ①</span>
-                  </button>
-        
-                  <button type="button" class="setup-choice-button setup-ios-display-button" data-ios-display-type="safari-type02">
-                    <img src="../../img/setting/setup-ios-type02.png" alt="タイプ②">
-                    <span>タイプ②</span>
-                  </button>
-        
-                  <button type="button" class="setup-choice-button" data-ios-display-type="chrome">Chromeを使用</button>
-                </div>
-              </div>
-        
-              <div id="setupDeviceGuideArea" class="setup-guide-area hidden"></div>
-            </div>
+        <section class="setup-intro-card">
+          <p class="setup-intro-title">毎日の応援をもっと簡単に！</p>
+          <p class="setup-intro-text"><strong>ホーム画面に追加</strong>でタスク消化も超簡単！<br>アプリ感覚でサクサク使えます！</p>
+        </section>
+  
+        <img loading="lazy" decoding="async" src="../../img/setting/setting_whypwa.png" alt="ホーム画面に追加するとページを開いた後にツールへ戻るのがとっても楽">
+  
+        <h3 class="setup-howto-title">ホーム画面に追加</h3>
+  
+        <div id="setupDeviceQuestion" class="setup-question-block">
+          <h3>① 今使っているのは？</h3>
+          <div class="setup-choice-list">
+            <button type="button" class="setup-choice-button" data-device-type="ios">iPhone / iPad</button>
+            <button type="button" class="setup-choice-button" data-device-type="android">Android</button>
           </div>
         </div>
+  
+        <div id="setupIosDisplayQuestion" class="setup-question-block hidden">
+          <h3>② Safariの場合、画面の下にはどっちが表示されていますか？</h3>
+          <div class="setup-choice-list setup-ios-display-choice-list">
+            <button type="button" class="setup-choice-button setup-ios-display-button" data-ios-display-type="safari-type01">
+              <img src="../../img/setting/setup-ios-type01.png" alt="タイプ①">
+              <span>タイプ①</span>
+            </button>
+            <button type="button" class="setup-choice-button setup-ios-display-button" data-ios-display-type="safari-type02">
+              <img src="../../img/setting/setup-ios-type02.png" alt="タイプ②">
+              <span>タイプ②</span>
+            </button>
+            <button type="button" class="setup-choice-button" data-ios-display-type="chrome">Chromeを使用</button>
+          </div>
+        </div>
+  
+        <div id="setupDeviceGuideArea" class="setup-guide-area hidden"></div>
       </div>
     </div>
   </div>
