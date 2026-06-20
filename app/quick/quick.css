@@ -1,0 +1,329 @@
+/* ==================================================
+   quick.css
+   30秒だけ時間をください：専用画面
+   ================================================== */
+
+:root {
+  --quick-overlay-color: rgba(10, 14, 20, 0.62);
+  --quick-spotlight-color: rgba(255, 255, 255, 0.95);
+  --quick-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+}
+
+.quick-page {
+  min-height: 100dvh;
+}
+
+.quick-app {
+  min-height: 100dvh;
+  padding-top: 58px;
+}
+
+.quick-topbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  width: min(100%, 540px);
+  min-height: 58px;
+  padding: env(safe-area-inset-top) 12px 0;
+  transform: translateX(-50%);
+  background: color-mix(in srgb, var(--color-bg, #fff) 92%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-text, #222) 10%, transparent);
+}
+
+.quick-home-link {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  color: inherit;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.quick-topbar-title {
+  margin: 0;
+  font-family: "Darumadrop One", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.quick-tutorial-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.quick-tutorial-toggle-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.quick-tutorial-toggle input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.quick-tutorial-toggle-switch {
+  position: relative;
+  width: 38px;
+  height: 22px;
+  border-radius: 999px;
+  background: #b8b8b8;
+  transition: background 0.2s ease;
+}
+
+.quick-tutorial-toggle-switch::after {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  content: "";
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.quick-tutorial-toggle input:checked + .quick-tutorial-toggle-switch {
+  background: var(--color-brand, #f06d88);
+}
+
+.quick-tutorial-toggle input:checked + .quick-tutorial-toggle-switch::after {
+  transform: translateX(16px);
+}
+
+.quick-step-screen {
+  min-height: calc(100dvh - 58px);
+  padding-top: 20px;
+  padding-bottom: calc(32px + env(safe-area-inset-bottom));
+}
+
+.quick-start-header {
+  padding-top: clamp(54px, 16vh, 128px);
+}
+
+.quick-start-eyebrow,
+.quick-step-label {
+  margin: 0 0 10px;
+  color: var(--color-brand, #f06d88);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.quick-start-title {
+  font-family: "Darumadrop One", sans-serif;
+  font-size: clamp(2rem, 8vw, 3rem);
+  line-height: 1.35;
+}
+
+.quick-start-description {
+  margin-top: 18px;
+  line-height: 1.8;
+}
+
+.quick-start-card {
+  margin-top: 38px;
+}
+
+.quick-start-card .primary-button {
+  min-height: 54px;
+  font-size: 1.05rem;
+}
+
+.quick-no-bgm-card {
+  margin-top: 20px;
+}
+
+.quick-no-bgm-text {
+  margin: 0 0 14px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.quick-spotify-scroll-area {
+  max-height: none;
+}
+
+.quick-daily-task-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.quick-daily-task-title-row .task-help-button {
+  flex: 0 0 auto;
+}
+
+.quick-share-card {
+  display: grid;
+  gap: 12px;
+}
+
+.quick-post-text-count {
+  margin: 8px 0 14px;
+  color: #777;
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+.quick-post-text-count.is-warning {
+  color: #d84b4b;
+  font-weight: 700;
+}
+
+.quick-post-textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-height: 160px;
+  padding: 12px;
+  color: inherit;
+  font: inherit;
+  line-height: 1.65;
+  resize: vertical;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+}
+
+.quick-post-textarea:focus {
+  outline: 2px solid color-mix(in srgb, var(--color-brand, #f06d88) 60%, transparent);
+  outline-offset: 2px;
+}
+
+.quick-complete-header {
+  padding-top: clamp(48px, 12vh, 100px);
+}
+
+.quick-complete-icon {
+  margin: 0 0 10px;
+  color: var(--color-brand, #f06d88);
+  font-size: 2.2rem;
+}
+
+.quick-install-guide-card {
+  display: grid;
+  gap: 12px;
+}
+
+.quick-pwa-complete-card {
+  text-align: center;
+}
+
+.quick-setup-guide {
+  display: grid;
+  gap: 16px;
+}
+
+.quick-setup-guide p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.quick-setup-guide strong {
+  color: var(--color-brand, #f06d88);
+}
+
+.quick-setup-guide-note {
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+/* ==================================================
+   チュートリアル表示
+   ================================================== */
+
+.quick-tutorial-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+}
+
+.quick-tutorial-spotlight {
+  position: fixed;
+  z-index: 41;
+  display: none;
+  border: 2px solid var(--quick-spotlight-color);
+  border-radius: 16px;
+  box-shadow: 0 0 0 100vmax var(--quick-overlay-color);
+  pointer-events: none;
+  transition:
+    top 0.28s ease,
+    left 0.28s ease,
+    width 0.28s ease,
+    height 0.28s ease;
+}
+
+.quick-tutorial-overlay.is-active .quick-tutorial-spotlight {
+  display: block;
+}
+
+.quick-tutorial-message {
+  position: fixed;
+  right: 16px;
+  bottom: calc(22px + env(safe-area-inset-bottom));
+  left: 16px;
+  z-index: 43;
+  padding: 18px 18px 14px;
+  color: #fff;
+  background: rgba(20, 20, 24, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 18px;
+  box-shadow: var(--quick-shadow);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.quick-tutorial-overlay.is-message-hidden .quick-tutorial-message {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.quick-tutorial-text {
+  min-height: 3.2em;
+  margin: 0;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: clamp(0.95rem, 4vw, 1.08rem);
+  font-weight: 700;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.quick-tutorial-hint {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.75rem;
+  text-align: right;
+}
+
+.quick-tutorial-target {
+  position: relative;
+  z-index: 42;
+  border-radius: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quick-tutorial-spotlight,
+  .quick-tutorial-message,
+  .quick-tutorial-toggle-switch,
+  .quick-tutorial-toggle-switch::after {
+    transition: none;
+  }
+}
