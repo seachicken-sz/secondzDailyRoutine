@@ -291,3 +291,24 @@
     transition: none;
   }
 }
+
+.quick-return-guide-section + .quick-return-guide-section {
+  padding-top: 18px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.quick-return-guide-section h3 {
+  margin: 0 0 10px;
+  color: var(--color-brand);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.quick-return-guide-image {
+  display: block;
+  width: min(100%, 320px);
+  height: auto;
+  margin: 0 auto 12px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
