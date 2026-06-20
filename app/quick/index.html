@@ -162,13 +162,13 @@
           </h2>
   
           <div id="quickDailyTaskCommentArea" class="notice-box hidden"></div>
+        
+          <div id="quickDailyTaskCopyPreviewArea" class="daily-task-copy-preview hidden">
+            <p class="daily-task-copy-preview-note">「ページを開く」を押すと以下がコピーされます。</p>
+            <div id="quickDailyTaskCopyPreviewText" class="daily-task-copy-preview-text"></div>
+            <p id="quickDailyTaskCopyPreviewPasteTarget" class="daily-task-copy-preview-note"></p>
+          </div>
         </div>
-        <div id="quickDailyTaskCopyPreviewArea" class="daily-task-copy-preview hidden">
-          <p class="daily-task-copy-preview-note">「ページを開く」を押すと以下がコピーされます。</p>
-          <div id="quickDailyTaskCopyPreviewText" class="daily-task-copy-preview-text"></div>
-          <p id="quickDailyTaskCopyPreviewPasteTarget" class="daily-task-copy-preview-note"></p>
-        </div>
-
         <button id="quickOpenDailyTaskUrlButton" class="primary-button" type="button">ページを開く</button>
         <button id="quickDailyTaskNextButton" class="secondary-button hidden" type="button">次へ</button>
       </section>
@@ -203,35 +203,28 @@
 
       <section class="scroll-area">
         <section class="task-card">
-          <div class="post-preview-tabs" role="tablist" aria-label="投稿先切り替え">
-            <button id="quickPostPreviewXTabButton" class="post-preview-tab active" type="button">X</button>
-            <button id="quickPostPreviewThreadsTabButton" class="post-preview-tab" type="button">Threads</button>
+          <div id="quickPostSelectionGuideArea">
+            <div class="post-preview-tabs" role="tablist" aria-label="投稿先切り替え">
+              <button id="quickPostPreviewXTabButton" class="post-preview-tab active" type="button">X</button>
+              <button id="quickPostPreviewThreadsTabButton" class="post-preview-tab" type="button">Threads</button>
+            </div>
+          
+            <div id="quickPostSelectionGuideX" class="quick-post-selection-guide">
+              <div id="quickPostItemXList" class="check-list post-item-list"></div>
+              <section class="post-check-box">
+                <p class="selected-label">チェック</p>
+                <p id="quickXPostTextCount" class="description"></p>
+              </section>
+            </div>
+          
+            <div id="quickPostSelectionGuideThreads" class="quick-post-selection-guide hidden">
+              <div id="quickPostItemThreadsList" class="check-list post-item-list"></div>
+              <section class="post-check-box">
+                <p class="selected-label">チェック</p>
+                <p id="quickThreadsPostLinkCount" class="description"></p>
+              </section>
+            </div>
           </div>
-
-          <section id="quickPostPreviewXPanel" class="post-preview-panel">
-            <div id="quickPostItemXList" class="check-list post-item-list"></div>
-
-            <section class="post-check-box">
-              <p class="selected-label">チェック</p>
-              <p id="quickXPostTextCount" class="description"></p>
-            </section>
-
-            <div id="quickGeneratedXPostText" class="copy-text"></div>
-            <button id="quickOpenXPostButton" class="primary-button post-action-button" type="button">Xに投稿</button>
-            <button id="quickCopyXPostTextButton" class="secondary-button" type="button">コピーする</button>
-          </section>
-
-          <section id="quickPostPreviewThreadsPanel" class="post-preview-panel hidden">
-            <div id="quickPostItemThreadsList" class="check-list post-item-list"></div>
-
-            <section class="post-check-box">
-              <p class="selected-label">チェック</p>
-              <p id="quickThreadsPostLinkCount" class="description"></p>
-            </section>
-
-            <div id="quickGeneratedThreadsPostText" class="copy-text"></div>
-            <button id="quickOpenThreadsButton" class="primary-button post-action-button" type="button">コピーしてThreadsを開く</button>
-          </section>
         </section>
 
         <section class="bottom-action-area">
@@ -248,11 +241,7 @@
       </header>
 
       <section id="quickInstallGuideCard" class="task-card quick-install-guide-card">
-        <h2 class="task-title">ホーム画面に追加しよう！</h2>
-        <p class="description">
-        <section class="setup-intro-card">
         <img loading="lazy" decoding="async" src="../../img/setting/setting_whypwa.png" alt="ホーム画面に追加するとページを開いた後にツールへ戻るのがとっても楽">  
-        </p>
         <button id="quickOpenSetupButton" class="primary-button" type="button">ホーム画面に追加する</button>
       </section>
 
