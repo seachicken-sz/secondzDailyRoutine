@@ -1099,7 +1099,7 @@ function startTutorialForCurrentScreen() {
       ],
     },
     daily: {
-      target: ".quick-daily-task-title-row",
+      target: "#quickDailyTaskGuideArea",
       messages: dailyMessages,
     },
     share: {
