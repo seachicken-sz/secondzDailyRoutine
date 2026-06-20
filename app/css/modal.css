@@ -657,6 +657,13 @@
 #firstVisitModal p{
    text-align:center;
 }
+#firstVisitModalSns .home-install-text{
+   text-align:left;
+}
+#firstVisitModalSns img{
+   border:1px solid #888;
+   margin:0.75rem auto;
+}
 
 /* ==================================================
    モーダル　解説
