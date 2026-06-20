@@ -971,44 +971,24 @@
         </p>
       </section>
       <img  loading="lazy" decoding="async" src="../img/setting/setting_whypwa.png" alt="ホーム画面に追加するとページを開いた後にツールに戻るのがとっても楽！">
-      <h3 class="setup-howto-title">ホーム画面に追加</h3>
-      <p id="userBrowser"></p>
-      <p>あてはまるものを選んで進めてください！</p>
-            <div class="setup-question-block">
-              <h3>① 今このページをどう開いた？</h3>
+     <h3 class="setup-howto-title">ホーム画面に追加</h3>
+      <div id="setupDeviceQuestion" class="setup-question-block">
+        <h3>① 今使っているのは？</h3>
+        <div class="setup-choice-list">
+          <button type="button" class="setup-choice-button" data-device-type="ios">iPhone / iPad</button>
+          <button type="button" class="setup-choice-button" data-device-type="android">Android</button>
+        </div>
+      </div>
       
-              <div class="setup-choice-list">
-                <button type="button" class="setup-choice-button" data-open-place="x">
-                  Xのリンクタップで開いた
-                </button>
-      
-                <button type="button" class="setup-choice-button" data-open-place="threads">
-                  Threadsのリンクタップで開いた
-                </button>
-      
-                <button type="button" class="setup-choice-button" data-open-place="browser">
-                  Safari / Chromeなどブラウザで開いた
-                </button>
-              </div>
-            </div>
-      
-            <div id="setupOpenPlaceGuideArea" class="setup-guide-area hidden"></div>
-      
-            <div id="setupDeviceQuestion" class="setup-question-block hidden">
-              <h3>② 今使っているのは？</h3>
-      
-              <div class="setup-choice-list">
-                <button type="button" class="setup-choice-button" data-device-type="ios">
-                  iPhone / iPad
-                </button>
-      
-                <button type="button" class="setup-choice-button" data-device-type="android">
-                  Android
-                </button>
-              </div>
-            </div>
-      
-            <div id="setupDeviceGuideArea" class="setup-guide-area hidden"></div>
+      <div id="setupIosDisplayQuestion" class="setup-question-block hidden">
+        <h3>② Safariの表示は？</h3>
+        <div class="setup-choice-list setup-ios-display-choice-list">
+          <button type="button" class="setup-choice-button setup-ios-display-button" data-ios-display-type="safari-bottom"><img src="../img/setting/setup-ios-type01.png" alt="タイプ①Safari"><span>タイプ①</span></button>
+          <button type="button" class="setup-choice-button setup-ios-display-button" data-ios-display-type="safari-top"><img src="../img/setting/setup-ios-type02.png" alt="タイプ②i"><span>タイプ②</span></button>
+          <button type="button" class="setup-choice-button" data-ios-display-type="chrome">Chromeを使用</button>
+        </div>
+      </div>
+      <div id="setupDeviceGuideArea" class="setup-guide-area hidden"></div>
           </div>
         </div>
       </div>
