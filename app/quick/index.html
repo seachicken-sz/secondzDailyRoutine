@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1, user-s:contentReference[oaicite:0]{index=0}aily</title>
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+  />
+
+  <title>タムごとDailyお試しモード！</title>
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="タムごとDaily">
@@ -45,17 +48,14 @@
     (() => {
       const themeName = localStorage.getItem("selectedTheme");
 
-      if (
-        themeName &&
-        themeName !== "normal"
-      ) {
+      if (themeName && themeName !== "normal") {
         document.documentElement.dataset.theme = themeName;
       }
     })();
   </script>
 </head>
 
-<body class="quick-page">
+<body class="quick-page is-quick-start">
   <main class="app quick-app">
 
     <header class="quick-topbar">
@@ -80,8 +80,11 @@
       </label>
     </header>
 
-    <!-- ① 開始 -->
-    <section id="quickStartStep" class="step-screen quick-step-screen quick-start-step">
+    <!-- 開始 -->
+    <section
+      id="quickStartStep"
+      class="step-screen quick-step-screen quick-start-step"
+    >
       <header class="home-header quick-start-home-header">
         <div class="home-logo-area">
           <img
@@ -91,7 +94,7 @@
           >
         </div>
       </header>
-    
+
       <section class="home-action-area quick-start-action-area">
         <button
           id="quickStartButton"
@@ -102,17 +105,25 @@
         </button>
       </section>
     </section>
-    <!-- ② Spotify -->
-    <section id="quickSpotifyStep" class="step-screen quick-step-screen hidden">
+
+    <!-- Spotify -->
+    <section
+      id="quickSpotifyStep"
+      class="step-screen quick-step-screen hidden"
+    >
       <header class="header">
-        <p class="quick-step-label">STEP 1</p>
-        <h1>Spotifyで再生しよう</h1>
+        <h1>今日のSpotify再生</h1>
         <p class="description">
-          好きな曲を選んで、再生してみよう。
+          1日1曲再生で<strong>月間リスナー数</strong>に貢献😊<br>
+          下のリストから好きな曲を選んで「Spotifyで開く」をタップするとSpotifyで再生されます。<br>
+          <strong>再生されたら、バックでこのアプリ</strong>に戻ってきてください。
         </p>
       </header>
 
-      <section id="quickSpotifySelectedArea" class="selected-area hidden">
+      <section
+        id="quickSpotifySelectedArea"
+        class="selected-area hidden"
+      >
         <p class="selected-label">選択中</p>
         <p id="quickSpotifySelectedSongName" class="selected-song"></p>
 
@@ -121,9 +132,14 @@
           class="primary-button"
           type="button"
         >
-          Spotifyを開く
+          Spotifyで開く
         </button>
       </section>
+
+      <section
+        id="quickSpotifyErrorArea"
+        class="error-area hidden"
+      ></section>
 
       <section class="scroll-area quick-spotify-scroll-area">
         <section class="song-section">
@@ -139,7 +155,7 @@
             class="accordion-button"
             type="button"
           >
-            <span>その他の曲</span>
+            <span>その他</span>
             <span id="quickToggleOtherSongsIcon">＋</span>
           </button>
 
@@ -153,44 +169,38 @@
             ></div>
           </div>
         </section>
+
+        <section class="bottom-action-area spotify-skip-area">
+          <button
+            id="quickSkipSpotifyButton"
+            class="secondary-button no-margin-button"
+            type="button"
+          >
+            BGMなし
+          </button>
+        </section>
       </section>
 
-      <section class="task-card quick-no-bgm-card">
-        <p class="quick-no-bgm-text">
-          Spotifyを入れていない人は、<br>
-          BGMなしで進んでも大丈夫。
-        </p>
-
-        <button
-          id="quickSkipSpotifyButton"
-          class="secondary-button"
-          type="button"
-        >
-          BGMなしで進む
-        </button>
-      </section>
-
-      <section id="quickSpotifyNextArea" class="task-card hidden">
+      <section
+        id="quickSpotifyNextArea"
+        class="task-card hidden"
+      >
         <button
           id="quickSpotifyNextButton"
-          class="primary-button"
+          class="secondary-button"
           type="button"
         >
           次へ
         </button>
       </section>
-
-      <section
-        id="quickSpotifyErrorArea"
-        class="error-area hidden"
-      ></section>
     </section>
 
-    <!-- ③ quickDaily -->
-    <section id="quickDailyStep" class="step-screen quick-step-screen hidden">
+    <!-- quickDaily -->
+    <section
+      id="quickDailyStep"
+      class="step-screen quick-step-screen hidden"
+    >
       <header class="header">
-        <p class="quick-step-label">STEP 2</p>
-        <h1>今日の応援をやってみよう</h1>
         <p
           id="quickDailyHeaderDescription"
           class="description"
@@ -252,7 +262,7 @@
           class="secondary-button hidden"
           type="button"
         >
-          できた！次へ
+          次へ
         </button>
       </section>
 
@@ -262,13 +272,16 @@
       ></section>
     </section>
 
-    <!-- ④ SNSシェア -->
-    <section id="quickShareStep" class="step-screen quick-step-screen hidden">
+    <!-- SNSシェア -->
+    <section
+      id="quickShareStep"
+      class="step-screen quick-step-screen hidden"
+    >
       <header class="header">
-        <p class="quick-step-label">STEP 3</p>
-        <h1>SNSでシェアしよう</h1>
+        <h1>SNSシェア</h1>
         <p class="description">
-          今日やった応援、よかったらみんなにも届けよう。
+          今日やったタスク、せっかくならSNSで共有しない？
+          <strong>※新曲リリースに向けて、みんなでオーエンタムしませんか？</strong>
         </p>
       </header>
 
@@ -278,7 +291,7 @@
           class="primary-button"
           type="button"
         >
-          シェアする！
+          共有する！
         </button>
 
         <button
@@ -286,16 +299,18 @@
           class="secondary-button"
           type="button"
         >
-          シェアせず進む
+          やめとく
         </button>
       </section>
     </section>
 
     <!-- SNSシェア文面 -->
-    <section id="quickPostEditStep" class="step-screen quick-step-screen hidden">
+    <section
+      id="quickPostEditStep"
+      class="step-screen quick-step-screen hidden"
+    >
       <header class="header">
-        <p class="quick-step-label">STEP 3</p>
-        <h1>シェア文章をつくろう</h1>
+        <h1>シェア文章作成📝</h1>
         <p class="description">
           内容を確認して、好きなSNSで投稿してね。
         </p>
@@ -304,7 +319,7 @@
       <section class="task-card">
         <textarea
           id="quickPostTextArea"
-          class="post-textarea"
+          class="quick-post-textarea"
           rows="7"
           maxlength="280"
         ></textarea>
@@ -347,13 +362,15 @@
       ></section>
     </section>
 
-    <!-- ⑤ 完了 -->
-    <section id="quickCompleteStep" class="step-screen quick-step-screen hidden">
+    <!-- 完了 -->
+    <section
+      id="quickCompleteStep"
+      class="step-screen quick-step-screen hidden"
+    >
       <header class="header quick-complete-header">
-        <p class="quick-complete-icon" aria-hidden="true">✦</p>
-        <h1>お疲れさまでした！</h1>
+        <h1>完了⌛</h1>
         <p class="description">
-          今日の応援、ちゃんとできたよ。
+          お疲れ様さまでした☺️Big Love💚
         </p>
       </header>
 
@@ -362,12 +379,12 @@
         class="task-card quick-install-guide-card"
       >
         <h2 class="task-title">
-          もしよかったら、<br>
-          ホーム画面に追加しない？
+          ホーム画面に追加しよう！
         </h2>
 
         <p class="description">
-          次からすぐに始められるよ。
+          ホーム画面に追加でタスク消化も超簡単！<br>
+          アプリ感覚でサクサク使えます！
         </p>
 
         <button
@@ -383,7 +400,7 @@
           class="text-link-button"
           type="button"
         >
-          今はこのまま使う
+          このまま使う
         </button>
       </section>
 
@@ -392,8 +409,7 @@
         class="task-card quick-pwa-complete-card hidden"
       >
         <p class="description">
-          また使いたくなったら、<br>
-          ホームからすぐに始められるよ。
+          お疲れ様さまでした☺️Big Love💚
         </p>
       </section>
 
@@ -402,7 +418,7 @@
           href="../"
           class="secondary-button no-margin-button"
         >
-          タムごとDailyのホームへ
+          ホームに戻る
         </a>
       </section>
     </section>
@@ -473,7 +489,6 @@
     </div>
   </div>
 
-  <!-- quick専用。既存 app.js / init.js / navigation.js は読み込まない -->
   <script src="./quick.js" defer></script>
 </body>
 </html>
