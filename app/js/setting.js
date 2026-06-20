@@ -233,7 +233,10 @@ function updateFirstVisitOpenSetupButtonVisibility() {
     return;
   }
 
-  const browserType = typeof getAccessBrowserType === "function" ? getAccessBrowserType() : "other_browser";
+  const firstVisitQuickButtonElement = document.getElementById("firstVisitQuickButton");
+  const browserType = typeof getAccessBrowserType === "function"
+    ? getAccessBrowserType()
+    : "other_browser";
 
   const isSnsInAppBrowser = [
     "x_in_app",
@@ -244,6 +247,7 @@ function updateFirstVisitOpenSetupButtonVisibility() {
   ].includes(browserType);
 
   firstVisitOpenSetupButtonElement.classList.toggle("hidden", isSnsInAppBrowser);
+  firstVisitQuickButtonElement?.classList.toggle("hidden", isSnsInAppBrowser);
 }
 
 function closeFirstVisitModal() {
