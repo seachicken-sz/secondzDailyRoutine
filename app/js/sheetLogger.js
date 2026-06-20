@@ -204,7 +204,7 @@ function hasSheetItems(payload) {
  * @param {Object} groups taskTypeごとの送信item配列
  * @returns {Promise<boolean>}
  */
-async function sendSheetLog(groups) {
+async function sendSheetLog(groups, options = {}) {
   if (!SHEET_WEB_APP_URL || SHEET_WEB_APP_URL.includes("ここに")) {
     return false;
   }
