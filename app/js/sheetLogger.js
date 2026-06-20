@@ -1,4 +1,4 @@
-const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzaXmITsQ0eZlBZGEefRCzihLjgkdOPSNPmUqXkFAIln8CrIdn4JDYZlcYH_0cpm7xF/exec";
+const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbw4xCifrcANzTS5Ym7-Zta3j_qqfW2VOwVsZhFlAuLi9m1FOqV45aJB6BgsApmu_6qN/exec";
 const SHEET_TOKEN = "test-token";
 const SHEET_APP_NAME = "secondzDailyRoutine";
 const SHEET_CLIENT_ID_KEY = "secondzDailyRoutineClientId";
