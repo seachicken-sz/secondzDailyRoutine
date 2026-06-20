@@ -720,16 +720,16 @@ function buildQuickPostItems() {
 }
 
 function getQuickPostSpotifyName(selectedSong) {
-  if (!selectedSong?.name) {
-    return "🎧Spotify";
+  if (quickState.spotifyChoice === "noBgm" || !selectedSong?.name) {
+    return "🎧timelesz - Spotify";
   }
 
   return `🎧Spotifyで${selectedSong.name}`;
 }
 
 function getQuickPostSpotifyUrl(selectedSong) {
-  if (!selectedSong?.url) {
-    return "";
+  if (quickState.spotifyChoice === "noBgm" || !selectedSong?.url) {
+    return "https://open.spotify.com/intl-ja/artist/1ZFfhzyXjPvbzSYPlCIwo3";
   }
 
   return buildQuickSpotifyUrl(selectedSong);
