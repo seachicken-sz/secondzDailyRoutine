@@ -2,19 +2,19 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"/>
-  <title>1分間だけ時間をください！タムごとDaily ショートver</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>タムごとDailyお試しモード！</title>
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="タムごとDaily">
-  <meta property="og:title" content="タムごとDaily ショートver">
-  <meta property="og:description" content="1分間だけ時間をください！タムごとDaily ショートver">
+  <meta property="og:title" content="タムごとDailyお試しモード！">
+  <meta property="og:description" content="1分間だけ時間をください！タムごとDailyお試しモード！">
   <meta property="og:url" content="https://seachicken-sz.github.io/secondzDailyRoutine/app/quick/">
   <meta property="og:image" content="https://seachicken-sz.github.io/secondzDailyRoutine/img/link-card.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="タムごとDaily ショートver">
-  <meta name="twitter:description" content="1分間だけ時間をください！タムごとDaily ショートver">
+  <meta name="twitter:title" content="タムごとDailyお試しモード">
+  <meta name="twitter:description" content="1分間だけ時間をください！タムごとDailyお試しモード！">
   <meta name="twitter:image" content="https://seachicken-sz.github.io/secondzDailyRoutine/img/link-card.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,21 +46,13 @@
 
 <body class="quick-page is-quick-start">
   <main class="app quick-app">
-    <header class="quick-topbar">
-      <a
-        class="quick-home-link"
-        href="../"
-        aria-label="タムごとDailyのホームへ戻る"
-      ><i class="bi bi-house-door"></i></a>
-
-      <p class="quick-topbar-title">タムごとDaily</p>
-
+    <div class="quick-tutorial-toggle-area">
       <label class="quick-tutorial-toggle" for="quickTutorialToggle">
         <span class="quick-tutorial-toggle-label">チュートリアルモード</span>
         <input id="quickTutorialToggle" type="checkbox" checked>
         <span class="quick-tutorial-toggle-switch" aria-hidden="true"></span>
       </label>
-    </header>
+    </div>
 
     <!-- 開始 -->
     <section id="quickStartStep" class="step-screen quick-step-screen quick-start-step">
@@ -72,13 +64,6 @@
 
       <section class="home-action-area quick-start-action-area">
         <button id="quickStartButton" class="primary-button" type="button">開始する</button>
-      </section>
-      <section class="quick-start-note">
-        <p class="quick-start-note-text">
-          タムごとDaily体験版「1分間だけ時間をください」モードです。<br>
-          使えるか不安、どんなツールか試してみたい方にお勧め！<br>
-          上の<strong>開始する</strong>ボタンから始めてみましょう！
-        </p>
       </section>
     </section>
 
@@ -176,42 +161,42 @@
         <h1>シェア文章作成📝</h1>
         <p class="description">投稿先を選んで、シェアしたい項目にチェックを入れてね！</p>
       </header>
-    
+
       <section id="quickPostErrorArea" class="error-area hidden"></section>
-    
+
       <section class="scroll-area">
         <section class="task-card">
           <div class="post-preview-tabs" role="tablist" aria-label="投稿先切り替え">
             <button id="quickPostPreviewXTabButton" class="post-preview-tab active" type="button">X</button>
             <button id="quickPostPreviewThreadsTabButton" class="post-preview-tab" type="button">Threads</button>
           </div>
-    
+
           <section id="quickPostPreviewXPanel" class="post-preview-panel">
             <div id="quickPostItemXList" class="check-list post-item-list"></div>
-    
+
             <section class="post-check-box">
               <p class="selected-label">チェック</p>
               <p id="quickXPostTextCount" class="description"></p>
             </section>
-    
+
             <div id="quickGeneratedXPostText" class="copy-text"></div>
             <button id="quickOpenXPostButton" class="primary-button post-action-button" type="button">Xに投稿</button>
             <button id="quickCopyXPostTextButton" class="secondary-button" type="button">コピーする</button>
           </section>
-    
+
           <section id="quickPostPreviewThreadsPanel" class="post-preview-panel hidden">
             <div id="quickPostItemThreadsList" class="check-list post-item-list"></div>
-    
+
             <section class="post-check-box">
               <p class="selected-label">チェック</p>
               <p id="quickThreadsPostLinkCount" class="description"></p>
             </section>
-    
+
             <div id="quickGeneratedThreadsPostText" class="copy-text"></div>
             <button id="quickOpenThreadsButton" class="primary-button post-action-button" type="button">コピーしてThreadsを開く</button>
           </section>
         </section>
-    
+
         <section class="bottom-action-area">
           <button id="quickPostNextButton" class="primary-button" type="button">次へ</button>
         </section>
