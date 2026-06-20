@@ -5,27 +5,27 @@
 let isSetupGuideInitialized = false;
 
 const setupGuideState = {
-  openPlace: "",
   deviceType: "",
+  iosDisplayType: "",
 };
 
 const SETUP_GUIDE_IMAGE_BASE_PATH = "../img/setting/";
 
 const SETUP_GUIDE_IMAGES = {
-  x: {
-    title: "Xからブラウザで開く方法",
-    src: `${SETUP_GUIDE_IMAGE_BASE_PATH}setup-x-browser.png`,
-    alt: "XからSafariまたはChromeで開く手順",
+  iosSafariBottom: {
+    title: "タイプ①：共有ボタンが画面下にある場合",
+    src: `${SETUP_GUIDE_IMAGE_BASE_PATH}setup-ios-safari-bottom.png`,
+    alt: "Safariの共有ボタンが画面下にある場合のホーム画面追加手順",
   },
-  threads: {
-    title: "Threadsからブラウザで開く方法",
-    src: `${SETUP_GUIDE_IMAGE_BASE_PATH}setup-threads-browser.png`,
-    alt: "ThreadsからSafariまたはChromeで開く手順",
+  iosSafariTop: {
+    title: "タイプ②：共有ボタンが画面上にある場合",
+    src: `${SETUP_GUIDE_IMAGE_BASE_PATH}setup-ios-safari-top.png`,
+    alt: "Safariの共有ボタンが画面上にある場合のホーム画面追加手順",
   },
-  ios: {
-    title: "iPhoneでホーム画面に追加する方法",
-    src: `${SETUP_GUIDE_IMAGE_BASE_PATH}setup-ios-safari.png`,
-    alt: "iPhoneのSafariでホーム画面に追加する手順",
+  iosChrome: {
+    title: "iPhone・iPadでChromeを使用している場合",
+    src: `${SETUP_GUIDE_IMAGE_BASE_PATH}setup-ios-chrome.png`,
+    alt: "iPhoneまたはiPadのChromeでホーム画面に追加する手順",
   },
   android: {
     title: "Androidでホーム画面に追加する方法",
@@ -46,61 +46,39 @@ function initializeSetupGuide() {
 
   isSetupGuideInitialized = true;
 
-  const openPlaceButtons = document.querySelectorAll("[data-open-place]");
   const deviceTypeButtons = document.querySelectorAll("[data-device-type]");
-
-  openPlaceButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      setupGuideState.openPlace = button.dataset.openPlace;
-      setupGuideState.deviceType = "";
-
-      setActiveSetupButton(openPlaceButtons, button);
-      resetSetupButtons(deviceTypeButtons);
-
-      renderOpenPlaceGuide();
-      clearDeviceGuide();
-      showSetupDeviceQuestion();
-      scrollSetupGuideIntoView(document.getElementById("setupDeviceQuestion"));
-    });
-  });
+  const iosDisplayTypeButtons = document.querySelectorAll("[data-ios-display-type]");
 
   deviceTypeButtons.forEach((button) => {
     button.addEventListener("click", () => {
       setupGuideState.deviceType = button.dataset.deviceType;
+      setupGuideState.iosDisplayType = "";
 
       setActiveSetupButton(deviceTypeButtons, button);
+      resetSetupButtons(iosDisplayTypeButtons);
+      clearDeviceGuide();
+
+      if (setupGuideState.deviceType === "ios") {
+        showSetupIosDisplayQuestion();
+        scrollSetupGuideIntoView(document.getElementById("setupIosDisplayQuestion"));
+        return;
+      }
+
+      hideSetupIosDisplayQuestion();
       renderDeviceGuide();
       scrollSetupGuideIntoView(document.getElementById("setupDeviceGuideArea"));
     });
   });
-}
 
-function renderOpenPlaceGuide() {
-  const area = document.getElementById("setupOpenPlaceGuideArea");
+  iosDisplayTypeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      setupGuideState.iosDisplayType = button.dataset.iosDisplayType;
 
-  if (!area) {
-    return;
-  }
-
-  const guide = getOpenPlaceGuideImage();
-
-  if (!guide) {
-    area.innerHTML = "";
-    area.classList.add("hidden");
-    return;
-  }
-
-  area.innerHTML = `
-    <div class="setup-guide-card">
-      ${buildSetupGuideImageHtml(guide)}
-
-      <p class="setup-guide-note">
-        ↓↓次のステップに進んでください！
-      </p>
-    </div>
-  `;
-
-  area.classList.remove("hidden");
+      setActiveSetupButton(iosDisplayTypeButtons, button);
+      renderDeviceGuide();
+      scrollSetupGuideIntoView(document.getElementById("setupDeviceGuideArea"));
+    });
+  });
 }
 
 function renderDeviceGuide() {
@@ -117,74 +95,42 @@ function renderDeviceGuide() {
     return;
   }
 
-  area.innerHTML = `
-    <div class="setup-guide-card">
-      ${buildSetupGuideImageHtml(guide)}
-      ${buildSetupCheckLaunchHtml()}
-    </div>
-  `;
-
+  area.innerHTML = `<div class="setup-guide-card">${buildSetupGuideImageHtml(guide)}${buildSetupCheckLaunchHtml()}</div>`;
   area.classList.remove("hidden");
 }
 
-function getOpenPlaceGuideImage() {
-  if (setupGuideState.openPlace === "x") {
-    return SETUP_GUIDE_IMAGES.x;
-  }
-
-  if (setupGuideState.openPlace === "threads") {
-    return SETUP_GUIDE_IMAGES.threads;
-  }
-
-  return null;
-}
-
 function getDeviceGuideImage() {
-  if (setupGuideState.deviceType === "ios") {
-    return SETUP_GUIDE_IMAGES.ios;
-  }
-
   if (setupGuideState.deviceType === "android") {
     return SETUP_GUIDE_IMAGES.android;
+  }
+
+  if (setupGuideState.deviceType !== "ios") {
+    return null;
+  }
+
+  if (setupGuideState.iosDisplayType === "safari-bottom") {
+    return SETUP_GUIDE_IMAGES.iosSafariBottom;
+  }
+
+  if (setupGuideState.iosDisplayType === "safari-top") {
+    return SETUP_GUIDE_IMAGES.iosSafariTop;
+  }
+
+  if (setupGuideState.iosDisplayType === "chrome") {
+    return SETUP_GUIDE_IMAGES.iosChrome;
   }
 
   return null;
 }
 
 function buildSetupGuideImageHtml(guide) {
-  return `
-    <div class="setup-guide-image-block">
-      <h3>${guide.title}</h3>
-
-      <img
-        class="setup-guide-image"
-        src="${guide.src}"
-        alt="${guide.alt}"
-        loading="lazy"
-      >
-    </div>
-  `;
+  return `<div class="setup-guide-image-block"><h3>${guide.title}</h3><img class="setup-guide-image" src="${guide.src}" alt="${guide.alt}" loading="lazy"></div>`;
 }
 
 function buildSetupCheckLaunchHtml() {
   const checkGuide = SETUP_GUIDE_IMAGES.checkLaunch;
 
-  return `
-    <div class="setup-check-block">
-      <h3>${checkGuide.title}</h3>
-
-      <img
-        class="setup-guide-image"
-        src="${checkGuide.src}"
-        alt="${checkGuide.alt}"
-        loading="lazy"
-      >
-
-      <p class="setup-guide-note">
-        ホーム画面に追加されたアイコンをタップして起動してください！
-      </p>
-    </div>
-  `;
+  return `<div class="setup-check-block"><h3>${checkGuide.title}</h3><img class="setup-guide-image" src="${checkGuide.src}" alt="${checkGuide.alt}" loading="lazy"><p class="setup-guide-note">ホーム画面に追加されたアイコンをタップして起動してください！</p></div>`;
 }
 
 function setActiveSetupButton(buttons, activeButton) {
@@ -199,31 +145,20 @@ function resetSetupButtons(buttons) {
   });
 }
 
-function showSetupDeviceQuestion() {
-  const area = document.getElementById("setupDeviceQuestion");
+function showSetupIosDisplayQuestion() {
+  const area = document.getElementById("setupIosDisplayQuestion");
 
   if (area) {
     area.classList.remove("hidden");
   }
 }
 
-function hideSetupDeviceQuestion() {
-  const area = document.getElementById("setupDeviceQuestion");
+function hideSetupIosDisplayQuestion() {
+  const area = document.getElementById("setupIosDisplayQuestion");
 
   if (area) {
     area.classList.add("hidden");
   }
-}
-
-function clearOpenPlaceGuide() {
-  const area = document.getElementById("setupOpenPlaceGuideArea");
-
-  if (!area) {
-    return;
-  }
-
-  area.innerHTML = "";
-  area.classList.add("hidden");
 }
 
 function clearDeviceGuide() {
@@ -238,16 +173,15 @@ function clearDeviceGuide() {
 }
 
 function resetSetupGuide() {
-  const openPlaceButtons = document.querySelectorAll("[data-open-place]");
   const deviceTypeButtons = document.querySelectorAll("[data-device-type]");
+  const iosDisplayTypeButtons = document.querySelectorAll("[data-ios-display-type]");
 
-  setupGuideState.openPlace = "";
   setupGuideState.deviceType = "";
+  setupGuideState.iosDisplayType = "";
 
-  resetSetupButtons(openPlaceButtons);
   resetSetupButtons(deviceTypeButtons);
-  hideSetupDeviceQuestion();
-  clearOpenPlaceGuide();
+  resetSetupButtons(iosDisplayTypeButtons);
+  hideSetupIosDisplayQuestion();
   clearDeviceGuide();
 }
 
@@ -265,10 +199,7 @@ function scrollSetupGuideIntoView(targetElement) {
 }
 
 function isStandaloneMode() {
-  return (
-    window.matchMedia("(display-mode: standalone)").matches ||
-    window.navigator.standalone === true
-  );
+  return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
 }
 
 function openFirstSetupModal() {
@@ -278,8 +209,7 @@ function openFirstSetupModal() {
 }
 
 function shouldAutoOpenFirstSetupModal() {
-  const alreadyShown =
-    localStorage.getItem(STORAGE_KEYS.browserFirstVisitModalShown) === "true";
+  const alreadyShown = localStorage.getItem(STORAGE_KEYS.browserFirstVisitModalShown) === "true";
 
   return !isStandaloneMode() && !alreadyShown;
 }
@@ -303,10 +233,7 @@ function updateFirstVisitOpenSetupButtonVisibility() {
     return;
   }
 
-  const browserType =
-    typeof getAccessBrowserType === "function"
-      ? getAccessBrowserType()
-      : "other_browser";
+  const browserType = typeof getAccessBrowserType === "function" ? getAccessBrowserType() : "other_browser";
 
   const isSnsInAppBrowser = [
     "x_in_app",
@@ -355,8 +282,7 @@ function closePwaFirstVisitModal() {
 }
 
 function hasExistingTaskHistory() {
-  return hasValidStorageObject(STORAGE_KEYS.onceTaskDoneMap) ||
-    hasValidStorageObject(STORAGE_KEYS.dailyTaskDoneMap);
+  return hasValidStorageObject(STORAGE_KEYS.onceTaskDoneMap) || hasValidStorageObject(STORAGE_KEYS.dailyTaskDoneMap);
 }
 
 function hasValidStorageObject(storageKey) {
@@ -369,22 +295,16 @@ function hasValidStorageObject(storageKey) {
 
     const parsed = JSON.parse(raw);
 
-    return parsed &&
-      typeof parsed === "object" &&
-      !Array.isArray(parsed) &&
-      Object.keys(parsed).length > 0;
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed) && Object.keys(parsed).length > 0;
   } catch (error) {
     return false;
   }
 }
 
 function shouldAutoOpenPwaFirstVisitModal() {
-  const alreadyShown =
-    localStorage.getItem(STORAGE_KEYS.pwaFirstVisitModalShown) === "true";
+  const alreadyShown = localStorage.getItem(STORAGE_KEYS.pwaFirstVisitModalShown) === "true";
 
-  return isStandaloneMode() &&
-    !alreadyShown &&
-    !hasExistingTaskHistory();
+  return isStandaloneMode() && !alreadyShown && !hasExistingTaskHistory();
 }
 
 function autoOpenPwaFirstVisitModalIfNeeded() {
