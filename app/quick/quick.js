@@ -1022,8 +1022,45 @@ function renderQuickComplete() {
   quickElements.installGuideCard?.classList.remove("hidden");
 }
 
+let isQuickSetupGuideInitialized = false;
+
+const quickSetupGuideState = {
+  deviceType: "",
+  iosDisplayType: "",
+};
+
+const QUICK_SETUP_GUIDE_IMAGE_BASE_PATH = "../../img/setting/";
+
+const QUICK_SETUP_GUIDE_IMAGES = {
+  iosSafariType01: {
+    title: "タイプ①：コンパクトモードの場合",
+    src: `${QUICK_SETUP_GUIDE_IMAGE_BASE_PATH}setup-ios-safari-type01.png`,
+    alt: "Safariコンパクトモードの場合のホーム画面追加手順",
+  },
+  iosSafariType02: {
+    title: "タイプ②：共有ボタンが画面にある場合",
+    src: `${QUICK_SETUP_GUIDE_IMAGE_BASE_PATH}setup-ios-safari-type02.png`,
+    alt: "Safariの共有ボタンが画面にある場合のホーム画面追加手順",
+  },
+  iosChrome: {
+    title: "iPhone・iPadでChromeを使用している場合",
+    src: `${QUICK_SETUP_GUIDE_IMAGE_BASE_PATH}setup-ios-chrome.png`,
+    alt: "iPhoneまたはiPadのChromeでホーム画面に追加する手順",
+  },
+  android: {
+    title: "Androidでホーム画面に追加する方法",
+    src: `${QUICK_SETUP_GUIDE_IMAGE_BASE_PATH}setup-android-chrome.png`,
+    alt: "AndroidのChromeでホーム画面に追加する手順",
+  },
+  checkLaunch: {
+    title: "最後にここを確認",
+    src: `${QUICK_SETUP_GUIDE_IMAGE_BASE_PATH}setup-check-launch.png`,
+    alt: "ホーム画面のアイコンから起動できているか確認する画像",
+  },
+};
+
 function openQuickSetupModal() {
-  renderQuickSetupGuide();
+  initializeQuickSetupGuide();
   quickElements.setupModal?.classList.remove("hidden");
   quickElements.setupModal?.setAttribute("aria-hidden", "false");
 }
@@ -1033,41 +1070,160 @@ function closeQuickSetupModal() {
   quickElements.setupModal?.setAttribute("aria-hidden", "true");
 }
 
-function renderQuickSetupGuide() {
-  if (!quickElements.setupModalBody) {
+function initializeQuickSetupGuide() {
+  if (isQuickSetupGuideInitialized) {
     return;
   }
 
-  const userAgent = navigator.userAgent || "";
-  const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
-  const isAndroid = /Android/i.test(userAgent);
+  isQuickSetupGuideInitialized = true;
 
-  if (isIOS) {
-    quickElements.setupModalBody.innerHTML = `
-      <div class="quick-setup-guide">
-        <p>Safariでこのページを開いて、画面下の<strong>共有ボタン</strong>から<strong>「ホーム画面に追加」</strong>を選んでね。</p>
-        <p class="quick-setup-guide-note">X・Instagram・Threadsなどのアプリ内ブラウザでは追加できないことがあります。Safariで開き直してから進めてください。</p>
-      </div>
-    `;
+  const deviceTypeButtons = document.querySelectorAll("[data-device-type]");
+  const iosDisplayTypeButtons = document.querySelectorAll("[data-ios-display-type]");
+
+  deviceTypeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      quickSetupGuideState.deviceType = button.dataset.deviceType;
+      quickSetupGuideState.iosDisplayType = "";
+
+      setActiveQuickSetupButton(deviceTypeButtons, button);
+      resetQuickSetupButtons(iosDisplayTypeButtons);
+      clearQuickDeviceGuide();
+
+      if (quickSetupGuideState.deviceType === "ios") {
+        showQuickIosDisplayQuestion();
+        scrollQuickSetupGuideIntoView(document.getElementById("setupIosDisplayQuestion"));
+        return;
+      }
+
+      hideQuickIosDisplayQuestion();
+      renderQuickDeviceGuide();
+      scrollQuickSetupGuideIntoView(document.getElementById("setupDeviceGuideArea"));
+    });
+  });
+
+  iosDisplayTypeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      quickSetupGuideState.iosDisplayType = button.dataset.iosDisplayType;
+
+      setActiveQuickSetupButton(iosDisplayTypeButtons, button);
+      renderQuickDeviceGuide();
+      scrollQuickSetupGuideIntoView(document.getElementById("setupDeviceGuideArea"));
+    });
+  });
+}
+
+function renderQuickDeviceGuide() {
+  const area = document.getElementById("setupDeviceGuideArea");
+
+  if (!area) {
     return;
   }
 
-  if (isAndroid) {
-    quickElements.setupModalBody.innerHTML = `
-      <div class="quick-setup-guide">
-        <p>Chrome右上の<strong>︙</strong>から<strong>「ホーム画面に追加」</strong>または<strong>「アプリをインストール」</strong>を選んでね。</p>
-      </div>
-    `;
+  const guide = getQuickDeviceGuideImage();
+
+  if (!guide) {
+    clearQuickDeviceGuide();
     return;
   }
 
-  quickElements.setupModalBody.innerHTML = `
-    <div class="quick-setup-guide">
-      <p>ブラウザのメニューから<strong>「ホーム画面に追加」</strong>または<strong>「アプリをインストール」</strong>を探してみてね。</p>
+  area.innerHTML = `
+    <div class="setup-guide-card">
+      ${buildQuickSetupGuideImageHtml(guide)}
+      ${buildQuickSetupCheckLaunchHtml()}
+    </div>
+  `;
+
+  area.classList.remove("hidden");
+}
+
+function getQuickDeviceGuideImage() {
+  if (quickSetupGuideState.deviceType === "android") {
+    return QUICK_SETUP_GUIDE_IMAGES.android;
+  }
+
+  if (quickSetupGuideState.deviceType !== "ios") {
+    return null;
+  }
+
+  if (quickSetupGuideState.iosDisplayType === "safari-type01") {
+    return QUICK_SETUP_GUIDE_IMAGES.iosSafariType01;
+  }
+
+  if (quickSetupGuideState.iosDisplayType === "safari-type02") {
+    return QUICK_SETUP_GUIDE_IMAGES.iosSafariType02;
+  }
+
+  if (quickSetupGuideState.iosDisplayType === "chrome") {
+    return QUICK_SETUP_GUIDE_IMAGES.iosChrome;
+  }
+
+  return null;
+}
+
+function buildQuickSetupGuideImageHtml(guide) {
+  return `
+    <div class="setup-guide-image-block">
+      <h3>${guide.title}</h3>
+      <img class="setup-guide-image" src="${guide.src}" alt="${guide.alt}" loading="lazy">
     </div>
   `;
 }
 
+function buildQuickSetupCheckLaunchHtml() {
+  const checkGuide = QUICK_SETUP_GUIDE_IMAGES.checkLaunch;
+
+  return `
+    <div class="setup-check-block">
+      <h3>${checkGuide.title}</h3>
+      <img class="setup-guide-image" src="${checkGuide.src}" alt="${checkGuide.alt}" loading="lazy">
+      <p class="setup-guide-note">ホーム画面に追加されたアイコンをタップして起動してください！</p>
+    </div>
+  `;
+}
+
+function setActiveQuickSetupButton(buttons, activeButton) {
+  buttons.forEach((button) => {
+    button.classList.toggle("active", button === activeButton);
+  });
+}
+
+function resetQuickSetupButtons(buttons) {
+  buttons.forEach((button) => {
+    button.classList.remove("active");
+  });
+}
+
+function showQuickIosDisplayQuestion() {
+  document.getElementById("setupIosDisplayQuestion")?.classList.remove("hidden");
+}
+
+function hideQuickIosDisplayQuestion() {
+  document.getElementById("setupIosDisplayQuestion")?.classList.add("hidden");
+}
+
+function clearQuickDeviceGuide() {
+  const area = document.getElementById("setupDeviceGuideArea");
+
+  if (!area) {
+    return;
+  }
+
+  area.innerHTML = "";
+  area.classList.add("hidden");
+}
+
+function scrollQuickSetupGuideIntoView(targetElement) {
+  if (!targetElement) {
+    return;
+  }
+
+  window.setTimeout(() => {
+    targetElement.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+    });
+  }, 80);
+}
 // ==================================================
 // チュートリアル
 // ==================================================
