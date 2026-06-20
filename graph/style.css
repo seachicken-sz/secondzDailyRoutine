@@ -1,22 +1,24 @@
 body {
   margin: 0;
-  padding-bottom:50px;
+  padding-bottom: 50px;
   font-family: system-ui, sans-serif;
-  /*background: linear-gradient(135deg, #e8f7ff, #fff4fb);*/
-  background-color:#fdfdfd;
+  background-color: #fdfdfd;
   color: #10213f;
   overflow-x: hidden;
 }
-.link-wrap{
-  text-align:center;
+
+.link-wrap {
+  text-align: center;
 }
-a img{
-  width:40%;
-  max-width:680px;
+
+a img {
+  width: 40%;
+  max-width: 680px;
   min-width: 320px;
-  margin:1rem auto 3rem;
-  border-radius:20px;
+  margin: 1rem auto 3rem;
+  border-radius: 20px;
 }
+
 .back-to-app-button,
 .reload-data-button {
   display: inline-flex;
@@ -33,8 +35,9 @@ a img{
   text-decoration: none;
   box-shadow: 0 6px 18px rgba(16, 33, 63, 0.14);
   white-space: nowrap;
-  border:none;
+  border: none;
 }
+
 .reload-data-button.is-loading {
   opacity: 0.6;
   pointer-events: none;
@@ -45,8 +48,7 @@ a img{
   max-width: none;
   margin: 0 auto;
   padding-bottom: 24px;
-  /*background-image: url("../img/graph_bg_img.jpg");*/
-  background-color:#f8f8f8;
+  background-color: #f8f8f8;
   background-size: cover;
   overflow: hidden;
   transform-origin: top center;
@@ -85,7 +87,7 @@ a img{
 }
 
 .card {
-  background: rgba(255,255,255,0.92);
+  background: rgba(255, 255, 255, 0.92);
   border-radius: 14px;
   box-shadow: 0 3px 10px rgba(27, 70, 120, 0.22);
   padding: 16px;
@@ -118,7 +120,7 @@ a img{
 }
 
 .rank-main:before {
-  content: '最高';
+  content: "最高";
   font-size: 16px;
   position: absolute;
   top: 75%;
@@ -256,7 +258,6 @@ a img{
   aspect-ratio: 3 / 1.8;
 }
 
-/* 168時間：グラフを1枠に統合 */
 .report.is-long-report .charts {
   grid-template-columns: 1fr;
   gap: 20px;
@@ -308,7 +309,6 @@ a img{
   margin-bottom: 4px;
 }
 
-/* 168時間：すぐ上ランキングの代わりに維持時間 */
 .duration-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -345,7 +345,6 @@ a img{
   font-weight: 700;
 }
 
-/* いいね数推移グラフ */
 .like-timeline-section {
   margin-top: 14px;
 }
@@ -354,7 +353,6 @@ a img{
   width: 100%;
 }
 
-/* いいねグラフ専用：ランキンググラフより縦に余裕を持たせる */
 .like-chart-canvas-wrap {
   position: relative;
   width: 100%;
@@ -362,14 +360,12 @@ a img{
   overflow: hidden;
 }
 
-/* Chart.js側で maintainAspectRatio:false にする前提 */
 .like-chart-canvas-wrap canvas {
   display: block;
   width: 100% !important;
   height: 100% !important;
 }
 
-/* 7日間表示では少しだけ高さを増やす */
 .report.is-long-report .like-chart-canvas-wrap {
   height: 180px;
 }
@@ -389,6 +385,7 @@ a img{
   display: flex;
   justify-content: center;
   margin: 24px 0 12px;
+  z-index: 20;
 }
 
 .save-button {
@@ -403,12 +400,12 @@ a img{
   display: flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 8px 20px rgba(8,119,223,.22);
+  box-shadow: 0 8px 20px rgba(8, 119, 223, 0.22);
   opacity: 0.8;
 }
 
 .save-button:active {
-  transform: scale(.98);
+  transform: scale(0.98);
   opacity: 0.9;
 }
 
@@ -458,9 +455,199 @@ a img{
   text-align: center;
 }
 
-/* スマホでは760pxの画像を縮小して見せる */
+/* スマホでは通常表示の760px画像を縮小して見せる */
 @media (max-width: 760px) {
   .report {
     zoom: calc(100vw / 760px);
+  }
+}
+
+/* ==============================
+  画像プレビュー：左右スワイプ
+============================== */
+
+.image-preview-section {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto 24px;
+}
+
+.image-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 760px;
+  max-width: calc(100vw - 28px);
+  margin: 0 auto 10px;
+}
+
+.image-preview-page-text {
+  color: #66758b;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.image-preview-book {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 calc((100% - 760px) / 2) 16px;
+  scrollbar-width: none;
+}
+
+.image-preview-book::-webkit-scrollbar {
+  display: none;
+}
+
+.image-preview-page {
+  flex: 0 0 760px;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-preview-page-label {
+  margin: 0 0 10px;
+  color: #66758b;
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.image-preview-page .report,
+.image-preview-page .current-ranking-report {
+  width: 760px;
+  max-width: none;
+  box-shadow: 0 18px 42px rgba(28, 68, 120, 0.16);
+}
+
+.image-preview-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 4px 0 20px;
+}
+
+.image-preview-arrow {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #0877df;
+  box-shadow: 0 8px 20px rgba(28, 68, 120, 0.14);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.image-preview-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.image-preview-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.image-preview-dot {
+  width: 8px;
+  height: 8px;
+  border: 0;
+  border-radius: 999px;
+  background: #c9d5e1;
+  padding: 0;
+  cursor: pointer;
+  transition: width 0.18s ease, background 0.18s ease;
+}
+
+.image-preview-dot.is-active {
+  width: 24px;
+  background: #36bfd0;
+}
+
+/* ==============================
+  2枚目：現在ランキング画像
+============================== */
+
+.current-ranking-report .top-bar {
+  background: #575757;
+}
+
+.current-ranking-report .stats .stat {
+  position: relative;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.current-ranking-report .stats .stat-icon,
+.current-ranking-report .stats .stat strong {
+  color: #36bfd0;
+}
+
+.current-ranking-report .stats .stat-icon {
+  background: rgba(54, 191, 208, 0.12);
+}
+
+.current-ranking-report .stat strong {
+  margin-left: 0;
+}
+
+.current-ranking-report .stat-diff {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(54, 191, 208, 0.14);
+  color: #36bfd0;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.current-ranking-report .sub-rank.is-empty {
+  visibility: hidden;
+}
+
+.current-ranking-report .rank-main:before {
+  content: "";
+}
+
+/* ==============================
+  スマホ調整
+============================== */
+
+@media (max-width: 760px) {
+  .image-preview-section {
+    max-width: 100%;
+  }
+
+  .image-preview-header {
+    width: calc(100vw - 28px);
+  }
+
+  .image-preview-book {
+    padding-left: max(14px, calc((100vw - 760px) / 2));
+    padding-right: max(14px, calc((100vw - 760px) / 2));
+  }
+
+  .image-preview-page {
+    flex-basis: 760px;
+  }
+
+  .image-preview-page .report,
+  .image-preview-page .current-ranking-report {
+    zoom: calc((100vw - 28px) / 760px);
   }
 }
