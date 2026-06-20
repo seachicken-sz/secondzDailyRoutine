@@ -198,35 +198,46 @@
         <h1>シェア文章作成📝</h1>
         <p class="description">投稿先を選んで、シェアしたい項目にチェックを入れてね！</p>
       </header>
-
+    
       <section id="quickPostErrorArea" class="error-area hidden"></section>
-
+    
       <section class="scroll-area">
         <section class="task-card">
-          <div id="quickPostSelectionGuideArea">
-            <div class="post-preview-tabs" role="tablist" aria-label="投稿先切り替え">
-              <button id="quickPostPreviewXTabButton" class="post-preview-tab active" type="button">X</button>
-              <button id="quickPostPreviewThreadsTabButton" class="post-preview-tab" type="button">Threads</button>
-            </div>
-          
+          <div id="quickPostPreviewTabs" class="post-preview-tabs" role="tablist" aria-label="投稿先切り替え">
+            <button id="quickPostPreviewXTabButton" class="post-preview-tab active" type="button">X</button>
+            <button id="quickPostPreviewThreadsTabButton" class="post-preview-tab" type="button">Threads</button>
+          </div>
+    
+          <section id="quickPostPreviewXPanel" class="post-preview-panel">
             <div id="quickPostSelectionGuideX" class="quick-post-selection-guide">
               <div id="quickPostItemXList" class="check-list post-item-list"></div>
+    
               <section class="post-check-box">
                 <p class="selected-label">チェック</p>
                 <p id="quickXPostTextCount" class="description"></p>
               </section>
             </div>
-          
-            <div id="quickPostSelectionGuideThreads" class="quick-post-selection-guide hidden">
+    
+            <div id="quickGeneratedXPostText" class="copy-text"></div>
+            <button id="quickOpenXPostButton" class="primary-button post-action-button" type="button">Xに投稿</button>
+            <button id="quickCopyXPostTextButton" class="secondary-button" type="button">コピーする</button>
+          </section>
+    
+          <section id="quickPostPreviewThreadsPanel" class="post-preview-panel hidden">
+            <div id="quickPostSelectionGuideThreads" class="quick-post-selection-guide">
               <div id="quickPostItemThreadsList" class="check-list post-item-list"></div>
+    
               <section class="post-check-box">
                 <p class="selected-label">チェック</p>
                 <p id="quickThreadsPostLinkCount" class="description"></p>
               </section>
             </div>
-          </div>
+    
+            <div id="quickGeneratedThreadsPostText" class="copy-text"></div>
+            <button id="quickOpenThreadsButton" class="primary-button post-action-button" type="button">コピーしてThreadsを開く</button>
+          </section>
         </section>
-
+    
         <section class="bottom-action-area">
           <button id="quickPostNextButton" class="primary-button" type="button">次へ</button>
         </section>
