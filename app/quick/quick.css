@@ -318,7 +318,7 @@
 }
 
 .quick-start-note-text{
-   margin-bottom:0;
+   margi:0 auto;
 }
 .home-card {
   flex-shrink: 0;
