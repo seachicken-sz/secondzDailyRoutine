@@ -291,7 +291,9 @@
     transition: none;
   }
 }
-
+.quick-return-guide{
+   margin-top:1.5rem;
+}
 
 .quick-return-guide-section{
    padding-top: 18px;
