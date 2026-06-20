@@ -37,6 +37,8 @@ const QUICK_STATE_DEFAULT = {
   postShared: false,
   postSkipped: false,
   preparedCopyTextMap: {},
+  postItems: [],
+  currentPostPlatform: "x",
 };
 
 const quickState = {
@@ -58,6 +60,7 @@ const quickState = {
 const quickElements = {
   tutorialToggle: document.getElementById("quickTutorialToggle"),
   startButton: document.getElementById("quickStartButton"),
+
   spotifySelectedArea: document.getElementById("quickSpotifySelectedArea"),
   spotifySelectedSongName: document.getElementById("quickSpotifySelectedSongName"),
   recommendedSongs: document.getElementById("quickRecommendedSongs"),
@@ -69,6 +72,7 @@ const quickElements = {
   skipSpotifyButton: document.getElementById("quickSkipSpotifyButton"),
   spotifyNextButton: document.getElementById("quickSpotifyNextButton"),
   spotifyErrorArea: document.getElementById("quickSpotifyErrorArea"),
+
   dailyHeaderDescription: document.getElementById("quickDailyHeaderDescription"),
   dailyActionDescription: document.getElementById("quickDailyActionDescription"),
   dailyTaskProgress: document.getElementById("quickDailyTaskProgress"),
@@ -80,21 +84,34 @@ const quickElements = {
   openDailyTaskUrlButton: document.getElementById("quickOpenDailyTaskUrlButton"),
   dailyTaskNextButton: document.getElementById("quickDailyTaskNextButton"),
   dailyTaskErrorArea: document.getElementById("quickDailyTaskErrorArea"),
+
   makePostButton: document.getElementById("quickMakePostButton"),
   skipPostButton: document.getElementById("quickSkipPostButton"),
-  postTextArea: document.getElementById("quickPostTextArea"),
-  postTextCount: document.getElementById("quickPostTextCount"),
-  postToXButton: document.getElementById("quickPostToXButton"),
-  postToThreadsButton: document.getElementById("quickPostToThreadsButton"),
+  postPreviewXTabButton: document.getElementById("quickPostPreviewXTabButton"),
+  postPreviewThreadsTabButton: document.getElementById("quickPostPreviewThreadsTabButton"),
+  postPreviewXPanel: document.getElementById("quickPostPreviewXPanel"),
+  postPreviewThreadsPanel: document.getElementById("quickPostPreviewThreadsPanel"),
+  postItemXList: document.getElementById("quickPostItemXList"),
+  postItemThreadsList: document.getElementById("quickPostItemThreadsList"),
+  generatedXPostText: document.getElementById("quickGeneratedXPostText"),
+  generatedThreadsPostText: document.getElementById("quickGeneratedThreadsPostText"),
+  xPostTextCount: document.getElementById("quickXPostTextCount"),
+  threadsPostLinkCount: document.getElementById("quickThreadsPostLinkCount"),
+  openXPostButton: document.getElementById("quickOpenXPostButton"),
+  copyXPostTextButton: document.getElementById("quickCopyXPostTextButton"),
+  openThreadsButton: document.getElementById("quickOpenThreadsButton"),
   postNextButton: document.getElementById("quickPostNextButton"),
   postErrorArea: document.getElementById("quickPostErrorArea"),
+
   installGuideCard: document.getElementById("quickInstallGuideCard"),
   openSetupButton: document.getElementById("quickOpenSetupButton"),
   backHomeButton: document.getElementById("quickBackHomeButton"),
+
   tutorialOverlay: document.getElementById("quickTutorialOverlay"),
   tutorialSpotlight: document.getElementById("quickTutorialSpotlight"),
   tutorialText: document.getElementById("quickTutorialText"),
   tutorialHint: document.getElementById("quickTutorialHint"),
+
   setupModal: document.getElementById("quickSetupModal"),
   closeSetupButton: document.getElementById("quickCloseSetupButton"),
   setupModalBody: document.getElementById("quickSetupModalBody"),
@@ -161,9 +178,17 @@ function bindQuickEvents() {
     showQuickScreen("complete");
   });
 
-  quickElements.postTextArea?.addEventListener("input", updatePostTextCount);
-  quickElements.postToXButton?.addEventListener("click", postQuickToX);
-  quickElements.postToThreadsButton?.addEventListener("click", postQuickToThreads);
+  quickElements.postPreviewXTabButton?.addEventListener("click", () => {
+    setQuickPostPreviewPlatform("x");
+  });
+
+  quickElements.postPreviewThreadsTabButton?.addEventListener("click", () => {
+    setQuickPostPreviewPlatform("threads");
+  });
+
+  quickElements.copyXPostTextButton?.addEventListener("click", copyQuickXPostText);
+  quickElements.openXPostButton?.addEventListener("click", openQuickXPost);
+  quickElements.openThreadsButton?.addEventListener("click", openQuickThreadsPost);
 
   quickElements.postNextButton?.addEventListener("click", () => {
     showQuickScreen("complete");
@@ -178,9 +203,7 @@ function bindQuickEvents() {
     }
   });
 
-  quickElements.backHomeButton?.addEventListener("click", () => {
-    clearQuickSession();
-  });
+  quickElements.backHomeButton?.addEventListener("click", clearQuickSession);
 
   quickElements.tutorialToggle?.addEventListener("change", () => {
     setQuickTutorialEnabled(quickElements.tutorialToggle.checked);
@@ -213,7 +236,10 @@ async function loadQuickData() {
   quickState.spotifySongs = Array.isArray(spotifySongs) ? spotifySongs : [];
   quickState.quickDailyTasks = getQuickTaskItems(quickTaskConfig);
   quickState.requestTexts = requestTexts || {};
-  quickState.selectedRadioRequestSongName = getQuickRadioRequestSongName(requestSongs, radioOverrides);
+  quickState.selectedRadioRequestSongName = getQuickRadioRequestSongName(
+    requestSongs,
+    radioOverrides
+  );
 
   if (quickTaskConfig?.active !== false && quickState.quickDailyTasks.length === 0) {
     throw new Error("quickTaskJson.json に有効なタスクがありません。");
@@ -328,6 +354,10 @@ function showQuickScreen(screenName, options = {}) {
   }
 }
 
+// ==================================================
+// Spotify
+// ==================================================
+
 function renderQuickSpotify() {
   const selectedSong = getSelectedQuickSong();
   const recommendedSongs = quickState.spotifySongs.filter((song) => song.flag === true);
@@ -387,7 +417,9 @@ function renderQuickSongList(container, songs) {
 }
 
 function getSelectedQuickSong() {
-  return quickState.spotifySongs.find((song) => song.id === quickState.selectedSongId) || null;
+  return quickState.spotifySongs.find((song) => {
+    return song.id === quickState.selectedSongId;
+  }) || null;
 }
 
 function openSelectedSpotify() {
@@ -419,6 +451,10 @@ function buildQuickSpotifyUrl(song) {
     ? `${baseUrl}?si=${encodeURIComponent(song.shareId)}`
     : baseUrl;
 }
+
+// ==================================================
+// quickDaily
+// ==================================================
 
 function renderQuickDailyTask() {
   const item = getCurrentQuickDailyTask();
@@ -633,57 +669,262 @@ function getQuickDailyDateKey() {
   ].join("");
 }
 
+// ==================================================
+// SNS共有
+// ==================================================
+
 function renderQuickPostEditor() {
-  if (!quickElements.postTextArea) {
+  quickState.postItems = buildQuickPostItems();
+  setQuickPostPreviewPlatform("x");
+  hideQuickError(quickElements.postErrorArea);
+}
+
+function buildQuickPostItems() {
+  const items = [];
+
+  items.push({
+    id: "app-share",
+    name: "このツールをSNSにシェア",
+    postText: "",
+    url: getQuickAppShareUrl(),
+    checked: true,
+  });
+
+  quickState.completedDailyTaskIds.forEach((taskId) => {
+    const task = quickState.quickDailyTasks.find((item) => item.id === taskId);
+
+    if (!task?.name) {
+      return;
+    }
+
+    items.push({
+      id: `daily-${task.id}`,
+      name: task.name,
+      postText: task["short-name"] || task.name,
+      url: task.url || "",
+      checked: false,
+    });
+  });
+
+  const selectedSong = getSelectedQuickSong();
+
+  items.push({
+    id: "spotify-bgm",
+    name: getQuickPostSpotifyName(selectedSong),
+    postText: getQuickPostSpotifyName(selectedSong),
+    url: getQuickPostSpotifyUrl(selectedSong),
+    checked: false,
+  });
+
+  return items;
+}
+
+function getQuickPostSpotifyName(selectedSong) {
+  if (!selectedSong?.name) {
+    return "🎧Spotify";
+  }
+
+  return `🎧Spotifyで${selectedSong.name}`;
+}
+
+function getQuickPostSpotifyUrl(selectedSong) {
+  if (!selectedSong?.url) {
+    return "";
+  }
+
+  return buildQuickSpotifyUrl(selectedSong);
+}
+
+function setQuickPostPreviewPlatform(platform) {
+  quickState.currentPostPlatform = platform === "threads"
+    ? "threads"
+    : "x";
+
+  quickElements.postPreviewXTabButton?.classList.toggle(
+    "active",
+    quickState.currentPostPlatform === "x"
+  );
+
+  quickElements.postPreviewThreadsTabButton?.classList.toggle(
+    "active",
+    quickState.currentPostPlatform === "threads"
+  );
+
+  quickElements.postPreviewXPanel?.classList.toggle(
+    "hidden",
+    quickState.currentPostPlatform !== "x"
+  );
+
+  quickElements.postPreviewThreadsPanel?.classList.toggle(
+    "hidden",
+    quickState.currentPostPlatform !== "threads"
+  );
+
+  renderQuickPostItemList(quickElements.postItemXList, quickState.postItems);
+  renderQuickPostItemList(quickElements.postItemThreadsList, quickState.postItems);
+  updateQuickGeneratedPostText();
+}
+
+function renderQuickPostItemList(container, items) {
+  if (!container) {
     return;
   }
 
-  quickElements.postTextArea.value = buildQuickPostText();
-  quickElements.postNextButton.textContent = "投稿せず進む";
-  updatePostTextCount();
+  container.innerHTML = "";
+
+  if (!items.length) {
+    container.innerHTML = '<p class="empty-text">追加できる項目はありません。</p>';
+    return;
+  }
+
+  items.forEach((item, index) => {
+    const label = document.createElement("label");
+
+    label.className = "check-item";
+
+    const checkbox = document.createElement("input");
+
+    checkbox.type = "checkbox";
+    checkbox.checked = item.checked;
+    checkbox.dataset.index = String(index);
+
+    checkbox.addEventListener("change", () => {
+      const targetIndex = Number(checkbox.dataset.index);
+      const targetItem = quickState.postItems[targetIndex];
+
+      if (!targetItem) {
+        return;
+      }
+
+      targetItem.checked = checkbox.checked;
+      renderQuickPostItemList(quickElements.postItemXList, quickState.postItems);
+      renderQuickPostItemList(quickElements.postItemThreadsList, quickState.postItems);
+      updateQuickGeneratedPostText();
+    });
+
+    const name = document.createElement("span");
+
+    name.className = "check-item-name";
+    name.textContent = item.name;
+
+    label.appendChild(checkbox);
+    label.appendChild(name);
+    container.appendChild(label);
+  });
 }
 
-function buildQuickPostText() {
-  const selectedSong = getSelectedQuickSong();
-  const completedTasks = quickState.completedDailyTaskNames;
-  const lines = ["タムごとDailyで今日の応援完了！"];
+function updateQuickGeneratedPostText() {
+  const xPostText = buildQuickPostText("x");
+  const threadsPostText = buildQuickPostText("threads");
 
-  if (quickState.spotifyChoice === "spotify" && selectedSong?.name) {
-    lines.push(`Spotify：${selectedSong.name}`);
+  if (quickElements.generatedXPostText) {
+    quickElements.generatedXPostText.textContent = xPostText;
   }
 
-  if (quickState.spotifyChoice === "noBgm") {
-    lines.push("Spotify：BGMなし");
+  if (quickElements.generatedThreadsPostText) {
+    quickElements.generatedThreadsPostText.textContent = threadsPostText;
   }
 
-  if (completedTasks.length > 0) {
-    lines.push(`今日やったこと：${completedTasks.join("・")}`);
+  if (quickElements.xPostTextCount) {
+    const xLength = countQuickXPostTextLength(xPostText);
+
+    quickElements.xPostTextCount.textContent = `X文字数: ${xLength} / 280`;
+    quickElements.xPostTextCount.classList.toggle("warning-text", xLength > 280);
   }
 
-  lines.push("", "#タムごとDaily", `${location.origin}${location.pathname}`);
+  if (quickElements.threadsPostLinkCount) {
+    const linkCount = countQuickLinks(threadsPostText);
+
+    quickElements.threadsPostLinkCount.textContent = `Threadsリンク数: ${linkCount} / 5`;
+    quickElements.threadsPostLinkCount.classList.toggle("warning-text", linkCount > 5);
+  }
+
+  if (quickElements.copyXPostTextButton) {
+    quickElements.copyXPostTextButton.textContent = "コピーする";
+  }
+}
+
+function buildQuickPostText(platform = "x") {
+  const lines = [
+    `${formatQuickMonthDay(new Date())}「タムごとDaily」タスク完了👍`,
+    `${quickState.selectedRadioRequestSongName}をリクエストしたよ😊`,
+  ];
+
+  const bottomShareLines = [];
+
+  quickState.postItems.forEach((item) => {
+    if (!item.checked) {
+      return;
+    }
+
+    const postText = item.postText ?? item.name;
+
+    if (platform === "threads" && item.id === "app-share") {
+      if (postText) {
+        bottomShareLines.push(postText);
+      }
+
+      if (item.url) {
+        bottomShareLines.push(getQuickAppShareUrlByPlatform(platform));
+      }
+
+      return;
+    }
+
+    if (item.id === "spotify-bgm" || item.id === "app-share") {
+      if (postText) {
+        lines.push(postText);
+      }
+    } else {
+      lines.push(`✅${postText}`);
+    }
+
+    if (item.url) {
+      lines.push(
+        item.id === "app-share"
+          ? getQuickAppShareUrlByPlatform(platform)
+          : item.url
+      );
+    }
+  });
+
+  lines.push("");
+  lines.push("クリックですぐ使えるよ▼");
+
+  if (platform === "threads" && bottomShareLines.length > 0) {
+    lines.push(...bottomShareLines);
+  }
 
   return lines.join("\n");
 }
 
-function updatePostTextCount() {
-  const text = quickElements.postTextArea?.value || "";
-  const count = countQuickXLength(text);
+async function copyQuickXPostText() {
+  const postText = buildQuickPostText("x");
 
-  if (quickElements.postTextCount) {
-    quickElements.postTextCount.textContent = `X文字数: ${count} / 280`;
-    quickElements.postTextCount.classList.toggle("is-warning", count > 280);
+  if (!postText) {
+    showQuickError(quickElements.postErrorArea, "コピーする投稿文がありません。");
+    return;
+  }
+
+  const isCopied = await copyQuickText(postText);
+
+  if (!isCopied) {
+    showQuickError(
+      quickElements.postErrorArea,
+      "コピーに失敗しました。投稿文を長押しでコピーしてください。"
+    );
+    return;
+  }
+
+  hideQuickError(quickElements.postErrorArea);
+
+  if (quickElements.copyXPostTextButton) {
+    quickElements.copyXPostTextButton.textContent = "コピーしました";
   }
 }
 
-function countQuickXLength(text) {
-  const urls = text.match(/https?:\/\/[^\s]+/g) || [];
-  const textWithoutUrls = text.replace(/https?:\/\/[^\s]+/g, "");
-
-  return Array.from(textWithoutUrls).length + (urls.length * 23);
-}
-
-function postQuickToX() {
-  const postText = quickElements.postTextArea?.value.trim() || "";
+function openQuickXPost() {
+  const postText = buildQuickPostText("x");
 
   if (!postText) {
     showQuickError(quickElements.postErrorArea, "投稿文がありません。");
@@ -692,18 +933,15 @@ function postQuickToX() {
 
   quickState.postShared = true;
   saveQuickSession();
-
-  if (quickElements.postNextButton) {
-    quickElements.postNextButton.textContent = "次へ";
-  }
+  hideQuickError(quickElements.postErrorArea);
 
   openQuickExternalUrl(
     `https://twitter.com/intent/tweet?text=${encodeURIComponent(postText)}`
   );
 }
 
-async function postQuickToThreads() {
-  const postText = quickElements.postTextArea?.value.trim() || "";
+async function openQuickThreadsPost() {
+  const postText = buildQuickPostText("threads");
 
   if (!postText) {
     showQuickError(quickElements.postErrorArea, "投稿文がありません。");
@@ -722,13 +960,63 @@ async function postQuickToThreads() {
 
   quickState.postShared = true;
   saveQuickSession();
-
-  if (quickElements.postNextButton) {
-    quickElements.postNextButton.textContent = "次へ";
-  }
-
+  hideQuickError(quickElements.postErrorArea);
   openQuickExternalUrl("https://www.threads.net/");
 }
+
+function formatQuickMonthDay(date) {
+  return `${date.getMonth() + 1}/${date.getDate()}`;
+}
+
+function getQuickAppShareUrl() {
+  return new URL("../", window.location.href).toString();
+}
+
+function getQuickShareParamByPlatform(platform = "x") {
+  const prefix = platform === "threads" ? "th" : "x";
+  const now = new Date();
+  const yyyy = now.getFullYear();
+  const mm = String(now.getMonth() + 1).padStart(2, "0");
+  const dd = String(now.getDate()).padStart(2, "0");
+
+  return `${prefix}_${yyyy}${mm}${dd}`;
+}
+
+function getQuickAppShareUrlByPlatform(platform = "x") {
+  const url = new URL(getQuickAppShareUrl());
+
+  url.searchParams.set("share", getQuickShareParamByPlatform(platform));
+
+  return url.toString();
+}
+
+function countQuickXPostTextLength(text) {
+  const urlPattern = /https?:\/\/[^\s]+/g;
+  const urls = text.match(urlPattern) || [];
+  const textWithoutUrls = text.replace(urlPattern, "");
+
+  return countQuickXWeightedTextLength(textWithoutUrls) + (urls.length * 23);
+}
+
+function countQuickXWeightedTextLength(text) {
+  let count = 0;
+
+  Array.from(text).forEach((char) => {
+    count += /^[\u0020-\u007e\u00a1-\u00ff]$/.test(char)
+      ? 1
+      : 2;
+  });
+
+  return count;
+}
+
+function countQuickLinks(text) {
+  return (text.match(/https?:\/\/\S+/g) || []).length;
+}
+
+// ==================================================
+// 完了・ホーム画面追加
+// ==================================================
 
 function renderQuickComplete() {
   quickElements.installGuideCard?.classList.remove("hidden");
@@ -780,6 +1068,10 @@ function renderQuickSetupGuide() {
   `;
 }
 
+// ==================================================
+// チュートリアル
+// ==================================================
+
 function startTutorialForCurrentScreen() {
   if (!quickState.tutorial.enabled) {
     return;
@@ -815,10 +1107,10 @@ function startTutorialForCurrentScreen() {
       ],
     },
     postEdit: {
-      target: "#quickPostTextArea",
+      target: "#quickPostItemXList",
       messages: [
-        "内容を確認して、好きなSNSで投稿してね。",
-        "投稿しない場合は「投稿せず進む」を押してね。",
+        "投稿先を選んで、シェアしたい項目にチェックを入れてね。",
+        "投稿しない場合は「次へ」を押してね。",
       ],
     },
     complete: {
@@ -959,6 +1251,7 @@ function handleQuickTutorialDocumentTap(event) {
   }
 
   quickState.tutorial.index += 1;
+
   typeQuickTutorialMessage(
     quickState.tutorial.messages[quickState.tutorial.index]
   );
@@ -999,6 +1292,10 @@ function updateTutorialSpotlight() {
   quickElements.tutorialSpotlight.style.height = `${rect.height + (padding * 2)}px`;
 }
 
+// ==================================================
+// 保存・復帰
+// ==================================================
+
 function restoreQuickSession() {
   const rawSession = sessionStorage.getItem(QUICK_STORAGE_KEYS.session);
 
@@ -1032,12 +1329,14 @@ function saveQuickSession() {
     preparedCopyTextMap: quickState.preparedCopyTextMap,
   };
 
-  sessionStorage.setItem(QUICK_STORAGE_KEYS.session, JSON.stringify(stateToSave));
+  sessionStorage.setItem(
+    QUICK_STORAGE_KEYS.session,
+    JSON.stringify(stateToSave)
+  );
 }
 
 function clearQuickSession() {
   sessionStorage.removeItem(QUICK_STORAGE_KEYS.session);
-
   Object.assign(quickState, QUICK_STATE_DEFAULT);
 }
 
@@ -1063,6 +1362,10 @@ function setQuickTutorialEnabled(enabled) {
     stopQuickTutorial();
   }
 }
+
+// ==================================================
+// 共通
+// ==================================================
 
 async function copyQuickText(text) {
   if (!text) {
