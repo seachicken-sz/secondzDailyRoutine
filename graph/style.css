@@ -620,8 +620,13 @@ a img {
   visibility: hidden;
 }
 
-.current-ranking-report .rank-main:before {
-  content: "";
+.current-ranking-report .current-rank-main:before {
+  content: "現在";
+  font-size: 16px;
+  position: absolute;
+  top: 75%;
+  left: 45px;
+  color: slategray;
 }
 
 /* ==============================
