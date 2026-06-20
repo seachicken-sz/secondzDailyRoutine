@@ -11,12 +11,6 @@
 function updateHomeInstallGuideVisibility() {
   const firstVisitModalSnsElement = document.getElementById("firstVisitModalSns");
 
-  const installGuideElements = [
-    homeInstallGuideCardElement,
-    homeInstallGuideMenuElement,
-    firstVisitModalSnsElement,
-  ];
-
   const isStandalone =
     window.matchMedia("(display-mode: standalone)").matches ||
     window.navigator.standalone === true;
@@ -36,23 +30,35 @@ function updateHomeInstallGuideVisibility() {
     "facebook_in_app",
   ].includes(browserType);
 
-  const shouldShowInstallGuide =
+  const shouldShowInstallGuide = !isStandalone;
+  const shouldShowSnsGuide =
     !isStandalone &&
     isMobile &&
     isSnsInAppBrowser;
 
-  if (shouldShowInstallGuide) {
+  if (shouldShowSnsGuide) {
     updateHomeInstallGuideContent(platform, browserType);
-    updateFirstVisitModalSnsContent(firstVisitModalSnsElement, platform, browserType);
+    updateFirstVisitModalSnsContent(
+      firstVisitModalSnsElement,
+      platform,
+      browserType
+    );
   }
 
-  installGuideElements.forEach((element) => {
-    if (!element) {
-      return;
-    }
+  homeInstallGuideCardElement?.classList.toggle(
+    "hidden",
+    !shouldShowInstallGuide
+  );
 
-    element.classList.toggle("hidden", !shouldShowInstallGuide);
-  });
+  homeInstallGuideMenuElement?.classList.toggle(
+    "hidden",
+    !shouldShowInstallGuide
+  );
+
+  firstVisitModalSnsElement?.classList.toggle(
+    "hidden",
+    !shouldShowSnsGuide
+  );
 }
 //プラットフォーム×ブラウザで分岐、SNS内ブラウザ時に案内を出す
 function updateFirstVisitModalSnsContent(targetElement, platform, browserType) {
