@@ -110,6 +110,17 @@
    ================================================== */
 
 .quick-page.is-quick-start .quick-topbar {
+  display: flex;
+  justify-content: flex-end;
+  min-height: auto;
+  padding: calc(12px + env(safe-area-inset-top)) 16px 0;
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom: 0;
+}
+
+.quick-page.is-quick-start .quick-home-link,
+.quick-page.is-quick-start .quick-topbar-title {
   display: none;
 }
 
