@@ -6,7 +6,6 @@
     name="viewport"
     content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
   />
-
   <title>タムごとDailyお試しモード！</title>
 
   <meta property="og:type" content="website">
@@ -27,7 +26,6 @@
     href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Darumadrop+One&family=Hachi+Maru+Pop&family=Klee+One:wght@400;600&family=Yomogi&family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
     rel="stylesheet"
   >
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
   <!-- 既存共通CSS -->
@@ -57,60 +55,37 @@
 
 <body class="quick-page is-quick-start">
   <main class="app quick-app">
-
     <header class="quick-topbar">
       <a
         class="quick-home-link"
         href="../"
         aria-label="タムごとDailyのホームへ戻る"
-      >
-        <i class="bi bi-house-door"></i>
-      </a>
+      ><i class="bi bi-house-door"></i></a>
 
       <p class="quick-topbar-title">タムごとDaily</p>
 
       <label class="quick-tutorial-toggle" for="quickTutorialToggle">
         <span class="quick-tutorial-toggle-label">案内</span>
-        <input
-          id="quickTutorialToggle"
-          type="checkbox"
-          checked
-        />
+        <input id="quickTutorialToggle" type="checkbox" checked>
         <span class="quick-tutorial-toggle-switch" aria-hidden="true"></span>
       </label>
     </header>
 
     <!-- 開始 -->
-    <section
-      id="quickStartStep"
-      class="step-screen quick-step-screen quick-start-step"
-    >
+    <section id="quickStartStep" class="step-screen quick-step-screen quick-start-step">
       <header class="home-header quick-start-home-header">
         <div class="home-logo-area">
-          <img
-            id="quickLogoImage"
-            src="../../img/logo.png"
-            alt="タムごとDaily"
-          >
+          <img id="quickLogoImage" src="../../img/logo.png" alt="タムごとDaily">
         </div>
       </header>
 
       <section class="home-action-area quick-start-action-area">
-        <button
-          id="quickStartButton"
-          class="primary-button"
-          type="button"
-        >
-          開始する
-        </button>
+        <button id="quickStartButton" class="primary-button" type="button">開始する</button>
       </section>
     </section>
 
     <!-- Spotify -->
-    <section
-      id="quickSpotifyStep"
-      class="step-screen quick-step-screen hidden"
-    >
+    <section id="quickSpotifyStep" class="step-screen quick-step-screen hidden">
       <header class="header">
         <h1>今日のSpotify再生</h1>
         <p class="description">
@@ -120,163 +95,71 @@
         </p>
       </header>
 
-      <section
-        id="quickSpotifySelectedArea"
-        class="selected-area hidden"
-      >
+      <section id="quickSpotifySelectedArea" class="selected-area hidden">
         <p class="selected-label">選択中</p>
         <p id="quickSpotifySelectedSongName" class="selected-song"></p>
-
-        <button
-          id="quickOpenSpotifyButton"
-          class="primary-button"
-          type="button"
-        >
-          Spotifyで開く
-        </button>
+        <button id="quickOpenSpotifyButton" class="primary-button" type="button">Spotifyで開く</button>
       </section>
 
-      <section
-        id="quickSpotifyErrorArea"
-        class="error-area hidden"
-      ></section>
+      <section id="quickSpotifyErrorArea" class="error-area hidden"></section>
 
       <section class="scroll-area quick-spotify-scroll-area">
         <section class="song-section">
-          <div
-            id="quickRecommendedSongs"
-            class="song-list"
-          ></div>
+          <div id="quickRecommendedSongs" class="song-list"></div>
         </section>
 
         <section class="song-section">
-          <button
-            id="quickToggleOtherSongsButton"
-            class="accordion-button"
-            type="button"
-          >
+          <button id="quickToggleOtherSongsButton" class="accordion-button" type="button">
             <span>その他</span>
             <span id="quickToggleOtherSongsIcon">＋</span>
           </button>
 
-          <div
-            id="quickOtherSongsWrapper"
-            class="accordion-content hidden"
-          >
-            <div
-              id="quickOtherSongs"
-              class="song-list"
-            ></div>
+          <div id="quickOtherSongsWrapper" class="accordion-content hidden">
+            <div id="quickOtherSongs" class="song-list"></div>
           </div>
         </section>
 
         <section class="bottom-action-area spotify-skip-area">
-          <button
-            id="quickSkipSpotifyButton"
-            class="secondary-button no-margin-button"
-            type="button"
-          >
-            BGMなし
-          </button>
+          <button id="quickSkipSpotifyButton" class="secondary-button no-margin-button" type="button">BGMなし</button>
         </section>
       </section>
 
-      <section
-        id="quickSpotifyNextArea"
-        class="task-card hidden"
-      >
-        <button
-          id="quickSpotifyNextButton"
-          class="secondary-button"
-          type="button"
-        >
-          次へ
-        </button>
+      <section id="quickSpotifyNextArea" class="task-card hidden">
+        <button id="quickSpotifyNextButton" class="secondary-button" type="button">次へ</button>
       </section>
     </section>
 
     <!-- quickDaily -->
-    <section
-      id="quickDailyStep"
-      class="step-screen quick-step-screen hidden"
-    >
+    <section id="quickDailyStep" class="step-screen quick-step-screen hidden">
       <header class="header">
-        <p
-          id="quickDailyHeaderDescription"
-          class="description"
-        ></p>
+        <p id="quickDailyHeaderDescription" class="description"></p>
       </header>
 
       <section class="task-card">
-        <p
-          id="quickDailyTaskProgress"
-          class="description"
-        ></p>
+        <p id="quickDailyTaskProgress" class="description"></p>
 
         <h2 class="task-title quick-daily-task-title-row">
           <span id="quickDailyTaskName"></span>
-
-          <button
-            id="quickDailyTaskHelpButton"
-            class="task-help-button hidden"
-            type="button"
-          >
-            やり方をチェック
-          </button>
+          <button id="quickDailyTaskHelpButton" class="task-help-button hidden" type="button">やり方をチェック</button>
         </h2>
 
-        <div
-          id="quickDailyTaskCommentArea"
-          class="notice-box hidden"
-        ></div>
+        <div id="quickDailyTaskCommentArea" class="notice-box hidden"></div>
 
-        <div
-          id="quickDailyTaskCopyPreviewArea"
-          class="daily-task-copy-preview hidden"
-        >
-          <p class="daily-task-copy-preview-note">
-            「ページを開く」を押すと以下がコピーされます。
-          </p>
-
-          <div
-            id="quickDailyTaskCopyPreviewText"
-            class="daily-task-copy-preview-text"
-          ></div>
-
-          <p
-            id="quickDailyTaskCopyPreviewPasteTarget"
-            class="daily-task-copy-preview-note"
-          ></p>
+        <div id="quickDailyTaskCopyPreviewArea" class="daily-task-copy-preview hidden">
+          <p class="daily-task-copy-preview-note">「ページを開く」を押すと以下がコピーされます。</p>
+          <div id="quickDailyTaskCopyPreviewText" class="daily-task-copy-preview-text"></div>
+          <p id="quickDailyTaskCopyPreviewPasteTarget" class="daily-task-copy-preview-note"></p>
         </div>
 
-        <button
-          id="quickOpenDailyTaskUrlButton"
-          class="primary-button"
-          type="button"
-        >
-          ページを開く
-        </button>
-
-        <button
-          id="quickDailyTaskNextButton"
-          class="secondary-button hidden"
-          type="button"
-        >
-          次へ
-        </button>
+        <button id="quickOpenDailyTaskUrlButton" class="primary-button" type="button">ページを開く</button>
+        <button id="quickDailyTaskNextButton" class="secondary-button hidden" type="button">次へ</button>
       </section>
 
-      <section
-        id="quickDailyTaskErrorArea"
-        class="error-area hidden"
-      ></section>
+      <section id="quickDailyTaskErrorArea" class="error-area hidden"></section>
     </section>
 
     <!-- SNSシェア -->
-    <section
-      id="quickShareStep"
-      class="step-screen quick-step-screen hidden"
-    >
+    <section id="quickShareStep" class="step-screen quick-step-screen hidden">
       <header class="header">
         <h1>SNSシェア</h1>
         <p class="description">
@@ -286,34 +169,16 @@
       </header>
 
       <section class="task-card quick-share-card">
-        <button
-          id="quickMakePostButton"
-          class="primary-button"
-          type="button"
-        >
-          共有する！
-        </button>
-
-        <button
-          id="quickSkipPostButton"
-          class="secondary-button"
-          type="button"
-        >
-          やめとく
-        </button>
+        <button id="quickMakePostButton" class="primary-button" type="button">共有する！</button>
+        <button id="quickSkipPostButton" class="secondary-button" type="button">やめとく</button>
       </section>
     </section>
 
     <!-- SNSシェア文面 -->
-    <section
-      id="quickPostEditStep"
-      class="step-screen quick-step-screen hidden"
-    >
+    <section id="quickPostEditStep" class="step-screen quick-step-screen hidden">
       <header class="header">
         <h1>シェア文章作成📝</h1>
-        <p class="description">
-          内容を確認して、好きなSNSで投稿してね。
-        </p>
+        <p class="description">内容を確認して、好きなSNSで投稿してね。</p>
       </header>
 
       <section class="task-card">
@@ -324,102 +189,47 @@
           maxlength="280"
         ></textarea>
 
-        <p
-          id="quickPostTextCount"
-          class="quick-post-text-count"
-        ></p>
+        <p id="quickPostTextCount" class="quick-post-text-count"></p>
 
-        <button
-          id="quickPostToXButton"
-          class="primary-button"
-          type="button"
-        >
+        <button id="quickPostToXButton" class="primary-button" type="button">
           <i class="bi bi-twitter-x"></i>
           Xでシェア
         </button>
 
-        <button
-          id="quickPostToThreadsButton"
-          class="secondary-button"
-          type="button"
-        >
+        <button id="quickPostToThreadsButton" class="secondary-button" type="button">
           <i class="bi bi-threads"></i>
           Threadsでシェア
         </button>
 
-        <button
-          id="quickPostNextButton"
-          class="text-link-button"
-          type="button"
-        >
-          投稿せず進む
-        </button>
+        <button id="quickPostNextButton" class="text-link-button" type="button">投稿せず進む</button>
       </section>
 
-      <section
-        id="quickPostErrorArea"
-        class="error-area hidden"
-      ></section>
+      <section id="quickPostErrorArea" class="error-area hidden"></section>
     </section>
 
     <!-- 完了 -->
-    <section
-      id="quickCompleteStep"
-      class="step-screen quick-step-screen hidden"
-    >
+    <section id="quickCompleteStep" class="step-screen quick-step-screen hidden">
       <header class="header quick-complete-header">
         <h1>完了⌛</h1>
-        <p class="description">
-          お疲れ様さまでした☺️Big Love💚
-        </p>
+        <p class="description">お疲れ様さまでした☺️Big Love💚</p>
       </header>
 
-      <section
-        id="quickInstallGuideCard"
-        class="task-card quick-install-guide-card"
-      >
-        <h2 class="task-title">
-          ホーム画面に追加しよう！
-        </h2>
-
+      <section id="quickInstallGuideCard" class="task-card quick-install-guide-card">
+        <h2 class="task-title">ホーム画面に追加しよう！</h2>
         <p class="description">
           ホーム画面に追加でタスク消化も超簡単！<br>
           アプリ感覚でサクサク使えます！
         </p>
-
-        <button
-          id="quickOpenSetupButton"
-          class="primary-button"
-          type="button"
-        >
-          ホーム画面に追加する
-        </button>
-
-        <button
-          id="quickSkipSetupButton"
-          class="text-link-button"
-          type="button"
-        >
-          このまま使う
-        </button>
+        <button id="quickOpenSetupButton" class="primary-button" type="button">ホーム画面に追加する</button>
+        <button id="quickSkipSetupButton" class="text-link-button" type="button">このまま使う</button>
       </section>
 
-      <section
-        id="quickPwaCompleteCard"
-        class="task-card quick-pwa-complete-card hidden"
-      >
-        <p class="description">
-          お疲れ様さまでした☺️Big Love💚
-        </p>
+      <section id="quickPwaCompleteCard" class="task-card quick-pwa-complete-card hidden">
+        <p class="description">お疲れ様さまでした☺️Big Love💚</p>
       </section>
 
       <section class="task-card">
-        <a
-          href="../"
-          class="secondary-button no-margin-button"
-        >
-          ホームに戻る
-        </a>
+        <a id="quickBackHomeButton" href="../" class="secondary-button no-margin-button">ホームに戻る</a>
       </section>
     </section>
   </main>
@@ -431,36 +241,16 @@
     aria-live="polite"
     aria-hidden="true"
   >
-    <div
-      id="quickTutorialSpotlight"
-      class="quick-tutorial-spotlight"
-      aria-hidden="true"
-    ></div>
+    <div id="quickTutorialSpotlight" class="quick-tutorial-spotlight" aria-hidden="true"></div>
 
-    <div
-      id="quickTutorialMessage"
-      class="quick-tutorial-message"
-    >
-      <p
-        id="quickTutorialText"
-        class="quick-tutorial-text"
-      ></p>
-
-      <p
-        id="quickTutorialHint"
-        class="quick-tutorial-hint"
-      >
-        タップで全文表示
-      </p>
+    <div id="quickTutorialMessage" class="quick-tutorial-message">
+      <p id="quickTutorialText" class="quick-tutorial-text"></p>
+      <p id="quickTutorialHint" class="quick-tutorial-hint">タップで全文表示</p>
     </div>
   </div>
 
   <!-- ホーム画面追加案内 -->
-  <div
-    id="quickSetupModal"
-    class="modal-overlay hidden"
-    aria-hidden="true"
-  >
+  <div id="quickSetupModal" class="modal-overlay hidden" aria-hidden="true">
     <div
       class="modal-content setup-modal-content quick-setup-modal-content"
       role="dialog"
@@ -469,21 +259,10 @@
     >
       <div class="modal-header">
         <h2 id="quickSetupModalTitle">ホーム画面に追加しよう！</h2>
-
-        <button
-          id="quickCloseSetupButton"
-          class="modal-close-button"
-          type="button"
-          aria-label="閉じる"
-        >
-          ×
-        </button>
+        <button id="quickCloseSetupButton" class="modal-close-button" type="button" aria-label="閉じる">×</button>
       </div>
 
-      <div
-        id="quickSetupModalBody"
-        class="modal-body setup-modal-body"
-      >
+      <div id="quickSetupModalBody" class="modal-body setup-modal-body">
         <!-- quick.jsでブラウザ別の案内を描画 -->
       </div>
     </div>
