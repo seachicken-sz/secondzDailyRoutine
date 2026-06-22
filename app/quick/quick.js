@@ -560,7 +560,7 @@ function renderQuickSongList(container, songs) {
       renderQuickSpotify();
 
       startQuickTutorial(
-        ["この曲でOK？","「Spotifyで開く」をタップすると曲が流れるよ。","流れたら「アプリ切り替え」で戻ってきてね。"],
+        ["この曲でOK？","「Spotifyで開く」をタップすると、Spotifyが開いて曲が流れるよ。","曲の再生が始まったら「アプリ切り替え」で戻ってきてね。"],
         "#quickSpotifySelectedArea"
       );
     });
@@ -1408,12 +1408,14 @@ function startTutorialForCurrentScreen() {
     ? [
       "「ページを開く」を押すと、入力する内容がコピーされて、新しいタブでページが開くよ。",
       `ページが開いたら「${currentDailyTask["request-input"] || "入力欄"}」に貼り付けてね。`,
-      "終わったらタブ切り替えで戻ってきて、「次へ」ボタンを押して次に進もう！",
+      "終わったら「タブ切り替え」で戻ってきてね。",
+      "戻れたら「次へ」ボタンを押して次に進もう！",
     ]
     : [
       "このタスクのやり方はここに書いてあるよ！",
       "「ページを開く」を押すと、新しいタブでページが開くよ。",
-      "終わったらタブ切り替えで戻ってきて、「次へ」ボタンを押して次に進もう！",
+      "終わったら「タブ切り替え」で戻ってきてね。",
+      "戻れたら「次へ」ボタンを押して次に進もう！",
     ];
 
   const tutorialMap = {
@@ -1421,6 +1423,7 @@ function startTutorialForCurrentScreen() {
       target: "#quickRecommendedSongs",
       messages: [
         "下のリストから好きな曲を選んでみよう。",
+        "聞きたい曲がないときは「その他」を押すと、表示される曲が増えるよ。"
         "Spotifyを入れていない人は下にスクロールして、「BGMなし」を押して次へ進めるよ。",
       ],
     },
