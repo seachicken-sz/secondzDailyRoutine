@@ -19,10 +19,9 @@
 }
 
 .quick-tutorial-toggle-area {
-  position: fixed;
-  top: calc(12px + env(safe-area-inset-top));
-  right: 16px;
-  z-index: 30;
+  display: flex;
+  justify-content: flex-end;
+  padding: calc(12px + env(safe-area-inset-top)) 16px;
 }
 
 .quick-tutorial-toggle {
