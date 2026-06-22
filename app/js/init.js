@@ -17,6 +17,7 @@ function updateHomeInstallGuideVisibility() {
 
   const platform = getSheetPlatform();
   const browserType = getAccessBrowserType();
+  rememberSnsInAppBrowserType(browserType);
 
   const isMobile =
     platform.startsWith("ios/") ||
