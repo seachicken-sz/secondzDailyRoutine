@@ -1075,11 +1075,7 @@
   display: grid;
   gap: 12px;
 }
-.update-notice-item {
-  padding: 12px;
-  border-radius: var(--radius-card);
-  background: var(--color-brand-soft);
-}
+.update-notice-item
 .update-notice-date {
   margin: 0 0 4px;
   font-size: 0.78rem;
