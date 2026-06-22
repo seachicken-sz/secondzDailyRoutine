@@ -1479,7 +1479,6 @@ function renderHomeUpdateNoticeList() {
   }
 
   updateNoticeListElement.innerHTML = "";
-  const readIds = getHomeUpdateNoticeReadIds();
 
   if (HOME_UPDATE_NOTICE_LIST.length === 0) {
     const emptyText = document.createElement("p");
@@ -1488,6 +1487,8 @@ function renderHomeUpdateNoticeList() {
     updateNoticeListElement.appendChild(emptyText);
     return;
   }
+
+  const readIds = getHomeUpdateNoticeReadIds();
 
   HOME_UPDATE_NOTICE_LIST.forEach((notice) => {
     const item = document.createElement("article");
