@@ -115,7 +115,7 @@
 }
 
 .quick-start-action-area {
-  padding: 0 24px calc(28px + env(safe-area-inset-bottom));
+  padding: 1rem 24px 2.5rem;
 }
 
 .quick-start-action-area .primary-button {
