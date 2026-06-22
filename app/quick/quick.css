@@ -120,7 +120,6 @@
 .quick-start-action-area .primary-button {
   min-height: 54px;
 }
-
 .quick-start-action-area .quick-sns-in-app-guide {
   display: grid;
   gap: 12px;
@@ -129,49 +128,66 @@
   text-align: center;
 }
 
-.quick-sns-in-app-guide-label {
+.quick-sns-in-app-guide h2,
+.quick-sns-in-app-guide h3,
+.quick-sns-in-app-guide p {
   margin: 0;
-  color: var(--color-brand, #f06d88);
-  font-size: 0.84rem;
-  font-weight: 700;
 }
 
 .quick-sns-in-app-guide h2 {
-  margin: 0;
   font-size: 1.2rem;
+  line-height: 1.45;
 }
 
-.quick-sns-in-app-guide-text,
-.quick-sns-in-app-guide-note {
-  margin: 0;
-  line-height: 1.75;
+.quick-sns-in-app-guide h3 {
+  padding: 10px 12px;
+  color: var(--color-brand, #f06d88);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  background: color-mix(in srgb, var(--color-brand, #f06d88) 10%, transparent);
+  border-radius: 10px;
 }
 
 .quick-sns-in-app-guide-text {
   font-size: 0.92rem;
+  line-height: 1.75;
 }
 
-.quick-sns-in-app-guide-steps {
+.quick-sns-in-app-guide-body {
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.quick-sns-in-app-guide-body img {
+  display: block;
+  width: min(100%, 320px);
+  height: auto;
+  margin: 12px auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.quick-sns-in-app-guide-body ol {
   display: grid;
-  gap: 8px;
-  margin: 0;
+  gap: 10px;
+  margin: 12px 0;
   padding: 14px 14px 14px 34px;
   text-align: left;
   background: rgba(0, 0, 0, 0.04);
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
-.quick-sns-in-app-guide-steps li {
+.quick-sns-in-app-guide-body li {
   padding-left: 2px;
-  line-height: 1.6;
 }
 
-.quick-sns-in-app-guide-note {
+.quick-sns-in-app-guide-body strong {
   color: var(--color-brand, #f06d88);
-  font-size: 0.86rem;
-  font-weight: 700;
 }
 
+.quick-sns-in-app-guide-body .bi {
+  vertical-align: -0.08em;
+}
 /* ==================================================
    各ステップ
    ================================================== */
