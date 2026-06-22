@@ -388,7 +388,7 @@ p.quick-start-note-text{
 }
 .home-card {
   flex-shrink: 0;
-  margin: 12px 0;
+  margin: 12px 0 3rem;
   padding: 14px 14px;
   background: var(--color-surface);
   border-radius: var(--radius-card);
