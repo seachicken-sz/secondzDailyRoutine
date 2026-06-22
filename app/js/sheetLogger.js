@@ -340,6 +340,48 @@ function getAccessBrowserType() {
   return "other_browser";
 }
 
+const SHEET_SNS_IN_APP_BROWSER_TYPE_KEY =
+  "secondzDailyRoutineSnsInAppBrowserType";
+
+const SHEET_SNS_IN_APP_BROWSER_TYPES = [
+  "x_in_app",
+  "threads_in_app",
+  "line_in_app",
+  "instagram_in_app",
+  "facebook_in_app",
+];
+
+function rememberSnsInAppBrowserType(browserType = getAccessBrowserType()) {
+  if (!SHEET_SNS_IN_APP_BROWSER_TYPES.includes(browserType)) {
+    return "";
+  }
+
+  sessionStorage.setItem(
+    SHEET_SNS_IN_APP_BROWSER_TYPE_KEY,
+    browserType
+  );
+
+  return browserType;
+}
+
+function getCurrentOrRememberedAccessBrowserType() {
+  const currentBrowserType = getAccessBrowserType();
+
+  if (SHEET_SNS_IN_APP_BROWSER_TYPES.includes(currentBrowserType)) {
+    rememberSnsInAppBrowserType(currentBrowserType);
+    return currentBrowserType;
+  }
+
+  const rememberedBrowserType = sessionStorage.getItem(
+    SHEET_SNS_IN_APP_BROWSER_TYPE_KEY
+  );
+
+  return SHEET_SNS_IN_APP_BROWSER_TYPES.includes(rememberedBrowserType)
+    ? rememberedBrowserType
+    : currentBrowserType;
+}
+
+
 /**
  * アクセス時の情報を取得する
  *
