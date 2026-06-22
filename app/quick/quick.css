@@ -14,8 +14,10 @@
 }
 
 .quick-app {
+  height: auto;
   min-height: 100dvh;
   padding-top: 0;
+  overflow: visible;
 }
 
 .quick-tutorial-toggle-area {
@@ -87,19 +89,19 @@
 }
 
 .quick-step-screen.quick-start-step {
-  display: flex;
-  flex-direction: column;
+  height: auto;
   min-height: 100dvh;
   padding-top: 0;
   padding-bottom: env(safe-area-inset-bottom);
+  overflow: visible;
 }
 
 .quick-start-home-header {
   display: flex;
-  flex: 1;
+  flex: none;
   align-items: center;
   justify-content: center;
-  padding: 0 24px;
+  padding: 24px 24px 20px;
 }
 
 .quick-start-home-header .home-logo-area {
