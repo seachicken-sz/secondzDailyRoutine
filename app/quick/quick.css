@@ -121,6 +121,57 @@
   min-height: 54px;
 }
 
+.quick-start-action-area .quick-sns-in-app-guide {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 20px 18px;
+  text-align: center;
+}
+
+.quick-sns-in-app-guide-label {
+  margin: 0;
+  color: var(--color-brand, #f06d88);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.quick-sns-in-app-guide h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.quick-sns-in-app-guide-text,
+.quick-sns-in-app-guide-note {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.quick-sns-in-app-guide-text {
+  font-size: 0.92rem;
+}
+
+.quick-sns-in-app-guide-steps {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 14px 14px 14px 34px;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+}
+
+.quick-sns-in-app-guide-steps li {
+  padding-left: 2px;
+  line-height: 1.6;
+}
+
+.quick-sns-in-app-guide-note {
+  color: var(--color-brand, #f06d88);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
 /* ==================================================
    各ステップ
    ================================================== */
