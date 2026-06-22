@@ -62,6 +62,7 @@ const quickState = {
 const quickElements = {
   tutorialToggle: document.getElementById("quickTutorialToggle"),
   startButton: document.getElementById("quickStartButton"),
+  snsInAppGuide: document.getElementById("quickSnsInAppGuide"),
 
   spotifySelectedArea: document.getElementById("quickSpotifySelectedArea"),
   spotifySelectedSongName: document.getElementById("quickSpotifySelectedSongName"),
@@ -376,8 +377,100 @@ function renderQuickApp() {
     ? quickState.screen
     : "start";
 
+  updateQuickSnsInAppGuide(screenName);
+
   showQuickScreen(screenName, { shouldStartTutorial: false });
 }
+
+const QUICK_SNS_IN_APP_GUIDES = {
+  x_in_app: {
+    title: "<strong>Xから開いてる場合</strong>",
+    text: `
+      画面の下の方にこんなの見えてませんか？<br>
+      <img src="../../img/setting/setting_ios_x.jpeg" alt="Xアプリ内ブラウザの開き直し方法">
+      もし見えていたら、
+      <ol>
+        <li>画面の下にある<strong>「github.io」</strong>をタップ<br>（画像の赤枠のところ）</li>
+        <li><strong>ブラウザで開く</strong>をタップ</li>
+      </ol>
+    `,
+  },
+  threads_in_app: {
+    title: "<strong>Threadsから開いている場合</strong>",
+    text: `
+      画面の上の方にこんなの見えてませんか？<br>
+      <img src="../../img/setting/setting_ios_threads.jpeg" alt="Threadsアプリ内ブラウザの開き直し方法">
+      もし見えていたら、
+      <ol>
+        <li>画面の右上にある<strong>「<i class="bi bi-three-dots"></i>」</strong>をタップ<br>（画像の赤枠のところ）</li>
+        <li><strong>外部ブラウザで開く</strong>をタップ</li>
+      </ol>
+    `,
+  },
+  instagram_in_app: {
+    title: "<strong>Instagramから開いている場合</strong>",
+    text: `
+      画面の上の方にこんなの見えてませんか？<br>
+      <img src="../../img/setting/setting_ios_threads.jpeg" alt="Instagramアプリ内ブラウザの開き直し方法">
+      もし見えていたら、
+      <ol>
+        <li>画面の右上にある<strong>「<i class="bi bi-three-dots"></i>」</strong>をタップ<br>（画像の赤枠のところ）</li>
+        <li><strong>外部ブラウザで開く</strong>をタップ</li>
+      </ol>
+    `,
+  },
+  line_in_app: {
+    title: "<strong>LINEから開いている場合</strong>",
+    text: `
+      画面の下の方にこんなの見えてませんか？<br>
+      <img src="../../img/setting/setting_ios_line.jpeg" alt="LINEアプリ内ブラウザの開き直し方法">
+      もし見えていたら、
+      <ol>
+        <li>画面の右下にある<strong>「<i class="bi bi-three-dots-vertical"></i>」</strong>をタップ<br>（画像の赤枠のところ）</li>
+        <li><strong>ブラウザで開く</strong>をタップ</li>
+      </ol>
+    `,
+  },
+};
+
+function getQuickAccessBrowserType() {
+  if (typeof getAccessBrowserType === "function") {
+    return getAccessBrowserType();
+  }
+
+  return "other_browser";
+}
+
+function updateQuickSnsInAppGuide(screenName) {
+  const browserType = getQuickAccessBrowserType();
+  const guide = QUICK_SNS_IN_APP_GUIDES[browserType];
+  const shouldShowGuide = screenName === "start" && Boolean(guide);
+
+  quickElements.startButton?.classList.toggle("hidden", shouldShowGuide);
+
+  if (!quickElements.snsInAppGuide) {
+    return;
+  }
+
+  quickElements.snsInAppGuide.classList.toggle("hidden", !shouldShowGuide);
+
+  if (!shouldShowGuide) {
+    quickElements.snsInAppGuide.innerHTML = "";
+    return;
+  }
+
+  quickElements.snsInAppGuide.innerHTML = `
+  <h2>最初にこれだけ！</h2>
+    <p class="quick-sns-in-app-guide-text">
+      このままだとちょっと使いにくいので<br>
+      Safari または Chrome で開くのがおすすめです。<br>
+      やり方は超簡単！
+    </p>
+    <h3>${guide.title}</h3>
+  <div class="quick-sns-in-app-guide-body">${guide.text}</div>
+`;
+}
+
 
 function showQuickScreen(screenName, options = {}) {
   const shouldStartTutorial = options.shouldStartTutorial !== false;
