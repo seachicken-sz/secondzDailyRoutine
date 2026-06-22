@@ -1427,7 +1427,7 @@ function startTutorialForCurrentScreen() {
       target: "#quickRecommendedSongs",
       messages: [
         "下のリストから好きな曲を選んでみよう。",
-        "聞きたい曲がないときは「その他」を押すと、表示される曲が増えるよ。"
+        "聞きたい曲がないときは「その他」を押すと、表示される曲が増えるよ。",
         "Spotifyを入れていない人は下にスクロールして、「BGMなし」を押して次へ進めるよ。",
       ],
     },
