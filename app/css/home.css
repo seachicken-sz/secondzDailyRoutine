@@ -1068,32 +1068,4 @@
   border-radius: 50%;
   background: var(--color-brand);
 }
-.update-notice-modal-content {
-  width: min(100%, 430px);
-}
-.update-notice-list {
-  display: grid;
-  gap: 12px;
-}
-.update-notice-item
-.update-notice-date {
-  margin: 0 0 4px;
-  font-size: 0.78rem;
-  color: var(--color-text-sub);
-}
-.update-notice-title {
-  margin: 0 0 6px;
-  font-size: 0.95rem;
-  color: var(--color-text-main);
-}
-.update-notice-body {
-  margin: 0;
-  white-space: pre-line;
-  font-size: 0.88rem;
-  line-height: 1.6;
-  color: var(--color-text-sub);
-}
-.update-notice-empty {
-  margin: 0;
-  color: var(--color-text-sub);
-}
+
