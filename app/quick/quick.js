@@ -434,6 +434,10 @@ const QUICK_SNS_IN_APP_GUIDES = {
 };
 
 function getQuickAccessBrowserType() {
+  if (typeof getCurrentOrRememberedAccessBrowserType === "function") {
+    return getCurrentOrRememberedAccessBrowserType();
+  }
+
   if (typeof getAccessBrowserType === "function") {
     return getAccessBrowserType();
   }
