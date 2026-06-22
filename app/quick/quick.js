@@ -63,6 +63,7 @@ const quickElements = {
   tutorialToggle: document.getElementById("quickTutorialToggle"),
   startButton: document.getElementById("quickStartButton"),
   snsInAppGuide: document.getElementById("quickSnsInAppGuide"),
+  startIntroCard: document.getElementById("quickStartIntroCard"),
 
   spotifySelectedArea: document.getElementById("quickSpotifySelectedArea"),
   spotifySelectedSongName: document.getElementById("quickSpotifySelectedSongName"),
@@ -451,6 +452,7 @@ function updateQuickSnsInAppGuide(screenName) {
   const shouldShowGuide = screenName === "start" && Boolean(guide);
 
   quickElements.startButton?.classList.toggle("hidden", shouldShowGuide);
+  quickElements.startIntroCard?.classList.toggle("hidden", shouldShowGuide);
 
   if (!quickElements.snsInAppGuide) {
     return;
