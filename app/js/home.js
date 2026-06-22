@@ -1479,6 +1479,7 @@ function renderHomeUpdateNoticeList() {
   }
 
   updateNoticeListElement.innerHTML = "";
+  const readIds = getHomeUpdateNoticeReadIds();
 
   if (HOME_UPDATE_NOTICE_LIST.length === 0) {
     const emptyText = document.createElement("p");
@@ -1491,6 +1492,10 @@ function renderHomeUpdateNoticeList() {
   HOME_UPDATE_NOTICE_LIST.forEach((notice) => {
     const item = document.createElement("article");
     item.className = "update-notice-item";
+
+    if (!readIds.includes(notice.id)) {
+      item.classList.add("is-unread");
+    }
 
     const date = document.createElement("p");
     date.className = "update-notice-date";
