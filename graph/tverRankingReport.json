@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/24 05:28",
+  "updatedAt": "2026/06/24 06:25",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/19",
-      "updatedAt": "2026/06/24 05:28",
+      "updatedAt": "2026/06/24 06:25",
       "episodeId": "epfxpix73m",
       "subtitle": "究極心理戦「信頼じゃんけん」山下智久が緊急リベンジ！",
       "likes": "1.5万",
@@ -420,6 +420,10 @@
         },
         {
           "hour": 103,
+          "likes": 15000
+        },
+        {
+          "hour": 104,
           "likes": 15000
         }
       ],
@@ -1089,9 +1093,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 15,
-          "elapsedHour": 103,
-          "elapsedRank": 15,
+          "currentRank": 13,
+          "elapsedHour": 104,
+          "elapsedRank": 13,
           "currentPoints": [
             {
               "hour": 3,
@@ -1496,6 +1500,10 @@
             {
               "hour": 103,
               "rank": 15
+            },
+            {
+              "hour": 104,
+              "rank": 13
             }
           ],
           "previousPoints": [
@@ -2154,19 +2162,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 10,
+              "title": "突然ですが占ってもいいですか？"
+            },
+            {
+              "rank": 11,
+              "title": "おしゃれクリップ"
+            },
+            {
               "rank": 12,
-              "title": "しゃべくり007"
-            },
-            {
-              "rank": 13,
-              "title": "Golden SixTONES"
-            },
-            {
-              "rank": 14,
               "title": "ニノなのに"
             },
             {
-              "rank": 15,
+              "rank": 13,
               "title": "タイムレスマン"
             }
           ]
@@ -2174,9 +2182,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 29,
-          "elapsedHour": 103,
-          "elapsedRank": 29,
+          "currentRank": 27,
+          "elapsedHour": 104,
+          "elapsedRank": 27,
           "currentPoints": [
             {
               "hour": 8,
@@ -2561,6 +2569,10 @@
             {
               "hour": 103,
               "rank": 29
+            },
+            {
+              "hour": 104,
+              "rank": 27
             }
           ],
           "previousPoints": [
@@ -3019,19 +3031,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 24,
+              "title": "美女か野獣"
+            },
+            {
+              "rank": 25,
+              "title": "刑事、ふりだしに戻る"
+            },
+            {
               "rank": 26,
-              "title": "しゃべくり007"
-            },
-            {
-              "rank": 27,
-              "title": "Golden SixTONES"
-            },
-            {
-              "rank": 28,
               "title": "ニノなのに"
             },
             {
-              "rank": 29,
+              "rank": 27,
               "title": "タイムレスマン"
             }
           ]
@@ -3041,7 +3053,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/24 05:28",
+      "updatedAt": "2026/06/24 06:25",
       "episodeId": "ep67r77z31",
       "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
       "likes": "1.8万",
@@ -5520,15 +5532,15 @@
             },
             {
               "rank": 48,
-              "title": "サクラミーツ"
-            },
-            {
-              "rank": 49,
               "title": "家、ついて行ってイイですか？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "あちこちオードリー"
+            },
+            {
+              "rank": 50,
+              "title": "サクラミーツ"
             }
           ]
         },
@@ -6065,11 +6077,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "エミリとマリア"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "エミリとマリア"
             },
             {
               "rank": 49,
@@ -6077,7 +6089,7 @@
             },
             {
               "rank": 50,
-              "title": "日曜日の初耳学"
+              "title": "真剣遊戯！THE バトル SHOW"
             }
           ]
         }
@@ -6086,10 +6098,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/23",
-      "updatedAt": "2026/06/24 05:28",
+      "updatedAt": "2026/06/24 06:25",
       "episodeId": "epptze25tv",
       "subtitle": "チョコプラ・timeleszが\"絶対に滑らない靴\"なら、ヌルヌルの坂でもお芝居できる？",
-      "likes": "1194",
+      "likes": "1461",
       "favorites": "5.1万",
       "likePoints": [
         {
@@ -6111,6 +6123,10 @@
         {
           "hour": 5,
           "likes": 1194
+        },
+        {
+          "hour": 6,
+          "likes": 1461
         }
       ],
       "previousLikePoints": [
@@ -6795,10 +6811,15 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 44,
+          "elapsedHour": 6,
+          "elapsedRank": 44,
+          "currentPoints": [
+            {
+              "hour": 6,
+              "rank": 44
+            }
+          ],
           "previousPoints": [
             {
               "hour": 6,
@@ -7215,20 +7236,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "有吉くんの正直さんぽ"
+              "rank": 41,
+              "title": "Hello! Music Lab。"
             },
             {
-              "rank": 48,
-              "title": "櫻井･有吉THE夜会"
+              "rank": 42,
+              "title": "草彅やすともの うさぎとかめ"
             },
             {
-              "rank": 49,
-              "title": "オードリー春日の知らない街で自腹せんべろ"
+              "rank": 43,
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
-              "rank": 50,
-              "title": "華丸・大吉のなんしようと？"
+              "rank": 44,
+              "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
         },
@@ -7340,15 +7361,15 @@
             },
             {
               "rank": 48,
-              "title": "サクラミーツ"
-            },
-            {
-              "rank": 49,
               "title": "家、ついて行ってイイですか？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "あちこちオードリー"
+            },
+            {
+              "rank": 50,
+              "title": "サクラミーツ"
             }
           ]
         }
@@ -7357,7 +7378,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/18",
-      "updatedAt": "2026/06/24 05:28",
+      "updatedAt": "2026/06/24 06:25",
       "episodeId": "epk6orsu7b",
       "subtitle": "【見たことない】外国人に日本の遊び伝えられるかな？",
       "likes": "1.1万",
@@ -7949,6 +7970,10 @@
         },
         {
           "hour": 147,
+          "likes": 11000
+        },
+        {
+          "hour": 148,
           "likes": 11000
         }
       ],
@@ -9132,15 +9157,15 @@
             },
             {
               "rank": 48,
-              "title": "サクラミーツ"
-            },
-            {
-              "rank": 49,
               "title": "家、ついて行ってイイですか？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "あちこちオードリー"
+            },
+            {
+              "rank": 50,
+              "title": "サクラミーツ"
             }
           ]
         },
@@ -9401,11 +9426,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "エミリとマリア"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "エミリとマリア"
             },
             {
               "rank": 49,
@@ -9413,7 +9438,7 @@
             },
             {
               "rank": 50,
-              "title": "日曜日の初耳学"
+              "title": "真剣遊戯！THE バトル SHOW"
             }
           ]
         }
@@ -9422,10 +9447,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/06/21",
-      "updatedAt": "2026/06/24 05:28",
+      "updatedAt": "2026/06/24 06:25",
       "episodeId": "epec0g36d1",
       "subtitle": "放送1000回記念SP!福島の田植えにメンバー勢揃い!",
-      "likes": "7437",
+      "likes": "7448",
       "favorites": "52.0万",
       "likePoints": [
         {
@@ -9655,6 +9680,10 @@
         {
           "hour": 58,
           "likes": 7437
+        },
+        {
+          "hour": 59,
+          "likes": 7448
         }
       ],
       "previousLikePoints": [],
@@ -9663,7 +9692,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 18,
-          "elapsedHour": 58,
+          "elapsedHour": 59,
           "elapsedRank": 18,
           "currentPoints": [
             {
@@ -9893,17 +9922,21 @@
             {
               "hour": 58,
               "rank": 18
+            },
+            {
+              "hour": 59,
+              "rank": 18
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 15,
-              "title": "ポツンと一軒家"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 16,
-              "title": "限界突破！やってM!LK"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 17,
@@ -10115,15 +10148,15 @@
             },
             {
               "rank": 48,
-              "title": "サクラミーツ"
-            },
-            {
-              "rank": 49,
               "title": "家、ついて行ってイイですか？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "あちこちオードリー"
+            },
+            {
+              "rank": 50,
+              "title": "サクラミーツ"
             }
           ]
         }
@@ -10132,7 +10165,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/06/24 05:28",
+      "updatedAt": "2026/06/24 06:25",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
       "likes": "3831",
@@ -11449,15 +11482,15 @@
             },
             {
               "rank": 48,
-              "title": "サクラミーツ"
-            },
-            {
-              "rank": 49,
               "title": "家、ついて行ってイイですか？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "あちこちオードリー"
+            },
+            {
+              "rank": 50,
+              "title": "サクラミーツ"
             }
           ]
         },
@@ -11701,11 +11734,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "エミリとマリア"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "エミリとマリア"
             },
             {
               "rank": 49,
@@ -11713,7 +11746,7 @@
             },
             {
               "rank": 50,
-              "title": "日曜日の初耳学"
+              "title": "真剣遊戯！THE バトル SHOW"
             }
           ]
         }
@@ -11722,10 +11755,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/06/24 05:28",
+      "updatedAt": "2026/06/24 06:25",
       "episodeId": "epgzv08t7a",
       "subtitle": "MC復帰菊池風磨＆畑芽育！ＭＡＺＺＥＬが苦悩の日々を告白！",
-      "likes": "2153",
+      "likes": "2618",
       "favorites": "7.7万",
       "likePoints": [
         {
@@ -11747,6 +11780,10 @@
         {
           "hour": 4,
           "likes": 2153
+        },
+        {
+          "hour": 5,
+          "likes": 2618
         }
       ],
       "previousLikePoints": [
@@ -12464,15 +12501,15 @@
             },
             {
               "rank": 48,
-              "title": "サクラミーツ"
-            },
-            {
-              "rank": 49,
               "title": "家、ついて行ってイイですか？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "あちこちオードリー"
+            },
+            {
+              "rank": 50,
+              "title": "サクラミーツ"
             }
           ]
         },
@@ -12487,11 +12524,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "エミリとマリア"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "エミリとマリア"
             },
             {
               "rank": 49,
@@ -12499,7 +12536,7 @@
             },
             {
               "rank": 50,
-              "title": "日曜日の初耳学"
+              "title": "真剣遊戯！THE バトル SHOW"
             }
           ]
         }
@@ -12508,10 +12545,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/19",
-      "updatedAt": "2026/06/24 05:28",
+      "updatedAt": "2026/06/24 06:25",
       "episodeId": "epwjsmac1r",
       "subtitle": "第132回 梅沢富美男節が止まらない！風磨＆森香澄も困惑",
-      "likes": "4492",
+      "likes": "4499",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -12936,7 +12973,7 @@
         },
         {
           "hour": 125,
-          "likes": 4492
+          "likes": 4499
         }
       ],
       "previousLikePoints": [
@@ -13975,15 +14012,15 @@
             },
             {
               "rank": 48,
-              "title": "サクラミーツ"
-            },
-            {
-              "rank": 49,
               "title": "家、ついて行ってイイですか？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "あちこちオードリー"
+            },
+            {
+              "rank": 50,
+              "title": "サクラミーツ"
             }
           ]
         },
@@ -14180,11 +14217,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "エミリとマリア"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "エミリとマリア"
             },
             {
               "rank": 49,
@@ -14192,7 +14229,7 @@
             },
             {
               "rank": 50,
-              "title": "日曜日の初耳学"
+              "title": "真剣遊戯！THE バトル SHOW"
             }
           ]
         }
@@ -14201,10 +14238,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/13",
-      "updatedAt": "2026/06/24 05:28",
+      "updatedAt": "2026/06/24 06:25",
       "episodeId": "epq7u4dq8k",
       "subtitle": "お泊りロケの家族は指名手配（秘）犯人SP前編",
-      "likes": "9138",
+      "likes": "9140",
       "favorites": "77.7万",
       "likePoints": [
         {
@@ -15592,15 +15629,15 @@
             },
             {
               "rank": 48,
-              "title": "サクラミーツ"
-            },
-            {
-              "rank": 49,
               "title": "家、ついて行ってイイですか？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "あちこちオードリー"
+            },
+            {
+              "rank": 50,
+              "title": "サクラミーツ"
             }
           ]
         },
@@ -15945,11 +15982,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "エミリとマリア"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "エミリとマリア"
             },
             {
               "rank": 49,
@@ -15957,7 +15994,7 @@
             },
             {
               "rank": 50,
-              "title": "日曜日の初耳学"
+              "title": "真剣遊戯！THE バトル SHOW"
             }
           ]
         }
@@ -15966,7 +16003,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/24 05:28",
+      "updatedAt": "2026/06/24 06:25",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.0万",
@@ -18673,7 +18710,7 @@
             },
             {
               "rank": 50,
-              "title": "３年Ａ組―今から皆さんは、人質です―"
+              "title": "惡の華"
             }
           ]
         },
@@ -19834,11 +19871,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "エミリとマリア"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "エミリとマリア"
             },
             {
               "rank": 49,
@@ -19846,7 +19883,7 @@
             },
             {
               "rank": 50,
-              "title": "日曜日の初耳学"
+              "title": "真剣遊戯！THE バトル SHOW"
             }
           ]
         }
@@ -19855,10 +19892,10 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/06/24 05:28",
+      "updatedAt": "2026/06/24 06:25",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
-      "likes": "716",
+      "likes": "1192",
       "favorites": "22.4万",
       "likePoints": [
         {
@@ -19872,6 +19909,10 @@
         {
           "hour": 2,
           "likes": 716
+        },
+        {
+          "hour": 3,
+          "likes": 1192
         }
       ],
       "previousLikePoints": [
@@ -20745,15 +20786,15 @@
             },
             {
               "rank": 48,
-              "title": "サクラミーツ"
-            },
-            {
-              "rank": 49,
               "title": "家、ついて行ってイイですか？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "あちこちオードリー"
+            },
+            {
+              "rank": 50,
+              "title": "サクラミーツ"
             }
           ]
         },
@@ -20825,11 +20866,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "エミリとマリア"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "エミリとマリア"
             },
             {
               "rank": 49,
@@ -20837,7 +20878,7 @@
             },
             {
               "rank": 50,
-              "title": "日曜日の初耳学"
+              "title": "真剣遊戯！THE バトル SHOW"
             }
           ]
         }
@@ -20846,10 +20887,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/23",
-      "updatedAt": "2026/06/24 05:28",
+      "updatedAt": "2026/06/24 06:25",
       "episodeId": "eph69ykxq1",
       "subtitle": "-40歳アイドル、デビューなし。でも幸せ-",
-      "likes": "709",
+      "likes": "714",
       "favorites": "2.0万",
       "likePoints": [
         {
@@ -20963,6 +21004,10 @@
         {
           "hour": 27,
           "likes": 709
+        },
+        {
+          "hour": 28,
+          "likes": 714
         }
       ],
       "previousLikePoints": [
@@ -21553,15 +21598,19 @@
         {
           "hour": 147,
           "likes": 5179
+        },
+        {
+          "hour": 148,
+          "likes": 5180
         }
       ],
       "rankings": [
         {
           "type": "talk",
           "label": "トーク",
-          "currentRank": 50,
-          "elapsedHour": 27,
-          "elapsedRank": 50,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 22,
@@ -21773,15 +21822,15 @@
             },
             {
               "rank": 48,
-              "title": "timeleszファミリア"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 49,
-              "title": "ぽかぽか"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 50,
-              "title": "ふぉ〜ゆ〜って、だれ？"
+              "title": "ぽかぽか"
             }
           ]
         },
@@ -21849,15 +21898,15 @@
             },
             {
               "rank": 48,
-              "title": "サクラミーツ"
-            },
-            {
-              "rank": 49,
               "title": "家、ついて行ってイイですか？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "あちこちオードリー"
+            },
+            {
+              "rank": 50,
+              "title": "サクラミーツ"
             }
           ]
         }
@@ -21866,10 +21915,10 @@
     "srwe52o8i3": {
       "programTitle": "世界くらべてみたら",
       "broadcastDate": "2026/06/22",
-      "updatedAt": "2026/06/24 05:28",
+      "updatedAt": "2026/06/24 06:25",
       "episodeId": "ep80kdm92w",
       "subtitle": "日本くらべてみたら 都会と地方の女子校生が交換留学 牛角売上ランキング",
-      "likes": "1472",
+      "likes": "1476",
       "favorites": "28.8万",
       "likePoints": [
         {
@@ -21991,6 +22040,10 @@
         {
           "hour": 34,
           "likes": 1472
+        },
+        {
+          "hour": 35,
+          "likes": 1476
         }
       ],
       "previousLikePoints": [],
@@ -21999,7 +22052,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 9,
-          "elapsedHour": 34,
+          "elapsedHour": 35,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -22076,6 +22129,10 @@
             },
             {
               "hour": 34,
+              "rank": 9
+            },
+            {
+              "hour": 35,
               "rank": 9
             }
           ],
@@ -22768,7 +22825,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 29,
-          "elapsedHour": 34,
+          "elapsedHour": 35,
           "elapsedRank": 29,
           "currentPoints": [
             {
@@ -22845,6 +22902,10 @@
             },
             {
               "hour": 34,
+              "rank": 29
+            },
+            {
+              "hour": 35,
               "rank": 29
             }
           ],
@@ -22973,15 +23034,15 @@
           "nearbyRanking": [
             {
               "rank": 26,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 27,
-              "title": "日曜日の初耳学"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 28,
-              "title": "マツコの知らない世界"
+              "title": "日曜日の初耳学"
             },
             {
               "rank": 29,
