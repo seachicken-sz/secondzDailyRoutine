@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/25 00:25",
+  "updatedAt": "2026/06/25 01:23",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/19",
-      "updatedAt": "2026/06/25 00:25",
+      "updatedAt": "2026/06/25 01:23",
       "episodeId": "epfxpix73m",
       "subtitle": "究極心理戦「信頼じゃんけん」山下智久が緊急リベンジ！",
       "likes": "1.6万",
@@ -496,6 +496,10 @@
         },
         {
           "hour": 122,
+          "likes": 16000
+        },
+        {
+          "hour": 123,
           "likes": 16000
         }
       ],
@@ -1165,9 +1169,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 29,
-          "elapsedHour": 122,
-          "elapsedRank": 29,
+          "currentRank": 30,
+          "elapsedHour": 123,
+          "elapsedRank": 30,
           "currentPoints": [
             {
               "hour": 3,
@@ -1648,6 +1652,10 @@
             {
               "hour": 122,
               "rank": 29
+            },
+            {
+              "hour": 123,
+              "rank": 30
             }
           ],
           "previousPoints": [
@@ -2306,10 +2314,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 26,
-              "title": "ウチ、“断捨離”しました！"
-            },
-            {
               "rank": 27,
               "title": "突然ですが占ってもいいですか？"
             },
@@ -2319,6 +2323,10 @@
             },
             {
               "rank": 29,
+              "title": "家、ついて行ってイイですか？"
+            },
+            {
+              "rank": 30,
               "title": "タイムレスマン"
             }
           ]
@@ -2326,9 +2334,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 41,
-          "elapsedHour": 122,
-          "elapsedRank": 41,
+          "currentRank": 43,
+          "elapsedHour": 123,
+          "elapsedRank": 43,
           "currentPoints": [
             {
               "hour": 8,
@@ -2789,6 +2797,10 @@
             {
               "hour": 122,
               "rank": 41
+            },
+            {
+              "hour": 123,
+              "rank": 43
             }
           ],
           "previousPoints": [
@@ -3247,19 +3259,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 38,
-              "title": "LOVED ONE"
-            },
-            {
-              "rank": 39,
-              "title": "突然ですが占ってもいいですか？"
-            },
-            {
               "rank": 40,
               "title": "開運！なんでも鑑定団"
             },
             {
               "rank": 41,
+              "title": "家、ついて行ってイイですか？"
+            },
+            {
+              "rank": 42,
+              "title": "刑事、ふりだしに戻る"
+            },
+            {
+              "rank": 43,
               "title": "タイムレスマン"
             }
           ]
@@ -3269,7 +3281,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/25 00:25",
+      "updatedAt": "2026/06/25 01:23",
       "episodeId": "ep67r77z31",
       "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
       "likes": "1.8万",
@@ -5748,11 +5760,11 @@
             },
             {
               "rank": 48,
-              "title": "日曜日の初耳学"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             },
             {
               "rank": 49,
-              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
+              "title": "日曜日の初耳学"
             },
             {
               "rank": 50,
@@ -6301,11 +6313,11 @@
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "100日後に別れる僕と彼"
             },
             {
               "rank": 50,
-              "title": "地球まるごと大実験 ネイチャーティーチャー"
+              "title": "世界の果てまでイッテQ！"
             }
           ]
         }
@@ -6314,10 +6326,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/23",
-      "updatedAt": "2026/06/25 00:25",
+      "updatedAt": "2026/06/25 01:23",
       "episodeId": "epptze25tv",
       "subtitle": "チョコプラ・timeleszが\"絶対に滑らない靴\"なら、ヌルヌルの坂でもお芝居できる？",
-      "likes": "5757",
+      "likes": "6039",
       "favorites": "5.2万",
       "likePoints": [
         {
@@ -6415,6 +6427,10 @@
         {
           "hour": 24,
           "likes": 5757
+        },
+        {
+          "hour": 25,
+          "likes": 6039
         }
       ],
       "previousLikePoints": [
@@ -7100,7 +7116,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 9,
-          "elapsedHour": 24,
+          "elapsedHour": 25,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -7177,6 +7193,10 @@
             },
             {
               "hour": 24,
+              "rank": 9
+            },
+            {
+              "hour": 25,
               "rank": 9
             }
           ],
@@ -7597,7 +7617,7 @@
           "nearbyRanking": [
             {
               "rank": 6,
-              "title": "水曜日のダウンタウン"
+              "title": "オモウマい店"
             },
             {
               "rank": 7,
@@ -7617,7 +7637,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 35,
-          "elapsedHour": 24,
+          "elapsedHour": 25,
           "elapsedRank": 35,
           "currentPoints": [
             {
@@ -7646,6 +7666,10 @@
             },
             {
               "hour": 24,
+              "rank": 35
+            },
+            {
+              "hour": 25,
               "rank": 35
             }
           ],
@@ -7767,7 +7791,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/18",
-      "updatedAt": "2026/06/25 00:25",
+      "updatedAt": "2026/06/25 01:23",
       "episodeId": "epk6orsu7b",
       "subtitle": "【見たことない】外国人に日本の遊び伝えられるかな？",
       "likes": "1.2万",
@@ -8435,6 +8459,10 @@
         },
         {
           "hour": 166,
+          "likes": 12000
+        },
+        {
+          "hour": 167,
           "likes": 12000
         }
       ],
@@ -9618,11 +9646,11 @@
             },
             {
               "rank": 48,
-              "title": "日曜日の初耳学"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             },
             {
               "rank": 49,
-              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
+              "title": "日曜日の初耳学"
             },
             {
               "rank": 50,
@@ -9895,11 +9923,11 @@
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "100日後に別れる僕と彼"
             },
             {
               "rank": 50,
-              "title": "地球まるごと大実験 ネイチャーティーチャー"
+              "title": "世界の果てまでイッテQ！"
             }
           ]
         }
@@ -9908,10 +9936,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/06/21",
-      "updatedAt": "2026/06/25 00:25",
+      "updatedAt": "2026/06/25 01:23",
       "episodeId": "epec0g36d1",
       "subtitle": "放送1000回記念SP!福島の田植えにメンバー勢揃い!",
-      "likes": "7950",
+      "likes": "7997",
       "favorites": "52.0万",
       "likePoints": [
         {
@@ -10217,6 +10245,10 @@
         {
           "hour": 77,
           "likes": 7950
+        },
+        {
+          "hour": 78,
+          "likes": 7997
         }
       ],
       "previousLikePoints": [],
@@ -10225,7 +10257,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 25,
-          "elapsedHour": 77,
+          "elapsedHour": 78,
           "elapsedRank": 25,
           "currentPoints": [
             {
@@ -10531,21 +10563,25 @@
             {
               "hour": 77,
               "rank": 25
+            },
+            {
+              "hour": 78,
+              "rank": 25
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 22,
-              "title": "サンド＆キスマイの気になるマン"
+              "title": "THE神業チャレンジ"
             },
             {
               "rank": 23,
-              "title": "ニノなのに"
+              "title": "有田哲平とコスられない街"
             },
             {
               "rank": 24,
-              "title": "有田哲平とコスられない街"
+              "title": "サンド＆キスマイの気になるマン"
             },
             {
               "rank": 25,
@@ -10753,11 +10789,11 @@
             },
             {
               "rank": 48,
-              "title": "日曜日の初耳学"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             },
             {
               "rank": 49,
-              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
+              "title": "日曜日の初耳学"
             },
             {
               "rank": 50,
@@ -10770,7 +10806,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/06/25 00:25",
+      "updatedAt": "2026/06/25 01:23",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
       "likes": "3831",
@@ -12087,11 +12123,11 @@
             },
             {
               "rank": 48,
-              "title": "日曜日の初耳学"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             },
             {
               "rank": 49,
-              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
+              "title": "日曜日の初耳学"
             },
             {
               "rank": 50,
@@ -12347,11 +12383,11 @@
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "100日後に別れる僕と彼"
             },
             {
               "rank": 50,
-              "title": "地球まるごと大実験 ネイチャーティーチャー"
+              "title": "世界の果てまでイッテQ！"
             }
           ]
         }
@@ -12360,7 +12396,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/06/25 00:25",
+      "updatedAt": "2026/06/25 01:23",
       "episodeId": "epgzv08t7a",
       "subtitle": "MC復帰菊池風磨＆畑芽育！ＭＡＺＺＥＬが苦悩の日々を告白！",
       "likes": "1.1万",
@@ -12460,6 +12496,10 @@
         },
         {
           "hour": 23,
+          "likes": 11000
+        },
+        {
+          "hour": 24,
           "likes": 11000
         }
       ],
@@ -13125,9 +13165,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 7,
-          "elapsedHour": 23,
-          "elapsedRank": 7,
+          "currentRank": 8,
+          "elapsedHour": 24,
+          "elapsedRank": 8,
           "currentPoints": [
             {
               "hour": 6,
@@ -13200,6 +13240,10 @@
             {
               "hour": 23,
               "rank": 7
+            },
+            {
+              "hour": 24,
+              "rank": 8
             }
           ],
           "previousPoints": [
@@ -13246,10 +13290,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 4,
-              "title": "ロンドンハーツ"
-            },
-            {
               "rank": 5,
               "title": "踊る！さんま御殿!!"
             },
@@ -13259,6 +13299,10 @@
             },
             {
               "rank": 7,
+              "title": "テレビ千鳥"
+            },
+            {
+              "rank": 8,
               "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
@@ -13266,9 +13310,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 11,
-          "elapsedHour": 23,
-          "elapsedRank": 11,
+          "currentRank": 12,
+          "elapsedHour": 24,
+          "elapsedRank": 12,
           "currentPoints": [
             {
               "hour": 8,
@@ -13333,14 +13377,14 @@
             {
               "hour": 23,
               "rank": 11
+            },
+            {
+              "hour": 24,
+              "rank": 12
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
-            {
-              "rank": 8,
-              "title": "踊る！さんま御殿!!"
-            },
             {
               "rank": 9,
               "title": "サバ缶、宇宙へ行く"
@@ -13351,6 +13395,10 @@
             },
             {
               "rank": 11,
+              "title": "テレビ千鳥"
+            },
+            {
+              "rank": 12,
               "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
@@ -13360,10 +13408,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/19",
-      "updatedAt": "2026/06/25 00:25",
+      "updatedAt": "2026/06/25 01:23",
       "episodeId": "epwjsmac1r",
       "subtitle": "第132回 梅沢富美男節が止まらない！風磨＆森香澄も困惑",
-      "likes": "4693",
+      "likes": "4730",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -13853,6 +13901,10 @@
         {
           "hour": 144,
           "likes": 4693
+        },
+        {
+          "hour": 145,
+          "likes": 4730
         }
       ],
       "previousLikePoints": [
@@ -14891,11 +14943,11 @@
             },
             {
               "rank": 48,
-              "title": "日曜日の初耳学"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             },
             {
               "rank": 49,
-              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
+              "title": "日曜日の初耳学"
             },
             {
               "rank": 50,
@@ -15104,11 +15156,11 @@
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "100日後に別れる僕と彼"
             },
             {
               "rank": 50,
-              "title": "地球まるごと大実験 ネイチャーティーチャー"
+              "title": "世界の果てまでイッテQ！"
             }
           ]
         }
@@ -15117,10 +15169,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/13",
-      "updatedAt": "2026/06/25 00:25",
+      "updatedAt": "2026/06/25 01:23",
       "episodeId": "epq7u4dq8k",
       "subtitle": "お泊りロケの家族は指名手配（秘）犯人SP前編",
-      "likes": "9247",
+      "likes": "9246",
       "favorites": "77.8万",
       "likePoints": [
         {
@@ -16508,11 +16560,11 @@
             },
             {
               "rank": 48,
-              "title": "日曜日の初耳学"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             },
             {
               "rank": 49,
-              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
+              "title": "日曜日の初耳学"
             },
             {
               "rank": 50,
@@ -16869,11 +16921,11 @@
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "100日後に別れる僕と彼"
             },
             {
               "rank": 50,
-              "title": "地球まるごと大実験 ネイチャーティーチャー"
+              "title": "世界の果てまでイッテQ！"
             }
           ]
         }
@@ -16882,11 +16934,11 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/25 00:25",
+      "updatedAt": "2026/06/25 01:23",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.0万",
-      "favorites": "26.5万",
+      "favorites": "26.4万",
       "likePoints": [
         {
           "hour": 1,
@@ -19577,7 +19629,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "中国ドラマ「花間令＜かかんれい＞ ～Lost in Love～」"
+              "title": "キャスター"
             },
             {
               "rank": 48,
@@ -20758,11 +20810,11 @@
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "100日後に別れる僕と彼"
             },
             {
               "rank": 50,
-              "title": "地球まるごと大実験 ネイチャーティーチャー"
+              "title": "世界の果てまでイッテQ！"
             }
           ]
         }
@@ -20771,10 +20823,10 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/06/25 00:25",
+      "updatedAt": "2026/06/25 01:23",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
-      "likes": "7123",
+      "likes": "7523",
       "favorites": "22.4万",
       "likePoints": [
         {
@@ -20864,6 +20916,10 @@
         {
           "hour": 21,
           "likes": 7123
+        },
+        {
+          "hour": 22,
+          "likes": 7523
         }
       ],
       "previousLikePoints": [
@@ -21553,7 +21609,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 25,
-          "elapsedHour": 21,
+          "elapsedHour": 22,
           "elapsedRank": 25,
           "currentPoints": [
             {
@@ -21598,6 +21654,10 @@
             },
             {
               "hour": 21,
+              "rank": 25
+            },
+            {
+              "hour": 22,
               "rank": 25
             }
           ],
@@ -21778,15 +21838,15 @@
           "nearbyRanking": [
             {
               "rank": 22,
-              "title": "オモウマい店"
+              "title": "永野＆くるまのひっかかりニーチェ"
             },
             {
               "rank": 23,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "オモウマい店"
             },
             {
               "rank": 24,
-              "title": "水曜日のダウンタウン"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             },
             {
               "rank": 25,
@@ -21797,9 +21857,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 36,
-          "elapsedHour": 21,
-          "elapsedRank": 36,
+          "currentRank": 37,
+          "elapsedHour": 22,
+          "elapsedRank": 37,
           "currentPoints": [
             {
               "hour": 17,
@@ -21820,6 +21880,10 @@
             {
               "hour": 21,
               "rank": 36
+            },
+            {
+              "hour": 22,
+              "rank": 37
             }
           ],
           "previousPoints": [
@@ -21882,19 +21946,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 33,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
-            },
-            {
               "rank": 34,
-              "title": "水曜日のダウンタウン"
+              "title": "オモウマい店"
             },
             {
               "rank": 35,
-              "title": "ワンピース"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             },
             {
               "rank": 36,
+              "title": "ワンピース"
+            },
+            {
+              "rank": 37,
               "title": "バラバラマンスリー"
             }
           ]
@@ -21904,10 +21968,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/23",
-      "updatedAt": "2026/06/25 00:25",
+      "updatedAt": "2026/06/25 01:23",
       "episodeId": "eph69ykxq1",
       "subtitle": "-40歳アイドル、デビューなし。でも幸せ-",
-      "likes": "956",
+      "likes": "995",
       "favorites": "2.0万",
       "likePoints": [
         {
@@ -22097,6 +22161,10 @@
         {
           "hour": 46,
           "likes": 956
+        },
+        {
+          "hour": 47,
+          "likes": 995
         }
       ],
       "previousLikePoints": [
@@ -22763,6 +22831,10 @@
         {
           "hour": 166,
           "likes": 5316
+        },
+        {
+          "hour": 167,
+          "likes": 5333
         }
       ],
       "rankings": [
@@ -22979,7 +23051,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "秘密のケンミンSHOW極"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 48,
@@ -22987,11 +23059,11 @@
             },
             {
               "rank": 49,
-              "title": "吉田徳井の大予言"
+              "title": "紙とさまぁ～ず"
             },
             {
               "rank": 50,
-              "title": "紙とさまぁ～ず"
+              "title": "吉田徳井の大予言"
             }
           ]
         },
@@ -23059,11 +23131,11 @@
             },
             {
               "rank": 48,
-              "title": "日曜日の初耳学"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             },
             {
               "rank": 49,
-              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
+              "title": "日曜日の初耳学"
             },
             {
               "rank": 50,
@@ -23076,10 +23148,10 @@
     "srwe52o8i3": {
       "programTitle": "世界くらべてみたら",
       "broadcastDate": "2026/06/22",
-      "updatedAt": "2026/06/25 00:25",
+      "updatedAt": "2026/06/25 01:23",
       "episodeId": "ep80kdm92w",
       "subtitle": "日本くらべてみたら 都会と地方の女子校生が交換留学 牛角売上ランキング",
-      "likes": "1671",
+      "likes": "1689",
       "favorites": "28.8万",
       "likePoints": [
         {
@@ -23277,6 +23349,10 @@
         {
           "hour": 53,
           "likes": 1671
+        },
+        {
+          "hour": 54,
+          "likes": 1689
         }
       ],
       "previousLikePoints": [],
@@ -23285,7 +23361,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 16,
-          "elapsedHour": 53,
+          "elapsedHour": 54,
           "elapsedRank": 16,
           "currentPoints": [
             {
@@ -23438,6 +23514,10 @@
             },
             {
               "hour": 53,
+              "rank": 16
+            },
+            {
+              "hour": 54,
               "rank": 16
             }
           ],
@@ -24383,11 +24463,11 @@
             },
             {
               "rank": 48,
-              "title": "日曜日の初耳学"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             },
             {
               "rank": 49,
-              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
+              "title": "日曜日の初耳学"
             },
             {
               "rank": 50,
