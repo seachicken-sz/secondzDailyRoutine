@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026/06/25 19:22",
+  "updatedAt": "2026/06/25 20:22",
   "reports": {
     "sroqs1gopx": {
       "programTitle": "ゲストはROIROM",
       "broadcastDate": "2026/06/12",
-      "updatedAt": "2026/06/25 19:22",
+      "updatedAt": "2026/06/25 20:22",
       "episodeId": "epf64e6ziq",
       "subtitle": "MCはピアニスト清塚信也",
-      "likes": "2098",
+      "likes": "2101",
       "favorites": "1.1万",
       "likePoints": [
         {
@@ -1370,15 +1370,15 @@
             },
             {
               "rank": 48,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 49,
               "title": "千鳥かまいたちゴールデンアワー"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "さんまのお笑い向上委員会"
+            },
+            {
+              "rank": 50,
+              "title": "※女性は見ないでください"
             }
           ]
         },
@@ -1393,7 +1393,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "いろはに千鳥"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 48,
@@ -1401,11 +1401,11 @@
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 50,
-              "title": "開運！なんでも鑑定団"
+              "title": "いたジャン！"
             }
           ]
         }
@@ -1414,7 +1414,7 @@
     "srleu4lcwn": {
       "programTitle": "それSnow Manにやらせて下さい",
       "broadcastDate": "2026/06/19",
-      "updatedAt": "2026/06/25 19:22",
+      "updatedAt": "2026/06/25 20:22",
       "episodeId": "ep1pd2k46t",
       "subtitle": "Snow Man vs 小学生50人！一番キッズに刺さるのは！？本気プレゼン対決",
       "likes": "1.0万",
@@ -1990,6 +1990,10 @@
         },
         {
           "hour": 144,
+          "likes": 10000
+        },
+        {
+          "hour": 145,
           "likes": 10000
         }
       ],
@@ -2659,9 +2663,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 41,
-          "elapsedHour": 144,
-          "elapsedRank": 41,
+          "currentRank": 42,
+          "elapsedHour": 145,
+          "elapsedRank": 42,
           "currentPoints": [
             {
               "hour": 4,
@@ -3226,6 +3230,10 @@
             {
               "hour": 144,
               "rank": 41
+            },
+            {
+              "hour": 145,
+              "rank": 42
             }
           ],
           "previousPoints": [
@@ -3888,19 +3896,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 38,
-              "title": "世界の果てまでイッテQ！"
-            },
-            {
               "rank": 39,
-              "title": "吉田と粗品と"
-            },
-            {
-              "rank": 40,
               "title": "奇跡体験！アンビリバボー"
             },
             {
+              "rank": 40,
+              "title": "世界の何だコレ！？ミステリー"
+            },
+            {
               "rank": 41,
+              "title": "世界の果てまでイッテQ！"
+            },
+            {
+              "rank": 42,
               "title": "それSnow Manにやらせて下さい"
             }
           ]
@@ -4878,15 +4886,15 @@
             },
             {
               "rank": 48,
-              "title": "オモウマい店"
-            },
-            {
-              "rank": 49,
               "title": "タイムレスマン"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "刑事、ふりだしに戻る"
+            },
+            {
+              "rank": 50,
+              "title": "オモウマい店"
             }
           ]
         }
@@ -4895,10 +4903,10 @@
     "srfgxtv5sb": {
       "programTitle": "いたジャン！",
       "broadcastDate": "2026/06/25",
-      "updatedAt": "2026/06/25 19:22",
+      "updatedAt": "2026/06/25 20:22",
       "episodeId": "epxcd25zv2",
       "subtitle": "第102回 ▽裏切りガッシャンに上田竜也参戦！",
-      "likes": "2704",
+      "likes": "2922",
       "favorites": "30.4万",
       "likePoints": [
         {
@@ -4968,6 +4976,10 @@
         {
           "hour": 18,
           "likes": 2704
+        },
+        {
+          "hour": 19,
+          "likes": 2922
         }
       ],
       "previousLikePoints": [
@@ -5540,10 +5552,15 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 50,
+          "elapsedHour": 20,
+          "elapsedRank": 50,
+          "currentPoints": [
+            {
+              "hour": 20,
+              "rank": 50
+            }
+          ],
           "previousPoints": [
             {
               "hour": 20,
@@ -5629,7 +5646,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "いろはに千鳥"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 48,
@@ -5637,11 +5654,11 @@
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 50,
-              "title": "開運！なんでも鑑定団"
+              "title": "いたジャン！"
             }
           ]
         },
@@ -5660,15 +5677,15 @@
             },
             {
               "rank": 48,
-              "title": "オモウマい店"
-            },
-            {
-              "rank": 49,
               "title": "タイムレスマン"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "刑事、ふりだしに戻る"
+            },
+            {
+              "rank": 50,
+              "title": "オモウマい店"
             }
           ]
         }
@@ -5677,7 +5694,7 @@
     "sracdkj75t": {
       "programTitle": "Golden SixTONES",
       "broadcastDate": "2026/06/21",
-      "updatedAt": "2026/06/25 19:22",
+      "updatedAt": "2026/06/25 20:22",
       "episodeId": "ephqcy8xbq",
       "subtitle": "今年の24時間テレビ“マラソンランナー”が登場!!",
       "likes": "1.6万",
@@ -6057,6 +6074,10 @@
         },
         {
           "hour": 94,
+          "likes": 16000
+        },
+        {
+          "hour": 95,
           "likes": 16000
         }
       ],
@@ -6731,7 +6752,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 44,
-          "elapsedHour": 94,
+          "elapsedHour": 95,
           "elapsedRank": 44,
           "currentPoints": [
             {
@@ -7100,6 +7121,10 @@
             },
             {
               "hour": 94,
+              "rank": 44
+            },
+            {
+              "hour": 95,
               "rank": 44
             }
           ],
@@ -7584,11 +7609,11 @@
           "nearbyRanking": [
             {
               "rank": 41,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 42,
-              "title": "世界の何だコレ！？ミステリー"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 43,
@@ -8065,15 +8090,15 @@
             },
             {
               "rank": 48,
-              "title": "オモウマい店"
-            },
-            {
-              "rank": 49,
               "title": "タイムレスマン"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "刑事、ふりだしに戻る"
+            },
+            {
+              "rank": 50,
+              "title": "オモウマい店"
             }
           ]
         }
@@ -8082,7 +8107,7 @@
     "srz5hf6qnt": {
       "programTitle": "Aぇ! groupのQ＆Aぇ!",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/06/25 19:22",
+      "updatedAt": "2026/06/25 20:22",
       "episodeId": "ep7vu7axdh",
       "subtitle": "ドレミファドン！出演決定も・・・出られるのは3人",
       "likes": "1.1万",
@@ -8234,6 +8259,10 @@
         },
         {
           "hour": 42,
+          "likes": 11000
+        },
+        {
+          "hour": 43,
           "likes": 11000
         }
       ],
@@ -8808,7 +8837,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 29,
-          "elapsedHour": 43,
+          "elapsedHour": 44,
           "elapsedRank": 29,
           "currentPoints": [
             {
@@ -8945,6 +8974,10 @@
             },
             {
               "hour": 43,
+              "rank": 29
+            },
+            {
+              "hour": 44,
               "rank": 29
             }
           ],
@@ -9157,7 +9190,7 @@
           "nearbyRanking": [
             {
               "rank": 26,
-              "title": "これ余談なんですけど・・・"
+              "title": "ザ！世界仰天ニュース"
             },
             {
               "rank": 27,
@@ -9176,9 +9209,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 41,
-          "elapsedHour": 43,
-          "elapsedRank": 41,
+          "currentRank": 43,
+          "elapsedHour": 44,
+          "elapsedRank": 43,
           "currentPoints": [
             {
               "hour": 14,
@@ -9299,6 +9332,10 @@
             {
               "hour": 43,
               "rank": 41
+            },
+            {
+              "hour": 44,
+              "rank": 43
             }
           ],
           "previousPoints": [
@@ -9353,19 +9390,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 38,
-              "title": "かまいたちの知らんけど"
-            },
-            {
-              "rank": 39,
+              "rank": 40,
               "title": "VIVANT"
             },
             {
-              "rank": 40,
+              "rank": 41,
               "title": "相席食堂"
             },
             {
-              "rank": 41,
+              "rank": 42,
+              "title": "ワンピース"
+            },
+            {
+              "rank": 43,
               "title": "Aぇ! groupのQ＆Aぇ!"
             }
           ]
@@ -9375,10 +9412,10 @@
     "srfdyr4f12": {
       "programTitle": "なにわ男子の逆転男子",
       "broadcastDate": "2026/06/20",
-      "updatedAt": "2026/06/25 19:22",
+      "updatedAt": "2026/06/25 20:22",
       "episodeId": "epert78j26",
       "subtitle": "マユリカ＆ママタルト参戦！匿名で芸人とガチ大喜利対決!!",
-      "likes": "9175",
+      "likes": "9201",
       "favorites": "60.0万",
       "likePoints": [
         {
@@ -9876,6 +9913,10 @@
         {
           "hour": 123,
           "likes": 9175
+        },
+        {
+          "hour": 124,
+          "likes": 9201
         }
       ],
       "previousLikePoints": [
@@ -10970,7 +11011,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "いろはに千鳥"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 48,
@@ -10978,11 +11019,11 @@
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 50,
-              "title": "開運！なんでも鑑定団"
+              "title": "いたジャン！"
             }
           ]
         },
@@ -11171,15 +11212,15 @@
             },
             {
               "rank": 48,
-              "title": "オモウマい店"
-            },
-            {
-              "rank": 49,
               "title": "タイムレスマン"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "刑事、ふりだしに戻る"
+            },
+            {
+              "rank": 50,
+              "title": "オモウマい店"
             }
           ]
         }
@@ -11188,7 +11229,7 @@
     "sr64ope7a7": {
       "programTitle": "限界突破！やってM!LK",
       "broadcastDate": "2026/06/19",
-      "updatedAt": "2026/06/25 19:22",
+      "updatedAt": "2026/06/25 20:22",
       "episodeId": "epjmzh5h5p",
       "subtitle": "過去の自分は何を語った？M!LKクイズ",
       "likes": "1.4万",
@@ -11840,6 +11881,10 @@
         },
         {
           "hour": 162,
+          "likes": 14000
+        },
+        {
+          "hour": 163,
           "likes": 14000
         }
       ],
@@ -12509,9 +12554,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 49,
-          "elapsedHour": 162,
-          "elapsedRank": 49,
+          "currentRank": 47,
+          "elapsedHour": 163,
+          "elapsedRank": 47,
           "currentPoints": [
             {
               "hour": 7,
@@ -13116,6 +13161,10 @@
             {
               "hour": 162,
               "rank": 49
+            },
+            {
+              "hour": 163,
+              "rank": 47
             }
           ],
           "previousPoints": [
@@ -13762,19 +13811,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 46,
+              "rank": 44,
+              "title": "Golden SixTONES"
+            },
+            {
+              "rank": 45,
               "title": "おしゃれクリップ"
             },
             {
+              "rank": 46,
+              "title": "有吉ゼミ"
+            },
+            {
               "rank": 47,
-              "title": "いろはに千鳥"
-            },
-            {
-              "rank": 48,
-              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
-            },
-            {
-              "rank": 49,
               "title": "限界突破！やってM!LK"
             }
           ]
@@ -14256,15 +14305,15 @@
             },
             {
               "rank": 48,
-              "title": "オモウマい店"
-            },
-            {
-              "rank": 49,
               "title": "タイムレスマン"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "刑事、ふりだしに戻る"
+            },
+            {
+              "rank": 50,
+              "title": "オモウマい店"
             }
           ]
         }
@@ -14273,10 +14322,10 @@
     "sra5n6j0w3": {
       "programTitle": "テレビ×ミセス",
       "broadcastDate": "2026/06/15",
-      "updatedAt": "2026/06/25 19:22",
+      "updatedAt": "2026/06/25 20:22",
       "episodeId": "ep1caj6d38",
       "subtitle": "生×テレビミセス★800人のファンと一緒に生鑑賞！",
-      "likes": "6837",
+      "likes": "6864",
       "favorites": "41.1万",
       "likePoints": [
         {
@@ -16516,7 +16565,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "いろはに千鳥"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 48,
@@ -16524,11 +16573,11 @@
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 50,
-              "title": "開運！なんでも鑑定団"
+              "title": "いたジャン！"
             }
           ]
         },
@@ -17001,15 +17050,15 @@
             },
             {
               "rank": 48,
-              "title": "オモウマい店"
-            },
-            {
-              "rank": 49,
               "title": "タイムレスマン"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "刑事、ふりだしに戻る"
+            },
+            {
+              "rank": 50,
+              "title": "オモウマい店"
             }
           ]
         }
@@ -17018,10 +17067,10 @@
     "sr91aqd0qa": {
       "programTitle": "ニノなのに",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/06/25 19:22",
+      "updatedAt": "2026/06/25 20:22",
       "episodeId": "epxb98a1bz",
       "subtitle": "司会はTBS新人アナウンサー GWの海老名から江の島！何が一番早いか？",
-      "likes": "1923",
+      "likes": "2007",
       "favorites": "29.5万",
       "likePoints": [
         {
@@ -17111,6 +17160,10 @@
         {
           "hour": 22,
           "likes": 1923
+        },
+        {
+          "hour": 23,
+          "likes": 2007
         }
       ],
       "previousLikePoints": [
@@ -17783,9 +17836,9 @@
         {
           "type": "talk",
           "label": "トーク",
-          "currentRank": 11,
-          "elapsedHour": 22,
-          "elapsedRank": 11,
+          "currentRank": 10,
+          "elapsedHour": 23,
+          "elapsedRank": 10,
           "currentPoints": [
             {
               "hour": 2,
@@ -17870,6 +17923,10 @@
             {
               "hour": 22,
               "rank": 11
+            },
+            {
+              "hour": 23,
+              "rank": 10
             }
           ],
           "previousPoints": [
@@ -18536,19 +18593,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 8,
-              "title": "あちこちオードリー"
+              "rank": 7,
+              "title": "バナナサンド"
             },
             {
-              "rank": 9,
+              "rank": 8,
               "title": "ニカゲーム"
             },
             {
-              "rank": 10,
-              "title": "クレイジージャーニー"
+              "rank": 9,
+              "title": "あちこちオードリー"
             },
             {
-              "rank": 11,
+              "rank": 10,
               "title": "ニノなのに"
             }
           ]
@@ -18557,7 +18614,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 21,
-          "elapsedHour": 22,
+          "elapsedHour": 23,
           "elapsedRank": 21,
           "currentPoints": [
             {
@@ -18610,6 +18667,10 @@
             },
             {
               "hour": 22,
+              "rank": 21
+            },
+            {
+              "hour": 23,
               "rank": 21
             }
           ],
@@ -19274,15 +19335,15 @@
           "nearbyRanking": [
             {
               "rank": 18,
-              "title": "あちこちオードリー"
+              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             },
             {
               "rank": 19,
-              "title": "ニカゲーム"
+              "title": "あちこちオードリー"
             },
             {
               "rank": 20,
-              "title": "クレイジージャーニー"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 21,
