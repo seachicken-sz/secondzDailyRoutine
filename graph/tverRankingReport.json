@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/26 04:26",
+  "updatedAt": "2026/06/26 05:23",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/19",
-      "updatedAt": "2026/06/26 04:26",
+      "updatedAt": "2026/06/26 05:23",
       "episodeId": "epfxpix73m",
       "subtitle": "究極心理戦「信頼じゃんけん」山下智久が緊急リベンジ！",
       "likes": "1.6万",
@@ -608,6 +608,10 @@
         },
         {
           "hour": 150,
+          "likes": 16000
+        },
+        {
+          "hour": 151,
           "likes": 16000
         }
       ],
@@ -1278,7 +1282,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 30,
-          "elapsedHour": 150,
+          "elapsedHour": 151,
           "elapsedRank": 30,
           "currentPoints": [
             {
@@ -1867,6 +1871,10 @@
             },
             {
               "hour": 150,
+              "rank": 30
+            },
+            {
+              "hour": 151,
               "rank": 30
             }
           ],
@@ -2546,9 +2554,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 47,
-          "elapsedHour": 150,
-          "elapsedRank": 47,
+          "currentRank": 49,
+          "elapsedHour": 151,
+          "elapsedRank": 49,
           "currentPoints": [
             {
               "hour": 8,
@@ -3105,6 +3113,10 @@
             {
               "hour": 150,
               "rank": 47
+            },
+            {
+              "hour": 151,
+              "rank": 49
             }
           ],
           "previousPoints": [
@@ -3563,19 +3575,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 44,
-              "title": "じゃあ、あんたが作ってみろよ"
-            },
-            {
-              "rank": 45,
-              "title": "ワンピース"
-            },
-            {
               "rank": 46,
               "title": "刑事、ふりだしに戻る"
             },
             {
               "rank": 47,
+              "title": "韓国ドラマ「テプンの花嫁～愛と復讐の羅針盤」"
+            },
+            {
+              "rank": 48,
+              "title": "エミリとマリア"
+            },
+            {
+              "rank": 49,
               "title": "タイムレスマン"
             }
           ]
@@ -3585,7 +3597,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/26 04:26",
+      "updatedAt": "2026/06/26 05:23",
       "episodeId": "ep67r77z31",
       "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
       "likes": "1.8万",
@@ -6060,7 +6072,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "プレバト！！"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 48,
@@ -6609,15 +6621,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "タイムレスマン"
-            },
-            {
-              "rank": 48,
               "title": "韓国ドラマ「テプンの花嫁～愛と復讐の羅針盤」"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "エミリとマリア"
+            },
+            {
+              "rank": 49,
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
@@ -6630,10 +6642,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/23",
-      "updatedAt": "2026/06/26 04:26",
+      "updatedAt": "2026/06/26 05:23",
       "episodeId": "epptze25tv",
       "subtitle": "チョコプラ・timeleszが\"絶対に滑らない靴\"なら、ヌルヌルの坂でもお芝居できる？",
-      "likes": "7011",
+      "likes": "7014",
       "favorites": "5.2万",
       "likePoints": [
         {
@@ -6843,6 +6855,10 @@
         {
           "hour": 52,
           "likes": 7011
+        },
+        {
+          "hour": 53,
+          "likes": 7014
         }
       ],
       "previousLikePoints": [
@@ -7527,9 +7543,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 21,
-          "elapsedHour": 52,
-          "elapsedRank": 21,
+          "currentRank": 20,
+          "elapsedHour": 53,
+          "elapsedRank": 20,
           "currentPoints": [
             {
               "hour": 6,
@@ -7714,6 +7730,10 @@
             {
               "hour": 52,
               "rank": 21
+            },
+            {
+              "hour": 53,
+              "rank": 20
             }
           ],
           "previousPoints": [
@@ -8132,6 +8152,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 17,
+              "title": "バナナマンのせっかくグルメ!!"
+            },
+            {
               "rank": 18,
               "title": "探偵！ナイトスクープ"
             },
@@ -8141,10 +8165,6 @@
             },
             {
               "rank": 20,
-              "title": "よるのブランチ"
-            },
-            {
-              "rank": 21,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -8338,7 +8358,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "プレバト！！"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 48,
@@ -8359,10 +8379,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/25",
-      "updatedAt": "2026/06/26 04:26",
+      "updatedAt": "2026/06/26 05:23",
       "episodeId": "epsxholvzn",
       "subtitle": "【奇跡連発】書く漢字を予想しろ！",
-      "likes": "8083",
+      "likes": "8105",
       "favorites": "22.7万",
       "likePoints": [
         {
@@ -8468,6 +8488,10 @@
         {
           "hour": 26,
           "likes": 8083
+        },
+        {
+          "hour": 27,
+          "likes": 8105
         }
       ],
       "previousLikePoints": [
@@ -9149,7 +9173,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 10,
-          "elapsedHour": 26,
+          "elapsedHour": 27,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -9222,6 +9246,10 @@
             },
             {
               "hour": 26,
+              "rank": 10
+            },
+            {
+              "hour": 27,
               "rank": 10
             }
           ],
@@ -9530,7 +9558,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 16,
-          "elapsedHour": 26,
+          "elapsedHour": 27,
           "elapsedRank": 16,
           "currentPoints": [
             {
@@ -9591,6 +9619,10 @@
             },
             {
               "hour": 26,
+              "rank": 16
+            },
+            {
+              "hour": 27,
               "rank": 16
             }
           ],
@@ -9748,10 +9780,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/06/21",
-      "updatedAt": "2026/06/26 04:26",
+      "updatedAt": "2026/06/26 05:23",
       "episodeId": "epec0g36d1",
       "subtitle": "放送1000回記念SP!福島の田植えにメンバー勢揃い!",
-      "likes": "8489",
+      "likes": "8493",
       "favorites": "52.1万",
       "likePoints": [
         {
@@ -10169,6 +10201,10 @@
         {
           "hour": 105,
           "likes": 8489
+        },
+        {
+          "hour": 106,
+          "likes": 8493
         }
       ],
       "previousLikePoints": [],
@@ -10177,7 +10213,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 29,
-          "elapsedHour": 105,
+          "elapsedHour": 106,
           "elapsedRank": 29,
           "currentPoints": [
             {
@@ -10591,17 +10627,21 @@
             {
               "hour": 105,
               "rank": 29
+            },
+            {
+              "hour": 106,
+              "rank": 29
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 26,
-              "title": "日本くらべてみたら"
+              "title": "キテレツキテル！？"
             },
             {
               "rank": 27,
-              "title": "限界突破！やってM!LK"
+              "title": "日本くらべてみたら"
             },
             {
               "rank": 28,
@@ -10809,7 +10849,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "プレバト！！"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 48,
@@ -10830,7 +10870,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/06/26 04:26",
+      "updatedAt": "2026/06/26 05:23",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
       "likes": "3831",
@@ -12143,7 +12183,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "プレバト！！"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 48,
@@ -12399,15 +12439,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "タイムレスマン"
-            },
-            {
-              "rank": 48,
               "title": "韓国ドラマ「テプンの花嫁～愛と復讐の羅針盤」"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "エミリとマリア"
+            },
+            {
+              "rank": 49,
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
@@ -12420,7 +12460,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/06/26 04:26",
+      "updatedAt": "2026/06/26 05:23",
       "episodeId": "epgzv08t7a",
       "subtitle": "MC復帰菊池風磨＆畑芽育！ＭＡＺＺＥＬが苦悩の日々を告白！",
       "likes": "1.5万",
@@ -12628,6 +12668,10 @@
         },
         {
           "hour": 51,
+          "likes": 15000
+        },
+        {
+          "hour": 52,
           "likes": 15000
         }
       ],
@@ -13728,10 +13772,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/26",
-      "updatedAt": "2026/06/26 04:26",
+      "updatedAt": "2026/06/26 05:23",
       "episodeId": "epg05z6v49",
       "subtitle": "第133回 真剣勝負あっち向いてホイで迷惑行為疑惑が！？",
-      "likes": "265",
+      "likes": "292",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -13748,7 +13792,7 @@
         },
         {
           "hour": 4,
-          "likes": 265
+          "likes": 292
         }
       ],
       "previousLikePoints": [
@@ -14534,7 +14578,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "プレバト！！"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 48,
@@ -14650,15 +14694,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "タイムレスマン"
-            },
-            {
-              "rank": 48,
               "title": "韓国ドラマ「テプンの花嫁～愛と復讐の羅針盤」"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "エミリとマリア"
+            },
+            {
+              "rank": 49,
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
@@ -14671,7 +14715,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/13",
-      "updatedAt": "2026/06/26 04:26",
+      "updatedAt": "2026/06/26 05:23",
       "episodeId": "epq7u4dq8k",
       "subtitle": "お泊りロケの家族は指名手配（秘）犯人SP前編",
       "likes": "9388",
@@ -16058,7 +16102,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "プレバト！！"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 48,
@@ -16415,15 +16459,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "タイムレスマン"
-            },
-            {
-              "rank": 48,
               "title": "韓国ドラマ「テプンの花嫁～愛と復讐の羅針盤」"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "エミリとマリア"
+            },
+            {
+              "rank": 49,
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
@@ -16436,7 +16480,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/26 04:26",
+      "updatedAt": "2026/06/26 05:23",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
@@ -19131,7 +19175,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "中国時代劇「驪妃（りひ）-The Song of Glory-」"
+              "title": "水曜日、私の夫に抱かれてください"
             },
             {
               "rank": 48,
@@ -19139,7 +19183,7 @@
             },
             {
               "rank": 49,
-              "title": "君の好きは無敵"
+              "title": "中国時代劇「驪妃（りひ）-The Song of Glory-」"
             },
             {
               "rank": 50,
@@ -20304,15 +20348,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "タイムレスマン"
-            },
-            {
-              "rank": 48,
               "title": "韓国ドラマ「テプンの花嫁～愛と復讐の羅針盤」"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "エミリとマリア"
+            },
+            {
+              "rank": 49,
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
@@ -20325,10 +20369,10 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/06/26 04:26",
+      "updatedAt": "2026/06/26 05:23",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
-      "likes": "8963",
+      "likes": "8964",
       "favorites": "22.6万",
       "likePoints": [
         {
@@ -20530,6 +20574,10 @@
         {
           "hour": 49,
           "likes": 8963
+        },
+        {
+          "hour": 50,
+          "likes": 8964
         }
       ],
       "previousLikePoints": [
@@ -21516,7 +21564,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "プレバト！！"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 48,
@@ -21669,15 +21717,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "タイムレスマン"
-            },
-            {
-              "rank": 48,
               "title": "韓国ドラマ「テプンの花嫁～愛と復讐の羅針盤」"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "エミリとマリア"
+            },
+            {
+              "rank": 49,
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
@@ -21690,10 +21738,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/23",
-      "updatedAt": "2026/06/26 04:26",
+      "updatedAt": "2026/06/26 05:23",
       "episodeId": "eph69ykxq1",
       "subtitle": "-40歳アイドル、デビューなし。でも幸せ-",
-      "likes": "1202",
+      "likes": "1204",
       "favorites": "2.1万",
       "likePoints": [
         {
@@ -21995,6 +22043,10 @@
         {
           "hour": 74,
           "likes": 1202
+        },
+        {
+          "hour": 75,
+          "likes": 1204
         }
       ],
       "previousLikePoints": [
@@ -22901,11 +22953,11 @@
             },
             {
               "rank": 49,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 50,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "千鳥かまいたちゴールデンアワー"
             }
           ]
         },
@@ -22969,7 +23021,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "プレバト！！"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 48,
@@ -22990,10 +23042,10 @@
     "srwe52o8i3": {
       "programTitle": "世界くらべてみたら",
       "broadcastDate": "2026/06/22",
-      "updatedAt": "2026/06/26 04:26",
+      "updatedAt": "2026/06/26 05:23",
       "episodeId": "ep80kdm92w",
       "subtitle": "日本くらべてみたら 都会と地方の女子校生が交換留学 牛角売上ランキング",
-      "likes": "1833",
+      "likes": "1835",
       "favorites": "28.8万",
       "likePoints": [
         {
@@ -23303,6 +23355,10 @@
         {
           "hour": 81,
           "likes": 1833
+        },
+        {
+          "hour": 82,
+          "likes": 1835
         }
       ],
       "previousLikePoints": [],
@@ -23310,9 +23366,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 26,
-          "elapsedHour": 81,
-          "elapsedRank": 26,
+          "currentRank": 27,
+          "elapsedHour": 82,
+          "elapsedRank": 27,
           "currentPoints": [
             {
               "hour": 16,
@@ -23573,6 +23629,10 @@
             {
               "hour": 81,
               "rank": 26
+            },
+            {
+              "hour": 82,
+              "rank": 27
             }
           ],
           "previousPoints": [
@@ -24243,19 +24303,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 23,
+              "rank": 24,
               "title": "世界まる見え！テレビ特捜部"
             },
             {
-              "rank": 24,
+              "rank": 25,
               "title": "ぐるぐるナインティナイン"
             },
             {
-              "rank": 25,
+              "rank": 26,
               "title": "キテレツキテル！？"
             },
             {
-              "rank": 26,
+              "rank": 27,
               "title": "日本くらべてみたら"
             }
           ]
@@ -24513,7 +24573,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "プレバト！！"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 48,
