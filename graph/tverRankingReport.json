@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/28 14:31",
+  "updatedAt": "2026/06/28 15:22",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/26",
-      "updatedAt": "2026/06/28 14:31",
+      "updatedAt": "2026/06/28 15:22",
       "episodeId": "epti1km4bl",
       "subtitle": "全員で連帯責任！腹ペコ2択マン",
       "likes": "1.0万",
@@ -164,6 +164,10 @@
         },
         {
           "hour": 40,
+          "likes": 10000
+        },
+        {
+          "hour": 41,
           "likes": 10000
         }
       ],
@@ -838,7 +842,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 7,
-          "elapsedHour": 40,
+          "elapsedHour": 41,
           "elapsedRank": 7,
           "currentPoints": [
             {
@@ -983,6 +987,10 @@
             },
             {
               "hour": 40,
+              "rank": 7
+            },
+            {
+              "hour": 41,
               "rank": 7
             }
           ],
@@ -1663,7 +1671,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 13,
-          "elapsedHour": 40,
+          "elapsedHour": 41,
           "elapsedRank": 13,
           "currentPoints": [
             {
@@ -1788,6 +1796,10 @@
             },
             {
               "hour": 40,
+              "rank": 13
+            },
+            {
+              "hour": 41,
               "rank": 13
             }
           ],
@@ -2400,13 +2412,19 @@
     },
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
-      "broadcastDate": "2026/06/07",
-      "updatedAt": "2026/06/28 14:31",
-      "episodeId": "ep67r77z31",
-      "subtitle": "【何個わかる？令和高校生の常識】学生文化の今昔でクイズ！",
-      "likes": "1.8万",
+      "broadcastDate": "2026/06/28",
+      "updatedAt": "2026/06/28 15:22",
+      "episodeId": "ep0i1czejb",
+      "subtitle": "【家族みんなで楽しい!ディズニー/ピクサー秘密SP】",
+      "likes": "717",
       "favorites": "33.1万",
       "likePoints": [
+        {
+          "hour": 1,
+          "likes": 717
+        }
+      ],
+      "previousLikePoints": [
         {
           "hour": 1,
           "likes": 826
@@ -3080,7 +3098,6 @@
           "likes": 16000
         }
       ],
-      "previousLikePoints": [],
       "rankings": [
         {
           "type": "variety",
@@ -3088,7 +3105,8 @@
           "currentRank": null,
           "elapsedHour": null,
           "elapsedRank": null,
-          "currentPoints": [
+          "currentPoints": [],
+          "previousPoints": [
             {
               "hour": 3,
               "rank": 50
@@ -3658,15 +3676,14 @@
               "rank": 50
             }
           ],
-          "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EIGHT-JAM"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 48,
-              "title": "あっちこっちAぇ!"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 49,
@@ -3674,7 +3691,7 @@
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "一茂×かまいたち ゲンバ"
             }
           ]
         },
@@ -3684,7 +3701,8 @@
           "currentRank": null,
           "elapsedHour": null,
           "elapsedRank": null,
-          "currentPoints": [
+          "currentPoints": [],
+          "previousPoints": [
             {
               "hour": 7,
               "rank": 46
@@ -3962,7 +3980,6 @@
               "rank": 50
             }
           ],
-          "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 47,
@@ -3970,15 +3987,15 @@
             },
             {
               "rank": 48,
-              "title": "名探偵プリキュア！"
+              "title": "A-Studio＋"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "人生最高レストラン"
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "有吉クイズ"
             }
           ]
         }
@@ -3987,10 +4004,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/23",
-      "updatedAt": "2026/06/28 14:31",
+      "updatedAt": "2026/06/28 15:22",
       "episodeId": "epptze25tv",
       "subtitle": "チョコプラ・timeleszが\"絶対に滑らない靴\"なら、ヌルヌルの坂でもお芝居できる？",
-      "likes": "7985",
+      "likes": "7998",
       "favorites": "5.2万",
       "likePoints": [
         {
@@ -4424,6 +4441,10 @@
         {
           "hour": 110,
           "likes": 7985
+        },
+        {
+          "hour": 111,
+          "likes": 7998
         }
       ],
       "previousLikePoints": [
@@ -5918,15 +5939,15 @@
             },
             {
               "rank": 48,
-              "title": "日本くらべてみたら"
+              "title": "大阪43市町村を大調査！誰も知らんキング"
             },
             {
               "rank": 49,
-              "title": "タカトシ温水の路線バスで！"
+              "title": "日本くらべてみたら"
             },
             {
               "rank": 50,
-              "title": "大阪43市町村を大調査！誰も知らんキング"
+              "title": "王様のブランチ"
             }
           ]
         },
@@ -6119,11 +6140,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EIGHT-JAM"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 48,
-              "title": "あっちこっちAぇ!"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 49,
@@ -6131,7 +6152,7 @@
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "一茂×かまいたち ゲンバ"
             }
           ]
         }
@@ -6140,7 +6161,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/25",
-      "updatedAt": "2026/06/28 14:31",
+      "updatedAt": "2026/06/28 15:22",
       "episodeId": "epsxholvzn",
       "subtitle": "【奇跡連発】書く漢字を予想しろ！",
       "likes": "1.1万",
@@ -6472,6 +6493,10 @@
         },
         {
           "hour": 84,
+          "likes": 11000
+        },
+        {
+          "hour": 85,
           "likes": 11000
         }
       ],
@@ -7723,11 +7748,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EIGHT-JAM"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 48,
-              "title": "あっちこっちAぇ!"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 49,
@@ -7735,7 +7760,7 @@
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "一茂×かまいたち ゲンバ"
             }
           ]
         },
@@ -8068,15 +8093,15 @@
             },
             {
               "rank": 48,
-              "title": "名探偵プリキュア！"
+              "title": "A-Studio＋"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "人生最高レストラン"
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "有吉クイズ"
             }
           ]
         }
@@ -8085,10 +8110,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/06/21",
-      "updatedAt": "2026/06/28 14:31",
+      "updatedAt": "2026/06/28 15:22",
       "episodeId": "epec0g36d1",
       "subtitle": "放送1000回記念SP!福島の田植えにメンバー勢揃い!",
-      "likes": "9806",
+      "likes": "9848",
       "favorites": "52.1万",
       "likePoints": [
         {
@@ -8730,6 +8755,10 @@
         {
           "hour": 163,
           "likes": 9806
+        },
+        {
+          "hour": 164,
+          "likes": 9848
         }
       ],
       "previousLikePoints": [],
@@ -8737,9 +8766,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 32,
-          "elapsedHour": 163,
-          "elapsedRank": 32,
+          "currentRank": 31,
+          "elapsedHour": 164,
+          "elapsedRank": 31,
           "currentPoints": [
             {
               "hour": 2,
@@ -9380,10 +9409,18 @@
             {
               "hour": 163,
               "rank": 32
+            },
+            {
+              "hour": 164,
+              "rank": 31
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
+            {
+              "rank": 28,
+              "title": "バナナマンのせっかくグルメ!!"
+            },
             {
               "rank": 29,
               "title": "バナナマンの早起きせっかくグルメ!!"
@@ -9394,10 +9431,6 @@
             },
             {
               "rank": 31,
-              "title": "知識の扉よ開け！ドア×ドア クエスト"
-            },
-            {
-              "rank": 32,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -9598,11 +9631,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EIGHT-JAM"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 48,
-              "title": "あっちこっちAぇ!"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 49,
@@ -9610,7 +9643,7 @@
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "一茂×かまいたち ゲンバ"
             }
           ]
         }
@@ -9619,7 +9652,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/06/28 14:31",
+      "updatedAt": "2026/06/28 15:22",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
       "likes": "3831",
@@ -10932,11 +10965,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EIGHT-JAM"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 48,
-              "title": "あっちこっちAぇ!"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 49,
@@ -10944,7 +10977,7 @@
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "一茂×かまいたち ゲンバ"
             }
           ]
         },
@@ -11192,15 +11225,15 @@
             },
             {
               "rank": 48,
-              "title": "名探偵プリキュア！"
+              "title": "A-Studio＋"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "人生最高レストラン"
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "有吉クイズ"
             }
           ]
         }
@@ -11209,7 +11242,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/06/28 14:31",
+      "updatedAt": "2026/06/28 15:22",
       "episodeId": "epgzv08t7a",
       "subtitle": "MC復帰菊池風磨＆畑芽育！ＭＡＺＺＥＬが苦悩の日々を告白！",
       "likes": "1.7万",
@@ -11641,6 +11674,10 @@
         },
         {
           "hour": 109,
+          "likes": 17000
+        },
+        {
+          "hour": 110,
           "likes": 17000
         }
       ],
@@ -12648,11 +12685,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EIGHT-JAM"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 48,
-              "title": "あっちこっちAぇ!"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 49,
@@ -12660,7 +12697,7 @@
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "一茂×かまいたち ゲンバ"
             }
           ]
         },
@@ -12904,15 +12941,15 @@
             },
             {
               "rank": 48,
-              "title": "名探偵プリキュア！"
+              "title": "A-Studio＋"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "人生最高レストラン"
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "有吉クイズ"
             }
           ]
         }
@@ -12921,10 +12958,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/26",
-      "updatedAt": "2026/06/28 14:31",
+      "updatedAt": "2026/06/28 15:22",
       "episodeId": "epg05z6v49",
       "subtitle": "第133回 真剣勝負あっち向いてホイで迷惑行為疑惑が！？",
-      "likes": "3157",
+      "likes": "3177",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -13117,7 +13154,7 @@
         },
         {
           "hour": 62,
-          "likes": 3157
+          "likes": 3177
         }
       ],
       "previousLikePoints": [
@@ -14020,11 +14057,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EIGHT-JAM"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 48,
-              "title": "あっちこっちAぇ!"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 49,
@@ -14032,7 +14069,7 @@
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "一茂×かまいたち ゲンバ"
             }
           ]
         },
@@ -14197,15 +14234,15 @@
             },
             {
               "rank": 48,
-              "title": "名探偵プリキュア！"
+              "title": "A-Studio＋"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "人生最高レストラン"
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "有吉クイズ"
             }
           ]
         }
@@ -14214,10 +14251,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/06/28 14:31",
+      "updatedAt": "2026/06/28 15:22",
       "episodeId": "epzd8603yf",
       "subtitle": "高橋成美は神ドッキリスターなのかSP 前編",
-      "likes": "982",
+      "likes": "1024",
       "favorites": "77.9万",
       "likePoints": [
         {
@@ -14287,6 +14324,10 @@
         {
           "hour": 19,
           "likes": 982
+        },
+        {
+          "hour": 20,
+          "likes": 1024
         }
       ],
       "previousLikePoints": [
@@ -14683,9 +14724,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 13,
-          "elapsedHour": 19,
-          "elapsedRank": 13,
+          "currentRank": 12,
+          "elapsedHour": 20,
+          "elapsedRank": 12,
           "currentPoints": [
             {
               "hour": 7,
@@ -14738,6 +14779,10 @@
             {
               "hour": 19,
               "rank": 13
+            },
+            {
+              "hour": 20,
+              "rank": 12
             }
           ],
           "previousPoints": [
@@ -15116,6 +15161,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 9,
+              "title": "かまいたちの机上の空論城"
+            },
+            {
               "rank": 10,
               "title": "探偵！ナイトスクープ"
             },
@@ -15125,10 +15174,6 @@
             },
             {
               "rank": 12,
-              "title": "ミキティダイニング"
-            },
-            {
-              "rank": 13,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -15136,9 +15181,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 23,
-          "elapsedHour": 19,
-          "elapsedRank": 23,
+          "currentRank": 21,
+          "elapsedHour": 20,
+          "elapsedRank": 21,
           "currentPoints": [
             {
               "hour": 14,
@@ -15163,6 +15208,10 @@
             {
               "hour": 19,
               "rank": 23
+            },
+            {
+              "hour": 20,
+              "rank": 21
             }
           ],
           "previousPoints": [
@@ -15425,19 +15474,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 18,
+              "title": "LOVED ONE"
+            },
+            {
+              "rank": 19,
+              "title": "探偵！ナイトスクープ"
+            },
+            {
               "rank": 20,
               "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 21,
-              "title": "ミキティダイニング"
-            },
-            {
-              "rank": 22,
-              "title": "夫婦別姓刑事"
-            },
-            {
-              "rank": 23,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -15447,7 +15496,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/28 14:31",
+      "updatedAt": "2026/06/28 15:22",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
@@ -18142,19 +18191,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ブラックペアン シーズン２"
+              "title": "夏の新ドラマ合体 みどころSP"
             },
             {
               "rank": 48,
-              "title": "松本清張シリーズ"
+              "title": "相棒 season2"
             },
             {
               "rank": 49,
-              "title": "ＧＩＦＴ"
+              "title": "ブラックペアン シーズン２"
             },
             {
               "rank": 50,
-              "title": "ピュア"
+              "title": "ＧＩＦＴ"
             }
           ]
         },
@@ -19319,15 +19368,15 @@
             },
             {
               "rank": 48,
-              "title": "名探偵プリキュア！"
+              "title": "A-Studio＋"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "人生最高レストラン"
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "有吉クイズ"
             }
           ]
         }
@@ -19336,7 +19385,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/06/28 14:31",
+      "updatedAt": "2026/06/28 15:22",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
       "likes": "1.0万",
@@ -19764,6 +19813,10 @@
         },
         {
           "hour": 107,
+          "likes": 10000
+        },
+        {
+          "hour": 108,
           "likes": 10000
         }
       ],
@@ -20751,11 +20804,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EIGHT-JAM"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 48,
-              "title": "あっちこっちAぇ!"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 49,
@@ -20763,7 +20816,7 @@
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "一茂×かまいたち ゲンバ"
             }
           ]
         },
@@ -20908,15 +20961,15 @@
             },
             {
               "rank": 48,
-              "title": "名探偵プリキュア！"
+              "title": "A-Studio＋"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "人生最高レストラン"
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "有吉クイズ"
             }
           ]
         }
@@ -20925,10 +20978,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/23",
-      "updatedAt": "2026/06/28 14:31",
+      "updatedAt": "2026/06/28 15:22",
       "episodeId": "eph69ykxq1",
       "subtitle": "-40歳アイドル、デビューなし。でも幸せ-",
-      "likes": "1551",
+      "likes": "1558",
       "favorites": "2.1万",
       "likePoints": [
         {
@@ -21454,6 +21507,10 @@
         {
           "hour": 132,
           "likes": 1551
+        },
+        {
+          "hour": 133,
+          "likes": 1558
         }
       ],
       "previousLikePoints": [
@@ -22352,11 +22409,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "吉田と粗品と"
+              "title": "相葉◎×部"
             },
             {
               "rank": 48,
-              "title": "相葉◎×部"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 49,
@@ -22428,11 +22485,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EIGHT-JAM"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 48,
-              "title": "あっちこっちAぇ!"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 49,
@@ -22440,7 +22497,7 @@
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "一茂×かまいたち ゲンバ"
             }
           ]
         }
@@ -22449,10 +22506,10 @@
     "srwe52o8i3": {
       "programTitle": "世界くらべてみたら",
       "broadcastDate": "2026/06/22",
-      "updatedAt": "2026/06/28 14:31",
+      "updatedAt": "2026/06/28 15:22",
       "episodeId": "ep80kdm92w",
       "subtitle": "日本くらべてみたら 都会と地方の女子校生が交換留学 牛角売上ランキング",
-      "likes": "2073",
+      "likes": "2074",
       "favorites": "28.9万",
       "likePoints": [
         {
@@ -22986,6 +23043,10 @@
         {
           "hour": 139,
           "likes": 2073
+        },
+        {
+          "hour": 140,
+          "likes": 2074
         }
       ],
       "previousLikePoints": [],
@@ -22993,9 +23054,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 48,
-          "elapsedHour": 139,
-          "elapsedRank": 48,
+          "currentRank": 49,
+          "elapsedHour": 140,
+          "elapsedRank": 49,
           "currentPoints": [
             {
               "hour": 16,
@@ -23484,6 +23545,10 @@
             {
               "hour": 139,
               "rank": 48
+            },
+            {
+              "hour": 140,
+              "rank": 49
             }
           ],
           "previousPoints": [
@@ -24154,10 +24219,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 45,
-              "title": "本日はダイアンなり！シーズン3"
-            },
-            {
               "rank": 46,
               "title": "ぐるぐるナインティナイン"
             },
@@ -24167,6 +24228,10 @@
             },
             {
               "rank": 48,
+              "title": "大阪43市町村を大調査！誰も知らんキング"
+            },
+            {
+              "rank": 49,
               "title": "日本くらべてみたら"
             }
           ]
@@ -24424,11 +24489,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EIGHT-JAM"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 48,
-              "title": "あっちこっちAぇ!"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 49,
@@ -24436,7 +24501,7 @@
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "一茂×かまいたち ゲンバ"
             }
           ]
         }
