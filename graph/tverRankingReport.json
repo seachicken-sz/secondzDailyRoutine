@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/28 19:24",
+  "updatedAt": "2026/06/28 20:23",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/26",
-      "updatedAt": "2026/06/28 19:24",
+      "updatedAt": "2026/06/28 20:23",
       "episodeId": "epti1km4bl",
       "subtitle": "全員で連帯責任！腹ペコ2択マン",
       "likes": "1.0万",
@@ -184,6 +184,10 @@
         },
         {
           "hour": 45,
+          "likes": 10000
+        },
+        {
+          "hour": 46,
           "likes": 10000
         }
       ],
@@ -857,9 +861,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 9,
-          "elapsedHour": 45,
-          "elapsedRank": 9,
+          "currentRank": 10,
+          "elapsedHour": 46,
+          "elapsedRank": 10,
           "currentPoints": [
             {
               "hour": 5,
@@ -1024,6 +1028,10 @@
             {
               "hour": 45,
               "rank": 9
+            },
+            {
+              "hour": 46,
+              "rank": 10
             }
           ],
           "previousPoints": [
@@ -1682,19 +1690,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 6,
-              "title": "月曜から夜ふかし"
-            },
-            {
               "rank": 7,
-              "title": "かまいたちの机上の空論城"
-            },
-            {
-              "rank": 8,
               "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
+              "rank": 8,
+              "title": "かまいたちの机上の空論城"
+            },
+            {
               "rank": 9,
+              "title": "かまいたちの知らんけど"
+            },
+            {
+              "rank": 10,
               "title": "タイムレスマン"
             }
           ]
@@ -1702,9 +1710,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 17,
-          "elapsedHour": 45,
-          "elapsedRank": 17,
+          "currentRank": 18,
+          "elapsedHour": 46,
+          "elapsedRank": 18,
           "currentPoints": [
             {
               "hour": 10,
@@ -1849,6 +1857,10 @@
             {
               "hour": 45,
               "rank": 17
+            },
+            {
+              "hour": 46,
+              "rank": 18
             }
           ],
           "previousPoints": [
@@ -2439,12 +2451,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 14,
-              "title": "かまいたちの机上の空論城"
-            },
-            {
               "rank": 15,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 16,
@@ -2452,6 +2460,10 @@
             },
             {
               "rank": 17,
+              "title": "かまいたちの知らんけど"
+            },
+            {
+              "rank": 18,
               "title": "タイムレスマン"
             }
           ]
@@ -2461,10 +2473,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/06/28 19:24",
+      "updatedAt": "2026/06/28 20:23",
       "episodeId": "ep0i1czejb",
       "subtitle": "【家族みんなで楽しい!ディズニー/ピクサー秘密SP】",
-      "likes": "3903",
+      "likes": "4595",
       "favorites": "33.1万",
       "likePoints": [
         {
@@ -2486,6 +2498,10 @@
         {
           "hour": 5,
           "likes": 3903
+        },
+        {
+          "hour": 6,
+          "likes": 4595
         }
       ],
       "previousLikePoints": [
@@ -3166,13 +3182,17 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 41,
-          "elapsedHour": 5,
-          "elapsedRank": 41,
+          "currentRank": 28,
+          "elapsedHour": 6,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 5,
               "rank": 41
+            },
+            {
+              "hour": 6,
+              "rank": 28
             }
           ],
           "previousPoints": [
@@ -3747,19 +3767,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 38,
-              "title": "全力！脱力タイムズ"
+              "rank": 25,
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
-              "rank": 39,
-              "title": "クレイジージャーニー"
+              "rank": 26,
+              "title": "なにわ男子の逆転男子"
             },
             {
-              "rank": 40,
-              "title": "櫻井･有吉THE夜会"
+              "rank": 27,
+              "title": "踊る！さんま御殿!!"
             },
             {
-              "rank": 41,
+              "rank": 28,
               "title": "timeleszファミリア"
             }
           ]
@@ -3767,10 +3787,15 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 50,
+          "elapsedHour": 6,
+          "elapsedRank": 50,
+          "currentPoints": [
+            {
+              "hour": 6,
+              "rank": 50
+            }
+          ],
           "previousPoints": [
             {
               "hour": 7,
@@ -4052,19 +4077,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "The Fashion Post"
             },
             {
               "rank": 48,
-              "title": "沸騰ワード10"
+              "title": "本好きの下剋上 領主の養女"
             },
             {
               "rank": 49,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 50,
-              "title": "Ｎのために"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -4073,10 +4098,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/23",
-      "updatedAt": "2026/06/28 19:24",
+      "updatedAt": "2026/06/28 20:23",
       "episodeId": "epptze25tv",
       "subtitle": "チョコプラ・timeleszが\"絶対に滑らない靴\"なら、ヌルヌルの坂でもお芝居できる？",
-      "likes": "8066",
+      "likes": "8083",
       "favorites": "5.2万",
       "likePoints": [
         {
@@ -4530,6 +4555,10 @@
         {
           "hour": 115,
           "likes": 8066
+        },
+        {
+          "hour": 116,
+          "likes": 8083
         }
       ],
       "previousLikePoints": [
@@ -6020,7 +6049,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ぐるぐるナインティナイン"
+              "title": "※女性は見ないでください"
             },
             {
               "rank": 48,
@@ -6028,7 +6057,7 @@
             },
             {
               "rank": 49,
-              "title": "※女性は見ないでください"
+              "title": "グッと！地球便"
             },
             {
               "rank": 50,
@@ -6225,19 +6254,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千原ジュニアの座王"
-            },
-            {
-              "rank": 48,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 48,
+              "title": "千原ジュニアの座王"
+            },
+            {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "がっちりマンデー!!"
             },
             {
               "rank": 50,
-              "title": "夜明けのラヴィット！"
+              "title": "夫が寝たあとに"
             }
           ]
         }
@@ -6246,7 +6275,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/25",
-      "updatedAt": "2026/06/28 19:24",
+      "updatedAt": "2026/06/28 20:23",
       "episodeId": "epsxholvzn",
       "subtitle": "【奇跡連発】書く漢字を予想しろ！",
       "likes": "1.1万",
@@ -6598,6 +6627,10 @@
         },
         {
           "hour": 89,
+          "likes": 11000
+        },
+        {
+          "hour": 90,
           "likes": 11000
         }
       ],
@@ -7849,19 +7882,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千原ジュニアの座王"
-            },
-            {
-              "rank": 48,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 48,
+              "title": "千原ジュニアの座王"
+            },
+            {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "がっちりマンデー!!"
             },
             {
               "rank": 50,
-              "title": "夜明けのラヴィット！"
+              "title": "夫が寝たあとに"
             }
           ]
         },
@@ -8190,19 +8223,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "The Fashion Post"
             },
             {
               "rank": 48,
-              "title": "沸騰ワード10"
+              "title": "本好きの下剋上 領主の養女"
             },
             {
               "rank": 49,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 50,
-              "title": "Ｎのために"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -8211,7 +8244,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/06/28 19:24",
+      "updatedAt": "2026/06/28 20:23",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
       "likes": "3831",
@@ -9524,19 +9557,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千原ジュニアの座王"
-            },
-            {
-              "rank": 48,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 48,
+              "title": "千原ジュニアの座王"
+            },
+            {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "がっちりマンデー!!"
             },
             {
               "rank": 50,
-              "title": "夜明けのラヴィット！"
+              "title": "夫が寝たあとに"
             }
           ]
         },
@@ -9780,19 +9813,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "The Fashion Post"
             },
             {
               "rank": 48,
-              "title": "沸騰ワード10"
+              "title": "本好きの下剋上 領主の養女"
             },
             {
               "rank": 49,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 50,
-              "title": "Ｎのために"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -9801,7 +9834,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/06/28 19:24",
+      "updatedAt": "2026/06/28 20:23",
       "episodeId": "epgzv08t7a",
       "subtitle": "MC復帰菊池風磨＆畑芽育！ＭＡＺＺＥＬが苦悩の日々を告白！",
       "likes": "1.7万",
@@ -10253,6 +10286,10 @@
         },
         {
           "hour": 114,
+          "likes": 17000
+        },
+        {
+          "hour": 115,
           "likes": 17000
         }
       ],
@@ -11260,19 +11297,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千原ジュニアの座王"
-            },
-            {
-              "rank": 48,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 48,
+              "title": "千原ジュニアの座王"
+            },
+            {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "がっちりマンデー!!"
             },
             {
               "rank": 50,
-              "title": "夜明けのラヴィット！"
+              "title": "夫が寝たあとに"
             }
           ]
         },
@@ -11512,19 +11549,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "The Fashion Post"
             },
             {
               "rank": 48,
-              "title": "沸騰ワード10"
+              "title": "本好きの下剋上 領主の養女"
             },
             {
               "rank": 49,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 50,
-              "title": "Ｎのために"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -11533,10 +11570,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/26",
-      "updatedAt": "2026/06/28 19:24",
+      "updatedAt": "2026/06/28 20:23",
       "episodeId": "epg05z6v49",
       "subtitle": "第133回 真剣勝負あっち向いてホイで迷惑行為疑惑が！？",
-      "likes": "3238",
+      "likes": "3245",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -11742,6 +11779,10 @@
         {
           "hour": 66,
           "likes": 3238
+        },
+        {
+          "hour": 67,
+          "likes": 3245
         }
       ],
       "previousLikePoints": [
@@ -12644,19 +12685,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千原ジュニアの座王"
-            },
-            {
-              "rank": 48,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 48,
+              "title": "千原ジュニアの座王"
+            },
+            {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "がっちりマンデー!!"
             },
             {
               "rank": 50,
-              "title": "夜明けのラヴィット！"
+              "title": "夫が寝たあとに"
             }
           ]
         },
@@ -12817,19 +12858,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "The Fashion Post"
             },
             {
               "rank": 48,
-              "title": "沸騰ワード10"
+              "title": "本好きの下剋上 領主の養女"
             },
             {
               "rank": 49,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 50,
-              "title": "Ｎのために"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -12838,10 +12879,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/06/28 19:24",
+      "updatedAt": "2026/06/28 20:23",
       "episodeId": "epzd8603yf",
       "subtitle": "高橋成美は神ドッキリスターなのかSP 前編",
-      "likes": "1200",
+      "likes": "1241",
       "favorites": "77.9万",
       "likePoints": [
         {
@@ -12931,6 +12972,10 @@
         {
           "hour": 24,
           "likes": 1200
+        },
+        {
+          "hour": 25,
+          "likes": 1241
         }
       ],
       "previousLikePoints": [
@@ -13327,9 +13372,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 8,
-          "elapsedHour": 24,
-          "elapsedRank": 8,
+          "currentRank": 7,
+          "elapsedHour": 25,
+          "elapsedRank": 7,
           "currentPoints": [
             {
               "hour": 7,
@@ -13402,6 +13447,10 @@
             {
               "hour": 24,
               "rank": 8
+            },
+            {
+              "hour": 25,
+              "rank": 7
             }
           ],
           "previousPoints": [
@@ -13780,6 +13829,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 4,
+              "title": "ハマダ歌謡祭★オオカミ少年"
+            },
+            {
               "rank": 5,
               "title": "マツコ＆有吉 かりそめ天国"
             },
@@ -13789,10 +13842,6 @@
             },
             {
               "rank": 7,
-              "title": "かまいたちの机上の空論城"
-            },
-            {
-              "rank": 8,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -13800,9 +13849,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 15,
-          "elapsedHour": 24,
-          "elapsedRank": 15,
+          "currentRank": 13,
+          "elapsedHour": 25,
+          "elapsedRank": 13,
           "currentPoints": [
             {
               "hour": 14,
@@ -13847,6 +13896,10 @@
             {
               "hour": 24,
               "rank": 15
+            },
+            {
+              "hour": 25,
+              "rank": 13
             }
           ],
           "previousPoints": [
@@ -14109,19 +14162,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 10,
+              "title": "ハマダ歌謡祭★オオカミ少年"
+            },
+            {
+              "rank": 11,
+              "title": "マツコ＆有吉 かりそめ天国"
+            },
+            {
               "rank": 12,
               "title": "月曜から夜ふかし"
             },
             {
               "rank": 13,
-              "title": "銀河の一票"
-            },
-            {
-              "rank": 14,
-              "title": "かまいたちの机上の空論城"
-            },
-            {
-              "rank": 15,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -14131,7 +14184,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/28 19:24",
+      "updatedAt": "2026/06/28 20:23",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
@@ -16826,15 +16879,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "恋仲"
+              "title": "韓国ドラマ「秘密の森 ～深い闇の向こうに～」"
             },
             {
               "rank": 48,
-              "title": "砂の塔～知りすぎた隣人"
+              "title": "一次元の挿し木"
             },
             {
               "rank": 49,
-              "title": "一次元の挿し木"
+              "title": "砂の塔～知りすぎた隣人"
             },
             {
               "rank": 50,
@@ -17999,19 +18052,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "The Fashion Post"
             },
             {
               "rank": 48,
-              "title": "沸騰ワード10"
+              "title": "本好きの下剋上 領主の養女"
             },
             {
               "rank": 49,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 50,
-              "title": "Ｎのために"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -18020,7 +18073,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/06/28 19:24",
+      "updatedAt": "2026/06/28 20:23",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
       "likes": "1.0万",
@@ -18468,6 +18521,10 @@
         },
         {
           "hour": 112,
+          "likes": 10000
+        },
+        {
+          "hour": 113,
           "likes": 10000
         }
       ],
@@ -19455,19 +19512,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千原ジュニアの座王"
-            },
-            {
-              "rank": 48,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 48,
+              "title": "千原ジュニアの座王"
+            },
+            {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "がっちりマンデー!!"
             },
             {
               "rank": 50,
-              "title": "夜明けのラヴィット！"
+              "title": "夫が寝たあとに"
             }
           ]
         },
@@ -19608,19 +19665,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "The Fashion Post"
             },
             {
               "rank": 48,
-              "title": "沸騰ワード10"
+              "title": "本好きの下剋上 領主の養女"
             },
             {
               "rank": 49,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 50,
-              "title": "Ｎのために"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -19629,10 +19686,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/23",
-      "updatedAt": "2026/06/28 19:24",
+      "updatedAt": "2026/06/28 20:23",
       "episodeId": "eph69ykxq1",
       "subtitle": "-40歳アイドル、デビューなし。でも幸せ-",
-      "likes": "1599",
+      "likes": "1608",
       "favorites": "2.1万",
       "likePoints": [
         {
@@ -20178,6 +20235,10 @@
         {
           "hour": 137,
           "likes": 1599
+        },
+        {
+          "hour": 138,
+          "likes": 1608
         }
       ],
       "previousLikePoints": [
@@ -21076,11 +21137,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "しゃべくり007"
+              "title": "日曜日の初耳学"
             },
             {
               "rank": 48,
-              "title": "日曜日の初耳学"
+              "title": "しゃべくり007"
             },
             {
               "rank": 49,
@@ -21088,7 +21149,7 @@
             },
             {
               "rank": 50,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "リア突WEST.レボリューション"
             }
           ]
         },
@@ -21152,19 +21213,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千原ジュニアの座王"
-            },
-            {
-              "rank": 48,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 48,
+              "title": "千原ジュニアの座王"
+            },
+            {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "がっちりマンデー!!"
             },
             {
               "rank": 50,
-              "title": "夜明けのラヴィット！"
+              "title": "夫が寝たあとに"
             }
           ]
         }
@@ -21173,10 +21234,10 @@
     "srwe52o8i3": {
       "programTitle": "世界くらべてみたら",
       "broadcastDate": "2026/06/22",
-      "updatedAt": "2026/06/28 19:24",
+      "updatedAt": "2026/06/28 20:23",
       "episodeId": "ep80kdm92w",
       "subtitle": "日本くらべてみたら 都会と地方の女子校生が交換留学 牛角売上ランキング",
-      "likes": "2089",
+      "likes": "2090",
       "favorites": "28.9万",
       "likePoints": [
         {
@@ -21730,6 +21791,10 @@
         {
           "hour": 144,
           "likes": 2089
+        },
+        {
+          "hour": 145,
+          "likes": 2090
         }
       ],
       "previousLikePoints": [],
@@ -21738,7 +21803,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 50,
-          "elapsedHour": 144,
+          "elapsedHour": 145,
           "elapsedRank": 50,
           "currentPoints": [
             {
@@ -22235,6 +22300,10 @@
             },
             {
               "hour": 144,
+              "rank": 50
+            },
+            {
+              "hour": 145,
               "rank": 50
             }
           ],
@@ -22907,7 +22976,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ぐるぐるナインティナイン"
+              "title": "※女性は見ないでください"
             },
             {
               "rank": 48,
@@ -22915,7 +22984,7 @@
             },
             {
               "rank": 49,
-              "title": "※女性は見ないでください"
+              "title": "グッと！地球便"
             },
             {
               "rank": 50,
@@ -23176,19 +23245,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千原ジュニアの座王"
-            },
-            {
-              "rank": 48,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 48,
+              "title": "千原ジュニアの座王"
+            },
+            {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "がっちりマンデー!!"
             },
             {
               "rank": 50,
-              "title": "夜明けのラヴィット！"
+              "title": "夫が寝たあとに"
             }
           ]
         }
