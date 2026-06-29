@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/06/29 20:25",
+  "updatedAt": "2026/06/29 21:26",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/26",
-      "updatedAt": "2026/06/29 20:25",
+      "updatedAt": "2026/06/29 21:26",
       "episodeId": "epti1km4bl",
       "subtitle": "全員で連帯責任！腹ペコ2択マン",
       "likes": "1.1万",
@@ -284,6 +284,10 @@
         },
         {
           "hour": 70,
+          "likes": 11000
+        },
+        {
+          "hour": 71,
           "likes": 11000
         }
       ],
@@ -958,7 +962,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 24,
-          "elapsedHour": 70,
+          "elapsedHour": 71,
           "elapsedRank": 24,
           "currentPoints": [
             {
@@ -1223,6 +1227,10 @@
             },
             {
               "hour": 70,
+              "rank": 24
+            },
+            {
+              "hour": 71,
               "rank": 24
             }
           ],
@@ -1883,15 +1891,15 @@
           "nearbyRanking": [
             {
               "rank": 21,
-              "title": "ゴッドタン"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 22,
-              "title": "マルコポロリ！"
+              "title": "ゴッドタン"
             },
             {
               "rank": 23,
-              "title": "おしゃれクリップ"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 24,
@@ -1902,9 +1910,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 38,
-          "elapsedHour": 70,
-          "elapsedRank": 38,
+          "currentRank": 39,
+          "elapsedHour": 71,
+          "elapsedRank": 39,
           "currentPoints": [
             {
               "hour": 10,
@@ -2149,6 +2157,10 @@
             {
               "hour": 70,
               "rank": 38
+            },
+            {
+              "hour": 71,
+              "rank": 39
             }
           ],
           "previousPoints": [
@@ -2739,19 +2751,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 35,
-              "title": "おしゃれクリップ"
-            },
-            {
               "rank": 36,
-              "title": "最愛"
+              "title": "ゴッドタン"
             },
             {
               "rank": 37,
-              "title": "美女か野獣"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 38,
+              "title": "夫婦別姓刑事"
+            },
+            {
+              "rank": 39,
               "title": "タイムレスマン"
             }
           ]
@@ -2761,10 +2773,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/06/29 20:25",
+      "updatedAt": "2026/06/29 21:26",
       "episodeId": "ep0i1czejb",
       "subtitle": "【家族みんなで楽しい!ディズニー/ピクサー秘密SP】",
-      "likes": "9942",
+      "likes": "1.0万",
       "favorites": "33.2万",
       "likePoints": [
         {
@@ -2886,6 +2898,10 @@
         {
           "hour": 30,
           "likes": 9942
+        },
+        {
+          "hour": 31,
+          "likes": 10000
         }
       ],
       "previousLikePoints": [
@@ -3566,9 +3582,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 6,
-          "elapsedHour": 30,
-          "elapsedRank": 6,
+          "currentRank": 7,
+          "elapsedHour": 31,
+          "elapsedRank": 7,
           "currentPoints": [
             {
               "hour": 5,
@@ -3673,6 +3689,10 @@
             {
               "hour": 30,
               "rank": 6
+            },
+            {
+              "hour": 31,
+              "rank": 7
             }
           ],
           "previousPoints": [
@@ -4247,10 +4267,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 3,
-              "title": "Golden SixTONES"
-            },
-            {
               "rank": 4,
               "title": "アメトーーク！"
             },
@@ -4260,6 +4276,10 @@
             },
             {
               "rank": 6,
+              "title": "有吉クイズ"
+            },
+            {
+              "rank": 7,
               "title": "timeleszファミリア"
             }
           ]
@@ -4267,9 +4287,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 10,
-          "elapsedHour": 30,
-          "elapsedRank": 10,
+          "currentRank": 11,
+          "elapsedHour": 31,
+          "elapsedRank": 11,
           "currentPoints": [
             {
               "hour": 6,
@@ -4370,6 +4390,10 @@
             {
               "hour": 30,
               "rank": 10
+            },
+            {
+              "hour": 31,
+              "rank": 11
             }
           ],
           "previousPoints": [
@@ -4652,10 +4676,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 7,
-              "title": "ワンピース"
-            },
-            {
               "rank": 8,
               "title": "今から、親友やめようか。"
             },
@@ -4665,6 +4685,10 @@
             },
             {
               "rank": 10,
+              "title": "有吉クイズ"
+            },
+            {
+              "rank": 11,
               "title": "timeleszファミリア"
             }
           ]
@@ -4674,10 +4698,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/23",
-      "updatedAt": "2026/06/29 20:25",
+      "updatedAt": "2026/06/29 21:26",
       "episodeId": "epptze25tv",
       "subtitle": "チョコプラ・timeleszが\"絶対に滑らない靴\"なら、ヌルヌルの坂でもお芝居できる？",
-      "likes": "8335",
+      "likes": "8351",
       "favorites": "5.2万",
       "likePoints": [
         {
@@ -5231,6 +5255,10 @@
         {
           "hour": 140,
           "likes": 8335
+        },
+        {
+          "hour": 141,
+          "likes": 8351
         }
       ],
       "previousLikePoints": [
@@ -5916,7 +5944,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 46,
-          "elapsedHour": 140,
+          "elapsedHour": 141,
           "elapsedRank": 46,
           "currentPoints": [
             {
@@ -6313,6 +6341,10 @@
             },
             {
               "hour": 140,
+              "rank": 46
+            },
+            {
+              "hour": 141,
               "rank": 46
             }
           ],
@@ -6737,11 +6769,11 @@
             },
             {
               "rank": 44,
-              "title": "ぐるぐるナインティナイン"
+              "title": "黄金のワンスプーン！"
             },
             {
               "rank": 45,
-              "title": "黄金のワンスプーン！"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 46,
@@ -6942,11 +6974,11 @@
             },
             {
               "rank": 48,
-              "title": "有吉の壁"
+              "title": "オジサンドリー"
             },
             {
               "rank": 49,
-              "title": "あっちこっちAぇ!"
+              "title": "有吉の壁"
             },
             {
               "rank": 50,
@@ -6959,7 +6991,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/06/25",
-      "updatedAt": "2026/06/29 20:25",
+      "updatedAt": "2026/06/29 21:26",
       "episodeId": "epsxholvzn",
       "subtitle": "【奇跡連発】書く漢字を予想しろ！",
       "likes": "1.2万",
@@ -7411,6 +7443,10 @@
         },
         {
           "hour": 114,
+          "likes": 12000
+        },
+        {
+          "hour": 115,
           "likes": 12000
         }
       ],
@@ -8666,11 +8702,11 @@
             },
             {
               "rank": 48,
-              "title": "有吉の壁"
+              "title": "オジサンドリー"
             },
             {
               "rank": 49,
-              "title": "あっちこっちAぇ!"
+              "title": "有吉の壁"
             },
             {
               "rank": 50,
@@ -9003,19 +9039,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上田と女が吠える夜"
+              "title": "ザ！鉄腕！DASH!!"
             },
             {
               "rank": 48,
-              "title": "坂上&指原のつぶれない店"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 49,
-              "title": "情熱大陸"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 50,
-              "title": "サバ缶、宇宙へ行く"
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
@@ -9024,7 +9060,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/06/29 20:25",
+      "updatedAt": "2026/06/29 21:26",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
       "likes": "3831",
@@ -10341,11 +10377,11 @@
             },
             {
               "rank": 48,
-              "title": "有吉の壁"
+              "title": "オジサンドリー"
             },
             {
               "rank": 49,
-              "title": "あっちこっちAぇ!"
+              "title": "有吉の壁"
             },
             {
               "rank": 50,
@@ -10593,19 +10629,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上田と女が吠える夜"
+              "title": "ザ！鉄腕！DASH!!"
             },
             {
               "rank": 48,
-              "title": "坂上&指原のつぶれない店"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 49,
-              "title": "情熱大陸"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 50,
-              "title": "サバ缶、宇宙へ行く"
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
@@ -10614,7 +10650,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/06/29 20:25",
+      "updatedAt": "2026/06/29 21:26",
       "episodeId": "epgzv08t7a",
       "subtitle": "MC復帰菊池風磨＆畑芽育！ＭＡＺＺＥＬが苦悩の日々を告白！",
       "likes": "1.8万",
@@ -11166,6 +11202,10 @@
         },
         {
           "hour": 139,
+          "likes": 18000
+        },
+        {
+          "hour": 140,
           "likes": 18000
         }
       ],
@@ -12177,11 +12217,11 @@
             },
             {
               "rank": 48,
-              "title": "有吉の壁"
+              "title": "オジサンドリー"
             },
             {
               "rank": 49,
-              "title": "あっちこっちAぇ!"
+              "title": "有吉の壁"
             },
             {
               "rank": 50,
@@ -12425,19 +12465,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上田と女が吠える夜"
+              "title": "ザ！鉄腕！DASH!!"
             },
             {
               "rank": 48,
-              "title": "坂上&指原のつぶれない店"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 49,
-              "title": "情熱大陸"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 50,
-              "title": "サバ缶、宇宙へ行く"
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
@@ -12446,10 +12486,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/06/26",
-      "updatedAt": "2026/06/29 20:25",
+      "updatedAt": "2026/06/29 21:26",
       "episodeId": "epg05z6v49",
       "subtitle": "第133回 真剣勝負あっち向いてホイで迷惑行為疑惑が！？",
-      "likes": "3446",
+      "likes": "3454",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -12734,7 +12774,7 @@
         },
         {
           "hour": 92,
-          "likes": 3446
+          "likes": 3454
         }
       ],
       "previousLikePoints": [
@@ -13641,11 +13681,11 @@
             },
             {
               "rank": 48,
-              "title": "有吉の壁"
+              "title": "オジサンドリー"
             },
             {
               "rank": 49,
-              "title": "あっちこっちAぇ!"
+              "title": "有吉の壁"
             },
             {
               "rank": 50,
@@ -13810,19 +13850,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上田と女が吠える夜"
+              "title": "ザ！鉄腕！DASH!!"
             },
             {
               "rank": 48,
-              "title": "坂上&指原のつぶれない店"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 49,
-              "title": "情熱大陸"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 50,
-              "title": "サバ缶、宇宙へ行く"
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
@@ -13831,10 +13871,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/06/29 20:25",
+      "updatedAt": "2026/06/29 21:26",
       "episodeId": "epzd8603yf",
       "subtitle": "高橋成美は神ドッキリスターなのかSP 前編",
-      "likes": "1687",
+      "likes": "1709",
       "favorites": "78.0万",
       "likePoints": [
         {
@@ -14024,6 +14064,10 @@
         {
           "hour": 49,
           "likes": 1687
+        },
+        {
+          "hour": 50,
+          "likes": 1709
         }
       ],
       "previousLikePoints": [
@@ -14420,9 +14464,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 17,
-          "elapsedHour": 49,
-          "elapsedRank": 17,
+          "currentRank": 19,
+          "elapsedHour": 50,
+          "elapsedRank": 19,
           "currentPoints": [
             {
               "hour": 7,
@@ -14595,6 +14639,10 @@
             {
               "hour": 49,
               "rank": 17
+            },
+            {
+              "hour": 50,
+              "rank": 19
             }
           ],
           "previousPoints": [
@@ -14973,19 +15021,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 14,
-              "title": "マツコ＆有吉 かりそめ天国"
-            },
-            {
-              "rank": 15,
-              "title": "ハマダ歌謡祭★オオカミ少年"
-            },
-            {
               "rank": 16,
               "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 17,
+              "title": "華大さんと千鳥くん"
+            },
+            {
+              "rank": 18,
+              "title": "おしゃれクリップ"
+            },
+            {
+              "rank": 19,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -14993,9 +15041,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 28,
-          "elapsedHour": 49,
-          "elapsedRank": 28,
+          "currentRank": 33,
+          "elapsedHour": 50,
+          "elapsedRank": 33,
           "currentPoints": [
             {
               "hour": 14,
@@ -15140,6 +15188,10 @@
             {
               "hour": 49,
               "rank": 28
+            },
+            {
+              "hour": 50,
+              "rank": 33
             }
           ],
           "previousPoints": [
@@ -15402,19 +15454,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 25,
+              "rank": 30,
               "title": "かまいたちの机上の空論城"
             },
             {
-              "rank": 26,
-              "title": "夏の新ドラマ予告集めました！"
+              "rank": 31,
+              "title": "華大さんと千鳥くん"
             },
             {
-              "rank": 27,
-              "title": "ザ・ノンフィクション"
+              "rank": 32,
+              "title": "おしゃれクリップ"
             },
             {
-              "rank": 28,
+              "rank": 33,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -15424,11 +15476,11 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/06/29 20:25",
+      "updatedAt": "2026/06/29 21:26",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
-      "favorites": "24.4万",
+      "favorites": "24.3万",
       "likePoints": [
         {
           "hour": 1,
@@ -18119,19 +18171,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "わたしの相殺日記"
-            },
-            {
-              "rank": 48,
-              "title": "昔の男"
-            },
-            {
-              "rank": 49,
               "title": "不適切にもほどがある！"
             },
             {
+              "rank": 48,
+              "title": "35歳、今さら恋とかありえない"
+            },
+            {
+              "rank": 49,
+              "title": "フェイクファクトリップス"
+            },
+            {
               "rank": 50,
-              "title": "多すぎる恋と殺人"
+              "title": "わたしの相殺日記"
             }
           ]
         },
@@ -19292,19 +19344,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上田と女が吠える夜"
+              "title": "ザ！鉄腕！DASH!!"
             },
             {
               "rank": 48,
-              "title": "坂上&指原のつぶれない店"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 49,
-              "title": "情熱大陸"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 50,
-              "title": "サバ缶、宇宙へ行く"
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
@@ -19313,7 +19365,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/06/29 20:25",
+      "updatedAt": "2026/06/29 21:26",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
       "likes": "1.0万",
@@ -19861,6 +19913,10 @@
         },
         {
           "hour": 137,
+          "likes": 10000
+        },
+        {
+          "hour": 138,
           "likes": 10000
         }
       ],
@@ -20852,11 +20908,11 @@
             },
             {
               "rank": 48,
-              "title": "有吉の壁"
+              "title": "オジサンドリー"
             },
             {
               "rank": 49,
-              "title": "あっちこっちAぇ!"
+              "title": "有吉の壁"
             },
             {
               "rank": 50,
@@ -21001,19 +21057,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上田と女が吠える夜"
+              "title": "ザ！鉄腕！DASH!!"
             },
             {
               "rank": 48,
-              "title": "坂上&指原のつぶれない店"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 49,
-              "title": "情熱大陸"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 50,
-              "title": "サバ缶、宇宙へ行く"
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
@@ -21022,10 +21078,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/23",
-      "updatedAt": "2026/06/29 20:25",
+      "updatedAt": "2026/06/29 21:26",
       "episodeId": "eph69ykxq1",
       "subtitle": "-40歳アイドル、デビューなし。でも幸せ-",
-      "likes": "1764",
+      "likes": "1781",
       "favorites": "2.1万",
       "likePoints": [
         {
@@ -21671,6 +21727,10 @@
         {
           "hour": 162,
           "likes": 1764
+        },
+        {
+          "hour": 163,
+          "likes": 1781
         }
       ],
       "previousLikePoints": [
@@ -22569,19 +22629,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "新婚さんいらっしゃい！"
+              "title": "音道楽√"
             },
             {
               "rank": 48,
-              "title": "プレバト！！"
-            },
-            {
-              "rank": 49,
               "title": "いろはに千鳥"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "ザワつく！ 金曜日"
+            },
+            {
+              "rank": 50,
+              "title": "吉田と粗品と"
             }
           ]
         },
@@ -22649,11 +22709,11 @@
             },
             {
               "rank": 48,
-              "title": "有吉の壁"
+              "title": "オジサンドリー"
             },
             {
               "rank": 49,
-              "title": "あっちこっちAぇ!"
+              "title": "有吉の壁"
             },
             {
               "rank": 50,
@@ -22666,10 +22726,10 @@
     "srwe52o8i3": {
       "programTitle": "世界くらべてみたら",
       "broadcastDate": "2026/06/22",
-      "updatedAt": "2026/06/29 20:25",
+      "updatedAt": "2026/06/29 21:26",
       "episodeId": "ep80kdm92w",
       "subtitle": "日本くらべてみたら 都会と地方の女子校生が交換留学 牛角売上ランキング",
-      "likes": "2149",
+      "likes": "2147",
       "favorites": "28.9万",
       "likePoints": [
         {
@@ -23323,6 +23383,10 @@
         {
           "hour": 169,
           "likes": 2149
+        },
+        {
+          "hour": 170,
+          "likes": 2147
         }
       ],
       "previousLikePoints": [],
@@ -24504,19 +24568,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サタプラ"
+              "title": "秋山の楽しすぎる約30分"
             },
             {
               "rank": 48,
-              "title": "※女性は見ないでください"
+              "title": "サタプラ"
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "※女性は見ないでください"
             },
             {
               "rank": 50,
-              "title": "秋山の楽しすぎる約30分"
+              "title": "かのサンド"
             }
           ]
         },
@@ -24777,11 +24841,11 @@
             },
             {
               "rank": 48,
-              "title": "有吉の壁"
+              "title": "オジサンドリー"
             },
             {
               "rank": 49,
-              "title": "あっちこっちAぇ!"
+              "title": "有吉の壁"
             },
             {
               "rank": 50,
