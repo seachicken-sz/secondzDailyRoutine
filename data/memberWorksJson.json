@@ -202,25 +202,6 @@
     "platformUrl": "https://tver.jp/series/srg8u5vpld"
   },
   {
-    "title": "夜の音 -TOKYO MIDNIGHT MUSIC-",
-    "workType": "tv",
-    "members": [
-      "all"
-    ],
-    "weekday": 2,
-    "time": "24:24",
-    "platformUrl": "https://tver.jp/series/srv5ck6m6m"
-  },
-  {
-    "title": "アポロの歌",
-    "workType": "tv",
-    "members": [
-      "all"
-    ],
-    "weekday": 6,
-    "platformUrl": "https://tver.jp/series/srlkhgsl9j"
-  },
-  {
     "title": "地球まるごと大実験 ネイチャーティーチャー",
     "workType": "tv",
     "members": [
@@ -235,8 +216,8 @@
     "title": "芸能人が本気で考えた！ドッキリGP",
     "workType": "tv",
     "members": [
-      "so",
-      "fuma"
+      "fuma",
+      "so"
     ],
     "weekday": 6,
     "time": "19:00",
@@ -261,6 +242,16 @@
     "weekday": 2,
     "time": "21:00",
     "platformUrl": "https://tver.jp/series/srtgttx5vc"
+  },
+  {
+    "title": "夜の音 -TOKYO MIDNIGHT MUSIC-",
+    "workType": "tv",
+    "members": [
+      "fuma"
+    ],
+    "weekday": 2,
+    "time": "24:24",
+    "platformUrl": "https://tver.jp/series/srv5ck6m6m"
   },
   {
     "title": "何か“オモシロいコト”ないの？",
@@ -301,6 +292,15 @@
     "weekday": 2,
     "time": "26:05",
     "platformUrl": "https://tver.jp/series/srdsx5l9uq"
+  },
+  {
+    "title": "アポロの歌",
+    "workType": "tv",
+    "members": [
+      "shori"
+    ],
+    "weekday": 6,
+    "platformUrl": "https://tver.jp/series/srlkhgsl9j"
   },
   {
     "title": "小峠地蔵とお狐風磨",
@@ -357,6 +357,7 @@
       "teranishi"
     ],
     "weekday": 6,
+    "time": "11:00",
     "platformUrl": "https://tver.jp/series/srdfz31i5d"
   },
   {
@@ -375,6 +376,7 @@
       "fuma"
     ],
     "weekday": 0,
+    "time": "15:00",
     "platformUrl": "https://tver.jp/series/sriyj0nb7d"
   },
   {
@@ -384,6 +386,7 @@
       "teranishi"
     ],
     "weekday": 1,
+    "time": "19:00",
     "platformUrl": "https://tver.jp/series/srjkmo0zhs"
   }
 ]
