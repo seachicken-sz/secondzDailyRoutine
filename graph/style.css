@@ -524,6 +524,7 @@ a img {
 .image-preview-page .report,
 .image-preview-page .current-ranking-report {
   width: 760px;
+  min-height: 760px;
   max-width: none;
   box-shadow: 0 18px 42px rgba(28, 68, 120, 0.16);
 }
