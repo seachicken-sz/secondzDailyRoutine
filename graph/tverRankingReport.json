@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/03 21:28",
+  "updatedAt": "2026/07/03 22:29",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/06/26",
-      "updatedAt": "2026/07/03 21:28",
+      "updatedAt": "2026/07/03 22:29",
       "episodeId": "epti1km4bl",
       "subtitle": "全員で連帯責任！腹ペコ2択マン",
       "likes": "1.4万",
@@ -1345,9 +1345,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 39,
-          "elapsedHour": 167,
-          "elapsedRank": 39,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 5,
@@ -2642,20 +2642,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 36,
-              "title": "ザ！世界仰天ニュース"
+              "rank": 47,
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
-              "rank": 37,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "rank": 48,
+              "title": "オモウマい店"
             },
             {
-              "rank": 38,
-              "title": "有吉クイズ"
+              "rank": 49,
+              "title": "CDTV ライブ! ライブ!"
             },
             {
-              "rank": 39,
-              "title": "タイムレスマン"
+              "rank": 50,
+              "title": "クイズ！ドレミファドン"
             }
           ]
         },
@@ -3636,19 +3636,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "大悟の芸人領収書"
+              "title": "西園寺さんは家事をしない"
             },
             {
               "rank": 48,
-              "title": "これ余談なんですけど・・・"
+              "title": "美女か野獣"
             },
             {
               "rank": 49,
-              "title": "コントラスト"
+              "title": "じゃあ、あんたが作ってみろよ"
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "クレイジージャーニー"
             }
           ]
         }
@@ -3657,7 +3657,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/03 21:28",
+      "updatedAt": "2026/07/03 22:29",
       "episodeId": "ep0i1czejb",
       "subtitle": "【家族みんなで楽しい!ディズニー/ピクサー秘密SP】",
       "likes": "1.3万",
@@ -4169,6 +4169,10 @@
         },
         {
           "hour": 127,
+          "likes": 13000
+        },
+        {
+          "hour": 128,
           "likes": 13000
         }
       ],
@@ -4850,9 +4854,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 42,
-          "elapsedHour": 127,
-          "elapsedRank": 42,
+          "currentRank": 40,
+          "elapsedHour": 128,
+          "elapsedRank": 40,
           "currentPoints": [
             {
               "hour": 5,
@@ -5341,6 +5345,10 @@
             {
               "hour": 127,
               "rank": 42
+            },
+            {
+              "hour": 128,
+              "rank": 40
             }
           ],
           "previousPoints": [
@@ -5915,19 +5923,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 39,
-              "title": "タイムレスマン"
+              "rank": 37,
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
-              "rank": 40,
+              "rank": 38,
+              "title": "有吉クイズ"
+            },
+            {
+              "rank": 39,
               "title": "テレビ×ミセス"
             },
             {
-              "rank": 41,
-              "title": "相席食堂"
-            },
-            {
-              "rank": 42,
+              "rank": 40,
               "title": "timeleszファミリア"
             }
           ]
@@ -6549,19 +6557,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "大悟の芸人領収書"
+              "title": "西園寺さんは家事をしない"
             },
             {
               "rank": 48,
-              "title": "これ余談なんですけど・・・"
+              "title": "美女か野獣"
             },
             {
               "rank": 49,
-              "title": "コントラスト"
+              "title": "じゃあ、あんたが作ってみろよ"
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "クレイジージャーニー"
             }
           ]
         }
@@ -6570,10 +6578,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/03 21:28",
+      "updatedAt": "2026/07/03 22:29",
       "episodeId": "epxk5ysq54",
       "subtitle": "チョコプラ・timeleszの実験番組 特別編「視聴者が衝撃を受けた！ワクワク実験ランキング」",
-      "likes": "5659",
+      "likes": "5686",
       "favorites": "5.3万",
       "likePoints": [
         {
@@ -6847,6 +6855,10 @@
         {
           "hour": 69,
           "likes": 5659
+        },
+        {
+          "hour": 70,
+          "likes": 5686
         }
       ],
       "previousLikePoints": [
@@ -7515,9 +7527,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 26,
-          "elapsedHour": 69,
-          "elapsedRank": 26,
+          "currentRank": 28,
+          "elapsedHour": 70,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 6,
@@ -7774,6 +7786,10 @@
             {
               "hour": 69,
               "rank": 26
+            },
+            {
+              "hour": 70,
+              "rank": 28
             }
           ],
           "previousPoints": [
@@ -8280,19 +8296,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 23,
-              "title": "秘密のケンミンSHOW極"
-            },
-            {
-              "rank": 24,
+              "rank": 25,
               "title": "有吉ゼミ"
             },
             {
-              "rank": 25,
+              "rank": 26,
               "title": "沸騰ワード10"
             },
             {
-              "rank": 26,
+              "rank": 27,
+              "title": "※女性は見ないでください"
+            },
+            {
+              "rank": 28,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -8442,19 +8458,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
               "rank": 48,
-              "title": "見取り図じゃん"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
-              "title": "クイズ！ドレミファドン"
+              "title": "CDTV ライブ! ライブ!"
             },
             {
               "rank": 50,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "クイズ！ドレミファドン"
             }
           ]
         }
@@ -8463,10 +8479,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/02",
-      "updatedAt": "2026/07/03 21:28",
+      "updatedAt": "2026/07/03 22:29",
       "episodeId": "ephnvcipnk",
       "subtitle": "粘土のこね方を言葉だけで伝えろ",
-      "likes": "8110",
+      "likes": "8186",
       "favorites": "22.9万",
       "likePoints": [
         {
@@ -8640,6 +8656,10 @@
         {
           "hour": 43,
           "likes": 8110
+        },
+        {
+          "hour": 44,
+          "likes": 8186
         }
       ],
       "previousLikePoints": [
@@ -9312,9 +9332,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 24,
-          "elapsedHour": 43,
-          "elapsedRank": 24,
+          "currentRank": 25,
+          "elapsedHour": 44,
+          "elapsedRank": 25,
           "currentPoints": [
             {
               "hour": 8,
@@ -9459,6 +9479,10 @@
             {
               "hour": 43,
               "rank": 24
+            },
+            {
+              "hour": 44,
+              "rank": 25
             }
           ],
           "previousPoints": [
@@ -9745,19 +9769,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 21,
-              "title": "あざとくて何が悪いの？"
-            },
-            {
               "rank": 22,
-              "title": "夫が寝たあとに"
-            },
-            {
-              "rank": 23,
               "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
+              "rank": 23,
+              "title": "ロンドンハーツ"
+            },
+            {
               "rank": 24,
+              "title": "夫が寝たあとに"
+            },
+            {
+              "rank": 25,
               "title": "ニカゲーム"
             }
           ]
@@ -9765,9 +9789,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 40,
-          "elapsedHour": 43,
-          "elapsedRank": 40,
+          "currentRank": 42,
+          "elapsedHour": 44,
+          "elapsedRank": 42,
           "currentPoints": [
             {
               "hour": 11,
@@ -9900,6 +9924,10 @@
             {
               "hour": 43,
               "rank": 40
+            },
+            {
+              "hour": 44,
+              "rank": 42
             }
           ],
           "previousPoints": [
@@ -10090,19 +10118,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 37,
-              "title": "あざとくて何が悪いの？"
-            },
-            {
-              "rank": 38,
-              "title": "夫が寝たあとに"
-            },
-            {
               "rank": 39,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 40,
+              "title": "夫が寝たあとに"
+            },
+            {
+              "rank": 41,
+              "title": "夏の新ドラマ予告集めました！"
+            },
+            {
+              "rank": 42,
               "title": "ニカゲーム"
             }
           ]
@@ -10112,7 +10140,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/07/03 21:28",
+      "updatedAt": "2026/07/03 22:29",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
       "likes": "3831",
@@ -11425,19 +11453,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
               "rank": 48,
-              "title": "見取り図じゃん"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
-              "title": "クイズ！ドレミファドン"
+              "title": "CDTV ライブ! ライブ!"
             },
             {
               "rank": 50,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "クイズ！ドレミファドン"
             }
           ]
         },
@@ -11681,19 +11709,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "大悟の芸人領収書"
+              "title": "西園寺さんは家事をしない"
             },
             {
               "rank": 48,
-              "title": "これ余談なんですけど・・・"
+              "title": "美女か野獣"
             },
             {
               "rank": 49,
-              "title": "コントラスト"
+              "title": "じゃあ、あんたが作ってみろよ"
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "クレイジージャーニー"
             }
           ]
         }
@@ -11702,10 +11730,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/01",
-      "updatedAt": "2026/07/03 21:28",
+      "updatedAt": "2026/07/03 22:29",
       "episodeId": "eputvsuotr",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！FRUITS ZIPPER登場",
-      "likes": "3964",
+      "likes": "3993",
       "favorites": "8.5万",
       "likePoints": [
         {
@@ -11975,6 +12003,10 @@
         {
           "hour": 68,
           "likes": 3964
+        },
+        {
+          "hour": 69,
+          "likes": 3993
         }
       ],
       "previousLikePoints": [
@@ -12989,19 +13021,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
               "rank": 48,
-              "title": "見取り図じゃん"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
-              "title": "クイズ！ドレミファドン"
+              "title": "CDTV ライブ! ライブ!"
             },
             {
               "rank": 50,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "クイズ！ドレミファドン"
             }
           ]
         },
@@ -13241,19 +13273,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "大悟の芸人領収書"
+              "title": "西園寺さんは家事をしない"
             },
             {
               "rank": 48,
-              "title": "これ余談なんですけど・・・"
+              "title": "美女か野獣"
             },
             {
               "rank": 49,
-              "title": "コントラスト"
+              "title": "じゃあ、あんたが作ってみろよ"
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "クレイジージャーニー"
             }
           ]
         }
@@ -13262,10 +13294,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/03 21:28",
+      "updatedAt": "2026/07/03 22:29",
       "episodeId": "ep9zs2mp9b",
       "subtitle": "第134回 あっち向いてホイ後編・・・伝説交代？悲鳴再び？",
-      "likes": "1776",
+      "likes": "1823",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -13334,7 +13366,7 @@
         },
         {
           "hour": 21,
-          "likes": 1776
+          "likes": 1823
         }
       ],
       "previousLikePoints": [
@@ -13867,9 +13899,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 32,
-          "elapsedHour": 21,
-          "elapsedRank": 32,
+          "currentRank": 28,
+          "elapsedHour": 22,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 14,
@@ -13902,6 +13934,10 @@
             {
               "hour": 21,
               "rank": 32
+            },
+            {
+              "hour": 22,
+              "rank": 28
             }
           ],
           "previousPoints": [
@@ -14024,19 +14060,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 29,
-              "title": "大悟の芸人領収書"
+              "rank": 25,
+              "title": "ニカゲーム"
             },
             {
-              "rank": 30,
-              "title": "これ余談なんですけど・・・"
+              "rank": 26,
+              "title": "街グルメをマジ探索！かまいまち"
             },
             {
-              "rank": 31,
-              "title": "あちこちオードリー"
+              "rank": 27,
+              "title": "月曜から夜ふかし"
             },
             {
-              "rank": 32,
+              "rank": 28,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -14044,10 +14080,15 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 45,
+          "elapsedHour": 22,
+          "elapsedRank": 45,
+          "currentPoints": [
+            {
+              "hour": 22,
+              "rank": 45
+            }
+          ],
           "previousPoints": [
             {
               "hour": 20,
@@ -14108,20 +14149,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "大悟の芸人領収書"
+              "rank": 42,
+              "title": "ニカゲーム"
             },
             {
-              "rank": 48,
-              "title": "これ余談なんですけど・・・"
+              "rank": 43,
+              "title": "街グルメをマジ探索！かまいまち"
             },
             {
-              "rank": 49,
-              "title": "コントラスト"
+              "rank": 44,
+              "title": "月曜から夜ふかし"
             },
             {
-              "rank": 50,
-              "title": "あちこちオードリー"
+              "rank": 45,
+              "title": "何か“オモシロいコト”ないの？"
             }
           ]
         }
@@ -14130,10 +14171,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/03 21:28",
+      "updatedAt": "2026/07/03 22:29",
       "episodeId": "epzd8603yf",
       "subtitle": "高橋成美は神ドッキリスターなのかSP 前編",
-      "likes": "2263",
+      "likes": "2270",
       "favorites": "78.0万",
       "likePoints": [
         {
@@ -14711,6 +14752,10 @@
         {
           "hour": 146,
           "likes": 2263
+        },
+        {
+          "hour": 147,
+          "likes": 2270
         }
       ],
       "previousLikePoints": [
@@ -15841,19 +15886,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
               "rank": 48,
-              "title": "見取り図じゃん"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
-              "title": "クイズ！ドレミファドン"
+              "title": "CDTV ライブ! ライブ!"
             },
             {
               "rank": 50,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "クイズ！ドレミファドン"
             }
           ]
         },
@@ -16366,19 +16411,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "大悟の芸人領収書"
+              "title": "西園寺さんは家事をしない"
             },
             {
               "rank": 48,
-              "title": "これ余談なんですけど・・・"
+              "title": "美女か野獣"
             },
             {
               "rank": 49,
-              "title": "コントラスト"
+              "title": "じゃあ、あんたが作ってみろよ"
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "クレイジージャーニー"
             }
           ]
         }
@@ -16387,7 +16432,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/07/03 21:28",
+      "updatedAt": "2026/07/03 22:29",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
@@ -17748,19 +17793,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "not so パーフェクトラブ！"
+              "title": "監獄のお姫さま"
             },
             {
               "rank": 48,
-              "title": "韓国時代劇 馬医"
+              "title": "砂の塔～知りすぎた隣人"
             },
             {
               "rank": 49,
-              "title": "逃げるは恥だが役に立つ"
+              "title": "１８／４０～ふたりなら夢も恋も～"
             },
             {
               "rank": 50,
-              "title": "中国ドラマ「花間令＜かかんれい＞ ～Lost in Love～」"
+              "title": "韓国ドラマ「ピンクのリップスティック」"
             }
           ]
         },
@@ -18260,19 +18305,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "大悟の芸人領収書"
+              "title": "西園寺さんは家事をしない"
             },
             {
               "rank": 48,
-              "title": "これ余談なんですけど・・・"
+              "title": "美女か野獣"
             },
             {
               "rank": 49,
-              "title": "コントラスト"
+              "title": "じゃあ、あんたが作ってみろよ"
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "クレイジージャーニー"
             }
           ]
         }
@@ -18281,7 +18326,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/07/03 21:28",
+      "updatedAt": "2026/07/03 22:29",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
       "likes": "1.1万",
@@ -19936,19 +19981,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
               "rank": 48,
-              "title": "見取り図じゃん"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
-              "title": "クイズ！ドレミファドン"
+              "title": "CDTV ライブ! ライブ!"
             },
             {
               "rank": 50,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "クイズ！ドレミファドン"
             }
           ]
         },
@@ -20089,19 +20134,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "大悟の芸人領収書"
+              "title": "西園寺さんは家事をしない"
             },
             {
               "rank": 48,
-              "title": "これ余談なんですけど・・・"
+              "title": "美女か野獣"
             },
             {
               "rank": 49,
-              "title": "コントラスト"
+              "title": "じゃあ、あんたが作ってみろよ"
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "クレイジージャーニー"
             }
           ]
         }
@@ -20110,10 +20155,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/03 21:28",
+      "updatedAt": "2026/07/03 22:29",
       "episodeId": "eparzrbnab",
       "subtitle": "【4人の休日に密着】",
-      "likes": "1282",
+      "likes": "1293",
       "favorites": "2.2万",
       "likePoints": [
         {
@@ -20483,6 +20528,10 @@
         {
           "hour": 91,
           "likes": 1282
+        },
+        {
+          "hour": 92,
+          "likes": 1293
         }
       ],
       "previousLikePoints": [
@@ -21229,11 +21278,11 @@
             },
             {
               "rank": 49,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 50,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             }
           ]
         },
@@ -21248,19 +21297,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
               "rank": 48,
-              "title": "見取り図じゃん"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
-              "title": "クイズ！ドレミファドン"
+              "title": "CDTV ライブ! ライブ!"
             },
             {
               "rank": 50,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "クイズ！ドレミファドン"
             }
           ]
         }
@@ -21269,10 +21318,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/03 21:28",
+      "updatedAt": "2026/07/03 22:29",
       "episodeId": "epggxhtmuq",
       "subtitle": "バレーボール女子日本代表佐藤＆和田ペア参戦",
-      "likes": "1601",
+      "likes": "1608",
       "favorites": "12.4万",
       "likePoints": [
         {
@@ -21566,6 +21615,10 @@
         {
           "hour": 74,
           "likes": 1601
+        },
+        {
+          "hour": 75,
+          "likes": 1608
         }
       ],
       "previousLikePoints": [
@@ -22238,9 +22291,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 33,
-          "elapsedHour": 74,
-          "elapsedRank": 33,
+          "currentRank": 34,
+          "elapsedHour": 75,
+          "elapsedRank": 34,
           "currentPoints": [
             {
               "hour": 3,
@@ -22529,6 +22582,10 @@
             {
               "hour": 74,
               "rank": 33
+            },
+            {
+              "hour": 75,
+              "rank": 34
             }
           ],
           "previousPoints": [
@@ -23191,12 +23248,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 30,
-              "title": "ＭＵＳＩＣ ＡＷＡＲＤＳ ＪＡＰＡＮ ２０２６ 演歌・歌謡曲ＬＩＶＥ"
-            },
-            {
               "rank": 31,
-              "title": "林修の今知りたいでしょ！"
+              "title": "ＭＵＳＩＣ ＡＷＡＲＤＳ ＪＡＰＡＮ ２０２６ 演歌・歌謡曲ＬＩＶＥ"
             },
             {
               "rank": 32,
@@ -23204,6 +23257,10 @@
             },
             {
               "rank": 33,
+              "title": "林修の今知りたいでしょ！"
+            },
+            {
+              "rank": 34,
               "title": "THE神業チャレンジ"
             }
           ]
@@ -23445,19 +23502,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
               "rank": 48,
-              "title": "見取り図じゃん"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
-              "title": "クイズ！ドレミファドン"
+              "title": "CDTV ライブ! ライブ!"
             },
             {
               "rank": 50,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "クイズ！ドレミファドン"
             }
           ]
         }
@@ -23466,10 +23523,10 @@
     "srwe52o8i3": {
       "programTitle": "世界くらべてみたら",
       "broadcastDate": "2026/06/22",
-      "updatedAt": "2026/07/03 21:28",
+      "updatedAt": "2026/07/03 22:29",
       "episodeId": "ep80kdm92w",
       "subtitle": "日本くらべてみたら 都会と地方の女子校生が交換留学 牛角売上ランキング",
-      "likes": "2302",
+      "likes": "2305",
       "favorites": "28.9万",
       "likePoints": [
         {
@@ -25308,11 +25365,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "草彅やすともの うさぎとかめ"
+              "title": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～"
             },
             {
               "rank": 48,
-              "title": "VS.超特急"
+              "title": "草彅やすともの うさぎとかめ"
             },
             {
               "rank": 49,
@@ -25320,7 +25377,7 @@
             },
             {
               "rank": 50,
-              "title": "華丸丼と大吉麺"
+              "title": "VS.超特急"
             }
           ]
         },
@@ -25577,19 +25634,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
               "rank": 48,
-              "title": "見取り図じゃん"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
-              "title": "クイズ！ドレミファドン"
+              "title": "CDTV ライブ! ライブ!"
             },
             {
               "rank": 50,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "クイズ！ドレミファドン"
             }
           ]
         }
@@ -25598,10 +25655,10 @@
     "srdfz31i5d": {
       "programTitle": "ミキティダイニング",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/03 21:28",
+      "updatedAt": "2026/07/03 22:29",
       "episodeId": "epi627g3v8",
       "subtitle": "内田有紀のガチ食生活！timelesz寺西拓人が素顔解禁！",
-      "likes": "8256",
+      "likes": "8271",
       "favorites": "9.2万",
       "likePoints": [
         {
@@ -25907,6 +25964,10 @@
         {
           "hour": 154,
           "likes": 8256
+        },
+        {
+          "hour": 155,
+          "likes": 8271
         }
       ],
       "previousLikePoints": [],
@@ -25915,10 +25976,10 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/03 21:28",
+      "updatedAt": "2026/07/03 22:29",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
-      "likes": "3442",
+      "likes": "3450",
       "favorites": "1.7万",
       "likePoints": [
         {
@@ -26224,6 +26285,10 @@
         {
           "hour": 126,
           "likes": 3442
+        },
+        {
+          "hour": 127,
+          "likes": 3450
         }
       ],
       "previousLikePoints": [],
@@ -26232,7 +26297,7 @@
     "srjkmo0zhs": {
       "programTitle": "クイズ！ドレミファドン",
       "broadcastDate": "2026/06/29",
-      "updatedAt": "2026/07/03 21:28",
+      "updatedAt": "2026/07/03 22:29",
       "episodeId": "epy72shs76",
       "subtitle": "新ドラマ人気番組対抗クイズドレミファドン50周年夏の祭典SP",
       "likes": "1.1万",
@@ -26540,6 +26605,10 @@
         },
         {
           "hour": 98,
+          "likes": 11000
+        },
+        {
+          "hour": 99,
           "likes": 11000
         }
       ],
