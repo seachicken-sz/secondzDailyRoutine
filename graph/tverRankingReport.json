@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026/07/04 02:27",
+  "updatedAt": "2026/07/04 03:26",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/04 02:27",
+      "updatedAt": "2026/07/04 03:26",
       "episodeId": "ep6osmqoh8",
       "subtitle": "timelesz100",
-      "likes": "2202",
+      "likes": "2389",
       "favorites": "76.7万",
       "likePoints": [
         {
@@ -25,6 +25,10 @@
         {
           "hour": 4,
           "likes": 2202
+        },
+        {
+          "hour": 5,
+          "likes": 2389
         }
       ],
       "previousLikePoints": [
@@ -697,9 +701,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 37,
-          "elapsedHour": 4,
-          "elapsedRank": 37,
+          "currentRank": 36,
+          "elapsedHour": 5,
+          "elapsedRank": 36,
           "currentPoints": [
             {
               "hour": 3,
@@ -708,6 +712,10 @@
             {
               "hour": 4,
               "rank": 37
+            },
+            {
+              "hour": 5,
+              "rank": 36
             }
           ],
           "previousPoints": [
@@ -1350,19 +1358,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 33,
+              "title": "上田と女が吠える夜"
+            },
+            {
               "rank": 34,
-              "title": "あちこちオードリー"
+              "title": "これ余談なんですけど・・・"
             },
             {
               "rank": 35,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "あちこちオードリー"
             },
             {
               "rank": 36,
-              "title": "ザ！世界仰天ニュース"
-            },
-            {
-              "rank": 37,
               "title": "タイムレスマン"
             }
           ]
@@ -1759,7 +1767,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "月曜から夜ふかし"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
@@ -1780,7 +1788,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/04 02:27",
+      "updatedAt": "2026/07/04 03:26",
       "episodeId": "ep0i1czejb",
       "subtitle": "【家族みんなで楽しい!ディズニー/ピクサー秘密SP】",
       "likes": "1.3万",
@@ -2312,6 +2320,10 @@
         },
         {
           "hour": 132,
+          "likes": 13000
+        },
+        {
+          "hour": 133,
           "likes": 13000
         }
       ],
@@ -2993,9 +3005,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 44,
-          "elapsedHour": 132,
-          "elapsedRank": 44,
+          "currentRank": 45,
+          "elapsedHour": 133,
+          "elapsedRank": 45,
           "currentPoints": [
             {
               "hour": 5,
@@ -3504,6 +3516,10 @@
             {
               "hour": 132,
               "rank": 44
+            },
+            {
+              "hour": 133,
+              "rank": 45
             }
           ],
           "previousPoints": [
@@ -4078,19 +4094,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 41,
-              "title": "テレビ×ミセス"
-            },
-            {
               "rank": 42,
               "title": "見取り図じゃん"
             },
             {
               "rank": 43,
-              "title": "有吉クイズ"
+              "title": "口を揃えたフシギな話"
             },
             {
               "rank": 44,
+              "title": "有吉クイズ"
+            },
+            {
+              "rank": 45,
               "title": "timeleszファミリア"
             }
           ]
@@ -4712,7 +4728,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "月曜から夜ふかし"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
@@ -4733,10 +4749,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/04 02:27",
+      "updatedAt": "2026/07/04 03:26",
       "episodeId": "epxk5ysq54",
       "subtitle": "チョコプラ・timeleszの実験番組 特別編「視聴者が衝撃を受けた！ワクワク実験ランキング」",
-      "likes": "5753",
+      "likes": "5763",
       "favorites": "5.3万",
       "likePoints": [
         {
@@ -5030,6 +5046,10 @@
         {
           "hour": 74,
           "likes": 5753
+        },
+        {
+          "hour": 75,
+          "likes": 5763
         }
       ],
       "previousLikePoints": [
@@ -5699,7 +5719,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 30,
-          "elapsedHour": 74,
+          "elapsedHour": 75,
           "elapsedRank": 30,
           "currentPoints": [
             {
@@ -5976,6 +5996,10 @@
             },
             {
               "hour": 74,
+              "rank": 30
+            },
+            {
+              "hour": 75,
               "rank": 30
             }
           ],
@@ -6645,7 +6669,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "口を揃えたフシギな話"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
@@ -6666,10 +6690,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/02",
-      "updatedAt": "2026/07/04 02:27",
+      "updatedAt": "2026/07/04 03:26",
       "episodeId": "ephnvcipnk",
       "subtitle": "粘土のこね方を言葉だけで伝えろ",
-      "likes": "8434",
+      "likes": "8452",
       "favorites": "22.9万",
       "likePoints": [
         {
@@ -6863,6 +6887,10 @@
         {
           "hour": 48,
           "likes": 8434
+        },
+        {
+          "hour": 49,
+          "likes": 8452
         }
       ],
       "previousLikePoints": [
@@ -7536,7 +7564,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 28,
-          "elapsedHour": 48,
+          "elapsedHour": 49,
           "elapsedRank": 28,
           "currentPoints": [
             {
@@ -7701,6 +7729,10 @@
             },
             {
               "hour": 48,
+              "rank": 28
+            },
+            {
+              "hour": 49,
               "rank": 28
             }
           ],
@@ -7993,11 +8025,11 @@
             },
             {
               "rank": 26,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 27,
-              "title": "月曜から夜ふかし"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 28,
@@ -8009,7 +8041,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 49,
-          "elapsedHour": 48,
+          "elapsedHour": 49,
           "elapsedRank": 49,
           "currentPoints": [
             {
@@ -8162,6 +8194,10 @@
             },
             {
               "hour": 48,
+              "rank": 49
+            },
+            {
+              "hour": 49,
               "rank": 49
             }
           ],
@@ -8354,11 +8390,11 @@
           "nearbyRanking": [
             {
               "rank": 46,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 47,
-              "title": "月曜から夜ふかし"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
@@ -8375,7 +8411,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/07/04 02:27",
+      "updatedAt": "2026/07/04 03:26",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
       "likes": "3831",
@@ -9688,7 +9724,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "口を揃えたフシギな話"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
@@ -9944,7 +9980,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "月曜から夜ふかし"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
@@ -9965,10 +10001,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/01",
-      "updatedAt": "2026/07/04 02:27",
+      "updatedAt": "2026/07/04 03:26",
       "episodeId": "eputvsuotr",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！FRUITS ZIPPER登場",
-      "likes": "4078",
+      "likes": "4087",
       "favorites": "8.5万",
       "likePoints": [
         {
@@ -10258,6 +10294,10 @@
         {
           "hour": 73,
           "likes": 4078
+        },
+        {
+          "hour": 74,
+          "likes": 4087
         }
       ],
       "previousLikePoints": [
@@ -11272,7 +11312,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "口を揃えたフシギな話"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
@@ -11524,7 +11564,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "月曜から夜ふかし"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
@@ -11545,10 +11585,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/04 02:27",
+      "updatedAt": "2026/07/04 03:26",
       "episodeId": "ep9zs2mp9b",
       "subtitle": "第134回 あっち向いてホイ後編・・・伝説交代？悲鳴再び？",
-      "likes": "2013",
+      "likes": "2031",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -11630,6 +11670,10 @@
         {
           "hour": 25,
           "likes": 2013
+        },
+        {
+          "hour": 26,
+          "likes": 2031
         }
       ],
       "previousLikePoints": [
@@ -12163,7 +12207,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 25,
-          "elapsedHour": 26,
+          "elapsedHour": 27,
           "elapsedRank": 25,
           "currentPoints": [
             {
@@ -12216,6 +12260,10 @@
             },
             {
               "hour": 26,
+              "rank": 25
+            },
+            {
+              "hour": 27,
               "rank": 25
             }
           ],
@@ -12344,11 +12392,11 @@
             },
             {
               "rank": 23,
-              "title": "ロンドンハーツ"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 24,
-              "title": "夫が寝たあとに"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 25,
@@ -12360,7 +12408,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 42,
-          "elapsedHour": 26,
+          "elapsedHour": 27,
           "elapsedRank": 42,
           "currentPoints": [
             {
@@ -12381,6 +12429,10 @@
             },
             {
               "hour": 26,
+              "rank": 42
+            },
+            {
+              "hour": 27,
               "rank": 42
             }
           ],
@@ -12449,11 +12501,11 @@
             },
             {
               "rank": 40,
-              "title": "ロンドンハーツ"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 41,
-              "title": "夫が寝たあとに"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 42,
@@ -12466,10 +12518,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/04 02:27",
+      "updatedAt": "2026/07/04 03:26",
       "episodeId": "epzd8603yf",
       "subtitle": "高橋成美は神ドッキリスターなのかSP 前編",
-      "likes": "2284",
+      "likes": "2286",
       "favorites": "78.0万",
       "likePoints": [
         {
@@ -13067,6 +13119,10 @@
         {
           "hour": 151,
           "likes": 2284
+        },
+        {
+          "hour": 152,
+          "likes": 2286
         }
       ],
       "previousLikePoints": [
@@ -14197,7 +14253,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "口を揃えたフシギな話"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
@@ -14722,7 +14778,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "月曜から夜ふかし"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
@@ -14743,11 +14799,11 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/07/04 02:27",
+      "updatedAt": "2026/07/04 03:26",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
-      "favorites": "23.0万",
+      "favorites": "22.9万",
       "likePoints": [
         {
           "hour": 1,
@@ -16104,7 +16160,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ヤンキー激戦区の四天王がアイドルグループに転生したら？"
+              "title": "しもべの王子様"
             },
             {
               "rank": 48,
@@ -16112,11 +16168,11 @@
             },
             {
               "rank": 49,
-              "title": "甘い秘密（放送版）"
+              "title": "ヤンキー激戦区の四天王がアイドルグループに転生したら？"
             },
             {
               "rank": 50,
-              "title": "逃げるは恥だが役に立つ"
+              "title": "甘い秘密（放送版）"
             }
           ]
         },
@@ -16616,7 +16672,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "月曜から夜ふかし"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
@@ -16637,7 +16693,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/07/04 02:27",
+      "updatedAt": "2026/07/04 03:26",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
       "likes": "1.1万",
@@ -18292,7 +18348,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "口を揃えたフシギな話"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
@@ -18445,7 +18501,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "月曜から夜ふかし"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
@@ -18466,10 +18522,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/04 02:27",
+      "updatedAt": "2026/07/04 03:26",
       "episodeId": "eparzrbnab",
       "subtitle": "【4人の休日に密着】",
-      "likes": "1316",
+      "likes": "1322",
       "favorites": "2.2万",
       "likePoints": [
         {
@@ -18859,6 +18915,10 @@
         {
           "hour": 96,
           "likes": 1316
+        },
+        {
+          "hour": 97,
+          "likes": 1322
         }
       ],
       "previousLikePoints": [
@@ -19597,7 +19657,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ミキティダイニング"
+              "title": "秘密のケンミンSHOW極"
             },
             {
               "rank": 48,
@@ -19605,11 +19665,11 @@
             },
             {
               "rank": 49,
-              "title": "※女性は見ないでください"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 50,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "※女性は見ないでください"
             }
           ]
         },
@@ -19624,7 +19684,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "口を揃えたフシギな話"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
@@ -19645,10 +19705,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/04 02:27",
+      "updatedAt": "2026/07/04 03:26",
       "episodeId": "epggxhtmuq",
       "subtitle": "バレーボール女子日本代表佐藤＆和田ペア参戦",
-      "likes": "1626",
+      "likes": "1627",
       "favorites": "12.4万",
       "likePoints": [
         {
@@ -19962,6 +20022,10 @@
         {
           "hour": 79,
           "likes": 1626
+        },
+        {
+          "hour": 80,
+          "likes": 1627
         }
       ],
       "previousLikePoints": [
@@ -20635,7 +20699,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 34,
-          "elapsedHour": 79,
+          "elapsedHour": 80,
           "elapsedRank": 34,
           "currentPoints": [
             {
@@ -20944,6 +21008,10 @@
             },
             {
               "hour": 79,
+              "rank": 34
+            },
+            {
+              "hour": 80,
               "rank": 34
             }
           ],
@@ -21861,7 +21929,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "口を揃えたフシギな話"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
@@ -21882,10 +21950,10 @@
     "srwe52o8i3": {
       "programTitle": "世界くらべてみたら",
       "broadcastDate": "2026/06/22",
-      "updatedAt": "2026/07/04 02:27",
+      "updatedAt": "2026/07/04 03:26",
       "episodeId": "ep80kdm92w",
       "subtitle": "日本くらべてみたら 都会と地方の女子校生が交換留学 牛角売上ランキング",
-      "likes": "2312",
+      "likes": "2311",
       "favorites": "28.9万",
       "likePoints": [
         {
@@ -23724,19 +23792,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "住人十色～家の数だけある 家族のカタチ～"
+              "title": "おぎやはぎのハピキャン"
             },
             {
               "rank": 48,
-              "title": "日本探求アカデミックバラエティ 火曜の良純孝太郎"
-            },
-            {
-              "rank": 49,
               "title": "ZIP!"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "有吉くんの正直さんぽ"
+            },
+            {
+              "rank": 50,
+              "title": "日本探求アカデミックバラエティ 火曜の良純孝太郎"
             }
           ]
         },
@@ -23993,7 +24061,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "口を揃えたフシギな話"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
@@ -24014,11 +24082,11 @@
     "srdfz31i5d": {
       "programTitle": "ミキティダイニング",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/04 02:27",
+      "updatedAt": "2026/07/04 03:26",
       "episodeId": "epi627g3v8",
       "subtitle": "内田有紀のガチ食生活！timelesz寺西拓人が素顔解禁！",
-      "likes": "8302",
-      "favorites": "9.2万",
+      "likes": "8303",
+      "favorites": "9.3万",
       "likePoints": [
         {
           "hour": 79,
@@ -24343,6 +24411,10 @@
         {
           "hour": 159,
           "likes": 8302
+        },
+        {
+          "hour": 160,
+          "likes": 8303
         }
       ],
       "previousLikePoints": [],
@@ -24351,10 +24423,10 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/04 02:27",
+      "updatedAt": "2026/07/04 03:26",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
-      "likes": "3471",
+      "likes": "3472",
       "favorites": "1.7万",
       "likePoints": [
         {
@@ -24680,6 +24752,10 @@
         {
           "hour": 131,
           "likes": 3471
+        },
+        {
+          "hour": 132,
+          "likes": 3472
         }
       ],
       "previousLikePoints": [],
@@ -24688,7 +24764,7 @@
     "srjkmo0zhs": {
       "programTitle": "クイズ！ドレミファドン",
       "broadcastDate": "2026/06/29",
-      "updatedAt": "2026/07/04 02:27",
+      "updatedAt": "2026/07/04 03:26",
       "episodeId": "epy72shs76",
       "subtitle": "新ドラマ人気番組対抗クイズドレミファドン50周年夏の祭典SP",
       "likes": "1.1万",
@@ -25016,6 +25092,10 @@
         },
         {
           "hour": 103,
+          "likes": 11000
+        },
+        {
+          "hour": 104,
           "likes": 11000
         }
       ],
