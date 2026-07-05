@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/05 23:27",
+  "updatedAt": "2026/07/06 00:26",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/05 23:27",
+      "updatedAt": "2026/07/06 00:26",
       "episodeId": "ep6osmqoh8",
       "subtitle": "timelesz100",
       "likes": "1.0万",
@@ -204,6 +204,10 @@
         },
         {
           "hour": 49,
+          "likes": 10000
+        },
+        {
+          "hour": 50,
           "likes": 10000
         }
       ],
@@ -877,9 +881,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 7,
-          "elapsedHour": 49,
-          "elapsedRank": 7,
+          "currentRank": 8,
+          "elapsedHour": 50,
+          "elapsedRank": 8,
           "currentPoints": [
             {
               "hour": 3,
@@ -1068,6 +1072,10 @@
             {
               "hour": 49,
               "rank": 7
+            },
+            {
+              "hour": 50,
+              "rank": 8
             }
           ],
           "previousPoints": [
@@ -1710,10 +1718,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 4,
-              "title": "かまいたちの知らんけど"
-            },
-            {
               "rank": 5,
               "title": "アメトーーク！"
             },
@@ -1723,6 +1727,10 @@
             },
             {
               "rank": 7,
+              "title": "千鳥のクセスゴ！"
+            },
+            {
+              "rank": 8,
               "title": "タイムレスマン"
             }
           ]
@@ -1730,9 +1738,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 13,
-          "elapsedHour": 49,
-          "elapsedRank": 13,
+          "currentRank": 15,
+          "elapsedHour": 50,
+          "elapsedRank": 15,
           "currentPoints": [
             {
               "hour": 8,
@@ -1901,6 +1909,10 @@
             {
               "hour": 49,
               "rank": 13
+            },
+            {
+              "hour": 50,
+              "rank": 15
             }
           ],
           "previousPoints": [
@@ -2287,19 +2299,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 10,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
-            },
-            {
-              "rank": 11,
-              "title": "今夜もシリアルキラーと待ち合わせ"
-            },
-            {
               "rank": 12,
               "title": "夫婦と16歳～狂気の隣人～"
             },
             {
               "rank": 13,
+              "title": "ミッドナイト屋台２～ル・モンドゥ～"
+            },
+            {
+              "rank": 14,
+              "title": "千鳥のクセスゴ！"
+            },
+            {
+              "rank": 15,
               "title": "タイムレスマン"
             }
           ]
@@ -2309,10 +2321,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/05",
-      "updatedAt": "2026/07/05 23:27",
+      "updatedAt": "2026/07/06 00:26",
       "episodeId": "epixcs383v",
       "subtitle": "【意外と知らない!渋谷の秘密】絶品!世界1のコーヒー",
-      "likes": "5672",
+      "likes": "5982",
       "favorites": "33.3万",
       "likePoints": [
         {
@@ -2350,6 +2362,10 @@
         {
           "hour": 9,
           "likes": 5672
+        },
+        {
+          "hour": 10,
+          "likes": 5982
         }
       ],
       "previousLikePoints": [
@@ -3026,9 +3042,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 17,
-          "elapsedHour": 9,
-          "elapsedRank": 17,
+          "currentRank": 15,
+          "elapsedHour": 10,
+          "elapsedRank": 15,
           "currentPoints": [
             {
               "hour": 4,
@@ -3053,6 +3069,10 @@
             {
               "hour": 9,
               "rank": 17
+            },
+            {
+              "hour": 10,
+              "rank": 15
             }
           ],
           "previousPoints": [
@@ -3703,19 +3723,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 12,
+              "title": "口を揃えたフシギな話"
+            },
+            {
+              "rank": 13,
+              "title": "華大さんと千鳥くん"
+            },
+            {
               "rank": 14,
-              "title": "かまいたちの机上の空論城"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 15,
-              "title": "さんまのお笑い向上委員会"
-            },
-            {
-              "rank": 16,
-              "title": "一茂×かまいたち ゲンバ"
-            },
-            {
-              "rank": 17,
               "title": "timeleszファミリア"
             }
           ]
@@ -3723,9 +3743,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 32,
-          "elapsedHour": 9,
-          "elapsedRank": 32,
+          "currentRank": 28,
+          "elapsedHour": 10,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 7,
@@ -3738,6 +3758,10 @@
             {
               "hour": 9,
               "rank": 32
+            },
+            {
+              "hour": 10,
+              "rank": 28
             }
           ],
           "previousPoints": [
@@ -4072,19 +4096,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 29,
-              "title": "さんまのお笑い向上委員会"
+              "rank": 25,
+              "title": "晩酌の流儀５"
             },
             {
-              "rank": 30,
-              "title": "一茂×かまいたち ゲンバ"
+              "rank": 26,
+              "title": "世界の果てまでイッテQ！"
             },
             {
-              "rank": 31,
-              "title": "人生最高レストラン"
+              "rank": 27,
+              "title": "好きな人がいること"
             },
             {
-              "rank": 32,
+              "rank": 28,
               "title": "timeleszファミリア"
             }
           ]
@@ -4094,10 +4118,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/05 23:27",
+      "updatedAt": "2026/07/06 00:26",
       "episodeId": "epxk5ysq54",
       "subtitle": "チョコプラ・timeleszの実験番組 特別編「視聴者が衝撃を受けた！ワクワク実験ランキング」",
-      "likes": "6332",
+      "likes": "6347",
       "favorites": "5.3万",
       "likePoints": [
         {
@@ -4571,6 +4595,10 @@
         {
           "hour": 119,
           "likes": 6332
+        },
+        {
+          "hour": 120,
+          "likes": 6347
         }
       ],
       "previousLikePoints": [
@@ -6101,15 +6129,15 @@
             },
             {
               "rank": 48,
-              "title": "林修の今知りたいでしょ！"
+              "title": "なりゆき街道旅"
             },
             {
               "rank": 49,
-              "title": "ウラマヨ！"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 50,
-              "title": "なりゆき街道旅"
+              "title": "ウラマヨ！"
             }
           ]
         },
@@ -6258,19 +6286,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 49,
-              "title": "IMP.の「できません」は言いません"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "トークィーンズ"
+              "title": "有吉クイズ"
             }
           ]
         }
@@ -6279,7 +6307,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/02",
-      "updatedAt": "2026/07/05 23:27",
+      "updatedAt": "2026/07/06 00:26",
       "episodeId": "ephnvcipnk",
       "subtitle": "粘土のこね方を言葉だけで伝えろ",
       "likes": "1.0万",
@@ -6655,6 +6683,10 @@
         },
         {
           "hour": 93,
+          "likes": 10000
+        },
+        {
+          "hour": 94,
           "likes": 10000
         }
       ],
@@ -7874,19 +7906,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 49,
-              "title": "IMP.の「できません」は言いません"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "トークィーンズ"
+              "title": "有吉クイズ"
             }
           ]
         },
@@ -8243,19 +8275,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "土曜ゴールデン"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 48,
-              "title": "限界突破！やってM!LK"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 49,
-              "title": "君は夏のなか"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 50,
-              "title": "ドラマ「永久少年 Eternal Boys」"
+              "title": "君は夏のなか"
             }
           ]
         }
@@ -8264,7 +8296,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/07/05 23:27",
+      "updatedAt": "2026/07/06 00:26",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
       "likes": "3831",
@@ -9577,19 +9609,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 49,
-              "title": "IMP.の「できません」は言いません"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "トークィーンズ"
+              "title": "有吉クイズ"
             }
           ]
         },
@@ -9833,19 +9865,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "土曜ゴールデン"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 48,
-              "title": "限界突破！やってM!LK"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 49,
-              "title": "君は夏のなか"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 50,
-              "title": "ドラマ「永久少年 Eternal Boys」"
+              "title": "君は夏のなか"
             }
           ]
         }
@@ -9854,10 +9886,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/01",
-      "updatedAt": "2026/07/05 23:27",
+      "updatedAt": "2026/07/06 00:26",
       "episodeId": "eputvsuotr",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！FRUITS ZIPPER登場",
-      "likes": "4518",
+      "likes": "4531",
       "favorites": "8.5万",
       "likePoints": [
         {
@@ -10327,6 +10359,10 @@
         {
           "hour": 118,
           "likes": 4518
+        },
+        {
+          "hour": 119,
+          "likes": 4531
         }
       ],
       "previousLikePoints": [
@@ -11341,19 +11377,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 49,
-              "title": "IMP.の「できません」は言いません"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "トークィーンズ"
+              "title": "有吉クイズ"
             }
           ]
         },
@@ -11593,19 +11629,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "土曜ゴールデン"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 48,
-              "title": "限界突破！やってM!LK"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 49,
-              "title": "君は夏のなか"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 50,
-              "title": "ドラマ「永久少年 Eternal Boys」"
+              "title": "君は夏のなか"
             }
           ]
         }
@@ -11614,10 +11650,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/05 23:27",
+      "updatedAt": "2026/07/06 00:26",
       "episodeId": "ep9zs2mp9b",
       "subtitle": "第134回 あっち向いてホイ後編・・・伝説交代？悲鳴再び？",
-      "likes": "2765",
+      "likes": "2779",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -11826,7 +11862,7 @@
         },
         {
           "hour": 71,
-          "likes": 2765
+          "likes": 2779
         }
       ],
       "previousLikePoints": [
@@ -12609,19 +12645,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 49,
-              "title": "IMP.の「できません」は言いません"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "トークィーンズ"
+              "title": "有吉クイズ"
             }
           ]
         },
@@ -12734,19 +12770,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "土曜ゴールデン"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 48,
-              "title": "限界突破！やってM!LK"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 49,
-              "title": "君は夏のなか"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 50,
-              "title": "ドラマ「永久少年 Eternal Boys」"
+              "title": "君は夏のなか"
             }
           ]
         }
@@ -12755,10 +12791,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/05 23:27",
+      "updatedAt": "2026/07/06 00:26",
       "episodeId": "epzd8603yf",
       "subtitle": "高橋成美は神ドッキリスターなのかSP 前編",
-      "likes": "2471",
+      "likes": "2472",
       "favorites": "78.0万",
       "likePoints": [
         {
@@ -14562,19 +14598,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 49,
-              "title": "IMP.の「できません」は言いません"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "トークィーンズ"
+              "title": "有吉クイズ"
             }
           ]
         },
@@ -15087,19 +15123,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "土曜ゴールデン"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 48,
-              "title": "限界突破！やってM!LK"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 49,
-              "title": "君は夏のなか"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 50,
-              "title": "ドラマ「永久少年 Eternal Boys」"
+              "title": "君は夏のなか"
             }
           ]
         }
@@ -15108,7 +15144,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/07/05 23:27",
+      "updatedAt": "2026/07/06 00:26",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
@@ -16469,15 +16505,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ドラゴン桜(2021)"
+              "title": "美女か野獣"
             },
             {
               "rank": 48,
-              "title": "クロスロード ～救命救急の約束～"
+              "title": "世界の中心で、愛をさけぶ"
             },
             {
               "rank": 49,
-              "title": "産まない女はダメですか？ DINKsのトツキトオカ"
+              "title": "クロスロード ～救命救急の約束～"
             },
             {
               "rank": 50,
@@ -16981,19 +17017,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "土曜ゴールデン"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 48,
-              "title": "限界突破！やってM!LK"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 49,
-              "title": "君は夏のなか"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 50,
-              "title": "ドラマ「永久少年 Eternal Boys」"
+              "title": "君は夏のなか"
             }
           ]
         }
@@ -17002,7 +17038,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/07/05 23:27",
+      "updatedAt": "2026/07/06 00:26",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
       "likes": "1.1万",
@@ -18657,19 +18693,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 49,
-              "title": "IMP.の「できません」は言いません"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "トークィーンズ"
+              "title": "有吉クイズ"
             }
           ]
         },
@@ -18810,19 +18846,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "土曜ゴールデン"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 48,
-              "title": "限界突破！やってM!LK"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 49,
-              "title": "君は夏のなか"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 50,
-              "title": "ドラマ「永久少年 Eternal Boys」"
+              "title": "君は夏のなか"
             }
           ]
         }
@@ -18831,10 +18867,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/05 23:27",
+      "updatedAt": "2026/07/06 00:26",
       "episodeId": "eparzrbnab",
       "subtitle": "【4人の休日に密着】",
-      "likes": "1576",
+      "likes": "1586",
       "favorites": "2.2万",
       "likePoints": [
         {
@@ -19404,6 +19440,10 @@
         {
           "hour": 141,
           "likes": 1576
+        },
+        {
+          "hour": 142,
+          "likes": 1586
         }
       ],
       "previousLikePoints": [
@@ -20146,15 +20186,15 @@
             },
             {
               "rank": 48,
-              "title": "吉田と粗品と"
+              "title": "上沼・高田のクギズケ！"
             },
             {
               "rank": 49,
-              "title": "大阪おっさんぽ"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 50,
-              "title": "上沼・高田のクギズケ！"
+              "title": "吉田と粗品と"
             }
           ]
         },
@@ -20169,19 +20209,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 49,
-              "title": "IMP.の「できません」は言いません"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "トークィーンズ"
+              "title": "有吉クイズ"
             }
           ]
         }
@@ -20190,10 +20230,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/05 23:27",
+      "updatedAt": "2026/07/06 00:26",
       "episodeId": "epggxhtmuq",
       "subtitle": "バレーボール女子日本代表佐藤＆和田ペア参戦",
-      "likes": "1826",
+      "likes": "1834",
       "favorites": "12.4万",
       "likePoints": [
         {
@@ -20687,6 +20727,10 @@
         {
           "hour": 124,
           "likes": 1826
+        },
+        {
+          "hour": 125,
+          "likes": 1834
         }
       ],
       "previousLikePoints": [
@@ -22449,15 +22493,15 @@
             },
             {
               "rank": 48,
-              "title": "林修の今知りたいでしょ！"
+              "title": "なりゆき街道旅"
             },
             {
               "rank": 49,
-              "title": "ウラマヨ！"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 50,
-              "title": "なりゆき街道旅"
+              "title": "ウラマヨ！"
             }
           ]
         },
@@ -22698,19 +22742,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 49,
-              "title": "IMP.の「できません」は言いません"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "トークィーンズ"
+              "title": "有吉クイズ"
             }
           ]
         }
@@ -22719,10 +22763,10 @@
     "srwe52o8i3": {
       "programTitle": "世界くらべてみたら",
       "broadcastDate": "2026/06/22",
-      "updatedAt": "2026/07/05 23:27",
+      "updatedAt": "2026/07/06 00:26",
       "episodeId": "ep80kdm92w",
       "subtitle": "日本くらべてみたら 都会と地方の女子校生が交換留学 牛角売上ランキング",
-      "likes": "2432",
+      "likes": "2436",
       "favorites": "28.9万",
       "likePoints": [
         {
@@ -24565,15 +24609,15 @@
             },
             {
               "rank": 48,
-              "title": "林修の今知りたいでしょ！"
+              "title": "なりゆき街道旅"
             },
             {
               "rank": 49,
-              "title": "ウラマヨ！"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 50,
-              "title": "なりゆき街道旅"
+              "title": "ウラマヨ！"
             }
           ]
         },
@@ -24830,19 +24874,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "がっちりマンデー!!"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 49,
-              "title": "IMP.の「できません」は言いません"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "トークィーンズ"
+              "title": "有吉クイズ"
             }
           ]
         }
@@ -24851,10 +24895,10 @@
     "srdfz31i5d": {
       "programTitle": "ミキティダイニング",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/05 23:27",
+      "updatedAt": "2026/07/06 00:26",
       "episodeId": "epi627g3v8",
       "subtitle": "内田有紀のガチ食生活！timelesz寺西拓人が素顔解禁！",
-      "likes": "8534",
+      "likes": "8538",
       "favorites": "9.3万",
       "likePoints": [
         {
@@ -25232,10 +25276,10 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/05 23:27",
+      "updatedAt": "2026/07/06 00:26",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
-      "likes": "3660",
+      "likes": "3664",
       "favorites": "1.8万",
       "likePoints": [
         {
@@ -25725,7 +25769,7 @@
     "srjkmo0zhs": {
       "programTitle": "クイズ！ドレミファドン",
       "broadcastDate": "2026/06/29",
-      "updatedAt": "2026/07/05 23:27",
+      "updatedAt": "2026/07/06 00:26",
       "episodeId": "epy72shs76",
       "subtitle": "新ドラマ人気番組対抗クイズドレミファドン50周年夏の祭典SP",
       "likes": "1.2万",
@@ -26233,6 +26277,10 @@
         },
         {
           "hour": 148,
+          "likes": 12000
+        },
+        {
+          "hour": 149,
           "likes": 12000
         }
       ],
