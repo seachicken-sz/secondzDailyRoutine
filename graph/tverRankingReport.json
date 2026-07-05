@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/06 07:27",
+  "updatedAt": "2026/07/06 08:25",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/06 07:27",
+      "updatedAt": "2026/07/06 08:25",
       "episodeId": "ep6osmqoh8",
       "subtitle": "timelesz100",
       "likes": "1.0万",
@@ -236,6 +236,10 @@
         },
         {
           "hour": 57,
+          "likes": 10000
+        },
+        {
+          "hour": 58,
           "likes": 10000
         }
       ],
@@ -910,7 +914,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 8,
-          "elapsedHour": 57,
+          "elapsedHour": 58,
           "elapsedRank": 8,
           "currentPoints": [
             {
@@ -1131,6 +1135,10 @@
             },
             {
               "hour": 57,
+              "rank": 8
+            },
+            {
+              "hour": 58,
               "rank": 8
             }
           ],
@@ -1795,7 +1803,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 16,
-          "elapsedHour": 57,
+          "elapsedHour": 58,
           "elapsedRank": 16,
           "currentPoints": [
             {
@@ -1996,6 +2004,10 @@
             },
             {
               "hour": 57,
+              "rank": 16
+            },
+            {
+              "hour": 58,
               "rank": 16
             }
           ],
@@ -2384,11 +2396,11 @@
           "nearbyRanking": [
             {
               "rank": 13,
-              "title": "ミッドナイト屋台２～ル・モンドゥ～"
+              "title": "千鳥のクセスゴ！"
             },
             {
               "rank": 14,
-              "title": "千鳥のクセスゴ！"
+              "title": "ミッドナイト屋台２～ル・モンドゥ～"
             },
             {
               "rank": 15,
@@ -2405,10 +2417,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/05",
-      "updatedAt": "2026/07/06 07:27",
+      "updatedAt": "2026/07/06 08:25",
       "episodeId": "epixcs383v",
       "subtitle": "【意外と知らない!渋谷の秘密】絶品!世界1のコーヒー",
-      "likes": "6688",
+      "likes": "6927",
       "favorites": "33.3万",
       "likePoints": [
         {
@@ -2478,6 +2490,10 @@
         {
           "hour": 17,
           "likes": 6688
+        },
+        {
+          "hour": 18,
+          "likes": 6927
         }
       ],
       "previousLikePoints": [
@@ -3154,9 +3170,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 14,
-          "elapsedHour": 17,
-          "elapsedRank": 14,
+          "currentRank": 12,
+          "elapsedHour": 18,
+          "elapsedRank": 12,
           "currentPoints": [
             {
               "hour": 4,
@@ -3213,6 +3229,10 @@
             {
               "hour": 17,
               "rank": 14
+            },
+            {
+              "hour": 18,
+              "rank": 12
             }
           ],
           "previousPoints": [
@@ -3863,19 +3883,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 9,
+              "title": "世界の果てまでイッテQ！"
+            },
+            {
+              "rank": 10,
+              "title": "マツコ＆有吉 かりそめ天国"
+            },
+            {
               "rank": 11,
               "title": "2026FNS歌謡祭 夏"
             },
             {
               "rank": 12,
-              "title": "エンタの神様"
-            },
-            {
-              "rank": 13,
-              "title": "口を揃えたフシギな話"
-            },
-            {
-              "rank": 14,
               "title": "timeleszファミリア"
             }
           ]
@@ -3883,9 +3903,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 26,
-          "elapsedHour": 17,
-          "elapsedRank": 26,
+          "currentRank": 23,
+          "elapsedHour": 18,
+          "elapsedRank": 23,
           "currentPoints": [
             {
               "hour": 7,
@@ -3930,6 +3950,10 @@
             {
               "hour": 17,
               "rank": 26
+            },
+            {
+              "hour": 18,
+              "rank": 23
             }
           ],
           "previousPoints": [
@@ -4264,19 +4288,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 20,
+              "title": "2026FNS歌謡祭 夏"
+            },
+            {
+              "rank": 21,
+              "title": "世にも奇妙な物語"
+            },
+            {
+              "rank": 22,
+              "title": "名探偵プリキュア！"
+            },
+            {
               "rank": 23,
-              "title": "エンタの神様"
-            },
-            {
-              "rank": 24,
-              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
-            },
-            {
-              "rank": 25,
-              "title": "口を揃えたフシギな話"
-            },
-            {
-              "rank": 26,
               "title": "timeleszファミリア"
             }
           ]
@@ -4286,10 +4310,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/06 07:27",
+      "updatedAt": "2026/07/06 08:25",
       "episodeId": "epxk5ysq54",
       "subtitle": "チョコプラ・timeleszの実験番組 特別編「視聴者が衝撃を受けた！ワクワク実験ランキング」",
-      "likes": "6383",
+      "likes": "6394",
       "favorites": "5.3万",
       "likePoints": [
         {
@@ -4795,6 +4819,10 @@
         {
           "hour": 127,
           "likes": 6383
+        },
+        {
+          "hour": 128,
+          "likes": 6394
         }
       ],
       "previousLikePoints": [
@@ -6321,11 +6349,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "坂上&指原のつぶれない店"
+              "title": "ベスコングルメ 〜ベストコンディションで最高の瞬間を！〜"
             },
             {
               "rank": 48,
-              "title": "ベスコングルメ 〜ベストコンディションで最高の瞬間を！〜"
+              "title": "坂上&指原のつぶれない店"
             },
             {
               "rank": 49,
@@ -6482,15 +6510,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ×ミセス"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "坂上どうぶつ王国"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
@@ -6503,7 +6531,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/02",
-      "updatedAt": "2026/07/06 07:27",
+      "updatedAt": "2026/07/06 08:25",
       "episodeId": "ephnvcipnk",
       "subtitle": "粘土のこね方を言葉だけで伝えろ",
       "likes": "1.0万",
@@ -6911,6 +6939,10 @@
         },
         {
           "hour": 101,
+          "likes": 10000
+        },
+        {
+          "hour": 102,
           "likes": 10000
         }
       ],
@@ -8130,15 +8162,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ×ミセス"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "坂上どうぶつ王国"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
@@ -8499,15 +8531,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "黄泉のツガイ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
+              "title": "黄泉のツガイ"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
@@ -8520,7 +8552,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/07/06 07:27",
+      "updatedAt": "2026/07/06 08:25",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
       "likes": "3831",
@@ -9833,15 +9865,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ×ミセス"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "坂上どうぶつ王国"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
@@ -10089,15 +10121,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "黄泉のツガイ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
+              "title": "黄泉のツガイ"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
@@ -10110,10 +10142,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/01",
-      "updatedAt": "2026/07/06 07:27",
+      "updatedAt": "2026/07/06 08:25",
       "episodeId": "eputvsuotr",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！FRUITS ZIPPER登場",
-      "likes": "4557",
+      "likes": "4562",
       "favorites": "8.5万",
       "likePoints": [
         {
@@ -10615,6 +10647,10 @@
         {
           "hour": 126,
           "likes": 4557
+        },
+        {
+          "hour": 127,
+          "likes": 4562
         }
       ],
       "previousLikePoints": [
@@ -11629,15 +11665,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ×ミセス"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "坂上どうぶつ王国"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
@@ -11881,15 +11917,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "黄泉のツガイ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
+              "title": "黄泉のツガイ"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
@@ -11902,10 +11938,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/06 07:27",
+      "updatedAt": "2026/07/06 08:25",
       "episodeId": "ep9zs2mp9b",
       "subtitle": "第134回 あっち向いてホイ後編・・・伝説交代？悲鳴再び？",
-      "likes": "2818",
+      "likes": "2820",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -12138,7 +12174,7 @@
         },
         {
           "hour": 79,
-          "likes": 2818
+          "likes": 2820
         }
       ],
       "previousLikePoints": [
@@ -12921,15 +12957,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ×ミセス"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "坂上どうぶつ王国"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
@@ -13046,15 +13082,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "黄泉のツガイ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
+              "title": "黄泉のツガイ"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
@@ -13067,10 +13103,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/06 07:27",
+      "updatedAt": "2026/07/06 08:25",
       "episodeId": "epzd8603yf",
       "subtitle": "高橋成美は神ドッキリスターなのかSP 前編",
-      "likes": "2479",
+      "likes": "2481",
       "favorites": "78.0万",
       "likePoints": [
         {
@@ -14874,15 +14910,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ×ミセス"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "坂上どうぶつ王国"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
@@ -15399,15 +15435,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "黄泉のツガイ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
+              "title": "黄泉のツガイ"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
@@ -15420,7 +15456,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/07/06 07:27",
+      "updatedAt": "2026/07/06 08:25",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
@@ -17293,15 +17329,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "黄泉のツガイ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
+              "title": "黄泉のツガイ"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
@@ -17314,7 +17350,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/07/06 07:27",
+      "updatedAt": "2026/07/06 08:25",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
       "likes": "1.1万",
@@ -18969,15 +19005,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ×ミセス"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "坂上どうぶつ王国"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
@@ -19122,15 +19158,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "黄泉のツガイ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
+              "title": "黄泉のツガイ"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
@@ -19143,10 +19179,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/06 07:27",
+      "updatedAt": "2026/07/06 08:25",
       "episodeId": "eparzrbnab",
       "subtitle": "【4人の休日に密着】",
-      "likes": "1605",
+      "likes": "1608",
       "favorites": "2.2万",
       "likePoints": [
         {
@@ -19748,6 +19784,10 @@
         {
           "hour": 149,
           "likes": 1605
+        },
+        {
+          "hour": 150,
+          "likes": 1608
         }
       ],
       "previousLikePoints": [
@@ -20513,15 +20553,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ×ミセス"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "坂上どうぶつ王国"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
@@ -20534,10 +20574,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/06 07:27",
+      "updatedAt": "2026/07/06 08:25",
       "episodeId": "epggxhtmuq",
       "subtitle": "バレーボール女子日本代表佐藤＆和田ペア参戦",
-      "likes": "1849",
+      "likes": "1851",
       "favorites": "12.4万",
       "likePoints": [
         {
@@ -21063,6 +21103,10 @@
         {
           "hour": 132,
           "likes": 1849
+        },
+        {
+          "hour": 133,
+          "likes": 1851
         }
       ],
       "previousLikePoints": [
@@ -22821,11 +22865,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "坂上&指原のつぶれない店"
+              "title": "ベスコングルメ 〜ベストコンディションで最高の瞬間を！〜"
             },
             {
               "rank": 48,
-              "title": "ベスコングルメ 〜ベストコンディションで最高の瞬間を！〜"
+              "title": "坂上&指原のつぶれない店"
             },
             {
               "rank": 49,
@@ -23074,15 +23118,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ×ミセス"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "坂上どうぶつ王国"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
@@ -23095,10 +23139,10 @@
     "srwe52o8i3": {
       "programTitle": "世界くらべてみたら",
       "broadcastDate": "2026/06/22",
-      "updatedAt": "2026/07/06 07:27",
+      "updatedAt": "2026/07/06 08:25",
       "episodeId": "ep80kdm92w",
       "subtitle": "日本くらべてみたら 都会と地方の女子校生が交換留学 牛角売上ランキング",
-      "likes": "2454",
+      "likes": "2461",
       "favorites": "28.9万",
       "likePoints": [
         {
@@ -24937,11 +24981,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "坂上&指原のつぶれない店"
+              "title": "ベスコングルメ 〜ベストコンディションで最高の瞬間を！〜"
             },
             {
               "rank": 48,
-              "title": "ベスコングルメ 〜ベストコンディションで最高の瞬間を！〜"
+              "title": "坂上&指原のつぶれない店"
             },
             {
               "rank": 49,
@@ -25206,15 +25250,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ×ミセス"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "坂上どうぶつ王国"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
@@ -25227,10 +25271,10 @@
     "srdfz31i5d": {
       "programTitle": "ミキティダイニング",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/06 07:27",
+      "updatedAt": "2026/07/06 08:25",
       "episodeId": "epi627g3v8",
       "subtitle": "内田有紀のガチ食生活！timelesz寺西拓人が素顔解禁！",
-      "likes": "8544",
+      "likes": "8546",
       "favorites": "9.3万",
       "likePoints": [
         {
@@ -25608,10 +25652,10 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/06 07:27",
+      "updatedAt": "2026/07/06 08:25",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
-      "likes": "3681",
+      "likes": "3683",
       "favorites": "1.8万",
       "likePoints": [
         {
@@ -26101,7 +26145,7 @@
     "srjkmo0zhs": {
       "programTitle": "クイズ！ドレミファドン",
       "broadcastDate": "2026/06/29",
-      "updatedAt": "2026/07/06 07:27",
+      "updatedAt": "2026/07/06 08:25",
       "episodeId": "epy72shs76",
       "subtitle": "新ドラマ人気番組対抗クイズドレミファドン50周年夏の祭典SP",
       "likes": "1.2万",
@@ -26641,6 +26685,10 @@
         },
         {
           "hour": 156,
+          "likes": 12000
+        },
+        {
+          "hour": 157,
           "likes": 12000
         }
       ],
