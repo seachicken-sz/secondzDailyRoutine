@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026/07/05 14:27",
+  "updatedAt": "2026/07/05 15:27",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/05 14:27",
+      "updatedAt": "2026/07/05 15:27",
       "episodeId": "ep6osmqoh8",
       "subtitle": "timelesz100",
-      "likes": "9199",
+      "likes": "9336",
       "favorites": "76.9万",
       "likePoints": [
         {
@@ -169,6 +169,10 @@
         {
           "hour": 40,
           "likes": 9199
+        },
+        {
+          "hour": 41,
+          "likes": 9336
         }
       ],
       "previousLikePoints": [
@@ -842,7 +846,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 6,
-          "elapsedHour": 40,
+          "elapsedHour": 41,
           "elapsedRank": 6,
           "currentPoints": [
             {
@@ -995,6 +999,10 @@
             },
             {
               "hour": 40,
+              "rank": 6
+            },
+            {
+              "hour": 41,
               "rank": 6
             }
           ],
@@ -1659,7 +1667,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 12,
-          "elapsedHour": 40,
+          "elapsedHour": 41,
           "elapsedRank": 12,
           "currentPoints": [
             {
@@ -1792,6 +1800,10 @@
             },
             {
               "hour": 40,
+              "rank": 12
+            },
+            {
+              "hour": 41,
               "rank": 12
             }
           ],
@@ -2200,13 +2212,19 @@
     },
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
-      "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/05 14:27",
-      "episodeId": "ep0i1czejb",
-      "subtitle": "【家族みんなで楽しい!ディズニー/ピクサー秘密SP】",
-      "likes": "1.4万",
+      "broadcastDate": "2026/07/05",
+      "updatedAt": "2026/07/05 15:27",
+      "episodeId": "epixcs383v",
+      "subtitle": "【意外と知らない!渋谷の秘密】絶品!世界1のコーヒー",
+      "likes": "703",
       "favorites": "33.3万",
       "likePoints": [
+        {
+          "hour": 1,
+          "likes": 703
+        }
+      ],
+      "previousLikePoints": [
         {
           "hour": 1,
           "likes": 717
@@ -2876,7 +2894,6 @@
           "likes": 14000
         }
       ],
-      "previousLikePoints": [],
       "rankings": [
         {
           "type": "variety",
@@ -2884,7 +2901,8 @@
           "currentRank": null,
           "elapsedHour": null,
           "elapsedRank": null,
-          "currentPoints": [
+          "currentPoints": [],
+          "previousPoints": [
             {
               "hour": 5,
               "rank": 41
@@ -3530,23 +3548,22 @@
               "rank": 45
             }
           ],
-          "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 49,
-              "title": "あっちこっちAぇ!"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 50,
-              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
+              "title": "あざとくて何が悪いの？"
             }
           ]
         },
@@ -3556,7 +3573,8 @@
           "currentRank": null,
           "elapsedHour": null,
           "elapsedRank": null,
-          "currentPoints": [
+          "currentPoints": [],
+          "previousPoints": [
             {
               "hour": 6,
               "rank": 50
@@ -3886,23 +3904,22 @@
               "rank": 49
             }
           ],
-          "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
+              "title": "ジャンクSPORTS"
             },
             {
               "rank": 48,
-              "title": "マツコの知らない世界"
+              "title": "夫を殺したはずなのに"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 50,
-              "title": "ジャンクSPORTS"
+              "title": "男子バスケットボールFIBAワールドカップ"
             }
           ]
         }
@@ -3911,10 +3928,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/05 14:27",
+      "updatedAt": "2026/07/05 15:27",
       "episodeId": "epxk5ysq54",
       "subtitle": "チョコプラ・timeleszの実験番組 特別編「視聴者が衝撃を受けた！ワクワク実験ランキング」",
-      "likes": "6158",
+      "likes": "6175",
       "favorites": "5.3万",
       "likePoints": [
         {
@@ -4352,6 +4369,10 @@
         {
           "hour": 110,
           "likes": 6158
+        },
+        {
+          "hour": 111,
+          "likes": 6175
         }
       ],
       "previousLikePoints": [
@@ -5886,11 +5907,11 @@
             },
             {
               "rank": 49,
-              "title": "LIFE～夢のカタチ～"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 50,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "LIFE～夢のカタチ～"
             }
           ]
         },
@@ -6039,19 +6060,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 49,
-              "title": "あっちこっちAぇ!"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 50,
-              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
+              "title": "あざとくて何が悪いの？"
             }
           ]
         }
@@ -6060,10 +6081,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/02",
-      "updatedAt": "2026/07/05 14:27",
+      "updatedAt": "2026/07/05 15:27",
       "episodeId": "ephnvcipnk",
       "subtitle": "粘土のこね方を言葉だけで伝えろ",
-      "likes": "9690",
+      "likes": "9735",
       "favorites": "22.9万",
       "likePoints": [
         {
@@ -6401,6 +6422,10 @@
         {
           "hour": 84,
           "likes": 9690
+        },
+        {
+          "hour": 85,
+          "likes": 9735
         }
       ],
       "previousLikePoints": [
@@ -7619,19 +7644,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 49,
-              "title": "あっちこっちAぇ!"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 50,
-              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
+              "title": "あざとくて何が悪いの？"
             }
           ]
         },
@@ -7988,19 +8013,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
+              "title": "ジャンクSPORTS"
             },
             {
               "rank": 48,
-              "title": "マツコの知らない世界"
+              "title": "夫を殺したはずなのに"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 50,
-              "title": "ジャンクSPORTS"
+              "title": "男子バスケットボールFIBAワールドカップ"
             }
           ]
         }
@@ -8009,7 +8034,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/07/05 14:27",
+      "updatedAt": "2026/07/05 15:27",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
       "likes": "3831",
@@ -9322,19 +9347,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 49,
-              "title": "あっちこっちAぇ!"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 50,
-              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
+              "title": "あざとくて何が悪いの？"
             }
           ]
         },
@@ -9578,19 +9603,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
+              "title": "ジャンクSPORTS"
             },
             {
               "rank": 48,
-              "title": "マツコの知らない世界"
+              "title": "夫を殺したはずなのに"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 50,
-              "title": "ジャンクSPORTS"
+              "title": "男子バスケットボールFIBAワールドカップ"
             }
           ]
         }
@@ -9599,10 +9624,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/01",
-      "updatedAt": "2026/07/05 14:27",
+      "updatedAt": "2026/07/05 15:27",
       "episodeId": "eputvsuotr",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！FRUITS ZIPPER登場",
-      "likes": "4392",
+      "likes": "4408",
       "favorites": "8.5万",
       "likePoints": [
         {
@@ -10036,6 +10061,10 @@
         {
           "hour": 109,
           "likes": 4392
+        },
+        {
+          "hour": 110,
+          "likes": 4408
         }
       ],
       "previousLikePoints": [
@@ -11050,19 +11079,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 49,
-              "title": "あっちこっちAぇ!"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 50,
-              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
+              "title": "あざとくて何が悪いの？"
             }
           ]
         },
@@ -11302,19 +11331,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
+              "title": "ジャンクSPORTS"
             },
             {
               "rank": 48,
-              "title": "マツコの知らない世界"
+              "title": "夫を殺したはずなのに"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 50,
-              "title": "ジャンクSPORTS"
+              "title": "男子バスケットボールFIBAワールドカップ"
             }
           ]
         }
@@ -11323,10 +11352,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/05 14:27",
+      "updatedAt": "2026/07/05 15:27",
       "episodeId": "ep9zs2mp9b",
       "subtitle": "第134回 あっち向いてホイ後編・・・伝説交代？悲鳴再び？",
-      "likes": "2594",
+      "likes": "2620",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -11512,6 +11541,10 @@
         {
           "hour": 61,
           "likes": 2594
+        },
+        {
+          "hour": 63,
+          "likes": 2620
         }
       ],
       "previousLikePoints": [
@@ -12294,19 +12327,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 49,
-              "title": "あっちこっちAぇ!"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 50,
-              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
+              "title": "あざとくて何が悪いの？"
             }
           ]
         },
@@ -12419,19 +12452,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
+              "title": "ジャンクSPORTS"
             },
             {
               "rank": 48,
-              "title": "マツコの知らない世界"
+              "title": "夫を殺したはずなのに"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 50,
-              "title": "ジャンクSPORTS"
+              "title": "男子バスケットボールFIBAワールドカップ"
             }
           ]
         }
@@ -12440,10 +12473,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/05 14:27",
+      "updatedAt": "2026/07/05 15:27",
       "episodeId": "epzd8603yf",
       "subtitle": "高橋成美は神ドッキリスターなのかSP 前編",
-      "likes": "2421",
+      "likes": "2427",
       "favorites": "78.0万",
       "likePoints": [
         {
@@ -14247,19 +14280,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 49,
-              "title": "あっちこっちAぇ!"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 50,
-              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
+              "title": "あざとくて何が悪いの？"
             }
           ]
         },
@@ -14772,19 +14805,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
+              "title": "ジャンクSPORTS"
             },
             {
               "rank": 48,
-              "title": "マツコの知らない世界"
+              "title": "夫を殺したはずなのに"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 50,
-              "title": "ジャンクSPORTS"
+              "title": "男子バスケットボールFIBAワールドカップ"
             }
           ]
         }
@@ -14793,7 +14826,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/07/05 14:27",
+      "updatedAt": "2026/07/05 15:27",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
@@ -16154,7 +16187,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "35歳、今さら恋とかありえない"
+              "title": "美女か野獣"
             },
             {
               "rank": 48,
@@ -16666,19 +16699,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
+              "title": "ジャンクSPORTS"
             },
             {
               "rank": 48,
-              "title": "マツコの知らない世界"
+              "title": "夫を殺したはずなのに"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 50,
-              "title": "ジャンクSPORTS"
+              "title": "男子バスケットボールFIBAワールドカップ"
             }
           ]
         }
@@ -16687,7 +16720,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/07/05 14:27",
+      "updatedAt": "2026/07/05 15:27",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
       "likes": "1.1万",
@@ -18342,19 +18375,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 49,
-              "title": "あっちこっちAぇ!"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 50,
-              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
+              "title": "あざとくて何が悪いの？"
             }
           ]
         },
@@ -18495,19 +18528,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
+              "title": "ジャンクSPORTS"
             },
             {
               "rank": 48,
-              "title": "マツコの知らない世界"
+              "title": "夫を殺したはずなのに"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 50,
-              "title": "ジャンクSPORTS"
+              "title": "男子バスケットボールFIBAワールドカップ"
             }
           ]
         }
@@ -18516,10 +18549,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/05 14:27",
+      "updatedAt": "2026/07/05 15:27",
       "episodeId": "eparzrbnab",
       "subtitle": "【4人の休日に密着】",
-      "likes": "1489",
+      "likes": "1503",
       "favorites": "2.2万",
       "likePoints": [
         {
@@ -19053,6 +19086,10 @@
         {
           "hour": 132,
           "likes": 1489
+        },
+        {
+          "hour": 133,
+          "likes": 1503
         }
       ],
       "previousLikePoints": [
@@ -19795,15 +19832,15 @@
             },
             {
               "rank": 48,
-              "title": "オー！マイゴッド！私だけの神様、教えます"
-            },
-            {
-              "rank": 49,
               "title": "大阪おっさんぽ"
             },
             {
+              "rank": 49,
+              "title": "スクール革命！"
+            },
+            {
               "rank": 50,
-              "title": "超超音波"
+              "title": "オー！マイゴッド！私だけの神様、教えます"
             }
           ]
         },
@@ -19818,19 +19855,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 49,
-              "title": "あっちこっちAぇ!"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 50,
-              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
+              "title": "あざとくて何が悪いの？"
             }
           ]
         }
@@ -19839,10 +19876,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/05 14:27",
+      "updatedAt": "2026/07/05 15:27",
       "episodeId": "epggxhtmuq",
       "subtitle": "バレーボール女子日本代表佐藤＆和田ペア参戦",
-      "likes": "1781",
+      "likes": "1786",
       "favorites": "12.4万",
       "likePoints": [
         {
@@ -20300,6 +20337,10 @@
         {
           "hour": 115,
           "likes": 1781
+        },
+        {
+          "hour": 116,
+          "likes": 1786
         }
       ],
       "previousLikePoints": [
@@ -22066,11 +22107,11 @@
             },
             {
               "rank": 49,
-              "title": "LIFE～夢のカタチ～"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 50,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "LIFE～夢のカタチ～"
             }
           ]
         },
@@ -22311,19 +22352,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 49,
-              "title": "あっちこっちAぇ!"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 50,
-              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
+              "title": "あざとくて何が悪いの？"
             }
           ]
         }
@@ -22332,10 +22373,10 @@
     "srwe52o8i3": {
       "programTitle": "世界くらべてみたら",
       "broadcastDate": "2026/06/22",
-      "updatedAt": "2026/07/05 14:27",
+      "updatedAt": "2026/07/05 15:27",
       "episodeId": "ep80kdm92w",
       "subtitle": "日本くらべてみたら 都会と地方の女子校生が交換留学 牛角売上ランキング",
-      "likes": "2386",
+      "likes": "2387",
       "favorites": "28.9万",
       "likePoints": [
         {
@@ -24182,11 +24223,11 @@
             },
             {
               "rank": 49,
-              "title": "LIFE～夢のカタチ～"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 50,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "LIFE～夢のカタチ～"
             }
           ]
         },
@@ -24443,19 +24484,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 49,
-              "title": "あっちこっちAぇ!"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 50,
-              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
+              "title": "あざとくて何が悪いの？"
             }
           ]
         }
@@ -24464,10 +24505,10 @@
     "srdfz31i5d": {
       "programTitle": "ミキティダイニング",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/05 14:27",
+      "updatedAt": "2026/07/05 15:27",
       "episodeId": "epi627g3v8",
       "subtitle": "内田有紀のガチ食生活！timelesz寺西拓人が素顔解禁！",
-      "likes": "8483",
+      "likes": "8492",
       "favorites": "9.3万",
       "likePoints": [
         {
@@ -24845,10 +24886,10 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/05 14:27",
+      "updatedAt": "2026/07/05 15:27",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
-      "likes": "3607",
+      "likes": "3613",
       "favorites": "1.7万",
       "likePoints": [
         {
@@ -25318,6 +25359,10 @@
         {
           "hour": 167,
           "likes": 3607
+        },
+        {
+          "hour": 168,
+          "likes": 3613
         }
       ],
       "previousLikePoints": [],
@@ -25326,7 +25371,7 @@
     "srjkmo0zhs": {
       "programTitle": "クイズ！ドレミファドン",
       "broadcastDate": "2026/06/29",
-      "updatedAt": "2026/07/05 14:27",
+      "updatedAt": "2026/07/05 15:27",
       "episodeId": "epy72shs76",
       "subtitle": "新ドラマ人気番組対抗クイズドレミファドン50周年夏の祭典SP",
       "likes": "1.2万",
@@ -25798,6 +25843,10 @@
         },
         {
           "hour": 139,
+          "likes": 12000
+        },
+        {
+          "hour": 140,
           "likes": 12000
         }
       ],
