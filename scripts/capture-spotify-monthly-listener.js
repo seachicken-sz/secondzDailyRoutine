@@ -4,7 +4,7 @@ const ARTIST_NAME = "timelesz";
 const ARTIST_ID = "1ZFfhzyXjPvbzSYPlCIwo3";
 const ARTIST_URL = `https://open.spotify.com/intl-ja/artist/${ARTIST_ID}`;
 
-const SPOTIFY_WEB_APP_URL = process.env.SPOTIFY_WEB_APP_URL;
+const RANKING_WEB_APP_URL = process.env.RANKING_WEB_APP_URL;
 
 function getJstDateParts() {
   const now = new Date();
@@ -89,8 +89,8 @@ async function getMonthlyListenerText() {
 }
 
 async function sendToSpreadsheet(record) {
-  if (!SPOTIFY_WEB_APP_URL) {
-    throw new Error("SPOTIFY_WEB_APP_URL is not set.");
+  if (!RANKING_WEB_APP_URL) {
+    throw new Error("RANKING_WEB_APP_URL is not set.");
   }
 
   const payload = {
@@ -100,14 +100,14 @@ async function sendToSpreadsheet(record) {
 
   console.log("Sending Spotify monthly listener to spreadsheet...");
   console.log(
-    `POST URL is set: ${SPOTIFY_WEB_APP_URL.startsWith(
+    `POST URL is set: ${RANKING_WEB_APP_URL.startsWith(
       "https://script.google.com/macros/s/"
     )}`
   );
   console.log("Payload:");
   console.log(JSON.stringify(payload, null, 2));
 
-  const response = await fetch(SPOTIFY_WEB_APP_URL, {
+  const response = await fetch(RANKING_WEB_APP_URL, {
     method: "POST",
     body: JSON.stringify(payload),
   });
