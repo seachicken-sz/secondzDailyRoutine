@@ -45,11 +45,11 @@ async function loadRequestRanking() {
 
     // リクエスト曲だけを順位順で上位3件に絞り、メインランキングへ表示する。
     const recentRequestItems = getRequestRankingItems(recentItems);
-
+    
     area.innerHTML = renderRequestRanking({
       recentRequestItems,
+      usenRankingItems,
     });
-
     // innerHTML反映後に「もっと見る」ボタンのイベントを設定する。
     setupRequestRankingToggle();
   } catch (error) {
@@ -227,13 +227,18 @@ function getThisWeekRequestRankingItems(items) {
     .slice(0, 3);
 }
 
-// ランキング本体のHTMLを生成する。先頭1件は常時表示、残りは折り畳む。
-function renderRequestRanking({ recentRequestItems, thisWeekRequestItems }) {
+// ランキング本体のHTMLを生成する。
+// 人気リクエスト曲の先頭1件は常時表示し、残りの曲とUSEN順位は折り畳み内へ表示する。
+function renderRequestRanking({
+  recentRequestItems,
+  usenRankingItems,
+}) {
   return `
     <div class="request-ranking-content" data-expanded="false">
       ${renderRequestRankingBlock(
         { main: "人気リクエスト曲", ruby: "request ranking" },
-        recentRequestItems
+        recentRequestItems,
+        usenRankingItems
       )}
 
       <button
@@ -247,7 +252,7 @@ function renderRequestRanking({ recentRequestItems, thisWeekRequestItems }) {
   `;
 }
 
-function renderRequestRankingBlock(title, items) {
+function renderRequestRankingBlock(title, items, usenRankingItems) {
   const firstItem = items[0];
   const hiddenItems = items.slice(1);
 
@@ -270,6 +275,81 @@ function renderRequestRankingBlock(title, items) {
 
       <div class="request-ranking-extra">
         ${hiddenItems.map(renderRequestRankingItem).join("")}
+
+        ${renderRequestRankingUsenBlock(usenRankingItems)}
+      </div>
+    </section>
+  `;
+}
+
+// 人気リクエスト曲の折り畳み内に表示するUSEN順位。
+// 1〜20位と21〜30位で見た目・文言を分けられるclassを付与する。
+function renderRequestRankingUsenBlock(items) {
+  const rankingItems = Array.isArray(items)
+    ? items
+        .filter((item) => {
+          const rank = Number(item.rank);
+          return rank >= 1 && rank <= 30;
+        })
+        .sort((a, b) => Number(a.rank) - Number(b.rank))
+    : [];
+
+  if (rankingItems.length === 0) {
+    return "";
+  }
+
+  return `
+    <section class="request-ranking-usen">
+      <h3 class="request-ranking-usen-title">
+        USEN推し活リクエスト順位
+      </h3>
+
+      <div class="request-ranking-usen-list">
+        ${rankingItems
+          .map((item) => {
+            const rankNumber = Number(item.rank);
+            const rank = escapeHtml(rankNumber);
+            const songTitle = escapeHtml(
+              item.songTitle || "タイトル不明"
+            );
+
+            const hour = escapeHtml(
+              formatUsenHour(item.hour || item.capturedHour)
+            );
+
+            const rankStatus =
+              rankNumber <= 20
+                ? {
+                    className: "is-top20",
+                    text: "超いい感じ！水曜18時まで20位以内をキープするとDAISOや松屋で流れるよ！",
+                  }
+                : {
+                    className: "is-top30",
+                    text: "いい感じ！水曜18時まで20位以内にあがるとDAISOや松屋で確実に流れるよ！",
+                  };
+
+            return `
+              <div class="request-ranking-usen-item ${rankStatus.className}">
+                <div class="request-ranking-usen-rank-row">
+                  <span class="request-ranking-usen-rank">${rank}位</span>
+                  <span class="request-ranking-usen-status">
+                    ${rankStatus.text}
+                  </span>
+                </div>
+
+                <strong class="request-ranking-usen-song">
+                  ${songTitle}
+                </strong>
+
+                ${
+                  hour
+                    ? `<span class="request-ranking-usen-time">${hour}現在</span>`
+                    : ""
+                }
+              </div>
+            `;
+          })
+          .join("")}
       </div>
     </section>
   `;
