@@ -155,13 +155,17 @@ function renderUsenRankingInfo(items) {
       return `
         <div class="usen-ranking-item ${rankStatus.className}">
           <span class="usen-ranking-line">
-            ${hour}現在 USEN推し活リクエスト
-            <strong>${rank}位！</strong>
-            <span class="usen-ranking-status">${rankStatus.text}</span>
+            ${hour}現在
+            <strong class="usen-ranking-song">
+              ${songTitle}
+            </strong>
+            <strong class="usen-ranking-rank">
+              ${rank}位！
+            </strong>
           </span>
 
-          <span class="usen-ranking-song">
-            <strong>${songTitle}</strong>
+          <span class="usen-ranking-status">
+            ${rankStatus.text}
           </span>
         </div>
       `;
@@ -283,7 +287,6 @@ function renderRequestRankingBlock(title, items, usenRankingItems) {
 }
 
 // 人気リクエスト曲の折り畳み内に表示するUSEN順位。
-// 1〜20位と21〜30位で見た目・文言を分けられるclassを付与する。
 function renderRequestRankingUsenBlock(items) {
   const rankingItems = Array.isArray(items)
     ? items
@@ -330,22 +333,25 @@ function renderRequestRankingUsenBlock(items) {
 
             return `
               <div class="request-ranking-usen-item ${rankStatus.className}">
-                <div class="request-ranking-usen-rank-row">
-                  <span class="request-ranking-usen-rank">${rank}位</span>
-                  <span class="request-ranking-usen-status">
-                    ${rankStatus.text}
-                  </span>
-                </div>
-
-                <strong class="request-ranking-usen-song">
-                  ${songTitle}
-                </strong>
-
                 ${
                   hour
                     ? `<span class="request-ranking-usen-time">${hour}現在</span>`
                     : ""
                 }
+
+                <div class="request-ranking-usen-rank-row">
+                  <strong class="request-ranking-usen-song">
+                    ${songTitle}
+                  </strong>
+
+                  <strong class="request-ranking-usen-rank">
+                    ${rank}位
+                  </strong>
+                </div>
+
+                <span class="request-ranking-usen-status">
+                  ${rankStatus.text}
+                </span>
               </div>
             `;
           })
