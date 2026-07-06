@@ -418,6 +418,61 @@
   font-weight: 700;
   line-height: 1.6;
 }
+.request-ranking-usen {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.request-ranking-usen-title {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+}
+
+.request-ranking-usen-list {
+  display: grid;
+  gap: 8px;
+}
+
+.request-ranking-usen-item {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.request-ranking-usen-item.is-top20 {
+  /* 1〜20位用の見た目 */
+}
+
+.request-ranking-usen-item.is-top30 {
+  /* 21〜30位用の見た目 */
+}
+
+.request-ranking-usen-rank-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.request-ranking-usen-rank {
+  font-weight: 700;
+}
+
+.request-ranking-usen-status {
+  font-size: 0.8rem;
+}
+
+.request-ranking-usen-song {
+  display: block;
+  margin-top: 3px;
+}
+
+.request-ranking-usen-time {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
 /* =========================
    メンバーお仕事エリア
 ========================= */
