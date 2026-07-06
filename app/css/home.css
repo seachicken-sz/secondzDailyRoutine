@@ -647,6 +647,9 @@
 .member-link-section-dreampass .member-link-section-title::before {
   content: "🎬";
 }
+.member-link-section-dreampass_kouho .member-link-section-title::before {
+  content: "🎬";
+}
 .member-work-link-card-tver {
   display: grid;
   grid-template-columns: minmax(0, 2.5fr) minmax(72px, 1fr) minmax(32px, 0.5fr);
