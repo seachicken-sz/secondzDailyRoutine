@@ -1,3 +1,4 @@
+// musicTopJson.jsonは、データ更新後も最新内容を取得できるよう時間単位でキャッシュを切り替える。
 const MUSIC_TOP_API_URL = `../data/musicTopJson.json?v=${getMusicTopCacheKey()}`;
 
 function getMusicTopCacheKey() {
@@ -11,6 +12,7 @@ function getMusicTopCacheKey() {
   ].join("");
 }
 
+// 音楽トップ用JSONを取得し、Spotify・USEN・人気リクエスト曲の表示をまとめて更新する。
 async function loadRequestRanking() {
   const area = document.getElementById("requestRankingArea");
 
@@ -27,6 +29,7 @@ async function loadRequestRanking() {
 
     const data = await response.json();
 
+    // JSONの項目欠損時でも後続の描画処理が止まらないよう、配列項目は空配列に寄せる。
     const recentItems = Array.isArray(data.recentMusicTop)
       ? data.recentMusicTop
       : [];
@@ -40,16 +43,19 @@ async function loadRequestRanking() {
     renderSpotifyListenerInfo(spotifyListener);
     renderUsenRankingInfo(usenRankingItems);
 
+    // リクエスト曲だけを順位順で上位3件に絞り、メインランキングへ表示する。
     const recentRequestItems = getRequestRankingItems(recentItems);
 
     area.innerHTML = renderRequestRanking({
       recentRequestItems,
     });
 
+    // innerHTML反映後に「もっと見る」ボタンのイベントを設定する。
     setupRequestRankingToggle();
   } catch (error) {
     console.error("request ranking load error", error);
 
+    // 一部の古い表示だけ残らないよう、取得失敗時は関連表示をまとめてリセットする。
     renderSpotifyListenerInfo(null);
     renderUsenRankingInfo([]);
 
@@ -58,6 +64,7 @@ async function loadRequestRanking() {
   }
 }
 
+// Spotifyの月間リスナー数と、取得できている場合のみ前日比を表示する。
 function renderSpotifyListenerInfo(spotifyListener) {
   const countElement = spotifyListenerCountElement;
 
@@ -101,6 +108,7 @@ function renderSpotifyListenerInfo(spotifyListener) {
   countElement.classList.remove("hidden");
 }
 
+// USEN推し活リクエストの最新順位を、30位以内に入っている曲だけ表示する。
 function renderUsenRankingInfo(items) {
   const element = usenRankingInfoElement;
 
@@ -111,7 +119,7 @@ function renderUsenRankingInfo(items) {
   const rankingItems = Array.isArray(items)
     ? items.filter((item) => {
         const rank = Number(item.rank);
-        return rank >= 1 && rank <= 10;
+        return rank >= 1 && rank <= 30;
       })
     : [];
 
@@ -127,19 +135,35 @@ function renderUsenRankingInfo(items) {
         formatUsenHour(item.hour || item.capturedHour)
       );
 
-      const rank = escapeHtml(item.rank);
+      const rankNumber = Number(item.rank);
+      const rank = escapeHtml(rankNumber);
       const songTitle = escapeHtml(
         item.songTitle || "タイトル不明"
       );
 
-      return `
-        <span class="usen-ranking-line">
-          ${hour}現在 USEN推し活リクエスト <strong>${rank}位！</strong>
-        </span>
+      const rankStatus =
+        rankNumber <= 20
+          ? {
+              className: "usen-ranking-top20",
+              text: "水曜18時まで20位以内をキープするとDAISOや松屋で流れるよ！",
+            }
+          : {
+              className: "usen-ranking-top30",
+              text: "水曜18時まで20位以内にあがるとDAISOや松屋で流れるよ！あと少し！",
+            };
 
-        <span class="usen-ranking-song">
-          <strong>${songTitle}</strong>
-        </span>
+      return `
+        <div class="usen-ranking-item ${rankStatus.className}">
+          <span class="usen-ranking-line">
+            ${hour}現在 USEN推し活リクエスト
+            <strong>${rank}位！</strong>
+            <span class="usen-ranking-status">${rankStatus.text}</span>
+          </span>
+
+          <span class="usen-ranking-song">
+            <strong>${songTitle}</strong>
+          </span>
+        </div>
       `;
     })
     .join("");
@@ -147,6 +171,7 @@ function renderUsenRankingInfo(items) {
   element.classList.remove("hidden");
 }
 
+// 時刻文字列・日時文字列のどちらでも「H:mm」形式へ整形する。
 function formatUsenHour(value) {
   if (!value) {
     return "";
@@ -169,6 +194,7 @@ function formatUsenHour(value) {
   return text;
 }
 
+// 数値・カンマ付き文字列を安全に数値化し、扱えない値はnullにする。
 function toDisplayNumber(value) {
   if (value === null || value === undefined || value === "") {
     return null;
@@ -183,6 +209,7 @@ function toDisplayNumber(value) {
   return number;
 }
 
+// 直近データからリクエスト曲だけを順位順に上位3件取得する。
 function getRequestRankingItems(items) {
   return items
     .filter((item) => item.taskType === "requestSong")
@@ -190,6 +217,7 @@ function getRequestRankingItems(items) {
     .slice(0, 3);
 }
 
+// 将来「今週」表示を追加する場合の取得処理。現時点では描画には未使用。
 function getThisWeekRequestRankingItems(items) {
   return items
     .filter((item) => {
@@ -199,6 +227,7 @@ function getThisWeekRequestRankingItems(items) {
     .slice(0, 3);
 }
 
+// ランキング本体のHTMLを生成する。先頭1件は常時表示、残りは折り畳む。
 function renderRequestRanking({ recentRequestItems, thisWeekRequestItems }) {
   return `
     <div class="request-ranking-content" data-expanded="false">
@@ -263,6 +292,7 @@ function renderRequestRankingItem(item) {
   `;
 }
 
+// 折り畳み対象がある場合だけ「もっと見る」を表示する。
 function setupRequestRankingToggle() {
   const content = document.querySelector(".request-ranking-content");
   const button = document.getElementById("requestRankingToggleButton");
@@ -294,6 +324,7 @@ function setupRequestRankingToggle() {
   });
 }
 
+// 外部JSON由来の文字列をHTMLへ埋め込む前にエスケープする。
 function escapeHtml(value) {
   return String(value || "")
     .replace(/&/g, "&amp;")
