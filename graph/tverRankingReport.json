@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/06 13:26",
+  "updatedAt": "2026/07/06 14:28",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/06 13:26",
+      "updatedAt": "2026/07/06 14:28",
       "episodeId": "ep6osmqoh8",
       "subtitle": "timelesz100",
       "likes": "1.1万",
@@ -260,6 +260,10 @@
         },
         {
           "hour": 63,
+          "likes": 11000
+        },
+        {
+          "hour": 64,
           "likes": 11000
         }
       ],
@@ -934,7 +938,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 9,
-          "elapsedHour": 63,
+          "elapsedHour": 64,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -1179,6 +1183,10 @@
             },
             {
               "hour": 63,
+              "rank": 9
+            },
+            {
+              "hour": 64,
               "rank": 9
             }
           ],
@@ -1827,11 +1835,11 @@
             },
             {
               "rank": 7,
-              "title": "千鳥のクセスゴ！"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 8,
-              "title": "timeleszファミリア"
+              "title": "千鳥のクセスゴ！"
             },
             {
               "rank": 9,
@@ -1842,9 +1850,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 18,
-          "elapsedHour": 63,
-          "elapsedRank": 18,
+          "currentRank": 17,
+          "elapsedHour": 64,
+          "elapsedRank": 17,
           "currentPoints": [
             {
               "hour": 8,
@@ -2069,6 +2077,10 @@
             {
               "hour": 63,
               "rank": 18
+            },
+            {
+              "hour": 64,
+              "rank": 17
             }
           ],
           "previousPoints": [
@@ -2455,19 +2467,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 15,
-              "title": "千鳥のクセスゴ！"
+              "rank": 14,
+              "title": "夫婦と16歳～狂気の隣人～"
             },
             {
-              "rank": 16,
+              "rank": 15,
               "title": "timeleszファミリア"
             },
             {
-              "rank": 17,
-              "title": "ミッドナイト屋台２～ル・モンドゥ～"
+              "rank": 16,
+              "title": "千鳥のクセスゴ！"
             },
             {
-              "rank": 18,
+              "rank": 17,
               "title": "タイムレスマン"
             }
           ]
@@ -2477,10 +2489,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/05",
-      "updatedAt": "2026/07/06 13:26",
+      "updatedAt": "2026/07/06 14:28",
       "episodeId": "epixcs383v",
       "subtitle": "【意外と知らない!渋谷の秘密】絶品!世界1のコーヒー",
-      "likes": "8090",
+      "likes": "8320",
       "favorites": "33.3万",
       "likePoints": [
         {
@@ -2574,6 +2586,10 @@
         {
           "hour": 23,
           "likes": 8090
+        },
+        {
+          "hour": 24,
+          "likes": 8320
         }
       ],
       "previousLikePoints": [
@@ -3250,9 +3266,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 8,
-          "elapsedHour": 23,
-          "elapsedRank": 8,
+          "currentRank": 7,
+          "elapsedHour": 24,
+          "elapsedRank": 7,
           "currentPoints": [
             {
               "hour": 4,
@@ -3333,6 +3349,10 @@
             {
               "hour": 23,
               "rank": 8
+            },
+            {
+              "hour": 24,
+              "rank": 7
             }
           ],
           "previousPoints": [
@@ -3983,6 +4003,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 4,
+              "title": "かまいたちの知らんけど"
+            },
+            {
               "rank": 5,
               "title": "世界の果てまでイッテQ！"
             },
@@ -3992,10 +4016,6 @@
             },
             {
               "rank": 7,
-              "title": "千鳥のクセスゴ！"
-            },
-            {
-              "rank": 8,
               "title": "timeleszファミリア"
             }
           ]
@@ -4003,9 +4023,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 16,
-          "elapsedHour": 23,
-          "elapsedRank": 16,
+          "currentRank": 15,
+          "elapsedHour": 24,
+          "elapsedRank": 15,
           "currentPoints": [
             {
               "hour": 7,
@@ -4074,6 +4094,10 @@
             {
               "hour": 23,
               "rank": 16
+            },
+            {
+              "hour": 24,
+              "rank": 15
             }
           ],
           "previousPoints": [
@@ -4408,6 +4432,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 12,
+              "title": "アメトーーク！"
+            },
+            {
               "rank": 13,
               "title": "今夜もシリアルキラーと待ち合わせ"
             },
@@ -4417,10 +4445,6 @@
             },
             {
               "rank": 15,
-              "title": "千鳥のクセスゴ！"
-            },
-            {
-              "rank": 16,
               "title": "timeleszファミリア"
             }
           ]
@@ -4430,10 +4454,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/06 13:26",
+      "updatedAt": "2026/07/06 14:28",
       "episodeId": "epxk5ysq54",
       "subtitle": "チョコプラ・timeleszの実験番組 特別編「視聴者が衝撃を受けた！ワクワク実験ランキング」",
-      "likes": "6471",
+      "likes": "6489",
       "favorites": "5.3万",
       "likePoints": [
         {
@@ -4963,6 +4987,10 @@
         {
           "hour": 133,
           "likes": 6471
+        },
+        {
+          "hour": 134,
+          "likes": 6489
         }
       ],
       "previousLikePoints": [
@@ -6489,19 +6517,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "アンタッチャブルでやらせてもらってます"
+              "title": "ナンデモ特命係 発見らくちゃく！"
             },
             {
               "rank": 48,
-              "title": "サタプラ"
+              "title": "アンタッチャブルでやらせてもらってます"
             },
             {
               "rank": 49,
-              "title": "坂上&指原のつぶれない店"
+              "title": "発見！仰天！！プレミアもん！！！ 土曜はダメよ！"
             },
             {
               "rank": 50,
-              "title": "林修の今知りたいでしょ！"
+              "title": "サタプラ"
             }
           ]
         },
@@ -6658,11 +6686,11 @@
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "クレイジージャーニー"
             }
           ]
         }
@@ -6671,7 +6699,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/02",
-      "updatedAt": "2026/07/06 13:26",
+      "updatedAt": "2026/07/06 14:28",
       "episodeId": "ephnvcipnk",
       "subtitle": "粘土のこね方を言葉だけで伝えろ",
       "likes": "1.0万",
@@ -7103,6 +7131,10 @@
         },
         {
           "hour": 107,
+          "likes": 10000
+        },
+        {
+          "hour": 108,
           "likes": 10000
         }
       ],
@@ -8330,11 +8362,11 @@
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "クレイジージャーニー"
             }
           ]
         },
@@ -8691,19 +8723,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
-            },
-            {
-              "rank": 48,
               "title": "月曜から夜ふかし"
             },
             {
+              "rank": 48,
+              "title": "夫を殺したはずなのに"
+            },
+            {
               "rank": 49,
-              "title": "ゴッドタン"
+              "title": "名探偵プリキュア！"
             },
             {
               "rank": 50,
-              "title": "夫を殺したはずなのに"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             }
           ]
         }
@@ -8712,7 +8744,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/07/06 13:26",
+      "updatedAt": "2026/07/06 14:28",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
       "likes": "3831",
@@ -10033,11 +10065,11 @@
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "クレイジージャーニー"
             }
           ]
         },
@@ -10281,19 +10313,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
-            },
-            {
-              "rank": 48,
               "title": "月曜から夜ふかし"
             },
             {
+              "rank": 48,
+              "title": "夫を殺したはずなのに"
+            },
+            {
               "rank": 49,
-              "title": "ゴッドタン"
+              "title": "名探偵プリキュア！"
             },
             {
               "rank": 50,
-              "title": "夫を殺したはずなのに"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             }
           ]
         }
@@ -10302,10 +10334,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/01",
-      "updatedAt": "2026/07/06 13:26",
+      "updatedAt": "2026/07/06 14:28",
       "episodeId": "eputvsuotr",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！FRUITS ZIPPER登場",
-      "likes": "4591",
+      "likes": "4602",
       "favorites": "8.5万",
       "likePoints": [
         {
@@ -10831,6 +10863,10 @@
         {
           "hour": 132,
           "likes": 4591
+        },
+        {
+          "hour": 133,
+          "likes": 4602
         }
       ],
       "previousLikePoints": [
@@ -11853,11 +11889,11 @@
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "クレイジージャーニー"
             }
           ]
         },
@@ -12097,19 +12133,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
-            },
-            {
-              "rank": 48,
               "title": "月曜から夜ふかし"
             },
             {
+              "rank": 48,
+              "title": "夫を殺したはずなのに"
+            },
+            {
               "rank": 49,
-              "title": "ゴッドタン"
+              "title": "名探偵プリキュア！"
             },
             {
               "rank": 50,
-              "title": "夫を殺したはずなのに"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             }
           ]
         }
@@ -12118,10 +12154,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/06 13:26",
+      "updatedAt": "2026/07/06 14:28",
       "episodeId": "ep9zs2mp9b",
       "subtitle": "第134回 あっち向いてホイ後編・・・伝説交代？悲鳴再び？",
-      "likes": "2884",
+      "likes": "2898",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -12367,6 +12403,10 @@
         {
           "hour": 84,
           "likes": 2884
+        },
+        {
+          "hour": 86,
+          "likes": 2898
         }
       ],
       "previousLikePoints": [
@@ -13157,11 +13197,11 @@
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "クレイジージャーニー"
             }
           ]
         },
@@ -13274,19 +13314,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
-            },
-            {
-              "rank": 48,
               "title": "月曜から夜ふかし"
             },
             {
+              "rank": 48,
+              "title": "夫を殺したはずなのに"
+            },
+            {
               "rank": 49,
-              "title": "ゴッドタン"
+              "title": "名探偵プリキュア！"
             },
             {
               "rank": 50,
-              "title": "夫を殺したはずなのに"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             }
           ]
         }
@@ -13295,10 +13335,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/06 13:26",
+      "updatedAt": "2026/07/06 14:28",
       "episodeId": "epzd8603yf",
       "subtitle": "高橋成美は神ドッキリスターなのかSP 前編",
-      "likes": "2487",
+      "likes": "2489",
       "favorites": "78.0万",
       "likePoints": [
         {
@@ -15110,11 +15150,11 @@
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "クレイジージャーニー"
             }
           ]
         },
@@ -15627,19 +15667,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
-            },
-            {
-              "rank": 48,
               "title": "月曜から夜ふかし"
             },
             {
+              "rank": 48,
+              "title": "夫を殺したはずなのに"
+            },
+            {
               "rank": 49,
-              "title": "ゴッドタン"
+              "title": "名探偵プリキュア！"
             },
             {
               "rank": 50,
-              "title": "夫を殺したはずなのに"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             }
           ]
         }
@@ -15648,7 +15688,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/07/06 13:26",
+      "updatedAt": "2026/07/06 14:28",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
@@ -17009,19 +17049,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラストノート"
+              "title": "美女か野獣"
             },
             {
               "rank": 48,
-              "title": "夫婦別姓刑事"
+              "title": "ラストノート"
             },
             {
               "rank": 49,
-              "title": "海の上の診療所"
+              "title": "夫婦別姓刑事"
             },
             {
               "rank": 50,
-              "title": "愛するということ"
+              "title": "スケバン刑事Ⅱ少女鉄仮面伝説"
             }
           ]
         },
@@ -17521,19 +17561,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
-            },
-            {
-              "rank": 48,
               "title": "月曜から夜ふかし"
             },
             {
+              "rank": 48,
+              "title": "夫を殺したはずなのに"
+            },
+            {
               "rank": 49,
-              "title": "ゴッドタン"
+              "title": "名探偵プリキュア！"
             },
             {
               "rank": 50,
-              "title": "夫を殺したはずなのに"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             }
           ]
         }
@@ -17542,7 +17582,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/07/06 13:26",
+      "updatedAt": "2026/07/06 14:28",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
       "likes": "1.1万",
@@ -19205,11 +19245,11 @@
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "クレイジージャーニー"
             }
           ]
         },
@@ -19350,19 +19390,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
-            },
-            {
-              "rank": 48,
               "title": "月曜から夜ふかし"
             },
             {
+              "rank": 48,
+              "title": "夫を殺したはずなのに"
+            },
+            {
               "rank": 49,
-              "title": "ゴッドタン"
+              "title": "名探偵プリキュア！"
             },
             {
               "rank": 50,
-              "title": "夫を殺したはずなのに"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             }
           ]
         }
@@ -19371,10 +19411,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/06 13:26",
+      "updatedAt": "2026/07/06 14:28",
       "episodeId": "eparzrbnab",
       "subtitle": "【4人の休日に密着】",
-      "likes": "1641",
+      "likes": "1650",
       "favorites": "2.2万",
       "likePoints": [
         {
@@ -20000,6 +20040,10 @@
         {
           "hour": 155,
           "likes": 1641
+        },
+        {
+          "hour": 156,
+          "likes": 1650
         }
       ],
       "previousLikePoints": [
@@ -20773,11 +20817,11 @@
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "クレイジージャーニー"
             }
           ]
         }
@@ -20786,10 +20830,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/06 13:26",
+      "updatedAt": "2026/07/06 14:28",
       "episodeId": "epggxhtmuq",
       "subtitle": "バレーボール女子日本代表佐藤＆和田ペア参戦",
-      "likes": "1859",
+      "likes": "1865",
       "favorites": "12.4万",
       "likePoints": [
         {
@@ -21339,6 +21383,10 @@
         {
           "hour": 138,
           "likes": 1859
+        },
+        {
+          "hour": 139,
+          "likes": 1865
         }
       ],
       "previousLikePoints": [
@@ -23097,19 +23145,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "アンタッチャブルでやらせてもらってます"
+              "title": "ナンデモ特命係 発見らくちゃく！"
             },
             {
               "rank": 48,
-              "title": "サタプラ"
+              "title": "アンタッチャブルでやらせてもらってます"
             },
             {
               "rank": 49,
-              "title": "坂上&指原のつぶれない店"
+              "title": "発見！仰天！！プレミアもん！！！ 土曜はダメよ！"
             },
             {
               "rank": 50,
-              "title": "林修の今知りたいでしょ！"
+              "title": "サタプラ"
             }
           ]
         },
@@ -23358,11 +23406,11 @@
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "クレイジージャーニー"
             }
           ]
         }
@@ -23371,10 +23419,10 @@
     "srwe52o8i3": {
       "programTitle": "世界くらべてみたら",
       "broadcastDate": "2026/06/22",
-      "updatedAt": "2026/07/06 13:26",
+      "updatedAt": "2026/07/06 14:28",
       "episodeId": "ep80kdm92w",
       "subtitle": "日本くらべてみたら 都会と地方の女子校生が交換留学 牛角売上ランキング",
-      "likes": "2489",
+      "likes": "2500",
       "favorites": "28.9万",
       "likePoints": [
         {
@@ -25213,19 +25261,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "アンタッチャブルでやらせてもらってます"
+              "title": "ナンデモ特命係 発見らくちゃく！"
             },
             {
               "rank": 48,
-              "title": "サタプラ"
+              "title": "アンタッチャブルでやらせてもらってます"
             },
             {
               "rank": 49,
-              "title": "坂上&指原のつぶれない店"
+              "title": "発見！仰天！！プレミアもん！！！ 土曜はダメよ！"
             },
             {
               "rank": 50,
-              "title": "林修の今知りたいでしょ！"
+              "title": "サタプラ"
             }
           ]
         },
@@ -25490,11 +25538,11 @@
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "クレイジージャーニー"
             }
           ]
         }
@@ -25503,10 +25551,10 @@
     "srdfz31i5d": {
       "programTitle": "ミキティダイニング",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/06 13:26",
+      "updatedAt": "2026/07/06 14:28",
       "episodeId": "epi627g3v8",
       "subtitle": "内田有紀のガチ食生活！timelesz寺西拓人が素顔解禁！",
-      "likes": "8565",
+      "likes": "8567",
       "favorites": "9.3万",
       "likePoints": [
         {
@@ -25884,10 +25932,10 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/06 13:26",
+      "updatedAt": "2026/07/06 14:28",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
-      "likes": "3713",
+      "likes": "3720",
       "favorites": "1.8万",
       "likePoints": [
         {
@@ -26377,7 +26425,7 @@
     "srjkmo0zhs": {
       "programTitle": "クイズ！ドレミファドン",
       "broadcastDate": "2026/06/29",
-      "updatedAt": "2026/07/06 13:26",
+      "updatedAt": "2026/07/06 14:28",
       "episodeId": "epy72shs76",
       "subtitle": "新ドラマ人気番組対抗クイズドレミファドン50周年夏の祭典SP",
       "likes": "1.2万",
@@ -26941,6 +26989,10 @@
         },
         {
           "hour": 162,
+          "likes": 12000
+        },
+        {
+          "hour": 163,
           "likes": 12000
         }
       ],
