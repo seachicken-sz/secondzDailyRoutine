@@ -2,7 +2,6 @@ const { chromium } = require("playwright");
 
 const ARTIST_NAME = "timelesz";
 const RANKING_URL = "https://usen.oshireq.com/";
-
 const RANKING_WEB_APP_URL = process.env.RANKING_WEB_APP_URL;
 
 function getJstDateParts() {
@@ -96,6 +95,7 @@ async function getTextOrEmpty(locator) {
   }
 
   const text = await locator.first().textContent();
+
   return normalizeText(text);
 }
 
@@ -107,6 +107,7 @@ async function getAttributeOrEmpty(locator, name) {
   }
 
   const value = await locator.first().getAttribute(name);
+
   return value || "";
 }
 
@@ -116,10 +117,9 @@ async function getTimeleszRankingItems(page) {
   });
 
   const count = await artistElements.count();
-
   const results = [];
 
-  for (let i = 0; i < count; i++) {
+  for (let i = 0; i < count; i += 1) {
     const artistElement = artistElements.nth(i);
     const item = artistElement.locator("xpath=ancestor::li[1]");
     const link = item.locator("a").first();
@@ -173,7 +173,6 @@ async function captureRankingItems() {
     });
 
     await page.waitForTimeout(3000);
-
     await scrollToBottom(page);
 
     const items = await getTimeleszRankingItems(page);
@@ -196,14 +195,25 @@ async function sendToSpreadsheet(snapshot) {
     ...snapshot,
   };
 
+  console.log("Sending timelesz request ranking to spreadsheet...");
+  console.log(
+    `POST URL is set: ${RANKING_WEB_APP_URL.startsWith(
+      "https://script.google.com/macros/s/"
+    )}`
+  );
+
   const response = await fetch(RANKING_WEB_APP_URL, {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(payload),
   });
 
   const responseText = await response.text();
 
   console.log(`Spreadsheet response status: ${response.status}`);
+  console.log("Spreadsheet sync response:");
   console.log(responseText);
 
   if (!response.ok) {
@@ -211,10 +221,31 @@ async function sendToSpreadsheet(snapshot) {
       `Spreadsheet sync failed: ${response.status} ${responseText}`
     );
   }
+
+  let result;
+
+  try {
+    result = JSON.parse(responseText);
+  } catch (error) {
+    throw new Error(
+      `Spreadsheet response is not JSON: ${responseText}`
+    );
+  }
+
+  if (!result.ok) {
+    throw new Error(
+      `Spreadsheet sync failed: ${result.error || responseText}`
+    );
+  }
 }
 
 async function main() {
-  const { date, hour, capturedHour, createdAt } = getJstDateParts();
+  const {
+    date,
+    hour,
+    capturedHour,
+    createdAt,
+  } = getJstDateParts();
 
   const items = await captureRankingItems();
 
