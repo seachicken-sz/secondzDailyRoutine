@@ -83,7 +83,7 @@ main{
 .header div{
     padding: 2rem;
     max-width: 720px;
-  margin:auto;
+
 }
 .header .primary-button{
     padding: 0.6rem;
@@ -287,42 +287,35 @@ h1 {
 /* 期間限定・デイリータスク */
 
 .task-link-card {
-  padding: 14px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 34px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
   border: 1px solid var(--color-border-light);
   border-radius: 14px;
   background: var(--color-surface);
 }
 
-.task-link-card-title {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 800;
-  line-height: 1.5;
-}
-
-.task-link-card-description {
-  margin: 8px 0 0;
-  color: var(--color-text-description);
-  font-size: 13px;
-  line-height: 1.65;
-  white-space: pre-line;
-}
-
-.task-link-card-button {
-  display: block;
-  margin-top: 12px;
-  padding: 10px 14px;
-  border-radius: var(--radius-button);
-  background: var(--color-brand);
-  color: var(--color-text-inverse);
-  font-size: 14px;
-  font-weight: 700;
-  text-align: center;
+.task-link-card-main {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  padding: 4px;
+  color: var(--color-text);
   text-decoration: none;
 }
 
-.task-link-card-button:active {
-  transform: scale(0.98);
+.task-link-card-main:active {
+  opacity: 0.65;
+}
+
+.task-link-card-title {
+  min-width: 0;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 
 /* TVer */
@@ -392,7 +385,7 @@ h1 {
   font-weight: 800;
   line-height: 1;
 }
-
+.task-link-card-button,
 .tver-link-card-button {
   display: grid;
   width: 28px;
@@ -408,7 +401,7 @@ h1 {
 }
 
 
-
+.task-link-card-button:active,
 .tver-link-card-button:active {
   transform: scale(0.94);
 }

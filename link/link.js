@@ -70,7 +70,10 @@ async function initializeLinkPage() {
   renderYoutubeResult(youtubeListResult);
 
   initializePageNavigation();
-  sendLinkPageAccessLog();
+
+  if (typeof sendLinkPageAccessLog === "function") {
+    sendLinkPageAccessLog();
+  }
 }
 
 async function fetchJson(url) {
@@ -106,12 +109,10 @@ function renderLimitedTaskResult(result) {
 
   activeTasks.forEach((task) => {
     container.appendChild(
-      createTaskCard({
+      createSimpleLinkCard({
         title: task.name,
-        description: task["notice-message"],
         url: task.url,
-        buttonText: "タスクを開く",
-        logCategory: "limited",
+        category: "limited",
         itemId: task.id || "",
       })
     );
@@ -141,12 +142,10 @@ function renderDailyTaskResult(result) {
 
   tasks.forEach((task) => {
     container.appendChild(
-      createTaskCard({
+      createSimpleLinkCard({
         title: task.name,
-        description: task.comment,
         url: task.url,
-        buttonText: "タスクを開く",
-        logCategory: "daily",
+        category: "daily",
         itemId: task.id || "",
       })
     );
@@ -180,10 +179,11 @@ function renderTverResult(result) {
 
   tverWorks.forEach((work) => {
     container.appendChild(
-      createTverCard({
+      createTverLinkCard({
         title: work.title,
         members: work.members,
         url: work.platformUrl,
+        itemId: createLinkLogItemId("tver", work.title),
       })
     );
   });
@@ -221,72 +221,77 @@ function renderYoutubeResult(result) {
 }
 
 // ==================================================
-// カード生成
+// 共通リンクカード
 // ==================================================
 
-function createTaskCard({
+function createSimpleLinkCard({
   title,
-  description,
   url,
-  buttonText,
-  logCategory,
+  category,
   itemId,
 }) {
   const card = document.createElement("article");
-  card.className = "task-link-card";
-
-  const titleElement = document.createElement("h3");
-  titleElement.className = "task-link-card-title";
-  titleElement.textContent = title;
-
-  const descriptionElement = document.createElement("p");
-  descriptionElement.className = "task-link-card-description";
-  descriptionElement.textContent = description || "";
-
-  const link = document.createElement("a");
-  link.className = "task-link-card-button";
-  link.href = url;
-  link.target = "_blank";
-  link.rel = "noopener noreferrer";
-  link.textContent = buttonText;
-
-  link.addEventListener("click", () => {
-    sendLinkClickLog({
-      category: logCategory,
-      itemId,
-      title,
-      url,
-    });
-  });
-
-  card.append(titleElement);
-
-  if (description) {
-    card.append(descriptionElement);
-  }
-
-  if (url) {
-    card.append(link);
-  }
-
-  return card;
-}
-
-function createTverCard({ title, members, url }) {
-  const card = document.createElement("article");
-  card.className = "tver-link-card";
+  card.className = "simple-link-card";
 
   const mainLink = document.createElement("a");
-  mainLink.className = "tver-link-card-main";
+  mainLink.className = "simple-link-card-main";
   mainLink.href = url;
   mainLink.target = "_blank";
   mainLink.rel = "noopener noreferrer";
 
-  const titleArea = document.createElement("div");
+  const titleElement = document.createElement("span");
+  titleElement.className = "simple-link-card-title";
+  titleElement.textContent = title;
+
+  mainLink.appendChild(titleElement);
+
+  const buttonLink = document.createElement("a");
+  buttonLink.className = "simple-link-card-button";
+  buttonLink.href = url;
+  buttonLink.target = "_blank";
+  buttonLink.rel = "noopener noreferrer";
+  buttonLink.setAttribute("aria-label", `${title}を開く`);
+  buttonLink.textContent = "→";
+
+  const logData = {
+    category,
+    itemId,
+    title,
+    url,
+  };
+
+  bindLinkClickLog(mainLink, logData);
+  bindLinkClickLog(buttonLink, logData);
+
+  card.append(mainLink, buttonLink);
+
+  return card;
+}
+
+// ==================================================
+// TVerリンクカード
+// ==================================================
+
+function createTverLinkCard({
+  title,
+  members,
+  url,
+  itemId,
+}) {
+  const card = document.createElement("article");
+  card.className = "simple-link-card";
+
+  const mainLink = document.createElement("a");
+  mainLink.className = "simple-link-card-main";
+  mainLink.href = url;
+  mainLink.target = "_blank";
+  mainLink.rel = "noopener noreferrer";
+
+  const titleArea = document.createElement("span");
   titleArea.className = "tver-link-card-title-area";
 
   const titleElement = document.createElement("span");
-  titleElement.className = "tver-link-card-title";
+  titleElement.className = "simple-link-card-title";
   titleElement.textContent = title;
 
   const heartsElement = createMemberHearts(members);
@@ -295,7 +300,7 @@ function createTverCard({ title, members, url }) {
   mainLink.appendChild(titleArea);
 
   const buttonLink = document.createElement("a");
-  buttonLink.className = "tver-link-card-button";
+  buttonLink.className = "simple-link-card-button";
   buttonLink.href = url;
   buttonLink.target = "_blank";
   buttonLink.rel = "noopener noreferrer";
@@ -304,26 +309,30 @@ function createTverCard({ title, members, url }) {
 
   const logData = {
     category: "tver",
-    itemId: createLinkLogItemId("tver", title),
+    itemId,
     title,
     url,
     members: Array.isArray(members) ? members.join(",") : "",
   };
 
-  mainLink.addEventListener("click", () => {
-    sendLinkClickLog(logData);
-  });
-
-  buttonLink.addEventListener("click", () => {
-    sendLinkClickLog(logData);
-  });
+  bindLinkClickLog(mainLink, logData);
+  bindLinkClickLog(buttonLink, logData);
 
   card.append(mainLink, buttonLink);
 
   return card;
 }
 
-function createYoutubeCard({ title, url, itemId, thumbnailUrl }) {
+// ==================================================
+// YouTubeカード
+// ==================================================
+
+function createYoutubeCard({
+  title,
+  url,
+  itemId,
+  thumbnailUrl,
+}) {
   const card = document.createElement("a");
   card.className = "youtube-link-card";
   card.href = url;
@@ -348,13 +357,11 @@ function createYoutubeCard({ title, url, itemId, thumbnailUrl }) {
   titleElement.className = "youtube-link-card-title";
   titleElement.textContent = title;
 
-  card.addEventListener("click", () => {
-    sendLinkClickLog({
-      category: "youtube",
-      itemId,
-      title,
-      url,
-    });
+  bindLinkClickLog(card, {
+    category: "youtube",
+    itemId,
+    title,
+    url,
   });
 
   imageWrap.appendChild(image);
@@ -426,12 +433,28 @@ function getMemberLabel(members) {
     return "ALL";
   }
 
-  const memberIds = normalizeMemberIds(members);
-
-  return memberIds
+  return normalizeMemberIds(members)
     .map((memberId) => MEMBER_HEARTS[memberId]?.label)
     .filter(Boolean)
     .join("・");
+}
+
+// ==================================================
+// ログ
+// ==================================================
+
+function bindLinkClickLog(element, logData) {
+  if (!element) {
+    return;
+  }
+
+  element.addEventListener("click", () => {
+    if (typeof sendLinkClickLog !== "function") {
+      return;
+    }
+
+    sendLinkClickLog(logData);
+  });
 }
 
 // ==================================================
