@@ -109,7 +109,7 @@ function renderLimitedTaskResult(result) {
 
   activeTasks.forEach((task) => {
     container.appendChild(
-      createSimpleLinkCard({
+      createTaskLinkCard({
         title: task.name,
         url: task.url,
         category: "limited",
@@ -142,7 +142,7 @@ function renderDailyTaskResult(result) {
 
   tasks.forEach((task) => {
     container.appendChild(
-      createSimpleLinkCard({
+      createTaskLinkCard({
         title: task.name,
         url: task.url,
         category: "daily",
@@ -221,32 +221,37 @@ function renderYoutubeResult(result) {
 }
 
 // ==================================================
-// 共通リンクカード
+// タスクカード
+// CSS:
+// .task-link-card
+// .task-link-card-main
+// .task-link-card-title
+// .task-link-card-button
 // ==================================================
 
-function createSimpleLinkCard({
+function createTaskLinkCard({
   title,
   url,
   category,
   itemId,
 }) {
   const card = document.createElement("article");
-  card.className = "simple-link-card";
+  card.className = "task-link-card";
 
   const mainLink = document.createElement("a");
-  mainLink.className = "simple-link-card-main";
+  mainLink.className = "task-link-card-main";
   mainLink.href = url;
   mainLink.target = "_blank";
   mainLink.rel = "noopener noreferrer";
 
   const titleElement = document.createElement("span");
-  titleElement.className = "simple-link-card-title";
+  titleElement.className = "task-link-card-title";
   titleElement.textContent = title;
 
   mainLink.appendChild(titleElement);
 
   const buttonLink = document.createElement("a");
-  buttonLink.className = "simple-link-card-button";
+  buttonLink.className = "task-link-card-button";
   buttonLink.href = url;
   buttonLink.target = "_blank";
   buttonLink.rel = "noopener noreferrer";
@@ -269,7 +274,13 @@ function createSimpleLinkCard({
 }
 
 // ==================================================
-// TVerリンクカード
+// TVerカード
+// CSS:
+// .tver-link-card
+// .tver-link-card-main
+// .tver-link-card-title-area
+// .tver-link-card-title
+// .tver-link-card-button
 // ==================================================
 
 function createTverLinkCard({
@@ -279,10 +290,10 @@ function createTverLinkCard({
   itemId,
 }) {
   const card = document.createElement("article");
-  card.className = "simple-link-card";
+  card.className = "tver-link-card";
 
   const mainLink = document.createElement("a");
-  mainLink.className = "simple-link-card-main";
+  mainLink.className = "tver-link-card-main";
   mainLink.href = url;
   mainLink.target = "_blank";
   mainLink.rel = "noopener noreferrer";
@@ -291,7 +302,7 @@ function createTverLinkCard({
   titleArea.className = "tver-link-card-title-area";
 
   const titleElement = document.createElement("span");
-  titleElement.className = "simple-link-card-title";
+  titleElement.className = "tver-link-card-title";
   titleElement.textContent = title;
 
   const heartsElement = createMemberHearts(members);
@@ -300,7 +311,7 @@ function createTverLinkCard({
   mainLink.appendChild(titleArea);
 
   const buttonLink = document.createElement("a");
-  buttonLink.className = "simple-link-card-button";
+  buttonLink.className = "tver-link-card-button";
   buttonLink.href = url;
   buttonLink.target = "_blank";
   buttonLink.rel = "noopener noreferrer";
@@ -457,6 +468,14 @@ function bindLinkClickLog(element, logData) {
   });
 }
 
+function createLinkLogItemId(prefix, value) {
+  const normalizedValue = String(value || "unknown")
+    .replace(/[^a-zA-Z0-9_-]/g, "_")
+    .slice(0, 80);
+
+  return `${prefix}_${normalizedValue}`;
+}
+
 // ==================================================
 // YouTubeサムネイル
 // ==================================================
@@ -522,14 +541,6 @@ function renderError(container) {
   element.textContent = "データを読み込めませんでした";
 
   container.replaceChildren(element);
-}
-
-function createLinkLogItemId(prefix, value) {
-  const normalizedValue = String(value || "unknown")
-    .replace(/[^a-zA-Z0-9_-]/g, "_")
-    .slice(0, 80);
-
-  return `${prefix}_${normalizedValue}`;
 }
 
 // ==================================================
