@@ -83,7 +83,7 @@ main{
 .header div{
     padding: 2rem;
     max-width: 720px;
-
+  margin:auto;
 }
 .header .primary-button{
     padding: 0.6rem;
