@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>タスクリンク集｜タムごとDaily</title>
+</head>
+<body>
+    <main>
+        <header class="header">
+            <img src="../img/logo.png" alt="タムごとDaily" id="logoImg">
+            <h1>リンク集</h1>
+            <div>
+                <p class="description">
+                    タムごとDailyの、期間限定タスク、デイリータスク、TVer配信中番組、YouTube再生リストのリンク集です。<br>
+                    <a href="../app/" class="primary-button">タムごとDailyに戻る</a>
+                </p>
+            </div>
+        </header>
+        <nav class="link-page-toc" aria-label="目次">
+            <a href="#limitedTaskSection">期間限定</a>
+            <a href="#dailyTaskSection">デイリー</a>
+            <a href="#tverSection">TVer</a>
+            <a href="#youtubeSection">YouTube</a>
+        </nav>
+        <section>
+            <div class="card-wrap" id="limitedTaskSection">
+                <h2 class="ruby-h">
+                    <ruby>
+                        期間限定タスク
+                        <rt>limited task</rt>
+                    </ruby>
+                </h2>
+                <div class="task-list" id="limitedTask"></div>
+            </div>
+            <div class="card-wrap" id="dailyTaskSection">
+                <h2 class="ruby-h">
+                    <ruby>
+                        デイリータスク
+                        <rt>daily task</rt>
+                    </ruby>
+                </h2>
+                <div class="task-list" id="dailyTask"></div>
+            </div>
+            <div class="card-wrap" id="tverSection">
+                <h2 class="ruby-h">
+                    <ruby>
+                        TVer配信中番組
+                        <rt>TVer episodes</rt>
+                    </ruby>
+                </h2>
+                <div class="tver-list" id="tverList"></div>
+            </div>
+            <div class="card-wrap" id="youtubeSection">
+                <h2 class="ruby-h">
+                    <ruby>
+                        YouTube再生リスト
+                        <rt>youtube playlists</rt>
+                    </ruby>
+                </h2>
+                <div class="movie-list" id="youtubeList"></div>
+            </div>
+            <a href="../app/" class="secondary-button">タムごとDailyに戻る</a>
+        </section>
+    </main>
+    
+<button type="button" class="back-to-top-button" id="backToTopButton" aria-label="ページ上部へ戻る">
+    ↑
+</button>
+</body>
+<script src="linkLogger.js"></script>
+<script src="link.js" defer></script>
+</html>
