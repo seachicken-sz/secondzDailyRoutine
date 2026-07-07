@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/08 01:30",
+  "updatedAt": "2026/07/08 02:31",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/08 01:30",
+      "updatedAt": "2026/07/08 02:31",
       "episodeId": "ep6osmqoh8",
       "subtitle": "timelesz100",
       "likes": "1.3万",
@@ -404,6 +404,10 @@
         },
         {
           "hour": 99,
+          "likes": 13000
+        },
+        {
+          "hour": 100,
           "likes": 13000
         }
       ],
@@ -1078,7 +1082,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 14,
-          "elapsedHour": 99,
+          "elapsedHour": 100,
           "elapsedRank": 14,
           "currentPoints": [
             {
@@ -1467,6 +1471,10 @@
             },
             {
               "hour": 99,
+              "rank": 14
+            },
+            {
+              "hour": 100,
               "rank": 14
             }
           ],
@@ -2131,7 +2139,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 30,
-          "elapsedHour": 99,
+          "elapsedHour": 100,
           "elapsedRank": 30,
           "currentPoints": [
             {
@@ -2500,6 +2508,10 @@
             },
             {
               "hour": 99,
+              "rank": 30
+            },
+            {
+              "hour": 100,
               "rank": 30
             }
           ],
@@ -2909,7 +2921,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/05",
-      "updatedAt": "2026/07/08 01:30",
+      "updatedAt": "2026/07/08 02:31",
       "episodeId": "epixcs383v",
       "subtitle": "【意外と知らない!渋谷の秘密】絶品!世界1のコーヒー",
       "likes": "1.1万",
@@ -3149,6 +3161,10 @@
         },
         {
           "hour": 59,
+          "likes": 11000
+        },
+        {
+          "hour": 60,
           "likes": 11000
         }
       ],
@@ -3827,7 +3843,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 18,
-          "elapsedHour": 59,
+          "elapsedHour": 60,
           "elapsedRank": 18,
           "currentPoints": [
             {
@@ -4052,6 +4068,10 @@
             },
             {
               "hour": 59,
+              "rank": 18
+            },
+            {
+              "hour": 60,
               "rank": 18
             }
           ],
@@ -4724,7 +4744,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 34,
-          "elapsedHour": 59,
+          "elapsedHour": 60,
           "elapsedRank": 34,
           "currentPoints": [
             {
@@ -4937,6 +4957,10 @@
             },
             {
               "hour": 59,
+              "rank": 34
+            },
+            {
+              "hour": 60,
               "rank": 34
             }
           ],
@@ -5294,15 +5318,19 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/07",
-      "updatedAt": "2026/07/08 01:30",
+      "updatedAt": "2026/07/08 02:31",
       "episodeId": "eppc07nzsl",
       "subtitle": "チョコプラ・timeleszが「水をはじく\"絶対に濡れない風呂敷\"なら、水を包んで運ぶことはできるの？」に挑む！",
-      "likes": "404",
+      "likes": "562",
       "favorites": "5.3万",
       "likePoints": [
         {
           "hour": 1,
           "likes": 404
+        },
+        {
+          "hour": 2,
+          "likes": 562
         }
       ],
       "previousLikePoints": [
@@ -6500,19 +6528,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "一茂×かまいたち ゲンバ"
-            },
-            {
-              "rank": 48,
               "title": "日曜日の初耳学"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "EIGHT-JAM"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "口を揃えたフシギな話"
+            },
+            {
+              "rank": 50,
+              "title": "徹子の部屋"
             }
           ]
         }
@@ -6521,7 +6549,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/02",
-      "updatedAt": "2026/07/08 01:30",
+      "updatedAt": "2026/07/08 02:31",
       "episodeId": "ephnvcipnk",
       "subtitle": "粘土のこね方を言葉だけで伝えろ",
       "likes": "1.1万",
@@ -7097,6 +7125,10 @@
         },
         {
           "hour": 143,
+          "likes": 11000
+        },
+        {
+          "hour": 144,
           "likes": 11000
         }
       ],
@@ -8316,19 +8348,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "一茂×かまいたち ゲンバ"
-            },
-            {
-              "rank": 48,
               "title": "日曜日の初耳学"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "EIGHT-JAM"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "口を揃えたフシギな話"
+            },
+            {
+              "rank": 50,
+              "title": "徹子の部屋"
             }
           ]
         },
@@ -8685,19 +8717,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "情熱大陸"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 48,
-              "title": "上田と女が吠える夜"
+              "title": "情熱大陸"
             },
             {
               "rank": 49,
-              "title": "スピナーベイト"
+              "title": "M!LKの爆裂ミッション"
             },
             {
               "rank": 50,
-              "title": "踊る！さんま御殿!!"
+              "title": "上田と女が吠える夜"
             }
           ]
         }
@@ -8706,7 +8738,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/07/08 01:30",
+      "updatedAt": "2026/07/08 02:31",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
       "likes": "3831",
@@ -10019,19 +10051,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "一茂×かまいたち ゲンバ"
-            },
-            {
-              "rank": 48,
               "title": "日曜日の初耳学"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "EIGHT-JAM"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "口を揃えたフシギな話"
+            },
+            {
+              "rank": 50,
+              "title": "徹子の部屋"
             }
           ]
         },
@@ -10275,19 +10307,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "情熱大陸"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 48,
-              "title": "上田と女が吠える夜"
+              "title": "情熱大陸"
             },
             {
               "rank": 49,
-              "title": "スピナーベイト"
+              "title": "M!LKの爆裂ミッション"
             },
             {
               "rank": 50,
-              "title": "踊る！さんま御殿!!"
+              "title": "上田と女が吠える夜"
             }
           ]
         }
@@ -10296,15 +10328,19 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/08",
-      "updatedAt": "2026/07/08 01:30",
+      "updatedAt": "2026/07/08 02:31",
       "episodeId": "ep2gt21kmn",
       "subtitle": "MC菊池風磨&畑芽育の音楽番組!NiziU登場",
-      "likes": "245",
+      "likes": "454",
       "favorites": "8.6万",
       "likePoints": [
         {
           "hour": 0,
           "likes": 245
+        },
+        {
+          "hour": 1,
+          "likes": 454
         }
       ],
       "previousLikePoints": [
@@ -11030,19 +11066,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "一茂×かまいたち ゲンバ"
-            },
-            {
-              "rank": 48,
               "title": "日曜日の初耳学"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "EIGHT-JAM"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "口を揃えたフシギな話"
+            },
+            {
+              "rank": 50,
+              "title": "徹子の部屋"
             }
           ]
         },
@@ -11057,19 +11093,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "情熱大陸"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 48,
-              "title": "上田と女が吠える夜"
+              "title": "情熱大陸"
             },
             {
               "rank": 49,
-              "title": "スピナーベイト"
+              "title": "M!LKの爆裂ミッション"
             },
             {
               "rank": 50,
-              "title": "踊る！さんま御殿!!"
+              "title": "上田と女が吠える夜"
             }
           ]
         }
@@ -11078,10 +11114,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/08 01:30",
+      "updatedAt": "2026/07/08 02:31",
       "episodeId": "ep9zs2mp9b",
       "subtitle": "第134回 あっち向いてホイ後編・・・伝説交代？悲鳴再び？",
-      "likes": "3232",
+      "likes": "3240",
       "favorites": "71.4万",
       "likePoints": [
         {
@@ -11447,6 +11483,10 @@
         {
           "hour": 121,
           "likes": 3232
+        },
+        {
+          "hour": 122,
+          "likes": 3240
         }
       ],
       "previousLikePoints": [
@@ -12229,19 +12269,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "一茂×かまいたち ゲンバ"
-            },
-            {
-              "rank": 48,
               "title": "日曜日の初耳学"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "EIGHT-JAM"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "口を揃えたフシギな話"
+            },
+            {
+              "rank": 50,
+              "title": "徹子の部屋"
             }
           ]
         },
@@ -12354,19 +12394,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "情熱大陸"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 48,
-              "title": "上田と女が吠える夜"
+              "title": "情熱大陸"
             },
             {
               "rank": 49,
-              "title": "スピナーベイト"
+              "title": "M!LKの爆裂ミッション"
             },
             {
               "rank": 50,
-              "title": "踊る！さんま御殿!!"
+              "title": "上田と女が吠える夜"
             }
           ]
         }
@@ -12375,10 +12415,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/08 01:30",
+      "updatedAt": "2026/07/08 02:31",
       "episodeId": "epzd8603yf",
       "subtitle": "高橋成美は神ドッキリスターなのかSP 前編",
-      "likes": "2574",
+      "likes": "2575",
       "favorites": "78.0万",
       "likePoints": [
         {
@@ -14182,19 +14222,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "一茂×かまいたち ゲンバ"
-            },
-            {
-              "rank": 48,
               "title": "日曜日の初耳学"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "EIGHT-JAM"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "口を揃えたフシギな話"
+            },
+            {
+              "rank": 50,
+              "title": "徹子の部屋"
             }
           ]
         },
@@ -14707,19 +14747,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "情熱大陸"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 48,
-              "title": "上田と女が吠える夜"
+              "title": "情熱大陸"
             },
             {
               "rank": 49,
-              "title": "スピナーベイト"
+              "title": "M!LKの爆裂ミッション"
             },
             {
               "rank": 50,
-              "title": "踊る！さんま御殿!!"
+              "title": "上田と女が吠える夜"
             }
           ]
         }
@@ -14728,7 +14768,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/07/08 01:30",
+      "updatedAt": "2026/07/08 02:31",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
@@ -16097,11 +16137,11 @@
             },
             {
               "rank": 49,
-              "title": "Ｔシャツが乾くまで"
+              "title": "中国時代劇「驪妃（りひ）-The Song of Glory-」"
             },
             {
               "rank": 50,
-              "title": "中国時代劇「驪妃（りひ）-The Song of Glory-」"
+              "title": "Ｔシャツが乾くまで"
             }
           ]
         },
@@ -16601,19 +16641,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "情熱大陸"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 48,
-              "title": "上田と女が吠える夜"
+              "title": "情熱大陸"
             },
             {
               "rank": 49,
-              "title": "スピナーベイト"
+              "title": "M!LKの爆裂ミッション"
             },
             {
               "rank": 50,
-              "title": "踊る！さんま御殿!!"
+              "title": "上田と女が吠える夜"
             }
           ]
         }
@@ -16622,7 +16662,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/07/08 01:30",
+      "updatedAt": "2026/07/08 02:31",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
       "likes": "1.1万",
@@ -18277,19 +18317,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "一茂×かまいたち ゲンバ"
-            },
-            {
-              "rank": 48,
               "title": "日曜日の初耳学"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "EIGHT-JAM"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "口を揃えたフシギな話"
+            },
+            {
+              "rank": 50,
+              "title": "徹子の部屋"
             }
           ]
         },
@@ -18430,19 +18470,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "情熱大陸"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 48,
-              "title": "上田と女が吠える夜"
+              "title": "情熱大陸"
             },
             {
               "rank": 49,
-              "title": "スピナーベイト"
+              "title": "M!LKの爆裂ミッション"
             },
             {
               "rank": 50,
-              "title": "踊る！さんま御殿!!"
+              "title": "上田と女が吠える夜"
             }
           ]
         }
@@ -18451,7 +18491,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/08 01:30",
+      "updatedAt": "2026/07/08 02:31",
       "episodeId": "eparzrbnab",
       "subtitle": "【4人の休日に密着】",
       "likes": "1779",
@@ -19858,11 +19898,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 48,
-              "title": "相葉◎×部"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 49,
@@ -19870,7 +19910,7 @@
             },
             {
               "rank": 50,
-              "title": "吉田と粗品と"
+              "title": "相葉◎×部"
             }
           ]
         },
@@ -19885,19 +19925,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "一茂×かまいたち ゲンバ"
-            },
-            {
-              "rank": 48,
               "title": "日曜日の初耳学"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "EIGHT-JAM"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "口を揃えたフシギな話"
+            },
+            {
+              "rank": 50,
+              "title": "徹子の部屋"
             }
           ]
         }
@@ -19906,10 +19946,10 @@
     "srbkekw9oj": {
       "programTitle": "ネプリーグ",
       "broadcastDate": "2026/07/06",
-      "updatedAt": "2026/07/08 01:30",
+      "updatedAt": "2026/07/08 02:31",
       "episodeId": "epa7uendiu",
       "subtitle": "木10俳優VS俳優芸人！負けられない俳優対決",
-      "likes": "3853",
+      "likes": "3872",
       "favorites": "17.5万",
       "likePoints": [
         {
@@ -20031,6 +20071,10 @@
         {
           "hour": 30,
           "likes": 3853
+        },
+        {
+          "hour": 31,
+          "likes": 3872
         }
       ],
       "previousLikePoints": [],
@@ -20039,7 +20083,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 23,
-          "elapsedHour": 30,
+          "elapsedHour": 31,
           "elapsedRank": 23,
           "currentPoints": [
             {
@@ -20141,6 +20185,10 @@
             {
               "hour": 30,
               "rank": 23
+            },
+            {
+              "hour": 31,
+              "rank": 23
             }
           ],
           "previousPoints": [],
@@ -20151,11 +20199,11 @@
             },
             {
               "rank": 21,
-              "title": "キミはもっと＝LOVEを愛せるか！！！"
+              "title": "2026FNS歌謡祭 夏"
             },
             {
               "rank": 22,
-              "title": "2026FNS歌謡祭 夏"
+              "title": "キミはもっと＝LOVEを愛せるか！！！"
             },
             {
               "rank": 23,
@@ -20167,7 +20215,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 45,
-          "elapsedHour": 30,
+          "elapsedHour": 31,
           "elapsedRank": 45,
           "currentPoints": [
             {
@@ -20225,21 +20273,25 @@
             {
               "hour": 30,
               "rank": 45
+            },
+            {
+              "hour": 31,
+              "rank": 45
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 42,
-              "title": "世にも奇妙な物語"
-            },
-            {
-              "rank": 43,
               "title": "2026FNS歌謡祭 夏"
             },
             {
-              "rank": 44,
+              "rank": 43,
               "title": "ザ・ロイヤルファミリー"
+            },
+            {
+              "rank": 44,
+              "title": "キミはもっと＝LOVEを愛せるか！！！"
             },
             {
               "rank": 45,
@@ -20252,10 +20304,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/08 01:30",
+      "updatedAt": "2026/07/08 02:31",
       "episodeId": "epggxhtmuq",
       "subtitle": "バレーボール女子日本代表佐藤＆和田ペア参戦",
-      "likes": "1970",
+      "likes": "1971",
       "favorites": "12.4万",
       "likePoints": [
         {
@@ -22944,19 +22996,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "一茂×かまいたち ゲンバ"
-            },
-            {
-              "rank": 48,
               "title": "日曜日の初耳学"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "EIGHT-JAM"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "口を揃えたフシギな話"
+            },
+            {
+              "rank": 50,
+              "title": "徹子の部屋"
             }
           ]
         }
@@ -22965,10 +23017,10 @@
     "srdfz31i5d": {
       "programTitle": "ミキティダイニング",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/08 01:30",
+      "updatedAt": "2026/07/08 02:31",
       "episodeId": "epi627g3v8",
       "subtitle": "内田有紀のガチ食生活！timelesz寺西拓人が素顔解禁！",
-      "likes": "8681",
+      "likes": "8685",
       "favorites": "9.3万",
       "likePoints": [
         {
@@ -23346,10 +23398,10 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/08 01:30",
+      "updatedAt": "2026/07/08 02:31",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
-      "likes": "3839",
+      "likes": "3842",
       "favorites": "1.8万",
       "likePoints": [
         {
@@ -23846,19 +23898,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "一茂×かまいたち ゲンバ"
-            },
-            {
-              "rank": 48,
               "title": "日曜日の初耳学"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "EIGHT-JAM"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "口を揃えたフシギな話"
+            },
+            {
+              "rank": 50,
+              "title": "徹子の部屋"
             }
           ]
         },
@@ -23873,19 +23925,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "情熱大陸"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 48,
-              "title": "上田と女が吠える夜"
+              "title": "情熱大陸"
             },
             {
               "rank": 49,
-              "title": "スピナーベイト"
+              "title": "M!LKの爆裂ミッション"
             },
             {
               "rank": 50,
-              "title": "踊る！さんま御殿!!"
+              "title": "上田と女が吠える夜"
             }
           ]
         }
@@ -23894,7 +23946,7 @@
     "srjkmo0zhs": {
       "programTitle": "クイズ！ドレミファドン",
       "broadcastDate": "2026/06/29",
-      "updatedAt": "2026/07/08 01:30",
+      "updatedAt": "2026/07/08 02:31",
       "episodeId": "epy72shs76",
       "subtitle": "新ドラマ人気番組対抗クイズドレミファドン50周年夏の祭典SP",
       "likes": "1.2万",
@@ -24887,19 +24939,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "一茂×かまいたち ゲンバ"
-            },
-            {
-              "rank": 48,
               "title": "日曜日の初耳学"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "EIGHT-JAM"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "口を揃えたフシギな話"
+            },
+            {
+              "rank": 50,
+              "title": "徹子の部屋"
             }
           ]
         },
@@ -25179,19 +25231,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "情熱大陸"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 48,
-              "title": "上田と女が吠える夜"
+              "title": "情熱大陸"
             },
             {
               "rank": 49,
-              "title": "スピナーベイト"
+              "title": "M!LKの爆裂ミッション"
             },
             {
               "rank": 50,
-              "title": "踊る！さんま御殿!!"
+              "title": "上田と女が吠える夜"
             }
           ]
         }
@@ -25200,7 +25252,7 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/07/08 01:30",
+      "updatedAt": "2026/07/08 02:31",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "2.4万",
@@ -25344,6 +25396,10 @@
         },
         {
           "hour": 83,
+          "likes": 24000
+        },
+        {
+          "hour": 84,
           "likes": 24000
         }
       ],
@@ -25605,19 +25661,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "一茂×かまいたち ゲンバ"
-            },
-            {
-              "rank": 48,
               "title": "日曜日の初耳学"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "EIGHT-JAM"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "口を揃えたフシギな話"
+            },
+            {
+              "rank": 50,
+              "title": "徹子の部屋"
             }
           ]
         },
@@ -25877,19 +25933,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "情熱大陸"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 48,
-              "title": "上田と女が吠える夜"
+              "title": "情熱大陸"
             },
             {
               "rank": 49,
-              "title": "スピナーベイト"
+              "title": "M!LKの爆裂ミッション"
             },
             {
               "rank": 50,
-              "title": "踊る！さんま御殿!!"
+              "title": "上田と女が吠える夜"
             }
           ]
         }
@@ -25898,10 +25954,10 @@
     "sr20l69ypl": {
       "programTitle": "バナナサンド",
       "broadcastDate": "2026/07/07",
-      "updatedAt": "2026/07/08 01:30",
+      "updatedAt": "2026/07/08 02:31",
       "episodeId": "ep5dxwkr55",
       "subtitle": "ハモリ我慢大賞2026上半期（後半戦）＆timelesz原リベンジ",
-      "likes": "750",
+      "likes": "799",
       "favorites": "68.8万",
       "likePoints": [
         {
@@ -25919,6 +25975,10 @@
         {
           "hour": 6,
           "likes": 750
+        },
+        {
+          "hour": 7,
+          "likes": 799
         }
       ],
       "previousLikePoints": [],
@@ -25934,19 +25994,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "一茂×かまいたち ゲンバ"
-            },
-            {
-              "rank": 48,
               "title": "日曜日の初耳学"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "EIGHT-JAM"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "口を揃えたフシギな話"
+            },
+            {
+              "rank": 50,
+              "title": "徹子の部屋"
             }
           ]
         },
@@ -25961,19 +26021,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "情熱大陸"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 48,
-              "title": "上田と女が吠える夜"
+              "title": "情熱大陸"
             },
             {
               "rank": 49,
-              "title": "スピナーベイト"
+              "title": "M!LKの爆裂ミッション"
             },
             {
               "rank": 50,
-              "title": "踊る！さんま御殿!!"
+              "title": "上田と女が吠える夜"
             }
           ]
         }
