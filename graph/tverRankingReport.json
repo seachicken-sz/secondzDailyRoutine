@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/08 12:28",
+  "updatedAt": "2026/07/08 13:32",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/08 12:28",
+      "updatedAt": "2026/07/08 13:32",
       "episodeId": "ep6osmqoh8",
       "subtitle": "timelesz100",
       "likes": "1.3万",
@@ -448,6 +448,10 @@
         },
         {
           "hour": 110,
+          "likes": 13000
+        },
+        {
+          "hour": 111,
           "likes": 13000
         }
       ],
@@ -1121,9 +1125,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 19,
-          "elapsedHour": 110,
-          "elapsedRank": 19,
+          "currentRank": 22,
+          "elapsedHour": 111,
+          "elapsedRank": 22,
           "currentPoints": [
             {
               "hour": 3,
@@ -1552,6 +1556,10 @@
             {
               "hour": 110,
               "rank": 19
+            },
+            {
+              "hour": 111,
+              "rank": 22
             }
           ],
           "previousPoints": [
@@ -2194,19 +2202,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 16,
-              "title": "有吉ゼミ"
-            },
-            {
-              "rank": 17,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 18,
-              "title": "ロンドンハーツ"
-            },
-            {
               "rank": 19,
+              "title": "あちこちオードリー"
+            },
+            {
+              "rank": 20,
+              "title": "しゃべくり007"
+            },
+            {
+              "rank": 21,
+              "title": "夫が寝たあとに"
+            },
+            {
+              "rank": 22,
               "title": "タイムレスマン"
             }
           ]
@@ -2214,9 +2222,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 38,
-          "elapsedHour": 110,
-          "elapsedRank": 38,
+          "currentRank": 40,
+          "elapsedHour": 111,
+          "elapsedRank": 40,
           "currentPoints": [
             {
               "hour": 8,
@@ -2625,6 +2633,10 @@
             {
               "hour": 110,
               "rank": 38
+            },
+            {
+              "hour": 111,
+              "rank": 40
             }
           ],
           "previousPoints": [
@@ -3011,19 +3023,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 35,
-              "title": "夫婦と16歳～狂気の隣人～"
-            },
-            {
-              "rank": 36,
-              "title": "ザ・ロイヤルファミリー"
-            },
-            {
               "rank": 37,
-              "title": "幸せになりたいマサムネ君"
+              "title": "しゃべくり007"
             },
             {
               "rank": 38,
+              "title": "夫婦と16歳～狂気の隣人～"
+            },
+            {
+              "rank": 39,
+              "title": "夫が寝たあとに"
+            },
+            {
+              "rank": 40,
               "title": "タイムレスマン"
             }
           ]
@@ -3033,7 +3045,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/05",
-      "updatedAt": "2026/07/08 12:28",
+      "updatedAt": "2026/07/08 13:32",
       "episodeId": "epixcs383v",
       "subtitle": "【意外と知らない!渋谷の秘密】絶品!世界1のコーヒー",
       "likes": "1.2万",
@@ -3317,6 +3329,10 @@
         },
         {
           "hour": 70,
+          "likes": 12000
+        },
+        {
+          "hour": 71,
           "likes": 12000
         }
       ],
@@ -3994,9 +4010,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 25,
-          "elapsedHour": 70,
-          "elapsedRank": 25,
+          "currentRank": 26,
+          "elapsedHour": 71,
+          "elapsedRank": 26,
           "currentPoints": [
             {
               "hour": 4,
@@ -4261,6 +4277,10 @@
             {
               "hour": 70,
               "rank": 25
+            },
+            {
+              "hour": 71,
+              "rank": 26
             }
           ],
           "previousPoints": [
@@ -4911,19 +4931,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 22,
-              "title": "あちこちオードリー"
-            },
-            {
               "rank": 23,
-              "title": "クレイジージャーニー"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 24,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 25,
+              "title": "マツコ＆有吉 かりそめ天国"
+            },
+            {
+              "rank": 26,
               "title": "timeleszファミリア"
             }
           ]
@@ -4931,9 +4951,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 46,
-          "elapsedHour": 70,
-          "elapsedRank": 46,
+          "currentRank": 48,
+          "elapsedHour": 71,
+          "elapsedRank": 48,
           "currentPoints": [
             {
               "hour": 7,
@@ -5186,6 +5206,10 @@
             {
               "hour": 70,
               "rank": 46
+            },
+            {
+              "hour": 71,
+              "rank": 48
             }
           ],
           "previousPoints": [
@@ -5520,19 +5544,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 43,
-              "title": "マツコ＆有吉 かりそめ天国"
-            },
-            {
-              "rank": 44,
-              "title": "ONE PIECE HEROINES"
-            },
-            {
               "rank": 45,
               "title": "VIVANT"
             },
             {
               "rank": 46,
+              "title": "ONE PIECE HEROINES"
+            },
+            {
+              "rank": 47,
+              "title": "夏の新ドラマ予告集めました！"
+            },
+            {
+              "rank": 48,
               "title": "timeleszファミリア"
             }
           ]
@@ -5542,10 +5566,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/07",
-      "updatedAt": "2026/07/08 12:28",
+      "updatedAt": "2026/07/08 13:32",
       "episodeId": "eppc07nzsl",
       "subtitle": "チョコプラ・timeleszが「水をはじく\"絶対に濡れない風呂敷\"なら、水を包んで運ぶことはできるの？」に挑む！",
-      "likes": "3109",
+      "likes": "3054",
       "favorites": "5.3万",
       "likePoints": [
         {
@@ -5595,6 +5619,10 @@
         {
           "hour": 12,
           "likes": 3109
+        },
+        {
+          "hour": 13,
+          "likes": 3054
         }
       ],
       "previousLikePoints": [
@@ -6267,9 +6295,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 15,
-          "elapsedHour": 12,
-          "elapsedRank": 15,
+          "currentRank": 14,
+          "elapsedHour": 13,
+          "elapsedRank": 14,
           "currentPoints": [
             {
               "hour": 5,
@@ -6298,6 +6326,10 @@
             {
               "hour": 12,
               "rank": 15
+            },
+            {
+              "hour": 13,
+              "rank": 14
             }
           ],
           "previousPoints": [
@@ -6744,6 +6776,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 11,
+              "title": "ポツンと一軒家"
+            },
+            {
               "rank": 12,
               "title": "そこまで言って委員会NP"
             },
@@ -6753,10 +6789,6 @@
             },
             {
               "rank": 14,
-              "title": "探偵！ナイトスクープ"
-            },
-            {
-              "rank": 15,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -6821,19 +6853,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 49,
-              "title": "ラヴィット！"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -6842,7 +6874,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/02",
-      "updatedAt": "2026/07/08 12:28",
+      "updatedAt": "2026/07/08 13:32",
       "episodeId": "ephnvcipnk",
       "subtitle": "粘土のこね方を言葉だけで伝えろ",
       "likes": "1.1万",
@@ -7462,6 +7494,10 @@
         },
         {
           "hour": 154,
+          "likes": 11000
+        },
+        {
+          "hour": 155,
           "likes": 11000
         }
       ],
@@ -8681,19 +8717,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 49,
-              "title": "ラヴィット！"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "かまいガチ"
             }
           ]
         },
@@ -9054,15 +9090,15 @@
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 50,
-              "title": "上田と女が吠える夜"
+              "title": "千鳥のクセスゴ！"
             }
           ]
         }
@@ -9071,7 +9107,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/07/08 12:28",
+      "updatedAt": "2026/07/08 13:32",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
       "likes": "3831",
@@ -10384,19 +10420,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 49,
-              "title": "ラヴィット！"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "かまいガチ"
             }
           ]
         },
@@ -10644,15 +10680,15 @@
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 50,
-              "title": "上田と女が吠える夜"
+              "title": "千鳥のクセスゴ！"
             }
           ]
         }
@@ -10661,10 +10697,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/08",
-      "updatedAt": "2026/07/08 12:28",
+      "updatedAt": "2026/07/08 13:32",
       "episodeId": "ep2gt21kmn",
       "subtitle": "MC菊池風磨&畑芽育の音楽番組!NiziU登場",
-      "likes": "2137",
+      "likes": "2113",
       "favorites": "8.6万",
       "likePoints": [
         {
@@ -10714,6 +10750,10 @@
         {
           "hour": 11,
           "likes": 2137
+        },
+        {
+          "hour": 12,
+          "likes": 2113
         }
       ],
       "previousLikePoints": [
@@ -11439,19 +11479,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 49,
-              "title": "ラヴィット！"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "かまいガチ"
             }
           ]
         },
@@ -11470,15 +11510,15 @@
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 50,
-              "title": "上田と女が吠える夜"
+              "title": "千鳥のクセスゴ！"
             }
           ]
         }
@@ -11487,10 +11527,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/08 12:28",
+      "updatedAt": "2026/07/08 13:32",
       "episodeId": "ep9zs2mp9b",
       "subtitle": "第134回 あっち向いてホイ後編・・・伝説交代？悲鳴再び？",
-      "likes": "3301",
+      "likes": "3297",
       "favorites": "71.4万",
       "likePoints": [
         {
@@ -11896,6 +11936,10 @@
         {
           "hour": 132,
           "likes": 3301
+        },
+        {
+          "hour": 133,
+          "likes": 3297
         }
       ],
       "previousLikePoints": [
@@ -12678,19 +12722,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 49,
-              "title": "ラヴィット！"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "かまいガチ"
             }
           ]
         },
@@ -12807,15 +12851,15 @@
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 50,
-              "title": "上田と女が吠える夜"
+              "title": "千鳥のクセスゴ！"
             }
           ]
         }
@@ -12824,10 +12868,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/08 12:28",
+      "updatedAt": "2026/07/08 13:32",
       "episodeId": "epzd8603yf",
       "subtitle": "高橋成美は神ドッキリスターなのかSP 前編",
-      "likes": "2591",
+      "likes": "2590",
       "favorites": "78.0万",
       "likePoints": [
         {
@@ -14631,19 +14675,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 49,
-              "title": "ラヴィット！"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "かまいガチ"
             }
           ]
         },
@@ -15160,15 +15204,15 @@
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 50,
-              "title": "上田と女が吠える夜"
+              "title": "千鳥のクセスゴ！"
             }
           ]
         }
@@ -15177,7 +15221,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/07/08 12:28",
+      "updatedAt": "2026/07/08 13:32",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
@@ -16538,15 +16582,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "年の差婚"
+              "title": "告白―25年目の秘密―"
             },
             {
               "rank": 48,
-              "title": "ナツノマンザイ"
+              "title": "年の差婚"
             },
             {
               "rank": 49,
-              "title": "中国ドラマ「星より輝く君へ」"
+              "title": "ナツノマンザイ"
             },
             {
               "rank": 50,
@@ -17054,15 +17098,15 @@
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 50,
-              "title": "上田と女が吠える夜"
+              "title": "千鳥のクセスゴ！"
             }
           ]
         }
@@ -17071,7 +17115,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/07/08 12:28",
+      "updatedAt": "2026/07/08 13:32",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
       "likes": "1.1万",
@@ -18726,19 +18770,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 49,
-              "title": "ラヴィット！"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "かまいガチ"
             }
           ]
         },
@@ -18883,15 +18927,15 @@
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 50,
-              "title": "上田と女が吠える夜"
+              "title": "千鳥のクセスゴ！"
             }
           ]
         }
@@ -18900,7 +18944,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/08 12:28",
+      "updatedAt": "2026/07/08 13:32",
       "episodeId": "eparzrbnab",
       "subtitle": "【4人の休日に密着】",
       "likes": "1779",
@@ -20311,15 +20355,15 @@
             },
             {
               "rank": 48,
-              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
+              "title": "やすとも・友近のキメツケ！あくまで個人の感想です"
             },
             {
               "rank": 49,
-              "title": "金曜ミステリークラブ!!!"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 50,
-              "title": "スクール革命！"
+              "title": "金曜ミステリークラブ!!!"
             }
           ]
         },
@@ -20334,19 +20378,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 49,
-              "title": "ラヴィット！"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -20355,10 +20399,10 @@
     "srbkekw9oj": {
       "programTitle": "ネプリーグ",
       "broadcastDate": "2026/07/06",
-      "updatedAt": "2026/07/08 12:28",
+      "updatedAt": "2026/07/08 13:32",
       "episodeId": "epa7uendiu",
       "subtitle": "木10俳優VS俳優芸人！負けられない俳優対決",
-      "likes": "4079",
+      "likes": "4092",
       "favorites": "17.5万",
       "likePoints": [
         {
@@ -20524,6 +20568,10 @@
         {
           "hour": 41,
           "likes": 4079
+        },
+        {
+          "hour": 42,
+          "likes": 4092
         }
       ],
       "previousLikePoints": [],
@@ -20531,9 +20579,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 32,
-          "elapsedHour": 41,
-          "elapsedRank": 32,
+          "currentRank": 37,
+          "elapsedHour": 42,
+          "elapsedRank": 37,
           "currentPoints": [
             {
               "hour": 6,
@@ -20674,24 +20722,28 @@
             {
               "hour": 41,
               "rank": 32
+            },
+            {
+              "hour": 42,
+              "rank": 37
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 29,
-              "title": "2026FNS歌謡祭 夏"
+              "rank": 34,
+              "title": "相席食堂"
             },
             {
-              "rank": 30,
-              "title": "エンタの神様"
+              "rank": 35,
+              "title": "バナナサンド"
             },
             {
-              "rank": 31,
-              "title": "くりぃむナンタラ"
+              "rank": 36,
+              "title": "キミはもっと＝LOVEを愛せるか！！！"
             },
             {
-              "rank": 32,
+              "rank": 37,
               "title": "ネプリーグ"
             }
           ]
@@ -20784,15 +20836,15 @@
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 50,
-              "title": "上田と女が吠える夜"
+              "title": "千鳥のクセスゴ！"
             }
           ]
         }
@@ -20801,10 +20853,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/08 12:28",
+      "updatedAt": "2026/07/08 13:32",
       "episodeId": "epggxhtmuq",
       "subtitle": "バレーボール女子日本代表佐藤＆和田ペア参戦",
-      "likes": "1978",
+      "likes": "1980",
       "favorites": "12.4万",
       "likePoints": [
         {
@@ -23252,7 +23304,7 @@
             },
             {
               "rank": 50,
-              "title": "※女性は見ないでください"
+              "title": "ヒロシのぼっちキャンプ Season13"
             }
           ]
         },
@@ -23493,19 +23545,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 49,
-              "title": "ラヴィット！"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -23514,10 +23566,10 @@
     "srdfz31i5d": {
       "programTitle": "ミキティダイニング",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/08 12:28",
+      "updatedAt": "2026/07/08 13:32",
       "episodeId": "epi627g3v8",
       "subtitle": "内田有紀のガチ食生活！timelesz寺西拓人が素顔解禁！",
-      "likes": "8696",
+      "likes": "8697",
       "favorites": "9.3万",
       "likePoints": [
         {
@@ -23895,10 +23947,10 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/08 12:28",
+      "updatedAt": "2026/07/08 13:32",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
-      "likes": "3862",
+      "likes": "3863",
       "favorites": "1.8万",
       "likePoints": [
         {
@@ -24395,19 +24447,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 49,
-              "title": "ラヴィット！"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "かまいガチ"
             }
           ]
         },
@@ -24426,15 +24478,15 @@
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 50,
-              "title": "上田と女が吠える夜"
+              "title": "千鳥のクセスゴ！"
             }
           ]
         }
@@ -24443,7 +24495,7 @@
     "srjkmo0zhs": {
       "programTitle": "クイズ！ドレミファドン",
       "broadcastDate": "2026/06/29",
-      "updatedAt": "2026/07/08 12:28",
+      "updatedAt": "2026/07/08 13:32",
       "episodeId": "epy72shs76",
       "subtitle": "新ドラマ人気番組対抗クイズドレミファドン50周年夏の祭典SP",
       "likes": "1.2万",
@@ -25436,19 +25488,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 49,
-              "title": "ラヴィット！"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "かまいガチ"
             }
           ]
         },
@@ -25732,15 +25784,15 @@
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 50,
-              "title": "上田と女が吠える夜"
+              "title": "千鳥のクセスゴ！"
             }
           ]
         }
@@ -25749,7 +25801,7 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/07/08 12:28",
+      "updatedAt": "2026/07/08 13:32",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "2.4万",
@@ -25937,6 +25989,10 @@
         },
         {
           "hour": 94,
+          "likes": 24000
+        },
+        {
+          "hour": 95,
           "likes": 24000
         }
       ],
@@ -26198,19 +26254,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 49,
-              "title": "ラヴィット！"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "かまいガチ"
             }
           ]
         },
@@ -26474,15 +26530,15 @@
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 50,
-              "title": "上田と女が吠える夜"
+              "title": "千鳥のクセスゴ！"
             }
           ]
         }
@@ -26491,10 +26547,10 @@
     "sr20l69ypl": {
       "programTitle": "バナナサンド",
       "broadcastDate": "2026/07/07",
-      "updatedAt": "2026/07/08 12:28",
+      "updatedAt": "2026/07/08 13:32",
       "episodeId": "ep5dxwkr55",
       "subtitle": "ハモリ我慢大賞2026上半期（後半戦）＆timelesz原リベンジ",
-      "likes": "1343",
+      "likes": "1338",
       "favorites": "68.8万",
       "likePoints": [
         {
@@ -26556,6 +26612,10 @@
         {
           "hour": 17,
           "likes": 1343
+        },
+        {
+          "hour": 18,
+          "likes": 1338
         }
       ],
       "previousLikePoints": [],
@@ -26571,19 +26631,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 49,
-              "title": "ラヴィット！"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "かまいガチ"
             }
           ]
         },
@@ -26602,15 +26662,15 @@
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "夫が寝たあとに"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 50,
-              "title": "上田と女が吠える夜"
+              "title": "千鳥のクセスゴ！"
             }
           ]
         }
