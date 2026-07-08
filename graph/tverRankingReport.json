@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/08 14:31",
+  "updatedAt": "2026/07/08 15:30",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/08 14:31",
+      "updatedAt": "2026/07/08 15:30",
       "episodeId": "ep6osmqoh8",
       "subtitle": "timelesz100",
       "likes": "1.3万",
@@ -456,6 +456,10 @@
         },
         {
           "hour": 112,
+          "likes": 13000
+        },
+        {
+          "hour": 113,
           "likes": 13000
         }
       ],
@@ -1130,7 +1134,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 22,
-          "elapsedHour": 112,
+          "elapsedHour": 113,
           "elapsedRank": 22,
           "currentPoints": [
             {
@@ -1567,6 +1571,10 @@
             },
             {
               "hour": 112,
+              "rank": 22
+            },
+            {
+              "hour": 113,
               "rank": 22
             }
           ],
@@ -2211,15 +2219,15 @@
           "nearbyRanking": [
             {
               "rank": 19,
-              "title": "有吉ゼミ"
-            },
-            {
-              "rank": 20,
               "title": "夫が寝たあとに"
             },
             {
-              "rank": 21,
+              "rank": 20,
               "title": "しゃべくり007"
+            },
+            {
+              "rank": 21,
+              "title": "有吉ゼミ"
             },
             {
               "rank": 22,
@@ -2231,7 +2239,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 40,
-          "elapsedHour": 112,
+          "elapsedHour": 113,
           "elapsedRank": 40,
           "currentPoints": [
             {
@@ -2649,6 +2657,10 @@
             {
               "hour": 112,
               "rank": 40
+            },
+            {
+              "hour": 113,
+              "rank": 40
             }
           ],
           "previousPoints": [
@@ -3036,11 +3048,11 @@
           "nearbyRanking": [
             {
               "rank": 37,
-              "title": "西園寺さんは家事をしない"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 38,
-              "title": "しゃべくり007"
+              "title": "西園寺さんは家事をしない"
             },
             {
               "rank": 39,
@@ -3057,7 +3069,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/05",
-      "updatedAt": "2026/07/08 14:31",
+      "updatedAt": "2026/07/08 15:30",
       "episodeId": "epixcs383v",
       "subtitle": "【意外と知らない!渋谷の秘密】絶品!世界1のコーヒー",
       "likes": "1.2万",
@@ -3349,6 +3361,10 @@
         },
         {
           "hour": 72,
+          "likes": 12000
+        },
+        {
+          "hour": 73,
           "likes": 12000
         }
       ],
@@ -4027,7 +4043,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 27,
-          "elapsedHour": 72,
+          "elapsedHour": 73,
           "elapsedRank": 27,
           "currentPoints": [
             {
@@ -4300,6 +4316,10 @@
             },
             {
               "hour": 72,
+              "rank": 27
+            },
+            {
+              "hour": 73,
               "rank": 27
             }
           ],
@@ -4971,9 +4991,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 50,
-          "elapsedHour": 72,
-          "elapsedRank": 50,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 7,
@@ -5569,11 +5589,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スピナーベイト"
+              "title": "コントラスト"
             },
             {
               "rank": 48,
-              "title": "夏の新ドラマ予告集めました！"
+              "title": "ONE PIECE HEROINES"
             },
             {
               "rank": 49,
@@ -5581,7 +5601,7 @@
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "夏の新ドラマ予告集めました！"
             }
           ]
         }
@@ -5590,10 +5610,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/07",
-      "updatedAt": "2026/07/08 14:31",
+      "updatedAt": "2026/07/08 15:30",
       "episodeId": "eppc07nzsl",
       "subtitle": "チョコプラ・timeleszが「水をはじく\"絶対に濡れない風呂敷\"なら、水を包んで運ぶことはできるの？」に挑む！",
-      "likes": "3248",
+      "likes": "3591",
       "favorites": "5.3万",
       "likePoints": [
         {
@@ -5651,6 +5671,10 @@
         {
           "hour": 14,
           "likes": 3248
+        },
+        {
+          "hour": 15,
+          "likes": 3591
         }
       ],
       "previousLikePoints": [
@@ -6323,9 +6347,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 13,
-          "elapsedHour": 14,
-          "elapsedRank": 13,
+          "currentRank": 12,
+          "elapsedHour": 15,
+          "elapsedRank": 12,
           "currentPoints": [
             {
               "hour": 5,
@@ -6362,6 +6386,10 @@
             {
               "hour": 14,
               "rank": 13
+            },
+            {
+              "hour": 15,
+              "rank": 12
             }
           ],
           "previousPoints": [
@@ -6808,6 +6836,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 9,
+              "title": "限界突破！やってM!LK"
+            },
+            {
               "rank": 10,
               "title": "バナナマンのせっかくグルメ!!"
             },
@@ -6817,10 +6849,6 @@
             },
             {
               "rank": 12,
-              "title": "ポツンと一軒家"
-            },
-            {
-              "rank": 13,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -6885,19 +6913,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "永野＆くるまのひっかかりニーチェ"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "バナナマンのせっかくグルメ!!"
             }
           ]
         }
@@ -6906,7 +6934,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/02",
-      "updatedAt": "2026/07/08 14:31",
+      "updatedAt": "2026/07/08 15:30",
       "episodeId": "ephnvcipnk",
       "subtitle": "粘土のこね方を言葉だけで伝えろ",
       "likes": "1.1万",
@@ -7534,6 +7562,10 @@
         },
         {
           "hour": 156,
+          "likes": 11000
+        },
+        {
+          "hour": 157,
           "likes": 11000
         }
       ],
@@ -8753,19 +8785,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "永野＆くるまのひっかかりニーチェ"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "バナナマンのせっかくグルメ!!"
             }
           ]
         },
@@ -9122,11 +9154,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スピナーベイト"
+              "title": "コントラスト"
             },
             {
               "rank": 48,
-              "title": "夏の新ドラマ予告集めました！"
+              "title": "ONE PIECE HEROINES"
             },
             {
               "rank": 49,
@@ -9134,7 +9166,7 @@
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "夏の新ドラマ予告集めました！"
             }
           ]
         }
@@ -9143,7 +9175,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/07/08 14:31",
+      "updatedAt": "2026/07/08 15:30",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
       "likes": "3831",
@@ -10456,19 +10488,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "永野＆くるまのひっかかりニーチェ"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "バナナマンのせっかくグルメ!!"
             }
           ]
         },
@@ -10712,11 +10744,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スピナーベイト"
+              "title": "コントラスト"
             },
             {
               "rank": 48,
-              "title": "夏の新ドラマ予告集めました！"
+              "title": "ONE PIECE HEROINES"
             },
             {
               "rank": 49,
@@ -10724,7 +10756,7 @@
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "夏の新ドラマ予告集めました！"
             }
           ]
         }
@@ -10733,10 +10765,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/08",
-      "updatedAt": "2026/07/08 14:31",
+      "updatedAt": "2026/07/08 15:30",
       "episodeId": "ep2gt21kmn",
       "subtitle": "MC菊池風磨&畑芽育の音楽番組!NiziU登場",
-      "likes": "2248",
+      "likes": "2449",
       "favorites": "8.6万",
       "likePoints": [
         {
@@ -10794,6 +10826,10 @@
         {
           "hour": 13,
           "likes": 2248
+        },
+        {
+          "hour": 14,
+          "likes": 2449
         }
       ],
       "previousLikePoints": [
@@ -11519,19 +11555,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "永野＆くるまのひっかかりニーチェ"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "バナナマンのせっかくグルメ!!"
             }
           ]
         },
@@ -11546,11 +11582,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スピナーベイト"
+              "title": "コントラスト"
             },
             {
               "rank": 48,
-              "title": "夏の新ドラマ予告集めました！"
+              "title": "ONE PIECE HEROINES"
             },
             {
               "rank": 49,
@@ -11558,7 +11594,7 @@
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "夏の新ドラマ予告集めました！"
             }
           ]
         }
@@ -11567,10 +11603,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/08 14:31",
+      "updatedAt": "2026/07/08 15:30",
       "episodeId": "ep9zs2mp9b",
       "subtitle": "第134回 あっち向いてホイ後編・・・伝説交代？悲鳴再び？",
-      "likes": "3304",
+      "likes": "3324",
       "favorites": "71.4万",
       "likePoints": [
         {
@@ -11984,6 +12020,10 @@
         {
           "hour": 134,
           "likes": 3304
+        },
+        {
+          "hour": 135,
+          "likes": 3324
         }
       ],
       "previousLikePoints": [
@@ -12766,19 +12806,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "永野＆くるまのひっかかりニーチェ"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "バナナマンのせっかくグルメ!!"
             }
           ]
         },
@@ -12891,11 +12931,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スピナーベイト"
+              "title": "コントラスト"
             },
             {
               "rank": 48,
-              "title": "夏の新ドラマ予告集めました！"
+              "title": "ONE PIECE HEROINES"
             },
             {
               "rank": 49,
@@ -12903,7 +12943,7 @@
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "夏の新ドラマ予告集めました！"
             }
           ]
         }
@@ -12912,10 +12952,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/08 14:31",
+      "updatedAt": "2026/07/08 15:30",
       "episodeId": "epzd8603yf",
       "subtitle": "高橋成美は神ドッキリスターなのかSP 前編",
-      "likes": "2591",
+      "likes": "2593",
       "favorites": "78.0万",
       "likePoints": [
         {
@@ -14719,19 +14759,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "永野＆くるまのひっかかりニーチェ"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "バナナマンのせっかくグルメ!!"
             }
           ]
         },
@@ -15244,11 +15284,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スピナーベイト"
+              "title": "コントラスト"
             },
             {
               "rank": 48,
-              "title": "夏の新ドラマ予告集めました！"
+              "title": "ONE PIECE HEROINES"
             },
             {
               "rank": 49,
@@ -15256,7 +15296,7 @@
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "夏の新ドラマ予告集めました！"
             }
           ]
         }
@@ -15265,7 +15305,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/07/08 14:31",
+      "updatedAt": "2026/07/08 15:30",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
@@ -17138,11 +17178,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スピナーベイト"
+              "title": "コントラスト"
             },
             {
               "rank": 48,
-              "title": "夏の新ドラマ予告集めました！"
+              "title": "ONE PIECE HEROINES"
             },
             {
               "rank": 49,
@@ -17150,7 +17190,7 @@
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "夏の新ドラマ予告集めました！"
             }
           ]
         }
@@ -17159,11 +17199,11 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/07/08 14:31",
+      "updatedAt": "2026/07/08 15:30",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
       "likes": "1.1万",
-      "favorites": "22.7万",
+      "favorites": "22.6万",
       "likePoints": [
         {
           "hour": 0,
@@ -18814,19 +18854,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "永野＆くるまのひっかかりニーチェ"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "バナナマンのせっかくグルメ!!"
             }
           ]
         },
@@ -18967,11 +19007,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スピナーベイト"
+              "title": "コントラスト"
             },
             {
               "rank": 48,
-              "title": "夏の新ドラマ予告集めました！"
+              "title": "ONE PIECE HEROINES"
             },
             {
               "rank": 49,
@@ -18979,7 +19019,7 @@
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "夏の新ドラマ予告集めました！"
             }
           ]
         }
@@ -18988,7 +19028,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/08 14:31",
+      "updatedAt": "2026/07/08 15:30",
       "episodeId": "eparzrbnab",
       "subtitle": "【4人の休日に密着】",
       "likes": "1779",
@@ -20395,19 +20435,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ハマダ歌謡祭★オオカミ少年"
-            },
-            {
-              "rank": 48,
-              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
-            },
-            {
-              "rank": 49,
               "title": "あのちゃんの電電電波"
             },
             {
-              "rank": 50,
+              "rank": 48,
+              "title": "ハマダ歌謡祭★オオカミ少年"
+            },
+            {
+              "rank": 49,
               "title": "千鳥かまいたちゴールデンアワー"
+            },
+            {
+              "rank": 50,
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             }
           ]
         },
@@ -20422,19 +20462,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "永野＆くるまのひっかかりニーチェ"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "バナナマンのせっかくグルメ!!"
             }
           ]
         }
@@ -20443,10 +20483,10 @@
     "srbkekw9oj": {
       "programTitle": "ネプリーグ",
       "broadcastDate": "2026/07/06",
-      "updatedAt": "2026/07/08 14:31",
+      "updatedAt": "2026/07/08 15:30",
       "episodeId": "epa7uendiu",
       "subtitle": "木10俳優VS俳優芸人！負けられない俳優対決",
-      "likes": "4113",
+      "likes": "4145",
       "favorites": "17.5万",
       "likePoints": [
         {
@@ -20620,6 +20660,10 @@
         {
           "hour": 43,
           "likes": 4113
+        },
+        {
+          "hour": 44,
+          "likes": 4145
         }
       ],
       "previousLikePoints": [],
@@ -20628,7 +20672,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 38,
-          "elapsedHour": 43,
+          "elapsedHour": 44,
           "elapsedRank": 38,
           "currentPoints": [
             {
@@ -20778,6 +20822,10 @@
             {
               "hour": 43,
               "rank": 38
+            },
+            {
+              "hour": 44,
+              "rank": 38
             }
           ],
           "previousPoints": [],
@@ -20884,11 +20932,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スピナーベイト"
+              "title": "コントラスト"
             },
             {
               "rank": 48,
-              "title": "夏の新ドラマ予告集めました！"
+              "title": "ONE PIECE HEROINES"
             },
             {
               "rank": 49,
@@ -20896,7 +20944,7 @@
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "夏の新ドラマ予告集めました！"
             }
           ]
         }
@@ -20905,10 +20953,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/08 14:31",
+      "updatedAt": "2026/07/08 15:30",
       "episodeId": "epggxhtmuq",
       "subtitle": "バレーボール女子日本代表佐藤＆和田ペア参戦",
-      "likes": "1983",
+      "likes": "1982",
       "favorites": "12.4万",
       "likePoints": [
         {
@@ -23597,19 +23645,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "永野＆くるまのひっかかりニーチェ"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "バナナマンのせっかくグルメ!!"
             }
           ]
         }
@@ -23618,10 +23666,10 @@
     "srdfz31i5d": {
       "programTitle": "ミキティダイニング",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/08 14:31",
+      "updatedAt": "2026/07/08 15:30",
       "episodeId": "epi627g3v8",
       "subtitle": "内田有紀のガチ食生活！timelesz寺西拓人が素顔解禁！",
-      "likes": "8699",
+      "likes": "8702",
       "favorites": "9.3万",
       "likePoints": [
         {
@@ -23999,10 +24047,10 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/08 14:31",
+      "updatedAt": "2026/07/08 15:30",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
-      "likes": "3864",
+      "likes": "3866",
       "favorites": "1.8万",
       "likePoints": [
         {
@@ -24499,19 +24547,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "永野＆くるまのひっかかりニーチェ"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "バナナマンのせっかくグルメ!!"
             }
           ]
         },
@@ -24526,11 +24574,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スピナーベイト"
+              "title": "コントラスト"
             },
             {
               "rank": 48,
-              "title": "夏の新ドラマ予告集めました！"
+              "title": "ONE PIECE HEROINES"
             },
             {
               "rank": 49,
@@ -24538,7 +24586,7 @@
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "夏の新ドラマ予告集めました！"
             }
           ]
         }
@@ -24547,7 +24595,7 @@
     "srjkmo0zhs": {
       "programTitle": "クイズ！ドレミファドン",
       "broadcastDate": "2026/06/29",
-      "updatedAt": "2026/07/08 14:31",
+      "updatedAt": "2026/07/08 15:30",
       "episodeId": "epy72shs76",
       "subtitle": "新ドラマ人気番組対抗クイズドレミファドン50周年夏の祭典SP",
       "likes": "1.2万",
@@ -25540,19 +25588,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "永野＆くるまのひっかかりニーチェ"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "バナナマンのせっかくグルメ!!"
             }
           ]
         },
@@ -25832,11 +25880,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スピナーベイト"
+              "title": "コントラスト"
             },
             {
               "rank": 48,
-              "title": "夏の新ドラマ予告集めました！"
+              "title": "ONE PIECE HEROINES"
             },
             {
               "rank": 49,
@@ -25844,7 +25892,7 @@
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "夏の新ドラマ予告集めました！"
             }
           ]
         }
@@ -25853,7 +25901,7 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/07/08 14:31",
+      "updatedAt": "2026/07/08 15:30",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "2.4万",
@@ -26049,6 +26097,10 @@
         },
         {
           "hour": 96,
+          "likes": 24000
+        },
+        {
+          "hour": 97,
           "likes": 24000
         }
       ],
@@ -26310,19 +26362,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "永野＆くるまのひっかかりニーチェ"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "バナナマンのせっかくグルメ!!"
             }
           ]
         },
@@ -26582,11 +26634,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スピナーベイト"
+              "title": "コントラスト"
             },
             {
               "rank": 48,
-              "title": "夏の新ドラマ予告集めました！"
+              "title": "ONE PIECE HEROINES"
             },
             {
               "rank": 49,
@@ -26594,7 +26646,7 @@
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "夏の新ドラマ予告集めました！"
             }
           ]
         }
@@ -26603,10 +26655,10 @@
     "sr20l69ypl": {
       "programTitle": "バナナサンド",
       "broadcastDate": "2026/07/07",
-      "updatedAt": "2026/07/08 14:31",
+      "updatedAt": "2026/07/08 15:30",
       "episodeId": "ep5dxwkr55",
       "subtitle": "ハモリ我慢大賞2026上半期（後半戦）＆timelesz原リベンジ",
-      "likes": "1410",
+      "likes": "1483",
       "favorites": "68.8万",
       "likePoints": [
         {
@@ -26676,6 +26728,10 @@
         {
           "hour": 19,
           "likes": 1410
+        },
+        {
+          "hour": 20,
+          "likes": 1483
         }
       ],
       "previousLikePoints": [],
@@ -26691,19 +26747,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "永野＆くるまのひっかかりニーチェ"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "バナナマンのせっかくグルメ!!"
             }
           ]
         },
@@ -26718,11 +26774,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スピナーベイト"
+              "title": "コントラスト"
             },
             {
               "rank": 48,
-              "title": "夏の新ドラマ予告集めました！"
+              "title": "ONE PIECE HEROINES"
             },
             {
               "rank": 49,
@@ -26730,7 +26786,7 @@
             },
             {
               "rank": 50,
-              "title": "timeleszファミリア"
+              "title": "夏の新ドラマ予告集めました！"
             }
           ]
         }
