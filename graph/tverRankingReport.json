@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/08 22:31",
+  "updatedAt": "2026/07/08 23:31",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/08 22:31",
+      "updatedAt": "2026/07/08 23:31",
       "episodeId": "ep6osmqoh8",
       "subtitle": "timelesz100",
       "likes": "1.4万",
@@ -484,6 +484,10 @@
         },
         {
           "hour": 120,
+          "likes": 14000
+        },
+        {
+          "hour": 121,
           "likes": 14000
         }
       ],
@@ -1158,7 +1162,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 25,
-          "elapsedHour": 120,
+          "elapsedHour": 121,
           "elapsedRank": 25,
           "currentPoints": [
             {
@@ -1627,6 +1631,10 @@
             },
             {
               "hour": 120,
+              "rank": 25
+            },
+            {
+              "hour": 121,
               "rank": 25
             }
           ],
@@ -2291,7 +2299,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 46,
-          "elapsedHour": 120,
+          "elapsedHour": 121,
           "elapsedRank": 46,
           "currentPoints": [
             {
@@ -2741,6 +2749,10 @@
             {
               "hour": 120,
               "rank": 46
+            },
+            {
+              "hour": 121,
+              "rank": 46
             }
           ],
           "previousPoints": [
@@ -3132,11 +3144,11 @@
             },
             {
               "rank": 44,
-              "title": "開運！なんでも鑑定団"
+              "title": "夫婦と16歳～狂気の隣人～"
             },
             {
               "rank": 45,
-              "title": "夫婦と16歳～狂気の隣人～"
+              "title": "開運！なんでも鑑定団"
             },
             {
               "rank": 46,
@@ -3149,7 +3161,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/05",
-      "updatedAt": "2026/07/08 22:31",
+      "updatedAt": "2026/07/08 23:31",
       "episodeId": "epixcs383v",
       "subtitle": "【意外と知らない!渋谷の秘密】絶品!世界1のコーヒー",
       "likes": "1.2万",
@@ -3469,6 +3481,10 @@
         },
         {
           "hour": 80,
+          "likes": 12000
+        },
+        {
+          "hour": 81,
           "likes": 12000
         }
       ],
@@ -4146,9 +4162,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 33,
-          "elapsedHour": 80,
-          "elapsedRank": 33,
+          "currentRank": 34,
+          "elapsedHour": 81,
+          "elapsedRank": 34,
           "currentPoints": [
             {
               "hour": 4,
@@ -4453,6 +4469,10 @@
             {
               "hour": 80,
               "rank": 33
+            },
+            {
+              "hour": 81,
+              "rank": 34
             }
           ],
           "previousPoints": [
@@ -5103,12 +5123,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 30,
-              "title": "Golden SixTONES"
-            },
-            {
               "rank": 31,
-              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 32,
@@ -5116,6 +5132,10 @@
             },
             {
               "rank": 33,
+              "title": "家、ついて行ってイイですか？"
+            },
+            {
+              "rank": 34,
               "title": "timeleszファミリア"
             }
           ]
@@ -5721,19 +5741,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
-            },
-            {
-              "rank": 48,
               "title": "マツコ＆有吉 かりそめ天国"
             },
             {
+              "rank": 48,
+              "title": "永野＆くるまのひっかかりニーチェ"
+            },
+            {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "バナナサンド"
             },
             {
               "rank": 50,
-              "title": "西園寺さんは家事をしない"
+              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
         }
@@ -5742,10 +5762,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/07",
-      "updatedAt": "2026/07/08 22:31",
+      "updatedAt": "2026/07/08 23:31",
       "episodeId": "eppc07nzsl",
       "subtitle": "チョコプラ・timeleszが「水をはじく\"絶対に濡れない風呂敷\"なら、水を包んで運ぶことはできるの？」に挑む！",
-      "likes": "4983",
+      "likes": "5002",
       "favorites": "5.3万",
       "likePoints": [
         {
@@ -5831,6 +5851,10 @@
         {
           "hour": 22,
           "likes": 4983
+        },
+        {
+          "hour": 23,
+          "likes": 5002
         }
       ],
       "previousLikePoints": [
@@ -6504,7 +6528,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 9,
-          "elapsedHour": 22,
+          "elapsedHour": 23,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -6573,6 +6597,10 @@
             },
             {
               "hour": 22,
+              "rank": 9
+            },
+            {
+              "hour": 23,
               "rank": 9
             }
           ],
@@ -7040,9 +7068,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 37,
-          "elapsedHour": 22,
-          "elapsedRank": 37,
+          "currentRank": 36,
+          "elapsedHour": 23,
+          "elapsedRank": 36,
           "currentPoints": [
             {
               "hour": 18,
@@ -7063,6 +7091,10 @@
             {
               "hour": 22,
               "rank": 37
+            },
+            {
+              "hour": 23,
+              "rank": 36
             }
           ],
           "previousPoints": [
@@ -7117,19 +7149,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 33,
+              "title": "家、ついて行ってイイですか？"
+            },
+            {
               "rank": 34,
-              "title": "2026FNS歌謡祭 夏"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 35,
-              "title": "千鳥のクセスゴ！"
+              "title": "2026FNS歌謡祭 夏"
             },
             {
               "rank": 36,
-              "title": "ありえへん∞世界"
-            },
-            {
-              "rank": 37,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -7139,7 +7171,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/02",
-      "updatedAt": "2026/07/08 22:31",
+      "updatedAt": "2026/07/08 23:31",
       "episodeId": "ephnvcipnk",
       "subtitle": "粘土のこね方を言葉だけで伝えろ",
       "likes": "1.2万",
@@ -7795,6 +7827,10 @@
         },
         {
           "hour": 164,
+          "likes": 12000
+        },
+        {
+          "hour": 165,
           "likes": 12000
         }
       ],
@@ -9014,19 +9050,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マルコポロリ！"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             },
             {
               "rank": 48,
-              "title": "有吉クイズ"
-            },
-            {
-              "rank": 49,
               "title": "にけつッ!!"
             },
             {
+              "rank": 49,
+              "title": "マルコポロリ！"
+            },
+            {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "有吉クイズ"
             }
           ]
         },
@@ -9383,19 +9419,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
-            },
-            {
-              "rank": 48,
               "title": "マツコ＆有吉 かりそめ天国"
             },
             {
+              "rank": 48,
+              "title": "永野＆くるまのひっかかりニーチェ"
+            },
+            {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "バナナサンド"
             },
             {
               "rank": 50,
-              "title": "西園寺さんは家事をしない"
+              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
         }
@@ -9404,7 +9440,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/07/08 22:31",
+      "updatedAt": "2026/07/08 23:31",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
       "likes": "3831",
@@ -10717,19 +10753,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マルコポロリ！"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             },
             {
               "rank": 48,
-              "title": "有吉クイズ"
-            },
-            {
-              "rank": 49,
               "title": "にけつッ!!"
             },
             {
+              "rank": 49,
+              "title": "マルコポロリ！"
+            },
+            {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "有吉クイズ"
             }
           ]
         },
@@ -10973,19 +11009,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
-            },
-            {
-              "rank": 48,
               "title": "マツコ＆有吉 かりそめ天国"
             },
             {
+              "rank": 48,
+              "title": "永野＆くるまのひっかかりニーチェ"
+            },
+            {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "バナナサンド"
             },
             {
               "rank": 50,
-              "title": "西園寺さんは家事をしない"
+              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
         }
@@ -10994,10 +11030,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/08",
-      "updatedAt": "2026/07/08 22:31",
+      "updatedAt": "2026/07/08 23:31",
       "episodeId": "ep2gt21kmn",
       "subtitle": "MC菊池風磨&畑芽育の音楽番組!NiziU登場",
-      "likes": "3500",
+      "likes": "3520",
       "favorites": "8.6万",
       "likePoints": [
         {
@@ -11083,6 +11119,10 @@
         {
           "hour": 21,
           "likes": 3500
+        },
+        {
+          "hour": 22,
+          "likes": 3520
         }
       ],
       "previousLikePoints": [
@@ -11755,9 +11795,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 31,
-          "elapsedHour": 22,
-          "elapsedRank": 31,
+          "currentRank": 29,
+          "elapsedHour": 23,
+          "elapsedRank": 29,
           "currentPoints": [
             {
               "hour": 16,
@@ -11782,6 +11822,10 @@
             {
               "hour": 22,
               "rank": 31
+            },
+            {
+              "hour": 23,
+              "rank": 29
             }
           ],
           "previousPoints": [
@@ -11832,19 +11876,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 28,
-              "title": "有吉ゼミ"
+              "rank": 26,
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
-              "rank": 29,
+              "rank": 27,
               "title": "永野＆くるまのひっかかりニーチェ"
             },
             {
-              "rank": 30,
-              "title": "Golden SixTONES"
+              "rank": 28,
+              "title": "バナナサンド"
             },
             {
-              "rank": 31,
+              "rank": 29,
               "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
@@ -11852,27 +11896,32 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 50,
+          "elapsedHour": 23,
+          "elapsedRank": 50,
+          "currentPoints": [
+            {
+              "hour": 23,
+              "rank": 50
+            }
+          ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
-            },
-            {
-              "rank": 48,
               "title": "マツコ＆有吉 かりそめ天国"
             },
             {
+              "rank": 48,
+              "title": "永野＆くるまのひっかかりニーチェ"
+            },
+            {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "バナナサンド"
             },
             {
               "rank": 50,
-              "title": "西園寺さんは家事をしない"
+              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
         }
@@ -11881,10 +11930,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/08 22:31",
+      "updatedAt": "2026/07/08 23:31",
       "episodeId": "ep9zs2mp9b",
       "subtitle": "第134回 あっち向いてホイ後編・・・伝説交代？悲鳴再び？",
-      "likes": "3421",
+      "likes": "3419",
       "favorites": "71.4万",
       "likePoints": [
         {
@@ -12326,6 +12375,10 @@
         {
           "hour": 142,
           "likes": 3421
+        },
+        {
+          "hour": 143,
+          "likes": 3419
         }
       ],
       "previousLikePoints": [
@@ -13108,19 +13161,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マルコポロリ！"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             },
             {
               "rank": 48,
-              "title": "有吉クイズ"
-            },
-            {
-              "rank": 49,
               "title": "にけつッ!!"
             },
             {
+              "rank": 49,
+              "title": "マルコポロリ！"
+            },
+            {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "有吉クイズ"
             }
           ]
         },
@@ -13233,19 +13286,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
-            },
-            {
-              "rank": 48,
               "title": "マツコ＆有吉 かりそめ天国"
             },
             {
+              "rank": 48,
+              "title": "永野＆くるまのひっかかりニーチェ"
+            },
+            {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "バナナサンド"
             },
             {
               "rank": 50,
-              "title": "西園寺さんは家事をしない"
+              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
         }
@@ -13254,10 +13307,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/08 22:31",
+      "updatedAt": "2026/07/08 23:31",
       "episodeId": "epzd8603yf",
       "subtitle": "高橋成美は神ドッキリスターなのかSP 前編",
-      "likes": "2617",
+      "likes": "2613",
       "favorites": "78.0万",
       "likePoints": [
         {
@@ -15061,19 +15114,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マルコポロリ！"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             },
             {
               "rank": 48,
-              "title": "有吉クイズ"
-            },
-            {
-              "rank": 49,
               "title": "にけつッ!!"
             },
             {
+              "rank": 49,
+              "title": "マルコポロリ！"
+            },
+            {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "有吉クイズ"
             }
           ]
         },
@@ -15586,19 +15639,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
-            },
-            {
-              "rank": 48,
               "title": "マツコ＆有吉 かりそめ天国"
             },
             {
+              "rank": 48,
+              "title": "永野＆くるまのひっかかりニーチェ"
+            },
+            {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "バナナサンド"
             },
             {
               "rank": 50,
-              "title": "西園寺さんは家事をしない"
+              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
         }
@@ -15607,7 +15660,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/07/08 22:31",
+      "updatedAt": "2026/07/08 23:31",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
@@ -16296,10 +16349,6 @@
           "elapsedRank": null,
           "currentPoints": [
             {
-              "hour": 2,
-              "rank": 23
-            },
-            {
               "hour": 4,
               "rank": 12
             },
@@ -16968,7 +17017,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "海の上の診療所"
+              "title": "修学旅行で仲良くないグループに入りました"
             },
             {
               "rank": 48,
@@ -16976,11 +17025,11 @@
             },
             {
               "rank": 49,
-              "title": "砂の塔～知りすぎた隣人"
+              "title": "甘い秘密（放送版）"
             },
             {
               "rank": 50,
-              "title": "恋仲"
+              "title": "医師たちの恋愛事情"
             }
           ]
         },
@@ -16991,10 +17040,6 @@
           "elapsedHour": null,
           "elapsedRank": null,
           "currentPoints": [
-            {
-              "hour": 2,
-              "rank": 48
-            },
             {
               "hour": 4,
               "rank": 24
@@ -17480,19 +17525,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
-            },
-            {
-              "rank": 48,
               "title": "マツコ＆有吉 かりそめ天国"
             },
             {
+              "rank": 48,
+              "title": "永野＆くるまのひっかかりニーチェ"
+            },
+            {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "バナナサンド"
             },
             {
               "rank": 50,
-              "title": "西園寺さんは家事をしない"
+              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
         }
@@ -17501,7 +17546,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/07/08 22:31",
+      "updatedAt": "2026/07/08 23:31",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
       "likes": "1.1万",
@@ -19156,19 +19201,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マルコポロリ！"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             },
             {
               "rank": 48,
-              "title": "有吉クイズ"
-            },
-            {
-              "rank": 49,
               "title": "にけつッ!!"
             },
             {
+              "rank": 49,
+              "title": "マルコポロリ！"
+            },
+            {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "有吉クイズ"
             }
           ]
         },
@@ -19309,19 +19354,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
-            },
-            {
-              "rank": 48,
               "title": "マツコ＆有吉 かりそめ天国"
             },
             {
+              "rank": 48,
+              "title": "永野＆くるまのひっかかりニーチェ"
+            },
+            {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "バナナサンド"
             },
             {
               "rank": 50,
-              "title": "西園寺さんは家事をしない"
+              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
         }
@@ -19330,7 +19375,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/08 22:31",
+      "updatedAt": "2026/07/08 23:31",
       "episodeId": "eparzrbnab",
       "subtitle": "【4人の休日に密着】",
       "likes": "1779",
@@ -20737,19 +20782,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ジャンクSPORTS"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 48,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "ジャンクSPORTS"
             },
             {
               "rank": 49,
-              "title": "ハマダ歌謡祭★オオカミ少年"
+              "title": "アッコとジャンボ"
             },
             {
               "rank": 50,
-              "title": "世界！ニッポン行きたい人応援団"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             }
           ]
         },
@@ -20764,19 +20809,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マルコポロリ！"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             },
             {
               "rank": 48,
-              "title": "有吉クイズ"
-            },
-            {
-              "rank": 49,
               "title": "にけつッ!!"
             },
             {
+              "rank": 49,
+              "title": "マルコポロリ！"
+            },
+            {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "有吉クイズ"
             }
           ]
         }
@@ -20785,10 +20830,10 @@
     "srbkekw9oj": {
       "programTitle": "ネプリーグ",
       "broadcastDate": "2026/07/06",
-      "updatedAt": "2026/07/08 22:31",
+      "updatedAt": "2026/07/08 23:31",
       "episodeId": "epa7uendiu",
       "subtitle": "木10俳優VS俳優芸人！負けられない俳優対決",
-      "likes": "4386",
+      "likes": "4388",
       "favorites": "17.5万",
       "likePoints": [
         {
@@ -20990,6 +21035,10 @@
         {
           "hour": 51,
           "likes": 4386
+        },
+        {
+          "hour": 52,
+          "likes": 4388
         }
       ],
       "previousLikePoints": [],
@@ -21178,19 +21227,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マルコポロリ！"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             },
             {
               "rank": 48,
-              "title": "有吉クイズ"
-            },
-            {
-              "rank": 49,
               "title": "にけつッ!!"
             },
             {
+              "rank": 49,
+              "title": "マルコポロリ！"
+            },
+            {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "有吉クイズ"
             }
           ]
         },
@@ -21278,19 +21327,168 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
-            },
-            {
-              "rank": 48,
               "title": "マツコ＆有吉 かりそめ天国"
             },
             {
+              "rank": 48,
+              "title": "永野＆くるまのひっかかりニーチェ"
+            },
+            {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "バナナサンド"
             },
             {
               "rank": 50,
-              "title": "西園寺さんは家事をしない"
+              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
+            }
+          ]
+        }
+      ]
+    },
+    "sr286e3aus": {
+      "programTitle": "ファーストクライ 母子救命救急班",
+      "broadcastDate": "2026/07/08",
+      "updatedAt": "2026/07/08 23:31",
+      "episodeId": "epxqdyttmd",
+      "subtitle": "#1 産声が響くまで、諦めない",
+      "likes": "1011",
+      "favorites": "35.5万",
+      "likePoints": [
+        {
+          "hour": 1,
+          "likes": 1011
+        }
+      ],
+      "previousLikePoints": [],
+      "rankings": [
+        {
+          "type": "drama",
+          "label": "ドラマ",
+          "currentRank": 32,
+          "elapsedHour": 1,
+          "elapsedRank": 32,
+          "currentPoints": [
+            {
+              "hour": 1,
+              "rank": 32
+            }
+          ],
+          "previousPoints": [],
+          "nearbyRanking": [
+            {
+              "rank": 29,
+              "title": "好きな人がいること"
+            },
+            {
+              "rank": 30,
+              "title": "君は夏のなか"
+            },
+            {
+              "rank": 31,
+              "title": "ミッドナイト屋台２～ル・モンドゥ～"
+            },
+            {
+              "rank": 32,
+              "title": "ファーストクライ 母子救命救急班"
+            }
+          ]
+        },
+        {
+          "type": "all",
+          "label": "総合",
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
+          "currentPoints": [],
+          "previousPoints": [],
+          "nearbyRanking": [
+            {
+              "rank": 47,
+              "title": "マツコ＆有吉 かりそめ天国"
+            },
+            {
+              "rank": 48,
+              "title": "永野＆くるまのひっかかりニーチェ"
+            },
+            {
+              "rank": 49,
+              "title": "バナナサンド"
+            },
+            {
+              "rank": 50,
+              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
+            }
+          ]
+        }
+      ]
+    },
+    "srns83dbgi": {
+      "programTitle": "ラストノート",
+      "broadcastDate": "2026/07/08",
+      "updatedAt": "2026/07/08 23:31",
+      "episodeId": "epx2ox5e13",
+      "subtitle": "第1話の見どころを一足先に公開！",
+      "likes": "251",
+      "favorites": "27.9万",
+      "likePoints": [
+        {
+          "hour": 1,
+          "likes": 251
+        }
+      ],
+      "previousLikePoints": [],
+      "rankings": [
+        {
+          "type": "drama",
+          "label": "ドラマ",
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
+          "currentPoints": [],
+          "previousPoints": [],
+          "nearbyRanking": [
+            {
+              "rank": 47,
+              "title": "修学旅行で仲良くないグループに入りました"
+            },
+            {
+              "rank": 48,
+              "title": "離婚弁護士"
+            },
+            {
+              "rank": 49,
+              "title": "甘い秘密（放送版）"
+            },
+            {
+              "rank": 50,
+              "title": "医師たちの恋愛事情"
+            }
+          ]
+        },
+        {
+          "type": "all",
+          "label": "総合",
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
+          "currentPoints": [],
+          "previousPoints": [],
+          "nearbyRanking": [
+            {
+              "rank": 47,
+              "title": "マツコ＆有吉 かりそめ天国"
+            },
+            {
+              "rank": 48,
+              "title": "永野＆くるまのひっかかりニーチェ"
+            },
+            {
+              "rank": 49,
+              "title": "バナナサンド"
+            },
+            {
+              "rank": 50,
+              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
         }
@@ -21299,10 +21497,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/08 22:31",
+      "updatedAt": "2026/07/08 23:31",
       "episodeId": "epggxhtmuq",
       "subtitle": "バレーボール女子日本代表佐藤＆和田ペア参戦",
-      "likes": "1998",
+      "likes": "2000",
       "favorites": "12.4万",
       "likePoints": [
         {
@@ -23738,19 +23936,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉くんの正直さんぽ"
-            },
-            {
-              "rank": 48,
               "title": "ヒロシのぼっちキャンプ Season13"
             },
             {
+              "rank": 48,
+              "title": "有吉くんの正直さんぽ"
+            },
+            {
               "rank": 49,
-              "title": "ゴルフ侍、見参！"
+              "title": "よるのブランチ"
             },
             {
               "rank": 50,
-              "title": "ニノなのに"
+              "title": "日本探求アカデミックバラエティ 火曜の良純孝太郎"
             }
           ]
         },
@@ -23991,19 +24189,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マルコポロリ！"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             },
             {
               "rank": 48,
-              "title": "有吉クイズ"
-            },
-            {
-              "rank": 49,
               "title": "にけつッ!!"
             },
             {
+              "rank": 49,
+              "title": "マルコポロリ！"
+            },
+            {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "有吉クイズ"
             }
           ]
         }
@@ -24012,10 +24210,10 @@
     "srdfz31i5d": {
       "programTitle": "ミキティダイニング",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/08 22:31",
+      "updatedAt": "2026/07/08 23:31",
       "episodeId": "epi627g3v8",
       "subtitle": "内田有紀のガチ食生活！timelesz寺西拓人が素顔解禁！",
-      "likes": "8725",
+      "likes": "8730",
       "favorites": "9.3万",
       "likePoints": [
         {
@@ -24393,7 +24591,7 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/08 22:31",
+      "updatedAt": "2026/07/08 23:31",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
       "likes": "3890",
@@ -24893,19 +25091,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マルコポロリ！"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             },
             {
               "rank": 48,
-              "title": "有吉クイズ"
-            },
-            {
-              "rank": 49,
               "title": "にけつッ!!"
             },
             {
+              "rank": 49,
+              "title": "マルコポロリ！"
+            },
+            {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "有吉クイズ"
             }
           ]
         },
@@ -24920,19 +25118,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
-            },
-            {
-              "rank": 48,
               "title": "マツコ＆有吉 かりそめ天国"
             },
             {
+              "rank": 48,
+              "title": "永野＆くるまのひっかかりニーチェ"
+            },
+            {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "バナナサンド"
             },
             {
               "rank": 50,
-              "title": "西園寺さんは家事をしない"
+              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
         }
@@ -24941,7 +25139,7 @@
     "srjkmo0zhs": {
       "programTitle": "クイズ！ドレミファドン",
       "broadcastDate": "2026/06/29",
-      "updatedAt": "2026/07/08 22:31",
+      "updatedAt": "2026/07/08 23:31",
       "episodeId": "epy72shs76",
       "subtitle": "新ドラマ人気番組対抗クイズドレミファドン50周年夏の祭典SP",
       "likes": "1.2万",
@@ -25934,19 +26132,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マルコポロリ！"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             },
             {
               "rank": 48,
-              "title": "有吉クイズ"
-            },
-            {
-              "rank": 49,
               "title": "にけつッ!!"
             },
             {
+              "rank": 49,
+              "title": "マルコポロリ！"
+            },
+            {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "有吉クイズ"
             }
           ]
         },
@@ -26226,19 +26424,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
-            },
-            {
-              "rank": 48,
               "title": "マツコ＆有吉 かりそめ天国"
             },
             {
+              "rank": 48,
+              "title": "永野＆くるまのひっかかりニーチェ"
+            },
+            {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "バナナサンド"
             },
             {
               "rank": 50,
-              "title": "西園寺さんは家事をしない"
+              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
         }
@@ -26247,11 +26445,11 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/07/08 22:31",
+      "updatedAt": "2026/07/08 23:31",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "2.5万",
-      "favorites": "23.1万",
+      "favorites": "23.2万",
       "likePoints": [
         {
           "hour": 49,
@@ -26472,6 +26670,10 @@
         {
           "hour": 104,
           "likes": 25000
+        },
+        {
+          "hour": 105,
+          "likes": 25000
         }
       ],
       "previousLikePoints": [],
@@ -26480,7 +26682,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 22,
-          "elapsedHour": 104,
+          "elapsedHour": 105,
           "elapsedRank": 22,
           "currentPoints": [
             {
@@ -26734,17 +26936,21 @@
             {
               "hour": 104,
               "rank": 22
+            },
+            {
+              "hour": 105,
+              "rank": 22
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 19,
-              "title": "大悟の芸人領収書"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 20,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 21,
@@ -26760,7 +26966,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 42,
-          "elapsedHour": 104,
+          "elapsedHour": 105,
           "elapsedRank": 42,
           "currentPoints": [
             {
@@ -27014,17 +27220,21 @@
             {
               "hour": 104,
               "rank": 42
+            },
+            {
+              "hour": 105,
+              "rank": 42
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 39,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "一緒にごはんをたべるだけ"
             },
             {
               "rank": 40,
-              "title": "一緒にごはんをたべるだけ"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 41,
@@ -27041,10 +27251,10 @@
     "sr20l69ypl": {
       "programTitle": "バナナサンド",
       "broadcastDate": "2026/07/07",
-      "updatedAt": "2026/07/08 22:31",
+      "updatedAt": "2026/07/08 23:31",
       "episodeId": "ep5dxwkr55",
       "subtitle": "ハモリ我慢大賞2026上半期（後半戦）＆timelesz原リベンジ",
-      "likes": "1937",
+      "likes": "1940",
       "favorites": "68.8万",
       "likePoints": [
         {
@@ -27142,6 +27352,10 @@
         {
           "hour": 27,
           "likes": 1937
+        },
+        {
+          "hour": 28,
+          "likes": 1940
         }
       ],
       "previousLikePoints": [],
@@ -27157,19 +27371,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マルコポロリ！"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             },
             {
               "rank": 48,
-              "title": "有吉クイズ"
-            },
-            {
-              "rank": 49,
               "title": "にけつッ!!"
             },
             {
+              "rank": 49,
+              "title": "マルコポロリ！"
+            },
+            {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "有吉クイズ"
             }
           ]
         },
@@ -27184,23 +27398,35 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
-            },
-            {
-              "rank": 48,
               "title": "マツコ＆有吉 かりそめ天国"
             },
             {
+              "rank": 48,
+              "title": "永野＆くるまのひっかかりニーチェ"
+            },
+            {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "バナナサンド"
             },
             {
               "rank": 50,
-              "title": "西園寺さんは家事をしない"
+              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
         }
       ]
+    },
+    "srgnxaf8s7": {
+      "programTitle": "ラヴィット！",
+      "broadcastDate": "",
+      "updatedAt": "2026/07/08 23:31",
+      "episodeId": "epowi9d382",
+      "subtitle": "【7/8 前半】誰でもわかる！スーパー簡単常識クイズ",
+      "likes": "404",
+      "favorites": "197.8万",
+      "likePoints": [],
+      "previousLikePoints": [],
+      "rankings": []
     }
   }
 }
