@@ -1146,3 +1146,6 @@
   background: var(--color-brand);
 }
 
+#settingButton{
+   display:none;
+}
