@@ -878,3 +878,8 @@
   font-size: 0.9rem;
   opacity: 0.75;
 }
+#home-top-share-btn-wrap {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
