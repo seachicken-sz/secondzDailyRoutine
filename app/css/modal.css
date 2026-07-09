@@ -894,5 +894,4 @@
 
 .setting-radio-card:has(input:checked) {
   border-color: var(--color-brand, #f4a7b9);
-  background: rgba(244, 167, 185, 0.12);
 }
