@@ -1152,35 +1152,43 @@
       <section id="pushSettingSection" class="setting-section">
         <div class="setting-section-header">
           <h3><i class="bi bi-bell"></i>プッシュ通知</h3>
-          <p>タムごとDailyのリマインド通知を受け取る時間を選べます。</p>
+          <p>タムごとDailyからの通知を受け取れます。<br>
+          「通知を許可しますか？」と出たら「許可」を選んでください。
+          </p>
+          <p id="pushStatusText" class="setting-status-text">現在：確認中...</p>
         </div>
-
+      
         <fieldset id="pushSettingFieldset" class="setting-fieldset">
           <div class="setting-radio-list">
+      
             <label class="setting-radio-card">
-              <input type="radio" name="pushTime" value="08">
+              <input type="radio" name="pushSetting" value="08">
               <span>
                 <strong>8時</strong>
-                <small>朝にやりたい派の方はこちら</small>
+                <small>朝にまとめて始める</small>
+              </span>
+            </label>
+      
+            <label class="setting-radio-card">
+              <input type="radio" name="pushSetting" value="18">
+              <span>
+                <strong>18時</strong>
+                <small>USEN更新時間に合わせる</small>
               </span>
             </label>
 
             <label class="setting-radio-card">
-              <input type="radio" name="pushTime" value="18">
+              <input type="radio" name="pushSetting" value="off">
               <span>
-                <strong>18時</strong>
-                <small>USEN更新時間に合わせたい派の方はこちら</small>
+                <strong>通知しない</strong>
+                <small>プッシュ通知を停止します</small>
               </span>
             </label>
           </div>
-
+      
           <div class="setting-action-row">
-            <button type="button" id="pushSubscribeButton" class="primary-button">
-              この時間で通知を受け取る
-            </button>
-
-            <button type="button" id="pushStopButton" class="secondary-button">
-              通知を止める
+            <button type="button" id="pushSaveButton" class="primary-button">
+              設定を保存
             </button>
           </div>
         </fieldset>
