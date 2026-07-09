@@ -69,6 +69,10 @@ const homeInstallGuideMenuElement = document.getElementById("homeInstallGuideMen
 const homeMenuSetupButtonElement = document.getElementById("homeMenuSetupButton");
 const homeMenuUsageButtonElement = document.getElementById("homeMenuUsageButton");
 const homeMenuShareButtonElement = document.getElementById("homeMenuShareButton");
+// ホーム上部の設定ボタン
+const settingButtonElement = document.getElementById("settingButton");
+// ホームメニュー内の設定ボタン
+const homeMenuSettingButtonElement = document.getElementById("homeMenuSettingButton");
 
 // ==================================================
 // DOM: 初回設定モーダル
@@ -130,6 +134,16 @@ const pwaFirstVisitModalElement = document.getElementById("pwaFirstVisitModal");
 const closePwaFirstVisitModalButtonElement = document.getElementById("closePwaFirstVisitModalButton");
 const pwaFirstVisitOpenUsageButtonElement = document.getElementById("pwaFirstVisitOpenUsageButton");
 const pwaFirstVisitCloseOnlyButtonElement = document.getElementById("pwaFirstVisitCloseOnlyButton");
+
+// ==================================================
+// DOM: 設定モーダル
+// ==================================================
+const settingModalElement = document.getElementById("settingModal");
+const closeSettingModalButtonElement = document.getElementById("closeSettingModalButton");
+const settingOpenFirstSetupButtonElement = document.getElementById("settingOpenFirstSetupButton");
+const settingPwaGuideElement = document.getElementById("settingPwaGuide");
+const pushSettingSectionElement = document.getElementById("pushSettingSection");
+const pushSettingFieldsetElement = document.getElementById("pushSettingFieldset");
 
 // ==================================================
 // DOM: STEP 1 Spotify
