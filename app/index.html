@@ -1101,6 +1101,7 @@
       <div id="stepHelpModalButtonArea" class="step-help-modal-button-area hidden"></div>
     </div>
   </div>
+  
   <!--お知らせ-->
   <div id="updateNoticeModal" class="modal-overlay hidden">
     <div class="modal-content update-notice-modal-content" role="dialog" aria-modal="true" aria-labelledby="updateNoticeModalTitle">
@@ -1113,6 +1114,77 @@
       </div>
     </div>
   </div>
+
+  <!--設定-->
+  <!--設定モーダル-->
+<div id="settingModal" class="modal-overlay hidden">
+  <div class="modal-content setting-modal-content" role="dialog" aria-modal="true" aria-labelledby="settingModalTitle">
+    <div class="modal-header">
+      <h2 id="settingModalTitle" class="modal-title">設定</h2>
+      <button id="closeSettingModalButton" class="modal-close-button" type="button" aria-label="閉じる">×</button>
+    </div>
+
+    <div class="modal-body setting-modal-body">
+      <section id="settingPwaGuide" class="setting-pwa-guide hidden">
+        <p>
+          Push通知はホーム画面に追加したアプリからのみ利用できます。
+        </p>
+        <button type="button" id="settingOpenFirstSetupButton" class="primary-button">
+          ホーム画面に追加する
+        </button>
+      </section>
+
+      <section id="pushSettingSection" class="setting-section">
+        <div class="setting-section-header">
+          <h3><i class="bi bi-bell"></i>プッシュ通知</h3>
+          <p>タムごとDailyのリマインド通知を受け取る時間を選べます。</p>
+        </div>
+
+        <fieldset id="pushSettingFieldset" class="setting-fieldset">
+          <div class="setting-radio-list">
+            <label class="setting-radio-card">
+              <input type="radio" name="pushTime" value="08">
+              <span>
+                <strong>8時</strong>
+                <small>朝にまとめて始める</small>
+              </span>
+            </label>
+
+            <label class="setting-radio-card">
+              <input type="radio" name="pushTime" value="18">
+              <span>
+                <strong>18時</strong>
+                <small>USEN更新時間に合わせる</small>
+              </span>
+            </label>
+          </div>
+
+          <div class="setting-action-row">
+            <button type="button" id="pushSubscribeButton" class="primary-button">
+              この時間で通知を受け取る
+            </button>
+
+            <button type="button" id="pushStopButton" class="secondary-button">
+              通知を止める
+            </button>
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="setting-section">
+        <div class="setting-section-header">
+          <h3><i class="bi bi-phone"></i>表示モード</h3>
+          <p>今後、起動時の表示モード切替をここに追加予定です。</p>
+        </div>
+
+        <div class="setting-placeholder">
+          準備中
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+  
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.js"></script>
 <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 <!-- 基本・共通 -->
