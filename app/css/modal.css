@@ -883,3 +883,16 @@
   gap: 8px;
   align-items: center;
 }
+.setting-status-text {
+  margin: 8px 0 0;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.04);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.setting-radio-card:has(input:checked) {
+  border-color: var(--color-brand, #f4a7b9);
+  background: rgba(244, 167, 185, 0.12);
+}
