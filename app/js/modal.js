@@ -146,6 +146,31 @@ if (pwaFirstVisitModalElement) {
       }
     });
   }
+
+  // ==================================================
+  // 設定モーダル
+  // ==================================================
+  addClickEvent(settingButtonElement, openSettingModal);
+  
+  addClickEvent(homeMenuSettingButtonElement, () => {
+    closeHomeMenu();
+    openSettingModal();
+  });
+  
+  addClickEvent(closeSettingModalButtonElement, closeSettingModal);
+  
+  addClickEvent(settingOpenFirstSetupButtonElement, () => {
+    closeSettingModal();
+    openFirstSetupModal();
+  });
+  
+  if (settingModalElement) {
+    settingModalElement.addEventListener("click", (event) => {
+      if (event.target === settingModalElement) {
+        closeSettingModal();
+      }
+    });
+  }
 }
 
 // ==================================================
@@ -159,3 +184,31 @@ function openUsageModal() {
   }
 }
 
+
+function openSettingModal() {
+  if (!settingModalElement) {
+    return;
+  }
+
+  updateSettingModalState();
+  settingModalElement.classList.remove("hidden");
+}
+
+function closeSettingModal() {
+  if (!settingModalElement) {
+    return;
+  }
+
+  settingModalElement.classList.add("hidden");
+}
+
+function updateSettingModalState() {
+  const isPwa = typeof isStandaloneMode === "function" && isStandaloneMode();
+
+  settingPwaGuideElement?.classList.toggle("hidden", isPwa);
+  pushSettingSectionElement?.classList.toggle("is-disabled", !isPwa);
+
+  if (pushSettingFieldsetElement) {
+    pushSettingFieldsetElement.disabled = !isPwa;
+  }
+}
