@@ -48,6 +48,14 @@
         "url": "https://search.yahoo.co.jp/search?p=%E5%8E%9F%E5%98%89%E5%AD%9D&ei=UTF-8&rkf=1",
         "comment": "ネーションズリーグとYahoo!検索がコラボ！\n原ちゃんのトレカ風画像を見よう☺️\n検索画面が表示されたらOK!",
         "input-flag": true
+      },
+      {
+        "id": "daily_andshino",
+        "name": "&シノ",
+        "short-name": "&シノ",
+        "url": "https://www.tbsradio.jp/articles/program/and/",
+        "comment": "最新記事をタップ！アクセスランクがあがるよ！",
+        "input-flag": false
       }
     ]
   },
@@ -121,14 +129,6 @@
     "listName": "もうちょい行けたりする？",
     "lastFlag": false,
     "items": [
-      {
-        "id": "daily_andshino",
-        "name": "&シノ",
-        "short-name": "&シノ",
-        "url": "https://www.tbsradio.jp/articles/program/and/",
-        "comment": "最新記事をタップ！アクセスランクがあがるよ！",
-        "input-flag": false
-      },
       {
         "id": "daily_sunsun",
         "name": "パペットスンスンのDJ SUNSUN",
