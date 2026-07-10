@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/10 21:07",
+  "updatedAt": "2026/07/10 22:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/03",
-      "updatedAt": "2026/07/10 21:07",
+      "updatedAt": "2026/07/10 22:07",
       "episodeId": "ep6osmqoh8",
       "subtitle": "timelesz100",
       "likes": "1.5万",
@@ -1341,9 +1341,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 26,
-          "elapsedHour": 167,
-          "elapsedRank": 26,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 3,
@@ -2626,29 +2626,29 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 23,
-              "title": "家、ついて行ってイイですか？"
+              "rank": 47,
+              "title": "やすとものいたって真剣です"
             },
             {
-              "rank": 24,
-              "title": "あちこちオードリー"
+              "rank": 48,
+              "title": "しゃべくり007"
             },
             {
-              "rank": 25,
-              "title": "かまいガチ"
+              "rank": 49,
+              "title": "千鳥のクセスゴ！"
             },
             {
-              "rank": 26,
-              "title": "タイムレスマン"
+              "rank": 50,
+              "title": "CDTV ライブ! ライブ!"
             }
           ]
         },
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 46,
-          "elapsedHour": 167,
-          "elapsedRank": 46,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 8,
@@ -3651,20 +3651,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 43,
-              "title": "家、ついて行ってイイですか？"
+              "rank": 47,
+              "title": "ニカゲーム"
             },
             {
-              "rank": 44,
-              "title": "あちこちオードリー"
+              "rank": 48,
+              "title": "ホンマでっか！？TV"
             },
             {
-              "rank": 45,
-              "title": "かまいガチ"
+              "rank": 49,
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
-              "rank": 46,
-              "title": "タイムレスマン"
+              "rank": 50,
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             }
           ]
         }
@@ -3673,7 +3673,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/05",
-      "updatedAt": "2026/07/10 21:07",
+      "updatedAt": "2026/07/10 22:07",
       "episodeId": "epixcs383v",
       "subtitle": "【意外と知らない!渋谷の秘密】絶品!世界1のコーヒー",
       "likes": "1.3万",
@@ -4177,6 +4177,10 @@
         },
         {
           "hour": 127,
+          "likes": 13000
+        },
+        {
+          "hour": 128,
           "likes": 13000
         }
       ],
@@ -4855,7 +4859,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 42,
-          "elapsedHour": 127,
+          "elapsedHour": 128,
           "elapsedRank": 42,
           "currentPoints": [
             {
@@ -5332,6 +5336,10 @@
             },
             {
               "hour": 127,
+              "rank": 42
+            },
+            {
+              "hour": 128,
               "rank": 42
             }
           ],
@@ -5984,15 +5992,15 @@
           "nearbyRanking": [
             {
               "rank": 39,
-              "title": "吉田と粗品と"
+              "title": "見取り図じゃん"
             },
             {
               "rank": 40,
-              "title": "ぽかぽか"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 41,
-              "title": "Golden SixTONES"
+              "title": "ナゼそこ？＋"
             },
             {
               "rank": 42,
@@ -6609,11 +6617,11 @@
             },
             {
               "rank": 49,
-              "title": "GTOリバイバル"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 50,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             }
           ]
         }
@@ -6622,10 +6630,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/07",
-      "updatedAt": "2026/07/10 21:07",
+      "updatedAt": "2026/07/10 22:07",
       "episodeId": "eppc07nzsl",
       "subtitle": "チョコプラ・timeleszが「水をはじく\"絶対に濡れない風呂敷\"なら、水を包んで運ぶことはできるの？」に挑む！",
-      "likes": "6905",
+      "likes": "6926",
       "favorites": "5.4万",
       "likePoints": [
         {
@@ -6895,6 +6903,10 @@
         {
           "hour": 69,
           "likes": 6905
+        },
+        {
+          "hour": 70,
+          "likes": 6926
         }
       ],
       "previousLikePoints": [
@@ -7568,7 +7580,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 18,
-          "elapsedHour": 69,
+          "elapsedHour": 70,
           "elapsedRank": 18,
           "currentPoints": [
             {
@@ -7809,6 +7821,10 @@
             },
             {
               "hour": 69,
+              "rank": 18
+            },
+            {
+              "hour": 70,
               "rank": 18
             }
           ],
@@ -8257,11 +8273,11 @@
           "nearbyRanking": [
             {
               "rank": 15,
-              "title": "ヒロシのぼっちキャンプ Season13"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 16,
-              "title": "ポツンと一軒家"
+              "title": "ヒロシのぼっちキャンプ Season13"
             },
             {
               "rank": 17,
@@ -8426,19 +8442,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "しゃべくり007"
             },
             {
               "rank": 49,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "千鳥のクセスゴ！"
             },
             {
               "rank": 50,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "CDTV ライブ! ライブ!"
             }
           ]
         }
@@ -8447,10 +8463,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/09",
-      "updatedAt": "2026/07/10 21:07",
+      "updatedAt": "2026/07/10 22:07",
       "episodeId": "ep7v41tq8u",
       "subtitle": "【珍ワード連発】あべこべ現代文",
-      "likes": "8583",
+      "likes": "8679",
       "favorites": "23.0万",
       "likePoints": [
         {
@@ -8620,6 +8636,10 @@
         {
           "hour": 43,
           "likes": 8583
+        },
+        {
+          "hour": 44,
+          "likes": 8679
         }
       ],
       "previousLikePoints": [
@@ -9292,9 +9312,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 27,
-          "elapsedHour": 43,
-          "elapsedRank": 27,
+          "currentRank": 26,
+          "elapsedHour": 44,
+          "elapsedRank": 26,
           "currentPoints": [
             {
               "hour": 8,
@@ -9423,6 +9443,10 @@
             {
               "hour": 43,
               "rank": 27
+            },
+            {
+              "hour": 44,
+              "rank": 26
             }
           ],
           "previousPoints": [
@@ -9685,6 +9709,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 23,
+              "title": "家、ついて行ってイイですか？"
+            },
+            {
               "rank": 24,
               "title": "あちこちオードリー"
             },
@@ -9694,10 +9722,6 @@
             },
             {
               "rank": 26,
-              "title": "タイムレスマン"
-            },
-            {
-              "rank": 27,
               "title": "ニカゲーム"
             }
           ]
@@ -9706,7 +9730,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 47,
-          "elapsedHour": 43,
+          "elapsedHour": 44,
           "elapsedRank": 47,
           "currentPoints": [
             {
@@ -9815,6 +9839,10 @@
             },
             {
               "hour": 43,
+              "rank": 47
+            },
+            {
+              "hour": 44,
               "rank": 47
             }
           ],
@@ -9987,7 +10015,7 @@
             },
             {
               "rank": 46,
-              "title": "タイムレスマン"
+              "title": "GTOリバイバル"
             },
             {
               "rank": 47,
@@ -10000,7 +10028,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/07/10 21:07",
+      "updatedAt": "2026/07/10 22:07",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
       "likes": "3831",
@@ -11313,19 +11341,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "しゃべくり007"
             },
             {
               "rank": 49,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "千鳥のクセスゴ！"
             },
             {
               "rank": 50,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "CDTV ライブ! ライブ!"
             }
           ]
         },
@@ -11577,11 +11605,11 @@
             },
             {
               "rank": 49,
-              "title": "GTOリバイバル"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 50,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             }
           ]
         }
@@ -11590,10 +11618,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/08",
-      "updatedAt": "2026/07/10 21:07",
+      "updatedAt": "2026/07/10 22:07",
       "episodeId": "ep2gt21kmn",
       "subtitle": "MC菊池風磨&畑芽育の音楽番組!NiziU登場",
-      "likes": "5016",
+      "likes": "5041",
       "favorites": "8.7万",
       "likePoints": [
         {
@@ -11855,6 +11883,10 @@
         {
           "hour": 68,
           "likes": 5016
+        },
+        {
+          "hour": 69,
+          "likes": 5041
         }
       ],
       "previousLikePoints": [
@@ -12689,19 +12721,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "しゃべくり007"
             },
             {
               "rank": 49,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "千鳥のクセスゴ！"
             },
             {
               "rank": 50,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "CDTV ライブ! ライブ!"
             }
           ]
         },
@@ -12729,11 +12761,11 @@
             },
             {
               "rank": 49,
-              "title": "GTOリバイバル"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 50,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             }
           ]
         }
@@ -12742,10 +12774,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/10",
-      "updatedAt": "2026/07/10 21:07",
+      "updatedAt": "2026/07/10 22:07",
       "episodeId": "ep2gtjikq3",
       "subtitle": "第135回 GTOスペシャル！制服姿でめるるの許せない飯",
-      "likes": "2995",
+      "likes": "3074",
       "favorites": "71.4万",
       "likePoints": [
         {
@@ -12823,6 +12855,10 @@
         {
           "hour": 21,
           "likes": 2995
+        },
+        {
+          "hour": 22,
+          "likes": 3074
         }
       ],
       "previousLikePoints": [
@@ -13371,9 +13407,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 17,
-          "elapsedHour": 20,
-          "elapsedRank": 17,
+          "currentRank": 16,
+          "elapsedHour": 21,
+          "elapsedRank": 16,
           "currentPoints": [
             {
               "hour": 10,
@@ -13414,6 +13450,10 @@
             {
               "hour": 20,
               "rank": 17
+            },
+            {
+              "hour": 21,
+              "rank": 16
             }
           ],
           "previousPoints": [
@@ -13544,19 +13584,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 13,
+              "title": "M!LKの爆裂ミッション"
+            },
+            {
               "rank": 14,
               "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 15,
-              "title": "秘密のケンミンSHOW極"
+              "title": "徹子の部屋"
             },
             {
               "rank": 16,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 17,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -13564,9 +13604,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 36,
-          "elapsedHour": 20,
-          "elapsedRank": 36,
+          "currentRank": 33,
+          "elapsedHour": 21,
+          "elapsedRank": 33,
           "currentPoints": [
             {
               "hour": 17,
@@ -13583,6 +13623,10 @@
             {
               "hour": 20,
               "rank": 36
+            },
+            {
+              "hour": 21,
+              "rank": 33
             }
           ],
           "previousPoints": [
@@ -13629,19 +13673,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 30,
+              "title": "M!LKの爆裂ミッション"
+            },
+            {
+              "rank": 31,
+              "title": "徹子の部屋"
+            },
+            {
+              "rank": 32,
+              "title": "世界の果てまでイッテQ！"
+            },
+            {
               "rank": 33,
-              "title": "君は夏のなか"
-            },
-            {
-              "rank": 34,
-              "title": "35歳、今さら恋とかありえない"
-            },
-            {
-              "rank": 35,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 36,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -13651,10 +13695,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/10 21:07",
+      "updatedAt": "2026/07/10 22:07",
       "episodeId": "epzd8603yf",
       "subtitle": "高橋成美は神ドッキリスターなのかSP 前編",
-      "likes": "2736",
+      "likes": "2741",
       "favorites": "78.0万",
       "likePoints": [
         {
@@ -15458,19 +15502,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "しゃべくり007"
             },
             {
               "rank": 49,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "千鳥のクセスゴ！"
             },
             {
               "rank": 50,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "CDTV ライブ! ライブ!"
             }
           ]
         },
@@ -15991,11 +16035,11 @@
             },
             {
               "rank": 49,
-              "title": "GTOリバイバル"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 50,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             }
           ]
         }
@@ -16004,7 +16048,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/07/10 21:07",
+      "updatedAt": "2026/07/10 22:07",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
@@ -16693,10 +16737,6 @@
           "elapsedRank": null,
           "currentPoints": [
             {
-              "hour": 48,
-              "rank": 10
-            },
-            {
               "hour": 49,
               "rank": 11
             },
@@ -17185,19 +17225,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "逃げるは恥だが役に立つ"
-            },
-            {
-              "rank": 48,
               "title": "ミッドナイト屋台２～ル・モンドゥ～"
             },
             {
+              "rank": 48,
+              "title": "逃げるは恥だが役に立つ"
+            },
+            {
               "rank": 49,
-              "title": "甘い秘密（放送版）"
+              "title": "中国ドラマ「花間令＜かかんれい＞ ～Lost in Love～」"
             },
             {
               "rank": 50,
-              "title": "中国ドラマ「花間令＜かかんれい＞ ～Lost in Love～」"
+              "title": "修学旅行で仲良くないグループに入りました"
             }
           ]
         },
@@ -17208,10 +17248,6 @@
           "elapsedHour": null,
           "elapsedRank": null,
           "currentPoints": [
-            {
-              "hour": 48,
-              "rank": 14
-            },
             {
               "hour": 49,
               "rank": 14
@@ -17525,11 +17561,11 @@
             },
             {
               "rank": 49,
-              "title": "GTOリバイバル"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 50,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             }
           ]
         }
@@ -17538,7 +17574,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/07/10 21:07",
+      "updatedAt": "2026/07/10 22:07",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
       "likes": "1.1万",
@@ -19193,19 +19229,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "しゃべくり007"
             },
             {
               "rank": 49,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "千鳥のクセスゴ！"
             },
             {
               "rank": 50,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "CDTV ライブ! ライブ!"
             }
           ]
         },
@@ -19354,11 +19390,11 @@
             },
             {
               "rank": 49,
-              "title": "GTOリバイバル"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 50,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             }
           ]
         }
@@ -19367,7 +19403,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/10 21:07",
+      "updatedAt": "2026/07/10 22:07",
       "episodeId": "eparzrbnab",
       "subtitle": "【4人の休日に密着】",
       "likes": "1779",
@@ -20801,19 +20837,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "しゃべくり007"
             },
             {
               "rank": 49,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "千鳥のクセスゴ！"
             },
             {
               "rank": 50,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "CDTV ライブ! ライブ!"
             }
           ]
         }
@@ -20822,10 +20858,10 @@
     "srbkekw9oj": {
       "programTitle": "ネプリーグ",
       "broadcastDate": "2026/07/06",
-      "updatedAt": "2026/07/10 21:07",
+      "updatedAt": "2026/07/10 22:07",
       "episodeId": "epa7uendiu",
       "subtitle": "木10俳優VS俳優芸人！負けられない俳優対決",
-      "likes": "4937",
+      "likes": "4950",
       "favorites": "17.5万",
       "likePoints": [
         {
@@ -21211,6 +21247,10 @@
         {
           "hour": 98,
           "likes": 4937
+        },
+        {
+          "hour": 99,
+          "likes": 4950
         }
       ],
       "previousLikePoints": [],
@@ -21399,19 +21439,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "しゃべくり007"
             },
             {
               "rank": 49,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "千鳥のクセスゴ！"
             },
             {
               "rank": 50,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "CDTV ライブ! ライブ!"
             }
           ]
         },
@@ -21507,11 +21547,11 @@
             },
             {
               "rank": 49,
-              "title": "GTOリバイバル"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 50,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             }
           ]
         }
@@ -21520,7 +21560,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/07/08",
-      "updatedAt": "2026/07/10 21:07",
+      "updatedAt": "2026/07/10 22:07",
       "episodeId": "epxqdyttmd",
       "subtitle": "#1 産声が響くまで、諦めない",
       "likes": "1.6万",
@@ -21709,6 +21749,10 @@
         {
           "hour": 47,
           "likes": 16000
+        },
+        {
+          "hour": 48,
+          "likes": 16000
         }
       ],
       "previousLikePoints": [],
@@ -21717,7 +21761,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 2,
-          "elapsedHour": 47,
+          "elapsedHour": 48,
           "elapsedRank": 2,
           "currentPoints": [
             {
@@ -21891,6 +21935,10 @@
             {
               "hour": 47,
               "rank": 2
+            },
+            {
+              "hour": 48,
+              "rank": 2
             }
           ],
           "previousPoints": [],
@@ -21909,7 +21957,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 2,
-          "elapsedHour": 47,
+          "elapsedHour": 48,
           "elapsedRank": 2,
           "currentPoints": [
             {
@@ -22079,6 +22127,10 @@
             {
               "hour": 47,
               "rank": 2
+            },
+            {
+              "hour": 48,
+              "rank": 2
             }
           ],
           "previousPoints": [],
@@ -22098,7 +22150,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/09",
-      "updatedAt": "2026/07/10 21:07",
+      "updatedAt": "2026/07/10 22:07",
       "episodeId": "ep7kzalm7v",
       "subtitle": "第1話 20歳差、静かに香る恋の予感・・・大人の純愛物語",
       "likes": "1.8万",
@@ -22187,6 +22239,10 @@
         {
           "hour": 23,
           "likes": 18000
+        },
+        {
+          "hour": 24,
+          "likes": 18000
         }
       ],
       "previousLikePoints": [],
@@ -22195,7 +22251,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 1,
-          "elapsedHour": 23,
+          "elapsedHour": 24,
           "elapsedRank": 1,
           "currentPoints": [
             {
@@ -22277,6 +22333,10 @@
             {
               "hour": 23,
               "rank": 1
+            },
+            {
+              "hour": 24,
+              "rank": 1
             }
           ],
           "previousPoints": [],
@@ -22291,7 +22351,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 1,
-          "elapsedHour": 23,
+          "elapsedHour": 24,
           "elapsedRank": 1,
           "currentPoints": [
             {
@@ -22373,6 +22433,10 @@
             {
               "hour": 23,
               "rank": 1
+            },
+            {
+              "hour": 24,
+              "rank": 1
             }
           ],
           "previousPoints": [],
@@ -22388,10 +22452,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/10 21:07",
+      "updatedAt": "2026/07/10 22:07",
       "episodeId": "epggxhtmuq",
       "subtitle": "バレーボール女子日本代表佐藤＆和田ペア参戦",
-      "likes": "2078",
+      "likes": "2080",
       "favorites": "12.4万",
       "likePoints": [
         {
@@ -24831,7 +24895,7 @@
             },
             {
               "rank": 48,
-              "title": "あげ太THEゴールデン"
+              "title": "華丸丼と大吉麺"
             },
             {
               "rank": 49,
@@ -24839,7 +24903,7 @@
             },
             {
               "rank": 50,
-              "title": "有吉くんの正直さんぽ"
+              "title": "オードリー春日の知らない街で自腹せんべろ"
             }
           ]
         },
@@ -25080,19 +25144,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "しゃべくり007"
             },
             {
               "rank": 49,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "千鳥のクセスゴ！"
             },
             {
               "rank": 50,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "CDTV ライブ! ライブ!"
             }
           ]
         }
@@ -25101,10 +25165,10 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/10 21:07",
+      "updatedAt": "2026/07/10 22:07",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
-      "likes": "3985",
+      "likes": "3987",
       "favorites": "1.8万",
       "likePoints": [
         {
@@ -25601,19 +25665,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "しゃべくり007"
             },
             {
               "rank": 49,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "千鳥のクセスゴ！"
             },
             {
               "rank": 50,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "CDTV ライブ! ライブ!"
             }
           ]
         },
@@ -25636,11 +25700,11 @@
             },
             {
               "rank": 49,
-              "title": "GTOリバイバル"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 50,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             }
           ]
         }
@@ -25649,7 +25713,7 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/07/10 21:07",
+      "updatedAt": "2026/07/10 22:07",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "2.6万",
@@ -26058,6 +26122,10 @@
         {
           "hour": 151,
           "likes": 26000
+        },
+        {
+          "hour": 152,
+          "likes": 26000
         }
       ],
       "previousLikePoints": [],
@@ -26065,9 +26133,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 35,
-          "elapsedHour": 151,
-          "elapsedRank": 35,
+          "currentRank": 36,
+          "elapsedHour": 152,
+          "elapsedRank": 36,
           "currentPoints": [
             {
               "hour": 10,
@@ -26480,24 +26548,28 @@
             {
               "hour": 151,
               "rank": 35
+            },
+            {
+              "hour": 152,
+              "rank": 36
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 32,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
-            },
-            {
               "rank": 33,
-              "title": "櫻井･有吉THE夜会"
-            },
-            {
-              "rank": 34,
               "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
+              "rank": 34,
+              "title": "THEシン世界サミット"
+            },
+            {
               "rank": 35,
+              "title": "大悟の芸人領収書"
+            },
+            {
+              "rank": 36,
               "title": "THE MUSIC DAY 2026"
             }
           ]
@@ -26834,11 +26906,11 @@
             },
             {
               "rank": 49,
-              "title": "GTOリバイバル"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 50,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             }
           ]
         }
@@ -26847,10 +26919,10 @@
     "sr20l69ypl": {
       "programTitle": "バナナサンド",
       "broadcastDate": "2026/07/07",
-      "updatedAt": "2026/07/10 21:07",
+      "updatedAt": "2026/07/10 22:07",
       "episodeId": "epxwyek1w5",
       "subtitle": "ハモリ我慢大賞2026上半期",
-      "likes": "1358",
+      "likes": "1372",
       "favorites": "68.8万",
       "likePoints": [
         {
@@ -26924,6 +26996,10 @@
         {
           "hour": 74,
           "likes": 1358
+        },
+        {
+          "hour": 75,
+          "likes": 1372
         }
       ],
       "previousLikePoints": [],
@@ -27128,19 +27204,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 48,
-              "title": "千鳥のクセスゴ！"
+              "title": "しゃべくり007"
             },
             {
               "rank": 49,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "千鳥のクセスゴ！"
             },
             {
               "rank": 50,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "CDTV ライブ! ライブ!"
             }
           ]
         },
@@ -27180,11 +27256,11 @@
             },
             {
               "rank": 49,
-              "title": "GTOリバイバル"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 50,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             }
           ]
         }
@@ -27193,10 +27269,10 @@
     "srt9dpl6u0": {
       "programTitle": "THE突破ファイル",
       "broadcastDate": "2026/07/09",
-      "updatedAt": "2026/07/10 21:07",
+      "updatedAt": "2026/07/10 22:07",
       "episodeId": "ep3k70img8",
       "subtitle": "人体ミステリー!健康体なのになぜ失神!?▼税関VS令和ギャル密輸団",
-      "likes": "1453",
+      "likes": "1484",
       "favorites": "44.8万",
       "likePoints": [
         {
@@ -27238,6 +27314,10 @@
         {
           "hour": 26,
           "likes": 1453
+        },
+        {
+          "hour": 27,
+          "likes": 1484
         }
       ],
       "previousLikePoints": [],
@@ -27245,9 +27325,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 16,
-          "elapsedHour": 26,
-          "elapsedRank": 16,
+          "currentRank": 19,
+          "elapsedHour": 27,
+          "elapsedRank": 19,
           "currentPoints": [
             {
               "hour": 4,
@@ -27332,24 +27412,28 @@
             {
               "hour": 26,
               "rank": 16
+            },
+            {
+              "hour": 27,
+              "rank": 19
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 13,
-              "title": "徹子の部屋"
-            },
-            {
-              "rank": 14,
-              "title": "世界の果てまでイッテQ！"
-            },
-            {
-              "rank": 15,
-              "title": "秘密のケンミンSHOW極"
-            },
-            {
               "rank": 16,
+              "title": "何か“オモシロいコト”ないの？"
+            },
+            {
+              "rank": 17,
+              "title": "あざとくて何が悪いの？"
+            },
+            {
+              "rank": 18,
+              "title": "トークィーンズ"
+            },
+            {
+              "rank": 19,
               "title": "THE突破ファイル"
             }
           ]
@@ -27357,9 +27441,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 35,
-          "elapsedHour": 26,
-          "elapsedRank": 35,
+          "currentRank": 38,
+          "elapsedHour": 27,
+          "elapsedRank": 38,
           "currentPoints": [
             {
               "hour": 16,
@@ -27400,24 +27484,28 @@
             {
               "hour": 26,
               "rank": 35
+            },
+            {
+              "hour": 27,
+              "rank": 38
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 32,
-              "title": "秘密のケンミンSHOW極"
+              "rank": 35,
+              "title": "あざとくて何が悪いの？"
             },
             {
-              "rank": 33,
+              "rank": 36,
+              "title": "トークィーンズ"
+            },
+            {
+              "rank": 37,
               "title": "君は夏のなか"
             },
             {
-              "rank": 34,
-              "title": "35歳、今さら恋とかありえない"
-            },
-            {
-              "rank": 35,
+              "rank": 38,
               "title": "THE突破ファイル"
             }
           ]
