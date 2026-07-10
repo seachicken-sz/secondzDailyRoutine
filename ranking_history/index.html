@@ -49,30 +49,30 @@
     </section>
 
     <section id="rankingContent" class="ranking-content" hidden>
-      <div class="summary-grid">
-        <article class="summary-card">
+      <div class="summary-grid" aria-label="表示内容の絞り込み">
+        <button class="summary-card filter-card is-active" type="button" data-filter="all" aria-pressed="true">
           <span>ランクイン</span>
           <strong id="rankedCount">0</strong>
           <small>件</small>
-        </article>
-        <article class="summary-card">
+        </button>
+        <button class="summary-card filter-card" type="button" data-filter="up" aria-pressed="false">
           <span>順位アップ</span>
           <strong id="upCount">0</strong>
           <small>件</small>
-        </article>
-        <article class="summary-card">
+        </button>
+        <button class="summary-card filter-card" type="button" data-filter="new" aria-pressed="false">
           <span>新規ランクイン</span>
           <strong id="newCount">0</strong>
           <small>件</small>
-        </article>
-        <article class="summary-card">
+        </button>
+        <button class="summary-card filter-card" type="button" data-filter="out" aria-pressed="false">
           <span>今回圏外</span>
           <strong id="outCount">0</strong>
           <small>件</small>
-        </article>
+        </button>
       </div>
 
-      <section class="table-card" aria-labelledby="rankingTableTitle">
+      <section id="rankingTableSection" class="table-card" aria-labelledby="rankingTableTitle">
         <div class="section-heading">
           <div>
             <p class="section-kicker" id="rankingTypeLabel">ランキング</p>
@@ -90,7 +90,7 @@
                 <th scope="col">番組・エピソード</th>
                 <th scope="col">放送局</th>
                 <th scope="col" class="best-column">48h最高</th>
-                <th scope="col" class="streak-column">連続</th>
+                <th scope="col" class="first-appearance-column">初登場時刻</th>
               </tr>
             </thead>
             <tbody id="rankingTableBody"></tbody>

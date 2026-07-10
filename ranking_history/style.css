@@ -242,7 +242,31 @@ h1 {
   padding: 16px 18px;
   border: 1px solid var(--border);
   border-radius: var(--radius-medium);
+  color: inherit;
   background: var(--surface);
+  text-align: left;
+}
+
+.filter-card {
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.filter-card:hover {
+  border-color: var(--brand);
+  background: var(--brand-soft);
+  transform: translateY(-1px);
+}
+
+.filter-card:focus-visible {
+  outline: 3px solid rgba(51, 92, 255, 0.25);
+  outline-offset: 2px;
+}
+
+.filter-card.is-active {
+  border-color: var(--brand);
+  background: var(--brand-soft);
+  box-shadow: inset 0 0 0 1px var(--brand);
 }
 
 .summary-card span {
@@ -339,7 +363,7 @@ h1 {
   width: 98px;
 }
 
-.streak-column {
+.first-appearance-column {
   width: 130px;
 }
 
@@ -397,17 +421,11 @@ h1 {
   font-variant-numeric: tabular-nums;
 }
 
-.streak-main {
+.first-appearance-value {
   display: block;
   font-weight: 800;
 }
 
-.streak-since {
-  display: block;
-  margin-top: 1px;
-  color: var(--text-subtle);
-  font-size: 0.72rem;
-}
 
 .empty-message {
   padding: 28px 12px;
@@ -539,5 +557,213 @@ h1 {
 
   .out-previous-rank {
     grid-column: 2;
+  }
+}
+
+/* スマホでは順位表をカード表示へ切り替える */
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
+  }
+
+  .page-header {
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-size: clamp(1.65rem, 8vw, 2.15rem);
+  }
+
+  .page-description {
+    font-size: 0.88rem;
+  }
+
+  .updated-card {
+    padding: 12px 14px;
+  }
+
+  .control-panel {
+    position: relative;
+    padding: 14px;
+  }
+
+  .time-navigation {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .current-time-block strong {
+    font-size: 1.05rem;
+  }
+
+  .ranking-tabs {
+    margin-top: 14px;
+    padding-top: 14px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .ranking-tab {
+    padding: 8px 13px;
+    font-size: 0.85rem;
+  }
+
+  .summary-card span {
+    font-size: 0.75rem;
+  }
+
+  .summary-card strong {
+    font-size: 1.4rem;
+  }
+
+  .table-card {
+    padding: 14px;
+  }
+
+  .table-scroll {
+    overflow: visible;
+  }
+
+  .ranking-table {
+    min-width: 0;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    table-layout: auto;
+  }
+
+  .ranking-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .ranking-table tbody,
+  .ranking-table tr,
+  .ranking-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .ranking-table tbody tr {
+    position: relative;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--surface);
+    box-shadow: 0 6px 18px rgba(29, 36, 48, 0.05);
+  }
+
+  .ranking-table tbody tr:hover {
+    background: var(--surface);
+  }
+
+  .ranking-table td {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    align-items: start;
+    gap: 10px;
+    padding: 8px 0;
+    border: 0;
+  }
+
+  .ranking-table td::before {
+    content: attr(data-label);
+    color: var(--text-subtle);
+    font-size: 0.74rem;
+    font-weight: 800;
+  }
+
+  .ranking-table .mobile-title-cell {
+    display: block;
+    padding-top: 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .ranking-table .mobile-title-cell::before {
+    display: none;
+  }
+
+  .ranking-table .mobile-rank-cell,
+  .ranking-table .mobile-change-cell {
+    display: inline-flex;
+    width: auto;
+    padding: 0;
+  }
+
+  .ranking-table .mobile-rank-cell {
+    float: left;
+    margin-right: 10px;
+  }
+
+  .ranking-table .mobile-change-cell {
+    float: left;
+  }
+
+  .ranking-table .mobile-rank-cell::before,
+  .ranking-table .mobile-change-cell::before {
+    display: none;
+  }
+
+  .ranking-table .mobile-change-cell + .mobile-title-cell {
+    clear: both;
+    padding-top: 12px;
+  }
+
+  .rank-value {
+    font-size: 1.35rem;
+  }
+
+  .change-badge {
+    min-width: 54px;
+  }
+
+  .program-title {
+    font-size: 0.96rem;
+  }
+
+  .episode-title {
+    margin-top: 4px;
+    font-size: 0.8rem;
+  }
+
+  .meta-value,
+  .first-appearance-value {
+    text-align: right;
+    overflow-wrap: anywhere;
+  }
+
+  .out-item {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 10px 12px;
+    padding: 13px;
+  }
+
+  .out-previous-rank {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 380px) {
+  .page-shell {
+    width: min(100% - 12px, 1180px);
+  }
+
+  .nav-button {
+    font-size: 0.76rem;
+  }
+
+  .summary-card {
+    padding: 12px 10px;
+  }
+
+  .ranking-table td {
+    grid-template-columns: 82px minmax(0, 1fr);
   }
 }

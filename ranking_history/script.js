@@ -5,7 +5,8 @@ const RANKING_HISTORY_JSON_URL = './tverRankingHistory48h.json';
 const state = {
   data: null,
   snapshotIndex: -1,
-  rankingType: ''
+  rankingType: '',
+  filter: 'all'
 };
 
 const elements = {};
@@ -26,6 +27,7 @@ function cacheElements() {
   elements.statusMessage = document.getElementById('statusMessage');
   elements.rankingContent = document.getElementById('rankingContent');
   elements.rankingTypeLabel = document.getElementById('rankingTypeLabel');
+  elements.rankingTableSection = document.getElementById('rankingTableSection');
   elements.rankingTableBody = document.getElementById('rankingTableBody');
   elements.emptyRankingMessage = document.getElementById('emptyRankingMessage');
   elements.outSection = document.getElementById('outSection');
@@ -34,6 +36,7 @@ function cacheElements() {
   elements.upCount = document.getElementById('upCount');
   elements.newCount = document.getElementById('newCount');
   elements.outCount = document.getElementById('outCount');
+  elements.filterCards = Array.from(document.querySelectorAll('[data-filter]'));
 }
 
 function bindEvents() {
@@ -43,6 +46,13 @@ function bindEvents() {
 
   elements.nextSnapshotButton.addEventListener('click', () => {
     moveSnapshot(1);
+  });
+
+  elements.filterCards.forEach((button) => {
+    button.addEventListener('click', () => {
+      state.filter = button.dataset.filter || 'all';
+      render();
+    });
   });
 
   document.addEventListener('keydown', (event) => {
@@ -235,9 +245,20 @@ function render() {
 
   updateNavigationButtons();
   updateTabs();
+  updateFilterCards();
   updateSummary(items, outItems);
-  renderRankingTable(items);
-  renderOutList(outItems);
+
+  const filteredItems = filterRankingItems(items, state.filter);
+  const showOutOnly = state.filter === 'out';
+
+  elements.rankingTableSection.hidden = showOutOnly;
+  renderRankingTable(showOutOnly ? [] : filteredItems);
+  renderOutList(showOutOnly || state.filter === 'all' ? outItems : []);
+  elements.emptyRankingMessage.textContent = buildEmptyMessage(state.filter);
+
+  if (showOutOnly) {
+    elements.emptyRankingMessage.hidden = outItems.length > 0;
+  }
 
   const definition = getRankingTypeDefinitions(state.data).find((item) => {
     return item.type === state.rankingType;
@@ -272,6 +293,46 @@ function updateTabs() {
   });
 }
 
+function updateFilterCards() {
+  elements.filterCards.forEach((button) => {
+    const isActive = button.dataset.filter === state.filter;
+    button.classList.toggle('is-active', isActive);
+    button.setAttribute('aria-pressed', String(isActive));
+  });
+}
+
+function filterRankingItems(items, filter) {
+  if (filter === 'up') {
+    return items.filter((item) => item.changeType === 'up');
+  }
+
+  if (filter === 'new') {
+    return items.filter((item) => item.changeType === 'new');
+  }
+
+  if (filter === 'out') {
+    return [];
+  }
+
+  return items;
+}
+
+function buildEmptyMessage(filter) {
+  if (filter === 'up') {
+    return 'この取得時点で順位アップしたエピソードはありません。';
+  }
+
+  if (filter === 'new') {
+    return 'この取得時点で新規ランクインしたエピソードはありません。';
+  }
+
+  if (filter === 'out') {
+    return '今回圏外になったエピソードはありません。';
+  }
+
+  return 'この取得時点のランキングデータはありません。';
+}
+
 function updateSummary(items, outItems) {
   elements.rankedCount.textContent = String(items.length);
   elements.upCount.textContent = String(
@@ -294,11 +355,12 @@ function renderRankingTable(items) {
     row.appendChild(createRankCell(item.rank));
     row.appendChild(createChangeCell(item));
     row.appendChild(createEpisodeCell(episode));
-    row.appendChild(createTextCell(episode.broadcaster || '-'));
+    row.appendChild(createTextCell(episode.broadcaster || '-', '放送局'));
     row.appendChild(createTextCell(
-      item.bestRank48h ? `${item.bestRank48h}位` : '-'
+      item.bestRank48h ? `${item.bestRank48h}位` : '-',
+      '48h最高'
     ));
-    row.appendChild(createStreakCell(item));
+    row.appendChild(createFirstAppearanceCell(item));
 
     elements.rankingTableBody.appendChild(row);
   });
@@ -306,6 +368,8 @@ function renderRankingTable(items) {
 
 function createRankCell(rank) {
   const cell = document.createElement('td');
+  cell.dataset.label = '順位';
+  cell.className = 'mobile-rank-cell';
   const value = document.createElement('span');
   value.className = 'rank-value';
   value.textContent = `${rank}位`;
@@ -315,6 +379,8 @@ function createRankCell(rank) {
 
 function createChangeCell(item) {
   const cell = document.createElement('td');
+  cell.dataset.label = '前回比';
+  cell.className = 'mobile-change-cell';
   const badge = document.createElement('span');
   const changeType = normalizeChangeType(item.changeType);
 
@@ -353,6 +419,8 @@ function buildChangeTitle(item) {
 
 function createEpisodeCell(episode) {
   const cell = document.createElement('td');
+  cell.dataset.label = '番組・エピソード';
+  cell.className = 'mobile-title-cell';
   const programTitle = document.createElement('span');
   const episodeTitle = document.createElement('span');
 
@@ -366,8 +434,11 @@ function createEpisodeCell(episode) {
   return cell;
 }
 
-function createTextCell(text) {
+function createTextCell(text, label = '') {
   const cell = document.createElement('td');
+  if (label) {
+    cell.dataset.label = label;
+  }
   const value = document.createElement('span');
   value.className = 'meta-value';
   value.textContent = text;
@@ -375,20 +446,15 @@ function createTextCell(text) {
   return cell;
 }
 
-function createStreakCell(item) {
+function createFirstAppearanceCell(item) {
   const cell = document.createElement('td');
-  const main = document.createElement('span');
-  const since = document.createElement('span');
+  cell.dataset.label = '初登場時刻';
+  const value = document.createElement('span');
 
-  main.className = 'streak-main';
-  main.textContent = `${item.consecutiveSnapshots || 0}回`;
+  value.className = 'first-appearance-value';
+  value.textContent = item.firstAppearedAt48h || '-';
 
-  since.className = 'streak-since';
-  since.textContent = item.consecutiveSince
-    ? `${item.consecutiveSince}から`
-    : '';
-
-  cell.append(main, since);
+  cell.appendChild(value);
   return cell;
 }
 
