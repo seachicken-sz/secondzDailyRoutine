@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>TVerランキング 48時間推移</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">TVer RANKING HISTORY</p>
+        <h1>TVerランキング 48時間推移</h1>
+        <p class="page-description">取得時点ごとの順位と、ひとつ前の取得時点からの変動を確認できます。</p>
+      </div>
+
+      <div class="updated-card" aria-live="polite">
+        <span class="updated-label">最新更新</span>
+        <strong id="latestUpdatedAt">--</strong>
+      </div>
+    </header>
+
+    <section class="control-panel" aria-label="ランキング表示切り替え">
+      <div class="time-navigation">
+        <button id="previousSnapshotButton" class="nav-button" type="button">
+          <span aria-hidden="true">←</span>
+          前の取得時点
+        </button>
+
+        <div class="current-time-block">
+          <span class="current-time-label">表示中</span>
+          <strong id="currentObservedAt">--</strong>
+          <span id="snapshotPosition" class="snapshot-position"></span>
+        </div>
+
+        <button id="nextSnapshotButton" class="nav-button" type="button">
+          次の取得時点
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+
+      <div id="rankingTabs" class="ranking-tabs" role="tablist" aria-label="ランキング種別"></div>
+    </section>
+
+    <section id="statusMessage" class="status-message" aria-live="polite">
+      ランキングデータを読み込んでいます。
+    </section>
+
+    <section id="rankingContent" class="ranking-content" hidden>
+      <div class="summary-grid">
+        <article class="summary-card">
+          <span>ランクイン</span>
+          <strong id="rankedCount">0</strong>
+          <small>件</small>
+        </article>
+        <article class="summary-card">
+          <span>順位アップ</span>
+          <strong id="upCount">0</strong>
+          <small>件</small>
+        </article>
+        <article class="summary-card">
+          <span>新規ランクイン</span>
+          <strong id="newCount">0</strong>
+          <small>件</small>
+        </article>
+        <article class="summary-card">
+          <span>今回圏外</span>
+          <strong id="outCount">0</strong>
+          <small>件</small>
+        </article>
+      </div>
+
+      <section class="table-card" aria-labelledby="rankingTableTitle">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker" id="rankingTypeLabel">ランキング</p>
+            <h2 id="rankingTableTitle">順位表</h2>
+          </div>
+          <p class="table-note">変動は同じepisodeIdを、ひとつ前の取得時点と比較しています。</p>
+        </div>
+
+        <div class="table-scroll">
+          <table class="ranking-table">
+            <thead>
+              <tr>
+                <th scope="col" class="rank-column">順位</th>
+                <th scope="col" class="change-column">前回比</th>
+                <th scope="col">番組・エピソード</th>
+                <th scope="col">放送局</th>
+                <th scope="col" class="best-column">48h最高</th>
+                <th scope="col" class="streak-column">連続</th>
+              </tr>
+            </thead>
+            <tbody id="rankingTableBody"></tbody>
+          </table>
+        </div>
+
+        <div id="emptyRankingMessage" class="empty-message" hidden>
+          この取得時点のランキングデータはありません。
+        </div>
+      </section>
+
+      <section id="outSection" class="out-section" hidden aria-labelledby="outSectionTitle">
+        <div class="section-heading compact">
+          <div>
+            <p class="section-kicker">OUT</p>
+            <h2 id="outSectionTitle">今回圏外になったエピソード</h2>
+          </div>
+        </div>
+        <div id="outList" class="out-list"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
