@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/11 20:07",
+  "updatedAt": "2026/07/11 21:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/10",
-      "updatedAt": "2026/07/11 20:07",
+      "updatedAt": "2026/07/11 21:07",
       "episodeId": "ep7a819uf1",
       "subtitle": "timelesz100＆祝・菊池風磨復帰企画",
       "likes": "1.0万",
@@ -96,6 +96,10 @@
         },
         {
           "hour": 22,
+          "likes": 10000
+        },
+        {
+          "hour": 23,
           "likes": 10000
         }
       ],
@@ -766,7 +770,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 4,
-          "elapsedHour": 22,
+          "elapsedHour": 23,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -847,6 +851,10 @@
             },
             {
               "hour": 22,
+              "rank": 4
+            },
+            {
+              "hour": 23,
               "rank": 4
             }
           ],
@@ -1495,11 +1503,11 @@
           "nearbyRanking": [
             {
               "rank": 1,
-              "title": "アメトーーク！"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 2,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "アメトーーク！"
             },
             {
               "rank": 3,
@@ -1514,9 +1522,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 13,
-          "elapsedHour": 22,
-          "elapsedRank": 13,
+          "currentRank": 11,
+          "elapsedHour": 23,
+          "elapsedRank": 11,
           "currentPoints": [
             {
               "hour": 8,
@@ -1577,6 +1585,10 @@
             {
               "hour": 22,
               "rank": 13
+            },
+            {
+              "hour": 23,
+              "rank": 11
             }
           ],
           "previousPoints": [
@@ -2199,19 +2211,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 8,
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
+            },
+            {
+              "rank": 9,
+              "title": "さよならノワール"
+            },
+            {
               "rank": 10,
               "title": "上田と女が吠える夜"
             },
             {
               "rank": 11,
-              "title": "今から、親友やめようか。"
-            },
-            {
-              "rank": 12,
-              "title": "マイ・フィクション"
-            },
-            {
-              "rank": 13,
               "title": "タイムレスマン"
             }
           ]
@@ -2221,7 +2233,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/05",
-      "updatedAt": "2026/07/11 20:07",
+      "updatedAt": "2026/07/11 21:07",
       "episodeId": "epixcs383v",
       "subtitle": "【意外と知らない!渋谷の秘密】絶品!世界1のコーヒー",
       "likes": "1.4万",
@@ -2817,6 +2829,10 @@
         },
         {
           "hour": 150,
+          "likes": 14000
+        },
+        {
+          "hour": 151,
           "likes": 14000
         }
       ],
@@ -4712,19 +4728,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 49,
-              "title": "ウワサのお客さま"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "Golden SixTONES"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             }
           ]
         },
@@ -5329,7 +5345,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "M!LKの爆裂ミッション"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 48,
@@ -5337,11 +5353,11 @@
             },
             {
               "rank": 49,
-              "title": "幸せになりたいマサムネ君"
+              "title": "A-Studio＋"
             },
             {
               "rank": 50,
-              "title": "A-Studio＋"
+              "title": "GTOリバイバル"
             }
           ]
         }
@@ -5350,10 +5366,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/07",
-      "updatedAt": "2026/07/11 20:07",
+      "updatedAt": "2026/07/11 21:07",
       "episodeId": "eppc07nzsl",
       "subtitle": "チョコプラ・timeleszが「水をはじく\"絶対に濡れない風呂敷\"なら、水を包んで運ぶことはできるの？」に挑む！",
-      "likes": "7347",
+      "likes": "7391",
       "favorites": "5.4万",
       "likePoints": [
         {
@@ -5715,6 +5731,10 @@
         {
           "hour": 92,
           "likes": 7347
+        },
+        {
+          "hour": 93,
+          "likes": 7391
         }
       ],
       "previousLikePoints": [
@@ -6387,9 +6407,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 33,
-          "elapsedHour": 92,
-          "elapsedRank": 33,
+          "currentRank": 31,
+          "elapsedHour": 93,
+          "elapsedRank": 31,
           "currentPoints": [
             {
               "hour": 5,
@@ -6722,6 +6742,10 @@
             {
               "hour": 92,
               "rank": 33
+            },
+            {
+              "hour": 93,
+              "rank": 31
             }
           ],
           "previousPoints": [
@@ -7168,19 +7192,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 28,
+              "title": "ザ！鉄腕！DASH!!"
+            },
+            {
+              "rank": 29,
+              "title": "オモウマい店"
+            },
+            {
               "rank": 30,
               "title": "IMP.の「できません」は言いません"
             },
             {
               "rank": 31,
-              "title": "ニンゲン観察バラエティ モニタリング"
-            },
-            {
-              "rank": 32,
-              "title": "ヒロシのぼっちキャンプ Season13"
-            },
-            {
-              "rank": 33,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -7338,19 +7362,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 49,
-              "title": "ウワサのお客さま"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "Golden SixTONES"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             }
           ]
         }
@@ -7359,10 +7383,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/09",
-      "updatedAt": "2026/07/11 20:07",
+      "updatedAt": "2026/07/11 21:07",
       "episodeId": "ep7v41tq8u",
       "subtitle": "【珍ワード連発】あべこべ現代文",
-      "likes": "9772",
+      "likes": "9872",
       "favorites": "23.0万",
       "likePoints": [
         {
@@ -7624,6 +7648,10 @@
         {
           "hour": 66,
           "likes": 9772
+        },
+        {
+          "hour": 67,
+          "likes": 9872
         }
       ],
       "previousLikePoints": [
@@ -8296,9 +8324,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 42,
-          "elapsedHour": 66,
-          "elapsedRank": 42,
+          "currentRank": 43,
+          "elapsedHour": 67,
+          "elapsedRank": 43,
           "currentPoints": [
             {
               "hour": 8,
@@ -8519,6 +8547,10 @@
             {
               "hour": 66,
               "rank": 42
+            },
+            {
+              "hour": 67,
+              "rank": 43
             }
           ],
           "previousPoints": [
@@ -8781,19 +8813,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 39,
-              "title": "かまいガチ"
-            },
-            {
               "rank": 40,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 41,
-              "title": "ホンマでっか！？TV"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 42,
+              "title": "ホンマでっか！？TV"
+            },
+            {
+              "rank": 43,
               "title": "ニカゲーム"
             }
           ]
@@ -9083,7 +9115,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "M!LKの爆裂ミッション"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 48,
@@ -9091,11 +9123,11 @@
             },
             {
               "rank": 49,
-              "title": "幸せになりたいマサムネ君"
+              "title": "A-Studio＋"
             },
             {
               "rank": 50,
-              "title": "A-Studio＋"
+              "title": "GTOリバイバル"
             }
           ]
         }
@@ -9104,7 +9136,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/07/11 20:07",
+      "updatedAt": "2026/07/11 21:07",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
       "likes": "3831",
@@ -10417,19 +10449,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 49,
-              "title": "ウワサのお客さま"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "Golden SixTONES"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             }
           ]
         },
@@ -10673,7 +10705,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "M!LKの爆裂ミッション"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 48,
@@ -10681,11 +10713,11 @@
             },
             {
               "rank": 49,
-              "title": "幸せになりたいマサムネ君"
+              "title": "A-Studio＋"
             },
             {
               "rank": 50,
-              "title": "A-Studio＋"
+              "title": "GTOリバイバル"
             }
           ]
         }
@@ -10694,10 +10726,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/08",
-      "updatedAt": "2026/07/11 20:07",
+      "updatedAt": "2026/07/11 21:07",
       "episodeId": "ep2gt21kmn",
       "subtitle": "MC菊池風磨&畑芽育の音楽番組!NiziU登場",
-      "likes": "5365",
+      "likes": "5395",
       "favorites": "8.7万",
       "likePoints": [
         {
@@ -11047,6 +11079,10 @@
         {
           "hour": 91,
           "likes": 5365
+        },
+        {
+          "hour": 92,
+          "likes": 5395
         }
       ],
       "previousLikePoints": [
@@ -11881,19 +11917,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 49,
-              "title": "ウワサのお客さま"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "Golden SixTONES"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             }
           ]
         },
@@ -11913,7 +11949,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "M!LKの爆裂ミッション"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 48,
@@ -11921,11 +11957,11 @@
             },
             {
               "rank": 49,
-              "title": "幸せになりたいマサムネ君"
+              "title": "A-Studio＋"
             },
             {
               "rank": 50,
-              "title": "A-Studio＋"
+              "title": "GTOリバイバル"
             }
           ]
         }
@@ -11934,10 +11970,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/10",
-      "updatedAt": "2026/07/11 20:07",
+      "updatedAt": "2026/07/11 21:07",
       "episodeId": "ep2gtjikq3",
       "subtitle": "第135回 GTOスペシャル！制服姿でめるるの許せない飯",
-      "likes": "4030",
+      "likes": "4100",
       "favorites": "71.4万",
       "likePoints": [
         {
@@ -12107,6 +12143,10 @@
         {
           "hour": 44,
           "likes": 4030
+        },
+        {
+          "hour": 45,
+          "likes": 4100
         }
       ],
       "previousLikePoints": [
@@ -12656,7 +12696,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 32,
-          "elapsedHour": 43,
+          "elapsedHour": 44,
           "elapsedRank": 32,
           "currentPoints": [
             {
@@ -12790,6 +12830,10 @@
             {
               "hour": 43,
               "rank": 32
+            },
+            {
+              "hour": 44,
+              "rank": 32
             }
           ],
           "previousPoints": [
@@ -12921,11 +12965,11 @@
           "nearbyRanking": [
             {
               "rank": 29,
-              "title": "千原ジュニアの座王"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 30,
-              "title": "沸騰ワード10"
+              "title": "トークィーンズ"
             },
             {
               "rank": 31,
@@ -13086,7 +13130,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "M!LKの爆裂ミッション"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 48,
@@ -13094,11 +13138,11 @@
             },
             {
               "rank": 49,
-              "title": "幸せになりたいマサムネ君"
+              "title": "A-Studio＋"
             },
             {
               "rank": 50,
-              "title": "A-Studio＋"
+              "title": "GTOリバイバル"
             }
           ]
         }
@@ -13106,13 +13150,19 @@
     },
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
-      "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/07/11 20:07",
-      "episodeId": "epzd8603yf",
-      "subtitle": "高橋成美は神ドッキリスターなのかSP 前編",
-      "likes": "2956",
+      "broadcastDate": "2026/07/11",
+      "updatedAt": "2026/07/11 21:07",
+      "episodeId": "epwsv29q63",
+      "subtitle": "マッサマンvs祝！亀梨和也ギリギリ記憶 前編",
+      "likes": "165",
       "favorites": "78.0万",
       "likePoints": [
+        {
+          "hour": 2,
+          "likes": 165
+        }
+      ],
+      "previousLikePoints": [
         {
           "hour": 2,
           "likes": 58
@@ -13786,7 +13836,6 @@
           "likes": 2365
         }
       ],
-      "previousLikePoints": [],
       "rankings": [
         {
           "type": "variety",
@@ -13794,7 +13843,8 @@
           "currentRank": null,
           "elapsedHour": null,
           "elapsedRank": null,
-          "currentPoints": [
+          "currentPoints": [],
+          "previousPoints": [
             {
               "hour": 7,
               "rank": 48
@@ -14148,23 +14198,22 @@
               "rank": 49
             }
           ],
-          "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 49,
-              "title": "ウワサのお客さま"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "Golden SixTONES"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             }
           ]
         },
@@ -14174,7 +14223,8 @@
           "currentRank": null,
           "elapsedHour": null,
           "elapsedRank": null,
-          "currentPoints": [
+          "currentPoints": [],
+          "previousPoints": [
             {
               "hour": 14,
               "rank": 49
@@ -14416,11 +14466,10 @@
               "rank": 50
             }
           ],
-          "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "M!LKの爆裂ミッション"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 48,
@@ -14428,11 +14477,11 @@
             },
             {
               "rank": 49,
-              "title": "幸せになりたいマサムネ君"
+              "title": "A-Studio＋"
             },
             {
               "rank": 50,
-              "title": "A-Studio＋"
+              "title": "GTOリバイバル"
             }
           ]
         }
@@ -14441,7 +14490,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/07/11 20:07",
+      "updatedAt": "2026/07/11 21:07",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
@@ -15130,10 +15179,6 @@
           "elapsedRank": null,
           "currentPoints": [
             {
-              "hour": 71,
-              "rank": 18
-            },
-            {
               "hour": 72,
               "rank": 18
             },
@@ -15534,15 +15579,15 @@
             },
             {
               "rank": 48,
-              "title": "医師たちの恋愛事情"
+              "title": "氷の世界"
             },
             {
               "rank": 49,
-              "title": "逃げるは恥だが役に立つ"
+              "title": "甘い秘密（放送版）"
             },
             {
               "rank": 50,
-              "title": "銀河の一票"
+              "title": "逃げるは恥だが役に立つ"
             }
           ]
         },
@@ -15553,10 +15598,6 @@
           "elapsedHour": null,
           "elapsedRank": null,
           "currentPoints": [
-            {
-              "hour": 71,
-              "rank": 27
-            },
             {
               "hour": 72,
               "rank": 28
@@ -15770,7 +15811,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "M!LKの爆裂ミッション"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 48,
@@ -15778,11 +15819,11 @@
             },
             {
               "rank": 49,
-              "title": "幸せになりたいマサムネ君"
+              "title": "A-Studio＋"
             },
             {
               "rank": 50,
-              "title": "A-Studio＋"
+              "title": "GTOリバイバル"
             }
           ]
         }
@@ -15791,7 +15832,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/07/11 20:07",
+      "updatedAt": "2026/07/11 21:07",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
       "likes": "1.1万",
@@ -17446,19 +17487,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 49,
-              "title": "ウワサのお客さま"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "Golden SixTONES"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             }
           ]
         },
@@ -17599,7 +17640,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "M!LKの爆裂ミッション"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 48,
@@ -17607,11 +17648,11 @@
             },
             {
               "rank": 49,
-              "title": "幸せになりたいマサムネ君"
+              "title": "A-Studio＋"
             },
             {
               "rank": 50,
-              "title": "A-Studio＋"
+              "title": "GTOリバイバル"
             }
           ]
         }
@@ -17620,7 +17661,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/11 20:07",
+      "updatedAt": "2026/07/11 21:07",
       "episodeId": "eparzrbnab",
       "subtitle": "【4人の休日に密着】",
       "likes": "1779",
@@ -19031,11 +19072,11 @@
             },
             {
               "rank": 48,
-              "title": "MAZZEL DUO MISSION シーズン2"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
               "rank": 49,
-              "title": "ハマダ歌謡祭★オオカミ少年"
+              "title": "MAZZEL DUO MISSION シーズン2"
             },
             {
               "rank": 50,
@@ -19054,809 +19095,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 49,
-              "title": "ウワサのお客さま"
-            },
-            {
-              "rank": 50,
               "title": "Golden SixTONES"
-            }
-          ]
-        }
-      ]
-    },
-    "srbkekw9oj": {
-      "programTitle": "ネプリーグ",
-      "broadcastDate": "2026/07/06",
-      "updatedAt": "2026/07/11 20:07",
-      "episodeId": "epa7uendiu",
-      "subtitle": "木10俳優VS俳優芸人！負けられない俳優対決",
-      "likes": "5148",
-      "favorites": "17.5万",
-      "likePoints": [
-        {
-          "hour": 1,
-          "likes": 332
-        },
-        {
-          "hour": 2,
-          "likes": 680
-        },
-        {
-          "hour": 3,
-          "likes": 1097
-        },
-        {
-          "hour": 4,
-          "likes": 1480
-        },
-        {
-          "hour": 5,
-          "likes": 1718
-        },
-        {
-          "hour": 6,
-          "likes": 1874
-        },
-        {
-          "hour": 7,
-          "likes": 1930
-        },
-        {
-          "hour": 8,
-          "likes": 1985
-        },
-        {
-          "hour": 9,
-          "likes": 2011
-        },
-        {
-          "hour": 10,
-          "likes": 2038
-        },
-        {
-          "hour": 11,
-          "likes": 2116
-        },
-        {
-          "hour": 12,
-          "likes": 2219
-        },
-        {
-          "hour": 13,
-          "likes": 2407
-        },
-        {
-          "hour": 14,
-          "likes": 2533
-        },
-        {
-          "hour": 15,
-          "likes": 2622
-        },
-        {
-          "hour": 16,
-          "likes": 2740
-        },
-        {
-          "hour": 17,
-          "likes": 2845
-        },
-        {
-          "hour": 18,
-          "likes": 2958
-        },
-        {
-          "hour": 19,
-          "likes": 3048
-        },
-        {
-          "hour": 20,
-          "likes": 3132
-        },
-        {
-          "hour": 21,
-          "likes": 3186
-        },
-        {
-          "hour": 22,
-          "likes": 3250
-        },
-        {
-          "hour": 23,
-          "likes": 3318
-        },
-        {
-          "hour": 24,
-          "likes": 3408
-        },
-        {
-          "hour": 25,
-          "likes": 3498
-        },
-        {
-          "hour": 26,
-          "likes": 3621
-        },
-        {
-          "hour": 27,
-          "likes": 3702
-        },
-        {
-          "hour": 28,
-          "likes": 3784
-        },
-        {
-          "hour": 29,
-          "likes": 3818
-        },
-        {
-          "hour": 30,
-          "likes": 3853
-        },
-        {
-          "hour": 31,
-          "likes": 3872
-        },
-        {
-          "hour": 32,
-          "likes": 3886
-        },
-        {
-          "hour": 33,
-          "likes": 3891
-        },
-        {
-          "hour": 34,
-          "likes": 3898
-        },
-        {
-          "hour": 35,
-          "likes": 3911
-        },
-        {
-          "hour": 36,
-          "likes": 3908
-        },
-        {
-          "hour": 37,
-          "likes": 3940
-        },
-        {
-          "hour": 38,
-          "likes": 3982
-        },
-        {
-          "hour": 39,
-          "likes": 4014
-        },
-        {
-          "hour": 40,
-          "likes": 4053
-        },
-        {
-          "hour": 41,
-          "likes": 4079
-        },
-        {
-          "hour": 42,
-          "likes": 4092
-        },
-        {
-          "hour": 43,
-          "likes": 4113
-        },
-        {
-          "hour": 44,
-          "likes": 4145
-        },
-        {
-          "hour": 45,
-          "likes": 4167
-        },
-        {
-          "hour": 46,
-          "likes": 4189
-        },
-        {
-          "hour": 48,
-          "likes": 4266
-        },
-        {
-          "hour": 49,
-          "likes": 4306
-        },
-        {
-          "hour": 50,
-          "likes": 4350
-        },
-        {
-          "hour": 51,
-          "likes": 4386
-        },
-        {
-          "hour": 52,
-          "likes": 4388
-        },
-        {
-          "hour": 53,
-          "likes": 4410
-        },
-        {
-          "hour": 54,
-          "likes": 4455
-        },
-        {
-          "hour": 55,
-          "likes": 4463
-        },
-        {
-          "hour": 56,
-          "likes": 4469
-        },
-        {
-          "hour": 57,
-          "likes": 4472
-        },
-        {
-          "hour": 58,
-          "likes": 4477
-        },
-        {
-          "hour": 59,
-          "likes": 4483
-        },
-        {
-          "hour": 60,
-          "likes": 4490
-        },
-        {
-          "hour": 61,
-          "likes": 4499
-        },
-        {
-          "hour": 62,
-          "likes": 4510
-        },
-        {
-          "hour": 63,
-          "likes": 4523
-        },
-        {
-          "hour": 64,
-          "likes": 4545
-        },
-        {
-          "hour": 65,
-          "likes": 4560
-        },
-        {
-          "hour": 66,
-          "likes": 4570
-        },
-        {
-          "hour": 67,
-          "likes": 4593
-        },
-        {
-          "hour": 68,
-          "likes": 4597
-        },
-        {
-          "hour": 69,
-          "likes": 4606
-        },
-        {
-          "hour": 70,
-          "likes": 4616
-        },
-        {
-          "hour": 71,
-          "likes": 4633
-        },
-        {
-          "hour": 72,
-          "likes": 4642
-        },
-        {
-          "hour": 73,
-          "likes": 4656
-        },
-        {
-          "hour": 74,
-          "likes": 4675
-        },
-        {
-          "hour": 75,
-          "likes": 4691
-        },
-        {
-          "hour": 76,
-          "likes": 4705
-        },
-        {
-          "hour": 77,
-          "likes": 4715
-        },
-        {
-          "hour": 78,
-          "likes": 4724
-        },
-        {
-          "hour": 79,
-          "likes": 4734
-        },
-        {
-          "hour": 80,
-          "likes": 4745
-        },
-        {
-          "hour": 81,
-          "likes": 4749
-        },
-        {
-          "hour": 82,
-          "likes": 4757
-        },
-        {
-          "hour": 83,
-          "likes": 4762
-        },
-        {
-          "hour": 84,
-          "likes": 4764
-        },
-        {
-          "hour": 85,
-          "likes": 4773
-        },
-        {
-          "hour": 86,
-          "likes": 4780
-        },
-        {
-          "hour": 87,
-          "likes": 4796
-        },
-        {
-          "hour": 88,
-          "likes": 4807
-        },
-        {
-          "hour": 89,
-          "likes": 4815
-        },
-        {
-          "hour": 90,
-          "likes": 4831
-        },
-        {
-          "hour": 91,
-          "likes": 4842
-        },
-        {
-          "hour": 93,
-          "likes": 4866
-        },
-        {
-          "hour": 94,
-          "likes": 4875
-        },
-        {
-          "hour": 95,
-          "likes": 4889
-        },
-        {
-          "hour": 96,
-          "likes": 4901
-        },
-        {
-          "hour": 97,
-          "likes": 4919
-        },
-        {
-          "hour": 98,
-          "likes": 4937
-        },
-        {
-          "hour": 99,
-          "likes": 4950
-        },
-        {
-          "hour": 100,
-          "likes": 4964
-        },
-        {
-          "hour": 101,
-          "likes": 4973
-        },
-        {
-          "hour": 102,
-          "likes": 4983
-        },
-        {
-          "hour": 103,
-          "likes": 4990
-        },
-        {
-          "hour": 104,
-          "likes": 4995
-        },
-        {
-          "hour": 105,
-          "likes": 4998
-        },
-        {
-          "hour": 106,
-          "likes": 5000
-        },
-        {
-          "hour": 107,
-          "likes": 5003
-        },
-        {
-          "hour": 108,
-          "likes": 5010
-        },
-        {
-          "hour": 109,
-          "likes": 5023
-        },
-        {
-          "hour": 110,
-          "likes": 5027
-        },
-        {
-          "hour": 111,
-          "likes": 5040
-        },
-        {
-          "hour": 112,
-          "likes": 5052
-        },
-        {
-          "hour": 113,
-          "likes": 5062
-        },
-        {
-          "hour": 114,
-          "likes": 5067
-        },
-        {
-          "hour": 115,
-          "likes": 5077
-        },
-        {
-          "hour": 116,
-          "likes": 5103
-        },
-        {
-          "hour": 117,
-          "likes": 5110
-        },
-        {
-          "hour": 118,
-          "likes": 5120
-        },
-        {
-          "hour": 119,
-          "likes": 5130
-        },
-        {
-          "hour": 120,
-          "likes": 5136
-        },
-        {
-          "hour": 121,
-          "likes": 5148
-        }
-      ],
-      "previousLikePoints": [],
-      "rankings": [
-        {
-          "type": "variety",
-          "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [
-            {
-              "hour": 6,
-              "rank": 47
             },
             {
-              "hour": 7,
-              "rank": 46
-            },
-            {
-              "hour": 8,
-              "rank": 45
-            },
-            {
-              "hour": 9,
-              "rank": 42
-            },
-            {
-              "hour": 10,
-              "rank": 41
-            },
-            {
-              "hour": 11,
-              "rank": 41
-            },
-            {
-              "hour": 12,
-              "rank": 36
-            },
-            {
-              "hour": 13,
-              "rank": 33
-            },
-            {
-              "hour": 14,
-              "rank": 33
-            },
-            {
-              "hour": 15,
-              "rank": 30
-            },
-            {
-              "hour": 16,
-              "rank": 29
-            },
-            {
-              "hour": 17,
-              "rank": 28
-            },
-            {
-              "hour": 18,
-              "rank": 25
-            },
-            {
-              "hour": 19,
-              "rank": 22
-            },
-            {
-              "hour": 20,
-              "rank": 22
-            },
-            {
-              "hour": 21,
-              "rank": 22
-            },
-            {
-              "hour": 22,
-              "rank": 22
-            },
-            {
-              "hour": 23,
-              "rank": 20
-            },
-            {
-              "hour": 24,
-              "rank": 19
-            },
-            {
-              "hour": 25,
-              "rank": 19
-            },
-            {
-              "hour": 26,
-              "rank": 20
-            },
-            {
-              "hour": 27,
-              "rank": 22
-            },
-            {
-              "hour": 28,
-              "rank": 23
-            },
-            {
-              "hour": 29,
-              "rank": 23
-            },
-            {
-              "hour": 30,
-              "rank": 23
-            },
-            {
-              "hour": 31,
-              "rank": 23
-            },
-            {
-              "hour": 32,
-              "rank": 25
-            },
-            {
-              "hour": 33,
-              "rank": 26
-            },
-            {
-              "hour": 34,
-              "rank": 26
-            },
-            {
-              "hour": 36,
-              "rank": 29
-            },
-            {
-              "hour": 37,
-              "rank": 28
-            },
-            {
-              "hour": 38,
-              "rank": 31
-            },
-            {
-              "hour": 39,
-              "rank": 32
-            },
-            {
-              "hour": 40,
-              "rank": 33
-            },
-            {
-              "hour": 41,
-              "rank": 32
-            },
-            {
-              "hour": 42,
-              "rank": 37
-            },
-            {
-              "hour": 43,
-              "rank": 38
-            },
-            {
-              "hour": 44,
-              "rank": 38
-            },
-            {
-              "hour": 45,
-              "rank": 40
-            },
-            {
-              "hour": 46,
-              "rank": 42
-            },
-            {
-              "hour": 47,
-              "rank": 45
-            },
-            {
-              "hour": 48,
-              "rank": 47
-            },
-            {
-              "hour": 50,
-              "rank": 50
-            }
-          ],
-          "previousPoints": [],
-          "nearbyRanking": [
-            {
-              "rank": 47,
+              "rank": 50,
               "title": "飯島直子の今夜一杯いっちゃう？"
-            },
-            {
-              "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
-            },
-            {
-              "rank": 49,
-              "title": "ウワサのお客さま"
-            },
-            {
-              "rank": 50,
-              "title": "Golden SixTONES"
-            }
-          ]
-        },
-        {
-          "type": "all",
-          "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [
-            {
-              "hour": 17,
-              "rank": 50
-            },
-            {
-              "hour": 18,
-              "rank": 44
-            },
-            {
-              "hour": 19,
-              "rank": 42
-            },
-            {
-              "hour": 20,
-              "rank": 42
-            },
-            {
-              "hour": 21,
-              "rank": 41
-            },
-            {
-              "hour": 22,
-              "rank": 40
-            },
-            {
-              "hour": 23,
-              "rank": 36
-            },
-            {
-              "hour": 24,
-              "rank": 34
-            },
-            {
-              "hour": 25,
-              "rank": 34
-            },
-            {
-              "hour": 26,
-              "rank": 35
-            },
-            {
-              "hour": 27,
-              "rank": 39
-            },
-            {
-              "hour": 28,
-              "rank": 44
-            },
-            {
-              "hour": 29,
-              "rank": 44
-            },
-            {
-              "hour": 30,
-              "rank": 45
-            },
-            {
-              "hour": 31,
-              "rank": 45
-            },
-            {
-              "hour": 32,
-              "rank": 47
-            },
-            {
-              "hour": 33,
-              "rank": 48
-            },
-            {
-              "hour": 34,
-              "rank": 48
-            }
-          ],
-          "previousPoints": [],
-          "nearbyRanking": [
-            {
-              "rank": 47,
-              "title": "M!LKの爆裂ミッション"
-            },
-            {
-              "rank": 48,
-              "title": "秘密のケンミンSHOW極"
-            },
-            {
-              "rank": 49,
-              "title": "幸せになりたいマサムネ君"
-            },
-            {
-              "rank": 50,
-              "title": "A-Studio＋"
             }
           ]
         }
@@ -19865,11 +19116,11 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/07/08",
-      "updatedAt": "2026/07/11 20:07",
+      "updatedAt": "2026/07/11 21:07",
       "episodeId": "epxqdyttmd",
       "subtitle": "#1 産声が響くまで、諦めない",
       "likes": "1.9万",
-      "favorites": "49.9万",
+      "favorites": "50.2万",
       "likePoints": [
         {
           "hour": 1,
@@ -20146,6 +19397,10 @@
         {
           "hour": 70,
           "likes": 19000
+        },
+        {
+          "hour": 71,
+          "likes": 19000
         }
       ],
       "previousLikePoints": [],
@@ -20154,7 +19409,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 3,
-          "elapsedHour": 70,
+          "elapsedHour": 71,
           "elapsedRank": 3,
           "currentPoints": [
             {
@@ -20420,6 +19675,10 @@
             {
               "hour": 70,
               "rank": 3
+            },
+            {
+              "hour": 71,
+              "rank": 3
             }
           ],
           "previousPoints": [],
@@ -20442,7 +19701,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 5,
-          "elapsedHour": 70,
+          "elapsedHour": 71,
           "elapsedRank": 5,
           "currentPoints": [
             {
@@ -20704,6 +19963,10 @@
             {
               "hour": 70,
               "rank": 5
+            },
+            {
+              "hour": 71,
+              "rank": 5
             }
           ],
           "previousPoints": [],
@@ -20714,11 +19977,11 @@
             },
             {
               "rank": 3,
-              "title": "アメトーーク！"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 4,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "アメトーーク！"
             },
             {
               "rank": 5,
@@ -20731,11 +19994,11 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/09",
-      "updatedAt": "2026/07/11 20:07",
+      "updatedAt": "2026/07/11 21:07",
       "episodeId": "ep7kzalm7v",
       "subtitle": "第1話 20歳差、静かに香る恋の予感・・・大人の純愛物語",
       "likes": "2.5万",
-      "favorites": "44.0万",
+      "favorites": "44.5万",
       "likePoints": [
         {
           "hour": 2,
@@ -20912,6 +20175,10 @@
         {
           "hour": 46,
           "likes": 25000
+        },
+        {
+          "hour": 47,
+          "likes": 25000
         }
       ],
       "previousLikePoints": [],
@@ -20920,7 +20187,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 2,
-          "elapsedHour": 46,
+          "elapsedHour": 47,
           "elapsedRank": 2,
           "currentPoints": [
             {
@@ -21094,6 +20361,10 @@
             {
               "hour": 46,
               "rank": 2
+            },
+            {
+              "hour": 47,
+              "rank": 2
             }
           ],
           "previousPoints": [],
@@ -21112,7 +20383,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 2,
-          "elapsedHour": 46,
+          "elapsedHour": 47,
           "elapsedRank": 2,
           "currentPoints": [
             {
@@ -21286,6 +20557,10 @@
             {
               "hour": 46,
               "rank": 2
+            },
+            {
+              "hour": 47,
+              "rank": 2
             }
           ],
           "previousPoints": [],
@@ -21305,10 +20580,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/11 20:07",
+      "updatedAt": "2026/07/11 21:07",
       "episodeId": "epggxhtmuq",
       "subtitle": "バレーボール女子日本代表佐藤＆和田ペア参戦",
-      "likes": "2123",
+      "likes": "2130",
       "favorites": "12.4万",
       "likePoints": [
         {
@@ -23744,7 +23019,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "本日はダイアンなり！シーズン3"
+              "title": "川島明の辞書で呑む"
             },
             {
               "rank": 48,
@@ -23756,7 +23031,7 @@
             },
             {
               "rank": 50,
-              "title": "ちゃちゃ入れマンデー"
+              "title": "土曜のあさはほめるちゃん"
             }
           ]
         },
@@ -23997,19 +23272,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 49,
-              "title": "ウワサのお客さま"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "Golden SixTONES"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             }
           ]
         }
@@ -24018,10 +23293,10 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/11 20:07",
+      "updatedAt": "2026/07/11 21:07",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
-      "likes": "4041",
+      "likes": "4047",
       "favorites": "1.8万",
       "likePoints": [
         {
@@ -24518,19 +23793,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 49,
-              "title": "ウワサのお客さま"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "Golden SixTONES"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             }
           ]
         },
@@ -24545,7 +23820,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "M!LKの爆裂ミッション"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 48,
@@ -24553,11 +23828,11 @@
             },
             {
               "rank": 49,
-              "title": "幸せになりたいマサムネ君"
+              "title": "A-Studio＋"
             },
             {
               "rank": 50,
-              "title": "A-Studio＋"
+              "title": "GTOリバイバル"
             }
           ]
         }
@@ -24566,7 +23841,7 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/07/11 20:07",
+      "updatedAt": "2026/07/11 21:07",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "2.7万",
@@ -25555,19 +24830,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 49,
-              "title": "ウワサのお客さま"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "Golden SixTONES"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             }
           ]
         },
@@ -25895,7 +25170,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "M!LKの爆裂ミッション"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 48,
@@ -25903,11 +25178,11 @@
             },
             {
               "rank": 49,
-              "title": "幸せになりたいマサムネ君"
+              "title": "A-Studio＋"
             },
             {
               "rank": 50,
-              "title": "A-Studio＋"
+              "title": "GTOリバイバル"
             }
           ]
         }
@@ -25916,10 +25191,10 @@
     "sr20l69ypl": {
       "programTitle": "バナナサンド",
       "broadcastDate": "2026/07/07",
-      "updatedAt": "2026/07/11 20:07",
+      "updatedAt": "2026/07/11 21:07",
       "episodeId": "epxwyek1w5",
       "subtitle": "ハモリ我慢大賞2026上半期",
-      "likes": "1483",
+      "likes": "1497",
       "favorites": "68.8万",
       "likePoints": [
         {
@@ -26085,6 +25360,10 @@
         {
           "hour": 97,
           "likes": 1483
+        },
+        {
+          "hour": 98,
+          "likes": 1497
         }
       ],
       "previousLikePoints": [],
@@ -26289,19 +25568,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 49,
-              "title": "ウワサのお客さま"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "Golden SixTONES"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             }
           ]
         },
@@ -26333,7 +25612,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "M!LKの爆裂ミッション"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 48,
@@ -26341,11 +25620,11 @@
             },
             {
               "rank": 49,
-              "title": "幸せになりたいマサムネ君"
+              "title": "A-Studio＋"
             },
             {
               "rank": 50,
-              "title": "A-Studio＋"
+              "title": "GTOリバイバル"
             }
           ]
         }
@@ -26354,10 +25633,10 @@
     "srt9dpl6u0": {
       "programTitle": "THE突破ファイル",
       "broadcastDate": "2026/07/09",
-      "updatedAt": "2026/07/11 20:07",
+      "updatedAt": "2026/07/11 21:07",
       "episodeId": "ep3k70img8",
       "subtitle": "人体ミステリー!健康体なのになぜ失神!?▼税関VS令和ギャル密輸団",
-      "likes": "1822",
+      "likes": "1851",
       "favorites": "44.8万",
       "likePoints": [
         {
@@ -26491,6 +25770,10 @@
         {
           "hour": 49,
           "likes": 1822
+        },
+        {
+          "hour": 50,
+          "likes": 1851
         }
       ],
       "previousLikePoints": [],
@@ -26498,9 +25781,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 33,
-          "elapsedHour": 49,
-          "elapsedRank": 33,
+          "currentRank": 34,
+          "elapsedHour": 50,
+          "elapsedRank": 34,
           "currentPoints": [
             {
               "hour": 4,
@@ -26677,14 +25960,14 @@
             {
               "hour": 49,
               "rank": 33
+            },
+            {
+              "hour": 50,
+              "rank": 34
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
-            {
-              "rank": 30,
-              "title": "沸騰ワード10"
-            },
             {
               "rank": 31,
               "title": "これ余談なんですけど・・・"
@@ -26695,6 +25978,10 @@
             },
             {
               "rank": 33,
+              "title": "夫が寝たあとに"
+            },
+            {
+              "rank": 34,
               "title": "THE突破ファイル"
             }
           ]
@@ -26823,7 +26110,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "M!LKの爆裂ミッション"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 48,
@@ -26831,11 +26118,11 @@
             },
             {
               "rank": 49,
-              "title": "幸せになりたいマサムネ君"
+              "title": "A-Studio＋"
             },
             {
               "rank": 50,
-              "title": "A-Studio＋"
+              "title": "GTOリバイバル"
             }
           ]
         }
