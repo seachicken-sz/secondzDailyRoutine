@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/13 13:07",
+  "updatedAt": "2026/07/13 14:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/10",
-      "updatedAt": "2026/07/13 13:07",
+      "updatedAt": "2026/07/13 14:07",
       "episodeId": "ep7a819uf1",
       "subtitle": "timelesz100＆祝・菊池風磨復帰企画",
       "likes": "1.5万",
@@ -256,6 +256,10 @@
         },
         {
           "hour": 63,
+          "likes": 15000
+        },
+        {
+          "hour": 64,
           "likes": 15000
         }
       ],
@@ -925,9 +929,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 13,
-          "elapsedHour": 63,
-          "elapsedRank": 13,
+          "currentRank": 14,
+          "elapsedHour": 64,
+          "elapsedRank": 14,
           "currentPoints": [
             {
               "hour": 3,
@@ -1168,6 +1172,10 @@
             {
               "hour": 63,
               "rank": 13
+            },
+            {
+              "hour": 64,
+              "rank": 14
             }
           ],
           "previousPoints": [
@@ -1814,10 +1822,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 10,
-              "title": "月曜から夜ふかし"
-            },
-            {
               "rank": 11,
               "title": "一茂×かまいたち ゲンバ"
             },
@@ -1827,6 +1831,10 @@
             },
             {
               "rank": 13,
+              "title": "マルコポロリ！"
+            },
+            {
+              "rank": 14,
               "title": "タイムレスマン"
             }
           ]
@@ -1834,9 +1842,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 26,
-          "elapsedHour": 63,
-          "elapsedRank": 26,
+          "currentRank": 27,
+          "elapsedHour": 64,
+          "elapsedRank": 27,
           "currentPoints": [
             {
               "hour": 8,
@@ -2057,6 +2065,10 @@
             {
               "hour": 63,
               "rank": 26
+            },
+            {
+              "hour": 64,
+              "rank": 27
             }
           ],
           "previousPoints": [
@@ -2679,19 +2691,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 23,
+              "rank": 24,
               "title": "今から、親友やめようか。"
             },
             {
-              "rank": 24,
+              "rank": 25,
               "title": "マツコ＆有吉 かりそめ天国"
             },
             {
-              "rank": 25,
-              "title": "ワンピース"
+              "rank": 26,
+              "title": "マルコポロリ！"
             },
             {
-              "rank": 26,
+              "rank": 27,
               "title": "タイムレスマン"
             }
           ]
@@ -2701,7 +2713,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/12",
-      "updatedAt": "2026/07/13 13:07",
+      "updatedAt": "2026/07/13 14:07",
       "episodeId": "epf7dmvgt5",
       "subtitle": "【肉汁たっぷり絶品ギョーザ】グルメゲームで白熱バトル",
       "likes": "1.0万",
@@ -2793,6 +2805,10 @@
         },
         {
           "hour": 23,
+          "likes": 10000
+        },
+        {
+          "hour": 24,
           "likes": 10000
         }
       ],
@@ -3462,9 +3478,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 6,
-          "elapsedHour": 23,
-          "elapsedRank": 6,
+          "currentRank": 5,
+          "elapsedHour": 24,
+          "elapsedRank": 5,
           "currentPoints": [
             {
               "hour": 4,
@@ -3541,6 +3557,10 @@
             {
               "hour": 23,
               "rank": 6
+            },
+            {
+              "hour": 24,
+              "rank": 5
             }
           ],
           "previousPoints": [
@@ -4127,6 +4147,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 2,
+              "title": "それSnow Manにやらせて下さい"
+            },
+            {
               "rank": 3,
               "title": "アメトーーク！"
             },
@@ -4136,10 +4160,6 @@
             },
             {
               "rank": 5,
-              "title": "出川哲朗の充電させてもらえませんか？"
-            },
-            {
-              "rank": 6,
               "title": "timeleszファミリア"
             }
           ]
@@ -4147,9 +4167,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 15,
-          "elapsedHour": 23,
-          "elapsedRank": 15,
+          "currentRank": 13,
+          "elapsedHour": 24,
+          "elapsedRank": 13,
           "currentPoints": [
             {
               "hour": 7,
@@ -4214,6 +4234,10 @@
             {
               "hour": 23,
               "rank": 15
+            },
+            {
+              "hour": 24,
+              "rank": 13
             }
           ],
           "previousPoints": [
@@ -4480,19 +4504,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 12,
+              "rank": 10,
+              "title": "ファーストクライ 母子救命救急班"
+            },
+            {
+              "rank": 11,
               "title": "世界の果てまでイッテQ！"
             },
             {
+              "rank": 12,
+              "title": "さよならノワール"
+            },
+            {
               "rank": 13,
-              "title": "出川哲朗の充電させてもらえませんか？"
-            },
-            {
-              "rank": 14,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
-            },
-            {
-              "rank": 15,
               "title": "timeleszファミリア"
             }
           ]
@@ -4502,10 +4526,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/07",
-      "updatedAt": "2026/07/13 13:07",
+      "updatedAt": "2026/07/13 14:07",
       "episodeId": "eppc07nzsl",
       "subtitle": "チョコプラ・timeleszが「水をはじく\"絶対に濡れない風呂敷\"なら、水を包んで運ぶことはできるの？」に挑む！",
-      "likes": "7916",
+      "likes": "7939",
       "favorites": "5.4万",
       "likePoints": [
         {
@@ -5027,6 +5051,10 @@
         {
           "hour": 133,
           "likes": 7916
+        },
+        {
+          "hour": 134,
+          "likes": 7939
         }
       ],
       "previousLikePoints": [
@@ -5699,9 +5727,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 49,
-          "elapsedHour": 133,
-          "elapsedRank": 49,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 5,
@@ -6640,20 +6668,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 46,
-              "title": "シューイチ"
-            },
-            {
               "rank": 47,
-              "title": "アンタッチャブルでやらせてもらってます"
-            },
-            {
-              "rank": 48,
               "title": "※女性は見ないでください"
             },
             {
+              "rank": 48,
+              "title": "ナンデモ特命係 発見らくちゃく！"
+            },
+            {
               "rank": 49,
-              "title": "地球まるごと大実験 ネイチャーティーチャー"
+              "title": "アンタッチャブルでやらせてもらってます"
+            },
+            {
+              "rank": 50,
+              "title": "なりゆき街道旅"
             }
           ]
         },
@@ -6810,11 +6838,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あっちこっちAぇ!"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "あっちこっちAぇ!"
             },
             {
               "rank": 49,
@@ -6822,7 +6850,7 @@
             },
             {
               "rank": 50,
-              "title": "スクール革命！"
+              "title": "テレビ×ミセス"
             }
           ]
         }
@@ -6831,7 +6859,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/09",
-      "updatedAt": "2026/07/13 13:07",
+      "updatedAt": "2026/07/13 14:07",
       "episodeId": "ep7v41tq8u",
       "subtitle": "【珍ワード連発】あべこべ現代文",
       "likes": "1.1万",
@@ -7255,6 +7283,10 @@
         },
         {
           "hour": 107,
+          "likes": 11000
+        },
+        {
+          "hour": 108,
           "likes": 11000
         }
       ],
@@ -8462,11 +8494,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あっちこっちAぇ!"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "あっちこっちAぇ!"
             },
             {
               "rank": 49,
@@ -8474,7 +8506,7 @@
             },
             {
               "rank": 50,
-              "title": "スクール革命！"
+              "title": "テレビ×ミセス"
             }
           ]
         },
@@ -8763,19 +8795,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 48,
-              "title": "さんまのお笑い向上委員会"
-            },
-            {
-              "rank": 49,
               "title": "全国ボロいい宿"
             },
             {
+              "rank": 48,
+              "title": "有吉クイズ"
+            },
+            {
+              "rank": 49,
+              "title": "クレヨンしんちゃん"
+            },
+            {
               "rank": 50,
-              "title": "日曜日の初耳学"
+              "title": "マツコの知らない世界"
             }
           ]
         }
@@ -8784,7 +8816,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/06/16",
-      "updatedAt": "2026/07/13 13:07",
+      "updatedAt": "2026/07/13 14:07",
       "episodeId": "eptcnibdpp",
       "subtitle": "芸能人熱演…身近な事件!あおり運転のガラケー女に間違われ怒り逆襲",
       "likes": "3831",
@@ -10097,11 +10129,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あっちこっちAぇ!"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "あっちこっちAぇ!"
             },
             {
               "rank": 49,
@@ -10109,7 +10141,7 @@
             },
             {
               "rank": 50,
-              "title": "スクール革命！"
+              "title": "テレビ×ミセス"
             }
           ]
         },
@@ -10353,19 +10385,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 48,
-              "title": "さんまのお笑い向上委員会"
-            },
-            {
-              "rank": 49,
               "title": "全国ボロいい宿"
             },
             {
+              "rank": 48,
+              "title": "有吉クイズ"
+            },
+            {
+              "rank": 49,
+              "title": "クレヨンしんちゃん"
+            },
+            {
               "rank": 50,
-              "title": "日曜日の初耳学"
+              "title": "マツコの知らない世界"
             }
           ]
         }
@@ -10374,10 +10406,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/08",
-      "updatedAt": "2026/07/13 13:07",
+      "updatedAt": "2026/07/13 14:07",
       "episodeId": "ep2gt21kmn",
       "subtitle": "MC菊池風磨&畑芽育の音楽番組!NiziU登場",
-      "likes": "5793",
+      "likes": "5802",
       "favorites": "8.7万",
       "likePoints": [
         {
@@ -10887,6 +10919,10 @@
         {
           "hour": 132,
           "likes": 5793
+        },
+        {
+          "hour": 133,
+          "likes": 5802
         }
       ],
       "previousLikePoints": [
@@ -11721,11 +11757,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あっちこっちAぇ!"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "あっちこっちAぇ!"
             },
             {
               "rank": 49,
@@ -11733,7 +11769,7 @@
             },
             {
               "rank": 50,
-              "title": "スクール革命！"
+              "title": "テレビ×ミセス"
             }
           ]
         },
@@ -11753,19 +11789,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 48,
-              "title": "さんまのお笑い向上委員会"
-            },
-            {
-              "rank": 49,
               "title": "全国ボロいい宿"
             },
             {
+              "rank": 48,
+              "title": "有吉クイズ"
+            },
+            {
+              "rank": 49,
+              "title": "クレヨンしんちゃん"
+            },
+            {
               "rank": 50,
-              "title": "日曜日の初耳学"
+              "title": "マツコの知らない世界"
             }
           ]
         }
@@ -11774,10 +11810,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/10",
-      "updatedAt": "2026/07/13 13:07",
+      "updatedAt": "2026/07/13 14:07",
       "episodeId": "ep2gtjikq3",
       "subtitle": "第135回 GTOスペシャル！制服姿でめるるの許せない飯",
-      "likes": "4780",
+      "likes": "4792",
       "favorites": "71.4万",
       "likePoints": [
         {
@@ -12107,6 +12143,10 @@
         {
           "hour": 85,
           "likes": 4780
+        },
+        {
+          "hour": 86,
+          "likes": 4792
         }
       ],
       "previousLikePoints": [
@@ -12993,11 +13033,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あっちこっちAぇ!"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "あっちこっちAぇ!"
             },
             {
               "rank": 49,
@@ -13005,7 +13045,7 @@
             },
             {
               "rank": 50,
-              "title": "スクール革命！"
+              "title": "テレビ×ミセス"
             }
           ]
         },
@@ -13158,19 +13198,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 48,
-              "title": "さんまのお笑い向上委員会"
-            },
-            {
-              "rank": 49,
               "title": "全国ボロいい宿"
             },
             {
+              "rank": 48,
+              "title": "有吉クイズ"
+            },
+            {
+              "rank": 49,
+              "title": "クレヨンしんちゃん"
+            },
+            {
               "rank": 50,
-              "title": "日曜日の初耳学"
+              "title": "マツコの知らない世界"
             }
           ]
         }
@@ -13179,10 +13219,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/07/11",
-      "updatedAt": "2026/07/13 13:07",
+      "updatedAt": "2026/07/13 14:07",
       "episodeId": "epwsv29q63",
       "subtitle": "マッサマンvs祝！亀梨和也ギリギリ記憶 前編",
-      "likes": "2906",
+      "likes": "2949",
       "favorites": "78.2万",
       "likePoints": [
         {
@@ -13344,6 +13384,10 @@
         {
           "hour": 42,
           "likes": 2906
+        },
+        {
+          "hour": 43,
+          "likes": 2949
         }
       ],
       "previousLikePoints": [
@@ -14025,7 +14069,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 16,
-          "elapsedHour": 42,
+          "elapsedHour": 43,
           "elapsedRank": 16,
           "currentPoints": [
             {
@@ -14170,6 +14214,10 @@
             },
             {
               "hour": 42,
+              "rank": 16
+            },
+            {
+              "hour": 43,
               "rank": 16
             }
           ],
@@ -14530,11 +14578,11 @@
           "nearbyRanking": [
             {
               "rank": 13,
-              "title": "タイムレスマン"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 14,
-              "title": "マルコポロリ！"
+              "title": "タイムレスマン"
             },
             {
               "rank": 15,
@@ -14549,9 +14597,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 31,
-          "elapsedHour": 42,
-          "elapsedRank": 31,
+          "currentRank": 32,
+          "elapsedHour": 43,
+          "elapsedRank": 32,
           "currentPoints": [
             {
               "hour": 15,
@@ -14660,6 +14708,10 @@
             {
               "hour": 42,
               "rank": 31
+            },
+            {
+              "hour": 43,
+              "rank": 32
             }
           ],
           "previousPoints": [
@@ -14906,10 +14958,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 28,
-              "title": "マルコポロリ！"
-            },
-            {
               "rank": 29,
               "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
@@ -14919,6 +14967,10 @@
             },
             {
               "rank": 31,
+              "title": "夫に不倫をお願いされました"
+            },
+            {
+              "rank": 32,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -14928,7 +14980,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/07/13 13:07",
+      "updatedAt": "2026/07/13 14:07",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
@@ -15617,10 +15669,6 @@
           "elapsedRank": null,
           "currentPoints": [
             {
-              "hour": 112,
-              "rank": 22
-            },
-            {
               "hour": 113,
               "rank": 22
             },
@@ -15861,11 +15909,11 @@
             },
             {
               "rank": 49,
-              "title": "真夜中の雨"
+              "title": "氷の世界"
             },
             {
               "rank": 50,
-              "title": "西園寺さんは家事をしない"
+              "title": "年の差婚"
             }
           ]
         },
@@ -15941,19 +15989,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 48,
-              "title": "さんまのお笑い向上委員会"
-            },
-            {
-              "rank": 49,
               "title": "全国ボロいい宿"
             },
             {
+              "rank": 48,
+              "title": "有吉クイズ"
+            },
+            {
+              "rank": 49,
+              "title": "クレヨンしんちゃん"
+            },
+            {
               "rank": 50,
-              "title": "日曜日の初耳学"
+              "title": "マツコの知らない世界"
             }
           ]
         }
@@ -15962,7 +16010,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/07/13 13:07",
+      "updatedAt": "2026/07/13 14:07",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
       "likes": "1.1万",
@@ -17617,11 +17665,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あっちこっちAぇ!"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "あっちこっちAぇ!"
             },
             {
               "rank": 49,
@@ -17629,7 +17677,7 @@
             },
             {
               "rank": 50,
-              "title": "スクール革命！"
+              "title": "テレビ×ミセス"
             }
           ]
         },
@@ -17770,19 +17818,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 48,
-              "title": "さんまのお笑い向上委員会"
-            },
-            {
-              "rank": 49,
               "title": "全国ボロいい宿"
             },
             {
+              "rank": 48,
+              "title": "有吉クイズ"
+            },
+            {
+              "rank": 49,
+              "title": "クレヨンしんちゃん"
+            },
+            {
               "rank": 50,
-              "title": "日曜日の初耳学"
+              "title": "マツコの知らない世界"
             }
           ]
         }
@@ -17791,7 +17839,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/13 13:07",
+      "updatedAt": "2026/07/13 14:07",
       "episodeId": "eparzrbnab",
       "subtitle": "【4人の休日に密着】",
       "likes": "1779",
@@ -19206,11 +19254,11 @@
             },
             {
               "rank": 49,
-              "title": "ザワつく！ 金曜日"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 50,
-              "title": "朝だ！生です旅サラダ"
+              "title": "ザワつく！ 金曜日"
             }
           ]
         },
@@ -19225,11 +19273,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あっちこっちAぇ!"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "あっちこっちAぇ!"
             },
             {
               "rank": 49,
@@ -19237,7 +19285,7 @@
             },
             {
               "rank": 50,
-              "title": "スクール革命！"
+              "title": "テレビ×ミセス"
             }
           ]
         }
@@ -19246,7 +19294,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/07/08",
-      "updatedAt": "2026/07/13 13:07",
+      "updatedAt": "2026/07/13 14:07",
       "episodeId": "epxqdyttmd",
       "subtitle": "#1 産声が響くまで、諦めない",
       "likes": "2.2万",
@@ -19687,6 +19735,10 @@
         {
           "hour": 111,
           "likes": 22000
+        },
+        {
+          "hour": 112,
+          "likes": 22000
         }
       ],
       "previousLikePoints": [],
@@ -19695,7 +19747,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 7,
-          "elapsedHour": 111,
+          "elapsedHour": 112,
           "elapsedRank": 7,
           "currentPoints": [
             {
@@ -20121,6 +20173,10 @@
             {
               "hour": 111,
               "rank": 7
+            },
+            {
+              "hour": 112,
+              "rank": 7
             }
           ],
           "previousPoints": [],
@@ -20147,7 +20203,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 10,
-          "elapsedHour": 111,
+          "elapsedHour": 112,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -20569,6 +20625,10 @@
             {
               "hour": 111,
               "rank": 10
+            },
+            {
+              "hour": 112,
+              "rank": 10
             }
           ],
           "previousPoints": [],
@@ -20596,7 +20656,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/09",
-      "updatedAt": "2026/07/13 13:07",
+      "updatedAt": "2026/07/13 14:07",
       "episodeId": "ep7kzalm7v",
       "subtitle": "第1話 20歳差、静かに香る恋の予感・・・大人の純愛物語",
       "likes": "3.1万",
@@ -20937,6 +20997,10 @@
         {
           "hour": 87,
           "likes": 31000
+        },
+        {
+          "hour": 88,
+          "likes": 31000
         }
       ],
       "previousLikePoints": [],
@@ -20945,7 +21009,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 5,
-          "elapsedHour": 87,
+          "elapsedHour": 88,
           "elapsedRank": 5,
           "currentPoints": [
             {
@@ -21279,6 +21343,10 @@
             {
               "hour": 87,
               "rank": 5
+            },
+            {
+              "hour": 88,
+              "rank": 5
             }
           ],
           "previousPoints": [],
@@ -21305,7 +21373,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 5,
-          "elapsedHour": 87,
+          "elapsedHour": 88,
           "elapsedRank": 5,
           "currentPoints": [
             {
@@ -21639,6 +21707,10 @@
             {
               "hour": 87,
               "rank": 5
+            },
+            {
+              "hour": 88,
+              "rank": 5
             }
           ],
           "previousPoints": [],
@@ -21666,10 +21738,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/13 13:07",
+      "updatedAt": "2026/07/13 14:07",
       "episodeId": "epggxhtmuq",
       "subtitle": "バレーボール女子日本代表佐藤＆和田ペア参戦",
-      "likes": "2206",
+      "likes": "2212",
       "favorites": "12.4万",
       "likePoints": [
         {
@@ -24105,15 +24177,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "アンタッチャブルでやらせてもらってます"
-            },
-            {
-              "rank": 48,
               "title": "※女性は見ないでください"
             },
             {
+              "rank": 48,
+              "title": "ナンデモ特命係 発見らくちゃく！"
+            },
+            {
               "rank": 49,
-              "title": "地球まるごと大実験 ネイチャーティーチャー"
+              "title": "アンタッチャブルでやらせてもらってます"
             },
             {
               "rank": 50,
@@ -24358,11 +24430,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あっちこっちAぇ!"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "あっちこっちAぇ!"
             },
             {
               "rank": 49,
@@ -24370,7 +24442,7 @@
             },
             {
               "rank": 50,
-              "title": "スクール革命！"
+              "title": "テレビ×ミセス"
             }
           ]
         }
@@ -24379,10 +24451,10 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/13 13:07",
+      "updatedAt": "2026/07/13 14:07",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
-      "likes": "4145",
+      "likes": "4147",
       "favorites": "1.8万",
       "likePoints": [
         {
@@ -24879,11 +24951,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あっちこっちAぇ!"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "あっちこっちAぇ!"
             },
             {
               "rank": 49,
@@ -24891,7 +24963,7 @@
             },
             {
               "rank": 50,
-              "title": "スクール革命！"
+              "title": "テレビ×ミセス"
             }
           ]
         },
@@ -24906,19 +24978,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 48,
-              "title": "さんまのお笑い向上委員会"
-            },
-            {
-              "rank": 49,
               "title": "全国ボロいい宿"
             },
             {
+              "rank": 48,
+              "title": "有吉クイズ"
+            },
+            {
+              "rank": 49,
+              "title": "クレヨンしんちゃん"
+            },
+            {
               "rank": 50,
-              "title": "日曜日の初耳学"
+              "title": "マツコの知らない世界"
             }
           ]
         }
@@ -24927,7 +24999,7 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/07/13 13:07",
+      "updatedAt": "2026/07/13 14:07",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "2.7万",
@@ -25916,11 +25988,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あっちこっちAぇ!"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "あっちこっちAぇ!"
             },
             {
               "rank": 49,
@@ -25928,7 +26000,7 @@
             },
             {
               "rank": 50,
-              "title": "スクール革命！"
+              "title": "テレビ×ミセス"
             }
           ]
         },
@@ -26256,19 +26328,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 48,
-              "title": "さんまのお笑い向上委員会"
-            },
-            {
-              "rank": 49,
               "title": "全国ボロいい宿"
             },
             {
+              "rank": 48,
+              "title": "有吉クイズ"
+            },
+            {
+              "rank": 49,
+              "title": "クレヨンしんちゃん"
+            },
+            {
               "rank": 50,
-              "title": "日曜日の初耳学"
+              "title": "マツコの知らない世界"
             }
           ]
         }
@@ -26277,10 +26349,10 @@
     "sr20l69ypl": {
       "programTitle": "バナナサンド",
       "broadcastDate": "2026/07/07",
-      "updatedAt": "2026/07/13 13:07",
+      "updatedAt": "2026/07/13 14:07",
       "episodeId": "epxwyek1w5",
       "subtitle": "ハモリ我慢大賞2026上半期",
-      "likes": "1710",
+      "likes": "1721",
       "favorites": "68.9万",
       "likePoints": [
         {
@@ -26606,6 +26678,10 @@
         {
           "hour": 138,
           "likes": 1710
+        },
+        {
+          "hour": 139,
+          "likes": 1721
         }
       ],
       "previousLikePoints": [],
@@ -26810,11 +26886,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あっちこっちAぇ!"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "あっちこっちAぇ!"
             },
             {
               "rank": 49,
@@ -26822,7 +26898,7 @@
             },
             {
               "rank": 50,
-              "title": "スクール革命！"
+              "title": "テレビ×ミセス"
             }
           ]
         },
@@ -26854,19 +26930,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 48,
-              "title": "さんまのお笑い向上委員会"
-            },
-            {
-              "rank": 49,
               "title": "全国ボロいい宿"
             },
             {
+              "rank": 48,
+              "title": "有吉クイズ"
+            },
+            {
+              "rank": 49,
+              "title": "クレヨンしんちゃん"
+            },
+            {
               "rank": 50,
-              "title": "日曜日の初耳学"
+              "title": "マツコの知らない世界"
             }
           ]
         }
@@ -26875,10 +26951,10 @@
     "srt9dpl6u0": {
       "programTitle": "THE突破ファイル",
       "broadcastDate": "2026/07/09",
-      "updatedAt": "2026/07/13 13:07",
+      "updatedAt": "2026/07/13 14:07",
       "episodeId": "ep3k70img8",
       "subtitle": "人体ミステリー!健康体なのになぜ失神!?▼税関VS令和ギャル密輸団",
-      "likes": "2177",
+      "likes": "2184",
       "favorites": "44.9万",
       "likePoints": [
         {
@@ -27172,6 +27248,10 @@
         {
           "hour": 90,
           "likes": 2177
+        },
+        {
+          "hour": 91,
+          "likes": 2184
         }
       ],
       "previousLikePoints": [],
@@ -27424,11 +27504,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あっちこっちAぇ!"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "あっちこっちAぇ!"
             },
             {
               "rank": 49,
@@ -27436,7 +27516,7 @@
             },
             {
               "rank": 50,
-              "title": "スクール革命！"
+              "title": "テレビ×ミセス"
             }
           ]
         },
@@ -27564,19 +27644,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 48,
-              "title": "さんまのお笑い向上委員会"
-            },
-            {
-              "rank": 49,
               "title": "全国ボロいい宿"
             },
             {
+              "rank": 48,
+              "title": "有吉クイズ"
+            },
+            {
+              "rank": 49,
+              "title": "クレヨンしんちゃん"
+            },
+            {
               "rank": 50,
-              "title": "日曜日の初耳学"
+              "title": "マツコの知らない世界"
             }
           ]
         }
