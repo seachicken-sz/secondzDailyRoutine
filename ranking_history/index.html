@@ -10,4 +10,187 @@
     .search-panel {
       margin-top: 18px;
       padding-top: 18px;
-      border-top: 1px solid var
+      border-top: 1px solid var(--border);
+    }
+    .search-label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--text-subtle);
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+    .search-input-wrap {
+      display: flex;
+      gap: 8px;
+    }
+    .search-input {
+      width: 100%;
+      min-height: 46px;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--text);
+      background: var(--surface);
+      outline: none;
+    }
+    .search-input:focus {
+      border-color: var(--brand);
+      box-shadow: 0 0 0 3px rgba(51, 92, 255, 0.14);
+    }
+    .search-clear-button {
+      flex: 0 0 auto;
+      min-width: 72px;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--text);
+      background: var(--surface-subtle);
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .search-clear-button:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+    .search-result-text {
+      min-height: 1.5em;
+      margin: 6px 0 0;
+      color: var(--text-subtle);
+      font-size: 0.78rem;
+    }
+    @media (max-width: 520px) {
+      .search-input-wrap {
+        align-items: stretch;
+      }
+      .search-input {
+        min-width: 0;
+      }
+      .search-clear-button {
+        min-width: 64px;
+        padding-inline: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">TVer RANKING HISTORY</p>
+        <h1>TVerランキング 全期間推移</h1>
+        <p class="page-description">取得時点ごとの順位と、ひとつ前の取得時点からの変動を確認できます。</p>
+      </div>
+      <div class="updated-card" aria-live="polite">
+        <span class="updated-label">最新更新</span>
+        <strong id="latestUpdatedAt">--</strong>
+      </div>
+    </header>
+
+    <section class="control-panel" aria-label="ランキング表示切り替え">
+      <div class="time-navigation">
+        <button id="previousSnapshotButton" class="nav-button" type="button">
+          <span aria-hidden="true">←</span>
+          前の取得時点
+        </button>
+        <div class="current-time-block">
+          <span class="current-time-label">表示中</span>
+          <strong id="currentObservedAt">--</strong>
+          <span id="snapshotPosition" class="snapshot-position"></span>
+        </div>
+        <button id="nextSnapshotButton" class="nav-button" type="button">
+          次の取得時点
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+
+      <div id="rankingTabs" class="ranking-tabs" role="tablist" aria-label="ランキング種別"></div>
+
+      <div class="search-panel">
+        <label class="search-label" for="rankingSearchInput">番組名・エピソード名で全期間検索</label>
+        <div class="search-input-wrap">
+          <input
+            id="rankingSearchInput"
+            class="search-input"
+            type="search"
+            placeholder="番組名またはエピソード名を入力"
+            autocomplete="off"
+          >
+          <button id="clearSearchButton" class="search-clear-button" type="button" disabled>クリア</button>
+        </div>
+        <p id="searchResultText" class="search-result-text" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="statusMessage" class="status-message" aria-live="polite">
+      ランキングデータを読み込んでいます。
+    </section>
+
+    <section id="rankingContent" class="ranking-content" hidden>
+      <div class="summary-grid" aria-label="表示内容の絞り込み">
+        <button class="summary-card filter-card is-active" type="button" data-filter="all" aria-pressed="true">
+          <span>ランクイン</span>
+          <strong id="rankedCount">0</strong>
+          <small>件</small>
+        </button>
+        <button class="summary-card filter-card" type="button" data-filter="up" aria-pressed="false">
+          <span>順位アップ</span>
+          <strong id="upCount">0</strong>
+          <small>件</small>
+        </button>
+        <button class="summary-card filter-card" type="button" data-filter="new" aria-pressed="false">
+          <span>新規ランクイン</span>
+          <strong id="newCount">0</strong>
+          <small>件</small>
+        </button>
+        <button class="summary-card filter-card" type="button" data-filter="out" aria-pressed="false">
+          <span>今回圏外</span>
+          <strong id="outCount">0</strong>
+          <small>件</small>
+        </button>
+      </div>
+
+      <section id="rankingTableSection" class="table-card" aria-labelledby="rankingTableTitle">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker" id="rankingTypeLabel">ランキング</p>
+            <h2 id="rankingTableTitle">順位表</h2>
+          </div>
+          <p class="table-note">変動は同じepisodeIdを、ひとつ前の取得時点と比較しています。</p>
+        </div>
+
+        <div class="table-scroll">
+          <table class="ranking-table">
+            <thead>
+              <tr>
+                <th scope="col" class="rank-column">順位</th>
+                <th scope="col" class="change-column">前回比</th>
+                <th scope="col">番組・エピソード</th>
+                <th scope="col">放送局</th>
+                <th scope="col" class="best-column">全期間最高</th>
+                <th id="historyTimeHeader" scope="col" class="first-appearance-column">初登場時刻</th>
+              </tr>
+            </thead>
+            <tbody id="rankingTableBody"></tbody>
+          </table>
+        </div>
+
+        <div id="emptyRankingMessage" class="empty-message" hidden>
+          この取得時点のランキングデータはありません。
+        </div>
+      </section>
+
+      <section id="outSection" class="out-section" hidden aria-labelledby="outSectionTitle">
+        <div class="section-heading compact">
+          <div>
+            <p class="section-kicker">OUT</p>
+            <h2 id="outSectionTitle">今回圏外になったエピソード</h2>
+          </div>
+        </div>
+        <div id="outList" class="out-list"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="./script.js?v=20260716-2" defer></script>
+</body>
+</html>
