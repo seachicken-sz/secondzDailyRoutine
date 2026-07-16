@@ -4,15 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#ffffff">
-  <title>TVerランキング 48時間推移</title>
-  <link rel="stylesheet" href="./style.css">
+  <title>TVerランキング 全期間推移</title>
+  <link rel="stylesheet" href="./style.css?v=20260716-1">
+  <style>
+    .search-panel {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+    }
+    .search-label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--text-subtle);
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+    .search-input-wrap {
+      display: flex;
+      gap: 8px;
+    }
+    .search-input {
+      width: 100%;
+      min-height: 46px;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--text);
+      background: var(--surface);
+      outline: none;
+    }
+    .search-input:focus {
+      border-color: var(--brand);
+      box-shadow: 0 0 0 3px rgba(51, 92, 255, 0.14);
+    }
+    .search-clear-button {
+      flex: 0 0 auto;
+      min-width: 72px;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--text);
+      background: var(--surface-subtle);
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .search-clear-button:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+    .search-result-text {
+      min-height: 1.5em;
+      margin: 6px 0 0;
+      color: var(--text-subtle);
+      font-size: 0.78rem;
+    }
+    @media (max-width: 520px) {
+      .search-input-wrap {
+        align-items: stretch;
+      }
+      .search-input {
+        min-width: 0;
+      }
+      .search-clear-button {
+        min-width: 64px;
+        padding-inline: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
   <main class="page-shell">
     <header class="page-header">
       <div>
         <p class="eyebrow">TVer RANKING HISTORY</p>
-        <h1>TVerランキング 48時間推移</h1>
+        <h1>TVerランキング 全期間推移</h1>
         <p class="page-description">取得時点ごとの順位と、ひとつ前の取得時点からの変動を確認できます。</p>
       </div>
 
@@ -42,6 +107,21 @@
       </div>
 
       <div id="rankingTabs" class="ranking-tabs" role="tablist" aria-label="ランキング種別"></div>
+
+      <div class="search-panel">
+        <label class="search-label" for="rankingSearchInput">番組名・エピソード名で絞り込み</label>
+        <div class="search-input-wrap">
+          <input
+            id="rankingSearchInput"
+            class="search-input"
+            type="search"
+            placeholder="番組名またはエピソード名を入力"
+            autocomplete="off"
+          >
+          <button id="clearSearchButton" class="search-clear-button" type="button" disabled>クリア</button>
+        </div>
+        <p id="searchResultText" class="search-result-text" aria-live="polite"></p>
+      </div>
     </section>
 
     <section id="statusMessage" class="status-message" aria-live="polite">
@@ -89,7 +169,7 @@
                 <th scope="col" class="change-column">前回比</th>
                 <th scope="col">番組・エピソード</th>
                 <th scope="col">放送局</th>
-                <th scope="col" class="best-column">48h最高</th>
+                <th scope="col" class="best-column">全期間最高</th>
                 <th scope="col" class="first-appearance-column">初登場時刻</th>
               </tr>
             </thead>
@@ -114,6 +194,6 @@
     </section>
   </main>
 
-  <script src="./script.js" defer></script>
+  <script src="./script.js?v=20260716-1" defer></script>
 </body>
 </html>
