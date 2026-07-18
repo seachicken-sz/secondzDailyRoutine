@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/18 16:07",
+  "updatedAt": "2026/07/18 17:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/10",
-      "updatedAt": "2026/07/18 16:07",
+      "updatedAt": "2026/07/18 17:07",
       "episodeId": "ep7a819uf1",
       "subtitle": "timelesz100＆祝・菊池風磨復帰企画",
       "likes": "1.8万",
@@ -2667,19 +2667,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 48,
-              "title": "所さんの学校では教えてくれないそこんトコロ！"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
-              "title": "EIGHT-JAM"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -3720,15 +3720,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉の壁"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             },
             {
               "rank": 48,
-              "title": "水曜日のダウンタウン"
+              "title": "有吉の壁"
             },
             {
               "rank": 49,
-              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
+              "title": "水曜日のダウンタウン"
             },
             {
               "rank": 50,
@@ -3741,7 +3741,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/12",
-      "updatedAt": "2026/07/18 16:07",
+      "updatedAt": "2026/07/18 17:07",
       "episodeId": "epf7dmvgt5",
       "subtitle": "【肉汁たっぷり絶品ギョーザ】グルメゲームで白熱バトル",
       "likes": "1.5万",
@@ -4325,6 +4325,10 @@
         },
         {
           "hour": 146,
+          "likes": 15000
+        },
+        {
+          "hour": 147,
           "likes": 15000
         }
       ],
@@ -4994,9 +4998,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 49,
-          "elapsedHour": 146,
-          "elapsedRank": 49,
+          "currentRank": 50,
+          "elapsedHour": 147,
+          "elapsedRank": 50,
           "currentPoints": [
             {
               "hour": 4,
@@ -5561,6 +5565,10 @@
             {
               "hour": 146,
               "rank": 49
+            },
+            {
+              "hour": 147,
+              "rank": 50
             }
           ],
           "previousPoints": [
@@ -6147,19 +6155,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 46,
-              "title": "タイムレスマン"
-            },
-            {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 48,
-              "title": "所さんの学校では教えてくれないそこんトコロ！"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 49,
+              "title": "タイムレスマン"
+            },
+            {
+              "rank": 50,
               "title": "timeleszファミリア"
             }
           ]
@@ -6701,15 +6709,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉の壁"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             },
             {
               "rank": 48,
-              "title": "水曜日のダウンタウン"
+              "title": "有吉の壁"
             },
             {
               "rank": 49,
-              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
+              "title": "水曜日のダウンタウン"
             },
             {
               "rank": 50,
@@ -6722,10 +6730,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/07/18 16:07",
+      "updatedAt": "2026/07/18 17:07",
       "episodeId": "ephe7wvovm",
       "subtitle": "チョコプラ・timeleszが「お化け屋敷の恐怖の打ち消し」に挑戦！",
-      "likes": "7571",
+      "likes": "7586",
       "favorites": "5.5万",
       "likePoints": [
         {
@@ -7079,6 +7087,10 @@
         {
           "hour": 88,
           "likes": 7571
+        },
+        {
+          "hour": 89,
+          "likes": 7586
         }
       ],
       "previousLikePoints": [
@@ -7744,7 +7756,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 26,
-          "elapsedHour": 88,
+          "elapsedHour": 89,
           "elapsedRank": 26,
           "currentPoints": [
             {
@@ -8081,6 +8093,10 @@
             },
             {
               "hour": 88,
+              "rank": 26
+            },
+            {
+              "hour": 89,
               "rank": 26
             }
           ],
@@ -8709,11 +8725,11 @@
           "nearbyRanking": [
             {
               "rank": 23,
-              "title": "ぐるぐるナインティナイン"
+              "title": "かのサンド"
             },
             {
               "rank": 24,
-              "title": "有田哲平とコスられない街"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 25,
@@ -8930,19 +8946,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 48,
-              "title": "所さんの学校では教えてくれないそこんトコロ！"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
-              "title": "EIGHT-JAM"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -8951,7 +8967,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/16",
-      "updatedAt": "2026/07/18 16:07",
+      "updatedAt": "2026/07/18 17:07",
       "episodeId": "ept1l8xc0e",
       "subtitle": "【モテ算】恋の方程式を証明せよ※モテ過ぎ注意",
       "likes": "1.0万",
@@ -9203,6 +9219,10 @@
         },
         {
           "hour": 62,
+          "likes": 10000
+        },
+        {
+          "hour": 63,
           "likes": 10000
         }
       ],
@@ -9873,7 +9893,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 41,
-          "elapsedHour": 62,
+          "elapsedHour": 63,
           "elapsedRank": 41,
           "currentPoints": [
             {
@@ -10094,6 +10114,10 @@
             },
             {
               "hour": 62,
+              "rank": 41
+            },
+            {
+              "hour": 63,
               "rank": 41
             }
           ],
@@ -10370,11 +10394,11 @@
           "nearbyRanking": [
             {
               "rank": 38,
-              "title": "テレビ×ミセス"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 39,
-              "title": "ザワつく！ 金曜日"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 40,
@@ -10639,15 +10663,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉の壁"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             },
             {
               "rank": 48,
-              "title": "水曜日のダウンタウン"
+              "title": "有吉の壁"
             },
             {
               "rank": 49,
-              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
+              "title": "水曜日のダウンタウン"
             },
             {
               "rank": 50,
@@ -10660,10 +10684,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/07/18 16:07",
+      "updatedAt": "2026/07/18 17:07",
       "episodeId": "epqf7c2gz6",
       "subtitle": "大食い激細女子…体の秘密!体温に関係?食べる順番で解決?",
-      "likes": "3957",
+      "likes": "3966",
       "favorites": "77.3万",
       "likePoints": [
         {
@@ -11013,6 +11037,10 @@
         {
           "hour": 91,
           "likes": 3957
+        },
+        {
+          "hour": 92,
+          "likes": 3966
         }
       ],
       "previousLikePoints": [],
@@ -11333,19 +11361,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 48,
-              "title": "所さんの学校では教えてくれないそこんトコロ！"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
-              "title": "EIGHT-JAM"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -11537,15 +11565,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉の壁"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             },
             {
               "rank": 48,
-              "title": "水曜日のダウンタウン"
+              "title": "有吉の壁"
             },
             {
               "rank": 49,
-              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
+              "title": "水曜日のダウンタウン"
             },
             {
               "rank": 50,
@@ -11558,10 +11586,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/15",
-      "updatedAt": "2026/07/18 16:07",
+      "updatedAt": "2026/07/18 17:07",
       "episodeId": "ep4m8meokp",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！裏側も見せる「あの夜の音」",
-      "likes": "4269",
+      "likes": "4271",
       "favorites": "9.0万",
       "likePoints": [
         {
@@ -11915,6 +11943,10 @@
         {
           "hour": 87,
           "likes": 4269
+        },
+        {
+          "hour": 88,
+          "likes": 4271
         }
       ],
       "previousLikePoints": [
@@ -12761,19 +12793,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 48,
-              "title": "所さんの学校では教えてくれないそこんトコロ！"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
-              "title": "EIGHT-JAM"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -12793,15 +12825,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉の壁"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             },
             {
               "rank": 48,
-              "title": "水曜日のダウンタウン"
+              "title": "有吉の壁"
             },
             {
               "rank": 49,
-              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
+              "title": "水曜日のダウンタウン"
             },
             {
               "rank": 50,
@@ -12814,10 +12846,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/17",
-      "updatedAt": "2026/07/18 16:07",
+      "updatedAt": "2026/07/18 17:07",
       "episodeId": "epmot9zx4y",
       "subtitle": "第136回 たぬき芝居でめるるピンチ！？GTOスペシャル",
-      "likes": "3170",
+      "likes": "3184",
       "favorites": "71.4万",
       "likePoints": [
         {
@@ -12979,6 +13011,10 @@
         {
           "hour": 40,
           "likes": 3170
+        },
+        {
+          "hour": 41,
+          "likes": 3184
         }
       ],
       "previousLikePoints": [
@@ -13644,7 +13680,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 28,
-          "elapsedHour": 39,
+          "elapsedHour": 40,
           "elapsedRank": 28,
           "currentPoints": [
             {
@@ -13761,6 +13797,10 @@
             },
             {
               "hour": 39,
+              "rank": 28
+            },
+            {
+              "hour": 40,
               "rank": 28
             }
           ],
@@ -13977,11 +14017,11 @@
             },
             {
               "rank": 26,
-              "title": "秘密のケンミンSHOW極"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 27,
-              "title": "ホンマでっか！？TV"
+              "title": "秘密のケンミンSHOW極"
             },
             {
               "rank": 28,
@@ -14174,15 +14214,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉の壁"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             },
             {
               "rank": 48,
-              "title": "水曜日のダウンタウン"
+              "title": "有吉の壁"
             },
             {
               "rank": 49,
-              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
+              "title": "水曜日のダウンタウン"
             },
             {
               "rank": 50,
@@ -14195,10 +14235,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/07/11",
-      "updatedAt": "2026/07/18 16:07",
+      "updatedAt": "2026/07/18 17:07",
       "episodeId": "epwsv29q63",
       "subtitle": "マッサマンvs祝！亀梨和也ギリギリ記憶 前編",
-      "likes": "4130",
+      "likes": "4129",
       "favorites": "78.3万",
       "likePoints": [
         {
@@ -14852,6 +14892,10 @@
         {
           "hour": 165,
           "likes": 4130
+        },
+        {
+          "hour": 166,
+          "likes": 4129
         }
       ],
       "previousLikePoints": [
@@ -16230,19 +16274,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 48,
-              "title": "所さんの学校では教えてくれないそこんトコロ！"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
-              "title": "EIGHT-JAM"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -16639,15 +16683,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉の壁"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             },
             {
               "rank": 48,
-              "title": "水曜日のダウンタウン"
+              "title": "有吉の壁"
             },
             {
               "rank": 49,
-              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
+              "title": "水曜日のダウンタウン"
             },
             {
               "rank": 50,
@@ -16660,7 +16704,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/07/18 16:07",
+      "updatedAt": "2026/07/18 17:07",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
@@ -17324,11 +17368,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "透明な夜に駆ける君と、目に見えない恋をした。"
+              "title": "医師たちの恋愛事情"
             },
             {
               "rank": 48,
-              "title": "韓国ドラマ「ウンヒの涙」"
+              "title": "透明な夜に駆ける君と、目に見えない恋をした。"
             },
             {
               "rank": 49,
@@ -17336,7 +17380,7 @@
             },
             {
               "rank": 50,
-              "title": "新参者"
+              "title": "韓国ドラマ「メンコン 史上最高の私！」"
             }
           ]
         },
@@ -17351,15 +17395,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉の壁"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             },
             {
               "rank": 48,
-              "title": "水曜日のダウンタウン"
+              "title": "有吉の壁"
             },
             {
               "rank": 49,
-              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
+              "title": "水曜日のダウンタウン"
             },
             {
               "rank": 50,
@@ -17372,7 +17416,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/07/18 16:07",
+      "updatedAt": "2026/07/18 17:07",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
       "likes": "1.1万",
@@ -18045,10 +18089,6 @@
       ],
       "previousLikePoints": [
         {
-          "hour": 86,
-          "likes": 10000
-        },
-        {
           "hour": 87,
           "likes": 10000
         },
@@ -18514,19 +18554,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 48,
-              "title": "所さんの学校では教えてくれないそこんトコロ！"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
-              "title": "EIGHT-JAM"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -18610,15 +18650,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉の壁"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             },
             {
               "rank": 48,
-              "title": "水曜日のダウンタウン"
+              "title": "有吉の壁"
             },
             {
               "rank": 49,
-              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
+              "title": "水曜日のダウンタウン"
             },
             {
               "rank": 50,
@@ -18631,7 +18671,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/18 16:07",
+      "updatedAt": "2026/07/18 17:07",
       "episodeId": "eparzrbnab",
       "subtitle": "【4人の休日に密着】",
       "likes": "1779",
@@ -20046,11 +20086,11 @@
             },
             {
               "rank": 49,
-              "title": "スクール革命！"
+              "title": "ミキティダイニング"
             },
             {
               "rank": 50,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "スクール革命！"
             }
           ]
         },
@@ -20065,19 +20105,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 48,
-              "title": "所さんの学校では教えてくれないそこんトコロ！"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
-              "title": "EIGHT-JAM"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -20086,11 +20126,11 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/07/15",
-      "updatedAt": "2026/07/18 16:07",
+      "updatedAt": "2026/07/18 17:07",
       "episodeId": "ep15rw0yyj",
       "subtitle": "#2 世界で最も純粋な空間",
       "likes": "1.3万",
-      "favorites": "59.6万",
+      "favorites": "59.7万",
       "likePoints": [
         {
           "hour": 1,
@@ -20354,6 +20394,10 @@
         },
         {
           "hour": 66,
+          "likes": 13000
+        },
+        {
+          "hour": 67,
           "likes": 13000
         }
       ],
@@ -21036,7 +21080,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 3,
-          "elapsedHour": 66,
+          "elapsedHour": 67,
           "elapsedRank": 3,
           "currentPoints": [
             {
@@ -21269,6 +21313,10 @@
             },
             {
               "hour": 66,
+              "rank": 3
+            },
+            {
+              "hour": 67,
               "rank": 3
             }
           ],
@@ -21949,7 +21997,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 4,
-          "elapsedHour": 66,
+          "elapsedHour": 67,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -22182,6 +22230,10 @@
             },
             {
               "hour": 66,
+              "rank": 4
+            },
+            {
+              "hour": 67,
               "rank": 4
             }
           ],
@@ -22863,11 +22915,11 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/16",
-      "updatedAt": "2026/07/18 16:07",
+      "updatedAt": "2026/07/18 17:07",
       "episodeId": "epigi3zo57",
       "subtitle": "第2話 夢さえ描けない現実・・・嘘から始まる恋の代償",
       "likes": "1.6万",
-      "favorites": "58.8万",
+      "favorites": "58.9万",
       "likePoints": [
         {
           "hour": 1,
@@ -23035,6 +23087,10 @@
         },
         {
           "hour": 42,
+          "likes": 16000
+        },
+        {
+          "hour": 43,
           "likes": 16000
         }
       ],
@@ -23713,7 +23769,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 2,
-          "elapsedHour": 42,
+          "elapsedHour": 43,
           "elapsedRank": 2,
           "currentPoints": [
             {
@@ -23850,6 +23906,10 @@
             },
             {
               "hour": 42,
+              "rank": 2
+            },
+            {
+              "hour": 43,
               "rank": 2
             }
           ],
@@ -24530,7 +24590,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 2,
-          "elapsedHour": 42,
+          "elapsedHour": 43,
           "elapsedRank": 2,
           "currentPoints": [
             {
@@ -24667,6 +24727,10 @@
             },
             {
               "hour": 42,
+              "rank": 2
+            },
+            {
+              "hour": 43,
               "rank": 2
             }
           ],
@@ -25348,10 +25412,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/07/18 16:07",
+      "updatedAt": "2026/07/18 17:07",
       "episodeId": "ep0ks97u1m",
       "subtitle": "SixTONESジェシーがアーチェリー公式大会出場＆音を出さずに食べろ！神業サイレント",
-      "likes": "4969",
+      "likes": "4990",
       "favorites": "12.5万",
       "likePoints": [
         {
@@ -25725,6 +25789,10 @@
         {
           "hour": 93,
           "likes": 4969
+        },
+        {
+          "hour": 94,
+          "likes": 4990
         }
       ],
       "previousLikePoints": [
@@ -26409,9 +26477,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 32,
-          "elapsedHour": 93,
-          "elapsedRank": 32,
+          "currentRank": 33,
+          "elapsedHour": 94,
+          "elapsedRank": 33,
           "currentPoints": [
             {
               "hour": 2,
@@ -26780,6 +26848,10 @@
             {
               "hour": 93,
               "rank": 32
+            },
+            {
+              "hour": 94,
+              "rank": 33
             }
           ],
           "previousPoints": [
@@ -27206,19 +27278,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 29,
-              "title": "ザ！鉄腕！DASH!!"
-            },
-            {
               "rank": 30,
-              "title": "世界の秘境で大発見！日本食堂"
-            },
-            {
-              "rank": 31,
               "title": "くりぃむしちゅーの熊本どぎゃん!?"
             },
             {
+              "rank": 31,
+              "title": "ザ！鉄腕！DASH!!"
+            },
+            {
               "rank": 32,
+              "title": "よるのブランチ"
+            },
+            {
+              "rank": 33,
               "title": "THE神業チャレンジ"
             }
           ]
@@ -27284,19 +27356,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 48,
-              "title": "所さんの学校では教えてくれないそこんトコロ！"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
-              "title": "EIGHT-JAM"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -27305,10 +27377,10 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/18 16:07",
+      "updatedAt": "2026/07/18 17:07",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
-      "likes": "4381",
+      "likes": "4383",
       "favorites": "1.8万",
       "likePoints": [
         {
@@ -28298,19 +28370,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "住人十色～家の数だけある 家族のカタチ～"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 48,
-              "title": "帰れマンデー見っけ隊!!"
-            },
-            {
-              "rank": 49,
               "title": "バナナマンの早起きせっかくグルメ!!"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "上沼・高田のクギズケ！"
+            },
+            {
+              "rank": 50,
+              "title": "ごぶごぶ"
             }
           ]
         },
@@ -28325,19 +28397,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 48,
-              "title": "所さんの学校では教えてくれないそこんトコロ！"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
-              "title": "EIGHT-JAM"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -28346,7 +28418,7 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/07/18 16:07",
+      "updatedAt": "2026/07/18 17:07",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "2.9万",
@@ -29335,19 +29407,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 48,
-              "title": "所さんの学校では教えてくれないそこんトコロ！"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
-              "title": "EIGHT-JAM"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -29675,15 +29747,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉の壁"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             },
             {
               "rank": 48,
-              "title": "水曜日のダウンタウン"
+              "title": "有吉の壁"
             },
             {
               "rank": 49,
-              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
+              "title": "水曜日のダウンタウン"
             },
             {
               "rank": 50,
@@ -29696,7 +29768,7 @@
     "sr2cbxi72h": {
       "programTitle": "CDTV ライブ! ライブ!",
       "broadcastDate": "2026/07/13",
-      "updatedAt": "2026/07/18 16:07",
+      "updatedAt": "2026/07/18 17:07",
       "episodeId": "epfwjqwdt1",
       "subtitle": "キンプリ★timelesz★Number_i★乃木坂★≠ME★トニセン★KiiiKiii",
       "likes": "1.8万",
@@ -30165,6 +30237,10 @@
         {
           "hour": 117,
           "likes": 18000
+        },
+        {
+          "hour": 118,
+          "likes": 18000
         }
       ],
       "previousLikePoints": [],
@@ -30173,7 +30249,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 34,
-          "elapsedHour": 117,
+          "elapsedHour": 118,
           "elapsedRank": 34,
           "currentPoints": [
             {
@@ -30635,21 +30711,25 @@
             {
               "hour": 117,
               "rank": 34
+            },
+            {
+              "hour": 118,
+              "rank": 34
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 31,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
-            },
-            {
-              "rank": 32,
               "title": "千原ジュニアの座王"
             },
             {
+              "rank": 32,
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+            },
+            {
               "rank": 33,
-              "title": "これ余談なんですけど・・・"
+              "title": "嗚呼!!みんなの動物園"
             },
             {
               "rank": 34,
@@ -31009,15 +31089,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉の壁"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             },
             {
               "rank": 48,
-              "title": "水曜日のダウンタウン"
+              "title": "有吉の壁"
             },
             {
               "rank": 49,
-              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
+              "title": "水曜日のダウンタウン"
             },
             {
               "rank": 50,
@@ -31030,10 +31110,10 @@
     "sr0vdmdczk": {
       "programTitle": "華大さんと千鳥くん",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/07/18 16:07",
+      "updatedAt": "2026/07/18 17:07",
       "episodeId": "epnojxqx6y",
       "subtitle": "timelesz寺西スパイ初参戦！ビリビリ&風船サッカーで漢･山内発動!?",
-      "likes": "8479",
+      "likes": "8504",
       "favorites": "162.4万",
       "likePoints": [
         {
@@ -31395,6 +31475,10 @@
         {
           "hour": 90,
           "likes": 8479
+        },
+        {
+          "hour": 91,
+          "likes": 8504
         }
       ],
       "previousLikePoints": [],
@@ -31403,7 +31487,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 8,
-          "elapsedHour": 90,
+          "elapsedHour": 91,
           "elapsedRank": 8,
           "currentPoints": [
             {
@@ -31761,6 +31845,10 @@
             {
               "hour": 90,
               "rank": 8
+            },
+            {
+              "hour": 91,
+              "rank": 8
             }
           ],
           "previousPoints": [],
@@ -31787,7 +31875,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 25,
-          "elapsedHour": 90,
+          "elapsedHour": 91,
           "elapsedRank": 25,
           "currentPoints": [
             {
@@ -32141,17 +32229,21 @@
             {
               "hour": 90,
               "rank": 25
+            },
+            {
+              "hour": 91,
+              "rank": 25
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 22,
-              "title": "夫婦と16歳～狂気の隣人～"
+              "title": "夫に不倫をお願いされました"
             },
             {
               "rank": 23,
-              "title": "A-Studio＋"
+              "title": "夫婦と16歳～狂気の隣人～"
             },
             {
               "rank": 24,
@@ -32168,10 +32260,10 @@
     "sryizgwr4y": {
       "programTitle": "かまいガチ",
       "broadcastDate": "2026/07/15",
-      "updatedAt": "2026/07/18 16:07",
+      "updatedAt": "2026/07/18 17:07",
       "episodeId": "epe5fqq205",
       "subtitle": "45歳山内が100m走 人生最速へ挑戦！高校生の自分を超えろ！4ヵ月ガチ特訓",
-      "likes": "4727",
+      "likes": "4750",
       "favorites": "165.1万",
       "likePoints": [
         {
@@ -32397,6 +32489,10 @@
         {
           "hour": 65,
           "likes": 4727
+        },
+        {
+          "hour": 66,
+          "likes": 4750
         }
       ],
       "previousLikePoints": [],
@@ -32404,9 +32500,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 13,
-          "elapsedHour": 64,
-          "elapsedRank": 13,
+          "currentRank": 14,
+          "elapsedHour": 65,
+          "elapsedRank": 14,
           "currentPoints": [
             {
               "hour": 9,
@@ -32631,14 +32727,14 @@
             {
               "hour": 64,
               "rank": 13
+            },
+            {
+              "hour": 65,
+              "rank": 14
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
-            {
-              "rank": 10,
-              "title": "さんまのまんま"
-            },
             {
               "rank": 11,
               "title": "限界突破！やってM!LK"
@@ -32649,6 +32745,10 @@
             },
             {
               "rank": 13,
+              "title": "探偵！ナイトスクープ"
+            },
+            {
+              "rank": 14,
               "title": "かまいガチ"
             }
           ]
@@ -32656,9 +32756,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 32,
-          "elapsedHour": 64,
-          "elapsedRank": 32,
+          "currentRank": 33,
+          "elapsedHour": 65,
+          "elapsedRank": 33,
           "currentPoints": [
             {
               "hour": 12,
@@ -32871,14 +32971,14 @@
             {
               "hour": 64,
               "rank": 32
+            },
+            {
+              "hour": 65,
+              "rank": 33
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
-            {
-              "rank": 29,
-              "title": "限界突破！やってM!LK"
-            },
             {
               "rank": 30,
               "title": "世界の果てまでイッテQ！"
@@ -32889,6 +32989,10 @@
             },
             {
               "rank": 32,
+              "title": "探偵！ナイトスクープ"
+            },
+            {
+              "rank": 33,
               "title": "かまいガチ"
             }
           ]
