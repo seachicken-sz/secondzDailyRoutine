@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/19 17:07",
+  "updatedAt": "2026/07/19 18:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/10",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "ep7a819uf1",
       "subtitle": "timelesz100＆祝・菊池風磨復帰企画",
       "likes": "1.8万",
@@ -2667,11 +2667,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
@@ -2679,7 +2679,7 @@
             },
             {
               "rank": 50,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -3720,7 +3720,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Google Pixel presents ANOTHER SKY"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
@@ -3732,7 +3732,7 @@
             },
             {
               "rank": 50,
-              "title": "晩酌の流儀５"
+              "title": "本好きの下剋上 領主の養女"
             }
           ]
         }
@@ -3741,10 +3741,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/19",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "ep236eth8r",
       "subtitle": "【渋谷SP】パルコ・109・タワーレコードの秘密とは",
-      "likes": "2360",
+      "likes": "2995",
       "favorites": "33.7万",
       "likePoints": [
         {
@@ -3758,6 +3758,10 @@
         {
           "hour": 3,
           "likes": 2360
+        },
+        {
+          "hour": 4,
+          "likes": 2995
         }
       ],
       "previousLikePoints": [
@@ -4430,10 +4434,15 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 50,
+          "elapsedHour": 4,
+          "elapsedRank": 50,
+          "currentPoints": [
+            {
+              "hour": 4,
+              "rank": 50
+            }
+          ],
           "previousPoints": [
             {
               "hour": 4,
@@ -5075,11 +5084,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
@@ -5087,7 +5096,7 @@
             },
             {
               "rank": 50,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -5367,7 +5376,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Google Pixel presents ANOTHER SKY"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
@@ -5379,7 +5388,7 @@
             },
             {
               "rank": 50,
-              "title": "晩酌の流儀５"
+              "title": "本好きの下剋上 領主の養女"
             }
           ]
         }
@@ -5388,10 +5397,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "ephe7wvovm",
       "subtitle": "チョコプラ・timeleszが「お化け屋敷の恐怖の打ち消し」に挑戦！",
-      "likes": "7913",
+      "likes": "7926",
       "favorites": "5.5万",
       "likePoints": [
         {
@@ -5845,6 +5854,10 @@
         {
           "hour": 113,
           "likes": 7913
+        },
+        {
+          "hour": 114,
+          "likes": 7926
         }
       ],
       "previousLikePoints": [
@@ -6509,9 +6522,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 42,
-          "elapsedHour": 113,
-          "elapsedRank": 42,
+          "currentRank": 43,
+          "elapsedHour": 114,
+          "elapsedRank": 43,
           "currentPoints": [
             {
               "hour": 5,
@@ -6948,6 +6961,10 @@
             {
               "hour": 113,
               "rank": 42
+            },
+            {
+              "hour": 114,
+              "rank": 43
             }
           ],
           "previousPoints": [
@@ -7574,19 +7591,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 39,
+              "rank": 40,
               "title": "シューイチ"
             },
             {
-              "rank": 40,
-              "title": "アンタッチャブルでやらせてもらってます"
-            },
-            {
               "rank": 41,
-              "title": "本日はダイアンなり！シーズン3"
+              "title": "全国ボロいい宿"
             },
             {
               "rank": 42,
+              "title": "ゴルフ侍、見参！"
+            },
+            {
+              "rank": 43,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -7796,11 +7813,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
@@ -7808,7 +7825,7 @@
             },
             {
               "rank": 50,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -7817,7 +7834,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/16",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "ept1l8xc0e",
       "subtitle": "【モテ算】恋の方程式を証明せよ※モテ過ぎ注意",
       "likes": "1.0万",
@@ -8169,6 +8186,10 @@
         },
         {
           "hour": 87,
+          "likes": 10000
+        },
+        {
+          "hour": 88,
           "likes": 10000
         }
       ],
@@ -9360,11 +9381,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
@@ -9372,7 +9393,7 @@
             },
             {
               "rank": 50,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -9629,7 +9650,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Google Pixel presents ANOTHER SKY"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
@@ -9641,7 +9662,7 @@
             },
             {
               "rank": 50,
-              "title": "晩酌の流儀５"
+              "title": "本好きの下剋上 領主の養女"
             }
           ]
         }
@@ -9650,10 +9671,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "epqf7c2gz6",
       "subtitle": "大食い激細女子…体の秘密!体温に関係?食べる順番で解決?",
-      "likes": "4163",
+      "likes": "4174",
       "favorites": "77.3万",
       "likePoints": [
         {
@@ -10103,6 +10124,10 @@
         {
           "hour": 116,
           "likes": 4163
+        },
+        {
+          "hour": 117,
+          "likes": 4174
         }
       ],
       "previousLikePoints": [],
@@ -10423,11 +10448,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
@@ -10435,7 +10460,7 @@
             },
             {
               "rank": 50,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -10627,7 +10652,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Google Pixel presents ANOTHER SKY"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
@@ -10639,7 +10664,7 @@
             },
             {
               "rank": 50,
-              "title": "晩酌の流儀５"
+              "title": "本好きの下剋上 領主の養女"
             }
           ]
         }
@@ -10648,10 +10673,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/15",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "ep4m8meokp",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！裏側も見せる「あの夜の音」",
-      "likes": "4466",
+      "likes": "4475",
       "favorites": "9.0万",
       "likePoints": [
         {
@@ -11105,6 +11130,10 @@
         {
           "hour": 112,
           "likes": 4466
+        },
+        {
+          "hour": 113,
+          "likes": 4475
         }
       ],
       "previousLikePoints": [
@@ -11951,11 +11980,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
@@ -11963,7 +11992,7 @@
             },
             {
               "rank": 50,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -11983,7 +12012,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Google Pixel presents ANOTHER SKY"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
@@ -11995,7 +12024,7 @@
             },
             {
               "rank": 50,
-              "title": "晩酌の流儀５"
+              "title": "本好きの下剋上 領主の養女"
             }
           ]
         }
@@ -12004,10 +12033,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/17",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "epmot9zx4y",
       "subtitle": "第136回 たぬき芝居でめるるピンチ！？GTOスペシャル",
-      "likes": "3650",
+      "likes": "3672",
       "favorites": "71.4万",
       "likePoints": [
         {
@@ -12269,6 +12298,10 @@
         {
           "hour": 65,
           "likes": 3650
+        },
+        {
+          "hour": 66,
+          "likes": 3672
         }
       ],
       "previousLikePoints": [
@@ -13347,11 +13380,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
@@ -13359,7 +13392,7 @@
             },
             {
               "rank": 50,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -13548,7 +13581,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Google Pixel presents ANOTHER SKY"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
@@ -13560,7 +13593,7 @@
             },
             {
               "rank": 50,
-              "title": "晩酌の流儀５"
+              "title": "本好きの下剋上 領主の養女"
             }
           ]
         }
@@ -13569,10 +13602,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/07/11",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "epwsv29q63",
       "subtitle": "マッサマンvs祝！亀梨和也ギリギリ記憶 前編",
-      "likes": "4250",
+      "likes": "4253",
       "favorites": "78.3万",
       "likePoints": [
         {
@@ -15624,11 +15657,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
@@ -15636,7 +15669,7 @@
             },
             {
               "rank": 50,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -16033,7 +16066,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Google Pixel presents ANOTHER SKY"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
@@ -16045,7 +16078,7 @@
             },
             {
               "rank": 50,
-              "title": "晩酌の流儀５"
+              "title": "本好きの下剋上 領主の養女"
             }
           ]
         }
@@ -16054,7 +16087,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
@@ -16718,7 +16751,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ドラマ「永久少年 Eternal Boys」"
+              "title": "左目探偵EYE"
             },
             {
               "rank": 48,
@@ -16745,7 +16778,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Google Pixel presents ANOTHER SKY"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
@@ -16757,7 +16790,7 @@
             },
             {
               "rank": 50,
-              "title": "晩酌の流儀５"
+              "title": "本好きの下剋上 領主の養女"
             }
           ]
         }
@@ -16766,7 +16799,7 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
       "likes": "1.1万",
@@ -17439,10 +17472,6 @@
       ],
       "previousLikePoints": [
         {
-          "hour": 111,
-          "likes": 10000
-        },
-        {
           "hour": 112,
           "likes": 10000
         },
@@ -17808,11 +17837,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
@@ -17820,7 +17849,7 @@
             },
             {
               "rank": 50,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -17904,7 +17933,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Google Pixel presents ANOTHER SKY"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
@@ -17916,7 +17945,7 @@
             },
             {
               "rank": 50,
-              "title": "晩酌の流儀５"
+              "title": "本好きの下剋上 領主の養女"
             }
           ]
         }
@@ -17925,7 +17954,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "eparzrbnab",
       "subtitle": "【4人の休日に密着】",
       "likes": "1779",
@@ -19332,11 +19361,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "草彅やすともの うさぎとかめ"
             },
             {
               "rank": 48,
-              "title": "草彅やすともの うさぎとかめ"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 49,
@@ -19359,11 +19388,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
@@ -19371,7 +19400,7 @@
             },
             {
               "rank": 50,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -19380,7 +19409,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/07/15",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "ep15rw0yyj",
       "subtitle": "#2 世界で最も純粋な空間",
       "likes": "1.4万",
@@ -19748,6 +19777,10 @@
         },
         {
           "hour": 91,
+          "likes": 14000
+        },
+        {
+          "hour": 92,
           "likes": 14000
         }
       ],
@@ -20430,7 +20463,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 7,
-          "elapsedHour": 91,
+          "elapsedHour": 92,
           "elapsedRank": 7,
           "currentPoints": [
             {
@@ -20763,6 +20796,10 @@
             },
             {
               "hour": 91,
+              "rank": 7
+            },
+            {
+              "hour": 92,
               "rank": 7
             }
           ],
@@ -21447,7 +21484,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 9,
-          "elapsedHour": 91,
+          "elapsedHour": 92,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -21780,6 +21817,10 @@
             },
             {
               "hour": 91,
+              "rank": 9
+            },
+            {
+              "hour": 92,
               "rank": 9
             }
           ],
@@ -22461,7 +22502,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/16",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "epigi3zo57",
       "subtitle": "第2話 夢さえ描けない現実・・・嘘から始まる恋の代償",
       "likes": "1.9万",
@@ -22733,6 +22774,10 @@
         },
         {
           "hour": 67,
+          "likes": 19000
+        },
+        {
+          "hour": 68,
           "likes": 19000
         }
       ],
@@ -23411,7 +23456,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 3,
-          "elapsedHour": 67,
+          "elapsedHour": 68,
           "elapsedRank": 3,
           "currentPoints": [
             {
@@ -23648,6 +23693,10 @@
             },
             {
               "hour": 67,
+              "rank": 3
+            },
+            {
+              "hour": 68,
               "rank": 3
             }
           ],
@@ -24331,9 +24380,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 3,
-          "elapsedHour": 67,
-          "elapsedRank": 3,
+          "currentRank": 4,
+          "elapsedHour": 68,
+          "elapsedRank": 4,
           "currentPoints": [
             {
               "hour": 9,
@@ -24570,6 +24619,10 @@
             {
               "hour": 67,
               "rank": 3
+            },
+            {
+              "hour": 68,
+              "rank": 4
             }
           ],
           "previousPoints": [
@@ -25245,6 +25298,10 @@
             },
             {
               "rank": 3,
+              "title": "音楽の日2026"
+            },
+            {
+              "rank": 4,
               "title": "ラストノート"
             }
           ]
@@ -25254,10 +25311,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "ep0ks97u1m",
       "subtitle": "SixTONESジェシーがアーチェリー公式大会出場＆音を出さずに食べろ！神業サイレント",
-      "likes": "5282",
+      "likes": "5297",
       "favorites": "12.5万",
       "likePoints": [
         {
@@ -25731,6 +25788,10 @@
         {
           "hour": 118,
           "likes": 5282
+        },
+        {
+          "hour": 119,
+          "likes": 5297
         }
       ],
       "previousLikePoints": [
@@ -27313,15 +27374,15 @@
             },
             {
               "rank": 48,
-              "title": "ウラマヨ！"
-            },
-            {
-              "rank": 49,
               "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
+              "rank": 49,
+              "title": "上沼・高田のクギズケ！"
+            },
+            {
               "rank": 50,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "発見！仰天！！プレミアもん！！！ 土曜はダメよ！"
             }
           ]
         },
@@ -27386,11 +27447,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
@@ -27398,7 +27459,7 @@
             },
             {
               "rank": 50,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -27407,7 +27468,7 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
       "likes": "4566",
@@ -28404,15 +28465,15 @@
             },
             {
               "rank": 48,
-              "title": "ウラマヨ！"
-            },
-            {
-              "rank": 49,
               "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
+              "rank": 49,
+              "title": "上沼・高田のクギズケ！"
+            },
+            {
               "rank": 50,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "発見！仰天！！プレミアもん！！！ 土曜はダメよ！"
             }
           ]
         },
@@ -28427,11 +28488,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
@@ -28439,7 +28500,7 @@
             },
             {
               "rank": 50,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -28448,7 +28509,7 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "2.9万",
@@ -29437,11 +29498,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
@@ -29449,7 +29510,7 @@
             },
             {
               "rank": 50,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -29777,7 +29838,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Google Pixel presents ANOTHER SKY"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
@@ -29789,7 +29850,7 @@
             },
             {
               "rank": 50,
-              "title": "晩酌の流儀５"
+              "title": "本好きの下剋上 領主の養女"
             }
           ]
         }
@@ -29798,7 +29859,7 @@
     "sr2cbxi72h": {
       "programTitle": "CDTV ライブ! ライブ!",
       "broadcastDate": "2026/07/13",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "epfwjqwdt1",
       "subtitle": "キンプリ★timelesz★Number_i★乃木坂★≠ME★トニセン★KiiiKiii",
       "likes": "1.8万",
@@ -30367,6 +30428,10 @@
         {
           "hour": 142,
           "likes": 18000
+        },
+        {
+          "hour": 143,
+          "likes": 18000
         }
       ],
       "previousLikePoints": [],
@@ -30374,9 +30439,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 43,
-          "elapsedHour": 142,
-          "elapsedRank": 43,
+          "currentRank": 42,
+          "elapsedHour": 143,
+          "elapsedRank": 42,
           "currentPoints": [
             {
               "hour": 3,
@@ -30937,24 +31002,28 @@
             {
               "hour": 142,
               "rank": 43
+            },
+            {
+              "hour": 143,
+              "rank": 42
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
+              "rank": 39,
+              "title": "千原ジュニアの座王"
+            },
+            {
               "rank": 40,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 41,
-              "title": "あざとくて何が悪いの？"
-            },
-            {
-              "rank": 42,
               "title": "出没！アド街ック天国"
             },
             {
-              "rank": 43,
+              "rank": 41,
+              "title": "THE突破ファイル"
+            },
+            {
+              "rank": 42,
               "title": "CDTV ライブ! ライブ!"
             }
           ]
@@ -31311,7 +31380,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Google Pixel presents ANOTHER SKY"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
@@ -31323,7 +31392,7 @@
             },
             {
               "rank": 50,
-              "title": "晩酌の流儀５"
+              "title": "本好きの下剋上 領主の養女"
             }
           ]
         }
@@ -31332,10 +31401,10 @@
     "sr0vdmdczk": {
       "programTitle": "華大さんと千鳥くん",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "epnojxqx6y",
       "subtitle": "timelesz寺西スパイ初参戦！ビリビリ&風船サッカーで漢･山内発動!?",
-      "likes": "9017",
+      "likes": "9042",
       "favorites": "162.5万",
       "likePoints": [
         {
@@ -31797,6 +31866,10 @@
         {
           "hour": 115,
           "likes": 9017
+        },
+        {
+          "hour": 116,
+          "likes": 9042
         }
       ],
       "previousLikePoints": [],
@@ -31805,7 +31878,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 15,
-          "elapsedHour": 115,
+          "elapsedHour": 116,
           "elapsedRank": 15,
           "currentPoints": [
             {
@@ -32263,21 +32336,25 @@
             {
               "hour": 115,
               "rank": 15
+            },
+            {
+              "hour": 116,
+              "rank": 15
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 12,
-              "title": "トークィーンズ"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 13,
-              "title": "かまいたちの知らんけど"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 14,
-              "title": "世界の果てまでイッテQ！"
+              "title": "トークィーンズ"
             },
             {
               "rank": 15,
@@ -32289,7 +32366,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 35,
-          "elapsedHour": 115,
+          "elapsedHour": 116,
           "elapsedRank": 35,
           "currentPoints": [
             {
@@ -32743,21 +32820,25 @@
             {
               "hour": 115,
               "rank": 35
+            },
+            {
+              "hour": 116,
+              "rank": 35
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 32,
-              "title": "今夜もシリアルキラーと待ち合わせ"
+              "title": "クレヨンしんちゃん"
             },
             {
               "rank": 33,
-              "title": "ジャンクSPORTS"
+              "title": "夫に不倫をお願いされました"
             },
             {
               "rank": 34,
-              "title": "夫に不倫をお願いされました"
+              "title": "ジャンクSPORTS"
             },
             {
               "rank": 35,
@@ -32770,10 +32851,10 @@
     "sryizgwr4y": {
       "programTitle": "かまいガチ",
       "broadcastDate": "2026/07/15",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "epe5fqq205",
       "subtitle": "45歳山内が100m走 人生最速へ挑戦！高校生の自分を超えろ！4ヵ月ガチ特訓",
-      "likes": "5209",
+      "likes": "5226",
       "favorites": "165.2万",
       "likePoints": [
         {
@@ -33099,6 +33180,10 @@
         {
           "hour": 90,
           "likes": 5209
+        },
+        {
+          "hour": 91,
+          "likes": 5226
         }
       ],
       "previousLikePoints": [],
@@ -33107,7 +33192,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 29,
-          "elapsedHour": 89,
+          "elapsedHour": 90,
           "elapsedRank": 29,
           "currentPoints": [
             {
@@ -33433,21 +33518,25 @@
             {
               "hour": 89,
               "rank": 29
+            },
+            {
+              "hour": 90,
+              "rank": 29
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 26,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 27,
-              "title": "限界突破！やってM!LK"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 28,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 29,
@@ -33755,7 +33844,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Google Pixel presents ANOTHER SKY"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
@@ -33767,7 +33856,7 @@
             },
             {
               "rank": 50,
-              "title": "晩酌の流儀５"
+              "title": "本好きの下剋上 領主の養女"
             }
           ]
         }
@@ -33776,10 +33865,10 @@
     "srqd4f3ihj": {
       "programTitle": "Google Pixel presents ANOTHER SKY",
       "broadcastDate": "2026/07/18",
-      "updatedAt": "2026/07/19 17:07",
+      "updatedAt": "2026/07/19 18:07",
       "episodeId": "epeecl4cvn",
       "subtitle": "ゲスト：佐藤勝利／イギリス・ロンドン",
-      "likes": "5262",
+      "likes": "5420",
       "favorites": "49.1万",
       "likePoints": [
         {
@@ -33833,6 +33922,10 @@
         {
           "hour": 18,
           "likes": 5262
+        },
+        {
+          "hour": 19,
+          "likes": 5420
         }
       ],
       "previousLikePoints": [],
@@ -33848,11 +33941,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "オモウマい店"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "オモウマい店"
             },
             {
               "rank": 49,
@@ -33860,16 +33953,16 @@
             },
             {
               "rank": 50,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "timeleszファミリア"
             }
           ]
         },
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 47,
-          "elapsedHour": 18,
-          "elapsedRank": 47,
+          "currentRank": 44,
+          "elapsedHour": 19,
+          "elapsedRank": 44,
           "currentPoints": [
             {
               "hour": 17,
@@ -33878,24 +33971,28 @@
             {
               "hour": 18,
               "rank": 47
+            },
+            {
+              "hour": 19,
+              "rank": 44
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 44,
+              "rank": 41,
+              "title": "夫婦と16歳～狂気の隣人～"
+            },
+            {
+              "rank": 42,
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
+            },
+            {
+              "rank": 43,
               "title": "さんまのお笑い向上委員会"
             },
             {
-              "rank": 45,
-              "title": "なにわ男子の逆転男子"
-            },
-            {
-              "rank": 46,
-              "title": "未婚詐欺 私の知らない彼の顔"
-            },
-            {
-              "rank": 47,
+              "rank": 44,
               "title": "Google Pixel presents ANOTHER SKY"
             }
           ]
