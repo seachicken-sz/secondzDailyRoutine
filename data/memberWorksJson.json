@@ -287,16 +287,6 @@
     "platformUrl": "https://tver.jp/series/srzvz0lo89"
   },
   {
-    "title": "CDTV ライブ! ライブ!",
-    "workType": "tv",
-    "members": [
-      "all"
-    ],
-    "weekday": 1,
-    "time": "19:00",
-    "platformUrl": "https://tver.jp/series/sr2cbxi72h"
-  },
-  {
     "title": "地球まるごと大実験 ネイチャーティーチャー",
     "workType": "tv",
     "members": [
@@ -438,6 +428,28 @@
     "platformUrl": "https://tver.jp/series/srqd4f3ihj"
   },
   {
+    "title": "踊る！さんま御殿!!",
+    "workType": "tv",
+    "members": [
+      "hashimoto"
+    ],
+    "weekday": 2,
+    "time": "20:00",
+    "platformUrl": "https://tver.jp/series/sr6elshzoq"
+  },
+  {
+    "title": "土曜はナニする",
+    "workType": "tv",
+    "members": [
+      "hashimoto",
+      "inomata",
+      "shinozuka"
+    ],
+    "weekday": 6,
+    "time": "08:30",
+    "platformUrl": "https://tver.jp/series/srwjupn0u6"
+  },
+  {
     "title": "アポロの歌",
     "workType": "tv",
     "members": [
@@ -499,14 +511,5 @@
     "weekday": 1,
     "time": "11:15",
     "platformUrl": "https://tver.jp/series/srdic8j8lz"
-  },
-  {
-    "title": "踊る！さんま御殿!!",
-    "workType": "tv",
-    "members": [
-      "hashimoto"
-    ],
-    "weekday": 2,
-    "platformUrl": "https://tver.jp/series/sr6elshzoq"
   }
 ]
