@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/25 22:07",
+  "updatedAt": "2026/07/25 23:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/24",
-      "updatedAt": "2026/07/25 22:07",
+      "updatedAt": "2026/07/25 23:07",
       "episodeId": "epe8nmzldb",
       "subtitle": "1000円差し入れマン",
       "likes": "1.1万",
@@ -104,6 +104,10 @@
         },
         {
           "hour": 24,
+          "likes": 11000
+        },
+        {
+          "hour": 25,
           "likes": 11000
         }
       ],
@@ -790,7 +794,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 3,
-          "elapsedHour": 24,
+          "elapsedHour": 25,
           "elapsedRank": 3,
           "currentPoints": [
             {
@@ -875,6 +879,10 @@
             },
             {
               "hour": 24,
+              "rank": 3
+            },
+            {
+              "hour": 25,
               "rank": 3
             }
           ],
@@ -1562,9 +1570,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 11,
-          "elapsedHour": 24,
-          "elapsedRank": 11,
+          "currentRank": 10,
+          "elapsedHour": 25,
+          "elapsedRank": 10,
           "currentPoints": [
             {
               "hour": 9,
@@ -1629,6 +1637,10 @@
             {
               "hour": 24,
               "rank": 11
+            },
+            {
+              "hour": 25,
+              "rank": 10
             }
           ],
           "previousPoints": [
@@ -2043,6 +2055,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 7,
+              "title": "GTO"
+            },
+            {
               "rank": 8,
               "title": "水曜日のダウンタウン"
             },
@@ -2052,10 +2068,6 @@
             },
             {
               "rank": 10,
-              "title": "ファーストクライ 母子救命救急班"
-            },
-            {
-              "rank": 11,
               "title": "タイムレスマン"
             }
           ]
@@ -2065,7 +2077,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/19",
-      "updatedAt": "2026/07/25 22:07",
+      "updatedAt": "2026/07/25 23:07",
       "episodeId": "ep236eth8r",
       "subtitle": "【渋谷SP】パルコ・109・タワーレコードの秘密とは",
       "likes": "1.4万",
@@ -2665,6 +2677,10 @@
         },
         {
           "hour": 152,
+          "likes": 14000
+        },
+        {
+          "hour": 153,
           "likes": 14000
         }
       ],
@@ -4432,15 +4448,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "賞金先渡しクイズ SAVE MONEY"
             },
             {
               "rank": 49,
-              "title": "なにわ男子の逆転男子"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 50,
@@ -4965,19 +4981,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 48,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 49,
               "title": "千原ジュニアの座王"
             },
             {
+              "rank": 48,
+              "title": "教えて！ニュースライブ 正義のミカタ"
+            },
+            {
+              "rank": 49,
+              "title": "名探偵コナン"
+            },
+            {
               "rank": 50,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -4986,10 +5002,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/07/25 22:07",
+      "updatedAt": "2026/07/25 23:07",
       "episodeId": "epkbzqd4p5",
       "subtitle": "「脳科学でお化けは怖くなくなるのか！？」でtimeleszが仕掛け人に挑む！",
-      "likes": "8652",
+      "likes": "8667",
       "favorites": "5.6万",
       "likePoints": [
         {
@@ -5363,6 +5379,10 @@
         {
           "hour": 94,
           "likes": 8652
+        },
+        {
+          "hour": 95,
+          "likes": 8667
         }
       ],
       "previousLikePoints": [
@@ -6032,7 +6052,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 43,
-          "elapsedHour": 94,
+          "elapsedHour": 95,
           "elapsedRank": 43,
           "currentPoints": [
             {
@@ -6385,6 +6405,10 @@
             },
             {
               "hour": 94,
+              "rank": 43
+            },
+            {
+              "hour": 95,
               "rank": 43
             }
           ],
@@ -7041,7 +7065,7 @@
           "nearbyRanking": [
             {
               "rank": 40,
-              "title": "IMP.の「できません」は言いません"
+              "title": "ヒロシのぼっちキャンプ Season13"
             },
             {
               "rank": 41,
@@ -7049,7 +7073,7 @@
             },
             {
               "rank": 42,
-              "title": "サンドウィッチマン＆芦田愛菜の博士ちゃん"
+              "title": "プロは普段何選ぶ？もち屋のモチ"
             },
             {
               "rank": 43,
@@ -7274,15 +7298,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "賞金先渡しクイズ SAVE MONEY"
             },
             {
               "rank": 49,
-              "title": "なにわ男子の逆転男子"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 50,
@@ -7295,10 +7319,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/07/25 22:07",
+      "updatedAt": "2026/07/25 23:07",
       "episodeId": "epuiveft5b",
       "subtitle": "クレしん映画の新作タイトル当てられる？",
-      "likes": "9891",
+      "likes": "9929",
       "favorites": "23.3万",
       "likePoints": [
         {
@@ -7568,6 +7592,10 @@
         {
           "hour": 68,
           "likes": 9891
+        },
+        {
+          "hour": 69,
+          "likes": 9929
         }
       ],
       "previousLikePoints": [
@@ -8726,15 +8754,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "賞金先渡しクイズ SAVE MONEY"
             },
             {
               "rank": 49,
-              "title": "なにわ男子の逆転男子"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 50,
@@ -8983,19 +9011,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 48,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 49,
               "title": "千原ジュニアの座王"
             },
             {
+              "rank": 48,
+              "title": "教えて！ニュースライブ 正義のミカタ"
+            },
+            {
+              "rank": 49,
+              "title": "名探偵コナン"
+            },
+            {
               "rank": 50,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -9004,7 +9032,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/07/25 22:07",
+      "updatedAt": "2026/07/25 23:07",
       "episodeId": "epqf7c2gz6",
       "subtitle": "大食い激細女子…体の秘密!体温に関係?食べる順番で解決?",
       "likes": "4767",
@@ -9973,15 +10001,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "賞金先渡しクイズ SAVE MONEY"
             },
             {
               "rank": 49,
-              "title": "なにわ男子の逆転男子"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 50,
@@ -10177,19 +10205,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 48,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 49,
               "title": "千原ジュニアの座王"
             },
             {
+              "rank": 48,
+              "title": "教えて！ニュースライブ 正義のミカタ"
+            },
+            {
+              "rank": 49,
+              "title": "名探偵コナン"
+            },
+            {
               "rank": 50,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -10198,7 +10226,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/22",
-      "updatedAt": "2026/07/25 22:07",
+      "updatedAt": "2026/07/25 23:07",
       "episodeId": "epgf6icidh",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！BE:FIRST登場",
       "likes": "2.0万",
@@ -10562,6 +10590,10 @@
         },
         {
           "hour": 93,
+          "likes": 20000
+        },
+        {
+          "hour": 94,
           "likes": 20000
         }
       ],
@@ -11649,15 +11681,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "賞金先渡しクイズ SAVE MONEY"
             },
             {
               "rank": 49,
-              "title": "なにわ男子の逆転男子"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 50,
@@ -11881,19 +11913,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 48,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 49,
               "title": "千原ジュニアの座王"
             },
             {
+              "rank": 48,
+              "title": "教えて！ニュースライブ 正義のミカタ"
+            },
+            {
+              "rank": 49,
+              "title": "名探偵コナン"
+            },
+            {
               "rank": 50,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -11902,10 +11934,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/24",
-      "updatedAt": "2026/07/25 22:07",
+      "updatedAt": "2026/07/25 23:07",
       "episodeId": "epkhmva7lm",
       "subtitle": "第137回 風磨くん結婚確定？5賢人と国仲涼子が愛を語る",
-      "likes": "4380",
+      "likes": "4430",
       "favorites": "71.4万",
       "likePoints": [
         {
@@ -12091,6 +12123,10 @@
         {
           "hour": 46,
           "likes": 4380
+        },
+        {
+          "hour": 47,
+          "likes": 4430
         }
       ],
       "previousLikePoints": [
@@ -12756,7 +12792,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 22,
-          "elapsedHour": 45,
+          "elapsedHour": 46,
           "elapsedRank": 22,
           "currentPoints": [
             {
@@ -12897,6 +12933,10 @@
             },
             {
               "hour": 45,
+              "rank": 22
+            },
+            {
+              "hour": 46,
               "rank": 22
             }
           ],
@@ -13105,11 +13145,11 @@
           "nearbyRanking": [
             {
               "rank": 19,
-              "title": "千原ジュニアの座王"
+              "title": "かまいガチ"
             },
             {
               "rank": 20,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 21,
@@ -13314,19 +13354,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 48,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 49,
               "title": "千原ジュニアの座王"
             },
             {
+              "rank": 48,
+              "title": "教えて！ニュースライブ 正義のミカタ"
+            },
+            {
+              "rank": 49,
+              "title": "名探偵コナン"
+            },
+            {
               "rank": 50,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -13335,10 +13375,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/07/25",
-      "updatedAt": "2026/07/25 22:07",
+      "updatedAt": "2026/07/25 23:07",
       "episodeId": "ep6mbhb4sa",
       "subtitle": "タイムマシーン3号のセッタイマシーンでGO",
-      "likes": "500",
+      "likes": "553",
       "favorites": "78.3万",
       "likePoints": [
         {
@@ -13356,6 +13396,10 @@
         {
           "hour": 3,
           "likes": 500
+        },
+        {
+          "hour": 4,
+          "likes": 553
         }
       ],
       "previousLikePoints": [
@@ -14381,15 +14425,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "賞金先渡しクイズ SAVE MONEY"
             },
             {
               "rank": 49,
-              "title": "なにわ男子の逆転男子"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 50,
@@ -14549,19 +14593,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 48,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 49,
               "title": "千原ジュニアの座王"
             },
             {
+              "rank": 48,
+              "title": "教えて！ニュースライブ 正義のミカタ"
+            },
+            {
+              "rank": 49,
+              "title": "名探偵コナン"
+            },
+            {
               "rank": 50,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -14570,7 +14614,7 @@
     "srskkomxag": {
       "programTitle": "ボーダレス～広域移動捜査隊～",
       "broadcastDate": "2026/06/10",
-      "updatedAt": "2026/07/25 22:07",
+      "updatedAt": "2026/07/25 23:07",
       "episodeId": "ep5kw562i0",
       "subtitle": "最終話",
       "likes": "1.1万",
@@ -15234,19 +15278,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "中国ドラマ「春花焔～Kill Me Love Me～」"
-            },
-            {
-              "rank": 48,
               "title": "ミッドナイト屋台２～ル・モンドゥ～"
             },
             {
+              "rank": 48,
+              "title": "中国ドラマ「春花焔～Kill Me Love Me～」"
+            },
+            {
               "rank": 49,
-              "title": "もみ消して冬 ～わが家の問題なかったことに～"
+              "title": "凪のお暇"
             },
             {
               "rank": 50,
-              "title": "甘い秘密（放送版）"
+              "title": "もみ消して冬 ～わが家の問題なかったことに～"
             }
           ]
         },
@@ -15261,19 +15305,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 48,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 49,
               "title": "千原ジュニアの座王"
             },
             {
+              "rank": 48,
+              "title": "教えて！ニュースライブ 正義のミカタ"
+            },
+            {
+              "rank": 49,
+              "title": "名探偵コナン"
+            },
+            {
               "rank": 50,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -15282,16 +15326,12 @@
     "srd19qr5zl": {
       "programTitle": "スポンジ・シノ2",
       "broadcastDate": "2026/06/24",
-      "updatedAt": "2026/07/25 22:07",
+      "updatedAt": "2026/07/25 23:07",
       "episodeId": "ephpod5say",
       "subtitle": "“海外で通用するパフォーマンス講座”",
       "likes": "1.1万",
       "favorites": "22.5万",
       "likePoints": [
-        {
-          "hour": 92,
-          "likes": 10000
-        },
         {
           "hour": 93,
           "likes": 10000
@@ -15602,15 +15642,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "賞金先渡しクイズ SAVE MONEY"
             },
             {
               "rank": 49,
-              "title": "なにわ男子の逆転男子"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 50,
@@ -15629,19 +15669,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 48,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 49,
               "title": "千原ジュニアの座王"
             },
             {
+              "rank": 48,
+              "title": "教えて！ニュースライブ 正義のミカタ"
+            },
+            {
+              "rank": 49,
+              "title": "名探偵コナン"
+            },
+            {
               "rank": 50,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -15650,7 +15690,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/25 22:07",
+      "updatedAt": "2026/07/25 23:07",
       "episodeId": "eparzrbnab",
       "subtitle": "【4人の休日に密着】",
       "likes": "1779",
@@ -16375,11 +16415,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "開運！なんでも鑑定団"
+              "title": "音道楽√"
             },
             {
               "rank": 48,
-              "title": "和田明日香とゆる宅飲み"
+              "title": "開運！なんでも鑑定団"
             },
             {
               "rank": 49,
@@ -16387,7 +16427,7 @@
             },
             {
               "rank": 50,
-              "title": "音道楽√"
+              "title": "痛快！明石家電視台"
             }
           ]
         },
@@ -16402,15 +16442,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "賞金先渡しクイズ SAVE MONEY"
             },
             {
               "rank": 49,
-              "title": "なにわ男子の逆転男子"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 50,
@@ -16423,11 +16463,11 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/07/22",
-      "updatedAt": "2026/07/25 22:07",
+      "updatedAt": "2026/07/25 23:07",
       "episodeId": "ephyflrbnk",
       "subtitle": "#3 不器用すぎる正義",
       "likes": "1.0万",
-      "favorites": "63.1万",
+      "favorites": "63.2万",
       "likePoints": [
         {
           "hour": 1,
@@ -16711,6 +16751,10 @@
         },
         {
           "hour": 72,
+          "likes": 10000
+        },
+        {
+          "hour": 73,
           "likes": 10000
         }
       ],
@@ -17393,7 +17437,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 8,
-          "elapsedHour": 72,
+          "elapsedHour": 73,
           "elapsedRank": 8,
           "currentPoints": [
             {
@@ -17646,6 +17690,10 @@
             },
             {
               "hour": 72,
+              "rank": 8
+            },
+            {
+              "hour": 73,
               "rank": 8
             }
           ],
@@ -18317,9 +18365,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 10,
-          "elapsedHour": 72,
-          "elapsedRank": 10,
+          "currentRank": 11,
+          "elapsedHour": 73,
+          "elapsedRank": 11,
           "currentPoints": [
             {
               "hour": 9,
@@ -18572,6 +18620,10 @@
             {
               "hour": 72,
               "rank": 10
+            },
+            {
+              "hour": 73,
+              "rank": 11
             }
           ],
           "previousPoints": [
@@ -19222,10 +19274,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 7,
-              "title": "GTO"
-            },
-            {
               "rank": 8,
               "title": "水曜日のダウンタウン"
             },
@@ -19235,6 +19283,10 @@
             },
             {
               "rank": 10,
+              "title": "タイムレスマン"
+            },
+            {
+              "rank": 11,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -19244,7 +19296,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/07/25 22:07",
+      "updatedAt": "2026/07/25 23:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "1.7万",
@@ -19440,6 +19492,10 @@
         },
         {
           "hour": 48,
+          "likes": 17000
+        },
+        {
+          "hour": 49,
           "likes": 17000
         }
       ],
@@ -20118,7 +20174,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 3,
-          "elapsedHour": 48,
+          "elapsedHour": 49,
           "elapsedRank": 3,
           "currentPoints": [
             {
@@ -20287,6 +20343,10 @@
             },
             {
               "hour": 48,
+              "rank": 3
+            },
+            {
+              "hour": 49,
               "rank": 3
             }
           ],
@@ -20955,7 +21015,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 3,
-          "elapsedHour": 48,
+          "elapsedHour": 49,
           "elapsedRank": 3,
           "currentPoints": [
             {
@@ -21124,6 +21184,10 @@
             },
             {
               "hour": 48,
+              "rank": 3
+            },
+            {
+              "hour": 49,
               "rank": 3
             }
           ],
@@ -21793,10 +21857,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/07/25 22:07",
+      "updatedAt": "2026/07/25 23:07",
       "episodeId": "epjmalbzhr",
       "subtitle": "堺雅人＆二宮和也VS神職人＆松尾×タイムレス原！神業ダンス",
-      "likes": "3687",
+      "likes": "3697",
       "favorites": "12.6万",
       "likePoints": [
         {
@@ -22190,6 +22254,10 @@
         {
           "hour": 99,
           "likes": 3687
+        },
+        {
+          "hour": 100,
+          "likes": 3697
         }
       ],
       "previousLikePoints": [
@@ -22858,9 +22926,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 31,
-          "elapsedHour": 99,
-          "elapsedRank": 31,
+          "currentRank": 30,
+          "elapsedHour": 100,
+          "elapsedRank": 30,
           "currentPoints": [
             {
               "hour": 2,
@@ -23249,6 +23317,10 @@
             {
               "hour": 99,
               "rank": 31
+            },
+            {
+              "hour": 100,
+              "rank": 30
             }
           ],
           "previousPoints": [
@@ -23859,19 +23931,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 27,
+              "title": "あっちこっちAぇ!"
+            },
+            {
               "rank": 28,
               "title": "シューイチ"
             },
             {
               "rank": 29,
-              "title": "よるのブランチ"
-            },
-            {
-              "rank": 30,
               "title": "かのサンド"
             },
             {
-              "rank": 31,
+              "rank": 30,
               "title": "THE神業チャレンジ"
             }
           ]
@@ -24017,15 +24089,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "賞金先渡しクイズ SAVE MONEY"
             },
             {
               "rank": 49,
-              "title": "なにわ男子の逆転男子"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 50,
@@ -24038,7 +24110,7 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/25 22:07",
+      "updatedAt": "2026/07/25 23:07",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
       "likes": "4566",
@@ -25031,19 +25103,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "プロは普段何選ぶ？もち屋のモチ"
-            },
-            {
-              "rank": 48,
-              "title": "ダイアンのガチで！ごめんやす"
-            },
-            {
-              "rank": 49,
               "title": "本日はダイアンなり！シーズン3"
             },
             {
+              "rank": 48,
+              "title": "三ツ星☆MAP"
+            },
+            {
+              "rank": 49,
+              "title": "ダイアンのガチで！ごめんやす"
+            },
+            {
               "rank": 50,
-              "title": "BS10 パネルクイズ アタック25"
+              "title": "発見！タカトシランド"
             }
           ]
         },
@@ -25058,15 +25130,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "賞金先渡しクイズ SAVE MONEY"
             },
             {
               "rank": 49,
-              "title": "なにわ男子の逆転男子"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 50,
@@ -25079,7 +25151,7 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/07/25 22:07",
+      "updatedAt": "2026/07/25 23:07",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "2.9万",
@@ -26068,15 +26140,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "賞金先渡しクイズ SAVE MONEY"
             },
             {
               "rank": 49,
-              "title": "なにわ男子の逆転男子"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 50,
@@ -26408,19 +26480,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 48,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 49,
               "title": "千原ジュニアの座王"
             },
             {
+              "rank": 48,
+              "title": "教えて！ニュースライブ 正義のミカタ"
+            },
+            {
+              "rank": 49,
+              "title": "名探偵コナン"
+            },
+            {
               "rank": 50,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -26429,7 +26501,7 @@
     "srqd4f3ihj": {
       "programTitle": "Google Pixel presents ANOTHER SKY",
       "broadcastDate": "2026/07/18",
-      "updatedAt": "2026/07/25 22:07",
+      "updatedAt": "2026/07/25 23:07",
       "episodeId": "epeecl4cvn",
       "subtitle": "ゲスト：佐藤勝利／イギリス・ロンドン",
       "likes": "1.0万",
@@ -27070,6 +27142,10 @@
         {
           "hour": 167,
           "likes": 10000
+        },
+        {
+          "hour": 168,
+          "likes": 10000
         }
       ],
       "previousLikePoints": [],
@@ -27085,15 +27161,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "賞金先渡しクイズ SAVE MONEY"
             },
             {
               "rank": 49,
-              "title": "なにわ男子の逆転男子"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 50,
@@ -27205,19 +27281,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 48,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 49,
               "title": "千原ジュニアの座王"
             },
             {
+              "rank": 48,
+              "title": "教えて！ニュースライブ 正義のミカタ"
+            },
+            {
+              "rank": 49,
+              "title": "名探偵コナン"
+            },
+            {
               "rank": 50,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -27226,10 +27302,10 @@
     "sr6elshzoq": {
       "programTitle": "踊る！さんま御殿!!",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/07/25 22:07",
+      "updatedAt": "2026/07/25 23:07",
       "episodeId": "epz108j83s",
       "subtitle": "神奈川7路線が大激突SP 東横線VS田園都市線!本当の横浜はどっち!?",
-      "likes": "6856",
+      "likes": "6873",
       "favorites": "214.2万",
       "likePoints": [
         {
@@ -27279,6 +27355,10 @@
         {
           "hour": 98,
           "likes": 6856
+        },
+        {
+          "hour": 99,
+          "likes": 6873
         }
       ],
       "previousLikePoints": [],
@@ -27286,9 +27366,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 30,
-          "elapsedHour": 98,
-          "elapsedRank": 30,
+          "currentRank": 28,
+          "elapsedHour": 99,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 3,
@@ -27669,24 +27749,28 @@
             {
               "hour": 98,
               "rank": 30
+            },
+            {
+              "hour": 99,
+              "rank": 28
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
+            {
+              "rank": 25,
+              "title": "テレビ千鳥"
+            },
+            {
+              "rank": 26,
+              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
+            },
             {
               "rank": 27,
               "title": "ニノなのに"
             },
             {
               "rank": 28,
-              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
-            },
-            {
-              "rank": 29,
-              "title": "ロンドンハーツ"
-            },
-            {
-              "rank": 30,
               "title": "踊る！さんま御殿!!"
             }
           ]
@@ -28003,19 +28087,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 48,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 49,
               "title": "千原ジュニアの座王"
             },
             {
+              "rank": 48,
+              "title": "教えて！ニュースライブ 正義のミカタ"
+            },
+            {
+              "rank": 49,
+              "title": "名探偵コナン"
+            },
+            {
               "rank": 50,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+              "title": "かまいガチ"
             }
           ]
         }
