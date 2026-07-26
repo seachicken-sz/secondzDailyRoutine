@@ -60,62 +60,6 @@
     ]
   },
   {
-    "listName": "原くん出演番組にリクエスト！出来たらがんばろ！",
-    "lastFlag": false,
-    "items": [
-      {
-        "id": "daily_onemorning",
-        "name": "TOKYO FM ONE MORNING",
-        "short-name": "ONE MORNING",
-        "url": "https://www.tfm.co.jp/f/om/message",
-        "request-type": "text",
-        "request-input": "メッセージ&リクエスト",
-        "comment": "※7/28 原くん出演番組！\n①コーナーは「ベストヒッツリクエスト」を選択\n②メアドなどを入力\n③「メッセージ&リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
-        "input-flag": true
-      },
-      {
-        "id": "daily_MarchéCoucou",
-        "name": "FM大阪Marché Coucou",
-        "short-name": "Marché Coucou",
-        "url": "https://fmosaka.futureartist.net/enquete/69139",
-        "request-type": "music",
-        "request-input": "曲名",
-        "comment": "※7/27 原くん出演番組！\n①名前・メアドなどを入力\n②「曲名」にペーストまたは貼り付けを行うと曲名が自動で入ります！\n③できたらメッセージもいれよう！",
-        "input-flag": true
-      },
-      {
-        "id": "daily_eveningstreet",
-        "name": "FM AICHI EVENING STREET",
-        "short-name": "EVENING STREET",
-        "url": "https://fma.co.jp/f/req/?cd=eveningstreet",
-        "request-type": "music",
-        "request-input": "リクエスト曲",
-        "comment": "※7/27 原くん出演番組！\n①名前・メアドなどを入力\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります！\n③できたらメッセージもいれよう！",
-        "input-flag": true
-      },
-      {
-        "id": "daily_bumpy",
-        "name": "FM FUJI Bumpy",
-        "short-name": "Bumpy",
-        "url": "https://www.fmfuji.jp/mail.php?cd=510",
-        "request-type": "music",
-        "request-input": "リクエスト曲名",
-        "comment": "※7/28 原くん出演番組！\n①番組名は「Bumpy」を選択\n②メアドなどを入力\n③「リクエスト曲名」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
-        "input-flag": false
-      },
-      {
-        "id": "daily_SOUNDSPLASH",
-        "name": "FM 新潟 SOUND SPLASH",
-        "short-name": "SOUND SPLASH",
-        "url": "https://www.fmniigata.com/program/15/request_message/160",
-        "request-type": "kienai-hanabi",
-        "request-input": "リクエスト曲をどうぞ！",
-        "comment": "※7/29 原くん出演番組！\n①名前・住所などを入力\n※マイページ登録で省略できるようになります\n②メッセージにペースト\n（例文が入るので編集してください）\n③「リクエスト曲をどうぞ！」に「消えない花火」を入力",
-        "input-flag": true
-      }
-    ]
-  },
-  {
     "listName": "新曲応援！できたらここまで！",
     "lastFlag": false,
     "items": [
@@ -177,6 +121,62 @@
         "request-type": "music-slash-artist",
         "request-input": "リクエスト曲",
         "comment": "①メアドなどを入力\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "input-flag": true
+      }
+    ]
+  },
+  {
+    "listName": "原くん出演番組にリクエスト！出来たらがんばろ！",
+    "lastFlag": false,
+    "items": [
+      {
+        "id": "daily_onemorning",
+        "name": "TOKYO FM ONE MORNING",
+        "short-name": "ONE MORNING",
+        "url": "https://www.tfm.co.jp/f/om/message",
+        "request-type": "text",
+        "request-input": "メッセージ&リクエスト",
+        "comment": "※7/28 原くん出演番組！\n①コーナーは「ベストヒッツリクエスト」を選択\n②メアドなどを入力\n③「メッセージ&リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "input-flag": true
+      },
+      {
+        "id": "daily_MarchéCoucou",
+        "name": "FM大阪Marché Coucou",
+        "short-name": "Marché Coucou",
+        "url": "https://fmosaka.futureartist.net/enquete/69139",
+        "request-type": "music",
+        "request-input": "曲名",
+        "comment": "※7/27 原くん出演番組！\n①名前・メアドなどを入力\n②「曲名」にペーストまたは貼り付けを行うと曲名が自動で入ります！\n③できたらメッセージもいれよう！",
+        "input-flag": true
+      },
+      {
+        "id": "daily_eveningstreet",
+        "name": "FM AICHI EVENING STREET",
+        "short-name": "EVENING STREET",
+        "url": "https://fma.co.jp/f/req/?cd=eveningstreet",
+        "request-type": "music",
+        "request-input": "リクエスト曲",
+        "comment": "※7/27 原くん出演番組！\n①名前・メアドなどを入力\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります！\n③できたらメッセージもいれよう！",
+        "input-flag": true
+      },
+      {
+        "id": "daily_bumpy",
+        "name": "FM FUJI Bumpy",
+        "short-name": "Bumpy",
+        "url": "https://www.fmfuji.jp/mail.php?cd=510",
+        "request-type": "music",
+        "request-input": "リクエスト曲名",
+        "comment": "※7/28 原くん出演番組！\n①番組名は「Bumpy」を選択\n②メアドなどを入力\n③「リクエスト曲名」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "input-flag": false
+      },
+      {
+        "id": "daily_SOUNDSPLASH",
+        "name": "FM 新潟 SOUND SPLASH",
+        "short-name": "SOUND SPLASH",
+        "url": "https://www.fmniigata.com/program/15/request_message/160",
+        "request-type": "kienai-hanabi",
+        "request-input": "リクエスト曲をどうぞ！",
+        "comment": "※7/29 原くん出演番組！\n①名前・住所などを入力\n※マイページ登録で省略できるようになります\n②メッセージにペースト\n（例文が入るので編集してください）\n③「リクエスト曲をどうぞ！」に「消えない花火」を入力",
         "input-flag": true
       }
     ]
