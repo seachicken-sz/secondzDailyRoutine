@@ -122,13 +122,7 @@
         "request-input": "リクエスト曲",
         "comment": "①メアドなどを入力\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
         "input-flag": true
-      }
-    ]
-  },
-  {
-    "listName": "もうちょい行けたりする？",
-    "lastFlag": false,
-    "items": [
+      },
       {
         "id": "daily_sunsun",
         "name": "パペットスンスンのDJ SUNSUN",
@@ -138,7 +132,13 @@
         "request-input": "メッセージ&リクエスト",
         "comment": "①メアドなどを入力\n②「メッセージ&リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります！\n③できたらスンスンにメッセージを入れましょう",
         "input-flag": true
-      },
+      }
+    ]
+  },
+  {
+    "listName": "シノの地元大阪局も頑張ってみる？",
+    "lastFlag": false,
+    "items": [
       {
         "id": "daily_tactyinthemoening",
         "name": "FM802 TACTY IN THE MORNING",
@@ -178,6 +178,92 @@
         "request-input": "リクエスト曲",
         "comment": "①メアドなどを入力\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
         "input-flag": true
+      },
+      {
+        "id": "daily_JoyTuneRadio",
+        "name": "Kiss FM Joy Tune Radio",
+        "short-name": "Joy Tune Radio",
+        "url": "https://www.kiss-fm.co.jp/requestmessage/request/2804/",
+        "request-type": "music",
+        "request-input": "リクエスト曲",
+        "comment": "①メアドなどを入力\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "input-flag": false
+      }
+    ]
+  },
+  {
+    "listName": "もうちょい行けたりする？",
+    "lastFlag": false,
+    "items": [
+      {
+        "id": "daily_MorningBrush",
+        "name": "Date FM Morning Brush",
+        "short-name": "Morning Brush",
+        "url": "https://forms.datefm.co.jp/request?",
+        "request-type": "music",
+        "request-input": "リクエスト曲",
+        "comment": "①番組名は「Morning Brush」を選択\n②「リクエスト曲」に入力\n③ラジオネームとメールアドレスを入力",
+        "input-flag": true
+      },
+      {
+        "id": "daily_kyomeiranbu",
+        "name": "Date FM 響鳴乱舞",
+        "short-name": "響鳴乱舞",
+        "url": "https://forms.datefm.co.jp/request?",
+        "request-type": "music",
+        "request-input": "リクエスト曲",
+        "comment": "①番組名は「響鳴乱舞 仙台 DATE-MON」を選択\n②「リクエスト曲」に入力\n③ラジオネームとメールアドレスを入力",
+        "input-flag": true
+      },
+      {
+        "id": "daily_blueocean",
+        "name": "TOKYO FM Blue Ocean",
+        "short-name": "Blue Ocean",
+        "url": "https://www.tfm.co.jp/f/bo/message",
+        "request-type": "text",
+        "request-input": "メッセージ&リクエスト",
+        "comment": "①「【レコメンドフライデー】あなたがオーシャンヌとシェアしたいおすすめ楽曲」を選択\n②メアドなどを入力\n③メッセージ＆リクエストにペースト",
+        "input-flag": true
+      },
+      {
+        "id": "daily_yamazakirenano",
+        "name": "TOKYO FM 山崎怜奈の誰かに話したかったこと。",
+        "short-name": "山崎怜奈の誰かに話したかったこと。",
+        "url": "https://www.tfm.co.jp/f/darehana/form",
+        "request-type": "text",
+        "request-input": "メッセージ&リクエスト",
+        "comment": "①「リクエスト」を選択\n②メアドなどを入力\n③メッセージ＆リクエストにペースト",
+        "input-flag": true
+      },
+      {
+        "id": "daily_morningbreeze",
+        "name": "FM AICHI MORNING BREEZE",
+        "short-name": "MORNING BREEZE",
+        "url": "https://fma.co.jp/f/req/?cd=morningbreeze",
+        "request-type": "music",
+        "request-input": "リクエスト曲",
+        "comment": "①メアドなどを入力\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "input-flag": true
+      },
+      {
+        "id": "daily_afternooncolors",
+        "name": "FM AICHI AFTERNOON COLORS",
+        "short-name": "AFTERNOON COLORS",
+        "url": "https://fma.co.jp/f/req/?cd=afternooncolors",
+        "request-type": "music",
+        "request-input": "リクエスト曲",
+        "comment": "①メアドなどを入力\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "input-flag": true
+      },
+      {
+        "id": "daily_DIGFUKUOKA",
+        "name": "FM FUKUOKA DIG!!!!!!!! FUKUOKA",
+        "short-name": "DIG!!!!!!!! FUKUOKA",
+        "url": "https://fmfukuoka.co.jp/message/?m=reform",
+        "request-type": "music-slash-artist",
+        "request-input": "リクエスト(曲名／アーティスト名)",
+        "comment": "①番組名は「DIG!!!!!!!! FUKUOKA」を選択\n②「リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "input-flag": false
       },
       {
         "id": "daily_oshiraku_suikun",
