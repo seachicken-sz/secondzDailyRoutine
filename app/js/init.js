@@ -306,6 +306,8 @@ async function init() {
     renderSpotifySongList(recommendedSongsElement, recommendedSongs);
     // Spotifyその他曲リストを描画
     renderSpotifySongList(otherSongsElement, otherSongs);
+    // ホーム：サブスク再生
+    initializeHomeSubscription(songs);
     // おすすめ曲が0件の場合の空表示
     if (recommendedSongs.length === 0 && recommendedSongsElement) {
       recommendedSongsElement.innerHTML = `<p>${MESSAGES.empty.recommendedSongs}</p>`;
