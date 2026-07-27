@@ -187,6 +187,8 @@ const onceListErrorAreaElement = document.getElementById("onceListErrorArea");
 const onceTaskListElement = document.getElementById("onceTaskList");
 // 選択した期間限定タスクを開始するボタン
 const startOnceTasksButtonElement = document.getElementById("startOnceTasksButton");
+// 期間限定タスクを今回はやらずに進むボタン
+const skipOnceTasksButtonElement = document.getElementById("skipOnceTasksButton");
 
 // ==================================================
 // DOM: STEP 2 期間限定タスク実行
