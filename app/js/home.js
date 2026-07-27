@@ -82,6 +82,11 @@ function bindHomeEvents() {
   // ホーム用リクエスト曲選択
   // ==================================================
   bindHomeRequestSongSelectEvents();
+    // ==================================================
+  // ホーム：サブスク再生
+  // ==================================================
+  bindHomeSubscriptionEvents();
+  
 }
 
 // ==================================================
@@ -1561,4 +1566,153 @@ function formatHomeUpdateNoticeDate(value) {
   const day = String(date.getDate()).padStart(2, "0");
 
   return `${date.getFullYear()}/${month}/${day}`;
+}
+
+// ==================================================
+// ホーム：サブスク再生
+// ==================================================
+
+let HOME_SUBSCRIPTION_SONGS = [];
+
+/**
+ * サブスク再生欄を初期化する
+ *
+ * 現在はSpotifyのみ。
+ * 今後Apple Music等を追加する場合は
+ * serviceごとに曲データ・URL生成を分岐できる構成にする。
+ */
+function initializeHomeSubscription(songs) {
+  if (
+    !homeSubscriptionServiceSelectElement ||
+    !homeSubscriptionSongSelectElement ||
+    !homeSubscriptionPlayButtonElement
+  ) {
+    return;
+  }
+
+  HOME_SUBSCRIPTION_SONGS = sortHomeSubscriptionSongs(songs);
+
+  renderHomeSubscriptionSongSelect();
+}
+
+
+/**
+ * Spotify画面と同じ優先順位に並べる
+ *
+ * 1. flag === true
+ * 2. その他
+ *
+ * 各グループ内の順序はJSONの順番を維持する。
+ */
+function sortHomeSubscriptionSongs(songs) {
+  if (!Array.isArray(songs)) {
+    return [];
+  }
+
+  const recommendedSongs = songs.filter(
+    (song) => song && song.flag === true
+  );
+
+  const otherSongs = songs.filter(
+    (song) => song && song.flag !== true
+  );
+
+  return [
+    ...recommendedSongs,
+    ...otherSongs,
+  ];
+}
+
+
+/**
+ * 曲名プルダウン生成
+ */
+function renderHomeSubscriptionSongSelect() {
+  if (!homeSubscriptionSongSelectElement) {
+    return;
+  }
+
+  homeSubscriptionSongSelectElement.innerHTML = "";
+
+  HOME_SUBSCRIPTION_SONGS.forEach((song, index) => {
+    if (!song?.name) {
+      return;
+    }
+
+    const option = document.createElement("option");
+
+    option.value = String(index);
+    option.textContent = song.name;
+
+    homeSubscriptionSongSelectElement.appendChild(option);
+  });
+
+  // 曲がない場合だけ再生不可
+  if (homeSubscriptionPlayButtonElement) {
+    homeSubscriptionPlayButtonElement.disabled =
+      HOME_SUBSCRIPTION_SONGS.length === 0;
+  }
+}
+
+
+/**
+ * サブスク再生イベント
+ */
+function bindHomeSubscriptionEvents() {
+  if (!homeSubscriptionPlayButtonElement) {
+    return;
+  }
+
+  homeSubscriptionPlayButtonElement.addEventListener("click", () => {
+    openHomeSubscription();
+  });
+}
+
+
+/**
+ * 選択中サブスク・曲を開く
+ */
+function openHomeSubscription() {
+  const service =
+    homeSubscriptionServiceSelectElement?.value || "";
+
+  const songIndex = Number(
+    homeSubscriptionSongSelectElement?.value
+  );
+
+  if (Number.isNaN(songIndex)) {
+    return;
+  }
+
+  const song = HOME_SUBSCRIPTION_SONGS[songIndex];
+
+  if (!song) {
+    return;
+  }
+
+  // 現在はSpotifyのみ
+  if (service === "spotify") {
+    openHomeSpotifySubscription(song);
+  }
+}
+
+
+/**
+ * Spotifyを開く
+ */
+function openHomeSpotifySubscription(song) {
+  const spotifyUrl = buildSpotifyUrl(song);
+
+  if (!spotifyUrl) {
+    return;
+  }
+
+  // 通常Spotifyステップと同じSpotifyログを送信
+  if (typeof sendSpotifyLog === "function") {
+    sendSpotifyLog(song).catch((error) => {
+      console.error("Spotifyログ送信失敗", error);
+    });
+  }
+
+  location.href = spotifyUrl;
 }
