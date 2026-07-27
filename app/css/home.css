@@ -1145,3 +1145,23 @@
   border-radius: 50%;
   background: var(--color-brand);
 }
+
+
+/* =========================
+   ホーム：サブスク再生
+========================= */
+
+.home-subscription-select-area {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.home-subscription-play-button {
+  margin-top: 12px;
+}
+
+.home-subscription-play-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
