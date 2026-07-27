@@ -385,19 +385,28 @@ function recordCompletedDailyItem(item) {
     return;
   }
 
-  // 完了済みタスクとして保存
-  state.completedDailyItems.push({
+  // 完了済みタスク情報を作成
+  const completedItem = {
     key,
     itemId: item.id,
     name,
     shortName: item["short-name"] || item.shortName || "",
     url,
-  });
-
+  };
+  
+  // SNS共有文などで使うため、stateにも保持する
+  state.completedDailyItems.push(completedItem);
+  
   // ホーム画面の「本日実行済み」判定にも使うため、18時切替の完了データに保存する
   if (typeof markDailyTaskDone === "function") {
     markDailyTaskDone(item, "mainFlow");
   }
+  
+  // デイリータスクログを1件ずつ即時送信する
+  // ログ送信に失敗してもユーザー操作は止めない
+  sendDailyTaskLog([completedItem]).catch((error) => {
+    console.error("dailyTaskLog送信失敗", error);
+  });
 }
 
 // ==================================================
