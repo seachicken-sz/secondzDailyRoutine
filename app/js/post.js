@@ -159,31 +159,30 @@ function showPostAskStep() {
   // 保存済みの途中再開データを削除する
   clearFlowState();
 
-  // デイリータスクログを送信する
-  sendSheetLogOnPostAskStep();
+  // メインフロー完了ログを送信する
+  sendFinishLogOnPostAskStep();
 
   // SNS共有確認画面を表示する
-  // saveFlow: false にして、この画面を途中再開対象にしない
   showOnlyStep(postAskStepElement, { saveFlow: false });
 }
 
 // ==================================================
-// デイリータスクログ送信
+// メインフロー完了ログ送信
 // ==================================================
-// SNS共有確認画面に到達したタイミングで、完了済みデイリータスクを1回だけ送信する
-function sendSheetLogOnPostAskStep() {
+// SNS共有確認画面に到達したタイミングでfinishを1回だけ送信する
+function sendFinishLogOnPostAskStep() {
   // 同一フロー内で送信済みなら二重送信しない
   if (state.isSheetLogSentInCurrentFlow) {
     return;
   }
 
-  // 完了済みデイリータスクログを送信する
+  // startLogへfinishを送信する
   // ログ送信に失敗しても画面遷移は止めない
-  sendDailyTaskLog(state.completedDailyItems).catch((error) => {
-    console.error("dailyTaskLog送信失敗", error);
+  sendStartLog("finish").catch((error) => {
+    console.error("finishLog送信失敗", error);
   });
 
-  // 同一フロー内での再送信防止フラグを立てる
+  // 同一フロー内での再送信防止
   state.isSheetLogSentInCurrentFlow = true;
 }
 
