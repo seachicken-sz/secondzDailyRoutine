@@ -1,4 +1,4 @@
-const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwnJOEFXIcHqTxKhLREmf1bCZ0JNQHJcEdUd-Dzk4e6lnmU0QV0rVx6MjlOH2_jSU4R/exec";
+const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzucuobkQoSbYuewwuFSQbJwKwd74sC163tfvLwi-nBhKcsUSJtmiAwpoYij4CjBHUx/exec";
 const SHEET_TOKEN = "test-token";
 const SHEET_APP_NAME = "secondzDailyRoutine";
 const SHEET_CLIENT_ID_KEY = "secondzDailyRoutineClientId";
@@ -446,19 +446,25 @@ async function sendAccessLog() {
 }
 
 /**
- * 開始ログを送信する
+ * メインフロー開始・終了ログを送信する
  *
+ * @param {"start" | "finish"} event
  * @returns {Promise<boolean>}
  */
-async function sendStartLog() {
+async function sendStartLog(event = "start") {
+  const normalizedEvent = event === "finish" ? "finish" : "start";
+
   const item = createSheetItem({}, {
-    itemId: "start",
-    title: "開始",
+    itemId: `flow_${normalizedEvent}`,
+    title: normalizedEvent,
     url: ""
   });
 
   return sendSheetLog({
-    start: [item]
+    start: [{
+      ...item,
+      event: normalizedEvent
+    }]
   });
 }
 
