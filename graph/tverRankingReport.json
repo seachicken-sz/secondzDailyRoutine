@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/27 08:07",
+  "updatedAt": "2026/07/27 09:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/24",
-      "updatedAt": "2026/07/27 08:07",
+      "updatedAt": "2026/07/27 09:07",
       "episodeId": "epe8nmzldb",
       "subtitle": "1000円差し入れマン",
       "likes": "1.5万",
@@ -240,6 +240,10 @@
         },
         {
           "hour": 58,
+          "likes": 15000
+        },
+        {
+          "hour": 59,
           "likes": 15000
         }
       ],
@@ -926,7 +930,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 5,
-          "elapsedHour": 58,
+          "elapsedHour": 59,
           "elapsedRank": 5,
           "currentPoints": [
             {
@@ -1147,6 +1151,10 @@
             },
             {
               "hour": 58,
+              "rank": 5
+            },
+            {
+              "hour": 59,
               "rank": 5
             }
           ],
@@ -1823,11 +1831,11 @@
             },
             {
               "rank": 3,
-              "title": "上田と女が吠える夜"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 4,
-              "title": "世界の果てまでイッテQ！"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 5,
@@ -1838,9 +1846,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 20,
-          "elapsedHour": 58,
-          "elapsedRank": 20,
+          "currentRank": 21,
+          "elapsedHour": 59,
+          "elapsedRank": 21,
           "currentPoints": [
             {
               "hour": 9,
@@ -2041,6 +2049,10 @@
             {
               "hour": 58,
               "rank": 20
+            },
+            {
+              "hour": 59,
+              "rank": 21
             }
           ],
           "previousPoints": [
@@ -2455,10 +2467,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 17,
-              "title": "世界の果てまでイッテQ！"
-            },
-            {
               "rank": 18,
               "title": "クロスロード ～救命救急の約束～"
             },
@@ -2468,6 +2476,10 @@
             },
             {
               "rank": 20,
+              "title": "君の好きは無敵"
+            },
+            {
+              "rank": 21,
               "title": "タイムレスマン"
             }
           ]
@@ -2477,11 +2489,11 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/26",
-      "updatedAt": "2026/07/27 08:07",
+      "updatedAt": "2026/07/27 09:07",
       "episodeId": "epoicu11f6",
       "subtitle": "CanCam編集部に潜入&爆売れ雑誌ハルメクの秘密",
-      "likes": "7016",
-      "favorites": "33.9万",
+      "likes": "7252",
+      "favorites": "34.0万",
       "likePoints": [
         {
           "hour": 1,
@@ -2554,6 +2566,10 @@
         {
           "hour": 18,
           "likes": 7016
+        },
+        {
+          "hour": 19,
+          "likes": 7252
         }
       ],
       "previousLikePoints": [
@@ -3218,9 +3234,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 12,
-          "elapsedHour": 18,
-          "elapsedRank": 12,
+          "currentRank": 8,
+          "elapsedHour": 19,
+          "elapsedRank": 8,
           "currentPoints": [
             {
               "hour": 7,
@@ -3269,6 +3285,10 @@
             {
               "hour": 18,
               "rank": 12
+            },
+            {
+              "hour": 19,
+              "rank": 8
             }
           ],
           "previousPoints": [
@@ -3723,19 +3743,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 9,
-              "title": "トーキング千鳥"
+              "rank": 5,
+              "title": "タイムレスマン"
             },
             {
-              "rank": 10,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "rank": 6,
+              "title": "月曜から夜ふかし"
             },
             {
-              "rank": 11,
-              "title": "一茂×かまいたち ゲンバ"
+              "rank": 7,
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
-              "rank": 12,
+              "rank": 8,
               "title": "timeleszファミリア"
             }
           ]
@@ -3743,9 +3763,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 34,
-          "elapsedHour": 18,
-          "elapsedRank": 34,
+          "currentRank": 28,
+          "elapsedHour": 19,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 8,
@@ -3790,6 +3810,10 @@
             {
               "hour": 18,
               "rank": 34
+            },
+            {
+              "hour": 19,
+              "rank": 28
             }
           ],
           "previousPoints": [
@@ -4036,19 +4060,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 31,
-              "title": "おちたらおわり"
+              "rank": 25,
+              "title": "さよならノワール"
             },
             {
-              "rank": 32,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "rank": 26,
+              "title": "夏色の雲が恋と嵐をまきおこす"
             },
             {
-              "rank": 33,
-              "title": "一茂×かまいたち ゲンバ"
+              "rank": 27,
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
-              "rank": 34,
+              "rank": 28,
               "title": "timeleszファミリア"
             }
           ]
@@ -4058,10 +4082,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/07/27 08:07",
+      "updatedAt": "2026/07/27 09:07",
       "episodeId": "epkbzqd4p5",
       "subtitle": "「脳科学でお化けは怖くなくなるのか！？」でtimeleszが仕掛け人に挑む！",
-      "likes": "9034",
+      "likes": "9045",
       "favorites": "5.6万",
       "likePoints": [
         {
@@ -4571,6 +4595,10 @@
         {
           "hour": 128,
           "likes": 9034
+        },
+        {
+          "hour": 129,
+          "likes": 9045
         }
       ],
       "previousLikePoints": [
@@ -6313,11 +6341,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "プロは普段何選ぶ？もち屋のモチ"
+              "title": "華丸・大吉のなんしようと？"
             },
             {
               "rank": 48,
-              "title": "華丸・大吉のなんしようと？"
+              "title": "プロは普段何選ぶ？もち屋のモチ"
             },
             {
               "rank": 49,
@@ -6325,7 +6353,7 @@
             },
             {
               "rank": 50,
-              "title": "王様のブランチ"
+              "title": "サンドウィッチマン＆芦田愛菜の博士ちゃん"
             }
           ]
         },
@@ -6546,19 +6574,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 49,
-              "title": "ロンドンハーツ"
+              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
             }
           ]
         }
@@ -6567,7 +6595,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/07/27 08:07",
+      "updatedAt": "2026/07/27 09:07",
       "episodeId": "epuiveft5b",
       "subtitle": "クレしん映画の新作タイトル当てられる？",
       "likes": "1.0万",
@@ -6975,6 +7003,10 @@
         },
         {
           "hour": 102,
+          "likes": 10000
+        },
+        {
+          "hour": 103,
           "likes": 10000
         }
       ],
@@ -8138,19 +8170,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 49,
-              "title": "ロンドンハーツ"
+              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
             }
           ]
         },
@@ -8395,19 +8427,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "週刊さんまとマツコ"
+              "title": "夫に不倫をお願いされました"
             },
             {
               "rank": 48,
-              "title": "さんまのお笑い向上委員会"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
-              "title": "一緒にごはんをたべるだけ"
+              "title": "限界突破！やってM!LK"
             }
           ]
         }
@@ -8416,7 +8448,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/07/27 08:07",
+      "updatedAt": "2026/07/27 09:07",
       "episodeId": "epqf7c2gz6",
       "subtitle": "大食い激細女子…体の秘密!体温に関係?食べる順番で解決?",
       "likes": "4767",
@@ -9385,19 +9417,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 49,
-              "title": "ロンドンハーツ"
+              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
             }
           ]
         },
@@ -9589,19 +9621,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "週刊さんまとマツコ"
+              "title": "夫に不倫をお願いされました"
             },
             {
               "rank": 48,
-              "title": "さんまのお笑い向上委員会"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
-              "title": "一緒にごはんをたべるだけ"
+              "title": "限界突破！やってM!LK"
             }
           ]
         }
@@ -9610,7 +9642,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/22",
-      "updatedAt": "2026/07/27 08:07",
+      "updatedAt": "2026/07/27 09:07",
       "episodeId": "epgf6icidh",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！BE:FIRST登場",
       "likes": "2.0万",
@@ -10110,6 +10142,10 @@
         },
         {
           "hour": 127,
+          "likes": 20000
+        },
+        {
+          "hour": 128,
           "likes": 20000
         }
       ],
@@ -11197,19 +11233,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 49,
-              "title": "ロンドンハーツ"
+              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
             }
           ]
         },
@@ -11429,19 +11465,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "週刊さんまとマツコ"
+              "title": "夫に不倫をお願いされました"
             },
             {
               "rank": 48,
-              "title": "さんまのお笑い向上委員会"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
-              "title": "一緒にごはんをたべるだけ"
+              "title": "限界突破！やってM!LK"
             }
           ]
         }
@@ -11450,10 +11486,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/24",
-      "updatedAt": "2026/07/27 08:07",
+      "updatedAt": "2026/07/27 09:07",
       "episodeId": "epkhmva7lm",
       "subtitle": "第137回 風磨くん結婚確定？5賢人と国仲涼子が愛を語る",
-      "likes": "5041",
+      "likes": "5050",
       "favorites": "71.4万",
       "likePoints": [
         {
@@ -11775,6 +11811,10 @@
         {
           "hour": 80,
           "likes": 5041
+        },
+        {
+          "hour": 81,
+          "likes": 5050
         }
       ],
       "previousLikePoints": [
@@ -12885,19 +12925,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 49,
-              "title": "ロンドンハーツ"
+              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
             }
           ]
         },
@@ -13094,19 +13134,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "週刊さんまとマツコ"
+              "title": "夫に不倫をお願いされました"
             },
             {
               "rank": 48,
-              "title": "さんまのお笑い向上委員会"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
-              "title": "一緒にごはんをたべるだけ"
+              "title": "限界突破！やってM!LK"
             }
           ]
         }
@@ -13115,10 +13155,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/07/25",
-      "updatedAt": "2026/07/27 08:07",
+      "updatedAt": "2026/07/27 09:07",
       "episodeId": "ep6mbhb4sa",
       "subtitle": "タイムマシーン3号のセッタイマシーンでGO",
-      "likes": "1120",
+      "likes": "1128",
       "favorites": "78.3万",
       "likePoints": [
         {
@@ -13272,6 +13312,10 @@
         {
           "hour": 37,
           "likes": 1120
+        },
+        {
+          "hour": 38,
+          "likes": 1128
         }
       ],
       "previousLikePoints": [
@@ -13952,9 +13996,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 47,
-          "elapsedHour": 37,
-          "elapsedRank": 47,
+          "currentRank": 48,
+          "elapsedHour": 38,
+          "elapsedRank": 48,
           "currentPoints": [
             {
               "hour": 9,
@@ -14071,6 +14115,10 @@
             {
               "hour": 37,
               "rank": 47
+            },
+            {
+              "hour": 38,
+              "rank": 48
             }
           ],
           "previousPoints": [
@@ -14413,12 +14461,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 44,
-              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
-            },
-            {
               "rank": 45,
-              "title": "かまいガチ"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 46,
@@ -14426,6 +14470,10 @@
             },
             {
               "rank": 47,
+              "title": "かまいガチ"
+            },
+            {
+              "rank": 48,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -14582,19 +14630,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "週刊さんまとマツコ"
+              "title": "夫に不倫をお願いされました"
             },
             {
               "rank": 48,
-              "title": "さんまのお笑い向上委員会"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
-              "title": "一緒にごはんをたべるだけ"
+              "title": "限界突破！やってM!LK"
             }
           ]
         }
@@ -14603,7 +14651,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/27 08:07",
+      "updatedAt": "2026/07/27 09:07",
       "episodeId": "eparzrbnab",
       "subtitle": "【4人の休日に密着】",
       "likes": "1779",
@@ -15328,19 +15376,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "痛快！明石家電視台"
-            },
-            {
-              "rank": 48,
               "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
+              "rank": 48,
+              "title": "痛快！明石家電視台"
+            },
+            {
               "rank": 49,
-              "title": "ザワつく！ 金曜日"
+              "title": "プレバト！！"
             },
             {
               "rank": 50,
-              "title": "プレバト！！"
+              "title": "ザワつく！ 金曜日"
             }
           ]
         },
@@ -15355,19 +15403,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 49,
-              "title": "ロンドンハーツ"
+              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
             }
           ]
         }
@@ -15376,7 +15424,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/07/22",
-      "updatedAt": "2026/07/27 08:07",
+      "updatedAt": "2026/07/27 09:07",
       "episodeId": "ephyflrbnk",
       "subtitle": "#3 不器用すぎる正義",
       "likes": "1.2万",
@@ -15800,6 +15848,10 @@
         },
         {
           "hour": 106,
+          "likes": 12000
+        },
+        {
+          "hour": 107,
           "likes": 12000
         }
       ],
@@ -16482,7 +16534,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 12,
-          "elapsedHour": 106,
+          "elapsedHour": 107,
           "elapsedRank": 12,
           "currentPoints": [
             {
@@ -16871,6 +16923,10 @@
             },
             {
               "hour": 106,
+              "rank": 12
+            },
+            {
+              "hour": 107,
               "rank": 12
             }
           ],
@@ -17523,7 +17579,7 @@
           "nearbyRanking": [
             {
               "rank": 9,
-              "title": "マイ・フィクション"
+              "title": "ラストノート"
             },
             {
               "rank": 10,
@@ -17542,9 +17598,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 14,
-          "elapsedHour": 106,
-          "elapsedRank": 14,
+          "currentRank": 15,
+          "elapsedHour": 107,
+          "elapsedRank": 15,
           "currentPoints": [
             {
               "hour": 9,
@@ -17933,6 +17989,10 @@
             {
               "hour": 106,
               "rank": 14
+            },
+            {
+              "hour": 107,
+              "rank": 15
             }
           ],
           "previousPoints": [
@@ -18583,10 +18643,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 11,
-              "title": "一次元の挿し木"
-            },
-            {
               "rank": 12,
               "title": "水曜日のダウンタウン"
             },
@@ -18596,6 +18652,10 @@
             },
             {
               "rank": 14,
+              "title": "世界の果てまでイッテQ！"
+            },
+            {
+              "rank": 15,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -18605,7 +18665,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/07/27 08:07",
+      "updatedAt": "2026/07/27 09:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "2.0万",
@@ -18937,6 +18997,10 @@
         },
         {
           "hour": 82,
+          "likes": 20000
+        },
+        {
+          "hour": 83,
           "likes": 20000
         }
       ],
@@ -19614,9 +19678,9 @@
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 8,
-          "elapsedHour": 82,
-          "elapsedRank": 8,
+          "currentRank": 9,
+          "elapsedHour": 83,
+          "elapsedRank": 9,
           "currentPoints": [
             {
               "hour": 6,
@@ -19921,6 +19985,10 @@
             {
               "hour": 82,
               "rank": 8
+            },
+            {
+              "hour": 83,
+              "rank": 9
             }
           ],
           "previousPoints": [
@@ -20571,19 +20639,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 5,
-              "title": "大空港～GATE24～"
-            },
-            {
               "rank": 6,
-              "title": "GTO"
+              "title": "マイ・フィクション"
             },
             {
               "rank": 7,
-              "title": "Tokyo middle 30"
+              "title": "GTO"
             },
             {
               "rank": 8,
+              "title": "Tokyo middle 30"
+            },
+            {
+              "rank": 9,
               "title": "ラストノート"
             }
           ]
@@ -20591,9 +20659,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 8,
-          "elapsedHour": 82,
-          "elapsedRank": 8,
+          "currentRank": 9,
+          "elapsedHour": 83,
+          "elapsedRank": 9,
           "currentPoints": [
             {
               "hour": 6,
@@ -20898,6 +20966,10 @@
             {
               "hour": 82,
               "rank": 8
+            },
+            {
+              "hour": 83,
+              "rank": 9
             }
           ],
           "previousPoints": [
@@ -21548,19 +21620,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 5,
-              "title": "大空港～GATE24～"
-            },
-            {
               "rank": 6,
-              "title": "GTO"
+              "title": "マイ・フィクション"
             },
             {
               "rank": 7,
-              "title": "Tokyo middle 30"
+              "title": "GTO"
             },
             {
               "rank": 8,
+              "title": "Tokyo middle 30"
+            },
+            {
+              "rank": 9,
               "title": "ラストノート"
             }
           ]
@@ -21570,10 +21642,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/07/27 08:07",
+      "updatedAt": "2026/07/27 09:07",
       "episodeId": "epjmalbzhr",
       "subtitle": "堺雅人＆二宮和也VS神職人＆松尾×タイムレス原！神業ダンス",
-      "likes": "3963",
+      "likes": "3966",
       "favorites": "12.7万",
       "likePoints": [
         {
@@ -22103,6 +22175,10 @@
         {
           "hour": 133,
           "likes": 3963
+        },
+        {
+          "hour": 134,
+          "likes": 3966
         }
       ],
       "previousLikePoints": [
@@ -22772,7 +22848,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 40,
-          "elapsedHour": 133,
+          "elapsedHour": 134,
           "elapsedRank": 40,
           "currentPoints": [
             {
@@ -23297,6 +23373,10 @@
             },
             {
               "hour": 133,
+              "rank": 40
+            },
+            {
+              "hour": 134,
               "rank": 40
             }
           ],
@@ -23909,15 +23989,15 @@
           "nearbyRanking": [
             {
               "rank": 37,
-              "title": "有吉ゼミ"
+              "title": "&TEAM vs FANTASTICS 最強スターはどっちだ？"
             },
             {
               "rank": 38,
-              "title": "アンタッチャブルでやらせてもらってます"
+              "title": "アメリカ横断ウルトラクイズ"
             },
             {
               "rank": 39,
-              "title": "アメリカ横断ウルトラクイズ"
+              "title": "ベスコングルメ 〜ベストコンディションで最高の瞬間を！〜"
             },
             {
               "rank": 40,
@@ -24066,19 +24146,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 49,
-              "title": "ロンドンハーツ"
+              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
             }
           ]
         }
@@ -24087,7 +24167,7 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/27 08:07",
+      "updatedAt": "2026/07/27 09:07",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
       "likes": "4566",
@@ -24584,10 +24664,6 @@
           "elapsedRank": null,
           "currentPoints": [
             {
-              "hour": 17,
-              "rank": 31
-            },
-            {
               "hour": 18,
               "rank": 31
             },
@@ -25036,11 +25112,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "プロは普段何選ぶ？もち屋のモチ"
+              "title": "華丸・大吉のなんしようと？"
             },
             {
               "rank": 48,
-              "title": "華丸・大吉のなんしようと？"
+              "title": "プロは普段何選ぶ？もち屋のモチ"
             },
             {
               "rank": 49,
@@ -25048,7 +25124,7 @@
             },
             {
               "rank": 50,
-              "title": "王様のブランチ"
+              "title": "サンドウィッチマン＆芦田愛菜の博士ちゃん"
             }
           ]
         },
@@ -25063,19 +25139,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 49,
-              "title": "ロンドンハーツ"
+              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
             }
           ]
         }
@@ -25084,7 +25160,7 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/07/27 08:07",
+      "updatedAt": "2026/07/27 09:07",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "3.0万",
@@ -26073,19 +26149,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 49,
-              "title": "ロンドンハーツ"
+              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
             }
           ]
         },
@@ -26413,19 +26489,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "週刊さんまとマツコ"
+              "title": "夫に不倫をお願いされました"
             },
             {
               "rank": 48,
-              "title": "さんまのお笑い向上委員会"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
-              "title": "一緒にごはんをたべるだけ"
+              "title": "限界突破！やってM!LK"
             }
           ]
         }
@@ -26434,10 +26510,10 @@
     "srqd4f3ihj": {
       "programTitle": "Google Pixel presents ANOTHER SKY",
       "broadcastDate": "2026/07/25",
-      "updatedAt": "2026/07/27 08:07",
+      "updatedAt": "2026/07/27 09:07",
       "episodeId": "ep5jm1maty",
       "subtitle": "ゲスト：新しい学校のリーダーズ／アメリカ・ロサンゼルス",
-      "likes": "685",
+      "likes": "692",
       "favorites": "49.3万",
       "likePoints": [
         {
@@ -26571,6 +26647,10 @@
         {
           "hour": 33,
           "likes": 685
+        },
+        {
+          "hour": 34,
+          "likes": 692
         }
       ],
       "previousLikePoints": [
@@ -27235,19 +27315,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 49,
-              "title": "ロンドンハーツ"
+              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
             }
           ]
         },
@@ -27355,19 +27435,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "週刊さんまとマツコ"
+              "title": "夫に不倫をお願いされました"
             },
             {
               "rank": 48,
-              "title": "さんまのお笑い向上委員会"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
-              "title": "一緒にごはんをたべるだけ"
+              "title": "限界突破！やってM!LK"
             }
           ]
         }
@@ -27376,10 +27456,10 @@
     "sr6elshzoq": {
       "programTitle": "踊る！さんま御殿!!",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/07/27 08:07",
+      "updatedAt": "2026/07/27 09:07",
       "episodeId": "epz108j83s",
       "subtitle": "神奈川7路線が大激突SP 東横線VS田園都市線!本当の横浜はどっち!?",
-      "likes": "7170",
+      "likes": "7176",
       "favorites": "214.2万",
       "likePoints": [
         {
@@ -27565,6 +27645,10 @@
         {
           "hour": 132,
           "likes": 7170
+        },
+        {
+          "hour": 133,
+          "likes": 7176
         }
       ],
       "previousLikePoints": [],
@@ -28057,19 +28141,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 49,
-              "title": "ロンドンハーツ"
+              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "アサヒビール スマドリ ダブルインパクト2026 漫才＆コント二刀流No.1決定戦"
             }
           ]
         },
@@ -28385,19 +28469,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "週刊さんまとマツコ"
+              "title": "夫に不倫をお願いされました"
             },
             {
               "rank": 48,
-              "title": "さんまのお笑い向上委員会"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
-              "title": "一緒にごはんをたべるだけ"
+              "title": "限界突破！やってM!LK"
             }
           ]
         }
