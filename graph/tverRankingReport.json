@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/27 20:07",
+  "updatedAt": "2026/07/27 21:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/24",
-      "updatedAt": "2026/07/27 20:07",
+      "updatedAt": "2026/07/27 21:07",
       "episodeId": "epe8nmzldb",
       "subtitle": "1000円差し入れマン",
       "likes": "1.6万",
@@ -288,6 +288,10 @@
         },
         {
           "hour": 70,
+          "likes": 16000
+        },
+        {
+          "hour": 71,
           "likes": 16000
         }
       ],
@@ -973,9 +977,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 12,
-          "elapsedHour": 70,
-          "elapsedRank": 12,
+          "currentRank": 13,
+          "elapsedHour": 71,
+          "elapsedRank": 13,
           "currentPoints": [
             {
               "hour": 4,
@@ -1244,6 +1248,10 @@
             {
               "hour": 70,
               "rank": 12
+            },
+            {
+              "hour": 71,
+              "rank": 13
             }
           ],
           "previousPoints": [
@@ -1914,19 +1922,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 9,
-              "title": "家、ついて行ってイイですか？"
-            },
-            {
               "rank": 10,
-              "title": "月曜から夜ふかし"
-            },
-            {
-              "rank": 11,
               "title": "有吉クイズ"
             },
             {
+              "rank": 11,
+              "title": "月曜から夜ふかし"
+            },
+            {
               "rank": 12,
+              "title": "千鳥の鬼レンチャン"
+            },
+            {
+              "rank": 13,
               "title": "タイムレスマン"
             }
           ]
@@ -1934,9 +1942,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 30,
-          "elapsedHour": 70,
-          "elapsedRank": 30,
+          "currentRank": 31,
+          "elapsedHour": 71,
+          "elapsedRank": 31,
           "currentPoints": [
             {
               "hour": 9,
@@ -2185,6 +2193,10 @@
             {
               "hour": 70,
               "rank": 30
+            },
+            {
+              "hour": 71,
+              "rank": 31
             }
           ],
           "previousPoints": [
@@ -2599,19 +2611,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 27,
-              "title": "有吉クイズ"
-            },
-            {
               "rank": 28,
               "title": "キスは捜査のあとで"
             },
             {
               "rank": 29,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 30,
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
+            },
+            {
+              "rank": 31,
               "title": "タイムレスマン"
             }
           ]
@@ -2621,10 +2633,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/26",
-      "updatedAt": "2026/07/27 20:07",
+      "updatedAt": "2026/07/27 21:07",
       "episodeId": "epoicu11f6",
       "subtitle": "CanCam編集部に潜入&爆売れ雑誌ハルメクの秘密",
-      "likes": "9323",
+      "likes": "9366",
       "favorites": "34.0万",
       "likePoints": [
         {
@@ -2746,6 +2758,10 @@
         {
           "hour": 30,
           "likes": 9323
+        },
+        {
+          "hour": 31,
+          "likes": 9366
         }
       ],
       "previousLikePoints": [
@@ -3410,9 +3426,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 8,
-          "elapsedHour": 30,
-          "elapsedRank": 8,
+          "currentRank": 9,
+          "elapsedHour": 31,
+          "elapsedRank": 9,
           "currentPoints": [
             {
               "hour": 7,
@@ -3509,6 +3525,10 @@
             {
               "hour": 30,
               "rank": 8
+            },
+            {
+              "hour": 31,
+              "rank": 9
             }
           ],
           "previousPoints": [
@@ -3963,19 +3983,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 5,
-              "title": "突然ですが占ってもいいですか？"
-            },
-            {
               "rank": 6,
-              "title": "上田と女が吠える夜"
-            },
-            {
-              "rank": 7,
               "title": "日曜日の初耳学"
             },
             {
+              "rank": 7,
+              "title": "上田と女が吠える夜"
+            },
+            {
               "rank": 8,
+              "title": "家、ついて行ってイイですか？"
+            },
+            {
+              "rank": 9,
               "title": "timeleszファミリア"
             }
           ]
@@ -3983,9 +4003,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 20,
-          "elapsedHour": 30,
-          "elapsedRank": 20,
+          "currentRank": 21,
+          "elapsedHour": 31,
+          "elapsedRank": 21,
           "currentPoints": [
             {
               "hour": 8,
@@ -4078,6 +4098,10 @@
             {
               "hour": 30,
               "rank": 20
+            },
+            {
+              "hour": 31,
+              "rank": 21
             }
           ],
           "previousPoints": [
@@ -4324,19 +4348,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 17,
+              "rank": 18,
               "title": "上田と女が吠える夜"
             },
             {
-              "rank": 18,
-              "title": "日曜日の初耳学"
-            },
-            {
               "rank": 19,
-              "title": "ファーストクライ 母子救命救急班"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 20,
+              "title": "ファーストクライ 母子救命救急班"
+            },
+            {
+              "rank": 21,
               "title": "timeleszファミリア"
             }
           ]
@@ -4346,10 +4370,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/07/27 20:07",
+      "updatedAt": "2026/07/27 21:07",
       "episodeId": "epkbzqd4p5",
       "subtitle": "「脳科学でお化けは怖くなくなるのか！？」でtimeleszが仕掛け人に挑む！",
-      "likes": "9183",
+      "likes": "9181",
       "favorites": "5.6万",
       "likePoints": [
         {
@@ -4907,6 +4931,10 @@
         {
           "hour": 140,
           "likes": 9183
+        },
+        {
+          "hour": 141,
+          "likes": 9181
         }
       ],
       "previousLikePoints": [
@@ -5576,7 +5604,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 46,
-          "elapsedHour": 140,
+          "elapsedHour": 141,
           "elapsedRank": 46,
           "currentPoints": [
             {
@@ -6021,6 +6049,10 @@
             },
             {
               "hour": 140,
+              "rank": 46
+            },
+            {
+              "hour": 141,
               "rank": 46
             }
           ],
@@ -6677,11 +6709,11 @@
           "nearbyRanking": [
             {
               "rank": 43,
-              "title": "沸騰ワード10"
+              "title": "M!LKの爆裂ミッション"
             },
             {
               "rank": 44,
-              "title": "グッと！地球便"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 45,
@@ -6914,11 +6946,11 @@
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "VIVANT 初回直前生放送 SP"
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -6931,7 +6963,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/07/27 20:07",
+      "updatedAt": "2026/07/27 21:07",
       "episodeId": "epuiveft5b",
       "subtitle": "クレしん映画の新作タイトル当てられる？",
       "likes": "1.0万",
@@ -7387,6 +7419,10 @@
         },
         {
           "hour": 114,
+          "likes": 10000
+        },
+        {
+          "hour": 115,
           "likes": 10000
         }
       ],
@@ -8554,11 +8590,11 @@
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "VIVANT 初回直前生放送 SP"
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -8807,19 +8843,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "華大さんと千鳥くん"
+              "title": "今夜もシリアルキラーと待ち合わせ"
             },
             {
               "rank": 48,
-              "title": "名探偵コナン"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "名探偵コナン"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "週刊さんまとマツコ"
             }
           ]
         }
@@ -8828,7 +8864,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/07/27 20:07",
+      "updatedAt": "2026/07/27 21:07",
       "episodeId": "epqf7c2gz6",
       "subtitle": "大食い激細女子…体の秘密!体温に関係?食べる順番で解決?",
       "likes": "4767",
@@ -9801,11 +9837,11 @@
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "VIVANT 初回直前生放送 SP"
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -10001,19 +10037,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "華大さんと千鳥くん"
+              "title": "今夜もシリアルキラーと待ち合わせ"
             },
             {
               "rank": 48,
-              "title": "名探偵コナン"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "名探偵コナン"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "週刊さんまとマツコ"
             }
           ]
         }
@@ -10022,7 +10058,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/22",
-      "updatedAt": "2026/07/27 20:07",
+      "updatedAt": "2026/07/27 21:07",
       "episodeId": "epgf6icidh",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！BE:FIRST登場",
       "likes": "2.0万",
@@ -10570,6 +10606,10 @@
         },
         {
           "hour": 139,
+          "likes": 20000
+        },
+        {
+          "hour": 140,
           "likes": 20000
         }
       ],
@@ -11661,11 +11701,11 @@
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "VIVANT 初回直前生放送 SP"
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -11889,19 +11929,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "華大さんと千鳥くん"
+              "title": "今夜もシリアルキラーと待ち合わせ"
             },
             {
               "rank": 48,
-              "title": "名探偵コナン"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "名探偵コナン"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "週刊さんまとマツコ"
             }
           ]
         }
@@ -11910,10 +11950,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/24",
-      "updatedAt": "2026/07/27 20:07",
+      "updatedAt": "2026/07/27 21:07",
       "episodeId": "epkhmva7lm",
       "subtitle": "第137回 風磨くん結婚確定？5賢人と国仲涼子が愛を語る",
-      "likes": "5255",
+      "likes": "5264",
       "favorites": "71.4万",
       "likePoints": [
         {
@@ -12283,6 +12323,10 @@
         {
           "hour": 92,
           "likes": 5255
+        },
+        {
+          "hour": 93,
+          "likes": 5264
         }
       ],
       "previousLikePoints": [
@@ -13397,11 +13441,11 @@
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "VIVANT 初回直前生放送 SP"
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -13602,19 +13646,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "華大さんと千鳥くん"
+              "title": "今夜もシリアルキラーと待ち合わせ"
             },
             {
               "rank": 48,
-              "title": "名探偵コナン"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "名探偵コナン"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "週刊さんまとマツコ"
             }
           ]
         }
@@ -13623,10 +13667,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/07/25",
-      "updatedAt": "2026/07/27 20:07",
+      "updatedAt": "2026/07/27 21:07",
       "episodeId": "ep6mbhb4sa",
       "subtitle": "タイムマシーン3号のセッタイマシーンでGO",
-      "likes": "1211",
+      "likes": "1206",
       "favorites": "78.3万",
       "likePoints": [
         {
@@ -13828,6 +13872,10 @@
         {
           "hour": 49,
           "likes": 1211
+        },
+        {
+          "hour": 50,
+          "likes": 1206
         }
       ],
       "previousLikePoints": [
@@ -14982,11 +15030,11 @@
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "VIVANT 初回直前生放送 SP"
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -15146,19 +15194,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "華大さんと千鳥くん"
+              "title": "今夜もシリアルキラーと待ち合わせ"
             },
             {
               "rank": 48,
-              "title": "名探偵コナン"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "名探偵コナン"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "週刊さんまとマツコ"
             }
           ]
         }
@@ -15167,7 +15215,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/27 20:07",
+      "updatedAt": "2026/07/27 21:07",
       "episodeId": "eparzrbnab",
       "subtitle": "【4人の休日に密着】",
       "likes": "1779",
@@ -15892,15 +15940,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "新婚さんいらっしゃい！"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 48,
-              "title": "ミキティダイニング"
+              "title": "滝沢カレン＆和田明日香のフィーリンきっちん"
             },
             {
               "rank": 49,
-              "title": "テレビ×ミセス"
+              "title": "新婚さんいらっしゃい！"
             },
             {
               "rank": 50,
@@ -15923,11 +15971,11 @@
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "VIVANT 初回直前生放送 SP"
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -15940,11 +15988,11 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/07/22",
-      "updatedAt": "2026/07/27 20:07",
+      "updatedAt": "2026/07/27 21:07",
       "episodeId": "ephyflrbnk",
       "subtitle": "#3 不器用すぎる正義",
       "likes": "1.2万",
-      "favorites": "63.5万",
+      "favorites": "63.6万",
       "likePoints": [
         {
           "hour": 1,
@@ -16412,6 +16460,10 @@
         },
         {
           "hour": 118,
+          "likes": 12000
+        },
+        {
+          "hour": 119,
           "likes": 12000
         }
       ],
@@ -17094,7 +17146,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 11,
-          "elapsedHour": 118,
+          "elapsedHour": 119,
           "elapsedRank": 11,
           "currentPoints": [
             {
@@ -17531,6 +17583,10 @@
             },
             {
               "hour": 118,
+              "rank": 11
+            },
+            {
+              "hour": 119,
               "rank": 11
             }
           ],
@@ -18202,9 +18258,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 19,
-          "elapsedHour": 118,
-          "elapsedRank": 19,
+          "currentRank": 20,
+          "elapsedHour": 119,
+          "elapsedRank": 20,
           "currentPoints": [
             {
               "hour": 9,
@@ -18641,6 +18697,10 @@
             {
               "hour": 118,
               "rank": 19
+            },
+            {
+              "hour": 119,
+              "rank": 20
             }
           ],
           "previousPoints": [
@@ -19291,19 +19351,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 16,
-              "title": "突然ですが占ってもいいですか？"
-            },
-            {
               "rank": 17,
-              "title": "上田と女が吠える夜"
-            },
-            {
-              "rank": 18,
               "title": "日曜日の初耳学"
             },
             {
+              "rank": 18,
+              "title": "上田と女が吠える夜"
+            },
+            {
               "rank": 19,
+              "title": "家、ついて行ってイイですか？"
+            },
+            {
+              "rank": 20,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -19313,7 +19373,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/07/27 20:07",
+      "updatedAt": "2026/07/27 21:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "2.1万",
@@ -19693,6 +19753,10 @@
         },
         {
           "hour": 94,
+          "likes": 21000
+        },
+        {
+          "hour": 95,
           "likes": 21000
         }
       ],
@@ -20371,7 +20435,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 9,
-          "elapsedHour": 94,
+          "elapsedHour": 95,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -20724,6 +20788,10 @@
             },
             {
               "hour": 94,
+              "rank": 9
+            },
+            {
+              "hour": 95,
               "rank": 9
             }
           ],
@@ -21396,7 +21464,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 10,
-          "elapsedHour": 94,
+          "elapsedHour": 95,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -21749,6 +21817,10 @@
             },
             {
               "hour": 94,
+              "rank": 10
+            },
+            {
+              "hour": 95,
               "rank": 10
             }
           ],
@@ -22422,10 +22494,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/07/27 20:07",
+      "updatedAt": "2026/07/27 21:07",
       "episodeId": "epjmalbzhr",
       "subtitle": "堺雅人＆二宮和也VS神職人＆松尾×タイムレス原！神業ダンス",
-      "likes": "4078",
+      "likes": "4084",
       "favorites": "12.7万",
       "likePoints": [
         {
@@ -23003,6 +23075,10 @@
         {
           "hour": 145,
           "likes": 4078
+        },
+        {
+          "hour": 146,
+          "likes": 4084
         }
       ],
       "previousLikePoints": [
@@ -23671,9 +23747,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 37,
-          "elapsedHour": 145,
-          "elapsedRank": 37,
+          "currentRank": 36,
+          "elapsedHour": 146,
+          "elapsedRank": 36,
           "currentPoints": [
             {
               "hour": 2,
@@ -24246,6 +24322,10 @@
             {
               "hour": 145,
               "rank": 37
+            },
+            {
+              "hour": 146,
+              "rank": 36
             }
           ],
           "previousPoints": [
@@ -24856,19 +24936,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 33,
+              "title": "バナナマンの早起きせっかくグルメ!!"
+            },
+            {
               "rank": 34,
               "title": "知識の扉よ開け！ドア×ドア クエスト"
             },
             {
               "rank": 35,
-              "title": "アメリカ横断ウルトラクイズ"
+              "title": "ベスコングルメ 〜ベストコンディションで最高の瞬間を！〜"
             },
             {
               "rank": 36,
-              "title": "ニンゲン観察バラエティ モニタリング"
-            },
-            {
-              "rank": 37,
               "title": "THE神業チャレンジ"
             }
           ]
@@ -25018,11 +25098,11 @@
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "VIVANT 初回直前生放送 SP"
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -25035,7 +25115,7 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/27 20:07",
+      "updatedAt": "2026/07/27 21:07",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
       "likes": "4566",
@@ -25532,10 +25612,6 @@
           "elapsedRank": null,
           "currentPoints": [
             {
-              "hour": 29,
-              "rank": 17
-            },
-            {
               "hour": 30,
               "rank": 20
             },
@@ -25936,7 +26012,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "アンタッチャブルでやらせてもらってます"
+              "title": "グッと！地球便"
             },
             {
               "rank": 48,
@@ -25944,11 +26020,11 @@
             },
             {
               "rank": 49,
-              "title": "Travis JapanノJUST！シン日本遺産"
+              "title": "アンタッチャブルでやらせてもらってます"
             },
             {
               "rank": 50,
-              "title": "フットマップ"
+              "title": "Travis JapanノJUST！シン日本遺産"
             }
           ]
         },
@@ -25967,11 +26043,11 @@
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "VIVANT 初回直前生放送 SP"
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -25984,7 +26060,7 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/07/27 20:07",
+      "updatedAt": "2026/07/27 21:07",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "3.0万",
@@ -26977,11 +27053,11 @@
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "VIVANT 初回直前生放送 SP"
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -27313,19 +27389,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "華大さんと千鳥くん"
+              "title": "今夜もシリアルキラーと待ち合わせ"
             },
             {
               "rank": 48,
-              "title": "名探偵コナン"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "名探偵コナン"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "週刊さんまとマツコ"
             }
           ]
         }
@@ -27334,10 +27410,10 @@
     "srqd4f3ihj": {
       "programTitle": "Google Pixel presents ANOTHER SKY",
       "broadcastDate": "2026/07/25",
-      "updatedAt": "2026/07/27 20:07",
+      "updatedAt": "2026/07/27 21:07",
       "episodeId": "ep5jm1maty",
       "subtitle": "ゲスト：新しい学校のリーダーズ／アメリカ・ロサンゼルス",
-      "likes": "799",
+      "likes": "796",
       "favorites": "49.3万",
       "likePoints": [
         {
@@ -27519,6 +27595,10 @@
         {
           "hour": 45,
           "likes": 799
+        },
+        {
+          "hour": 46,
+          "likes": 796
         }
       ],
       "previousLikePoints": [
@@ -28187,11 +28267,11 @@
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "VIVANT 初回直前生放送 SP"
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -28303,19 +28383,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "華大さんと千鳥くん"
+              "title": "今夜もシリアルキラーと待ち合わせ"
             },
             {
               "rank": 48,
-              "title": "名探偵コナン"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "名探偵コナン"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "週刊さんまとマツコ"
             }
           ]
         }
@@ -28324,10 +28404,10 @@
     "sr6elshzoq": {
       "programTitle": "踊る！さんま御殿!!",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/07/27 20:07",
+      "updatedAt": "2026/07/27 21:07",
       "episodeId": "epz108j83s",
       "subtitle": "神奈川7路線が大激突SP 東横線VS田園都市線!本当の横浜はどっち!?",
-      "likes": "7268",
+      "likes": "7265",
       "favorites": "214.2万",
       "likePoints": [
         {
@@ -28561,6 +28641,10 @@
         {
           "hour": 144,
           "likes": 7268
+        },
+        {
+          "hour": 145,
+          "likes": 7265
         }
       ],
       "previousLikePoints": [],
@@ -29057,11 +29141,11 @@
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "VIVANT 初回直前生放送 SP"
             },
             {
               "rank": 49,
-              "title": "かのサンド"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -29381,19 +29465,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "華大さんと千鳥くん"
+              "title": "今夜もシリアルキラーと待ち合わせ"
             },
             {
               "rank": 48,
-              "title": "名探偵コナン"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "名探偵コナン"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "週刊さんまとマツコ"
             }
           ]
         }
