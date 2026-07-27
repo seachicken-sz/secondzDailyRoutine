@@ -75,6 +75,22 @@ const settingButtonElement = document.getElementById("settingButton");
 const homeMenuSettingButtonElement = document.getElementById("homeMenuSettingButton");
 
 // ==================================================
+// DOM: ホーム サブスク再生
+// ==================================================
+
+const homeSubscriptionCardElement =
+  document.getElementById("homeSubscriptionCard");
+
+const homeSubscriptionServiceSelectElement =
+  document.getElementById("homeSubscriptionServiceSelect");
+
+const homeSubscriptionSongSelectElement =
+  document.getElementById("homeSubscriptionSongSelect");
+
+const homeSubscriptionPlayButtonElement =
+  document.getElementById("homeSubscriptionPlayButton");
+
+// ==================================================
 // DOM: 初回設定モーダル
 // ==================================================
 // 初回設定モーダル全体
