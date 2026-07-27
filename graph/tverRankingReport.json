@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/28 06:07",
+  "updatedAt": "2026/07/28 07:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/24",
-      "updatedAt": "2026/07/28 06:07",
+      "updatedAt": "2026/07/28 07:07",
       "episodeId": "epe8nmzldb",
       "subtitle": "1000円差し入れマン",
       "likes": "1.6万",
@@ -328,6 +328,10 @@
         },
         {
           "hour": 80,
+          "likes": 16000
+        },
+        {
+          "hour": 81,
           "likes": 16000
         }
       ],
@@ -1014,7 +1018,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 12,
-          "elapsedHour": 80,
+          "elapsedHour": 81,
           "elapsedRank": 12,
           "currentPoints": [
             {
@@ -1323,6 +1327,10 @@
             },
             {
               "hour": 80,
+              "rank": 12
+            },
+            {
+              "hour": 81,
               "rank": 12
             }
           ],
@@ -2015,7 +2023,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 32,
-          "elapsedHour": 80,
+          "elapsedHour": 81,
           "elapsedRank": 32,
           "currentPoints": [
             {
@@ -2304,6 +2312,10 @@
             },
             {
               "hour": 80,
+              "rank": 32
+            },
+            {
+              "hour": 81,
               "rank": 32
             }
           ],
@@ -2741,7 +2753,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/26",
-      "updatedAt": "2026/07/28 06:07",
+      "updatedAt": "2026/07/28 07:07",
       "episodeId": "epoicu11f6",
       "subtitle": "CanCam編集部に潜入&爆売れ雑誌ハルメクの秘密",
       "likes": "1.0万",
@@ -2905,6 +2917,10 @@
         },
         {
           "hour": 40,
+          "likes": 10000
+        },
+        {
+          "hour": 41,
           "likes": 10000
         }
       ],
@@ -3571,7 +3587,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 10,
-          "elapsedHour": 40,
+          "elapsedHour": 41,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -3708,6 +3724,10 @@
             },
             {
               "hour": 40,
+              "rank": 10
+            },
+            {
+              "hour": 41,
               "rank": 10
             }
           ],
@@ -4164,7 +4184,7 @@
           "nearbyRanking": [
             {
               "rank": 7,
-              "title": "水曜日のダウンタウン"
+              "title": "有吉クイズ"
             },
             {
               "rank": 8,
@@ -4183,9 +4203,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 26,
-          "elapsedHour": 40,
-          "elapsedRank": 26,
+          "currentRank": 25,
+          "elapsedHour": 41,
+          "elapsedRank": 25,
           "currentPoints": [
             {
               "hour": 8,
@@ -4318,6 +4338,10 @@
             {
               "hour": 40,
               "rank": 26
+            },
+            {
+              "hour": 41,
+              "rank": 25
             }
           ],
           "previousPoints": [
@@ -4564,6 +4588,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 22,
+              "title": "ファーストクライ 母子救命救急班"
+            },
+            {
               "rank": 23,
               "title": "君の好きは無敵"
             },
@@ -4573,10 +4601,6 @@
             },
             {
               "rank": 25,
-              "title": "キスは捜査のあとで"
-            },
-            {
-              "rank": 26,
               "title": "timeleszファミリア"
             }
           ]
@@ -4586,10 +4610,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/07/28 06:07",
+      "updatedAt": "2026/07/28 07:07",
       "episodeId": "epkbzqd4p5",
       "subtitle": "「脳科学でお化けは怖くなくなるのか！？」でtimeleszが仕掛け人に挑む！",
-      "likes": "9299",
+      "likes": "9307",
       "favorites": "5.6万",
       "likePoints": [
         {
@@ -5187,6 +5211,10 @@
         {
           "hour": 150,
           "likes": 9299
+        },
+        {
+          "hour": 151,
+          "likes": 9307
         }
       ],
       "previousLikePoints": [
@@ -5856,7 +5884,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 47,
-          "elapsedHour": 150,
+          "elapsedHour": 151,
           "elapsedRank": 47,
           "currentPoints": [
             {
@@ -6341,6 +6369,10 @@
             },
             {
               "hour": 150,
+              "rank": 47
+            },
+            {
+              "hour": 151,
               "rank": 47
             }
           ],
@@ -6997,11 +7029,11 @@
           "nearbyRanking": [
             {
               "rank": 44,
-              "title": "M!LKの爆裂ミッション"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 45,
-              "title": "沸騰ワード10"
+              "title": "アメリカ横断ウルトラクイズ"
             },
             {
               "rank": 46,
@@ -7230,7 +7262,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ・イロモネア"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
@@ -7238,7 +7270,7 @@
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -7251,7 +7283,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/07/28 06:07",
+      "updatedAt": "2026/07/28 07:07",
       "episodeId": "epuiveft5b",
       "subtitle": "クレしん映画の新作タイトル当てられる？",
       "likes": "1.1万",
@@ -7747,6 +7779,10 @@
         },
         {
           "hour": 124,
+          "likes": 11000
+        },
+        {
+          "hour": 125,
           "likes": 11000
         }
       ],
@@ -8910,7 +8946,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ・イロモネア"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
@@ -8918,7 +8954,7 @@
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -9167,19 +9203,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "離婚弁護士"
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             },
             {
               "rank": 48,
-              "title": "やすとものどこいこ！？"
+              "title": "夏色の雲が恋と嵐をまきおこす"
             },
             {
               "rank": 49,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "離婚弁護士"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
@@ -9188,7 +9224,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/07/28 06:07",
+      "updatedAt": "2026/07/28 07:07",
       "episodeId": "epqf7c2gz6",
       "subtitle": "大食い激細女子…体の秘密!体温に関係?食べる順番で解決?",
       "likes": "4767",
@@ -10157,7 +10193,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ・イロモネア"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
@@ -10165,7 +10201,7 @@
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -10361,19 +10397,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "離婚弁護士"
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             },
             {
               "rank": 48,
-              "title": "やすとものどこいこ！？"
+              "title": "夏色の雲が恋と嵐をまきおこす"
             },
             {
               "rank": 49,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "離婚弁護士"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
@@ -10382,7 +10418,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/22",
-      "updatedAt": "2026/07/28 06:07",
+      "updatedAt": "2026/07/28 07:07",
       "episodeId": "epgf6icidh",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！BE:FIRST登場",
       "likes": "2.1万",
@@ -10970,6 +11006,10 @@
         },
         {
           "hour": 149,
+          "likes": 21000
+        },
+        {
+          "hour": 150,
           "likes": 21000
         }
       ],
@@ -12057,7 +12097,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ・イロモネア"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
@@ -12065,7 +12105,7 @@
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -12289,19 +12329,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "離婚弁護士"
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             },
             {
               "rank": 48,
-              "title": "やすとものどこいこ！？"
+              "title": "夏色の雲が恋と嵐をまきおこす"
             },
             {
               "rank": 49,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "離婚弁護士"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
@@ -12310,10 +12350,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/24",
-      "updatedAt": "2026/07/28 06:07",
+      "updatedAt": "2026/07/28 07:07",
       "episodeId": "epkhmva7lm",
       "subtitle": "第137回 風磨くん結婚確定？5賢人と国仲涼子が愛を語る",
-      "likes": "5412",
+      "likes": "5420",
       "favorites": "71.4万",
       "likePoints": [
         {
@@ -12723,6 +12763,10 @@
         {
           "hour": 102,
           "likes": 5412
+        },
+        {
+          "hour": 103,
+          "likes": 5420
         }
       ],
       "previousLikePoints": [
@@ -13833,7 +13877,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ・イロモネア"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
@@ -13841,7 +13885,7 @@
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -14042,19 +14086,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "離婚弁護士"
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             },
             {
               "rank": 48,
-              "title": "やすとものどこいこ！？"
+              "title": "夏色の雲が恋と嵐をまきおこす"
             },
             {
               "rank": 49,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "離婚弁護士"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
@@ -14063,7 +14107,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/07/25",
-      "updatedAt": "2026/07/28 06:07",
+      "updatedAt": "2026/07/28 07:07",
       "episodeId": "ep6mbhb4sa",
       "subtitle": "タイムマシーン3号のセッタイマシーンでGO",
       "likes": "1247",
@@ -14307,6 +14351,10 @@
         },
         {
           "hour": 59,
+          "likes": 1247
+        },
+        {
+          "hour": 60,
           "likes": 1247
         }
       ],
@@ -15458,7 +15506,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ・イロモネア"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
@@ -15466,7 +15514,7 @@
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -15626,19 +15674,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "離婚弁護士"
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             },
             {
               "rank": 48,
-              "title": "やすとものどこいこ！？"
+              "title": "夏色の雲が恋と嵐をまきおこす"
             },
             {
               "rank": 49,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "離婚弁護士"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
@@ -15647,7 +15695,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/18",
-      "updatedAt": "2026/07/28 06:07",
+      "updatedAt": "2026/07/28 07:07",
       "episodeId": "eprwx0ssjf",
       "subtitle": "【緊急！健康診断＆メンバー飲み会に密着】",
       "likes": "6695",
@@ -15670,15 +15718,15 @@
             },
             {
               "rank": 48,
-              "title": "ミキティダイニング"
+              "title": "ぽかぽか"
             },
             {
               "rank": 49,
-              "title": "出川一茂ホラン☆フシギの会"
+              "title": "ミキティダイニング"
             },
             {
               "rank": 50,
-              "title": "ぽかぽか"
+              "title": "出川一茂ホラン☆フシギの会"
             }
           ]
         },
@@ -15693,7 +15741,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ・イロモネア"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
@@ -15701,7 +15749,7 @@
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -15714,7 +15762,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/07/22",
-      "updatedAt": "2026/07/28 06:07",
+      "updatedAt": "2026/07/28 07:07",
       "episodeId": "ephyflrbnk",
       "subtitle": "#3 不器用すぎる正義",
       "likes": "1.2万",
@@ -16226,6 +16274,10 @@
         },
         {
           "hour": 128,
+          "likes": 12000
+        },
+        {
+          "hour": 129,
           "likes": 12000
         }
       ],
@@ -16908,7 +16960,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 12,
-          "elapsedHour": 128,
+          "elapsedHour": 129,
           "elapsedRank": 12,
           "currentPoints": [
             {
@@ -17385,6 +17437,10 @@
             },
             {
               "hour": 128,
+              "rank": 12
+            },
+            {
+              "hour": 129,
               "rank": 12
             }
           ],
@@ -18057,7 +18113,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 22,
-          "elapsedHour": 128,
+          "elapsedHour": 129,
           "elapsedRank": 22,
           "currentPoints": [
             {
@@ -18534,6 +18590,10 @@
             },
             {
               "hour": 128,
+              "rank": 22
+            },
+            {
+              "hour": 129,
               "rank": 22
             }
           ],
@@ -19207,7 +19267,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/07/28 06:07",
+      "updatedAt": "2026/07/28 07:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "2.1万",
@@ -19627,6 +19687,10 @@
         },
         {
           "hour": 104,
+          "likes": 21000
+        },
+        {
+          "hour": 105,
           "likes": 21000
         }
       ],
@@ -20305,7 +20369,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 10,
-          "elapsedHour": 104,
+          "elapsedHour": 105,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -20698,6 +20762,10 @@
             },
             {
               "hour": 104,
+              "rank": 10
+            },
+            {
+              "hour": 105,
               "rank": 10
             }
           ],
@@ -21370,7 +21438,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 12,
-          "elapsedHour": 104,
+          "elapsedHour": 105,
           "elapsedRank": 12,
           "currentPoints": [
             {
@@ -21763,6 +21831,10 @@
             },
             {
               "hour": 104,
+              "rank": 12
+            },
+            {
+              "hour": 105,
               "rank": 12
             }
           ],
@@ -22415,11 +22487,11 @@
           "nearbyRanking": [
             {
               "rank": 9,
-              "title": "ワンピース"
+              "title": "大空港～GATE24～"
             },
             {
               "rank": 10,
-              "title": "大空港～GATE24～"
+              "title": "ワンピース"
             },
             {
               "rank": 11,
@@ -22436,10 +22508,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/07/28 06:07",
+      "updatedAt": "2026/07/28 07:07",
       "episodeId": "epjmalbzhr",
       "subtitle": "堺雅人＆二宮和也VS神職人＆松尾×タイムレス原！神業ダンス",
-      "likes": "4205",
+      "likes": "4216",
       "favorites": "12.7万",
       "likePoints": [
         {
@@ -23057,6 +23129,10 @@
         {
           "hour": 155,
           "likes": 4205
+        },
+        {
+          "hour": 156,
+          "likes": 4216
         }
       ],
       "previousLikePoints": [
@@ -23725,9 +23801,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 31,
-          "elapsedHour": 155,
-          "elapsedRank": 31,
+          "currentRank": 30,
+          "elapsedHour": 156,
+          "elapsedRank": 30,
           "currentPoints": [
             {
               "hour": 2,
@@ -24340,6 +24416,10 @@
             {
               "hour": 155,
               "rank": 31
+            },
+            {
+              "hour": 156,
+              "rank": 30
             }
           ],
           "previousPoints": [
@@ -24950,6 +25030,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 27,
+              "title": "秘密のケンミンSHOW極"
+            },
+            {
               "rank": 28,
               "title": "ごぶごぶ"
             },
@@ -24959,10 +25043,6 @@
             },
             {
               "rank": 30,
-              "title": "華丸丼と大吉麺"
-            },
-            {
-              "rank": 31,
               "title": "THE神業チャレンジ"
             }
           ]
@@ -25108,7 +25188,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ・イロモネア"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
@@ -25116,7 +25196,7 @@
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -25129,7 +25209,7 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/28 06:07",
+      "updatedAt": "2026/07/28 07:07",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
       "likes": "4566",
@@ -25626,10 +25706,6 @@
           "elapsedRank": null,
           "currentPoints": [
             {
-              "hour": 39,
-              "rank": 24
-            },
-            {
               "hour": 40,
               "rank": 25
             },
@@ -26002,11 +26078,11 @@
             },
             {
               "rank": 49,
-              "title": "秋山の楽しすぎる約30分"
+              "title": "Travis JapanノJUST！シン日本遺産"
             },
             {
               "rank": 50,
-              "title": "Travis JapanノJUST！シン日本遺産"
+              "title": "秋山の楽しすぎる約30分"
             }
           ]
         },
@@ -26021,7 +26097,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ・イロモネア"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
@@ -26029,7 +26105,7 @@
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -26042,7 +26118,7 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/07/28 06:07",
+      "updatedAt": "2026/07/28 07:07",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "3.0万",
@@ -27031,7 +27107,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ・イロモネア"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
@@ -27039,7 +27115,7 @@
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -27371,19 +27447,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "離婚弁護士"
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             },
             {
               "rank": 48,
-              "title": "やすとものどこいこ！？"
+              "title": "夏色の雲が恋と嵐をまきおこす"
             },
             {
               "rank": 49,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "離婚弁護士"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
@@ -27392,10 +27468,10 @@
     "sr6elshzoq": {
       "programTitle": "踊る！さんま御殿!!",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/07/28 06:07",
+      "updatedAt": "2026/07/28 07:07",
       "episodeId": "epz108j83s",
       "subtitle": "神奈川7路線が大激突SP 東横線VS田園都市線!本当の横浜はどっち!?",
-      "likes": "7357",
+      "likes": "7360",
       "favorites": "214.2万",
       "likePoints": [
         {
@@ -27669,6 +27745,10 @@
         {
           "hour": 154,
           "likes": 7357
+        },
+        {
+          "hour": 155,
+          "likes": 7360
         }
       ],
       "previousLikePoints": [],
@@ -28161,7 +28241,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ・イロモネア"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 48,
@@ -28169,7 +28249,7 @@
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
@@ -28489,19 +28569,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "離婚弁護士"
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             },
             {
               "rank": 48,
-              "title": "やすとものどこいこ！？"
+              "title": "夏色の雲が恋と嵐をまきおこす"
             },
             {
               "rank": 49,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "離婚弁護士"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
