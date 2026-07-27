@@ -284,7 +284,7 @@
           </div>
         </section>
 
-            <!--期間限定お知らせ事-->
+      <!--期間限定お知らせ事-->
       <section class="home-card date-visible-block" data-fromdate="2026-06-13T00:00:00+09:00" data-todate="2026-06-15T23:59:59+09:00">
           <h2 class="ruby-h"><ruby>当落アンケート<rt>questionnaire</rt></ruby></h2>
           <div class="card-link">
@@ -309,10 +309,30 @@
               <img src="https://timely-iota-eight.vercel.app/icon-192.png" alt="Timely">
               <span class="card-link-text">
                 <strong>Timely</strong>
-                <small>タムたちの予定を確認できるsecondz向けの非公式サポートアプリ。今日は何がTimelyかな？<br>作成：かなで(@knd12310104)さん</small>
+                <small>タムたちの予定を確認できるsecondz向けの非公式サポートアプリ。今日は何がTimelyかな？<br>
+                  ※外部サイトに移動します。<br>作成：かなで(@knd12310104)さん</small>
               </span>
             </a>
           </div>
+        </section>
+
+        <!--サブスク再生-->
+        <section id="homeSubscriptionCard" class="home-card">
+          <h2 class="ruby-h">
+            <ruby>サブスク再生<rt>subscription</rt></ruby>
+          </h2>
+          <p class="home-extra-description">
+            せっかくなら再生しておかない？<br>
+            ※Apple Music有料会員、Spotify Premium加入済みの方はStationheadもおすすめ！<br>
+            <a href="https://www.universal-music.co.jp/other/umjstationhead/">設定方法(外部サイト)</a>
+          </p>
+          <div class="home-subscription-select-area">
+            <select id="homeSubscriptionServiceSelect" class="home-request-song-select" aria-label="サブスクを選択">
+              <option value="spotify" selected>Spotify</option>
+            </select>
+            <select id="homeSubscriptionSongSelect" class="home-request-song-select" aria-label="曲を選択"></select>
+          </div>
+          <button id="homeSubscriptionPlayButton"  class="primary-button home-subscription-play-button" type="button">再生する</button>
         </section>
       
         <!--メンバーごと-->
@@ -353,25 +373,6 @@
           <!--ここにメンバーごと便利リンク集生成-->
           <div id="memberWorksArea" class="member-works-list"></div>
         </section>
-
-      <!--サブスク再生-->
-      <section id="homeSubscriptionCard" class="home-card">
-        <h2 class="ruby-h">
-          <ruby>サブスク再生<rt>subscription</rt></ruby>
-        </h2>
-        <p class="home-extra-description">
-          せっかくなら再生しておかない？<br>
-          ※Apple Music有料会員、Spotify Premium加入済みの方はStationheadもおすすめ！<br>
-          <a href="https://www.universal-music.co.jp/other/umjstationhead/">設定方法(外部サイト)</a>
-        </p>
-        <div class="home-subscription-select-area">
-          <select id="homeSubscriptionServiceSelect" class="home-request-song-select" aria-label="サブスクを選択">
-            <option value="spotify" selected>Spotify</option>
-          </select>
-          <select id="homeSubscriptionSongSelect" class="home-request-song-select" aria-label="曲を選択"></select>
-        </div>
-        <button id="homeSubscriptionPlayButton"  class="primary-button home-subscription-play-button" type="button">再生する</button>
-      </section>
 
         <!--おかわりDaily-->
         <section id="homeDailyExtraCard" class="home-card home-extra-task-card hidden">
