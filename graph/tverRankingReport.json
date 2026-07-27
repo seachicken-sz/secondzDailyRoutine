@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/27 17:07",
+  "updatedAt": "2026/07/27 18:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/24",
-      "updatedAt": "2026/07/27 17:07",
+      "updatedAt": "2026/07/27 18:07",
       "episodeId": "epe8nmzldb",
       "subtitle": "1000円差し入れマン",
       "likes": "1.6万",
@@ -276,6 +276,10 @@
         },
         {
           "hour": 67,
+          "likes": 16000
+        },
+        {
+          "hour": 68,
           "likes": 16000
         }
       ],
@@ -961,9 +965,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 9,
-          "elapsedHour": 67,
-          "elapsedRank": 9,
+          "currentRank": 11,
+          "elapsedHour": 68,
+          "elapsedRank": 11,
           "currentPoints": [
             {
               "hour": 4,
@@ -1220,6 +1224,10 @@
             {
               "hour": 67,
               "rank": 9
+            },
+            {
+              "hour": 68,
+              "rank": 11
             }
           ],
           "previousPoints": [
@@ -1890,19 +1898,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 6,
-              "title": "Golden SixTONES"
-            },
-            {
-              "rank": 7,
-              "title": "月曜から夜ふかし"
-            },
-            {
               "rank": 8,
               "title": "突然ですが占ってもいいですか？"
             },
             {
               "rank": 9,
+              "title": "日曜日の初耳学"
+            },
+            {
+              "rank": 10,
+              "title": "家、ついて行ってイイですか？"
+            },
+            {
+              "rank": 11,
               "title": "タイムレスマン"
             }
           ]
@@ -1910,9 +1918,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 25,
-          "elapsedHour": 67,
-          "elapsedRank": 25,
+          "currentRank": 27,
+          "elapsedHour": 68,
+          "elapsedRank": 27,
           "currentPoints": [
             {
               "hour": 9,
@@ -2149,6 +2157,10 @@
             {
               "hour": 67,
               "rank": 25
+            },
+            {
+              "hour": 68,
+              "rank": 27
             }
           ],
           "previousPoints": [
@@ -2563,19 +2575,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 22,
-              "title": "月曜から夜ふかし"
-            },
-            {
-              "rank": 23,
-              "title": "ブラックトリック～裁きを操る弁護人～"
-            },
-            {
               "rank": 24,
-              "title": "突然ですが占ってもいいですか？"
+              "title": "日曜日の初耳学"
             },
             {
               "rank": 25,
+              "title": "ブラックトリック～裁きを操る弁護人～"
+            },
+            {
+              "rank": 26,
+              "title": "家、ついて行ってイイですか？"
+            },
+            {
+              "rank": 27,
               "title": "タイムレスマン"
             }
           ]
@@ -2585,10 +2597,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/26",
-      "updatedAt": "2026/07/27 17:07",
+      "updatedAt": "2026/07/27 18:07",
       "episodeId": "epoicu11f6",
       "subtitle": "CanCam編集部に潜入&爆売れ雑誌ハルメクの秘密",
-      "likes": "8773",
+      "likes": "8943",
       "favorites": "34.0万",
       "likePoints": [
         {
@@ -2698,6 +2710,10 @@
         {
           "hour": 27,
           "likes": 8773
+        },
+        {
+          "hour": 28,
+          "likes": 8943
         }
       ],
       "previousLikePoints": [
@@ -3362,9 +3378,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 5,
-          "elapsedHour": 27,
-          "elapsedRank": 5,
+          "currentRank": 6,
+          "elapsedHour": 28,
+          "elapsedRank": 6,
           "currentPoints": [
             {
               "hour": 7,
@@ -3449,6 +3465,10 @@
             {
               "hour": 27,
               "rank": 5
+            },
+            {
+              "hour": 28,
+              "rank": 6
             }
           ],
           "previousPoints": [
@@ -3903,10 +3923,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 2,
-              "title": "アメトーーク！"
-            },
-            {
               "rank": 3,
               "title": "水曜日のダウンタウン"
             },
@@ -3916,6 +3932,10 @@
             },
             {
               "rank": 5,
+              "title": "Golden SixTONES"
+            },
+            {
+              "rank": 6,
               "title": "timeleszファミリア"
             }
           ]
@@ -3923,9 +3943,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 18,
-          "elapsedHour": 27,
-          "elapsedRank": 18,
+          "currentRank": 19,
+          "elapsedHour": 28,
+          "elapsedRank": 19,
           "currentPoints": [
             {
               "hour": 8,
@@ -4006,6 +4026,10 @@
             {
               "hour": 27,
               "rank": 18
+            },
+            {
+              "hour": 28,
+              "rank": 19
             }
           ],
           "previousPoints": [
@@ -4252,19 +4276,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 15,
-              "title": "上田と女が吠える夜"
-            },
-            {
               "rank": 16,
-              "title": "大追跡～警視庁ＳＳＢＣ強行犯係～ Season2"
-            },
-            {
-              "rank": 17,
               "title": "ファーストクライ 母子救命救急班"
             },
             {
+              "rank": 17,
+              "title": "大追跡～警視庁ＳＳＢＣ強行犯係～ Season2"
+            },
+            {
               "rank": 18,
+              "title": "Golden SixTONES"
+            },
+            {
+              "rank": 19,
               "title": "timeleszファミリア"
             }
           ]
@@ -4274,10 +4298,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/07/27 17:07",
+      "updatedAt": "2026/07/27 18:07",
       "episodeId": "epkbzqd4p5",
       "subtitle": "「脳科学でお化けは怖くなくなるのか！？」でtimeleszが仕掛け人に挑む！",
-      "likes": "9148",
+      "likes": "9154",
       "favorites": "5.6万",
       "likePoints": [
         {
@@ -4823,6 +4847,10 @@
         {
           "hour": 137,
           "likes": 9148
+        },
+        {
+          "hour": 138,
+          "likes": 9154
         }
       ],
       "previousLikePoints": [
@@ -5491,9 +5519,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 48,
-          "elapsedHour": 137,
-          "elapsedRank": 48,
+          "currentRank": 47,
+          "elapsedHour": 138,
+          "elapsedRank": 47,
           "currentPoints": [
             {
               "hour": 6,
@@ -5926,6 +5954,10 @@
             {
               "hour": 137,
               "rank": 48
+            },
+            {
+              "hour": 138,
+              "rank": 47
             }
           ],
           "previousPoints": [
@@ -6580,6 +6612,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 44,
+              "title": "グッと！地球便"
+            },
+            {
               "rank": 45,
               "title": "アンタッチャブルでやらせてもらってます"
             },
@@ -6589,10 +6625,6 @@
             },
             {
               "rank": 47,
-              "title": "路線バスで寄り道の旅"
-            },
-            {
-              "rank": 48,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -6826,7 +6858,7 @@
             },
             {
               "rank": 50,
-              "title": "世界くらべてみたら"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             }
           ]
         }
@@ -6835,7 +6867,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/07/27 17:07",
+      "updatedAt": "2026/07/27 18:07",
       "episodeId": "epuiveft5b",
       "subtitle": "クレしん映画の新作タイトル当てられる？",
       "likes": "1.0万",
@@ -7279,6 +7311,10 @@
         },
         {
           "hour": 111,
+          "likes": 10000
+        },
+        {
+          "hour": 112,
           "likes": 10000
         }
       ],
@@ -8454,7 +8490,7 @@
             },
             {
               "rank": 50,
-              "title": "世界くらべてみたら"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             }
           ]
         },
@@ -8707,11 +8743,11 @@
             },
             {
               "rank": 49,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 50,
-              "title": "華大さんと千鳥くん"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             }
           ]
         }
@@ -8720,7 +8756,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/07/27 17:07",
+      "updatedAt": "2026/07/27 18:07",
       "episodeId": "epqf7c2gz6",
       "subtitle": "大食い激細女子…体の秘密!体温に関係?食べる順番で解決?",
       "likes": "4767",
@@ -9701,7 +9737,7 @@
             },
             {
               "rank": 50,
-              "title": "世界くらべてみたら"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             }
           ]
         },
@@ -9901,11 +9937,11 @@
             },
             {
               "rank": 49,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 50,
-              "title": "華大さんと千鳥くん"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             }
           ]
         }
@@ -9914,7 +9950,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/22",
-      "updatedAt": "2026/07/27 17:07",
+      "updatedAt": "2026/07/27 18:07",
       "episodeId": "epgf6icidh",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！BE:FIRST登場",
       "likes": "2.0万",
@@ -10450,6 +10486,10 @@
         },
         {
           "hour": 136,
+          "likes": 20000
+        },
+        {
+          "hour": 137,
           "likes": 20000
         }
       ],
@@ -11549,7 +11589,7 @@
             },
             {
               "rank": 50,
-              "title": "世界くらべてみたら"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             }
           ]
         },
@@ -11777,11 +11817,11 @@
             },
             {
               "rank": 49,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 50,
-              "title": "華大さんと千鳥くん"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             }
           ]
         }
@@ -11790,10 +11830,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/24",
-      "updatedAt": "2026/07/27 17:07",
+      "updatedAt": "2026/07/27 18:07",
       "episodeId": "epkhmva7lm",
       "subtitle": "第137回 風磨くん結婚確定？5賢人と国仲涼子が愛を語る",
-      "likes": "5201",
+      "likes": "5218",
       "favorites": "71.4万",
       "likePoints": [
         {
@@ -12151,6 +12191,10 @@
         {
           "hour": 89,
           "likes": 5201
+        },
+        {
+          "hour": 90,
+          "likes": 5218
         }
       ],
       "previousLikePoints": [
@@ -13273,7 +13317,7 @@
             },
             {
               "rank": 50,
-              "title": "世界くらべてみたら"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             }
           ]
         },
@@ -13478,11 +13522,11 @@
             },
             {
               "rank": 49,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 50,
-              "title": "華大さんと千鳥くん"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             }
           ]
         }
@@ -13491,10 +13535,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/07/25",
-      "updatedAt": "2026/07/27 17:07",
+      "updatedAt": "2026/07/27 18:07",
       "episodeId": "ep6mbhb4sa",
       "subtitle": "タイムマシーン3号のセッタイマシーンでGO",
-      "likes": "1185",
+      "likes": "1194",
       "favorites": "78.3万",
       "likePoints": [
         {
@@ -13684,6 +13728,10 @@
         {
           "hour": 46,
           "likes": 1185
+        },
+        {
+          "hour": 47,
+          "likes": 1194
         }
       ],
       "previousLikePoints": [
@@ -14846,7 +14894,7 @@
             },
             {
               "rank": 50,
-              "title": "世界くらべてみたら"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             }
           ]
         },
@@ -15010,11 +15058,11 @@
             },
             {
               "rank": 49,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 50,
-              "title": "華大さんと千鳥くん"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             }
           ]
         }
@@ -15023,7 +15071,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/06/30",
-      "updatedAt": "2026/07/27 17:07",
+      "updatedAt": "2026/07/27 18:07",
       "episodeId": "eparzrbnab",
       "subtitle": "【4人の休日に密着】",
       "likes": "1779",
@@ -15748,7 +15796,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "じっくり聞いタロウ～スター近況（秘）報告～"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 48,
@@ -15787,7 +15835,7 @@
             },
             {
               "rank": 50,
-              "title": "世界くらべてみたら"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             }
           ]
         }
@@ -15796,7 +15844,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/07/22",
-      "updatedAt": "2026/07/27 17:07",
+      "updatedAt": "2026/07/27 18:07",
       "episodeId": "ephyflrbnk",
       "subtitle": "#3 不器用すぎる正義",
       "likes": "1.2万",
@@ -16256,6 +16304,10 @@
         },
         {
           "hour": 115,
+          "likes": 12000
+        },
+        {
+          "hour": 116,
           "likes": 12000
         }
       ],
@@ -16937,9 +16989,9 @@
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 12,
-          "elapsedHour": 115,
-          "elapsedRank": 12,
+          "currentRank": 11,
+          "elapsedHour": 116,
+          "elapsedRank": 11,
           "currentPoints": [
             {
               "hour": 9,
@@ -17364,6 +17416,10 @@
             {
               "hour": 115,
               "rank": 12
+            },
+            {
+              "hour": 116,
+              "rank": 11
             }
           ],
           "previousPoints": [
@@ -18014,6 +18070,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 8,
+              "title": "大空港～GATE24～"
+            },
+            {
               "rank": 9,
               "title": "ラストノート"
             },
@@ -18023,10 +18083,6 @@
             },
             {
               "rank": 11,
-              "title": "大追跡～警視庁ＳＳＢＣ強行犯係～ Season2"
-            },
-            {
-              "rank": 12,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -18034,9 +18090,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 17,
-          "elapsedHour": 115,
-          "elapsedRank": 17,
+          "currentRank": 16,
+          "elapsedHour": 116,
+          "elapsedRank": 16,
           "currentPoints": [
             {
               "hour": 9,
@@ -18461,6 +18517,10 @@
             {
               "hour": 115,
               "rank": 17
+            },
+            {
+              "hour": 116,
+              "rank": 16
             }
           ],
           "previousPoints": [
@@ -19111,6 +19171,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 13,
+              "title": "水曜日のダウンタウン"
+            },
+            {
               "rank": 14,
               "title": "ワンピース"
             },
@@ -19120,10 +19184,6 @@
             },
             {
               "rank": 16,
-              "title": "大追跡～警視庁ＳＳＢＣ強行犯係～ Season2"
-            },
-            {
-              "rank": 17,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -19133,7 +19193,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/07/27 17:07",
+      "updatedAt": "2026/07/27 18:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "2.1万",
@@ -19501,6 +19561,10 @@
         },
         {
           "hour": 91,
+          "likes": 21000
+        },
+        {
+          "hour": 92,
           "likes": 21000
         }
       ],
@@ -20179,7 +20243,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 9,
-          "elapsedHour": 91,
+          "elapsedHour": 92,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -20520,6 +20584,10 @@
             },
             {
               "hour": 91,
+              "rank": 9
+            },
+            {
+              "hour": 92,
               "rank": 9
             }
           ],
@@ -21176,11 +21244,11 @@
             },
             {
               "rank": 7,
-              "title": "大空港～GATE24～"
+              "title": "GTO"
             },
             {
               "rank": 8,
-              "title": "GTO"
+              "title": "大空港～GATE24～"
             },
             {
               "rank": 9,
@@ -21192,7 +21260,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 10,
-          "elapsedHour": 91,
+          "elapsedHour": 92,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -21533,6 +21601,10 @@
             },
             {
               "hour": 91,
+              "rank": 10
+            },
+            {
+              "hour": 92,
               "rank": 10
             }
           ],
@@ -22189,11 +22261,11 @@
             },
             {
               "rank": 8,
-              "title": "大空港～GATE24～"
+              "title": "GTO"
             },
             {
               "rank": 9,
-              "title": "GTO"
+              "title": "大空港～GATE24～"
             },
             {
               "rank": 10,
@@ -22206,10 +22278,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/07/27 17:07",
+      "updatedAt": "2026/07/27 18:07",
       "episodeId": "epjmalbzhr",
       "subtitle": "堺雅人＆二宮和也VS神職人＆松尾×タイムレス原！神業ダンス",
-      "likes": "4042",
+      "likes": "4056",
       "favorites": "12.7万",
       "likePoints": [
         {
@@ -22775,6 +22847,10 @@
         {
           "hour": 142,
           "likes": 4042
+        },
+        {
+          "hour": 143,
+          "likes": 4056
         }
       ],
       "previousLikePoints": [
@@ -23443,9 +23519,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 40,
-          "elapsedHour": 142,
-          "elapsedRank": 40,
+          "currentRank": 38,
+          "elapsedHour": 143,
+          "elapsedRank": 38,
           "currentPoints": [
             {
               "hour": 2,
@@ -24006,6 +24082,10 @@
             {
               "hour": 142,
               "rank": 40
+            },
+            {
+              "hour": 143,
+              "rank": 38
             }
           ],
           "previousPoints": [
@@ -24616,19 +24696,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 35,
+              "title": "ナンデモ特命係 発見らくちゃく！"
+            },
+            {
+              "rank": 36,
+              "title": "ニンゲン観察バラエティ モニタリング"
+            },
+            {
               "rank": 37,
               "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 38,
-              "title": "ダイアン津田＆Snow Man向井の俺のツレとも仲良くなって！"
-            },
-            {
-              "rank": 39,
-              "title": "リア突WEST.レボリューション"
-            },
-            {
-              "rank": 40,
               "title": "THE神業チャレンジ"
             }
           ]
@@ -24786,7 +24866,7 @@
             },
             {
               "rank": 50,
-              "title": "世界くらべてみたら"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             }
           ]
         }
@@ -24795,7 +24875,7 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/27 17:07",
+      "updatedAt": "2026/07/27 18:07",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
       "likes": "4566",
@@ -25292,10 +25372,6 @@
           "elapsedRank": null,
           "currentPoints": [
             {
-              "hour": 26,
-              "rank": 16
-            },
-            {
               "hour": 27,
               "rank": 16
             },
@@ -25708,15 +25784,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "路線バスで寄り道の旅"
-            },
-            {
-              "rank": 48,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "なりゆき街道旅"
+            },
+            {
+              "rank": 49,
+              "title": "路線バスで寄り道の旅"
             },
             {
               "rank": 50,
@@ -25747,7 +25823,7 @@
             },
             {
               "rank": 50,
-              "title": "世界くらべてみたら"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             }
           ]
         }
@@ -25756,7 +25832,7 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/07/27 17:07",
+      "updatedAt": "2026/07/27 18:07",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "3.0万",
@@ -26757,7 +26833,7 @@
             },
             {
               "rank": 50,
-              "title": "世界くらべてみたら"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             }
           ]
         },
@@ -27093,11 +27169,11 @@
             },
             {
               "rank": 49,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 50,
-              "title": "華大さんと千鳥くん"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             }
           ]
         }
@@ -27106,10 +27182,10 @@
     "srqd4f3ihj": {
       "programTitle": "Google Pixel presents ANOTHER SKY",
       "broadcastDate": "2026/07/25",
-      "updatedAt": "2026/07/27 17:07",
+      "updatedAt": "2026/07/27 18:07",
       "episodeId": "ep5jm1maty",
       "subtitle": "ゲスト：新しい学校のリーダーズ／アメリカ・ロサンゼルス",
-      "likes": "762",
+      "likes": "775",
       "favorites": "49.3万",
       "likePoints": [
         {
@@ -27279,6 +27355,10 @@
         {
           "hour": 42,
           "likes": 762
+        },
+        {
+          "hour": 43,
+          "likes": 775
         }
       ],
       "previousLikePoints": [
@@ -27955,7 +28035,7 @@
             },
             {
               "rank": 50,
-              "title": "世界くらべてみたら"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             }
           ]
         },
@@ -28071,11 +28151,11 @@
             },
             {
               "rank": 49,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 50,
-              "title": "華大さんと千鳥くん"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             }
           ]
         }
@@ -28084,10 +28164,10 @@
     "sr6elshzoq": {
       "programTitle": "踊る！さんま御殿!!",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/07/27 17:07",
+      "updatedAt": "2026/07/27 18:07",
       "episodeId": "epz108j83s",
       "subtitle": "神奈川7路線が大激突SP 東横線VS田園都市線!本当の横浜はどっち!?",
-      "likes": "7240",
+      "likes": "7245",
       "favorites": "214.2万",
       "likePoints": [
         {
@@ -28309,6 +28389,10 @@
         {
           "hour": 141,
           "likes": 7240
+        },
+        {
+          "hour": 142,
+          "likes": 7245
         }
       ],
       "previousLikePoints": [],
@@ -28813,7 +28897,7 @@
             },
             {
               "rank": 50,
-              "title": "世界くらべてみたら"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             }
           ]
         },
@@ -29137,11 +29221,11 @@
             },
             {
               "rank": 49,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 50,
-              "title": "華大さんと千鳥くん"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             }
           ]
         }
