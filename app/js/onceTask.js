@@ -4,6 +4,31 @@
 // ==================================================
 
 // ==================================================
+// 期間限定タスクを選択せずに次へ進む
+// ==================================================
+async function skipOnceTaskSelection() {
+  // チェックをすべて外す
+  if (onceTaskListElement) {
+    const checkboxes =
+      onceTaskListElement.querySelectorAll('input[type="checkbox"]');
+
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = false;
+    });
+  }
+
+  // 期間限定タスクは未選択扱いにする
+  state.selectedOnceTasks = [];
+  state.currentOnceTaskIndex = 0;
+
+  // エラー表示を消す
+  hideError(onceListErrorAreaElement);
+
+  // USEN推しリクへ進む
+  await showRequestSongStep();
+}
+
+// ==================================================
 // 期間限定タスクイベント登録
 // ==================================================
 // app.js から呼び出して、期間限定タスク画面で使うクリックイベントをまとめて登録する
@@ -22,9 +47,7 @@ function bindOnceTaskEvents() {
 
     // 選択された期間限定タスクがない場合は、期間限定タスク実行画面をスキップしてUSEN推しリクへ進む
     if (selectedTasks.length === 0) {
-      state.selectedOnceTasks = [];
-      state.currentOnceTaskIndex = 0;
-      await showRequestSongStep();
+      await skipOnceTaskSelection();
       return;
     }
 
@@ -36,6 +59,14 @@ function bindOnceTaskEvents() {
 
     // 期間限定タスク実行画面へ進む
     showOnceTaskRunStep();
+  });
+
+  // ==================================================
+  // 期間限定タスク選択画面：「今はやめとく」ボタン
+  // ==================================================
+  
+  addClickEvent(skipOnceTasksButtonElement, async () => {
+    await skipOnceTaskSelection();
   });
 
   // ==================================================
