@@ -1707,12 +1707,29 @@ function openHomeSpotifySubscription(song) {
     return;
   }
 
-  // 通常Spotifyステップと同じSpotifyログを送信
-  if (typeof sendSpotifyLog === "function") {
-    sendSpotifyLog(song).catch((error) => {
-      console.error("Spotifyログ送信失敗", error);
-    });
-  }
+const logPromises = [];
 
-  location.href = spotifyUrl;
+// musicLog
+// taskType = spotify
+if (typeof sendSpotifyLog === "function") {
+  logPromises.push(
+    sendSpotifyLog(song)
+  );
+}
+
+// homeTaskLog
+if (typeof sendHomeTaskLog === "function") {
+  logPromises.push(
+    sendHomeTaskLog(song, {
+      source: "spotify",
+      url: spotifyUrl,
+    })
+  );
+}
+
+Promise.allSettled(logPromises).catch((error) => {
+  console.error("サブスク再生ログ送信失敗", error);
+});
+
+location.href = spotifyUrl;
 }
