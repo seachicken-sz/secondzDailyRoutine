@@ -1244,32 +1244,66 @@
 
 <!-- Stationhead案内モーダル -->
 <div id="stationheadModal" class="modal-overlay hidden">
-  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="stationheadModalTitle">
+  <div class="modal-content stationhead-modal-content" role="dialog" aria-modal="true" aria-labelledby="stationheadModalTitle">
     <div class="modal-header">
-      <h2 id="stationheadModalTitle">Stationhead（ステヘ）</h2>
+      <h2 id="stationheadModalTitle"><i class="bi bi-headphones"></i> Stationhead</h2>
       <button type="button" id="closeStationheadModalButton" class="modal-close-button" aria-label="閉じる">×</button>
     </div>
-    <div class="modal-body">
-      <h3>Stationhead（ステヘ）にチャレンジしてみない？</h3>
-      <p>リリース週だけでもステヘに参加してみませんか？</p>
-      <h4>参加条件</h4>
-      <ul>
-        <li>Apple Music有料会員またはSpotify Premium加入者</li>
-        <li>18歳以上</li>
-      </ul>
-      <h4>ステヘのメリット</h4>
-      <ul>
-        <li>つないでおくだけで再生回数に大幅貢献！<br>（＝Billboardランキングに貢献）</li>
-        <li>再生リストを組んだりする手間なし！</li>
-        <li>Apple Music有料会員またはSpotify Premium加入済みなら追加料金なし！</li>
-        <li>アプリDL＋簡単な初期設定のみで使える！</li>
-      </ul>
-      <p>設定方法、アプリのDLはこちら！</p>
-      <a href="https://www.universal-music.co.jp/other/umjstationhead/" class="primary-button" target="_blank" rel="noopener noreferrer">設定方法（外部サイト）</a>
-      <a href="https://apps.apple.com/us/app/stationhead/id1076117681" class="secondary-button" target="_blank" rel="noopener noreferrer"><i class="bi bi-apple"></i>DL（iPhone）</a>
-      <a href="https://play.google.com/store/apps/details?id=com.stationhead.app&referrer=utm_source%3DMarketing%2520Website%26utm_medium%3Dreferral%26utm_campaign%3DMarketing%26anid%3Dadmob" class="secondary-button" target="_blank" rel="noopener noreferrer"><i class="bi bi-google-play"></i>DL（Android）</a>
-      <p>アプリのDL＋初期設定が完了したら下のsecondz専用チャンネルにつなごう！</p>
-      <a href="https://www.stationhead.com/c/secondz" class="primary-button" target="_blank" rel="noopener noreferrer">secondzチャンネルを開く</a>
+    <div class="modal-body stationhead-modal-body">
+      <section class="stationhead-intro">
+        <span class="stationhead-label">リリース週におすすめ！</span>
+        <h3>ステヘにチャレンジしてみない？</h3>
+        <p>リリース週だけでもStationheadに参加して、みんなで一緒に再生しよう！</p>
+      </section>
+
+      <section class="stationhead-section">
+        <h4><i class="bi bi-person-check"></i> 参加できる人</h4>
+        <div class="stationhead-condition-list">
+          <div class="stationhead-condition"><i class="bi bi-check-circle-fill"></i><span>Apple Music有料会員<br>またはSpotify Premium加入者</span></div>
+          <div class="stationhead-condition"><i class="bi bi-check-circle-fill"></i><span>18歳以上</span></div>
+        </div>
+      </section>
+
+      <section class="stationhead-section">
+        <h4><i class="bi bi-stars"></i> ステヘのメリット</h4>
+        <div class="stationhead-benefit-list">
+          <div class="stationhead-benefit">
+            <i class="bi bi-play-circle"></i>
+            <div><strong>つないでおくだけ！</strong><span>再生回数に大幅貢献<br>＝Billboardランキングにも貢献！</span></div>
+          </div>
+          <div class="stationhead-benefit">
+            <i class="bi bi-music-note-list"></i>
+            <div><strong>プレイリスト不要</strong><span>自分で再生リストを組む手間なし！</span></div>
+          </div>
+          <div class="stationhead-benefit">
+            <i class="bi bi-wallet2"></i>
+            <div><strong>追加料金なし</strong><span>対象サブスクに加入済みならそのまま参加できます。</span></div>
+          </div>
+          <div class="stationhead-benefit">
+            <i class="bi bi-phone"></i>
+            <div><strong>設定もかんたん</strong><span>アプリDL＋簡単な初期設定だけ！</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stationhead-section stationhead-start-section">
+        <h4><i class="bi bi-rocket-takeoff"></i> はじめかた</h4>
+        <p>まずは設定方法を確認して、Stationheadアプリをダウンロード！</p>
+        <a href="https://www.universal-music.co.jp/other/umjstationhead/" class="primary-button stationhead-guide-button" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> 設定方法を見る</a>
+        <div class="stationhead-download-row">
+          <a href="https://apps.apple.com/us/app/stationhead/id1076117681" class="secondary-button" target="_blank" rel="noopener noreferrer"><i class="bi bi-apple"></i> iPhone</a>
+          <a href="https://play.google.com/store/apps/details?id=com.stationhead.app&referrer=utm_source%3DMarketing%2520Website%26utm_medium%3Dreferral%26utm_campaign%3DMarketing%26anid%3Dadmob" class="secondary-button" target="_blank" rel="noopener noreferrer"><i class="bi bi-google-play"></i> Android</a>
+        </div>
+      </section>
+
+      <section class="stationhead-channel-card">
+        <div class="stationhead-channel-icon"><i class="bi bi-broadcast"></i></div>
+        <div class="stationhead-channel-text">
+          <strong>準備ができたらsecondzへ！</strong>
+          <span>アプリのDL＋初期設定が終わったら、secondz専用チャンネルにつなごう！</span>
+        </div>
+        <a href="https://www.stationhead.com/c/secondz" class="primary-button" target="_blank" rel="noopener noreferrer">secondzチャンネルを開く</a>
+      </section>
     </div>
   </div>
 </div>
