@@ -263,7 +263,7 @@
         "request-type": "music-slash-artist",
         "request-input": "リクエスト(曲名／アーティスト名)",
         "comment": "①番組名は「DIG!!!!!!!! FUKUOKA」を選択\n②「リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
-        "input-flag": false
+        "input-flag": true
       },
       {
         "id": "daily_oshiraku_suikun",
