@@ -92,6 +92,27 @@ if (pwaFirstVisitModalElement) {
   }
 
   // ==================================================
+  // Stationhead案内モーダル
+  // ==================================================
+
+  // ホーム・Spotifyステップなどの各ボタンからモーダルを開く
+  openStationheadModalButtonElements.forEach((button) => {
+    addClickEvent(button, openStationheadModal);
+  });
+
+  // 閉じるボタン
+  addClickEvent(closeStationheadModalButtonElement, closeStationheadModal);
+
+  // モーダル外側タップで閉じる
+  if (stationheadModalElement) {
+    stationheadModalElement.addEventListener("click", (event) => {
+      if (event.target === stationheadModalElement) {
+        closeStationheadModal();
+      }
+    });
+  }
+  
+  // ==================================================
   // 使い方モーダル
   // ==================================================
 
@@ -171,6 +192,25 @@ if (pwaFirstVisitModalElement) {
       }
     });
   }
+}
+// ==================================================
+// Stationhead案内モーダル表示
+// ==================================================
+
+function openStationheadModal() {
+  if (!stationheadModalElement) {
+    return;
+  }
+
+  stationheadModalElement.classList.remove("hidden");
+}
+
+function closeStationheadModal() {
+  if (!stationheadModalElement) {
+    return;
+  }
+
+  stationheadModalElement.classList.add("hidden");
 }
 
 // ==================================================
