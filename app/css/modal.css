@@ -895,3 +895,206 @@
 .setting-radio-card:has(input:checked) {
   border-color: var(--color-brand, #f4a7b9);
 }
+
+/* =========================
+   Stationheadモーダル
+========================= */
+.stationhead-modal-body {
+  display: grid;
+  gap: 18px;
+}
+
+.stationhead-modal-content .modal-header h2 i {
+  color: var(--color-brand);
+}
+
+.stationhead-intro {
+  padding: 18px;
+  border-radius: var(--radius-card);
+  background: var(--color-surface-soft);
+  text-align: center;
+}
+
+.stationhead-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--color-brand);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.stationhead-intro h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+
+.stationhead-intro p {
+  margin: 0;
+  color: var(--color-text-sub);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.stationhead-section {
+  display: grid;
+  gap: 10px;
+}
+
+.stationhead-section h4 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 1rem;
+}
+
+.stationhead-section h4 i {
+  color: var(--color-brand);
+}
+
+.stationhead-condition-list {
+  display: flex;
+  gap: 8px;
+}
+
+.stationhead-condition {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.stationhead-condition i {
+  flex-shrink: 0;
+  color: var(--color-brand);
+  font-size: 1.1rem;
+}
+
+.stationhead-benefit-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.stationhead-benefit {
+  padding: 12px;
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.stationhead-benefit > i {
+  flex-shrink: 0;
+  color: var(--color-brand);
+  font-size: 1.25rem;
+}
+
+.stationhead-benefit div {
+  display: grid;
+  gap: 3px;
+}
+
+.stationhead-benefit strong {
+  font-size: 0.85rem;
+}
+
+.stationhead-benefit span {
+  color: var(--color-text-sub);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.stationhead-start-section {
+  padding-top: 4px;
+}
+
+.stationhead-start-section > p {
+  margin: 0;
+  color: var(--color-text-sub);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.stationhead-guide-button {
+  margin: 0;
+}
+
+.stationhead-download-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.stationhead-download-row .secondary-button {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.stationhead-channel-card {
+  padding: 16px;
+  border: 1px solid var(--color-brand-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface-soft);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 12px;
+  align-items: center;
+}
+
+.stationhead-channel-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--color-brand);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+}
+
+.stationhead-channel-text {
+  display: grid;
+  gap: 3px;
+}
+
+.stationhead-channel-text strong {
+  font-size: 0.95rem;
+}
+
+.stationhead-channel-text span {
+  color: var(--color-text-sub);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.stationhead-channel-card .primary-button {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+}
+
+@media (max-width: 420px) {
+  .stationhead-benefit-list {
+    grid-template-columns: 1fr;
+  }
+
+  .stationhead-condition-list {
+    flex-direction: column;
+  }
+}
