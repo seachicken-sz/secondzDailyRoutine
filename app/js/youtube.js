@@ -183,8 +183,10 @@ function renderYoutubeCardRow(container, items, type, options = {}) {
     const shareButton = document.createElement("button");
     shareButton.type = "button";
     shareButton.className = "youtube-card-share-button";
-    shareButton.textContent = "シェア";
-
+    shareButton.innerHTML = '<i class="bi bi-box-arrow-up"></i>';
+    shareButton.setAttribute("aria-label", `${item.name}をシェア`);
+    shareButton.title = "シェア";
+    
     shareButton.addEventListener("click", () => {
       shareYoutubeItem(item);
     });
