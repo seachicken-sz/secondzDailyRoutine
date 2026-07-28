@@ -110,6 +110,23 @@ const usageModalElement = document.getElementById("usageModal");
 const closeUsageButtonElement = document.getElementById("closeUsageButton");
 
 // ==================================================
+// DOM: Stationhead案内モーダル
+// ==================================================
+
+// Stationheadモーダルを開くボタン
+// ホーム・Spotifyステップなど複数箇所から呼び出す
+const openStationheadModalButtonElements =
+  document.querySelectorAll(".open-stationhead-modal-button");
+
+// Stationheadモーダル
+const stationheadModalElement =
+  document.getElementById("stationheadModal");
+
+// Stationheadモーダル閉じるボタン
+const closeStationheadModalButtonElement =
+  document.getElementById("closeStationheadModalButton");
+
+// ==================================================
 // DOM: Youtubeモーダル
 // ==================================================
 // Youtubeモーダル開くボタン
