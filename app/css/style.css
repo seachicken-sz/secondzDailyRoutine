@@ -373,6 +373,7 @@ h1 {
 }
 
 .task-help-button {
+  text-decoration:none;
   flex-shrink: 0;
   padding: 5px 8px;
   border: none;
