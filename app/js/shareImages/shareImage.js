@@ -349,7 +349,7 @@ function getShareImageBgmText() {
 
   const name = state.selectedSong.name || "";
 
-  return name ? `BGM：${name}` : "";
+  return name ? `Spotify：${name}` : "";
 }
 
 // ==================================================
