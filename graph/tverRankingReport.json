@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/29 09:07",
+  "updatedAt": "2026/07/29 10:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/24",
-      "updatedAt": "2026/07/29 09:07",
+      "updatedAt": "2026/07/29 10:07",
       "episodeId": "epe8nmzldb",
       "subtitle": "1000円差し入れマン",
       "likes": "1.7万",
@@ -432,6 +432,10 @@
         },
         {
           "hour": 107,
+          "likes": 17000
+        },
+        {
+          "hour": 108,
           "likes": 17000
         }
       ],
@@ -1117,9 +1121,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 20,
-          "elapsedHour": 107,
-          "elapsedRank": 20,
+          "currentRank": 23,
+          "elapsedHour": 108,
+          "elapsedRank": 23,
           "currentPoints": [
             {
               "hour": 4,
@@ -1532,6 +1536,10 @@
             {
               "hour": 107,
               "rank": 20
+            },
+            {
+              "hour": 108,
+              "rank": 23
             }
           ],
           "previousPoints": [
@@ -2202,19 +2210,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 17,
-              "title": "VIVANT 初回直前生放送 SP"
-            },
-            {
-              "rank": 18,
+              "rank": 20,
               "title": "timeleszファミリア"
             },
             {
-              "rank": 19,
+              "rank": 21,
               "title": "有吉ゼミ"
             },
             {
-              "rank": 20,
+              "rank": 22,
+              "title": "マツコの知らない世界"
+            },
+            {
+              "rank": 23,
               "title": "タイムレスマン"
             }
           ]
@@ -2222,9 +2230,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 49,
-          "elapsedHour": 107,
-          "elapsedRank": 49,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 9,
@@ -3031,20 +3039,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 46,
+              "rank": 47,
               "title": "名探偵のままでいて"
             },
             {
-              "rank": 47,
-              "title": "有吉ゼミ"
-            },
-            {
               "rank": 48,
-              "title": "今から、親友やめようか。"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "タイムレスマン"
+              "title": "今から、親友やめようか。"
+            },
+            {
+              "rank": 50,
+              "title": "有吉ゼミ"
             }
           ]
         }
@@ -3053,7 +3061,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/26",
-      "updatedAt": "2026/07/29 09:07",
+      "updatedAt": "2026/07/29 10:07",
       "episodeId": "epoicu11f6",
       "subtitle": "CanCam編集部に潜入&爆売れ雑誌ハルメクの秘密",
       "likes": "1.1万",
@@ -3321,6 +3329,10 @@
         },
         {
           "hour": 67,
+          "likes": 11000
+        },
+        {
+          "hour": 68,
           "likes": 11000
         }
       ],
@@ -3986,9 +3998,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 18,
-          "elapsedHour": 67,
-          "elapsedRank": 18,
+          "currentRank": 20,
+          "elapsedHour": 68,
+          "elapsedRank": 20,
           "currentPoints": [
             {
               "hour": 7,
@@ -4229,6 +4241,10 @@
             {
               "hour": 67,
               "rank": 18
+            },
+            {
+              "hour": 68,
+              "rank": 20
             }
           ],
           "previousPoints": [
@@ -4683,19 +4699,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 15,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
-            },
-            {
-              "rank": 16,
-              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
-            },
-            {
               "rank": 17,
-              "title": "VIVANT 初回直前生放送 SP"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 18,
+              "title": "VIVANT 初回直前生放送 SP"
+            },
+            {
+              "rank": 19,
+              "title": "ロンドンハーツ"
+            },
+            {
+              "rank": 20,
               "title": "timeleszファミリア"
             }
           ]
@@ -4703,9 +4719,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 45,
-          "elapsedHour": 67,
-          "elapsedRank": 45,
+          "currentRank": 48,
+          "elapsedHour": 68,
+          "elapsedRank": 48,
           "currentPoints": [
             {
               "hour": 8,
@@ -4942,6 +4958,10 @@
             {
               "hour": 67,
               "rank": 45
+            },
+            {
+              "hour": 68,
+              "rank": 48
             }
           ],
           "previousPoints": [
@@ -5188,19 +5208,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 42,
-              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
-            },
-            {
-              "rank": 43,
-              "title": "VIVANT 初回直前生放送 SP"
-            },
-            {
-              "rank": 44,
+              "rank": 45,
               "title": "今夜もシリアルキラーと待ち合わせ"
             },
             {
-              "rank": 45,
+              "rank": 46,
+              "title": "ロンドンハーツ"
+            },
+            {
+              "rank": 47,
+              "title": "名探偵のままでいて"
+            },
+            {
+              "rank": 48,
               "title": "timeleszファミリア"
             }
           ]
@@ -5210,10 +5230,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/28",
-      "updatedAt": "2026/07/29 09:07",
+      "updatedAt": "2026/07/29 10:07",
       "episodeId": "epgw9m4xvk",
       "subtitle": "チョコプラ・timeleszが「衝撃吸収材なら、バラエティ罰ゲームをノーリアクションでこなせるのか？」に挑む！",
-      "likes": "2450",
+      "likes": "2712",
       "favorites": "5.7万",
       "likePoints": [
         {
@@ -5251,6 +5271,10 @@
         {
           "hour": 9,
           "likes": 2450
+        },
+        {
+          "hour": 10,
+          "likes": 2712
         }
       ],
       "previousLikePoints": [
@@ -5919,9 +5943,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 25,
-          "elapsedHour": 9,
-          "elapsedRank": 25,
+          "currentRank": 21,
+          "elapsedHour": 10,
+          "elapsedRank": 21,
           "currentPoints": [
             {
               "hour": 6,
@@ -5938,6 +5962,10 @@
             {
               "hour": 9,
               "rank": 25
+            },
+            {
+              "hour": 10,
+              "rank": 21
             }
           ],
           "previousPoints": [
@@ -6492,19 +6520,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 22,
-              "title": "川島明の辞書で呑む"
+              "rank": 18,
+              "title": "世界くらべてみたら"
             },
             {
-              "rank": 23,
-              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
+              "rank": 19,
+              "title": "オモウマい店"
             },
             {
-              "rank": 24,
-              "title": "かまいたちの知らんけど"
+              "rank": 20,
+              "title": "ザ！鉄腕！DASH!!"
             },
             {
-              "rank": 25,
+              "rank": 21,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -6625,19 +6653,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 48,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 49,
-              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "一茂×かまいたち ゲンバ"
             }
           ]
         }
@@ -6646,7 +6674,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/07/29 09:07",
+      "updatedAt": "2026/07/29 10:07",
       "episodeId": "epuiveft5b",
       "subtitle": "クレしん映画の新作タイトル当てられる？",
       "likes": "1.1万",
@@ -7246,6 +7274,10 @@
         },
         {
           "hour": 151,
+          "likes": 11000
+        },
+        {
+          "hour": 152,
           "likes": 11000
         }
       ],
@@ -8409,19 +8441,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 48,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 49,
-              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "一茂×かまいたち ゲンバ"
             }
           ]
         },
@@ -8666,19 +8698,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "名探偵のままでいて"
             },
             {
               "rank": 48,
-              "title": "今から、親友やめようか。"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "タイムレスマン"
+              "title": "今から、親友やめようか。"
             },
             {
               "rank": 50,
-              "title": "くりぃむナンタラ"
+              "title": "有吉ゼミ"
             }
           ]
         }
@@ -8687,7 +8719,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/07/29 09:07",
+      "updatedAt": "2026/07/29 10:07",
       "episodeId": "epqf7c2gz6",
       "subtitle": "大食い激細女子…体の秘密!体温に関係?食べる順番で解決?",
       "likes": "4767",
@@ -9656,19 +9688,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 48,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 49,
-              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "一茂×かまいたち ゲンバ"
             }
           ]
         },
@@ -9860,19 +9892,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "名探偵のままでいて"
             },
             {
               "rank": 48,
-              "title": "今から、親友やめようか。"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "タイムレスマン"
+              "title": "今から、親友やめようか。"
             },
             {
               "rank": 50,
-              "title": "くりぃむナンタラ"
+              "title": "有吉ゼミ"
             }
           ]
         }
@@ -9881,10 +9913,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/07/29 09:07",
+      "updatedAt": "2026/07/29 10:07",
       "episodeId": "epxt2mcck0",
       "subtitle": "【timelesz】リアルな本音・裏側を語る。菊池風磨＆畑芽育の音楽番組",
-      "likes": "8365",
+      "likes": "9178",
       "favorites": "10.9万",
       "likePoints": [
         {
@@ -9914,6 +9946,10 @@
         {
           "hour": 8,
           "likes": 8365
+        },
+        {
+          "hour": 9,
+          "likes": 9178
         }
       ],
       "previousLikePoints": [
@@ -10566,9 +10602,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 16,
-          "elapsedHour": 8,
-          "elapsedRank": 16,
+          "currentRank": 15,
+          "elapsedHour": 9,
+          "elapsedRank": 15,
           "currentPoints": [
             {
               "hour": 5,
@@ -10585,6 +10621,10 @@
             {
               "hour": 8,
               "rank": 16
+            },
+            {
+              "hour": 9,
+              "rank": 15
             }
           ],
           "previousPoints": [
@@ -10923,6 +10963,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 12,
+              "title": "家、ついて行ってイイですか？"
+            },
+            {
               "rank": 13,
               "title": "Golden SixTONES"
             },
@@ -10932,10 +10976,6 @@
             },
             {
               "rank": 15,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
-            },
-            {
-              "rank": 16,
               "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
@@ -10943,13 +10983,17 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 42,
-          "elapsedHour": 8,
-          "elapsedRank": 42,
+          "currentRank": 38,
+          "elapsedHour": 9,
+          "elapsedRank": 38,
           "currentPoints": [
             {
               "hour": 8,
               "rank": 42
+            },
+            {
+              "hour": 9,
+              "rank": 38
             }
           ],
           "previousPoints": [
@@ -11160,19 +11204,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 39,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "rank": 35,
+              "title": "ワンピース"
             },
             {
-              "rank": 40,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "rank": 36,
+              "title": "Golden SixTONES"
             },
             {
-              "rank": 41,
-              "title": "TOKYO MER～走る緊急救命室～"
+              "rank": 37,
+              "title": "有吉クイズ"
             },
             {
-              "rank": 42,
+              "rank": 38,
               "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
@@ -11182,10 +11226,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/24",
-      "updatedAt": "2026/07/29 09:07",
+      "updatedAt": "2026/07/29 10:07",
       "episodeId": "epkhmva7lm",
       "subtitle": "第137回 風磨くん結婚確定？5賢人と国仲涼子が愛を語る",
-      "likes": "5792",
+      "likes": "5808",
       "favorites": "71.4万",
       "likePoints": [
         {
@@ -11699,6 +11743,10 @@
         {
           "hour": 129,
           "likes": 5792
+        },
+        {
+          "hour": 130,
+          "likes": 5808
         }
       ],
       "previousLikePoints": [
@@ -12809,19 +12857,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 48,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 49,
-              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "一茂×かまいたち ゲンバ"
             }
           ]
         },
@@ -13018,19 +13066,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "名探偵のままでいて"
             },
             {
               "rank": 48,
-              "title": "今から、親友やめようか。"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "タイムレスマン"
+              "title": "今から、親友やめようか。"
             },
             {
               "rank": 50,
-              "title": "くりぃむナンタラ"
+              "title": "有吉ゼミ"
             }
           ]
         }
@@ -13039,10 +13087,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/07/25",
-      "updatedAt": "2026/07/29 09:07",
+      "updatedAt": "2026/07/29 10:07",
       "episodeId": "ep6mbhb4sa",
       "subtitle": "タイムマシーン3号のセッタイマシーンでGO",
-      "likes": "1346",
+      "likes": "1350",
       "favorites": "78.4万",
       "likePoints": [
         {
@@ -13388,6 +13436,10 @@
         {
           "hour": 86,
           "likes": 1346
+        },
+        {
+          "hour": 87,
+          "likes": 1350
         }
       ],
       "previousLikePoints": [
@@ -14538,19 +14590,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 48,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 49,
-              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "一茂×かまいたち ゲンバ"
             }
           ]
         },
@@ -14706,19 +14758,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "名探偵のままでいて"
             },
             {
               "rank": 48,
-              "title": "今から、親友やめようか。"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "タイムレスマン"
+              "title": "今から、親友やめようか。"
             },
             {
               "rank": 50,
-              "title": "くりぃむナンタラ"
+              "title": "有吉ゼミ"
             }
           ]
         }
@@ -14727,10 +14779,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/07/29 09:07",
+      "updatedAt": "2026/07/29 10:07",
       "episodeId": "epm64ewk9k",
       "subtitle": "4人の飲み会に後輩を呼び出しまくる夜",
-      "likes": "1484",
+      "likes": "1771",
       "favorites": "2.3万",
       "likePoints": [
         {
@@ -14764,6 +14816,10 @@
         {
           "hour": 7,
           "likes": 1484
+        },
+        {
+          "hour": 8,
+          "likes": 1771
         }
       ],
       "previousLikePoints": [],
@@ -14771,27 +14827,32 @@
         {
           "type": "talk",
           "label": "トーク",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 48,
+          "elapsedHour": 8,
+          "elapsedRank": 48,
+          "currentPoints": [
+            {
+              "hour": 8,
+              "rank": 48
+            }
+          ],
           "previousPoints": [],
           "nearbyRanking": [
+            {
+              "rank": 45,
+              "title": "かまいたちの知らんけど"
+            },
+            {
+              "rank": 46,
+              "title": "スクール革命！"
+            },
             {
               "rank": 47,
               "title": "秘密のケンミンSHOW極"
             },
             {
               "rank": 48,
-              "title": "鶴瓶ちゃんとサワコちゃん～昭和の大先輩とおかしな２人～"
-            },
-            {
-              "rank": 49,
-              "title": "５時に夢中！"
-            },
-            {
-              "rank": 50,
-              "title": "小峠英二の試乗最高"
+              "title": "ふぉ〜ゆ〜って、だれ？"
             }
           ]
         },
@@ -14806,19 +14867,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 48,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 49,
-              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "一茂×かまいたち ゲンバ"
             }
           ]
         }
@@ -14827,7 +14888,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/07/22",
-      "updatedAt": "2026/07/29 09:07",
+      "updatedAt": "2026/07/29 10:07",
       "episodeId": "ephyflrbnk",
       "subtitle": "#3 不器用すぎる正義",
       "likes": "1.3万",
@@ -15443,6 +15504,10 @@
         },
         {
           "hour": 155,
+          "likes": 13000
+        },
+        {
+          "hour": 156,
           "likes": 13000
         }
       ],
@@ -16125,7 +16190,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 19,
-          "elapsedHour": 155,
+          "elapsedHour": 156,
           "elapsedRank": 19,
           "currentPoints": [
             {
@@ -16706,6 +16771,10 @@
             },
             {
               "hour": 155,
+              "rank": 19
+            },
+            {
+              "hour": 156,
               "rank": 19
             }
           ],
@@ -17377,9 +17446,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 27,
-          "elapsedHour": 155,
-          "elapsedRank": 27,
+          "currentRank": 28,
+          "elapsedHour": 156,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 9,
@@ -17960,6 +18029,10 @@
             {
               "hour": 155,
               "rank": 27
+            },
+            {
+              "hour": 156,
+              "rank": 28
             }
           ],
           "previousPoints": [
@@ -18610,12 +18683,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 24,
-              "title": "上田と女が吠える夜"
-            },
-            {
               "rank": 25,
-              "title": "えっちなお尻じゃダメですか？"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 26,
@@ -18623,6 +18692,10 @@
             },
             {
               "rank": 27,
+              "title": "えっちなお尻じゃダメですか？"
+            },
+            {
+              "rank": 28,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -18632,7 +18705,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/07/29 09:07",
+      "updatedAt": "2026/07/29 10:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "2.2万",
@@ -19156,6 +19229,10 @@
         },
         {
           "hour": 131,
+          "likes": 22000
+        },
+        {
+          "hour": 132,
           "likes": 22000
         }
       ],
@@ -19834,7 +19911,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 17,
-          "elapsedHour": 131,
+          "elapsedHour": 132,
           "elapsedRank": 17,
           "currentPoints": [
             {
@@ -20331,6 +20408,10 @@
             },
             {
               "hour": 131,
+              "rank": 17
+            },
+            {
+              "hour": 132,
               "rank": 17
             }
           ],
@@ -21003,7 +21084,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 19,
-          "elapsedHour": 131,
+          "elapsedHour": 132,
           "elapsedRank": 19,
           "currentPoints": [
             {
@@ -21500,6 +21581,10 @@
             },
             {
               "hour": 131,
+              "rank": 19
+            },
+            {
+              "hour": 132,
               "rank": 19
             }
           ],
@@ -22173,16 +22258,12 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/29 09:07",
+      "updatedAt": "2026/07/29 10:07",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
       "likes": "4566",
       "favorites": "1.8万",
       "likePoints": [
-        {
-          "hour": 67,
-          "likes": 2890
-        },
         {
           "hour": 68,
           "likes": 2902
@@ -22606,10 +22687,6 @@
           "elapsedRank": null,
           "currentPoints": [
             {
-              "hour": 66,
-              "rank": 34
-            },
-            {
               "hour": 67,
               "rank": 34
             },
@@ -22893,19 +22970,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 48,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 49,
-              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "一茂×かまいたち ゲンバ"
             }
           ]
         }
@@ -22914,7 +22991,7 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/07/29 09:07",
+      "updatedAt": "2026/07/29 10:07",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "3.0万",
@@ -23903,19 +23980,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 48,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 49,
-              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "一茂×かまいたち ゲンバ"
             }
           ]
         },
@@ -24243,19 +24320,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "名探偵のままでいて"
             },
             {
               "rank": 48,
-              "title": "今から、親友やめようか。"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "タイムレスマン"
+              "title": "今から、親友やめようか。"
             },
             {
               "rank": 50,
-              "title": "くりぃむナンタラ"
+              "title": "有吉ゼミ"
             }
           ]
         }
@@ -24264,7 +24341,7 @@
     "sr6elshzoq": {
       "programTitle": "踊る！さんま御殿!!",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/07/29 09:07",
+      "updatedAt": "2026/07/29 10:07",
       "episodeId": "epz108j83s",
       "subtitle": "神奈川7路線が大激突SP 東横線VS田園都市線!本当の横浜はどっち!?",
       "likes": "7532",
@@ -25093,19 +25170,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナサンド"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 48,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 49,
-              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "一茂×かまいたち ゲンバ"
             }
           ]
         },
@@ -25421,19 +25498,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "名探偵のままでいて"
             },
             {
               "rank": 48,
-              "title": "今から、親友やめようか。"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
-              "title": "タイムレスマン"
+              "title": "今から、親友やめようか。"
             },
             {
               "rank": 50,
-              "title": "くりぃむナンタラ"
+              "title": "有吉ゼミ"
             }
           ]
         }
