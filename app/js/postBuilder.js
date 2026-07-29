@@ -113,7 +113,44 @@ function renderPostItemListByContainer(container, items) {
     return;
   }
 
-  // 投稿項目をチェックボックスとして描画する
+  // ==================================================
+  // すべてチェック
+  // ==================================================
+  const allLabel = document.createElement("label");
+  allLabel.className = "check-item post-check-all";
+
+  const allCheckbox = document.createElement("input");
+  allCheckbox.type = "checkbox";
+
+  // 全項目がチェック済みなら「すべてチェック」もON
+  allCheckbox.checked = items.every((item) => item.checked);
+
+  const allName = document.createElement("span");
+  allName.className = "check-item-name";
+  allName.textContent = "すべてチェック";
+
+  allCheckbox.addEventListener("change", () => {
+    const checked = allCheckbox.checked;
+
+    // 全項目のチェック状態をまとめて変更
+    state.postItems.forEach((item) => {
+      item.checked = checked;
+    });
+
+    // X / Threads両方を再描画
+    renderPostItemList(state.postItems);
+
+    // 投稿文プレビュー・文字数・リンク数を更新
+    updateGeneratedPostText();
+  });
+
+  allLabel.appendChild(allCheckbox);
+  allLabel.appendChild(allName);
+  container.appendChild(allLabel);
+
+  // ==================================================
+  // 各投稿項目
+  // ==================================================
   items.forEach((item, index) => {
     const label = document.createElement("label");
     label.className = "check-item";
@@ -153,7 +190,6 @@ function renderPostItemListByContainer(container, items) {
     container.appendChild(label);
   });
 }
-
 // ==================================================
 // 投稿文プレビュー更新
 // ==================================================
