@@ -1838,9 +1838,9 @@ function createCurrentRankingSummaryElement(data) {
     ` : ""}
 
     <div class="footer">
-      データ出典：TVer<br>
-      本データは個人がTVerをより楽しむために作成された資料であり、公式とは一切関係がありません。<br>
-      ※1時間ごと更新
+        データ出典：TVer<br>本データは個人がTVerをより楽しむために作成された資料であり、公式とは一切関係がありません。<br>
+        ※1時間ごと更新のため、正確な最高値を取得できない場合がございます。<br>
+          参考程度にご覧ください。
     </div>
   `;
 
