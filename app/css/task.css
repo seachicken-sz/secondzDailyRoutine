@@ -143,6 +143,15 @@
   font-weight: 600;
 }
 
+.stationhead-direct-button {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
 /* JSON内の \n を画面上の改行として表示する */
 #dailyTaskCommentArea,
 #onceTaskMessageArea {
