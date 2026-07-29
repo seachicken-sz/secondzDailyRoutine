@@ -205,9 +205,13 @@ const toggleOtherSongsIconElement = document.getElementById("toggleOtherSongsIco
 // その他曲の開閉ラッパー
 const otherSongsWrapperElement = document.getElementById("otherSongsWrapper");
 // その他曲リスト
-const otherSongsElement = document.getElementById("otherSongs");
+const otherSongsElement = document.getElementById("otherSongs");;
 // BGMなしボタン
 const skipSpotifyButtonElement = document.getElementById("skipSpotifyButton");
+// Stationheadを開くボタン
+const openStationheadButtonElement = document.getElementById("openStationheadButton");
+// Stationheadを開いた後の次へボタン
+const stationheadNextButtonElement = document.getElementById("stationheadNextButton");
 
 // ==================================================
 // DOM: STEP 2 期間限定タスク選択
