@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/30 23:07",
+  "updatedAt": "2026/07/31 00:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/24",
-      "updatedAt": "2026/07/30 23:07",
+      "updatedAt": "2026/07/31 00:07",
       "episodeId": "epe8nmzldb",
       "subtitle": "1000円差し入れマン",
       "likes": "1.9万",
@@ -584,6 +584,10 @@
         },
         {
           "hour": 145,
+          "likes": 19000
+        },
+        {
+          "hour": 146,
           "likes": 19000
         }
       ],
@@ -1269,9 +1273,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 25,
-          "elapsedHour": 145,
-          "elapsedRank": 25,
+          "currentRank": 26,
+          "elapsedHour": 146,
+          "elapsedRank": 26,
           "currentPoints": [
             {
               "hour": 4,
@@ -1836,6 +1840,10 @@
             {
               "hour": 145,
               "rank": 25
+            },
+            {
+              "hour": 146,
+              "rank": 26
             }
           ],
           "previousPoints": [
@@ -2506,19 +2514,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 22,
-              "title": "吉田と粗品と"
-            },
-            {
               "rank": 23,
-              "title": "日曜日の初耳学"
-            },
-            {
-              "rank": 24,
               "title": "相席食堂"
             },
             {
+              "rank": 24,
+              "title": "日曜日の初耳学"
+            },
+            {
               "rank": 25,
+              "title": "STAR"
+            },
+            {
+              "rank": 26,
               "title": "タイムレスマン"
             }
           ]
@@ -3336,15 +3344,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 49,
-              "title": "吉田と粗品と"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
@@ -3357,7 +3365,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/26",
-      "updatedAt": "2026/07/30 23:07",
+      "updatedAt": "2026/07/31 00:07",
       "episodeId": "epoicu11f6",
       "subtitle": "CanCam編集部に潜入&爆売れ雑誌ハルメクの秘密",
       "likes": "1.3万",
@@ -3777,6 +3785,10 @@
         },
         {
           "hour": 105,
+          "likes": 13000
+        },
+        {
+          "hour": 106,
           "likes": 13000
         }
       ],
@@ -4443,7 +4455,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 40,
-          "elapsedHour": 105,
+          "elapsedHour": 106,
           "elapsedRank": 40,
           "currentPoints": [
             {
@@ -4836,6 +4848,10 @@
             },
             {
               "hour": 105,
+              "rank": 40
+            },
+            {
+              "hour": 106,
               "rank": 40
             }
           ],
@@ -5292,11 +5308,11 @@
           "nearbyRanking": [
             {
               "rank": 37,
-              "title": "有吉クイズ"
+              "title": "VIVANT 初回直前生放送 SP"
             },
             {
               "rank": 38,
-              "title": "いたジャン！"
+              "title": "有吉クイズ"
             },
             {
               "rank": 39,
@@ -5801,15 +5817,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 49,
-              "title": "吉田と粗品と"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
@@ -5822,10 +5838,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/28",
-      "updatedAt": "2026/07/30 23:07",
+      "updatedAt": "2026/07/31 00:07",
       "episodeId": "epgw9m4xvk",
       "subtitle": "チョコプラ・timeleszが「衝撃吸収材なら、バラエティ罰ゲームをノーリアクションでこなせるのか？」に挑む！",
-      "likes": "6283",
+      "likes": "6319",
       "favorites": "5.7万",
       "likePoints": [
         {
@@ -6015,6 +6031,10 @@
         {
           "hour": 47,
           "likes": 6283
+        },
+        {
+          "hour": 48,
+          "likes": 6319
         }
       ],
       "previousLikePoints": [
@@ -6684,7 +6704,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 14,
-          "elapsedHour": 47,
+          "elapsedHour": 48,
           "elapsedRank": 14,
           "currentPoints": [
             {
@@ -6853,6 +6873,10 @@
             },
             {
               "hour": 47,
+              "rank": 14
+            },
+            {
+              "hour": 48,
               "rank": 14
             }
           ],
@@ -7409,11 +7433,11 @@
           "nearbyRanking": [
             {
               "rank": 11,
-              "title": "探偵！ナイトスクープ"
+              "title": "Travis JapanノJUST！シン日本遺産"
             },
             {
               "rank": 12,
-              "title": "Travis JapanノJUST！シン日本遺産"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 13,
@@ -7638,19 +7662,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "プレバト！！"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "有吉ゼミ"
             }
           ]
         }
@@ -7659,10 +7683,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/30",
-      "updatedAt": "2026/07/30 23:07",
+      "updatedAt": "2026/07/31 00:07",
       "episodeId": "epb8a7zaf8",
       "subtitle": "【特定班】写真から居場所を特定しろ！",
-      "likes": "6271",
+      "likes": "6462",
       "favorites": "23.4万",
       "likePoints": [
         {
@@ -7748,6 +7772,10 @@
         {
           "hour": 21,
           "likes": 6271
+        },
+        {
+          "hour": 22,
+          "likes": 6462
         }
       ],
       "previousLikePoints": [
@@ -8416,9 +8444,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 16,
-          "elapsedHour": 21,
-          "elapsedRank": 16,
+          "currentRank": 15,
+          "elapsedHour": 22,
+          "elapsedRank": 15,
           "currentPoints": [
             {
               "hour": 8,
@@ -8475,6 +8503,10 @@
             {
               "hour": 21,
               "rank": 16
+            },
+            {
+              "hour": 22,
+              "rank": 15
             }
           ],
           "previousPoints": [
@@ -8717,8 +8749,12 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 13,
+              "rank": 12,
               "title": "これ余談なんですけど・・・"
+            },
+            {
+              "rank": 13,
+              "title": "アメトーーク！"
             },
             {
               "rank": 14,
@@ -8726,10 +8762,6 @@
             },
             {
               "rank": 15,
-              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
-            },
-            {
-              "rank": 16,
               "title": "ニカゲーム"
             }
           ]
@@ -8737,9 +8769,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 37,
-          "elapsedHour": 21,
-          "elapsedRank": 37,
+          "currentRank": 36,
+          "elapsedHour": 22,
+          "elapsedRank": 36,
           "currentPoints": [
             {
               "hour": 14,
@@ -8772,6 +8804,10 @@
             {
               "hour": 21,
               "rank": 37
+            },
+            {
+              "hour": 22,
+              "rank": 36
             }
           ],
           "previousPoints": [
@@ -8882,6 +8918,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 33,
+              "title": "アメトーーク！"
+            },
+            {
               "rank": 34,
               "title": "有吉の壁"
             },
@@ -8891,10 +8931,6 @@
             },
             {
               "rank": 36,
-              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
-            },
-            {
-              "rank": 37,
               "title": "ニカゲーム"
             }
           ]
@@ -8904,7 +8940,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/07/30 23:07",
+      "updatedAt": "2026/07/31 00:07",
       "episodeId": "epqf7c2gz6",
       "subtitle": "大食い激細女子…体の秘密!体温に関係?食べる順番で解決?",
       "likes": "4767",
@@ -9873,19 +9909,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "プレバト！！"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "有吉ゼミ"
             }
           ]
         },
@@ -10077,15 +10113,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 49,
-              "title": "吉田と粗品と"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
@@ -10098,7 +10134,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/07/30 23:07",
+      "updatedAt": "2026/07/31 00:07",
       "episodeId": "epxt2mcck0",
       "subtitle": "【timelesz】リアルな本音・裏側を語る。菊池風磨＆畑芽育の音楽番組",
       "likes": "1.9万",
@@ -10278,6 +10314,10 @@
         },
         {
           "hour": 46,
+          "likes": 19000
+        },
+        {
+          "hour": 47,
           "likes": 19000
         }
       ],
@@ -10931,9 +10971,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 15,
-          "elapsedHour": 46,
-          "elapsedRank": 15,
+          "currentRank": 16,
+          "elapsedHour": 47,
+          "elapsedRank": 16,
           "currentPoints": [
             {
               "hour": 5,
@@ -11102,6 +11142,10 @@
             {
               "hour": 46,
               "rank": 15
+            },
+            {
+              "hour": 47,
+              "rank": 16
             }
           ],
           "previousPoints": [
@@ -11440,12 +11484,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 12,
-              "title": "アメトーーク！"
-            },
-            {
               "rank": 13,
-              "title": "これ余談なんですけど・・・"
+              "title": "アメトーーク！"
             },
             {
               "rank": 14,
@@ -11453,6 +11493,10 @@
             },
             {
               "rank": 15,
+              "title": "ニカゲーム"
+            },
+            {
+              "rank": 16,
               "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
@@ -11460,9 +11504,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 36,
-          "elapsedHour": 46,
-          "elapsedRank": 36,
+          "currentRank": 38,
+          "elapsedHour": 47,
+          "elapsedRank": 38,
           "currentPoints": [
             {
               "hour": 8,
@@ -11619,6 +11663,10 @@
             {
               "hour": 46,
               "rank": 36
+            },
+            {
+              "hour": 47,
+              "rank": 38
             }
           ],
           "previousPoints": [
@@ -11829,19 +11877,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 33,
-              "title": "これ余談なんですけど・・・"
-            },
-            {
-              "rank": 34,
-              "title": "有吉の壁"
-            },
-            {
               "rank": 35,
               "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             },
             {
               "rank": 36,
+              "title": "ニカゲーム"
+            },
+            {
+              "rank": 37,
+              "title": "リーガルビート -逆転の法廷-"
+            },
+            {
+              "rank": 38,
               "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
@@ -11851,7 +11899,7 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/24",
-      "updatedAt": "2026/07/30 23:07",
+      "updatedAt": "2026/07/31 00:07",
       "episodeId": "epkhmva7lm",
       "subtitle": "第137回 風磨くん結婚確定？5賢人と国仲涼子が愛を語る",
       "likes": "6526",
@@ -13630,19 +13678,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "プレバト！！"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "有吉ゼミ"
             }
           ]
         },
@@ -13839,15 +13887,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 49,
-              "title": "吉田と粗品と"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
@@ -13860,10 +13908,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/07/25",
-      "updatedAt": "2026/07/30 23:07",
+      "updatedAt": "2026/07/31 00:07",
       "episodeId": "ep6mbhb4sa",
       "subtitle": "タイムマシーン3号のセッタイマシーンでGO",
-      "likes": "1479",
+      "likes": "1481",
       "favorites": "78.4万",
       "likePoints": [
         {
@@ -14361,6 +14409,10 @@
         {
           "hour": 124,
           "likes": 1479
+        },
+        {
+          "hour": 125,
+          "likes": 1481
         }
       ],
       "previousLikePoints": [
@@ -15511,19 +15563,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "プレバト！！"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "有吉ゼミ"
             }
           ]
         },
@@ -15679,15 +15731,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 49,
-              "title": "吉田と粗品と"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
@@ -15700,10 +15752,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/07/30 23:07",
+      "updatedAt": "2026/07/31 00:07",
       "episodeId": "epm64ewk9k",
       "subtitle": "4人の飲み会に後輩を呼び出しまくる夜",
-      "likes": "5920",
+      "likes": "5987",
       "favorites": "2.4万",
       "likePoints": [
         {
@@ -15889,6 +15941,10 @@
         {
           "hour": 45,
           "likes": 5920
+        },
+        {
+          "hour": 46,
+          "likes": 5987
         }
       ],
       "previousLikePoints": [],
@@ -15896,9 +15952,9 @@
         {
           "type": "talk",
           "label": "トーク",
-          "currentRank": 36,
-          "elapsedHour": 45,
-          "elapsedRank": 36,
+          "currentRank": 37,
+          "elapsedHour": 46,
+          "elapsedRank": 37,
           "currentPoints": [
             {
               "hour": 8,
@@ -16051,14 +16107,14 @@
             {
               "hour": 45,
               "rank": 36
+            },
+            {
+              "hour": 46,
+              "rank": 37
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
-            {
-              "rank": 33,
-              "title": "ポツンと一軒家"
-            },
             {
               "rank": 34,
               "title": "サクサクヒムヒム☆推しの降る夜☆"
@@ -16069,6 +16125,10 @@
             },
             {
               "rank": 36,
+              "title": "秘密のケンミンSHOW極"
+            },
+            {
+              "rank": 37,
               "title": "ふぉ〜ゆ〜って、だれ？"
             }
           ]
@@ -16157,19 +16217,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "プレバト！！"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "有吉ゼミ"
             }
           ]
         }
@@ -16178,10 +16238,10 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/07/30 23:07",
+      "updatedAt": "2026/07/31 00:07",
       "episodeId": "ep8s7i6hiz",
       "subtitle": "#4 たった数時間の命…“奇跡”に挑む究極オペ",
-      "likes": "6162",
+      "likes": "6321",
       "favorites": "64.3万",
       "likePoints": [
         {
@@ -16283,6 +16343,10 @@
         {
           "hour": 25,
           "likes": 6162
+        },
+        {
+          "hour": 26,
+          "likes": 6321
         }
       ],
       "previousLikePoints": [
@@ -16964,7 +17028,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 3,
-          "elapsedHour": 25,
+          "elapsedHour": 26,
           "elapsedRank": 3,
           "currentPoints": [
             {
@@ -17033,6 +17097,10 @@
             },
             {
               "hour": 25,
+              "rank": 3
+            },
+            {
+              "hour": 26,
               "rank": 3
             }
           ],
@@ -17697,7 +17765,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 4,
-          "elapsedHour": 25,
+          "elapsedHour": 26,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -17766,6 +17834,10 @@
             },
             {
               "hour": 25,
+              "rank": 4
+            },
+            {
+              "hour": 26,
               "rank": 4
             }
           ],
@@ -18418,11 +18490,11 @@
             },
             {
               "rank": 2,
-              "title": "Tokyo middle 30"
+              "title": "水曜日のダウンタウン"
             },
             {
               "rank": 3,
-              "title": "水曜日のダウンタウン"
+              "title": "Tokyo middle 30"
             },
             {
               "rank": 4,
@@ -18435,15 +18507,19 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/30",
-      "updatedAt": "2026/07/30 23:07",
+      "updatedAt": "2026/07/31 00:07",
       "episodeId": "ep7xjw37et",
       "subtitle": "第4話 もっとあなたと一緒にいたい・・・恋が動き出す",
-      "likes": "907",
+      "likes": "2359",
       "favorites": "66.2万",
       "likePoints": [
         {
           "hour": 1,
           "likes": 907
+        },
+        {
+          "hour": 2,
+          "likes": 2359
         }
       ],
       "previousLikePoints": [
@@ -19118,6 +19194,10 @@
         {
           "hour": 169,
           "likes": 24000
+        },
+        {
+          "hour": 170,
+          "likes": 24000
         }
       ],
       "rankings": [
@@ -19776,6 +19856,10 @@
             {
               "hour": 169,
               "rank": 17
+            },
+            {
+              "hour": 170,
+              "rank": 17
             }
           ],
           "nearbyRanking": [
@@ -19793,7 +19877,7 @@
             },
             {
               "rank": 50,
-              "title": "晩酌の流儀５"
+              "title": "韓国ドラマ「ウンヒの涙」"
             }
           ]
         },
@@ -20452,20 +20536,24 @@
             {
               "hour": 169,
               "rank": 23
+            },
+            {
+              "hour": 170,
+              "rank": 23
             }
           ],
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 49,
-              "title": "吉田と粗品と"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
@@ -20478,16 +20566,12 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/30 23:07",
+      "updatedAt": "2026/07/31 00:07",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
       "likes": "4566",
       "favorites": "1.8万",
       "likePoints": [
-        {
-          "hour": 105,
-          "likes": 3321
-        },
         {
           "hour": 106,
           "likes": 3334
@@ -20759,10 +20843,6 @@
           "elapsedRank": null,
           "currentPoints": [
             {
-              "hour": 104,
-              "rank": 42
-            },
-            {
               "hour": 105,
               "rank": 43
             },
@@ -20867,19 +20947,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "いくらかわかる金？"
-            },
-            {
-              "rank": 48,
               "title": "&TEAM vs FANTASTICS 最強スターはどっちだ？"
             },
             {
+              "rank": 48,
+              "title": "ダイアン津田＆Snow Man向井の俺のツレとも仲良くなって！"
+            },
+            {
               "rank": 49,
-              "title": "川島明の辞書で呑む"
+              "title": "今日は推しと旅します。"
             },
             {
               "rank": 50,
-              "title": "今日は推しと旅します。"
+              "title": "いくらかわかる金？"
             }
           ]
         },
@@ -20894,19 +20974,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "プレバト！！"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "有吉ゼミ"
             }
           ]
         }
@@ -20915,7 +20995,7 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/07/30 23:07",
+      "updatedAt": "2026/07/31 00:07",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "3.0万",
@@ -21904,19 +21984,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "プレバト！！"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "有吉ゼミ"
             }
           ]
         },
@@ -22244,15 +22324,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 49,
-              "title": "吉田と粗品と"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
@@ -22265,10 +22345,10 @@
     "sr6elshzoq": {
       "programTitle": "踊る！さんま御殿!!",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/07/30 23:07",
+      "updatedAt": "2026/07/31 00:07",
       "episodeId": "epz108j83s",
       "subtitle": "神奈川7路線が大激突SP 東横線VS田園都市線!本当の横浜はどっち!?",
-      "likes": "7699",
+      "likes": "7703",
       "favorites": "214.2万",
       "likePoints": [
         {
@@ -23094,19 +23174,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "プレバト！！"
             },
             {
               "rank": 48,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "有吉ゼミ"
             }
           ]
         },
@@ -23422,15 +23502,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 48,
-              "title": "ぐるぐるナインティナイン"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 49,
-              "title": "吉田と粗品と"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
