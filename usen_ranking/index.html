@@ -6,6 +6,14 @@
   <meta name="theme-color" content="#02b9a5">
   <meta name="description" content="USEN推し活リクエストの週別・曲別順位推移を確認できます。">
   <title>USEN推し活リクエスト 順位推移</title>
+  <script>
+    (() => {
+      const theme = localStorage.getItem("selectedTheme");
+      const themes = ["red", "purple", "green", "sky", "lime", "pink", "yellow", "white"];
+      if (themes.includes(theme)) document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="../app/css/style.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -38,25 +46,27 @@
       <section id="periodPanel" class="view-panel">
         <section class="control-card">
           <label class="field"><span>集計期間</span><select id="periodSelect"></select></label>
-          <p id="periodDescription" class="control-note"></p>
+          <p id="periodDescription" class="control-note period-description"></p>
         </section>
 
         <section class="content-card chart-card">
           <div class="section-heading">
             <div><p class="eyebrow">WEEKLY GRAPH</p><h2 id="periodChartTitle">週ごとの順位推移</h2></div>
-            <button id="periodImageButton" class="secondary-button" type="button">画像を保存</button>
+            <div class="chart-actions">
+              <button id="periodLargeButton" class="secondary-button mobile-chart-button" type="button">大きく表示</button>
+              <button id="periodImageButton" class="secondary-button" type="button">画像を保存</button>
+            </div>
           </div>
-          <p class="section-note">系列のチェックで曲ごとの表示を切り替えられます。</p>
           <div id="periodSeriesControls" class="series-control-box"></div>
           <div id="periodChartEmpty" class="empty-message hidden">表示できる順位データがありません。</div>
           <div id="periodChartScroll" class="chart-scroll"><div id="periodChartSurface" class="chart-surface"><canvas id="periodChart"></canvas></div></div>
         </section>
 
-        <section class="summary-grid" aria-label="期間の概要">
-          <article class="summary-card"><span>最新時点トップ</span><strong id="periodTopRank">--</strong><small id="periodTopRankSub">--</small></article>
-          <article class="summary-card"><span>期間内最高</span><strong id="periodBestRank">--</strong><small>最高順位</small></article>
-          <article class="summary-card"><span>登場曲</span><strong id="periodSongCount">0</strong><small>曲</small></article>
-          <article class="summary-card"><span>取得回数</span><strong id="periodSnapshotCount">0</strong><small>回</small></article>
+        <section class="summary-grid summary-grid-current" aria-label="現在順位">
+          <article class="summary-card current-rank-card"><span>現在順位</span><strong id="periodTopRank">--</strong><small id="periodTopRankSub">--</small></article>
+          <article class="summary-card hidden"><span>期間内最高</span><strong id="periodBestRank">--</strong><small>最高順位</small></article>
+          <article class="summary-card hidden"><span>登場曲</span><strong id="periodSongCount">0</strong><small>曲</small></article>
+          <article class="summary-card hidden"><span>取得回数</span><strong id="periodSnapshotCount">0</strong><small>回</small></article>
         </section>
 
         <section class="content-card">
@@ -68,25 +78,27 @@
       <section id="songPanel" class="view-panel hidden">
         <section class="control-card">
           <label class="field"><span>曲を選択</span><select id="historySongSelect"></select></label>
-          <p id="historyLoadStatus" class="control-note">曲を選ぶと、その曲がランクインしたすべての週を重ねて表示します。</p>
+          <p id="historyLoadStatus" class="control-note hidden"></p>
         </section>
 
         <section class="content-card chart-card">
           <div class="section-heading">
             <div><p class="eyebrow">ALL WEEKS GRAPH</p><h2 id="historyChartTitle">曲別・全期間比較</h2></div>
-            <button id="historyImageButton" class="secondary-button" type="button">画像を保存</button>
+            <div class="chart-actions">
+              <button id="historyLargeButton" class="secondary-button mobile-chart-button" type="button">大きく表示</button>
+              <button id="historyImageButton" class="secondary-button" type="button">画像を保存</button>
+            </div>
           </div>
-          <p class="section-note">選択中の最新週を色付き、以前の週をグレーの濃淡で表示します。</p>
           <div id="historySeriesControls" class="series-control-box"></div>
           <div id="historyChartEmpty" class="empty-message hidden">表示できる順位データがありません。</div>
           <div id="historyChartScroll" class="chart-scroll"><div id="historyChartSurface" class="chart-surface"><canvas id="historyChart"></canvas></div></div>
         </section>
 
-        <section class="summary-grid" aria-label="曲の全期間概要">
-          <article class="summary-card"><span>登場した週</span><strong id="historyWeekCount">0</strong><small>週</small></article>
-          <article class="summary-card"><span>全期間最高</span><strong id="historyBestRank">--</strong><small>最高順位</small></article>
-          <article class="summary-card"><span>最新順位</span><strong id="historyLatestRank">--</strong><small id="historyLatestRankSub">--</small></article>
-          <article class="summary-card"><span>初登場</span><strong id="historyFirstWeek">--</strong><small>開始週</small></article>
+        <section class="summary-grid summary-grid-current" aria-label="現在順位">
+          <article class="summary-card hidden"><span>登場した週</span><strong id="historyWeekCount">0</strong><small>週</small></article>
+          <article class="summary-card hidden"><span>全期間最高</span><strong id="historyBestRank">--</strong><small>最高順位</small></article>
+          <article class="summary-card current-rank-card"><span>現在順位</span><strong id="historyLatestRank">--</strong><small id="historyLatestRankSub">--</small></article>
+          <article class="summary-card hidden"><span>初登場</span><strong id="historyFirstWeek">--</strong><small>開始週</small></article>
         </section>
 
         <section class="content-card">
@@ -99,5 +111,6 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
   <script src="./js/script.js" defer></script>
   <script src="./js/history-colors.js" defer></script>
+  <script src="./js/ui-adjustments.js" defer></script>
 </body>
 </html>
