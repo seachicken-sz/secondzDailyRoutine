@@ -208,16 +208,48 @@ function downloadChartImage(dataUrl, fileName) {
   link.remove();
 }
 
+function restoreChartDisplay(chart, surface, displayState) {
+  if (surface) {
+    surface.classList.toggle("is-large", displayState.wasLarge);
+    surface.style.width = displayState.width;
+    surface.style.minWidth = displayState.minWidth;
+    surface.style.height = displayState.height;
+  }
+
+  requestAnimationFrame(() => chart.resize());
+}
+
 exportChartImage = function shareChartImage({ chart, title, fileName }) {
   const sourceCanvas = chart?.canvas;
   if (!sourceCanvas) return;
+
+  const surface = sourceCanvas.parentElement;
+  const displayState = {
+    wasLarge: surface?.classList.contains("is-large") || false,
+    width: surface?.style.width || "",
+    minWidth: surface?.style.minWidth || "",
+    height: surface?.style.height || "",
+  };
+
+  if (surface) {
+    surface.classList.add("is-large");
+    surface.style.width = "920px";
+    surface.style.minWidth = "920px";
+    surface.style.height = "360px";
+  }
+
+  chart.resize(920, 360);
+  chart.update("none");
 
   const canvas = document.createElement("canvas");
   canvas.width = IMAGE_WIDTH;
   canvas.height = IMAGE_HEIGHT;
 
   const context = canvas.getContext("2d");
-  if (!context) return;
+  if (!context) {
+    restoreChartDisplay(chart, surface, displayState);
+    return;
+  }
 
   const shareText = getChartShareText(chart, title);
 
@@ -238,6 +270,8 @@ exportChartImage = function shareChartImage({ chart, title, fileName }) {
   context.drawImage(sourceCanvas, 40, chartTop, IMAGE_WIDTH - 80, chartHeight);
 
   const dataUrl = canvas.toDataURL("image/png");
+  restoreChartDisplay(chart, surface, displayState);
+
   const blob = dataUrlToBlob(dataUrl);
   const file = new File([blob], fileName, { type: "image/png" });
   const button = chart === state.periodChart ? el.periodImageButton : el.historyImageButton;
