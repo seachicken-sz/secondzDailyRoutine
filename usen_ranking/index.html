@@ -76,7 +76,7 @@
             <div><p class="eyebrow">ALL WEEKS GRAPH</p><h2 id="historyChartTitle">曲別・全期間比較</h2></div>
             <button id="historyImageButton" class="secondary-button" type="button">画像を保存</button>
           </div>
-          <p class="section-note">古い週ほど薄く表示します。系列のチェックで週ごとに切り替えられます。</p>
+          <p class="section-note">選択中の最新週を色付き、以前の週をグレーの濃淡で表示します。</p>
           <div id="historySeriesControls" class="series-control-box"></div>
           <div id="historyChartEmpty" class="empty-message hidden">表示できる順位データがありません。</div>
           <div id="historyChartScroll" class="chart-scroll"><div id="historyChartSurface" class="chart-surface"><canvas id="historyChart"></canvas></div></div>
@@ -98,5 +98,6 @@
   </main>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
   <script src="./js/script.js" defer></script>
+  <script src="./js/history-colors.js" defer></script>
 </body>
 </html>
