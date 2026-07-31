@@ -1,5 +1,55 @@
 "use strict";
 
+const basePopulateSongsForUi = populateSongs;
+populateSongs = function populateSongsByLatestRankIn() {
+  const songs = new Map();
+
+  for (const data of state.cache.values()) {
+    for (const song of data.songs) {
+      const key = songKey(song);
+      const lastPointAt = song.points.length
+        ? song.points[song.points.length - 1].capturedAt
+        : "";
+      const lastSeenAt = song.lastSeenAt || lastPointAt || "";
+      const previous = songs.get(key);
+
+      if (!previous || compareRankInDate(lastSeenAt, previous.lastSeenAt) > 0) {
+        songs.set(key, {
+          title: song.songTitle || song.songId,
+          lastSeenAt,
+        });
+      }
+    }
+  }
+
+  el.historySongSelect.replaceChildren();
+
+  [...songs.entries()]
+    .sort((a, b) => {
+      const dateCompare = compareRankInDate(b[1].lastSeenAt, a[1].lastSeenAt);
+      if (dateCompare !== 0) return dateCompare;
+      return a[1].title.localeCompare(b[1].title, "ja");
+    })
+    .forEach(([key, song]) => {
+      const option = document.createElement("option");
+      option.value = key;
+      option.textContent = song.title;
+      el.historySongSelect.append(option);
+    });
+
+  state.historySongKey = state.historySongKey && songs.has(state.historySongKey)
+    ? state.historySongKey
+    : (el.historySongSelect.options[0]?.value || "");
+
+  el.historySongSelect.value = state.historySongKey;
+};
+
+function compareRankInDate(a, b) {
+  const aTime = Date.parse(a || "") || 0;
+  const bTime = Date.parse(b || "") || 0;
+  return aTime - bTime;
+}
+
 const baseRenderPeriodForUi = renderPeriod;
 renderPeriod = function renderPeriodWithCurrentRankOnly() {
   baseRenderPeriodForUi();
@@ -28,10 +78,26 @@ renderHistory = function renderHistoryWithLatestCapturedAt() {
   el.historyLatestRankSub.textContent = `最終取得 ${latest}`;
 };
 
-exportChartImage = function exportChartImageWithCorrectAspect({ chart, title, fileName }) {
+exportChartImage = async function exportChartImageAsLarge({ chart, title, fileName }) {
   if (!chart || !chart.canvas) return;
 
   const sourceCanvas = chart.canvas;
+  const surface = sourceCanvas.parentElement;
+  const wasLarge = surface?.classList.contains("is-large") || false;
+  const previousWidth = surface?.style.width || "";
+  const previousMinWidth = surface?.style.minWidth || "";
+  const previousHeight = surface?.style.height || "";
+
+  if (surface) {
+    surface.classList.add("is-large");
+    surface.style.width = "920px";
+    surface.style.minWidth = "920px";
+    surface.style.height = "360px";
+  }
+
+  chart.resize(920, 360);
+  await waitForChartFrame();
+
   const visibleDatasets = chart.data.datasets.filter((dataset, index) => chart.isDatasetVisible(index));
   const canvas = document.createElement("canvas");
   canvas.width = IMAGE_WIDTH;
@@ -78,7 +144,22 @@ exportChartImage = function exportChartImageWithCorrectAspect({ chart, title, fi
   link.download = fileName;
   link.href = canvas.toDataURL("image/png");
   link.click();
+
+  if (surface) {
+    if (!wasLarge) surface.classList.remove("is-large");
+    surface.style.width = previousWidth;
+    surface.style.minWidth = previousMinWidth;
+    surface.style.height = previousHeight;
+  }
+
+  requestAnimationFrame(() => chart.resize());
 };
+
+function waitForChartFrame() {
+  return new Promise((resolve) => {
+    requestAnimationFrame(() => requestAnimationFrame(resolve));
+  });
+}
 
 function updateLargeChartButton(button, large) {
   const icon = button.querySelector("i");
