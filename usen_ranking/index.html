@@ -17,121 +17,27 @@
         <p class="page-description">水曜18時から翌水曜18時までの順位推移を、曲ごとに確認できます。</p>
       </div>
       <div class="updated-card">
-        <div>
-          <span>データ更新</span>
-          <strong id="latestUpdatedAt">--</strong>
-        </div>
-        <button id="refreshButton" class="refresh-button" type="button" aria-label="最新データを再読み込み">
-          <span aria-hidden="true">↻</span>
-          更新
-        </button>
+        <div><span>データ更新</span><strong id="latestUpdatedAt">--</strong></div>
+        <button id="refreshButton" class="refresh-button" type="button" aria-label="最新データを再読み込み"><span aria-hidden="true">↻</span>更新</button>
       </div>
     </header>
-
-    <section id="loadingPanel" class="status-panel" aria-live="polite">
-      <div class="spinner" aria-hidden="true"></div>
-      <div>
-        <strong>ランキング履歴を読み込んでいます</strong>
-        <p id="loadingMessage">manifest.jsonを確認しています。</p>
-      </div>
-    </section>
-
-    <section id="errorPanel" class="status-panel error-panel" hidden aria-live="assertive">
-      <div>
-        <strong>データを読み込めませんでした</strong>
-        <p id="errorMessage"></p>
-      </div>
-    </section>
-
-    <section id="emptyPanel" class="status-panel empty-panel" hidden>
-      <div>
-        <strong>ランキングデータはまだありません</strong>
-        <p>GASから週次JSONとmanifest.jsonが保存されると、ここにグラフが表示されます。</p>
-      </div>
-    </section>
-
+    <section id="loadingPanel" class="status-panel" aria-live="polite"><div class="spinner" aria-hidden="true"></div><div><strong>ランキング履歴を読み込んでいます</strong><p id="loadingMessage">manifest.jsonを確認しています。</p></div></section>
+    <section id="errorPanel" class="status-panel error-panel" hidden aria-live="assertive"><div><strong>データを読み込めませんでした</strong><p id="errorMessage"></p></div></section>
+    <section id="emptyPanel" class="status-panel empty-panel" hidden><div><strong>ランキングデータはまだありません</strong><p>GASから週次JSONとmanifest.jsonが保存されると、ここにグラフが表示されます。</p></div></section>
     <section id="appContent" hidden>
-      <section class="control-card">
-        <div class="control-grid">
-          <label class="field">
-            <span>集計期間</span>
-            <select id="periodSelect"></select>
-          </label>
-          <label class="field">
-            <span>表示する曲</span>
-            <select id="songSelect"></select>
-          </label>
-        </div>
-        <p id="periodDescription" class="control-note"></p>
-      </section>
-
+      <section class="control-card"><div class="control-grid"><label class="field"><span>集計期間</span><select id="periodSelect"></select></label><label class="field"><span>表示する曲</span><select id="songSelect"></select></label></div><p id="periodDescription" class="control-note"></p></section>
       <section class="summary-grid" aria-label="ランキング概要">
-        <article class="summary-card">
-          <span id="latestRankLabel">最新順位</span>
-          <strong id="latestRankValue">--</strong>
-          <small id="latestRankSub">最新取得時点</small>
-        </article>
-        <article class="summary-card">
-          <span>期間内最高</span>
-          <strong id="bestRankValue">--</strong>
-          <small>最高順位</small>
-        </article>
-        <article class="summary-card">
-          <span>登場曲</span>
-          <strong id="songCountValue">0</strong>
-          <small>曲</small>
-        </article>
-        <article class="summary-card">
-          <span>取得回数</span>
-          <strong id="snapshotCountValue">0</strong>
-          <small>回</small>
-        </article>
+        <article class="summary-card"><span id="latestRankLabel">最新順位</span><strong id="latestRankValue">--</strong><small id="latestRankSub">最新取得時点</small></article>
+        <article class="summary-card"><span>期間内最高</span><strong id="bestRankValue">--</strong><small>最高順位</small></article>
+        <article class="summary-card"><span>登場曲</span><strong id="songCountValue">0</strong><small>曲</small></article>
+        <article class="summary-card"><span>取得回数</span><strong id="snapshotCountValue">0</strong><small>回</small></article>
       </section>
-
-      <section class="chart-card">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">RANKING GRAPH</p>
-            <h2 id="chartTitle">順位推移</h2>
-          </div>
-          <p>縦軸は上ほど高順位です。凡例を押すと曲ごとに表示を切り替えられます。</p>
-        </div>
-        <div id="chartEmptyMessage" class="chart-empty" hidden>表示できる順位データがありません。</div>
-        <div id="chartScroll" class="chart-scroll">
-          <div id="chartSurface" class="chart-surface">
-            <canvas id="rankingChart" role="img" aria-label="USEN推し活リクエスト順位推移グラフ"></canvas>
-          </div>
-        </div>
-      </section>
-
-      <section class="table-card">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">SONG SUMMARY</p>
-            <h2>曲別サマリー</h2>
-          </div>
-          <p>最新順位がない曲は、最新取得時点では圏外です。</p>
-        </div>
-        <div class="table-scroll">
-          <table>
-            <thead>
-              <tr>
-                <th>曲名</th>
-                <th>最新</th>
-                <th>最高</th>
-                <th>最低</th>
-                <th>初登場</th>
-                <th>最終確認</th>
-              </tr>
-            </thead>
-            <tbody id="songTableBody"></tbody>
-          </table>
-        </div>
-      </section>
+      <section class="chart-card"><div class="section-heading"><div><p class="eyebrow">RANKING GRAPH</p><h2 id="chartTitle">順位推移</h2></div><p>縦軸は上ほど高順位です。凡例を押すと曲ごとに表示を切り替えられます。</p></div><div id="chartEmptyMessage" class="chart-empty" hidden>表示できる順位データがありません。</div><div id="chartScroll" class="chart-scroll"><div id="chartSurface" class="chart-surface"><canvas id="rankingChart" role="img" aria-label="USEN推し活リクエスト順位推移グラフ"></canvas></div></div></section>
+      <section class="table-card"><div class="section-heading"><div><p class="eyebrow">SONG SUMMARY</p><h2>曲別サマリー</h2></div><p>最新順位がない曲は、最新取得時点では圏外です。</p></div><div class="table-scroll"><table><thead><tr><th>曲名</th><th>最新</th><th>最高</th><th>最低</th><th>初登場</th><th>最終確認</th></tr></thead><tbody id="songTableBody"></tbody></table></div></section>
     </section>
   </main>
-
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
   <script src="./js/script.js" defer></script>
+  <script src="./js/axis-fix.js" defer></script>
 </body>
 </html>
