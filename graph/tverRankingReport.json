@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/07/31 21:07",
+  "updatedAt": "2026/07/31 22:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/24",
-      "updatedAt": "2026/07/31 21:07",
+      "updatedAt": "2026/07/31 22:07",
       "episodeId": "epe8nmzldb",
       "subtitle": "1000円差し入れマン",
       "likes": "2.0万",
@@ -1357,9 +1357,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 27,
-          "elapsedHour": 167,
-          "elapsedRank": 27,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 4,
@@ -2682,20 +2682,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 24,
-              "title": "ニカゲーム"
+              "rank": 47,
+              "title": "しゃべくり007"
             },
             {
-              "rank": 25,
-              "title": "マツコの知らない世界"
+              "rank": 48,
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
-              "rank": 26,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "rank": 49,
+              "title": "サクラミーツ"
             },
             {
-              "rank": 27,
-              "title": "タイムレスマン"
+              "rank": 50,
+              "title": "ラヴィット！"
             }
           ]
         },
@@ -3512,19 +3512,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "林修の今知りたいでしょ！"
+              "title": "これ余談なんですけど・・・"
             },
             {
               "rank": 48,
-              "title": "秘密のケンミンSHOW極"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 49,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 50,
-              "title": "プレバト！！"
+              "title": "35歳、今さら恋とかありえない"
             }
           ]
         }
@@ -3533,7 +3533,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/26",
-      "updatedAt": "2026/07/31 21:07",
+      "updatedAt": "2026/07/31 22:07",
       "episodeId": "epoicu11f6",
       "subtitle": "CanCam編集部に潜入&爆売れ雑誌ハルメクの秘密",
       "likes": "1.3万",
@@ -4041,6 +4041,10 @@
         },
         {
           "hour": 127,
+          "likes": 13000
+        },
+        {
+          "hour": 128,
           "likes": 13000
         }
       ],
@@ -4706,9 +4710,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 46,
-          "elapsedHour": 127,
-          "elapsedRank": 46,
+          "currentRank": 44,
+          "elapsedHour": 128,
+          "elapsedRank": 44,
           "currentPoints": [
             {
               "hour": 7,
@@ -5189,6 +5193,10 @@
             {
               "hour": 127,
               "rank": 46
+            },
+            {
+              "hour": 128,
+              "rank": 44
             }
           ],
           "previousPoints": [
@@ -5643,19 +5651,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 43,
-              "title": "VIVANT 初回直前生放送 SP"
-            },
-            {
-              "rank": 44,
-              "title": "有吉クイズ"
-            },
-            {
-              "rank": 45,
+              "rank": 41,
               "title": "ナゾトレMAXXX"
             },
             {
-              "rank": 46,
+              "rank": 42,
+              "title": "VIVANT 初回直前生放送 SP"
+            },
+            {
+              "rank": 43,
+              "title": "有吉クイズ"
+            },
+            {
+              "rank": 44,
               "title": "timeleszファミリア"
             }
           ]
@@ -6153,19 +6161,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "林修の今知りたいでしょ！"
+              "title": "これ余談なんですけど・・・"
             },
             {
               "rank": 48,
-              "title": "秘密のケンミンSHOW極"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 49,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 50,
-              "title": "プレバト！！"
+              "title": "35歳、今さら恋とかありえない"
             }
           ]
         }
@@ -6174,10 +6182,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/28",
-      "updatedAt": "2026/07/31 21:07",
+      "updatedAt": "2026/07/31 22:07",
       "episodeId": "epgw9m4xvk",
       "subtitle": "チョコプラ・timeleszが「衝撃吸収材なら、バラエティ罰ゲームをノーリアクションでこなせるのか？」に挑む！",
-      "likes": "6596",
+      "likes": "6620",
       "favorites": "5.7万",
       "likePoints": [
         {
@@ -6455,6 +6463,10 @@
         {
           "hour": 69,
           "likes": 6596
+        },
+        {
+          "hour": 70,
+          "likes": 6620
         }
       ],
       "previousLikePoints": [
@@ -7124,7 +7136,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 19,
-          "elapsedHour": 69,
+          "elapsedHour": 70,
           "elapsedRank": 19,
           "currentPoints": [
             {
@@ -7381,6 +7393,10 @@
             },
             {
               "hour": 69,
+              "rank": 19
+            },
+            {
+              "hour": 70,
               "rank": 19
             }
           ],
@@ -7937,7 +7953,7 @@
           "nearbyRanking": [
             {
               "rank": 16,
-              "title": "ニノなのに"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 17,
@@ -8166,15 +8182,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Golden SixTONES"
-            },
-            {
-              "rank": 48,
               "title": "しゃべくり007"
             },
             {
+              "rank": 48,
+              "title": "飯島直子の今夜一杯いっちゃう？"
+            },
+            {
               "rank": 49,
-              "title": "ザ・イロモネア"
+              "title": "サクラミーツ"
             },
             {
               "rank": 50,
@@ -8187,10 +8203,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/30",
-      "updatedAt": "2026/07/31 21:07",
+      "updatedAt": "2026/07/31 22:07",
       "episodeId": "epb8a7zaf8",
       "subtitle": "【特定班】写真から居場所を特定しろ！",
-      "likes": "7606",
+      "likes": "7676",
       "favorites": "23.4万",
       "likePoints": [
         {
@@ -8364,6 +8380,10 @@
         {
           "hour": 43,
           "likes": 7606
+        },
+        {
+          "hour": 44,
+          "likes": 7676
         }
       ],
       "previousLikePoints": [
@@ -9032,9 +9052,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 24,
-          "elapsedHour": 43,
-          "elapsedRank": 24,
+          "currentRank": 25,
+          "elapsedHour": 44,
+          "elapsedRank": 25,
           "currentPoints": [
             {
               "hour": 8,
@@ -9179,6 +9199,10 @@
             {
               "hour": 43,
               "rank": 24
+            },
+            {
+              "hour": 44,
+              "rank": 25
             }
           ],
           "previousPoints": [
@@ -9421,19 +9445,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 21,
-              "title": "ニンゲン観察バラエティ モニタリング"
-            },
-            {
               "rank": 22,
-              "title": "プレバト！！"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 23,
-              "title": "有吉の壁"
+              "title": "プレバト！！"
             },
             {
               "rank": 24,
+              "title": "有吉の壁"
+            },
+            {
+              "rank": 25,
               "title": "ニカゲーム"
             }
           ]
@@ -9667,19 +9691,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "林修の今知りたいでしょ！"
+              "title": "これ余談なんですけど・・・"
             },
             {
               "rank": 48,
-              "title": "秘密のケンミンSHOW極"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 49,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 50,
-              "title": "プレバト！！"
+              "title": "35歳、今さら恋とかありえない"
             }
           ]
         }
@@ -9688,7 +9712,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/07/31 21:07",
+      "updatedAt": "2026/07/31 22:07",
       "episodeId": "epqf7c2gz6",
       "subtitle": "大食い激細女子…体の秘密!体温に関係?食べる順番で解決?",
       "likes": "4767",
@@ -10657,15 +10681,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Golden SixTONES"
-            },
-            {
-              "rank": 48,
               "title": "しゃべくり007"
             },
             {
+              "rank": 48,
+              "title": "飯島直子の今夜一杯いっちゃう？"
+            },
+            {
               "rank": 49,
-              "title": "ザ・イロモネア"
+              "title": "サクラミーツ"
             },
             {
               "rank": 50,
@@ -10861,19 +10885,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "林修の今知りたいでしょ！"
+              "title": "これ余談なんですけど・・・"
             },
             {
               "rank": 48,
-              "title": "秘密のケンミンSHOW極"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 49,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 50,
-              "title": "プレバト！！"
+              "title": "35歳、今さら恋とかありえない"
             }
           ]
         }
@@ -10882,7 +10906,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/07/31 21:07",
+      "updatedAt": "2026/07/31 22:07",
       "episodeId": "epxt2mcck0",
       "subtitle": "【timelesz】リアルな本音・裏側を語る。菊池風磨＆畑芽育の音楽番組",
       "likes": "1.9万",
@@ -11146,6 +11170,10 @@
         },
         {
           "hour": 68,
+          "likes": 19000
+        },
+        {
+          "hour": 69,
           "likes": 19000
         }
       ],
@@ -11799,9 +11827,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 28,
-          "elapsedHour": 68,
-          "elapsedRank": 28,
+          "currentRank": 30,
+          "elapsedHour": 69,
+          "elapsedRank": 30,
           "currentPoints": [
             {
               "hour": 5,
@@ -12058,6 +12086,10 @@
             {
               "hour": 68,
               "rank": 28
+            },
+            {
+              "hour": 69,
+              "rank": 30
             }
           ],
           "previousPoints": [
@@ -12396,19 +12428,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 25,
+              "rank": 27,
               "title": "マツコの知らない世界"
             },
             {
-              "rank": 26,
-              "title": "DAN! DAN! EBiDAN!～新章～"
-            },
-            {
-              "rank": 27,
-              "title": "タイムレスマン"
-            },
-            {
               "rank": 28,
+              "title": "見取り図じゃん"
+            },
+            {
+              "rank": 29,
+              "title": "櫻井･有吉THE夜会"
+            },
+            {
+              "rank": 30,
               "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
@@ -12838,19 +12870,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "林修の今知りたいでしょ！"
+              "title": "これ余談なんですけど・・・"
             },
             {
               "rank": 48,
-              "title": "秘密のケンミンSHOW極"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 49,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 50,
-              "title": "プレバト！！"
+              "title": "35歳、今さら恋とかありえない"
             }
           ]
         }
@@ -12859,10 +12891,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/31",
-      "updatedAt": "2026/07/31 21:07",
+      "updatedAt": "2026/07/31 22:07",
       "episodeId": "epw5mrc1bs",
       "subtitle": "第138回 賢人の幸せに国仲涼子涙？風磨くん結婚しようぜ",
-      "likes": "2193",
+      "likes": "2289",
       "favorites": "71.4万",
       "likePoints": [
         {
@@ -12948,6 +12980,10 @@
         {
           "hour": 21,
           "likes": 2193
+        },
+        {
+          "hour": 22,
+          "likes": 2289
         }
       ],
       "previousLikePoints": [
@@ -13620,9 +13656,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 17,
-          "elapsedHour": 20,
-          "elapsedRank": 17,
+          "currentRank": 16,
+          "elapsedHour": 21,
+          "elapsedRank": 16,
           "currentPoints": [
             {
               "hour": 9,
@@ -13671,6 +13707,10 @@
             {
               "hour": 20,
               "rank": 17
+            },
+            {
+              "hour": 21,
+              "rank": 16
             }
           ],
           "previousPoints": [
@@ -13913,19 +13953,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 14,
-              "title": "STAR"
+              "rank": 13,
+              "title": "かまいガチ"
             },
             {
-              "rank": 15,
+              "rank": 14,
               "title": "ロンドンハーツ"
             },
             {
-              "rank": 16,
-              "title": "夫が寝たあとに"
+              "rank": 15,
+              "title": "STAR"
             },
             {
-              "rank": 17,
+              "rank": 16,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -13933,9 +13973,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 44,
-          "elapsedHour": 20,
-          "elapsedRank": 44,
+          "currentRank": 41,
+          "elapsedHour": 21,
+          "elapsedRank": 41,
           "currentPoints": [
             {
               "hour": 18,
@@ -13948,6 +13988,10 @@
             {
               "hour": 20,
               "rank": 44
+            },
+            {
+              "hour": 21,
+              "rank": 41
             }
           ],
           "previousPoints": [
@@ -14058,19 +14102,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 41,
+              "rank": 38,
+              "title": "夫を殺したはずなのに"
+            },
+            {
+              "rank": 39,
+              "title": "STAR"
+            },
+            {
+              "rank": 40,
               "title": "リーガルビート -逆転の法廷-"
             },
             {
-              "rank": 42,
-              "title": "夫が寝たあとに"
-            },
-            {
-              "rank": 43,
-              "title": "君は夏のなか"
-            },
-            {
-              "rank": 44,
+              "rank": 41,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -14080,10 +14124,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/07/25",
-      "updatedAt": "2026/07/31 21:07",
+      "updatedAt": "2026/07/31 22:07",
       "episodeId": "ep6mbhb4sa",
       "subtitle": "タイムマシーン3号のセッタイマシーンでGO",
-      "likes": "1509",
+      "likes": "1510",
       "favorites": "78.4万",
       "likePoints": [
         {
@@ -14669,6 +14713,10 @@
         {
           "hour": 146,
           "likes": 1509
+        },
+        {
+          "hour": 147,
+          "likes": 1510
         }
       ],
       "previousLikePoints": [
@@ -15819,15 +15867,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Golden SixTONES"
-            },
-            {
-              "rank": 48,
               "title": "しゃべくり007"
             },
             {
+              "rank": 48,
+              "title": "飯島直子の今夜一杯いっちゃう？"
+            },
+            {
               "rank": 49,
-              "title": "ザ・イロモネア"
+              "title": "サクラミーツ"
             },
             {
               "rank": 50,
@@ -15987,19 +16035,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "林修の今知りたいでしょ！"
+              "title": "これ余談なんですけど・・・"
             },
             {
               "rank": 48,
-              "title": "秘密のケンミンSHOW極"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 49,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 50,
-              "title": "プレバト！！"
+              "title": "35歳、今さら恋とかありえない"
             }
           ]
         }
@@ -16008,10 +16056,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/07/31 21:07",
+      "updatedAt": "2026/07/31 22:07",
       "episodeId": "epm64ewk9k",
       "subtitle": "4人の飲み会に後輩を呼び出しまくる夜",
-      "likes": "6352",
+      "likes": "6397",
       "favorites": "2.5万",
       "likePoints": [
         {
@@ -16285,6 +16333,10 @@
         {
           "hour": 67,
           "likes": 6352
+        },
+        {
+          "hour": 68,
+          "likes": 6397
         }
       ],
       "previousLikePoints": [],
@@ -16292,9 +16344,9 @@
         {
           "type": "talk",
           "label": "トーク",
-          "currentRank": 44,
-          "elapsedHour": 67,
-          "elapsedRank": 44,
+          "currentRank": 45,
+          "elapsedHour": 68,
+          "elapsedRank": 45,
           "currentPoints": [
             {
               "hour": 8,
@@ -16535,24 +16587,28 @@
             {
               "hour": 67,
               "rank": 44
+            },
+            {
+              "hour": 68,
+              "rank": 45
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 41,
-              "title": "踊る！さんま御殿!!"
-            },
-            {
               "rank": 42,
-              "title": "さんまのお笑い向上委員会"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 43,
-              "title": "亀梨くんのワンにゃフル！"
+              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
             },
             {
               "rank": 44,
+              "title": "亀梨くんのワンにゃフル！"
+            },
+            {
+              "rank": 45,
               "title": "ふぉ〜ゆ〜って、だれ？"
             }
           ]
@@ -16641,15 +16697,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Golden SixTONES"
-            },
-            {
-              "rank": 48,
               "title": "しゃべくり007"
             },
             {
+              "rank": 48,
+              "title": "飯島直子の今夜一杯いっちゃう？"
+            },
+            {
               "rank": 49,
-              "title": "ザ・イロモネア"
+              "title": "サクラミーツ"
             },
             {
               "rank": 50,
@@ -16662,10 +16718,10 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/07/31 21:07",
+      "updatedAt": "2026/07/31 22:07",
       "episodeId": "ep8s7i6hiz",
       "subtitle": "#4 たった数時間の命…“奇跡”に挑む究極オペ",
-      "likes": "7523",
+      "likes": "7640",
       "favorites": "64.5万",
       "likePoints": [
         {
@@ -16855,6 +16911,10 @@
         {
           "hour": 47,
           "likes": 7523
+        },
+        {
+          "hour": 48,
+          "likes": 7640
         }
       ],
       "previousLikePoints": [
@@ -17536,7 +17596,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 5,
-          "elapsedHour": 47,
+          "elapsedHour": 48,
           "elapsedRank": 5,
           "currentPoints": [
             {
@@ -17693,6 +17753,10 @@
             },
             {
               "hour": 47,
+              "rank": 5
+            },
+            {
+              "hour": 48,
               "rank": 5
             }
           ],
@@ -18341,11 +18405,11 @@
           "nearbyRanking": [
             {
               "rank": 2,
-              "title": "VIVANT"
+              "title": "大空港～GATE24～"
             },
             {
               "rank": 3,
-              "title": "大空港～GATE24～"
+              "title": "VIVANT"
             },
             {
               "rank": 4,
@@ -18360,9 +18424,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 6,
-          "elapsedHour": 47,
-          "elapsedRank": 6,
+          "currentRank": 7,
+          "elapsedHour": 48,
+          "elapsedRank": 7,
           "currentPoints": [
             {
               "hour": 9,
@@ -18519,6 +18583,10 @@
             {
               "hour": 47,
               "rank": 6
+            },
+            {
+              "hour": 48,
+              "rank": 7
             }
           ],
           "previousPoints": [
@@ -19165,10 +19233,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 3,
-              "title": "大空港～GATE24～"
-            },
-            {
               "rank": 4,
               "title": "Tokyo middle 30"
             },
@@ -19178,6 +19242,10 @@
             },
             {
               "rank": 6,
+              "title": "アメトーーク！"
+            },
+            {
+              "rank": 7,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -19187,7 +19255,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/30",
-      "updatedAt": "2026/07/31 21:07",
+      "updatedAt": "2026/07/31 22:07",
       "episodeId": "ep7xjw37et",
       "subtitle": "第4話 もっとあなたと一緒にいたい・・・恋が動き出す",
       "likes": "1.0万",
@@ -19283,6 +19351,10 @@
         },
         {
           "hour": 23,
+          "likes": 10000
+        },
+        {
+          "hour": 24,
           "likes": 10000
         }
       ],
@@ -19969,7 +20041,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 1,
-          "elapsedHour": 23,
+          "elapsedHour": 24,
           "elapsedRank": 1,
           "currentPoints": [
             {
@@ -20050,6 +20122,10 @@
             },
             {
               "hour": 23,
+              "rank": 1
+            },
+            {
+              "hour": 24,
               "rank": 1
             }
           ],
@@ -20718,7 +20794,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 1,
-          "elapsedHour": 23,
+          "elapsedHour": 24,
           "elapsedRank": 1,
           "currentPoints": [
             {
@@ -20799,6 +20875,10 @@
             },
             {
               "hour": 23,
+              "rank": 1
+            },
+            {
+              "hour": 24,
               "rank": 1
             }
           ],
@@ -21468,16 +21548,12 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/07/31 21:07",
+      "updatedAt": "2026/07/31 22:07",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
       "likes": "4566",
       "favorites": "1.8万",
       "likePoints": [
-        {
-          "hour": 127,
-          "likes": 3450
-        },
         {
           "hour": 128,
           "likes": 3458
@@ -21661,10 +21737,6 @@
           "elapsedRank": null,
           "currentPoints": [
             {
-              "hour": 126,
-              "rank": 45
-            },
-            {
               "hour": 127,
               "rank": 47
             },
@@ -21689,7 +21761,7 @@
             },
             {
               "rank": 49,
-              "title": "MリーグNo.1への道 BEAST ROAD"
+              "title": "Myらいふすと～り～in京都"
             },
             {
               "rank": 50,
@@ -21708,15 +21780,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Golden SixTONES"
-            },
-            {
-              "rank": 48,
               "title": "しゃべくり007"
             },
             {
+              "rank": 48,
+              "title": "飯島直子の今夜一杯いっちゃう？"
+            },
+            {
               "rank": 49,
-              "title": "ザ・イロモネア"
+              "title": "サクラミーツ"
             },
             {
               "rank": 50,
@@ -21729,7 +21801,7 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/07/31 21:07",
+      "updatedAt": "2026/07/31 22:07",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "3.0万",
@@ -22718,15 +22790,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Golden SixTONES"
-            },
-            {
-              "rank": 48,
               "title": "しゃべくり007"
             },
             {
+              "rank": 48,
+              "title": "飯島直子の今夜一杯いっちゃう？"
+            },
+            {
               "rank": 49,
-              "title": "ザ・イロモネア"
+              "title": "サクラミーツ"
             },
             {
               "rank": 50,
@@ -23058,19 +23130,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "林修の今知りたいでしょ！"
+              "title": "これ余談なんですけど・・・"
             },
             {
               "rank": 48,
-              "title": "秘密のケンミンSHOW極"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 49,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 50,
-              "title": "プレバト！！"
+              "title": "35歳、今さら恋とかありえない"
             }
           ]
         }
@@ -23079,10 +23151,10 @@
     "sr6elshzoq": {
       "programTitle": "踊る！さんま御殿!!",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/07/31 21:07",
+      "updatedAt": "2026/07/31 22:07",
       "episodeId": "epz108j83s",
       "subtitle": "神奈川7路線が大激突SP 東横線VS田園都市線!本当の横浜はどっち!?",
-      "likes": "7748",
+      "likes": "7753",
       "favorites": "214.2万",
       "likePoints": [
         {
@@ -23908,15 +23980,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Golden SixTONES"
-            },
-            {
-              "rank": 48,
               "title": "しゃべくり007"
             },
             {
+              "rank": 48,
+              "title": "飯島直子の今夜一杯いっちゃう？"
+            },
+            {
               "rank": 49,
-              "title": "ザ・イロモネア"
+              "title": "サクラミーツ"
             },
             {
               "rank": 50,
@@ -24236,19 +24308,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "林修の今知りたいでしょ！"
+              "title": "これ余談なんですけど・・・"
             },
             {
               "rank": 48,
-              "title": "秘密のケンミンSHOW極"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 49,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 50,
-              "title": "プレバト！！"
+              "title": "35歳、今さら恋とかありえない"
             }
           ]
         }
@@ -24257,10 +24329,10 @@
     "sr5czyxny0": {
       "programTitle": "上田と女が吠える夜",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/07/31 21:07",
+      "updatedAt": "2026/07/31 22:07",
       "episodeId": "eptt90k6t6",
       "subtitle": "夏休みは勉学派vs遊び倒す女▼究極ミニマリスト生活で激論",
-      "likes": "7606",
+      "likes": "7739",
       "favorites": "340.4万",
       "likePoints": [
         {
@@ -24314,6 +24386,10 @@
         {
           "hour": 49,
           "likes": 7606
+        },
+        {
+          "hour": 50,
+          "likes": 7739
         }
       ],
       "previousLikePoints": [],
@@ -24321,9 +24397,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 2,
-          "elapsedHour": 49,
-          "elapsedRank": 2,
+          "currentRank": 3,
+          "elapsedHour": 50,
+          "elapsedRank": 3,
           "currentPoints": [
             {
               "hour": 3,
@@ -24512,6 +24588,10 @@
             {
               "hour": 49,
               "rank": 2
+            },
+            {
+              "hour": 50,
+              "rank": 3
             }
           ],
           "previousPoints": [],
@@ -24522,6 +24602,10 @@
             },
             {
               "rank": 2,
+              "title": "アメトーーク！"
+            },
+            {
+              "rank": 3,
               "title": "上田と女が吠える夜"
             }
           ]
@@ -24529,9 +24613,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 7,
-          "elapsedHour": 49,
-          "elapsedRank": 7,
+          "currentRank": 8,
+          "elapsedHour": 50,
+          "elapsedRank": 8,
           "currentPoints": [
             {
               "hour": 4,
@@ -24716,24 +24800,28 @@
             {
               "hour": 49,
               "rank": 7
+            },
+            {
+              "hour": 50,
+              "rank": 8
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
-            {
-              "rank": 4,
-              "title": "Tokyo middle 30"
-            },
             {
               "rank": 5,
               "title": "水曜日のダウンタウン"
             },
             {
               "rank": 6,
-              "title": "ファーストクライ 母子救命救急班"
+              "title": "アメトーーク！"
             },
             {
               "rank": 7,
+              "title": "ファーストクライ 母子救命救急班"
+            },
+            {
+              "rank": 8,
               "title": "上田と女が吠える夜"
             }
           ]
@@ -24743,10 +24831,10 @@
     "sr1ksvsv1n": {
       "programTitle": "",
       "broadcastDate": "",
-      "updatedAt": "2026/07/31 21:07",
+      "updatedAt": "2026/07/31 22:07",
       "episodeId": "ep7985nrp3",
       "subtitle": "タイムレス・ナンバーアイディズニーモアナ特集",
-      "likes": "6185",
+      "likes": "6306",
       "favorites": "9.9万",
       "likePoints": [],
       "previousLikePoints": [],
@@ -24762,15 +24850,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Golden SixTONES"
-            },
-            {
-              "rank": 48,
               "title": "しゃべくり007"
             },
             {
+              "rank": 48,
+              "title": "飯島直子の今夜一杯いっちゃう？"
+            },
+            {
               "rank": 49,
-              "title": "ザ・イロモネア"
+              "title": "サクラミーツ"
             },
             {
               "rank": 50,
@@ -24789,19 +24877,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "林修の今知りたいでしょ！"
+              "title": "これ余談なんですけど・・・"
             },
             {
               "rank": 48,
-              "title": "秘密のケンミンSHOW極"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 49,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 50,
-              "title": "プレバト！！"
+              "title": "35歳、今さら恋とかありえない"
             }
           ]
         }
