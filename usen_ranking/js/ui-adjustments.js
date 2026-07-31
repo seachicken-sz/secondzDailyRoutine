@@ -1,5 +1,7 @@
 "use strict";
 
+const RANKING_BENEFIT_NOTE = "20位以内でダイソーや松屋で放送！30位以内でランダム再生の対象に！";
+
 const basePopulateSongsForUi = populateSongs;
 populateSongs = function populateSongsByLatestRankIn() {
   const songs = new Map();
@@ -115,9 +117,18 @@ exportChartImage = async function exportChartImageAsLarge({ chart, title, fileNa
   context.textBaseline = "middle";
   context.fillText(title, IMAGE_WIDTH / 2, 50, IMAGE_WIDTH - 80);
 
-  drawImageLegend(context, visibleDatasets, 56, 88, IMAGE_WIDTH - 112);
+  const legendStartY = 88;
+  drawImageLegend(context, visibleDatasets, 56, legendStartY, IMAGE_WIDTH - 112);
+  const legendHeight = calculateImageLegendHeight(context, visibleDatasets, IMAGE_WIDTH - 112);
+  const noteY = legendStartY + legendHeight + 22;
 
-  const chartTop = visibleDatasets.length > 4 ? 176 : 142;
+  context.fillStyle = getComputedStyle(document.documentElement).getPropertyValue("--color-accent-text").trim() || "#1b6b3a";
+  context.font = '700 21px system-ui, -apple-system, "Segoe UI", sans-serif';
+  context.textAlign = "center";
+  context.textBaseline = "middle";
+  context.fillText(RANKING_BENEFIT_NOTE, IMAGE_WIDTH / 2, noteY, IMAGE_WIDTH - 112);
+
+  const chartTop = noteY + 30;
   const areaX = 42;
   const areaY = chartTop;
   const areaWidth = IMAGE_WIDTH - 84;
@@ -154,6 +165,27 @@ exportChartImage = async function exportChartImageAsLarge({ chart, title, fileNa
 
   requestAnimationFrame(() => chart.resize());
 };
+
+function calculateImageLegendHeight(context, datasets, maxWidth) {
+  context.font = '600 21px system-ui, -apple-system, "Segoe UI", sans-serif';
+
+  let rowCount = 1;
+  let currentWidth = 0;
+
+  datasets.forEach((dataset) => {
+    const label = String(dataset.label || "");
+    const itemWidth = 34 + context.measureText(label).width + 28;
+
+    if (currentWidth > 0 && currentWidth + itemWidth > maxWidth) {
+      rowCount += 1;
+      currentWidth = itemWidth;
+    } else {
+      currentWidth += itemWidth;
+    }
+  });
+
+  return Math.max(1, rowCount) * 34;
+}
 
 function waitForChartFrame() {
   return new Promise((resolve) => {
