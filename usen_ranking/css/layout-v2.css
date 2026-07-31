@@ -1,20 +1,26 @@
-/* タムごとDailyのSNSシェア切替と同じタブUI */
-.view-tabs.post-preview-tabs {
+/* タムごとDaily postEditStep と同じ切り替えUI */
+.ranking-workspace-card {
+  padding: 16px;
+}
+
+.ranking-workspace-card .post-preview-tabs {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
-  margin: 16px 0 14px;
+  margin: 8px 0 18px;
   padding: 4px;
+  border: 0;
   border-radius: var(--radius-button);
   background: var(--color-page-bg);
+  box-shadow: none;
 }
 
-.view-tab.post-preview-tab {
+.ranking-workspace-card .post-preview-tab {
   width: 100%;
   padding: 10px 12px;
-  border: 1px solid transparent;
+  border: 1px solid var(--color-transparent);
   border-radius: var(--radius-button);
-  background: transparent;
+  background: var(--color-transparent);
   color: var(--color-text-muted);
   font-size: 14px;
   font-weight: 700;
@@ -23,33 +29,29 @@
   box-shadow: none;
 }
 
-.view-tab.post-preview-tab small {
-  display: block;
-  margin-top: 2px;
-  color: inherit;
-  font-size: 11px;
-  font-weight: 600;
-}
-
-.view-tab.post-preview-tab.active,
-.view-tab.post-preview-tab.is-active {
+.ranking-workspace-card .post-preview-tab.active,
+.ranking-workspace-card .post-preview-tab.is-active {
   border-color: var(--color-brand);
   background: var(--color-surface);
   color: var(--color-brand);
   box-shadow: var(--shadow-card);
 }
 
-/* 期間選択から曲別サマリーまでを1枚のカードにまとめる */
-.period-unified-card {
-  padding: 18px;
+:root[data-theme="white"] .ranking-workspace-card .post-preview-tab.active,
+:root[data-theme="white"] .ranking-workspace-card .post-preview-tab.is-active {
+  background: var(--color-brand);
+  color: var(--color-text-inverse);
+  box-shadow: inset 0 0 0 1px var(--color-border-soft);
 }
 
-.period-unified-card > .period-section,
-.period-unified-card > .summary-grid {
+.ranking-workspace-card .view-panel,
+.ranking-workspace-card .ranking-panel-section,
+.ranking-workspace-card .summary-grid {
   margin: 0;
 }
 
-.period-unified-card .period-filter-section .field {
+/* 選択欄 */
+.ranking-filter-section .field {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
@@ -59,14 +61,14 @@
   background: transparent;
 }
 
-.period-unified-card .period-filter-section .field > span {
+.ranking-filter-section .field > span {
   padding: 0;
   color: var(--color-text-muted);
   font-size: 13px;
   white-space: nowrap;
 }
 
-.period-unified-card .period-filter-section .field select {
+.ranking-filter-section .field select {
   min-height: 44px;
   padding: 0 38px 0 14px;
   border: 1px solid var(--color-border);
@@ -77,7 +79,12 @@
   box-shadow: none;
 }
 
-.period-unified-card .period-description {
+.ranking-filter-section .field select:focus {
+  border-color: var(--color-brand);
+  outline: 2px solid var(--color-brand-soft);
+}
+
+.period-description {
   margin: 10px 0 0;
 }
 
@@ -88,7 +95,7 @@
   background: var(--color-border-light);
 }
 
-/* 系列をグラフ下へ移動 */
+/* 系列をグラフ下へ */
 .chart-scroll + .series-control-box {
   margin-top: 16px;
   margin-bottom: 0;
@@ -100,10 +107,6 @@
 
 .series-control-header {
   padding: 10px 12px;
-  border-radius: 14px 14px 0 0;
-}
-
-.series-control-box:not(.is-collapsible) .series-control-header {
   border-radius: 14px 14px 0 0;
 }
 
@@ -144,6 +147,19 @@
   display: none;
 }
 
+.ranking-benefit-note {
+  margin: 14px 0 0;
+  padding: 10px 12px;
+  border: 1px solid var(--color-brand-border);
+  border-radius: 12px;
+  background: var(--color-brand-soft);
+  color: var(--color-accent-text);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.65;
+  text-align: center;
+}
+
 /* 現在順位を中央に */
 .summary-grid-current {
   display: flex;
@@ -155,7 +171,10 @@
 .current-rank-card {
   width: min(100%, 360px);
   padding: 8px 14px;
+  border: 0;
+  background: transparent;
   text-align: center;
+  box-shadow: none;
 }
 
 .current-rank-block span,
@@ -173,12 +192,6 @@
   margin: 5px 0;
   color: var(--color-brand);
   font-size: 1.7rem;
-}
-
-.period-unified-card .current-rank-block {
-  border: 0;
-  background: transparent;
-  box-shadow: none;
 }
 
 /* 曲別サマリー */
@@ -227,8 +240,8 @@
 }
 
 @media (max-width: 760px) {
-  .period-unified-card {
-    padding: 14px;
+  .ranking-workspace-card {
+    padding: 16px;
   }
 
   .section-divider {
@@ -237,11 +250,15 @@
 }
 
 @media (max-width: 430px) {
-  .view-tab.post-preview-tab {
-    padding: 9px 8px;
+  .ranking-workspace-card {
+    padding: 14px;
   }
 
-  .period-unified-card .period-filter-section .field {
+  .ranking-workspace-card .post-preview-tab {
+    padding: 10px 8px;
+  }
+
+  .ranking-filter-section .field {
     grid-template-columns: 1fr;
     gap: 7px;
   }
