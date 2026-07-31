@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="../app/css/style.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/app-theme-overrides.css">
+  <link rel="stylesheet" href="./css/layout-v2.css">
 </head>
 <body>
   <main class="page-shell">
@@ -45,49 +46,57 @@
     <section id="emptyPanel" class="status-card hidden"><strong>ランキングデータはまだありません</strong><p>週次JSONが保存されると、ここにグラフが表示されます。</p></section>
 
     <section id="appContent" class="hidden">
-      <nav class="view-tabs" aria-label="表示方法">
-        <button class="view-tab is-active" type="button" data-view="period" aria-selected="true"><span>期間を選択</span><small>週ごとの順位</small></button>
-        <button class="view-tab" type="button" data-view="song" aria-selected="false"><span>曲を選択</span><small>過去の週を比較</small></button>
+      <nav class="view-tabs post-preview-tabs" aria-label="表示方法">
+        <button class="view-tab post-preview-tab is-active active" type="button" data-view="period" aria-selected="true"><span>期間を選択</span><small>週ごとの順位</small></button>
+        <button class="view-tab post-preview-tab" type="button" data-view="song" aria-selected="false"><span>曲を選択</span><small>過去の週を比較</small></button>
       </nav>
 
       <section id="periodPanel" class="view-panel">
-        <section class="control-card">
-          <label class="field"><span>集計期間</span><select id="periodSelect"></select></label>
-          <p id="periodDescription" class="control-note period-description"></p>
-        </section>
-
-        <section class="content-card chart-card">
-          <div class="section-heading chart-section-heading">
-            <div class="section-title-block">
-              <div class="section-kicker-row">
-                <p class="eyebrow">WEEKLY GRAPH</p>
-                <div class="chart-actions">
-                  <button id="periodLargeButton" class="app-icon-button mobile-chart-button" type="button" aria-label="大きく表示" title="大きく表示">
-                    <i class="bi bi-arrows-angle-expand" aria-hidden="true"></i>
-                  </button>
-                  <button id="periodImageButton" class="app-icon-button" type="button" aria-label="画像を保存" title="画像を保存">
-                    <i class="bi bi-box-arrow-up" aria-hidden="true"></i>
-                  </button>
-                </div>
-              </div>
-              <h2 id="periodChartTitle">週ごとの順位推移</h2>
-            </div>
+        <section class="content-card period-unified-card">
+          <div class="period-section period-filter-section">
+            <label class="field"><span>集計期間</span><select id="periodSelect"></select></label>
+            <p id="periodDescription" class="control-note period-description"></p>
           </div>
-          <div id="periodSeriesControls" class="series-control-box"></div>
-          <div id="periodChartEmpty" class="empty-message hidden">表示できる順位データがありません。</div>
-          <div id="periodChartScroll" class="chart-scroll"><div id="periodChartSurface" class="chart-surface"><canvas id="periodChart"></canvas></div></div>
-        </section>
 
-        <section class="summary-grid summary-grid-current" aria-label="現在順位">
-          <article class="summary-card current-rank-card"><span>現在順位</span><strong id="periodTopRank">--</strong><small id="periodTopRankSub">--</small></article>
-          <article class="summary-card hidden"><span>期間内最高</span><strong id="periodBestRank">--</strong><small>最高順位</small></article>
-          <article class="summary-card hidden"><span>登場曲</span><strong id="periodSongCount">0</strong><small>曲</small></article>
-          <article class="summary-card hidden"><span>取得回数</span><strong id="periodSnapshotCount">0</strong><small>回</small></article>
-        </section>
+          <div class="section-divider" aria-hidden="true"></div>
 
-        <section class="content-card">
-          <div class="section-heading"><div><p class="eyebrow">SONG SUMMARY</p><h2>曲別サマリー</h2></div></div>
-          <div class="table-scroll"><table><thead><tr><th>曲名</th><th>最新</th><th>最高</th><th>最低</th><th>初登場</th><th>最終確認</th></tr></thead><tbody id="periodTableBody"></tbody></table></div>
+          <div class="period-section chart-card-section">
+            <div class="section-heading chart-section-heading">
+              <div class="section-title-block">
+                <div class="section-kicker-row">
+                  <p class="eyebrow">WEEKLY GRAPH</p>
+                  <div class="chart-actions">
+                    <button id="periodLargeButton" class="app-icon-button mobile-chart-button" type="button" aria-label="大きく表示" title="大きく表示">
+                      <i class="bi bi-arrows-angle-expand" aria-hidden="true"></i>
+                    </button>
+                    <button id="periodImageButton" class="app-icon-button" type="button" aria-label="画像を保存" title="画像を保存">
+                      <i class="bi bi-box-arrow-up" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+                <h2 id="periodChartTitle">週ごとの順位推移</h2>
+              </div>
+            </div>
+            <div id="periodChartEmpty" class="empty-message hidden">表示できる順位データがありません。</div>
+            <div id="periodChartScroll" class="chart-scroll"><div id="periodChartSurface" class="chart-surface"><canvas id="periodChart"></canvas></div></div>
+            <div id="periodSeriesControls" class="series-control-box"></div>
+          </div>
+
+          <div class="section-divider" aria-hidden="true"></div>
+
+          <section class="summary-grid summary-grid-current" aria-label="現在順位">
+            <article class="current-rank-block"><span>現在順位</span><strong id="periodTopRank">--</strong><small id="periodTopRankSub">--</small></article>
+            <article class="summary-card hidden"><span>期間内最高</span><strong id="periodBestRank">--</strong><small>最高順位</small></article>
+            <article class="summary-card hidden"><span>登場曲</span><strong id="periodSongCount">0</strong><small>曲</small></article>
+            <article class="summary-card hidden"><span>取得回数</span><strong id="periodSnapshotCount">0</strong><small>回</small></article>
+          </section>
+
+          <div class="section-divider" aria-hidden="true"></div>
+
+          <div class="period-section period-summary-section">
+            <div class="section-heading"><div><p class="eyebrow">SONG SUMMARY</p><h2>曲別サマリー</h2></div></div>
+            <div class="table-scroll"><table class="period-summary-table"><thead><tr><th>曲名</th><th>最終順位</th><th>最高順位</th><th>最低順位</th></tr></thead><tbody id="periodTableBody"></tbody></table></div>
+          </div>
         </section>
       </section>
 
@@ -114,9 +123,9 @@
               <h2 id="historyChartTitle">曲別・全期間比較</h2>
             </div>
           </div>
-          <div id="historySeriesControls" class="series-control-box"></div>
           <div id="historyChartEmpty" class="empty-message hidden">表示できる順位データがありません。</div>
           <div id="historyChartScroll" class="chart-scroll"><div id="historyChartSurface" class="chart-surface"><canvas id="historyChart"></canvas></div></div>
+          <div id="historySeriesControls" class="series-control-box"></div>
         </section>
 
         <section class="summary-grid summary-grid-current" aria-label="現在順位">
@@ -139,5 +148,6 @@
   <script src="./js/ui-adjustments.js" defer></script>
   <script src="./js/cache-theme.js" defer></script>
   <script src="./js/rank-limit.js" defer></script>
+  <script src="./js/layout-v2.js" defer></script>
 </body>
 </html>
