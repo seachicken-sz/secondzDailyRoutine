@@ -29,7 +29,7 @@ body {
   padding: 6px 10px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-button);
-  background: var(--color-page-bg);
+  background: var(--color-surface);
   color: var(--color-text-sub);
   font-size: 12px;
   font-weight: 700;
@@ -94,11 +94,43 @@ body {
   box-shadow: var(--shadow-card);
 }
 
-.field select {
-  border-color: var(--color-border);
-  border-radius: 14px;
-  color: var(--color-text);
-  background: var(--color-surface);
+#periodPanel > .control-card:first-child,
+#songPanel > .control-card:first-child {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+#periodPanel > .control-card:first-child .field,
+#songPanel > .control-card:first-child .field {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border-radius: var(--radius-button);
+  background: var(--color-page-bg);
+}
+
+#periodPanel > .control-card:first-child .field > span,
+#songPanel > .control-card:first-child .field > span {
+  padding: 0 12px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+#periodPanel > .control-card:first-child .field select,
+#songPanel > .control-card:first-child .field select {
+  min-height: 42px;
+  padding: 0 36px 0 14px;
+  border: 1px solid var(--color-brand);
+  border-radius: var(--radius-button);
+  background-color: var(--color-surface);
+  color: var(--color-brand);
+  font-weight: 700;
+  box-shadow: var(--shadow-card);
 }
 
 .field select:focus {
@@ -143,6 +175,7 @@ body {
 }
 
 .period-description {
+  margin-left: 12px;
   line-height: 1.65;
 }
 
@@ -220,6 +253,18 @@ body {
 
   .view-tab {
     padding: 9px 8px;
+  }
+
+  #periodPanel > .control-card:first-child .field,
+  #songPanel > .control-card:first-child .field {
+    grid-template-columns: 1fr;
+    gap: 2px;
+    padding: 4px;
+  }
+
+  #periodPanel > .control-card:first-child .field > span,
+  #songPanel > .control-card:first-child .field > span {
+    padding: 4px 10px 2px;
   }
 }
 
