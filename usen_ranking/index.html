@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -24,7 +23,7 @@
     <section class="update-strip"><span>最新更新</span><strong id="latestUpdatedAt">--</strong></section>
 
     <section id="loadingPanel" class="status-card">
-      <div class="spinner"></div>
+      <div class="spinner" aria-hidden="true"></div>
       <div><strong>ランキング履歴を読み込んでいます</strong><p id="loadingMessage">manifest.jsonを確認しています。</p></div>
     </section>
     <section id="errorPanel" class="status-card error-card hidden"><strong>データを読み込めませんでした</strong><p id="errorMessage"></p></section>
@@ -32,8 +31,8 @@
 
     <section id="appContent" class="hidden">
       <nav class="view-tabs" aria-label="表示方法">
-        <button class="view-tab is-active" type="button" data-view="period"><span>期間を選択</span><small>週ごとの順位</small></button>
-        <button class="view-tab" type="button" data-view="song"><span>曲を選択</span><small>過去の週を比較</small></button>
+        <button class="view-tab is-active" type="button" data-view="period" aria-selected="true"><span>期間を選択</span><small>週ごとの順位</small></button>
+        <button class="view-tab" type="button" data-view="song" aria-selected="false"><span>曲を選択</span><small>過去の週を比較</small></button>
       </nav>
 
       <section id="periodPanel" class="view-panel">
@@ -41,18 +40,25 @@
           <label class="field"><span>集計期間</span><select id="periodSelect"></select></label>
           <p id="periodDescription" class="control-note"></p>
         </section>
-        <section class="summary-grid">
+
+        <section class="content-card chart-card">
+          <div class="section-heading">
+            <div><p class="eyebrow">WEEKLY GRAPH</p><h2 id="periodChartTitle">週ごとの順位推移</h2></div>
+            <button id="periodImageButton" class="secondary-button" type="button">画像を保存</button>
+          </div>
+          <p class="section-note">系列のチェックで曲ごとの表示を切り替えられます。</p>
+          <div id="periodSeriesControls" class="series-control-box"></div>
+          <div id="periodChartEmpty" class="empty-message hidden">表示できる順位データがありません。</div>
+          <div id="periodChartScroll" class="chart-scroll"><div id="periodChartSurface" class="chart-surface"><canvas id="periodChart"></canvas></div></div>
+        </section>
+
+        <section class="summary-grid" aria-label="期間の概要">
           <article class="summary-card"><span>最新時点トップ</span><strong id="periodTopRank">--</strong><small id="periodTopRankSub">--</small></article>
           <article class="summary-card"><span>期間内最高</span><strong id="periodBestRank">--</strong><small>最高順位</small></article>
           <article class="summary-card"><span>登場曲</span><strong id="periodSongCount">0</strong><small>曲</small></article>
           <article class="summary-card"><span>取得回数</span><strong id="periodSnapshotCount">0</strong><small>回</small></article>
         </section>
-        <section class="content-card chart-card">
-          <div class="section-heading"><div><p class="eyebrow">WEEKLY GRAPH</p><h2 id="periodChartTitle">週ごとの順位推移</h2></div><p>系列のチェックで曲ごとの表示を切り替えられます。</p></div>
-          <div id="periodSeriesControls" class="series-panel"></div>
-          <div id="periodChartEmpty" class="empty-message hidden">表示できる順位データがありません。</div>
-          <div id="periodChartScroll" class="chart-scroll"><div id="periodChartSurface" class="chart-surface"><canvas id="periodChart"></canvas></div></div>
-        </section>
+
         <section class="content-card">
           <div class="section-heading"><div><p class="eyebrow">SONG SUMMARY</p><h2>曲別サマリー</h2></div></div>
           <div class="table-scroll"><table><thead><tr><th>曲名</th><th>最新</th><th>最高</th><th>最低</th><th>初登場</th><th>最終確認</th></tr></thead><tbody id="periodTableBody"></tbody></table></div>
@@ -64,18 +70,25 @@
           <label class="field"><span>曲を選択</span><select id="historySongSelect"></select></label>
           <p id="historyLoadStatus" class="control-note">曲を選ぶと、その曲がランクインしたすべての週を重ねて表示します。</p>
         </section>
-        <section class="summary-grid">
+
+        <section class="content-card chart-card">
+          <div class="section-heading">
+            <div><p class="eyebrow">ALL WEEKS GRAPH</p><h2 id="historyChartTitle">曲別・全期間比較</h2></div>
+            <button id="historyImageButton" class="secondary-button" type="button">画像を保存</button>
+          </div>
+          <p class="section-note">古い週ほど薄く表示します。系列のチェックで週ごとに切り替えられます。</p>
+          <div id="historySeriesControls" class="series-control-box"></div>
+          <div id="historyChartEmpty" class="empty-message hidden">表示できる順位データがありません。</div>
+          <div id="historyChartScroll" class="chart-scroll"><div id="historyChartSurface" class="chart-surface"><canvas id="historyChart"></canvas></div></div>
+        </section>
+
+        <section class="summary-grid" aria-label="曲の全期間概要">
           <article class="summary-card"><span>登場した週</span><strong id="historyWeekCount">0</strong><small>週</small></article>
           <article class="summary-card"><span>全期間最高</span><strong id="historyBestRank">--</strong><small>最高順位</small></article>
           <article class="summary-card"><span>最新順位</span><strong id="historyLatestRank">--</strong><small id="historyLatestRankSub">--</small></article>
           <article class="summary-card"><span>初登場</span><strong id="historyFirstWeek">--</strong><small>開始週</small></article>
         </section>
-        <section class="content-card chart-card">
-          <div class="section-heading"><div><p class="eyebrow">ALL WEEKS GRAPH</p><h2 id="historyChartTitle">曲別・全期間比較</h2></div><p>古い週ほど薄く表示します。系列のチェックで週ごとに切り替えられます。</p></div>
-          <div id="historySeriesControls" class="series-panel"></div>
-          <div id="historyChartEmpty" class="empty-message hidden">表示できる順位データがありません。</div>
-          <div id="historyChartScroll" class="chart-scroll"><div id="historyChartSurface" class="chart-surface"><canvas id="historyChart"></canvas></div></div>
-        </section>
+
         <section class="content-card">
           <div class="section-heading"><div><p class="eyebrow">WEEK SUMMARY</p><h2>週ごとのサマリー</h2></div></div>
           <div class="table-scroll"><table><thead><tr><th>開始週</th><th>最新</th><th>最高</th><th>最低</th><th>初登場</th><th>最終確認</th></tr></thead><tbody id="historyTableBody"></tbody></table></div>
