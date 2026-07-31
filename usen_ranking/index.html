@@ -13,6 +13,7 @@
       if (themes.includes(theme)) document.documentElement.dataset.theme = theme;
     })();
   </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../app/css/style.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/app-theme-overrides.css">
@@ -20,13 +21,18 @@
 <body>
   <main class="page-shell">
     <header class="page-header">
-      <a class="back-link" href="../app/">← 戻る</a>
+      <a class="back-step-button back-link" href="../app/">
+        <i class="bi bi-chevron-left" aria-hidden="true"></i>
+        <span>戻る</span>
+      </a>
       <div class="title-block">
         <p class="eyebrow">USEN RANKING HISTORY</p>
         <h1>USEN推し活リクエスト 順位推移</h1>
         <p class="page-description">水曜18時から翌水曜18時直前までの順位を確認できます。</p>
       </div>
-      <button id="refreshButton" class="icon-button" type="button" aria-label="最新データを再読み込み">↻</button>
+      <button id="refreshButton" class="app-icon-button" type="button" aria-label="最新データを再読み込み" title="最新データを再読み込み">
+        <i class="bi bi-arrow-clockwise" aria-hidden="true"></i>
+      </button>
     </header>
 
     <section class="update-strip"><span>最新更新</span><strong id="latestUpdatedAt">--</strong></section>
@@ -51,11 +57,20 @@
         </section>
 
         <section class="content-card chart-card">
-          <div class="section-heading">
-            <div><p class="eyebrow">WEEKLY GRAPH</p><h2 id="periodChartTitle">週ごとの順位推移</h2></div>
-            <div class="chart-actions">
-              <button id="periodLargeButton" class="secondary-button mobile-chart-button" type="button">大きく表示</button>
-              <button id="periodImageButton" class="secondary-button" type="button">画像を保存</button>
+          <div class="section-heading chart-section-heading">
+            <div class="section-title-block">
+              <div class="section-kicker-row">
+                <p class="eyebrow">WEEKLY GRAPH</p>
+                <div class="chart-actions">
+                  <button id="periodLargeButton" class="app-icon-button mobile-chart-button" type="button" aria-label="大きく表示" title="大きく表示">
+                    <i class="bi bi-arrows-angle-expand" aria-hidden="true"></i>
+                  </button>
+                  <button id="periodImageButton" class="app-icon-button" type="button" aria-label="画像を保存" title="画像を保存">
+                    <i class="bi bi-box-arrow-up" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <h2 id="periodChartTitle">週ごとの順位推移</h2>
             </div>
           </div>
           <div id="periodSeriesControls" class="series-control-box"></div>
@@ -83,11 +98,20 @@
         </section>
 
         <section class="content-card chart-card">
-          <div class="section-heading">
-            <div><p class="eyebrow">ALL WEEKS GRAPH</p><h2 id="historyChartTitle">曲別・全期間比較</h2></div>
-            <div class="chart-actions">
-              <button id="historyLargeButton" class="secondary-button mobile-chart-button" type="button">大きく表示</button>
-              <button id="historyImageButton" class="secondary-button" type="button">画像を保存</button>
+          <div class="section-heading chart-section-heading">
+            <div class="section-title-block">
+              <div class="section-kicker-row">
+                <p class="eyebrow">ALL WEEKS GRAPH</p>
+                <div class="chart-actions">
+                  <button id="historyLargeButton" class="app-icon-button mobile-chart-button" type="button" aria-label="大きく表示" title="大きく表示">
+                    <i class="bi bi-arrows-angle-expand" aria-hidden="true"></i>
+                  </button>
+                  <button id="historyImageButton" class="app-icon-button" type="button" aria-label="画像を保存" title="画像を保存">
+                    <i class="bi bi-box-arrow-up" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <h2 id="historyChartTitle">曲別・全期間比較</h2>
             </div>
           </div>
           <div id="historySeriesControls" class="series-control-box"></div>
