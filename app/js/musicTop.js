@@ -213,12 +213,12 @@ function toDisplayNumber(value) {
   return number;
 }
 
-// 直近データからリクエスト曲だけを順位順に上位3件取得する。
+// 直近データから、最も人気のあるリクエスト曲を1件取得する。
 function getRequestRankingItems(items) {
   return items
     .filter((item) => item.taskType === "requestSong")
     .sort((a, b) => Number(a.rank || 999) - Number(b.rank || 999))
-    .slice(0, 3);
+    .slice(0, 1);
 }
 
 // 将来「今週」表示を追加する場合の取得処理。現時点では描画には未使用。
@@ -232,7 +232,7 @@ function getThisWeekRequestRankingItems(items) {
 }
 
 // ランキング本体のHTMLを生成する。
-// 人気リクエスト曲の先頭1件は常時表示し、残りの曲とUSEN順位は折り畳み内へ表示する。
+// 人気曲は常時表示し、USEN順位とランキング推移グラフへのリンクを折り畳み内へ表示する。
 function renderRequestRanking({
   recentRequestItems,
   usenRankingItems,
@@ -240,7 +240,10 @@ function renderRequestRanking({
   return `
     <div class="request-ranking-content" data-expanded="false">
       ${renderRequestRankingBlock(
-        { main: "人気リクエスト曲", ruby: "request ranking" },
+        {
+          main: "USEN推し活リクエスト",
+          ruby: "usen oshireq",
+        },
         recentRequestItems,
         usenRankingItems
       )}
@@ -249,6 +252,7 @@ function renderRequestRanking({
         type="button"
         id="requestRankingToggleButton"
         class="request-ranking-toggle"
+        aria-expanded="false"
       >
         もっと見る
       </button>
@@ -258,7 +262,6 @@ function renderRequestRanking({
 
 function renderRequestRankingBlock(title, items, usenRankingItems) {
   const firstItem = items[0];
-  const hiddenItems = items.slice(1);
 
   return `
     <section class="request-ranking-block">
@@ -272,17 +275,33 @@ function renderRequestRankingBlock(title, items, usenRankingItems) {
       <div class="request-ranking-main">
         ${
           firstItem
-            ? renderRequestRankingItem(firstItem)
+            ? renderCurrentRequestSong(firstItem)
             : '<p class="request-ranking-empty">データなし</p>'
         }
       </div>
 
       <div class="request-ranking-extra">
-        ${hiddenItems.map(renderRequestRankingItem).join("")}
-
         ${renderRequestRankingUsenBlock(usenRankingItems)}
+
+        <a
+          href="https://seachicken-sz.github.io/secondzDailyRoutine/usen_ranking/"
+          class="primary-button request-ranking-graph-button"
+        >
+          ランキング推移グラフを見る
+        </a>
       </div>
     </section>
+  `;
+}
+
+// 折り畳み前に表示する現在の人気曲。
+function renderCurrentRequestSong(item) {
+  const title = item.title || item.songTitle || "タイトル不明";
+
+  return `
+    <p class="request-ranking-current-song">
+      現在の人気曲は<strong>${escapeHtml(title)}</strong>！
+    </p>
   `;
 }
 
@@ -378,22 +397,17 @@ function renderRequestRankingItem(item) {
   `;
 }
 
-// 折り畳み対象がある場合だけ「もっと見る」を表示する。
+// 「もっと見る」ボタンでUSEN順位とグラフリンクを開閉する。
 function setupRequestRankingToggle() {
   const content = document.querySelector(".request-ranking-content");
   const button = document.getElementById("requestRankingToggleButton");
+  const extraArea = content?.querySelector(".request-ranking-extra");
 
-  if (!content || !button) {
+  if (!content || !button || !extraArea) {
     return;
   }
 
-  const extraItems = content.querySelectorAll(".request-ranking-extra");
-
-  const hasHiddenItems = Array.from(extraItems).some((extraItem) => {
-    return extraItem.children.length > 0;
-  });
-
-  if (!hasHiddenItems) {
+  if (extraArea.children.length === 0) {
     button.classList.add("hidden");
     return;
   }
@@ -403,10 +417,8 @@ function setupRequestRankingToggle() {
     const nextExpanded = !isExpanded;
 
     content.dataset.expanded = String(nextExpanded);
-
-    button.textContent = nextExpanded
-      ? "閉じる"
-      : "もっと見る";
+    button.setAttribute("aria-expanded", String(nextExpanded));
+    button.textContent = nextExpanded ? "閉じる" : "もっと見る";
   });
 }
 
