@@ -46,32 +46,28 @@
     <section id="emptyPanel" class="status-card hidden"><strong>ランキングデータはまだありません</strong><p>週次JSONが保存されると、ここにグラフが表示されます。</p></section>
 
     <section id="appContent" class="hidden">
-      <nav class="view-tabs post-preview-tabs" aria-label="表示方法">
-        <button class="view-tab post-preview-tab is-active active" type="button" data-view="period" aria-selected="true"><span>期間を選択</span><small>週ごとの順位</small></button>
-        <button class="view-tab post-preview-tab" type="button" data-view="song" aria-selected="false"><span>曲を選択</span><small>過去の週を比較</small></button>
-      </nav>
+      <section class="content-card ranking-workspace-card">
+        <nav class="view-tabs post-preview-tabs" aria-label="表示方法">
+          <button class="view-tab post-preview-tab is-active active" type="button" data-view="period" aria-selected="true">期間を選択</button>
+          <button class="view-tab post-preview-tab" type="button" data-view="song" aria-selected="false">曲を選択</button>
+        </nav>
 
-      <section id="periodPanel" class="view-panel">
-        <section class="content-card period-unified-card">
-          <div class="period-section period-filter-section">
+        <section id="periodPanel" class="view-panel">
+          <div class="ranking-panel-section ranking-filter-section">
             <label class="field"><span>集計期間</span><select id="periodSelect"></select></label>
             <p id="periodDescription" class="control-note period-description"></p>
           </div>
 
           <div class="section-divider" aria-hidden="true"></div>
 
-          <div class="period-section chart-card-section">
+          <div class="ranking-panel-section chart-card-section">
             <div class="section-heading chart-section-heading">
               <div class="section-title-block">
                 <div class="section-kicker-row">
                   <p class="eyebrow">WEEKLY GRAPH</p>
                   <div class="chart-actions">
-                    <button id="periodLargeButton" class="app-icon-button mobile-chart-button" type="button" aria-label="大きく表示" title="大きく表示">
-                      <i class="bi bi-arrows-angle-expand" aria-hidden="true"></i>
-                    </button>
-                    <button id="periodImageButton" class="app-icon-button" type="button" aria-label="画像を保存" title="画像を保存">
-                      <i class="bi bi-box-arrow-up" aria-hidden="true"></i>
-                    </button>
+                    <button id="periodLargeButton" class="app-icon-button mobile-chart-button" type="button" aria-label="大きく表示" title="大きく表示"><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i></button>
+                    <button id="periodImageButton" class="app-icon-button" type="button" aria-label="画像を保存" title="画像を保存"><i class="bi bi-box-arrow-up" aria-hidden="true"></i></button>
                   </div>
                 </div>
                 <h2 id="periodChartTitle">週ごとの順位推移</h2>
@@ -80,6 +76,7 @@
             <div id="periodChartEmpty" class="empty-message hidden">表示できる順位データがありません。</div>
             <div id="periodChartScroll" class="chart-scroll"><div id="periodChartSurface" class="chart-surface"><canvas id="periodChart"></canvas></div></div>
             <div id="periodSeriesControls" class="series-control-box"></div>
+            <p class="ranking-benefit-note">20位以内でダイソーや松屋で放送！30位以内でランダム再生の対象に！</p>
           </div>
 
           <div class="section-divider" aria-hidden="true"></div>
@@ -93,51 +90,54 @@
 
           <div class="section-divider" aria-hidden="true"></div>
 
-          <div class="period-section period-summary-section">
+          <div class="ranking-panel-section period-summary-section">
             <div class="section-heading"><div><p class="eyebrow">SONG SUMMARY</p><h2>曲別サマリー</h2></div></div>
             <div class="table-scroll"><table class="period-summary-table"><thead><tr><th>曲名</th><th>最終順位</th><th>最高順位</th><th>最低順位</th></tr></thead><tbody id="periodTableBody"></tbody></table></div>
           </div>
         </section>
-      </section>
 
-      <section id="songPanel" class="view-panel hidden">
-        <section class="control-card">
-          <label class="field"><span>曲を選択</span><select id="historySongSelect"></select></label>
-          <p id="historyLoadStatus" class="control-note hidden"></p>
-        </section>
-
-        <section class="content-card chart-card">
-          <div class="section-heading chart-section-heading">
-            <div class="section-title-block">
-              <div class="section-kicker-row">
-                <p class="eyebrow">ALL WEEKS GRAPH</p>
-                <div class="chart-actions">
-                  <button id="historyLargeButton" class="app-icon-button mobile-chart-button" type="button" aria-label="大きく表示" title="大きく表示">
-                    <i class="bi bi-arrows-angle-expand" aria-hidden="true"></i>
-                  </button>
-                  <button id="historyImageButton" class="app-icon-button" type="button" aria-label="画像を保存" title="画像を保存">
-                    <i class="bi bi-box-arrow-up" aria-hidden="true"></i>
-                  </button>
-                </div>
-              </div>
-              <h2 id="historyChartTitle">曲別・全期間比較</h2>
-            </div>
+        <section id="songPanel" class="view-panel hidden">
+          <div class="ranking-panel-section ranking-filter-section">
+            <label class="field"><span>曲を選択</span><select id="historySongSelect"></select></label>
+            <p id="historyLoadStatus" class="control-note hidden"></p>
           </div>
-          <div id="historyChartEmpty" class="empty-message hidden">表示できる順位データがありません。</div>
-          <div id="historyChartScroll" class="chart-scroll"><div id="historyChartSurface" class="chart-surface"><canvas id="historyChart"></canvas></div></div>
-          <div id="historySeriesControls" class="series-control-box"></div>
-        </section>
 
-        <section class="summary-grid summary-grid-current" aria-label="現在順位">
-          <article class="summary-card hidden"><span>登場した週</span><strong id="historyWeekCount">0</strong><small>週</small></article>
-          <article class="summary-card hidden"><span>全期間最高</span><strong id="historyBestRank">--</strong><small>最高順位</small></article>
-          <article class="summary-card current-rank-card"><span>現在順位</span><strong id="historyLatestRank">--</strong><small id="historyLatestRankSub">--</small></article>
-          <article class="summary-card hidden"><span>初登場</span><strong id="historyFirstWeek">--</strong><small>開始週</small></article>
-        </section>
+          <div class="section-divider" aria-hidden="true"></div>
 
-        <section class="content-card">
-          <div class="section-heading"><div><p class="eyebrow">WEEK SUMMARY</p><h2>週ごとのサマリー</h2></div></div>
-          <div class="table-scroll"><table><thead><tr><th>開始週</th><th>最新</th><th>最高</th><th>最低</th><th>初登場</th><th>最終確認</th></tr></thead><tbody id="historyTableBody"></tbody></table></div>
+          <div class="ranking-panel-section chart-card-section">
+            <div class="section-heading chart-section-heading">
+              <div class="section-title-block">
+                <div class="section-kicker-row">
+                  <p class="eyebrow">ALL WEEKS GRAPH</p>
+                  <div class="chart-actions">
+                    <button id="historyLargeButton" class="app-icon-button mobile-chart-button" type="button" aria-label="大きく表示" title="大きく表示"><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i></button>
+                    <button id="historyImageButton" class="app-icon-button" type="button" aria-label="画像を保存" title="画像を保存"><i class="bi bi-box-arrow-up" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+                <h2 id="historyChartTitle">曲別・全期間比較</h2>
+              </div>
+            </div>
+            <div id="historyChartEmpty" class="empty-message hidden">表示できる順位データがありません。</div>
+            <div id="historyChartScroll" class="chart-scroll"><div id="historyChartSurface" class="chart-surface"><canvas id="historyChart"></canvas></div></div>
+            <div id="historySeriesControls" class="series-control-box"></div>
+            <p class="ranking-benefit-note">20位以内でダイソーや松屋で放送！30位以内でランダム再生の対象に！</p>
+          </div>
+
+          <div class="section-divider" aria-hidden="true"></div>
+
+          <section class="summary-grid summary-grid-current" aria-label="現在順位">
+            <article class="summary-card hidden"><span>登場した週</span><strong id="historyWeekCount">0</strong><small>週</small></article>
+            <article class="summary-card hidden"><span>全期間最高</span><strong id="historyBestRank">--</strong><small>最高順位</small></article>
+            <article class="current-rank-block"><span>現在順位</span><strong id="historyLatestRank">--</strong><small id="historyLatestRankSub">--</small></article>
+            <article class="summary-card hidden"><span>初登場</span><strong id="historyFirstWeek">--</strong><small>開始週</small></article>
+          </section>
+
+          <div class="section-divider" aria-hidden="true"></div>
+
+          <div class="ranking-panel-section">
+            <div class="section-heading"><div><p class="eyebrow">WEEK SUMMARY</p><h2>週ごとのサマリー</h2></div></div>
+            <div class="table-scroll"><table><thead><tr><th>開始週</th><th>最新</th><th>最高</th><th>最低</th><th>初登場</th><th>最終確認</th></tr></thead><tbody id="historyTableBody"></tbody></table></div>
+          </div>
         </section>
       </section>
     </section>
