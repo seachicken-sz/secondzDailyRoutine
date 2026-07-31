@@ -28,7 +28,6 @@ renderHistory = function renderHistoryWithLatestCapturedAt() {
   el.historyLatestRankSub.textContent = `最終取得 ${latest}`;
 };
 
-const baseExportChartImageForUi = exportChartImage;
 exportChartImage = function exportChartImageWithCorrectAspect({ chart, title, fileName }) {
   if (!chart || !chart.canvas) return;
 
@@ -81,14 +80,30 @@ exportChartImage = function exportChartImageWithCorrectAspect({ chart, title, fi
   link.click();
 };
 
+function updateLargeChartButton(button, large) {
+  const icon = button.querySelector("i");
+  const label = large ? "通常表示" : "大きく表示";
+
+  button.setAttribute("aria-label", label);
+  button.setAttribute("title", label);
+
+  if (icon) {
+    icon.className = large
+      ? "bi bi-arrows-angle-contract"
+      : "bi bi-arrows-angle-expand";
+  }
+}
+
 function setupLargeChartButton(buttonId, surfaceId, chartName) {
   const button = document.getElementById(buttonId);
   const surface = document.getElementById(surfaceId);
   if (!button || !surface) return;
 
+  updateLargeChartButton(button, false);
+
   button.addEventListener("click", () => {
     const large = surface.classList.toggle("is-large");
-    button.textContent = large ? "通常表示" : "大きく表示";
+    updateLargeChartButton(button, large);
 
     const chart = state[chartName];
     if (chart) {
