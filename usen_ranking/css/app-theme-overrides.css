@@ -128,7 +128,7 @@ body {
   border: 1px solid var(--color-brand);
   border-radius: var(--radius-button);
   background-color: var(--color-surface);
-  color: var(--color-brand);
+  color: var(--color-text);
   font-weight: 700;
   box-shadow: var(--shadow-card);
 }
