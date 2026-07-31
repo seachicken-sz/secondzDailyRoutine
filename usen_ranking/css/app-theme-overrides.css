@@ -1,0 +1,99 @@
+:root {
+  --brand: var(--color-brand);
+  --brand-dark: var(--color-accent-text);
+  --brand-soft: var(--color-brand-soft);
+  --page: var(--color-page-bg);
+  --surface: var(--color-surface);
+  --soft: var(--color-surface-soft);
+  --text: var(--color-text);
+  --sub: var(--color-text-sub);
+  --muted: var(--color-text-muted);
+  --border: var(--color-border);
+  --danger: var(--color-danger);
+  --shadow: var(--shadow-card);
+  --radius: var(--radius-card);
+}
+
+html,
+body {
+  height: auto;
+  min-height: 100%;
+}
+
+.back-link {
+  color: var(--color-link);
+}
+
+.back-link:hover {
+  color: var(--color-link-hover);
+}
+
+.summary-grid-current {
+  grid-template-columns: minmax(0, 360px);
+}
+
+.current-rank-card {
+  width: 100%;
+}
+
+.period-description {
+  line-height: 1.65;
+}
+
+.chart-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.mobile-chart-button {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .summary-grid-current {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-chart-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chart-surface {
+    width: 100%;
+    min-width: 0;
+    height: 360px;
+  }
+
+  .chart-surface.is-large {
+    width: 920px;
+    min-width: 920px;
+    height: 360px;
+  }
+
+  .chart-scroll {
+    overflow-x: hidden;
+  }
+
+  .chart-scroll:has(.chart-surface.is-large) {
+    overflow-x: auto;
+  }
+
+  .section-heading {
+    align-items: center;
+  }
+}
+
+@media (max-width: 430px) {
+  .chart-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
