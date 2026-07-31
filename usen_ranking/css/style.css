@@ -1,6 +1,6 @@
 :root {
   --brand: #02b9a5;
-  --brand-dark: #087f73;
+  --color-brand: #087f73;
   --brand-soft: #ecfff3;
   --page: #f6f6f6;
   --surface: #fff;
@@ -46,7 +46,7 @@ button { -webkit-tap-highlight-color: transparent; }
 .title-block { min-width: 0; }
 .eyebrow {
   margin: 0 0 4px;
-  color: var(--brand-dark);
+  color: var(--color-brand);
   font-size: .72rem;
   font-weight: 800;
   letter-spacing: .12em;
@@ -75,7 +75,7 @@ h2 {
   border: 1px solid var(--border);
   border-radius: 50%;
   background: var(--surface);
-  color: var(--brand-dark);
+  color: var(--color-brand);
   font-weight: 800;
   cursor: pointer;
 }
@@ -139,7 +139,7 @@ h2 {
 .view-tab.is-active {
   border-color: var(--brand);
   background: var(--brand-soft);
-  color: var(--brand-dark);
+  color: var(--color-brand);
 }
 
 .control-card {
@@ -182,7 +182,7 @@ h2 {
   border: 1px solid var(--brand);
   border-radius: 999px;
   background: var(--surface);
-  color: var(--brand-dark);
+  color: var(--color-brand);
   font-weight: 800;
   cursor: pointer;
 }
@@ -216,7 +216,7 @@ h2 {
 .series-toggle {
   border: 0;
   background: transparent;
-  color: var(--brand-dark);
+  color: var(--color-brand);
   font-size: .8rem;
   font-weight: 800;
   cursor: pointer;
@@ -294,7 +294,7 @@ h2 {
 .summary-card strong {
   display: block;
   margin: 4px 0;
-  color: var(--brand-dark);
+  color: var(--color-brand);
   font-size: 1.55rem;
 }
 
@@ -327,7 +327,7 @@ tbody tr:last-child td { border-bottom: 0; }
   font-weight: 700;
   white-space: normal;
 }
-.rank-value { color: var(--brand-dark); font-weight: 800; }
+.rank-value { color: var(--color-brand); font-weight: 800; }
 
 @media (max-width: 760px) {
   .page-shell {
