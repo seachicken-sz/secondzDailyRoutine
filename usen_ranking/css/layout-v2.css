@@ -1,0 +1,252 @@
+/* タムごとDailyのSNSシェア切替と同じタブUI */
+.view-tabs.post-preview-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 16px 0 14px;
+  padding: 4px;
+  border-radius: var(--radius-button);
+  background: var(--color-page-bg);
+}
+
+.view-tab.post-preview-tab {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-button);
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.view-tab.post-preview-tab small {
+  display: block;
+  margin-top: 2px;
+  color: inherit;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.view-tab.post-preview-tab.active,
+.view-tab.post-preview-tab.is-active {
+  border-color: var(--color-brand);
+  background: var(--color-surface);
+  color: var(--color-brand);
+  box-shadow: var(--shadow-card);
+}
+
+/* 期間選択から曲別サマリーまでを1枚のカードにまとめる */
+.period-unified-card {
+  padding: 18px;
+}
+
+.period-unified-card > .period-section,
+.period-unified-card > .summary-grid {
+  margin: 0;
+}
+
+.period-unified-card .period-filter-section .field {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.period-unified-card .period-filter-section .field > span {
+  padding: 0;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.period-unified-card .period-filter-section .field select {
+  min-height: 44px;
+  padding: 0 38px 0 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.period-unified-card .period-description {
+  margin: 10px 0 0;
+}
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  margin: 24px 0;
+  background: var(--color-border-light);
+}
+
+/* 系列をグラフ下へ移動 */
+.chart-scroll + .series-control-box {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.series-control-box {
+  overflow: visible;
+}
+
+.series-control-header {
+  padding: 10px 12px;
+  border-radius: 14px 14px 0 0;
+}
+
+.series-control-box:not(.is-collapsible) .series-control-header {
+  border-radius: 14px 14px 0 0;
+}
+
+.series-list {
+  border-top: 1px solid var(--color-border-light);
+}
+
+.series-control-box.is-collapsible:not(.is-expanded) .series-list {
+  max-height: 104px;
+  padding-bottom: 12px;
+  overflow: hidden;
+}
+
+.series-control-box.is-expanded .series-list {
+  max-height: none;
+}
+
+.series-toggle.series-toggle-bottom {
+  display: grid;
+  width: 100%;
+  min-height: 34px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid var(--color-border-light);
+  border-radius: 0 0 14px 14px;
+  background: var(--color-page-bg);
+  color: var(--color-brand);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.series-toggle.series-toggle-bottom:hover {
+  background: var(--color-brand-soft);
+}
+
+.series-toggle.series-toggle-bottom.is-hidden {
+  display: none;
+}
+
+/* 現在順位を中央に */
+.summary-grid-current {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.current-rank-block,
+.current-rank-card {
+  width: min(100%, 360px);
+  padding: 8px 14px;
+  text-align: center;
+}
+
+.current-rank-block span,
+.current-rank-block small,
+.current-rank-card span,
+.current-rank-card small {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+.current-rank-block strong,
+.current-rank-card strong {
+  display: block;
+  margin: 5px 0;
+  color: var(--color-brand);
+  font-size: 1.7rem;
+}
+
+.period-unified-card .current-rank-block {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* 曲別サマリー */
+.period-summary-table {
+  min-width: 560px;
+}
+
+.period-summary-table .song-name a {
+  position: relative;
+  z-index: 1;
+  color: var(--color-link);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.period-summary-table .song-name a:hover {
+  color: var(--color-link-hover);
+}
+
+.period-summary-table tr.is-top20 td {
+  background-color: var(--color-brand-soft);
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.95) 0 1.5px, transparent 2.8px),
+    radial-gradient(circle, color-mix(in srgb, var(--color-brand) 48%, transparent) 0 1.2px, transparent 2.6px),
+    radial-gradient(circle, rgba(255,255,255,.82) 0 1px, transparent 2.2px);
+  background-position: 0 8px, 38px 28px, 72px 13px;
+  background-size: 96px 54px, 126px 68px, 84px 48px;
+  animation: usenTop20Sparkle 5s linear infinite;
+}
+
+@keyframes usenTop20Sparkle {
+  from {
+    background-position: 0 8px, 38px 28px, 72px 13px;
+  }
+  to {
+    background-position: 192px -18px, 290px 4px, 240px -12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .period-summary-table tr.is-top20 td {
+    animation: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .period-unified-card {
+    padding: 14px;
+  }
+
+  .section-divider {
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .view-tab.post-preview-tab {
+    padding: 9px 8px;
+  }
+
+  .period-unified-card .period-filter-section .field {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .period-summary-table {
+    min-width: 520px;
+  }
+}
