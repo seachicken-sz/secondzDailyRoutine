@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026/08/01 20:07",
+  "updatedAt": "2026/08/01 21:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/31",
-      "updatedAt": "2026/08/01 20:07",
+      "updatedAt": "2026/08/01 21:07",
       "episodeId": "eplqgnuarg",
       "subtitle": "真夏の決戦！「信頼じゃんけん」トーナメント",
-      "likes": "8839",
+      "likes": "9132",
       "favorites": "77.7万",
       "likePoints": [
         {
@@ -97,6 +97,10 @@
         {
           "hour": 22,
           "likes": 8839
+        },
+        {
+          "hour": 23,
+          "likes": 9132
         }
       ],
       "previousLikePoints": [
@@ -769,10 +773,15 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 11,
+          "elapsedHour": 23,
+          "elapsedRank": 11,
+          "currentPoints": [
+            {
+              "hour": 23,
+              "rank": 11
+            }
+          ],
           "previousPoints": [
             {
               "hour": 4,
@@ -1429,26 +1438,35 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "見取り図の間取り図ミステリー"
+              "rank": 8,
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
-              "rank": 48,
-              "title": "ゴッドタン"
+              "rank": 9,
+              "title": "トークィーンズ"
             },
             {
-              "rank": 49,
-              "title": "クレイジージャーニー"
+              "rank": 10,
+              "title": "華大さんと千鳥くん"
+            },
+            {
+              "rank": 11,
+              "title": "タイムレスマン"
             }
           ]
         },
         {
           "type": "all",
           "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 24,
+          "elapsedHour": 23,
+          "elapsedRank": 24,
+          "currentPoints": [
+            {
+              "hour": 23,
+              "rank": 24
+            }
+          ],
           "previousPoints": [
             {
               "hour": 9,
@@ -1845,20 +1863,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "何か“オモシロいコト”ないの？"
+              "rank": 21,
+              "title": "GTO"
             },
             {
-              "rank": 48,
-              "title": "Ｔシャツが乾くまで"
+              "rank": 22,
+              "title": "クロスロード ～救命救急の約束～"
             },
             {
-              "rank": 49,
-              "title": "ハイキュー!! TO THE TOP"
+              "rank": 23,
+              "title": "華大さんと千鳥くん"
             },
             {
-              "rank": 50,
-              "title": "あざとくて何が悪いの？"
+              "rank": 24,
+              "title": "タイムレスマン"
             }
           ]
         }
@@ -1867,7 +1885,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/07/26",
-      "updatedAt": "2026/08/01 20:07",
+      "updatedAt": "2026/08/01 21:07",
       "episodeId": "epoicu11f6",
       "subtitle": "CanCam編集部に潜入&爆売れ雑誌ハルメクの秘密",
       "likes": "1.3万",
@@ -2467,6 +2485,10 @@
         },
         {
           "hour": 150,
+          "likes": 13000
+        },
+        {
+          "hour": 151,
           "likes": 13000
         }
       ],
@@ -3132,9 +3154,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 24,
-          "elapsedHour": 150,
-          "elapsedRank": 24,
+          "currentRank": 34,
+          "elapsedHour": 151,
+          "elapsedRank": 34,
           "currentPoints": [
             {
               "hour": 7,
@@ -3707,6 +3729,10 @@
             {
               "hour": 150,
               "rank": 24
+            },
+            {
+              "hour": 151,
+              "rank": 34
             }
           ],
           "previousPoints": [
@@ -4161,19 +4187,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 21,
-              "title": "あざとくて何が悪いの？"
+              "rank": 31,
+              "title": "有吉クイズ"
             },
             {
-              "rank": 22,
-              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
+              "rank": 32,
+              "title": "これ余談なんですけど・・・"
             },
             {
-              "rank": 23,
-              "title": "秘密のケンミンSHOW極"
+              "rank": 33,
+              "title": "見取り図じゃん"
             },
             {
-              "rank": 24,
+              "rank": 34,
               "title": "timeleszファミリア"
             }
           ]
@@ -4671,19 +4697,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 48,
-              "title": "Ｔシャツが乾くまで"
+              "title": "しもべの王子様"
             },
             {
               "rank": 49,
-              "title": "ハイキュー!! TO THE TOP"
+              "title": "ブラックトリック～裁きを操る弁護人～"
             },
             {
               "rank": 50,
-              "title": "あざとくて何が悪いの？"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             }
           ]
         }
@@ -4692,10 +4718,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/28",
-      "updatedAt": "2026/08/01 20:07",
+      "updatedAt": "2026/08/01 21:07",
       "episodeId": "epgw9m4xvk",
       "subtitle": "チョコプラ・timeleszが「衝撃吸収材なら、バラエティ罰ゲームをノーリアクションでこなせるのか？」に挑む！",
-      "likes": "6624",
+      "likes": "6602",
       "favorites": "5.7万",
       "likePoints": [
         {
@@ -5065,6 +5091,10 @@
         {
           "hour": 92,
           "likes": 6624
+        },
+        {
+          "hour": 93,
+          "likes": 6602
         }
       ],
       "previousLikePoints": [
@@ -5733,9 +5763,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 12,
-          "elapsedHour": 92,
-          "elapsedRank": 12,
+          "currentRank": 24,
+          "elapsedHour": 93,
+          "elapsedRank": 24,
           "currentPoints": [
             {
               "hour": 6,
@@ -6084,6 +6114,10 @@
             {
               "hour": 92,
               "rank": 12
+            },
+            {
+              "hour": 93,
+              "rank": 24
             }
           ],
           "previousPoints": [
@@ -6638,19 +6672,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 9,
-              "title": "そこまで言って委員会NP"
+              "rank": 21,
+              "title": "有吉ゼミ"
             },
             {
-              "rank": 10,
-              "title": "見取り図の間取り図ミステリー"
+              "rank": 22,
+              "title": "ポツンと一軒家"
             },
             {
-              "rank": 11,
-              "title": "クレイジージャーニー"
+              "rank": 23,
+              "title": "有田哲平とコスられない街"
             },
             {
-              "rank": 12,
+              "rank": 24,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -6868,15 +6902,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図の間取り図ミステリー"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "ニカゲーム"
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "はじめてのおつかい"
+            },
+            {
+              "rank": 50,
+              "title": "有吉の壁"
             }
           ]
         }
@@ -6885,10 +6923,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/30",
-      "updatedAt": "2026/08/01 20:07",
+      "updatedAt": "2026/08/01 21:07",
       "episodeId": "epb8a7zaf8",
       "subtitle": "【特定班】写真から居場所を特定しろ！",
-      "likes": "7631",
+      "likes": "7600",
       "favorites": "23.4万",
       "likePoints": [
         {
@@ -7154,6 +7192,10 @@
         {
           "hour": 66,
           "likes": 7631
+        },
+        {
+          "hour": 67,
+          "likes": 7600
         }
       ],
       "previousLikePoints": [
@@ -7822,9 +7864,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 42,
-          "elapsedHour": 66,
-          "elapsedRank": 42,
+          "currentRank": 48,
+          "elapsedHour": 67,
+          "elapsedRank": 48,
           "currentPoints": [
             {
               "hour": 8,
@@ -8061,6 +8103,10 @@
             {
               "hour": 66,
               "rank": 42
+            },
+            {
+              "hour": 67,
+              "rank": 48
             }
           ],
           "previousPoints": [
@@ -8303,19 +8349,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 39,
-              "title": "Golden SixTONES"
+              "rank": 45,
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
-              "rank": 40,
-              "title": "あちこちオードリー"
+              "rank": 46,
+              "title": "林修の今知りたいでしょ！"
             },
             {
-              "rank": 41,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "rank": 47,
+              "title": "なにわ男子の逆転男子"
             },
             {
-              "rank": 42,
+              "rank": 48,
               "title": "ニカゲーム"
             }
           ]
@@ -8549,19 +8595,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 48,
-              "title": "Ｔシャツが乾くまで"
+              "title": "しもべの王子様"
             },
             {
               "rank": 49,
-              "title": "ハイキュー!! TO THE TOP"
+              "title": "ブラックトリック～裁きを操る弁護人～"
             },
             {
               "rank": 50,
-              "title": "あざとくて何が悪いの？"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             }
           ]
         }
@@ -8570,7 +8616,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/08/01 20:07",
+      "updatedAt": "2026/08/01 21:07",
       "episodeId": "epqf7c2gz6",
       "subtitle": "大食い激細女子…体の秘密!体温に関係?食べる順番で解決?",
       "likes": "4767",
@@ -9539,15 +9585,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図の間取り図ミステリー"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "ニカゲーム"
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "はじめてのおつかい"
+            },
+            {
+              "rank": 50,
+              "title": "有吉の壁"
             }
           ]
         },
@@ -9739,19 +9789,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 48,
-              "title": "Ｔシャツが乾くまで"
+              "title": "しもべの王子様"
             },
             {
               "rank": 49,
-              "title": "ハイキュー!! TO THE TOP"
+              "title": "ブラックトリック～裁きを操る弁護人～"
             },
             {
               "rank": 50,
-              "title": "あざとくて何が悪いの？"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             }
           ]
         }
@@ -9760,7 +9810,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/08/01 20:07",
+      "updatedAt": "2026/08/01 21:07",
       "episodeId": "epxt2mcck0",
       "subtitle": "【timelesz】リアルな本音・裏側を語る。菊池風磨＆畑芽育の音楽番組",
       "likes": "1.9万",
@@ -10112,6 +10162,10 @@
         },
         {
           "hour": 91,
+          "likes": 19000
+        },
+        {
+          "hour": 92,
           "likes": 19000
         }
       ],
@@ -10765,9 +10819,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 22,
-          "elapsedHour": 91,
-          "elapsedRank": 22,
+          "currentRank": 40,
+          "elapsedHour": 92,
+          "elapsedRank": 40,
           "currentPoints": [
             {
               "hour": 5,
@@ -11116,6 +11170,10 @@
             {
               "hour": 91,
               "rank": 22
+            },
+            {
+              "hour": 92,
+              "rank": 40
             }
           ],
           "previousPoints": [
@@ -11454,19 +11512,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 19,
-              "title": "これ余談なんですけど・・・"
+              "rank": 37,
+              "title": "坂上どうぶつ王国"
             },
             {
-              "rank": 20,
-              "title": "何か“オモシロいコト”ないの？"
+              "rank": 38,
+              "title": "知識の扉よ開け！ドア×ドア クエスト"
             },
             {
-              "rank": 21,
-              "title": "あざとくて何が悪いの？"
+              "rank": 39,
+              "title": "クレイジージャーニー"
             },
             {
-              "rank": 22,
+              "rank": 40,
               "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
@@ -11896,19 +11954,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 48,
-              "title": "Ｔシャツが乾くまで"
+              "title": "しもべの王子様"
             },
             {
               "rank": 49,
-              "title": "ハイキュー!! TO THE TOP"
+              "title": "ブラックトリック～裁きを操る弁護人～"
             },
             {
               "rank": 50,
-              "title": "あざとくて何が悪いの？"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             }
           ]
         }
@@ -11917,10 +11975,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/31",
-      "updatedAt": "2026/08/01 20:07",
+      "updatedAt": "2026/08/01 21:07",
       "episodeId": "epw5mrc1bs",
       "subtitle": "第138回 賢人の幸せに国仲涼子涙？風磨くん結婚しようぜ",
-      "likes": "2230",
+      "likes": "2196",
       "favorites": "71.4万",
       "likePoints": [
         {
@@ -12094,6 +12152,10 @@
         {
           "hour": 44,
           "likes": 2230
+        },
+        {
+          "hour": 45,
+          "likes": 2196
         }
       ],
       "previousLikePoints": [
@@ -12766,9 +12828,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 20,
-          "elapsedHour": 43,
-          "elapsedRank": 20,
+          "currentRank": 35,
+          "elapsedHour": 44,
+          "elapsedRank": 35,
           "currentPoints": [
             {
               "hour": 9,
@@ -12909,6 +12971,10 @@
             {
               "hour": 43,
               "rank": 20
+            },
+            {
+              "hour": 44,
+              "rank": 35
             }
           ],
           "previousPoints": [
@@ -13151,19 +13217,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 17,
-              "title": "家、ついて行ってイイですか？"
-            },
-            {
-              "rank": 18,
-              "title": "夫が寝たあとに"
-            },
-            {
-              "rank": 19,
+              "rank": 32,
               "title": "これ余談なんですけど・・・"
             },
             {
-              "rank": 20,
+              "rank": 33,
+              "title": "見取り図じゃん"
+            },
+            {
+              "rank": 34,
+              "title": "timeleszファミリア"
+            },
+            {
+              "rank": 35,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -13171,9 +13237,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 47,
-          "elapsedHour": 43,
-          "elapsedRank": 47,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 18,
@@ -13388,20 +13454,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 44,
-              "title": "TOKYO MER～走る緊急救命室～"
-            },
-            {
-              "rank": 45,
-              "title": "ドライな同期の溺愛癖"
-            },
-            {
-              "rank": 46,
-              "title": "これ余談なんですけど・・・"
-            },
-            {
               "rank": 47,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "家、ついて行ってイイですか？"
+            },
+            {
+              "rank": 48,
+              "title": "しもべの王子様"
+            },
+            {
+              "rank": 49,
+              "title": "ブラックトリック～裁きを操る弁護人～"
+            },
+            {
+              "rank": 50,
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             }
           ]
         }
@@ -13410,7 +13476,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/07/25",
-      "updatedAt": "2026/08/01 20:07",
+      "updatedAt": "2026/08/01 21:07",
       "episodeId": "ep6mbhb4sa",
       "subtitle": "タイムマシーン3号のセッタイマシーンでGO",
       "likes": "1508",
@@ -14090,6 +14156,10 @@
         },
         {
           "hour": 169,
+          "likes": 1508
+        },
+        {
+          "hour": 170,
           "likes": 1508
         }
       ],
@@ -15241,15 +15311,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図の間取り図ミステリー"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "ニカゲーム"
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "はじめてのおつかい"
+            },
+            {
+              "rank": 50,
+              "title": "有吉の壁"
             }
           ]
         },
@@ -15405,19 +15479,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 48,
-              "title": "Ｔシャツが乾くまで"
+              "title": "しもべの王子様"
             },
             {
               "rank": 49,
-              "title": "ハイキュー!! TO THE TOP"
+              "title": "ブラックトリック～裁きを操る弁護人～"
             },
             {
               "rank": 50,
-              "title": "あざとくて何が悪いの？"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             }
           ]
         }
@@ -15426,10 +15500,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/08/01 20:07",
+      "updatedAt": "2026/08/01 21:07",
       "episodeId": "epm64ewk9k",
       "subtitle": "4人の飲み会に後輩を呼び出しまくる夜",
-      "likes": "6379",
+      "likes": "6350",
       "favorites": "2.5万",
       "likePoints": [
         {
@@ -15795,6 +15869,10 @@
         {
           "hour": 90,
           "likes": 6379
+        },
+        {
+          "hour": 91,
+          "likes": 6350
         }
       ],
       "previousLikePoints": [],
@@ -15802,9 +15880,9 @@
         {
           "type": "talk",
           "label": "トーク",
-          "currentRank": 45,
-          "elapsedHour": 90,
-          "elapsedRank": 45,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 8,
@@ -16114,20 +16192,20 @@
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 42,
-              "title": "所さんの学校では教えてくれないそこんトコロ！"
+              "rank": 47,
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
-              "rank": 43,
-              "title": "あのちゃんの電電電波"
+              "rank": 48,
+              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
             },
             {
-              "rank": 44,
-              "title": "オードリーさん、ぜひ会ってほしい人がいるんです。"
+              "rank": 49,
+              "title": "踊る！さんま御殿!!"
             },
             {
-              "rank": 45,
-              "title": "ふぉ〜ゆ〜って、だれ？"
+              "rank": 50,
+              "title": "にけつッ!!"
             }
           ]
         },
@@ -16215,15 +16293,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図の間取り図ミステリー"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "ニカゲーム"
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "はじめてのおつかい"
+            },
+            {
+              "rank": 50,
+              "title": "有吉の壁"
             }
           ]
         }
@@ -16232,10 +16314,10 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/08/01 20:07",
+      "updatedAt": "2026/08/01 21:07",
       "episodeId": "ep8s7i6hiz",
       "subtitle": "#4 たった数時間の命…“奇跡”に挑む究極オペ",
-      "likes": "7547",
+      "likes": "7503",
       "favorites": "64.5万",
       "likePoints": [
         {
@@ -16517,6 +16599,10 @@
         {
           "hour": 70,
           "likes": 7547
+        },
+        {
+          "hour": 71,
+          "likes": 7503
         }
       ],
       "previousLikePoints": [
@@ -17197,9 +17283,9 @@
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 6,
-          "elapsedHour": 70,
-          "elapsedRank": 6,
+          "currentRank": 8,
+          "elapsedHour": 71,
+          "elapsedRank": 8,
           "currentPoints": [
             {
               "hour": 9,
@@ -17448,6 +17534,10 @@
             {
               "hour": 70,
               "rank": 6
+            },
+            {
+              "hour": 71,
+              "rank": 8
             }
           ],
           "previousPoints": [
@@ -18094,19 +18184,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 3,
-              "title": "大空港～GATE24～"
-            },
-            {
-              "rank": 4,
-              "title": "Tokyo middle 30"
-            },
-            {
               "rank": 5,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "リーガルビート -逆転の法廷-"
             },
             {
               "rank": 6,
+              "title": "Tokyo middle 30"
+            },
+            {
+              "rank": 7,
+              "title": "名探偵のままでいて"
+            },
+            {
+              "rank": 8,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -18114,9 +18204,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 8,
-          "elapsedHour": 70,
-          "elapsedRank": 8,
+          "currentRank": 16,
+          "elapsedHour": 71,
+          "elapsedRank": 16,
           "currentPoints": [
             {
               "hour": 9,
@@ -18365,6 +18455,10 @@
             {
               "hour": 70,
               "rank": 8
+            },
+            {
+              "hour": 71,
+              "rank": 16
             }
           ],
           "previousPoints": [
@@ -19011,19 +19105,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 5,
-              "title": "上田と女が吠える夜"
+              "rank": 13,
+              "title": "名探偵のままでいて"
             },
             {
-              "rank": 6,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "rank": 14,
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
-              "rank": 7,
-              "title": "アメトーーク！"
+              "rank": 15,
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
-              "rank": 8,
+              "rank": 16,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -19033,10 +19127,10 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/30",
-      "updatedAt": "2026/08/01 20:07",
+      "updatedAt": "2026/08/01 21:07",
       "episodeId": "ep7xjw37et",
       "subtitle": "第4話 もっとあなたと一緒にいたい・・・恋が動き出す",
-      "likes": "1.0万",
+      "likes": "9976",
       "favorites": "66.7万",
       "likePoints": [
         {
@@ -19222,6 +19316,10 @@
         {
           "hour": 46,
           "likes": 10000
+        },
+        {
+          "hour": 47,
+          "likes": 9976
         }
       ],
       "previousLikePoints": [
@@ -19906,9 +20004,9 @@
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 1,
-          "elapsedHour": 46,
-          "elapsedRank": 1,
+          "currentRank": 3,
+          "elapsedHour": 47,
+          "elapsedRank": 3,
           "currentPoints": [
             {
               "hour": 4,
@@ -20081,6 +20179,10 @@
             {
               "hour": 46,
               "rank": 1
+            },
+            {
+              "hour": 47,
+              "rank": 3
             }
           ],
           "previousPoints": [
@@ -20740,6 +20842,14 @@
           "nearbyRanking": [
             {
               "rank": 1,
+              "title": "Ｔシャツが乾くまで"
+            },
+            {
+              "rank": 2,
+              "title": "VIVANT"
+            },
+            {
+              "rank": 3,
               "title": "ラストノート"
             }
           ]
@@ -20747,9 +20857,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 1,
-          "elapsedHour": 46,
-          "elapsedRank": 1,
+          "currentRank": 3,
+          "elapsedHour": 47,
+          "elapsedRank": 3,
           "currentPoints": [
             {
               "hour": 4,
@@ -20922,6 +21032,10 @@
             {
               "hour": 46,
               "rank": 1
+            },
+            {
+              "hour": 47,
+              "rank": 3
             }
           ],
           "previousPoints": [
@@ -21581,6 +21695,14 @@
           "nearbyRanking": [
             {
               "rank": 1,
+              "title": "Ｔシャツが乾くまで"
+            },
+            {
+              "rank": 2,
+              "title": "VIVANT"
+            },
+            {
+              "rank": 3,
               "title": "ラストノート"
             }
           ]
@@ -21590,16 +21712,12 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/08/01 20:07",
+      "updatedAt": "2026/08/01 21:07",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
       "likes": "4566",
       "favorites": "1.8万",
       "likePoints": [
-        {
-          "hour": 150,
-          "likes": 3554
-        },
         {
           "hour": 151,
           "likes": 3560
@@ -21694,19 +21812,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ドっとコネクト"
+              "title": "ヒロシのぼっちキャンプ Season13"
             },
             {
               "rank": 48,
-              "title": "川島明の辞書で呑む"
+              "title": "ダイアンのガチで！ごめんやす"
             },
             {
               "rank": 49,
-              "title": "TRADE ROOM"
+              "title": "Travis JapanノJUST！シン日本遺産"
             },
             {
               "rank": 50,
-              "title": "世界の秘境で大発見！日本食堂"
+              "title": "上沼・高田のクギズケ！"
             }
           ]
         },
@@ -21721,15 +21839,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図の間取り図ミステリー"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "ニカゲーム"
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "はじめてのおつかい"
+            },
+            {
+              "rank": 50,
+              "title": "有吉の壁"
             }
           ]
         }
@@ -21738,11 +21860,11 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/08/01 20:07",
+      "updatedAt": "2026/08/01 21:07",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "3.0万",
-      "favorites": "23.6万",
+      "favorites": "23.5万",
       "likePoints": [
         {
           "hour": 49,
@@ -22727,15 +22849,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図の間取り図ミステリー"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "ニカゲーム"
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "はじめてのおつかい"
+            },
+            {
+              "rank": 50,
+              "title": "有吉の壁"
             }
           ]
         },
@@ -23063,19 +23189,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 48,
-              "title": "Ｔシャツが乾くまで"
+              "title": "しもべの王子様"
             },
             {
               "rank": 49,
-              "title": "ハイキュー!! TO THE TOP"
+              "title": "ブラックトリック～裁きを操る弁護人～"
             },
             {
               "rank": 50,
-              "title": "あざとくて何が悪いの？"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             }
           ]
         }
@@ -23084,10 +23210,10 @@
     "sr6elshzoq": {
       "programTitle": "踊る！さんま御殿!!",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/08/01 20:07",
+      "updatedAt": "2026/08/01 21:07",
       "episodeId": "epz108j83s",
       "subtitle": "神奈川7路線が大激突SP 東横線VS田園都市線!本当の横浜はどっち!?",
-      "likes": "7752",
+      "likes": "7748",
       "favorites": "214.2万",
       "likePoints": [
         {
@@ -23913,15 +24039,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図の間取り図ミステリー"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "ニカゲーム"
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "はじめてのおつかい"
+            },
+            {
+              "rank": 50,
+              "title": "有吉の壁"
             }
           ]
         },
@@ -24237,19 +24367,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 48,
-              "title": "Ｔシャツが乾くまで"
+              "title": "しもべの王子様"
             },
             {
               "rank": 49,
-              "title": "ハイキュー!! TO THE TOP"
+              "title": "ブラックトリック～裁きを操る弁護人～"
             },
             {
               "rank": 50,
-              "title": "あざとくて何が悪いの？"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             }
           ]
         }
@@ -24258,10 +24388,10 @@
     "sr5czyxny0": {
       "programTitle": "上田と女が吠える夜",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/08/01 20:07",
+      "updatedAt": "2026/08/01 21:07",
       "episodeId": "eptt90k6t6",
       "subtitle": "夏休みは勉学派vs遊び倒す女▼究極ミニマリスト生活で激論",
-      "likes": "7826",
+      "likes": "7759",
       "favorites": "340.4万",
       "likePoints": [
         {
@@ -24407,6 +24537,10 @@
         {
           "hour": 72,
           "likes": 7826
+        },
+        {
+          "hour": 73,
+          "likes": 7759
         }
       ],
       "previousLikePoints": [],
@@ -24415,7 +24549,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 1,
-          "elapsedHour": 72,
+          "elapsedHour": 73,
           "elapsedRank": 1,
           "currentPoints": [
             {
@@ -24697,6 +24831,10 @@
             {
               "hour": 72,
               "rank": 1
+            },
+            {
+              "hour": 73,
+              "rank": 1
             }
           ],
           "previousPoints": [],
@@ -24710,9 +24848,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 5,
-          "elapsedHour": 72,
-          "elapsedRank": 5,
+          "currentRank": 4,
+          "elapsedHour": 73,
+          "elapsedRank": 4,
           "currentPoints": [
             {
               "hour": 4,
@@ -24989,24 +25127,28 @@
             {
               "hour": 72,
               "rank": 5
+            },
+            {
+              "hour": 73,
+              "rank": 4
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
+            {
+              "rank": 1,
+              "title": "Ｔシャツが乾くまで"
+            },
             {
               "rank": 2,
               "title": "VIVANT"
             },
             {
               "rank": 3,
-              "title": "大空港～GATE24～"
+              "title": "ラストノート"
             },
             {
               "rank": 4,
-              "title": "Tokyo middle 30"
-            },
-            {
-              "rank": 5,
               "title": "上田と女が吠える夜"
             }
           ]
@@ -25016,10 +25158,10 @@
     "sr1ksvsv1n": {
       "programTitle": "",
       "broadcastDate": "",
-      "updatedAt": "2026/08/01 20:07",
+      "updatedAt": "2026/08/01 21:07",
       "episodeId": "ep7985nrp3",
       "subtitle": "タイムレス・ナンバーアイディズニーモアナ特集",
-      "likes": "6229",
+      "likes": "6182",
       "favorites": "9.9万",
       "likePoints": [],
       "previousLikePoints": [],
@@ -25035,15 +25177,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図の間取り図ミステリー"
+              "title": "なにわ男子の逆転男子"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "ニカゲーム"
             },
             {
               "rank": 49,
-              "title": "クレイジージャーニー"
+              "title": "はじめてのおつかい"
+            },
+            {
+              "rank": 50,
+              "title": "有吉の壁"
             }
           ]
         },
@@ -25058,19 +25204,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 48,
-              "title": "Ｔシャツが乾くまで"
+              "title": "しもべの王子様"
             },
             {
               "rank": 49,
-              "title": "ハイキュー!! TO THE TOP"
+              "title": "ブラックトリック～裁きを操る弁護人～"
             },
             {
               "rank": 50,
-              "title": "あざとくて何が悪いの？"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             }
           ]
         }
