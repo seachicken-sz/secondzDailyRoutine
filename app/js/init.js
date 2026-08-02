@@ -85,7 +85,7 @@ function updateFirstVisitModalSnsContent(targetElement, platform, browserType) {
   if (isIOS) {
     const iosGuideMap = {
       x_in_app: {
-        title: "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>",
+        title: "<strong>🔰まずは標準ブラウザで開こう！</strong>",
         text: `
           画面の下の方にこんなの見えてませんか？<br>
           <img src="../img/setting/setting_ios_x.jpeg">
@@ -96,11 +96,11 @@ function updateFirstVisitModalSnsContent(targetElement, platform, browserType) {
             <li><strong>ブラウザで開く</strong>をタップ</li>
           </ol>
           をやってみてください！<br>
-          ページが開き直されて、<br>「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」<br>が消えていたらOKです！
+          ページが開き直されて、<br>「<strong>🔰まずは初回設定をしよう！</strong>」<br>が表示されていたらOKです！
         `,
       },
       threads_in_app: {
-        title: "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>",
+        title: "<strong>🔰まずは標準ブラウザで開こう！</strong>",
         text: `
           画面の上の方にこんなの見えてませんか？<br>
           <img src="../img/setting/setting_ios_threads.jpeg">
@@ -111,11 +111,11 @@ function updateFirstVisitModalSnsContent(targetElement, platform, browserType) {
             <li><strong>外部ブラウザで開く</strong>をタップ</li>
           </ol>
           をやってみてください！<br>
-          ページが開き直されて、<br>「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」<br>が消えていたらOKです！
+          ページが開き直されて、<br>「<strong>🔰まずは初回設定をしよう！</strong>」<br>が表示されていたらOKです！
         `,
       },
       line_in_app: {
-        title: "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>",
+        title: "<strong>🔰まずは標準ブラウザで開こう！</strong>",
         text: `
           画面の下の方にこんなの見えてませんか？<br>
           <img src="../img/setting/setting_ios_line.jpeg">
@@ -126,7 +126,7 @@ function updateFirstVisitModalSnsContent(targetElement, platform, browserType) {
             <li><strong>ブラウザで開く</strong>をタップ</li>
           </ol>
           をやってみてください！<br>
-          ページが開き直されて、<br>「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」<br>が消えていたらOKです！
+          ページが開き直されて、<br>「<strong>🔰まずは初回設定をしよう！</strong>」<br>が表示されていたらOKです！
         `,
       },
     };
@@ -148,13 +148,14 @@ function updateFirstVisitModalSnsContent(targetElement, platform, browserType) {
   }
 
   if (isAndroid) {
-    titleElement.innerHTML = "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>";
+    titleElement.innerHTML = "<strong>🔰まずは標準ブラウザで開こう！</strong>";
     textElement.innerHTML = `
       SNS内ブラウザで開いているかもしれません。<br>
       一番最初に、下のボタンを押してみてください！<br>
       <button id="openChromeFromFirstVisitModalButton" class="primary-button home-install-link" type="button">
         このページをChromeで開く
       </button>
+      ページが開き直されて、<br>「<strong>🔰まずは初回設定をしよう！</strong>」<br>が表示されていたらOKです！
     `;
 
     document
@@ -183,7 +184,7 @@ function updateHomeInstallGuideContent(platform, browserType) {
   if (isIOS) {
     const iosGuideMap = {
       x_in_app: {
-        title: "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>",
+        title: "<strong>🔰まずは標準ブラウザで開こう！</strong>",
         text: `
           画面の下の方にこんなの見えてませんか？<br>
           <img src="../img/setting/setting_ios_x.jpeg"><br>
@@ -194,11 +195,11 @@ function updateHomeInstallGuideContent(platform, browserType) {
             <li><strong>ブラウザで開く</strong>をタップ</li>
           </ol>
           をやってみてください！<br>
-          ページが開き直されて、<br>「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」<br>が消えていたらOKです！
+          ページが開き直されて、<br>「<strong>🔰まずは初回設定をしよう！</strong>」<br>が表示されていたらOKです！
         `,
       },
       threads_in_app: {
-        title: "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>",
+        title: "<strong>🔰まずは標準ブラウザで開こう！</strong>",
         text: `
          もしかして画面の上の方に、こんなの見えてませんか？<br>
          <img src="../img/setting/setting_ios_threads.jpeg"><br>
@@ -209,11 +210,11 @@ function updateHomeInstallGuideContent(platform, browserType) {
             <li><strong>外部ブラウザで開く</strong>をタップ</li>
           </ol>
           をやってみてください！<br>
-          ページが開き直されて、<br>「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」<br>が消えていたらOKです！
+          ページが開き直されて、<br>「<strong>🔰まずは初回設定をしよう！</strong>」<br>が表示されていたらOKです！
         `,
       },
       line_in_app: {
-        title: "<strong>⚠️今あなたの状態ちょっと使いにくいかも！</strong>",
+        title: "<strong>🔰まずは標準ブラウザで開こう！</strong>",
         text: `
           もしかして画面の下の方に、こんなの見えてませんか？<br>
           <img src="../img/setting/setting_ios_line.jpeg"><br>
@@ -224,7 +225,7 @@ function updateHomeInstallGuideContent(platform, browserType) {
             <li><strong>ブラウザで開く</strong>をタップ</li>
           </ol>
           をやってみてください！<br>
-          ページが開き直されて、<br>「<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>」<br>が消えていたらOKです！
+          ページが開き直されて、<br>「<strong>🔰まずは初回設定をしよう！</strong>」<br>が表示されていたらOKです！
         `,
       },
     };
@@ -256,7 +257,7 @@ function updateHomeInstallGuideContent(platform, browserType) {
 
     const snsName = snsNameMap[browserType] || "SNS";
 
-    titleElement.innerHTML = "<strong>⚠️今のあなたの状態ちょっと使いにくいかも！</strong>";
+    titleElement.innerHTML = "<strong>🔰まずは標準ブラウザで開こう！</strong>";
     textElement.innerHTML = `
       SNS内ブラウザで開いているかもしれません。<br>
       「開始」を押す前に下のボタンを押してみてください！
@@ -269,6 +270,7 @@ function updateHomeInstallGuideContent(platform, browserType) {
           <button id="openChromeFromHomeInstallGuideButton" class="primary-button home-install-link" type="button">
             このページをChromeで開く
           </button>
+          ページが開き直されて、<br>「<strong>🔰まずは初回設定をしよう！</strong>」<br>が表示されていたらOKです！
         `
       );
     }
