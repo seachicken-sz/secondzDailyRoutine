@@ -126,3 +126,26 @@ exportChartImage = function exportChartImageWithoutTooltipOrStretch({ chart, tit
     }
   });
 };
+
+function moveLatestRankBlock(panelId) {
+  const panel = document.getElementById(panelId);
+  const summary = panel?.querySelector(".summary-grid-current");
+  const chartSection = panel?.querySelector(".chart-card-section");
+  if (!panel || !summary || !chartSection) return;
+
+  const dividerBeforeSummary = summary.previousElementSibling;
+  panel.insertBefore(summary, chartSection);
+
+  if (dividerBeforeSummary?.classList.contains("section-divider")) {
+    panel.insertBefore(dividerBeforeSummary, chartSection);
+  }
+
+  summary.setAttribute("aria-label", "最新順位");
+  const label = summary.querySelector(".current-rank-block > span");
+  if (label) label.textContent = "最新順位";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  moveLatestRankBlock("periodPanel");
+  moveLatestRankBlock("songPanel");
+});
