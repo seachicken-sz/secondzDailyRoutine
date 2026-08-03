@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/updates.css">
   <link rel="icon" type="image/png" href="../img/icon-180.png">
   <link rel="apple-touch-icon" href="../img/icon-180.png">
 </head>
@@ -39,7 +40,17 @@
         </p>
       </section>
 
-      <section class="guide-panel free-app-panel" aria-labelledby="freeAppsTitle">
+      <nav class="page-toc" aria-label="ページ目次">
+        <div class="page-toc-scroll">
+          <a class="page-toc-link active" href="#freeAppsSection"><i class="bi bi-phone"></i><span>無料アプリ</span></a>
+          <a class="page-toc-link" href="#serviceFinderSection"><i class="bi bi-search"></i><span>サブスクから探す</span></a>
+          <a class="page-toc-link" href="#resultSection"><i class="bi bi-check2-circle"></i><span>できる応援</span></a>
+          <a class="page-toc-link" href="#dailyIntroSection"><i class="bi bi-list-check"></i><span>無料応援ツール</span></a>
+          <a class="page-toc-link" href="#comingSoonSection"><i class="bi bi-stars"></i><span>今後のガイド</span></a>
+        </div>
+      </nav>
+
+      <section id="freeAppsSection" class="guide-panel free-app-panel page-anchor" aria-labelledby="freeAppsTitle">
         <header class="panel-heading">
           <p class="section-label">FREE APPS</p>
           <h2 id="freeAppsTitle">無料サービス(公式)</h2>
@@ -51,7 +62,7 @@
         <div id="freeAppsGrid" class="free-app-grid" aria-live="polite"></div>
       </section>
 
-      <section id="serviceFinderSection" class="guide-panel" aria-labelledby="serviceFinderTitle">
+      <section id="serviceFinderSection" class="guide-panel page-anchor" aria-labelledby="serviceFinderTitle">
         <header class="panel-heading">
           <p class="section-label">SUBSCRIPTION CHECK</p>
           <h2 id="serviceFinderTitle">利用中のサブスクからできる応援を探す</h2>
@@ -97,7 +108,7 @@
         </div>
       </section>
 
-      <section id="resultSection" class="result-section hidden" aria-labelledby="resultTitle">
+      <section id="resultSection" class="result-section hidden page-anchor" aria-labelledby="resultTitle">
         <header class="result-heading">
           <div>
             <p class="section-label">YOUR SUPPORT GUIDE</p>
@@ -140,7 +151,7 @@
         </div>
       </section>
 
-      <section class="daily-intro-card">
+      <section id="dailyIntroSection" class="daily-intro-card page-anchor">
         <div class="daily-intro-icon" aria-hidden="true"><i class="bi bi-check2-circle"></i></div>
         <div class="daily-intro-content">
           <p class="section-label">FREE SUPPORT TOOL</p>
@@ -153,7 +164,7 @@
         </div>
       </section>
 
-      <section class="coming-soon-card">
+      <section id="comingSoonSection" class="coming-soon-card page-anchor">
         <p class="section-label">NEXT GUIDE</p>
         <h2>今後追加するガイド</h2>
         <div class="coming-soon-list">
@@ -186,5 +197,6 @@
   </div>
 
   <script src="./js/script.js" defer></script>
+  <script src="./js/updates.js" defer></script>
 </body>
 </html>
