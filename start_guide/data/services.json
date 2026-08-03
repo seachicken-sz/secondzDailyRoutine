@@ -1,1 +1,685 @@
-{"schemaVersion":"1.0.0","updatedAt":"2026-08-03T17:52:00+09:00","htmlPolicy":{"allowedTags":["p","strong","em","ul","ol","li","br","small","span"],"allowedSpanClasses":["content-highlight","content-note","content-warning","content-service-name"]},"services":[{"id":"spotify","name":"Spotify","category":"music","displayOrder":10,"showInServiceSelector":true,"selectionType":"single-plan","content":{"summary":"無料プランと有料プランがある音楽ストリーミングサービスです。","sections":[{"id":"overview","title":"Spotifyでできる応援","bodyHtml":"<p>timeleszの<strong>公式音源</strong>を聴くことができます。普段の音楽再生に取り入れやすい応援です。</p>"}]},"plans":[{"id":"free","name":"Spotify Free","shortName":"","planType":"free","billingOptions":[],"includedPlans":[],"features":["music-streaming"]},{"id":"premium","name":"Spotify Premium","shortName":"","planType":"paid","billingOptions":[{"cycle":"monthly","amount":null,"currency":"JPY"}],"includedPlans":[],"features":["music-streaming","stationhead-compatible"]}]},{"id":"apple-music","name":"Apple Music","category":"music","displayOrder":20,"showInServiceSelector":true,"selectionType":"single-plan","content":{"summary":"Appleの音楽ストリーミングサービスです。","sections":[{"id":"overview","title":"Apple Musicでできる応援","bodyHtml":"<p>timeleszの<strong>公式音源</strong>を聴くことができます。</p>"}]},"plans":[{"id":"paid","name":"Apple Music","shortName":"","planType":"paid","billingOptions":[{"cycle":"monthly","amount":null,"currency":"JPY"}],"includedPlans":[],"features":["music-streaming","stationhead-compatible"]}]},{"id":"amazon-music","name":"Amazon Music","category":"music","displayOrder":30,"showInServiceSelector":true,"selectionType":"single-plan","content":{"summary":"Amazonが提供する音楽ストリーミングサービスです。","sections":[{"id":"overview","title":"Amazon Musicでできる応援","bodyHtml":"<p>利用中のプランに応じて、timeleszの<strong>公式音源</strong>を聴くことができます。</p>"}]},"plans":[{"id":"free","name":"Amazon Music Free","shortName":"","planType":"free","billingOptions":[],"includedPlans":[],"features":["music-streaming"]},{"id":"prime","name":"Amazon Music Prime","shortName":"","planType":"paid","billingOptions":[],"includedPlans":[],"features":["music-streaming"]},{"id":"unlimited","name":"Amazon Music Unlimited","shortName":"","planType":"paid","billingOptions":[{"cycle":"monthly","amount":null,"currency":"JPY"}],"includedPlans":[],"features":["music-streaming"]}]},{"id":"youtube-music","name":"YouTube Music","category":"music","displayOrder":40,"showInServiceSelector":true,"selectionType":"single-plan","content":{"summary":"YouTubeの音楽ストリーミングサービスです。","sections":[{"id":"overview","title":"YouTube Musicでできる応援","bodyHtml":"<p>timeleszの<strong>公式音源</strong>を聴くことができます。</p>"}]},"plans":[{"id":"free","name":"YouTube Music 無料利用","shortName":"","planType":"free","billingOptions":[],"includedPlans":[],"features":["music-streaming"]},{"id":"premium","name":"YouTube Music Premium","shortName":"","planType":"paid","billingOptions":[{"cycle":"monthly","amount":null,"currency":"JPY"}],"includedPlans":[],"features":["music-streaming","music-ad-free","music-background-play","music-offline-play"]}]},{"id":"line-music","name":"LINE MUSIC","category":"music","displayOrder":50,"showInServiceSelector":true,"selectionType":"single-plan","content":{"summary":"LINEが提供する音楽ストリーミングサービスです。","sections":[{"id":"overview","title":"LINE MUSICでできる応援","bodyHtml":"<p>timeleszの<strong>公式音源</strong>を聴くことができます。</p>"}]},"plans":[{"id":"free","name":"LINE MUSIC 無料利用","shortName":"","planType":"free","billingOptions":[],"includedPlans":[],"features":["music-streaming"]},{"id":"premium","name":"LINE MUSIC 有料プラン","shortName":"","planType":"paid","billingOptions":[{"cycle":"monthly","amount":null,"currency":"JPY"}],"includedPlans":[],"features":["music-streaming"]}]},{"id":"tver","name":"TVer","category":"video","displayOrder":60,"showInServiceSelector":false,"selectionType":"single-plan","content":{"summary":"民放公式の動画配信サービスです。","sections":[{"id":"overview","title":"TVerでできる応援","bodyHtml":"<p>配信中の出演番組を<strong>無料</strong>で見ることができます。</p>"}]},"plans":[{"id":"free","name":"TVer","shortName":"","planType":"free","billingOptions":[],"includedPlans":[],"features":["catch-up-video"]}]},{"id":"youtube","name":"YouTube","category":"video","displayOrder":70,"showInServiceSelector":true,"selectionType":"single-plan","content":{"summary":"公式動画やミュージックビデオを視聴できる動画サービスです。","sections":[{"id":"overview","title":"YouTubeでできる応援","bodyHtml":"<p>公式チャンネルの動画やミュージックビデオを見ることができます。</p>"}]},"plans":[{"id":"free","name":"YouTube 無料利用","shortName":"","planType":"free","billingOptions":[],"includedPlans":[],"features":["video-streaming","channel-subscribe","video-like"]},{"id":"premium","name":"YouTube Premium","shortName":"","planType":"paid","billingOptions":[{"cycle":"monthly","amount":null,"currency":"JPY"}],"includedPlans":[{"serviceId":"youtube-music","planId":"premium"}],"features":["video-streaming","video-ad-free","video-background-play","video-offline-play"]}]},{"id":"fod","name":"FOD","category":"video","displayOrder":80,"showInServiceSelector":true,"selectionType":"single-plan","content":{"summary":"フジテレビ系の番組や作品を配信する動画サービスです。","sections":[{"id":"overview","title":"FODでできる応援","bodyHtml":"<p>出演番組や関連作品が配信されている場合に視聴できます。</p>"}]},"plans":[{"id":"premium","name":"FODプレミアム","shortName":"","planType":"paid","billingOptions":[{"cycle":"monthly","amount":null,"currency":"JPY"}],"includedPlans":[],"features":["video-streaming"]}]},{"id":"hulu","name":"Hulu","category":"video","displayOrder":90,"showInServiceSelector":true,"selectionType":"single-plan","content":{"summary":"番組や映画などを配信する動画サービスです。","sections":[{"id":"overview","title":"Huluでできる応援","bodyHtml":"<p>出演番組や関連作品が配信されている場合に視聴できます。</p>"}]},"plans":[{"id":"paid","name":"Hulu","shortName":"","planType":"paid","billingOptions":[{"cycle":"monthly","amount":null,"currency":"JPY"}],"includedPlans":[],"features":["video-streaming"]}]},{"id":"telasa","name":"TELASA","category":"video","displayOrder":100,"showInServiceSelector":true,"selectionType":"single-plan","content":{"summary":"テレビ番組や関連作品を配信する動画サービスです。","sections":[{"id":"overview","title":"TELASAでできる応援","bodyHtml":"<p>出演番組や関連作品が配信されている場合に視聴できます。</p>"}]},"plans":[{"id":"paid","name":"TELASA","shortName":"","planType":"paid","billingOptions":[{"cycle":"monthly","amount":null,"currency":"JPY"}],"includedPlans":[],"features":["video-streaming"]}]},{"id":"radiko","name":"radiko","category":"radio","displayOrder":110,"showInServiceSelector":true,"selectionType":"single-plan","content":{"summary":"ラジオ番組をスマートフォンやPCで聴けるサービスです。","sections":[{"id":"overview","title":"radikoでできる応援","bodyHtml":"<p>出演番組を聴いたり、番組へのメッセージやリクエストにつなげたりできます。</p>"}]},"trialPolicy":{"available":true,"appliesToPlanIds":["area-free","time-free-30","double"],"periodType":"first-month","eligibility":"first-time-registration","label":"初月無料","note":"初めて会員登録される方が対象です。"},"plans":[{"id":"free","name":"radiko 無料利用","shortName":"","planType":"free","billingOptions":[],"includedPlans":[],"features":["radio-live","radio-timeshift-local"]},{"id":"area-free","name":"エリアフリープラン","shortName":"","planType":"paid","billingOptions":[{"cycle":"monthly","amount":385,"currency":"JPY"}],"includedPlans":[],"features":["radio-area-free"]},{"id":"time-free-30","name":"タイムフリー30プラン","shortName":"","planType":"paid","billingOptions":[{"cycle":"monthly","amount":480,"currency":"JPY"}],"includedPlans":[],"features":["radio-time-free-30","radio-unlimited-listening"]},{"id":"double","name":"ダブルプラン","shortName":"","planType":"paid","billingOptions":[{"cycle":"monthly","amount":865,"currency":"JPY"}],"includedPlans":[{"serviceId":"radiko","planId":"area-free"},{"serviceId":"radiko","planId":"time-free-30"}],"features":["radio-area-free","radio-time-free-30","radio-unlimited-listening"]}]}]}
+{
+  "schemaVersion": "1.1.0",
+  "updatedAt": "2026-08-03T18:28:00+09:00",
+  "priceUpdatedAt": "2026-08-03",
+  "htmlPolicy": {
+    "allowedTags": [
+      "p",
+      "strong",
+      "em",
+      "ul",
+      "ol",
+      "li",
+      "br",
+      "small",
+      "span"
+    ],
+    "allowedSpanClasses": [
+      "content-highlight",
+      "content-note",
+      "content-warning",
+      "content-service-name"
+    ]
+  },
+  "services": [
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "category": "music",
+      "displayOrder": 10,
+      "showInServiceSelector": true,
+      "selectionType": "single-plan",
+      "content": {
+        "summary": "無料プランと有料プランがある音楽ストリーミングサービスです。",
+        "sections": [
+          {
+            "id": "overview",
+            "title": "Spotifyでできる応援",
+            "bodyHtml": "<p>timeleszの<strong>公式音源</strong>を聴くことができます。普段の音楽再生に取り入れやすい応援です。</p>"
+          }
+        ]
+      },
+      "plans": [
+        {
+          "id": "free",
+          "name": "Spotify Free",
+          "shortName": "",
+          "planType": "free",
+          "billingOptions": [],
+          "includedPlans": [],
+          "features": [
+            "music-streaming"
+          ]
+        },
+        {
+          "id": "premium",
+          "name": "Spotify Premium",
+          "shortName": "",
+          "planType": "paid",
+          "billingOptions": [
+            {
+              "cycle": "monthly",
+              "amount": 1080,
+              "currency": "JPY",
+              "taxIncluded": true,
+              "label": "Premium Standard"
+            }
+          ],
+          "includedPlans": [],
+          "features": [
+            "music-streaming",
+            "stationhead-compatible"
+          ],
+          "priceVerifiedAt": "2026-08-03",
+          "priceSourceUrl": "https://www.spotify.com/jp/premium/"
+        }
+      ]
+    },
+    {
+      "id": "apple-music",
+      "name": "Apple Music",
+      "category": "music",
+      "displayOrder": 20,
+      "showInServiceSelector": true,
+      "selectionType": "single-plan",
+      "content": {
+        "summary": "Appleの音楽ストリーミングサービスです。",
+        "sections": [
+          {
+            "id": "overview",
+            "title": "Apple Musicでできる応援",
+            "bodyHtml": "<p>timeleszの<strong>公式音源</strong>を聴くことができます。</p>"
+          }
+        ]
+      },
+      "plans": [
+        {
+          "id": "paid",
+          "name": "Apple Music",
+          "shortName": "",
+          "planType": "paid",
+          "billingOptions": [
+            {
+              "cycle": "monthly",
+              "amount": 1180,
+              "currency": "JPY",
+              "taxIncluded": true,
+              "label": "個人プラン"
+            }
+          ],
+          "includedPlans": [],
+          "features": [
+            "music-streaming",
+            "stationhead-compatible"
+          ],
+          "priceVerifiedAt": "2026-08-03",
+          "priceSourceUrl": "https://www.apple.com/jp/apple-music/"
+        }
+      ]
+    },
+    {
+      "id": "amazon-music",
+      "name": "Amazon Music",
+      "category": "music",
+      "displayOrder": 30,
+      "showInServiceSelector": true,
+      "selectionType": "single-plan",
+      "content": {
+        "summary": "Amazonが提供する音楽ストリーミングサービスです。",
+        "sections": [
+          {
+            "id": "overview",
+            "title": "Amazon Musicでできる応援",
+            "bodyHtml": "<p>利用中のプランに応じて、timeleszの<strong>公式音源</strong>を聴くことができます。</p>"
+          }
+        ]
+      },
+      "plans": [
+        {
+          "id": "free",
+          "name": "Amazon Music Free",
+          "shortName": "",
+          "planType": "free",
+          "billingOptions": [],
+          "includedPlans": [],
+          "features": [
+            "music-streaming"
+          ]
+        },
+        {
+          "id": "prime",
+          "name": "Amazon Music Prime",
+          "shortName": "",
+          "planType": "paid",
+          "billingOptions": [
+            {
+              "cycle": "monthly",
+              "amount": 600,
+              "currency": "JPY",
+              "taxIncluded": true,
+              "label": "Amazon Prime 月間プラン"
+            },
+            {
+              "cycle": "yearly",
+              "amount": 5900,
+              "currency": "JPY",
+              "taxIncluded": true,
+              "label": "Amazon Prime 年間プラン"
+            }
+          ],
+          "includedPlans": [],
+          "features": [
+            "music-streaming"
+          ],
+          "priceVerifiedAt": "2026-08-03",
+          "priceSourceUrl": "https://www.amazon.co.jp/amazonprime"
+        },
+        {
+          "id": "unlimited",
+          "name": "Amazon Music Unlimited",
+          "shortName": "",
+          "planType": "paid",
+          "billingOptions": [
+            {
+              "cycle": "monthly",
+              "amount": 1180,
+              "currency": "JPY",
+              "taxIncluded": true,
+              "label": "個人プラン"
+            },
+            {
+              "cycle": "monthly",
+              "amount": 1080,
+              "currency": "JPY",
+              "taxIncluded": true,
+              "label": "プライム会員向け",
+              "eligibility": "amazon-prime-member",
+              "default": false
+            }
+          ],
+          "includedPlans": [],
+          "features": [
+            "music-streaming"
+          ],
+          "priceVerifiedAt": "2026-08-03",
+          "priceSourceUrl": "https://music.amazon.co.jp/lp/freemusic"
+        }
+      ]
+    },
+    {
+      "id": "youtube-music",
+      "name": "YouTube Music",
+      "category": "music",
+      "displayOrder": 40,
+      "showInServiceSelector": true,
+      "selectionType": "single-plan",
+      "content": {
+        "summary": "YouTubeの音楽ストリーミングサービスです。",
+        "sections": [
+          {
+            "id": "overview",
+            "title": "YouTube Musicでできる応援",
+            "bodyHtml": "<p>timeleszの<strong>公式音源</strong>を聴くことができます。</p>"
+          }
+        ]
+      },
+      "plans": [
+        {
+          "id": "free",
+          "name": "YouTube Music 無料利用",
+          "shortName": "",
+          "planType": "free",
+          "billingOptions": [],
+          "includedPlans": [],
+          "features": [
+            "music-streaming"
+          ]
+        },
+        {
+          "id": "premium",
+          "name": "YouTube Music Premium",
+          "shortName": "",
+          "planType": "paid",
+          "billingOptions": [
+            {
+              "cycle": "monthly",
+              "amount": 1080,
+              "currency": "JPY",
+              "taxIncluded": true,
+              "label": "個人プラン"
+            },
+            {
+              "cycle": "yearly",
+              "amount": 10800,
+              "currency": "JPY",
+              "taxIncluded": true,
+              "label": "年間プラン"
+            }
+          ],
+          "includedPlans": [],
+          "features": [
+            "music-streaming",
+            "music-ad-free",
+            "music-background-play",
+            "music-offline-play"
+          ],
+          "priceVerifiedAt": "2026-08-03",
+          "priceSourceUrl": "https://music.youtube.com/music_premium"
+        }
+      ]
+    },
+    {
+      "id": "line-music",
+      "name": "LINE MUSIC",
+      "category": "music",
+      "displayOrder": 50,
+      "showInServiceSelector": true,
+      "selectionType": "single-plan",
+      "content": {
+        "summary": "LINEが提供する音楽ストリーミングサービスです。",
+        "sections": [
+          {
+            "id": "overview",
+            "title": "LINE MUSICでできる応援",
+            "bodyHtml": "<p>timeleszの<strong>公式音源</strong>を聴くことができます。</p>"
+          }
+        ]
+      },
+      "plans": [
+        {
+          "id": "free",
+          "name": "LINE MUSIC 無料利用",
+          "shortName": "",
+          "planType": "free",
+          "billingOptions": [],
+          "includedPlans": [],
+          "features": [
+            "music-streaming"
+          ]
+        },
+        {
+          "id": "premium",
+          "name": "LINE MUSIC プレミアムプラン",
+          "shortName": "",
+          "planType": "paid",
+          "billingOptions": [
+            {
+              "cycle": "monthly",
+              "amount": 980,
+              "currency": "JPY",
+              "taxIncluded": true,
+              "label": "LINE STORE"
+            },
+            {
+              "cycle": "monthly",
+              "amount": 1080,
+              "currency": "JPY",
+              "taxIncluded": true,
+              "label": "アプリ内課金",
+              "default": false
+            },
+            {
+              "cycle": "yearly",
+              "amount": 9600,
+              "currency": "JPY",
+              "taxIncluded": true,
+              "label": "LINE STORE"
+            }
+          ],
+          "includedPlans": [],
+          "features": [
+            "music-streaming"
+          ],
+          "priceVerifiedAt": "2026-08-03",
+          "priceSourceUrl": "https://store.line.me/family/music/ja"
+        }
+      ]
+    },
+    {
+      "id": "tver",
+      "name": "TVer",
+      "category": "video",
+      "displayOrder": 60,
+      "showInServiceSelector": false,
+      "selectionType": "single-plan",
+      "content": {
+        "summary": "民放公式の動画配信サービスです。",
+        "sections": [
+          {
+            "id": "overview",
+            "title": "TVerでできる応援",
+            "bodyHtml": "<p>配信中の出演番組を<strong>無料</strong>で見ることができます。</p>"
+          }
+        ]
+      },
+      "plans": [
+        {
+          "id": "free",
+          "name": "TVer",
+          "shortName": "",
+          "planType": "free",
+          "billingOptions": [],
+          "includedPlans": [],
+          "features": [
+            "catch-up-video"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "category": "video",
+      "displayOrder": 70,
+      "showInServiceSelector": true,
+      "selectionType": "single-plan",
+      "content": {
+        "summary": "公式動画やミュージックビデオを視聴できる動画サービスです。",
+        "sections": [
+          {
+            "id": "overview",
+            "title": "YouTubeでできる応援",
+            "bodyHtml": "<p>公式チャンネルの動画やミュージックビデオを見ることができます。</p>"
+          }
+        ]
+      },
+      "plans": [
+        {
+          "id": "free",
+          "name": "YouTube 無料利用",
+          "shortName": "",
+          "planType": "free",
+          "billingOptions": [],
+          "includedPlans": [],
+          "features": [
+            "video-streaming",
+            "channel-subscribe",
+            "video-like"
+          ]
+        },
+        {
+          "id": "premium",
+          "name": "YouTube Premium",
+          "shortName": "",
+          "planType": "paid",
+          "billingOptions": [
+            {
+              "cycle": "monthly",
+              "amount": 1280,
+              "currency": "JPY",
+              "taxIncluded": true,
+              "label": "個人プラン"
+            },
+            {
+              "cycle": "yearly",
+              "amount": 12800,
+              "currency": "JPY",
+              "taxIncluded": true,
+              "label": "年間プラン"
+            }
+          ],
+          "includedPlans": [
+            {
+              "serviceId": "youtube-music",
+              "planId": "premium"
+            }
+          ],
+          "features": [
+            "video-streaming",
+            "video-ad-free",
+            "video-background-play",
+            "video-offline-play"
+          ],
+          "priceVerifiedAt": "2026-08-03",
+          "priceSourceUrl": "https://www.youtube.com/premium"
+        }
+      ]
+    },
+    {
+      "id": "fod",
+      "name": "FOD",
+      "category": "video",
+      "displayOrder": 80,
+      "showInServiceSelector": true,
+      "selectionType": "single-plan",
+      "content": {
+        "summary": "フジテレビ系の番組や作品を配信する動画サービスです。",
+        "sections": [
+          {
+            "id": "overview",
+            "title": "FODでできる応援",
+            "bodyHtml": "<p>出演番組や関連作品が配信されている場合に視聴できます。</p>"
+          }
+        ]
+      },
+      "plans": [
+        {
+          "id": "premium",
+          "name": "FOD スタンダードコース",
+          "shortName": "",
+          "planType": "paid",
+          "billingOptions": [
+            {
+              "cycle": "monthly",
+              "amount": 1320,
+              "currency": "JPY",
+              "taxIncluded": true,
+              "label": "スタンダードコース"
+            }
+          ],
+          "includedPlans": [],
+          "features": [
+            "video-streaming"
+          ],
+          "priceVerifiedAt": "2026-08-03",
+          "priceSourceUrl": "https://news.fod.fujitv.co.jp/faq",
+          "priceNote": "FODには広告付きライトコース（月額976円）とポイントMAXコース（月額2,090円）もあります。"
+        }
+      ]
+    },
+    {
+      "id": "hulu",
+      "name": "Hulu",
+      "category": "video",
+      "displayOrder": 90,
+      "showInServiceSelector": true,
+      "selectionType": "single-plan",
+      "content": {
+        "summary": "番組や映画などを配信する動画サービスです。",
+        "sections": [
+          {
+            "id": "overview",
+            "title": "Huluでできる応援",
+            "bodyHtml": "<p>出演番組や関連作品が配信されている場合に視聴できます。</p>"
+          }
+        ]
+      },
+      "plans": [
+        {
+          "id": "paid",
+          "name": "Hulu",
+          "shortName": "",
+          "planType": "paid",
+          "billingOptions": [
+            {
+              "cycle": "monthly",
+              "amount": 1026,
+              "currency": "JPY",
+              "taxIncluded": true,
+              "label": "通常決済",
+              "effectiveUntil": "2026-09-30"
+            }
+          ],
+          "includedPlans": [],
+          "features": [
+            "video-streaming"
+          ],
+          "priceVerifiedAt": "2026-08-03",
+          "priceSourceUrl": "https://help.hulu.jp/hc/ja/articles/360044165794",
+          "futureBillingOptions": [
+            {
+              "cycle": "monthly",
+              "amount": 1320,
+              "currency": "JPY",
+              "taxIncluded": true,
+              "label": "通常決済",
+              "effectiveFrom": "2026-10-01"
+            }
+          ],
+          "priceNote": "2026年10月1日から通常決済は月額1,320円へ改定予定です。"
+        }
+      ]
+    },
+    {
+      "id": "telasa",
+      "name": "TELASA",
+      "category": "video",
+      "displayOrder": 100,
+      "showInServiceSelector": true,
+      "selectionType": "single-plan",
+      "content": {
+        "summary": "テレビ番組や関連作品を配信する動画サービスです。",
+        "sections": [
+          {
+            "id": "overview",
+            "title": "TELASAでできる応援",
+            "bodyHtml": "<p>出演番組や関連作品が配信されている場合に視聴できます。</p>"
+          }
+        ]
+      },
+      "plans": [
+        {
+          "id": "paid",
+          "name": "TELASA 見放題プラン",
+          "shortName": "",
+          "planType": "paid",
+          "billingOptions": [
+            {
+              "cycle": "monthly",
+              "amount": 990,
+              "currency": "JPY",
+              "taxIncluded": true,
+              "label": "見放題プラン"
+            }
+          ],
+          "includedPlans": [],
+          "features": [
+            "video-streaming"
+          ],
+          "priceVerifiedAt": "2026-08-03",
+          "priceSourceUrl": "https://help.telasa.jp/faq/category/service/"
+        }
+      ]
+    },
+    {
+      "id": "radiko",
+      "name": "radiko",
+      "category": "radio",
+      "displayOrder": 110,
+      "showInServiceSelector": true,
+      "selectionType": "single-plan",
+      "content": {
+        "summary": "ラジオ番組をスマートフォンやPCで聴けるサービスです。",
+        "sections": [
+          {
+            "id": "overview",
+            "title": "radikoでできる応援",
+            "bodyHtml": "<p>出演番組を聴いたり、番組へのメッセージやリクエストにつなげたりできます。</p>"
+          }
+        ]
+      },
+      "plans": [
+        {
+          "id": "free",
+          "name": "radiko 無料利用",
+          "shortName": "",
+          "planType": "free",
+          "billingOptions": [],
+          "includedPlans": [],
+          "features": [
+            "radio-live",
+            "radio-timeshift-local"
+          ]
+        },
+        {
+          "id": "area-free",
+          "name": "エリアフリープラン",
+          "shortName": "",
+          "planType": "paid",
+          "billingOptions": [
+            {
+              "cycle": "monthly",
+              "amount": 385,
+              "currency": "JPY",
+              "taxIncluded": true
+            }
+          ],
+          "includedPlans": [],
+          "features": [
+            "radio-area-free"
+          ]
+        },
+        {
+          "id": "time-free-30",
+          "name": "タイムフリー30プラン",
+          "shortName": "",
+          "planType": "paid",
+          "billingOptions": [
+            {
+              "cycle": "monthly",
+              "amount": 480,
+              "currency": "JPY",
+              "taxIncluded": true
+            }
+          ],
+          "includedPlans": [],
+          "features": [
+            "radio-time-free-30",
+            "radio-unlimited-listening"
+          ]
+        },
+        {
+          "id": "double",
+          "name": "ダブルプラン",
+          "shortName": "",
+          "planType": "paid",
+          "billingOptions": [
+            {
+              "cycle": "monthly",
+              "amount": 865,
+              "currency": "JPY",
+              "taxIncluded": true
+            }
+          ],
+          "includedPlans": [
+            {
+              "serviceId": "radiko",
+              "planId": "area-free"
+            },
+            {
+              "serviceId": "radiko",
+              "planId": "time-free-30"
+            }
+          ],
+          "features": [
+            "radio-area-free",
+            "radio-time-free-30",
+            "radio-unlimited-listening"
+          ]
+        }
+      ],
+      "trialPolicy": {
+        "available": true,
+        "appliesToPlanIds": [
+          "area-free",
+          "time-free-30",
+          "double"
+        ],
+        "periodType": "first-month",
+        "eligibility": "first-time-registration",
+        "label": "初月無料",
+        "note": "初めて会員登録される方が対象です。"
+      }
+    }
+  ]
+}
