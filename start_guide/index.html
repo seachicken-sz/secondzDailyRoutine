@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/updates.css">
   <link rel="stylesheet" href="./css/filters.css">
+  <link rel="stylesheet" href="./css/paidServices.css">
   <link rel="icon" type="image/png" href="../img/icon-180.png">
   <link rel="apple-touch-icon" href="../img/icon-180.png">
 </head>
@@ -44,6 +45,7 @@
       <nav class="page-toc" aria-label="ページ目次">
         <div class="page-toc-scroll">
           <a class="page-toc-link active" href="#freeAppsSection"><i class="bi bi-phone"></i><span>無料サービス（公式）</span></a>
+          <a class="page-toc-link" href="#paidServicesSection"><i class="bi bi-credit-card"></i><span>有料サービス（公式）</span></a>
           <a class="page-toc-link" href="#serviceFinderSection"><i class="bi bi-search"></i><span>今できる応援を探す</span></a>
         </div>
       </nav>
@@ -58,6 +60,34 @@
           </p>
         </header>
         <div id="freeAppsGrid" class="free-app-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="paidServicesSection" class="guide-panel paid-services-panel page-anchor" aria-labelledby="paidServicesTitle">
+        <header class="panel-heading">
+          <p class="section-label">PAID OFFICIAL SERVICES</p>
+          <h2 id="paidServicesTitle">有料サービス（公式）</h2>
+          <p>
+            月額・年額などの有料プランで利用できる公式サービスです。料金や利用条件を確認しながら、無理のない範囲で選ぼう！<br>
+            ※サービス内容や料金は変更される可能性があります。登録・購入前に公式ページでの説明をお読みください。
+          </p>
+        </header>
+
+        <div class="card-filter-panel hidden" data-paid-service-filter-panel>
+          <div class="card-filter-row">
+            <p class="card-filter-label">カテゴリ</p>
+            <div class="card-filter-options" data-paid-filter-options="category"></div>
+          </div>
+          <div class="card-filter-row">
+            <p class="card-filter-label">できる応援</p>
+            <div class="card-filter-options" data-paid-filter-options="feature"></div>
+          </div>
+        </div>
+
+        <div id="paidServicesGrid" class="paid-service-grid" aria-live="polite"></div>
+        <div class="card-filter-empty hidden" data-paid-service-filter-empty>
+          <i class="bi bi-search" aria-hidden="true"></i>
+          <p>条件に合うサービスがありません。</p>
+        </div>
       </section>
 
       <section id="serviceFinderSection" class="guide-panel page-anchor" aria-labelledby="serviceFinderTitle">
@@ -203,5 +233,6 @@
   <script src="./js/updates.js" defer></script>
   <script src="./js/resultCards.js" defer></script>
   <script src="./js/cardFilters.js" defer></script>
+  <script src="./js/paidServices.js" defer></script>
 </body>
 </html>
