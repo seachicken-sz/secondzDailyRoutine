@@ -168,6 +168,19 @@
     </footer>
   </div>
 
+  <div id="serviceInfoModal" class="service-info-modal hidden" aria-hidden="true">
+    <div class="service-info-modal-backdrop" data-service-info-close></div>
+    <section class="service-info-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="serviceInfoModalTitle">
+      <header class="service-info-modal-header">
+        <h2 id="serviceInfoModalTitle">このサービスについて</h2>
+        <button type="button" class="service-info-modal-close" data-service-info-close aria-label="閉じる">
+          <i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+      </header>
+      <div id="serviceInfoModalBody" class="service-info-modal-body"></div>
+    </section>
+  </div>
+
   <div id="loadingPanel" class="status-overlay" role="status">
     <div class="status-card">
       <span class="loading-spinner" aria-hidden="true"></span>
