@@ -638,24 +638,12 @@ main { display: grid; gap: 18px; }
 .selector-service-card .plan-options { margin-top: 10px; }
 .result-daily-intro { margin-top: 22px; }
 
-/* 条件付きサービス */
-.conditional-service-card { border-style: dashed; }
-.conditional-service-card.available {
-  border-color: var(--color-brand);
-  background: var(--color-brand-soft);
-}
-.conditional-service-status {
-  flex-shrink: 0;
-  padding: 5px 8px;
-  border-radius: 999px;
-  color: var(--color-text-muted);
-  background: var(--color-surface-soft);
-  font-size: 10px;
-  font-weight: 700;
-}
-.conditional-service-card.available .conditional-service-status {
-  color: #fff;
-  background: var(--color-brand);
+/* 条件付きサービス：通常項目と同じ見た目でカテゴリ末尾に表示 */
+.service-category-panel .service-list .conditional-service-card {
+  order: 1;
+  border-style: solid;
+  border-color: var(--color-border);
+  background: #fff;
 }
 
 /* サービス説明モーダル */
