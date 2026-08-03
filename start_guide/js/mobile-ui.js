@@ -351,7 +351,7 @@ function setupStickyToc() {
   const compactLabels = {
     "#firstGuideSection":"初めてガイド",
     "#serviceFinderSection":"応援を探す",
-    "#purchaseGuideSection":"購入ガイド"
+    "#purchaseGuideSection":"CD購入ガイド"
   };
 
   const floatingToc = document.createElement("nav");
