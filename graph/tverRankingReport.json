@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/08/03 10:07",
+  "updatedAt": "2026/08/03 11:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/31",
-      "updatedAt": "2026/08/03 10:07",
+      "updatedAt": "2026/08/03 11:07",
       "episodeId": "eplqgnuarg",
       "subtitle": "真夏の決戦！「信頼じゃんけん」トーナメント",
       "likes": "1.2万",
@@ -244,6 +244,10 @@
         },
         {
           "hour": 60,
+          "likes": 12000
+        },
+        {
+          "hour": 61,
           "likes": 12000
         }
       ],
@@ -917,9 +921,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 30,
-          "elapsedHour": 60,
-          "elapsedRank": 30,
+          "currentRank": 31,
+          "elapsedHour": 61,
+          "elapsedRank": 31,
           "currentPoints": [
             {
               "hour": 23,
@@ -1072,6 +1076,10 @@
             {
               "hour": 60,
               "rank": 30
+            },
+            {
+              "hour": 61,
+              "rank": 31
             }
           ],
           "previousPoints": [
@@ -1730,19 +1738,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 27,
-              "title": "テレビ千鳥"
-            },
-            {
               "rank": 28,
               "title": "日曜日の初耳学"
             },
             {
               "rank": 29,
-              "title": "有吉クイズ"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 30,
+              "title": "おしゃれクリップ"
+            },
+            {
+              "rank": 31,
               "title": "タイムレスマン"
             }
           ]
@@ -2272,19 +2280,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Your Sky ハレのち恋"
+              "title": "名探偵プリキュア！"
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 49,
-              "title": "今から、親友やめようか。"
+              "title": "Your Sky ハレのち恋"
             },
             {
               "rank": 50,
-              "title": "キスは捜査のあとで"
+              "title": "今から、親友やめようか。"
             }
           ]
         }
@@ -2293,10 +2301,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/02",
-      "updatedAt": "2026/08/03 10:07",
+      "updatedAt": "2026/08/03 11:07",
       "episodeId": "ep6mqnux58",
       "subtitle": "【絶品どんぶり登場】このお店に丼はある？ない？",
-      "likes": "6863",
+      "likes": "6906",
       "favorites": "34.2万",
       "likePoints": [
         {
@@ -2374,6 +2382,10 @@
         {
           "hour": 20,
           "likes": 6863
+        },
+        {
+          "hour": 21,
+          "likes": 6906
         }
       ],
       "previousLikePoints": [
@@ -3047,7 +3059,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 10,
-          "elapsedHour": 20,
+          "elapsedHour": 21,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -3116,6 +3128,10 @@
             },
             {
               "hour": 20,
+              "rank": 10
+            },
+            {
+              "hour": 21,
               "rank": 10
             }
           ],
@@ -3704,15 +3720,15 @@
           "nearbyRanking": [
             {
               "rank": 7,
-              "title": "月曜から夜ふかし"
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
               "rank": 8,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "爆笑レッドカーペット"
             },
             {
               "rank": 9,
-              "title": "爆笑レッドカーペット"
+              "title": "嗚呼!!みんなの動物園"
             },
             {
               "rank": 10,
@@ -3724,7 +3740,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 23,
-          "elapsedHour": 20,
+          "elapsedHour": 21,
           "elapsedRank": 23,
           "currentPoints": [
             {
@@ -3777,6 +3793,10 @@
             },
             {
               "hour": 20,
+              "rank": 23
+            },
+            {
+              "hour": 21,
               "rank": 23
             }
           ],
@@ -4025,11 +4045,11 @@
           "nearbyRanking": [
             {
               "rank": 20,
-              "title": "ザ・ノンフィクション"
+              "title": "嗚呼!!みんなの動物園"
             },
             {
               "rank": 21,
-              "title": "ワンピース"
+              "title": "ザ・ノンフィクション"
             },
             {
               "rank": 22,
@@ -4046,10 +4066,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/28",
-      "updatedAt": "2026/08/03 10:07",
+      "updatedAt": "2026/08/03 11:07",
       "episodeId": "epgw9m4xvk",
       "subtitle": "チョコプラ・timeleszが「衝撃吸収材なら、バラエティ罰ゲームをノーリアクションでこなせるのか？」に挑む！",
-      "likes": "7565",
+      "likes": "7568",
       "favorites": "5.7万",
       "likePoints": [
         {
@@ -4567,6 +4587,10 @@
         {
           "hour": 130,
           "likes": 7565
+        },
+        {
+          "hour": 131,
+          "likes": 7568
         }
       ],
       "previousLikePoints": [
@@ -6382,7 +6406,7 @@
             },
             {
               "rank": 48,
-              "title": "夫が寝たあとに"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 49,
@@ -6399,7 +6423,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/30",
-      "updatedAt": "2026/08/03 10:07",
+      "updatedAt": "2026/08/03 11:07",
       "episodeId": "epb8a7zaf8",
       "subtitle": "【特定班】写真から居場所を特定しろ！",
       "likes": "1.0万",
@@ -6815,6 +6839,10 @@
         },
         {
           "hour": 104,
+          "likes": 10000
+        },
+        {
+          "hour": 105,
           "likes": 10000
         }
       ],
@@ -7978,7 +8006,7 @@
             },
             {
               "rank": 48,
-              "title": "夫が寝たあとに"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 49,
@@ -8219,19 +8247,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Your Sky ハレのち恋"
+              "title": "名探偵プリキュア！"
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 49,
-              "title": "今から、親友やめようか。"
+              "title": "Your Sky ハレのち恋"
             },
             {
               "rank": 50,
-              "title": "キスは捜査のあとで"
+              "title": "今から、親友やめようか。"
             }
           ]
         }
@@ -8240,10 +8268,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/02",
-      "updatedAt": "2026/08/03 10:07",
+      "updatedAt": "2026/08/03 11:07",
       "episodeId": "epu2r9bvgo",
       "subtitle": "棲みつく可能性5%以下…新宿ミツバチを再び呼べるか!?",
-      "likes": "3394",
+      "likes": "3411",
       "favorites": "52.8万",
       "likePoints": [
         {
@@ -8301,6 +8329,10 @@
         {
           "hour": 15,
           "likes": 3394
+        },
+        {
+          "hour": 16,
+          "likes": 3411
         }
       ],
       "previousLikePoints": [],
@@ -8309,7 +8341,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 5,
-          "elapsedHour": 15,
+          "elapsedHour": 16,
           "elapsedRank": 5,
           "currentPoints": [
             {
@@ -8367,6 +8399,10 @@
             {
               "hour": 15,
               "rank": 5
+            },
+            {
+              "hour": 16,
+              "rank": 5
             }
           ],
           "previousPoints": [],
@@ -8392,9 +8428,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 24,
-          "elapsedHour": 15,
-          "elapsedRank": 24,
+          "currentRank": 23,
+          "elapsedHour": 16,
+          "elapsedRank": 23,
           "currentPoints": [
             {
               "hour": 5,
@@ -8439,24 +8475,28 @@
             {
               "hour": 15,
               "rank": 24
+            },
+            {
+              "hour": 16,
+              "rank": 23
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
+              "rank": 20,
+              "title": "やすとものどこいこ！？"
+            },
+            {
               "rank": 21,
-              "title": "家、ついて行ってイイですか？"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 22,
-              "title": "かまいたちの机上の空論城"
+              "title": "突然ですが占ってもいいですか？"
             },
             {
               "rank": 23,
-              "title": "華大さんと千鳥くん"
-            },
-            {
-              "rank": 24,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -8466,11 +8506,11 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/08/03 10:07",
+      "updatedAt": "2026/08/03 11:07",
       "episodeId": "epqf7c2gz6",
       "subtitle": "大食い激細女子…体の秘密!体温に関係?食べる順番で解決?",
       "likes": "4767",
-      "favorites": "77.8万",
+      "favorites": "77.9万",
       "likePoints": [
         {
           "hour": 5,
@@ -9439,7 +9479,7 @@
             },
             {
               "rank": 48,
-              "title": "夫が寝たあとに"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 49,
@@ -9639,19 +9679,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Your Sky ハレのち恋"
+              "title": "名探偵プリキュア！"
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 49,
-              "title": "今から、親友やめようか。"
+              "title": "Your Sky ハレのち恋"
             },
             {
               "rank": 50,
-              "title": "キスは捜査のあとで"
+              "title": "今から、親友やめようか。"
             }
           ]
         }
@@ -9660,7 +9700,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/08/03 10:07",
+      "updatedAt": "2026/08/03 11:07",
       "episodeId": "epxt2mcck0",
       "subtitle": "【timelesz】リアルな本音・裏側を語る。菊池風磨＆畑芽育の音楽番組",
       "likes": "2.1万",
@@ -10152,6 +10192,10 @@
         },
         {
           "hour": 129,
+          "likes": 21000
+        },
+        {
+          "hour": 130,
           "likes": 21000
         }
       ],
@@ -11507,7 +11551,7 @@
             },
             {
               "rank": 48,
-              "title": "夫が寝たあとに"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 49,
@@ -11944,19 +11988,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Your Sky ハレのち恋"
+              "title": "名探偵プリキュア！"
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 49,
-              "title": "今から、親友やめようか。"
+              "title": "Your Sky ハレのち恋"
             },
             {
               "rank": 50,
-              "title": "キスは捜査のあとで"
+              "title": "今から、親友やめようか。"
             }
           ]
         }
@@ -11965,11 +12009,11 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/31",
-      "updatedAt": "2026/08/03 10:07",
+      "updatedAt": "2026/08/03 11:07",
       "episodeId": "epw5mrc1bs",
       "subtitle": "第138回 賢人の幸せに国仲涼子涙？風磨くん結婚しようぜ",
-      "likes": "4600",
-      "favorites": "71.5万",
+      "likes": "4603",
+      "favorites": "71.4万",
       "likePoints": [
         {
           "hour": 1,
@@ -12290,6 +12334,10 @@
         {
           "hour": 82,
           "likes": 4600
+        },
+        {
+          "hour": 83,
+          "likes": 4603
         }
       ],
       "previousLikePoints": [
@@ -13424,7 +13472,7 @@
             },
             {
               "rank": 48,
-              "title": "夫が寝たあとに"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 49,
@@ -13657,19 +13705,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Your Sky ハレのち恋"
+              "title": "名探偵プリキュア！"
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 49,
-              "title": "今から、親友やめようか。"
+              "title": "Your Sky ハレのち恋"
             },
             {
               "rank": 50,
-              "title": "キスは捜査のあとで"
+              "title": "今から、親友やめようか。"
             }
           ]
         }
@@ -13678,7 +13726,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/07/25",
-      "updatedAt": "2026/08/03 10:07",
+      "updatedAt": "2026/08/03 11:07",
       "episodeId": "ep6mbhb4sa",
       "subtitle": "タイムマシーン3号のセッタイマシーンでGO",
       "likes": "1633",
@@ -15517,7 +15565,7 @@
             },
             {
               "rank": 48,
-              "title": "夫が寝たあとに"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 49,
@@ -15681,19 +15729,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Your Sky ハレのち恋"
+              "title": "名探偵プリキュア！"
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 49,
-              "title": "今から、親友やめようか。"
+              "title": "Your Sky ハレのち恋"
             },
             {
               "rank": 50,
-              "title": "キスは捜査のあとで"
+              "title": "今から、親友やめようか。"
             }
           ]
         }
@@ -15702,10 +15750,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/08/03 10:07",
+      "updatedAt": "2026/08/03 11:07",
       "episodeId": "epm64ewk9k",
       "subtitle": "4人の飲み会に後輩を呼び出しまくる夜",
-      "likes": "7575",
+      "likes": "7577",
       "favorites": "2.5万",
       "likePoints": [
         {
@@ -16219,6 +16267,10 @@
         {
           "hour": 128,
           "likes": 7575
+        },
+        {
+          "hour": 129,
+          "likes": 7577
         }
       ],
       "previousLikePoints": [],
@@ -16539,11 +16591,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "プレバト！！"
+              "title": "しんごの🌱"
             },
             {
               "rank": 48,
-              "title": "大阪おっさんぽ"
+              "title": "いたジャン！"
             },
             {
               "rank": 49,
@@ -16551,7 +16603,7 @@
             },
             {
               "rank": 50,
-              "title": "かまいたちの知らんけど"
+              "title": "大阪おっさんぽ"
             }
           ]
         },
@@ -16643,7 +16695,7 @@
             },
             {
               "rank": 48,
-              "title": "夫が寝たあとに"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 49,
@@ -16660,7 +16712,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/08/03 10:07",
+      "updatedAt": "2026/08/03 11:07",
       "episodeId": "ep8s7i6hiz",
       "subtitle": "#4 たった数時間の命…“奇跡”に挑む究極オペ",
       "likes": "1.0万",
@@ -17092,6 +17144,10 @@
         },
         {
           "hour": 108,
+          "likes": 10000
+        },
+        {
+          "hour": 109,
           "likes": 10000
         }
       ],
@@ -17774,7 +17830,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 11,
-          "elapsedHour": 108,
+          "elapsedHour": 109,
           "elapsedRank": 11,
           "currentPoints": [
             {
@@ -18175,6 +18231,10 @@
             },
             {
               "hour": 108,
+              "rank": 11
+            },
+            {
+              "hour": 109,
               "rank": 11
             }
           ],
@@ -18843,7 +18903,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 22,
-          "elapsedHour": 108,
+          "elapsedHour": 109,
           "elapsedRank": 22,
           "currentPoints": [
             {
@@ -19244,6 +19304,10 @@
             },
             {
               "hour": 108,
+              "rank": 22
+            },
+            {
+              "hour": 109,
               "rank": 22
             }
           ],
@@ -19896,11 +19960,11 @@
             },
             {
               "rank": 20,
-              "title": "ザ・ノンフィクション"
+              "title": "嗚呼!!みんなの動物園"
             },
             {
               "rank": 21,
-              "title": "ワンピース"
+              "title": "ザ・ノンフィクション"
             },
             {
               "rank": 22,
@@ -19913,7 +19977,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/30",
-      "updatedAt": "2026/08/03 10:07",
+      "updatedAt": "2026/08/03 11:07",
       "episodeId": "ep7xjw37et",
       "subtitle": "第4話 もっとあなたと一緒にいたい・・・恋が動き出す",
       "likes": "2.1万",
@@ -20249,6 +20313,10 @@
         },
         {
           "hour": 84,
+          "likes": 21000
+        },
+        {
+          "hour": 85,
           "likes": 21000
         }
       ],
@@ -20935,7 +21003,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 6,
-          "elapsedHour": 84,
+          "elapsedHour": 85,
           "elapsedRank": 6,
           "currentPoints": [
             {
@@ -21260,6 +21328,10 @@
             },
             {
               "hour": 84,
+              "rank": 6
+            },
+            {
+              "hour": 85,
               "rank": 6
             }
           ],
@@ -21920,7 +21992,7 @@
           "nearbyRanking": [
             {
               "rank": 3,
-              "title": "マイ・フィクション"
+              "title": "告白―25年目の秘密―"
             },
             {
               "rank": 4,
@@ -21940,7 +22012,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 10,
-          "elapsedHour": 84,
+          "elapsedHour": 85,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -22265,6 +22337,10 @@
             },
             {
               "hour": 84,
+              "rank": 10
+            },
+            {
+              "hour": 85,
               "rank": 10
             }
           ],
@@ -22946,7 +23022,7 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/08/03 10:07",
+      "updatedAt": "2026/08/03 11:07",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
       "likes": "4566",
@@ -22996,7 +23072,7 @@
             },
             {
               "rank": 48,
-              "title": "夫が寝たあとに"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 49,
@@ -23013,7 +23089,7 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/08/03 10:07",
+      "updatedAt": "2026/08/03 11:07",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "3.0万",
@@ -23510,10 +23586,6 @@
           "elapsedRank": null,
           "currentPoints": [
             {
-              "hour": 44,
-              "rank": 1
-            },
-            {
               "hour": 45,
               "rank": 1
             },
@@ -23870,7 +23942,7 @@
             },
             {
               "rank": 48,
-              "title": "夫が寝たあとに"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 49,
@@ -23889,10 +23961,6 @@
           "elapsedHour": null,
           "elapsedRank": null,
           "currentPoints": [
-            {
-              "hour": 44,
-              "rank": 1
-            },
             {
               "hour": 45,
               "rank": 1
@@ -24070,19 +24138,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Your Sky ハレのち恋"
+              "title": "名探偵プリキュア！"
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 49,
-              "title": "今から、親友やめようか。"
+              "title": "Your Sky ハレのち恋"
             },
             {
               "rank": 50,
-              "title": "キスは捜査のあとで"
+              "title": "今から、親友やめようか。"
             }
           ]
         }
@@ -24091,10 +24159,10 @@
     "sr6elshzoq": {
       "programTitle": "踊る！さんま御殿!!",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/08/03 10:07",
+      "updatedAt": "2026/08/03 11:07",
       "episodeId": "epz108j83s",
       "subtitle": "神奈川7路線が大激突SP 東横線VS田園都市線!本当の横浜はどっち!?",
-      "likes": "7993",
+      "likes": "7996",
       "favorites": "214.2万",
       "likePoints": [
         {
@@ -24924,7 +24992,7 @@
             },
             {
               "rank": 48,
-              "title": "夫が寝たあとに"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 49,
@@ -25248,19 +25316,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Your Sky ハレのち恋"
+              "title": "名探偵プリキュア！"
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 49,
-              "title": "今から、親友やめようか。"
+              "title": "Your Sky ハレのち恋"
             },
             {
               "rank": 50,
-              "title": "キスは捜査のあとで"
+              "title": "今から、親友やめようか。"
             }
           ]
         }
@@ -25269,7 +25337,7 @@
     "sr5czyxny0": {
       "programTitle": "上田と女が吠える夜",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/08/03 10:07",
+      "updatedAt": "2026/08/03 11:07",
       "episodeId": "eptt90k6t6",
       "subtitle": "夏休みは勉学派vs遊び倒す女▼究極ミニマリスト生活で激論",
       "likes": "1.2万",
@@ -25566,6 +25634,10 @@
         {
           "hour": 110,
           "likes": 12000
+        },
+        {
+          "hour": 111,
+          "likes": 12000
         }
       ],
       "previousLikePoints": [],
@@ -25574,7 +25646,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 5,
-          "elapsedHour": 110,
+          "elapsedHour": 111,
           "elapsedRank": 5,
           "currentPoints": [
             {
@@ -26008,6 +26080,10 @@
             {
               "hour": 110,
               "rank": 5
+            },
+            {
+              "hour": 111,
+              "rank": 5
             }
           ],
           "previousPoints": [],
@@ -26034,7 +26110,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 13,
-          "elapsedHour": 110,
+          "elapsedHour": 111,
           "elapsedRank": 13,
           "currentPoints": [
             {
@@ -26463,6 +26539,10 @@
             },
             {
               "hour": 110,
+              "rank": 13
+            },
+            {
+              "hour": 111,
               "rank": 13
             }
           ],
