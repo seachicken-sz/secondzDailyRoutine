@@ -40,9 +40,6 @@ renderConditionalSelectorServiceCard = function renderSelectableConditionalServi
         <span class="conditional-service-status">${available ? "選択可能" : "条件あり"}</span>
       </div>
       <div class="plan-options">${plans}</div>
-      <p class="conditional-service-help">${available
-        ? "利用している場合は選択してください。選ばなければ、追加料金なしでできる応援にも表示されます。"
-        : "Spotify PremiumまたはApple Musicを選ぶと選択できるようになります。"}</p>
     </article>
   `;
 };
