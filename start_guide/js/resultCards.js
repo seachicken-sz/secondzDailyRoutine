@@ -67,6 +67,7 @@ function renderServiceResultCard(group) {
       ${includedByNames.length
         ? `<p class="included-note">${includedByNames.map(escapeHtml).join("、")}に含まれています。</p>`
         : ""}
+      ${renderServiceDetails(group.service)}
     </article>
   `;
 }
@@ -167,6 +168,7 @@ renderAdditionalSupport = function renderAdditionalSupportByService(currentRefs)
             </section>
           `).join("")}
       </div>
+      ${renderServiceDetails(group.service)}
       ${renderAppDownloadLinks(group.service.id)}
     </article>
   `).join("");
