@@ -108,21 +108,30 @@ renderServiceCard = function renderServiceCardWithoutTrial(service) {
 renderAdditionalSupport = function renderAdditionalSupportWithServiceNames(currentRefs) {
   const budget = state.budget;
   const currentKeys = new Set(currentRefs.map((ref) => planKey(ref.serviceId, ref.planId)));
+  const currentServiceIds = new Set(currentRefs.map((ref) => ref.serviceId));
   const currentFeatures = new Set(
     currentRefs.flatMap((ref) => getPlanRecord(ref.serviceId, ref.planId)?.plan.features || [])
   );
-
-  if (budget <= 0) {
-    elements.additionalSupportSection.classList.add("hidden");
-    elements.additionalSupportCards.innerHTML = "";
-    return;
-  }
-
   const candidates = [];
 
   getServices().forEach((service) => {
     (service.plans || []).forEach((plan) => {
       const key = planKey(service.id, plan.id);
+
+      if (budget === 0) {
+        if (plan.planType !== "free" || currentKeys.has(key) || currentServiceIds.has(service.id)) return;
+
+        candidates.push({
+          service,
+          plan,
+          monthlyPrice: 0,
+          newFeatures: plan.features || [],
+          candidateRefs: resolveIncludedPlans([{ serviceId: service.id, planId: plan.id }]),
+          isFree: true
+        });
+        return;
+      }
+
       if (plan.planType !== "paid" || currentKeys.has(key)) return;
 
       const monthlyPrice = getMonthlyPrice(plan);
@@ -135,7 +144,7 @@ renderAdditionalSupport = function renderAdditionalSupportWithServiceNames(curre
       const newFeatures = [...candidateFeatures].filter((feature) => !currentFeatures.has(feature));
       if (!newFeatures.length) return;
 
-      candidates.push({ service, plan, monthlyPrice, newFeatures, candidateRefs });
+      candidates.push({ service, plan, monthlyPrice, newFeatures, candidateRefs, isFree: false });
     });
   });
 
@@ -147,18 +156,25 @@ renderAdditionalSupport = function renderAdditionalSupportWithServiceNames(curre
     return;
   }
 
-  elements.additionalBudgetBadge.textContent = `＋${budget.toLocaleString("ja-JP")}円まで`;
+  elements.additionalBudgetBadge.textContent = budget === 0
+    ? "追加料金なし"
+    : `＋${budget.toLocaleString("ja-JP")}円まで`;
+
   elements.additionalSupportCards.innerHTML = candidates.map((candidate) => `
     <article class="result-card additional-support-card">
       <div class="result-card-top">
         <div>
           <h4 class="additional-service-name">${escapeHtml(candidate.service.name)}</h4>
           <p class="additional-plan-name">${escapeHtml(candidate.plan.name)}</p>
-          <p class="result-card-summary">このサービスを追加すると、今よりできる応援が増えます。</p>
+          <p class="result-card-summary">${candidate.isFree
+            ? "まだ選んでいない、追加料金なしで始められる応援です。"
+            : "このサービスを追加すると、今よりできる応援が増えます。"}</p>
         </div>
-        <span class="source-badge">追加候補</span>
+        <span class="source-badge">${candidate.isFree ? "無料" : "追加候補"}</span>
       </div>
-      <p class="additional-price">月額＋${candidate.monthlyPrice.toLocaleString("ja-JP")}円</p>
+      <p class="additional-price">${candidate.isFree
+        ? "追加料金なし"
+        : `月額＋${candidate.monthlyPrice.toLocaleString("ja-JP")}円`}</p>
       <div class="feature-list">${renderFeatureChips(candidate.newFeatures)}</div>
       ${renderIncludedPlanNames(candidate.candidateRefs)}
       ${renderAppDownloadLinks(candidate.service.id)}
