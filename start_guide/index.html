@@ -42,18 +42,15 @@
 
       <nav class="page-toc" aria-label="ページ目次">
         <div class="page-toc-scroll">
-          <a class="page-toc-link active" href="#freeAppsSection"><i class="bi bi-phone"></i><span>無料アプリ</span></a>
-          <a class="page-toc-link" href="#serviceFinderSection"><i class="bi bi-search"></i><span>サブスクから探す</span></a>
-          <a class="page-toc-link" href="#resultSection"><i class="bi bi-check2-circle"></i><span>できる応援</span></a>
-          <a class="page-toc-link" href="#dailyIntroSection"><i class="bi bi-list-check"></i><span>無料応援ツール</span></a>
-          <a class="page-toc-link" href="#comingSoonSection"><i class="bi bi-stars"></i><span>今後のガイド</span></a>
+          <a class="page-toc-link active" href="#freeAppsSection"><i class="bi bi-phone"></i><span>無料サービス（公式）</span></a>
+          <a class="page-toc-link" href="#serviceFinderSection"><i class="bi bi-search"></i><span>今できる応援を探す</span></a>
         </div>
       </nav>
 
       <section id="freeAppsSection" class="guide-panel free-app-panel page-anchor" aria-labelledby="freeAppsTitle">
         <header class="panel-heading">
           <p class="section-label">FREE APPS</p>
-          <h2 id="freeAppsTitle">無料サービス(公式)</h2>
+          <h2 id="freeAppsTitle">無料サービス（公式）</h2>
           <p>
             基本無料で利用できる公式サービスです。これは入れとかないと！<br>
             スマホの容量が許す限りまずこれは入れておこう！
@@ -64,12 +61,12 @@
 
       <section id="serviceFinderSection" class="guide-panel page-anchor" aria-labelledby="serviceFinderTitle">
         <header class="panel-heading">
-          <p class="section-label">SUBSCRIPTION CHECK</p>
-          <h2 id="serviceFinderTitle">利用中のサブスクからできる応援を探す</h2>
-          <p>今契約しているサブスクを使うとどんな応援ができるか見てみよう！</p>
+          <p class="section-label">SUPPORT CHECK</p>
+          <h2 id="serviceFinderTitle">今できる応援を探す</h2>
+          <p>登録済み・利用中のサービスやプランを選んで、今の環境でできる応援を確認しよう！</p>
         </header>
 
-        <div id="serviceGroups" class="service-groups" aria-live="polite"></div>
+        <div id="serviceGroups" class="service-groups service-selector-groups" aria-live="polite"></div>
 
         <section class="budget-card" aria-labelledby="budgetTitle">
           <div class="budget-card-heading">
@@ -140,6 +137,19 @@
           </div>
           <div id="additionalSupportCards" class="result-cards"></div>
         </section>
+
+        <section id="dailyIntroSection" class="daily-intro-card result-daily-intro">
+          <div class="daily-intro-icon" aria-hidden="true"><i class="bi bi-check2-circle"></i></div>
+          <div class="daily-intro-content">
+            <p class="section-label">FREE SUPPORT TOOL</p>
+            <h2>無料応援をまとめて進めたいときは</h2>
+            <p>タムごとDailyでは、毎日のリクエストや再生、期間限定の応援をまとめて確認できます。</p>
+            <a class="primary-button" href="../app/">
+              無料応援をまとめて見る
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+          </div>
+        </section>
       </section>
 
       <section class="guide-note-card">
@@ -148,28 +158,6 @@
           <h2>全部やらなくて大丈夫</h2>
           <p>生活や予算に合わせて、できることをできる分だけ。<br>
             <strong>※サービス内容や料金は変更される場合があるため、契約前には各公式情報も確認してください。</strong></p>
-        </div>
-      </section>
-
-      <section id="dailyIntroSection" class="daily-intro-card page-anchor">
-        <div class="daily-intro-icon" aria-hidden="true"><i class="bi bi-check2-circle"></i></div>
-        <div class="daily-intro-content">
-          <p class="section-label">FREE SUPPORT TOOL</p>
-          <h2>無料応援をまとめて進めたいときは</h2>
-          <p>タムごとDailyでは、毎日のリクエストや再生、期間限定の応援をまとめて確認できます。</p>
-          <a class="primary-button" href="../app/">
-            無料応援をまとめて見る
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-        </div>
-      </section>
-
-      <section id="comingSoonSection" class="coming-soon-card page-anchor">
-        <p class="section-label">NEXT GUIDE</p>
-        <h2>今後追加するガイド</h2>
-        <div class="coming-soon-list">
-          <span><i class="bi bi-disc"></i>リリース時の応援</span>
-          <span><i class="bi bi-bag-check"></i>CD・ライブ映像の購入ガイド</span>
         </div>
       </section>
     </main>
