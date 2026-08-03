@@ -70,3 +70,106 @@ function renderServiceResultCard(group) {
     </article>
   `;
 }
+
+renderAdditionalSupport = function renderAdditionalSupportByService(currentRefs) {
+  const budget = state.budget;
+  const currentKeys = new Set(currentRefs.map((ref) => planKey(ref.serviceId, ref.planId)));
+  const currentServiceIds = new Set(currentRefs.map((ref) => ref.serviceId));
+  const currentFeatures = new Set(
+    currentRefs.flatMap((ref) => getPlanRecord(ref.serviceId, ref.planId)?.plan.features || [])
+  );
+  const candidates = [];
+
+  getServices().forEach((service) => {
+    (service.plans || []).forEach((plan) => {
+      const key = planKey(service.id, plan.id);
+
+      if (budget === 0) {
+        if (plan.planType !== "free" || currentKeys.has(key) || currentServiceIds.has(service.id)) return;
+
+        candidates.push({
+          service,
+          plan,
+          monthlyPrice: 0,
+          newFeatures: plan.features || [],
+          candidateRefs: resolveIncludedPlans([{ serviceId: service.id, planId: plan.id }]),
+          isFree: true
+        });
+        return;
+      }
+
+      if (plan.planType !== "paid" || currentKeys.has(key)) return;
+
+      const monthlyPrice = getMonthlyPrice(plan);
+      if (monthlyPrice === null || monthlyPrice > budget) return;
+
+      const candidateRefs = resolveIncludedPlans([{ serviceId: service.id, planId: plan.id }]);
+      const candidateFeatures = new Set(
+        candidateRefs.flatMap((ref) => getPlanRecord(ref.serviceId, ref.planId)?.plan.features || [])
+      );
+      const newFeatures = [...candidateFeatures].filter((feature) => !currentFeatures.has(feature));
+      if (!newFeatures.length) return;
+
+      candidates.push({ service, plan, monthlyPrice, newFeatures, candidateRefs, isFree: false });
+    });
+  });
+
+  const grouped = new Map();
+  candidates.forEach((candidate) => {
+    if (!grouped.has(candidate.service.id)) {
+      grouped.set(candidate.service.id, {
+        service: candidate.service,
+        candidates: []
+      });
+    }
+    grouped.get(candidate.service.id).candidates.push(candidate);
+  });
+
+  const serviceGroups = [...grouped.values()]
+    .map((group) => ({
+      ...group,
+      minimumPrice: Math.min(...group.candidates.map((candidate) => candidate.monthlyPrice))
+    }))
+    .sort((a, b) => a.minimumPrice - b.minimumPrice || (a.service.displayOrder || 0) - (b.service.displayOrder || 0));
+
+  if (!serviceGroups.length) {
+    elements.additionalSupportSection.classList.add("hidden");
+    elements.additionalSupportCards.innerHTML = "";
+    return;
+  }
+
+  elements.additionalBudgetBadge.textContent = budget === 0
+    ? "追加料金なし"
+    : `＋${budget.toLocaleString("ja-JP")}円まで`;
+
+  elements.additionalSupportCards.innerHTML = serviceGroups.map((group) => `
+    <article class="result-card additional-support-card">
+      <div class="result-card-top">
+        <div>
+          <h4 class="additional-service-name">${escapeHtml(group.service.name)}</h4>
+          <p class="result-card-summary">${group.candidates[0].isFree
+            ? "まだ選んでいない、追加料金なしで始められる応援です。"
+            : "このサービスを追加すると、今よりできる応援が増えます。"}</p>
+        </div>
+        <span class="source-badge">${group.candidates[0].isFree ? "無料" : "追加候補"}</span>
+      </div>
+      <div class="service-plan-candidates">
+        ${group.candidates
+          .sort((a, b) => a.monthlyPrice - b.monthlyPrice)
+          .map((candidate) => `
+            <section class="service-plan-candidate">
+              <p class="additional-plan-name">${escapeHtml(candidate.plan.name)}</p>
+              <p class="additional-price">${candidate.isFree
+                ? "追加料金なし"
+                : `月額＋${candidate.monthlyPrice.toLocaleString("ja-JP")}円`}</p>
+              <div class="feature-list">${renderFeatureChips(candidate.newFeatures)}</div>
+              ${renderIncludedPlanNames(candidate.candidateRefs)}
+            </section>
+          `).join("")}
+      </div>
+      ${renderAppDownloadLinks(group.service.id)}
+    </article>
+  `).join("");
+
+  elements.additionalSupportSection.classList.remove("hidden");
+};
