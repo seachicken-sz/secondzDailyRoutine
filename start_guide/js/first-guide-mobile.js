@@ -22,7 +22,16 @@
       }
 
       .first-guide-section .guide-step-heading {
+        align-items: center;
         gap: 10px;
+      }
+
+      .first-guide-section .guide-step-heading > div {
+        min-width: 0;
+      }
+
+      .first-guide-section .guide-step-heading h3 {
+        margin: 0;
       }
 
       .first-guide-section .guide-step-note {
@@ -41,6 +50,11 @@
         border: 0;
         border-radius: 0;
         background: transparent;
+      }
+
+      .first-guide-section .service-data-card:first-child {
+        padding-top: 18px;
+        border-top: 1px dashed var(--color-border);
       }
 
       .first-guide-section .service-data-card + .service-data-card {
@@ -62,6 +76,31 @@
       }
 
       .first-guide-section .service-data-card .card-download-footer {
+        padding-top: 10px;
+      }
+
+      #resultSection .result-cards {
+        gap: 0;
+      }
+
+      #resultSection .result-card {
+        overflow: visible;
+        padding: 18px 0 0;
+        border: 0;
+        border-top: 1px dashed var(--color-border);
+        border-radius: 0;
+        background: transparent;
+      }
+
+      #resultSection .result-card + .result-card {
+        margin-top: 18px;
+      }
+
+      #resultSection .result-card-top {
+        align-items: center;
+      }
+
+      #resultSection .result-card .card-download-footer {
         padding-top: 10px;
       }
     }
