@@ -1,43 +1,270 @@
 // スマホ向けモーダル・固定目次
 let mobileModalScrollY = 0;
 
+function updateMobileViewportHeight() {
+  const viewportHeight = window.visualViewport?.height || window.innerHeight;
+  document.documentElement.style.setProperty("--mobile-viewport-height", `${viewportHeight}px`);
+}
+
 function applyMobileUiStyles() {
   if (document.getElementById("startGuideMobileUiStyles")) return;
+
   const style = document.createElement("style");
   style.id = "startGuideMobileUiStyles";
   style.textContent = `
-    .service-info-modal{align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top)) 12px max(16px,env(safe-area-inset-bottom))}
-    .service-info-modal-dialog{width:min(100%,620px);max-height:88vh;max-height:min(88dvh,720px);border-radius:20px}
-    .service-info-modal-header{flex-shrink:0}
-    .service-info-modal-body{overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
-    .service-info-modal-close{width:44px;height:44px}
-    .service-info-button,.app-store-link{min-height:44px}
-    .floating-toc{position:fixed;top:0;right:0;left:0;z-index:90;padding:max(6px,env(safe-area-inset-top)) 8px 6px;border-bottom:1px solid rgba(2,185,165,.2);background:rgba(255,255,255,.96);box-shadow:0 8px 24px rgba(28,75,69,.12);backdrop-filter:blur(16px);transform:translateY(-110%);opacity:0;pointer-events:none;transition:transform .22s ease,opacity .22s ease}
-    .floating-toc.is-visible{transform:translateY(0);opacity:1;pointer-events:auto}
-    .floating-toc-scroll{width:min(100%,720px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:0 auto}
-    .floating-toc-link{min-width:0;min-height:44px;display:flex;align-items:center;justify-content:center;padding:7px 4px;border:1px solid transparent;border-radius:12px;color:var(--color-text-sub);font-size:11px;font-weight:700;line-height:1.25;text-align:center;text-decoration:none;white-space:nowrap}
-    .floating-toc-link.active{border-color:rgba(2,185,165,.28);color:var(--color-brand-dark);background:var(--color-brand-soft)}
-    body.floating-toc-visible .page-anchor,body.floating-toc-visible #resultSection{scroll-margin-top:calc(66px + env(safe-area-inset-top))}
-    body.service-info-modal-open .floating-toc{opacity:0;pointer-events:none}
-    .service-data-card,.service-card,.result-card,.purchase-shop-link{min-width:0;overflow-wrap:anywhere}
-    .twitter-tweet{max-width:100%!important;margin-right:auto!important;margin-left:auto!important}
-    @media(max-width:480px){
-      .service-info-modal-header{padding:10px 12px}
-      .service-info-modal-body{padding:14px}
-      .result-card-top{flex-wrap:wrap}
-      .result-card-top>div{min-width:0;flex:1 1 100%}
-      .floating-toc-link{font-size:10.5px}
+    .service-info-modal{
+      height:var(--mobile-viewport-height,100dvh);
+      min-height:0;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      padding:max(16px,env(safe-area-inset-top)) 12px max(16px,env(safe-area-inset-bottom));
     }
+
+    .service-info-modal-dialog{
+      width:min(100%,620px);
+      min-height:0;
+      max-height:calc(var(--mobile-viewport-height,100dvh) - 32px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+      border-radius:20px;
+    }
+
+    .service-info-modal-header{
+      flex:0 0 auto;
+    }
+
+    .service-info-modal-body{
+      min-height:0;
+      flex:1 1 auto;
+      overflow-y:auto;
+      overscroll-behavior:contain;
+      -webkit-overflow-scrolling:touch;
+    }
+
+    .service-info-modal-close{
+      width:44px;
+      height:44px;
+    }
+
+    .service-info-button,
+    .app-store-link{
+      min-height:44px;
+    }
+
+    .floating-toc{
+      position:fixed;
+      top:0;
+      right:0;
+      left:0;
+      z-index:90;
+      padding:max(6px,env(safe-area-inset-top)) 8px 6px;
+      border-bottom:1px solid rgba(2,185,165,.2);
+      background:rgba(255,255,255,.96);
+      box-shadow:0 8px 24px rgba(28,75,69,.12);
+      backdrop-filter:blur(16px);
+      transform:translateY(-110%);
+      opacity:0;
+      pointer-events:none;
+      transition:transform .22s ease,opacity .22s ease;
+    }
+
+    .floating-toc.is-visible{
+      transform:translateY(0);
+      opacity:1;
+      pointer-events:auto;
+    }
+
+    .floating-toc-scroll{
+      width:min(100%,720px);
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:6px;
+      margin:0 auto;
+    }
+
+    .floating-toc-link{
+      min-width:0;
+      min-height:44px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:7px 4px;
+      border:1px solid transparent;
+      border-radius:12px;
+      color:var(--color-text-sub);
+      font-size:11px;
+      font-weight:700;
+      line-height:1.25;
+      text-align:center;
+      text-decoration:none;
+      white-space:nowrap;
+    }
+
+    .floating-toc-link.active{
+      border-color:rgba(2,185,165,.28);
+      color:var(--color-brand-dark);
+      background:var(--color-brand-soft);
+    }
+
+    body.floating-toc-visible .page-anchor,
+    body.floating-toc-visible #resultSection{
+      scroll-margin-top:calc(66px + env(safe-area-inset-top));
+    }
+
+    body.service-info-modal-open .floating-toc{
+      opacity:0;
+      pointer-events:none;
+    }
+
+    .service-data-card,
+    .service-card,
+    .result-card,
+    .purchase-shop-link{
+      min-width:0;
+      overflow-wrap:anywhere;
+    }
+
+    .twitter-tweet{
+      max-width:100%!important;
+      margin-right:auto!important;
+      margin-left:auto!important;
+    }
+
+    @media(max-width:699px){
+      .page-shell{
+        padding-bottom:calc(48px + env(safe-area-inset-bottom));
+      }
+
+      .site-footer{
+        padding-bottom:max(12px,env(safe-area-inset-bottom));
+      }
+
+      .selection-action-card{
+        bottom:calc(8px + env(safe-area-inset-bottom));
+      }
+
+      .service-groups{
+        gap:0;
+      }
+
+      .service-category-accordion{
+        overflow:visible;
+        border:0;
+        border-radius:0;
+        background:transparent;
+      }
+
+      .service-category-accordion + .service-category-accordion{
+        margin-top:22px;
+        padding-top:22px;
+        border-top:1px solid var(--color-border);
+      }
+
+      .service-category-summary{
+        min-height:52px;
+        padding:4px 0 10px;
+        border:0;
+        background:transparent;
+      }
+
+      .service-category-accordion[open] .service-category-summary{
+        border:0;
+        background:transparent;
+      }
+
+      .service-category-summary-icon{
+        width:36px;
+        height:36px;
+      }
+
+      .service-category-panel{
+        padding:6px 0 0;
+      }
+
+      .service-list{
+        gap:0;
+      }
+
+      .service-card{
+        overflow:visible;
+        padding:0;
+        border:0;
+        border-radius:0;
+        background:transparent;
+      }
+
+      .service-card + .service-card{
+        margin-top:18px;
+        padding-top:18px;
+        border-top:1px dashed var(--color-border);
+      }
+
+      .service-card-title h4{
+        font-size:15px;
+      }
+
+      .plan-options{
+        margin-top:8px;
+      }
+
+      .plan-option{
+        min-height:50px;
+        border-radius:12px;
+      }
+
+      .service-category-empty{
+        padding:10px 0;
+        background:transparent;
+        text-align:left;
+      }
+
+      .service-info-modal-header{
+        padding:10px 12px;
+      }
+
+      .service-info-modal-body{
+        padding:14px;
+      }
+
+      .result-card-top{
+        flex-wrap:wrap;
+      }
+
+      .result-card-top > div{
+        min-width:0;
+        flex:1 1 100%;
+      }
+
+      .floating-toc-link{
+        font-size:10.5px;
+      }
+    }
+
     @media(max-width:360px){
-      .floating-toc{padding-right:5px;padding-left:5px}
-      .floating-toc-scroll{gap:4px}
-      .floating-toc-link{font-size:10px}
+      .floating-toc{
+        padding-right:5px;
+        padding-left:5px;
+      }
+
+      .floating-toc-scroll{
+        gap:4px;
+      }
+
+      .floating-toc-link{
+        font-size:10px;
+      }
     }
+
     @media(prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}
-      .floating-toc{transition:none}
+      html{
+        scroll-behavior:auto;
+      }
+
+      .floating-toc{
+        transition:none;
+      }
     }
   `;
+
   document.head.appendChild(style);
 }
 
@@ -45,6 +272,7 @@ function openServiceInfoModal(serviceId, trigger) {
   const service = getServiceById(serviceId);
   if (!service || !elements.serviceInfoModal) return;
 
+  updateMobileViewportHeight();
   state.previousFocus = trigger || document.activeElement;
   elements.serviceInfoModalTitle.textContent = `${service.name}の詳細`;
   elements.serviceInfoModalBody.innerHTML = buildModalBody(service);
@@ -81,7 +309,7 @@ function closeServiceInfoModal() {
   window.scrollTo(0, mobileModalScrollY);
   document.documentElement.style.scrollBehavior = previousScrollBehavior;
 
-  state.previousFocus?.focus?.({ preventScroll: true });
+  state.previousFocus?.focus?.({ preventScroll:true });
   state.previousFocus = null;
 }
 
@@ -93,6 +321,7 @@ function handleMobileModalTabTrap(event) {
   )].filter((item) => item instanceof HTMLElement && item.offsetParent !== null);
 
   if (!focusable.length) return;
+
   const first = focusable[0];
   const last = focusable[focusable.length - 1];
 
@@ -108,16 +337,21 @@ function handleMobileModalTabTrap(event) {
 document.addEventListener("keydown", handleMobileModalTabTrap);
 
 function setupStickyToc() {
+  updateMobileViewportHeight();
   applyMobileUiStyles();
+
+  window.addEventListener("resize", updateMobileViewportHeight, { passive:true });
+  window.visualViewport?.addEventListener("resize", updateMobileViewportHeight, { passive:true });
+  window.visualViewport?.addEventListener("scroll", updateMobileViewportHeight, { passive:true });
 
   const detailedToc = document.querySelector(".page-toc");
   const detailedLinks = [...document.querySelectorAll(".page-toc-link")];
   if (!detailedToc || !detailedLinks.length) return;
 
   const compactLabels = {
-    "#firstGuideSection": "初めてガイド",
-    "#serviceFinderSection": "応援を探す",
-    "#purchaseGuideSection": "購入ガイド"
+    "#firstGuideSection":"初めてガイド",
+    "#serviceFinderSection":"応援を探す",
+    "#purchaseGuideSection":"購入ガイド"
   };
 
   const floatingToc = document.createElement("nav");
@@ -154,13 +388,16 @@ function setupStickyToc() {
   });
 
   let frameId = 0;
+
   function updateFloatingToc() {
     frameId = 0;
 
     const shouldShow = window.scrollY > 80 && detailedToc.getBoundingClientRect().bottom <= 8;
     floatingToc.classList.toggle("is-visible", shouldShow);
     floatingToc.setAttribute("aria-hidden", String(!shouldShow));
-    floatingLinks.forEach((link) => { link.tabIndex = shouldShow ? 0 : -1; });
+    floatingLinks.forEach((link) => {
+      link.tabIndex = shouldShow ? 0 : -1;
+    });
     document.body.classList.toggle("floating-toc-visible", shouldShow);
 
     const topOffset = 90;
@@ -168,6 +405,7 @@ function setupStickyToc() {
     targets.forEach((target) => {
       if (target.getBoundingClientRect().top <= topOffset) currentTarget = target;
     });
+
     if (currentTarget) setActiveLink(`#${currentTarget.id}`);
   }
 
@@ -176,7 +414,7 @@ function setupStickyToc() {
     frameId = window.requestAnimationFrame(updateFloatingToc);
   }
 
-  window.addEventListener("scroll", scheduleUpdate, { passive: true });
-  window.addEventListener("resize", scheduleUpdate, { passive: true });
+  window.addEventListener("scroll", scheduleUpdate, { passive:true });
+  window.addEventListener("resize", scheduleUpdate, { passive:true });
   updateFloatingToc();
 }
