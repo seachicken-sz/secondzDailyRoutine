@@ -85,8 +85,8 @@ renderAdditionalSupport = function renderAdditionalSupportByService(currentRefs)
     (service.plans || []).forEach((plan) => {
       const key = planKey(service.id, plan.id);
 
-      if (budget === 0) {
-        if (plan.planType !== "free" || currentKeys.has(key) || currentServiceIds.has(service.id)) return;
+      if (plan.planType === "free") {
+        if (currentKeys.has(key) || currentServiceIds.has(service.id)) return;
 
         candidates.push({
           service,
@@ -99,7 +99,7 @@ renderAdditionalSupport = function renderAdditionalSupportByService(currentRefs)
         return;
       }
 
-      if (plan.planType !== "paid" || currentKeys.has(key)) return;
+      if (budget <= 0 || plan.planType !== "paid" || currentKeys.has(key)) return;
 
       const monthlyPrice = getMonthlyPrice(plan);
       if (monthlyPrice === null || monthlyPrice > budget) return;
@@ -148,11 +148,11 @@ renderAdditionalSupport = function renderAdditionalSupportByService(currentRefs)
       <div class="result-card-top">
         <div>
           <h4 class="additional-service-name">${escapeHtml(group.service.name)}</h4>
-          <p class="result-card-summary">${group.candidates[0].isFree
+          <p class="result-card-summary">${group.candidates.every((candidate) => candidate.isFree)
             ? "まだ選んでいない、追加料金なしで始められる応援です。"
-            : "このサービスを追加すると、今よりできる応援が増えます。"}</p>
+            : "無料で始められる応援と、予算内で増やせる応援があります。"}</p>
         </div>
-        <span class="source-badge">${group.candidates[0].isFree ? "無料" : "追加候補"}</span>
+        <span class="source-badge">${group.candidates.every((candidate) => candidate.isFree) ? "無料" : "追加候補"}</span>
       </div>
       ${renderServiceInfoButton(group.service)}
       <div class="card-description-spacer" aria-hidden="true"></div>
