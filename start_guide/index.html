@@ -24,13 +24,9 @@
 <body>
   <div class="page-shell">
     <header class="site-header">
-      <a class="site-brand" href="../app/" aria-label="タムごとDailyを開く">
-        <img src="../img/logo.png" alt="タムごとDaily" class="site-logo">
-      </a>
-      <a class="header-app-link" href="../app/">
-        <span>Dailyへ</span>
-        <i class="bi bi-arrow-up-right"></i>
-      </a>
+      <div class="site-brand">
+        <img src="../img/logo.png" alt="タムごと はじめかたガイド" class="site-logo">
+      </div>
     </header>
 
     <main>
@@ -38,11 +34,6 @@
         <p class="hero-eyebrow">TAMUGOTO START GUIDE</p>
         <h1 id="pageTitle">今の環境から<br>できる応援を見つけよう</h1>
         <p class="hero-description">使っている音楽・動画・ラジオサービスを選ぶと、追加料金なしで始められる応援をまとめて確認できます。</p>
-        <div class="hero-tags" aria-label="このガイドの特徴">
-          <span><i class="bi bi-check-circle-fill"></i>初心者向け</span>
-          <span><i class="bi bi-phone"></i>スマホで見やすい</span>
-          <span><i class="bi bi-wallet2"></i>無料から探せる</span>
-        </div>
       </section>
 
       <nav class="mode-tabs" aria-label="応援方法の探し方" role="tablist">
@@ -102,19 +93,6 @@
 
         <div id="resultSummary" class="result-summary" aria-live="polite"></div>
         <div id="resultCards" class="result-cards"></div>
-
-        <section class="daily-cta-card">
-          <div class="daily-cta-icon" aria-hidden="true"><i class="bi bi-check2-circle"></i></div>
-          <div>
-            <p class="daily-cta-label">次は、今日できることを実行</p>
-            <h3>タムごとDailyで応援を始める</h3>
-            <p>毎日のリクエストや再生、期間限定タスクをまとめて確認できます。</p>
-          </div>
-          <a class="primary-button" href="../app/">
-            タムごとDailyを開く
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-        </section>
       </section>
 
       <section class="guide-note-card">
@@ -123,6 +101,19 @@
           <h2>全部やらなくて大丈夫</h2>
           <p>生活や予算に合わせて、できることをできる分だけ。サービス内容や料金は変更される場合があるため、契約前には各公式情報も確認してください。</p>
         </div>
+      </section>
+
+      <section class="daily-cta-card" aria-labelledby="dailyIntroTitle">
+        <div class="daily-cta-icon" aria-hidden="true"><i class="bi bi-check2-circle"></i></div>
+        <div>
+          <p class="daily-cta-label">無料応援をまとめて進めたい人へ</p>
+          <h3 id="dailyIntroTitle">タムごとDaily</h3>
+          <p>USENやラジオへのリクエストなど、その日にできる無料の応援をまとめて確認できます。</p>
+        </div>
+        <a class="primary-button" href="../app/">
+          無料応援をまとめて見る
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
       </section>
 
       <section class="coming-soon-card">
