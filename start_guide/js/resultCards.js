@@ -296,3 +296,87 @@ renderAdditionalSupport = function renderAdditionalSupportByService(currentRefs)
 
   elements.additionalSupportSection.classList.remove("hidden");
 };
+
+const SERVICE_CATEGORY_STATE_STORAGE_KEY = "tamugotoStartGuideClosedServiceCategories";
+let closedServiceCategories = loadClosedServiceCategories();
+
+function loadClosedServiceCategories() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(SERVICE_CATEGORY_STATE_STORAGE_KEY) || "[]");
+    return new Set(Array.isArray(saved) ? saved.filter((item) => typeof item === "string") : []);
+  } catch (error) {
+    console.warn("カテゴリの開閉状態を復元できませんでした。", error);
+    return new Set();
+  }
+}
+
+function saveClosedServiceCategories() {
+  localStorage.setItem(
+    SERVICE_CATEGORY_STATE_STORAGE_KEY,
+    JSON.stringify([...closedServiceCategories])
+  );
+}
+
+renderServiceGroups = function renderPersistentOpenServiceGroups() {
+  const selectableServices = getServices().filter((service) => service.showInServiceSelector !== false);
+  const grouped = groupBy(selectableServices, (service) => service.category || "other");
+  const knownCategoryIds = new Set(SELECTOR_CATEGORY_META.map((category) => category.id));
+  const additionalCategories = Object.keys(grouped)
+    .filter((categoryId) => !knownCategoryIds.has(categoryId))
+    .map((categoryId) => ({
+      id: categoryId,
+      label: categoryId,
+      note: "その他のサービス",
+      icon: "bi-grid"
+    }));
+
+  const categories = [...SELECTOR_CATEGORY_META, ...additionalCategories];
+
+  elements.serviceGroups.innerHTML = categories.map((category) => {
+    const services = grouped[category.id] || [];
+    const shouldOpen = !closedServiceCategories.has(category.id);
+
+    return `
+      <details class="service-category-accordion" data-service-category="${escapeAttribute(category.id)}"${shouldOpen ? " open" : ""}>
+        <summary class="service-category-summary">
+          <span class="service-category-summary-main">
+            <span class="service-category-summary-icon"><i class="bi ${escapeAttribute(category.icon)}" aria-hidden="true"></i></span>
+            <span class="service-category-summary-text">
+              <strong>${escapeHtml(category.label)}</strong>
+              <small>${escapeHtml(category.note)}</small>
+            </span>
+          </span>
+          <span class="service-category-summary-side">
+            <span class="service-category-count">${services.length}</span>
+            <i class="bi bi-chevron-down service-category-chevron" aria-hidden="true"></i>
+          </span>
+        </summary>
+        <div class="service-category-panel">
+          ${services.length
+            ? `<div class="service-list">${services.map(renderServiceCard).join("")}</div>`
+            : `<p class="service-category-empty">サービス情報は準備中です。</p>`}
+        </div>
+      </details>
+    `;
+  }).join("");
+
+  elements.serviceGroups.querySelectorAll("[data-service-category]").forEach((accordion) => {
+    accordion.addEventListener("toggle", () => {
+      const categoryId = accordion.dataset.serviceCategory;
+      if (!categoryId) return;
+
+      if (accordion.open) {
+        closedServiceCategories.delete(categoryId);
+      } else {
+        closedServiceCategories.add(categoryId);
+      }
+      saveClosedServiceCategories();
+    });
+  });
+
+  elements.serviceGroups.querySelectorAll("[data-plan-button]").forEach((button) => {
+    button.addEventListener("click", () => {
+      togglePlan(button.dataset.serviceId, button.dataset.planId);
+    });
+  });
+};
