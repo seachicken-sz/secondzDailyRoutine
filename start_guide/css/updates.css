@@ -95,6 +95,50 @@
   font-size: 16px;
 }
 
+/* DLリンクをカード下部へそろえる */
+.card-with-fixed-footer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-description-spacer {
+  min-height: 14px;
+  flex: 1 1 18px;
+}
+
+.card-download-footer {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--color-border);
+}
+
+/* このサービスについて */
+.service-info-button {
+  width: fit-content;
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 7px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-brand-dark);
+  background: var(--color-brand-soft);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.service-info-button:hover {
+  border-color: var(--color-brand);
+}
+
+.service-info-button i {
+  flex-shrink: 0;
+}
+
 /* 追加候補ではサービス名とプラン名を分離 */
 .additional-service-name {
   margin: 0;
@@ -109,12 +153,6 @@
   font-weight: 700;
 }
 
-.additional-support-card .app-download-links {
-  margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1px solid var(--color-border);
-}
-
 /* できる応援は1サービスにつき1カード */
 .service-result-card .additional-plan-name {
   line-height: 1.75;
@@ -123,7 +161,7 @@
 .service-plan-candidates {
   display: grid;
   gap: 10px;
-  margin-top: 14px;
+  margin-top: 0;
 }
 
 .service-plan-candidate {
@@ -277,39 +315,100 @@
   margin-top: 10px;
 }
 
-/* 説明は無料サービス欄と結果欄に表示 */
-.free-app-card .service-details,
-.service-result-card .service-details,
-.additional-support-card .service-details {
-  margin-top: 14px;
+.result-daily-intro {
+  margin-top: 22px;
 }
 
-.free-app-card .service-details summary,
-.service-result-card .service-details summary,
-.additional-support-card .service-details summary {
-  min-height: 42px;
+/* サービス説明モーダル */
+body.service-info-modal-open {
+  overflow: hidden;
+}
+
+.service-info-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 16px 12px max(16px, env(safe-area-inset-bottom));
+}
+
+.service-info-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.46);
+}
+
+.service-info-modal-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 620px);
+  max-height: min(78dvh, 720px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 22px;
+  background: var(--color-surface);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.26);
+}
+
+.service-info-modal-header {
+  min-height: 62px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 12px;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--color-border);
 }
 
-.free-app-card .service-details summary::after,
-.service-result-card .service-details summary::after,
-.additional-support-card .service-details summary::after {
-  content: "+";
+.service-info-modal-header h2 {
+  margin: 0;
   font-size: 18px;
-  line-height: 1;
+  line-height: 1.4;
 }
 
-.free-app-card .service-details[open] summary::after,
-.service-result-card .service-details[open] summary::after,
-.additional-support-card .service-details[open] summary::after {
-  content: "−";
+.service-info-modal-close {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--color-text-sub);
+  background: var(--color-surface-soft);
+  cursor: pointer;
 }
 
-.result-daily-intro {
-  margin-top: 22px;
+.service-info-modal-body {
+  overflow-y: auto;
+  padding: 16px;
+  color: var(--color-text-sub);
+  font-size: 14px;
+}
+
+.service-info-modal-section + .service-info-modal-section {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-border);
+}
+
+.service-info-modal-section h3 {
+  margin: 0 0 8px;
+  color: var(--color-text);
+  font-size: 16px;
+}
+
+.service-info-modal-section p,
+.service-info-modal-section ul,
+.service-info-modal-section ol {
+  margin: 0 0 10px;
+}
+
+.service-info-modal-section ul,
+.service-info-modal-section ol {
+  padding-left: 1.4em;
 }
 
 @media (min-width: 700px) {
@@ -321,6 +420,11 @@
 
   .page-toc-scroll {
     justify-content: center;
+  }
+
+  .service-info-modal {
+    align-items: center;
+    padding: 24px;
   }
 }
 
