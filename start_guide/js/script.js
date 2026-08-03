@@ -2,6 +2,7 @@
 
 const DATA_URL = "./data/services.json";
 const STORAGE_KEY = "tamugotoStartGuideSelectedPlans";
+const BUDGET_STORAGE_KEY = "tamugotoStartGuideBudget";
 
 const CATEGORY_META = {
   music: { label: "音楽", icon: "bi-music-note-beamed" },
@@ -11,75 +12,83 @@ const CATEGORY_META = {
 
 const FEATURE_LABELS = {
   "music-streaming": "公式音源を聴く",
-  "stationhead-compatible": "Stationhead連携",
-  "music-ad-free": "広告なし再生",
-  "music-background-play": "バックグラウンド再生",
-  "music-offline-play": "オフライン再生",
+  "stationhead-compatible": "Stationheadに参加する",
+  "music-ad-free": "広告なしで再生する",
+  "music-background-play": "バックグラウンド再生する",
+  "music-offline-play": "オフライン再生する",
   "catch-up-video": "見逃し配信を見る",
-  "video-streaming": "出演作品を見る",
-  "channel-subscribe": "チャンネル登録",
-  "video-like": "高評価",
-  "video-ad-free": "広告なし視聴",
-  "video-background-play": "バックグラウンド再生",
-  "video-offline-play": "オフライン再生",
+  "video-streaming": "出演番組・作品を見る",
+  "channel-subscribe": "公式チャンネルを登録する",
+  "video-like": "公式動画を高評価する",
+  "video-ad-free": "広告なしで視聴する",
+  "video-background-play": "バックグラウンド再生する",
+  "video-offline-play": "オフライン再生する",
   "radio-live": "放送を聴く",
-  "radio-timeshift-local": "タイムフリー",
+  "radio-timeshift-local": "タイムフリーで聴く",
   "radio-area-free": "全国の放送局を聴く",
-  "radio-time-free-30": "過去30日以内を聴く",
-  "radio-unlimited-listening": "聴取時間制限なし"
+  "radio-time-free-30": "過去30日以内の番組を聴く",
+  "radio-unlimited-listening": "聴取時間制限なしで聴く"
 };
 
 const state = {
   data: null,
   selectedPlans: new Map(),
-  mode: "services"
+  budget: 0
 };
 
 const elements = {};
 
 document.addEventListener("DOMContentLoaded", () => {
   cacheElements();
-  bindStaticEvents();
-  loadGuideData();
+  bindEvents();
+  loadData();
 });
 
 function cacheElements() {
-  elements.loadingPanel = document.getElementById("loadingPanel");
-  elements.errorPanel = document.getElementById("errorPanel");
-  elements.errorMessage = document.getElementById("errorMessage");
-  elements.retryButton = document.getElementById("retryButton");
-  elements.serviceTab = document.getElementById("serviceTab");
-  elements.freeTab = document.getElementById("freeTab");
-  elements.servicePanel = document.getElementById("servicePanel");
-  elements.freePanel = document.getElementById("freePanel");
-  elements.serviceGroups = document.getElementById("serviceGroups");
-  elements.freeServiceGroups = document.getElementById("freeServiceGroups");
-  elements.selectionCount = document.getElementById("selectionCount");
-  elements.resetSelectionButton = document.getElementById("resetSelectionButton");
-  elements.showResultButton = document.getElementById("showResultButton");
-  elements.resultSection = document.getElementById("resultSection");
-  elements.resultSummary = document.getElementById("resultSummary");
-  elements.resultCards = document.getElementById("resultCards");
-  elements.editSelectionButton = document.getElementById("editSelectionButton");
+  [
+    "freeAppsGrid",
+    "serviceGroups",
+    "selectionCount",
+    "resetSelectionButton",
+    "showResultButton",
+    "budgetSelect",
+    "resultSection",
+    "resultSummary",
+    "resultCards",
+    "emptyCurrentResult",
+    "additionalSupportSection",
+    "additionalSupportCards",
+    "additionalBudgetBadge",
+    "editSelectionButton",
+    "loadingPanel",
+    "errorPanel",
+    "errorMessage",
+    "retryButton",
+    "serviceFinderSection"
+  ].forEach((id) => {
+    elements[id] = document.getElementById(id);
+  });
 }
 
-function bindStaticEvents() {
-  document.querySelectorAll("[data-mode]").forEach((button) => {
-    button.addEventListener("click", () => switchMode(button.dataset.mode));
-  });
-
-  elements.retryButton.addEventListener("click", loadGuideData);
+function bindEvents() {
   elements.resetSelectionButton.addEventListener("click", resetSelection);
   elements.showResultButton.addEventListener("click", showResults);
   elements.editSelectionButton.addEventListener("click", () => {
-    switchMode("services");
-    elements.servicePanel.scrollIntoView({ behavior: "smooth", block: "start" });
+    elements.serviceFinderSection.scrollIntoView({ behavior: "smooth", block: "start" });
   });
+  elements.budgetSelect.addEventListener("change", (event) => {
+    state.budget = Number(event.target.value) || 0;
+    localStorage.setItem(BUDGET_STORAGE_KEY, String(state.budget));
+    if (!elements.resultSection.classList.contains("hidden")) {
+      renderResults();
+    }
+  });
+  elements.retryButton.addEventListener("click", loadData);
 }
 
-async function loadGuideData() {
-  setLoading(true);
-  hideError();
+async function loadData() {
+  showLoading(true);
+  elements.errorPanel.classList.add("hidden");
 
   try {
     const response = await fetch(`${DATA_URL}?v=${Date.now()}`, { cache: "no-store" });
@@ -87,229 +96,189 @@ async function loadGuideData() {
       throw new Error(`HTTP ${response.status}`);
     }
 
-    const data = await response.json();
-    validateGuideData(data);
-    state.data = data;
-    restoreSelection();
-    renderAll();
+    state.data = await response.json();
+    restoreState();
+    renderFreeApps();
+    renderServiceGroups();
+    updateSelectionCount();
+    showLoading(false);
   } catch (error) {
-    console.error("start_guide data load failed", error);
-    showError("サービス情報を読み込めませんでした。通信状態を確認して、再読み込みしてください。");
-  } finally {
-    setLoading(false);
+    console.error(error);
+    showLoading(false);
+    elements.errorMessage.textContent = "サービス情報の取得に失敗しました。通信状況を確認して、もう一度お試しください。";
+    elements.errorPanel.classList.remove("hidden");
   }
 }
 
-function validateGuideData(data) {
-  if (!data || !Array.isArray(data.services)) {
-    throw new Error("services.json の形式が正しくありません");
-  }
+function restoreState() {
+  state.selectedPlans.clear();
 
-  for (const service of data.services) {
-    if (!service.id || !service.name || !Array.isArray(service.plans)) {
-      throw new Error(`サービスデータが不完全です: ${service?.id || "unknown"}`);
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+    if (Array.isArray(saved)) {
+      saved.forEach((item) => {
+        if (item?.serviceId && item?.planId) {
+          state.selectedPlans.set(item.serviceId, item.planId);
+        }
+      });
     }
+  } catch (error) {
+    console.warn("保存済みプランを復元できませんでした。", error);
   }
+
+  state.budget = Number(localStorage.getItem(BUDGET_STORAGE_KEY)) || 0;
+  elements.budgetSelect.value = String(state.budget);
 }
 
-function renderAll() {
-  renderServiceSelector();
-  renderFreeServices();
-  updateSelectionUI();
-
-  if (state.selectedPlans.size > 0) {
-    renderResults();
-  } else {
-    elements.resultSection.classList.add("hidden");
-  }
+function saveSelection() {
+  const value = Array.from(state.selectedPlans, ([serviceId, planId]) => ({ serviceId, planId }));
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(value));
 }
 
-function renderServiceSelector() {
-  elements.serviceGroups.replaceChildren();
-  const services = [...state.data.services]
-    .filter((service) => service.showInServiceSelector)
-    .sort(sortByDisplayOrder);
+function getServices() {
+  return [...(state.data?.services || [])].sort((a, b) => (a.displayOrder || 0) - (b.displayOrder || 0));
+}
 
-  Object.keys(CATEGORY_META).forEach((category) => {
-    const categoryServices = services.filter((service) => service.category === category);
-    if (categoryServices.length === 0) return;
+function renderFreeApps() {
+  const freeItems = [];
 
-    const section = document.createElement("section");
-    section.className = "service-group";
+  getServices().forEach((service) => {
+    const freePlan = (service.plans || []).find((plan) => plan.planType === "free");
+    if (freePlan) {
+      freeItems.push({ service, plan: freePlan });
+    }
+  });
 
-    const heading = createCategoryHeading(category);
-    const list = document.createElement("div");
-    list.className = "service-list";
+  elements.freeAppsGrid.innerHTML = freeItems.map(({ service, plan }) => {
+    const category = CATEGORY_META[service.category] || { label: service.category || "その他" };
+    return `
+      <article class="free-app-card">
+        <div class="free-app-top">
+          <div>
+            <h3>${escapeHtml(service.name)}</h3>
+            <p>${escapeHtml(service.content?.summary || "無料で利用できます。")}</p>
+          </div>
+          <span class="price-badge">無料</span>
+        </div>
+        <div class="feature-list">${renderFeatureChips(plan.features || [])}</div>
+        <span class="service-category-chip">${escapeHtml(category.label)}</span>
+      </article>
+    `;
+  }).join("");
+}
 
-    categoryServices.forEach((service) => list.append(createServiceSelectorCard(service)));
-    section.append(heading, list);
-    elements.serviceGroups.append(section);
+function renderServiceGroups() {
+  const selectableServices = getServices().filter((service) => service.showInServiceSelector !== false);
+  const grouped = groupBy(selectableServices, (service) => service.category || "other");
+
+  elements.serviceGroups.innerHTML = Object.entries(CATEGORY_META)
+    .filter(([category]) => grouped[category]?.length)
+    .map(([category, meta]) => `
+      <section class="service-group">
+        <div class="service-group-heading">
+          <i class="bi ${meta.icon}" aria-hidden="true"></i>
+          <h3>${meta.label}</h3>
+        </div>
+        <div class="service-list">
+          ${grouped[category].map(renderServiceCard).join("")}
+        </div>
+      </section>
+    `).join("");
+
+  elements.serviceGroups.querySelectorAll("[data-plan-button]").forEach((button) => {
+    button.addEventListener("click", () => {
+      togglePlan(button.dataset.serviceId, button.dataset.planId);
+    });
   });
 }
 
-function createServiceSelectorCard(service) {
-  const card = document.createElement("article");
-  card.className = "service-card";
-  card.dataset.serviceId = service.id;
+function renderServiceCard(service) {
+  const selectedPlanId = state.selectedPlans.get(service.id);
+  const category = CATEGORY_META[service.category] || { label: service.category || "その他" };
+  const plans = (service.plans || []).map((plan) => {
+    const selected = selectedPlanId === plan.id;
+    return `
+      <button
+        type="button"
+        class="plan-option${selected ? " selected" : ""}"
+        data-plan-button
+        data-service-id="${escapeAttribute(service.id)}"
+        data-plan-id="${escapeAttribute(plan.id)}"
+        aria-pressed="${selected}"
+      >
+        <span class="plan-option-main">
+          <span class="plan-option-name">${escapeHtml(plan.name)}</span>
+          <span class="plan-option-price">${escapeHtml(formatPlanPrice(plan))}</span>
+        </span>
+        <span class="plan-option-check"><i class="bi bi-check-lg"></i></span>
+      </button>
+    `;
+  }).join("");
 
-  const header = document.createElement("div");
-  header.className = "service-card-header";
-
-  const titleWrap = document.createElement("div");
-  titleWrap.className = "service-card-title";
-
-  const title = document.createElement("h4");
-  title.textContent = service.name;
-
-  const summary = document.createElement("p");
-  summary.textContent = service.content?.summary || "";
-
-  const categoryChip = document.createElement("span");
-  categoryChip.className = "service-category-chip";
-  categoryChip.textContent = CATEGORY_META[service.category]?.label || service.category;
-
-  titleWrap.append(title, summary);
-  header.append(titleWrap, categoryChip);
-
-  const plans = document.createElement("div");
-  plans.className = "plan-options";
-  plans.setAttribute("role", "radiogroup");
-  plans.setAttribute("aria-label", `${service.name}のプラン`);
-
-  service.plans.forEach((plan) => plans.append(createPlanOption(service, plan)));
-
-  card.append(header, plans);
-
-  if (service.trialPolicy?.available) {
-    const trial = document.createElement("span");
-    trial.className = "trial-chip";
-    trial.innerHTML = `<i class="bi bi-stars"></i>${escapeText(service.trialPolicy.label || "無料体験あり")}`;
-    card.append(trial);
-  }
-
-  const details = createContentDetails(service.content, state.data.htmlPolicy);
-  if (details) card.append(details);
-
-  return card;
+  return `
+    <article class="service-card">
+      <div class="service-card-header">
+        <div class="service-card-title">
+          <h4>${escapeHtml(service.name)}</h4>
+          <p>${escapeHtml(service.content?.summary || "")}</p>
+        </div>
+        <span class="service-category-chip">${escapeHtml(category.label)}</span>
+      </div>
+      <div class="plan-options">${plans}</div>
+      ${renderTrialPolicy(service)}
+      ${renderServiceDetails(service)}
+    </article>
+  `;
 }
 
-function createPlanOption(service, plan) {
-  const button = document.createElement("button");
-  button.type = "button";
-  button.className = "plan-option";
-  button.dataset.serviceId = service.id;
-  button.dataset.planId = plan.id;
-  button.setAttribute("role", "radio");
-
-  const main = document.createElement("span");
-  main.className = "plan-option-main";
-
-  const name = document.createElement("span");
-  name.className = "plan-option-name";
-  name.textContent = plan.shortName || plan.name;
-
-  const price = document.createElement("span");
-  price.className = "plan-option-price";
-  price.textContent = formatPlanPrice(plan);
-
-  const check = document.createElement("span");
-  check.className = "plan-option-check";
-  check.innerHTML = '<i class="bi bi-check"></i>';
-  check.setAttribute("aria-hidden", "true");
-
-  main.append(name, price);
-  button.append(main, check);
-  button.addEventListener("click", () => togglePlanSelection(service.id, plan.id));
-
-  return button;
+function renderTrialPolicy(service) {
+  const policy = service.trialPolicy;
+  if (!policy?.available) return "";
+  return `<span class="trial-chip"><i class="bi bi-stars"></i>${escapeHtml(policy.label || "無料体験あり")}</span>`;
 }
 
-function togglePlanSelection(serviceId, planId) {
+function renderServiceDetails(service) {
+  const sections = service.content?.sections || [];
+  if (!sections.length) return "";
+
+  return `
+    <details class="service-details">
+      <summary>このサービスについて</summary>
+      <div class="service-detail-content">
+        ${sections.map((section) => `
+          <section>
+            <h5>${escapeHtml(section.title || "")}</h5>
+            ${sanitizeHtml(section.bodyHtml || "")}
+          </section>
+        `).join("")}
+      </div>
+    </details>
+  `;
+}
+
+function togglePlan(serviceId, planId) {
   if (state.selectedPlans.get(serviceId) === planId) {
     state.selectedPlans.delete(serviceId);
   } else {
     state.selectedPlans.set(serviceId, planId);
   }
 
-  persistSelection();
-  updateSelectionUI();
-  elements.resultSection.classList.add("hidden");
-}
-
-function updateSelectionUI() {
-  document.querySelectorAll(".plan-option").forEach((button) => {
-    const selected = state.selectedPlans.get(button.dataset.serviceId) === button.dataset.planId;
-    button.classList.toggle("selected", selected);
-    button.setAttribute("aria-checked", String(selected));
-  });
-
-  const count = state.selectedPlans.size;
-  elements.selectionCount.textContent = `${count}件`;
-  elements.resetSelectionButton.disabled = count === 0;
-  elements.showResultButton.innerHTML = count === 0
-    ? '無料でできる応援を見る<i class="bi bi-arrow-down"></i>'
-    : 'できる応援を見る<i class="bi bi-arrow-down"></i>';
+  saveSelection();
+  renderServiceGroups();
+  updateSelectionCount();
 }
 
 function resetSelection() {
   state.selectedPlans.clear();
-  persistSelection();
-  updateSelectionUI();
+  saveSelection();
+  renderServiceGroups();
+  updateSelectionCount();
   elements.resultSection.classList.add("hidden");
 }
 
-function renderFreeServices() {
-  elements.freeServiceGroups.replaceChildren();
-
-  Object.keys(CATEGORY_META).forEach((category) => {
-    const freeEntries = getFreePlanEntries().filter(({ service }) => service.category === category);
-    if (freeEntries.length === 0) return;
-
-    const section = document.createElement("section");
-    section.className = "service-group";
-    const heading = createCategoryHeading(category);
-    const list = document.createElement("div");
-    list.className = "free-card-list";
-
-    freeEntries.forEach(({ service, plan }) => list.append(createFreeServiceCard(service, plan)));
-    section.append(heading, list);
-    elements.freeServiceGroups.append(section);
-  });
-}
-
-function getFreePlanEntries() {
-  return [...state.data.services]
-    .sort(sortByDisplayOrder)
-    .flatMap((service) => service.plans
-      .filter((plan) => plan.planType === "free")
-      .map((plan) => ({ service, plan })));
-}
-
-function createFreeServiceCard(service, plan) {
-  const card = document.createElement("article");
-  card.className = "free-service-card";
-
-  const top = document.createElement("div");
-  top.className = "free-card-top";
-
-  const titleWrap = document.createElement("div");
-  const title = document.createElement("h3");
-  title.textContent = plan.name;
-  const summary = document.createElement("p");
-  summary.textContent = service.content?.summary || "";
-
-  const badge = document.createElement("span");
-  badge.className = "price-badge";
-  badge.textContent = "無料";
-
-  titleWrap.append(title, summary);
-  top.append(titleWrap, badge);
-  card.append(top, createFeatureList(plan.features));
-
-  const details = createContentDetails(service.content, state.data.htmlPolicy);
-  if (details) card.append(details);
-
-  return card;
+function updateSelectionCount() {
+  const count = state.selectedPlans.size;
+  elements.selectionCount.textContent = `${count}件`;
 }
 
 function showResults() {
@@ -319,267 +288,231 @@ function showResults() {
 }
 
 function renderResults() {
-  const entries = resolveAvailablePlans();
-  elements.resultCards.replaceChildren();
+  const selectedRefs = Array.from(state.selectedPlans, ([serviceId, planId]) => ({ serviceId, planId }));
+  const resolvedRefs = resolveIncludedPlans(selectedRefs);
+  const currentItems = resolvedRefs.map((ref) => getPlanRecord(ref.serviceId, ref.planId)).filter(Boolean);
 
-  if (entries.length === 0) {
-    elements.resultSummary.innerHTML = "<p>有料サービスを選ばなくても、無料で始められる応援があります。</p>";
-    getFreePlanEntries().forEach(({ service, plan }) => {
-      elements.resultCards.append(createResultCard(service, plan, { source: "free" }));
-    });
+  elements.resultSummary.textContent = currentItems.length
+    ? `${state.selectedPlans.size}件の選択から、${currentItems.length}件の利用可能なプランを確認しました。`
+    : "利用中のプランがまだ選択されていません。";
+
+  elements.resultCards.innerHTML = currentItems.map((item) => renderResultCard(item, resolvedRefs)).join("");
+  elements.emptyCurrentResult.classList.toggle("hidden", currentItems.length > 0);
+
+  renderAdditionalSupport(resolvedRefs);
+}
+
+function renderAdditionalSupport(currentRefs) {
+  const budget = state.budget;
+  const currentKeys = new Set(currentRefs.map((ref) => planKey(ref.serviceId, ref.planId)));
+  const currentFeatures = new Set(
+    currentRefs.flatMap((ref) => getPlanRecord(ref.serviceId, ref.planId)?.plan.features || [])
+  );
+
+  if (budget <= 0) {
+    elements.additionalSupportSection.classList.add("hidden");
+    elements.additionalSupportCards.innerHTML = "";
     return;
   }
 
-  const directCount = entries.filter((entry) => entry.source === "selected").length;
-  const includedCount = entries.length - directCount;
-  const includedText = includedCount > 0 ? `、契約に含まれるサービス${includedCount}件` : "";
-  elements.resultSummary.innerHTML = `<p>選択したサービス${directCount}件${includedText}から、追加料金なしでできることを表示しています。</p>`;
+  const candidates = [];
 
-  entries.forEach((entry) => {
-    const service = findService(entry.serviceId);
-    const plan = findPlan(entry.serviceId, entry.planId);
-    if (!service || !plan) return;
-    elements.resultCards.append(createResultCard(service, plan, entry));
+  getServices().forEach((service) => {
+    (service.plans || []).forEach((plan) => {
+      const key = planKey(service.id, plan.id);
+      if (plan.planType !== "paid" || currentKeys.has(key)) return;
+
+      const monthlyPrice = getMonthlyPrice(plan);
+      if (monthlyPrice === null || monthlyPrice > budget) return;
+
+      const candidateRefs = resolveIncludedPlans([{ serviceId: service.id, planId: plan.id }]);
+      const candidateFeatures = new Set(
+        candidateRefs.flatMap((ref) => getPlanRecord(ref.serviceId, ref.planId)?.plan.features || [])
+      );
+      const newFeatures = [...candidateFeatures].filter((feature) => !currentFeatures.has(feature));
+      if (!newFeatures.length) return;
+
+      candidates.push({ service, plan, monthlyPrice, newFeatures, candidateRefs });
+    });
   });
+
+  candidates.sort((a, b) => a.monthlyPrice - b.monthlyPrice || a.service.displayOrder - b.service.displayOrder);
+
+  if (!candidates.length) {
+    elements.additionalSupportSection.classList.add("hidden");
+    elements.additionalSupportCards.innerHTML = "";
+    return;
+  }
+
+  elements.additionalBudgetBadge.textContent = `＋${budget.toLocaleString("ja-JP")}円まで`;
+  elements.additionalSupportCards.innerHTML = candidates.map((candidate) => `
+    <article class="result-card">
+      <div class="result-card-top">
+        <div>
+          <h4>${escapeHtml(candidate.plan.name)}</h4>
+          <p class="result-card-summary">${escapeHtml(candidate.service.name)}で、今よりできることが増えます。</p>
+        </div>
+        <span class="source-badge">追加候補</span>
+      </div>
+      <p class="additional-price">月額＋${candidate.monthlyPrice.toLocaleString("ja-JP")}円</p>
+      <div class="feature-list">${renderFeatureChips(candidate.newFeatures)}</div>
+      ${renderIncludedPlanNames(candidate.candidateRefs)}
+    </article>
+  `).join("");
+  elements.additionalSupportSection.classList.remove("hidden");
 }
 
-function resolveAvailablePlans() {
-  const resolved = new Map();
-  const queue = [];
+function renderResultCard(item, resolvedRefs) {
+  const source = resolvedRefs.find((ref) => ref.serviceId === item.service.id && ref.planId === item.plan.id);
+  const sourceLabel = source?.source === "included" ? "含まれるプラン" : "選択中";
 
-  state.selectedPlans.forEach((planId, serviceId) => {
-    queue.push({ serviceId, planId, source: "selected", includedBy: null });
-  });
+  return `
+    <article class="result-card">
+      <div class="result-card-top">
+        <div>
+          <h4>${escapeHtml(item.plan.name)}</h4>
+          <p class="result-card-summary">${escapeHtml(item.service.content?.summary || "")}</p>
+        </div>
+        <span class="source-badge">${sourceLabel}</span>
+      </div>
+      <div class="feature-list">${renderFeatureChips(item.plan.features || [])}</div>
+      ${source?.includedBy ? `<p class="included-note">${escapeHtml(getPlanName(source.includedBy.serviceId, source.includedBy.planId))}に含まれています。</p>` : ""}
+    </article>
+  `;
+}
 
-  while (queue.length > 0) {
-    const entry = queue.shift();
-    const key = `${entry.serviceId}.${entry.planId}`;
-    if (resolved.has(key)) continue;
+function resolveIncludedPlans(initialRefs) {
+  const result = [];
+  const queue = initialRefs.map((ref) => ({ ...ref, source: "selected" }));
+  const seen = new Set();
 
-    const plan = findPlan(entry.serviceId, entry.planId);
-    if (!plan) continue;
+  while (queue.length) {
+    const ref = queue.shift();
+    const key = planKey(ref.serviceId, ref.planId);
+    if (seen.has(key)) continue;
 
-    resolved.set(key, entry);
-    (plan.includedPlans || []).forEach((included) => {
+    const record = getPlanRecord(ref.serviceId, ref.planId);
+    if (!record) continue;
+
+    seen.add(key);
+    result.push(ref);
+
+    (record.plan.includedPlans || []).forEach((included) => {
       queue.push({
         serviceId: included.serviceId,
         planId: included.planId,
         source: "included",
-        includedBy: { serviceId: entry.serviceId, planId: entry.planId }
+        includedBy: { serviceId: ref.serviceId, planId: ref.planId }
       });
     });
   }
 
-  return [...resolved.values()].sort((a, b) => {
-    if (a.source !== b.source) return a.source === "selected" ? -1 : 1;
-    return sortByDisplayOrder(findService(a.serviceId), findService(b.serviceId));
-  });
+  return result;
 }
 
-function createResultCard(service, plan, entry) {
-  const card = document.createElement("article");
-  card.className = `result-card${entry.source === "included" ? " included" : ""}`;
-
-  const top = document.createElement("div");
-  top.className = "result-card-top";
-
-  const titleWrap = document.createElement("div");
-  const title = document.createElement("h3");
-  title.textContent = plan.name;
-  const summary = document.createElement("p");
-  summary.className = "result-card-summary";
-  summary.textContent = service.content?.summary || "";
-
-  const price = document.createElement("span");
-  price.className = "price-badge";
-  price.textContent = entry.source === "free" ? "無料" : "追加料金なし";
-
-  titleWrap.append(title, summary);
-  top.append(titleWrap, price);
-
-  const badges = document.createElement("div");
-  badges.className = "result-card-badges";
-  const sourceBadge = document.createElement("span");
-  sourceBadge.className = `source-badge${entry.source === "included" ? " included" : ""}`;
-  sourceBadge.textContent = entry.source === "included" ? "契約に含まれる" : entry.source === "free" ? "無料サービス" : "選択したプラン";
-  badges.append(sourceBadge);
-
-  card.append(top, badges, createFeatureList(plan.features));
-
-  if (entry.source === "included" && entry.includedBy) {
-    const parentPlan = findPlan(entry.includedBy.serviceId, entry.includedBy.planId);
-    const note = document.createElement("p");
-    note.className = "plan-inclusion-note";
-    note.textContent = `${parentPlan?.name || "選択したプラン"}に含まれているため利用できます。`;
-    card.append(note);
-  }
-
-  if (service.trialPolicy?.available && service.trialPolicy.appliesToPlanIds?.includes(plan.id)) {
-    const trial = document.createElement("span");
-    trial.className = "trial-chip";
-    trial.innerHTML = `<i class="bi bi-stars"></i>${escapeText(service.trialPolicy.label || "無料体験あり")}`;
-    card.append(trial);
-  }
-
-  const details = createContentDetails(service.content, state.data.htmlPolicy);
-  if (details) card.append(details);
-
-  return card;
+function getPlanRecord(serviceId, planId) {
+  const service = getServices().find((item) => item.id === serviceId);
+  const plan = service?.plans?.find((item) => item.id === planId);
+  return service && plan ? { service, plan } : null;
 }
 
-function createFeatureList(features = []) {
-  const list = document.createElement("div");
-  list.className = "feature-list";
-
-  features.forEach((feature) => {
-    const chip = document.createElement("span");
-    chip.className = "feature-chip";
-    chip.textContent = FEATURE_LABELS[feature] || feature;
-    list.append(chip);
-  });
-
-  return list;
+function getPlanName(serviceId, planId) {
+  return getPlanRecord(serviceId, planId)?.plan.name || "対象プラン";
 }
 
-function createContentDetails(content, policy) {
-  if (!content?.sections?.length) return null;
+function getMonthlyPrice(plan) {
+  const options = plan.billingOptions || [];
+  const monthly = options.find((option) => option.cycle === "monthly" && Number.isFinite(option.amount));
+  if (monthly) return Number(monthly.amount);
 
-  const details = document.createElement("details");
-  details.className = "service-details";
-  const summary = document.createElement("summary");
-  summary.textContent = "詳しく見る";
-  const wrapper = document.createElement("div");
-  wrapper.className = "service-detail-content";
+  const yearly = options.find((option) => option.cycle === "yearly" && Number.isFinite(option.amount));
+  if (yearly) return Math.ceil(Number(yearly.amount) / 12);
 
-  content.sections.forEach((section) => {
-    if (section.title) {
-      const heading = document.createElement("h5");
-      heading.textContent = section.title;
-      wrapper.append(heading);
-    }
-
-    const body = document.createElement("div");
-    body.innerHTML = sanitizeHtml(section.bodyHtml || "", policy);
-    wrapper.append(body);
-  });
-
-  details.append(summary, wrapper);
-  return details;
-}
-
-function sanitizeHtml(html, policy = {}) {
-  const allowedTags = new Set((policy.allowedTags || ["p", "strong", "em", "ul", "ol", "li", "br", "small", "span"]).map((tag) => tag.toUpperCase()));
-  const allowedSpanClasses = new Set(policy.allowedSpanClasses || []);
-  const template = document.createElement("template");
-  template.innerHTML = html;
-
-  const sanitizeNode = (node) => {
-    [...node.children].forEach((child) => {
-      if (!allowedTags.has(child.tagName)) {
-        child.replaceWith(document.createTextNode(child.textContent || ""));
-        return;
-      }
-
-      const originalClass = child.tagName === "SPAN" ? (child.getAttribute("class") || "") : "";
-      [...child.attributes].forEach((attribute) => child.removeAttribute(attribute.name));
-      if (child.tagName === "SPAN") {
-        const safeClasses = originalClass.split(/\s+/).filter((name) => allowedSpanClasses.has(name));
-        if (safeClasses.length > 0) child.className = safeClasses.join(" ");
-      }
-      sanitizeNode(child);
-    });
-  };
-
-  sanitizeNode(template.content);
-  return template.innerHTML;
-}
-
-function createCategoryHeading(category) {
-  const meta = CATEGORY_META[category] || { label: category, icon: "bi-circle" };
-  const heading = document.createElement("div");
-  heading.className = "service-group-heading";
-  heading.innerHTML = `<i class="bi ${meta.icon}"></i><h3>${escapeText(meta.label)}</h3>`;
-  return heading;
-}
-
-function switchMode(mode) {
-  state.mode = mode;
-  const showServices = mode === "services";
-  elements.serviceTab.classList.toggle("active", showServices);
-  elements.freeTab.classList.toggle("active", !showServices);
-  elements.serviceTab.setAttribute("aria-selected", String(showServices));
-  elements.freeTab.setAttribute("aria-selected", String(!showServices));
-  elements.servicePanel.classList.toggle("hidden", !showServices);
-  elements.freePanel.classList.toggle("hidden", showServices);
+  return null;
 }
 
 function formatPlanPrice(plan) {
   if (plan.planType === "free") return "無料";
-  if (!Array.isArray(plan.billingOptions) || plan.billingOptions.length === 0) return "料金は公式情報を確認";
-
-  const parts = plan.billingOptions.map((option) => {
-    const cycle = option.cycle === "monthly" ? "月額" : option.cycle === "yearly" ? "年額" : option.cycle;
-    if (typeof option.amount !== "number") return `${cycle}料金は公式情報を確認`;
-    return `${cycle}${option.amount.toLocaleString("ja-JP")}円`;
-  });
-  return parts.join("・");
+  const monthly = getMonthlyPrice(plan);
+  return monthly === null ? "料金は公式情報を確認" : `月額${monthly.toLocaleString("ja-JP")}円`;
 }
 
-function findService(serviceId) {
-  return state.data?.services.find((service) => service.id === serviceId) || null;
+function renderIncludedPlanNames(refs) {
+  const included = refs.filter((ref) => ref.source === "included");
+  if (!included.length) return "";
+  const names = included.map((ref) => getPlanName(ref.serviceId, ref.planId));
+  return `<p class="included-note">${escapeHtml(names.join("、"))}も含まれます。</p>`;
 }
 
-function findPlan(serviceId, planId) {
-  return findService(serviceId)?.plans.find((plan) => plan.id === planId) || null;
-}
-
-function persistSelection() {
-  const data = [...state.selectedPlans.entries()].map(([serviceId, planId]) => ({ serviceId, planId }));
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-  } catch (error) {
-    console.warn("selection save failed", error);
+function renderFeatureChips(features) {
+  const unique = [...new Set(features)];
+  if (!unique.length) {
+    return `<span class="feature-chip"><i class="bi bi-check-circle"></i>利用できる応援を確認中</span>`;
   }
+
+  return unique.map((feature) => `
+    <span class="feature-chip"><i class="bi bi-check-circle"></i>${escapeHtml(FEATURE_LABELS[feature] || feature)}</span>
+  `).join("");
 }
 
-function restoreSelection() {
-  state.selectedPlans.clear();
-  try {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-    if (!Array.isArray(saved)) return;
+function sanitizeHtml(html) {
+  const allowedTags = new Set((state.data?.htmlPolicy?.allowedTags || []).map((tag) => tag.toUpperCase()));
+  const allowedClasses = new Set(state.data?.htmlPolicy?.allowedSpanClasses || []);
+  const template = document.createElement("template");
+  template.innerHTML = html;
 
-    saved.forEach((entry) => {
-      if (entry?.serviceId && entry?.planId && findPlan(entry.serviceId, entry.planId)) {
-        state.selectedPlans.set(entry.serviceId, entry.planId);
+  const walker = document.createTreeWalker(template.content, NodeFilter.SHOW_ELEMENT);
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+
+  nodes.forEach((node) => {
+    if (!allowedTags.has(node.tagName)) {
+      node.replaceWith(...node.childNodes);
+      return;
+    }
+
+    [...node.attributes].forEach((attribute) => {
+      if (node.tagName === "SPAN" && attribute.name === "class") {
+        const validClasses = attribute.value.split(/\s+/).filter((className) => allowedClasses.has(className));
+        if (validClasses.length) {
+          node.setAttribute("class", validClasses.join(" "));
+        } else {
+          node.removeAttribute("class");
+        }
+      } else {
+        node.removeAttribute(attribute.name);
       }
     });
-  } catch (error) {
-    console.warn("selection restore failed", error);
-  }
+  });
+
+  return template.innerHTML;
 }
 
-function sortByDisplayOrder(a, b) {
-  return (a?.displayOrder ?? 9999) - (b?.displayOrder ?? 9999);
+function groupBy(items, keyGetter) {
+  return items.reduce((groups, item) => {
+    const key = keyGetter(item);
+    (groups[key] ||= []).push(item);
+    return groups;
+  }, {});
 }
 
-function setLoading(isLoading) {
-  elements.loadingPanel.classList.toggle("hidden", !isLoading);
+function planKey(serviceId, planId) {
+  return `${serviceId}::${planId}`;
 }
 
-function showError(message) {
-  elements.errorMessage.textContent = message;
-  elements.errorPanel.classList.remove("hidden");
+function showLoading(visible) {
+  elements.loadingPanel.classList.toggle("hidden", !visible);
 }
 
-function hideError() {
-  elements.errorPanel.classList.add("hidden");
-}
-
-function escapeText(value) {
-  return String(value)
+function escapeHtml(value) {
+  return String(value ?? "")
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+}
+
+function escapeAttribute(value) {
+  return escapeHtml(value);
 }
