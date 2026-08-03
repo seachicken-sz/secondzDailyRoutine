@@ -2,7 +2,9 @@
 
 renderResults = function renderResultsByService() {
   const selectedRefs = Array.from(state.selectedPlans, ([serviceId, planId]) => ({ serviceId, planId }));
-  const resolvedRefs = resolveIncludedPlans(selectedRefs);
+  const baseResolvedRefs = resolveIncludedPlans(selectedRefs);
+  const conditionalRefs = getEligibleConditionalPlanRefs(baseResolvedRefs);
+  const resolvedRefs = [...baseResolvedRefs, ...conditionalRefs];
   const serviceItems = groupResultPlansByService(resolvedRefs);
 
   elements.resultSummary.textContent = serviceItems.length
@@ -41,9 +43,12 @@ function groupResultPlansByService(refs) {
 }
 
 function renderServiceResultCard(group) {
-  const hasSelectedPlan = group.items.some(({ ref }) => ref.source !== "included");
+  const hasSelectedPlan = group.items.some(({ ref }) => ref.source === "selected");
+  const hasConditionalPlan = group.items.some(({ ref }) => ref.source === "conditional");
   const planNames = group.items.map(({ ref, plan }) => {
-    const status = ref.source === "included" ? "含まれるプラン" : "選択中";
+    let status = "選択中";
+    if (ref.source === "included") status = "含まれるプラン";
+    if (ref.source === "conditional") status = "追加料金なし";
     return `${plan.name}（${status}）`;
   });
 
@@ -53,6 +58,12 @@ function renderServiceResultCard(group) {
       .map(({ ref }) => getPlanName(ref.includedBy.serviceId, ref.includedBy.planId))
   )];
 
+  const badgeLabel = hasSelectedPlan
+    ? "選択中"
+    : hasConditionalPlan
+      ? "追加料金なし"
+      : "含まれるサービス";
+
   return `
     <article class="result-card service-result-card">
       <div class="result-card-top">
@@ -61,7 +72,7 @@ function renderServiceResultCard(group) {
           <p class="additional-plan-name">${planNames.map(escapeHtml).join("<br>")}</p>
           <p class="result-card-summary">${escapeHtml(group.service.content?.summary || "")}</p>
         </div>
-        <span class="source-badge">${hasSelectedPlan ? "選択中" : "含まれるサービス"}</span>
+        <span class="source-badge">${badgeLabel}</span>
       </div>
       ${renderServiceInfoButton(group.service)}
       <div class="feature-list">${renderFeatureChips([...group.features])}</div>
@@ -82,6 +93,8 @@ renderAdditionalSupport = function renderAdditionalSupportByService(currentRefs)
   const candidates = [];
 
   getServices().forEach((service) => {
+    if (service.selectionType === "conditional") return;
+
     (service.plans || []).forEach((plan) => {
       const key = planKey(service.id, plan.id);
 
@@ -164,9 +177,10 @@ renderAdditionalSupport = function renderAdditionalSupportByService(currentRefs)
               <p class="additional-plan-name">${escapeHtml(candidate.plan.name)}</p>
               <p class="additional-price">${candidate.isFree
                 ? "追加料金なし"
-                : `月額＋${candidate.monthlyPrice.toLocaleString("ja-JP")}円`}</p>
+                : formatAdditionalPrice(candidate.plan, candidate.monthlyPrice)}</p>
               <div class="feature-list">${renderFeatureChips(candidate.newFeatures)}</div>
               ${renderIncludedPlanNames(candidate.candidateRefs)}
+              ${candidate.plan.priceNote ? `<p class="included-note">${escapeHtml(candidate.plan.priceNote)}</p>` : ""}
             </section>
           `).join("")}
       </div>
