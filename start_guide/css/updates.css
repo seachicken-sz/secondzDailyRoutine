@@ -145,6 +145,173 @@
   margin-top: 10px;
 }
 
+/* 今できる応援を探す：カテゴリ折りたたみ */
+.service-selector-groups {
+  gap: 10px;
+}
+
+.service-category-accordion {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: #fff;
+}
+
+.service-category-summary {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.service-category-summary::-webkit-details-marker {
+  display: none;
+}
+
+.service-category-summary-main,
+.service-category-summary-side {
+  display: flex;
+  align-items: center;
+}
+
+.service-category-summary-main {
+  min-width: 0;
+  gap: 10px;
+}
+
+.service-category-summary-side {
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.service-category-summary-icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 12px;
+  color: var(--color-brand-dark);
+  background: var(--color-brand-soft);
+}
+
+.service-category-summary-text {
+  min-width: 0;
+  display: grid;
+  gap: 1px;
+}
+
+.service-category-summary-text strong {
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.service-category-summary-text small {
+  overflow: hidden;
+  color: var(--color-text-muted);
+  font-size: 11px;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.service-category-count {
+  min-width: 26px;
+  min-height: 26px;
+  display: inline-grid;
+  place-items: center;
+  padding: 3px 7px;
+  border-radius: 999px;
+  color: var(--color-text-muted);
+  background: var(--color-surface-soft);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.service-category-chevron {
+  color: var(--color-text-muted);
+  transition: transform 0.2s ease;
+}
+
+.service-category-accordion[open] .service-category-summary {
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-brand-soft);
+}
+
+.service-category-accordion[open] .service-category-chevron {
+  transform: rotate(180deg);
+}
+
+.service-category-panel {
+  padding: 12px;
+}
+
+.service-category-panel .service-list {
+  gap: 10px;
+}
+
+.service-category-empty {
+  margin: 0;
+  padding: 12px;
+  border-radius: 12px;
+  color: var(--color-text-muted);
+  background: var(--color-surface-soft);
+  font-size: 12px;
+  text-align: center;
+}
+
+.selector-service-card {
+  padding: 14px;
+}
+
+.selector-service-card-header {
+  display: block;
+}
+
+.selector-service-card .plan-options {
+  margin-top: 10px;
+}
+
+/* 説明は無料サービス欄と結果欄に表示 */
+.free-app-card .service-details,
+.service-result-card .service-details,
+.additional-support-card .service-details {
+  margin-top: 14px;
+}
+
+.free-app-card .service-details summary,
+.service-result-card .service-details summary,
+.additional-support-card .service-details summary {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+}
+
+.free-app-card .service-details summary::after,
+.service-result-card .service-details summary::after,
+.additional-support-card .service-details summary::after {
+  content: "+";
+  font-size: 18px;
+  line-height: 1;
+}
+
+.free-app-card .service-details[open] summary::after,
+.service-result-card .service-details[open] summary::after,
+.additional-support-card .service-details[open] summary::after {
+  content: "−";
+}
+
+.result-daily-intro {
+  margin-top: 22px;
+}
+
 @media (min-width: 700px) {
   .page-toc {
     margin: 0;
@@ -157,8 +324,18 @@
   }
 }
 
+@media (max-width: 480px) {
+  .service-category-summary-text small {
+    max-width: 190px;
+  }
+}
+
 @media (max-width: 360px) {
   .app-download-links {
     grid-template-columns: 1fr;
+  }
+
+  .service-category-summary-text small {
+    max-width: 150px;
   }
 }
