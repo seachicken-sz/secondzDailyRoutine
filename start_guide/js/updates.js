@@ -1,6 +1,23 @@
 "use strict";
 
 const APP_LINKS_URL = "./data/appLinks.json";
+const EXTRA_SERVICES_URL = "./data/serviceAdditions.json";
+
+Object.assign(FEATURE_LABELS, {
+  "stationhead-group-listening": "みんなと一緒に公式音源を聴く",
+  "stationhead-official-streaming": "公式音源の再生で応援する",
+  "official-sns-follow": "公式アカウントをフォローする",
+  "official-sns-comment": "公式投稿にコメントする",
+  "official-sns-share": "公式投稿をシェアする",
+  "family-club-membership": "公式ファンクラブに入会する",
+  "family-club-member-content": "会員限定コンテンツを見る",
+  "family-club-online-live": "生配信・オンライン配信を見る",
+  "family-club-online-ticket": "配信チケットを購入して見る",
+  "family-club-web-blog": "有料ブログを読む",
+  "family-club-web-live": "個人生配信を見る",
+  "famikura-store-photos": "生写真を購入する",
+  "famikura-store-goods": "公式グッズを購入する"
+});
 
 const SELECTOR_CATEGORY_META = [
   {
@@ -40,18 +57,35 @@ CATEGORY_META.sns = { label: "SNS", icon: "bi-share" };
 
 let serviceInfoPreviousFocus = null;
 
-loadData = async function loadDataWithAppLinks() {
+loadData = async function loadDataWithAdditionalServices() {
   showLoading(true);
   elements.errorPanel.classList.add("hidden");
 
   try {
     const version = Date.now();
-    const servicesResponse = await fetch(`${DATA_URL}?v=${version}`, { cache: "no-store" });
+    const [servicesResponse, additionsResponse] = await Promise.all([
+      fetch(`${DATA_URL}?v=${version}`, { cache: "no-store" }),
+      fetch(`${EXTRA_SERVICES_URL}?v=${version}`, { cache: "no-store" })
+    ]);
+
     if (!servicesResponse.ok) {
       throw new Error(`services.json: HTTP ${servicesResponse.status}`);
     }
 
-    state.data = await servicesResponse.json();
+    const baseData = await servicesResponse.json();
+    const additionsData = additionsResponse.ok ? await additionsResponse.json() : { services: [] };
+    state.data = {
+      ...baseData,
+      services: [...(baseData.services || []), ...(additionsData.services || [])]
+    };
+
+    state.data.services.forEach((service) => {
+      if (!["spotify", "apple-music"].includes(service.id)) return;
+      (service.plans || []).forEach((plan) => {
+        plan.features = (plan.features || []).filter((feature) => feature !== "stationhead-compatible");
+      });
+    });
+
     state.appLinks = { services: {} };
 
     try {
@@ -80,6 +114,7 @@ renderFreeApps = function renderFreeAppsWithDescriptionsAndDownloadLinks() {
   const freeItems = [];
 
   getServices().forEach((service) => {
+    if (service.selectionType === "conditional") return;
     const freePlan = (service.plans || []).find((plan) => plan.planType === "free");
     if (freePlan) {
       freeItems.push({ service, plan: freePlan });
@@ -126,7 +161,7 @@ renderServiceGroups = function renderCollapsibleServiceGroups() {
   elements.serviceGroups.innerHTML = categories.map((category) => {
     const services = grouped[category.id] || [];
     const hasSelectedService = services.some((service) => state.selectedPlans.has(service.id));
-    const shouldOpen = category.id === "music" || hasSelectedService;
+    const shouldOpen = category.id === "official" || hasSelectedService;
 
     return `
       <details class="service-category-accordion" data-service-category="${escapeAttribute(category.id)}"${shouldOpen ? " open" : ""}>
@@ -160,6 +195,10 @@ renderServiceGroups = function renderCollapsibleServiceGroups() {
 };
 
 renderServiceCard = function renderCompactSelectorServiceCard(service) {
+  if (service.selectionType === "conditional") {
+    return renderConditionalSelectorServiceCard(service);
+  }
+
   const selectedPlanId = state.selectedPlans.get(service.id);
   const plans = (service.plans || []).map((plan) => {
     const selected = selectedPlanId === plan.id;
@@ -193,6 +232,64 @@ renderServiceCard = function renderCompactSelectorServiceCard(service) {
     </article>
   `;
 };
+
+function renderConditionalSelectorServiceCard(service) {
+  const currentRefs = resolveIncludedPlans(
+    Array.from(state.selectedPlans, ([serviceId, planId]) => ({ serviceId, planId }))
+  );
+  const available = isServiceRequirementSatisfied(service, currentRefs);
+  const label = service.requirements?.label || "利用条件があります";
+
+  return `
+    <article class="service-card selector-service-card conditional-service-card${available ? " available" : ""}">
+      <div class="service-card-header selector-service-card-header">
+        <div class="service-card-title">
+          <h4>${escapeHtml(service.name)}</h4>
+        </div>
+        <span class="conditional-service-status">${available ? "利用可能" : "条件あり"}</span>
+      </div>
+      <div class="conditional-service-plan">
+        <strong>${escapeHtml(label)}</strong>
+        <small>${available
+          ? "選択したサービスの条件を満たしているため、できる応援に自動で追加されます。"
+          : "対象の音楽サービスを選ぶと、できる応援に自動で追加されます。"}</small>
+      </div>
+    </article>
+  `;
+}
+
+function getAvailablePlanKeySet(refs) {
+  return new Set((refs || []).map((ref) => planKey(ref.serviceId, ref.planId)));
+}
+
+function isServiceRequirementSatisfied(service, refs) {
+  const anyPlans = service.requirements?.anyPlans || [];
+  if (!anyPlans.length) return true;
+  const availableKeys = getAvailablePlanKeySet(refs);
+  return anyPlans.some((required) => availableKeys.has(planKey(required.serviceId, required.planId)));
+}
+
+function getEligibleConditionalPlanRefs(refs) {
+  const existingKeys = getAvailablePlanKeySet(refs);
+  const conditionalRefs = [];
+
+  getServices()
+    .filter((service) => service.selectionType === "conditional")
+    .forEach((service) => {
+      if (!isServiceRequirementSatisfied(service, refs)) return;
+      (service.plans || []).forEach((plan) => {
+        const key = planKey(service.id, plan.id);
+        if (existingKeys.has(key)) return;
+        conditionalRefs.push({
+          serviceId: service.id,
+          planId: plan.id,
+          source: "conditional"
+        });
+      });
+    });
+
+  return conditionalRefs;
+}
 
 function renderServiceInfoButton(service) {
   const sections = service.content?.sections || [];
@@ -303,6 +400,73 @@ function setupServiceInfoModal() {
   });
 }
 
+formatPlanPrice = function formatPlanPriceWithYearlySupport(plan) {
+  if (plan.planType === "free") return "無料";
+  const options = plan.billingOptions || [];
+  const monthly = options.find((option) => option.cycle === "monthly" && Number.isFinite(option.amount));
+  if (monthly) return `月額${Number(monthly.amount).toLocaleString("ja-JP")}円`;
+  const yearly = options.find((option) => option.cycle === "yearly" && Number.isFinite(option.amount));
+  if (yearly) return `年額${Number(yearly.amount).toLocaleString("ja-JP")}円`;
+  return "料金は公式情報を確認";
+};
+
+function formatAdditionalPrice(plan, monthlyPrice) {
+  const options = plan.billingOptions || [];
+  const monthly = options.find((option) => option.cycle === "monthly" && Number.isFinite(option.amount));
+  if (monthly) return `月額＋${Number(monthly.amount).toLocaleString("ja-JP")}円`;
+  const yearly = options.find((option) => option.cycle === "yearly" && Number.isFinite(option.amount));
+  if (yearly) {
+    return `年額${Number(yearly.amount).toLocaleString("ja-JP")}円（月あたり約${monthlyPrice.toLocaleString("ja-JP")}円）`;
+  }
+  return "料金は公式情報を確認";
+}
+
+function injectAdditionalServiceStyles() {
+  if (document.getElementById("additionalServiceStyles")) return;
+  const style = document.createElement("style");
+  style.id = "additionalServiceStyles";
+  style.textContent = `
+    .conditional-service-card {
+      border-style: dashed;
+    }
+    .conditional-service-card.available {
+      border-color: var(--color-brand);
+      background: var(--color-brand-soft);
+    }
+    .conditional-service-status {
+      flex-shrink: 0;
+      padding: 5px 8px;
+      border-radius: 999px;
+      color: var(--color-text-muted);
+      background: var(--color-surface-soft);
+      font-size: 10px;
+      font-weight: 700;
+    }
+    .conditional-service-card.available .conditional-service-status {
+      color: #fff;
+      background: var(--color-brand);
+    }
+    .conditional-service-plan {
+      display: grid;
+      gap: 4px;
+      margin-top: 10px;
+      padding: 11px 12px;
+      border-radius: 12px;
+      color: var(--color-text-sub);
+      background: var(--color-surface-soft);
+    }
+    .conditional-service-plan strong {
+      color: var(--color-brand-dark);
+      font-size: 12px;
+    }
+    .conditional-service-plan small {
+      font-size: 11px;
+      line-height: 1.55;
+    }
+  `;
+  document.head.append(style);
+}
+
 function setupStickyToc() {
   const links = [...document.querySelectorAll(".page-toc-link")];
   if (!links.length) return;
@@ -339,6 +503,7 @@ function setupStickyToc() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  injectAdditionalServiceStyles();
   setupStickyToc();
   setupServiceInfoModal();
 });
