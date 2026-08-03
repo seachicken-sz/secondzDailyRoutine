@@ -35,6 +35,9 @@ const SELECTOR_CATEGORY_META = [
   }
 ];
 
+CATEGORY_META.official = { label: "公式サービス", icon: "bi-patch-check" };
+CATEGORY_META.sns = { label: "SNS", icon: "bi-share" };
+
 loadData = async function loadDataWithAppLinks() {
   showLoading(true);
   elements.errorPanel.classList.add("hidden");
