@@ -63,11 +63,11 @@ function renderServiceResultCard(group) {
         </div>
         <span class="source-badge">${hasSelectedPlan ? "選択中" : "含まれるサービス"}</span>
       </div>
+      ${renderServiceInfoButton(group.service)}
       <div class="feature-list">${renderFeatureChips([...group.features])}</div>
       ${includedByNames.length
         ? `<p class="included-note">${includedByNames.map(escapeHtml).join("、")}に含まれています。</p>`
         : ""}
-      ${renderServiceDetails(group.service)}
     </article>
   `;
 }
@@ -144,7 +144,7 @@ renderAdditionalSupport = function renderAdditionalSupportByService(currentRefs)
     : `＋${budget.toLocaleString("ja-JP")}円まで`;
 
   elements.additionalSupportCards.innerHTML = serviceGroups.map((group) => `
-    <article class="result-card additional-support-card">
+    <article class="result-card additional-support-card card-with-fixed-footer">
       <div class="result-card-top">
         <div>
           <h4 class="additional-service-name">${escapeHtml(group.service.name)}</h4>
@@ -154,6 +154,8 @@ renderAdditionalSupport = function renderAdditionalSupportByService(currentRefs)
         </div>
         <span class="source-badge">${group.candidates[0].isFree ? "無料" : "追加候補"}</span>
       </div>
+      ${renderServiceInfoButton(group.service)}
+      <div class="card-description-spacer" aria-hidden="true"></div>
       <div class="service-plan-candidates">
         ${group.candidates
           .sort((a, b) => a.monthlyPrice - b.monthlyPrice)
@@ -168,7 +170,6 @@ renderAdditionalSupport = function renderAdditionalSupportByService(currentRefs)
             </section>
           `).join("")}
       </div>
-      ${renderServiceDetails(group.service)}
       ${renderAppDownloadLinks(group.service.id)}
     </article>
   `).join("");
