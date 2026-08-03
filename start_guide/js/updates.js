@@ -1,8 +1,5 @@
 "use strict";
 
-const APP_LINKS_URL = "./data/appLinks.json";
-const EXTRA_SERVICES_URL = "./data/serviceAdditions.json";
-
 Object.assign(FEATURE_LABELS, {
   "stationhead-group-listening": "みんなと一緒に公式音源を聴く",
   "stationhead-official-streaming": "公式音源の再生で応援する",
@@ -57,46 +54,17 @@ CATEGORY_META.sns = { label: "SNS", icon: "bi-share" };
 
 let serviceInfoPreviousFocus = null;
 
-loadData = async function loadDataWithAdditionalServices() {
+loadData = async function loadUnifiedServiceData() {
   showLoading(true);
   elements.errorPanel.classList.add("hidden");
 
   try {
-    const version = Date.now();
-    const [servicesResponse, additionsResponse] = await Promise.all([
-      fetch(`${DATA_URL}?v=${version}`, { cache: "no-store" }),
-      fetch(`${EXTRA_SERVICES_URL}?v=${version}`, { cache: "no-store" })
-    ]);
-
-    if (!servicesResponse.ok) {
-      throw new Error(`services.json: HTTP ${servicesResponse.status}`);
+    const response = await fetch(`${DATA_URL}?v=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error(`services.json: HTTP ${response.status}`);
     }
 
-    const baseData = await servicesResponse.json();
-    const additionsData = additionsResponse.ok ? await additionsResponse.json() : { services: [] };
-    state.data = {
-      ...baseData,
-      services: [...(baseData.services || []), ...(additionsData.services || [])]
-    };
-
-    state.data.services.forEach((service) => {
-      if (!["spotify", "apple-music"].includes(service.id)) return;
-      (service.plans || []).forEach((plan) => {
-        plan.features = (plan.features || []).filter((feature) => feature !== "stationhead-compatible");
-      });
-    });
-
-    state.appLinks = { services: {} };
-
-    try {
-      const linksResponse = await fetch(`${APP_LINKS_URL}?v=${version}`, { cache: "no-store" });
-      if (linksResponse.ok) {
-        state.appLinks = await linksResponse.json();
-      }
-    } catch (linkError) {
-      console.warn("アプリリンクを読み込めませんでした。", linkError);
-    }
-
+    state.data = await response.json();
     restoreState();
     renderFreeApps();
     renderServiceGroups();
@@ -108,39 +76,6 @@ loadData = async function loadDataWithAdditionalServices() {
     elements.errorMessage.textContent = "サービス情報の取得に失敗しました。通信状況を確認して、もう一度お試しください。";
     elements.errorPanel.classList.remove("hidden");
   }
-};
-
-renderFreeApps = function renderFreeAppsWithDescriptionsAndDownloadLinks() {
-  const freeItems = [];
-
-  getServices().forEach((service) => {
-    if (service.selectionType === "conditional") return;
-    const freePlan = (service.plans || []).find((plan) => plan.planType === "free");
-    if (freePlan) {
-      freeItems.push({ service, plan: freePlan });
-    }
-  });
-
-  elements.freeAppsGrid.innerHTML = freeItems.map(({ service, plan }) => {
-    const category = CATEGORY_META[service.category] || { label: service.category || "その他" };
-
-    return `
-      <article class="free-app-card card-with-fixed-footer">
-        <div class="free-app-top">
-          <div>
-            <h3>${escapeHtml(service.name)}</h3>
-            <p>${escapeHtml(service.content?.summary || "無料で利用できます。")}</p>
-          </div>
-          <span class="price-badge">無料</span>
-        </div>
-        ${renderServiceInfoButton(service)}
-        <div class="card-description-spacer" aria-hidden="true"></div>
-        <div class="feature-list">${renderFeatureChips(plan.features || [])}</div>
-        <span class="service-category-chip">${escapeHtml(category.label)}</span>
-        ${renderAppDownloadLinks(service.id)}
-      </article>
-    `;
-  }).join("");
 };
 
 renderServiceGroups = function renderCollapsibleServiceGroups() {
@@ -233,31 +168,6 @@ renderServiceCard = function renderCompactSelectorServiceCard(service) {
   `;
 };
 
-function renderConditionalSelectorServiceCard(service) {
-  const currentRefs = resolveIncludedPlans(
-    Array.from(state.selectedPlans, ([serviceId, planId]) => ({ serviceId, planId }))
-  );
-  const available = isServiceRequirementSatisfied(service, currentRefs);
-  const label = service.requirements?.label || "利用条件があります";
-
-  return `
-    <article class="service-card selector-service-card conditional-service-card${available ? " available" : ""}">
-      <div class="service-card-header selector-service-card-header">
-        <div class="service-card-title">
-          <h4>${escapeHtml(service.name)}</h4>
-        </div>
-        <span class="conditional-service-status">${available ? "利用可能" : "条件あり"}</span>
-      </div>
-      <div class="conditional-service-plan">
-        <strong>${escapeHtml(label)}</strong>
-        <small>${available
-          ? "選択したサービスの条件を満たしているため、できる応援に自動で追加されます。"
-          : "対象の音楽サービスを選ぶと、できる応援に自動で追加されます。"}</small>
-      </div>
-    </article>
-  `;
-}
-
 function getAvailablePlanKeySet(refs) {
   return new Set((refs || []).map((ref) => planKey(ref.serviceId, ref.planId)));
 }
@@ -309,7 +219,7 @@ function renderServiceInfoButton(service) {
 }
 
 function renderAppDownloadLinks(serviceId) {
-  const links = state.appLinks?.services?.[serviceId] || {};
+  const links = getServiceById(serviceId)?.downloadLinks || {};
   const items = [];
 
   if (links.ios) {
@@ -445,23 +355,6 @@ function injectAdditionalServiceStyles() {
     .conditional-service-card.available .conditional-service-status {
       color: #fff;
       background: var(--color-brand);
-    }
-    .conditional-service-plan {
-      display: grid;
-      gap: 4px;
-      margin-top: 10px;
-      padding: 11px 12px;
-      border-radius: 12px;
-      color: var(--color-text-sub);
-      background: var(--color-surface-soft);
-    }
-    .conditional-service-plan strong {
-      color: var(--color-brand-dark);
-      font-size: 12px;
-    }
-    .conditional-service-plan small {
-      font-size: 11px;
-      line-height: 1.55;
     }
   `;
   document.head.append(style);
