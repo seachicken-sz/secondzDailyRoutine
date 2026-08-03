@@ -60,11 +60,7 @@ const state = {
   selectedPlans: new Map(),
   budget: 0,
   closedServiceCategories: loadClosedServiceCategories(),
-  cardFilters: {
-    free: { category: "all", feature: "all" },
-    additional: { category: "all", feature: "all" },
-    paid: { category: "all", feature: "all" }
-  },
+  additionalFilter: { category: "all", feature: "all" },
   serviceInfoPreviousFocus: null
 };
 
@@ -81,8 +77,6 @@ function initialize() {
 
 function cacheElements() {
   [
-    "freeAppsGrid",
-    "paidServicesGrid",
     "serviceGroups",
     "selectionCount",
     "resetSelectionButton",
@@ -153,25 +147,12 @@ function handleDocumentClick(event) {
     return;
   }
 
-  const cardFilterButton = target.closest("[data-card-filter-button]");
-  if (cardFilterButton) {
-    const type = cardFilterButton.dataset.cardFilterType;
-    const group = cardFilterButton.dataset.cardFilterGroup;
-    const value = cardFilterButton.dataset.cardFilterValue;
-
-    if (state.cardFilters[type] && ["category", "feature"].includes(group)) {
-      state.cardFilters[type][group] = value;
-      applyCardFilters(type);
-    }
-    return;
-  }
-
-  const paidFilterButton = target.closest("[data-paid-filter-button]");
-  if (paidFilterButton) {
-    const group = paidFilterButton.dataset.paidFilterGroup;
+  const filterButton = target.closest("[data-card-filter-button]");
+  if (filterButton) {
+    const group = filterButton.dataset.cardFilterGroup;
     if (["category", "feature"].includes(group)) {
-      state.cardFilters.paid[group] = paidFilterButton.dataset.paidFilterValue;
-      applyPaidServiceFilters();
+      state.additionalFilter[group] = filterButton.dataset.cardFilterValue;
+      applyAdditionalSupportFilters();
     }
   }
 }
@@ -209,7 +190,7 @@ async function loadData() {
 
     restoreState();
     removeInvalidSelections();
-    renderAllServiceAreas();
+    renderServiceGroups();
     updateSelectionCount();
     showLoading(false);
   } catch (error) {
@@ -265,12 +246,6 @@ function validateServiceData(data) {
       }
     });
   });
-}
-
-function renderAllServiceAreas() {
-  renderFreeApps();
-  renderPaidServices();
-  renderServiceGroups();
 }
 
 function restoreState() {
@@ -398,120 +373,9 @@ function removeInvalidConditionalSelections() {
   return changed;
 }
 
-function renderFreeApps() {
-  const freeItems = getServices()
-    .filter((service) => service.showInFreeServices !== false)
-    .map((service) => ({
-      service,
-      plan: (service.plans || []).find((plan) => plan.planType === "free")
-    }))
-    .filter((item) => Boolean(item.plan));
-
-  elements.freeAppsGrid.innerHTML = freeItems.map(({ service, plan }) => {
-    const category = CATEGORY_META[service.category] || { label: service.category || "その他" };
-    const features = plan.features || [];
-
-    return `
-      <article
-        class="free-app-card card-with-fixed-footer filterable-card"
-        data-filter-card="free"
-        data-filter-category="${escapeAttribute(service.category || "other")}"
-        data-filter-features="${escapeAttribute(features.join(" "))}"
-      >
-        <div class="free-app-top">
-          <div>
-            <h3>${escapeHtml(service.name)}</h3>
-            <p>${escapeHtml(service.content?.summary || "無料で利用できます。")}</p>
-          </div>
-          <span class="price-badge">無料</span>
-        </div>
-        ${renderServiceInfoButton(service)}
-        <div class="card-description-spacer" aria-hidden="true"></div>
-        <div class="feature-list">${renderFeatureChips(features)}</div>
-        <span class="service-category-chip">${escapeHtml(category.label)}</span>
-        ${renderServiceLinks(service.id)}
-      </article>
-    `;
-  }).join("");
-
-  renderCardFilterPanel("free", freeItems.map(({ service, plan }) => ({
-    category: service.category || "other",
-    features: plan.features || []
-  })));
-}
-
-function renderPaidServices() {
-  if (!elements.paidServicesGrid) return;
-
-  const paidServices = getServices()
-    .map((service) => {
-      const plans = (service.plans || []).filter((plan) => plan.planType === "paid");
-      const features = [...new Set(plans.flatMap((plan) => plan.features || []))];
-      return { service, plans, features };
-    })
-    .filter((item) => item.plans.length > 0);
-
-  elements.paidServicesGrid.innerHTML = paidServices.map(renderPaidServiceCard).join("");
-  renderPaidServiceFilterPanel(paidServices);
-  applyPaidServiceFilters();
-}
-
-function renderPaidServiceCard(item) {
-  const { service, features } = item;
-  const category = CATEGORY_META[service.category] || { label: service.category || "その他" };
-  const sortedPlans = [...item.plans].sort((a, b) => {
-    const priceA = getMonthlyPrice(a);
-    const priceB = getMonthlyPrice(b);
-    return (priceA ?? Number.POSITIVE_INFINITY) - (priceB ?? Number.POSITIVE_INFINITY);
-  });
-
-  return `
-    <article
-      class="paid-service-card card-with-fixed-footer filterable-card"
-      data-paid-filter-card
-      data-filter-category="${escapeAttribute(service.category || "other")}"
-      data-filter-features="${escapeAttribute(features.join(" "))}"
-    >
-      <div class="paid-service-card-top">
-        <div>
-          <h3>${escapeHtml(service.name)}</h3>
-          <p>${escapeHtml(service.content?.summary || "有料プランを利用できるサービスです。")}</p>
-        </div>
-        <span class="paid-service-badge">有料</span>
-      </div>
-      ${renderServiceInfoButton(service)}
-      <div class="card-description-spacer" aria-hidden="true"></div>
-      <span class="service-category-chip paid-service-category-chip">${escapeHtml(category.label)}</span>
-      <div class="paid-service-plans">
-        ${sortedPlans.map((plan) => renderPaidServicePlan(service, plan)).join("")}
-      </div>
-      ${renderServiceLinks(service.id)}
-    </article>
-  `;
-}
-
-function renderPaidServicePlan(service, plan) {
-  const features = plan.features || [];
-  const includedRefs = resolveIncludedPlans([{ serviceId: service.id, planId: plan.id }]);
-
-  return `
-    <section
-      class="paid-service-plan"
-      data-paid-filter-plan
-      data-filter-features="${escapeAttribute(features.join(" "))}"
-    >
-      <div class="paid-service-plan-heading">
-        <h4>${escapeHtml(plan.name)}</h4>
-        <span>${escapeHtml(formatPlanPrice(plan))}</span>
-      </div>
-      <div class="feature-list">${renderFeatureChips(features)}</div>
-      ${renderIncludedPlanNames(includedRefs)}
-      ${plan.priceNote ? `<p class="included-note">${escapeHtml(plan.priceNote)}</p>` : ""}
-    </section>
-  `;
-}
-
 function renderServiceGroups() {
+  if (!elements.serviceGroups) return;
+
   const resolvedRefs = getResolvedSelectedRefs();
   const selectableServices = getServices().filter(
     (service) => isServiceVisibleInSelector(service, resolvedRefs)
@@ -572,7 +436,7 @@ function renderServiceCard(service) {
     .join("");
 
   return `
-    <article class="service-card selector-service-card${service.selectionType === "conditional" ? " conditional-service-card available" : ""}">
+    <article class="service-card selector-service-card${service.selectionType === "conditional" ? " conditional-service-card" : ""}">
       <div class="service-card-header selector-service-card-header">
         <div class="service-card-title">
           <h4>${escapeHtml(service.name)}</h4>
@@ -634,7 +498,7 @@ function resetSelection() {
   renderServiceGroups();
   updateSelectionCount();
   elements.resultSection?.classList.add("hidden");
-  removeCardFilterPanel("additional");
+  removeAdditionalFilterPanel();
 }
 
 function updateSelectionCount() {
@@ -659,12 +523,16 @@ function renderResults() {
   const resolvedRefs = getResolvedSelectedRefs();
   const serviceItems = groupResultPlansByService(resolvedRefs);
 
-  elements.resultSummary.textContent = serviceItems.length
-    ? `${state.selectedPlans.size}件の選択から、${serviceItems.length}サービスでできる応援を確認しました。`
-    : "利用中のプランがまだ選択されていません。";
+  if (elements.resultSummary) {
+    elements.resultSummary.textContent = serviceItems.length
+      ? `${state.selectedPlans.size}件の選択から、${serviceItems.length}サービスでできる応援を確認しました。`
+      : "利用中のプランがまだ選択されていません。";
+  }
 
-  elements.resultCards.innerHTML = serviceItems.map(renderServiceResultCard).join("");
-  elements.emptyCurrentResult.classList.toggle("hidden", serviceItems.length > 0);
+  if (elements.resultCards) {
+    elements.resultCards.innerHTML = serviceItems.map(renderServiceResultCard).join("");
+  }
+  elements.emptyCurrentResult?.classList.toggle("hidden", serviceItems.length > 0);
 
   renderAdditionalSupport(resolvedRefs);
 }
@@ -726,6 +594,8 @@ function renderServiceResultCard(group) {
 }
 
 function renderAdditionalSupport(currentRefs) {
+  if (!elements.additionalSupportSection || !elements.additionalSupportCards) return;
+
   const budget = state.budget;
   const currentKeys = new Set(currentRefs.map((ref) => planKey(ref.serviceId, ref.planId)));
   const currentServiceIds = new Set(currentRefs.map((ref) => ref.serviceId));
@@ -818,13 +688,15 @@ function renderAdditionalSupport(currentRefs) {
   if (!serviceGroups.length) {
     elements.additionalSupportSection.classList.add("hidden");
     elements.additionalSupportCards.innerHTML = "";
-    removeCardFilterPanel("additional");
+    removeAdditionalFilterPanel();
     return;
   }
 
-  elements.additionalBudgetBadge.textContent = budget === 0
-    ? "追加料金なし"
-    : `＋${budget.toLocaleString("ja-JP")}円まで`;
+  if (elements.additionalBudgetBadge) {
+    elements.additionalBudgetBadge.textContent = budget === 0
+      ? "追加料金なし"
+      : `＋${budget.toLocaleString("ja-JP")}円まで`;
+  }
 
   elements.additionalSupportCards.innerHTML = serviceGroups.map((group) => {
     const category = CATEGORY_META[group.service.category] || { label: group.service.category || "その他" };
@@ -877,7 +749,7 @@ function renderAdditionalSupport(currentRefs) {
   }).join("");
 
   elements.additionalSupportSection.classList.remove("hidden");
-  renderCardFilterPanel("additional", serviceGroups.map((group) => ({
+  renderAdditionalFilterPanel(serviceGroups.map((group) => ({
     category: group.service.category || "other",
     features: group.features
   })));
@@ -1009,7 +881,7 @@ function renderServiceLinks(serviceId) {
 
   const officialPage = service.officialPageUrl
     ? `
-      <div class="app-download-links" style="grid-template-columns:1fr;margin-top:0;">
+      <div class="app-download-links app-download-links-single">
         <a class="app-store-link" href="${escapeAttribute(service.officialPageUrl)}" target="_blank" rel="noopener noreferrer">
           <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
           <span>${escapeHtml(service.officialPageLabel || "公式ページ")}</span>
@@ -1040,7 +912,7 @@ function renderServiceLinks(serviceId) {
   }
 
   const appDownloads = appItems.length
-    ? `<div class="app-download-links" style="margin-top:${officialPage ? "8px" : "0"};">${appItems.join("")}</div>`
+    ? `<div class="app-download-links${officialPage ? " app-download-links-after-official" : ""}">${appItems.join("")}</div>`
     : "";
 
   if (!officialPage && !appDownloads) return "";
@@ -1086,15 +958,15 @@ function closeServiceInfoModal() {
   state.serviceInfoPreviousFocus = null;
 }
 
-function ensureCardFilterPanel(type) {
-  const grid = type === "free" ? elements.freeAppsGrid : elements.additionalSupportCards;
+function ensureAdditionalFilterPanel() {
+  const grid = elements.additionalSupportCards;
   if (!grid) return null;
 
-  let panel = document.querySelector(`[data-card-filter-panel="${type}"]`);
+  let panel = document.querySelector("[data-card-filter-panel=\"additional\"]");
   if (!panel) {
     panel = document.createElement("div");
     panel.className = "card-filter-panel";
-    panel.dataset.cardFilterPanel = type;
+    panel.dataset.cardFilterPanel = "additional";
     panel.innerHTML = `
       <div class="card-filter-row">
         <p class="card-filter-label">カテゴリ</p>
@@ -1108,11 +980,11 @@ function ensureCardFilterPanel(type) {
     grid.before(panel);
   }
 
-  let empty = document.querySelector(`[data-card-filter-empty="${type}"]`);
+  let empty = document.querySelector("[data-card-filter-empty=\"additional\"]");
   if (!empty) {
     empty = document.createElement("div");
     empty.className = "card-filter-empty hidden";
-    empty.dataset.cardFilterEmpty = type;
+    empty.dataset.cardFilterEmpty = "additional";
     empty.innerHTML = `<i class="bi bi-search" aria-hidden="true"></i><p>条件に合うサービスがありません。</p>`;
     grid.after(empty);
   }
@@ -1120,56 +992,56 @@ function ensureCardFilterPanel(type) {
   return panel;
 }
 
-function removeCardFilterPanel(type) {
-  document.querySelector(`[data-card-filter-panel="${type}"]`)?.remove();
-  document.querySelector(`[data-card-filter-empty="${type}"]`)?.remove();
+function removeAdditionalFilterPanel() {
+  document.querySelector("[data-card-filter-panel=\"additional\"]")?.remove();
+  document.querySelector("[data-card-filter-empty=\"additional\"]")?.remove();
 }
 
-function renderCardFilterPanel(type, items) {
+function renderAdditionalFilterPanel(items) {
   if (!items.length) {
-    removeCardFilterPanel(type);
+    removeAdditionalFilterPanel();
     return;
   }
 
-  const panel = ensureCardFilterPanel(type);
+  const panel = ensureAdditionalFilterPanel();
   if (!panel) return;
 
   const categories = sortCategoryValues([...new Set(items.map((item) => item.category).filter(Boolean))]);
   const features = [...new Set(items.flatMap((item) => item.features || []))];
-  const filterState = state.cardFilters[type];
 
-  if (!categories.includes(filterState.category)) filterState.category = "all";
-  if (!features.includes(filterState.feature)) filterState.feature = "all";
+  if (!categories.includes(state.additionalFilter.category)) state.additionalFilter.category = "all";
+  if (!features.includes(state.additionalFilter.feature)) state.additionalFilter.feature = "all";
 
   const categoryContainer = panel.querySelector('[data-card-filter-options="category"]');
   const featureContainer = panel.querySelector('[data-card-filter-options="feature"]');
 
-  categoryContainer.innerHTML = renderCardFilterButtons(
-    type,
-    "category",
-    categories.map((value) => ({ value, label: CATEGORY_META[value]?.label || value })),
-    filterState.category
-  );
+  if (categoryContainer) {
+    categoryContainer.innerHTML = renderFilterButtons(
+      "category",
+      categories.map((value) => ({ value, label: CATEGORY_META[value]?.label || value })),
+      state.additionalFilter.category
+    );
+  }
 
-  featureContainer.innerHTML = renderCardFilterButtons(
-    type,
-    "feature",
-    features
-      .map((value) => ({ value, label: FEATURE_LABELS[value] || value }))
-      .sort((a, b) => a.label.localeCompare(b.label, "ja")),
-    filterState.feature
-  );
+  if (featureContainer) {
+    featureContainer.innerHTML = renderFilterButtons(
+      "feature",
+      features
+        .map((value) => ({ value, label: FEATURE_LABELS[value] || value }))
+        .sort((a, b) => a.label.localeCompare(b.label, "ja")),
+      state.additionalFilter.feature
+    );
+  }
 
-  applyCardFilters(type);
+  applyAdditionalSupportFilters();
 }
 
-function renderCardFilterButtons(type, group, options, selectedValue) {
+function renderFilterButtons(group, options, selectedValue) {
   return [{ value: "all", label: "すべて" }, ...options].map((option) => `
     <button
       type="button"
       class="card-filter-button${selectedValue === option.value ? " active" : ""}"
       data-card-filter-button
-      data-card-filter-type="${escapeAttribute(type)}"
       data-card-filter-group="${escapeAttribute(group)}"
       data-card-filter-value="${escapeAttribute(option.value)}"
       aria-pressed="${selectedValue === option.value}"
@@ -1177,122 +1049,37 @@ function renderCardFilterButtons(type, group, options, selectedValue) {
   `).join("");
 }
 
-function applyCardFilters(type) {
-  const filterState = state.cardFilters[type];
-  const grid = type === "free" ? elements.freeAppsGrid : elements.additionalSupportCards;
-  if (!filterState || !grid) return;
+function applyAdditionalSupportFilters() {
+  const grid = elements.additionalSupportCards;
+  if (!grid) return;
 
   let visibleCount = 0;
 
-  grid.querySelectorAll(`[data-filter-card="${type}"]`).forEach((card) => {
-    const categoryMatches = filterState.category === "all"
-      || card.dataset.filterCategory === filterState.category;
+  grid.querySelectorAll('[data-filter-card="additional"]').forEach((card) => {
+    const categoryMatches = state.additionalFilter.category === "all"
+      || card.dataset.filterCategory === state.additionalFilter.category;
     const cardFeatures = splitDataValues(card.dataset.filterFeatures);
-    const featureMatches = filterState.feature === "all"
-      || cardFeatures.includes(filterState.feature);
+    const featureMatches = state.additionalFilter.feature === "all"
+      || cardFeatures.includes(state.additionalFilter.feature);
     const visible = categoryMatches && featureMatches;
 
     card.classList.toggle("filter-hidden", !visible);
 
-    if (type === "additional") {
-      card.querySelectorAll("[data-filter-plan-candidate]").forEach((candidate) => {
-        const candidateFeatures = splitDataValues(candidate.dataset.filterFeatures);
-        const candidateVisible = filterState.feature === "all"
-          || candidateFeatures.includes(filterState.feature);
-        candidate.classList.toggle("filter-hidden", !candidateVisible);
-      });
-    }
-
-    if (visible) visibleCount += 1;
-  });
-
-  document.querySelector(`[data-card-filter-empty="${type}"]`)
-    ?.classList.toggle("hidden", visibleCount > 0);
-
-  document.querySelectorAll(`[data-card-filter-button][data-card-filter-type="${type}"]`).forEach((button) => {
-    const selected = filterState[button.dataset.cardFilterGroup] === button.dataset.cardFilterValue;
-    button.classList.toggle("active", selected);
-    button.setAttribute("aria-pressed", String(selected));
-  });
-}
-
-function renderPaidServiceFilterPanel(items) {
-  const panel = document.querySelector("[data-paid-service-filter-panel]");
-  const empty = document.querySelector("[data-paid-service-filter-empty]");
-  if (!panel || !empty) return;
-
-  const categories = sortCategoryValues([...new Set(items.map((item) => item.service.category || "other"))]);
-  const features = [...new Set(items.flatMap((item) => item.features || []))];
-  const filterState = state.cardFilters.paid;
-
-  if (!categories.includes(filterState.category)) filterState.category = "all";
-  if (!features.includes(filterState.feature)) filterState.feature = "all";
-
-  const categoryOptions = panel.querySelector('[data-paid-filter-options="category"]');
-  const featureOptions = panel.querySelector('[data-paid-filter-options="feature"]');
-
-  categoryOptions.innerHTML = renderPaidFilterButtons(
-    "category",
-    categories.map((value) => ({ value, label: CATEGORY_META[value]?.label || value })),
-    filterState.category
-  );
-
-  featureOptions.innerHTML = renderPaidFilterButtons(
-    "feature",
-    features
-      .map((value) => ({ value, label: FEATURE_LABELS[value] || value }))
-      .sort((a, b) => a.label.localeCompare(b.label, "ja")),
-    filterState.feature
-  );
-
-  panel.classList.toggle("hidden", items.length === 0);
-  empty.classList.add("hidden");
-}
-
-function renderPaidFilterButtons(group, options, selectedValue) {
-  return [{ value: "all", label: "すべて" }, ...options].map((option) => `
-    <button
-      type="button"
-      class="card-filter-button${selectedValue === option.value ? " active" : ""}"
-      data-paid-filter-button
-      data-paid-filter-group="${escapeAttribute(group)}"
-      data-paid-filter-value="${escapeAttribute(option.value)}"
-      aria-pressed="${selectedValue === option.value}"
-    >${escapeHtml(option.label)}</button>
-  `).join("");
-}
-
-function applyPaidServiceFilters() {
-  const empty = document.querySelector("[data-paid-service-filter-empty]");
-  if (!elements.paidServicesGrid || !empty) return;
-
-  const filterState = state.cardFilters.paid;
-  let visibleCount = 0;
-
-  elements.paidServicesGrid.querySelectorAll("[data-paid-filter-card]").forEach((card) => {
-    const categoryMatches = filterState.category === "all"
-      || card.dataset.filterCategory === filterState.category;
-    const cardFeatures = splitDataValues(card.dataset.filterFeatures);
-    const featureMatches = filterState.feature === "all"
-      || cardFeatures.includes(filterState.feature);
-    const visible = categoryMatches && featureMatches;
-
-    card.classList.toggle("filter-hidden", !visible);
-
-    card.querySelectorAll("[data-paid-filter-plan]").forEach((plan) => {
-      const planFeatures = splitDataValues(plan.dataset.filterFeatures);
-      const planVisible = filterState.feature === "all"
-        || planFeatures.includes(filterState.feature);
-      plan.classList.toggle("filter-hidden", !planVisible);
+    card.querySelectorAll("[data-filter-plan-candidate]").forEach((candidate) => {
+      const candidateFeatures = splitDataValues(candidate.dataset.filterFeatures);
+      const candidateVisible = state.additionalFilter.feature === "all"
+        || candidateFeatures.includes(state.additionalFilter.feature);
+      candidate.classList.toggle("filter-hidden", !candidateVisible);
     });
 
     if (visible) visibleCount += 1;
   });
 
-  empty.classList.toggle("hidden", visibleCount > 0);
+  document.querySelector('[data-card-filter-empty="additional"]')
+    ?.classList.toggle("hidden", visibleCount > 0);
 
-  document.querySelectorAll("[data-paid-filter-button]").forEach((button) => {
-    const selected = filterState[button.dataset.paidFilterGroup] === button.dataset.paidFilterValue;
+  document.querySelectorAll("[data-card-filter-button]").forEach((button) => {
+    const selected = state.additionalFilter[button.dataset.cardFilterGroup] === button.dataset.cardFilterValue;
     button.classList.toggle("active", selected);
     button.setAttribute("aria-pressed", String(selected));
   });
