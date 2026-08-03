@@ -2,6 +2,39 @@
 
 const APP_LINKS_URL = "./data/appLinks.json";
 
+const SELECTOR_CATEGORY_META = [
+  {
+    id: "official",
+    label: "公式サービス",
+    note: "ファンクラブ・公式ブログなど",
+    icon: "bi-patch-check"
+  },
+  {
+    id: "sns",
+    label: "SNS",
+    note: "公式SNS",
+    icon: "bi-share"
+  },
+  {
+    id: "music",
+    label: "音楽",
+    note: "音楽配信サービス",
+    icon: "bi-music-note-beamed"
+  },
+  {
+    id: "video",
+    label: "動画",
+    note: "動画配信サービス",
+    icon: "bi-play-btn"
+  },
+  {
+    id: "radio",
+    label: "ラジオ",
+    note: "ラジオ配信サービス",
+    icon: "bi-broadcast"
+  }
+];
+
 loadData = async function loadDataWithAppLinks() {
   showLoading(true);
   elements.errorPanel.classList.add("hidden");
@@ -38,7 +71,7 @@ loadData = async function loadDataWithAppLinks() {
   }
 };
 
-renderFreeApps = function renderFreeAppsWithDownloadLinks() {
+renderFreeApps = function renderFreeAppsWithDescriptionsAndDownloadLinks() {
   const freeItems = [];
 
   getServices().forEach((service) => {
@@ -50,6 +83,7 @@ renderFreeApps = function renderFreeAppsWithDownloadLinks() {
 
   elements.freeAppsGrid.innerHTML = freeItems.map(({ service, plan }) => {
     const category = CATEGORY_META[service.category] || { label: service.category || "その他" };
+
     return `
       <article class="free-app-card">
         <div class="free-app-top">
@@ -61,17 +95,69 @@ renderFreeApps = function renderFreeAppsWithDownloadLinks() {
         </div>
         <div class="feature-list">${renderFeatureChips(plan.features || [])}</div>
         <span class="service-category-chip">${escapeHtml(category.label)}</span>
+        ${renderServiceDetails(service)}
         ${renderAppDownloadLinks(service.id)}
       </article>
     `;
   }).join("");
 };
 
-renderServiceCard = function renderServiceCardWithoutTrial(service) {
+renderServiceGroups = function renderCollapsibleServiceGroups() {
+  const selectableServices = getServices().filter((service) => service.showInServiceSelector !== false);
+  const grouped = groupBy(selectableServices, (service) => service.category || "other");
+  const knownCategoryIds = new Set(SELECTOR_CATEGORY_META.map((category) => category.id));
+  const additionalCategories = Object.keys(grouped)
+    .filter((categoryId) => !knownCategoryIds.has(categoryId))
+    .map((categoryId) => ({
+      id: categoryId,
+      label: categoryId,
+      note: "その他のサービス",
+      icon: "bi-grid"
+    }));
+
+  const categories = [...SELECTOR_CATEGORY_META, ...additionalCategories];
+
+  elements.serviceGroups.innerHTML = categories.map((category) => {
+    const services = grouped[category.id] || [];
+    const hasSelectedService = services.some((service) => state.selectedPlans.has(service.id));
+    const shouldOpen = category.id === "music" || hasSelectedService;
+
+    return `
+      <details class="service-category-accordion" data-service-category="${escapeAttribute(category.id)}"${shouldOpen ? " open" : ""}>
+        <summary class="service-category-summary">
+          <span class="service-category-summary-main">
+            <span class="service-category-summary-icon"><i class="bi ${escapeAttribute(category.icon)}" aria-hidden="true"></i></span>
+            <span class="service-category-summary-text">
+              <strong>${escapeHtml(category.label)}</strong>
+              <small>${escapeHtml(category.note)}</small>
+            </span>
+          </span>
+          <span class="service-category-summary-side">
+            <span class="service-category-count">${services.length}</span>
+            <i class="bi bi-chevron-down service-category-chevron" aria-hidden="true"></i>
+          </span>
+        </summary>
+        <div class="service-category-panel">
+          ${services.length
+            ? `<div class="service-list">${services.map(renderServiceCard).join("")}</div>`
+            : `<p class="service-category-empty">サービス情報は準備中です。</p>`}
+        </div>
+      </details>
+    `;
+  }).join("");
+
+  elements.serviceGroups.querySelectorAll("[data-plan-button]").forEach((button) => {
+    button.addEventListener("click", () => {
+      togglePlan(button.dataset.serviceId, button.dataset.planId);
+    });
+  });
+};
+
+renderServiceCard = function renderCompactSelectorServiceCard(service) {
   const selectedPlanId = state.selectedPlans.get(service.id);
-  const category = CATEGORY_META[service.category] || { label: service.category || "その他" };
   const plans = (service.plans || []).map((plan) => {
     const selected = selectedPlanId === plan.id;
+
     return `
       <button
         type="button"
@@ -91,96 +177,15 @@ renderServiceCard = function renderServiceCardWithoutTrial(service) {
   }).join("");
 
   return `
-    <article class="service-card">
-      <div class="service-card-header">
+    <article class="service-card selector-service-card">
+      <div class="service-card-header selector-service-card-header">
         <div class="service-card-title">
           <h4>${escapeHtml(service.name)}</h4>
-          <p>${escapeHtml(service.content?.summary || "")}</p>
         </div>
-        <span class="service-category-chip">${escapeHtml(category.label)}</span>
       </div>
       <div class="plan-options">${plans}</div>
-      ${renderServiceDetails(service)}
     </article>
   `;
-};
-
-renderAdditionalSupport = function renderAdditionalSupportWithServiceNames(currentRefs) {
-  const budget = state.budget;
-  const currentKeys = new Set(currentRefs.map((ref) => planKey(ref.serviceId, ref.planId)));
-  const currentServiceIds = new Set(currentRefs.map((ref) => ref.serviceId));
-  const currentFeatures = new Set(
-    currentRefs.flatMap((ref) => getPlanRecord(ref.serviceId, ref.planId)?.plan.features || [])
-  );
-  const candidates = [];
-
-  getServices().forEach((service) => {
-    (service.plans || []).forEach((plan) => {
-      const key = planKey(service.id, plan.id);
-
-      if (budget === 0) {
-        if (plan.planType !== "free" || currentKeys.has(key) || currentServiceIds.has(service.id)) return;
-
-        candidates.push({
-          service,
-          plan,
-          monthlyPrice: 0,
-          newFeatures: plan.features || [],
-          candidateRefs: resolveIncludedPlans([{ serviceId: service.id, planId: plan.id }]),
-          isFree: true
-        });
-        return;
-      }
-
-      if (plan.planType !== "paid" || currentKeys.has(key)) return;
-
-      const monthlyPrice = getMonthlyPrice(plan);
-      if (monthlyPrice === null || monthlyPrice > budget) return;
-
-      const candidateRefs = resolveIncludedPlans([{ serviceId: service.id, planId: plan.id }]);
-      const candidateFeatures = new Set(
-        candidateRefs.flatMap((ref) => getPlanRecord(ref.serviceId, ref.planId)?.plan.features || [])
-      );
-      const newFeatures = [...candidateFeatures].filter((feature) => !currentFeatures.has(feature));
-      if (!newFeatures.length) return;
-
-      candidates.push({ service, plan, monthlyPrice, newFeatures, candidateRefs, isFree: false });
-    });
-  });
-
-  candidates.sort((a, b) => a.monthlyPrice - b.monthlyPrice || a.service.displayOrder - b.service.displayOrder);
-
-  if (!candidates.length) {
-    elements.additionalSupportSection.classList.add("hidden");
-    elements.additionalSupportCards.innerHTML = "";
-    return;
-  }
-
-  elements.additionalBudgetBadge.textContent = budget === 0
-    ? "追加料金なし"
-    : `＋${budget.toLocaleString("ja-JP")}円まで`;
-
-  elements.additionalSupportCards.innerHTML = candidates.map((candidate) => `
-    <article class="result-card additional-support-card">
-      <div class="result-card-top">
-        <div>
-          <h4 class="additional-service-name">${escapeHtml(candidate.service.name)}</h4>
-          <p class="additional-plan-name">${escapeHtml(candidate.plan.name)}</p>
-          <p class="result-card-summary">${candidate.isFree
-            ? "まだ選んでいない、追加料金なしで始められる応援です。"
-            : "このサービスを追加すると、今よりできる応援が増えます。"}</p>
-        </div>
-        <span class="source-badge">${candidate.isFree ? "無料" : "追加候補"}</span>
-      </div>
-      <p class="additional-price">${candidate.isFree
-        ? "追加料金なし"
-        : `月額＋${candidate.monthlyPrice.toLocaleString("ja-JP")}円`}</p>
-      <div class="feature-list">${renderFeatureChips(candidate.newFeatures)}</div>
-      ${renderIncludedPlanNames(candidate.candidateRefs)}
-      ${renderAppDownloadLinks(candidate.service.id)}
-    </article>
-  `).join("");
-  elements.additionalSupportSection.classList.remove("hidden");
 };
 
 function renderAppDownloadLinks(serviceId) {
