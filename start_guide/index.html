@@ -60,7 +60,7 @@
             <div>
               <h3 id="budgetTitle">追加料金で広がる応援も見る</h3>
               <p>月額＋〇円でできる応援ってなんだろう？ 無理のない範囲で応援しよ💚<br>
-            ※サービス内容は変更される可能性があります。登録・DL前に公式ページでの説明をお読みください。</p>
+              ※サービス内容は変更される可能性があります。登録・DL前に公式ページでの説明をお読みください。</p>
             </div>
           </div>
           <label class="budget-select-label" for="budgetSelect">追加できる月額予算</label>
@@ -114,15 +114,26 @@
           </div>
         </section>
 
-        <section id="additionalSupportSection" class="result-group additional-support-section hidden" aria-labelledby="additionalSupportTitle">
+        <section id="freeAdditionalSupportSection" class="result-group additional-support-section hidden" aria-labelledby="freeAdditionalSupportTitle">
+          <div class="additional-support-heading">
+            <div>
+              <p class="section-label">FREE OPTIONS</p>
+              <h3 id="freeAdditionalSupportTitle" class="result-group-title">無料で追加できる応援</h3>
+            </div>
+            <span class="budget-badge">追加料金なし</span>
+          </div>
+          <div id="freeAdditionalSupportCards" class="result-cards"></div>
+        </section>
+
+        <section id="paidAdditionalSupportSection" class="result-group additional-support-section hidden" aria-labelledby="paidAdditionalSupportTitle">
           <div class="additional-support-heading">
             <div>
               <p class="section-label">WITHIN YOUR BUDGET</p>
-              <h3 id="additionalSupportTitle" class="result-group-title">選んだ予算内で増やせる応援</h3>
+              <h3 id="paidAdditionalSupportTitle" class="result-group-title">予算内で増やせる応援</h3>
             </div>
-            <span id="additionalBudgetBadge" class="budget-badge"></span>
+            <span id="paidAdditionalBudgetBadge" class="budget-badge"></span>
           </div>
-          <div id="additionalSupportCards" class="result-cards"></div>
+          <div id="paidAdditionalSupportCards" class="result-cards"></div>
         </section>
 
         <section id="dailyIntroSection" class="daily-intro-card result-daily-intro">
@@ -159,7 +170,7 @@
     <div class="service-info-modal-backdrop" data-service-info-close></div>
     <section class="service-info-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="serviceInfoModalTitle">
       <header class="service-info-modal-header">
-        <h2 id="serviceInfoModalTitle">このサービスについて</h2>
+        <h2 id="serviceInfoModalTitle">詳しく見る</h2>
         <button type="button" class="service-info-modal-close" data-service-info-close aria-label="閉じる">
           <i class="bi bi-x-lg" aria-hidden="true"></i>
         </button>
