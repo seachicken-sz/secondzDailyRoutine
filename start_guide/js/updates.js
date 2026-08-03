@@ -331,35 +331,6 @@ function formatAdditionalPrice(plan, monthlyPrice) {
   return "料金は公式情報を確認";
 }
 
-function injectAdditionalServiceStyles() {
-  if (document.getElementById("additionalServiceStyles")) return;
-  const style = document.createElement("style");
-  style.id = "additionalServiceStyles";
-  style.textContent = `
-    .conditional-service-card {
-      border-style: dashed;
-    }
-    .conditional-service-card.available {
-      border-color: var(--color-brand);
-      background: var(--color-brand-soft);
-    }
-    .conditional-service-status {
-      flex-shrink: 0;
-      padding: 5px 8px;
-      border-radius: 999px;
-      color: var(--color-text-muted);
-      background: var(--color-surface-soft);
-      font-size: 10px;
-      font-weight: 700;
-    }
-    .conditional-service-card.available .conditional-service-status {
-      color: #fff;
-      background: var(--color-brand);
-    }
-  `;
-  document.head.append(style);
-}
-
 function setupStickyToc() {
   const links = [...document.querySelectorAll(".page-toc-link")];
   if (!links.length) return;
@@ -396,7 +367,6 @@ function setupStickyToc() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  injectAdditionalServiceStyles();
   setupStickyToc();
   setupServiceInfoModal();
 });
