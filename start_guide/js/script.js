@@ -16,36 +16,11 @@ const CATEGORY_META = {
 };
 
 const SELECTOR_CATEGORY_META = [
-  {
-    id: "official",
-    label: "公式サービス",
-    note: "ファンクラブ・公式ブログなど",
-    icon: "bi-patch-check"
-  },
-  {
-    id: "sns",
-    label: "公式SNS",
-    note: "公式SNS",
-    icon: "bi-share"
-  },
-  {
-    id: "music",
-    label: "音楽",
-    note: "音楽配信サービス",
-    icon: "bi-music-note-beamed"
-  },
-  {
-    id: "video",
-    label: "動画",
-    note: "動画配信サービス",
-    icon: "bi-play-btn"
-  },
-  {
-    id: "radio",
-    label: "ラジオ",
-    note: "ラジオ配信サービス",
-    icon: "bi-broadcast"
-  }
+  { id: "official", label: "公式サービス", note: "ファンクラブ・公式ブログなど", icon: "bi-patch-check" },
+  { id: "sns", label: "公式SNS", note: "公式SNS", icon: "bi-share" },
+  { id: "music", label: "音楽", note: "音楽配信サービス", icon: "bi-music-note-beamed" },
+  { id: "video", label: "動画", note: "動画配信サービス", icon: "bi-play-btn" },
+  { id: "radio", label: "ラジオ", note: "ラジオ配信サービス", icon: "bi-broadcast" }
 ];
 
 const FEATURE_LABELS = {
@@ -74,10 +49,10 @@ const FEATURE_LABELS = {
   "family-club-member-content": "会員限定コンテンツを見る",
   "family-club-online-live": "生配信・オンライン配信を見る",
   "family-club-online-ticket": "配信チケットを購入して見る",
+  "family-club-mail-view": "メール伝言板を確認する",
+  "family-club-mail-notification": "新しいお知らせを通知で受け取る",
   "family-club-web-blog": "有料ブログを読む",
-  "family-club-web-live": "個人生配信を見る",
-  "famikura-store-photos": "生写真を購入する",
-  "famikura-store-goods": "公式グッズを購入する"
+  "family-club-web-live": "個人生配信を見る"
 };
 
 const state = {
@@ -145,6 +120,7 @@ function bindEvents() {
 
   document.addEventListener("click", handleDocumentClick);
   document.addEventListener("keydown", handleDocumentKeydown);
+  document.addEventListener("toggle", handleCategoryToggle, true);
 }
 
 function handleBudgetChange(event) {
@@ -159,6 +135,12 @@ function handleBudgetChange(event) {
 function handleDocumentClick(event) {
   const target = event.target instanceof Element ? event.target : null;
   if (!target) return;
+
+  const planButton = target.closest("[data-plan-button]");
+  if (planButton) {
+    togglePlan(planButton.dataset.serviceId, planButton.dataset.planId);
+    return;
+  }
 
   const serviceInfoButton = target.closest("[data-service-info-button]");
   if (serviceInfoButton) {
@@ -195,9 +177,22 @@ function handleDocumentClick(event) {
 }
 
 function handleDocumentKeydown(event) {
-  if (event.key === "Escape") {
-    closeServiceInfoModal();
+  if (event.key === "Escape") closeServiceInfoModal();
+}
+
+function handleCategoryToggle(event) {
+  const accordion = event.target;
+  if (!(accordion instanceof HTMLDetailsElement) || !accordion.matches("[data-service-category]")) return;
+
+  const categoryId = accordion.dataset.serviceCategory;
+  if (!categoryId) return;
+
+  if (accordion.open) {
+    state.closedServiceCategories.delete(categoryId);
+  } else {
+    state.closedServiceCategories.add(categoryId);
   }
+  saveClosedServiceCategories();
 }
 
 async function loadData() {
@@ -206,9 +201,7 @@ async function loadData() {
 
   try {
     const response = await fetch(`${DATA_URL}?v=${Date.now()}`, { cache: "no-store" });
-    if (!response.ok) {
-      throw new Error(`services.json: HTTP ${response.status}`);
-    }
+    if (!response.ok) throw new Error(`services.json: HTTP ${response.status}`);
 
     const data = await response.json();
     validateServiceData(data);
@@ -361,6 +354,14 @@ function getPlanName(serviceId, planId) {
   return getPlanRecord(serviceId, planId)?.plan.name || "対象プラン";
 }
 
+function getSelectedRefs() {
+  return Array.from(state.selectedPlans, ([serviceId, planId]) => ({ serviceId, planId }));
+}
+
+function getResolvedSelectedRefs() {
+  return resolveIncludedPlans(getSelectedRefs());
+}
+
 function removeInvalidSelections() {
   let changed = false;
 
@@ -381,8 +382,7 @@ function removeInvalidConditionalSelections() {
 
   while (removedInPass) {
     removedInPass = false;
-    const selectedRefs = Array.from(state.selectedPlans, ([serviceId, planId]) => ({ serviceId, planId }));
-    const resolvedRefs = resolveIncludedPlans(selectedRefs);
+    const resolvedRefs = getResolvedSelectedRefs();
 
     getServices()
       .filter((service) => service.selectionType === "conditional" && state.selectedPlans.has(service.id))
@@ -400,7 +400,7 @@ function removeInvalidConditionalSelections() {
 
 function renderFreeApps() {
   const freeItems = getServices()
-    .filter((service) => service.selectionType !== "conditional")
+    .filter((service) => service.showInFreeServices !== false)
     .map((service) => ({
       service,
       plan: (service.plans || []).find((plan) => plan.planType === "free")
@@ -429,7 +429,7 @@ function renderFreeApps() {
         <div class="card-description-spacer" aria-hidden="true"></div>
         <div class="feature-list">${renderFeatureChips(features)}</div>
         <span class="service-category-chip">${escapeHtml(category.label)}</span>
-        ${renderAppDownloadLinks(service.id)}
+        ${renderServiceLinks(service.id)}
       </article>
     `;
   }).join("");
@@ -444,7 +444,6 @@ function renderPaidServices() {
   if (!elements.paidServicesGrid) return;
 
   const paidServices = getServices()
-    .filter((service) => service.selectionType !== "conditional")
     .map((service) => {
       const plans = (service.plans || []).filter((plan) => plan.planType === "paid");
       const features = [...new Set(plans.flatMap((plan) => plan.features || []))];
@@ -486,7 +485,7 @@ function renderPaidServiceCard(item) {
       <div class="paid-service-plans">
         ${sortedPlans.map((plan) => renderPaidServicePlan(service, plan)).join("")}
       </div>
-      ${renderAppDownloadLinks(service.id)}
+      ${renderServiceLinks(service.id)}
     </article>
   `;
 }
@@ -513,7 +512,10 @@ function renderPaidServicePlan(service, plan) {
 }
 
 function renderServiceGroups() {
-  const selectableServices = getServices().filter((service) => service.showInServiceSelector !== false);
+  const resolvedRefs = getResolvedSelectedRefs();
+  const selectableServices = getServices().filter(
+    (service) => isServiceVisibleInSelector(service, resolvedRefs)
+  );
   const grouped = groupBy(selectableServices, (service) => service.category || "other");
   const knownCategoryIds = new Set(SELECTOR_CATEGORY_META.map((category) => category.id));
   const additionalCategories = Object.keys(grouped)
@@ -555,38 +557,22 @@ function renderServiceGroups() {
       </details>
     `;
   }).join("");
+}
 
-  elements.serviceGroups.querySelectorAll("[data-service-category]").forEach((accordion) => {
-    accordion.addEventListener("toggle", () => {
-      const categoryId = accordion.dataset.serviceCategory;
-      if (!categoryId) return;
-
-      if (accordion.open) {
-        state.closedServiceCategories.delete(categoryId);
-      } else {
-        state.closedServiceCategories.add(categoryId);
-      }
-      saveClosedServiceCategories();
-    });
-  });
-
-  elements.serviceGroups.querySelectorAll("[data-plan-button]").forEach((button) => {
-    button.addEventListener("click", () => {
-      togglePlan(button.dataset.serviceId, button.dataset.planId);
-    });
-  });
+function isServiceVisibleInSelector(service, resolvedRefs) {
+  if (service.showInServiceSelector === false) return false;
+  if (service.selectionType !== "conditional") return true;
+  return isServiceRequirementSatisfied(service, resolvedRefs);
 }
 
 function renderServiceCard(service) {
-  if (service.selectionType === "conditional") {
-    return renderConditionalSelectorServiceCard(service);
-  }
-
   const selectedPlanId = state.selectedPlans.get(service.id);
-  const plans = (service.plans || []).map((plan) => renderPlanOption(service, plan, selectedPlanId === plan.id, true)).join("");
+  const plans = (service.plans || [])
+    .map((plan) => renderPlanOption(service, plan, selectedPlanId === plan.id))
+    .join("");
 
   return `
-    <article class="service-card selector-service-card">
+    <article class="service-card selector-service-card${service.selectionType === "conditional" ? " conditional-service-card available" : ""}">
       <div class="service-card-header selector-service-card-header">
         <div class="service-card-title">
           <h4>${escapeHtml(service.name)}</h4>
@@ -597,37 +583,7 @@ function renderServiceCard(service) {
   `;
 }
 
-function renderConditionalSelectorServiceCard(service) {
-  const selectedPlanId = state.selectedPlans.get(service.id);
-  const currentRefs = resolveIncludedPlans(
-    Array.from(state.selectedPlans, ([serviceId, planId]) => ({ serviceId, planId }))
-  );
-  const available = isServiceRequirementSatisfied(service, currentRefs);
-  const requirementLabel = service.requirements?.label || "利用条件があります";
-  const plans = (service.plans || []).map((plan) => renderPlanOption(
-    service,
-    plan,
-    selectedPlanId === plan.id,
-    available,
-    available ? "選択できます" : requirementLabel
-  )).join("");
-
-  return `
-    <article class="service-card selector-service-card conditional-service-card${available ? " available" : ""}">
-      <div class="service-card-header selector-service-card-header">
-        <div class="service-card-title">
-          <h4>${escapeHtml(service.name)}</h4>
-        </div>
-        <span class="conditional-service-status">${available ? "選択可能" : "条件あり"}</span>
-      </div>
-      <div class="plan-options">${plans}</div>
-    </article>
-  `;
-}
-
-function renderPlanOption(service, plan, selected, enabled, customPriceLabel = null) {
-  const label = customPriceLabel ?? formatPlanPrice(plan);
-
+function renderPlanOption(service, plan, selected) {
   return `
     <button
       type="button"
@@ -636,12 +592,10 @@ function renderPlanOption(service, plan, selected, enabled, customPriceLabel = n
       data-service-id="${escapeAttribute(service.id)}"
       data-plan-id="${escapeAttribute(plan.id)}"
       aria-pressed="${selected}"
-      aria-disabled="${enabled ? "false" : "true"}"
-      ${enabled ? "" : "disabled"}
     >
       <span class="plan-option-main">
         <span class="plan-option-name">${escapeHtml(plan.name)}</span>
-        <span class="plan-option-price">${escapeHtml(label)}</span>
+        <span class="plan-option-price">${escapeHtml(formatPlanPrice(plan))}</span>
       </span>
       <span class="plan-option-check"><i class="bi bi-check-lg"></i></span>
     </button>
@@ -650,17 +604,12 @@ function renderPlanOption(service, plan, selected, enabled, customPriceLabel = n
 
 function togglePlan(serviceId, planId) {
   const service = getServiceById(serviceId);
+  if (!service || !getPlanRecord(serviceId, planId)) return;
+
   const isSelected = state.selectedPlans.get(serviceId) === planId;
 
-  if (!isSelected && service?.selectionType === "conditional") {
-    const currentRefs = resolveIncludedPlans(
-      Array.from(state.selectedPlans, ([selectedServiceId, selectedPlanId]) => ({
-        serviceId: selectedServiceId,
-        planId: selectedPlanId
-      }))
-    );
-
-    if (!isServiceRequirementSatisfied(service, currentRefs)) return;
+  if (!isSelected && service.selectionType === "conditional") {
+    if (!isServiceRequirementSatisfied(service, getResolvedSelectedRefs())) return;
   }
 
   if (isSelected) {
@@ -707,8 +656,7 @@ function renderResults() {
     updateSelectionCount();
   }
 
-  const selectedRefs = Array.from(state.selectedPlans, ([serviceId, planId]) => ({ serviceId, planId }));
-  const resolvedRefs = resolveIncludedPlans(selectedRefs);
+  const resolvedRefs = getResolvedSelectedRefs();
   const serviceItems = groupResultPlansByService(resolvedRefs);
 
   elements.resultSummary.textContent = serviceItems.length
@@ -772,6 +720,7 @@ function renderServiceResultCard(group) {
       ${includedByNames.length
         ? `<p class="included-note">${includedByNames.map(escapeHtml).join("、")}に含まれています。</p>`
         : ""}
+      ${renderServiceLinks(group.service.id)}
     </article>
   `;
 }
@@ -789,20 +738,22 @@ function renderAdditionalSupport(currentRefs) {
     if (service.selectionType === "conditional") {
       if (currentServiceIds.has(service.id) || !isServiceRequirementSatisfied(service, currentRefs)) return;
 
-      (service.plans || []).forEach((plan) => {
-        const key = planKey(service.id, plan.id);
-        if (currentKeys.has(key)) return;
+      (service.plans || [])
+        .filter((plan) => plan.planType === "free")
+        .forEach((plan) => {
+          const key = planKey(service.id, plan.id);
+          if (currentKeys.has(key)) return;
 
-        candidates.push({
-          service,
-          plan,
-          monthlyPrice: 0,
-          newFeatures: plan.features || [],
-          candidateRefs: resolveIncludedPlans([{ serviceId: service.id, planId: plan.id }]),
-          isFree: true,
-          isConditional: true
+          candidates.push({
+            service,
+            plan,
+            monthlyPrice: 0,
+            newFeatures: plan.features || [],
+            candidateRefs: resolveIncludedPlans([{ serviceId: service.id, planId: plan.id }]),
+            isFree: true,
+            isConditional: true
+          });
         });
-      });
       return;
     }
 
@@ -851,10 +802,7 @@ function renderAdditionalSupport(currentRefs) {
   const grouped = new Map();
   candidates.forEach((candidate) => {
     if (!grouped.has(candidate.service.id)) {
-      grouped.set(candidate.service.id, {
-        service: candidate.service,
-        candidates: []
-      });
+      grouped.set(candidate.service.id, { service: candidate.service, candidates: [] });
     }
     grouped.get(candidate.service.id).candidates.push(candidate);
   });
@@ -923,7 +871,7 @@ function renderAdditionalSupport(currentRefs) {
               </section>
             `).join("")}
         </div>
-        ${renderAppDownloadLinks(group.service.id)}
+        ${renderServiceLinks(group.service.id)}
       </article>
     `;
   }).join("");
@@ -975,35 +923,48 @@ function resolveIncludedPlans(initialRefs) {
   return result;
 }
 
+function getPreferredMonthlyOption(plan) {
+  const monthlyOptions = (plan.billingOptions || []).filter(
+    (option) => option.cycle === "monthly" && Number.isFinite(option.amount)
+  );
+  return monthlyOptions.find((option) => option.default !== false) || monthlyOptions[0] || null;
+}
+
 function getMonthlyPrice(plan) {
-  const options = plan.billingOptions || [];
-  const monthly = options.find((option) => option.cycle === "monthly" && Number.isFinite(option.amount));
+  const monthly = getPreferredMonthlyOption(plan);
   if (monthly) return Number(monthly.amount);
 
-  const yearly = options.find((option) => option.cycle === "yearly" && Number.isFinite(option.amount));
-  if (yearly) return Math.ceil(Number(yearly.amount) / 12);
-
-  return null;
+  const yearly = (plan.billingOptions || []).find(
+    (option) => option.cycle === "yearly" && Number.isFinite(option.amount)
+  );
+  return yearly ? Math.ceil(Number(yearly.amount) / 12) : null;
 }
 
 function formatPlanPrice(plan) {
   if (plan.planType === "free") return "無料";
-  const options = plan.billingOptions || [];
-  const monthly = options.find((option) => option.cycle === "monthly" && Number.isFinite(option.amount));
+
+  const monthly = getPreferredMonthlyOption(plan);
   if (monthly) return `月額${Number(monthly.amount).toLocaleString("ja-JP")}円`;
-  const yearly = options.find((option) => option.cycle === "yearly" && Number.isFinite(option.amount));
+
+  const yearly = (plan.billingOptions || []).find(
+    (option) => option.cycle === "yearly" && Number.isFinite(option.amount)
+  );
   if (yearly) return `年額${Number(yearly.amount).toLocaleString("ja-JP")}円`;
+
   return "料金は公式情報を確認";
 }
 
 function formatAdditionalPrice(plan, monthlyPrice) {
-  const options = plan.billingOptions || [];
-  const monthly = options.find((option) => option.cycle === "monthly" && Number.isFinite(option.amount));
+  const monthly = getPreferredMonthlyOption(plan);
   if (monthly) return `月額＋${Number(monthly.amount).toLocaleString("ja-JP")}円`;
-  const yearly = options.find((option) => option.cycle === "yearly" && Number.isFinite(option.amount));
+
+  const yearly = (plan.billingOptions || []).find(
+    (option) => option.cycle === "yearly" && Number.isFinite(option.amount)
+  );
   if (yearly) {
     return `年額${Number(yearly.amount).toLocaleString("ja-JP")}円（月あたり約${monthlyPrice.toLocaleString("ja-JP")}円）`;
   }
+
   return "料金は公式情報を確認";
 }
 
@@ -1042,12 +1003,26 @@ function renderServiceInfoButton(service) {
   `;
 }
 
-function renderAppDownloadLinks(serviceId) {
-  const links = getServiceById(serviceId)?.downloadLinks || {};
-  const items = [];
+function renderServiceLinks(serviceId) {
+  const service = getServiceById(serviceId);
+  if (!service) return "";
+
+  const officialPage = service.officialPageUrl
+    ? `
+      <div class="app-download-links" style="grid-template-columns:1fr;margin-top:0;">
+        <a class="app-store-link" href="${escapeAttribute(service.officialPageUrl)}" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+          <span>${escapeHtml(service.officialPageLabel || "公式ページ")}</span>
+        </a>
+      </div>
+    `
+    : "";
+
+  const appItems = [];
+  const links = service.downloadLinks || {};
 
   if (links.ios) {
-    items.push(`
+    appItems.push(`
       <a class="app-store-link" href="${escapeAttribute(links.ios)}" target="_blank" rel="noopener noreferrer" aria-label="App Storeでダウンロード">
         <i class="bi bi-apple" aria-hidden="true"></i>
         <span>iPhone</span>
@@ -1056,7 +1031,7 @@ function renderAppDownloadLinks(serviceId) {
   }
 
   if (links.android) {
-    items.push(`
+    appItems.push(`
       <a class="app-store-link" href="${escapeAttribute(links.android)}" target="_blank" rel="noopener noreferrer" aria-label="Google Playでダウンロード">
         <i class="bi bi-google-play" aria-hidden="true"></i>
         <span>Android</span>
@@ -1064,7 +1039,12 @@ function renderAppDownloadLinks(serviceId) {
     `);
   }
 
-  return items.length ? `<div class="app-download-links card-download-footer">${items.join("")}</div>` : "";
+  const appDownloads = appItems.length
+    ? `<div class="app-download-links" style="margin-top:${officialPage ? "8px" : "0"};">${appItems.join("")}</div>`
+    : "";
+
+  if (!officialPage && !appDownloads) return "";
+  return `<div class="card-download-footer">${officialPage}${appDownloads}</div>`;
 }
 
 function buildServiceInfoModalBody(service) {
@@ -1146,6 +1126,11 @@ function removeCardFilterPanel(type) {
 }
 
 function renderCardFilterPanel(type, items) {
+  if (!items.length) {
+    removeCardFilterPanel(type);
+    return;
+  }
+
   const panel = ensureCardFilterPanel(type);
   if (!panel) return;
 
@@ -1179,10 +1164,7 @@ function renderCardFilterPanel(type, items) {
 }
 
 function renderCardFilterButtons(type, group, options, selectedValue) {
-  return [
-    { value: "all", label: "すべて" },
-    ...options
-  ].map((option) => `
+  return [{ value: "all", label: "すべて" }, ...options].map((option) => `
     <button
       type="button"
       class="card-filter-button${selectedValue === option.value ? " active" : ""}"
@@ -1268,10 +1250,7 @@ function renderPaidServiceFilterPanel(items) {
 }
 
 function renderPaidFilterButtons(group, options, selectedValue) {
-  return [
-    { value: "all", label: "すべて" },
-    ...options
-  ].map((option) => `
+  return [{ value: "all", label: "すべて" }, ...options].map((option) => `
     <button
       type="button"
       class="card-filter-button${selectedValue === option.value ? " active" : ""}"
