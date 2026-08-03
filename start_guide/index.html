@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#02b9a5">
-  <title>タムごと はじめかたガイド</title>
-  <meta name="description" content="今使っているサブスクや無料サービスから、timeleszを応援する方法を見つける初心者向けガイドです。">
+  <title>応援スタートガイド</title>
+  <meta name="description" content="無料アプリや利用中のサブスクから、timeleszを応援する方法を見つけるガイドです。">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="タムごと はじめかたガイド">
-  <meta property="og:title" content="タムごと はじめかたガイド">
+  <meta property="og:site_name" content="応援スタートガイド">
+  <meta property="og:title" content="応援スタートガイド">
   <meta property="og:description" content="今の環境から、できる応援を見つけよう。">
   <meta property="og:url" content="https://seachicken-sz.github.io/secondzDailyRoutine/start_guide/">
   <meta property="og:image" content="https://seachicken-sz.github.io/secondzDailyRoutine/img/link-card.jpg">
@@ -24,37 +24,57 @@
 <body>
   <div class="page-shell">
     <header class="site-header">
-      <div class="site-brand">
-        <img src="../img/logo.png" alt="タムごと はじめかたガイド" class="site-logo">
+      <div class="site-brand" aria-label="応援スタートガイド">
+        <img src="../img/logo.png" alt="" class="site-logo">
       </div>
     </header>
 
     <main>
       <section class="hero-card" aria-labelledby="pageTitle">
-        <p class="hero-eyebrow">TAMUGOTO START GUIDE</p>
+        <p class="hero-eyebrow">SUPPORT START GUIDE</p>
         <h1 id="pageTitle">今の環境から<br>できる応援を見つけよう</h1>
-        <p class="hero-description">使っている音楽・動画・ラジオサービスを選ぶと、追加料金なしで始められる応援をまとめて確認できます。</p>
+        <p class="hero-description">まず無料で使えるアプリを確認して、次に利用中のサブスクからできることを探せます。</p>
       </section>
 
-      <nav class="mode-tabs" aria-label="応援方法の探し方" role="tablist">
-        <button id="serviceTab" class="mode-tab active" type="button" role="tab" aria-selected="true" aria-controls="servicePanel" data-mode="services">
-          <i class="bi bi-grid"></i>
-          <span>利用中サービス</span>
-        </button>
-        <button id="freeTab" class="mode-tab" type="button" role="tab" aria-selected="false" aria-controls="freePanel" data-mode="free">
-          <i class="bi bi-gift"></i>
-          <span>無料でできる</span>
-        </button>
-      </nav>
+      <section class="guide-panel free-app-panel" aria-labelledby="freeAppsTitle">
+        <header class="panel-heading">
+          <p class="section-label">FREE APPS</p>
+          <h2 id="freeAppsTitle">まず入れるべき無料アプリ</h2>
+          <p>新しく月額料金をかけずに始められるサービスです。無料プランでできる応援をまとめています。</p>
+        </header>
+        <div id="freeAppsGrid" class="free-app-grid" aria-live="polite"></div>
+      </section>
 
-      <section id="servicePanel" class="guide-panel" role="tabpanel" aria-labelledby="serviceTab">
+      <section id="serviceFinderSection" class="guide-panel" aria-labelledby="serviceFinderTitle">
         <header class="panel-heading">
           <p class="section-label">SUBSCRIPTION CHECK</p>
-          <h2>使っているプランを選ぶ</h2>
-          <p>同じサービスでは1つのプランを選択できます。もう一度タップすると選択を外せます。</p>
+          <h2 id="serviceFinderTitle">利用中のサブスクからできる応援を探す</h2>
+          <p>現在使っているプランを選んでください。同じサービスでは1つのプランを選択できます。</p>
         </header>
 
         <div id="serviceGroups" class="service-groups" aria-live="polite"></div>
+
+        <section class="budget-card" aria-labelledby="budgetTitle">
+          <div class="budget-card-heading">
+            <div class="budget-icon" aria-hidden="true"><i class="bi bi-plus-circle"></i></div>
+            <div>
+              <h3 id="budgetTitle">追加料金で広がる応援も見る</h3>
+              <p>現在の契約に、月額いくらまで追加できるか選べます。</p>
+            </div>
+          </div>
+          <label class="budget-select-label" for="budgetSelect">追加できる月額予算</label>
+          <div class="select-wrap">
+            <select id="budgetSelect">
+              <option value="0">追加料金なし</option>
+              <option value="500">＋500円まで</option>
+              <option value="1000">＋1,000円まで</option>
+              <option value="1500">＋1,500円まで</option>
+              <option value="2000">＋2,000円まで</option>
+              <option value="3000">＋3,000円まで</option>
+            </select>
+            <i class="bi bi-chevron-down" aria-hidden="true"></i>
+          </div>
+        </section>
 
         <div class="selection-action-card">
           <div>
@@ -71,20 +91,11 @@
         </div>
       </section>
 
-      <section id="freePanel" class="guide-panel hidden" role="tabpanel" aria-labelledby="freeTab">
-        <header class="panel-heading">
-          <p class="section-label">FREE SUPPORT</p>
-          <h2>無料で始められる応援</h2>
-          <p>有料サブスクへ新しく加入しなくても利用できるサービスをまとめています。</p>
-        </header>
-        <div id="freeServiceGroups" class="free-service-groups"></div>
-      </section>
-
       <section id="resultSection" class="result-section hidden" aria-labelledby="resultTitle">
         <header class="result-heading">
           <div>
             <p class="section-label">YOUR SUPPORT GUIDE</p>
-            <h2 id="resultTitle">今の環境でできる応援</h2>
+            <h2 id="resultTitle">できる応援</h2>
           </div>
           <button id="editSelectionButton" class="secondary-button" type="button">
             <i class="bi bi-pencil"></i>選び直す
@@ -92,7 +103,26 @@
         </header>
 
         <div id="resultSummary" class="result-summary" aria-live="polite"></div>
-        <div id="resultCards" class="result-cards"></div>
+
+        <section class="result-group" aria-labelledby="currentSupportTitle">
+          <h3 id="currentSupportTitle" class="result-group-title">選んだサービスでできる応援</h3>
+          <div id="resultCards" class="result-cards"></div>
+          <div id="emptyCurrentResult" class="empty-result hidden">
+            <i class="bi bi-info-circle"></i>
+            <p>利用中のプランを選ぶと、ここにできる応援が表示されます。</p>
+          </div>
+        </section>
+
+        <section id="additionalSupportSection" class="result-group additional-support-section hidden" aria-labelledby="additionalSupportTitle">
+          <div class="additional-support-heading">
+            <div>
+              <p class="section-label">WITHIN YOUR BUDGET</p>
+              <h3 id="additionalSupportTitle" class="result-group-title">選んだ予算内で増やせる応援</h3>
+            </div>
+            <span id="additionalBudgetBadge" class="budget-badge"></span>
+          </div>
+          <div id="additionalSupportCards" class="result-cards"></div>
+        </section>
       </section>
 
       <section class="guide-note-card">
@@ -103,17 +133,17 @@
         </div>
       </section>
 
-      <section class="daily-cta-card" aria-labelledby="dailyIntroTitle">
-        <div class="daily-cta-icon" aria-hidden="true"><i class="bi bi-check2-circle"></i></div>
-        <div>
-          <p class="daily-cta-label">無料応援をまとめて進めたい人へ</p>
-          <h3 id="dailyIntroTitle">タムごとDaily</h3>
-          <p>USENやラジオへのリクエストなど、その日にできる無料の応援をまとめて確認できます。</p>
+      <section class="daily-intro-card">
+        <div class="daily-intro-icon" aria-hidden="true"><i class="bi bi-check2-circle"></i></div>
+        <div class="daily-intro-content">
+          <p class="section-label">FREE SUPPORT TOOL</p>
+          <h2>無料応援をまとめて進めたいときは</h2>
+          <p>タムごとDailyでは、毎日のリクエストや再生、期間限定の応援をまとめて確認できます。</p>
+          <a class="primary-button" href="../app/">
+            無料応援をまとめて見る
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
         </div>
-        <a class="primary-button" href="../app/">
-          無料応援をまとめて見る
-          <i class="bi bi-arrow-up-right"></i>
-        </a>
       </section>
 
       <section class="coming-soon-card">
