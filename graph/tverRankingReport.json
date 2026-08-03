@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/08/03 11:07",
+  "updatedAt": "2026/08/03 12:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/31",
-      "updatedAt": "2026/08/03 11:07",
+      "updatedAt": "2026/08/03 12:07",
       "episodeId": "eplqgnuarg",
       "subtitle": "真夏の決戦！「信頼じゃんけん」トーナメント",
       "likes": "1.2万",
@@ -248,6 +248,10 @@
         },
         {
           "hour": 61,
+          "likes": 12000
+        },
+        {
+          "hour": 62,
           "likes": 12000
         }
       ],
@@ -921,9 +925,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 31,
-          "elapsedHour": 61,
-          "elapsedRank": 31,
+          "currentRank": 16,
+          "elapsedHour": 62,
+          "elapsedRank": 16,
           "currentPoints": [
             {
               "hour": 23,
@@ -1080,6 +1084,10 @@
             {
               "hour": 61,
               "rank": 31
+            },
+            {
+              "hour": 62,
+              "rank": 16
             }
           ],
           "previousPoints": [
@@ -1738,19 +1746,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 28,
-              "title": "日曜日の初耳学"
+              "rank": 13,
+              "title": "timeleszファミリア"
             },
             {
-              "rank": 29,
-              "title": "テレビ千鳥"
+              "rank": 14,
+              "title": "マルコポロリ！"
             },
             {
-              "rank": 30,
-              "title": "おしゃれクリップ"
+              "rank": 15,
+              "title": "週刊さんまとマツコ"
             },
             {
-              "rank": 31,
+              "rank": 16,
               "title": "タイムレスマン"
             }
           ]
@@ -1758,9 +1766,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
+          "currentRank": 42,
+          "elapsedHour": 62,
+          "elapsedRank": 42,
           "currentPoints": [
             {
               "hour": 23,
@@ -1881,6 +1889,10 @@
             {
               "hour": 52,
               "rank": 50
+            },
+            {
+              "hour": 62,
+              "rank": 42
             }
           ],
           "previousPoints": [
@@ -2279,20 +2291,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "名探偵プリキュア！"
+              "rank": 39,
+              "title": "週刊さんまとマツコ"
             },
             {
-              "rank": 48,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "rank": 40,
+              "title": "今夜もシリアルキラーと待ち合わせ"
             },
             {
-              "rank": 49,
-              "title": "Your Sky ハレのち恋"
-            },
-            {
-              "rank": 50,
+              "rank": 41,
               "title": "今から、親友やめようか。"
+            },
+            {
+              "rank": 42,
+              "title": "タイムレスマン"
             }
           ]
         }
@@ -2301,10 +2313,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/02",
-      "updatedAt": "2026/08/03 11:07",
+      "updatedAt": "2026/08/03 12:07",
       "episodeId": "ep6mqnux58",
       "subtitle": "【絶品どんぶり登場】このお店に丼はある？ない？",
-      "likes": "6906",
+      "likes": "7114",
       "favorites": "34.2万",
       "likePoints": [
         {
@@ -2386,6 +2398,10 @@
         {
           "hour": 21,
           "likes": 6906
+        },
+        {
+          "hour": 22,
+          "likes": 7114
         }
       ],
       "previousLikePoints": [
@@ -3058,9 +3074,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 10,
-          "elapsedHour": 21,
-          "elapsedRank": 10,
+          "currentRank": 13,
+          "elapsedHour": 22,
+          "elapsedRank": 13,
           "currentPoints": [
             {
               "hour": 4,
@@ -3133,6 +3149,10 @@
             {
               "hour": 21,
               "rank": 10
+            },
+            {
+              "hour": 22,
+              "rank": 13
             }
           ],
           "previousPoints": [
@@ -3719,19 +3739,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 7,
-              "title": "マツコ＆有吉 かりそめ天国"
-            },
-            {
-              "rank": 8,
-              "title": "爆笑レッドカーペット"
-            },
-            {
-              "rank": 9,
-              "title": "嗚呼!!みんなの動物園"
-            },
-            {
               "rank": 10,
+              "title": "月曜から夜ふかし"
+            },
+            {
+              "rank": 11,
+              "title": "『ウンナンの気分は上々。夏』"
+            },
+            {
+              "rank": 12,
+              "title": "一茂×かまいたち ゲンバ"
+            },
+            {
+              "rank": 13,
               "title": "timeleszファミリア"
             }
           ]
@@ -3739,9 +3759,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 23,
-          "elapsedHour": 21,
-          "elapsedRank": 23,
+          "currentRank": 28,
+          "elapsedHour": 22,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 8,
@@ -3798,6 +3818,10 @@
             {
               "hour": 21,
               "rank": 23
+            },
+            {
+              "hour": 22,
+              "rank": 28
             }
           ],
           "previousPoints": [
@@ -4044,19 +4068,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 20,
-              "title": "嗚呼!!みんなの動物園"
+              "rank": 25,
+              "title": "さよならノワール"
             },
             {
-              "rank": 21,
-              "title": "ザ・ノンフィクション"
+              "rank": 26,
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
-              "rank": 22,
-              "title": "ファーストクライ 母子救命救急班"
+              "rank": 27,
+              "title": "君の好きは無敵"
             },
             {
-              "rank": 23,
+              "rank": 28,
               "title": "timeleszファミリア"
             }
           ]
@@ -4066,10 +4090,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/28",
-      "updatedAt": "2026/08/03 11:07",
+      "updatedAt": "2026/08/03 12:07",
       "episodeId": "epgw9m4xvk",
       "subtitle": "チョコプラ・timeleszが「衝撃吸収材なら、バラエティ罰ゲームをノーリアクションでこなせるのか？」に挑む！",
-      "likes": "7568",
+      "likes": "7580",
       "favorites": "5.7万",
       "likePoints": [
         {
@@ -4591,6 +4615,10 @@
         {
           "hour": 131,
           "likes": 7568
+        },
+        {
+          "hour": 132,
+          "likes": 7580
         }
       ],
       "previousLikePoints": [
@@ -6173,19 +6201,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サタプラ"
+              "title": "TRADE ROOM"
             },
             {
               "rank": 48,
-              "title": "フットマップ"
-            },
-            {
-              "rank": 49,
               "title": "華丸・大吉のなんしようと？"
             },
             {
+              "rank": 49,
+              "title": "ナンデモ特命係 発見らくちゃく！"
+            },
+            {
               "rank": 50,
-              "title": "本日はダイアンなり！シーズン3"
+              "title": "ロイロム鉄道 ～私を待ってる人がいる～"
             }
           ]
         },
@@ -6402,15 +6430,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ホンマでっか！？TV"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "スクール革命！"
             },
             {
               "rank": 50,
@@ -6423,7 +6451,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/07/30",
-      "updatedAt": "2026/08/03 11:07",
+      "updatedAt": "2026/08/03 12:07",
       "episodeId": "epb8a7zaf8",
       "subtitle": "【特定班】写真から居場所を特定しろ！",
       "likes": "1.0万",
@@ -6843,6 +6871,10 @@
         },
         {
           "hour": 105,
+          "likes": 10000
+        },
+        {
+          "hour": 106,
           "likes": 10000
         }
       ],
@@ -8002,15 +8034,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ホンマでっか！？TV"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "スクール革命！"
             },
             {
               "rank": 50,
@@ -8247,19 +8279,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 49,
-              "title": "Your Sky ハレのち恋"
+              "title": "劇場版「TOKYO MER～走る緊急救命室～」"
             },
             {
               "rank": 50,
-              "title": "今から、親友やめようか。"
+              "title": "かまいたちの机上の空論城"
             }
           ]
         }
@@ -8268,10 +8300,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/02",
-      "updatedAt": "2026/08/03 11:07",
+      "updatedAt": "2026/08/03 12:07",
       "episodeId": "epu2r9bvgo",
       "subtitle": "棲みつく可能性5%以下…新宿ミツバチを再び呼べるか!?",
-      "likes": "3411",
+      "likes": "3590",
       "favorites": "52.8万",
       "likePoints": [
         {
@@ -8333,6 +8365,10 @@
         {
           "hour": 16,
           "likes": 3411
+        },
+        {
+          "hour": 17,
+          "likes": 3590
         }
       ],
       "previousLikePoints": [],
@@ -8340,9 +8376,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 5,
-          "elapsedHour": 16,
-          "elapsedRank": 5,
+          "currentRank": 9,
+          "elapsedHour": 17,
+          "elapsedRank": 9,
           "currentPoints": [
             {
               "hour": 2,
@@ -8403,24 +8439,28 @@
             {
               "hour": 16,
               "rank": 5
+            },
+            {
+              "hour": 17,
+              "rank": 9
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 2,
-              "title": "水曜日のダウンタウン"
+              "rank": 6,
+              "title": "限界突破！やってM!LK"
             },
             {
-              "rank": 3,
-              "title": "それSnow Manにやらせて下さい"
+              "rank": 7,
+              "title": "あっちこっちAぇ!"
             },
             {
-              "rank": 4,
-              "title": "そこまで言って委員会NP"
+              "rank": 8,
+              "title": "かのサンド"
             },
             {
-              "rank": 5,
+              "rank": 9,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -8428,9 +8468,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 23,
-          "elapsedHour": 16,
-          "elapsedRank": 23,
+          "currentRank": 37,
+          "elapsedHour": 17,
+          "elapsedRank": 37,
           "currentPoints": [
             {
               "hour": 5,
@@ -8479,24 +8519,28 @@
             {
               "hour": 16,
               "rank": 23
+            },
+            {
+              "hour": 17,
+              "rank": 37
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 20,
-              "title": "やすとものどこいこ！？"
+              "rank": 34,
+              "title": "さんまのお笑い向上委員会"
             },
             {
-              "rank": 21,
-              "title": "上田と女がDEEPに吠える夜"
+              "rank": 35,
+              "title": "有吉クイズ"
             },
             {
-              "rank": 22,
-              "title": "突然ですが占ってもいいですか？"
+              "rank": 36,
+              "title": "かのサンド"
             },
             {
-              "rank": 23,
+              "rank": 37,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -8506,7 +8550,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/08/03 11:07",
+      "updatedAt": "2026/08/03 12:07",
       "episodeId": "epqf7c2gz6",
       "subtitle": "大食い激細女子…体の秘密!体温に関係?食べる順番で解決?",
       "likes": "4767",
@@ -9475,15 +9519,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ホンマでっか！？TV"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "スクール革命！"
             },
             {
               "rank": 50,
@@ -9679,19 +9723,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 49,
-              "title": "Your Sky ハレのち恋"
+              "title": "劇場版「TOKYO MER～走る緊急救命室～」"
             },
             {
               "rank": 50,
-              "title": "今から、親友やめようか。"
+              "title": "かまいたちの机上の空論城"
             }
           ]
         }
@@ -9700,10 +9744,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/08/03 11:07",
+      "updatedAt": "2026/08/03 12:07",
       "episodeId": "epxt2mcck0",
       "subtitle": "【timelesz】リアルな本音・裏側を語る。菊池風磨＆畑芽育の音楽番組",
-      "likes": "2.1万",
+      "likes": "2.2万",
       "favorites": "11.5万",
       "likePoints": [
         {
@@ -10197,6 +10241,10 @@
         {
           "hour": 130,
           "likes": 21000
+        },
+        {
+          "hour": 131,
+          "likes": 22000
         }
       ],
       "previousLikePoints": [
@@ -11547,15 +11595,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ホンマでっか！？TV"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "スクール革命！"
             },
             {
               "rank": 50,
@@ -11988,19 +12036,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 49,
-              "title": "Your Sky ハレのち恋"
+              "title": "劇場版「TOKYO MER～走る緊急救命室～」"
             },
             {
               "rank": 50,
-              "title": "今から、親友やめようか。"
+              "title": "かまいたちの机上の空論城"
             }
           ]
         }
@@ -12009,10 +12057,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/07/31",
-      "updatedAt": "2026/08/03 11:07",
+      "updatedAt": "2026/08/03 12:07",
       "episodeId": "epw5mrc1bs",
       "subtitle": "第138回 賢人の幸せに国仲涼子涙？風磨くん結婚しようぜ",
-      "likes": "4603",
+      "likes": "4623",
       "favorites": "71.4万",
       "likePoints": [
         {
@@ -12338,6 +12386,10 @@
         {
           "hour": 83,
           "likes": 4603
+        },
+        {
+          "hour": 84,
+          "likes": 4623
         }
       ],
       "previousLikePoints": [
@@ -13468,15 +13520,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ホンマでっか！？TV"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "スクール革命！"
             },
             {
               "rank": 50,
@@ -13705,19 +13757,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 49,
-              "title": "Your Sky ハレのち恋"
+              "title": "劇場版「TOKYO MER～走る緊急救命室～」"
             },
             {
               "rank": 50,
-              "title": "今から、親友やめようか。"
+              "title": "かまいたちの机上の空論城"
             }
           ]
         }
@@ -13726,7 +13778,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/07/25",
-      "updatedAt": "2026/08/03 11:07",
+      "updatedAt": "2026/08/03 12:07",
       "episodeId": "ep6mbhb4sa",
       "subtitle": "タイムマシーン3号のセッタイマシーンでGO",
       "likes": "1633",
@@ -15561,15 +15613,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ホンマでっか！？TV"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "スクール革命！"
             },
             {
               "rank": 50,
@@ -15729,19 +15781,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 49,
-              "title": "Your Sky ハレのち恋"
+              "title": "劇場版「TOKYO MER～走る緊急救命室～」"
             },
             {
               "rank": 50,
-              "title": "今から、親友やめようか。"
+              "title": "かまいたちの机上の空論城"
             }
           ]
         }
@@ -15750,10 +15802,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/08/03 11:07",
+      "updatedAt": "2026/08/03 12:07",
       "episodeId": "epm64ewk9k",
       "subtitle": "4人の飲み会に後輩を呼び出しまくる夜",
-      "likes": "7577",
+      "likes": "7589",
       "favorites": "2.5万",
       "likePoints": [
         {
@@ -16271,6 +16323,10 @@
         {
           "hour": 129,
           "likes": 7577
+        },
+        {
+          "hour": 130,
+          "likes": 7589
         }
       ],
       "previousLikePoints": [],
@@ -16591,19 +16647,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "しんごの🌱"
+              "title": "大阪おっさんぽ"
             },
             {
               "rank": 48,
-              "title": "いたジャン！"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 49,
-              "title": "朝だ！生です旅サラダ"
+              "title": "しんごの🌱"
             },
             {
               "rank": 50,
-              "title": "大阪おっさんぽ"
+              "title": "開運！なんでも鑑定団"
             }
           ]
         },
@@ -16691,15 +16747,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ホンマでっか！？TV"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "スクール革命！"
             },
             {
               "rank": 50,
@@ -16712,7 +16768,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/08/03 11:07",
+      "updatedAt": "2026/08/03 12:07",
       "episodeId": "ep8s7i6hiz",
       "subtitle": "#4 たった数時間の命…“奇跡”に挑む究極オペ",
       "likes": "1.0万",
@@ -17148,6 +17204,10 @@
         },
         {
           "hour": 109,
+          "likes": 10000
+        },
+        {
+          "hour": 110,
           "likes": 10000
         }
       ],
@@ -17830,7 +17890,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 11,
-          "elapsedHour": 109,
+          "elapsedHour": 110,
           "elapsedRank": 11,
           "currentPoints": [
             {
@@ -18235,6 +18295,10 @@
             },
             {
               "hour": 109,
+              "rank": 11
+            },
+            {
+              "hour": 110,
               "rank": 11
             }
           ],
@@ -18902,9 +18966,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 22,
-          "elapsedHour": 109,
-          "elapsedRank": 22,
+          "currentRank": 18,
+          "elapsedHour": 110,
+          "elapsedRank": 18,
           "currentPoints": [
             {
               "hour": 9,
@@ -19309,6 +19373,10 @@
             {
               "hour": 109,
               "rank": 22
+            },
+            {
+              "hour": 110,
+              "rank": 18
             }
           ],
           "previousPoints": [
@@ -19955,19 +20023,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 19,
+              "rank": 15,
+              "title": "世界の果てまでイッテQ！"
+            },
+            {
+              "rank": 16,
               "title": "Tokyo middle 30"
             },
             {
-              "rank": 20,
+              "rank": 17,
               "title": "嗚呼!!みんなの動物園"
             },
             {
-              "rank": 21,
-              "title": "ザ・ノンフィクション"
-            },
-            {
-              "rank": 22,
+              "rank": 18,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -19977,7 +20045,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/30",
-      "updatedAt": "2026/08/03 11:07",
+      "updatedAt": "2026/08/03 12:07",
       "episodeId": "ep7xjw37et",
       "subtitle": "第4話 もっとあなたと一緒にいたい・・・恋が動き出す",
       "likes": "2.1万",
@@ -20317,6 +20385,10 @@
         },
         {
           "hour": 85,
+          "likes": 21000
+        },
+        {
+          "hour": 86,
           "likes": 21000
         }
       ],
@@ -21003,7 +21075,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 6,
-          "elapsedHour": 85,
+          "elapsedHour": 86,
           "elapsedRank": 6,
           "currentPoints": [
             {
@@ -21332,6 +21404,10 @@
             },
             {
               "hour": 85,
+              "rank": 6
+            },
+            {
+              "hour": 86,
               "rank": 6
             }
           ],
@@ -21992,11 +22068,11 @@
           "nearbyRanking": [
             {
               "rank": 3,
-              "title": "告白―25年目の秘密―"
+              "title": "Ｔシャツが乾くまで"
             },
             {
               "rank": 4,
-              "title": "Ｔシャツが乾くまで"
+              "title": "マイ・フィクション"
             },
             {
               "rank": 5,
@@ -22011,9 +22087,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 10,
-          "elapsedHour": 85,
-          "elapsedRank": 10,
+          "currentRank": 6,
+          "elapsedHour": 86,
+          "elapsedRank": 6,
           "currentPoints": [
             {
               "hour": 4,
@@ -22342,6 +22418,10 @@
             {
               "hour": 85,
               "rank": 10
+            },
+            {
+              "hour": 86,
+              "rank": 6
             }
           ],
           "previousPoints": [
@@ -23000,19 +23080,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 7,
-              "title": "アメトーーク！"
+              "rank": 3,
+              "title": "Ｔシャツが乾くまで"
             },
             {
-              "rank": 8,
-              "title": "水曜日のダウンタウン"
+              "rank": 4,
+              "title": "マイ・フィクション"
             },
             {
-              "rank": 9,
-              "title": "ENGEIグランドスラム"
+              "rank": 5,
+              "title": "一次元の挿し木"
             },
             {
-              "rank": 10,
+              "rank": 6,
               "title": "ラストノート"
             }
           ]
@@ -23022,7 +23102,7 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/08/03 11:07",
+      "updatedAt": "2026/08/03 12:07",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
       "likes": "4566",
@@ -23041,19 +23121,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サタプラ"
+              "title": "TRADE ROOM"
             },
             {
               "rank": 48,
-              "title": "フットマップ"
-            },
-            {
-              "rank": 49,
               "title": "華丸・大吉のなんしようと？"
             },
             {
+              "rank": 49,
+              "title": "ナンデモ特命係 発見らくちゃく！"
+            },
+            {
               "rank": 50,
-              "title": "本日はダイアンなり！シーズン3"
+              "title": "ロイロム鉄道 ～私を待ってる人がいる～"
             }
           ]
         },
@@ -23068,15 +23148,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ホンマでっか！？TV"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "スクール革命！"
             },
             {
               "rank": 50,
@@ -23089,7 +23169,7 @@
     "srzvz0lo89": {
       "programTitle": "THE MUSIC DAY 2026",
       "broadcastDate": "2026/07/04",
-      "updatedAt": "2026/08/03 11:07",
+      "updatedAt": "2026/08/03 12:07",
       "episodeId": "epnev1s29d",
       "subtitle": "PART.8／20時50分頃～21時50分頃",
       "likes": "3.0万",
@@ -23586,10 +23666,6 @@
           "elapsedRank": null,
           "currentPoints": [
             {
-              "hour": 45,
-              "rank": 1
-            },
-            {
               "hour": 46,
               "rank": 1
             },
@@ -23938,15 +24014,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ホンマでっか！？TV"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "スクール革命！"
             },
             {
               "rank": 50,
@@ -23961,10 +24037,6 @@
           "elapsedHour": null,
           "elapsedRank": null,
           "currentPoints": [
-            {
-              "hour": 45,
-              "rank": 1
-            },
             {
               "hour": 46,
               "rank": 2
@@ -24138,19 +24210,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 49,
-              "title": "Your Sky ハレのち恋"
+              "title": "劇場版「TOKYO MER～走る緊急救命室～」"
             },
             {
               "rank": 50,
-              "title": "今から、親友やめようか。"
+              "title": "かまいたちの机上の空論城"
             }
           ]
         }
@@ -24159,10 +24231,10 @@
     "sr6elshzoq": {
       "programTitle": "踊る！さんま御殿!!",
       "broadcastDate": "2026/07/21",
-      "updatedAt": "2026/08/03 11:07",
+      "updatedAt": "2026/08/03 12:07",
       "episodeId": "epz108j83s",
       "subtitle": "神奈川7路線が大激突SP 東横線VS田園都市線!本当の横浜はどっち!?",
-      "likes": "7996",
+      "likes": "8000",
       "favorites": "214.2万",
       "likePoints": [
         {
@@ -24988,15 +25060,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ホンマでっか！？TV"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "スクール革命！"
             },
             {
               "rank": 50,
@@ -25316,19 +25388,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 48,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 49,
-              "title": "Your Sky ハレのち恋"
+              "title": "劇場版「TOKYO MER～走る緊急救命室～」"
             },
             {
               "rank": 50,
-              "title": "今から、親友やめようか。"
+              "title": "かまいたちの机上の空論城"
             }
           ]
         }
@@ -25337,7 +25409,7 @@
     "sr5czyxny0": {
       "programTitle": "上田と女が吠える夜",
       "broadcastDate": "2026/07/29",
-      "updatedAt": "2026/08/03 11:07",
+      "updatedAt": "2026/08/03 12:07",
       "episodeId": "eptt90k6t6",
       "subtitle": "夏休みは勉学派vs遊び倒す女▼究極ミニマリスト生活で激論",
       "likes": "1.2万",
@@ -25638,6 +25710,10 @@
         {
           "hour": 111,
           "likes": 12000
+        },
+        {
+          "hour": 112,
+          "likes": 12000
         }
       ],
       "previousLikePoints": [],
@@ -25646,7 +25722,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 5,
-          "elapsedHour": 111,
+          "elapsedHour": 112,
           "elapsedRank": 5,
           "currentPoints": [
             {
@@ -26084,13 +26160,17 @@
             {
               "hour": 111,
               "rank": 5
+            },
+            {
+              "hour": 112,
+              "rank": 5
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 2,
-              "title": "アメトーーク！"
+              "title": "ENGEIグランドスラム"
             },
             {
               "rank": 3,
@@ -26098,7 +26178,7 @@
             },
             {
               "rank": 4,
-              "title": "ENGEIグランドスラム"
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
               "rank": 5,
@@ -26109,9 +26189,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 13,
-          "elapsedHour": 111,
-          "elapsedRank": 13,
+          "currentRank": 14,
+          "elapsedHour": 112,
+          "elapsedRank": 14,
           "currentPoints": [
             {
               "hour": 4,
@@ -26544,24 +26624,28 @@
             {
               "hour": 111,
               "rank": 13
+            },
+            {
+              "hour": 112,
+              "rank": 14
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 10,
-              "title": "ラストノート"
-            },
-            {
               "rank": 11,
-              "title": "リーガルビート -逆転の法廷-"
-            },
-            {
-              "rank": 12,
               "title": "GTO"
             },
             {
+              "rank": 12,
+              "title": "大空港～GATE24～"
+            },
+            {
               "rank": 13,
+              "title": "マツコ＆有吉 かりそめ天国"
+            },
+            {
+              "rank": 14,
               "title": "上田と女が吠える夜"
             }
           ]
