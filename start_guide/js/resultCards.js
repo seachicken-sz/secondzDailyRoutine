@@ -1,10 +1,98 @@
 "use strict";
 
-renderResults = function renderResultsByService() {
+renderConditionalSelectorServiceCard = function renderSelectableConditionalServiceCard(service) {
+  const selectedPlanId = state.selectedPlans.get(service.id);
+  const currentRefs = resolveIncludedPlans(
+    Array.from(state.selectedPlans, ([serviceId, planId]) => ({ serviceId, planId }))
+  );
+  const available = isServiceRequirementSatisfied(service, currentRefs);
+  const requirementLabel = service.requirements?.label || "利用条件があります";
+
+  const plans = (service.plans || []).map((plan) => {
+    const selected = selectedPlanId === plan.id;
+
+    return `
+      <button
+        type="button"
+        class="plan-option${selected ? " selected" : ""}"
+        data-plan-button
+        data-service-id="${escapeAttribute(service.id)}"
+        data-plan-id="${escapeAttribute(plan.id)}"
+        aria-pressed="${selected}"
+        aria-disabled="${available ? "false" : "true"}"
+        ${available ? "" : "disabled"}
+      >
+        <span class="plan-option-main">
+          <span class="plan-option-name">${escapeHtml(plan.name)}</span>
+          <span class="plan-option-price">${available ? "選択できます" : escapeHtml(requirementLabel)}</span>
+        </span>
+        <span class="plan-option-check"><i class="bi bi-check-lg"></i></span>
+      </button>
+    `;
+  }).join("");
+
+  return `
+    <article class="service-card selector-service-card conditional-service-card${available ? " available" : ""}">
+      <div class="service-card-header selector-service-card-header">
+        <div class="service-card-title">
+          <h4>${escapeHtml(service.name)}</h4>
+        </div>
+        <span class="conditional-service-status">${available ? "選択可能" : "条件あり"}</span>
+      </div>
+      <div class="plan-options">${plans}</div>
+      <p class="conditional-service-help">${available
+        ? "利用している場合は選択してください。選ばなければ、追加料金なしでできる応援にも表示されます。"
+        : "Spotify PremiumまたはApple Musicを選ぶと選択できるようになります。"}</p>
+    </article>
+  `;
+};
+
+togglePlan = function togglePlanWithConditionalValidation(serviceId, planId) {
+  const service = getServiceById(serviceId);
+  const isSelected = state.selectedPlans.get(serviceId) === planId;
+
+  if (!isSelected && service?.selectionType === "conditional") {
+    const currentRefs = resolveIncludedPlans(
+      Array.from(state.selectedPlans, ([selectedServiceId, selectedPlanId]) => ({
+        serviceId: selectedServiceId,
+        planId: selectedPlanId
+      }))
+    );
+
+    if (!isServiceRequirementSatisfied(service, currentRefs)) return;
+  }
+
+  if (isSelected) {
+    state.selectedPlans.delete(serviceId);
+  } else {
+    state.selectedPlans.set(serviceId, planId);
+  }
+
+  removeInvalidConditionalSelections();
+  saveSelection();
+  renderServiceGroups();
+  updateSelectionCount();
+};
+
+function removeInvalidConditionalSelections() {
   const selectedRefs = Array.from(state.selectedPlans, ([serviceId, planId]) => ({ serviceId, planId }));
-  const baseResolvedRefs = resolveIncludedPlans(selectedRefs);
-  const conditionalRefs = getEligibleConditionalPlanRefs(baseResolvedRefs);
-  const resolvedRefs = [...baseResolvedRefs, ...conditionalRefs];
+  const resolvedRefs = resolveIncludedPlans(selectedRefs);
+
+  getServices()
+    .filter((service) => service.selectionType === "conditional" && state.selectedPlans.has(service.id))
+    .forEach((service) => {
+      if (!isServiceRequirementSatisfied(service, resolvedRefs)) {
+        state.selectedPlans.delete(service.id);
+      }
+    });
+}
+
+renderResults = function renderResultsByService() {
+  removeInvalidConditionalSelections();
+  saveSelection();
+
+  const selectedRefs = Array.from(state.selectedPlans, ([serviceId, planId]) => ({ serviceId, planId }));
+  const resolvedRefs = resolveIncludedPlans(selectedRefs);
   const serviceItems = groupResultPlansByService(resolvedRefs);
 
   elements.resultSummary.textContent = serviceItems.length
@@ -44,11 +132,8 @@ function groupResultPlansByService(refs) {
 
 function renderServiceResultCard(group) {
   const hasSelectedPlan = group.items.some(({ ref }) => ref.source === "selected");
-  const hasConditionalPlan = group.items.some(({ ref }) => ref.source === "conditional");
   const planNames = group.items.map(({ ref, plan }) => {
-    let status = "選択中";
-    if (ref.source === "included") status = "含まれるプラン";
-    if (ref.source === "conditional") status = "追加料金なし";
+    const status = ref.source === "included" ? "含まれるプラン" : "選択中";
     return `${plan.name}（${status}）`;
   });
 
@@ -58,12 +143,6 @@ function renderServiceResultCard(group) {
       .map(({ ref }) => getPlanName(ref.includedBy.serviceId, ref.includedBy.planId))
   )];
 
-  const badgeLabel = hasSelectedPlan
-    ? "選択中"
-    : hasConditionalPlan
-      ? "追加料金なし"
-      : "含まれるサービス";
-
   return `
     <article class="result-card service-result-card">
       <div class="result-card-top">
@@ -72,7 +151,7 @@ function renderServiceResultCard(group) {
           <p class="additional-plan-name">${planNames.map(escapeHtml).join("<br>")}</p>
           <p class="result-card-summary">${escapeHtml(group.service.content?.summary || "")}</p>
         </div>
-        <span class="source-badge">${badgeLabel}</span>
+        <span class="source-badge">${hasSelectedPlan ? "選択中" : "含まれるサービス"}</span>
       </div>
       ${renderServiceInfoButton(group.service)}
       <div class="feature-list">${renderFeatureChips([...group.features])}</div>
@@ -93,7 +172,25 @@ renderAdditionalSupport = function renderAdditionalSupportByService(currentRefs)
   const candidates = [];
 
   getServices().forEach((service) => {
-    if (service.selectionType === "conditional") return;
+    if (service.selectionType === "conditional") {
+      if (currentServiceIds.has(service.id) || !isServiceRequirementSatisfied(service, currentRefs)) return;
+
+      (service.plans || []).forEach((plan) => {
+        const key = planKey(service.id, plan.id);
+        if (currentKeys.has(key)) return;
+
+        candidates.push({
+          service,
+          plan,
+          monthlyPrice: 0,
+          newFeatures: plan.features || [],
+          candidateRefs: resolveIncludedPlans([{ serviceId: service.id, planId: plan.id }]),
+          isFree: true,
+          isConditional: true
+        });
+      });
+      return;
+    }
 
     (service.plans || []).forEach((plan) => {
       const key = planKey(service.id, plan.id);
@@ -107,7 +204,8 @@ renderAdditionalSupport = function renderAdditionalSupportByService(currentRefs)
           monthlyPrice: 0,
           newFeatures: plan.features || [],
           candidateRefs: resolveIncludedPlans([{ serviceId: service.id, planId: plan.id }]),
-          isFree: true
+          isFree: true,
+          isConditional: false
         });
         return;
       }
@@ -124,7 +222,15 @@ renderAdditionalSupport = function renderAdditionalSupportByService(currentRefs)
       const newFeatures = [...candidateFeatures].filter((feature) => !currentFeatures.has(feature));
       if (!newFeatures.length) return;
 
-      candidates.push({ service, plan, monthlyPrice, newFeatures, candidateRefs, isFree: false });
+      candidates.push({
+        service,
+        plan,
+        monthlyPrice,
+        newFeatures,
+        candidateRefs,
+        isFree: false,
+        isConditional: false
+      });
     });
   });
 
@@ -178,6 +284,9 @@ renderAdditionalSupport = function renderAdditionalSupportByService(currentRefs)
               <p class="additional-price">${candidate.isFree
                 ? "追加料金なし"
                 : formatAdditionalPrice(candidate.plan, candidate.monthlyPrice)}</p>
+              ${candidate.isConditional && group.service.requirements?.label
+                ? `<p class="included-note">${escapeHtml(group.service.requirements.label)}</p>`
+                : ""}
               <div class="feature-list">${renderFeatureChips(candidate.newFeatures)}</div>
               ${renderIncludedPlanNames(candidate.candidateRefs)}
               ${candidate.plan.priceNote ? `<p class="included-note">${escapeHtml(candidate.plan.priceNote)}</p>` : ""}
