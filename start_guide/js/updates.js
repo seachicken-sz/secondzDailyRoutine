@@ -38,6 +38,8 @@ const SELECTOR_CATEGORY_META = [
 CATEGORY_META.official = { label: "公式サービス", icon: "bi-patch-check" };
 CATEGORY_META.sns = { label: "SNS", icon: "bi-share" };
 
+let serviceInfoPreviousFocus = null;
+
 loadData = async function loadDataWithAppLinks() {
   showLoading(true);
   elements.errorPanel.classList.add("hidden");
@@ -88,7 +90,7 @@ renderFreeApps = function renderFreeAppsWithDescriptionsAndDownloadLinks() {
     const category = CATEGORY_META[service.category] || { label: service.category || "その他" };
 
     return `
-      <article class="free-app-card">
+      <article class="free-app-card card-with-fixed-footer">
         <div class="free-app-top">
           <div>
             <h3>${escapeHtml(service.name)}</h3>
@@ -96,9 +98,10 @@ renderFreeApps = function renderFreeAppsWithDescriptionsAndDownloadLinks() {
           </div>
           <span class="price-badge">無料</span>
         </div>
+        ${renderServiceInfoButton(service)}
+        <div class="card-description-spacer" aria-hidden="true"></div>
         <div class="feature-list">${renderFeatureChips(plan.features || [])}</div>
         <span class="service-category-chip">${escapeHtml(category.label)}</span>
-        ${renderServiceDetails(service)}
         ${renderAppDownloadLinks(service.id)}
       </article>
     `;
@@ -191,6 +194,23 @@ renderServiceCard = function renderCompactSelectorServiceCard(service) {
   `;
 };
 
+function renderServiceInfoButton(service) {
+  const sections = service.content?.sections || [];
+  if (!sections.length) return "";
+
+  return `
+    <button
+      type="button"
+      class="service-info-button"
+      data-service-info-button
+      data-service-id="${escapeAttribute(service.id)}"
+    >
+      <i class="bi bi-info-circle" aria-hidden="true"></i>
+      <span>このサービスについて</span>
+    </button>
+  `;
+}
+
 function renderAppDownloadLinks(serviceId) {
   const links = state.appLinks?.services?.[serviceId] || {};
   const items = [];
@@ -213,7 +233,74 @@ function renderAppDownloadLinks(serviceId) {
     `);
   }
 
-  return items.length ? `<div class="app-download-links">${items.join("")}</div>` : "";
+  return items.length ? `<div class="app-download-links card-download-footer">${items.join("")}</div>` : "";
+}
+
+function getServiceById(serviceId) {
+  return getServices().find((service) => service.id === serviceId) || null;
+}
+
+function buildServiceInfoModalBody(service) {
+  const sections = service.content?.sections || [];
+  if (!sections.length) {
+    return `<p>${escapeHtml(service.content?.summary || "説明は準備中です。")}</p>`;
+  }
+
+  return sections.map((section) => `
+    <section class="service-info-modal-section">
+      ${section.title ? `<h3>${escapeHtml(section.title)}</h3>` : ""}
+      ${sanitizeHtml(section.bodyHtml || "")}
+    </section>
+  `).join("");
+}
+
+function openServiceInfoModal(serviceId, triggerElement) {
+  const service = getServiceById(serviceId);
+  const modal = document.getElementById("serviceInfoModal");
+  const title = document.getElementById("serviceInfoModalTitle");
+  const body = document.getElementById("serviceInfoModalBody");
+  if (!service || !modal || !title || !body) return;
+
+  serviceInfoPreviousFocus = triggerElement || document.activeElement;
+  title.textContent = `${service.name}について`;
+  body.innerHTML = buildServiceInfoModalBody(service);
+  modal.classList.remove("hidden");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("service-info-modal-open");
+
+  const closeButton = modal.querySelector(".service-info-modal-close");
+  window.requestAnimationFrame(() => closeButton?.focus());
+}
+
+function closeServiceInfoModal() {
+  const modal = document.getElementById("serviceInfoModal");
+  if (!modal || modal.classList.contains("hidden")) return;
+
+  modal.classList.add("hidden");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("service-info-modal-open");
+  serviceInfoPreviousFocus?.focus?.();
+  serviceInfoPreviousFocus = null;
+}
+
+function setupServiceInfoModal() {
+  document.addEventListener("click", (event) => {
+    const openButton = event.target.closest("[data-service-info-button]");
+    if (openButton) {
+      openServiceInfoModal(openButton.dataset.serviceId, openButton);
+      return;
+    }
+
+    if (event.target.closest("[data-service-info-close]")) {
+      closeServiceInfoModal();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeServiceInfoModal();
+    }
+  });
 }
 
 function setupStickyToc() {
@@ -251,4 +338,7 @@ function setupStickyToc() {
   targets.forEach((target) => observer.observe(target));
 }
 
-document.addEventListener("DOMContentLoaded", setupStickyToc);
+document.addEventListener("DOMContentLoaded", () => {
+  setupStickyToc();
+  setupServiceInfoModal();
+});
