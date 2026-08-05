@@ -294,13 +294,33 @@ function buildOnceTaskMessage(task) {
 // 期間限定タスク選択画面表示 or スキップ
 // ==================================================
 // 対象の期間限定タスクがない場合は、選択画面を表示せずUSEN推しリクへ進む
+// ==================================================
+// 期間限定タスク選択画面表示 or スキップ
+// ==================================================
 async function showOnceTaskSelectStepOrSkip() {
-  if (!Array.isArray(state.onceTasks) || state.onceTasks.length === 0) {
-    state.selectedOnceTasks = [];
-    state.currentOnceTaskIndex = 0;
-    await advanceRoutineFrom("onceTask");
-    return;
-  }
+  try {
+    if (
+      !Array.isArray(state.onceTasks) ||
+      state.onceTasks.length === 0
+    ) {
+      state.onceTasks = await loadOnceTasks();
+    }
 
-  await showOnceTaskSelectStepOrSkip();
+    if (state.onceTasks.length === 0) {
+      state.selectedOnceTasks = [];
+      state.currentOnceTaskIndex = 0;
+
+      await advanceRoutineFrom("onceTask");
+      return;
+    }
+
+    await showOnceListSelectStep();
+  } catch (error) {
+    console.error(error);
+
+    showError(
+      onceListErrorAreaElement,
+      "期間限定タスクの読み込みに失敗しました。"
+    );
+  }
 }
