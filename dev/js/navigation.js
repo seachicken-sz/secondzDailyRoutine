@@ -121,7 +121,7 @@ function goBackStep() {
 // デイリータスク画面からの戻る制御
 // ==================================================
 // デイリータスク中の戻る操作は、画面ではなく「タスク位置」を戻す
-function goBackDailyTask() {
+async function goBackDailyTask() {
   // 同じグループ内で2件目以降のタスクを表示している場合は、1つ前のタスクに戻る
   if (state.currentDailyTaskIndex > 0) {
     state.currentDailyTaskIndex -= 1;
