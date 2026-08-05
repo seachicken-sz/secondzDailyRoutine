@@ -22,7 +22,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Darumadrop+One&family=Hachi+Maru+Pop&family=Klee+One:wght@400;600&family=Yomogi&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Darumadrop+One&family=Hachi+Maru+Pop&family=Klee+One:wght@400;600&family=Yomogi&family=Zen+Kurenaido&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   
@@ -33,7 +33,7 @@
   <link rel="stylesheet" href="./css/task.css" />
   <link rel="stylesheet" href="./css/utility.css" />
   
-  <link rel="manifest" href="./manifest.json">
+  <link rel="manifest" href="../manifest.json">
   <link rel="apple-touch-icon" href="../img/icon-180.png">
   <link rel="icon" type="image/png" href="../img/icon-180.png">
   <meta name="theme-color" content="#ffffff">
@@ -73,6 +73,20 @@
           </button>
         </section>
         <div class="home-menu-scroll">
+          <section class="home-menu-accordion">
+            <button type="button" class="home-menu-item" data-home-menu-accordion="1minutes_moode">
+              <span><i class="bi bi-clock"></i>お試しモード</span>
+              <span class="home-menu-arrow">＋</span>
+            </button>
+            <div class="home-menu-detail hidden" data-home-menu-detail="1minutes_moode">
+              <p>
+                <strong>1分間だけ時間をください！</strong><br>
+                タムごとDailyを使ったことがない方、使ってみようとしたけど挫折した方へ！<br>
+                チュートリアル付き・1分間モードが登場しました！<br>
+              </p>
+              <a href="./quick/" class="primary-button">試してみる</a>
+            </div>
+          </section>
           <section class="home-menu-accordion">
             <button type="button" class="home-menu-item" data-home-menu-accordion="about">
               <span><i class="bi bi-info-circle"></i>タムごとDaily とは</span>
@@ -132,6 +146,20 @@
           </section>
 
           <section class="home-menu-accordion">
+            <button type="button" class="home-menu-item" data-home-menu-accordion="settings">
+              <span><i class="bi bi-gear"></i>設定</span>
+              <span class="home-menu-arrow">＋</span>
+            </button>
+          
+            <div class="home-menu-detail hidden" data-home-menu-detail="settings">
+              <p>通知や表示モードを設定できます。</p>
+              <button type="button" class="primary-button" id="homeMenuSettingButton">
+                設定を開く
+              </button>
+            </div>
+          </section>
+
+          <section class="home-menu-accordion">
             <button type="button" class="home-menu-item" data-home-menu-accordion="feedback">
               <span><i class="bi bi-send"></i>お問い合わせ</span>
               <span class="home-menu-arrow">＋</span>
@@ -148,6 +176,7 @@
       </nav>
       <div id="home-top-share-btn-wrap">
         <button id="updateNoticeButton" type="button" class="button secondary update-notice-button"><i class="bi bi-bell"></i></button>
+        <button id="settingButton" type="button" class="button secondary update-notice-button" aria-label="設定を開く"><i class="bi bi-gear"></i></button>
       </div>
       <header class="home-header">
         <!--ロゴ-->
@@ -161,7 +190,7 @@
           開始する
         </button>
         </section>
-    <button id="debugStorageClearButton" type="button" class="text-link-button">debug: storage削除</button>
+    
         <section class="home-color-change-area">
       <div class="theme-heart-grid" aria-label="テーマカラー選択">
         <button type="button" class="theme-heart-button" data-theme-button="red" aria-label="赤">
@@ -226,17 +255,28 @@
         <section id="homeInstallGuideCard" class="home-card home-install-guide-area hidden">
           <h2 class="ruby-h"><ruby>はじめに<rt>first step</rt></ruby></h2>
         
-          <p class="home-install-title">🔰まずは「ホーム画面に追加」する</p>
+          <p class="home-install-title"><strong>🔰まずは初回設定をしよう！</strong></p>
         
           <p class="home-install-text">
-            最初はブラウザで開いているので<br>
+            現在あなたは<strong>ブラウザで開いている状態</strong>です。<br>
+            より使いやすくするためには<strong>ホーム画面に追加</strong>するのがおすすめ！<br><br>
             <strong>共有 → ホーム画面に追加</strong>をすると、ホーム画面にアイコンができます。<br>
-            そのアイコンからスタートしてください。
+            そのアイコンからスタートしてください。</p>
+          <a id="openHowToFromHomeCardButton" class="primary-button">ホーム画面に追加する</a>
+          <br>
+          <p class="home-install-title"><strong>🔰 難しくてうまく出来なかった方へ</strong></p>
+          <p class="home-install-text">
+            当ツールは誰も置いていかないことをコンセプトに各種様々なお助けモードを用意しております。<br><br>
+            <strong>おすすめ！</strong> タムごとDailyの基本機能を体験できるチュートリアル付き
+            <a href="./quick/" class="primary-button">「1分間だけ時間をください」モード</a><br>
+            どうしても無理だった方は
+            <a href="../link/" class="secondary-button">タスクまとめページ</a><br>
+            難しかったけど挑戦したい方は
+            <a class="secondary-button" href="https://x.com/tsunakan_r" target="_blank">作成者にヘルプ要請</a><br><br>
+            無理のない範囲でtimeleszをオーエンタムしていきましょう！
           </p>
         
-          <button id="openHowToFromHomeCardButton" class="text-link-button home-install-link" type="button">
-            詳しくはこちら ＞＞
-          </button>
+
         </section>
         <section class="request-ranking-card">
           <div id="requestRankingArea" class="request-ranking-area">
@@ -244,7 +284,7 @@
           </div>
         </section>
 
-            <!--期間限定お知らせ事-->
+      <!--期間限定お知らせ事-->
       <section class="home-card date-visible-block" data-fromdate="2026-06-13T00:00:00+09:00" data-todate="2026-06-15T23:59:59+09:00">
           <h2 class="ruby-h"><ruby>当落アンケート<rt>questionnaire</rt></ruby></h2>
           <div class="card-link">
@@ -269,10 +309,34 @@
               <img src="https://timely-iota-eight.vercel.app/icon-192.png" alt="Timely">
               <span class="card-link-text">
                 <strong>Timely</strong>
-                <small>タムたちの予定を確認できるsecondz向けの非公式サポートアプリ。今日は何がTimelyかな？<br>作成：かなで(@knd12310104)さん</small>
+                <small>タムたちの予定を確認できるsecondz向けの非公式サポートアプリ。今日は何がTimelyかな？<br>
+                  ※外部サイトに移動します。<br>作成：かなで(@knd12310104)さん</small>
               </span>
             </a>
           </div>
+        </section>
+
+        <!--サブスク再生-->
+        <section id="homeSubscriptionCard" class="home-card">
+          <h2 class="ruby-h">
+            <ruby>サブスク再生<rt>subscription</rt></ruby>
+          </h2>
+          <p class="home-extra-description">
+            せっかくなら1曲聞いていかない？<br><br>
+            ※Apple Music有料会員、Spotify Premium加入済みの方はStationheadもおすすめ！<br>
+            <button type="button" class="text-link-button open-stationhead-modal-button">詳しくはこちら</button>
+          </p>
+          <div class="home-subscription-select-area">
+            <select id="homeSubscriptionServiceSelect" class="home-request-song-select" aria-label="サブスクを選択">
+              <option value="spotify" selected>Spotify</option>
+              <option value="amazonMusic">Amazon Music</option>
+              <option value="appleMusic">Apple Music</option>
+              <option value="youtubeMusic">YouTube Music</option>
+              <option value="lineMusic">LINE MUSIC</option>
+            </select>
+            <select id="homeSubscriptionSongSelect" class="home-request-song-select" aria-label="曲を選択"></select>
+          </div>
+          <button id="homeSubscriptionPlayButton"  class="primary-button home-subscription-play-button" type="button">再生する</button>
         </section>
       
         <!--メンバーごと-->
@@ -387,6 +451,8 @@
         </p>
         <button class="task-help-button" type="button" data-step-help-key="spotify">やり方をチェック</button>
         <p id="spotifyListenerCount" class="spotify-listener-count"></p>
+        <p>※リリース週にはStationhead(ステヘ)もおすすめ！<br>
+        <button type="button" class="text-link-button open-stationhead-modal-button">詳しくはこちら</button></p>
       </header>
 
       <section id="selectedArea" class="selected-area hidden">
@@ -420,11 +486,11 @@
           </div>
         </section>
 
-        <section class="bottom-action-area spotify-skip-area">
-          <button id="skipSpotifyButton" class="secondary-button no-margin-button">
-            BGMなし
-          </button>
-        </section>
+      <section class="bottom-action-area spotify-skip-area">
+        <button id="skipSpotifyButton" class="secondary-button no-margin-button">BGMなし</button>
+        <a id="openStationheadButton" href="https://www.stationhead.com/c/secondz" class="secondary-button stationhead-direct-button" target="_blank" rel="noopener noreferrer"><i class="bi bi-broadcast"></i> Stationheadにつなぐ</a>
+        <button id="stationheadNextButton" class="primary-button hidden">次へ</button>
+      </section>
       </section>
     </section>
     <!--STEP 2 期間限定タスク-->
@@ -448,6 +514,9 @@
         <section class="bottom-action-area">
           <button id="startOnceTasksButton" class="primary-button">
             次へ
+          </button>
+          <button id="skipOnceTasksButton" class="secondary-button">
+            今はやめとく
           </button>
         </section>
       </section>
@@ -599,6 +668,7 @@
         <h1>SNSシェア</h1>
         <p class="description">
           今日やったタスク、せっかくならSNSで共有しない？
+          <strong>※新曲リリースに向けて、みんなでオーエンタムしませんか？</strong>
         </p>
       </header>
 
@@ -617,7 +687,7 @@
       <header class="header">
         <h1>シェア文章作成📝</h1>
         <p class="description">
-          投稿先を選んで、シェアしたい項目にチェックを入れてね！          
+          投稿先を選んで、シェアしたい項目にチェックを入れてね！ 
         </p>
       </header>
 
@@ -870,7 +940,9 @@
             画像スタイル
           </label>
           <select id="shareImageStyleSelect" class="share-image-select">
-            <option value="simple" selected>シンプルA</option>
+            <option value="fireworks">夏限定 - 花火バージョン</option>
+            <option value="fireworksCharacter">夏限定 - 花火バージョン(＋ミニキャラ)</option>
+            <option value="simple">シンプルA</option>
             <option value="minimalMemo">シンプルB</option>
             <option value="stationeryPlanner">シンプルC</option>
             <option value="paperWood">natural</option>
@@ -969,44 +1041,24 @@
         </p>
       </section>
       <img  loading="lazy" decoding="async" src="../img/setting/setting_whypwa.png" alt="ホーム画面に追加するとページを開いた後にツールに戻るのがとっても楽！">
-      <h3 class="setup-howto-title">ホーム画面に追加</h3>
-      <p id="userBrowser"></p>
-      <p>あてはまるものを選んで進めてください！</p>
-            <div class="setup-question-block">
-              <h3>① 今このページをどう開いた？</h3>
+     <h3 class="setup-howto-title">ホーム画面に追加</h3>
+      <div id="setupDeviceQuestion" class="setup-question-block">
+        <h3>① 今使っているのは？</h3>
+        <div class="setup-choice-list">
+          <button type="button" class="setup-choice-button" data-device-type="ios">iPhone / iPad</button>
+          <button type="button" class="setup-choice-button" data-device-type="android">Android</button>
+        </div>
+      </div>
       
-              <div class="setup-choice-list">
-                <button type="button" class="setup-choice-button" data-open-place="x">
-                  Xのリンクタップで開いた
-                </button>
-      
-                <button type="button" class="setup-choice-button" data-open-place="threads">
-                  Threadsのリンクタップで開いた
-                </button>
-      
-                <button type="button" class="setup-choice-button" data-open-place="browser">
-                  Safari / Chromeなどブラウザで開いた
-                </button>
-              </div>
-            </div>
-      
-            <div id="setupOpenPlaceGuideArea" class="setup-guide-area hidden"></div>
-      
-            <div id="setupDeviceQuestion" class="setup-question-block hidden">
-              <h3>② 今使っているのは？</h3>
-      
-              <div class="setup-choice-list">
-                <button type="button" class="setup-choice-button" data-device-type="ios">
-                  iPhone / iPad
-                </button>
-      
-                <button type="button" class="setup-choice-button" data-device-type="android">
-                  Android
-                </button>
-              </div>
-            </div>
-      
-            <div id="setupDeviceGuideArea" class="setup-guide-area hidden"></div>
+      <div id="setupIosDisplayQuestion" class="setup-question-block hidden">
+        <h3>② (Safariの場合)画面の下にはどっちが表示されていますか？</h3>
+        <div class="setup-choice-list setup-ios-display-choice-list">
+          <button type="button" class="setup-choice-button setup-ios-display-button" data-ios-display-type="safari-type01"><img src="../img/setting/setup-ios-type01.png" alt="タイプ①"><span>タイプ①</span></button>
+          <button type="button" class="setup-choice-button setup-ios-display-button" data-ios-display-type="safari-type02"><img src="../img/setting/setup-ios-type02.png" alt="タイプ②i"><span>タイプ②</span></button>
+          <button type="button" class="setup-choice-button" data-ios-display-type="chrome">Chromeを使用</button>
+        </div>
+      </div>
+      <div id="setupDeviceGuideArea" class="setup-guide-area hidden"></div>
           </div>
         </div>
       </div>
@@ -1058,6 +1110,9 @@
         <button type="button" class="primary-button" id="firstVisitOpenSetupButton">
           ホーム画面に追加する
         </button>
+        <a href="./quick/" class="secondary-button" id="firstVisitQuickButton">
+          まずは試してみる？
+        </a>
         <button type="button" class="text-link-button" id="firstVisitCloseOnlyButton">
           このまま始める
         </button>
@@ -1091,6 +1146,7 @@
       <div id="stepHelpModalButtonArea" class="step-help-modal-button-area hidden"></div>
     </div>
   </div>
+  
   <!--お知らせ-->
   <div id="updateNoticeModal" class="modal-overlay hidden">
     <div class="modal-content update-notice-modal-content" role="dialog" aria-modal="true" aria-labelledby="updateNoticeModalTitle">
@@ -1103,12 +1159,159 @@
       </div>
     </div>
   </div>
+
+  <!--設定-->
+  <!--設定モーダル-->
+<div id="settingModal" class="modal-overlay hidden">
+  <div class="modal-content setting-modal-content" role="dialog" aria-modal="true" aria-labelledby="settingModalTitle">
+    <div class="modal-header">
+      <h2 id="settingModalTitle" class="modal-title">設定</h2>
+      <button id="closeSettingModalButton" class="modal-close-button" type="button" aria-label="閉じる">×</button>
+    </div>
+
+    <div class="modal-body setting-modal-body">
+      <section id="settingPwaGuide" class="setting-pwa-guide hidden">
+        <p>
+          Push通知はホーム画面に追加したアプリからのみ利用できます。
+        </p>
+        <button type="button" id="settingOpenFirstSetupButton" class="primary-button">
+          ホーム画面に追加する
+        </button>
+      </section>
+
+      <section id="pushSettingSection" class="setting-section">
+        <div class="setting-section-header">
+          <h3><i class="bi bi-bell"></i>プッシュ通知</h3>
+          <p>タムごとDailyからの通知を受け取れます。<br>
+          「通知を許可しますか？」と出たら「許可」を選んでください。
+          </p>
+          <p id="pushStatusText" class="setting-status-text">現在：確認中...</p>
+        </div>
+      
+        <fieldset id="pushSettingFieldset" class="setting-fieldset">
+          <div class="setting-radio-list">
+      
+            <label class="setting-radio-card">
+              <input type="radio" name="pushSetting" value="08">
+              <span>
+                <strong>8時</strong>
+                <small>朝にまとめて始める</small>
+              </span>
+            </label>
+      
+            <label class="setting-radio-card">
+              <input type="radio" name="pushSetting" value="18">
+              <span>
+                <strong>18時</strong>
+                <small>USEN更新時間に合わせる</small>
+              </span>
+            </label>
+
+            <label class="setting-radio-card">
+              <input type="radio" name="pushSetting" value="off">
+              <span>
+                <strong>通知しない</strong>
+                <small>プッシュ通知を停止します</small>
+              </span>
+            </label>
+          </div>
+      
+          <div class="setting-action-row">
+            <button type="button" id="pushSaveButton" class="primary-button">
+              設定を保存
+            </button>
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="setting-section">
+        <div class="setting-section-header">
+          <h3><i class="bi bi-phone"></i>表示モード</h3>
+          <p>※今後実装予定</p>
+        </div>
+
+        <div class="setting-placeholder">
+          準備中
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<!-- Stationhead案内モーダル -->
+<div id="stationheadModal" class="modal-overlay hidden">
+  <div class="modal-content stationhead-modal-content" role="dialog" aria-modal="true" aria-labelledby="stationheadModalTitle">
+    <div class="modal-header">
+      <h2 id="stationheadModalTitle"><i class="bi bi-headphones"></i> Stationhead</h2>
+      <button type="button" id="closeStationheadModalButton" class="modal-close-button" aria-label="閉じる">×</button>
+    </div>
+    <div class="modal-body stationhead-modal-body">
+      <section class="stationhead-intro">
+        <span class="stationhead-label">リリース週におすすめ！</span>
+        <h3>ステヘにチャレンジしてみない？</h3>
+        <p>リリース週だけでもStationheadに参加して、みんなで一緒に再生しよう！</p>
+      </section>
+
+      <section class="stationhead-section">
+        <h4><i class="bi bi-person-check"></i> 参加できる人</h4>
+        <div class="stationhead-condition-list">
+          <div class="stationhead-condition"><i class="bi bi-check-circle-fill"></i><span>Apple Music有料会員<br>またはSpotify Premium加入者</span></div>
+          <div class="stationhead-condition"><i class="bi bi-check-circle-fill"></i><span>18歳以上</span></div>
+        </div>
+      </section>
+
+      <section class="stationhead-section">
+        <h4><i class="bi bi-stars"></i> ステヘのメリット</h4>
+        <div class="stationhead-benefit-list">
+          <div class="stationhead-benefit">
+            <i class="bi bi-play-circle"></i>
+            <div><strong>つないでおくだけ！</strong><span>再生回数に大幅貢献<br>＝Billboardランキングにも貢献！</span></div>
+          </div>
+          <div class="stationhead-benefit">
+            <i class="bi bi-music-note-list"></i>
+            <div><strong>プレイリスト不要</strong><span>自分で再生リストを組む手間なし！</span></div>
+          </div>
+          <div class="stationhead-benefit">
+            <i class="bi bi-wallet2"></i>
+            <div><strong>追加料金なし</strong><span>対象サブスクに加入済みならそのまま参加できます。</span></div>
+          </div>
+          <div class="stationhead-benefit">
+            <i class="bi bi-phone"></i>
+            <div><strong>設定もかんたん</strong><span>アプリDL＋簡単な初期設定だけ！</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stationhead-section stationhead-start-section">
+        <h4><i class="bi bi-rocket-takeoff"></i> はじめかた</h4>
+        <p>まずは設定方法を確認して、Stationheadアプリをダウンロード！</p>
+        <a href="https://www.universal-music.co.jp/other/umjstationhead/" class="primary-button stationhead-guide-button" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> 設定方法を見る</a>
+        <div class="stationhead-download-row">
+          <a href="https://apps.apple.com/us/app/stationhead/id1076117681" class="secondary-button" target="_blank" rel="noopener noreferrer"><i class="bi bi-apple"></i> iPhone</a>
+          <a href="https://play.google.com/store/apps/details?id=com.stationhead.app&referrer=utm_source%3DMarketing%2520Website%26utm_medium%3Dreferral%26utm_campaign%3DMarketing%26anid%3Dadmob" class="secondary-button" target="_blank" rel="noopener noreferrer"><i class="bi bi-google-play"></i> Android</a>
+        </div>
+      </section>
+
+      <section class="stationhead-channel-card">
+        <div class="stationhead-channel-icon"><i class="bi bi-broadcast"></i></div>
+        <div class="stationhead-channel-text">
+          <strong>準備ができたらsecondzへ！</strong>
+          <span>アプリのDL＋初期設定が終わったら、secondz専用チャンネルにつなごう！</span>
+        </div>
+        <a href="https://www.stationhead.com/c/secondz" class="primary-button" target="_blank" rel="noopener noreferrer">secondzチャンネルを開く</a>
+      </section>
+    </div>
+  </div>
+</div>
+  
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.js"></script>
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 <!-- 基本・共通 -->
 <script src="./js/config.js" defer></script>
 <script src="./js/state.js" defer></script>
 <script src="./js/dom.js" defer></script>
 <script src="./js/utils.js" defer></script>
+<script src="./js/pushNotification.js" defer></script>
 <!-- データ・保存・ログ -->
 <script src="./js/loader.js" defer></script>
 <script src="./js/sheetLogger.js" defer></script>
@@ -1141,8 +1344,6 @@
 <script src="./js/post.js" defer></script>
 <script src="./js/youtube.js" defer></script>
 <!-- 起動 -->
-
-  <script src="./js/debug.js" defer></script>
 <script src="./js/app.js" defer></script>
 </body>
 </html>
