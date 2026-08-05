@@ -99,10 +99,7 @@ function goBackStep() {
   
   // 履歴がない場合はホームへ戻す
   if (!previousStepElement) {
-    // 戻る操作でホームへ戻るため、途中再開データを削除
-    clearFlowState();
-  
-    showOnlyStep(homeStepElement, { recordHistory: false });
+    await showFallbackPreviousStepForDaily();
     return;
   }
   
