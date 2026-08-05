@@ -3,44 +3,70 @@
 // ラジオリクエスト用の曲だけを、USEN選択曲とは別に切り替える
 // ==================================================
 
-// ==================================================
-// イベント登録
-// ==================================================
 function bindRadioRequestSongOverrideEvents() {
-  addClickEvent(keepCurrentRadioRequestSongButtonElement, async () => {
-    useCurrentRequestSongForRadio();
-    await showDailyTaskStep();
-  });
+  addClickEvent(
+    keepCurrentRadioRequestSongButtonElement,
+    async () => {
+      useCurrentRequestSongForRadio();
+
+      await advanceRoutineFrom(
+        "radioOverride"
+      );
+    }
+  );
 }
 
-// ==================================================
-// ラジオリクエスト曲切替画面表示
-// ==================================================
 async function showRadioRequestSongOverrideStep() {
   try {
-    // まだラジオ用の曲が決まっていない場合だけ、USEN選択曲を初期値にする
     if (!state.selectedRadioRequestSong) {
       useCurrentRequestSongForRadio();
     }
 
-    const overrideSongs = await getActiveRadioRequestSongOverrides();
+    // セレクトモードで、
+    // ・この後デイリーを行わない
+    // ・デイリーで任意の曲名を使わない
+    // 場合は切り替え画面を出さない
+    if (
+      !shouldShowRadioRequestSongOverride()
+    ) {
+      await advanceRoutineFrom(
+        "radioOverride"
+      );
+
+      return;
+    }
+
+    const overrideSongs =
+      await getActiveRadioRequestSongOverrides();
 
     if (overrideSongs.length === 0) {
-      await showDailyTaskStep();
+      await advanceRoutineFrom(
+        "radioOverride"
+      );
+
       return;
     }
 
     if (currentRadioRequestSongNameElement) {
       currentRadioRequestSongNameElement.textContent =
-        getSelectedRequestSongName() || "未選択";
+        getSelectedRequestSongName() ||
+        "未選択";
     }
 
-    renderRadioRequestSongOverrideButtons(overrideSongs);
+    renderRadioRequestSongOverrideButtons(
+      overrideSongs
+    );
 
-    showOnlyStep(radioRequestSongOverrideStepElement);
-    hideError(radioRequestSongOverrideErrorAreaElement);
+    showOnlyStep(
+      radioRequestSongOverrideStepElement
+    );
+
+    hideError(
+      radioRequestSongOverrideErrorAreaElement
+    );
   } catch (error) {
     console.error(error);
+
     showError(
       requestSongErrorAreaElement,
       "※エラーが発生しました。アプリを立ち上げ直してください。ERROR:radioRequestSongOverride"
@@ -48,62 +74,78 @@ async function showRadioRequestSongOverrideStep() {
   }
 }
 
-// ==================================================
-// 有効な切替候補取得
-// ==================================================
 async function getActiveRadioRequestSongOverrides() {
   if (
-    !Array.isArray(state.radioRequestSongOverrides) ||
+    !Array.isArray(
+      state.radioRequestSongOverrides
+    ) ||
     state.radioRequestSongOverrides.length === 0
   ) {
-    state.radioRequestSongOverrides = await loadRadioRequestSongOverrides();
+    state.radioRequestSongOverrides =
+      await loadRadioRequestSongOverrides();
   }
 
   return state.radioRequestSongOverrides;
 }
 
-// ==================================================
-// 切替ボタン描画
-// ==================================================
-function renderRadioRequestSongOverrideButtons(songs) {
-  if (!radioRequestSongOverrideButtonListElement) {
+function renderRadioRequestSongOverrideButtons(
+  songs
+) {
+  if (
+    !radioRequestSongOverrideButtonListElement
+  ) {
     return;
   }
 
-  radioRequestSongOverrideButtonListElement.innerHTML = "";
+  radioRequestSongOverrideButtonListElement.innerHTML =
+    "";
 
   songs.forEach((song) => {
-    const songName = String(song.songName || "").trim();
+    const songName = String(
+      song.songName || ""
+    ).trim();
 
     if (!songName) {
       return;
     }
 
-    const button = document.createElement("button");
+    const button =
+      document.createElement("button");
+
     button.type = "button";
     button.className = "primary-button";
-    button.textContent = `「${songName}」に切り替える`;
+    button.textContent =
+      `「${songName}」に切り替える`;
 
-    button.addEventListener("click", async () => {
-      state.selectedRadioRequestSong = {
-        name: songName,
-        source: "override",
-      };
-    
-      sendNewSongRequestLog(state.selectedRadioRequestSong).catch((error) => {
-        console.error("newSong requestSongログ送信失敗", error);
-      });
-    
-      await showDailyTaskStep();
-    });
+    button.addEventListener(
+      "click",
+      async () => {
+        state.selectedRadioRequestSong = {
+          name: songName,
+          source: "override",
+        };
 
-    radioRequestSongOverrideButtonListElement.appendChild(button);
+        sendNewSongRequestLog(
+          state.selectedRadioRequestSong
+        ).catch((error) => {
+          console.error(
+            "newSong requestSongログ送信失敗",
+            error
+          );
+        });
+
+        await advanceRoutineFrom(
+          "radioOverride"
+        );
+      }
+    );
+
+    radioRequestSongOverrideButtonListElement.appendChild(
+      button
+    );
   });
 }
 
-// ==================================================
-// 現在のUSEN選択曲をラジオ用にも使う
-// ==================================================
 function useCurrentRequestSongForRadio() {
   if (!state.selectedRequestSong) {
     state.selectedRadioRequestSong = null;
@@ -116,11 +158,11 @@ function useCurrentRequestSongForRadio() {
   };
 }
 
-// ==================================================
-// ラジオリクエストで実際に使う曲名
-// ==================================================
 function getSelectedRadioRequestSongName() {
-  if (state.selectedRadioRequestSong && state.selectedRadioRequestSong.name) {
+  if (
+    state.selectedRadioRequestSong &&
+    state.selectedRadioRequestSong.name
+  ) {
     return state.selectedRadioRequestSong.name;
   }
 
