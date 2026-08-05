@@ -1,160 +1,224 @@
 // ==================================================
 // requestSong.js
-// USEN推しリクステップの表示・曲選択後の遷移・次画面への進行を管理するファイル
+// USEN推しリク／デイリー用リクエスト曲選択を管理する
 // ==================================================
 
-// ==================================================
-// USEN推しリクイベント登録
-// ==================================================
-// app.js から呼び出して、USEN推しリク画面で使うクリックイベントをまとめて登録する
 function bindRequestSongEvents() {
-  // ==================================================
-  // 「その他」アコーディオン
-  // ==================================================
+  addClickEvent(
+    toggleOtherRequestSongsButtonElement,
+    () => {
+      state.isOtherRequestSongsOpen =
+        !state.isOtherRequestSongsOpen;
 
-  // USEN推しリクの「その他」開閉ボタン押下時
-  addClickEvent(toggleOtherRequestSongsButtonElement, () => {
-    // その他リクエスト曲リストの開閉状態を反転する
-    state.isOtherRequestSongsOpen = !state.isOtherRequestSongsOpen;
-
-    // 反転後の状態を画面に反映する
-    updateOtherRequestSongsAccordion();
-  });
-
-  // ==================================================
-  // 「USEN推しリクで開く」ボタン
-  // ==================================================
-
-  // USEN推しリクのページを開くボタン押下時
-  addClickEvent(openRequestSongButtonElement, () => {
-    // リクエスト曲が未選択の場合はエラー表示して処理を止める
-    if (!state.selectedRequestSong) {
-      showError(requestSongErrorAreaElement, MESSAGES.errors.noRequestSongSelected);
-      return;
+      updateOtherRequestSongsAccordion();
     }
+  );
 
-    // 選択中の曲からUSEN推しリク用URLを作成
-    const requestUrl = buildRequestSongUrl(state.selectedRequestSong.url);
+  addClickEvent(
+    openRequestSongButtonElement,
+    () => {
+      // デイリー用曲選択モードでは
+      // USENページを開かない
+      if (isDailyRequestSongMode()) {
+        return;
+      }
 
-    // ページを開いた後に進めるよう、次へボタンを表示
-    if (requestSongNextButtonElement) {
-      requestSongNextButtonElement.classList.remove("hidden");
+      if (!state.selectedRequestSong) {
+        showError(
+          requestSongErrorAreaElement,
+          MESSAGES.errors.noRequestSongSelected
+        );
+
+        return;
+      }
+
+      const requestUrl = buildRequestSongUrl(
+        state.selectedRequestSong.url
+      );
+
+      requestSongNextButtonElement?.classList.remove(
+        "hidden"
+      );
+
+      setButtonStyle(
+        openRequestSongButtonElement,
+        "gray"
+      );
+
+      setButtonStyle(
+        requestSongNextButtonElement,
+        "primary"
+      );
+
+      setSongListVisibility(
+        recommendedRequestSongsElement,
+        false
+      );
+
+      setSongListVisibility(
+        otherRequestSongsWrapperElement,
+        false
+      );
+
+      setSongListVisibility(
+        toggleOtherRequestSongsButtonElement,
+        false
+      );
+
+      state.openedAction =
+        OPENED_ACTIONS.requestSong;
+
+      saveFlowState(
+        state.openedAction,
+        requestSongStepElement
+      );
+
+      markHomeUsenTaskDoneFromRoutine();
+
+      sendRequestSongLog(
+        state.selectedRequestSong
+      ).catch((error) => {
+        console.error(
+          "requestSongLog送信失敗",
+          error
+        );
+      });
+
+      openExternalTaskUrl(requestUrl);
     }
+  );
 
-    // 開くボタンは押下済み表示、次へボタンを主ボタン表示にする
-    setButtonStyle(openRequestSongButtonElement, "gray");
-    setButtonStyle(requestSongNextButtonElement, "primary");
+  addClickEvent(
+    requestSongNextButtonElement,
+    async () => {
+      // USENなし・デイリーありの場合
+      if (isDailyRequestSongMode()) {
+        if (
+          !state.selectedRadioRequestSong?.name
+        ) {
+          showError(
+            requestSongErrorAreaElement,
+            MESSAGES.errors.noRequestSongSelected
+          );
 
-    // USEN推しリク遷移後は曲リストを非表示にして、戻ってきた時の画面を簡略化する
-    setSongListVisibility(recommendedRequestSongsElement, false);
-    setSongListVisibility(otherRequestSongsWrapperElement, false);
-    setSongListVisibility(toggleOtherRequestSongsButtonElement, false);
+          return;
+        }
 
-    // USEN推しリクを開いた状態として保存する
-    // アプリに戻ってきた時に次へボタン表示などを復元するため
-    state.openedAction = OPENED_ACTIONS.requestSong;
-    saveFlowState(state.openedAction, requestSongStepElement);
-    markHomeUsenTaskDoneFromRoutine();
+        // 新曲切り替え画面は通らず
+        // 直接デイリーへ進む
+        await advanceRoutineFrom("dailySong");
+        return;
+      }
 
-    // USEN推しリクのログを送信する
-    // ログ送信に失敗してもユーザー操作は止めない
-    sendRequestSongLog(state.selectedRequestSong).catch((error) => {
-      console.error("requestSongLog送信失敗", error);
-    });
-
-    // USEN推しリクページへ移動
-    openExternalTaskUrl(requestUrl);
-  });
-
-  // ==================================================
-  // 「次へ」ボタン
-  // ==================================================
-
-  // USEN推しリクステップの次へボタン押下時
-  addClickEvent(requestSongNextButtonElement, async () => {
-    // ラジオリクエスト用の曲切替確認へ進む
-    await showRadioRequestSongOverrideStep();
-  });
+      // 通常USENの場合は、
+      // 必要に応じて新曲切り替えへ進む
+      await showRadioRequestSongOverrideStep();
+    }
+  );
 }
 
-// ==================================================
-// USEN推しリク画面表示
-// ==================================================
-// 期間限定タスク終了後、または期間限定タスク未選択時に呼ばれる
-// リクエスト曲一覧を読み込み、USEN推しリク画面を表示する
 async function showRequestSongStep() {
   try {
-    // 前回選択していたリクエスト曲をリセットする
     state.selectedRequestSong = null;
     state.selectedRadioRequestSong = null;
 
-    // 選択済み曲の表示エリアを非表示に戻す
-    if (selectedRequestSongAreaElement) {
-      selectedRequestSongAreaElement.classList.add("hidden");
-    }
+    selectedRequestSongAreaElement?.classList.add(
+      "hidden"
+    );
 
-    // 次へボタンを一旦非表示に戻す
-    if (requestSongNextButtonElement) {
-      requestSongNextButtonElement.classList.add("hidden");
-    }
+    requestSongNextButtonElement?.classList.add(
+      "hidden"
+    );
 
-    // ボタン表示を初期状態に戻す
-    setButtonStyle(openRequestSongButtonElement, "primary");
-    setButtonStyle(requestSongNextButtonElement, "secondary");
+    setButtonStyle(
+      openRequestSongButtonElement,
+      "primary"
+    );
 
-    // おすすめ曲リストを表示する
-    setSongListVisibility(recommendedRequestSongsElement, true);
+    setButtonStyle(
+      requestSongNextButtonElement,
+      "secondary"
+    );
 
-    // 「その他」開閉ボタンを表示する
-    setSongListVisibility(toggleOtherRequestSongsButtonElement, true);
+    setSongListVisibility(
+      recommendedRequestSongsElement,
+      true
+    );
 
-    // その他リクエスト曲リストの開閉状態を画面に反映する
+    setSongListVisibility(
+      toggleOtherRequestSongsButtonElement,
+      true
+    );
+
     updateOtherRequestSongsAccordion();
 
-    // リクエスト曲一覧が未読み込みの場合だけJSONを読み込む
-    if (state.requestSongs.length === 0) {
-      state.requestSongs = await loadRequestSongs();
+    if (
+      !Array.isArray(state.requestSongs) ||
+      state.requestSongs.length === 0
+    ) {
+      state.requestSongs =
+        await loadRequestSongs();
     }
 
-    // URLがない新曲は、dailyコピペ用には使うがUSENボタンには出さない
-    const requestableSongs = state.requestSongs.filter((song) => {
-      return String(song.url || "").trim() !== "";
-    });
-    
-    // flag === true の曲をおすすめ欄へ、それ以外を「その他」欄へ分ける
-    const recommendedRequestSongs = requestableSongs.filter((song) => song.flag === true);
-    const otherRequestSongs = requestableSongs.filter((song) => song.flag !== true);
+    // 通常USEN：
+    // URLがある曲だけ表示
+    //
+    // デイリー用：
+    // URLなしを含む全曲を表示
+    const availableSongs =
+      isDailyRequestSongMode()
+        ? state.requestSongs
+        : state.requestSongs.filter((song) => {
+            return (
+              String(song.url || "").trim() !== ""
+            );
+          });
 
-    // おすすめリクエスト曲リストを描画
-    renderRequestSongList(recommendedRequestSongsElement, recommendedRequestSongs);
+    const recommendedRequestSongs =
+      availableSongs.filter((song) => {
+        return song.flag === true;
+      });
 
-    // その他リクエスト曲リストを描画
-    renderRequestSongList(otherRequestSongsElement, otherRequestSongs);
+    const otherRequestSongs =
+      availableSongs.filter((song) => {
+        return song.flag !== true;
+      });
 
-    // おすすめ曲が0件の場合の空表示
-    if (recommendedRequestSongs.length === 0 && recommendedRequestSongsElement) {
-      recommendedRequestSongsElement.innerHTML = `<p class="empty-text">${MESSAGES.empty.recommendedSongs}</p>`;
+    renderRequestSongList(
+      recommendedRequestSongsElement,
+      recommendedRequestSongs
+    );
+
+    renderRequestSongList(
+      otherRequestSongsElement,
+      otherRequestSongs
+    );
+
+    if (
+      recommendedRequestSongs.length === 0 &&
+      recommendedRequestSongsElement
+    ) {
+      recommendedRequestSongsElement.innerHTML =
+        `<p class="empty-text">${MESSAGES.empty.recommendedSongs}</p>`;
     }
 
-    // その他曲が0件の場合の空表示
-    if (otherRequestSongs.length === 0 && otherRequestSongsElement) {
-      otherRequestSongsElement.innerHTML = `<p class="empty-text">${MESSAGES.empty.otherSongs}</p>`;
+    if (
+      otherRequestSongs.length === 0 &&
+      otherRequestSongsElement
+    ) {
+      otherRequestSongsElement.innerHTML =
+        `<p class="empty-text">${MESSAGES.empty.otherSongs}</p>`;
     }
 
-    // リスト描画後に、その他リクエスト曲リストの開閉状態を再反映する
     updateOtherRequestSongsAccordion();
+    applyRequestSongStepMode();
 
-    // USEN推しリク画面を表示する
     showOnlyStep(requestSongStepElement);
 
-    // 前回表示されていたエラーを消す
     hideError(requestSongErrorAreaElement);
   } catch (error) {
-    // リクエスト曲一覧の読み込みや描画に失敗した場合
     console.error(error);
 
-    // 期間限定タスク側のエリアにエラー表示する
-    // この関数は期間限定タスク終了直後に呼ばれることが多いため、既存挙動に合わせる
     showError(
       onceTaskRunErrorAreaElement,
       "※エラーが発生しました。アプリを立ち上げ直してください。ERROR:requestSong"
