@@ -546,17 +546,22 @@
     <!--STEP 3 USEN推しリク-->
     <section id="requestSongStep" class="step-screen hidden">
       <header class="header">
-        <h1>USEN推し活リクエスト📻</h1>
-        <p class="description">
+        <h1 id="requestSongStepTitle">USEN推し活リクエスト📻</h1>
+      
+        <p id="requestSongStepDescription" class="description">
           曲を選んで<strong>「ページを開く」</strong>をタップ！<br>
           「USEN推し活リクエスト」でリクエストしよ！
         </p>
-        <button class="task-help-button" type="button" data-step-help-key="usenRequest">やり方をチェック</button>
+      
+        <button id="requestSongHelpButton" class="task-help-button" type="button" data-step-help-key="usenRequest">
+          やり方をチェック
+        </button>
+      
         <p id="usenRankingInfo" class="usen-ranking-info hidden"></p>
       </header>
 
       <section id="selectedRequestSongArea" class="selected-area hidden">
-        <p class="selected-label">選択中</p>
+        <p id="selectedRequestSongLabel" class="selected-label">選択中</p>
         <p id="selectedRequestSongName" class="selected-song"></p>
 
         <button id="openRequestSongButton" class="primary-button">
@@ -1224,15 +1229,86 @@
         </fieldset>
       </section>
 
-      <section class="setting-section">
+      <section id="selectModeSettingSection" class="setting-section">
         <div class="setting-section-header">
-          <h3><i class="bi bi-phone"></i>表示モード</h3>
-          <p>※今後実装予定</p>
+          <h3><i class="bi bi-ui-checks-grid"></i>セレクトモード</h3>
+          <p>
+            セレクトモードをオンにすると選んだタスクのみでスタートします。<br>
+            通常のデイリータスクモードに戻したいときはオフにするだけでOK。<br>
+            自分の余力と元気に合わせて無理なく応援していきましょう！
+          </p>
         </div>
-
-        <div class="setting-placeholder">
-          準備中
+      
+        <div class="select-mode-toggle-row">
+          <div class="select-mode-toggle-text">
+            <strong>セレクトモード</strong>
+            <small id="selectModeStatusText">現在：確認中...</small>
+          </div>
+      
+          <label class="select-mode-switch">
+            <input
+              id="selectModeToggle"
+              class="select-mode-switch-input"
+              type="checkbox"
+              aria-label="セレクトモードを切り替える"
+            >
+            <span class="select-mode-switch-slider"></span>
+          </label>
         </div>
+      
+        <p class="select-mode-auto-save-note">
+          <i class="bi bi-check-circle"></i>
+          変更内容は自動で保存されます。
+        </p>
+      
+        <fieldset id="selectModeFeatureFieldset" class="select-mode-fieldset">
+          <legend>セレクトする内容</legend>
+      
+          <div class="select-mode-feature-list">
+            <label class="select-mode-check-card">
+              <input id="selectModeSpotifyCheckbox" type="checkbox">
+              <span class="select-mode-check-main">
+                <strong><i class="bi bi-headphones"></i> Spotify再生</strong>
+                <small>タスク消化中にSpotifyでBGMを再生します。</small>
+              </span>
+            </label>
+      
+            <label class="select-mode-check-card">
+              <input id="selectModeOnceTaskCheckbox" type="checkbox">
+              <span class="select-mode-check-main">
+                <strong><i class="bi bi-clock"></i> 期間限定タスク</strong>
+                <small>現在実施中の期間限定タスクを表示します。</small>
+              </span>
+            </label>
+      
+            <label class="select-mode-check-card">
+              <input id="selectModeUsenCheckbox" type="checkbox">
+              <span class="select-mode-check-main">
+                <strong><i class="bi bi-music-note-list"></i> USEN推し活リクエスト</strong>
+                <small>USENでリクエストできる曲を選んで進みます。</small>
+              </span>
+            </label>
+          </div>
+        </fieldset>
+      
+        <section class="select-mode-daily-area">
+          <div class="select-mode-daily-header">
+            <div>
+              <h4>デイリータスク</h4>
+              <p>実行したいタスクを個別に選べます。</p>
+            </div>
+      
+            <p id="selectModeSelectionSummary" class="select-mode-selection-summary">
+              機能 0件・デイリー 0件を選択中
+            </p>
+          </div>
+      
+          <div id="selectModeDailyTaskList" class="select-mode-daily-list"></div>
+      
+          <p id="selectModeDailyTaskEmptyText" class="select-mode-empty-text hidden">
+            現在選べるデイリータスクがありません。
+          </p>
+        </section>
       </section>
     </div>
   </div>
@@ -1324,6 +1400,7 @@
 <script src="./js/theme.js" defer></script>
 <script src="./js/memberWorks.js" defer></script>
 <script src="./js/setting.js" defer></script>
+<script src="./js/selectMode.js" defer></script>
 <!-- シェア画像 -->
 <script src="./js/shareImages/shareImageThemes.js" defer></script>
 <script src="./js/shareImages/shareImageUtils.js" defer></script>
