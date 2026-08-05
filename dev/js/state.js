@@ -1,4 +1,8 @@
 const state = {
+  routineMode: ROUTINE_MODES.normal,
+  requestSongMode: REQUEST_SONG_MODES.usen,
+  selectModeDailyTaskIds: [],
+  
   selectedSong: null,
   isOtherSongsOpen: false,
 
