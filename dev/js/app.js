@@ -21,6 +21,8 @@ addClickEvent(backStepButtonElement, () => {
 });
 // モーダル系イベント登録
 bindModalEvents();
+// セレクトモード設定イベント登録
+bindSelectModeEvents();
 // ホーム画面イベント登録
 bindHomeEvents();
 // Spotify画面イベント登録
