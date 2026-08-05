@@ -69,6 +69,26 @@ const homeInstallGuideMenuElement = document.getElementById("homeInstallGuideMen
 const homeMenuSetupButtonElement = document.getElementById("homeMenuSetupButton");
 const homeMenuUsageButtonElement = document.getElementById("homeMenuUsageButton");
 const homeMenuShareButtonElement = document.getElementById("homeMenuShareButton");
+// ホーム上部の設定ボタン
+const settingButtonElement = document.getElementById("settingButton");
+// ホームメニュー内の設定ボタン
+const homeMenuSettingButtonElement = document.getElementById("homeMenuSettingButton");
+
+// ==================================================
+// DOM: ホーム サブスク再生
+// ==================================================
+
+const homeSubscriptionCardElement =
+  document.getElementById("homeSubscriptionCard");
+
+const homeSubscriptionServiceSelectElement =
+  document.getElementById("homeSubscriptionServiceSelect");
+
+const homeSubscriptionSongSelectElement =
+  document.getElementById("homeSubscriptionSongSelect");
+
+const homeSubscriptionPlayButtonElement =
+  document.getElementById("homeSubscriptionPlayButton");
 
 // ==================================================
 // DOM: 初回設定モーダル
@@ -88,6 +108,23 @@ const userBrowserElement = document.getElementById("userBrowser");
 const usageModalElement = document.getElementById("usageModal");
 // 使い方モーダルの閉じるボタン
 const closeUsageButtonElement = document.getElementById("closeUsageButton");
+
+// ==================================================
+// DOM: Stationhead案内モーダル
+// ==================================================
+
+// Stationheadモーダルを開くボタン
+// ホーム・Spotifyステップなど複数箇所から呼び出す
+const openStationheadModalButtonElements =
+  document.querySelectorAll(".open-stationhead-modal-button");
+
+// Stationheadモーダル
+const stationheadModalElement =
+  document.getElementById("stationheadModal");
+
+// Stationheadモーダル閉じるボタン
+const closeStationheadModalButtonElement =
+  document.getElementById("closeStationheadModalButton");
 
 // ==================================================
 // DOM: Youtubeモーダル
@@ -132,6 +169,16 @@ const pwaFirstVisitOpenUsageButtonElement = document.getElementById("pwaFirstVis
 const pwaFirstVisitCloseOnlyButtonElement = document.getElementById("pwaFirstVisitCloseOnlyButton");
 
 // ==================================================
+// DOM: 設定モーダル
+// ==================================================
+const settingModalElement = document.getElementById("settingModal");
+const closeSettingModalButtonElement = document.getElementById("closeSettingModalButton");
+const settingOpenFirstSetupButtonElement = document.getElementById("settingOpenFirstSetupButton");
+const settingPwaGuideElement = document.getElementById("settingPwaGuide");
+const pushSettingSectionElement = document.getElementById("pushSettingSection");
+const pushSettingFieldsetElement = document.getElementById("pushSettingFieldset");
+
+// ==================================================
 // DOM: STEP 1 Spotify
 // ==================================================
 // Spotifyステップ画面全体
@@ -158,9 +205,13 @@ const toggleOtherSongsIconElement = document.getElementById("toggleOtherSongsIco
 // その他曲の開閉ラッパー
 const otherSongsWrapperElement = document.getElementById("otherSongsWrapper");
 // その他曲リスト
-const otherSongsElement = document.getElementById("otherSongs");
+const otherSongsElement = document.getElementById("otherSongs");;
 // BGMなしボタン
 const skipSpotifyButtonElement = document.getElementById("skipSpotifyButton");
+// Stationheadを開くボタン
+const openStationheadButtonElement = document.getElementById("openStationheadButton");
+// Stationheadを開いた後の次へボタン
+const stationheadNextButtonElement = document.getElementById("stationheadNextButton");
 
 // ==================================================
 // DOM: STEP 2 期間限定タスク選択
@@ -173,6 +224,8 @@ const onceListErrorAreaElement = document.getElementById("onceListErrorArea");
 const onceTaskListElement = document.getElementById("onceTaskList");
 // 選択した期間限定タスクを開始するボタン
 const startOnceTasksButtonElement = document.getElementById("startOnceTasksButton");
+// 期間限定タスクを今回はやらずに進むボタン
+const skipOnceTasksButtonElement = document.getElementById("skipOnceTasksButton");
 
 // ==================================================
 // DOM: STEP 2 期間限定タスク実行

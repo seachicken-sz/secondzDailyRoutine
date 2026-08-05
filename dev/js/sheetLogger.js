@@ -1,4 +1,4 @@
-const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzaXmITsQ0eZlBZGEefRCzihLjgkdOPSNPmUqXkFAIln8CrIdn4JDYZlcYH_0cpm7xF/exec";
+const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzucuobkQoSbYuewwuFSQbJwKwd74sC163tfvLwi-nBhKcsUSJtmiAwpoYij4CjBHUx/exec";
 const SHEET_TOKEN = "test-token";
 const SHEET_APP_NAME = "secondzDailyRoutine";
 const SHEET_CLIENT_ID_KEY = "secondzDailyRoutineClientId";
@@ -13,7 +13,8 @@ const SHEET_TASK_TYPES = [
   "snsShare",
   "youtube",
   "access",
-  "memberLink"
+  "memberLink",
+  "quick"
 ];
 
 /**
@@ -58,7 +59,14 @@ function getSheetPlatform() {
  * @returns {boolean}
  */
 function isSheetStandaloneMode() {
-  return isStandaloneMode();
+  if (typeof isStandaloneMode === "function") {
+    return isStandaloneMode();
+  }
+
+  return Boolean(
+    window.matchMedia?.("(display-mode: standalone)")?.matches ||
+    window.navigator.standalone === true
+  );
 }
 
 /**
@@ -152,14 +160,14 @@ function createSheetItem(item, options = {}) {
  * @param {Object} groups
  * @returns {Object}
  */
-function createSheetPayload(groups) {
-const payload = {
-  token: SHEET_TOKEN,
-  app: SHEET_APP_NAME,
-  platform: getSheetPlatform(),
-  clientId: getSheetClientId(),
-  theme: getSheetSelectedTheme()
-};
+function createSheetPayload(groups, options = {}) {
+  const payload = {
+    token: SHEET_TOKEN,
+    app: options.app || SHEET_APP_NAME,
+    platform: getSheetPlatform(),
+    clientId: getSheetClientId(),
+    theme: getSheetSelectedTheme()
+  };
 
   SHEET_TASK_TYPES.forEach((taskType) => {
     const rawItems = Array.isArray(groups[taskType]) ? groups[taskType] : [];
@@ -196,7 +204,7 @@ function hasSheetItems(payload) {
  * @param {Object} groups taskTypeごとの送信item配列
  * @returns {Promise<boolean>}
  */
-async function sendSheetLog(groups) {
+async function sendSheetLog(groups, options = {}) {
   if (!SHEET_WEB_APP_URL || SHEET_WEB_APP_URL.includes("ここに")) {
     return false;
   }
@@ -205,7 +213,7 @@ async function sendSheetLog(groups) {
     return false;
   }
 
-  const payload = createSheetPayload(groups || {});
+  const payload = createSheetPayload(groups || {}, options);
 
   if (!hasSheetItems(payload)) {
     return false;
@@ -332,6 +340,48 @@ function getAccessBrowserType() {
   return "other_browser";
 }
 
+const SHEET_SNS_IN_APP_BROWSER_TYPE_KEY =
+  "secondzDailyRoutineSnsInAppBrowserType";
+
+const SHEET_SNS_IN_APP_BROWSER_TYPES = [
+  "x_in_app",
+  "threads_in_app",
+  "line_in_app",
+  "instagram_in_app",
+  "facebook_in_app",
+];
+
+function rememberSnsInAppBrowserType(browserType = getAccessBrowserType()) {
+  if (!SHEET_SNS_IN_APP_BROWSER_TYPES.includes(browserType)) {
+    return "";
+  }
+
+  sessionStorage.setItem(
+    SHEET_SNS_IN_APP_BROWSER_TYPE_KEY,
+    browserType
+  );
+
+  return browserType;
+}
+
+function getCurrentOrRememberedAccessBrowserType() {
+  const currentBrowserType = getAccessBrowserType();
+
+  if (SHEET_SNS_IN_APP_BROWSER_TYPES.includes(currentBrowserType)) {
+    rememberSnsInAppBrowserType(currentBrowserType);
+    return currentBrowserType;
+  }
+
+  const rememberedBrowserType = sessionStorage.getItem(
+    SHEET_SNS_IN_APP_BROWSER_TYPE_KEY
+  );
+
+  return SHEET_SNS_IN_APP_BROWSER_TYPES.includes(rememberedBrowserType)
+    ? rememberedBrowserType
+    : currentBrowserType;
+}
+
+
 /**
  * アクセス時の情報を取得する
  *
@@ -396,19 +446,64 @@ async function sendAccessLog() {
 }
 
 /**
- * 開始ログを送信する
+ * メインフロー開始・終了ログを送信する
  *
+ * @param {"start" | "finish"} event
  * @returns {Promise<boolean>}
  */
-async function sendStartLog() {
+async function sendStartLog(event = "start") {
+  const normalizedEvent = event === "finish" ? "finish" : "start";
+
   const item = createSheetItem({}, {
-    itemId: "start",
-    title: "開始",
+    itemId: `flow_${normalizedEvent}`,
+    title: normalizedEvent,
     url: ""
   });
 
   return sendSheetLog({
-    start: [item]
+    start: [{
+      ...item,
+      event: normalizedEvent
+    }]
+  });
+}
+
+/**
+ * ショート版の操作ログを送信する
+ *
+ * @param {"start" | "spotifyOpen" | "taskOpen" | "complete"} eventType
+ * @param {Object} data
+ * @param {string} data.sessionId
+ * @param {string} data.itemId
+ * @param {string} data.title
+ * @param {string} data.url
+ * @param {boolean} data.tutorialEnabled
+ * @returns {Promise<boolean>}
+ */
+async function sendQuickLog(eventType, data = {}) {
+  if (!eventType || !data.sessionId) {
+    return false;
+  }
+
+  const item = createSheetItem({}, {
+    itemId: data.itemId || `quick_${eventType}`,
+    title: data.title || "",
+    url: data.url || ""
+  });
+
+  if (!item) {
+    return false;
+  }
+
+  return sendSheetLog({
+    quick: [{
+      ...item,
+      eventType,
+      sessionId: data.sessionId,
+      tutorialEnabled: data.tutorialEnabled === true
+    }]
+  }, {
+    app: "secondzDailyRoutineQuick"
   });
 }
 

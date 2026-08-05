@@ -50,6 +50,15 @@ const MEMBER_WORK_LINK_GROUPS = [
     isTarget: (item) =>
       item.workType === "dreampass" &&
       Boolean(item.platformUrl)
+  },
+    {
+    key: "dreampass_kouho",
+    label: "ドリパス上映候補入り",
+    description: "上映候補入りした作品はこちら！見たい作品にはファン登録しておこ！",
+    urlKey: "platformUrl",
+    isTarget: (item) =>
+      item.workType === "dreampass_kouho" &&
+      Boolean(item.platformUrl)
   }
 ];
 

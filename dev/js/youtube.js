@@ -40,36 +40,95 @@ function bindYoutubeEvents() {
 }
 
 // ==================================================
+// YouTube共有
+// ==================================================
+
+// YouTube共有文を作成する
+function buildYoutubeShareText(item) {
+  const title = String(item?.name || item?.title || "").trim();
+  const url = String(item?.url || "").trim();
+
+  // shareTags は配列を基本とする
+  // 文字列で設定されていても1件として扱う
+  const rawTags = Array.isArray(item?.shareTags)
+    ? item.shareTags
+    : item?.shareTags
+      ? [item.shareTags]
+      : [];
+
+  const tags = rawTags
+    .map((tag) => String(tag || "").trim())
+    .filter(Boolean)
+    .map((tag) => tag.startsWith("#") ? tag : `#${tag}`)
+    .join(" ");
+
+  return [title, tags, url]
+    .filter(Boolean)
+    .join(" ");
+}
+
+// YouTube項目を共有する
+async function shareYoutubeItem(item) {
+  const shareText = buildYoutubeShareText(item);
+
+  if (!shareText) {
+    return;
+  }
+
+  try {
+    // iPhone / Android / PWAなど
+    if (navigator.share) {
+      await navigator.share({
+        text: shareText,
+      });
+      return;
+    }
+
+    // Web Share API非対応環境
+    await navigator.clipboard.writeText(shareText);
+    alert("共有文をコピーしました。");
+  } catch (error) {
+    // 共有シートをユーザー自身が閉じた場合
+    if (error.name === "AbortError") {
+      return;
+    }
+
+    console.error("YouTube共有失敗", error);
+    alert("共有に失敗しました。");
+  }
+}
+
+// ==================================================
 // YouTubeカード行描画
 // ==================================================
-// 指定されたコンテナに、YouTube項目のカード一覧を描画する
-// playlist / mv / other の各行で共通利用する
 function renderYoutubeCardRow(container, items, type, options = {}) {
-  // 表示先コンテナがない場合は何もしない
   if (!container) {
     return;
   }
 
-  // 既存の表示をクリア
   container.innerHTML = "";
 
-  // 表示対象が0件の場合は空表示を出す
   if (items.length === 0) {
-    container.innerHTML = `<p class="empty-text">${MESSAGES.empty.youtubeItems}</p>`;
+    container.innerHTML =
+      `<p class="empty-text">${MESSAGES.empty.youtubeItems}</p>`;
     return;
   }
 
-  // YouTube項目を1件ずつカード化する
   items.forEach((item) => {
-    // カード全体をbuttonとして作成
+    // カード + シェアボタンをまとめるラッパー
+    const cardItem = document.createElement("div");
+    cardItem.className = "youtube-card-item";
+
+    // ==================================================
+    // 動画を開くカード
+    // ==================================================
+
     const card = document.createElement("button");
     card.type = "button";
     card.className = "youtube-card";
 
-    // サムネイルURLを取得
     const thumbnailUrl = getYoutubeThumbnailUrl(item);
 
-    // サムネイルが取得できる場合
     if (thumbnailUrl) {
       const thumbnail = document.createElement("img");
       thumbnail.className = "youtube-thumbnail";
@@ -78,50 +137,64 @@ function renderYoutubeCardRow(container, items, type, options = {}) {
       thumbnail.loading = "lazy";
       card.appendChild(thumbnail);
     } else {
-      // サムネイルがない場合は種別ラベルのテキストカードにする
       const textCard = document.createElement("div");
       textCard.className = "youtube-text-card";
       textCard.textContent = getYoutubeFallbackLabel(type);
       card.appendChild(textCard);
     }
 
-    // カード下部に表示する名前
     const name = document.createElement("p");
     name.className = "youtube-card-name";
     name.textContent = item.name;
     card.appendChild(name);
 
-    // カードクリック時：ログ送信 → 必要なら完了画面表示 → YouTubeへ遷移
     card.addEventListener("click", () => {
-      // YouTubeクリックログを送信する
-      // ログ送信に失敗しても遷移は止めない
       sendYoutubeLog({
-        itemId: item.id || item.itemId || createLogItemId(`yt_${type}`, item.url || item.name),
+        itemId:
+          item.id ||
+          item.itemId ||
+          createLogItemId(
+            `yt_${type}`,
+            item.url || item.name
+          ),
         title: item.name || item.title || "",
         url: item.url || "",
       }).catch((error) => {
         console.error("youtubeLog送信失敗", error);
       });
 
-      // モーダル内カードから開いた場合は、指定されたモーダルを閉じる
       if (options.closeModalElement) {
         options.closeModalElement.classList.add("hidden");
       }
 
-      // 通常フローでは、YouTubeを開く前に完了画面へ進める
-      // モーダル内カードでは finishAfterClick: false を指定して完了画面にしない
       if (options.finishAfterClick !== false) {
         showPlaceholderNextStep(MESSAGES.finish);
       }
 
-      // 完了画面描画やログ処理を阻害しないよう、少し遅らせて外部遷移する
       setTimeout(() => {
         location.href = item.url;
       }, 100);
     });
 
-    // コンテナにカードを追加
-    container.appendChild(card);
+    // ==================================================
+    // シェアボタン
+    // ==================================================
+
+    const shareButton = document.createElement("button");
+    shareButton.type = "button";
+    shareButton.className = "youtube-card-share-button";
+    shareButton.innerHTML = '<i class="bi bi-box-arrow-up"></i>';
+    shareButton.setAttribute("aria-label", `${item.name}をシェア`);
+    shareButton.title = "シェア";
+    
+    shareButton.addEventListener("click", () => {
+      shareYoutubeItem(item);
+    });
+
+    cardItem.appendChild(card);
+    cardItem.appendChild(shareButton);
+
+    container.appendChild(cardItem);
   });
 }
 

@@ -51,7 +51,24 @@ function bindSpotifyEvents() {
     // Spotifyへ移動
     location.href = spotifyUrl;
   });
-
+  // ==================================================
+  // 「Stationheadにつなぐ」ボタン
+  // ==================================================
+  
+  addClickEvent(openStationheadButtonElement, () => {
+    if (stationheadNextButtonElement) {
+      stationheadNextButtonElement.classList.remove("hidden");
+    }
+  });
+  
+  // ==================================================
+  // Stationhead利用後の「次へ」ボタン
+  // ==================================================
+  
+  addClickEvent(stationheadNextButtonElement, async () => {
+    state.selectedSong = null;
+    await showOnceListSelectStep();
+  });
   // ==================================================
   // 「BGMなし」ボタン
   // ==================================================

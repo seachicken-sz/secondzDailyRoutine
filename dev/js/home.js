@@ -82,6 +82,11 @@ function bindHomeEvents() {
   // ホーム用リクエスト曲選択
   // ==================================================
   bindHomeRequestSongSelectEvents();
+    // ==================================================
+  // ホーム：サブスク再生
+  // ==================================================
+  bindHomeSubscriptionEvents();
+  
 }
 
 // ==================================================
@@ -1488,9 +1493,15 @@ function renderHomeUpdateNoticeList() {
     return;
   }
 
+  const readIds = getHomeUpdateNoticeReadIds();
+
   HOME_UPDATE_NOTICE_LIST.forEach((notice) => {
     const item = document.createElement("article");
     item.className = "update-notice-item";
+
+    if (!readIds.includes(notice.id)) {
+      item.classList.add("is-unread");
+    }
 
     const date = document.createElement("p");
     date.className = "update-notice-date";
@@ -1555,4 +1566,245 @@ function formatHomeUpdateNoticeDate(value) {
   const day = String(date.getDate()).padStart(2, "0");
 
   return `${date.getFullYear()}/${month}/${day}`;
+}
+
+// ==================================================
+// ホーム：サブスク再生
+// ==================================================
+
+let HOME_SUBSCRIPTION_SONGS = [];
+
+const HOME_SUBSCRIPTION_SERVICES = {
+  spotify: {
+    label: "Spotify",
+    source: "Spotify",
+  },
+  amazonMusic: {
+    label: "Amazon Music",
+    source: "Amazon Music",
+  },
+  appleMusic: {
+    label: "Apple Music",
+    source: "Apple Music",
+  },
+  youtubeMusic: {
+    label: "YouTube Music",
+    source: "YouTube Music",
+  },
+  lineMusic: {
+    label: "LINE MUSIC",
+    source: "LINE MUSIC",
+  },
+};
+
+
+/**
+ * サブスク再生欄を初期化する
+ */
+function initializeHomeSubscription(songs) {
+  if (
+    !homeSubscriptionServiceSelectElement ||
+    !homeSubscriptionSongSelectElement ||
+    !homeSubscriptionPlayButtonElement
+  ) {
+    return;
+  }
+
+  HOME_SUBSCRIPTION_SONGS = sortHomeSubscriptionSongs(songs);
+
+  renderHomeSubscriptionSongSelect();
+}
+
+
+/**
+ * Spotify画面と同じ優先順位に並べる
+ *
+ * 1. flag === true
+ * 2. その他
+ *
+ * 各グループ内の順序はJSONの順番を維持する。
+ */
+function sortHomeSubscriptionSongs(songs) {
+  if (!Array.isArray(songs)) {
+    return [];
+  }
+
+  const recommendedSongs = songs.filter(
+    (song) => song && song.flag === true
+  );
+
+  const otherSongs = songs.filter(
+    (song) => song && song.flag !== true
+  );
+
+  return [
+    ...recommendedSongs,
+    ...otherSongs,
+  ];
+}
+
+
+/**
+ * 選択中サービスを取得
+ */
+function getHomeSubscriptionService() {
+  return homeSubscriptionServiceSelectElement?.value || "spotify";
+}
+
+
+/**
+ * 曲・サービスから再生URLを取得
+ */
+function getHomeSubscriptionUrl(song, service) {
+  if (!song) {
+    return "";
+  }
+
+  const subscriptionUrl =
+    song.subscription?.[service] || "";
+
+  if (subscriptionUrl) {
+    return subscriptionUrl;
+  }
+
+  // 旧Spotifyデータとの互換用
+  if (service === "spotify") {
+    return buildSpotifyUrl(song);
+  }
+
+  return "";
+}
+
+
+/**
+ * 曲名プルダウン生成
+ *
+ * 選択中サービスのURLが存在する曲だけ表示する。
+ */
+function renderHomeSubscriptionSongSelect() {
+  if (!homeSubscriptionSongSelectElement) {
+    return;
+  }
+
+  const service = getHomeSubscriptionService();
+
+  homeSubscriptionSongSelectElement.innerHTML = "";
+
+  HOME_SUBSCRIPTION_SONGS.forEach((song, index) => {
+    if (!song?.name) {
+      return;
+    }
+
+    const url = getHomeSubscriptionUrl(song, service);
+
+    if (!url) {
+      return;
+    }
+
+    const option = document.createElement("option");
+
+    option.value = String(index);
+    option.textContent = song.name;
+
+    homeSubscriptionSongSelectElement.appendChild(option);
+  });
+
+  const hasSongs =
+    homeSubscriptionSongSelectElement.options.length > 0;
+
+  if (hasSongs) {
+    homeSubscriptionSongSelectElement.selectedIndex = 0;
+  }
+
+  if (homeSubscriptionPlayButtonElement) {
+    homeSubscriptionPlayButtonElement.disabled = !hasSongs;
+  }
+}
+
+
+/**
+ * サブスク再生イベント
+ */
+function bindHomeSubscriptionEvents() {
+  if (
+    !homeSubscriptionServiceSelectElement ||
+    !homeSubscriptionPlayButtonElement
+  ) {
+    return;
+  }
+
+  // サービス変更時に、そのサービスで再生できる曲だけ再描画
+  homeSubscriptionServiceSelectElement.addEventListener(
+    "change",
+    renderHomeSubscriptionSongSelect
+  );
+
+  homeSubscriptionPlayButtonElement.addEventListener(
+    "click",
+    openHomeSubscription
+  );
+}
+
+
+/**
+ * 選択中サブスク・曲を開く
+ */
+function openHomeSubscription() {
+  const service = getHomeSubscriptionService();
+
+  const songIndex = Number(
+    homeSubscriptionSongSelectElement?.value
+  );
+
+  if (Number.isNaN(songIndex)) {
+    return;
+  }
+
+  const song = HOME_SUBSCRIPTION_SONGS[songIndex];
+
+  if (!song) {
+    return;
+  }
+
+  const subscriptionUrl =
+    getHomeSubscriptionUrl(song, service);
+
+  if (!subscriptionUrl) {
+    return;
+  }
+
+  const serviceConfig =
+    HOME_SUBSCRIPTION_SERVICES[service];
+
+  if (!serviceConfig) {
+    return;
+  }
+
+  const logPromises = [];
+
+  // Spotifyは既存のmusicLogにも送信
+  if (
+    service === "spotify" &&
+    typeof sendSpotifyLog === "function"
+  ) {
+    logPromises.push(
+      sendSpotifyLog(song)
+    );
+  }
+
+  // ホームからのサブスク再生は全サービスhomeTaskLogへ送信
+  if (typeof sendHomeTaskLog === "function") {
+    logPromises.push(
+      sendHomeTaskLog(song, {
+        source: serviceConfig.source,
+        url: subscriptionUrl,
+      })
+    );
+  }
+
+  Promise.allSettled(logPromises).catch((error) => {
+    console.error("サブスク再生ログ送信失敗", error);
+  });
+
+  location.href = subscriptionUrl;
 }

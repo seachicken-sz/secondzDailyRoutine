@@ -93,16 +93,25 @@ function goBackStep() {
     goBackFromDailyGroupEnd();
     return;
   }
-
+  
   // 通常画面は履歴スタックから直前の画面を取り出す
   const previousStepElement = state.stepHistory.pop();
-
+  
   // 履歴がない場合はホームへ戻す
   if (!previousStepElement) {
+    // 戻る操作でホームへ戻るため、途中再開データを削除
+    clearFlowState();
+  
     showOnlyStep(homeStepElement, { recordHistory: false });
     return;
   }
-
+  
+  // 戻る操作でホームへ戻る場合
+  if (previousStepElement === homeStepElement) {
+    // 途中再開データを削除
+    clearFlowState();
+  }
+  
   // 履歴に残っていた画面へ戻る
   // 戻る操作自体をさらに履歴へ積まないよう recordHistory: false
   showOnlyStep(previousStepElement, { recordHistory: false });
