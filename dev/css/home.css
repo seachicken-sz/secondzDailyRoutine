@@ -290,12 +290,12 @@
   margin: 0 0 8px;
   line-height: 1.7;
 }
-.home-install-link {
+#homeInstallGuideCard .text-link-button{
   padding: 0;
   font-weight: 700;
   color: var(--color-link);
 }
-.home-install-link:hover {
+#homeInstallGuideCard .text-link-button:hover {
   color: var(--color-link-hover);
 }
 /* =========================
@@ -418,6 +418,100 @@
   font-weight: 700;
   line-height: 1.6;
 }
+.request-ranking-usen {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.request-ranking-usen-title {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+}
+
+.request-ranking-usen-list {
+  display: grid;
+  gap: 8px;
+}
+
+.request-ranking-usen-item {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.request-ranking-usen-item.is-top20 {
+  /* 1〜20位用の見た目 */
+}
+
+.request-ranking-usen-item.is-top30 {
+  /* 21〜30位用の見た目 */
+}
+
+.request-ranking-usen-rank-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.request-ranking-usen-rank {
+  font-weight: 700;
+   color:var(--color-brand);
+}
+
+.request-ranking-usen-status {
+  font-size: 0.8rem;
+}
+
+.request-ranking-usen-song {
+  display: block;
+  margin-top: 3px;
+}
+
+.request-ranking-usen-time {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+.usen-ranking-line .usen-ranking-song {
+  display: inline;
+}
+
+.usen-ranking-status {
+  display: block;
+  margin-top: 4px;
+}
+
+
+.usen-ranking-item{
+    background-color: #fff;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    box-shadow: #e2e2e2 0 0 5px;
+}
+.usen-ranking-rank{
+   color:var(--color-brand);
+}
+
+.request-ranking-current-song {
+  margin: 0;
+  padding: 14px 12px;
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.request-ranking-current-song strong {
+  color: var(--color-brand);
+  font-weight: 800;
+}
+
+.request-ranking-graph-button {
+  margin-top: 14px;
+}
+
 /* =========================
    メンバーお仕事エリア
 ========================= */
@@ -571,6 +665,9 @@
   content: "▶️ ";
 }
 .member-link-section-dreampass .member-link-section-title::before {
+  content: "🎬";
+}
+.member-link-section-dreampass_kouho .member-link-section-title::before {
   content: "🎬";
 }
 .member-work-link-card-tver {
@@ -1068,36 +1165,23 @@
   border-radius: 50%;
   background: var(--color-brand);
 }
-.update-notice-modal-content {
-  width: min(100%, 430px);
-}
-.update-notice-list {
+
+
+/* =========================
+   ホーム：サブスク再生
+========================= */
+
+.home-subscription-select-area {
   display: grid;
-  gap: 12px;
+  gap: 8px;
+  margin-top: 8px;
 }
-.update-notice-item {
-  padding: 12px;
-  border-radius: var(--radius-card);
-  background: var(--color-brand-soft);
+
+.home-subscription-play-button {
+  margin-top: 12px;
 }
-.update-notice-date {
-  margin: 0 0 4px;
-  font-size: 0.78rem;
-  color: var(--color-text-sub);
-}
-.update-notice-title {
-  margin: 0 0 6px;
-  font-size: 0.95rem;
-  color: var(--color-text-main);
-}
-.update-notice-body {
-  margin: 0;
-  white-space: pre-line;
-  font-size: 0.88rem;
-  line-height: 1.6;
-  color: var(--color-text-sub);
-}
-.update-notice-empty {
-  margin: 0;
-  color: var(--color-text-sub);
+
+.home-subscription-play-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
