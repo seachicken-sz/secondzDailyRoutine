@@ -25,27 +25,85 @@ function selectSong(song) {
 }
 
 function selectRequestSong(song) {
-  state.selectedRequestSong = song;
+  if (!song) {
+    return;
+  }
+
+  const dailyMode = isDailyRequestSongMode();
+
+  if (dailyMode) {
+    // USENを実行した曲としては保存しない
+    state.selectedRequestSong = null;
+
+    // 実際にラジオリクエストで使う曲として保存
+    state.selectedRadioRequestSong = {
+      name: song.name || "",
+      source: "dailySelect",
+    };
+  } else {
+    state.selectedRequestSong = song;
+    state.selectedRadioRequestSong = null;
+  }
 
   if (selectedRequestSongNameElement) {
-    selectedRequestSongNameElement.textContent = song.name;
+    selectedRequestSongNameElement.textContent =
+      song.name;
   }
 
-  if (selectedRequestSongAreaElement) {
-    selectedRequestSongAreaElement.classList.remove("hidden");
+  selectedRequestSongAreaElement?.classList.remove(
+    "hidden"
+  );
+
+  if (dailyMode) {
+    openRequestSongButtonElement?.classList.add(
+      "hidden"
+    );
+
+    requestSongNextButtonElement?.classList.remove(
+      "hidden"
+    );
+
+    setButtonStyle(
+      requestSongNextButtonElement,
+      "primary"
+    );
+  } else {
+    openRequestSongButtonElement?.classList.remove(
+      "hidden"
+    );
+
+    requestSongNextButtonElement?.classList.add(
+      "hidden"
+    );
+
+    setButtonStyle(
+      openRequestSongButtonElement,
+      "primary"
+    );
+
+    setButtonStyle(
+      requestSongNextButtonElement,
+      "secondary"
+    );
   }
 
-  if (requestSongNextButtonElement) {
-    requestSongNextButtonElement.classList.add("hidden");
-  }
-  setButtonStyle(openRequestSongButtonElement, "primary");
-  setButtonStyle(requestSongNextButtonElement, "secondary");
-  
-  setSongListVisibility(recommendedRequestSongsElement, true);
-  setSongListVisibility(toggleOtherRequestSongsButtonElement, true);
-  updateOtherRequestSongsAccordion();  
+  setSongListVisibility(
+    recommendedRequestSongsElement,
+    true
+  );
 
-  updateSelectedButtonStyle(".request-song-button", song);
+  setSongListVisibility(
+    toggleOtherRequestSongsButtonElement,
+    true
+  );
+
+  updateOtherRequestSongsAccordion();
+
+  updateSelectedButtonStyle(
+    ".request-song-button",
+    song
+  );
+
   hideError(requestSongErrorAreaElement);
 }
 
