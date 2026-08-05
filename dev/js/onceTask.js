@@ -25,7 +25,7 @@ async function skipOnceTaskSelection() {
   hideError(onceListErrorAreaElement);
 
   // USEN推しリクへ進む
-  await showRequestSongStep();
+  await advanceRoutineFrom("onceTask");
 }
 
 // ==================================================
@@ -126,7 +126,7 @@ function bindOnceTaskEvents() {
       });
 
       // USEN推しリクへ進む
-      await showRequestSongStep();
+      await advanceRoutineFrom("onceTask");
       return;
     }
 
@@ -298,7 +298,7 @@ async function showOnceTaskSelectStepOrSkip() {
   if (!Array.isArray(state.onceTasks) || state.onceTasks.length === 0) {
     state.selectedOnceTasks = [];
     state.currentOnceTaskIndex = 0;
-    await showRequestSongStep();
+    await advanceRoutineFrom("onceTask");
     return;
   }
 
