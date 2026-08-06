@@ -432,6 +432,10 @@ function updateStartRoutineButtonLabel() {
 // ==================================================
 
 function resetRoutineProgressState() {
+  // 前回SNS共有画面へ到達した際に無効化された
+  // 途中再開保存を、今回の開始時に再有効化する
+  state.isFlowStateSaveDisabled = false;
+  
   state.selectedSong = null;
 
   state.selectedOnceTasks = [];
@@ -511,12 +515,12 @@ function isSelectModeFeatureSelected(featureName) {
 // ==================================================
 // 今回実行するデイリータスク
 // ==================================================
-
 function getExecutionDailyGroups() {
   const groups = Array.isArray(state.dailyGroups)
     ? state.dailyGroups
     : [];
 
+  // 通常モードは、従来どおり元のグループ構成を使う
   if (!isSelectRoutine()) {
     return groups;
   }
@@ -527,24 +531,33 @@ function getExecutionDailyGroups() {
       : []
   );
 
-  return groups
-    .map((group) => {
-      const items = Array.isArray(group?.items)
-        ? group.items
-        : [];
+  // 元のJSONに並んでいる順番を維持したまま、
+  // 選択されたタスクだけを1つの配列にまとめる
+  const selectedItems = groups.flatMap((group) => {
+    const items = Array.isArray(group?.items)
+      ? group.items
+      : [];
 
-      const selectedItems = items.filter((item) => {
-        return selectedIdSet.has(
-          String(item?.id || "")
-        );
-      });
+    return items.filter((item) => {
+      const taskId = String(item?.id || "");
 
-      return {
-        ...group,
-        items: selectedItems,
-      };
-    })
-    .filter((group) => group.items.length > 0);
+      return selectedIdSet.has(taskId);
+    });
+  });
+
+  if (selectedItems.length === 0) {
+    return [];
+  }
+
+  // セレクトモードでは、元のグループに関係なく
+  // 選んだデイリータスク全体を1グループとして扱う
+  return [
+    {
+      listName: "選んだデイリータスク",
+      lastFlag: true,
+      items: selectedItems,
+    },
+  ];
 }
 
 function getExecutionDailyItems() {
@@ -739,7 +752,9 @@ function finishRoutineAfterDaily() {
 }
 
 function finishSelectModeRoutine() {
-  showPlaceholderNextStep(MESSAGES.finish);
+  // セレクトモードでも、
+  // 最後にSNS共有とYouTubeを必ず実行対象に含める
+  showPostAskStep();
 }
 
 // ==================================================
