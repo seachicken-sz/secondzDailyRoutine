@@ -79,79 +79,87 @@ function showOnlyStep(activeStepElement, options = {}) {
 // 戻るボタン制御
 // ==================================================
 // 上部の「戻る」ボタン押下時に、現在画面に応じて前の画面へ戻す
-function goBackStep() {
-  // デイリータスク画面は、単純な画面履歴ではなく
+async function goBackStep() {
+  // デイリータスク画面は、
   // タスク番号・グループ番号を戻す必要があるため専用処理に回す
   if (state.currentStepElement === dailyTaskStepElement) {
-    goBackDailyTask();
+    await goBackDailyTask();
     return;
   }
 
-  // デイリーグループ終了画面から戻る場合も、
-  // 直前のデイリータスク末尾に戻す必要があるため専用処理に回す
+  // デイリーグループ終了画面から戻る場合
   if (state.currentStepElement === dailyGroupEndStepElement) {
     goBackFromDailyGroupEnd();
     return;
   }
-  
+
   // 通常画面は履歴スタックから直前の画面を取り出す
   const previousStepElement = state.stepHistory.pop();
-  
+
   // 履歴がない場合はホームへ戻す
   if (!previousStepElement) {
-    await showFallbackPreviousStepForDaily();
+    clearFlowState();
+
+    showOnlyStep(homeStepElement, {
+      recordHistory: false,
+    });
+
     return;
   }
-  
+
   // 戻る操作でホームへ戻る場合
   if (previousStepElement === homeStepElement) {
-    // 途中再開データを削除
     clearFlowState();
   }
-  
-  // 履歴に残っていた画面へ戻る
-  // 戻る操作自体をさらに履歴へ積まないよう recordHistory: false
-  showOnlyStep(previousStepElement, { recordHistory: false });
-}
 
+  // 履歴に残っていた画面へ戻る
+  showOnlyStep(previousStepElement, {
+    recordHistory: false,
+  });
+}
 // ==================================================
 // デイリータスク画面からの戻る制御
 // ==================================================
 // デイリータスク中の戻る操作は、画面ではなく「タスク位置」を戻す
 async function goBackDailyTask() {
-  // 同じグループ内で2件目以降のタスクを表示している場合は、1つ前のタスクに戻る
+  // 同じグループ内で2件目以降なら、1つ前のタスクへ戻る
   if (state.currentDailyTaskIndex > 0) {
     state.currentDailyTaskIndex -= 1;
     renderCurrentDailyTask();
     return;
   }
 
-  // グループ先頭にいるが、前のグループがある場合は、
-  // 前グループの最後のタスクに戻る
+  // グループ先頭で、前のグループがある場合
   if (state.currentDailyGroupIndex > 0) {
     state.currentDailyGroupIndex -= 1;
 
     const previousGroup = getCurrentDailyGroup();
-    const previousGroupItems = getDailyGroupItems(previousGroup);
+    const previousGroupItems =
+      getDailyGroupItems(previousGroup);
 
-    state.currentDailyTaskIndex = Math.max(previousGroupItems.length - 1, 0);
+    state.currentDailyTaskIndex = Math.max(
+      previousGroupItems.length - 1,
+      0
+    );
+
     renderCurrentDailyTask();
     return;
   }
 
-  // デイリータスク全体の先頭にいる場合は、通常の画面履歴へ戻す
+  // デイリータスク全体の先頭の場合は画面履歴を見る
   const previousStepElement = state.stepHistory.pop();
 
-  // 履歴がない場合は、直前想定のUSEN推しリク画面へ戻す
+  // 途中再開などで履歴がない場合
   if (!previousStepElement) {
-    showOnlyStep(requestSongStepElement, { recordHistory: false });
+    await showFallbackPreviousStepForDaily();
     return;
   }
 
   // 履歴に残っていた画面へ戻る
-  showOnlyStep(previousStepElement, { recordHistory: false });
+  showOnlyStep(previousStepElement, {
+    recordHistory: false,
+  });
 }
-
 // ==================================================
 // デイリーグループ終了画面からの戻る制御
 // ==================================================
