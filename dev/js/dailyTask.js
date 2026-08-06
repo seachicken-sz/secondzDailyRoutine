@@ -347,6 +347,8 @@ function showDailyGroupEndStep() {
   const executionGroups =
     getExecutionDailyGroups();
 
+  // セレクトモードでは実行グループが1つなので、
+  // 最後のタスク終了後はここで直接SNS共有へ進む
   if (
     state.currentDailyGroupIndex >=
     executionGroups.length - 1
