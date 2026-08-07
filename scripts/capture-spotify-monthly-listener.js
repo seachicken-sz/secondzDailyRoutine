@@ -1,7 +1,8 @@
 const { chromium } = require("playwright");
 
 const ARTIST_NAME = "timelesz";
-const RANKING_URL = "https://usen.oshireq.com/";
+const ARTIST_ID = "1ZFfhzyXjPvbzSYPlCIwo3";
+const SPOTIFY_URL = `https://open.spotify.com/artist/${ARTIST_ID}`;
 const RANKING_WEB_APP_URL = process.env.RANKING_WEB_APP_URL;
 
 function getJstDateParts() {
@@ -16,6 +17,7 @@ function getJstDateParts() {
     minute: "2-digit",
     second: "2-digit",
     hour12: false,
+    hourCycle: "h23",
   });
 
   const parts = formatter.formatToParts(now);
@@ -27,159 +29,122 @@ function getJstDateParts() {
     }
   });
 
+  const capturedAt =
+    `${values.year}-${values.month}-${values.day}` +
+    `T${values.hour}:${values.minute}:${values.second}+09:00`;
+
   return {
     date: `${values.year}-${values.month}-${values.day}`,
-    hour: `${values.hour}:00`,
-    capturedHour: `${values.year}-${values.month}-${values.day}T${values.hour}:00:00+09:00`,
-    createdAt: `${values.year}-${values.month}-${values.day}T${values.hour}:${values.minute}:${values.second}+09:00`,
+    capturedAt,
+    createdAt: capturedAt,
   };
 }
 
 function normalizeText(text) {
-  return text ? text.trim() : "";
+  return String(text || "")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
-function extractNumber(text) {
-  const numericText = String(text || "").replace(/[^\d]/g, "");
+function extractListenerInfo(text) {
+  const normalized = normalizeText(text);
 
-  if (!numericText) {
-    return null;
-  }
+  const patterns = [
+    /([\d,]+)\s+monthly listeners/i,
+    /([\d,]+)\s*(?:人の)?月間リスナー/i,
+    /月間リスナー\s*([\d,]+)/i,
+  ];
 
-  return Number(numericText);
-}
+  for (const pattern of patterns) {
+    const match = normalized.match(pattern);
 
-async function scrollToBottom(page) {
-  let previousHeight = 0;
-  let previousItemCount = 0;
-  let stableCount = 0;
-
-  while (stableCount < 3) {
-    const currentHeight = await page.evaluate(() => {
-      return document.body.scrollHeight;
-    });
-
-    const currentItemCount = await page.locator("li").count();
-
-    await page.evaluate(() => {
-      window.scrollTo(0, document.body.scrollHeight);
-    });
-
-    await page.waitForTimeout(1200);
-
-    const isHeightStable = currentHeight === previousHeight;
-    const isItemCountStable = currentItemCount === previousItemCount;
-
-    if (isHeightStable && isItemCountStable) {
-      stableCount += 1;
-    } else {
-      stableCount = 0;
-    }
-
-    previousHeight = currentHeight;
-    previousItemCount = currentItemCount;
-  }
-
-  await page.evaluate(() => {
-    window.scrollTo(0, 0);
-  });
-
-  await page.waitForTimeout(500);
-}
-
-async function getTextOrEmpty(locator) {
-  const count = await locator.count();
-
-  if (count === 0) {
-    return "";
-  }
-
-  const text = await locator.first().textContent();
-
-  return normalizeText(text);
-}
-
-async function getAttributeOrEmpty(locator, name) {
-  const count = await locator.count();
-
-  if (count === 0) {
-    return "";
-  }
-
-  const value = await locator.first().getAttribute(name);
-
-  return value || "";
-}
-
-async function getTimeleszRankingItems(page) {
-  const artistElements = page.locator("dd", {
-    hasText: /^timelesz$/,
-  });
-
-  const count = await artistElements.count();
-  const results = [];
-
-  for (let i = 0; i < count; i += 1) {
-    const artistElement = artistElements.nth(i);
-    const item = artistElement.locator("xpath=ancestor::li[1]");
-    const link = item.locator("a").first();
-
-    const valueText = await getTextOrEmpty(item.locator("h4"));
-    const songTitle = await getTextOrEmpty(item.locator("dt"));
-    const href = await getAttributeOrEmpty(link, "href");
-    const songId = await getAttributeOrEmpty(link, "id");
-
-    if (!valueText || !songTitle) {
+    if (!match) {
       continue;
     }
 
-    results.push({
-      valueText,
-      valueNumber: extractNumber(valueText),
-      artist: ARTIST_NAME,
-      songTitle,
-      songId,
-      url: href ? new URL(href, RANKING_URL).toString() : "",
-    });
+    const listenerCount = Number(
+      String(match[1]).replace(/[^\d]/g, "")
+    );
+
+    if (!Number.isFinite(listenerCount)) {
+      continue;
+    }
+
+    return {
+      listenerText: normalizeText(match[0]),
+      listenerCount,
+    };
   }
 
-  return results;
+  return null;
 }
 
-async function captureRankingItems() {
+async function captureSpotifyMonthlyListener() {
   const browser = await chromium.launch({
     headless: true,
   });
 
   try {
-    const page = await browser.newPage({
+    const context = await browser.newContext({
       viewport: {
         width: 1280,
         height: 1200,
       },
-      locale: "ja-JP",
+      locale: "en-US",
     });
 
-    console.log(`Opening ranking page: ${RANKING_URL}`);
+    const page = await context.newPage();
 
-    await page.goto(RANKING_URL, {
+    console.log(`Opening Spotify artist page: ${SPOTIFY_URL}`);
+
+    await page.goto(SPOTIFY_URL, {
       waitUntil: "domcontentloaded",
       timeout: 90000,
     });
 
-    await page.waitForSelector("li", {
+    await page.waitForSelector("body", {
       state: "visible",
       timeout: 60000,
     });
 
-    await page.waitForTimeout(3000);
-    await scrollToBottom(page);
+    /*
+     * Spotifyはクライアント側でプロフィール情報を描画するため、
+     * DOMContentLoaded直後では月間リスナー数がまだ存在しない場合がある。
+     */
+    await page.waitForFunction(
+      () => {
+        const text = document.body?.innerText || "";
 
-    const items = await getTimeleszRankingItems(page);
+        return (
+          /[\d,]+\s+monthly listeners/i.test(text) ||
+          /[\d,]+\s*(?:人の)?月間リスナー/i.test(text) ||
+          /月間リスナー\s*[\d,]+/i.test(text)
+        );
+      },
+      null,
+      {
+        timeout: 60000,
+      }
+    );
 
-    console.log(`Captured timelesz ranking items: ${items.length}`);
+    const bodyText = await page.locator("body").innerText();
 
-    return items;
+    const listenerInfo = extractListenerInfo(bodyText);
+
+    if (!listenerInfo) {
+      console.log("Spotify body text:");
+      console.log(bodyText.slice(0, 5000));
+
+      throw new Error(
+        "Spotify monthly listener count was not found."
+      );
+    }
+
+    console.log(
+      `Captured Spotify monthly listener: ${listenerInfo.listenerCount}`
+    );
+
+    return listenerInfo;
   } finally {
     await browser.close();
   }
@@ -191,15 +156,22 @@ async function sendToSpreadsheet(snapshot) {
   }
 
   const payload = {
-    type: "timeleszRequestRanking",
+    type: "spotifyMonthlyListener",
     ...snapshot,
   };
 
-  console.log("Sending timelesz request ranking to spreadsheet...");
+  console.log(
+    "Sending Spotify monthly listener to spreadsheet..."
+  );
+
   console.log(
     `POST URL is set: ${RANKING_WEB_APP_URL.startsWith(
       "https://script.google.com/macros/s/"
     )}`
+  );
+
+  console.log(
+    `Listener count: ${snapshot.listenerCount}`
   );
 
   const response = await fetch(RANKING_WEB_APP_URL, {
@@ -212,7 +184,10 @@ async function sendToSpreadsheet(snapshot) {
 
   const responseText = await response.text();
 
-  console.log(`Spreadsheet response status: ${response.status}`);
+  console.log(
+    `Spreadsheet response status: ${response.status}`
+  );
+
   console.log("Spreadsheet sync response:");
   console.log(responseText);
 
@@ -234,7 +209,9 @@ async function sendToSpreadsheet(snapshot) {
 
   if (!result.ok) {
     throw new Error(
-      `Spreadsheet sync failed: ${result.error || responseText}`
+      `Spreadsheet sync failed: ${
+        result.error || responseText
+      }`
     );
   }
 }
@@ -242,32 +219,36 @@ async function sendToSpreadsheet(snapshot) {
 async function main() {
   const {
     date,
-    hour,
-    capturedHour,
+    capturedAt,
     createdAt,
   } = getJstDateParts();
 
-  const items = await captureRankingItems();
+  const {
+    listenerText,
+    listenerCount,
+  } = await captureSpotifyMonthlyListener();
 
   const snapshot = {
     date,
-    hour,
-    capturedHour,
+    capturedAt,
     artist: ARTIST_NAME,
-    sourceUrl: RANKING_URL,
-    itemCount: items.length,
-    items,
+    artistId: ARTIST_ID,
+    listenerText,
+    listenerCount,
+    sourceUrl: SPOTIFY_URL,
     createdAt,
   };
 
   await sendToSpreadsheet(snapshot);
 
-  console.log("Saved to spreadsheet:");
+  console.log("Saved Spotify monthly listener:");
   console.log(JSON.stringify(snapshot, null, 2));
 }
 
 main().catch((error) => {
-  console.error("Failed to capture timelesz request ranking data.");
+  console.error(
+    "Failed to capture Spotify monthly listener."
+  );
   console.error(error);
   process.exit(1);
 });
