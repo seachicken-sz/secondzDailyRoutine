@@ -2,8 +2,15 @@ const { chromium } = require("playwright");
 
 const ARTIST_NAME = "timelesz";
 const ARTIST_ID = "1ZFfhzyXjPvbzSYPlCIwo3";
-const SPOTIFY_URL = `https://open.spotify.com/artist/${ARTIST_ID}`;
-const RANKING_WEB_APP_URL = process.env.RANKING_WEB_APP_URL;
+const SPOTIFY_URL =
+  `https://open.spotify.com/intl-ja/artist/${ARTIST_ID}`;
+
+const RANKING_WEB_APP_URL =
+  process.env.RANKING_WEB_APP_URL;
+
+// ==================================================
+// JST日時
+// ==================================================
 
 function getJstDateParts() {
   const now = new Date();
@@ -29,16 +36,22 @@ function getJstDateParts() {
     }
   });
 
+  const date =
+    `${values.year}-${values.month}-${values.day}`;
+
   const capturedAt =
-    `${values.year}-${values.month}-${values.day}` +
-    `T${values.hour}:${values.minute}:${values.second}+09:00`;
+    `${date}T${values.hour}:${values.minute}:${values.second}+09:00`;
 
   return {
-    date: `${values.year}-${values.month}-${values.day}`,
+    date,
     capturedAt,
     createdAt: capturedAt,
   };
 }
+
+// ==================================================
+// 共通
+// ==================================================
 
 function normalizeText(text) {
   return String(text || "")
@@ -46,38 +59,31 @@ function normalizeText(text) {
     .trim();
 }
 
-function extractListenerInfo(text) {
-  const normalized = normalizeText(text);
+function parseListenerCount(listenerText) {
+  const text = normalizeText(listenerText);
 
-  const patterns = [
-    /([\d,]+)\s+monthly listeners/i,
-    /([\d,]+)\s*(?:人の)?月間リスナー/i,
-    /月間リスナー\s*([\d,]+)/i,
-  ];
+  const match = text.match(
+    /([\d,]+)\s*(?:人の月間リスナー|monthly listeners)/i
+  );
 
-  for (const pattern of patterns) {
-    const match = normalized.match(pattern);
-
-    if (!match) {
-      continue;
-    }
-
-    const listenerCount = Number(
-      String(match[1]).replace(/[^\d]/g, "")
-    );
-
-    if (!Number.isFinite(listenerCount)) {
-      continue;
-    }
-
-    return {
-      listenerText: normalizeText(match[0]),
-      listenerCount,
-    };
+  if (!match) {
+    return null;
   }
 
-  return null;
+  const listenerCount = Number(
+    match[1].replace(/,/g, "")
+  );
+
+  if (!Number.isFinite(listenerCount)) {
+    return null;
+  }
+
+  return listenerCount;
 }
+
+// ==================================================
+// Spotify月間リスナー取得
+// ==================================================
 
 async function captureSpotifyMonthlyListener() {
   const browser = await chromium.launch({
@@ -90,35 +96,50 @@ async function captureSpotifyMonthlyListener() {
         width: 1280,
         height: 1200,
       },
-      locale: "en-US",
+      locale: "ja-JP",
     });
 
     const page = await context.newPage();
 
-    console.log(`Opening Spotify artist page: ${SPOTIFY_URL}`);
+    console.log(
+      `Opening Spotify artist page: ${SPOTIFY_URL}`
+    );
 
     await page.goto(SPOTIFY_URL, {
       waitUntil: "domcontentloaded",
       timeout: 90000,
     });
 
-    await page.waitForSelector("body", {
+    const artistPage = page.locator(
+      'section[data-testid="artist-page"]'
+    );
+
+    await artistPage.waitFor({
       state: "visible",
       timeout: 60000,
     });
 
     /*
-     * Spotifyはクライアント側でプロフィール情報を描画するため、
-     * DOMContentLoaded直後では月間リスナー数がまだ存在しない場合がある。
+     * SpotifyはDOMContentLoaded後に
+     * 月間リスナー数が描画されることがあるので、
+     * テキストが出るまで待つ。
      */
     await page.waitForFunction(
       () => {
-        const text = document.body?.innerText || "";
+        const artistPage = document.querySelector(
+          'section[data-testid="artist-page"]'
+        );
+
+        if (!artistPage) {
+          return false;
+        }
+
+        const text =
+          artistPage.textContent || "";
 
         return (
-          /[\d,]+\s+monthly listeners/i.test(text) ||
-          /[\d,]+\s*(?:人の)?月間リスナー/i.test(text) ||
-          /月間リスナー\s*[\d,]+/i.test(text)
+          /[\d,]+\s*人の月間リスナー/.test(text) ||
+          /[\d,]+\s*monthly listeners/i.test(text)
         );
       },
       null,
@@ -127,32 +148,123 @@ async function captureSpotifyMonthlyListener() {
       }
     );
 
-    const bodyText = await page.locator("body").innerText();
+    /*
+     * class名はSpotify側で変更される可能性があるため、
+     * classではなく表示テキストから探す。
+     *
+     * 添付HTMLでは、
+     * artist-pageヘッダー内に
+     * 「704,761人の月間リスナー」
+     * のような形で表示されている。
+     */
+    const listenerElements = artistPage.getByText(
+      /[\d,]+\s*(?:人の月間リスナー|monthly listeners)/i
+    );
 
-    const listenerInfo = extractListenerInfo(bodyText);
+    const listenerElementCount =
+      await listenerElements.count();
 
-    if (!listenerInfo) {
-      console.log("Spotify body text:");
-      console.log(bodyText.slice(0, 5000));
+    console.log(
+      `Monthly listener text candidates: ${listenerElementCount}`
+    );
+
+    let listenerText = "";
+
+    for (
+      let i = 0;
+      i < listenerElementCount;
+      i += 1
+    ) {
+      const candidate =
+        listenerElements.nth(i);
+
+      const text = normalizeText(
+        await candidate.textContent()
+      );
+
+      if (
+        /[\d,]+\s*(?:人の月間リスナー|monthly listeners)/i.test(
+          text
+        )
+      ) {
+        listenerText = text;
+        break;
+      }
+    }
+
+    /*
+     * getByTextで取れなかった場合の保険として、
+     * artist-page全体から正規表現で抽出する。
+     */
+    if (!listenerText) {
+      const artistPageText = normalizeText(
+        await artistPage.textContent()
+      );
+
+      const fallbackMatch =
+        artistPageText.match(
+          /[\d,]+\s*(?:人の月間リスナー|monthly listeners)/i
+        );
+
+      if (fallbackMatch) {
+        listenerText =
+          normalizeText(fallbackMatch[0]);
+      }
+    }
+
+    if (!listenerText) {
+      const debugText = normalizeText(
+        await artistPage.textContent()
+      );
+
+      console.log(
+        "Spotify artist page text:"
+      );
+
+      console.log(
+        debugText.slice(0, 5000)
+      );
 
       throw new Error(
-        "Spotify monthly listener count was not found."
+        "Spotify monthly listener text was not found."
+      );
+    }
+
+    const listenerCount =
+      parseListenerCount(listenerText);
+
+    if (listenerCount === null) {
+      throw new Error(
+        `Spotify monthly listener count could not be parsed: ${listenerText}`
       );
     }
 
     console.log(
-      `Captured Spotify monthly listener: ${listenerInfo.listenerCount}`
+      `Captured Spotify monthly listener: ${listenerText}`
     );
 
-    return listenerInfo;
+    console.log(
+      `Listener count: ${listenerCount}`
+    );
+
+    return {
+      listenerText,
+      listenerCount,
+    };
   } finally {
     await browser.close();
   }
 }
 
+// ==================================================
+// GASへPOST
+// ==================================================
+
 async function sendToSpreadsheet(snapshot) {
   if (!RANKING_WEB_APP_URL) {
-    throw new Error("RANKING_WEB_APP_URL is not set.");
+    throw new Error(
+      "RANKING_WEB_APP_URL is not set."
+    );
   }
 
   const payload = {
@@ -171,24 +283,35 @@ async function sendToSpreadsheet(snapshot) {
   );
 
   console.log(
-    `Listener count: ${snapshot.listenerCount}`
+    "POST payload:"
   );
 
-  const response = await fetch(RANKING_WEB_APP_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(payload),
-  });
+  console.log(
+    JSON.stringify(payload, null, 2)
+  );
 
-  const responseText = await response.text();
+  const response = await fetch(
+    RANKING_WEB_APP_URL,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    }
+  );
+
+  const responseText =
+    await response.text();
 
   console.log(
     `Spreadsheet response status: ${response.status}`
   );
 
-  console.log("Spreadsheet sync response:");
+  console.log(
+    "Spreadsheet sync response:"
+  );
+
   console.log(responseText);
 
   if (!response.ok) {
@@ -200,7 +323,8 @@ async function sendToSpreadsheet(snapshot) {
   let result;
 
   try {
-    result = JSON.parse(responseText);
+    result =
+      JSON.parse(responseText);
   } catch (error) {
     throw new Error(
       `Spreadsheet response is not JSON: ${responseText}`
@@ -214,7 +338,13 @@ async function sendToSpreadsheet(snapshot) {
       }`
     );
   }
+
+  return result;
 }
+
+// ==================================================
+// メイン
+// ==================================================
 
 async function main() {
   const {
@@ -226,7 +356,8 @@ async function main() {
   const {
     listenerText,
     listenerCount,
-  } = await captureSpotifyMonthlyListener();
+  } =
+    await captureSpotifyMonthlyListener();
 
   const snapshot = {
     date,
@@ -241,14 +372,21 @@ async function main() {
 
   await sendToSpreadsheet(snapshot);
 
-  console.log("Saved Spotify monthly listener:");
-  console.log(JSON.stringify(snapshot, null, 2));
+  console.log(
+    "Saved Spotify monthly listener:"
+  );
+
+  console.log(
+    JSON.stringify(snapshot, null, 2)
+  );
 }
 
 main().catch((error) => {
   console.error(
     "Failed to capture Spotify monthly listener."
   );
+
   console.error(error);
+
   process.exit(1);
 });
