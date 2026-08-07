@@ -350,7 +350,7 @@ function renderSelectModeDailyTaskList() {
 
     const groupName = document.createElement("span");
     groupName.textContent =
-      group.listName || "デイリータスク";
+      group.listName || "マイセレクト";
 
     const count = document.createElement("span");
     count.className = "select-mode-daily-group-count";
