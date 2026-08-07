@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/08/07 23:07",
+  "updatedAt": "2026/08/08 00:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/31",
-      "updatedAt": "2026/08/07 23:07",
+      "updatedAt": "2026/08/08 00:07",
       "episodeId": "eplqgnuarg",
       "subtitle": "真夏の決戦！「信頼じゃんけん」トーナメント",
       "likes": "1.6万",
@@ -628,6 +628,10 @@
         },
         {
           "hour": 169,
+          "likes": 16000
+        },
+        {
+          "hour": 170,
           "likes": 16000
         }
       ],
@@ -1301,9 +1305,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
+          "currentRank": 50,
+          "elapsedHour": 170,
+          "elapsedRank": 50,
           "currentPoints": [
             {
               "hour": 23,
@@ -1864,6 +1868,10 @@
             {
               "hour": 168,
               "rank": 49
+            },
+            {
+              "hour": 170,
+              "rank": 50
             }
           ],
           "previousPoints": [
@@ -2523,19 +2531,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "相葉ヒロミのお困りですカー？"
             },
             {
               "rank": 48,
-              "title": "テレビ×ミセス"
-            },
-            {
-              "rank": 49,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 49,
+              "title": "かまいたちの机上の空論城"
+            },
+            {
               "rank": 50,
-              "title": "吉田と粗品と"
+              "title": "タイムレスマン"
             }
           ]
         },
@@ -3116,15 +3124,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Ｔシャツが乾くまで"
+              "title": "リーガルビート -逆転の法廷-"
             },
             {
               "rank": 48,
-              "title": "THE突破ファイル"
+              "title": "君は夏のなか"
             },
             {
               "rank": 49,
-              "title": "ゴールデンタッグ ～何かが起きそうな2人をマッチング～"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
@@ -3137,7 +3145,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/02",
-      "updatedAt": "2026/08/07 23:07",
+      "updatedAt": "2026/08/08 00:07",
       "episodeId": "ep6mqnux58",
       "subtitle": "【絶品どんぶり登場】このお店に丼はある？ない？",
       "likes": "1.2万",
@@ -3601,6 +3609,10 @@
         },
         {
           "hour": 129,
+          "likes": 12000
+        },
+        {
+          "hour": 130,
           "likes": 12000
         }
       ],
@@ -5316,19 +5328,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "相葉ヒロミのお困りですカー？"
             },
             {
               "rank": 48,
-              "title": "テレビ×ミセス"
-            },
-            {
-              "rank": 49,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 49,
+              "title": "かまいたちの机上の空論城"
+            },
+            {
               "rank": 50,
-              "title": "吉田と粗品と"
+              "title": "タイムレスマン"
             }
           ]
         },
@@ -5789,15 +5801,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Ｔシャツが乾くまで"
+              "title": "リーガルビート -逆転の法廷-"
             },
             {
               "rank": 48,
-              "title": "THE突破ファイル"
+              "title": "君は夏のなか"
             },
             {
               "rank": 49,
-              "title": "ゴールデンタッグ ～何かが起きそうな2人をマッチング～"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
@@ -5810,10 +5822,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/28",
-      "updatedAt": "2026/08/07 23:07",
+      "updatedAt": "2026/08/08 00:07",
       "episodeId": "epgw9m4xvk",
       "subtitle": "チョコプラ・timeleszが「衝撃吸収材なら、バラエティ罰ゲームをノーリアクションでこなせるのか？」に挑む！",
-      "likes": "8513",
+      "likes": "8521",
       "favorites": "5.7万",
       "likePoints": [
         {
@@ -8193,7 +8205,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE神業チャレンジ"
+              "title": "世界くらべてみたら"
             },
             {
               "rank": 48,
@@ -8205,7 +8217,7 @@
             },
             {
               "rank": 50,
-              "title": "地球まるごと大実験 ネイチャーティーチャー"
+              "title": "THE神業チャレンジ"
             }
           ]
         },
@@ -8422,19 +8434,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "相葉ヒロミのお困りですカー？"
             },
             {
               "rank": 48,
-              "title": "テレビ×ミセス"
-            },
-            {
-              "rank": 49,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 49,
+              "title": "かまいたちの机上の空論城"
+            },
+            {
               "rank": 50,
-              "title": "吉田と粗品と"
+              "title": "タイムレスマン"
             }
           ]
         }
@@ -8443,10 +8455,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/06",
-      "updatedAt": "2026/08/07 23:07",
+      "updatedAt": "2026/08/08 00:07",
       "episodeId": "epegtojnm9",
       "subtitle": "【特定班ゲーム】こうやって居場所は特定される",
-      "likes": "8507",
+      "likes": "8586",
       "favorites": "23.6万",
       "likePoints": [
         {
@@ -8600,6 +8612,10 @@
         {
           "hour": 45,
           "likes": 8507
+        },
+        {
+          "hour": 46,
+          "likes": 8586
         }
       ],
       "previousLikePoints": [
@@ -9248,9 +9264,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 26,
-          "elapsedHour": 45,
-          "elapsedRank": 26,
+          "currentRank": 28,
+          "elapsedHour": 46,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 9,
@@ -9383,6 +9399,10 @@
             {
               "hour": 45,
               "rank": 26
+            },
+            {
+              "hour": 46,
+              "rank": 28
             }
           ],
           "previousPoints": [
@@ -9633,19 +9653,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 23,
-              "title": "ぐるぐるナインティナイン"
-            },
-            {
-              "rank": 24,
+              "rank": 25,
               "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
-              "rank": 25,
-              "title": "見取り図じゃん"
+              "rank": 26,
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
-              "rank": 26,
+              "rank": 27,
+              "title": "マツコ＆有吉 かりそめ天国"
+            },
+            {
+              "rank": 28,
               "title": "ニカゲーム"
             }
           ]
@@ -9875,15 +9895,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Ｔシャツが乾くまで"
+              "title": "リーガルビート -逆転の法廷-"
             },
             {
               "rank": 48,
-              "title": "THE突破ファイル"
+              "title": "君は夏のなか"
             },
             {
               "rank": 49,
-              "title": "ゴールデンタッグ ～何かが起きそうな2人をマッチング～"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
@@ -9896,10 +9916,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/02",
-      "updatedAt": "2026/08/07 23:07",
+      "updatedAt": "2026/08/08 00:07",
       "episodeId": "epu2r9bvgo",
       "subtitle": "棲みつく可能性5%以下…新宿ミツバチを再び呼べるか!?",
-      "likes": "7903",
+      "likes": "7915",
       "favorites": "52.9万",
       "likePoints": [
         {
@@ -10341,6 +10361,10 @@
         {
           "hour": 124,
           "likes": 7903
+        },
+        {
+          "hour": 125,
+          "likes": 7915
         }
       ],
       "previousLikePoints": [],
@@ -10349,7 +10373,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 25,
-          "elapsedHour": 124,
+          "elapsedHour": 125,
           "elapsedRank": 25,
           "currentPoints": [
             {
@@ -10827,17 +10851,21 @@
             {
               "hour": 124,
               "rank": 25
+            },
+            {
+              "hour": 125,
+              "rank": 25
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 22,
-              "title": "ポツンと一軒家"
+              "title": "秘密のケンミンSHOW極"
             },
             {
               "rank": 23,
-              "title": "秘密のケンミンSHOW極"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 24,
@@ -11053,19 +11081,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "相葉ヒロミのお困りですカー？"
             },
             {
               "rank": 48,
-              "title": "テレビ×ミセス"
-            },
-            {
-              "rank": 49,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 49,
+              "title": "かまいたちの机上の空論城"
+            },
+            {
               "rank": 50,
-              "title": "吉田と粗品と"
+              "title": "タイムレスマン"
             }
           ]
         }
@@ -11074,7 +11102,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/08/07 23:07",
+      "updatedAt": "2026/08/08 00:07",
       "episodeId": "epqf7c2gz6",
       "subtitle": "大食い激細女子…体の秘密!体温に関係?食べる順番で解決?",
       "likes": "4767",
@@ -12043,19 +12071,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "相葉ヒロミのお困りですカー？"
             },
             {
               "rank": 48,
-              "title": "テレビ×ミセス"
-            },
-            {
-              "rank": 49,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 49,
+              "title": "かまいたちの机上の空論城"
+            },
+            {
               "rank": 50,
-              "title": "吉田と粗品と"
+              "title": "タイムレスマン"
             }
           ]
         },
@@ -12247,15 +12275,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Ｔシャツが乾くまで"
+              "title": "リーガルビート -逆転の法廷-"
             },
             {
               "rank": 48,
-              "title": "THE突破ファイル"
+              "title": "君は夏のなか"
             },
             {
               "rank": 49,
-              "title": "ゴールデンタッグ ～何かが起きそうな2人をマッチング～"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
@@ -12268,10 +12296,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/05",
-      "updatedAt": "2026/08/07 23:07",
+      "updatedAt": "2026/08/08 00:07",
       "episodeId": "epzzl2s061",
       "subtitle": "【SATOH】アジカン後藤から手紙。菊池風磨＆畑芽育の音楽番組",
-      "likes": "2921",
+      "likes": "2930",
       "favorites": "11.6万",
       "likePoints": [
         {
@@ -12509,6 +12537,10 @@
         {
           "hour": 70,
           "likes": 2921
+        },
+        {
+          "hour": 71,
+          "likes": 2930
         }
       ],
       "previousLikePoints": [
@@ -13506,19 +13538,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "相葉ヒロミのお困りですカー？"
             },
             {
               "rank": 48,
-              "title": "テレビ×ミセス"
-            },
-            {
-              "rank": 49,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 49,
+              "title": "かまいたちの机上の空論城"
+            },
+            {
               "rank": 50,
-              "title": "吉田と粗品と"
+              "title": "タイムレスマン"
             }
           ]
         },
@@ -13742,15 +13774,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Ｔシャツが乾くまで"
+              "title": "リーガルビート -逆転の法廷-"
             },
             {
               "rank": 48,
-              "title": "THE突破ファイル"
+              "title": "君は夏のなか"
             },
             {
               "rank": 49,
-              "title": "ゴールデンタッグ ～何かが起きそうな2人をマッチング～"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
@@ -13763,10 +13795,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/07",
-      "updatedAt": "2026/08/07 23:07",
+      "updatedAt": "2026/08/08 00:07",
       "episodeId": "ephute9c4w",
       "subtitle": "第139回 国仲涼子が賢人に説教？風磨くん、結婚しようぜ",
-      "likes": "2830",
+      "likes": "2915",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -13848,6 +13880,10 @@
         {
           "hour": 23,
           "likes": 2830
+        },
+        {
+          "hour": 24,
+          "likes": 2915
         }
       ],
       "previousLikePoints": [
@@ -14472,9 +14508,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 12,
-          "elapsedHour": 22,
-          "elapsedRank": 12,
+          "currentRank": 11,
+          "elapsedHour": 23,
+          "elapsedRank": 11,
           "currentPoints": [
             {
               "hour": 10,
@@ -14523,6 +14559,10 @@
             {
               "hour": 22,
               "rank": 12
+            },
+            {
+              "hour": 23,
+              "rank": 11
             }
           ],
           "previousPoints": [
@@ -14741,6 +14781,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 8,
+              "title": "世界の果てまでイッテQ！"
+            },
+            {
               "rank": 9,
               "title": "トークィーンズ"
             },
@@ -14750,10 +14794,6 @@
             },
             {
               "rank": 11,
-              "title": "上田と女がDEEPに吠える夜"
-            },
-            {
-              "rank": 12,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -14761,9 +14801,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 36,
-          "elapsedHour": 22,
-          "elapsedRank": 36,
+          "currentRank": 35,
+          "elapsedHour": 23,
+          "elapsedRank": 35,
           "currentPoints": [
             {
               "hour": 19,
@@ -14780,6 +14820,10 @@
             {
               "hour": 22,
               "rank": 36
+            },
+            {
+              "hour": 23,
+              "rank": 35
             }
           ],
           "previousPoints": [
@@ -14890,8 +14934,12 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 32,
+              "title": "トークィーンズ"
+            },
+            {
               "rank": 33,
-              "title": "ドライな同期の溺愛癖"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 34,
@@ -14899,10 +14947,6 @@
             },
             {
               "rank": 35,
-              "title": "上田と女がDEEPに吠える夜"
-            },
-            {
-              "rank": 36,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -14912,10 +14956,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/07/25",
-      "updatedAt": "2026/08/07 23:07",
+      "updatedAt": "2026/08/08 00:07",
       "episodeId": "ep6mbhb4sa",
       "subtitle": "タイムマシーン3号のセッタイマシーンでGO",
-      "likes": "1868",
+      "likes": "1871",
       "favorites": "78.5万",
       "likePoints": [
         {
@@ -16747,19 +16791,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "相葉ヒロミのお困りですカー？"
             },
             {
               "rank": 48,
-              "title": "テレビ×ミセス"
-            },
-            {
-              "rank": 49,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 49,
+              "title": "かまいたちの机上の空論城"
+            },
+            {
               "rank": 50,
-              "title": "吉田と粗品と"
+              "title": "タイムレスマン"
             }
           ]
         },
@@ -16915,15 +16959,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Ｔシャツが乾くまで"
+              "title": "リーガルビート -逆転の法廷-"
             },
             {
               "rank": 48,
-              "title": "THE突破ファイル"
+              "title": "君は夏のなか"
             },
             {
               "rank": 49,
-              "title": "ゴールデンタッグ ～何かが起きそうな2人をマッチング～"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
@@ -16936,10 +16980,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/07",
-      "updatedAt": "2026/08/07 23:07",
+      "updatedAt": "2026/08/08 00:07",
       "episodeId": "epw9234h3g",
       "subtitle": "ふぉ～ゆ～と堂本光一の知られざる絆物語",
-      "likes": "1986",
+      "likes": "2061",
       "favorites": "2.7万",
       "likePoints": [
         {
@@ -17017,6 +17061,10 @@
         {
           "hour": 21,
           "likes": 1986
+        },
+        {
+          "hour": 22,
+          "likes": 2061
         }
       ],
       "previousLikePoints": [
@@ -17698,7 +17746,7 @@
           "type": "talk",
           "label": "トーク",
           "currentRank": 28,
-          "elapsedHour": 21,
+          "elapsedHour": 22,
           "elapsedRank": 28,
           "currentPoints": [
             {
@@ -17743,6 +17791,10 @@
             },
             {
               "hour": 21,
+              "rank": 28
+            },
+            {
+              "hour": 22,
               "rank": 28
             }
           ],
@@ -18155,19 +18207,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "相葉ヒロミのお困りですカー？"
             },
             {
               "rank": 48,
-              "title": "テレビ×ミセス"
-            },
-            {
-              "rank": 49,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 49,
+              "title": "かまいたちの机上の空論城"
+            },
+            {
               "rank": 50,
-              "title": "吉田と粗品と"
+              "title": "タイムレスマン"
             }
           ]
         }
@@ -18176,10 +18228,10 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/05",
-      "updatedAt": "2026/08/07 23:07",
+      "updatedAt": "2026/08/08 00:07",
       "episodeId": "epmzana0do",
       "subtitle": "#5 セレブ病院で集団感染!?孤立する妊婦を救え",
-      "likes": "8692",
+      "likes": "8761",
       "favorites": "65.2万",
       "likePoints": [
         {
@@ -18353,6 +18405,10 @@
         {
           "hour": 49,
           "likes": 8692
+        },
+        {
+          "hour": 50,
+          "likes": 8761
         }
       ],
       "previousLikePoints": [
@@ -18997,9 +19053,9 @@
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 6,
-          "elapsedHour": 49,
-          "elapsedRank": 6,
+          "currentRank": 7,
+          "elapsedHour": 50,
+          "elapsedRank": 7,
           "currentPoints": [
             {
               "hour": 3,
@@ -19172,6 +19228,10 @@
             {
               "hour": 49,
               "rank": 6
+            },
+            {
+              "hour": 50,
+              "rank": 7
             }
           ],
           "previousPoints": [
@@ -19814,19 +19874,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 3,
-              "title": "VIVANT"
-            },
-            {
               "rank": 4,
               "title": "Tokyo middle 30"
             },
             {
               "rank": 5,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "Ｔシャツが乾くまで"
             },
             {
               "rank": 6,
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
+            },
+            {
+              "rank": 7,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -19834,9 +19894,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 8,
-          "elapsedHour": 49,
-          "elapsedRank": 8,
+          "currentRank": 9,
+          "elapsedHour": 50,
+          "elapsedRank": 9,
           "currentPoints": [
             {
               "hour": 3,
@@ -20009,6 +20069,10 @@
             {
               "hour": 49,
               "rank": 8
+            },
+            {
+              "hour": 50,
+              "rank": 9
             }
           ],
           "previousPoints": [
@@ -20651,12 +20715,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 5,
-              "title": "アメトーーク！"
-            },
-            {
               "rank": 6,
-              "title": "水曜日のダウンタウン"
+              "title": "Ｔシャツが乾くまで"
             },
             {
               "rank": 7,
@@ -20664,6 +20724,10 @@
             },
             {
               "rank": 8,
+              "title": "水曜日のダウンタウン"
+            },
+            {
+              "rank": 9,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -20673,7 +20737,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/06",
-      "updatedAt": "2026/08/07 23:07",
+      "updatedAt": "2026/08/08 00:07",
       "episodeId": "epymg7l9ot",
       "subtitle": "第5話 消せない過去・・・あなたに恋する資格なんてない",
       "likes": "1.4万",
@@ -20761,6 +20825,10 @@
         },
         {
           "hour": 25,
+          "likes": 14000
+        },
+        {
+          "hour": 26,
           "likes": 14000
         }
       ],
@@ -20936,6 +21004,10 @@
         {
           "hour": 49,
           "likes": 1663
+        },
+        {
+          "hour": 50,
+          "likes": 1666
         }
       ],
       "rankings": [
@@ -20943,7 +21015,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 1,
-          "elapsedHour": 25,
+          "elapsedHour": 26,
           "elapsedRank": 1,
           "currentPoints": [
             {
@@ -21025,6 +21097,10 @@
             {
               "hour": 25,
               "rank": 1
+            },
+            {
+              "hour": 26,
+              "rank": 1
             }
           ],
           "previousPoints": [
@@ -21048,7 +21124,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 1,
-          "elapsedHour": 25,
+          "elapsedHour": 26,
           "elapsedRank": 1,
           "currentPoints": [
             {
@@ -21130,6 +21206,10 @@
             {
               "hour": 25,
               "rank": 1
+            },
+            {
+              "hour": 26,
+              "rank": 1
             }
           ],
           "previousPoints": [
@@ -21154,7 +21234,7 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/08/07 23:07",
+      "updatedAt": "2026/08/08 00:07",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
       "likes": "4566",
@@ -21173,7 +21253,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE神業チャレンジ"
+              "title": "世界くらべてみたら"
             },
             {
               "rank": 48,
@@ -21185,7 +21265,7 @@
             },
             {
               "rank": 50,
-              "title": "地球まるごと大実験 ネイチャーティーチャー"
+              "title": "THE神業チャレンジ"
             }
           ]
         },
@@ -21200,19 +21280,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの机上の空論城"
+              "title": "相葉ヒロミのお困りですカー？"
             },
             {
               "rank": 48,
-              "title": "テレビ×ミセス"
-            },
-            {
-              "rank": 49,
               "title": "Golden SixTONES"
             },
             {
+              "rank": 49,
+              "title": "かまいたちの机上の空論城"
+            },
+            {
               "rank": 50,
-              "title": "吉田と粗品と"
+              "title": "タイムレスマン"
             }
           ]
         }
