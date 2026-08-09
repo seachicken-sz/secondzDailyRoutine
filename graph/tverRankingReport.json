@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/08/09 21:07",
+  "updatedAt": "2026/08/09 22:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/07/31",
-      "updatedAt": "2026/08/09 21:07",
+      "updatedAt": "2026/08/09 22:07",
       "episodeId": "eplqgnuarg",
       "subtitle": "真夏の決戦！「信頼じゃんけん」トーナメント",
       "likes": "1.6万",
@@ -2535,15 +2535,15 @@
             },
             {
               "rank": 48,
-              "title": "大悟の芸人領収書"
+              "title": "これ余談なんですけど・・・"
             },
             {
               "rank": 49,
-              "title": "千原ジュニアの座王"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "やすとものどこいこ！？"
             }
           ]
         },
@@ -3124,19 +3124,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "今夜もシリアルキラーと待ち合わせ"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 48,
-              "title": "ブラックトリック～裁きを操る弁護人～"
+              "title": "Your Sky ハレのち恋"
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "ブラックトリック～裁きを操る弁護人～"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "今夜もシリアルキラーと待ち合わせ"
             }
           ]
         }
@@ -3145,10 +3145,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/09",
-      "updatedAt": "2026/08/09 21:07",
+      "updatedAt": "2026/08/09 22:07",
       "episodeId": "epqt9zdknm",
       "subtitle": "話題の「あか抜けの神様」と大学生を劇的イメチェン!",
-      "likes": "4709",
+      "likes": "5285",
       "favorites": "34.4万",
       "likePoints": [
         {
@@ -3178,6 +3178,10 @@
         {
           "hour": 7,
           "likes": 4709
+        },
+        {
+          "hour": 8,
+          "likes": 5285
         }
       ],
       "previousLikePoints": [
@@ -3798,9 +3802,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 21,
-          "elapsedHour": 7,
-          "elapsedRank": 21,
+          "currentRank": 19,
+          "elapsedHour": 8,
+          "elapsedRank": 19,
           "currentPoints": [
             {
               "hour": 4,
@@ -3817,6 +3821,10 @@
             {
               "hour": 7,
               "rank": 21
+            },
+            {
+              "hour": 8,
+              "rank": 19
             }
           ],
           "previousPoints": [
@@ -4387,19 +4395,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 18,
+              "rank": 16,
+              "title": "SUPER EIGHTと8人の関西大物MCたち"
+            },
+            {
+              "rank": 17,
               "title": "一茂×かまいたち ゲンバ"
             },
             {
+              "rank": 18,
+              "title": "出没！アド街ック天国"
+            },
+            {
               "rank": 19,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 20,
-              "title": "華大さんと千鳥くん"
-            },
-            {
-              "rank": 21,
               "title": "timeleszファミリア"
             }
           ]
@@ -4407,10 +4415,15 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 47,
+          "elapsedHour": 8,
+          "elapsedRank": 47,
+          "currentPoints": [
+            {
+              "hour": 8,
+              "rank": 47
+            }
+          ],
           "previousPoints": [
             {
               "hour": 8,
@@ -4619,20 +4632,20 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 44,
+              "title": "一茂×かまいたち ゲンバ"
+            },
+            {
+              "rank": 45,
+              "title": "出没！アド街ック天国"
+            },
+            {
+              "rank": 46,
+              "title": "クレヨンしんちゃん"
+            },
+            {
               "rank": 47,
-              "title": "今夜もシリアルキラーと待ち合わせ"
-            },
-            {
-              "rank": 48,
-              "title": "ブラックトリック～裁きを操る弁護人～"
-            },
-            {
-              "rank": 49,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -4641,10 +4654,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/07/28",
-      "updatedAt": "2026/08/09 21:07",
+      "updatedAt": "2026/08/09 22:07",
       "episodeId": "epgw9m4xvk",
       "subtitle": "チョコプラ・timeleszが「衝撃吸収材なら、バラエティ罰ゲームをノーリアクションでこなせるのか？」に挑む！",
-      "likes": "8717",
+      "likes": "8736",
       "favorites": "5.7万",
       "likePoints": [
         {
@@ -7028,15 +7041,15 @@
             },
             {
               "rank": 48,
-              "title": "発見！仰天！！プレミアもん！！！ 土曜はダメよ！"
+              "title": "ロイロム鉄道 ～私を待ってる人がいる～"
             },
             {
               "rank": 49,
-              "title": "シューイチ"
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
               "rank": 50,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "発見！仰天！！プレミアもん！！！ 土曜はダメよ！"
             }
           ]
         },
@@ -7257,15 +7270,15 @@
             },
             {
               "rank": 48,
-              "title": "大悟の芸人領収書"
+              "title": "これ余談なんですけど・・・"
             },
             {
               "rank": 49,
-              "title": "千原ジュニアの座王"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
@@ -7274,7 +7287,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/06",
-      "updatedAt": "2026/08/09 21:07",
+      "updatedAt": "2026/08/09 22:07",
       "episodeId": "epegtojnm9",
       "subtitle": "【特定班ゲーム】こうやって居場所は特定される",
       "likes": "1.0万",
@@ -7614,6 +7627,10 @@
         },
         {
           "hour": 91,
+          "likes": 10000
+        },
+        {
+          "hour": 92,
           "likes": 10000
         }
       ],
@@ -8753,15 +8770,15 @@
             },
             {
               "rank": 48,
-              "title": "大悟の芸人領収書"
+              "title": "これ余談なんですけど・・・"
             },
             {
               "rank": 49,
-              "title": "千原ジュニアの座王"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "やすとものどこいこ！？"
             }
           ]
         },
@@ -8990,19 +9007,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "今夜もシリアルキラーと待ち合わせ"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 48,
-              "title": "ブラックトリック～裁きを操る弁護人～"
+              "title": "Your Sky ハレのち恋"
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "ブラックトリック～裁きを操る弁護人～"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "今夜もシリアルキラーと待ち合わせ"
             }
           ]
         }
@@ -9011,7 +9028,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/07/14",
-      "updatedAt": "2026/08/09 21:07",
+      "updatedAt": "2026/08/09 22:07",
       "episodeId": "epqf7c2gz6",
       "subtitle": "大食い激細女子…体の秘密!体温に関係?食べる順番で解決?",
       "likes": "4767",
@@ -9984,15 +10001,15 @@
             },
             {
               "rank": 48,
-              "title": "大悟の芸人領収書"
+              "title": "これ余談なんですけど・・・"
             },
             {
               "rank": 49,
-              "title": "千原ジュニアの座王"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "やすとものどこいこ！？"
             }
           ]
         },
@@ -10184,19 +10201,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "今夜もシリアルキラーと待ち合わせ"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 48,
-              "title": "ブラックトリック～裁きを操る弁護人～"
+              "title": "Your Sky ハレのち恋"
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "ブラックトリック～裁きを操る弁護人～"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "今夜もシリアルキラーと待ち合わせ"
             }
           ]
         }
@@ -10205,10 +10222,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/05",
-      "updatedAt": "2026/08/09 21:07",
+      "updatedAt": "2026/08/09 22:07",
       "episodeId": "epzzl2s061",
       "subtitle": "【SATOH】アジカン後藤から手紙。菊池風磨＆畑芽育の音楽番組",
-      "likes": "3210",
+      "likes": "3221",
       "favorites": "11.6万",
       "likePoints": [
         {
@@ -10626,6 +10643,10 @@
         {
           "hour": 116,
           "likes": 3210
+        },
+        {
+          "hour": 117,
+          "likes": 3221
         }
       ],
       "previousLikePoints": [
@@ -11627,15 +11648,15 @@
             },
             {
               "rank": 48,
-              "title": "大悟の芸人領収書"
+              "title": "これ余談なんですけど・・・"
             },
             {
               "rank": 49,
-              "title": "千原ジュニアの座王"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "やすとものどこいこ！？"
             }
           ]
         },
@@ -11859,19 +11880,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "今夜もシリアルキラーと待ち合わせ"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 48,
-              "title": "ブラックトリック～裁きを操る弁護人～"
+              "title": "Your Sky ハレのち恋"
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "ブラックトリック～裁きを操る弁護人～"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "今夜もシリアルキラーと待ち合わせ"
             }
           ]
         }
@@ -11880,10 +11901,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/07",
-      "updatedAt": "2026/08/09 21:07",
+      "updatedAt": "2026/08/09 22:07",
       "episodeId": "ephute9c4w",
       "subtitle": "第139回 国仲涼子が賢人に説教？風磨くん、結婚しようぜ",
-      "likes": "4105",
+      "likes": "4122",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -12145,6 +12166,10 @@
         {
           "hour": 69,
           "likes": 4105
+        },
+        {
+          "hour": 70,
+          "likes": 4122
         }
       ],
       "previousLikePoints": [
@@ -13211,15 +13236,15 @@
             },
             {
               "rank": 48,
-              "title": "大悟の芸人領収書"
+              "title": "これ余談なんですけど・・・"
             },
             {
               "rank": 49,
-              "title": "千原ジュニアの座王"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "やすとものどこいこ！？"
             }
           ]
         },
@@ -13428,19 +13453,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "今夜もシリアルキラーと待ち合わせ"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 48,
-              "title": "ブラックトリック～裁きを操る弁護人～"
+              "title": "Your Sky ハレのち恋"
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "ブラックトリック～裁きを操る弁護人～"
             },
             {
               "rank": 50,
-              "title": "夫に不倫をお願いされました"
+              "title": "今夜もシリアルキラーと待ち合わせ"
             }
           ]
         }
@@ -13449,10 +13474,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/09 21:07",
+      "updatedAt": "2026/08/09 22:07",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
-      "likes": "4082",
+      "likes": "4245",
       "favorites": "79.1万",
       "likePoints": [
         {
@@ -13546,6 +13571,10 @@
         {
           "hour": 26,
           "likes": 4082
+        },
+        {
+          "hour": 27,
+          "likes": 4245
         }
       ],
       "previousLikePoints": [
@@ -14234,9 +14263,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 2,
-          "elapsedHour": 26,
-          "elapsedRank": 2,
+          "currentRank": 1,
+          "elapsedHour": 27,
+          "elapsedRank": 1,
           "currentPoints": [
             {
               "hour": 7,
@@ -14317,6 +14346,10 @@
             {
               "hour": 26,
               "rank": 2
+            },
+            {
+              "hour": 27,
+              "rank": 1
             }
           ],
           "previousPoints": [
@@ -14448,10 +14481,6 @@
           "nearbyRanking": [
             {
               "rank": 1,
-              "title": "アメトーーク！"
-            },
-            {
-              "rank": 2,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -14459,9 +14488,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 7,
-          "elapsedHour": 26,
-          "elapsedRank": 7,
+          "currentRank": 5,
+          "elapsedHour": 27,
+          "elapsedRank": 5,
           "currentPoints": [
             {
               "hour": 13,
@@ -14518,24 +14547,28 @@
             {
               "hour": 26,
               "rank": 7
+            },
+            {
+              "hour": 27,
+              "rank": 5
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
+            {
+              "rank": 2,
+              "title": "Ｔシャツが乾くまで"
+            },
+            {
+              "rank": 3,
+              "title": "VIVANT"
+            },
             {
               "rank": 4,
               "title": "ラストノート"
             },
             {
               "rank": 5,
-              "title": "アメトーーク！"
-            },
-            {
-              "rank": 6,
-              "title": "リーガルビート -逆転の法廷-"
-            },
-            {
-              "rank": 7,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -14545,10 +14578,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/07",
-      "updatedAt": "2026/08/09 21:07",
+      "updatedAt": "2026/08/09 22:07",
       "episodeId": "epw9234h3g",
       "subtitle": "ふぉ～ゆ～と堂本光一の知られざる絆物語",
-      "likes": "3055",
+      "likes": "3068",
       "favorites": "2.8万",
       "likePoints": [
         {
@@ -14810,6 +14843,10 @@
         {
           "hour": 67,
           "likes": 3055
+        },
+        {
+          "hour": 68,
+          "likes": 3068
         }
       ],
       "previousLikePoints": [
@@ -15932,19 +15969,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "草彅やすともの うさぎとかめ"
-            },
-            {
-              "rank": 48,
               "title": "金曜ミステリークラブ!!!"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "全力！なにわ実験部"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "吉田と粗品と"
+            },
+            {
+              "rank": 50,
+              "title": "新婚さんいらっしゃい！"
             }
           ]
         },
@@ -16036,15 +16073,15 @@
             },
             {
               "rank": 48,
-              "title": "大悟の芸人領収書"
+              "title": "これ余談なんですけど・・・"
             },
             {
               "rank": 49,
-              "title": "千原ジュニアの座王"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
@@ -16053,7 +16090,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/05",
-      "updatedAt": "2026/08/09 21:07",
+      "updatedAt": "2026/08/09 22:07",
       "episodeId": "epmzana0do",
       "subtitle": "#5 セレブ病院で集団感染!?孤立する妊婦を救え",
       "likes": "1.0万",
@@ -16413,6 +16450,10 @@
         },
         {
           "hour": 95,
+          "likes": 10000
+        },
+        {
+          "hour": 96,
           "likes": 10000
         }
       ],
@@ -17058,9 +17099,9 @@
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 12,
-          "elapsedHour": 95,
-          "elapsedRank": 12,
+          "currentRank": 13,
+          "elapsedHour": 96,
+          "elapsedRank": 13,
           "currentPoints": [
             {
               "hour": 3,
@@ -17417,6 +17458,10 @@
             {
               "hour": 95,
               "rank": 12
+            },
+            {
+              "hour": 96,
+              "rank": 13
             }
           ],
           "previousPoints": [
@@ -18059,10 +18104,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 9,
-              "title": "マイ・フィクション"
-            },
-            {
               "rank": 10,
               "title": "Tokyo middle 30"
             },
@@ -18072,6 +18113,10 @@
             },
             {
               "rank": 12,
+              "title": "GTO"
+            },
+            {
+              "rank": 13,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -18079,9 +18124,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 17,
-          "elapsedHour": 95,
-          "elapsedRank": 17,
+          "currentRank": 19,
+          "elapsedHour": 96,
+          "elapsedRank": 19,
           "currentPoints": [
             {
               "hour": 3,
@@ -18438,6 +18483,10 @@
             {
               "hour": 95,
               "rank": 17
+            },
+            {
+              "hour": 96,
+              "rank": 19
             }
           ],
           "previousPoints": [
@@ -19080,19 +19129,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 14,
-              "title": "嗚呼!!みんなの動物園"
-            },
-            {
-              "rank": 15,
+              "rank": 16,
               "title": "上田と女が吠える夜"
             },
             {
-              "rank": 16,
+              "rank": 17,
               "title": "クロスロード ～救命救急の約束～"
             },
             {
-              "rank": 17,
+              "rank": 18,
+              "title": "GTO"
+            },
+            {
+              "rank": 19,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -19102,7 +19151,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/06",
-      "updatedAt": "2026/08/09 21:07",
+      "updatedAt": "2026/08/09 22:07",
       "episodeId": "epymg7l9ot",
       "subtitle": "第5話 消せない過去・・・あなたに恋する資格なんてない",
       "likes": "2.0万",
@@ -19374,6 +19423,10 @@
         },
         {
           "hour": 71,
+          "likes": 20000
+        },
+        {
+          "hour": 72,
           "likes": 20000
         }
       ],
@@ -19733,6 +19786,10 @@
         {
           "hour": 95,
           "likes": 1739
+        },
+        {
+          "hour": 96,
+          "likes": 1740
         }
       ],
       "rankings": [
@@ -19740,7 +19797,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 4,
-          "elapsedHour": 71,
+          "elapsedHour": 72,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -20006,6 +20063,10 @@
             {
               "hour": 71,
               "rank": 4
+            },
+            {
+              "hour": 72,
+              "rank": 4
             }
           ],
           "previousPoints": [
@@ -20041,7 +20102,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 4,
-          "elapsedHour": 71,
+          "elapsedHour": 72,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -20307,6 +20368,10 @@
             {
               "hour": 71,
               "rank": 4
+            },
+            {
+              "hour": 72,
+              "rank": 4
             }
           ],
           "previousPoints": [
@@ -20343,7 +20408,7 @@
     "sriyj0nb7d": {
       "programTitle": "全力💨シャカリキ調査団～あなたの疑問スッキリ解消～",
       "broadcastDate": "2026/06/28",
-      "updatedAt": "2026/08/09 21:07",
+      "updatedAt": "2026/08/09 22:07",
       "episodeId": "epizb24dnk",
       "subtitle": "川島明＆菊池風磨MC☆全力シャカリキ調査団～あなたの疑問スッキリ解消～",
       "likes": "4566",
@@ -20366,15 +20431,15 @@
             },
             {
               "rank": 48,
-              "title": "発見！仰天！！プレミアもん！！！ 土曜はダメよ！"
+              "title": "ロイロム鉄道 ～私を待ってる人がいる～"
             },
             {
               "rank": 49,
-              "title": "シューイチ"
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
               "rank": 50,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "発見！仰天！！プレミアもん！！！ 土曜はダメよ！"
             }
           ]
         },
@@ -20393,15 +20458,15 @@
             },
             {
               "rank": 48,
-              "title": "大悟の芸人領収書"
+              "title": "これ余談なんですけど・・・"
             },
             {
               "rank": 49,
-              "title": "千原ジュニアの座王"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
