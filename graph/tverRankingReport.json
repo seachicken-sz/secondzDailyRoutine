@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/08/19 05:07",
+  "updatedAt": "2026/08/19 06:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/14",
-      "updatedAt": "2026/08/19 05:07",
+      "updatedAt": "2026/08/19 06:07",
       "episodeId": "epw9ttjvnx",
       "subtitle": "全員で連帯責任！腹ペコ2択マン",
       "likes": "1.2万",
@@ -400,6 +400,10 @@
         },
         {
           "hour": 103,
+          "likes": 12000
+        },
+        {
+          "hour": 104,
           "likes": 12000
         }
       ],
@@ -1034,7 +1038,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 32,
-          "elapsedHour": 103,
+          "elapsedHour": 104,
           "elapsedRank": 32,
           "currentPoints": [
             {
@@ -1411,6 +1415,10 @@
             },
             {
               "hour": 103,
+              "rank": 32
+            },
+            {
+              "hour": 104,
               "rank": 32
             }
           ],
@@ -1983,11 +1991,11 @@
           "nearbyRanking": [
             {
               "rank": 29,
-              "title": "かまいたちの机上の空論城"
+              "title": "オモウマい店"
             },
             {
               "rank": 30,
-              "title": "オモウマい店"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 31,
@@ -2405,7 +2413,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/16",
-      "updatedAt": "2026/08/19 05:07",
+      "updatedAt": "2026/08/19 06:07",
       "episodeId": "epo6cmqsks",
       "subtitle": "バク転挑戦で緊急合宿!金メダリスト白井健三も参戦",
       "likes": "1.5万",
@@ -2645,6 +2653,10 @@
         },
         {
           "hour": 63,
+          "likes": 15000
+        },
+        {
+          "hour": 64,
           "likes": 15000
         }
       ],
@@ -3287,7 +3299,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 12,
-          "elapsedHour": 63,
+          "elapsedHour": 64,
           "elapsedRank": 12,
           "currentPoints": [
             {
@@ -3512,6 +3524,10 @@
             },
             {
               "hour": 63,
+              "rank": 12
+            },
+            {
+              "hour": 64,
               "rank": 12
             }
           ],
@@ -4080,7 +4096,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 37,
-          "elapsedHour": 63,
+          "elapsedHour": 64,
           "elapsedRank": 37,
           "currentPoints": [
             {
@@ -4293,6 +4309,10 @@
             },
             {
               "hour": 63,
+              "rank": 37
+            },
+            {
+              "hour": 64,
               "rank": 37
             }
           ],
@@ -4582,10 +4602,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/18",
-      "updatedAt": "2026/08/19 05:07",
+      "updatedAt": "2026/08/19 06:07",
       "episodeId": "epjrd5nzjc",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！前編",
-      "likes": "1002",
+      "likes": "1314",
       "favorites": "5.8万",
       "likePoints": [
         {
@@ -4599,6 +4619,10 @@
         {
           "hour": 5,
           "likes": 1002
+        },
+        {
+          "hour": 6,
+          "likes": 1314
         }
       ],
       "previousLikePoints": [
@@ -5227,10 +5251,15 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 47,
+          "elapsedHour": 6,
+          "elapsedRank": 47,
+          "currentPoints": [
+            {
+              "hour": 6,
+              "rank": 47
+            }
+          ],
           "previousPoints": [
             {
               "hour": 7,
@@ -5715,20 +5744,20 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 44,
+              "title": "草彅やすともの うさぎとかめ"
+            },
+            {
+              "rank": 45,
+              "title": "&TEAM vs FANTASTICS 最強スターはどっちだ？"
+            },
+            {
+              "rank": 46,
+              "title": "久保田・中丸のそれゆけ！ラクガキさんぽ"
+            },
+            {
               "rank": 47,
-              "title": "IMP.の「できません」は言いません"
-            },
-            {
-              "rank": 48,
-              "title": "なりゆき街道旅"
-            },
-            {
-              "rank": 49,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
-            },
-            {
-              "rank": 50,
-              "title": "THE神業チャレンジ"
+              "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
         },
@@ -5808,7 +5837,7 @@
             },
             {
               "rank": 50,
-              "title": "なるみ・岡村の過ぎるＴＶ"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         }
@@ -5817,7 +5846,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/13",
-      "updatedAt": "2026/08/19 05:07",
+      "updatedAt": "2026/08/19 06:07",
       "episodeId": "ep9917ljy7",
       "subtitle": "【大集結】珍英語VS天才 謎解き王決定戦SP 第1話",
       "likes": "1.5万",
@@ -6365,6 +6394,10 @@
         },
         {
           "hour": 147,
+          "likes": 15000
+        },
+        {
+          "hour": 148,
           "likes": 15000
         }
       ],
@@ -7592,7 +7625,7 @@
             },
             {
               "rank": 50,
-              "title": "なるみ・岡村の過ぎるＴＶ"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         },
@@ -7910,10 +7943,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/16",
-      "updatedAt": "2026/08/19 05:07",
+      "updatedAt": "2026/08/19 06:07",
       "episodeId": "epmo0217zw",
       "subtitle": "真夏の自由研究SP!夢の巨大お菓子の家を本気で作る!",
-      "likes": "3099",
+      "likes": "3111",
       "favorites": "53.2万",
       "likePoints": [
         {
@@ -8131,6 +8164,10 @@
         {
           "hour": 58,
           "likes": 3099
+        },
+        {
+          "hour": 59,
+          "likes": 3111
         }
       ],
       "previousLikePoints": [
@@ -8752,7 +8789,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 16,
-          "elapsedHour": 58,
+          "elapsedHour": 59,
           "elapsedRank": 16,
           "currentPoints": [
             {
@@ -8965,6 +9002,10 @@
             },
             {
               "hour": 58,
+              "rank": 16
+            },
+            {
+              "hour": 59,
               "rank": 16
             }
           ],
@@ -9966,7 +10007,7 @@
             },
             {
               "rank": 50,
-              "title": "なるみ・岡村の過ぎるＴＶ"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         }
@@ -9975,10 +10016,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/19 05:07",
+      "updatedAt": "2026/08/19 06:07",
       "episodeId": "epd7ebv3mp",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！=LOVE登場",
-      "likes": "1506",
+      "likes": "1797",
       "favorites": "12.0万",
       "likePoints": [
         {
@@ -9991,7 +10032,7 @@
         },
         {
           "hour": 5,
-          "likes": 1506
+          "likes": 1797
         }
       ],
       "previousLikePoints": [
@@ -10645,7 +10686,7 @@
             },
             {
               "rank": 50,
-              "title": "なるみ・岡村の過ぎるＴＶ"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         },
@@ -10681,10 +10722,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/14",
-      "updatedAt": "2026/08/19 05:07",
+      "updatedAt": "2026/08/19 06:07",
       "episodeId": "epb7pj6qtw",
       "subtitle": "第140回 真っ白天使のんに翻弄？深川麻衣との許せない飯",
-      "likes": "4803",
+      "likes": "4806",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -11158,6 +11199,10 @@
         {
           "hour": 125,
           "likes": 4803
+        },
+        {
+          "hour": 126,
+          "likes": 4806
         }
       ],
       "previousLikePoints": [
@@ -12252,7 +12297,7 @@
             },
             {
               "rank": 50,
-              "title": "なるみ・岡村の過ぎるＴＶ"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         },
@@ -12462,10 +12507,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/19 05:07",
+      "updatedAt": "2026/08/19 06:07",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
-      "likes": "9583",
+      "likes": "9584",
       "favorites": "80.1万",
       "likePoints": [
         {
@@ -14589,7 +14634,7 @@
             },
             {
               "rank": 50,
-              "title": "なるみ・岡村の過ぎるＴＶ"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         },
@@ -15030,10 +15075,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/14",
-      "updatedAt": "2026/08/19 05:07",
+      "updatedAt": "2026/08/19 06:07",
       "episodeId": "epq1mep0kx",
       "subtitle": "4人を慕う後輩が魅力と素顔を語る＆4人の舞台に密着",
-      "likes": "6795",
+      "likes": "6801",
       "favorites": "3.3万",
       "likePoints": [
         {
@@ -15503,6 +15548,10 @@
         {
           "hour": 123,
           "likes": 6795
+        },
+        {
+          "hour": 124,
+          "likes": 6801
         }
       ],
       "previousLikePoints": [
@@ -16605,19 +16654,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "世界くらべてみたら"
+              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
             },
             {
               "rank": 48,
-              "title": "THE突破ファイル"
+              "title": "世界くらべてみたら"
             },
             {
               "rank": 49,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
-              "title": "いろはに千鳥"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             }
           ]
         },
@@ -16733,7 +16782,7 @@
             },
             {
               "rank": 50,
-              "title": "なるみ・岡村の過ぎるＴＶ"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         }
@@ -16742,7 +16791,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/12",
-      "updatedAt": "2026/08/19 05:07",
+      "updatedAt": "2026/08/19 06:07",
       "episodeId": "epf66fv1b3",
       "subtitle": "#6 脳死の娘に宿る命…父と医師、涙の決断",
       "likes": "1.2万",
@@ -17306,6 +17355,10 @@
         },
         {
           "hour": 151,
+          "likes": 12000
+        },
+        {
+          "hour": 152,
           "likes": 12000
         }
       ],
@@ -17952,7 +18005,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 16,
-          "elapsedHour": 151,
+          "elapsedHour": 152,
           "elapsedRank": 16,
           "currentPoints": [
             {
@@ -18537,6 +18590,10 @@
             },
             {
               "hour": 151,
+              "rank": 16
+            },
+            {
+              "hour": 152,
               "rank": 16
             }
           ],
@@ -19193,11 +19250,11 @@
             },
             {
               "rank": 14,
-              "title": "陽キャ集団にいる芹沢は、俺の前だと様子がおかしい"
+              "title": "さよならノワール"
             },
             {
               "rank": 15,
-              "title": "さよならノワール"
+              "title": "陽キャ集団にいる芹沢は、俺の前だと様子がおかしい"
             },
             {
               "rank": 16,
@@ -19209,7 +19266,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 20,
-          "elapsedHour": 151,
+          "elapsedHour": 152,
           "elapsedRank": 20,
           "currentPoints": [
             {
@@ -19790,6 +19847,10 @@
             },
             {
               "hour": 151,
+              "rank": 20
+            },
+            {
+              "hour": 152,
               "rank": 20
             }
           ],
@@ -20442,15 +20503,15 @@
           "nearbyRanking": [
             {
               "rank": 17,
-              "title": "大悟の芸人領収書"
+              "title": "さよならノワール"
             },
             {
               "rank": 18,
-              "title": "陽キャ集団にいる芹沢は、俺の前だと様子がおかしい"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 19,
-              "title": "さよならノワール"
+              "title": "陽キャ集団にいる芹沢は、俺の前だと様子がおかしい"
             },
             {
               "rank": 20,
@@ -20463,7 +20524,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/13",
-      "updatedAt": "2026/08/19 05:07",
+      "updatedAt": "2026/08/19 06:07",
       "episodeId": "ep36trz5yx",
       "subtitle": "第6話 きっとすぐ忘れるから・・・あなたのことなんて",
       "likes": "2.2万",
@@ -20951,6 +21012,10 @@
         },
         {
           "hour": 127,
+          "likes": 22000
+        },
+        {
+          "hour": 128,
           "likes": 22000
         }
       ],
@@ -21584,9 +21649,9 @@
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 11,
-          "elapsedHour": 127,
-          "elapsedRank": 11,
+          "currentRank": 12,
+          "elapsedHour": 128,
+          "elapsedRank": 12,
           "currentPoints": [
             {
               "hour": 2,
@@ -22075,6 +22140,10 @@
             {
               "hour": 127,
               "rank": 11
+            },
+            {
+              "hour": 128,
+              "rank": 12
             }
           ],
           "previousPoints": [
@@ -22729,10 +22798,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 8,
-              "title": "Ｔシャツが乾くまで"
-            },
-            {
               "rank": 9,
               "title": "告白―25年目の秘密―"
             },
@@ -22742,6 +22807,10 @@
             },
             {
               "rank": 11,
+              "title": "クロスロード ～救命救急の約束～"
+            },
+            {
+              "rank": 12,
               "title": "ラストノート"
             }
           ]
@@ -22749,9 +22818,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 14,
-          "elapsedHour": 127,
-          "elapsedRank": 14,
+          "currentRank": 15,
+          "elapsedHour": 128,
+          "elapsedRank": 15,
           "currentPoints": [
             {
               "hour": 2,
@@ -23240,6 +23309,10 @@
             {
               "hour": 127,
               "rank": 14
+            },
+            {
+              "hour": 128,
+              "rank": 15
             }
           ],
           "previousPoints": [
@@ -23894,10 +23967,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 11,
-              "title": "Ｔシャツが乾くまで"
-            },
-            {
               "rank": 12,
               "title": "告白―25年目の秘密―"
             },
@@ -23907,6 +23976,10 @@
             },
             {
               "rank": 14,
+              "title": "クロスロード ～救命救急の約束～"
+            },
+            {
+              "rank": 15,
               "title": "ラストノート"
             }
           ]
