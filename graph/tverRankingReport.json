@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/08/19 09:07",
+  "updatedAt": "2026/08/19 10:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/14",
-      "updatedAt": "2026/08/19 09:07",
+      "updatedAt": "2026/08/19 10:07",
       "episodeId": "epw9ttjvnx",
       "subtitle": "全員で連帯責任！腹ペコ2択マン",
       "likes": "1.2万",
@@ -416,6 +416,10 @@
         },
         {
           "hour": 107,
+          "likes": 12000
+        },
+        {
+          "hour": 108,
           "likes": 12000
         }
       ],
@@ -1049,9 +1053,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 33,
-          "elapsedHour": 107,
-          "elapsedRank": 33,
+          "currentRank": 36,
+          "elapsedHour": 108,
+          "elapsedRank": 36,
           "currentPoints": [
             {
               "hour": 6,
@@ -1444,6 +1448,10 @@
             {
               "hour": 107,
               "rank": 33
+            },
+            {
+              "hour": 108,
+              "rank": 36
             }
           ],
           "previousPoints": [
@@ -2014,19 +2022,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 30,
+              "rank": 33,
               "title": "かまいたちの机上の空論城"
             },
             {
-              "rank": 31,
-              "title": "耳の穴かっぽじって聞け！"
+              "rank": 34,
+              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
             },
             {
-              "rank": 32,
+              "rank": 35,
               "title": "大泉サンドの年2会"
             },
             {
-              "rank": 33,
+              "rank": 36,
               "title": "タイムレスマン"
             }
           ]
@@ -2416,19 +2424,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "くりぃむナンタラ"
+              "title": "真夏のシンデレラ"
             },
             {
               "rank": 48,
-              "title": "かまいたちの知らんけど"
+              "title": "名探偵のままでいて"
             },
             {
               "rank": 49,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "幸せになりたいマサムネ君"
             },
             {
               "rank": 50,
-              "title": "家、ついて行ってイイですか？"
+              "title": "熱闘甲子園"
             }
           ]
         }
@@ -2437,7 +2445,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/16",
-      "updatedAt": "2026/08/19 09:07",
+      "updatedAt": "2026/08/19 10:07",
       "episodeId": "epo6cmqsks",
       "subtitle": "バク転挑戦で緊急合宿!金メダリスト白井健三も参戦",
       "likes": "1.5万",
@@ -2693,6 +2701,10 @@
         },
         {
           "hour": 67,
+          "likes": 15000
+        },
+        {
+          "hour": 68,
           "likes": 15000
         }
       ],
@@ -3334,9 +3346,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 14,
-          "elapsedHour": 67,
-          "elapsedRank": 14,
+          "currentRank": 15,
+          "elapsedHour": 68,
+          "elapsedRank": 15,
           "currentPoints": [
             {
               "hour": 4,
@@ -3577,6 +3589,10 @@
             {
               "hour": 67,
               "rank": 14
+            },
+            {
+              "hour": 68,
+              "rank": 15
             }
           ],
           "previousPoints": [
@@ -4123,19 +4139,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 11,
-              "title": "Golden SixTONES"
-            },
-            {
               "rank": 12,
               "title": "CDTV ライブ! ライブ!"
             },
             {
               "rank": 13,
-              "title": "突然ですが占ってもいいですか？"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 14,
+              "title": "突然ですが占ってもいいですか？"
+            },
+            {
+              "rank": 15,
               "title": "timeleszファミリア"
             }
           ]
@@ -4143,9 +4159,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 39,
-          "elapsedHour": 67,
-          "elapsedRank": 39,
+          "currentRank": 40,
+          "elapsedHour": 68,
+          "elapsedRank": 40,
           "currentPoints": [
             {
               "hour": 7,
@@ -4374,6 +4390,10 @@
             {
               "hour": 67,
               "rank": 39
+            },
+            {
+              "hour": 68,
+              "rank": 40
             }
           ],
           "previousPoints": [
@@ -4640,12 +4660,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 36,
-              "title": "CDTV ライブ! ライブ!"
-            },
-            {
               "rank": 37,
-              "title": "突然ですが占ってもいいですか？"
+              "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 38,
@@ -4653,6 +4669,10 @@
             },
             {
               "rank": 39,
+              "title": "突然ですが占ってもいいですか？"
+            },
+            {
+              "rank": 40,
               "title": "timeleszファミリア"
             }
           ]
@@ -4662,10 +4682,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/18",
-      "updatedAt": "2026/08/19 09:07",
+      "updatedAt": "2026/08/19 10:07",
       "episodeId": "epjrd5nzjc",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！前編",
-      "likes": "2702",
+      "likes": "3025",
       "favorites": "5.8万",
       "likePoints": [
         {
@@ -4695,6 +4715,10 @@
         {
           "hour": 9,
           "likes": 2702
+        },
+        {
+          "hour": 10,
+          "likes": 3025
         }
       ],
       "previousLikePoints": [
@@ -5323,9 +5347,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 23,
-          "elapsedHour": 9,
-          "elapsedRank": 23,
+          "currentRank": 19,
+          "elapsedHour": 10,
+          "elapsedRank": 19,
           "currentPoints": [
             {
               "hour": 6,
@@ -5342,6 +5366,10 @@
             {
               "hour": 9,
               "rank": 23
+            },
+            {
+              "hour": 10,
+              "rank": 19
             }
           ],
           "previousPoints": [
@@ -5828,19 +5856,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 20,
-              "title": "帰れマンデー見っけ隊!!"
+              "rank": 16,
+              "title": "探偵！ナイトスクープ"
             },
             {
-              "rank": 21,
-              "title": "かのサンド"
+              "rank": 17,
+              "title": "ザ！鉄腕！DASH!!"
             },
             {
-              "rank": 22,
-              "title": "ザ！世界仰天ニュース"
+              "rank": 18,
+              "title": "あっちこっちAぇ!"
             },
             {
-              "rank": 23,
+              "rank": 19,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -5909,19 +5937,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Snow Man 佐久間 渡辺 宮舘の江戸川会"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 48,
-              "title": "ひらめけ！うんぴょこちゃんねる"
+              "title": "キミはもっと＝LOVEを愛せるか！！！"
             },
             {
               "rank": 49,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "Snow Man 佐久間 渡辺 宮舘の江戸川会"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "開運！なんでも鑑定団"
             }
           ]
         }
@@ -5930,7 +5958,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/13",
-      "updatedAt": "2026/08/19 09:07",
+      "updatedAt": "2026/08/19 10:07",
       "episodeId": "ep9917ljy7",
       "subtitle": "【大集結】珍英語VS天才 謎解き王決定戦SP 第1話",
       "likes": "1.5万",
@@ -6494,6 +6522,10 @@
         },
         {
           "hour": 151,
+          "likes": 15000
+        },
+        {
+          "hour": 152,
           "likes": 15000
         }
       ],
@@ -7709,19 +7741,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Snow Man 佐久間 渡辺 宮舘の江戸川会"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 48,
-              "title": "ひらめけ！うんぴょこちゃんねる"
+              "title": "キミはもっと＝LOVEを愛せるか！！！"
             },
             {
               "rank": 49,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "Snow Man 佐久間 渡辺 宮舘の江戸川会"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "開運！なんでも鑑定団"
             }
           ]
         },
@@ -8018,19 +8050,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "くりぃむナンタラ"
+              "title": "真夏のシンデレラ"
             },
             {
               "rank": 48,
-              "title": "かまいたちの知らんけど"
+              "title": "名探偵のままでいて"
             },
             {
               "rank": 49,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "幸せになりたいマサムネ君"
             },
             {
               "rank": 50,
-              "title": "家、ついて行ってイイですか？"
+              "title": "熱闘甲子園"
             }
           ]
         }
@@ -8039,10 +8071,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/16",
-      "updatedAt": "2026/08/19 09:07",
+      "updatedAt": "2026/08/19 10:07",
       "episodeId": "epmo0217zw",
       "subtitle": "真夏の自由研究SP!夢の巨大お菓子の家を本気で作る!",
-      "likes": "3153",
+      "likes": "3163",
       "favorites": "53.2万",
       "likePoints": [
         {
@@ -8276,6 +8308,10 @@
         {
           "hour": 62,
           "likes": 3153
+        },
+        {
+          "hour": 63,
+          "likes": 3163
         }
       ],
       "previousLikePoints": [
@@ -8897,7 +8933,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 17,
-          "elapsedHour": 62,
+          "elapsedHour": 63,
           "elapsedRank": 17,
           "currentPoints": [
             {
@@ -9126,6 +9162,10 @@
             },
             {
               "hour": 62,
+              "rank": 17
+            },
+            {
+              "hour": 63,
               "rank": 17
             }
           ],
@@ -10115,19 +10155,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Snow Man 佐久間 渡辺 宮舘の江戸川会"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 48,
-              "title": "ひらめけ！うんぴょこちゃんねる"
+              "title": "キミはもっと＝LOVEを愛せるか！！！"
             },
             {
               "rank": 49,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "Snow Man 佐久間 渡辺 宮舘の江戸川会"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "開運！なんでも鑑定団"
             }
           ]
         }
@@ -10136,10 +10176,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/19 09:07",
+      "updatedAt": "2026/08/19 10:07",
       "episodeId": "epd7ebv3mp",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！=LOVE登場",
-      "likes": "3222",
+      "likes": "3690",
       "favorites": "12.0万",
       "likePoints": [
         {
@@ -10165,6 +10205,10 @@
         {
           "hour": 8,
           "likes": 3222
+        },
+        {
+          "hour": 9,
+          "likes": 3690
         }
       ],
       "previousLikePoints": [
@@ -10761,9 +10805,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 34,
-          "elapsedHour": 8,
-          "elapsedRank": 34,
+          "currentRank": 29,
+          "elapsedHour": 9,
+          "elapsedRank": 29,
           "currentPoints": [
             {
               "hour": 7,
@@ -10772,6 +10816,10 @@
             {
               "hour": 8,
               "rank": 34
+            },
+            {
+              "hour": 9,
+              "rank": 29
             }
           ],
           "previousPoints": [
@@ -10814,19 +10862,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 31,
-              "title": "耳の穴かっぽじって聞け！"
+              "rank": 26,
+              "title": "有吉クイズ"
             },
             {
-              "rank": 32,
-              "title": "大泉サンドの年2会"
+              "rank": 27,
+              "title": "世界まる見え！テレビ特捜部"
             },
             {
-              "rank": 33,
-              "title": "タイムレスマン"
+              "rank": 28,
+              "title": "マルコポロリ！"
             },
             {
-              "rank": 34,
+              "rank": 29,
               "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
@@ -10842,19 +10890,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "くりぃむナンタラ"
+              "title": "真夏のシンデレラ"
             },
             {
               "rank": 48,
-              "title": "かまいたちの知らんけど"
+              "title": "名探偵のままでいて"
             },
             {
               "rank": 49,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "幸せになりたいマサムネ君"
             },
             {
               "rank": 50,
-              "title": "家、ついて行ってイイですか？"
+              "title": "熱闘甲子園"
             }
           ]
         }
@@ -10863,10 +10911,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/14",
-      "updatedAt": "2026/08/19 09:07",
+      "updatedAt": "2026/08/19 10:07",
       "episodeId": "epb7pj6qtw",
       "subtitle": "第140回 真っ白天使のんに翻弄？深川麻衣との許せない飯",
-      "likes": "4835",
+      "likes": "4847",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -11356,6 +11404,10 @@
         {
           "hour": 129,
           "likes": 4835
+        },
+        {
+          "hour": 130,
+          "likes": 4847
         }
       ],
       "previousLikePoints": [
@@ -12438,19 +12490,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Snow Man 佐久間 渡辺 宮舘の江戸川会"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 48,
-              "title": "ひらめけ！うんぴょこちゃんねる"
+              "title": "キミはもっと＝LOVEを愛せるか！！！"
             },
             {
               "rank": 49,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "Snow Man 佐久間 渡辺 宮舘の江戸川会"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "開運！なんでも鑑定団"
             }
           ]
         },
@@ -12639,19 +12691,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "くりぃむナンタラ"
+              "title": "真夏のシンデレラ"
             },
             {
               "rank": 48,
-              "title": "かまいたちの知らんけど"
+              "title": "名探偵のままでいて"
             },
             {
               "rank": 49,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "幸せになりたいマサムネ君"
             },
             {
               "rank": 50,
-              "title": "家、ついて行ってイイですか？"
+              "title": "熱闘甲子園"
             }
           ]
         }
@@ -12660,10 +12712,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/19 09:07",
+      "updatedAt": "2026/08/19 10:07",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
-      "likes": "9589",
+      "likes": "9594",
       "favorites": "80.1万",
       "likePoints": [
         {
@@ -14775,19 +14827,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Snow Man 佐久間 渡辺 宮舘の江戸川会"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 48,
-              "title": "ひらめけ！うんぴょこちゃんねる"
+              "title": "キミはもっと＝LOVEを愛せるか！！！"
             },
             {
               "rank": 49,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "Snow Man 佐久間 渡辺 宮舘の江戸川会"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "開運！なんでも鑑定団"
             }
           ]
         },
@@ -15207,19 +15259,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "くりぃむナンタラ"
+              "title": "真夏のシンデレラ"
             },
             {
               "rank": 48,
-              "title": "かまいたちの知らんけど"
+              "title": "名探偵のままでいて"
             },
             {
               "rank": 49,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "幸せになりたいマサムネ君"
             },
             {
               "rank": 50,
-              "title": "家、ついて行ってイイですか？"
+              "title": "熱闘甲子園"
             }
           ]
         }
@@ -15228,10 +15280,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/14",
-      "updatedAt": "2026/08/19 09:07",
+      "updatedAt": "2026/08/19 10:07",
       "episodeId": "epq1mep0kx",
       "subtitle": "4人を慕う後輩が魅力と素顔を語る＆4人の舞台に密着",
-      "likes": "6826",
+      "likes": "6838",
       "favorites": "3.3万",
       "likePoints": [
         {
@@ -15717,6 +15769,10 @@
         {
           "hour": 127,
           "likes": 6826
+        },
+        {
+          "hour": 128,
+          "likes": 6838
         }
       ],
       "previousLikePoints": [
@@ -16819,19 +16875,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "川島・山内のマンガ沼"
             },
             {
               "rank": 48,
-              "title": "にけつッ!!"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 49,
-              "title": "ありえへん∞世界"
+              "title": "ぽかぽか"
             },
             {
               "rank": 50,
-              "title": "秘密のケンミンSHOW極"
+              "title": "じっくり聞いタロウ～スター近況（秘）報告～"
             }
           ]
         },
@@ -16935,19 +16991,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Snow Man 佐久間 渡辺 宮舘の江戸川会"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 48,
-              "title": "ひらめけ！うんぴょこちゃんねる"
+              "title": "キミはもっと＝LOVEを愛せるか！！！"
             },
             {
               "rank": 49,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "Snow Man 佐久間 渡辺 宮舘の江戸川会"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "開運！なんでも鑑定団"
             }
           ]
         }
@@ -16956,7 +17012,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/12",
-      "updatedAt": "2026/08/19 09:07",
+      "updatedAt": "2026/08/19 10:07",
       "episodeId": "epf66fv1b3",
       "subtitle": "#6 脳死の娘に宿る命…父と医師、涙の決断",
       "likes": "1.2万",
@@ -17536,6 +17592,10 @@
         },
         {
           "hour": 155,
+          "likes": 12000
+        },
+        {
+          "hour": 156,
           "likes": 12000
         }
       ],
@@ -18182,7 +18242,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 16,
-          "elapsedHour": 155,
+          "elapsedHour": 156,
           "elapsedRank": 16,
           "currentPoints": [
             {
@@ -18783,6 +18843,10 @@
             },
             {
               "hour": 155,
+              "rank": 16
+            },
+            {
+              "hour": 156,
               "rank": 16
             }
           ],
@@ -19455,7 +19519,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 19,
-          "elapsedHour": 155,
+          "elapsedHour": 156,
           "elapsedRank": 19,
           "currentPoints": [
             {
@@ -20052,6 +20116,10 @@
             },
             {
               "hour": 155,
+              "rank": 19
+            },
+            {
+              "hour": 156,
               "rank": 19
             }
           ],
@@ -20725,7 +20793,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/13",
-      "updatedAt": "2026/08/19 09:07",
+      "updatedAt": "2026/08/19 10:07",
       "episodeId": "ep36trz5yx",
       "subtitle": "第6話 きっとすぐ忘れるから・・・あなたのことなんて",
       "likes": "2.2万",
@@ -21229,6 +21297,10 @@
         },
         {
           "hour": 131,
+          "likes": 22000
+        },
+        {
+          "hour": 132,
           "likes": 22000
         }
       ],
@@ -21863,7 +21935,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 13,
-          "elapsedHour": 131,
+          "elapsedHour": 132,
           "elapsedRank": 13,
           "currentPoints": [
             {
@@ -22368,6 +22440,10 @@
             },
             {
               "hour": 131,
+              "rank": 13
+            },
+            {
+              "hour": 132,
               "rank": 13
             }
           ],
@@ -23024,7 +23100,7 @@
           "nearbyRanking": [
             {
               "rank": 10,
-              "title": "クロスロード ～救命救急の約束～"
+              "title": "告白―25年目の秘密―"
             },
             {
               "rank": 11,
@@ -23044,7 +23120,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 16,
-          "elapsedHour": 131,
+          "elapsedHour": 132,
           "elapsedRank": 16,
           "currentPoints": [
             {
@@ -23549,6 +23625,10 @@
             },
             {
               "hour": 131,
+              "rank": 16
+            },
+            {
+              "hour": 132,
               "rank": 16
             }
           ],
@@ -24205,7 +24285,7 @@
           "nearbyRanking": [
             {
               "rank": 13,
-              "title": "クロスロード ～救命救急の約束～"
+              "title": "告白―25年目の秘密―"
             },
             {
               "rank": 14,
