@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/08/21 21:07",
+  "updatedAt": "2026/08/21 22:08",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/14",
-      "updatedAt": "2026/08/21 21:07",
+      "updatedAt": "2026/08/21 22:08",
       "episodeId": "epw9ttjvnx",
       "subtitle": "全員で連帯責任！腹ペコ2択マン",
       "likes": "1.4万",
@@ -1269,9 +1269,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 36,
-          "elapsedHour": 167,
-          "elapsedRank": 36,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 6,
@@ -2446,20 +2446,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 33,
-              "title": "見取り図じゃん"
+              "rank": 47,
+              "title": "吉田と粗品と"
             },
             {
-              "rank": 34,
-              "title": "Golden SixTONES"
+              "rank": 48,
+              "title": "VIVANT 悪役会議室"
             },
             {
-              "rank": 35,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "rank": 49,
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
-              "rank": 36,
-              "title": "タイムレスマン"
+              "rank": 50,
+              "title": "突然ですが占ってもいいですか？"
             }
           ]
         },
@@ -2848,19 +2848,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
+              "title": "ちいかわ"
             },
             {
               "rank": 48,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "名探偵のままでいて"
             },
             {
               "rank": 49,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+              "title": "熱闘甲子園"
             },
             {
               "rank": 50,
-              "title": "熱闘甲子園"
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             }
           ]
         }
@@ -2869,7 +2869,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/16",
-      "updatedAt": "2026/08/21 21:07",
+      "updatedAt": "2026/08/21 22:08",
       "episodeId": "epo6cmqsks",
       "subtitle": "バク転挑戦で緊急合宿!金メダリスト白井健三も参戦",
       "likes": "1.7万",
@@ -3345,6 +3345,10 @@
         },
         {
           "hour": 127,
+          "likes": 17000
+        },
+        {
+          "hour": 128,
           "likes": 17000
         }
       ],
@@ -3986,9 +3990,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 37,
-          "elapsedHour": 127,
-          "elapsedRank": 37,
+          "currentRank": 36,
+          "elapsedHour": 128,
+          "elapsedRank": 36,
           "currentPoints": [
             {
               "hour": 4,
@@ -4445,6 +4449,10 @@
             {
               "hour": 127,
               "rank": 37
+            },
+            {
+              "hour": 128,
+              "rank": 36
             }
           ],
           "previousPoints": [
@@ -4991,6 +4999,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 33,
+              "title": "見取り図じゃん"
+            },
+            {
               "rank": 34,
               "title": "Golden SixTONES"
             },
@@ -5000,10 +5012,6 @@
             },
             {
               "rank": 36,
-              "title": "タイムレスマン"
-            },
-            {
-              "rank": 37,
               "title": "timeleszファミリア"
             }
           ]
@@ -5521,19 +5529,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
+              "title": "ちいかわ"
             },
             {
               "rank": 48,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "名探偵のままでいて"
             },
             {
               "rank": 49,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+              "title": "熱闘甲子園"
             },
             {
               "rank": 50,
-              "title": "熱闘甲子園"
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             }
           ]
         }
@@ -5542,10 +5550,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/18",
-      "updatedAt": "2026/08/21 21:07",
+      "updatedAt": "2026/08/21 22:08",
       "episodeId": "epjrd5nzjc",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！前編",
-      "likes": "7159",
+      "likes": "7181",
       "favorites": "5.9万",
       "likePoints": [
         {
@@ -5795,6 +5803,10 @@
         {
           "hour": 69,
           "likes": 7159
+        },
+        {
+          "hour": 70,
+          "likes": 7181
         }
       ],
       "previousLikePoints": [
@@ -6424,7 +6436,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 26,
-          "elapsedHour": 69,
+          "elapsedHour": 70,
           "elapsedRank": 26,
           "currentPoints": [
             {
@@ -6657,6 +6669,10 @@
             },
             {
               "hour": 69,
+              "rank": 26
+            },
+            {
+              "hour": 70,
               "rank": 26
             }
           ],
@@ -7145,7 +7161,7 @@
           "nearbyRanking": [
             {
               "rank": 23,
-              "title": "世界まる見え！テレビ特捜部"
+              "title": "Aぇ! groupのQ＆Aぇ!"
             },
             {
               "rank": 24,
@@ -7302,19 +7318,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 48,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "VIVANT 悪役会議室"
             },
             {
               "rank": 49,
-              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
               "rank": 50,
-              "title": "VIVANT 悪役会議室"
+              "title": "突然ですが占ってもいいですか？"
             }
           ]
         }
@@ -7323,7 +7339,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/21 21:07",
+      "updatedAt": "2026/08/21 22:08",
       "episodeId": "epejkq59pb",
       "subtitle": "【準決勝】天才すぎる…謎解き王決定戦SP 第2話",
       "likes": "1.1万",
@@ -7495,6 +7511,10 @@
         },
         {
           "hour": 43,
+          "likes": 11000
+        },
+        {
+          "hour": 44,
           "likes": 11000
         }
       ],
@@ -8124,9 +8144,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 16,
-          "elapsedHour": 43,
-          "elapsedRank": 16,
+          "currentRank": 17,
+          "elapsedHour": 44,
+          "elapsedRank": 17,
           "currentPoints": [
             {
               "hour": 7,
@@ -8275,6 +8295,10 @@
             {
               "hour": 43,
               "rank": 16
+            },
+            {
+              "hour": 44,
+              "rank": 17
             }
           ],
           "previousPoints": [
@@ -8609,10 +8633,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 13,
-              "title": "櫻井･有吉THE夜会"
-            },
-            {
               "rank": 14,
               "title": "かまいガチ"
             },
@@ -8622,6 +8642,10 @@
             },
             {
               "rank": 16,
+              "title": "夫が寝たあとに"
+            },
+            {
+              "rank": 17,
               "title": "ニカゲーム"
             }
           ]
@@ -8629,9 +8653,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 41,
-          "elapsedHour": 43,
-          "elapsedRank": 41,
+          "currentRank": 42,
+          "elapsedHour": 44,
+          "elapsedRank": 42,
           "currentPoints": [
             {
               "hour": 12,
@@ -8760,6 +8784,10 @@
             {
               "hour": 43,
               "rank": 41
+            },
+            {
+              "hour": 44,
+              "rank": 42
             }
           ],
           "previousPoints": [
@@ -8946,19 +8974,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 38,
-              "title": "THE突破ファイル"
-            },
-            {
               "rank": 39,
-              "title": "リーガルビート -逆転の法廷-"
+              "title": "薬屋のひとりごと"
             },
             {
               "rank": 40,
-              "title": "ブラックトリック～裁きを操る弁護人～"
+              "title": "夫を殺したはずなのに"
             },
             {
               "rank": 41,
+              "title": "夫が寝たあとに"
+            },
+            {
+              "rank": 42,
               "title": "ニカゲーム"
             }
           ]
@@ -8968,10 +8996,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/16",
-      "updatedAt": "2026/08/21 21:07",
+      "updatedAt": "2026/08/21 22:08",
       "episodeId": "epmo0217zw",
       "subtitle": "真夏の自由研究SP!夢の巨大お菓子の家を本気で作る!",
-      "likes": "4034",
+      "likes": "4052",
       "favorites": "53.2万",
       "likePoints": [
         {
@@ -9425,6 +9453,10 @@
         {
           "hour": 122,
           "likes": 4034
+        },
+        {
+          "hour": 123,
+          "likes": 4052
         }
       ],
       "previousLikePoints": [
@@ -10045,9 +10077,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 34,
-          "elapsedHour": 122,
-          "elapsedRank": 34,
+          "currentRank": 33,
+          "elapsedHour": 123,
+          "elapsedRank": 33,
           "currentPoints": [
             {
               "hour": 2,
@@ -10492,6 +10524,10 @@
             {
               "hour": 122,
               "rank": 34
+            },
+            {
+              "hour": 123,
+              "rank": 33
             }
           ],
           "previousPoints": [
@@ -11146,19 +11182,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 31,
+              "rank": 30,
               "title": "有吉ゼミ"
             },
             {
-              "rank": 32,
+              "rank": 31,
               "title": "帰れマンデー見っけ隊!!"
             },
             {
-              "rank": 33,
-              "title": "かのサンド"
+              "rank": 32,
+              "title": "ヒロシのぼっちキャンプ Season13"
             },
             {
-              "rank": 34,
+              "rank": 33,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -11480,19 +11516,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 48,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "VIVANT 悪役会議室"
             },
             {
               "rank": 49,
-              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
               "rank": 50,
-              "title": "VIVANT 悪役会議室"
+              "title": "突然ですが占ってもいいですか？"
             }
           ]
         }
@@ -11501,7 +11537,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/21 21:07",
+      "updatedAt": "2026/08/21 22:08",
       "episodeId": "epd7ebv3mp",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！=LOVE登場",
       "likes": "1.0万",
@@ -11729,6 +11765,10 @@
         },
         {
           "hour": 68,
+          "likes": 10000
+        },
+        {
+          "hour": 69,
           "likes": 10000
         }
       ],
@@ -12584,19 +12624,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 48,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "VIVANT 悪役会議室"
             },
             {
               "rank": 49,
-              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
               "rank": 50,
-              "title": "VIVANT 悪役会議室"
+              "title": "突然ですが占ってもいいですか？"
             }
           ]
         },
@@ -12700,19 +12740,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
+              "title": "ちいかわ"
             },
             {
               "rank": 48,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "名探偵のままでいて"
             },
             {
               "rank": 49,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+              "title": "熱闘甲子園"
             },
             {
               "rank": 50,
-              "title": "熱闘甲子園"
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             }
           ]
         }
@@ -12721,10 +12761,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/21 21:07",
+      "updatedAt": "2026/08/21 22:08",
       "episodeId": "eprp4uddvt",
       "subtitle": "第141回 のんと深川麻衣の許せない飯で衝撃のラストが！",
-      "likes": "2663",
+      "likes": "2751",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -12810,6 +12850,10 @@
         {
           "hour": 21,
           "likes": 2663
+        },
+        {
+          "hour": 22,
+          "likes": 2751
         }
       ],
       "previousLikePoints": [
@@ -13438,9 +13482,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 20,
-          "elapsedHour": 20,
-          "elapsedRank": 20,
+          "currentRank": 19,
+          "elapsedHour": 21,
+          "elapsedRank": 19,
           "currentPoints": [
             {
               "hour": 10,
@@ -13485,6 +13529,10 @@
             {
               "hour": 20,
               "rank": 20
+            },
+            {
+              "hour": 21,
+              "rank": 19
             }
           ],
           "previousPoints": [
@@ -13719,8 +13767,12 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 17,
+              "rank": 16,
               "title": "夫が寝たあとに"
+            },
+            {
+              "rank": 17,
+              "title": "ニカゲーム"
             },
             {
               "rank": 18,
@@ -13728,10 +13780,6 @@
             },
             {
               "rank": 19,
-              "title": "テレビ千鳥"
-            },
-            {
-              "rank": 20,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -13739,9 +13787,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 48,
-          "elapsedHour": 20,
-          "elapsedRank": 48,
+          "currentRank": 44,
+          "elapsedHour": 21,
+          "elapsedRank": 44,
           "currentPoints": [
             {
               "hour": 19,
@@ -13750,6 +13798,10 @@
             {
               "hour": 20,
               "rank": 48
+            },
+            {
+              "hour": 21,
+              "rank": 44
             }
           ],
           "previousPoints": [
@@ -13840,19 +13892,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 45,
-              "title": "薬屋のひとりごと"
+              "rank": 41,
+              "title": "夫が寝たあとに"
             },
             {
-              "rank": 46,
-              "title": "君は夏のなか"
+              "rank": 42,
+              "title": "ニカゲーム"
             },
             {
-              "rank": 47,
-              "title": "テレビ千鳥"
+              "rank": 43,
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
-              "rank": 48,
+              "rank": 44,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -13862,10 +13914,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/21 21:07",
+      "updatedAt": "2026/08/21 22:08",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
-      "likes": "9934",
+      "likes": "9943",
       "favorites": "80.2万",
       "likePoints": [
         {
@@ -15977,19 +16029,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 48,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "VIVANT 悪役会議室"
             },
             {
               "rank": 49,
-              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
               "rank": 50,
-              "title": "VIVANT 悪役会議室"
+              "title": "突然ですが占ってもいいですか？"
             }
           ]
         },
@@ -16409,19 +16461,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
+              "title": "ちいかわ"
             },
             {
               "rank": 48,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "名探偵のままでいて"
             },
             {
               "rank": 49,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+              "title": "熱闘甲子園"
             },
             {
               "rank": 50,
-              "title": "熱闘甲子園"
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             }
           ]
         }
@@ -16430,10 +16482,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/21 21:07",
+      "updatedAt": "2026/08/21 22:08",
       "episodeId": "epp5sd3y19",
       "subtitle": "運命の日本武道館ライブまで密着",
-      "likes": "1783",
+      "likes": "1892",
       "favorites": "3.4万",
       "likePoints": [
         {
@@ -16511,6 +16563,10 @@
         {
           "hour": 19,
           "likes": 1783
+        },
+        {
+          "hour": 20,
+          "likes": 1892
         }
       ],
       "previousLikePoints": [
@@ -17155,9 +17211,9 @@
         {
           "type": "talk",
           "label": "トーク",
-          "currentRank": 34,
-          "elapsedHour": 19,
-          "elapsedRank": 34,
+          "currentRank": 29,
+          "elapsedHour": 20,
+          "elapsedRank": 29,
           "currentPoints": [
             {
               "hour": 11,
@@ -17194,6 +17250,10 @@
             {
               "hour": 19,
               "rank": 34
+            },
+            {
+              "hour": 20,
+              "rank": 29
             }
           ],
           "previousPoints": [
@@ -17512,19 +17572,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 31,
+              "rank": 26,
               "title": "和田明日香とゆる宅飲み"
             },
             {
-              "rank": 32,
-              "title": "クレイジージャーニー"
+              "rank": 27,
+              "title": "日曜日の初耳学"
             },
             {
-              "rank": 33,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "rank": 28,
+              "title": "マルコポロリ！"
             },
             {
-              "rank": 34,
+              "rank": 29,
               "title": "ふぉ〜ゆ〜って、だれ？"
             }
           ]
@@ -17629,19 +17689,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 48,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "VIVANT 悪役会議室"
             },
             {
               "rank": 49,
-              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
               "rank": 50,
-              "title": "VIVANT 悪役会議室"
+              "title": "突然ですが占ってもいいですか？"
             }
           ]
         }
@@ -17650,10 +17710,10 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/21 21:07",
+      "updatedAt": "2026/08/21 22:08",
       "episodeId": "ep8dh8exqw",
       "subtitle": "#7 私を捨てた母、私が向き合う命",
-      "likes": "8247",
+      "likes": "8368",
       "favorites": "65.4万",
       "likePoints": [
         {
@@ -17835,6 +17895,10 @@
         {
           "hour": 47,
           "likes": 8247
+        },
+        {
+          "hour": 48,
+          "likes": 8368
         }
       ],
       "previousLikePoints": [
@@ -18456,7 +18520,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 5,
-          "elapsedHour": 47,
+          "elapsedHour": 48,
           "elapsedRank": 5,
           "currentPoints": [
             {
@@ -18633,6 +18697,10 @@
             },
             {
               "hour": 47,
+              "rank": 5
+            },
+            {
+              "hour": 48,
               "rank": 5
             }
           ],
@@ -19293,7 +19361,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 6,
-          "elapsedHour": 47,
+          "elapsedHour": 48,
           "elapsedRank": 6,
           "currentPoints": [
             {
@@ -19466,6 +19534,10 @@
             },
             {
               "hour": 47,
+              "rank": 6
+            },
+            {
+              "hour": 48,
               "rank": 6
             }
           ],
@@ -20123,7 +20195,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/21 21:07",
+      "updatedAt": "2026/08/21 22:08",
       "episodeId": "ep84f9w8rw",
       "subtitle": "第7話 想いが重なる夏の夜・・・あなたの事がひたすら好き",
       "likes": "1.2万",
@@ -20219,6 +20291,10 @@
         },
         {
           "hour": 23,
+          "likes": 12000
+        },
+        {
+          "hour": 24,
           "likes": 12000
         }
       ],
@@ -20853,7 +20929,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 1,
-          "elapsedHour": 23,
+          "elapsedHour": 24,
           "elapsedRank": 1,
           "currentPoints": [
             {
@@ -20942,6 +21018,10 @@
             },
             {
               "hour": 23,
+              "rank": 1
+            },
+            {
+              "hour": 24,
               "rank": 1
             }
           ],
@@ -21582,7 +21662,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 1,
-          "elapsedHour": 23,
+          "elapsedHour": 24,
           "elapsedRank": 1,
           "currentPoints": [
             {
@@ -21671,6 +21751,10 @@
             },
             {
               "hour": 23,
+              "rank": 1
+            },
+            {
+              "hour": 24,
               "rank": 1
             }
           ],
