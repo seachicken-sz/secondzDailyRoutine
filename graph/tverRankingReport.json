@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026/08/22 00:07",
+  "updatedAt": "2026/08/22 01:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/22 00:07",
+      "updatedAt": "2026/08/22 01:07",
       "episodeId": "eptbg59rwy",
       "subtitle": "timelesz100",
-      "likes": "2233",
-      "favorites": "78.2万",
+      "likes": "2551",
+      "favorites": "78.3万",
       "likePoints": [
         {
           "hour": 1,
@@ -17,6 +17,10 @@
         {
           "hour": 2,
           "likes": 2233
+        },
+        {
+          "hour": 3,
+          "likes": 2551
         }
       ],
       "previousLikePoints": [
@@ -653,10 +657,15 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 48,
+          "elapsedHour": 3,
+          "elapsedRank": 48,
+          "currentPoints": [
+            {
+              "hour": 3,
+              "rank": 48
+            }
+          ],
           "previousPoints": [
             {
               "hour": 6,
@@ -1265,20 +1274,20 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 45,
+              "title": "家、ついて行ってイイですか？"
+            },
+            {
+              "rank": 46,
+              "title": "かまいたちの机上の空論城"
+            },
+            {
               "rank": 47,
-              "title": "VIVANT 悪役会議室"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 48,
-              "title": "マツコ＆有吉 かりそめ天国"
-            },
-            {
-              "rank": 49,
-              "title": "吉田と粗品と"
-            },
-            {
-              "rank": 50,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "タイムレスマン"
             }
           ]
         },
@@ -1502,11 +1511,11 @@
             },
             {
               "rank": 49,
-              "title": "ニカゲーム"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 50,
-              "title": "テレビ千鳥"
+              "title": "ニカゲーム"
             }
           ]
         }
@@ -1515,7 +1524,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/16",
-      "updatedAt": "2026/08/22 00:07",
+      "updatedAt": "2026/08/22 01:07",
       "episodeId": "epo6cmqsks",
       "subtitle": "バク転挑戦で緊急合宿!金メダリスト白井健三も参戦",
       "likes": "1.7万",
@@ -2003,6 +2012,10 @@
         },
         {
           "hour": 130,
+          "likes": 17000
+        },
+        {
+          "hour": 131,
           "likes": 17000
         }
       ],
@@ -2645,7 +2658,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 37,
-          "elapsedHour": 130,
+          "elapsedHour": 131,
           "elapsedRank": 37,
           "currentPoints": [
             {
@@ -3114,6 +3127,10 @@
             },
             {
               "hour": 130,
+              "rank": 37
+            },
+            {
+              "hour": 131,
               "rank": 37
             }
           ],
@@ -4199,11 +4216,11 @@
             },
             {
               "rank": 49,
-              "title": "ニカゲーム"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 50,
-              "title": "テレビ千鳥"
+              "title": "ニカゲーム"
             }
           ]
         }
@@ -4212,10 +4229,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/18",
-      "updatedAt": "2026/08/22 00:07",
+      "updatedAt": "2026/08/22 01:07",
       "episodeId": "epjrd5nzjc",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！前編",
-      "likes": "7205",
+      "likes": "7248",
       "favorites": "5.9万",
       "likePoints": [
         {
@@ -4477,6 +4494,10 @@
         {
           "hour": 72,
           "likes": 7205
+        },
+        {
+          "hour": 73,
+          "likes": 7248
         }
       ],
       "previousLikePoints": [
@@ -5105,9 +5126,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 28,
-          "elapsedHour": 72,
-          "elapsedRank": 28,
+          "currentRank": 27,
+          "elapsedHour": 73,
+          "elapsedRank": 27,
           "currentPoints": [
             {
               "hour": 6,
@@ -5352,6 +5373,10 @@
             {
               "hour": 72,
               "rank": 28
+            },
+            {
+              "hour": 73,
+              "rank": 27
             }
           ],
           "previousPoints": [
@@ -5838,19 +5863,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 25,
-              "title": "沸騰ワード10"
+              "rank": 24,
+              "title": "世界くらべてみたら"
             },
             {
-              "rank": 26,
+              "rank": 25,
               "title": "あっちこっちAぇ!"
             },
             {
-              "rank": 27,
+              "rank": 26,
               "title": "キスマイ ピンスポクエスト"
             },
             {
-              "rank": 28,
+              "rank": 27,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -5996,19 +6021,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "VIVANT 悪役会議室"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 48,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "タイムレスマン"
             },
             {
               "rank": 49,
-              "title": "吉田と粗品と"
+              "title": "VIVANT 悪役会議室"
             },
             {
               "rank": 50,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "スポッパ★オオカミ少年"
             }
           ]
         }
@@ -6017,7 +6042,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/22 00:07",
+      "updatedAt": "2026/08/22 01:07",
       "episodeId": "epejkq59pb",
       "subtitle": "【準決勝】天才すぎる…謎解き王決定戦SP 第2話",
       "likes": "1.1万",
@@ -6201,6 +6226,10 @@
         },
         {
           "hour": 46,
+          "likes": 11000
+        },
+        {
+          "hour": 47,
           "likes": 11000
         }
       ],
@@ -6830,9 +6859,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 20,
-          "elapsedHour": 46,
-          "elapsedRank": 20,
+          "currentRank": 21,
+          "elapsedHour": 47,
+          "elapsedRank": 21,
           "currentPoints": [
             {
               "hour": 7,
@@ -6993,6 +7022,10 @@
             {
               "hour": 46,
               "rank": 20
+            },
+            {
+              "hour": 47,
+              "rank": 21
             }
           ],
           "previousPoints": [
@@ -7327,10 +7360,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 17,
-              "title": "夫が寝たあとに"
-            },
-            {
               "rank": 18,
               "title": "上田と女がDEEPに吠える夜"
             },
@@ -7340,6 +7369,10 @@
             },
             {
               "rank": 20,
+              "title": "テレビ千鳥"
+            },
+            {
+              "rank": 21,
               "title": "ニカゲーム"
             }
           ]
@@ -7347,9 +7380,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 49,
-          "elapsedHour": 46,
-          "elapsedRank": 49,
+          "currentRank": 50,
+          "elapsedHour": 47,
+          "elapsedRank": 50,
           "currentPoints": [
             {
               "hour": 12,
@@ -7490,6 +7523,10 @@
             {
               "hour": 46,
               "rank": 49
+            },
+            {
+              "hour": 47,
+              "rank": 50
             }
           ],
           "previousPoints": [
@@ -7676,10 +7713,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 46,
-              "title": "夫が寝たあとに"
-            },
-            {
               "rank": 47,
               "title": "上田と女がDEEPに吠える夜"
             },
@@ -7689,6 +7722,10 @@
             },
             {
               "rank": 49,
+              "title": "テレビ千鳥"
+            },
+            {
+              "rank": 50,
               "title": "ニカゲーム"
             }
           ]
@@ -7698,10 +7735,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/16",
-      "updatedAt": "2026/08/22 00:07",
+      "updatedAt": "2026/08/22 01:07",
       "episodeId": "epmo0217zw",
       "subtitle": "真夏の自由研究SP!夢の巨大お菓子の家を本気で作る!",
-      "likes": "4079",
+      "likes": "4109",
       "favorites": "53.2万",
       "likePoints": [
         {
@@ -8167,6 +8204,10 @@
         {
           "hour": 125,
           "likes": 4079
+        },
+        {
+          "hour": 126,
+          "likes": 4109
         }
       ],
       "previousLikePoints": [
@@ -8788,7 +8829,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 33,
-          "elapsedHour": 125,
+          "elapsedHour": 126,
           "elapsedRank": 33,
           "currentPoints": [
             {
@@ -9245,6 +9286,10 @@
             },
             {
               "hour": 125,
+              "rank": 33
+            },
+            {
+              "hour": 126,
               "rank": 33
             }
           ],
@@ -9901,15 +9946,15 @@
           "nearbyRanking": [
             {
               "rank": 30,
-              "title": "よるのブランチ"
-            },
-            {
-              "rank": 31,
               "title": "有吉ゼミ"
             },
             {
-              "rank": 32,
+              "rank": 31,
               "title": "帰れマンデー見っけ隊!!"
+            },
+            {
+              "rank": 32,
+              "title": "かのサンド"
             },
             {
               "rank": 33,
@@ -10234,19 +10279,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "VIVANT 悪役会議室"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 48,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "タイムレスマン"
             },
             {
               "rank": 49,
-              "title": "吉田と粗品と"
+              "title": "VIVANT 悪役会議室"
             },
             {
               "rank": 50,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "スポッパ★オオカミ少年"
             }
           ]
         }
@@ -10255,7 +10300,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/22 00:07",
+      "updatedAt": "2026/08/22 01:07",
       "episodeId": "epd7ebv3mp",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！=LOVE登場",
       "likes": "1.0万",
@@ -10491,6 +10536,10 @@
         },
         {
           "hour": 71,
+          "likes": 10000
+        },
+        {
+          "hour": 72,
           "likes": 10000
         }
       ],
@@ -11346,19 +11395,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "VIVANT 悪役会議室"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 48,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "タイムレスマン"
             },
             {
               "rank": 49,
-              "title": "吉田と粗品と"
+              "title": "VIVANT 悪役会議室"
             },
             {
               "rank": 50,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "スポッパ★オオカミ少年"
             }
           ]
         },
@@ -11470,11 +11519,11 @@
             },
             {
               "rank": 49,
-              "title": "ニカゲーム"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 50,
-              "title": "テレビ千鳥"
+              "title": "ニカゲーム"
             }
           ]
         }
@@ -11483,10 +11532,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/22 00:07",
+      "updatedAt": "2026/08/22 01:07",
       "episodeId": "eprp4uddvt",
       "subtitle": "第141回 のんと深川麻衣の許せない飯で衝撃のラストが！",
-      "likes": "2845",
+      "likes": "2985",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -11584,6 +11633,10 @@
         {
           "hour": 24,
           "likes": 2845
+        },
+        {
+          "hour": 25,
+          "likes": 2985
         }
       ],
       "previousLikePoints": [
@@ -12213,7 +12266,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 16,
-          "elapsedHour": 23,
+          "elapsedHour": 24,
           "elapsedRank": 16,
           "currentPoints": [
             {
@@ -12270,6 +12323,10 @@
             },
             {
               "hour": 23,
+              "rank": 16
+            },
+            {
+              "hour": 24,
               "rank": 16
             }
           ],
@@ -12506,11 +12563,11 @@
           "nearbyRanking": [
             {
               "rank": 13,
-              "title": "有吉の壁"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 14,
-              "title": "THE突破ファイル"
+              "title": "有吉の壁"
             },
             {
               "rank": 15,
@@ -12526,7 +12583,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 42,
-          "elapsedHour": 23,
+          "elapsedHour": 24,
           "elapsedRank": 42,
           "currentPoints": [
             {
@@ -12547,6 +12604,10 @@
             },
             {
               "hour": 23,
+              "rank": 42
+            },
+            {
+              "hour": 24,
               "rank": 42
             }
           ],
@@ -12639,15 +12700,15 @@
           "nearbyRanking": [
             {
               "rank": 39,
-              "title": "かまいガチ"
+              "title": "ドライな同期の溺愛癖"
             },
             {
               "rank": 40,
-              "title": "ブラックトリック～裁きを操る弁護人～"
+              "title": "熱闘甲子園"
             },
             {
               "rank": 41,
-              "title": "熱闘甲子園"
+              "title": "ブラックトリック～裁きを操る弁護人～"
             },
             {
               "rank": 42,
@@ -12660,10 +12721,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/22 00:07",
+      "updatedAt": "2026/08/22 01:07",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
-      "likes": "9953",
+      "likes": "9969",
       "favorites": "80.2万",
       "likePoints": [
         {
@@ -14775,19 +14836,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "VIVANT 悪役会議室"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 48,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "タイムレスマン"
             },
             {
               "rank": 49,
-              "title": "吉田と粗品と"
+              "title": "VIVANT 悪役会議室"
             },
             {
               "rank": 50,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "スポッパ★オオカミ少年"
             }
           ]
         },
@@ -15215,11 +15276,11 @@
             },
             {
               "rank": 49,
-              "title": "ニカゲーム"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 50,
-              "title": "テレビ千鳥"
+              "title": "ニカゲーム"
             }
           ]
         }
@@ -15228,10 +15289,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/22 00:07",
+      "updatedAt": "2026/08/22 01:07",
       "episodeId": "epp5sd3y19",
       "subtitle": "運命の日本武道館ライブまで密着",
-      "likes": "1975",
+      "likes": "2129",
       "favorites": "3.4万",
       "likePoints": [
         {
@@ -15321,6 +15382,10 @@
         {
           "hour": 22,
           "likes": 1975
+        },
+        {
+          "hour": 23,
+          "likes": 2129
         }
       ],
       "previousLikePoints": [
@@ -15965,9 +16030,9 @@
         {
           "type": "talk",
           "label": "トーク",
-          "currentRank": 26,
-          "elapsedHour": 22,
-          "elapsedRank": 26,
+          "currentRank": 28,
+          "elapsedHour": 23,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 11,
@@ -16016,6 +16081,10 @@
             {
               "hour": 22,
               "rank": 26
+            },
+            {
+              "hour": 23,
+              "rank": 28
             }
           ],
           "previousPoints": [
@@ -16334,19 +16403,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 23,
-              "title": "ジャンクSPORTS"
-            },
-            {
-              "rank": 24,
-              "title": "吉田と粗品と"
-            },
-            {
               "rank": 25,
-              "title": "突然ですが占ってもいいですか？"
+              "title": "スポッパ★オオカミ少年"
             },
             {
               "rank": 26,
+              "title": "吉田と粗品と"
+            },
+            {
+              "rank": 27,
+              "title": "突然ですが占ってもいいですか？"
+            },
+            {
+              "rank": 28,
               "title": "ふぉ〜ゆ〜って、だれ？"
             }
           ]
@@ -16451,19 +16520,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "VIVANT 悪役会議室"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 48,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "タイムレスマン"
             },
             {
               "rank": 49,
-              "title": "吉田と粗品と"
+              "title": "VIVANT 悪役会議室"
             },
             {
               "rank": 50,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "スポッパ★オオカミ少年"
             }
           ]
         }
@@ -16472,10 +16541,10 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/22 00:07",
+      "updatedAt": "2026/08/22 01:07",
       "episodeId": "ep8dh8exqw",
       "subtitle": "#7 私を捨てた母、私が向き合う命",
-      "likes": "8437",
+      "likes": "8596",
       "favorites": "65.4万",
       "likePoints": [
         {
@@ -16669,6 +16738,10 @@
         {
           "hour": 50,
           "likes": 8437
+        },
+        {
+          "hour": 51,
+          "likes": 8596
         }
       ],
       "previousLikePoints": [
@@ -17290,7 +17363,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 7,
-          "elapsedHour": 50,
+          "elapsedHour": 51,
           "elapsedRank": 7,
           "currentPoints": [
             {
@@ -17479,6 +17552,10 @@
             },
             {
               "hour": 50,
+              "rank": 7
+            },
+            {
+              "hour": 51,
               "rank": 7
             }
           ],
@@ -18119,7 +18196,7 @@
           "nearbyRanking": [
             {
               "rank": 4,
-              "title": "Ｔシャツが乾くまで"
+              "title": "VIVANT"
             },
             {
               "rank": 5,
@@ -18139,7 +18216,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 9,
-          "elapsedHour": 50,
+          "elapsedHour": 51,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -18324,6 +18401,10 @@
             },
             {
               "hour": 50,
+              "rank": 9
+            },
+            {
+              "hour": 51,
               "rank": 9
             }
           ],
@@ -18981,11 +19062,11 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/22 00:07",
+      "updatedAt": "2026/08/22 01:07",
       "episodeId": "ep84f9w8rw",
       "subtitle": "第7話 想いが重なる夏の夜・・・あなたの事がひたすら好き",
       "likes": "1.3万",
-      "favorites": "70.9万",
+      "favorites": "71.0万",
       "likePoints": [
         {
           "hour": 1,
@@ -19089,6 +19170,10 @@
         },
         {
           "hour": 26,
+          "likes": 13000
+        },
+        {
+          "hour": 27,
           "likes": 13000
         }
       ],
@@ -19723,7 +19808,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 1,
-          "elapsedHour": 26,
+          "elapsedHour": 27,
           "elapsedRank": 1,
           "currentPoints": [
             {
@@ -19824,6 +19909,10 @@
             },
             {
               "hour": 26,
+              "rank": 1
+            },
+            {
+              "hour": 27,
               "rank": 1
             }
           ],
@@ -20464,7 +20553,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 1,
-          "elapsedHour": 26,
+          "elapsedHour": 27,
           "elapsedRank": 1,
           "currentPoints": [
             {
@@ -20565,6 +20654,10 @@
             },
             {
               "hour": 26,
+              "rank": 1
+            },
+            {
+              "hour": 27,
               "rank": 1
             }
           ],
