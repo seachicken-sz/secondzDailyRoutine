@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026/08/22 15:07",
+  "updatedAt": "2026/08/22 16:08",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/22 15:07",
+      "updatedAt": "2026/08/22 16:08",
       "episodeId": "eptbg59rwy",
       "subtitle": "timelesz100",
-      "likes": "7682",
+      "likes": "7994",
       "favorites": "78.3万",
       "likePoints": [
         {
@@ -77,6 +77,10 @@
         {
           "hour": 17,
           "likes": 7682
+        },
+        {
+          "hour": 18,
+          "likes": 7994
         }
       ],
       "previousLikePoints": [
@@ -714,7 +718,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 9,
-          "elapsedHour": 17,
+          "elapsedHour": 18,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -775,6 +779,10 @@
             },
             {
               "hour": 17,
+              "rank": 9
+            },
+            {
+              "hour": 18,
               "rank": 9
             }
           ],
@@ -1387,15 +1395,15 @@
           "nearbyRanking": [
             {
               "rank": 6,
-              "title": "限界突破！やってM!LK"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 7,
-              "title": "月曜から夜ふかし"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 8,
-              "title": "世界の果てまでイッテQ！"
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 9,
@@ -1406,9 +1414,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 30,
-          "elapsedHour": 17,
-          "elapsedRank": 30,
+          "currentRank": 29,
+          "elapsedHour": 18,
+          "elapsedRank": 29,
           "currentPoints": [
             {
               "hour": 11,
@@ -1437,6 +1445,10 @@
             {
               "hour": 17,
               "rank": 30
+            },
+            {
+              "hour": 18,
+              "rank": 29
             }
           ],
           "previousPoints": [
@@ -1643,19 +1655,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 27,
-              "title": "月曜から夜ふかし"
-            },
-            {
-              "rank": 28,
+              "rank": 26,
               "title": "世界の果てまでイッテQ！"
             },
             {
-              "rank": 29,
-              "title": "夫婦と16歳～狂気の隣人～"
+              "rank": 27,
+              "title": "限界突破！やってM!LK"
             },
             {
-              "rank": 30,
+              "rank": 28,
+              "title": "月曜から夜ふかし"
+            },
+            {
+              "rank": 29,
               "title": "タイムレスマン"
             }
           ]
@@ -1665,7 +1677,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/16",
-      "updatedAt": "2026/08/22 15:07",
+      "updatedAt": "2026/08/22 16:08",
       "episodeId": "epo6cmqsks",
       "subtitle": "バク転挑戦で緊急合宿!金メダリスト白井健三も参戦",
       "likes": "1.8万",
@@ -2213,6 +2225,10 @@
         },
         {
           "hour": 145,
+          "likes": 18000
+        },
+        {
+          "hour": 146,
           "likes": 18000
         }
       ],
@@ -2855,7 +2871,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 44,
-          "elapsedHour": 145,
+          "elapsedHour": 146,
           "elapsedRank": 44,
           "currentPoints": [
             {
@@ -3384,6 +3400,10 @@
             },
             {
               "hour": 145,
+              "rank": 44
+            },
+            {
+              "hour": 146,
               "rank": 44
             }
           ],
@@ -3932,7 +3952,7 @@
           "nearbyRanking": [
             {
               "rank": 41,
-              "title": "A-Studio＋"
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
               "rank": 42,
@@ -4465,15 +4485,15 @@
             },
             {
               "rank": 48,
-              "title": "有吉の壁"
+              "title": "席替えしたら、どうやら後ろの男が俺のこと好きらしい"
             },
             {
               "rank": 49,
-              "title": "夫を殺したはずなのに"
+              "title": "有吉の壁"
             },
             {
               "rank": 50,
-              "title": "席替えしたら、どうやら後ろの男が俺のこと好きらしい"
+              "title": "夫を殺したはずなのに"
             }
           ]
         }
@@ -4482,10 +4502,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/18",
-      "updatedAt": "2026/08/22 15:07",
+      "updatedAt": "2026/08/22 16:08",
       "episodeId": "epjrd5nzjc",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！前編",
-      "likes": "7440",
+      "likes": "7469",
       "favorites": "5.9万",
       "likePoints": [
         {
@@ -4807,6 +4827,10 @@
         {
           "hour": 87,
           "likes": 7440
+        },
+        {
+          "hour": 88,
+          "likes": 7469
         }
       ],
       "previousLikePoints": [
@@ -5436,7 +5460,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 34,
-          "elapsedHour": 87,
+          "elapsedHour": 88,
           "elapsedRank": 34,
           "currentPoints": [
             {
@@ -5741,6 +5765,10 @@
             },
             {
               "hour": 87,
+              "rank": 34
+            },
+            {
+              "hour": 88,
               "rank": 34
             }
           ],
@@ -6229,11 +6257,11 @@
           "nearbyRanking": [
             {
               "rank": 31,
-              "title": "有吉ゼミ"
+              "title": "ザ！鉄腕！DASH!!"
             },
             {
               "rank": 32,
-              "title": "ザ！鉄腕！DASH!!"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 33,
@@ -6386,7 +6414,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 48,
@@ -6394,7 +6422,7 @@
             },
             {
               "rank": 49,
-              "title": "沸騰ワード10"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 50,
@@ -6407,7 +6435,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/22 15:07",
+      "updatedAt": "2026/08/22 16:08",
       "episodeId": "epejkq59pb",
       "subtitle": "【準決勝】天才すぎる…謎解き王決定戦SP 第2話",
       "likes": "1.2万",
@@ -6651,6 +6679,10 @@
         },
         {
           "hour": 61,
+          "likes": 12000
+        },
+        {
+          "hour": 62,
           "likes": 12000
         }
       ],
@@ -7280,9 +7312,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 27,
-          "elapsedHour": 61,
-          "elapsedRank": 27,
+          "currentRank": 28,
+          "elapsedHour": 62,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 7,
@@ -7503,6 +7535,10 @@
             {
               "hour": 61,
               "rank": 27
+            },
+            {
+              "hour": 62,
+              "rank": 28
             }
           ],
           "previousPoints": [
@@ -7837,12 +7873,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 24,
-              "title": "あざとくて何が悪いの？"
-            },
-            {
               "rank": 25,
-              "title": "探偵！ナイトスクープ"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 26,
@@ -7850,6 +7882,10 @@
             },
             {
               "rank": 27,
+              "title": "デカ盛りハンター"
+            },
+            {
+              "rank": 28,
               "title": "ニカゲーム"
             }
           ]
@@ -8219,15 +8255,15 @@
             },
             {
               "rank": 48,
-              "title": "有吉の壁"
+              "title": "席替えしたら、どうやら後ろの男が俺のこと好きらしい"
             },
             {
               "rank": 49,
-              "title": "夫を殺したはずなのに"
+              "title": "有吉の壁"
             },
             {
               "rank": 50,
-              "title": "席替えしたら、どうやら後ろの男が俺のこと好きらしい"
+              "title": "夫を殺したはずなのに"
             }
           ]
         }
@@ -8236,10 +8272,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/16",
-      "updatedAt": "2026/08/22 15:07",
+      "updatedAt": "2026/08/22 16:08",
       "episodeId": "epmo0217zw",
       "subtitle": "真夏の自由研究SP!夢の巨大お菓子の家を本気で作る!",
-      "likes": "4280",
+      "likes": "4297",
       "favorites": "53.2万",
       "likePoints": [
         {
@@ -8765,6 +8801,10 @@
         {
           "hour": 140,
           "likes": 4280
+        },
+        {
+          "hour": 141,
+          "likes": 4297
         }
       ],
       "previousLikePoints": [
@@ -9385,9 +9425,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 32,
-          "elapsedHour": 140,
-          "elapsedRank": 32,
+          "currentRank": 31,
+          "elapsedHour": 141,
+          "elapsedRank": 31,
           "currentPoints": [
             {
               "hour": 2,
@@ -9904,6 +9944,10 @@
             {
               "hour": 140,
               "rank": 32
+            },
+            {
+              "hour": 141,
+              "rank": 31
             }
           ],
           "previousPoints": [
@@ -10558,6 +10602,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 28,
+              "title": "かのサンド"
+            },
+            {
               "rank": 29,
               "title": "ザ！世界仰天ニュース"
             },
@@ -10567,10 +10615,6 @@
             },
             {
               "rank": 31,
-              "title": "有吉ゼミ"
-            },
-            {
-              "rank": 32,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -10892,7 +10936,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 48,
@@ -10900,7 +10944,7 @@
             },
             {
               "rank": 49,
-              "title": "沸騰ワード10"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 50,
@@ -10913,7 +10957,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/22 15:07",
+      "updatedAt": "2026/08/22 16:08",
       "episodeId": "epd7ebv3mp",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！=LOVE登場",
       "likes": "1.1万",
@@ -11209,6 +11253,10 @@
         },
         {
           "hour": 86,
+          "likes": 11000
+        },
+        {
+          "hour": 88,
           "likes": 11000
         }
       ],
@@ -12064,7 +12112,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 48,
@@ -12072,7 +12120,7 @@
             },
             {
               "rank": 49,
-              "title": "沸騰ワード10"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 50,
@@ -12184,15 +12232,15 @@
             },
             {
               "rank": 48,
-              "title": "有吉の壁"
+              "title": "席替えしたら、どうやら後ろの男が俺のこと好きらしい"
             },
             {
               "rank": 49,
-              "title": "夫を殺したはずなのに"
+              "title": "有吉の壁"
             },
             {
               "rank": 50,
-              "title": "席替えしたら、どうやら後ろの男が俺のこと好きらしい"
+              "title": "夫を殺したはずなのに"
             }
           ]
         }
@@ -12201,10 +12249,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/22 15:07",
+      "updatedAt": "2026/08/22 16:08",
       "episodeId": "eprp4uddvt",
       "subtitle": "第141回 のんと深川麻衣の許せない飯で衝撃のラストが！",
-      "likes": "3406",
+      "likes": "3442",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -12362,6 +12410,10 @@
         {
           "hour": 39,
           "likes": 3406
+        },
+        {
+          "hour": 40,
+          "likes": 3442
         }
       ],
       "previousLikePoints": [
@@ -12990,9 +13042,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 23,
-          "elapsedHour": 38,
-          "elapsedRank": 23,
+          "currentRank": 24,
+          "elapsedHour": 39,
+          "elapsedRank": 24,
           "currentPoints": [
             {
               "hour": 10,
@@ -13109,6 +13161,10 @@
             {
               "hour": 38,
               "rank": 23
+            },
+            {
+              "hour": 39,
+              "rank": 24
             }
           ],
           "previousPoints": [
@@ -13343,10 +13399,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 20,
-              "title": "スポッパ★オオカミ少年"
-            },
-            {
               "rank": 21,
               "title": "テレビ千鳥"
             },
@@ -13356,6 +13408,10 @@
             },
             {
               "rank": 23,
+              "title": "探偵！ナイトスクープ"
+            },
+            {
+              "rank": 24,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -13525,15 +13581,15 @@
             },
             {
               "rank": 48,
-              "title": "有吉の壁"
+              "title": "席替えしたら、どうやら後ろの男が俺のこと好きらしい"
             },
             {
               "rank": 49,
-              "title": "夫を殺したはずなのに"
+              "title": "有吉の壁"
             },
             {
               "rank": 50,
-              "title": "席替えしたら、どうやら後ろの男が俺のこと好きらしい"
+              "title": "夫を殺したはずなのに"
             }
           ]
         }
@@ -13542,7 +13598,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/22 15:07",
+      "updatedAt": "2026/08/22 16:08",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
       "likes": "1.0万",
@@ -15657,7 +15713,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 48,
@@ -15665,7 +15721,7 @@
             },
             {
               "rank": 49,
-              "title": "沸騰ワード10"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 50,
@@ -16093,15 +16149,15 @@
             },
             {
               "rank": 48,
-              "title": "有吉の壁"
+              "title": "席替えしたら、どうやら後ろの男が俺のこと好きらしい"
             },
             {
               "rank": 49,
-              "title": "夫を殺したはずなのに"
+              "title": "有吉の壁"
             },
             {
               "rank": 50,
-              "title": "席替えしたら、どうやら後ろの男が俺のこと好きらしい"
+              "title": "夫を殺したはずなのに"
             }
           ]
         }
@@ -16110,10 +16166,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/22 15:07",
+      "updatedAt": "2026/08/22 16:08",
       "episodeId": "epp5sd3y19",
       "subtitle": "運命の日本武道館ライブまで密着",
-      "likes": "2576",
+      "likes": "2615",
       "favorites": "3.4万",
       "likePoints": [
         {
@@ -16263,6 +16319,10 @@
         {
           "hour": 37,
           "likes": 2576
+        },
+        {
+          "hour": 38,
+          "likes": 2615
         }
       ],
       "previousLikePoints": [
@@ -16907,9 +16967,9 @@
         {
           "type": "talk",
           "label": "トーク",
-          "currentRank": 40,
-          "elapsedHour": 37,
-          "elapsedRank": 40,
+          "currentRank": 41,
+          "elapsedHour": 38,
+          "elapsedRank": 41,
           "currentPoints": [
             {
               "hour": 11,
@@ -17018,6 +17078,10 @@
             {
               "hour": 37,
               "rank": 40
+            },
+            {
+              "hour": 38,
+              "rank": 41
             }
           ],
           "previousPoints": [
@@ -17336,10 +17400,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 37,
-              "title": "クレイジージャーニー"
-            },
-            {
               "rank": 38,
               "title": "ぽかぽか"
             },
@@ -17349,6 +17409,10 @@
             },
             {
               "rank": 40,
+              "title": "そこまで言って委員会NP"
+            },
+            {
+              "rank": 41,
               "title": "ふぉ〜ゆ〜って、だれ？"
             }
           ]
@@ -17453,7 +17517,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 48,
@@ -17461,7 +17525,7 @@
             },
             {
               "rank": 49,
-              "title": "沸騰ワード10"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 50,
@@ -17474,10 +17538,10 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/22 15:07",
+      "updatedAt": "2026/08/22 16:08",
       "episodeId": "ep8dh8exqw",
       "subtitle": "#7 私を捨てた母、私が向き合う命",
-      "likes": "9204",
+      "likes": "9287",
       "favorites": "65.4万",
       "likePoints": [
         {
@@ -17731,6 +17795,10 @@
         {
           "hour": 65,
           "likes": 9204
+        },
+        {
+          "hour": 66,
+          "likes": 9287
         }
       ],
       "previousLikePoints": [
@@ -18352,7 +18420,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 8,
-          "elapsedHour": 65,
+          "elapsedHour": 66,
           "elapsedRank": 8,
           "currentPoints": [
             {
@@ -18601,6 +18669,10 @@
             },
             {
               "hour": 65,
+              "rank": 8
+            },
+            {
+              "hour": 66,
               "rank": 8
             }
           ],
@@ -19261,7 +19333,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 10,
-          "elapsedHour": 65,
+          "elapsedHour": 66,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -19506,6 +19578,10 @@
             },
             {
               "hour": 65,
+              "rank": 10
+            },
+            {
+              "hour": 66,
               "rank": 10
             }
           ],
@@ -20163,7 +20239,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/22 15:07",
+      "updatedAt": "2026/08/22 16:08",
       "episodeId": "ep84f9w8rw",
       "subtitle": "第7話 想いが重なる夏の夜・・・あなたの事がひたすら好き",
       "likes": "1.5万",
@@ -20331,6 +20407,10 @@
         },
         {
           "hour": 41,
+          "likes": 15000
+        },
+        {
+          "hour": 42,
           "likes": 15000
         }
       ],
@@ -20965,7 +21045,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 2,
-          "elapsedHour": 41,
+          "elapsedHour": 42,
           "elapsedRank": 2,
           "currentPoints": [
             {
@@ -21126,6 +21206,10 @@
             },
             {
               "hour": 41,
+              "rank": 2
+            },
+            {
+              "hour": 42,
               "rank": 2
             }
           ],
@@ -21770,7 +21854,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 2,
-          "elapsedHour": 41,
+          "elapsedHour": 42,
           "elapsedRank": 2,
           "currentPoints": [
             {
@@ -21931,6 +22015,10 @@
             },
             {
               "hour": 41,
+              "rank": 2
+            },
+            {
+              "hour": 42,
               "rank": 2
             }
           ],
