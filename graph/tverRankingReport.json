@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/08/23 01:07",
+  "updatedAt": "2026/08/23 02:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/23 01:07",
+      "updatedAt": "2026/08/23 02:07",
       "episodeId": "eptbg59rwy",
       "subtitle": "timelesz100",
       "likes": "1.0万",
@@ -116,6 +116,10 @@
         },
         {
           "hour": 27,
+          "likes": 10000
+        },
+        {
+          "hour": 28,
           "likes": 10000
         }
       ],
@@ -754,7 +758,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 4,
-          "elapsedHour": 27,
+          "elapsedHour": 28,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -855,6 +859,10 @@
             },
             {
               "hour": 27,
+              "rank": 4
+            },
+            {
+              "hour": 28,
               "rank": 4
             }
           ],
@@ -1487,7 +1495,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 13,
-          "elapsedHour": 27,
+          "elapsedHour": 28,
           "elapsedRank": 13,
           "currentPoints": [
             {
@@ -1556,6 +1564,10 @@
             },
             {
               "hour": 27,
+              "rank": 13
+            },
+            {
+              "hour": 28,
               "rank": 13
             }
           ],
@@ -1768,11 +1780,11 @@
             },
             {
               "rank": 11,
-              "title": "上田と女が吠える夜"
+              "title": "ファーストクライ 母子救命救急班"
             },
             {
               "rank": 12,
-              "title": "ファーストクライ 母子救命救急班"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 13,
@@ -1785,7 +1797,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/16",
-      "updatedAt": "2026/08/23 01:07",
+      "updatedAt": "2026/08/23 02:07",
       "episodeId": "epo6cmqsks",
       "subtitle": "バク転挑戦で緊急合宿!金メダリスト白井健三も参戦",
       "likes": "1.8万",
@@ -2373,6 +2385,10 @@
         },
         {
           "hour": 155,
+          "likes": 18000
+        },
+        {
+          "hour": 156,
           "likes": 18000
         }
       ],
@@ -3014,9 +3030,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 43,
-          "elapsedHour": 155,
-          "elapsedRank": 43,
+          "currentRank": 44,
+          "elapsedHour": 156,
+          "elapsedRank": 44,
           "currentPoints": [
             {
               "hour": 4,
@@ -3585,6 +3601,10 @@
             {
               "hour": 155,
               "rank": 43
+            },
+            {
+              "hour": 156,
+              "rank": 44
             }
           ],
           "previousPoints": [
@@ -4131,19 +4151,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 40,
+              "rank": 41,
               "title": "ニカゲーム"
             },
             {
-              "rank": 41,
+              "rank": 42,
               "title": "相席食堂"
             },
             {
-              "rank": 42,
-              "title": "Golden SixTONES"
+              "rank": 43,
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
-              "rank": 43,
+              "rank": 44,
               "title": "timeleszファミリア"
             }
           ]
@@ -4665,15 +4685,15 @@
             },
             {
               "rank": 48,
-              "title": "真夏のシンデレラ"
+              "title": "名探偵コナン"
             },
             {
               "rank": 49,
-              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
+              "title": "真夏のシンデレラ"
             },
             {
               "rank": 50,
-              "title": "夫を殺したはずなのに"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             }
           ]
         }
@@ -4682,10 +4702,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/18",
-      "updatedAt": "2026/08/23 01:07",
+      "updatedAt": "2026/08/23 02:07",
       "episodeId": "epjrd5nzjc",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！前編",
-      "likes": "7691",
+      "likes": "7698",
       "favorites": "5.9万",
       "likePoints": [
         {
@@ -5047,6 +5067,10 @@
         {
           "hour": 97,
           "likes": 7691
+        },
+        {
+          "hour": 98,
+          "likes": 7698
         }
       ],
       "previousLikePoints": [
@@ -5675,9 +5699,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 41,
-          "elapsedHour": 97,
-          "elapsedRank": 41,
+          "currentRank": 40,
+          "elapsedHour": 98,
+          "elapsedRank": 40,
           "currentPoints": [
             {
               "hour": 6,
@@ -6022,6 +6046,10 @@
             {
               "hour": 97,
               "rank": 41
+            },
+            {
+              "hour": 98,
+              "rank": 40
             }
           ],
           "previousPoints": [
@@ -6508,8 +6536,12 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 38,
+              "rank": 37,
               "title": "帰れマンデー見っけ隊!!"
+            },
+            {
+              "rank": 38,
+              "title": "ウラマヨ！"
             },
             {
               "rank": 39,
@@ -6517,10 +6549,6 @@
             },
             {
               "rank": 40,
-              "title": "オズブラウン"
-            },
-            {
-              "rank": 41,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -6666,11 +6694,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "沸騰ワード10"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 48,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 49,
@@ -6678,7 +6706,7 @@
             },
             {
               "rank": 50,
-              "title": "秘密のケンミンSHOW極"
+              "title": "夜明けのラヴィット！"
             }
           ]
         }
@@ -6687,7 +6715,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/23 01:07",
+      "updatedAt": "2026/08/23 02:07",
       "episodeId": "epejkq59pb",
       "subtitle": "【準決勝】天才すぎる…謎解き王決定戦SP 第2話",
       "likes": "1.2万",
@@ -6971,6 +6999,10 @@
         },
         {
           "hour": 71,
+          "likes": 12000
+        },
+        {
+          "hour": 72,
           "likes": 12000
         }
       ],
@@ -7600,9 +7632,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 40,
-          "elapsedHour": 71,
-          "elapsedRank": 40,
+          "currentRank": 41,
+          "elapsedHour": 72,
+          "elapsedRank": 41,
           "currentPoints": [
             {
               "hour": 7,
@@ -7863,6 +7895,10 @@
             {
               "hour": 71,
               "rank": 40
+            },
+            {
+              "hour": 72,
+              "rank": 41
             }
           ],
           "previousPoints": [
@@ -8197,10 +8233,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 37,
-              "title": "何か“オモシロいコト”ないの？"
-            },
-            {
               "rank": 38,
               "title": "あちこちオードリー"
             },
@@ -8210,6 +8242,10 @@
             },
             {
               "rank": 40,
+              "title": "Golden SixTONES"
+            },
+            {
+              "rank": 41,
               "title": "ニカゲーム"
             }
           ]
@@ -8579,15 +8615,15 @@
             },
             {
               "rank": 48,
-              "title": "真夏のシンデレラ"
+              "title": "名探偵コナン"
             },
             {
               "rank": 49,
-              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
+              "title": "真夏のシンデレラ"
             },
             {
               "rank": 50,
-              "title": "夫を殺したはずなのに"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             }
           ]
         }
@@ -8596,10 +8632,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/16",
-      "updatedAt": "2026/08/23 01:07",
+      "updatedAt": "2026/08/23 02:07",
       "episodeId": "epmo0217zw",
       "subtitle": "真夏の自由研究SP!夢の巨大お菓子の家を本気で作る!",
-      "likes": "4546",
+      "likes": "4565",
       "favorites": "53.2万",
       "likePoints": [
         {
@@ -9165,6 +9201,10 @@
         {
           "hour": 150,
           "likes": 4546
+        },
+        {
+          "hour": 151,
+          "likes": 4565
         }
       ],
       "previousLikePoints": [
@@ -9785,9 +9825,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 29,
-          "elapsedHour": 150,
-          "elapsedRank": 29,
+          "currentRank": 28,
+          "elapsedHour": 151,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 2,
@@ -10344,6 +10384,10 @@
             {
               "hour": 150,
               "rank": 29
+            },
+            {
+              "hour": 151,
+              "rank": 28
             }
           ],
           "previousPoints": [
@@ -10998,19 +11042,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 26,
+              "rank": 25,
               "title": "ふぉ〜ゆ〜って、だれ？"
             },
             {
-              "rank": 27,
+              "rank": 26,
               "title": "シューイチ"
             },
             {
-              "rank": 28,
+              "rank": 27,
               "title": "有田哲平とコスられない街"
             },
             {
-              "rank": 29,
+              "rank": 28,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -11332,11 +11376,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "沸騰ワード10"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 48,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 49,
@@ -11344,7 +11388,7 @@
             },
             {
               "rank": 50,
-              "title": "秘密のケンミンSHOW極"
+              "title": "夜明けのラヴィット！"
             }
           ]
         }
@@ -11353,7 +11397,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/23 01:07",
+      "updatedAt": "2026/08/23 02:07",
       "episodeId": "epd7ebv3mp",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！=LOVE登場",
       "likes": "1.1万",
@@ -11681,6 +11725,10 @@
         },
         {
           "hour": 96,
+          "likes": 11000
+        },
+        {
+          "hour": 97,
           "likes": 11000
         }
       ],
@@ -12536,11 +12584,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "沸騰ワード10"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 48,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 49,
@@ -12548,7 +12596,7 @@
             },
             {
               "rank": 50,
-              "title": "秘密のケンミンSHOW極"
+              "title": "夜明けのラヴィット！"
             }
           ]
         },
@@ -12656,15 +12704,15 @@
             },
             {
               "rank": 48,
-              "title": "真夏のシンデレラ"
+              "title": "名探偵コナン"
             },
             {
               "rank": 49,
-              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
+              "title": "真夏のシンデレラ"
             },
             {
               "rank": 50,
-              "title": "夫を殺したはずなのに"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             }
           ]
         }
@@ -12673,10 +12721,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/23 01:07",
+      "updatedAt": "2026/08/23 02:07",
       "episodeId": "eprp4uddvt",
       "subtitle": "第141回 のんと深川麻衣の許せない飯で衝撃のラストが！",
-      "likes": "3803",
+      "likes": "3816",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -12874,6 +12922,10 @@
         {
           "hour": 49,
           "likes": 3803
+        },
+        {
+          "hour": 50,
+          "likes": 3816
         }
       ],
       "previousLikePoints": [
@@ -13503,7 +13555,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 37,
-          "elapsedHour": 48,
+          "elapsedHour": 49,
           "elapsedRank": 37,
           "currentPoints": [
             {
@@ -13660,6 +13712,10 @@
             },
             {
               "hour": 48,
+              "rank": 37
+            },
+            {
+              "hour": 49,
               "rank": 37
             }
           ],
@@ -13896,7 +13952,7 @@
           "nearbyRanking": [
             {
               "rank": 34,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 35,
@@ -14077,15 +14133,15 @@
             },
             {
               "rank": 48,
-              "title": "真夏のシンデレラ"
+              "title": "名探偵コナン"
             },
             {
               "rank": 49,
-              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
+              "title": "真夏のシンデレラ"
             },
             {
               "rank": 50,
-              "title": "夫を殺したはずなのに"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             }
           ]
         }
@@ -14094,7 +14150,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/23 01:07",
+      "updatedAt": "2026/08/23 02:07",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
       "likes": "1.0万",
@@ -14734,10 +14790,6 @@
         }
       ],
       "previousLikePoints": [
-        {
-          "hour": 7,
-          "likes": 641
-        },
         {
           "hour": 8,
           "likes": 657
@@ -16181,11 +16233,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "沸騰ワード10"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 48,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 49,
@@ -16193,7 +16245,7 @@
             },
             {
               "rank": 50,
-              "title": "秘密のケンミンSHOW極"
+              "title": "夜明けのラヴィット！"
             }
           ]
         },
@@ -16617,15 +16669,15 @@
             },
             {
               "rank": 48,
-              "title": "真夏のシンデレラ"
+              "title": "名探偵コナン"
             },
             {
               "rank": 49,
-              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
+              "title": "真夏のシンデレラ"
             },
             {
               "rank": 50,
-              "title": "夫を殺したはずなのに"
+              "title": "ストレンジ -伊藤潤二の夜も眠れぬ奇妙な話-"
             }
           ]
         }
@@ -16634,10 +16686,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/23 01:07",
+      "updatedAt": "2026/08/23 02:07",
       "episodeId": "epp5sd3y19",
       "subtitle": "運命の日本武道館ライブまで密着",
-      "likes": "2879",
+      "likes": "2892",
       "favorites": "3.5万",
       "likePoints": [
         {
@@ -16827,6 +16879,10 @@
         {
           "hour": 47,
           "likes": 2879
+        },
+        {
+          "hour": 48,
+          "likes": 2892
         }
       ],
       "previousLikePoints": [
@@ -17471,9 +17527,9 @@
         {
           "type": "talk",
           "label": "トーク",
-          "currentRank": 46,
-          "elapsedHour": 47,
-          "elapsedRank": 46,
+          "currentRank": 48,
+          "elapsedHour": 48,
+          "elapsedRank": 48,
           "currentPoints": [
             {
               "hour": 11,
@@ -17622,6 +17678,10 @@
             {
               "hour": 47,
               "rank": 46
+            },
+            {
+              "hour": 48,
+              "rank": 48
             }
           ],
           "previousPoints": [
@@ -17940,19 +18000,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 43,
-              "title": "スクール革命！"
-            },
-            {
-              "rank": 44,
-              "title": "相葉◎×部"
-            },
-            {
               "rank": 45,
-              "title": "おしゃれクリップ"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 46,
+              "title": "いたジャン！"
+            },
+            {
+              "rank": 47,
+              "title": "開運！なんでも鑑定団"
+            },
+            {
+              "rank": 48,
               "title": "ふぉ〜ゆ〜って、だれ？"
             }
           ]
@@ -18057,11 +18117,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "沸騰ワード10"
+              "title": "ザワつく！ 金曜日"
             },
             {
               "rank": 48,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 49,
@@ -18069,7 +18129,7 @@
             },
             {
               "rank": 50,
-              "title": "秘密のケンミンSHOW極"
+              "title": "夜明けのラヴィット！"
             }
           ]
         }
@@ -18078,10 +18138,10 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/23 01:07",
+      "updatedAt": "2026/08/23 02:07",
       "episodeId": "ep8dh8exqw",
       "subtitle": "#7 私を捨てた母、私が向き合う命",
-      "likes": "9818",
+      "likes": "9837",
       "favorites": "65.4万",
       "likePoints": [
         {
@@ -18375,6 +18435,10 @@
         {
           "hour": 75,
           "likes": 9818
+        },
+        {
+          "hour": 76,
+          "likes": 9837
         }
       ],
       "previousLikePoints": [
@@ -18996,7 +19060,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 9,
-          "elapsedHour": 75,
+          "elapsedHour": 76,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -19285,6 +19349,10 @@
             },
             {
               "hour": 75,
+              "rank": 9
+            },
+            {
+              "hour": 76,
               "rank": 9
             }
           ],
@@ -19944,9 +20012,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 12,
-          "elapsedHour": 75,
-          "elapsedRank": 12,
+          "currentRank": 11,
+          "elapsedHour": 76,
+          "elapsedRank": 11,
           "currentPoints": [
             {
               "hour": 4,
@@ -20231,6 +20299,10 @@
             {
               "hour": 75,
               "rank": 12
+            },
+            {
+              "hour": 76,
+              "rank": 11
             }
           ],
           "previousPoints": [
@@ -20865,6 +20937,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 8,
+              "title": "水曜日のダウンタウン"
+            },
+            {
               "rank": 9,
               "title": "名探偵のままでいて"
             },
@@ -20874,10 +20950,6 @@
             },
             {
               "rank": 11,
-              "title": "上田と女が吠える夜"
-            },
-            {
-              "rank": 12,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -20887,7 +20959,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/23 01:07",
+      "updatedAt": "2026/08/23 02:07",
       "episodeId": "ep84f9w8rw",
       "subtitle": "第7話 想いが重なる夏の夜・・・あなたの事がひたすら好き",
       "likes": "1.7万",
@@ -21095,6 +21167,10 @@
         },
         {
           "hour": 51,
+          "likes": 17000
+        },
+        {
+          "hour": 52,
           "likes": 17000
         }
       ],
@@ -21729,7 +21805,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 3,
-          "elapsedHour": 51,
+          "elapsedHour": 52,
           "elapsedRank": 3,
           "currentPoints": [
             {
@@ -21930,6 +22006,10 @@
             },
             {
               "hour": 51,
+              "rank": 3
+            },
+            {
+              "hour": 52,
               "rank": 3
             }
           ],
@@ -22578,7 +22658,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 3,
-          "elapsedHour": 51,
+          "elapsedHour": 52,
           "elapsedRank": 3,
           "currentPoints": [
             {
@@ -22779,6 +22859,10 @@
             },
             {
               "hour": 51,
+              "rank": 3
+            },
+            {
+              "hour": 52,
               "rank": 3
             }
           ],
