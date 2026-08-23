@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/08/24 01:07",
+  "updatedAt": "2026/08/24 02:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/24 01:07",
+      "updatedAt": "2026/08/24 02:07",
       "episodeId": "eptbg59rwy",
       "subtitle": "timelesz100",
       "likes": "1.2万",
@@ -212,6 +212,10 @@
         },
         {
           "hour": 51,
+          "likes": 12000
+        },
+        {
+          "hour": 52,
           "likes": 12000
         }
       ],
@@ -849,9 +853,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 10,
-          "elapsedHour": 51,
-          "elapsedRank": 10,
+          "currentRank": 11,
+          "elapsedHour": 52,
+          "elapsedRank": 11,
           "currentPoints": [
             {
               "hour": 3,
@@ -1048,6 +1052,10 @@
             {
               "hour": 51,
               "rank": 10
+            },
+            {
+              "hour": 52,
+              "rank": 11
             }
           ],
           "previousPoints": [
@@ -1658,19 +1666,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 7,
-              "title": "かまいたちの知らんけど"
-            },
-            {
               "rank": 8,
-              "title": "月曜から夜ふかし"
-            },
-            {
-              "rank": 9,
               "title": "ゴッドタン"
             },
             {
+              "rank": 9,
+              "title": "月曜から夜ふかし"
+            },
+            {
               "rank": 10,
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+            },
+            {
+              "rank": 11,
               "title": "タイムレスマン"
             }
           ]
@@ -1678,9 +1686,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 27,
-          "elapsedHour": 51,
-          "elapsedRank": 27,
+          "currentRank": 29,
+          "elapsedHour": 52,
+          "elapsedRank": 29,
           "currentPoints": [
             {
               "hour": 11,
@@ -1845,6 +1853,10 @@
             {
               "hour": 51,
               "rank": 27
+            },
+            {
+              "hour": 52,
+              "rank": 29
             }
           ],
           "previousPoints": [
@@ -2051,19 +2063,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 24,
-              "title": "ゴッドタン"
-            },
-            {
-              "rank": 25,
-              "title": "大追跡～警視庁ＳＳＢＣ強行犯係～ Season2"
-            },
-            {
               "rank": 26,
               "title": "さよならノワール"
             },
             {
               "rank": 27,
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+            },
+            {
+              "rank": 28,
+              "title": "一次元の挿し木"
+            },
+            {
+              "rank": 29,
               "title": "タイムレスマン"
             }
           ]
@@ -2073,10 +2085,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/24 01:07",
+      "updatedAt": "2026/08/24 02:07",
       "episodeId": "ep55b7uj3p",
       "subtitle": "【韓国グルメSP】進化系料理&伝統ゲームで爆笑連発!",
-      "likes": "6878",
+      "likes": "6993",
       "favorites": "35.1万",
       "likePoints": [
         {
@@ -2122,6 +2134,10 @@
         {
           "hour": 11,
           "likes": 6878
+        },
+        {
+          "hour": 12,
+          "likes": 6993
         }
       ],
       "previousLikePoints": [
@@ -2763,7 +2779,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 16,
-          "elapsedHour": 11,
+          "elapsedHour": 12,
           "elapsedRank": 16,
           "currentPoints": [
             {
@@ -2784,6 +2800,10 @@
             },
             {
               "hour": 11,
+              "rank": 16
+            },
+            {
+              "hour": 12,
               "rank": 16
             }
           ],
@@ -3412,11 +3432,11 @@
             },
             {
               "rank": 14,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 15,
-              "title": "世界の果てまでイッテQ！"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 16,
@@ -3428,7 +3448,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 40,
-          "elapsedHour": 11,
+          "elapsedHour": 12,
           "elapsedRank": 40,
           "currentPoints": [
             {
@@ -3441,6 +3461,10 @@
             },
             {
               "hour": 11,
+              "rank": 40
+            },
+            {
+              "hour": 12,
               "rank": 40
             }
           ],
@@ -3689,15 +3713,15 @@
           "nearbyRanking": [
             {
               "rank": 37,
-              "title": "一茂×かまいたち ゲンバ"
-            },
-            {
-              "rank": 38,
               "title": "世界の果てまでイッテQ！"
             },
             {
+              "rank": 38,
+              "title": "おちたらおわり"
+            },
+            {
               "rank": 39,
-              "title": "一次元の挿し木"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 40,
@@ -3710,10 +3734,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/18",
-      "updatedAt": "2026/08/24 01:07",
+      "updatedAt": "2026/08/24 02:07",
       "episodeId": "epjrd5nzjc",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！前編",
-      "likes": "8000",
+      "likes": "8004",
       "favorites": "5.9万",
       "likePoints": [
         {
@@ -4171,6 +4195,10 @@
         {
           "hour": 121,
           "likes": 8000
+        },
+        {
+          "hour": 122,
+          "likes": 8004
         }
       ],
       "previousLikePoints": [
@@ -5705,7 +5733,7 @@
             },
             {
               "rank": 50,
-              "title": "ちょっと福岡行ってきました！"
+              "title": "ベスコングルメ 〜ベストコンディションで最高の瞬間を！〜"
             }
           ]
         },
@@ -5858,11 +5886,11 @@
             },
             {
               "rank": 49,
-              "title": "健康カプセル！ゲンキの時間"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 50,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "健康カプセル！ゲンキの時間"
             }
           ]
         }
@@ -5871,7 +5899,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/24 01:07",
+      "updatedAt": "2026/08/24 02:07",
       "episodeId": "epejkq59pb",
       "subtitle": "【準決勝】天才すぎる…謎解き王決定戦SP 第2話",
       "likes": "1.3万",
@@ -6251,6 +6279,10 @@
         },
         {
           "hour": 95,
+          "likes": 13000
+        },
+        {
+          "hour": 96,
           "likes": 13000
         }
       ],
@@ -7546,11 +7578,11 @@
             },
             {
               "rank": 49,
-              "title": "健康カプセル！ゲンキの時間"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 50,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "健康カプセル！ゲンキの時間"
             }
           ]
         },
@@ -7927,7 +7959,7 @@
             },
             {
               "rank": 50,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "仮面ライダー ゼッツ"
             }
           ]
         }
@@ -7936,10 +7968,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/24 01:07",
+      "updatedAt": "2026/08/24 02:07",
       "episodeId": "eppaa3pee6",
       "subtitle": "24時間テレビ企画!巨大弓矢で福島から日本全国にエール",
-      "likes": "1554",
+      "likes": "1618",
       "favorites": "53.2万",
       "likePoints": [
         {
@@ -7965,6 +7997,10 @@
         {
           "hour": 6,
           "likes": 1554
+        },
+        {
+          "hour": 7,
+          "likes": 1618
         }
       ],
       "previousLikePoints": [
@@ -8606,7 +8642,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 22,
-          "elapsedHour": 6,
+          "elapsedHour": 7,
           "elapsedRank": 22,
           "currentPoints": [
             {
@@ -8623,6 +8659,10 @@
             },
             {
               "hour": 6,
+              "rank": 22
+            },
+            {
+              "hour": 7,
               "rank": 22
             }
           ],
@@ -9255,7 +9295,7 @@
           "nearbyRanking": [
             {
               "rank": 19,
-              "title": "おぎやはぎの愛車遍歴 NO CAR,NO LIFE！"
+              "title": "IMP.の「できません」は言いません"
             },
             {
               "rank": 20,
@@ -9403,11 +9443,11 @@
             },
             {
               "rank": 49,
-              "title": "健康カプセル！ゲンキの時間"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 50,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "健康カプセル！ゲンキの時間"
             }
           ]
         }
@@ -9416,7 +9456,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/24 01:07",
+      "updatedAt": "2026/08/24 02:07",
       "episodeId": "epd7ebv3mp",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！=LOVE登場",
       "likes": "1.2万",
@@ -9840,6 +9880,10 @@
         },
         {
           "hour": 120,
+          "likes": 12000
+        },
+        {
+          "hour": 122,
           "likes": 12000
         }
       ],
@@ -10703,11 +10747,11 @@
             },
             {
               "rank": 49,
-              "title": "健康カプセル！ゲンキの時間"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 50,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "健康カプセル！ゲンキの時間"
             }
           ]
         },
@@ -10823,7 +10867,7 @@
             },
             {
               "rank": 50,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "仮面ライダー ゼッツ"
             }
           ]
         }
@@ -10832,10 +10876,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/24 01:07",
+      "updatedAt": "2026/08/24 02:07",
       "episodeId": "eprp4uddvt",
       "subtitle": "第141回 のんと深川麻衣の許せない飯で衝撃のラストが！",
-      "likes": "4189",
+      "likes": "4195",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -11129,6 +11173,10 @@
         {
           "hour": 73,
           "likes": 4189
+        },
+        {
+          "hour": 74,
+          "likes": 4195
         }
       ],
       "previousLikePoints": [
@@ -12211,11 +12259,11 @@
             },
             {
               "rank": 49,
-              "title": "健康カプセル！ゲンキの時間"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 50,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "健康カプセル！ゲンキの時間"
             }
           ]
         },
@@ -12392,7 +12440,7 @@
             },
             {
               "rank": 50,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "仮面ライダー ゼッツ"
             }
           ]
         }
@@ -12401,7 +12449,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/24 01:07",
+      "updatedAt": "2026/08/24 02:07",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
       "likes": "1.0万",
@@ -13041,10 +13089,6 @@
         }
       ],
       "previousLikePoints": [
-        {
-          "hour": 31,
-          "likes": 1097
-        },
         {
           "hour": 32,
           "likes": 1102
@@ -14265,10 +14309,6 @@
           ],
           "previousPoints": [
             {
-              "hour": 31,
-              "rank": 41
-            },
-            {
               "hour": 32,
               "rank": 42
             },
@@ -14312,11 +14352,11 @@
             },
             {
               "rank": 49,
-              "title": "健康カプセル！ゲンキの時間"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 50,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "健康カプセル！ゲンキの時間"
             }
           ]
         },
@@ -14748,7 +14788,7 @@
             },
             {
               "rank": 50,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "仮面ライダー ゼッツ"
             }
           ]
         }
@@ -14757,10 +14797,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/24 01:07",
+      "updatedAt": "2026/08/24 02:07",
       "episodeId": "epp5sd3y19",
       "subtitle": "運命の日本武道館ライブまで密着",
-      "likes": "3251",
+      "likes": "3256",
       "favorites": "3.5万",
       "likePoints": [
         {
@@ -15046,6 +15086,10 @@
         {
           "hour": 71,
           "likes": 3251
+        },
+        {
+          "hour": 72,
+          "likes": 3256
         }
       ],
       "previousLikePoints": [
@@ -16188,15 +16232,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "リア突WEST.レボリューション"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 48,
-              "title": "ミキティダイニング"
+              "title": "新婚さんいらっしゃい！"
             },
             {
               "rank": 49,
-              "title": "新婚さんいらっしゃい！"
+              "title": "ミキティダイニング"
             },
             {
               "rank": 50,
@@ -16312,11 +16356,11 @@
             },
             {
               "rank": 49,
-              "title": "健康カプセル！ゲンキの時間"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 50,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "健康カプセル！ゲンキの時間"
             }
           ]
         }
@@ -16325,7 +16369,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/24 01:07",
+      "updatedAt": "2026/08/24 02:07",
       "episodeId": "ep8dh8exqw",
       "subtitle": "#7 私を捨てた母、私が向き合う命",
       "likes": "1.0万",
@@ -16717,6 +16761,10 @@
         },
         {
           "hour": 99,
+          "likes": 10000
+        },
+        {
+          "hour": 100,
           "likes": 10000
         }
       ],
@@ -17338,9 +17386,9 @@
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 8,
-          "elapsedHour": 99,
-          "elapsedRank": 8,
+          "currentRank": 9,
+          "elapsedHour": 100,
+          "elapsedRank": 9,
           "currentPoints": [
             {
               "hour": 2,
@@ -17725,6 +17773,10 @@
             {
               "hour": 99,
               "rank": 8
+            },
+            {
+              "hour": 100,
+              "rank": 9
             }
           ],
           "previousPoints": [
@@ -18363,10 +18415,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 5,
-              "title": "大空港～GATE24～"
-            },
-            {
               "rank": 6,
               "title": "リーガルビート -逆転の法廷-"
             },
@@ -18376,6 +18424,10 @@
             },
             {
               "rank": 8,
+              "title": "マイ・フィクション"
+            },
+            {
+              "rank": 9,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -18383,9 +18435,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 14,
-          "elapsedHour": 99,
-          "elapsedRank": 14,
+          "currentRank": 15,
+          "elapsedHour": 100,
+          "elapsedRank": 15,
           "currentPoints": [
             {
               "hour": 4,
@@ -18766,6 +18818,10 @@
             {
               "hour": 99,
               "rank": 14
+            },
+            {
+              "hour": 100,
+              "rank": 15
             }
           ],
           "previousPoints": [
@@ -19400,10 +19456,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 11,
-              "title": "Tokyo middle 30"
-            },
-            {
               "rank": 12,
               "title": "マツコの知らない世界"
             },
@@ -19413,6 +19465,10 @@
             },
             {
               "rank": 14,
+              "title": "マイ・フィクション"
+            },
+            {
+              "rank": 15,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -19422,7 +19478,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/24 01:07",
+      "updatedAt": "2026/08/24 02:07",
       "episodeId": "ep84f9w8rw",
       "subtitle": "第7話 想いが重なる夏の夜・・・あなたの事がひたすら好き",
       "likes": "1.8万",
@@ -19726,6 +19782,10 @@
         },
         {
           "hour": 75,
+          "likes": 18000
+        },
+        {
+          "hour": 76,
           "likes": 18000
         }
       ],
@@ -20360,7 +20420,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 4,
-          "elapsedHour": 75,
+          "elapsedHour": 76,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -20657,6 +20717,10 @@
             },
             {
               "hour": 75,
+              "rank": 4
+            },
+            {
+              "hour": 76,
               "rank": 4
             }
           ],
@@ -21309,7 +21373,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 4,
-          "elapsedHour": 75,
+          "elapsedHour": 76,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -21606,6 +21670,10 @@
             },
             {
               "hour": 75,
+              "rank": 4
+            },
+            {
+              "hour": 76,
               "rank": 4
             }
           ],
