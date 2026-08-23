@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026/08/23 20:07",
+  "updatedAt": "2026/08/23 21:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/23 20:07",
+      "updatedAt": "2026/08/23 21:07",
       "episodeId": "eptbg59rwy",
       "subtitle": "timelesz100",
       "likes": "1.2万",
-      "favorites": "78.3万",
+      "favorites": "78.4万",
       "likePoints": [
         {
           "hour": 1,
@@ -192,6 +192,10 @@
         },
         {
           "hour": 46,
+          "likes": 12000
+        },
+        {
+          "hour": 47,
           "likes": 12000
         }
       ],
@@ -830,7 +834,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 7,
-          "elapsedHour": 46,
+          "elapsedHour": 47,
           "elapsedRank": 7,
           "currentPoints": [
             {
@@ -1007,6 +1011,10 @@
             },
             {
               "hour": 46,
+              "rank": 7
+            },
+            {
+              "hour": 47,
               "rank": 7
             }
           ],
@@ -1619,11 +1627,11 @@
           "nearbyRanking": [
             {
               "rank": 4,
-              "title": "マツコの知らない世界"
+              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
             },
             {
               "rank": 5,
-              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 6,
@@ -1638,9 +1646,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 22,
-          "elapsedHour": 46,
-          "elapsedRank": 22,
+          "currentRank": 23,
+          "elapsedHour": 47,
+          "elapsedRank": 23,
           "currentPoints": [
             {
               "hour": 11,
@@ -1785,6 +1793,10 @@
             {
               "hour": 46,
               "rank": 22
+            },
+            {
+              "hour": 47,
+              "rank": 23
             }
           ],
           "previousPoints": [
@@ -1991,19 +2003,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 19,
-              "title": "夏色の雲が恋と嵐をまきおこす"
-            },
-            {
               "rank": 20,
-              "title": "クロスロード ～救命救急の約束～"
-            },
-            {
-              "rank": 21,
               "title": "名探偵プリキュア！"
             },
             {
+              "rank": 21,
+              "title": "クロスロード ～救命救急の約束～"
+            },
+            {
               "rank": 22,
+              "title": "大追跡～警視庁ＳＳＢＣ強行犯係～ Season2"
+            },
+            {
+              "rank": 23,
               "title": "タイムレスマン"
             }
           ]
@@ -2013,10 +2025,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/23 20:07",
+      "updatedAt": "2026/08/23 21:07",
       "episodeId": "ep55b7uj3p",
       "subtitle": "【韓国グルメSP】進化系料理&伝統ゲームで爆笑連発!",
-      "likes": "4839",
+      "likes": "4756",
       "favorites": "35.1万",
       "likePoints": [
         {
@@ -2042,6 +2054,10 @@
         {
           "hour": 6,
           "likes": 4839
+        },
+        {
+          "hour": 7,
+          "likes": 4756
         }
       ],
       "previousLikePoints": [
@@ -2682,10 +2698,15 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 21,
+          "elapsedHour": 7,
+          "elapsedRank": 21,
+          "currentPoints": [
+            {
+              "hour": 7,
+              "rank": 21
+            }
+          ],
           "previousPoints": [
             {
               "hour": 4,
@@ -3306,20 +3327,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "いくらかわかる金？"
+              "rank": 18,
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
-              "rank": 48,
-              "title": "相席食堂"
+              "rank": 19,
+              "title": "しゃべくり007"
             },
             {
-              "rank": 49,
-              "title": "これ余談なんですけど・・・"
+              "rank": 20,
+              "title": "なにわ男子の逆転男子"
             },
             {
-              "rank": 50,
-              "title": "デカ盛りハンター"
+              "rank": 21,
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -3575,19 +3596,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "タイムトラベルダディ"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 48,
-              "title": "踊る大捜査線"
+              "title": "しゃべくり007"
             },
             {
               "rank": 49,
-              "title": "熱闘甲子園"
+              "title": "Your Sky ハレのち恋"
             },
             {
               "rank": 50,
-              "title": "今夜もシリアルキラーと待ち合わせ"
+              "title": "人生最高レストラン"
             }
           ]
         }
@@ -3596,10 +3617,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/18",
-      "updatedAt": "2026/08/23 20:07",
+      "updatedAt": "2026/08/23 21:07",
       "episodeId": "epjrd5nzjc",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！前編",
-      "likes": "7935",
+      "likes": "7933",
       "favorites": "5.9万",
       "likePoints": [
         {
@@ -4037,6 +4058,10 @@
         {
           "hour": 116,
           "likes": 7935
+        },
+        {
+          "hour": 117,
+          "likes": 7933
         }
       ],
       "previousLikePoints": [
@@ -5559,7 +5584,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ニノなのに"
+              "title": "ロイロム鉄道 ～私を待ってる人がいる～"
             },
             {
               "rank": 48,
@@ -5567,11 +5592,11 @@
             },
             {
               "rank": 49,
-              "title": "発見！仰天！！プレミアもん！！！ 土曜はダメよ！"
+              "title": "サンド＆キスマイの気になるマン"
             },
             {
               "rank": 50,
-              "title": "シューイチ"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             }
           ]
         },
@@ -5716,19 +5741,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "いくらかわかる金？"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             },
             {
               "rank": 49,
-              "title": "これ余談なんですけど・・・"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
-              "title": "デカ盛りハンター"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             }
           ]
         }
@@ -5737,7 +5762,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/23 20:07",
+      "updatedAt": "2026/08/23 21:07",
       "episodeId": "epejkq59pb",
       "subtitle": "【準決勝】天才すぎる…謎解き王決定戦SP 第2話",
       "likes": "1.3万",
@@ -6097,6 +6122,10 @@
         },
         {
           "hour": 90,
+          "likes": 13000
+        },
+        {
+          "hour": 91,
           "likes": 13000
         }
       ],
@@ -7384,19 +7413,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "いくらかわかる金？"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             },
             {
               "rank": 49,
-              "title": "これ余談なんですけど・・・"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
-              "title": "デカ盛りハンター"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             }
           ]
         },
@@ -7761,19 +7790,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "タイムトラベルダディ"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 48,
-              "title": "踊る大捜査線"
+              "title": "しゃべくり007"
             },
             {
               "rank": 49,
-              "title": "熱闘甲子園"
+              "title": "Your Sky ハレのち恋"
             },
             {
               "rank": 50,
-              "title": "今夜もシリアルキラーと待ち合わせ"
+              "title": "人生最高レストラン"
             }
           ]
         }
@@ -7781,13 +7810,22 @@
     },
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
-      "broadcastDate": "",
-      "updatedAt": "2026/08/23 20:07",
+      "broadcastDate": "2026/08/23",
+      "updatedAt": "2026/08/23 21:07",
       "episodeId": "eppaa3pee6",
       "subtitle": "24時間テレビ企画!巨大弓矢で福島から日本全国にエール",
-      "likes": "345",
+      "likes": "76",
       "favorites": "53.2万",
-      "likePoints": [],
+      "likePoints": [
+        {
+          "hour": 1,
+          "likes": 345
+        },
+        {
+          "hour": 2,
+          "likes": 76
+        }
+      ],
       "previousLikePoints": [
         {
           "hour": 1,
@@ -9059,7 +9097,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ニノなのに"
+              "title": "ロイロム鉄道 ～私を待ってる人がいる～"
             },
             {
               "rank": 48,
@@ -9067,11 +9105,11 @@
             },
             {
               "rank": 49,
-              "title": "発見！仰天！！プレミアもん！！！ 土曜はダメよ！"
+              "title": "サンド＆キスマイの気になるマン"
             },
             {
               "rank": 50,
-              "title": "シューイチ"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             }
           ]
         },
@@ -9199,19 +9237,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "いくらかわかる金？"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             },
             {
               "rank": 49,
-              "title": "これ余談なんですけど・・・"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
-              "title": "デカ盛りハンター"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             }
           ]
         }
@@ -9220,7 +9258,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/23 20:07",
+      "updatedAt": "2026/08/23 21:07",
       "episodeId": "epd7ebv3mp",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！=LOVE登場",
       "likes": "1.2万",
@@ -9624,6 +9662,10 @@
         },
         {
           "hour": 115,
+          "likes": 12000
+        },
+        {
+          "hour": 116,
           "likes": 12000
         }
       ],
@@ -10479,19 +10521,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "いくらかわかる金？"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             },
             {
               "rank": 49,
-              "title": "これ余談なんですけど・・・"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
-              "title": "デカ盛りハンター"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             }
           ]
         },
@@ -10595,19 +10637,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "タイムトラベルダディ"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 48,
-              "title": "踊る大捜査線"
+              "title": "しゃべくり007"
             },
             {
               "rank": 49,
-              "title": "熱闘甲子園"
+              "title": "Your Sky ハレのち恋"
             },
             {
               "rank": 50,
-              "title": "今夜もシリアルキラーと待ち合わせ"
+              "title": "人生最高レストラン"
             }
           ]
         }
@@ -10616,10 +10658,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/23 20:07",
+      "updatedAt": "2026/08/23 21:07",
       "episodeId": "eprp4uddvt",
       "subtitle": "第141回 のんと深川麻衣の許せない飯で衝撃のラストが！",
-      "likes": "4123",
+      "likes": "4128",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -10893,6 +10935,10 @@
         {
           "hour": 68,
           "likes": 4123
+        },
+        {
+          "hour": 69,
+          "likes": 4128
         }
       ],
       "previousLikePoints": [
@@ -11967,19 +12013,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "いくらかわかる金？"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             },
             {
               "rank": 49,
-              "title": "これ余談なんですけど・・・"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
-              "title": "デカ盛りハンター"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             }
           ]
         },
@@ -12144,19 +12190,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "タイムトラベルダディ"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 48,
-              "title": "踊る大捜査線"
+              "title": "しゃべくり007"
             },
             {
               "rank": 49,
-              "title": "熱闘甲子園"
+              "title": "Your Sky ハレのち恋"
             },
             {
               "rank": 50,
-              "title": "今夜もシリアルキラーと待ち合わせ"
+              "title": "人生最高レストラン"
             }
           ]
         }
@@ -12165,7 +12211,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/23 20:07",
+      "updatedAt": "2026/08/23 21:07",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
       "likes": "1.0万",
@@ -12805,10 +12851,6 @@
         }
       ],
       "previousLikePoints": [
-        {
-          "hour": 26,
-          "likes": 1038
-        },
         {
           "hour": 27,
           "likes": 1055
@@ -14049,10 +14091,6 @@
           ],
           "previousPoints": [
             {
-              "hour": 26,
-              "rank": 34
-            },
-            {
               "hour": 27,
               "rank": 37
             },
@@ -14108,19 +14146,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "いくらかわかる金？"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             },
             {
               "rank": 49,
-              "title": "これ余談なんですけど・・・"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
-              "title": "デカ盛りハンター"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             }
           ]
         },
@@ -14540,19 +14578,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "タイムトラベルダディ"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 48,
-              "title": "踊る大捜査線"
+              "title": "しゃべくり007"
             },
             {
               "rank": 49,
-              "title": "熱闘甲子園"
+              "title": "Your Sky ハレのち恋"
             },
             {
               "rank": 50,
-              "title": "今夜もシリアルキラーと待ち合わせ"
+              "title": "人生最高レストラン"
             }
           ]
         }
@@ -14561,10 +14599,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/23 20:07",
+      "updatedAt": "2026/08/23 21:07",
       "episodeId": "epp5sd3y19",
       "subtitle": "運命の日本武道館ライブまで密着",
-      "likes": "3191",
+      "likes": "3185",
       "favorites": "3.5万",
       "likePoints": [
         {
@@ -14830,6 +14868,10 @@
         {
           "hour": 66,
           "likes": 3191
+        },
+        {
+          "hour": 67,
+          "likes": 3185
         }
       ],
       "previousLikePoints": [
@@ -15984,7 +16026,7 @@
             },
             {
               "rank": 50,
-              "title": "所さんの学校では教えてくれないそこんトコロ！"
+              "title": "リア突WEST.レボリューション"
             }
           ]
         },
@@ -16088,19 +16130,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "いくらかわかる金？"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             },
             {
               "rank": 49,
-              "title": "これ余談なんですけど・・・"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
-              "title": "デカ盛りハンター"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             }
           ]
         }
@@ -16109,7 +16151,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/23 20:07",
+      "updatedAt": "2026/08/23 21:07",
       "episodeId": "ep8dh8exqw",
       "subtitle": "#7 私を捨てた母、私が向き合う命",
       "likes": "1.0万",
@@ -16481,6 +16523,10 @@
         },
         {
           "hour": 94,
+          "likes": 10000
+        },
+        {
+          "hour": 95,
           "likes": 10000
         }
       ],
@@ -17103,7 +17149,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 10,
-          "elapsedHour": 94,
+          "elapsedHour": 95,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -17468,6 +17514,10 @@
             },
             {
               "hour": 94,
+              "rank": 10
+            },
+            {
+              "hour": 95,
               "rank": 10
             }
           ],
@@ -18112,11 +18162,11 @@
             },
             {
               "rank": 8,
-              "title": "Tokyo middle 30"
+              "title": "マイ・フィクション"
             },
             {
               "rank": 9,
-              "title": "マイ・フィクション"
+              "title": "Tokyo middle 30"
             },
             {
               "rank": 10,
@@ -18127,9 +18177,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 14,
-          "elapsedHour": 94,
-          "elapsedRank": 14,
+          "currentRank": 15,
+          "elapsedHour": 95,
+          "elapsedRank": 15,
           "currentPoints": [
             {
               "hour": 4,
@@ -18490,6 +18540,10 @@
             {
               "hour": 94,
               "rank": 14
+            },
+            {
+              "hour": 95,
+              "rank": 15
             }
           ],
           "previousPoints": [
@@ -19124,19 +19178,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 11,
-              "title": "Google Pixel presents ANOTHER SKY"
-            },
-            {
               "rank": 12,
-              "title": "Tokyo middle 30"
-            },
-            {
-              "rank": 13,
               "title": "マイ・フィクション"
             },
             {
+              "rank": 13,
+              "title": "Tokyo middle 30"
+            },
+            {
               "rank": 14,
+              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
+            },
+            {
+              "rank": 15,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -19146,7 +19200,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/23 20:07",
+      "updatedAt": "2026/08/23 21:07",
       "episodeId": "ep84f9w8rw",
       "subtitle": "第7話 想いが重なる夏の夜・・・あなたの事がひたすら好き",
       "likes": "1.8万",
@@ -19430,6 +19484,10 @@
         },
         {
           "hour": 70,
+          "likes": 18000
+        },
+        {
+          "hour": 71,
           "likes": 18000
         }
       ],
@@ -20063,9 +20121,9 @@
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 4,
-          "elapsedHour": 70,
-          "elapsedRank": 4,
+          "currentRank": 3,
+          "elapsedHour": 71,
+          "elapsedRank": 3,
           "currentPoints": [
             {
               "hour": 2,
@@ -20342,6 +20400,10 @@
             {
               "hour": 70,
               "rank": 4
+            },
+            {
+              "hour": 71,
+              "rank": 3
             }
           ],
           "previousPoints": [
@@ -20981,10 +21043,6 @@
             },
             {
               "rank": 3,
-              "title": "VIVANT"
-            },
-            {
-              "rank": 4,
               "title": "ラストノート"
             }
           ]
@@ -20992,9 +21050,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 4,
-          "elapsedHour": 70,
-          "elapsedRank": 4,
+          "currentRank": 3,
+          "elapsedHour": 71,
+          "elapsedRank": 3,
           "currentPoints": [
             {
               "hour": 2,
@@ -21271,6 +21329,10 @@
             {
               "hour": 70,
               "rank": 4
+            },
+            {
+              "hour": 71,
+              "rank": 3
             }
           ],
           "previousPoints": [
@@ -21910,10 +21972,6 @@
             },
             {
               "rank": 3,
-              "title": "VIVANT"
-            },
-            {
-              "rank": 4,
               "title": "ラストノート"
             }
           ]
