@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026/08/23 16:07",
+  "updatedAt": "2026/08/23 17:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/23 16:07",
+      "updatedAt": "2026/08/23 17:07",
       "episodeId": "eptbg59rwy",
       "subtitle": "timelesz100",
       "likes": "1.2万",
-      "favorites": "78.3万",
+      "favorites": "78.4万",
       "likePoints": [
         {
           "hour": 1,
@@ -176,6 +176,10 @@
         },
         {
           "hour": 42,
+          "likes": 12000
+        },
+        {
+          "hour": 43,
           "likes": 12000
         }
       ],
@@ -814,7 +818,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 7,
-          "elapsedHour": 42,
+          "elapsedHour": 43,
           "elapsedRank": 7,
           "currentPoints": [
             {
@@ -975,6 +979,10 @@
             },
             {
               "hour": 42,
+              "rank": 7
+            },
+            {
+              "hour": 43,
               "rank": 7
             }
           ],
@@ -1606,9 +1614,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 18,
-          "elapsedHour": 42,
-          "elapsedRank": 18,
+          "currentRank": 19,
+          "elapsedHour": 43,
+          "elapsedRank": 19,
           "currentPoints": [
             {
               "hour": 11,
@@ -1737,6 +1745,10 @@
             {
               "hour": 42,
               "rank": 18
+            },
+            {
+              "hour": 43,
+              "rank": 19
             }
           ],
           "previousPoints": [
@@ -1943,12 +1955,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 15,
-              "title": "マツコ＆有吉 かりそめ天国"
-            },
-            {
               "rank": 16,
-              "title": "マイ・フィクション"
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
               "rank": 17,
@@ -1956,6 +1964,10 @@
             },
             {
               "rank": 18,
+              "title": "Google Pixel presents ANOTHER SKY"
+            },
+            {
+              "rank": 19,
               "title": "タイムレスマン"
             }
           ]
@@ -1965,10 +1977,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/23 16:07",
+      "updatedAt": "2026/08/23 17:07",
       "episodeId": "ep55b7uj3p",
       "subtitle": "【韓国グルメSP】進化系料理&伝統ゲームで爆笑連発!",
-      "likes": "2172",
+      "likes": "2780",
       "favorites": "35.1万",
       "likePoints": [
         {
@@ -1978,6 +1990,10 @@
         {
           "hour": 2,
           "likes": 2172
+        },
+        {
+          "hour": 3,
+          "likes": 2780
         }
       ],
       "previousLikePoints": [
@@ -3243,19 +3259,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あちこちオードリー"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
-              "title": "A-Studio＋"
+              "title": "あちこちオードリー"
             },
             {
               "rank": 49,
-              "title": "夜明けのラヴィット！"
+              "title": "ニカゲーム"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "A-Studio＋"
             }
           ]
         },
@@ -3511,11 +3527,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "熱闘甲子園"
+              "title": "薬屋のひとりごと"
             },
             {
               "rank": 48,
-              "title": "ミッドナイト屋台２～ル・モンドゥ～"
+              "title": "熱闘甲子園"
             },
             {
               "rank": 49,
@@ -3532,10 +3548,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/18",
-      "updatedAt": "2026/08/23 16:07",
+      "updatedAt": "2026/08/23 17:07",
       "episodeId": "epjrd5nzjc",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！前編",
-      "likes": "7878",
+      "likes": "7888",
       "favorites": "5.9万",
       "likePoints": [
         {
@@ -3957,6 +3973,10 @@
         {
           "hour": 112,
           "likes": 7878
+        },
+        {
+          "hour": 113,
+          "likes": 7888
         }
       ],
       "previousLikePoints": [
@@ -4585,9 +4605,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 50,
-          "elapsedHour": 112,
-          "elapsedRank": 50,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 6,
@@ -5479,7 +5499,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "帰れマンデー見っけ隊!!"
+              "title": "サンド＆キスマイの気になるマン"
             },
             {
               "rank": 48,
@@ -5487,11 +5507,11 @@
             },
             {
               "rank": 49,
-              "title": "ニノなのに"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 50,
-              "title": "地球まるごと大実験 ネイチャーティーチャー"
+              "title": "ちょっと福岡行ってきました！"
             }
           ]
         },
@@ -5636,19 +5656,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あちこちオードリー"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
-              "title": "A-Studio＋"
+              "title": "あちこちオードリー"
             },
             {
               "rank": 49,
-              "title": "夜明けのラヴィット！"
+              "title": "ニカゲーム"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "A-Studio＋"
             }
           ]
         }
@@ -5657,7 +5677,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/23 16:07",
+      "updatedAt": "2026/08/23 17:07",
       "episodeId": "epejkq59pb",
       "subtitle": "【準決勝】天才すぎる…謎解き王決定戦SP 第2話",
       "likes": "1.3万",
@@ -6001,6 +6021,10 @@
         },
         {
           "hour": 86,
+          "likes": 13000
+        },
+        {
+          "hour": 87,
           "likes": 13000
         }
       ],
@@ -6630,9 +6654,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
+          "currentRank": 49,
+          "elapsedHour": 87,
+          "elapsedRank": 49,
           "currentPoints": [
             {
               "hour": 7,
@@ -6945,6 +6969,10 @@
             {
               "hour": 85,
               "rank": 50
+            },
+            {
+              "hour": 87,
+              "rank": 49
             }
           ],
           "previousPoints": [
@@ -7279,20 +7307,20 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 46,
+              "title": "あざとくて何が悪いの？"
+            },
+            {
               "rank": 47,
-              "title": "あちこちオードリー"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
-              "title": "A-Studio＋"
+              "title": "あちこちオードリー"
             },
             {
               "rank": 49,
-              "title": "夜明けのラヴィット！"
-            },
-            {
-              "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "ニカゲーム"
             }
           ]
         },
@@ -7657,11 +7685,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "熱闘甲子園"
+              "title": "薬屋のひとりごと"
             },
             {
               "rank": 48,
-              "title": "ミッドナイト屋台２～ル・モンドゥ～"
+              "title": "熱闘甲子園"
             },
             {
               "rank": 49,
@@ -7678,10 +7706,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/16",
-      "updatedAt": "2026/08/23 16:07",
+      "updatedAt": "2026/08/23 17:07",
       "episodeId": "epmo0217zw",
       "subtitle": "真夏の自由研究SP!夢の巨大お菓子の家を本気で作る!",
-      "likes": "4846",
+      "likes": "4898",
       "favorites": "53.2万",
       "likePoints": [
         {
@@ -8307,6 +8335,10 @@
         {
           "hour": 165,
           "likes": 4846
+        },
+        {
+          "hour": 166,
+          "likes": 4898
         }
       ],
       "previousLikePoints": [
@@ -8927,9 +8959,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 30,
-          "elapsedHour": 165,
-          "elapsedRank": 30,
+          "currentRank": 29,
+          "elapsedHour": 166,
+          "elapsedRank": 29,
           "currentPoints": [
             {
               "hour": 2,
@@ -9546,6 +9578,10 @@
             {
               "hour": 165,
               "rank": 30
+            },
+            {
+              "hour": 166,
+              "rank": 29
             }
           ],
           "previousPoints": [
@@ -10200,6 +10236,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 26,
+              "title": "サタプラ"
+            },
+            {
               "rank": 27,
               "title": "&TEAM vs FANTASTICS 最強スターはどっちだ？"
             },
@@ -10209,10 +10249,6 @@
             },
             {
               "rank": 29,
-              "title": "世界まる見え！テレビ特捜部"
-            },
-            {
-              "rank": 30,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -10534,19 +10570,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あちこちオードリー"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
-              "title": "A-Studio＋"
+              "title": "あちこちオードリー"
             },
             {
               "rank": 49,
-              "title": "夜明けのラヴィット！"
+              "title": "ニカゲーム"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "A-Studio＋"
             }
           ]
         }
@@ -10555,7 +10591,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/23 16:07",
+      "updatedAt": "2026/08/23 17:07",
       "episodeId": "epd7ebv3mp",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！=LOVE登場",
       "likes": "1.2万",
@@ -10943,6 +10979,10 @@
         },
         {
           "hour": 111,
+          "likes": 12000
+        },
+        {
+          "hour": 112,
           "likes": 12000
         }
       ],
@@ -11798,19 +11838,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あちこちオードリー"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
-              "title": "A-Studio＋"
+              "title": "あちこちオードリー"
             },
             {
               "rank": 49,
-              "title": "夜明けのラヴィット！"
+              "title": "ニカゲーム"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "A-Studio＋"
             }
           ]
         },
@@ -11914,11 +11954,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "熱闘甲子園"
+              "title": "薬屋のひとりごと"
             },
             {
               "rank": 48,
-              "title": "ミッドナイト屋台２～ル・モンドゥ～"
+              "title": "熱闘甲子園"
             },
             {
               "rank": 49,
@@ -11935,10 +11975,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/23 16:07",
+      "updatedAt": "2026/08/23 17:07",
       "episodeId": "eprp4uddvt",
       "subtitle": "第141回 のんと深川麻衣の許せない飯で衝撃のラストが！",
-      "likes": "4024",
+      "likes": "4060",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -12196,6 +12236,10 @@
         {
           "hour": 64,
           "likes": 4024
+        },
+        {
+          "hour": 65,
+          "likes": 4060
         }
       ],
       "previousLikePoints": [
@@ -13270,19 +13314,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あちこちオードリー"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
-              "title": "A-Studio＋"
+              "title": "あちこちオードリー"
             },
             {
               "rank": 49,
-              "title": "夜明けのラヴィット！"
+              "title": "ニカゲーム"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "A-Studio＋"
             }
           ]
         },
@@ -13447,11 +13491,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "熱闘甲子園"
+              "title": "薬屋のひとりごと"
             },
             {
               "rank": 48,
-              "title": "ミッドナイト屋台２～ル・モンドゥ～"
+              "title": "熱闘甲子園"
             },
             {
               "rank": 49,
@@ -13468,7 +13512,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/23 16:07",
+      "updatedAt": "2026/08/23 17:07",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
       "likes": "1.0万",
@@ -14108,10 +14152,6 @@
         }
       ],
       "previousLikePoints": [
-        {
-          "hour": 22,
-          "likes": 965
-        },
         {
           "hour": 23,
           "likes": 996
@@ -15368,10 +15408,6 @@
           ],
           "previousPoints": [
             {
-              "hour": 22,
-              "rank": 30
-            },
-            {
               "hour": 23,
               "rank": 31
             },
@@ -15443,19 +15479,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あちこちオードリー"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
-              "title": "A-Studio＋"
+              "title": "あちこちオードリー"
             },
             {
               "rank": 49,
-              "title": "夜明けのラヴィット！"
+              "title": "ニカゲーム"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "A-Studio＋"
             }
           ]
         },
@@ -15875,11 +15911,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "熱闘甲子園"
+              "title": "薬屋のひとりごと"
             },
             {
               "rank": 48,
-              "title": "ミッドナイト屋台２～ル・モンドゥ～"
+              "title": "熱闘甲子園"
             },
             {
               "rank": 49,
@@ -15896,10 +15932,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/23 16:07",
+      "updatedAt": "2026/08/23 17:07",
       "episodeId": "epp5sd3y19",
       "subtitle": "運命の日本武道館ライブまで密着",
-      "likes": "3113",
+      "likes": "3143",
       "favorites": "3.5万",
       "likePoints": [
         {
@@ -16149,6 +16185,10 @@
         {
           "hour": 62,
           "likes": 3113
+        },
+        {
+          "hour": 63,
+          "likes": 3143
         }
       ],
       "previousLikePoints": [
@@ -17291,7 +17331,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スクール革命！"
+              "title": "所さんの学校では教えてくれないそこんトコロ！"
             },
             {
               "rank": 48,
@@ -17303,7 +17343,7 @@
             },
             {
               "rank": 50,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "しんごの🌱"
             }
           ]
         },
@@ -17407,19 +17447,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "あちこちオードリー"
+              "title": "相席食堂"
             },
             {
               "rank": 48,
-              "title": "A-Studio＋"
+              "title": "あちこちオードリー"
             },
             {
               "rank": 49,
-              "title": "夜明けのラヴィット！"
+              "title": "ニカゲーム"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "A-Studio＋"
             }
           ]
         }
@@ -17428,7 +17468,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/23 16:07",
+      "updatedAt": "2026/08/23 17:07",
       "episodeId": "ep8dh8exqw",
       "subtitle": "#7 私を捨てた母、私が向き合う命",
       "likes": "1.0万",
@@ -17784,6 +17824,10 @@
         },
         {
           "hour": 90,
+          "likes": 10000
+        },
+        {
+          "hour": 91,
           "likes": 10000
         }
       ],
@@ -18406,7 +18450,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 10,
-          "elapsedHour": 90,
+          "elapsedHour": 91,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -18755,6 +18799,10 @@
             },
             {
               "hour": 90,
+              "rank": 10
+            },
+            {
+              "hour": 91,
               "rank": 10
             }
           ],
@@ -19415,7 +19463,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 13,
-          "elapsedHour": 90,
+          "elapsedHour": 91,
           "elapsedRank": 13,
           "currentPoints": [
             {
@@ -19760,6 +19808,10 @@
             },
             {
               "hour": 90,
+              "rank": 13
+            },
+            {
+              "hour": 91,
               "rank": 13
             }
           ],
@@ -20396,7 +20448,7 @@
           "nearbyRanking": [
             {
               "rank": 10,
-              "title": "一次元の挿し木"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 11,
@@ -20417,7 +20469,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/23 16:07",
+      "updatedAt": "2026/08/23 17:07",
       "episodeId": "ep84f9w8rw",
       "subtitle": "第7話 想いが重なる夏の夜・・・あなたの事がひたすら好き",
       "likes": "1.8万",
@@ -20685,6 +20737,10 @@
         },
         {
           "hour": 66,
+          "likes": 18000
+        },
+        {
+          "hour": 67,
           "likes": 18000
         }
       ],
@@ -21319,7 +21375,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 4,
-          "elapsedHour": 66,
+          "elapsedHour": 67,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -21580,6 +21636,10 @@
             },
             {
               "hour": 66,
+              "rank": 4
+            },
+            {
+              "hour": 67,
               "rank": 4
             }
           ],
@@ -22232,7 +22292,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 4,
-          "elapsedHour": 66,
+          "elapsedHour": 67,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -22493,6 +22553,10 @@
             },
             {
               "hour": 66,
+              "rank": 4
+            },
+            {
+              "hour": 67,
               "rank": 4
             }
           ],
