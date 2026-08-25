@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/08/25 13:07",
+  "updatedAt": "2026/08/25 14:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/25 13:07",
+      "updatedAt": "2026/08/25 14:07",
       "episodeId": "eptbg59rwy",
       "subtitle": "timelesz100",
       "likes": "1.4万",
@@ -352,6 +352,10 @@
         },
         {
           "hour": 87,
+          "likes": 14000
+        },
+        {
+          "hour": 88,
           "likes": 14000
         }
       ],
@@ -989,9 +993,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 24,
-          "elapsedHour": 87,
-          "elapsedRank": 24,
+          "currentRank": 25,
+          "elapsedHour": 88,
+          "elapsedRank": 25,
           "currentPoints": [
             {
               "hour": 3,
@@ -1332,6 +1336,10 @@
             {
               "hour": 87,
               "rank": 24
+            },
+            {
+              "hour": 88,
+              "rank": 25
             }
           ],
           "previousPoints": [
@@ -1942,19 +1950,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 21,
-              "title": "華大さんと千鳥くん"
-            },
-            {
               "rank": 22,
-              "title": "バナナマンのせっかくグルメ!!"
-            },
-            {
-              "rank": 23,
               "title": "有吉ゼミ"
             },
             {
+              "rank": 23,
+              "title": "クレイジージャーニー"
+            },
+            {
               "rank": 24,
+              "title": "バナナマンのせっかくグルメ!!"
+            },
+            {
+              "rank": 25,
               "title": "タイムレスマン"
             }
           ]
@@ -2476,7 +2484,7 @@
             },
             {
               "rank": 49,
-              "title": "名探偵のままでいて"
+              "title": "えっちなお尻じゃダメですか？"
             },
             {
               "rank": 50,
@@ -2489,7 +2497,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/25 13:07",
+      "updatedAt": "2026/08/25 14:07",
       "episodeId": "ep55b7uj3p",
       "subtitle": "【韓国グルメSP】進化系料理&伝統ゲームで爆笑連発!",
       "likes": "1.1万",
@@ -2677,6 +2685,10 @@
         },
         {
           "hour": 47,
+          "likes": 11000
+        },
+        {
+          "hour": 48,
           "likes": 11000
         }
       ],
@@ -3319,7 +3331,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 12,
-          "elapsedHour": 47,
+          "elapsedHour": 48,
           "elapsedRank": 12,
           "currentPoints": [
             {
@@ -3484,6 +3496,10 @@
             },
             {
               "hour": 47,
+              "rank": 12
+            },
+            {
+              "hour": 48,
               "rank": 12
             }
           ],
@@ -4127,9 +4143,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 31,
-          "elapsedHour": 47,
-          "elapsedRank": 31,
+          "currentRank": 32,
+          "elapsedHour": 48,
+          "elapsedRank": 32,
           "currentPoints": [
             {
               "hour": 9,
@@ -4286,6 +4302,10 @@
             {
               "hour": 47,
               "rank": 31
+            },
+            {
+              "hour": 48,
+              "rank": 32
             }
           ],
           "previousPoints": [
@@ -4532,19 +4552,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 28,
+              "rank": 29,
               "title": "家、ついて行ってイイですか？"
             },
             {
-              "rank": 29,
+              "rank": 30,
               "title": "有吉クイズ"
             },
             {
-              "rank": 30,
+              "rank": 31,
               "title": "月曜から夜ふかし"
             },
             {
-              "rank": 31,
+              "rank": 32,
               "title": "timeleszファミリア"
             }
           ]
@@ -4554,10 +4574,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/18",
-      "updatedAt": "2026/08/25 13:07",
+      "updatedAt": "2026/08/25 14:07",
       "episodeId": "epjrd5nzjc",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！前編",
-      "likes": "8421",
+      "likes": "8434",
       "favorites": "5.9万",
       "likePoints": [
         {
@@ -5155,6 +5175,10 @@
         {
           "hour": 157,
           "likes": 8421
+        },
+        {
+          "hour": 158,
+          "likes": 8434
         }
       ],
       "previousLikePoints": [
@@ -5784,7 +5808,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 43,
-          "elapsedHour": 157,
+          "elapsedHour": 158,
           "elapsedRank": 43,
           "currentPoints": [
             {
@@ -6265,6 +6289,10 @@
             },
             {
               "hour": 157,
+              "rank": 43
+            },
+            {
+              "hour": 158,
               "rank": 43
             }
           ],
@@ -6753,7 +6781,7 @@
           "nearbyRanking": [
             {
               "rank": 40,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "IMP.の「できません」は言いません"
             },
             {
               "rank": 41,
@@ -6910,11 +6938,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "櫻井･有吉THE夜会"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 49,
@@ -6922,7 +6950,7 @@
             },
             {
               "rank": 50,
-              "title": "くりぃむナンタラ"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -6931,7 +6959,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/25 13:07",
+      "updatedAt": "2026/08/25 14:07",
       "episodeId": "epejkq59pb",
       "subtitle": "【準決勝】天才すぎる…謎解き王決定戦SP 第2話",
       "likes": "1.4万",
@@ -7451,6 +7479,10 @@
         },
         {
           "hour": 131,
+          "likes": 14000
+        },
+        {
+          "hour": 132,
           "likes": 14000
         }
       ],
@@ -8738,11 +8770,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "櫻井･有吉THE夜会"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 49,
@@ -8750,7 +8782,7 @@
             },
             {
               "rank": 50,
-              "title": "くりぃむナンタラ"
+              "title": "かまいガチ"
             }
           ]
         },
@@ -9123,7 +9155,7 @@
             },
             {
               "rank": 49,
-              "title": "名探偵のままでいて"
+              "title": "えっちなお尻じゃダメですか？"
             },
             {
               "rank": 50,
@@ -9136,10 +9168,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/25 13:07",
+      "updatedAt": "2026/08/25 14:07",
       "episodeId": "eppaa3pee6",
       "subtitle": "24時間テレビ企画!巨大弓矢で福島から日本全国にエール",
-      "likes": "3978",
+      "likes": "4017",
       "favorites": "53.3万",
       "likePoints": [
         {
@@ -9305,6 +9337,10 @@
         {
           "hour": 42,
           "likes": 3978
+        },
+        {
+          "hour": 43,
+          "likes": 4017
         }
       ],
       "previousLikePoints": [
@@ -9946,7 +9982,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 14,
-          "elapsedHour": 42,
+          "elapsedHour": 43,
           "elapsedRank": 14,
           "currentPoints": [
             {
@@ -10107,6 +10143,10 @@
             },
             {
               "hour": 42,
+              "rank": 14
+            },
+            {
+              "hour": 43,
               "rank": 14
             }
           ],
@@ -10739,11 +10779,11 @@
           "nearbyRanking": [
             {
               "rank": 11,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "世界まる見え！テレビ特捜部"
             },
             {
               "rank": 12,
-              "title": "世界まる見え！テレビ特捜部"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 13,
@@ -10976,11 +11016,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "櫻井･有吉THE夜会"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 49,
@@ -10988,7 +11028,7 @@
             },
             {
               "rank": 50,
-              "title": "くりぃむナンタラ"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -10997,7 +11037,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/25 13:07",
+      "updatedAt": "2026/08/25 14:07",
       "episodeId": "epd7ebv3mp",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！=LOVE登場",
       "likes": "1.3万",
@@ -11545,6 +11585,10 @@
         },
         {
           "hour": 156,
+          "likes": 13000
+        },
+        {
+          "hour": 157,
           "likes": 13000
         }
       ],
@@ -12400,11 +12444,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "櫻井･有吉THE夜会"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 49,
@@ -12412,7 +12456,7 @@
             },
             {
               "rank": 50,
-              "title": "くりぃむナンタラ"
+              "title": "かまいガチ"
             }
           ]
         },
@@ -12524,7 +12568,7 @@
             },
             {
               "rank": 49,
-              "title": "名探偵のままでいて"
+              "title": "えっちなお尻じゃダメですか？"
             },
             {
               "rank": 50,
@@ -12537,10 +12581,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/25 13:07",
+      "updatedAt": "2026/08/25 14:07",
       "episodeId": "eprp4uddvt",
       "subtitle": "第141回 のんと深川麻衣の許せない飯で衝撃のラストが！",
-      "likes": "4554",
+      "likes": "4562",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -12974,6 +13018,10 @@
         {
           "hour": 109,
           "likes": 4554
+        },
+        {
+          "hour": 110,
+          "likes": 4562
         }
       ],
       "previousLikePoints": [
@@ -14048,11 +14096,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "櫻井･有吉THE夜会"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 49,
@@ -14060,7 +14108,7 @@
             },
             {
               "rank": 50,
-              "title": "くりぃむナンタラ"
+              "title": "かまいガチ"
             }
           ]
         },
@@ -14233,7 +14281,7 @@
             },
             {
               "rank": 49,
-              "title": "名探偵のままでいて"
+              "title": "えっちなお尻じゃダメですか？"
             },
             {
               "rank": 50,
@@ -14246,7 +14294,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/25 13:07",
+      "updatedAt": "2026/08/25 14:07",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
       "likes": "1.0万",
@@ -14886,10 +14934,6 @@
         }
       ],
       "previousLikePoints": [
-        {
-          "hour": 67,
-          "likes": 1284
-        },
         {
           "hour": 68,
           "likes": 1285
@@ -15968,11 +16012,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "櫻井･有吉THE夜会"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 49,
@@ -15980,7 +16024,7 @@
             },
             {
               "rank": 50,
-              "title": "くりぃむナンタラ"
+              "title": "かまいガチ"
             }
           ]
         },
@@ -16408,7 +16452,7 @@
             },
             {
               "rank": 49,
-              "title": "名探偵のままでいて"
+              "title": "えっちなお尻じゃダメですか？"
             },
             {
               "rank": 50,
@@ -16421,10 +16465,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/25 13:07",
+      "updatedAt": "2026/08/25 14:07",
       "episodeId": "epp5sd3y19",
       "subtitle": "運命の日本武道館ライブまで密着",
-      "likes": "3514",
+      "likes": "3523",
       "favorites": "3.5万",
       "likePoints": [
         {
@@ -16850,6 +16894,10 @@
         {
           "hour": 107,
           "likes": 3514
+        },
+        {
+          "hour": 108,
+          "likes": 3523
         }
       ],
       "previousLikePoints": [
@@ -17992,19 +18040,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "吉田と粗品と"
+              "title": "出川一茂ホラン☆フシギの会"
             },
             {
               "rank": 48,
-              "title": "その情報、訂正させてください 〜巷の誤情報を訂正して深ぼるトーク〜"
+              "title": "川島・山内のマンガ沼"
             },
             {
               "rank": 49,
-              "title": "バナナマンの早起きせっかくグルメ!!"
+              "title": "DAIGOも台所～きょうの献立 何にする？～"
             },
             {
               "rank": 50,
-              "title": "ザワつく！ 金曜日"
+              "title": "バナナマンの早起きせっかくグルメ!!"
             }
           ]
         },
@@ -18108,11 +18156,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "櫻井･有吉THE夜会"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 48,
-              "title": "かまいガチ"
+              "title": "耳の穴かっぽじって聞け！"
             },
             {
               "rank": 49,
@@ -18120,7 +18168,7 @@
             },
             {
               "rank": 50,
-              "title": "くりぃむナンタラ"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -18129,7 +18177,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/25 13:07",
+      "updatedAt": "2026/08/25 14:07",
       "episodeId": "ep8dh8exqw",
       "subtitle": "#7 私を捨てた母、私が向き合う命",
       "likes": "1.1万",
@@ -18661,6 +18709,10 @@
         },
         {
           "hour": 135,
+          "likes": 11000
+        },
+        {
+          "hour": 136,
           "likes": 11000
         }
       ],
@@ -19283,7 +19335,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 14,
-          "elapsedHour": 135,
+          "elapsedHour": 136,
           "elapsedRank": 14,
           "currentPoints": [
             {
@@ -19812,6 +19864,10 @@
             },
             {
               "hour": 135,
+              "rank": 14
+            },
+            {
+              "hour": 136,
               "rank": 14
             }
           ],
@@ -20471,9 +20527,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 24,
-          "elapsedHour": 135,
-          "elapsedRank": 24,
+          "currentRank": 23,
+          "elapsedHour": 136,
+          "elapsedRank": 23,
           "currentPoints": [
             {
               "hour": 4,
@@ -20998,6 +21054,10 @@
             {
               "hour": 135,
               "rank": 24
+            },
+            {
+              "hour": 136,
+              "rank": 23
             }
           ],
           "previousPoints": [
@@ -21632,6 +21692,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 20,
+              "title": "突然ですが占ってもいいですか？"
+            },
+            {
               "rank": 21,
               "title": "Tokyo middle 30"
             },
@@ -21641,10 +21705,6 @@
             },
             {
               "rank": 23,
-              "title": "Golden SixTONES"
-            },
-            {
-              "rank": 24,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -21654,7 +21714,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/25 13:07",
+      "updatedAt": "2026/08/25 14:07",
       "episodeId": "ep84f9w8rw",
       "subtitle": "第7話 想いが重なる夏の夜・・・あなたの事がひたすら好き",
       "likes": "2.0万",
@@ -22098,6 +22158,10 @@
         },
         {
           "hour": 111,
+          "likes": 20000
+        },
+        {
+          "hour": 112,
           "likes": 20000
         }
       ],
@@ -22732,7 +22796,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 10,
-          "elapsedHour": 111,
+          "elapsedHour": 112,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -23173,6 +23237,10 @@
             },
             {
               "hour": 111,
+              "rank": 10
+            },
+            {
+              "hour": 112,
               "rank": 10
             }
           ],
@@ -23824,9 +23892,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 11,
-          "elapsedHour": 111,
-          "elapsedRank": 11,
+          "currentRank": 12,
+          "elapsedHour": 112,
+          "elapsedRank": 12,
           "currentPoints": [
             {
               "hour": 2,
@@ -24267,6 +24335,10 @@
             {
               "hour": 111,
               "rank": 11
+            },
+            {
+              "hour": 112,
+              "rank": 12
             }
           ],
           "previousPoints": [
@@ -24897,10 +24969,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 8,
-              "title": "ブラックトリック～裁きを操る弁護人～"
-            },
-            {
               "rank": 9,
               "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             },
@@ -24910,6 +24978,10 @@
             },
             {
               "rank": 11,
+              "title": "日曜日の初耳学"
+            },
+            {
+              "rank": 12,
               "title": "ラストノート"
             }
           ]
