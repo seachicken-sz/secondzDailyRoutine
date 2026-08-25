@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/08/25 10:07",
+  "updatedAt": "2026/08/25 11:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/25 10:07",
+      "updatedAt": "2026/08/25 11:07",
       "episodeId": "eptbg59rwy",
       "subtitle": "timelesz100",
       "likes": "1.4万",
@@ -340,6 +340,10 @@
         },
         {
           "hour": 84,
+          "likes": 14000
+        },
+        {
+          "hour": 85,
           "likes": 14000
         }
       ],
@@ -977,9 +981,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 21,
-          "elapsedHour": 84,
-          "elapsedRank": 21,
+          "currentRank": 22,
+          "elapsedHour": 85,
+          "elapsedRank": 22,
           "currentPoints": [
             {
               "hour": 3,
@@ -1308,6 +1312,10 @@
             {
               "hour": 84,
               "rank": 21
+            },
+            {
+              "hour": 85,
+              "rank": 22
             }
           ],
           "previousPoints": [
@@ -1918,10 +1926,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 18,
-              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
-            },
-            {
               "rank": 19,
               "title": "バナナマンのせっかくグルメ!!"
             },
@@ -1931,6 +1935,10 @@
             },
             {
               "rank": 21,
+              "title": "SASUKE ワールドカップ2026"
+            },
+            {
+              "rank": 22,
               "title": "タイムレスマン"
             }
           ]
@@ -1938,9 +1946,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 49,
-          "elapsedHour": 84,
-          "elapsedRank": 49,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 11,
@@ -2443,20 +2451,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 46,
+              "rank": 47,
               "title": "バナナマンのせっかくグルメ!!"
             },
             {
-              "rank": 47,
+              "rank": 48,
               "title": "華大さんと千鳥くん"
             },
             {
-              "rank": 48,
-              "title": "真夏のシンデレラ"
+              "rank": 49,
+              "title": "陽キャ集団にいる芹沢は、俺の前だと様子がおかしい"
             },
             {
-              "rank": 49,
-              "title": "タイムレスマン"
+              "rank": 50,
+              "title": "SASUKE ワールドカップ2026"
             }
           ]
         }
@@ -2465,7 +2473,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/25 10:07",
+      "updatedAt": "2026/08/25 11:07",
       "episodeId": "ep55b7uj3p",
       "subtitle": "【韓国グルメSP】進化系料理&伝統ゲームで爆笑連発!",
       "likes": "1.1万",
@@ -2641,6 +2649,10 @@
         },
         {
           "hour": 44,
+          "likes": 11000
+        },
+        {
+          "hour": 45,
           "likes": 11000
         }
       ],
@@ -3282,9 +3294,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 9,
-          "elapsedHour": 44,
-          "elapsedRank": 9,
+          "currentRank": 10,
+          "elapsedHour": 45,
+          "elapsedRank": 10,
           "currentPoints": [
             {
               "hour": 7,
@@ -3437,6 +3449,10 @@
             {
               "hour": 44,
               "rank": 9
+            },
+            {
+              "hour": 45,
+              "rank": 10
             }
           ],
           "previousPoints": [
@@ -4059,10 +4075,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 6,
-              "title": "上田と女が吠える夜"
-            },
-            {
               "rank": 7,
               "title": "Golden SixTONES"
             },
@@ -4072,6 +4084,10 @@
             },
             {
               "rank": 9,
+              "title": "家、ついて行ってイイですか？"
+            },
+            {
+              "rank": 10,
               "title": "timeleszファミリア"
             }
           ]
@@ -4079,9 +4095,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 28,
-          "elapsedHour": 44,
-          "elapsedRank": 28,
+          "currentRank": 29,
+          "elapsedHour": 45,
+          "elapsedRank": 29,
           "currentPoints": [
             {
               "hour": 9,
@@ -4226,6 +4242,10 @@
             {
               "hour": 44,
               "rank": 28
+            },
+            {
+              "hour": 45,
+              "rank": 29
             }
           ],
           "previousPoints": [
@@ -4472,10 +4492,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 25,
-              "title": "君の好きは無敵"
-            },
-            {
               "rank": 26,
               "title": "さよならノワール"
             },
@@ -4485,6 +4501,10 @@
             },
             {
               "rank": 28,
+              "title": "家、ついて行ってイイですか？"
+            },
+            {
+              "rank": 29,
               "title": "timeleszファミリア"
             }
           ]
@@ -4494,10 +4514,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/18",
-      "updatedAt": "2026/08/25 10:07",
+      "updatedAt": "2026/08/25 11:07",
       "episodeId": "epjrd5nzjc",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！前編",
-      "likes": "8368",
+      "likes": "8395",
       "favorites": "5.9万",
       "likePoints": [
         {
@@ -5083,6 +5103,10 @@
         {
           "hour": 154,
           "likes": 8368
+        },
+        {
+          "hour": 155,
+          "likes": 8395
         }
       ],
       "previousLikePoints": [
@@ -5711,9 +5735,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 42,
-          "elapsedHour": 154,
-          "elapsedRank": 42,
+          "currentRank": 43,
+          "elapsedHour": 155,
+          "elapsedRank": 43,
           "currentPoints": [
             {
               "hour": 6,
@@ -6182,6 +6206,10 @@
             {
               "hour": 154,
               "rank": 42
+            },
+            {
+              "hour": 155,
+              "rank": 43
             }
           ],
           "previousPoints": [
@@ -6668,12 +6696,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 39,
-              "title": "ゴルフ侍、見参！"
-            },
-            {
               "rank": 40,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "ゴルフ侍、見参！"
             },
             {
               "rank": 41,
@@ -6681,6 +6705,10 @@
             },
             {
               "rank": 42,
+              "title": "その情報、訂正させてください 〜巷の誤情報を訂正して深ぼるトーク〜"
+            },
+            {
+              "rank": 43,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -6826,19 +6854,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 48,
-              "title": "世界まる見え！テレビ特捜部"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "やすとものどこいこ！？"
+              "title": "ザ！鉄腕！DASH!!"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
@@ -6847,7 +6875,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/25 10:07",
+      "updatedAt": "2026/08/25 11:07",
       "episodeId": "epejkq59pb",
       "subtitle": "【準決勝】天才すぎる…謎解き王決定戦SP 第2話",
       "likes": "1.4万",
@@ -7355,6 +7383,10 @@
         },
         {
           "hour": 128,
+          "likes": 14000
+        },
+        {
+          "hour": 129,
           "likes": 14000
         }
       ],
@@ -8642,19 +8674,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 48,
-              "title": "世界まる見え！テレビ特捜部"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "やすとものどこいこ！？"
+              "title": "ザ！鉄腕！DASH!!"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "やすとものどこいこ！？"
             }
           ]
         },
@@ -9019,15 +9051,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "華大さんと千鳥くん"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 48,
-              "title": "真夏のシンデレラ"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 49,
-              "title": "タイムレスマン"
+              "title": "陽キャ集団にいる芹沢は、俺の前だと様子がおかしい"
             },
             {
               "rank": 50,
@@ -9040,10 +9072,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/25 10:07",
+      "updatedAt": "2026/08/25 11:07",
       "episodeId": "eppaa3pee6",
       "subtitle": "24時間テレビ企画!巨大弓矢で福島から日本全国にエール",
-      "likes": "3836",
+      "likes": "3885",
       "favorites": "53.3万",
       "likePoints": [
         {
@@ -9197,6 +9229,10 @@
         {
           "hour": 39,
           "likes": 3836
+        },
+        {
+          "hour": 40,
+          "likes": 3885
         }
       ],
       "previousLikePoints": [
@@ -9837,9 +9873,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 13,
-          "elapsedHour": 39,
-          "elapsedRank": 13,
+          "currentRank": 14,
+          "elapsedHour": 40,
+          "elapsedRank": 14,
           "currentPoints": [
             {
               "hour": 3,
@@ -9988,6 +10024,10 @@
             {
               "hour": 39,
               "rank": 13
+            },
+            {
+              "hour": 40,
+              "rank": 14
             }
           ],
           "previousPoints": [
@@ -10618,19 +10658,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 10,
-              "title": "ポツンと一軒家"
-            },
-            {
               "rank": 11,
-              "title": "クレイジージャーニー"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 12,
-              "title": "櫻井･有吉THE夜会"
+              "title": "世界まる見え！テレビ特捜部"
             },
             {
               "rank": 13,
+              "title": "櫻井･有吉THE夜会"
+            },
+            {
+              "rank": 14,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -10638,9 +10678,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 46,
-          "elapsedHour": 39,
-          "elapsedRank": 46,
+          "currentRank": 49,
+          "elapsedHour": 40,
+          "elapsedRank": 49,
           "currentPoints": [
             {
               "hour": 18,
@@ -10729,6 +10769,10 @@
             {
               "hour": 39,
               "rank": 46
+            },
+            {
+              "hour": 40,
+              "rank": 49
             }
           ],
           "previousPoints": [
@@ -10847,19 +10891,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 43,
-              "title": "ロンドンハーツ"
-            },
-            {
-              "rank": 44,
-              "title": "踊る！さんま御殿!!"
-            },
-            {
-              "rank": 45,
+              "rank": 46,
               "title": "櫻井･有吉THE夜会"
             },
             {
-              "rank": 46,
+              "rank": 47,
+              "title": "真剣遊戯！THE バトル SHOW"
+            },
+            {
+              "rank": 48,
+              "title": "かまいガチ"
+            },
+            {
+              "rank": 49,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -10869,7 +10913,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/25 10:07",
+      "updatedAt": "2026/08/25 11:07",
       "episodeId": "epd7ebv3mp",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！=LOVE登場",
       "likes": "1.3万",
@@ -11405,6 +11449,10 @@
         },
         {
           "hour": 153,
+          "likes": 13000
+        },
+        {
+          "hour": 154,
           "likes": 13000
         }
       ],
@@ -12260,19 +12308,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 48,
-              "title": "世界まる見え！テレビ特捜部"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "やすとものどこいこ！？"
+              "title": "ザ！鉄腕！DASH!!"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "やすとものどこいこ！？"
             }
           ]
         },
@@ -12376,15 +12424,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "華大さんと千鳥くん"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 48,
-              "title": "真夏のシンデレラ"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 49,
-              "title": "タイムレスマン"
+              "title": "陽キャ集団にいる芹沢は、俺の前だと様子がおかしい"
             },
             {
               "rank": 50,
@@ -12397,10 +12445,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/25 10:07",
+      "updatedAt": "2026/08/25 11:07",
       "episodeId": "eprp4uddvt",
       "subtitle": "第141回 のんと深川麻衣の許せない飯で衝撃のラストが！",
-      "likes": "4512",
+      "likes": "4525",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -12822,6 +12870,10 @@
         {
           "hour": 106,
           "likes": 4512
+        },
+        {
+          "hour": 107,
+          "likes": 4525
         }
       ],
       "previousLikePoints": [
@@ -13896,19 +13948,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 48,
-              "title": "世界まる見え！テレビ特捜部"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "やすとものどこいこ！？"
+              "title": "ザ！鉄腕！DASH!!"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "やすとものどこいこ！？"
             }
           ]
         },
@@ -14073,15 +14125,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "華大さんと千鳥くん"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 48,
-              "title": "真夏のシンデレラ"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 49,
-              "title": "タイムレスマン"
+              "title": "陽キャ集団にいる芹沢は、俺の前だと様子がおかしい"
             },
             {
               "rank": 50,
@@ -14094,11 +14146,11 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/25 10:07",
+      "updatedAt": "2026/08/25 11:07",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
       "likes": "1.0万",
-      "favorites": "80.2万",
+      "favorites": "80.3万",
       "likePoints": [
         {
           "hour": 4,
@@ -14734,10 +14786,6 @@
         }
       ],
       "previousLikePoints": [
-        {
-          "hour": 64,
-          "likes": 1270
-        },
         {
           "hour": 65,
           "likes": 1275
@@ -15828,19 +15876,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 48,
-              "title": "世界まる見え！テレビ特捜部"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "やすとものどこいこ！？"
+              "title": "ザ！鉄腕！DASH!!"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "やすとものどこいこ！？"
             }
           ]
         },
@@ -16260,15 +16308,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "華大さんと千鳥くん"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 48,
-              "title": "真夏のシンデレラ"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 49,
-              "title": "タイムレスマン"
+              "title": "陽キャ集団にいる芹沢は、俺の前だと様子がおかしい"
             },
             {
               "rank": 50,
@@ -16281,10 +16329,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/25 10:07",
+      "updatedAt": "2026/08/25 11:07",
       "episodeId": "epp5sd3y19",
       "subtitle": "運命の日本武道館ライブまで密着",
-      "likes": "3485",
+      "likes": "3494",
       "favorites": "3.5万",
       "likePoints": [
         {
@@ -16698,6 +16746,10 @@
         {
           "hour": 104,
           "likes": 3485
+        },
+        {
+          "hour": 105,
+          "likes": 3494
         }
       ],
       "previousLikePoints": [
@@ -17840,7 +17892,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "DAIGOも台所～きょうの献立 何にする？～"
+              "title": "バナナマンの早起きせっかくグルメ!!"
             },
             {
               "rank": 48,
@@ -17956,19 +18008,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 48,
-              "title": "世界まる見え！テレビ特捜部"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "やすとものどこいこ！？"
+              "title": "ザ！鉄腕！DASH!!"
             },
             {
               "rank": 50,
-              "title": "真剣遊戯！THE バトル SHOW"
+              "title": "やすとものどこいこ！？"
             }
           ]
         }
@@ -17977,11 +18029,11 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/25 10:07",
+      "updatedAt": "2026/08/25 11:07",
       "episodeId": "ep8dh8exqw",
       "subtitle": "#7 私を捨てた母、私が向き合う命",
       "likes": "1.1万",
-      "favorites": "65.3万",
+      "favorites": "65.4万",
       "likePoints": [
         {
           "hour": 1,
@@ -18497,6 +18549,10 @@
         },
         {
           "hour": 132,
+          "likes": 11000
+        },
+        {
+          "hour": 133,
           "likes": 11000
         }
       ],
@@ -19119,7 +19175,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 14,
-          "elapsedHour": 132,
+          "elapsedHour": 133,
           "elapsedRank": 14,
           "currentPoints": [
             {
@@ -19636,6 +19692,10 @@
             },
             {
               "hour": 132,
+              "rank": 14
+            },
+            {
+              "hour": 133,
               "rank": 14
             }
           ],
@@ -20276,11 +20336,11 @@
           "nearbyRanking": [
             {
               "rank": 11,
-              "title": "Tokyo middle 30"
+              "title": "夫を殺したはずなのに"
             },
             {
               "rank": 12,
-              "title": "夫を殺したはずなのに"
+              "title": "Tokyo middle 30"
             },
             {
               "rank": 13,
@@ -20296,7 +20356,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 23,
-          "elapsedHour": 132,
+          "elapsedHour": 133,
           "elapsedRank": 23,
           "currentPoints": [
             {
@@ -20809,6 +20869,10 @@
             },
             {
               "hour": 132,
+              "rank": 23
+            },
+            {
+              "hour": 133,
               "rank": 23
             }
           ],
@@ -21445,11 +21509,11 @@
           "nearbyRanking": [
             {
               "rank": 20,
-              "title": "Golden SixTONES"
+              "title": "Tokyo middle 30"
             },
             {
               "rank": 21,
-              "title": "夫を殺したはずなのに"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 22,
@@ -21466,7 +21530,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/25 10:07",
+      "updatedAt": "2026/08/25 11:07",
       "episodeId": "ep84f9w8rw",
       "subtitle": "第7話 想いが重なる夏の夜・・・あなたの事がひたすら好き",
       "likes": "2.0万",
@@ -21898,6 +21962,10 @@
         },
         {
           "hour": 108,
+          "likes": 20000
+        },
+        {
+          "hour": 109,
           "likes": 20000
         }
       ],
@@ -22532,7 +22600,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 9,
-          "elapsedHour": 108,
+          "elapsedHour": 109,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -22961,6 +23029,10 @@
             },
             {
               "hour": 108,
+              "rank": 9
+            },
+            {
+              "hour": 109,
               "rank": 9
             }
           ],
@@ -23613,7 +23685,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 11,
-          "elapsedHour": 108,
+          "elapsedHour": 109,
           "elapsedRank": 11,
           "currentPoints": [
             {
@@ -24042,6 +24114,10 @@
             },
             {
               "hour": 108,
+              "rank": 11
+            },
+            {
+              "hour": 109,
               "rank": 11
             }
           ],
