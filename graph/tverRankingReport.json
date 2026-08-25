@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/08/25 23:07",
+  "updatedAt": "2026/08/26 00:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/25 23:07",
+      "updatedAt": "2026/08/26 00:07",
       "episodeId": "eptbg59rwy",
       "subtitle": "timelesz100",
       "likes": "1.4万",
@@ -392,6 +392,10 @@
         },
         {
           "hour": 97,
+          "likes": 14000
+        },
+        {
+          "hour": 98,
           "likes": 14000
         }
       ],
@@ -1029,9 +1033,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 26,
-          "elapsedHour": 97,
-          "elapsedRank": 26,
+          "currentRank": 25,
+          "elapsedHour": 98,
+          "elapsedRank": 25,
           "currentPoints": [
             {
               "hour": 3,
@@ -1412,6 +1416,10 @@
             {
               "hour": 97,
               "rank": 26
+            },
+            {
+              "hour": 98,
+              "rank": 25
             }
           ],
           "previousPoints": [
@@ -2022,19 +2030,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 22,
+              "title": "くりぃむナンタラ"
+            },
+            {
               "rank": 23,
               "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
             },
             {
               "rank": 24,
-              "title": "くりぃむナンタラ"
-            },
-            {
-              "rank": 25,
               "title": "マルコポロリ！"
             },
             {
-              "rank": 26,
+              "rank": 25,
               "title": "タイムレスマン"
             }
           ]
@@ -2548,19 +2556,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Google Pixel presents ANOTHER SKY"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 48,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
               "rank": 49,
-              "title": "かまいたちの知らんけど"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "Google Pixel presents ANOTHER SKY"
             }
           ]
         }
@@ -2569,7 +2577,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/25 23:07",
+      "updatedAt": "2026/08/26 00:07",
       "episodeId": "ep55b7uj3p",
       "subtitle": "【韓国グルメSP】進化系料理&伝統ゲームで爆笑連発!",
       "likes": "1.2万",
@@ -2797,6 +2805,10 @@
         },
         {
           "hour": 57,
+          "likes": 12000
+        },
+        {
+          "hour": 58,
           "likes": 12000
         }
       ],
@@ -3439,7 +3451,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 16,
-          "elapsedHour": 57,
+          "elapsedHour": 58,
           "elapsedRank": 16,
           "currentPoints": [
             {
@@ -3644,6 +3656,10 @@
             },
             {
               "hour": 57,
+              "rank": 16
+            },
+            {
+              "hour": 58,
               "rank": 16
             }
           ],
@@ -4287,9 +4303,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 41,
-          "elapsedHour": 57,
-          "elapsedRank": 41,
+          "currentRank": 45,
+          "elapsedHour": 58,
+          "elapsedRank": 45,
           "currentPoints": [
             {
               "hour": 9,
@@ -4486,6 +4502,10 @@
             {
               "hour": 57,
               "rank": 41
+            },
+            {
+              "hour": 58,
+              "rank": 45
             }
           ],
           "previousPoints": [
@@ -4732,19 +4752,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 38,
-              "title": "有吉クイズ"
-            },
-            {
-              "rank": 39,
+              "rank": 42,
               "title": "マツコの知らない世界"
             },
             {
-              "rank": 40,
-              "title": "鬼の花嫁"
+              "rank": 43,
+              "title": "ちいかわ"
             },
             {
-              "rank": 41,
+              "rank": 44,
+              "title": "君の好きは無敵"
+            },
+            {
+              "rank": 45,
               "title": "timeleszファミリア"
             }
           ]
@@ -4754,7 +4774,7 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/18",
-      "updatedAt": "2026/08/25 23:07",
+      "updatedAt": "2026/08/26 00:07",
       "episodeId": "epjrd5nzjc",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！前編",
       "likes": "8675",
@@ -6023,9 +6043,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 28,
-          "elapsedHour": 167,
-          "elapsedRank": 28,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 6,
@@ -7032,20 +7052,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 25,
-              "title": "TRADE ROOM"
+              "rank": 47,
+              "title": "知識の扉よ開け！ドア×ドア クエスト"
             },
             {
-              "rank": 26,
-              "title": "秘密のケンミンSHOW極"
+              "rank": 48,
+              "title": "関西ジュニア ノーフィルター 〜殻、破ル。〜"
             },
             {
-              "rank": 27,
-              "title": "住人十色～家の数だけある 家族のカタチ～"
+              "rank": 49,
+              "title": "&TEAM vs FANTASTICS 最強スターはどっちだ？"
             },
             {
-              "rank": 28,
-              "title": "地球まるごと大実験 ネイチャーティーチャー"
+              "rank": 50,
+              "title": "世界くらべてみたら"
             }
           ]
         },
@@ -7190,19 +7210,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "VIVANT 悪役会議室"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 49,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 50,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "相席食堂"
             }
           ]
         }
@@ -7211,7 +7231,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/25 23:07",
+      "updatedAt": "2026/08/26 00:07",
       "episodeId": "epejkq59pb",
       "subtitle": "【準決勝】天才すぎる…謎解き王決定戦SP 第2話",
       "likes": "1.4万",
@@ -7771,6 +7791,10 @@
         },
         {
           "hour": 141,
+          "likes": 14000
+        },
+        {
+          "hour": 142,
           "likes": 14000
         }
       ],
@@ -9058,19 +9082,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "VIVANT 悪役会議室"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 49,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 50,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "相席食堂"
             }
           ]
         },
@@ -9435,19 +9459,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Google Pixel presents ANOTHER SKY"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 48,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
               "rank": 49,
-              "title": "かまいたちの知らんけど"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "Google Pixel presents ANOTHER SKY"
             }
           ]
         }
@@ -9456,10 +9480,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/25 23:07",
+      "updatedAt": "2026/08/26 00:07",
       "episodeId": "eppaa3pee6",
       "subtitle": "24時間テレビ企画!巨大弓矢で福島から日本全国にエール",
-      "likes": "4340",
+      "likes": "4368",
       "favorites": "53.3万",
       "likePoints": [
         {
@@ -9665,6 +9689,10 @@
         {
           "hour": 52,
           "likes": 4340
+        },
+        {
+          "hour": 53,
+          "likes": 4368
         }
       ],
       "previousLikePoints": [
@@ -10306,7 +10334,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 17,
-          "elapsedHour": 52,
+          "elapsedHour": 53,
           "elapsedRank": 17,
           "currentPoints": [
             {
@@ -10507,6 +10535,10 @@
             },
             {
               "hour": 52,
+              "rank": 17
+            },
+            {
+              "hour": 53,
               "rank": 17
             }
           ],
@@ -11139,7 +11171,7 @@
           "nearbyRanking": [
             {
               "rank": 14,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 15,
@@ -11376,19 +11408,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "VIVANT 悪役会議室"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 49,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 50,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "相席食堂"
             }
           ]
         }
@@ -11397,7 +11429,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/25 23:07",
+      "updatedAt": "2026/08/26 00:07",
       "episodeId": "epd7ebv3mp",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！=LOVE登場",
       "likes": "1.3万",
@@ -12832,19 +12864,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "VIVANT 悪役会議室"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 49,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 50,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "相席食堂"
             }
           ]
         },
@@ -12948,19 +12980,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Google Pixel presents ANOTHER SKY"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 48,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
               "rank": 49,
-              "title": "かまいたちの知らんけど"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "Google Pixel presents ANOTHER SKY"
             }
           ]
         }
@@ -12969,10 +13001,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/25 23:07",
+      "updatedAt": "2026/08/26 00:07",
       "episodeId": "eprp4uddvt",
       "subtitle": "第141回 のんと深川麻衣の許せない飯で衝撃のラストが！",
-      "likes": "4670",
+      "likes": "4690",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -13446,6 +13478,10 @@
         {
           "hour": 119,
           "likes": 4670
+        },
+        {
+          "hour": 120,
+          "likes": 4690
         }
       ],
       "previousLikePoints": [
@@ -14520,19 +14556,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "VIVANT 悪役会議室"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 49,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 50,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "相席食堂"
             }
           ]
         },
@@ -14697,19 +14733,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Google Pixel presents ANOTHER SKY"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 48,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
               "rank": 49,
-              "title": "かまいたちの知らんけど"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "Google Pixel presents ANOTHER SKY"
             }
           ]
         }
@@ -14718,7 +14754,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/25 23:07",
+      "updatedAt": "2026/08/26 00:07",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
       "likes": "1.0万",
@@ -15358,10 +15394,6 @@
         }
       ],
       "previousLikePoints": [
-        {
-          "hour": 77,
-          "likes": 1321
-        },
         {
           "hour": 78,
           "likes": 1329
@@ -16404,19 +16436,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "VIVANT 悪役会議室"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 49,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 50,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "相席食堂"
             }
           ]
         },
@@ -16836,19 +16868,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Google Pixel presents ANOTHER SKY"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 48,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
               "rank": 49,
-              "title": "かまいたちの知らんけど"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "Google Pixel presents ANOTHER SKY"
             }
           ]
         }
@@ -16857,10 +16889,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/25 23:07",
+      "updatedAt": "2026/08/26 00:07",
       "episodeId": "epp5sd3y19",
       "subtitle": "運命の日本武道館ライブまで密着",
-      "likes": "3599",
+      "likes": "3608",
       "favorites": "3.5万",
       "likePoints": [
         {
@@ -17326,6 +17358,10 @@
         {
           "hour": 117,
           "likes": 3599
+        },
+        {
+          "hour": 118,
+          "likes": 3608
         }
       ],
       "previousLikePoints": [
@@ -18468,19 +18504,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "草彅やすともの うさぎとかめ"
-            },
-            {
-              "rank": 48,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
-            },
-            {
-              "rank": 49,
               "title": "滝沢カレン＆和田明日香のフィーリンきっちん"
             },
             {
+              "rank": 48,
+              "title": "鶴瓶ちゃんとサワコちゃん～昭和の大先輩とおかしな２人～"
+            },
+            {
+              "rank": 49,
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
+            },
+            {
               "rank": 50,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "草彅やすともの うさぎとかめ"
             }
           ]
         },
@@ -18584,19 +18620,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ラヴィット！"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "VIVANT 悪役会議室"
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
               "rank": 49,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 50,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "相席食堂"
             }
           ]
         }
@@ -18605,7 +18641,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/25 23:07",
+      "updatedAt": "2026/08/26 00:07",
       "episodeId": "ep8dh8exqw",
       "subtitle": "#7 私を捨てた母、私が向き合う命",
       "likes": "1.2万",
@@ -19177,6 +19213,10 @@
         },
         {
           "hour": 145,
+          "likes": 12000
+        },
+        {
+          "hour": 146,
           "likes": 12000
         }
       ],
@@ -19799,7 +19839,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 14,
-          "elapsedHour": 145,
+          "elapsedHour": 146,
           "elapsedRank": 14,
           "currentPoints": [
             {
@@ -20368,6 +20408,10 @@
             },
             {
               "hour": 145,
+              "rank": 14
+            },
+            {
+              "hour": 146,
               "rank": 14
             }
           ],
@@ -21008,11 +21052,11 @@
           "nearbyRanking": [
             {
               "rank": 11,
-              "title": "ラストノート"
+              "title": "陽キャ集団にいる芹沢は、俺の前だと様子がおかしい"
             },
             {
               "rank": 12,
-              "title": "陽キャ集団にいる芹沢は、俺の前だと様子がおかしい"
+              "title": "ラストノート"
             },
             {
               "rank": 13,
@@ -21027,9 +21071,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 24,
-          "elapsedHour": 145,
-          "elapsedRank": 24,
+          "currentRank": 22,
+          "elapsedHour": 146,
+          "elapsedRank": 22,
           "currentPoints": [
             {
               "hour": 4,
@@ -21594,6 +21638,10 @@
             {
               "hour": 145,
               "rank": 24
+            },
+            {
+              "hour": 146,
+              "rank": 22
             }
           ],
           "previousPoints": [
@@ -22228,19 +22276,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 19,
+              "title": "アメトーーク！"
+            },
+            {
+              "rank": 20,
+              "title": "上田と女が吠える夜"
+            },
+            {
               "rank": 21,
               "title": "大空港～GATE24～"
             },
             {
               "rank": 22,
-              "title": "情熱大陸"
-            },
-            {
-              "rank": 23,
-              "title": "水曜日のダウンタウン"
-            },
-            {
-              "rank": 24,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -22250,10 +22298,10 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/25 23:07",
+      "updatedAt": "2026/08/26 00:07",
       "episodeId": "ep84f9w8rw",
       "subtitle": "第7話 想いが重なる夏の夜・・・あなたの事がひたすら好き",
-      "likes": "2.0万",
+      "likes": "2.1万",
       "favorites": "71.1万",
       "likePoints": [
         {
@@ -22735,6 +22783,10 @@
         {
           "hour": 121,
           "likes": 20000
+        },
+        {
+          "hour": 122,
+          "likes": 21000
         }
       ],
       "previousLikePoints": [
@@ -23367,9 +23419,9 @@
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 11,
-          "elapsedHour": 121,
-          "elapsedRank": 11,
+          "currentRank": 12,
+          "elapsedHour": 122,
+          "elapsedRank": 12,
           "currentPoints": [
             {
               "hour": 2,
@@ -23850,6 +23902,10 @@
             {
               "hour": 121,
               "rank": 11
+            },
+            {
+              "hour": 122,
+              "rank": 12
             }
           ],
           "previousPoints": [
@@ -24480,10 +24536,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 8,
-              "title": "Ｔシャツが乾くまで"
-            },
-            {
               "rank": 9,
               "title": "告白―25年目の秘密―"
             },
@@ -24493,6 +24545,10 @@
             },
             {
               "rank": 11,
+              "title": "陽キャ集団にいる芹沢は、俺の前だと様子がおかしい"
+            },
+            {
+              "rank": 12,
               "title": "ラストノート"
             }
           ]
@@ -24500,9 +24556,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 15,
-          "elapsedHour": 121,
-          "elapsedRank": 15,
+          "currentRank": 16,
+          "elapsedHour": 122,
+          "elapsedRank": 16,
           "currentPoints": [
             {
               "hour": 2,
@@ -24983,6 +25039,10 @@
             {
               "hour": 121,
               "rank": 15
+            },
+            {
+              "hour": 122,
+              "rank": 16
             }
           ],
           "previousPoints": [
@@ -25613,19 +25673,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 12,
-              "title": "35歳、今さら恋とかありえない"
-            },
-            {
               "rank": 13,
               "title": "日曜日の初耳学"
             },
             {
               "rank": 14,
-              "title": "SASUKE ワールドカップ2026"
+              "title": "陽キャ集団にいる芹沢は、俺の前だと様子がおかしい"
             },
             {
               "rank": 15,
+              "title": "大悟の芸人領収書"
+            },
+            {
+              "rank": 16,
               "title": "ラストノート"
             }
           ]
