@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/08/26 18:08",
+  "updatedAt": "2026/08/26 19:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/26 18:08",
+      "updatedAt": "2026/08/26 19:07",
       "episodeId": "eptbg59rwy",
       "subtitle": "timelesz100",
       "likes": "1.5万",
@@ -464,6 +464,14 @@
         },
         {
           "hour": 115,
+          "likes": 15000
+        },
+        {
+          "hour": 116,
+          "likes": 15000
+        },
+        {
+          "hour": 117,
           "likes": 15000
         }
       ],
@@ -1101,9 +1109,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 39,
-          "elapsedHour": 116,
-          "elapsedRank": 39,
+          "currentRank": 38,
+          "elapsedHour": 117,
+          "elapsedRank": 38,
           "currentPoints": [
             {
               "hour": 3,
@@ -1560,6 +1568,10 @@
             {
               "hour": 116,
               "rank": 39
+            },
+            {
+              "hour": 117,
+              "rank": 38
             }
           ],
           "previousPoints": [
@@ -2170,8 +2182,12 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 35,
+              "title": "有吉ゼミ"
+            },
+            {
               "rank": 36,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             },
             {
               "rank": 37,
@@ -2179,10 +2195,6 @@
             },
             {
               "rank": 38,
-              "title": "深夜のダイアン"
-            },
-            {
-              "rank": 39,
               "title": "タイムレスマン"
             }
           ]
@@ -2717,7 +2729,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/26 18:08",
+      "updatedAt": "2026/08/26 19:07",
       "episodeId": "ep55b7uj3p",
       "subtitle": "【韓国グルメSP】進化系料理&伝統ゲームで爆笑連発!",
       "likes": "1.2万",
@@ -3017,6 +3029,14 @@
         },
         {
           "hour": 75,
+          "likes": 12000
+        },
+        {
+          "hour": 76,
+          "likes": 12000
+        },
+        {
+          "hour": 77,
           "likes": 12000
         }
       ],
@@ -3658,9 +3678,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 27,
-          "elapsedHour": 76,
-          "elapsedRank": 27,
+          "currentRank": 30,
+          "elapsedHour": 77,
+          "elapsedRank": 30,
           "currentPoints": [
             {
               "hour": 7,
@@ -3941,6 +3961,10 @@
             {
               "hour": 76,
               "rank": 27
+            },
+            {
+              "hour": 77,
+              "rank": 30
             }
           ],
           "previousPoints": [
@@ -4563,19 +4587,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 24,
-              "title": "突然ですが占ってもいいですか？"
-            },
-            {
-              "rank": 25,
+              "rank": 27,
               "title": "家、ついて行ってイイですか？"
             },
             {
-              "rank": 26,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "rank": 28,
+              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
             },
             {
-              "rank": 27,
+              "rank": 29,
+              "title": "開運！なんでも鑑定団"
+            },
+            {
+              "rank": 30,
               "title": "timeleszファミリア"
             }
           ]
@@ -5090,10 +5114,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/25",
-      "updatedAt": "2026/08/26 18:08",
+      "updatedAt": "2026/08/26 19:07",
       "episodeId": "epguch9hd0",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！後編",
-      "likes": "3919",
+      "likes": "4218",
       "favorites": "5.9万",
       "likePoints": [
         {
@@ -5163,6 +5187,14 @@
         {
           "hour": 17,
           "likes": 3919
+        },
+        {
+          "hour": 18,
+          "likes": 4080
+        },
+        {
+          "hour": 19,
+          "likes": 4218
         }
       ],
       "previousLikePoints": [
@@ -5808,7 +5840,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 12,
-          "elapsedHour": 18,
+          "elapsedHour": 19,
           "elapsedRank": 12,
           "currentPoints": [
             {
@@ -5861,6 +5893,10 @@
             },
             {
               "hour": 18,
+              "rank": 12
+            },
+            {
+              "hour": 19,
               "rank": 12
             }
           ],
@@ -6408,10 +6444,15 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 50,
+          "elapsedHour": 19,
+          "elapsedRank": 50,
+          "currentPoints": [
+            {
+              "hour": 19,
+              "rank": 50
+            }
+          ],
           "previousPoints": [
             {
               "hour": 16,
@@ -6493,11 +6534,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "限界突破！やってM!LK"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "バナナサンド"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 49,
@@ -6505,7 +6546,7 @@
             },
             {
               "rank": 50,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
         }
@@ -6514,7 +6555,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/26 18:08",
+      "updatedAt": "2026/08/26 19:07",
       "episodeId": "epejkq59pb",
       "subtitle": "【準決勝】天才すぎる…謎解き王決定戦SP 第2話",
       "likes": "1.4万",
@@ -7146,6 +7187,14 @@
         },
         {
           "hour": 159,
+          "likes": 14000
+        },
+        {
+          "hour": 160,
+          "likes": 14000
+        },
+        {
+          "hour": 161,
           "likes": 14000
         }
       ],
@@ -8433,11 +8482,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "限界突破！やってM!LK"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "バナナサンド"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 49,
@@ -8445,7 +8494,7 @@
             },
             {
               "rank": 50,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
         },
@@ -8831,10 +8880,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/26 18:08",
+      "updatedAt": "2026/08/26 19:07",
       "episodeId": "eppaa3pee6",
       "subtitle": "24時間テレビ企画!巨大弓矢で福島から日本全国にエール",
-      "likes": "4647",
+      "likes": "4706",
       "favorites": "53.3万",
       "likePoints": [
         {
@@ -9112,6 +9161,14 @@
         {
           "hour": 70,
           "likes": 4647
+        },
+        {
+          "hour": 71,
+          "likes": 4678
+        },
+        {
+          "hour": 72,
+          "likes": 4706
         }
       ],
       "previousLikePoints": [
@@ -9752,9 +9809,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 24,
-          "elapsedHour": 71,
-          "elapsedRank": 24,
+          "currentRank": 25,
+          "elapsedHour": 72,
+          "elapsedRank": 25,
           "currentPoints": [
             {
               "hour": 3,
@@ -10031,6 +10088,10 @@
             {
               "hour": 71,
               "rank": 24
+            },
+            {
+              "hour": 72,
+              "rank": 25
             }
           ],
           "previousPoints": [
@@ -10661,10 +10722,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 21,
-              "title": "櫻井･有吉THE夜会"
-            },
-            {
               "rank": 22,
               "title": "サンド＆キスマイの気になるマン"
             },
@@ -10674,6 +10731,10 @@
             },
             {
               "rank": 24,
+              "title": "ぐるぐるナインティナイン"
+            },
+            {
+              "rank": 25,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -10899,11 +10960,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "限界突破！やってM!LK"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "バナナサンド"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 49,
@@ -10911,7 +10972,7 @@
             },
             {
               "rank": 50,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
         }
@@ -10920,10 +10981,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/26",
-      "updatedAt": "2026/08/26 18:08",
+      "updatedAt": "2026/08/26 19:07",
       "episodeId": "ep8ee4pzpw",
       "subtitle": "【山崎育三郎】TV進出の裏にあった真意とは？",
-      "likes": "2215",
+      "likes": "2395",
       "favorites": "12.4万",
       "likePoints": [
         {
@@ -10985,6 +11046,14 @@
         {
           "hour": 16,
           "likes": 2215
+        },
+        {
+          "hour": 18,
+          "likes": 2318
+        },
+        {
+          "hour": 19,
+          "likes": 2395
         }
       ],
       "previousLikePoints": [
@@ -11790,11 +11859,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "限界突破！やってM!LK"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "バナナサンド"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 49,
@@ -11802,7 +11871,7 @@
             },
             {
               "rank": 50,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
         },
@@ -11927,10 +11996,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/26 18:08",
+      "updatedAt": "2026/08/26 19:07",
       "episodeId": "eprp4uddvt",
       "subtitle": "第141回 のんと深川麻衣の許せない飯で衝撃のラストが！",
-      "likes": "4834",
+      "likes": "4855",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -12476,6 +12545,14 @@
         {
           "hour": 137,
           "likes": 4834
+        },
+        {
+          "hour": 138,
+          "likes": 4849
+        },
+        {
+          "hour": 139,
+          "likes": 4855
         }
       ],
       "previousLikePoints": [
@@ -13550,11 +13627,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "限界突破！やってM!LK"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "バナナサンド"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 49,
@@ -13562,7 +13639,7 @@
             },
             {
               "rank": 50,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
         },
@@ -13748,7 +13825,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/26 18:08",
+      "updatedAt": "2026/08/26 19:07",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
       "likes": "1.0万",
@@ -14388,14 +14465,6 @@
         }
       ],
       "previousLikePoints": [
-        {
-          "hour": 95,
-          "likes": 1393
-        },
-        {
-          "hour": 96,
-          "likes": 1394
-        },
         {
           "hour": 97,
           "likes": 1400
@@ -15362,11 +15431,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "限界突破！やってM!LK"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "バナナサンド"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 49,
@@ -15374,7 +15443,7 @@
             },
             {
               "rank": 50,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
         },
@@ -15815,10 +15884,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/26 18:08",
+      "updatedAt": "2026/08/26 19:07",
       "episodeId": "epp5sd3y19",
       "subtitle": "運命の日本武道館ライブまで密着",
-      "likes": "3718",
+      "likes": "3743",
       "favorites": "3.5万",
       "likePoints": [
         {
@@ -16356,6 +16425,14 @@
         {
           "hour": 135,
           "likes": 3718
+        },
+        {
+          "hour": 136,
+          "likes": 3731
+        },
+        {
+          "hour": 137,
+          "likes": 3743
         }
       ],
       "previousLikePoints": [
@@ -17498,11 +17575,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "START UP！ドリームエンタ"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 48,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "START UP！ドリームエンタ"
             },
             {
               "rank": 49,
@@ -17614,11 +17691,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "限界突破！やってM!LK"
+              "title": "かまいガチ"
             },
             {
               "rank": 48,
-              "title": "バナナサンド"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 49,
@@ -17626,7 +17703,7 @@
             },
             {
               "rank": 50,
-              "title": "東野・岡村の旅猿28 ～プライベートでごめんなさい…"
+              "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
         }
@@ -17635,11 +17712,11 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/19",
-      "updatedAt": "2026/08/26 18:08",
+      "updatedAt": "2026/08/26 19:07",
       "episodeId": "ep8dh8exqw",
       "subtitle": "#7 私を捨てた母、私が向き合う命",
       "likes": "1.2万",
-      "favorites": "65.4万",
+      "favorites": "65.3万",
       "likePoints": [
         {
           "hour": 1,
@@ -18280,6 +18357,14 @@
         {
           "hour": 163,
           "likes": 12000
+        },
+        {
+          "hour": 164,
+          "likes": 12000
+        },
+        {
+          "hour": 165,
+          "likes": 12000
         }
       ],
       "previousLikePoints": [
@@ -18901,7 +18986,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 15,
-          "elapsedHour": 164,
+          "elapsedHour": 165,
           "elapsedRank": 15,
           "currentPoints": [
             {
@@ -19546,6 +19631,10 @@
             },
             {
               "hour": 164,
+              "rank": 15
+            },
+            {
+              "hour": 165,
               "rank": 15
             }
           ],
@@ -20206,7 +20295,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 24,
-          "elapsedHour": 164,
+          "elapsedHour": 165,
           "elapsedRank": 24,
           "currentPoints": [
             {
@@ -20848,6 +20937,10 @@
             {
               "hour": 164,
               "rank": 24
+            },
+            {
+              "hour": 165,
+              "rank": 24
             }
           ],
           "previousPoints": [
@@ -21483,15 +21576,15 @@
           "nearbyRanking": [
             {
               "rank": 21,
-              "title": "日曜日の初耳学"
+              "title": "35歳、今さら恋とかありえない"
             },
             {
               "rank": 22,
-              "title": "ロンドンハーツ"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 23,
-              "title": "マツコの知らない世界"
+              "title": "日曜日の初耳学"
             },
             {
               "rank": 24,
@@ -21504,7 +21597,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/20",
-      "updatedAt": "2026/08/26 18:08",
+      "updatedAt": "2026/08/26 19:07",
       "episodeId": "ep84f9w8rw",
       "subtitle": "第7話 想いが重なる夏の夜・・・あなたの事がひたすら好き",
       "likes": "2.1万",
@@ -22060,6 +22153,14 @@
         },
         {
           "hour": 139,
+          "likes": 21000
+        },
+        {
+          "hour": 140,
+          "likes": 21000
+        },
+        {
+          "hour": 141,
           "likes": 21000
         }
       ],
@@ -22694,7 +22795,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 13,
-          "elapsedHour": 140,
+          "elapsedHour": 141,
           "elapsedRank": 13,
           "currentPoints": [
             {
@@ -23251,6 +23352,10 @@
             },
             {
               "hour": 140,
+              "rank": 13
+            },
+            {
+              "hour": 141,
               "rank": 13
             }
           ],
@@ -23902,9 +24007,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 18,
-          "elapsedHour": 140,
-          "elapsedRank": 18,
+          "currentRank": 20,
+          "elapsedHour": 141,
+          "elapsedRank": 20,
           "currentPoints": [
             {
               "hour": 2,
@@ -24461,6 +24566,10 @@
             {
               "hour": 140,
               "rank": 18
+            },
+            {
+              "hour": 141,
+              "rank": 20
             }
           ],
           "previousPoints": [
@@ -25091,19 +25200,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 15,
-              "title": "夫が寝たあとに"
-            },
-            {
-              "rank": 16,
-              "title": "上田と女がDEEPに吠える夜"
-            },
-            {
               "rank": 17,
               "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 18,
+              "title": "ロンドンハーツ"
+            },
+            {
+              "rank": 19,
+              "title": "マツコの知らない世界"
+            },
+            {
+              "rank": 20,
               "title": "ラストノート"
             }
           ]
