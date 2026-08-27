@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/08/27 17:07",
+  "updatedAt": "2026/08/27 18:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/27 17:07",
+      "updatedAt": "2026/08/27 18:07",
       "episodeId": "eptbg59rwy",
       "subtitle": "timelesz100",
       "likes": "1.6万",
@@ -556,6 +556,10 @@
         },
         {
           "hour": 139,
+          "likes": 16000
+        },
+        {
+          "hour": 140,
           "likes": 16000
         }
       ],
@@ -1193,9 +1197,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 45,
-          "elapsedHour": 139,
-          "elapsedRank": 45,
+          "currentRank": 44,
+          "elapsedHour": 140,
+          "elapsedRank": 44,
           "currentPoints": [
             {
               "hour": 3,
@@ -1740,6 +1744,10 @@
             {
               "hour": 139,
               "rank": 45
+            },
+            {
+              "hour": 140,
+              "rank": 44
             }
           ],
           "previousPoints": [
@@ -2350,8 +2358,12 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 42,
+              "rank": 41,
               "title": "かまいたちの知らんけど"
+            },
+            {
+              "rank": 42,
+              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
             },
             {
               "rank": 43,
@@ -2359,10 +2371,6 @@
             },
             {
               "rank": 44,
-              "title": "timeleszファミリア"
-            },
-            {
-              "rank": 45,
               "title": "タイムレスマン"
             }
           ]
@@ -2880,11 +2888,11 @@
             },
             {
               "rank": 48,
-              "title": "月曜から夜ふかし"
+              "title": "35歳、今さら恋とかありえない"
             },
             {
               "rank": 49,
-              "title": "よるのブランチ"
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 50,
@@ -2897,7 +2905,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/27 17:07",
+      "updatedAt": "2026/08/27 18:07",
       "episodeId": "ep55b7uj3p",
       "subtitle": "【韓国グルメSP】進化系料理&伝統ゲームで爆笑連発!",
       "likes": "1.3万",
@@ -3289,6 +3297,10 @@
         },
         {
           "hour": 99,
+          "likes": 13000
+        },
+        {
+          "hour": 100,
           "likes": 13000
         }
       ],
@@ -3930,9 +3942,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 44,
-          "elapsedHour": 99,
-          "elapsedRank": 44,
+          "currentRank": 45,
+          "elapsedHour": 100,
+          "elapsedRank": 45,
           "currentPoints": [
             {
               "hour": 7,
@@ -4301,6 +4313,10 @@
             {
               "hour": 99,
               "rank": 44
+            },
+            {
+              "hour": 100,
+              "rank": 45
             }
           ],
           "previousPoints": [
@@ -4923,12 +4939,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 41,
-              "title": "吉田と粗品と"
-            },
-            {
               "rank": 42,
-              "title": "かまいたちの知らんけど"
+              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
             },
             {
               "rank": 43,
@@ -4936,6 +4948,10 @@
             },
             {
               "rank": 44,
+              "title": "タイムレスマン"
+            },
+            {
+              "rank": 45,
               "title": "timeleszファミリア"
             }
           ]
@@ -5433,11 +5449,11 @@
             },
             {
               "rank": 48,
-              "title": "月曜から夜ふかし"
+              "title": "35歳、今さら恋とかありえない"
             },
             {
               "rank": 49,
-              "title": "よるのブランチ"
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 50,
@@ -5450,10 +5466,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/25",
-      "updatedAt": "2026/08/27 17:07",
+      "updatedAt": "2026/08/27 18:07",
       "episodeId": "epguch9hd0",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！後編",
-      "likes": "5719",
+      "likes": "5747",
       "favorites": "5.9万",
       "likePoints": [
         {
@@ -5615,6 +5631,10 @@
         {
           "hour": 41,
           "likes": 5719
+        },
+        {
+          "hour": 42,
+          "likes": 5747
         }
       ],
       "previousLikePoints": [
@@ -6260,7 +6280,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 13,
-          "elapsedHour": 41,
+          "elapsedHour": 42,
           "elapsedRank": 13,
           "currentPoints": [
             {
@@ -6401,6 +6421,10 @@
             },
             {
               "hour": 41,
+              "rank": 13
+            },
+            {
+              "hour": 42,
               "rank": 13
             }
           ],
@@ -7106,7 +7130,7 @@
             },
             {
               "rank": 48,
-              "title": "有吉クイズ"
+              "title": "いたジャン！"
             },
             {
               "rank": 49,
@@ -7114,7 +7138,7 @@
             },
             {
               "rank": 50,
-              "title": "ゴッドタン"
+              "title": "有吉クイズ"
             }
           ]
         }
@@ -7123,10 +7147,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/27",
-      "updatedAt": "2026/08/27 17:07",
+      "updatedAt": "2026/08/27 18:07",
       "episodeId": "ep7w5egegm",
       "subtitle": "【決勝】大熱戦！謎解き王決定戦SP 第3話",
-      "likes": "6967",
+      "likes": "7306",
       "favorites": "24.6万",
       "likePoints": [
         {
@@ -7188,6 +7212,10 @@
         {
           "hour": 15,
           "likes": 6967
+        },
+        {
+          "hour": 16,
+          "likes": 7306
         }
       ],
       "previousLikePoints": [
@@ -7864,9 +7892,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 16,
-          "elapsedHour": 15,
-          "elapsedRank": 16,
+          "currentRank": 14,
+          "elapsedHour": 16,
+          "elapsedRank": 14,
           "currentPoints": [
             {
               "hour": 7,
@@ -7903,6 +7931,10 @@
             {
               "hour": 15,
               "rank": 16
+            },
+            {
+              "hour": 16,
+              "rank": 14
             }
           ],
           "previousPoints": [
@@ -8229,19 +8261,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 11,
+              "title": "ザ！世界仰天ニュース"
+            },
+            {
+              "rank": 12,
+              "title": "あちこちオードリー"
+            },
+            {
               "rank": 13,
               "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 14,
-              "title": "アメトーーク！"
-            },
-            {
-              "rank": 15,
-              "title": "相席食堂"
-            },
-            {
-              "rank": 16,
               "title": "ニカゲーム"
             }
           ]
@@ -8249,9 +8281,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 40,
-          "elapsedHour": 15,
-          "elapsedRank": 40,
+          "currentRank": 36,
+          "elapsedHour": 16,
+          "elapsedRank": 36,
           "currentPoints": [
             {
               "hour": 11,
@@ -8272,6 +8304,10 @@
             {
               "hour": 15,
               "rank": 40
+            },
+            {
+              "hour": 16,
+              "rank": 36
             }
           ],
           "previousPoints": [
@@ -8446,19 +8482,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 37,
-              "title": "アメトーーク！"
+              "rank": 33,
+              "title": "君は夏のなか"
             },
             {
-              "rank": 38,
-              "title": "相席食堂"
+              "rank": 34,
+              "title": "幸せになりたいマサムネ君"
             },
             {
-              "rank": 39,
-              "title": "薬屋のひとりごと"
+              "rank": 35,
+              "title": "世界の果てまでイッテQ！"
             },
             {
-              "rank": 40,
+              "rank": 36,
               "title": "ニカゲーム"
             }
           ]
@@ -8468,10 +8504,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/27 17:07",
+      "updatedAt": "2026/08/27 18:07",
       "episodeId": "eppaa3pee6",
       "subtitle": "24時間テレビ企画!巨大弓矢で福島から日本全国にエール",
-      "likes": "4997",
+      "likes": "5017",
       "favorites": "53.3万",
       "likePoints": [
         {
@@ -8841,6 +8877,10 @@
         {
           "hour": 94,
           "likes": 4997
+        },
+        {
+          "hour": 95,
+          "likes": 5017
         }
       ],
       "previousLikePoints": [
@@ -9482,7 +9522,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 32,
-          "elapsedHour": 94,
+          "elapsedHour": 95,
           "elapsedRank": 32,
           "currentPoints": [
             {
@@ -9847,6 +9887,10 @@
             },
             {
               "hour": 94,
+              "rank": 32
+            },
+            {
+              "hour": 95,
               "rank": 32
             }
           ],
@@ -10479,7 +10523,7 @@
           "nearbyRanking": [
             {
               "rank": 29,
-              "title": "Travis JapanノJUST！シン日本遺産"
+              "title": "VS.超特急"
             },
             {
               "rank": 30,
@@ -10720,7 +10764,7 @@
             },
             {
               "rank": 48,
-              "title": "有吉クイズ"
+              "title": "いたジャン！"
             },
             {
               "rank": 49,
@@ -10728,7 +10772,7 @@
             },
             {
               "rank": 50,
-              "title": "ゴッドタン"
+              "title": "有吉クイズ"
             }
           ]
         }
@@ -10737,10 +10781,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/26",
-      "updatedAt": "2026/08/27 17:07",
+      "updatedAt": "2026/08/27 18:07",
       "episodeId": "ep8ee4pzpw",
       "subtitle": "【山崎育三郎】TV進出の裏にあった真意とは？",
-      "likes": "3280",
+      "likes": "3309",
       "favorites": "12.5万",
       "likePoints": [
         {
@@ -10878,6 +10922,10 @@
         {
           "hour": 40,
           "likes": 3280
+        },
+        {
+          "hour": 41,
+          "likes": 3309
         }
       ],
       "previousLikePoints": [
@@ -11687,7 +11735,7 @@
             },
             {
               "rank": 48,
-              "title": "有吉クイズ"
+              "title": "いたジャン！"
             },
             {
               "rank": 49,
@@ -11695,7 +11743,7 @@
             },
             {
               "rank": 50,
-              "title": "ゴッドタン"
+              "title": "有吉クイズ"
             }
           ]
         },
@@ -11803,11 +11851,11 @@
             },
             {
               "rank": 48,
-              "title": "月曜から夜ふかし"
+              "title": "35歳、今さら恋とかありえない"
             },
             {
               "rank": 49,
-              "title": "よるのブランチ"
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 50,
@@ -11820,10 +11868,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/27 17:07",
+      "updatedAt": "2026/08/27 18:07",
       "episodeId": "eprp4uddvt",
       "subtitle": "第141回 のんと深川麻衣の許せない飯で衝撃のラストが！",
-      "likes": "5150",
+      "likes": "5175",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -12453,6 +12501,10 @@
         {
           "hour": 161,
           "likes": 5150
+        },
+        {
+          "hour": 162,
+          "likes": 5175
         }
       ],
       "previousLikePoints": [
@@ -13531,7 +13583,7 @@
             },
             {
               "rank": 48,
-              "title": "有吉クイズ"
+              "title": "いたジャン！"
             },
             {
               "rank": 49,
@@ -13539,7 +13591,7 @@
             },
             {
               "rank": 50,
-              "title": "ゴッドタン"
+              "title": "有吉クイズ"
             }
           ]
         },
@@ -13708,11 +13760,11 @@
             },
             {
               "rank": 48,
-              "title": "月曜から夜ふかし"
+              "title": "35歳、今さら恋とかありえない"
             },
             {
               "rank": 49,
-              "title": "よるのブランチ"
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 50,
@@ -13725,7 +13777,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/27 17:07",
+      "updatedAt": "2026/08/27 18:07",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
       "likes": "1.0万",
@@ -14365,10 +14417,6 @@
         }
       ],
       "previousLikePoints": [
-        {
-          "hour": 119,
-          "likes": 1464
-        },
         {
           "hour": 120,
           "likes": 1469
@@ -15247,7 +15295,7 @@
             },
             {
               "rank": 48,
-              "title": "有吉クイズ"
+              "title": "いたジャン！"
             },
             {
               "rank": 49,
@@ -15255,7 +15303,7 @@
             },
             {
               "rank": 50,
-              "title": "ゴッドタン"
+              "title": "有吉クイズ"
             }
           ]
         },
@@ -15679,11 +15727,11 @@
             },
             {
               "rank": 48,
-              "title": "月曜から夜ふかし"
+              "title": "35歳、今さら恋とかありえない"
             },
             {
               "rank": 49,
-              "title": "よるのブランチ"
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 50,
@@ -15696,10 +15744,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/27 17:07",
+      "updatedAt": "2026/08/27 18:07",
       "episodeId": "epp5sd3y19",
       "subtitle": "運命の日本武道館ライブまで密着",
-      "likes": "3904",
+      "likes": "3910",
       "favorites": "3.6万",
       "likePoints": [
         {
@@ -16329,6 +16377,10 @@
         {
           "hour": 159,
           "likes": 3904
+        },
+        {
+          "hour": 160,
+          "likes": 3910
         }
       ],
       "previousLikePoints": [
@@ -17471,11 +17523,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "太田上田"
+              "title": "なるみ・岡村の過ぎるＴＶ"
             },
             {
               "rank": 48,
-              "title": "なるみ・岡村の過ぎるＴＶ"
+              "title": "太田上田"
             },
             {
               "rank": 49,
@@ -17591,7 +17643,7 @@
             },
             {
               "rank": 48,
-              "title": "有吉クイズ"
+              "title": "いたジャン！"
             },
             {
               "rank": 49,
@@ -17599,7 +17651,7 @@
             },
             {
               "rank": 50,
-              "title": "ゴッドタン"
+              "title": "有吉クイズ"
             }
           ]
         }
@@ -17608,10 +17660,10 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/26",
-      "updatedAt": "2026/08/27 17:07",
+      "updatedAt": "2026/08/27 18:07",
       "episodeId": "epsijorwie",
       "subtitle": "#8 最終章!!産み捨てた母と対峙!!",
-      "likes": "4873",
+      "likes": "5128",
       "favorites": "65.4万",
       "likePoints": [
         {
@@ -17685,6 +17737,10 @@
         {
           "hour": 19,
           "likes": 4873
+        },
+        {
+          "hour": 20,
+          "likes": 5128
         }
       ],
       "previousLikePoints": [
@@ -18350,7 +18406,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 3,
-          "elapsedHour": 19,
+          "elapsedHour": 20,
           "elapsedRank": 3,
           "currentPoints": [
             {
@@ -18419,6 +18475,10 @@
             },
             {
               "hour": 19,
+              "rank": 3
+            },
+            {
+              "hour": 20,
               "rank": 3
             }
           ],
@@ -19083,11 +19143,11 @@
           "nearbyRanking": [
             {
               "rank": 1,
-              "title": "VIVANT"
+              "title": "Tokyo middle 30"
             },
             {
               "rank": 2,
-              "title": "Tokyo middle 30"
+              "title": "VIVANT"
             },
             {
               "rank": 3,
@@ -19099,7 +19159,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 3,
-          "elapsedHour": 19,
+          "elapsedHour": 20,
           "elapsedRank": 3,
           "currentPoints": [
             {
@@ -19168,6 +19228,10 @@
             },
             {
               "hour": 19,
+              "rank": 3
+            },
+            {
+              "hour": 20,
               "rank": 3
             }
           ],
@@ -19828,11 +19892,11 @@
           "nearbyRanking": [
             {
               "rank": 1,
-              "title": "VIVANT"
+              "title": "Tokyo middle 30"
             },
             {
               "rank": 2,
-              "title": "Tokyo middle 30"
+              "title": "VIVANT"
             },
             {
               "rank": 3,
@@ -19845,10 +19909,10 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/26",
-      "updatedAt": "2026/08/27 17:07",
+      "updatedAt": "2026/08/27 18:07",
       "episodeId": "ep1mun2bx1",
       "subtitle": "あなたを諦めたくない・・・第8話を先出し大公開！",
-      "likes": "1009",
+      "likes": "1033",
       "favorites": "71.2万",
       "likePoints": [
         {
@@ -19922,6 +19986,10 @@
         {
           "hour": 19,
           "likes": 1009
+        },
+        {
+          "hour": 20,
+          "likes": 1033
         }
       ],
       "previousLikePoints": [
@@ -20567,6 +20635,10 @@
         },
         {
           "hour": 163,
+          "likes": 22000
+        },
+        {
+          "hour": 164,
           "likes": 22000
         }
       ],
@@ -21222,6 +21294,10 @@
             {
               "hour": 163,
               "rank": 15
+            },
+            {
+              "hour": 164,
+              "rank": 16
             }
           ],
           "nearbyRanking": [
@@ -21231,15 +21307,15 @@
             },
             {
               "rank": 48,
-              "title": "席替えしたら、どうやら後ろの男が俺のこと好きらしい"
+              "title": "女神の教室～リーガル青春白書～"
             },
             {
               "rank": 49,
-              "title": "韓国ドラマ「メンコン 史上最高の私！」"
+              "title": "中国ドラマ「惜花芷～星が照らす道～」"
             },
             {
               "rank": 50,
-              "title": "東京ラブストーリー（1991）"
+              "title": "韓国ドラマ「メンコン 史上最高の私！」"
             }
           ]
         },
@@ -21894,6 +21970,10 @@
             {
               "hour": 163,
               "rank": 21
+            },
+            {
+              "hour": 164,
+              "rank": 22
             }
           ],
           "nearbyRanking": [
@@ -21903,11 +21983,11 @@
             },
             {
               "rank": 48,
-              "title": "月曜から夜ふかし"
+              "title": "35歳、今さら恋とかありえない"
             },
             {
               "rank": 49,
-              "title": "よるのブランチ"
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 50,
