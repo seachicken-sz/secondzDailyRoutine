@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/08/27 13:07",
+  "updatedAt": "2026/08/27 14:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/27 13:07",
+      "updatedAt": "2026/08/27 14:07",
       "episodeId": "eptbg59rwy",
       "subtitle": "timelesz100",
       "likes": "1.5万",
@@ -540,6 +540,10 @@
         },
         {
           "hour": 135,
+          "likes": 15000
+        },
+        {
+          "hour": 136,
           "likes": 15000
         }
       ],
@@ -1178,7 +1182,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 43,
-          "elapsedHour": 135,
+          "elapsedHour": 136,
           "elapsedRank": 43,
           "currentPoints": [
             {
@@ -1707,6 +1711,10 @@
             },
             {
               "hour": 135,
+              "rank": 43
+            },
+            {
+              "hour": 136,
               "rank": 43
             }
           ],
@@ -2319,15 +2327,15 @@
           "nearbyRanking": [
             {
               "rank": 40,
-              "title": "かまいたちの知らんけど"
-            },
-            {
-              "rank": 41,
               "title": "限界突破！やってM!LK"
             },
             {
+              "rank": 41,
+              "title": "かまいたちの知らんけど"
+            },
+            {
               "rank": 42,
-              "title": "開運！なんでも鑑定団"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 43,
@@ -2852,11 +2860,11 @@
             },
             {
               "rank": 49,
-              "title": "ニカゲーム"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 50,
-              "title": "踊る大捜査線"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -2865,7 +2873,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/27 13:07",
+      "updatedAt": "2026/08/27 14:07",
       "episodeId": "ep55b7uj3p",
       "subtitle": "【韓国グルメSP】進化系料理&伝統ゲームで爆笑連発!",
       "likes": "1.3万",
@@ -3241,6 +3249,10 @@
         },
         {
           "hour": 95,
+          "likes": 13000
+        },
+        {
+          "hour": 96,
           "likes": 13000
         }
       ],
@@ -3882,9 +3894,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 38,
-          "elapsedHour": 95,
-          "elapsedRank": 38,
+          "currentRank": 42,
+          "elapsedHour": 96,
+          "elapsedRank": 42,
           "currentPoints": [
             {
               "hour": 7,
@@ -4237,6 +4249,10 @@
             {
               "hour": 95,
               "rank": 38
+            },
+            {
+              "hour": 96,
+              "rank": 42
             }
           ],
           "previousPoints": [
@@ -4859,19 +4875,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 35,
-              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
-            },
-            {
-              "rank": 36,
+              "rank": 39,
               "title": "突然ですが占ってもいいですか？"
             },
             {
-              "rank": 37,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "rank": 40,
+              "title": "限界突破！やってM!LK"
             },
             {
-              "rank": 38,
+              "rank": 41,
+              "title": "かまいたちの知らんけど"
+            },
+            {
+              "rank": 42,
               "title": "timeleszファミリア"
             }
           ]
@@ -5373,11 +5389,11 @@
             },
             {
               "rank": 49,
-              "title": "ニカゲーム"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 50,
-              "title": "踊る大捜査線"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -5386,10 +5402,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/25",
-      "updatedAt": "2026/08/27 13:07",
+      "updatedAt": "2026/08/27 14:07",
       "episodeId": "epguch9hd0",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！後編",
-      "likes": "5574",
+      "likes": "5615",
       "favorites": "5.9万",
       "likePoints": [
         {
@@ -5535,6 +5551,10 @@
         {
           "hour": 37,
           "likes": 5574
+        },
+        {
+          "hour": 38,
+          "likes": 5615
         }
       ],
       "previousLikePoints": [
@@ -6180,7 +6200,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 13,
-          "elapsedHour": 37,
+          "elapsedHour": 38,
           "elapsedRank": 13,
           "currentPoints": [
             {
@@ -6305,6 +6325,10 @@
             },
             {
               "hour": 37,
+              "rank": 13
+            },
+            {
+              "hour": 38,
               "rank": 13
             }
           ],
@@ -6833,11 +6857,11 @@
           "nearbyRanking": [
             {
               "rank": 10,
-              "title": "かまいたちの知らんけど"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 11,
-              "title": "限界突破！やってM!LK"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 12,
@@ -7006,19 +7030,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
-            },
-            {
-              "rank": 48,
               "title": "有吉クイズ"
             },
             {
+              "rank": 48,
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+            },
+            {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 50,
-              "title": "ゴッドタン"
+              "title": "有吉ゼミ"
             }
           ]
         }
@@ -7027,10 +7051,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/27",
-      "updatedAt": "2026/08/27 13:07",
+      "updatedAt": "2026/08/27 14:07",
       "episodeId": "ep7w5egegm",
       "subtitle": "【決勝】大熱戦！謎解き王決定戦SP 第3話",
-      "likes": "5735",
+      "likes": "6121",
       "favorites": "24.6万",
       "likePoints": [
         {
@@ -7076,6 +7100,10 @@
         {
           "hour": 11,
           "likes": 5735
+        },
+        {
+          "hour": 12,
+          "likes": 6121
         }
       ],
       "previousLikePoints": [
@@ -7752,9 +7780,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 21,
-          "elapsedHour": 11,
-          "elapsedRank": 21,
+          "currentRank": 19,
+          "elapsedHour": 12,
+          "elapsedRank": 19,
           "currentPoints": [
             {
               "hour": 7,
@@ -7775,6 +7803,10 @@
             {
               "hour": 11,
               "rank": 21
+            },
+            {
+              "hour": 12,
+              "rank": 19
             }
           ],
           "previousPoints": [
@@ -8101,19 +8133,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 16,
+              "title": "クレイジージャーニー"
+            },
+            {
+              "rank": 17,
+              "title": "日曜日の初耳学"
+            },
+            {
               "rank": 18,
               "title": "月曜から夜ふかし"
             },
             {
               "rank": 19,
-              "title": "ホンマでっか！？TV"
-            },
-            {
-              "rank": 20,
-              "title": "有吉の壁"
-            },
-            {
-              "rank": 21,
               "title": "ニカゲーム"
             }
           ]
@@ -8121,13 +8153,17 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 49,
-          "elapsedHour": 11,
-          "elapsedRank": 49,
+          "currentRank": 46,
+          "elapsedHour": 12,
+          "elapsedRank": 46,
           "currentPoints": [
             {
               "hour": 11,
               "rank": 49
+            },
+            {
+              "hour": 12,
+              "rank": 46
             }
           ],
           "previousPoints": [
@@ -8302,19 +8338,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 43,
+              "title": "日曜日の初耳学"
+            },
+            {
+              "rank": 44,
+              "title": "リーガルビート -逆転の法廷-"
+            },
+            {
+              "rank": 45,
+              "title": "月曜から夜ふかし"
+            },
+            {
               "rank": 46,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
-            },
-            {
-              "rank": 47,
-              "title": "ホンマでっか！？TV"
-            },
-            {
-              "rank": 48,
-              "title": "有吉の壁"
-            },
-            {
-              "rank": 49,
               "title": "ニカゲーム"
             }
           ]
@@ -8324,10 +8360,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/27 13:07",
+      "updatedAt": "2026/08/27 14:07",
       "episodeId": "eppaa3pee6",
       "subtitle": "24時間テレビ企画!巨大弓矢で福島から日本全国にエール",
-      "likes": "4955",
+      "likes": "4973",
       "favorites": "53.3万",
       "likePoints": [
         {
@@ -8681,6 +8717,10 @@
         {
           "hour": 90,
           "likes": 4955
+        },
+        {
+          "hour": 91,
+          "likes": 4973
         }
       ],
       "previousLikePoints": [
@@ -9322,7 +9362,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 31,
-          "elapsedHour": 90,
+          "elapsedHour": 91,
           "elapsedRank": 31,
           "currentPoints": [
             {
@@ -9671,6 +9711,10 @@
             },
             {
               "hour": 90,
+              "rank": 31
+            },
+            {
+              "hour": 91,
               "rank": 31
             }
           ],
@@ -10540,19 +10584,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
-            },
-            {
-              "rank": 48,
               "title": "有吉クイズ"
             },
             {
+              "rank": 48,
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+            },
+            {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 50,
-              "title": "ゴッドタン"
+              "title": "有吉ゼミ"
             }
           ]
         }
@@ -10561,10 +10605,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/26",
-      "updatedAt": "2026/08/27 13:07",
+      "updatedAt": "2026/08/27 14:07",
       "episodeId": "ep8ee4pzpw",
       "subtitle": "【山崎育三郎】TV進出の裏にあった真意とは？",
-      "likes": "3200",
+      "likes": "3219",
       "favorites": "12.5万",
       "likePoints": [
         {
@@ -10690,6 +10734,10 @@
         {
           "hour": 36,
           "likes": 3200
+        },
+        {
+          "hour": 38,
+          "likes": 3219
         }
       ],
       "previousLikePoints": [
@@ -11495,19 +11543,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
-            },
-            {
-              "rank": 48,
               "title": "有吉クイズ"
             },
             {
+              "rank": 48,
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+            },
+            {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 50,
-              "title": "ゴッドタン"
+              "title": "有吉ゼミ"
             }
           ]
         },
@@ -11619,11 +11667,11 @@
             },
             {
               "rank": 49,
-              "title": "ニカゲーム"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 50,
-              "title": "踊る大捜査線"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -11632,10 +11680,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/27 13:07",
+      "updatedAt": "2026/08/27 14:07",
       "episodeId": "eprp4uddvt",
       "subtitle": "第141回 のんと深川麻衣の許せない飯で衝撃のラストが！",
-      "likes": "5083",
+      "likes": "5101",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -12253,6 +12301,10 @@
         {
           "hour": 157,
           "likes": 5083
+        },
+        {
+          "hour": 158,
+          "likes": 5101
         }
       ],
       "previousLikePoints": [
@@ -13327,19 +13379,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
-            },
-            {
-              "rank": 48,
               "title": "有吉クイズ"
             },
             {
+              "rank": 48,
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+            },
+            {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 50,
-              "title": "ゴッドタン"
+              "title": "有吉ゼミ"
             }
           ]
         },
@@ -13512,11 +13564,11 @@
             },
             {
               "rank": 49,
-              "title": "ニカゲーム"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 50,
-              "title": "踊る大捜査線"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -13525,7 +13577,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/27 13:07",
+      "updatedAt": "2026/08/27 14:07",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
       "likes": "1.0万",
@@ -14165,10 +14217,6 @@
         }
       ],
       "previousLikePoints": [
-        {
-          "hour": 115,
-          "likes": 1451
-        },
         {
           "hour": 116,
           "likes": 1454
@@ -15059,19 +15107,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
-            },
-            {
-              "rank": 48,
               "title": "有吉クイズ"
             },
             {
+              "rank": 48,
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+            },
+            {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 50,
-              "title": "ゴッドタン"
+              "title": "有吉ゼミ"
             }
           ]
         },
@@ -15499,11 +15547,11 @@
             },
             {
               "rank": 49,
-              "title": "ニカゲーム"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 50,
-              "title": "踊る大捜査線"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -15512,10 +15560,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/27 13:07",
+      "updatedAt": "2026/08/27 14:07",
       "episodeId": "epp5sd3y19",
       "subtitle": "運命の日本武道館ライブまで密着",
-      "likes": "3862",
+      "likes": "3874",
       "favorites": "3.6万",
       "likePoints": [
         {
@@ -16129,6 +16177,10 @@
         {
           "hour": 155,
           "likes": 3862
+        },
+        {
+          "hour": 156,
+          "likes": 3874
         }
       ],
       "previousLikePoints": [
@@ -17271,19 +17323,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "紙とさまぁ～ず"
+              "title": "なるみ・岡村の過ぎるＴＶ"
             },
             {
               "rank": 48,
-              "title": "さらばのこの本ダレが書いとんねん！"
+              "title": "紙とさまぁ～ず"
             },
             {
               "rank": 49,
-              "title": "ライバルたちがめっちゃ褒めてくる！～アイドル同士の本音レビューSP～"
+              "title": "ぽかぽか"
             },
             {
               "rank": 50,
-              "title": "なるみ・岡村の過ぎるＴＶ"
+              "title": "ライバルたちがめっちゃ褒めてくる！～アイドル同士の本音レビューSP～"
             }
           ]
         },
@@ -17387,19 +17439,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
-            },
-            {
-              "rank": 48,
               "title": "有吉クイズ"
             },
             {
+              "rank": 48,
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+            },
+            {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 50,
-              "title": "ゴッドタン"
+              "title": "有吉ゼミ"
             }
           ]
         }
@@ -17408,10 +17460,10 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/26",
-      "updatedAt": "2026/08/27 13:07",
+      "updatedAt": "2026/08/27 14:07",
       "episodeId": "epsijorwie",
       "subtitle": "#8 最終章!!産み捨てた母と対峙!!",
-      "likes": "3912",
+      "likes": "4194",
       "favorites": "65.4万",
       "likePoints": [
         {
@@ -17469,6 +17521,10 @@
         {
           "hour": 15,
           "likes": 3912
+        },
+        {
+          "hour": 16,
+          "likes": 4194
         }
       ],
       "previousLikePoints": [
@@ -18134,7 +18190,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 6,
-          "elapsedHour": 15,
+          "elapsedHour": 16,
           "elapsedRank": 6,
           "currentPoints": [
             {
@@ -18187,6 +18243,10 @@
             },
             {
               "hour": 15,
+              "rank": 6
+            },
+            {
+              "hour": 16,
               "rank": 6
             }
           ],
@@ -18851,11 +18911,11 @@
           "nearbyRanking": [
             {
               "rank": 3,
-              "title": "クロスロード ～救命救急の約束～"
+              "title": "君の好きは無敵"
             },
             {
               "rank": 4,
-              "title": "Tokyo middle 30"
+              "title": "クロスロード ～救命救急の約束～"
             },
             {
               "rank": 5,
@@ -18871,7 +18931,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 6,
-          "elapsedHour": 15,
+          "elapsedHour": 16,
           "elapsedRank": 6,
           "currentPoints": [
             {
@@ -18924,6 +18984,10 @@
             },
             {
               "hour": 15,
+              "rank": 6
+            },
+            {
+              "hour": 16,
               "rank": 6
             }
           ],
@@ -19584,11 +19648,11 @@
           "nearbyRanking": [
             {
               "rank": 3,
-              "title": "クロスロード ～救命救急の約束～"
+              "title": "君の好きは無敵"
             },
             {
               "rank": 4,
-              "title": "Tokyo middle 30"
+              "title": "クロスロード ～救命救急の約束～"
             },
             {
               "rank": 5,
@@ -19605,10 +19669,10 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/26",
-      "updatedAt": "2026/08/27 13:07",
+      "updatedAt": "2026/08/27 14:07",
       "episodeId": "ep1mun2bx1",
       "subtitle": "あなたを諦めたくない・・・第8話を先出し大公開！",
-      "likes": "894",
+      "likes": "925",
       "favorites": "71.1万",
       "likePoints": [
         {
@@ -19666,6 +19730,10 @@
         {
           "hour": 15,
           "likes": 894
+        },
+        {
+          "hour": 16,
+          "likes": 925
         }
       ],
       "previousLikePoints": [
@@ -20295,6 +20363,10 @@
         },
         {
           "hour": 159,
+          "likes": 22000
+        },
+        {
+          "hour": 160,
           "likes": 22000
         }
       ],
@@ -20933,6 +21005,10 @@
             },
             {
               "hour": 159,
+              "rank": 15
+            },
+            {
+              "hour": 160,
               "rank": 15
             }
           ],
@@ -21590,6 +21666,10 @@
             {
               "hour": 159,
               "rank": 24
+            },
+            {
+              "hour": 160,
+              "rank": 24
             }
           ],
           "nearbyRanking": [
@@ -21603,11 +21683,11 @@
             },
             {
               "rank": 49,
-              "title": "ニカゲーム"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 50,
-              "title": "踊る大捜査線"
+              "title": "かまいガチ"
             }
           ]
         }
