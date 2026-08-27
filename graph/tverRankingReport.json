@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/08/27 19:07",
+  "updatedAt": "2026/08/27 20:08",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/27 19:07",
+      "updatedAt": "2026/08/27 20:08",
       "episodeId": "eptbg59rwy",
       "subtitle": "timelesz100",
       "likes": "1.6万",
@@ -564,6 +564,10 @@
         },
         {
           "hour": 141,
+          "likes": 16000
+        },
+        {
+          "hour": 142,
           "likes": 16000
         }
       ],
@@ -1201,9 +1205,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 42,
-          "elapsedHour": 141,
-          "elapsedRank": 42,
+          "currentRank": 41,
+          "elapsedHour": 142,
+          "elapsedRank": 41,
           "currentPoints": [
             {
               "hour": 3,
@@ -1756,6 +1760,10 @@
             {
               "hour": 141,
               "rank": 42
+            },
+            {
+              "hour": 142,
+              "rank": 41
             }
           ],
           "previousPoints": [
@@ -2366,8 +2374,12 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 38,
+              "title": "家、ついて行ってイイですか？"
+            },
+            {
               "rank": 39,
-              "title": "限界突破！やってM!LK"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 40,
@@ -2375,10 +2387,6 @@
             },
             {
               "rank": 41,
-              "title": "かまいたちの知らんけど"
-            },
-            {
-              "rank": 42,
               "title": "タイムレスマン"
             }
           ]
@@ -2892,15 +2900,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "リーガルビート -逆転の法廷-"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 48,
-              "title": "35歳、今さら恋とかありえない"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 49,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "35歳、今さら恋とかありえない"
             },
             {
               "rank": 50,
@@ -2913,7 +2921,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/27 19:07",
+      "updatedAt": "2026/08/27 20:08",
       "episodeId": "ep55b7uj3p",
       "subtitle": "【韓国グルメSP】進化系料理&伝統ゲームで爆笑連発!",
       "likes": "1.3万",
@@ -3313,6 +3321,10 @@
         },
         {
           "hour": 101,
+          "likes": 13000
+        },
+        {
+          "hour": 102,
           "likes": 13000
         }
       ],
@@ -3954,9 +3966,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 45,
-          "elapsedHour": 101,
-          "elapsedRank": 45,
+          "currentRank": 46,
+          "elapsedHour": 102,
+          "elapsedRank": 46,
           "currentPoints": [
             {
               "hour": 7,
@@ -4333,6 +4345,10 @@
             {
               "hour": 101,
               "rank": 45
+            },
+            {
+              "hour": 102,
+              "rank": 46
             }
           ],
           "previousPoints": [
@@ -4955,19 +4971,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 42,
-              "title": "タイムレスマン"
-            },
-            {
               "rank": 43,
-              "title": "突然ですが占ってもいいですか？"
+              "title": "いたジャン！"
             },
             {
               "rank": 44,
-              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
+              "title": "突然ですが占ってもいいですか？"
             },
             {
               "rank": 45,
+              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
+            },
+            {
+              "rank": 46,
               "title": "timeleszファミリア"
             }
           ]
@@ -5461,15 +5477,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "リーガルビート -逆転の法廷-"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 48,
-              "title": "35歳、今さら恋とかありえない"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 49,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "35歳、今さら恋とかありえない"
             },
             {
               "rank": 50,
@@ -5482,10 +5498,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/25",
-      "updatedAt": "2026/08/27 19:07",
+      "updatedAt": "2026/08/27 20:08",
       "episodeId": "epguch9hd0",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！後編",
-      "likes": "5793",
+      "likes": "5855",
       "favorites": "5.9万",
       "likePoints": [
         {
@@ -5655,6 +5671,10 @@
         {
           "hour": 43,
           "likes": 5793
+        },
+        {
+          "hour": 44,
+          "likes": 5855
         }
       ],
       "previousLikePoints": [
@@ -6300,7 +6320,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 13,
-          "elapsedHour": 43,
+          "elapsedHour": 44,
           "elapsedRank": 13,
           "currentPoints": [
             {
@@ -6449,6 +6469,10 @@
             },
             {
               "hour": 43,
+              "rank": 13
+            },
+            {
+              "hour": 44,
               "rank": 13
             }
           ],
@@ -6977,11 +7001,11 @@
           "nearbyRanking": [
             {
               "rank": 10,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 11,
-              "title": "かまいたちの知らんけど"
+              "title": "Aぇ! groupのQ＆Aぇ!"
             },
             {
               "rank": 12,
@@ -7150,11 +7174,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
+              "title": "かまいたちの掟"
             },
             {
               "rank": 48,
-              "title": "開運！なんでも鑑定団"
+              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
             },
             {
               "rank": 49,
@@ -7171,10 +7195,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/27",
-      "updatedAt": "2026/08/27 19:07",
+      "updatedAt": "2026/08/27 20:08",
       "episodeId": "ep7w5egegm",
       "subtitle": "【決勝】大熱戦！謎解き王決定戦SP 第3話",
-      "likes": "7617",
+      "likes": "8218",
       "favorites": "24.6万",
       "likePoints": [
         {
@@ -7244,6 +7268,10 @@
         {
           "hour": 17,
           "likes": 7617
+        },
+        {
+          "hour": 18,
+          "likes": 8218
         }
       ],
       "previousLikePoints": [
@@ -7920,9 +7948,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 14,
-          "elapsedHour": 17,
-          "elapsedRank": 14,
+          "currentRank": 12,
+          "elapsedHour": 18,
+          "elapsedRank": 12,
           "currentPoints": [
             {
               "hour": 7,
@@ -7967,6 +7995,10 @@
             {
               "hour": 17,
               "rank": 14
+            },
+            {
+              "hour": 18,
+              "rank": 12
             }
           ],
           "previousPoints": [
@@ -8293,19 +8325,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 9,
+              "title": "テレビ千鳥"
+            },
+            {
+              "rank": 10,
+              "title": "マツコの知らない世界"
+            },
+            {
               "rank": 11,
               "title": "ザ！世界仰天ニュース"
             },
             {
               "rank": 12,
-              "title": "あちこちオードリー"
-            },
-            {
-              "rank": 13,
-              "title": "世界の果てまでイッテQ！"
-            },
-            {
-              "rank": 14,
               "title": "ニカゲーム"
             }
           ]
@@ -8313,9 +8345,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 36,
-          "elapsedHour": 17,
-          "elapsedRank": 36,
+          "currentRank": 33,
+          "elapsedHour": 18,
+          "elapsedRank": 33,
           "currentPoints": [
             {
               "hour": 11,
@@ -8344,6 +8376,10 @@
             {
               "hour": 17,
               "rank": 36
+            },
+            {
+              "hour": 18,
+              "rank": 33
             }
           ],
           "previousPoints": [
@@ -8518,19 +8554,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 30,
+              "title": "君は夏のなか"
+            },
+            {
+              "rank": 31,
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+            },
+            {
+              "rank": 32,
+              "title": "夫を殺したはずなのに"
+            },
+            {
               "rank": 33,
-              "title": "あちこちオードリー"
-            },
-            {
-              "rank": 34,
-              "title": "幸せになりたいマサムネ君"
-            },
-            {
-              "rank": 35,
-              "title": "世界の果てまでイッテQ！"
-            },
-            {
-              "rank": 36,
               "title": "ニカゲーム"
             }
           ]
@@ -8540,10 +8576,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/27 19:07",
+      "updatedAt": "2026/08/27 20:08",
       "episodeId": "eppaa3pee6",
       "subtitle": "24時間テレビ企画!巨大弓矢で福島から日本全国にエール",
-      "likes": "5037",
+      "likes": "5065",
       "favorites": "53.3万",
       "likePoints": [
         {
@@ -8921,6 +8957,10 @@
         {
           "hour": 96,
           "likes": 5037
+        },
+        {
+          "hour": 97,
+          "likes": 5065
         }
       ],
       "previousLikePoints": [
@@ -9562,7 +9602,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 32,
-          "elapsedHour": 96,
+          "elapsedHour": 97,
           "elapsedRank": 32,
           "currentPoints": [
             {
@@ -9935,6 +9975,10 @@
             },
             {
               "hour": 96,
+              "rank": 32
+            },
+            {
+              "hour": 97,
               "rank": 32
             }
           ],
@@ -10804,11 +10848,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
+              "title": "かまいたちの掟"
             },
             {
               "rank": 48,
-              "title": "開運！なんでも鑑定団"
+              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
             },
             {
               "rank": 49,
@@ -10825,10 +10869,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/26",
-      "updatedAt": "2026/08/27 19:07",
+      "updatedAt": "2026/08/27 20:08",
       "episodeId": "ep8ee4pzpw",
       "subtitle": "【山崎育三郎】TV進出の裏にあった真意とは？",
-      "likes": "3343",
+      "likes": "3399",
       "favorites": "12.5万",
       "likePoints": [
         {
@@ -10974,6 +11018,10 @@
         {
           "hour": 42,
           "likes": 3343
+        },
+        {
+          "hour": 43,
+          "likes": 3399
         }
       ],
       "previousLikePoints": [
@@ -11779,11 +11827,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
+              "title": "かまいたちの掟"
             },
             {
               "rank": 48,
-              "title": "開運！なんでも鑑定団"
+              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
             },
             {
               "rank": 49,
@@ -11895,15 +11943,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "リーガルビート -逆転の法廷-"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 48,
-              "title": "35歳、今さら恋とかありえない"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 49,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "35歳、今さら恋とかありえない"
             },
             {
               "rank": 50,
@@ -11916,10 +11964,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/27 19:07",
+      "updatedAt": "2026/08/27 20:08",
       "episodeId": "eprp4uddvt",
       "subtitle": "第141回 のんと深川麻衣の許せない飯で衝撃のラストが！",
-      "likes": "5198",
+      "likes": "5229",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -12553,6 +12601,10 @@
         {
           "hour": 162,
           "likes": 5198
+        },
+        {
+          "hour": 164,
+          "likes": 5229
         }
       ],
       "previousLikePoints": [
@@ -13627,11 +13679,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
+              "title": "かまいたちの掟"
             },
             {
               "rank": 48,
-              "title": "開運！なんでも鑑定団"
+              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
             },
             {
               "rank": 49,
@@ -13804,15 +13856,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "リーガルビート -逆転の法廷-"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 48,
-              "title": "35歳、今さら恋とかありえない"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 49,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "35歳、今さら恋とかありえない"
             },
             {
               "rank": 50,
@@ -13825,7 +13877,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/27 19:07",
+      "updatedAt": "2026/08/27 20:08",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
       "likes": "1.0万",
@@ -14465,10 +14517,6 @@
         }
       ],
       "previousLikePoints": [
-        {
-          "hour": 121,
-          "likes": 1474
-        },
         {
           "hour": 122,
           "likes": 1474
@@ -15335,11 +15383,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
+              "title": "かまいたちの掟"
             },
             {
               "rank": 48,
-              "title": "開運！なんでも鑑定団"
+              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
             },
             {
               "rank": 49,
@@ -15767,15 +15815,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "リーガルビート -逆転の法廷-"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 48,
-              "title": "35歳、今さら恋とかありえない"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 49,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "35歳、今さら恋とかありえない"
             },
             {
               "rank": 50,
@@ -15788,10 +15836,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/27 19:07",
+      "updatedAt": "2026/08/27 20:08",
       "episodeId": "epp5sd3y19",
       "subtitle": "運命の日本武道館ライブまで密着",
-      "likes": "3914",
+      "likes": "3926",
       "favorites": "3.6万",
       "likePoints": [
         {
@@ -16429,6 +16477,10 @@
         {
           "hour": 161,
           "likes": 3914
+        },
+        {
+          "hour": 162,
+          "likes": 3926
         }
       ],
       "previousLikePoints": [
@@ -17571,19 +17623,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "太田上田"
+              "title": "ぽかぽか"
             },
             {
               "rank": 48,
-              "title": "ライバルたちがめっちゃ褒めてくる！～アイドル同士の本音レビューSP～"
-            },
-            {
-              "rank": 49,
               "title": "スクール革命！"
             },
             {
+              "rank": 49,
+              "title": "ライバルたちがめっちゃ褒めてくる！～アイドル同士の本音レビューSP～"
+            },
+            {
               "rank": 50,
-              "title": "Music Lab W"
+              "title": "５時に夢中！"
             }
           ]
         },
@@ -17687,11 +17739,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
+              "title": "かまいたちの掟"
             },
             {
               "rank": 48,
-              "title": "開運！なんでも鑑定団"
+              "title": "Mrs. GREEN APPLE presents 『CEREMONY』"
             },
             {
               "rank": 49,
@@ -17708,10 +17760,10 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/26",
-      "updatedAt": "2026/08/27 19:07",
+      "updatedAt": "2026/08/27 20:08",
       "episodeId": "epsijorwie",
       "subtitle": "#8 最終章!!産み捨てた母と対峙!!",
-      "likes": "5375",
+      "likes": "5723",
       "favorites": "65.4万",
       "likePoints": [
         {
@@ -17793,6 +17845,10 @@
         {
           "hour": 21,
           "likes": 5375
+        },
+        {
+          "hour": 22,
+          "likes": 5723
         }
       ],
       "previousLikePoints": [
@@ -18458,7 +18514,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 3,
-          "elapsedHour": 21,
+          "elapsedHour": 22,
           "elapsedRank": 3,
           "currentPoints": [
             {
@@ -18535,6 +18591,10 @@
             },
             {
               "hour": 21,
+              "rank": 3
+            },
+            {
+              "hour": 22,
               "rank": 3
             }
           ],
@@ -19215,7 +19275,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 3,
-          "elapsedHour": 21,
+          "elapsedHour": 22,
           "elapsedRank": 3,
           "currentPoints": [
             {
@@ -19292,6 +19352,10 @@
             },
             {
               "hour": 21,
+              "rank": 3
+            },
+            {
+              "hour": 22,
               "rank": 3
             }
           ],
@@ -19969,10 +20033,10 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/26",
-      "updatedAt": "2026/08/27 19:07",
+      "updatedAt": "2026/08/27 20:08",
       "episodeId": "ep1mun2bx1",
       "subtitle": "あなたを諦めたくない・・・第8話を先出し大公開！",
-      "likes": "1060",
+      "likes": "1096",
       "favorites": "71.2万",
       "likePoints": [
         {
@@ -20054,6 +20118,10 @@
         {
           "hour": 21,
           "likes": 1060
+        },
+        {
+          "hour": 22,
+          "likes": 1096
         }
       ],
       "previousLikePoints": [
@@ -20708,6 +20776,10 @@
         {
           "hour": 165,
           "likes": 22000
+        },
+        {
+          "hour": 166,
+          "likes": 23000
         }
       ],
       "rankings": [
@@ -21370,12 +21442,16 @@
             {
               "hour": 165,
               "rank": 16
+            },
+            {
+              "hour": 166,
+              "rank": 16
             }
           ],
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "中国ドラマ「惜花芷～星が照らす道～」"
+              "title": "ミッドナイト屋台２～ル・モンドゥ～"
             },
             {
               "rank": 48,
@@ -21383,11 +21459,11 @@
             },
             {
               "rank": 49,
-              "title": "韓国ドラマ「ウンヒの涙」"
+              "title": "東京ラブストーリー（1991）"
             },
             {
               "rank": 50,
-              "title": "東京ラブストーリー（1991）"
+              "title": "【韓国ドラマ】華麗なる遺産"
             }
           ]
         },
@@ -22050,20 +22126,24 @@
             {
               "hour": 165,
               "rank": 21
+            },
+            {
+              "hour": 166,
+              "rank": 21
             }
           ],
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "リーガルビート -逆転の法廷-"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 48,
-              "title": "35歳、今さら恋とかありえない"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 49,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "35歳、今さら恋とかありえない"
             },
             {
               "rank": 50,
