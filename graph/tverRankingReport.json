@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/08/28 21:07",
+  "updatedAt": "2026/08/28 22:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/21",
-      "updatedAt": "2026/08/28 21:07",
+      "updatedAt": "2026/08/28 22:07",
       "episodeId": "eptbg59rwy",
       "subtitle": "timelesz100",
       "likes": "1.6万",
@@ -1305,9 +1305,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 37,
-          "elapsedHour": 167,
-          "elapsedRank": 37,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 3,
@@ -2574,20 +2574,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 34,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "rank": 47,
+              "title": "SASUKE ワールドカップ2026"
             },
             {
-              "rank": 35,
-              "title": "日曜日の初耳学"
+              "rank": 48,
+              "title": "それSnow Manにやらせて下さい"
             },
             {
-              "rank": 36,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "rank": 49,
+              "title": "歌のサンセット"
             },
             {
-              "rank": 37,
-              "title": "タイムレスマン"
+              "rank": 50,
+              "title": "ラヴィット！"
             }
           ]
         },
@@ -3100,19 +3100,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "君は夏のなか"
-            },
-            {
-              "rank": 48,
-              "title": "夫を殺したはずなのに"
-            },
-            {
-              "rank": 49,
               "title": "世界の果てまでイッテQ！"
             },
             {
-              "rank": 50,
+              "rank": 48,
+              "title": "マツコの知らない世界"
+            },
+            {
+              "rank": 49,
               "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+            },
+            {
+              "rank": 50,
+              "title": "情熱大陸"
             }
           ]
         }
@@ -3121,7 +3121,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/28 21:07",
+      "updatedAt": "2026/08/28 22:07",
       "episodeId": "ep55b7uj3p",
       "subtitle": "【韓国グルメSP】進化系料理&伝統ゲームで爆笑連発!",
       "likes": "1.3万",
@@ -3625,6 +3625,10 @@
         },
         {
           "hour": 127,
+          "likes": 13000
+        },
+        {
+          "hour": 128,
           "likes": 13000
         }
       ],
@@ -5336,19 +5340,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
-            },
-            {
-              "rank": 48,
-              "title": "ラヴィット！"
-            },
-            {
-              "rank": 49,
               "title": "SASUKE ワールドカップ2026"
             },
             {
+              "rank": 48,
+              "title": "それSnow Manにやらせて下さい"
+            },
+            {
+              "rank": 49,
+              "title": "歌のサンセット"
+            },
+            {
               "rank": 50,
-              "title": "ぽかぽか"
+              "title": "ラヴィット！"
             }
           ]
         },
@@ -5841,19 +5845,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "君は夏のなか"
-            },
-            {
-              "rank": 48,
-              "title": "夫を殺したはずなのに"
-            },
-            {
-              "rank": 49,
               "title": "世界の果てまでイッテQ！"
             },
             {
-              "rank": 50,
+              "rank": 48,
+              "title": "マツコの知らない世界"
+            },
+            {
+              "rank": 49,
               "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+            },
+            {
+              "rank": 50,
+              "title": "情熱大陸"
             }
           ]
         }
@@ -5862,10 +5866,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/25",
-      "updatedAt": "2026/08/28 21:07",
+      "updatedAt": "2026/08/28 22:07",
       "episodeId": "epguch9hd0",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！後編",
-      "likes": "6326",
+      "likes": "6344",
       "favorites": "5.9万",
       "likePoints": [
         {
@@ -6139,6 +6143,10 @@
         {
           "hour": 69,
           "likes": 6326
+        },
+        {
+          "hour": 70,
+          "likes": 6344
         }
       ],
       "previousLikePoints": [
@@ -6783,9 +6791,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 29,
-          "elapsedHour": 69,
-          "elapsedRank": 29,
+          "currentRank": 30,
+          "elapsedHour": 70,
+          "elapsedRank": 30,
           "currentPoints": [
             {
               "hour": 6,
@@ -7038,6 +7046,10 @@
             {
               "hour": 69,
               "rank": 29
+            },
+            {
+              "hour": 70,
+              "rank": 30
             }
           ],
           "previousPoints": [
@@ -7564,19 +7576,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 26,
-              "title": "ヒロシのぼっちキャンプ Season13"
-            },
-            {
               "rank": 27,
-              "title": "Travis JapanノJUST！シン日本遺産"
-            },
-            {
-              "rank": 28,
               "title": "日本探求アカデミックバラエティ 火曜の良純孝太郎"
             },
             {
+              "rank": 28,
+              "title": "Travis JapanノJUST！シン日本遺産"
+            },
+            {
               "rank": 29,
+              "title": "かのサンド"
+            },
+            {
+              "rank": 30,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -7738,19 +7750,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
-            },
-            {
-              "rank": 48,
-              "title": "ラヴィット！"
-            },
-            {
-              "rank": 49,
               "title": "SASUKE ワールドカップ2026"
             },
             {
+              "rank": 48,
+              "title": "それSnow Manにやらせて下さい"
+            },
+            {
+              "rank": 49,
+              "title": "歌のサンセット"
+            },
+            {
               "rank": 50,
-              "title": "ぽかぽか"
+              "title": "ラヴィット！"
             }
           ]
         }
@@ -7759,7 +7771,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/27",
-      "updatedAt": "2026/08/28 21:07",
+      "updatedAt": "2026/08/28 22:07",
       "episodeId": "ep7w5egegm",
       "subtitle": "【決勝】大熱戦！謎解き王決定戦SP 第3話",
       "likes": "1.1万",
@@ -7935,6 +7947,10 @@
         },
         {
           "hour": 43,
+          "likes": 11000
+        },
+        {
+          "hour": 44,
           "likes": 11000
         }
       ],
@@ -8612,9 +8628,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 15,
-          "elapsedHour": 43,
-          "elapsedRank": 15,
+          "currentRank": 16,
+          "elapsedHour": 44,
+          "elapsedRank": 16,
           "currentPoints": [
             {
               "hour": 7,
@@ -8763,6 +8779,10 @@
             {
               "hour": 43,
               "rank": 15
+            },
+            {
+              "hour": 44,
+              "rank": 16
             }
           ],
           "previousPoints": [
@@ -9089,19 +9109,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 12,
-              "title": "しゃべくり007"
-            },
-            {
               "rank": 13,
-              "title": "ロンドンハーツ"
+              "title": "ふぉ〜ゆ〜って、だれ？"
             },
             {
               "rank": 14,
-              "title": "テレビ千鳥"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 15,
+              "title": "テレビ千鳥"
+            },
+            {
+              "rank": 16,
               "title": "ニカゲーム"
             }
           ]
@@ -9109,9 +9129,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 42,
-          "elapsedHour": 43,
-          "elapsedRank": 42,
+          "currentRank": 43,
+          "elapsedHour": 44,
+          "elapsedRank": 43,
           "currentPoints": [
             {
               "hour": 11,
@@ -9244,6 +9264,10 @@
             {
               "hour": 43,
               "rank": 42
+            },
+            {
+              "hour": 44,
+              "rank": 43
             }
           ],
           "previousPoints": [
@@ -9418,19 +9442,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 39,
-              "title": "テレビ千鳥"
-            },
-            {
               "rank": 40,
-              "title": "リーガルビート -逆転の法廷-"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 41,
-              "title": "薬屋のひとりごと"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 42,
+              "title": "救命病棟24時（第1シリーズ）"
+            },
+            {
+              "rank": 43,
               "title": "ニカゲーム"
             }
           ]
@@ -9440,10 +9464,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/28 21:07",
+      "updatedAt": "2026/08/28 22:07",
       "episodeId": "eppaa3pee6",
       "subtitle": "24時間テレビ企画!巨大弓矢で福島から日本全国にエール",
-      "likes": "5326",
+      "likes": "5339",
       "favorites": "53.3万",
       "likePoints": [
         {
@@ -9925,6 +9949,10 @@
         {
           "hour": 122,
           "likes": 5326
+        },
+        {
+          "hour": 123,
+          "likes": 5339
         }
       ],
       "previousLikePoints": [
@@ -10566,7 +10594,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 33,
-          "elapsedHour": 122,
+          "elapsedHour": 123,
           "elapsedRank": 33,
           "currentPoints": [
             {
@@ -11043,6 +11071,10 @@
             },
             {
               "hour": 122,
+              "rank": 33
+            },
+            {
+              "hour": 123,
               "rank": 33
             }
           ],
@@ -11675,7 +11707,7 @@
           "nearbyRanking": [
             {
               "rank": 30,
-              "title": "かのサンド"
+              "title": "地球まるごと大実験 ネイチャーティーチャー"
             },
             {
               "rank": 31,
@@ -11912,19 +11944,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
-            },
-            {
-              "rank": 48,
-              "title": "ラヴィット！"
-            },
-            {
-              "rank": 49,
               "title": "SASUKE ワールドカップ2026"
             },
             {
+              "rank": 48,
+              "title": "それSnow Manにやらせて下さい"
+            },
+            {
+              "rank": 49,
+              "title": "歌のサンセット"
+            },
+            {
               "rank": 50,
-              "title": "ぽかぽか"
+              "title": "ラヴィット！"
             }
           ]
         }
@@ -11933,10 +11965,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/26",
-      "updatedAt": "2026/08/28 21:07",
+      "updatedAt": "2026/08/28 22:07",
       "episodeId": "ep8ee4pzpw",
       "subtitle": "【山崎育三郎】TV進出の裏にあった真意とは？",
-      "likes": "3784",
+      "likes": "3797",
       "favorites": "12.5万",
       "likePoints": [
         {
@@ -12162,6 +12194,10 @@
         {
           "hour": 68,
           "likes": 3784
+        },
+        {
+          "hour": 69,
+          "likes": 3797
         }
       ],
       "previousLikePoints": [
@@ -12967,19 +13003,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
-            },
-            {
-              "rank": 48,
-              "title": "ラヴィット！"
-            },
-            {
-              "rank": 49,
               "title": "SASUKE ワールドカップ2026"
             },
             {
+              "rank": 48,
+              "title": "それSnow Manにやらせて下さい"
+            },
+            {
+              "rank": 49,
+              "title": "歌のサンセット"
+            },
+            {
               "rank": 50,
-              "title": "ぽかぽか"
+              "title": "ラヴィット！"
             }
           ]
         },
@@ -13083,19 +13119,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "君は夏のなか"
-            },
-            {
-              "rank": 48,
-              "title": "夫を殺したはずなのに"
-            },
-            {
-              "rank": 49,
               "title": "世界の果てまでイッテQ！"
             },
             {
-              "rank": 50,
+              "rank": 48,
+              "title": "マツコの知らない世界"
+            },
+            {
+              "rank": 49,
               "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+            },
+            {
+              "rank": 50,
+              "title": "情熱大陸"
             }
           ]
         }
@@ -13104,10 +13140,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/08/28 21:07",
+      "updatedAt": "2026/08/28 22:07",
       "episodeId": "ep1aw07474",
       "subtitle": "第142回 風磨ついに結婚寸前！？大賢人・国仲涼子も感動",
-      "likes": "2402",
+      "likes": "2477",
       "favorites": "71.7万",
       "likePoints": [
         {
@@ -13193,6 +13229,10 @@
         {
           "hour": 21,
           "likes": 2402
+        },
+        {
+          "hour": 22,
+          "likes": 2477
         }
       ],
       "previousLikePoints": [
@@ -13849,9 +13889,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 20,
-          "elapsedHour": 20,
-          "elapsedRank": 20,
+          "currentRank": 17,
+          "elapsedHour": 21,
+          "elapsedRank": 17,
           "currentPoints": [
             {
               "hour": 10,
@@ -13896,6 +13936,10 @@
             {
               "hour": 20,
               "rank": 20
+            },
+            {
+              "hour": 21,
+              "rank": 17
             }
           ],
           "previousPoints": [
@@ -14110,19 +14154,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 14,
+              "title": "ロンドンハーツ"
+            },
+            {
+              "rank": 15,
+              "title": "テレビ千鳥"
+            },
+            {
+              "rank": 16,
+              "title": "ニカゲーム"
+            },
+            {
               "rank": 17,
-              "title": "有吉の壁"
-            },
-            {
-              "rank": 18,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 19,
-              "title": "世界の果てまでイッテQ！"
-            },
-            {
-              "rank": 20,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -14130,10 +14174,15 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 44,
+          "elapsedHour": 21,
+          "elapsedRank": 44,
+          "currentPoints": [
+            {
+              "hour": 21,
+              "rank": 44
+            }
+          ],
           "previousPoints": [
             {
               "hour": 19,
@@ -14202,20 +14251,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "君は夏のなか"
+              "rank": 41,
+              "title": "テレビ千鳥"
             },
             {
-              "rank": 48,
-              "title": "夫を殺したはずなのに"
+              "rank": 42,
+              "title": "救命病棟24時（第1シリーズ）"
             },
             {
-              "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "rank": 43,
+              "title": "ニカゲーム"
             },
             {
-              "rank": 50,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+              "rank": 44,
+              "title": "何か“オモシロいコト”ないの？"
             }
           ]
         }
@@ -14224,7 +14273,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/28 21:07",
+      "updatedAt": "2026/08/28 22:07",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
       "likes": "1.0万",
@@ -14864,10 +14913,6 @@
         }
       ],
       "previousLikePoints": [
-        {
-          "hour": 147,
-          "likes": 1510
-        },
         {
           "hour": 148,
           "likes": 1506
@@ -15630,19 +15675,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
-            },
-            {
-              "rank": 48,
-              "title": "ラヴィット！"
-            },
-            {
-              "rank": 49,
               "title": "SASUKE ワールドカップ2026"
             },
             {
+              "rank": 48,
+              "title": "それSnow Manにやらせて下さい"
+            },
+            {
+              "rank": 49,
+              "title": "歌のサンセット"
+            },
+            {
               "rank": 50,
-              "title": "ぽかぽか"
+              "title": "ラヴィット！"
             }
           ]
         },
@@ -16062,19 +16107,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "君は夏のなか"
-            },
-            {
-              "rank": 48,
-              "title": "夫を殺したはずなのに"
-            },
-            {
-              "rank": 49,
               "title": "世界の果てまでイッテQ！"
             },
             {
-              "rank": 50,
+              "rank": 48,
+              "title": "マツコの知らない世界"
+            },
+            {
+              "rank": 49,
               "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+            },
+            {
+              "rank": 50,
+              "title": "情熱大陸"
             }
           ]
         }
@@ -16083,10 +16128,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/08/28 21:07",
+      "updatedAt": "2026/08/28 22:07",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
-      "likes": "5515",
+      "likes": "5730",
       "favorites": "3.8万",
       "likePoints": [
         {
@@ -16164,6 +16209,10 @@
         {
           "hour": 19,
           "likes": 5515
+        },
+        {
+          "hour": 20,
+          "likes": 5730
         }
       ],
       "previousLikePoints": [
@@ -16844,9 +16893,9 @@
         {
           "type": "talk",
           "label": "トーク",
-          "currentRank": 9,
-          "elapsedHour": 19,
-          "elapsedRank": 9,
+          "currentRank": 8,
+          "elapsedHour": 20,
+          "elapsedRank": 8,
           "currentPoints": [
             {
               "hour": 5,
@@ -16907,6 +16956,10 @@
             {
               "hour": 19,
               "rank": 9
+            },
+            {
+              "hour": 20,
+              "rank": 8
             }
           ],
           "previousPoints": [
@@ -17089,6 +17142,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 5,
+              "title": "夫が寝たあとに"
+            },
+            {
               "rank": 6,
               "title": "ニノなのに"
             },
@@ -17098,10 +17155,6 @@
             },
             {
               "rank": 8,
-              "title": "ニカゲーム"
-            },
-            {
-              "rank": 9,
               "title": "ふぉ〜ゆ〜って、だれ？"
             }
           ]
@@ -17109,9 +17162,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 16,
-          "elapsedHour": 19,
-          "elapsedRank": 16,
+          "currentRank": 13,
+          "elapsedHour": 20,
+          "elapsedRank": 13,
           "currentPoints": [
             {
               "hour": 9,
@@ -17156,24 +17209,28 @@
             {
               "hour": 19,
               "rank": 16
+            },
+            {
+              "hour": 20,
+              "rank": 13
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
+              "rank": 10,
+              "title": "かまいガチ"
+            },
+            {
+              "rank": 11,
+              "title": "ニノなのに"
+            },
+            {
+              "rank": 12,
+              "title": "しゃべくり007"
+            },
+            {
               "rank": 13,
-              "title": "ロンドンハーツ"
-            },
-            {
-              "rank": 14,
-              "title": "テレビ千鳥"
-            },
-            {
-              "rank": 15,
-              "title": "ニカゲーム"
-            },
-            {
-              "rank": 16,
               "title": "ふぉ〜ゆ〜って、だれ？"
             }
           ]
@@ -17183,10 +17240,10 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/26",
-      "updatedAt": "2026/08/28 21:07",
+      "updatedAt": "2026/08/28 22:07",
       "episodeId": "epsijorwie",
       "subtitle": "#8 最終章!!産み捨てた母と対峙!!",
-      "likes": "8467",
+      "likes": "8576",
       "favorites": "65.4万",
       "likePoints": [
         {
@@ -17372,6 +17429,10 @@
         {
           "hour": 47,
           "likes": 8467
+        },
+        {
+          "hour": 48,
+          "likes": 8576
         }
       ],
       "previousLikePoints": [
@@ -18036,9 +18097,9 @@
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 5,
-          "elapsedHour": 47,
-          "elapsedRank": 5,
+          "currentRank": 6,
+          "elapsedHour": 48,
+          "elapsedRank": 6,
           "currentPoints": [
             {
               "hour": 3,
@@ -18219,6 +18280,10 @@
             {
               "hour": 47,
               "rank": 5
+            },
+            {
+              "hour": 48,
+              "rank": 6
             }
           ],
           "previousPoints": [
@@ -18881,10 +18946,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 2,
-              "title": "大空港～GATE24～"
-            },
-            {
               "rank": 3,
               "title": "Tokyo middle 30"
             },
@@ -18894,6 +18955,10 @@
             },
             {
               "rank": 5,
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
+            },
+            {
+              "rank": 6,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -18901,9 +18966,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 7,
-          "elapsedHour": 47,
-          "elapsedRank": 7,
+          "currentRank": 8,
+          "elapsedHour": 48,
+          "elapsedRank": 8,
           "currentPoints": [
             {
               "hour": 3,
@@ -19084,6 +19149,10 @@
             {
               "hour": 47,
               "rank": 7
+            },
+            {
+              "hour": 48,
+              "rank": 8
             }
           ],
           "previousPoints": [
@@ -19742,19 +19811,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 4,
-              "title": "アメトーーク！"
-            },
-            {
               "rank": 5,
               "title": "VIVANT"
             },
             {
               "rank": 6,
-              "title": "水曜日のダウンタウン"
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 7,
+              "title": "水曜日のダウンタウン"
+            },
+            {
+              "rank": 8,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -19764,7 +19833,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/27",
-      "updatedAt": "2026/08/28 21:07",
+      "updatedAt": "2026/08/28 22:07",
       "episodeId": "epk2vmkk4g",
       "subtitle": "第8話 現実が恋を阻む・・・あなたを諦めたくない・・・",
       "likes": "1.0万",
@@ -19860,6 +19929,10 @@
         },
         {
           "hour": 23,
+          "likes": 10000
+        },
+        {
+          "hour": 24,
           "likes": 10000
         }
       ],
@@ -20047,6 +20120,10 @@
         {
           "hour": 47,
           "likes": 1409
+        },
+        {
+          "hour": 48,
+          "likes": 1413
         }
       ],
       "rankings": [
@@ -20054,7 +20131,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 1,
-          "elapsedHour": 23,
+          "elapsedHour": 24,
           "elapsedRank": 1,
           "currentPoints": [
             {
@@ -20144,6 +20221,10 @@
             {
               "hour": 23,
               "rank": 1
+            },
+            {
+              "hour": 24,
+              "rank": 1
             }
           ],
           "previousPoints": [
@@ -20167,7 +20248,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 1,
-          "elapsedHour": 23,
+          "elapsedHour": 24,
           "elapsedRank": 1,
           "currentPoints": [
             {
@@ -20256,6 +20337,10 @@
             },
             {
               "hour": 23,
+              "rank": 1
+            },
+            {
+              "hour": 24,
               "rank": 1
             }
           ],
