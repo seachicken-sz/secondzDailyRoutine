@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026/08/29 09:07",
+  "updatedAt": "2026/08/29 10:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/08/29 09:07",
+      "updatedAt": "2026/08/29 10:07",
       "episodeId": "epn08pl88a",
       "subtitle": "「信頼じゃんけん」夏の終わりの決戦！",
-      "likes": "5355",
+      "likes": "5883",
       "favorites": "78.5万",
       "likePoints": [
         {
@@ -45,6 +45,10 @@
         {
           "hour": 11,
           "likes": 5355
+        },
+        {
+          "hour": 12,
+          "likes": 5883
         }
       ],
       "previousLikePoints": [
@@ -713,9 +717,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 22,
-          "elapsedHour": 11,
-          "elapsedRank": 22,
+          "currentRank": 14,
+          "elapsedHour": 12,
+          "elapsedRank": 14,
           "currentPoints": [
             {
               "hour": 4,
@@ -748,6 +752,10 @@
             {
               "hour": 11,
               "rank": 22
+            },
+            {
+              "hour": 12,
+              "rank": 14
             }
           ],
           "previousPoints": [
@@ -1410,19 +1418,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 19,
-              "title": "有吉の壁"
+              "rank": 11,
+              "title": "かまいガチ"
             },
             {
-              "rank": 20,
-              "title": "マツコの知らない世界"
+              "rank": 12,
+              "title": "しゃべくり007"
             },
             {
-              "rank": 21,
-              "title": "あざとくて何が悪いの？"
+              "rank": 13,
+              "title": "ふぉ〜ゆ〜って、だれ？"
             },
             {
-              "rank": 22,
+              "rank": 14,
               "title": "タイムレスマン"
             }
           ]
@@ -1430,10 +1438,15 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 44,
+          "elapsedHour": 12,
+          "elapsedRank": 44,
+          "currentPoints": [
+            {
+              "hour": 12,
+              "rank": 44
+            }
+          ],
           "previousPoints": [
             {
               "hour": 11,
@@ -1734,20 +1747,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "情熱大陸"
+              "rank": 41,
+              "title": "しゃべくり007"
             },
             {
-              "rank": 48,
-              "title": "世界の果てまでイッテQ！"
+              "rank": 42,
+              "title": "救命病棟24時（第1シリーズ）"
             },
             {
-              "rank": 49,
-              "title": "ロンドンハーツ"
+              "rank": 43,
+              "title": "ふぉ〜ゆ〜って、だれ？"
             },
             {
-              "rank": 50,
-              "title": "何か“オモシロいコト”ないの？"
+              "rank": 44,
+              "title": "タイムレスマン"
             }
           ]
         }
@@ -1756,7 +1769,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/29 09:07",
+      "updatedAt": "2026/08/29 10:07",
       "episodeId": "ep55b7uj3p",
       "subtitle": "【韓国グルメSP】進化系料理&伝統ゲームで爆笑連発!",
       "likes": "1.4万",
@@ -2300,6 +2313,10 @@
         },
         {
           "hour": 139,
+          "likes": 14000
+        },
+        {
+          "hour": 140,
           "likes": 14000
         }
       ],
@@ -4011,19 +4028,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "よるのブランチ"
             },
             {
               "rank": 48,
-              "title": "金曜ミステリークラブ!!!"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 49,
-              "title": "相葉ヒロミのお困りですカー？"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 50,
-              "title": "深夜のダイアン"
+              "title": "相葉ヒロミのお困りですカー？"
             }
           ]
         },
@@ -4516,19 +4533,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "情熱大陸"
+              "title": "ニノなのに"
             },
             {
               "rank": 48,
-              "title": "世界の果てまでイッテQ！"
+              "title": "情熱大陸"
             },
             {
               "rank": 49,
-              "title": "ロンドンハーツ"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "ロンドンハーツ"
             }
           ]
         }
@@ -4537,10 +4554,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/25",
-      "updatedAt": "2026/08/29 09:07",
+      "updatedAt": "2026/08/29 10:07",
       "episodeId": "epguch9hd0",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！後編",
-      "likes": "6491",
+      "likes": "6504",
       "favorites": "5.9万",
       "likePoints": [
         {
@@ -4854,6 +4871,10 @@
         {
           "hour": 81,
           "likes": 6491
+        },
+        {
+          "hour": 82,
+          "likes": 6504
         }
       ],
       "previousLikePoints": [
@@ -5499,7 +5520,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 34,
-          "elapsedHour": 81,
+          "elapsedHour": 82,
           "elapsedRank": 34,
           "currentPoints": [
             {
@@ -5800,6 +5821,10 @@
             },
             {
               "hour": 81,
+              "rank": 34
+            },
+            {
+              "hour": 82,
               "rank": 34
             }
           ],
@@ -6332,11 +6357,11 @@
             },
             {
               "rank": 32,
-              "title": "Travis JapanノJUST！シン日本遺産"
+              "title": "あっちこっちAぇ!"
             },
             {
               "rank": 33,
-              "title": "あっちこっちAぇ!"
+              "title": "Travis JapanノJUST！シン日本遺産"
             },
             {
               "rank": 34,
@@ -6501,19 +6526,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "よるのブランチ"
             },
             {
               "rank": 48,
-              "title": "金曜ミステリークラブ!!!"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 49,
-              "title": "相葉ヒロミのお困りですカー？"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 50,
-              "title": "深夜のダイアン"
+              "title": "相葉ヒロミのお困りですカー？"
             }
           ]
         }
@@ -6522,7 +6547,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/27",
-      "updatedAt": "2026/08/29 09:07",
+      "updatedAt": "2026/08/29 10:07",
       "episodeId": "ep7w5egegm",
       "subtitle": "【決勝】大熱戦！謎解き王決定戦SP 第3話",
       "likes": "1.2万",
@@ -6738,6 +6763,10 @@
         },
         {
           "hour": 55,
+          "likes": 12000
+        },
+        {
+          "hour": 56,
           "likes": 12000
         }
       ],
@@ -7416,7 +7445,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 26,
-          "elapsedHour": 55,
+          "elapsedHour": 56,
           "elapsedRank": 26,
           "currentPoints": [
             {
@@ -7613,6 +7642,10 @@
             },
             {
               "hour": 55,
+              "rank": 26
+            },
+            {
+              "hour": 56,
               "rank": 26
             }
           ],
@@ -8278,19 +8311,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "情熱大陸"
+              "title": "ニノなのに"
             },
             {
               "rank": 48,
-              "title": "世界の果てまでイッテQ！"
+              "title": "情熱大陸"
             },
             {
               "rank": 49,
-              "title": "ロンドンハーツ"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "ロンドンハーツ"
             }
           ]
         }
@@ -8299,10 +8332,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/29 09:07",
+      "updatedAt": "2026/08/29 10:07",
       "episodeId": "eppaa3pee6",
       "subtitle": "24時間テレビ企画!巨大弓矢で福島から日本全国にエール",
-      "likes": "5412",
+      "likes": "5427",
       "favorites": "53.3万",
       "likePoints": [
         {
@@ -8824,6 +8857,10 @@
         {
           "hour": 134,
           "likes": 5412
+        },
+        {
+          "hour": 135,
+          "likes": 5427
         }
       ],
       "previousLikePoints": [
@@ -9465,7 +9502,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 35,
-          "elapsedHour": 134,
+          "elapsedHour": 135,
           "elapsedRank": 35,
           "currentPoints": [
             {
@@ -9990,6 +10027,10 @@
             },
             {
               "hour": 134,
+              "rank": 35
+            },
+            {
+              "hour": 135,
               "rank": 35
             }
           ],
@@ -10622,11 +10663,11 @@
           "nearbyRanking": [
             {
               "rank": 32,
-              "title": "Travis JapanノJUST！シン日本遺産"
+              "title": "あっちこっちAぇ!"
             },
             {
               "rank": 33,
-              "title": "あっちこっちAぇ!"
+              "title": "Travis JapanノJUST！シン日本遺産"
             },
             {
               "rank": 34,
@@ -10859,19 +10900,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "よるのブランチ"
             },
             {
               "rank": 48,
-              "title": "金曜ミステリークラブ!!!"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 49,
-              "title": "相葉ヒロミのお困りですカー？"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 50,
-              "title": "深夜のダイアン"
+              "title": "相葉ヒロミのお困りですカー？"
             }
           ]
         }
@@ -10880,10 +10921,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/26",
-      "updatedAt": "2026/08/29 09:07",
+      "updatedAt": "2026/08/29 10:07",
       "episodeId": "ep8ee4pzpw",
       "subtitle": "【山崎育三郎】TV進出の裏にあった真意とは？",
-      "likes": "3887",
+      "likes": "3896",
       "favorites": "12.5万",
       "likePoints": [
         {
@@ -11145,6 +11186,10 @@
         {
           "hour": 80,
           "likes": 3887
+        },
+        {
+          "hour": 81,
+          "likes": 3896
         }
       ],
       "previousLikePoints": [
@@ -11950,19 +11995,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "よるのブランチ"
             },
             {
               "rank": 48,
-              "title": "金曜ミステリークラブ!!!"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 49,
-              "title": "相葉ヒロミのお困りですカー？"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 50,
-              "title": "深夜のダイアン"
+              "title": "相葉ヒロミのお困りですカー？"
             }
           ]
         },
@@ -12066,19 +12111,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "情熱大陸"
+              "title": "ニノなのに"
             },
             {
               "rank": 48,
-              "title": "世界の果てまでイッテQ！"
+              "title": "情熱大陸"
             },
             {
               "rank": 49,
-              "title": "ロンドンハーツ"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "ロンドンハーツ"
             }
           ]
         }
@@ -12087,10 +12132,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/08/29 09:07",
+      "updatedAt": "2026/08/29 10:07",
       "episodeId": "ep1aw07474",
       "subtitle": "第142回 風磨ついに結婚寸前！？大賢人・国仲涼子も感動",
-      "likes": "2989",
+      "likes": "3025",
       "favorites": "71.7万",
       "likePoints": [
         {
@@ -12216,6 +12261,10 @@
         {
           "hour": 33,
           "likes": 2989
+        },
+        {
+          "hour": 34,
+          "likes": 3025
         }
       ],
       "previousLikePoints": [
@@ -12872,9 +12921,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 18,
-          "elapsedHour": 32,
-          "elapsedRank": 18,
+          "currentRank": 21,
+          "elapsedHour": 33,
+          "elapsedRank": 21,
           "currentPoints": [
             {
               "hour": 10,
@@ -12967,6 +13016,10 @@
             {
               "hour": 32,
               "rank": 18
+            },
+            {
+              "hour": 33,
+              "rank": 21
             }
           ],
           "previousPoints": [
@@ -13181,19 +13234,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 15,
-              "title": "テレビ千鳥"
-            },
-            {
-              "rank": 16,
-              "title": "世界の果てまでイッテQ！"
-            },
-            {
-              "rank": 17,
+              "rank": 18,
               "title": "ロンドンハーツ"
             },
             {
-              "rank": 18,
+              "rank": 19,
+              "title": "マツコの知らない世界"
+            },
+            {
+              "rank": 20,
+              "title": "有吉の壁"
+            },
+            {
+              "rank": 21,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -13201,9 +13254,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 50,
-          "elapsedHour": 32,
-          "elapsedRank": 50,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 21,
@@ -13323,19 +13376,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "情熱大陸"
+              "title": "ニノなのに"
             },
             {
               "rank": 48,
-              "title": "世界の果てまでイッテQ！"
+              "title": "情熱大陸"
             },
             {
               "rank": 49,
-              "title": "ロンドンハーツ"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "ロンドンハーツ"
             }
           ]
         }
@@ -13344,7 +13397,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/29 09:07",
+      "updatedAt": "2026/08/29 10:07",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
       "likes": "1.0万",
@@ -13984,10 +14037,6 @@
         }
       ],
       "previousLikePoints": [
-        {
-          "hour": 159,
-          "likes": 1510
-        },
         {
           "hour": 160,
           "likes": 1507
@@ -14702,19 +14751,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "DAN! DAN! EBiDAN!～新章～"
+              "title": "よるのブランチ"
             },
             {
               "rank": 48,
-              "title": "金曜ミステリークラブ!!!"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 49,
-              "title": "相葉ヒロミのお困りですカー？"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 50,
-              "title": "深夜のダイアン"
+              "title": "相葉ヒロミのお困りですカー？"
             }
           ]
         },
@@ -15134,19 +15183,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "情熱大陸"
+              "title": "ニノなのに"
             },
             {
               "rank": 48,
-              "title": "世界の果てまでイッテQ！"
+              "title": "情熱大陸"
             },
             {
               "rank": 49,
-              "title": "ロンドンハーツ"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "何か“オモシロいコト”ないの？"
+              "title": "ロンドンハーツ"
             }
           ]
         }
@@ -15155,10 +15204,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/08/29 09:07",
+      "updatedAt": "2026/08/29 10:07",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
-      "likes": "7188",
+      "likes": "7308",
       "favorites": "3.9万",
       "likePoints": [
         {
@@ -15276,6 +15325,10 @@
         {
           "hour": 31,
           "likes": 7188
+        },
+        {
+          "hour": 32,
+          "likes": 7308
         }
       ],
       "previousLikePoints": [
@@ -15956,9 +16009,9 @@
         {
           "type": "talk",
           "label": "トーク",
-          "currentRank": 6,
-          "elapsedHour": 31,
-          "elapsedRank": 6,
+          "currentRank": 7,
+          "elapsedHour": 32,
+          "elapsedRank": 7,
           "currentPoints": [
             {
               "hour": 5,
@@ -16067,6 +16120,10 @@
             {
               "hour": 31,
               "rank": 6
+            },
+            {
+              "hour": 32,
+              "rank": 7
             }
           ],
           "previousPoints": [
@@ -16249,10 +16306,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 3,
-              "title": "トークィーンズ"
-            },
-            {
               "rank": 4,
               "title": "夫が寝たあとに"
             },
@@ -16262,6 +16315,10 @@
             },
             {
               "rank": 6,
+              "title": "しゃべくり007"
+            },
+            {
+              "rank": 7,
               "title": "ふぉ〜ゆ〜って、だれ？"
             }
           ]
@@ -16269,9 +16326,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 12,
-          "elapsedHour": 31,
-          "elapsedRank": 12,
+          "currentRank": 13,
+          "elapsedHour": 32,
+          "elapsedRank": 13,
           "currentPoints": [
             {
               "hour": 9,
@@ -16364,14 +16421,14 @@
             {
               "hour": 31,
               "rank": 12
+            },
+            {
+              "hour": 32,
+              "rank": 13
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
-            {
-              "rank": 9,
-              "title": "夫が寝たあとに"
-            },
             {
               "rank": 10,
               "title": "THE突破ファイル"
@@ -16382,6 +16439,10 @@
             },
             {
               "rank": 12,
+              "title": "しゃべくり007"
+            },
+            {
+              "rank": 13,
               "title": "ふぉ〜ゆ〜って、だれ？"
             }
           ]
@@ -16391,10 +16452,10 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/26",
-      "updatedAt": "2026/08/29 09:07",
+      "updatedAt": "2026/08/29 10:07",
       "episodeId": "epsijorwie",
       "subtitle": "#8 最終章!!産み捨てた母と対峙!!",
-      "likes": "9055",
+      "likes": "9107",
       "favorites": "65.4万",
       "likePoints": [
         {
@@ -16620,6 +16681,10 @@
         {
           "hour": 59,
           "likes": 9055
+        },
+        {
+          "hour": 60,
+          "likes": 9107
         }
       ],
       "previousLikePoints": [
@@ -17285,7 +17350,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 7,
-          "elapsedHour": 59,
+          "elapsedHour": 60,
           "elapsedRank": 7,
           "currentPoints": [
             {
@@ -17514,6 +17579,10 @@
             },
             {
               "hour": 59,
+              "rank": 7
+            },
+            {
+              "hour": 60,
               "rank": 7
             }
           ],
@@ -18198,7 +18267,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 9,
-          "elapsedHour": 59,
+          "elapsedHour": 60,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -18427,6 +18496,10 @@
             },
             {
               "hour": 59,
+              "rank": 9
+            },
+            {
+              "hour": 60,
               "rank": 9
             }
           ],
@@ -19108,7 +19181,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/27",
-      "updatedAt": "2026/08/29 09:07",
+      "updatedAt": "2026/08/29 10:07",
       "episodeId": "epk2vmkk4g",
       "subtitle": "第8話 現実が恋を阻む・・・あなたを諦めたくない・・・",
       "likes": "1.2万",
@@ -19244,6 +19317,10 @@
         },
         {
           "hour": 35,
+          "likes": 12000
+        },
+        {
+          "hour": 36,
           "likes": 12000
         }
       ],
@@ -19471,6 +19548,10 @@
         {
           "hour": 59,
           "likes": 1434
+        },
+        {
+          "hour": 60,
+          "likes": 1437
         }
       ],
       "rankings": [
@@ -19478,7 +19559,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 2,
-          "elapsedHour": 35,
+          "elapsedHour": 36,
           "elapsedRank": 2,
           "currentPoints": [
             {
@@ -19616,6 +19697,10 @@
             {
               "hour": 35,
               "rank": 2
+            },
+            {
+              "hour": 36,
+              "rank": 2
             }
           ],
           "previousPoints": [
@@ -19643,7 +19728,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 2,
-          "elapsedHour": 35,
+          "elapsedHour": 36,
           "elapsedRank": 2,
           "currentPoints": [
             {
@@ -19780,6 +19865,10 @@
             },
             {
               "hour": 35,
+              "rank": 2
+            },
+            {
+              "hour": 36,
               "rank": 2
             }
           ],
