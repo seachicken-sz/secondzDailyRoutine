@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/08/31 02:07",
+  "updatedAt": "2026/08/31 03:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/08/31 02:07",
+      "updatedAt": "2026/08/31 03:07",
       "episodeId": "epn08pl88a",
       "subtitle": "「信頼じゃんけん」夏の終わりの決戦！",
       "likes": "1.2万",
@@ -208,6 +208,10 @@
         },
         {
           "hour": 52,
+          "likes": 12000
+        },
+        {
+          "hour": 53,
           "likes": 12000
         }
       ],
@@ -878,7 +882,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 8,
-          "elapsedHour": 52,
+          "elapsedHour": 53,
           "elapsedRank": 8,
           "currentPoints": [
             {
@@ -1075,6 +1079,10 @@
             },
             {
               "hour": 52,
+              "rank": 8
+            },
+            {
+              "hour": 53,
               "rank": 8
             }
           ],
@@ -1758,9 +1766,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 30,
-          "elapsedHour": 52,
-          "elapsedRank": 30,
+          "currentRank": 32,
+          "elapsedHour": 53,
+          "elapsedRank": 32,
           "currentPoints": [
             {
               "hour": 12,
@@ -1925,6 +1933,10 @@
             {
               "hour": 52,
               "rank": 30
+            },
+            {
+              "hour": 53,
+              "rank": 32
             }
           ],
           "previousPoints": [
@@ -2227,19 +2239,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 27,
-              "title": "ミッドナイト屋台２～ル・モンドゥ～"
-            },
-            {
-              "rank": 28,
-              "title": "君の好きは無敵"
-            },
-            {
               "rank": 29,
-              "title": "親愛なる夫へ～完璧な妻の嘘～"
+              "title": "24時間テレビ49「わたしの家族の話～あなたは誰を想う？～」"
             },
             {
               "rank": 30,
+              "title": "親愛なる夫へ～完璧な妻の嘘～"
+            },
+            {
+              "rank": 31,
+              "title": "薬屋のひとりごと"
+            },
+            {
+              "rank": 32,
               "title": "タイムレスマン"
             }
           ]
@@ -2249,7 +2261,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/31 02:07",
+      "updatedAt": "2026/08/31 03:07",
       "episodeId": "ep55b7uj3p",
       "subtitle": "【韓国グルメSP】進化系料理&伝統ゲームで爆笑連発!",
       "likes": "1.4万",
@@ -4632,15 +4644,15 @@
             },
             {
               "rank": 48,
-              "title": "指原千夏"
-            },
-            {
-              "rank": 49,
               "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "あざとくて何が悪いの？"
+            },
+            {
+              "rank": 50,
+              "title": "バナナマンの早起きせっかくグルメ!!"
             }
           ]
         },
@@ -5141,11 +5153,11 @@
             },
             {
               "rank": 49,
-              "title": "テレビ千鳥"
+              "title": "ザ・ノンフィクション"
             },
             {
               "rank": 50,
-              "title": "ザ・ノンフィクション"
+              "title": "テレビ千鳥"
             }
           ]
         }
@@ -5154,10 +5166,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/25",
-      "updatedAt": "2026/08/31 02:07",
+      "updatedAt": "2026/08/31 03:07",
       "episodeId": "epguch9hd0",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！後編",
-      "likes": "6992",
+      "likes": "6995",
       "favorites": "6.0万",
       "likePoints": [
         {
@@ -5635,6 +5647,10 @@
         {
           "hour": 122,
           "likes": 6992
+        },
+        {
+          "hour": 123,
+          "likes": 6995
         }
       ],
       "previousLikePoints": [
@@ -7402,15 +7418,15 @@
             },
             {
               "rank": 48,
-              "title": "指原千夏"
-            },
-            {
-              "rank": 49,
               "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "あざとくて何が悪いの？"
+            },
+            {
+              "rank": 50,
+              "title": "バナナマンの早起きせっかくグルメ!!"
             }
           ]
         }
@@ -7419,7 +7435,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/27",
-      "updatedAt": "2026/08/31 02:07",
+      "updatedAt": "2026/08/31 03:07",
       "episodeId": "ep7w5egegm",
       "subtitle": "【決勝】大熱戦！謎解き王決定戦SP 第3話",
       "likes": "1.3万",
@@ -7799,6 +7815,10 @@
         },
         {
           "hour": 96,
+          "likes": 13000
+        },
+        {
+          "hour": 97,
           "likes": 13000
         }
       ],
@@ -9122,15 +9142,15 @@
             },
             {
               "rank": 48,
-              "title": "指原千夏"
-            },
-            {
-              "rank": 49,
               "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "あざとくて何が悪いの？"
+            },
+            {
+              "rank": 50,
+              "title": "バナナマンの早起きせっかくグルメ!!"
             }
           ]
         },
@@ -9463,11 +9483,11 @@
             },
             {
               "rank": 49,
-              "title": "テレビ千鳥"
+              "title": "ザ・ノンフィクション"
             },
             {
               "rank": 50,
-              "title": "ザ・ノンフィクション"
+              "title": "テレビ千鳥"
             }
           ]
         }
@@ -9476,10 +9496,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/31 02:07",
+      "updatedAt": "2026/08/31 03:07",
       "episodeId": "eppaa3pee6",
       "subtitle": "24時間テレビ企画!巨大弓矢で福島から日本全国にエール",
-      "likes": "5800",
+      "likes": "5804",
       "favorites": "53.3万",
       "likePoints": [
         {
@@ -12328,15 +12348,15 @@
             },
             {
               "rank": 48,
-              "title": "指原千夏"
-            },
-            {
-              "rank": 49,
               "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "あざとくて何が悪いの？"
+            },
+            {
+              "rank": 50,
+              "title": "バナナマンの早起きせっかくグルメ!!"
             }
           ]
         }
@@ -12345,10 +12365,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/26",
-      "updatedAt": "2026/08/31 02:07",
+      "updatedAt": "2026/08/31 03:07",
       "episodeId": "ep8ee4pzpw",
       "subtitle": "【山崎育三郎】TV進出の裏にあった真意とは？",
-      "likes": "4233",
+      "likes": "4239",
       "favorites": "12.5万",
       "likePoints": [
         {
@@ -12766,6 +12786,10 @@
         {
           "hour": 121,
           "likes": 4233
+        },
+        {
+          "hour": 122,
+          "likes": 4239
         }
       ],
       "previousLikePoints": [
@@ -13575,15 +13599,15 @@
             },
             {
               "rank": 48,
-              "title": "指原千夏"
-            },
-            {
-              "rank": 49,
               "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "あざとくて何が悪いの？"
+            },
+            {
+              "rank": 50,
+              "title": "バナナマンの早起きせっかくグルメ!!"
             }
           ]
         },
@@ -13695,11 +13719,11 @@
             },
             {
               "rank": 49,
-              "title": "テレビ千鳥"
+              "title": "ザ・ノンフィクション"
             },
             {
               "rank": 50,
-              "title": "ザ・ノンフィクション"
+              "title": "テレビ千鳥"
             }
           ]
         }
@@ -13708,11 +13732,11 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/08/31 02:07",
+      "updatedAt": "2026/08/31 03:07",
       "episodeId": "ep1aw07474",
       "subtitle": "第142回 風磨ついに結婚寸前！？大賢人・国仲涼子も感動",
-      "likes": "3920",
-      "favorites": "71.6万",
+      "likes": "3926",
+      "favorites": "71.7万",
       "likePoints": [
         {
           "hour": 1,
@@ -14001,6 +14025,10 @@
         {
           "hour": 74,
           "likes": 3920
+        },
+        {
+          "hour": 75,
+          "likes": 3926
         }
       ],
       "previousLikePoints": [
@@ -15087,15 +15115,15 @@
             },
             {
               "rank": 48,
-              "title": "指原千夏"
-            },
-            {
-              "rank": 49,
               "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "あざとくて何が悪いの？"
+            },
+            {
+              "rank": 50,
+              "title": "バナナマンの早起きせっかくグルメ!!"
             }
           ]
         },
@@ -15232,11 +15260,11 @@
             },
             {
               "rank": 49,
-              "title": "テレビ千鳥"
+              "title": "ザ・ノンフィクション"
             },
             {
               "rank": 50,
-              "title": "ザ・ノンフィクション"
+              "title": "テレビ千鳥"
             }
           ]
         }
@@ -15245,7 +15273,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/31 02:07",
+      "updatedAt": "2026/08/31 03:07",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
       "likes": "1.0万",
@@ -16558,15 +16586,15 @@
             },
             {
               "rank": 48,
-              "title": "指原千夏"
-            },
-            {
-              "rank": 49,
               "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "あざとくて何が悪いの？"
+            },
+            {
+              "rank": 50,
+              "title": "バナナマンの早起きせっかくグルメ!!"
             }
           ]
         },
@@ -16994,11 +17022,11 @@
             },
             {
               "rank": 49,
-              "title": "テレビ千鳥"
+              "title": "ザ・ノンフィクション"
             },
             {
               "rank": 50,
-              "title": "ザ・ノンフィクション"
+              "title": "テレビ千鳥"
             }
           ]
         }
@@ -17007,10 +17035,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/08/31 02:07",
+      "updatedAt": "2026/08/31 03:07",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
-      "likes": "9343",
+      "likes": "9354",
       "favorites": "4.0万",
       "likePoints": [
         {
@@ -17292,6 +17320,10 @@
         {
           "hour": 72,
           "likes": 9343
+        },
+        {
+          "hour": 73,
+          "likes": 9354
         }
       ],
       "previousLikePoints": [
@@ -17973,7 +18005,7 @@
           "type": "talk",
           "label": "トーク",
           "currentRank": 39,
-          "elapsedHour": 72,
+          "elapsedHour": 73,
           "elapsedRank": 39,
           "currentPoints": [
             {
@@ -18246,6 +18278,10 @@
             },
             {
               "hour": 72,
+              "rank": 39
+            },
+            {
+              "hour": 73,
               "rank": 39
             }
           ],
@@ -18650,15 +18686,15 @@
             },
             {
               "rank": 48,
-              "title": "指原千夏"
-            },
-            {
-              "rank": 49,
               "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "あざとくて何が悪いの？"
+            },
+            {
+              "rank": 50,
+              "title": "バナナマンの早起きせっかくグルメ!!"
             }
           ]
         }
@@ -18667,7 +18703,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/26",
-      "updatedAt": "2026/08/31 02:07",
+      "updatedAt": "2026/08/31 03:07",
       "episodeId": "epsijorwie",
       "subtitle": "#8 最終章!!産み捨てた母と対峙!!",
       "likes": "1.0万",
@@ -19059,6 +19095,10 @@
         },
         {
           "hour": 100,
+          "likes": 10000
+        },
+        {
+          "hour": 101,
           "likes": 10000
         }
       ],
@@ -19725,7 +19765,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 10,
-          "elapsedHour": 100,
+          "elapsedHour": 101,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -20118,6 +20158,10 @@
             },
             {
               "hour": 100,
+              "rank": 10
+            },
+            {
+              "hour": 101,
               "rank": 10
             }
           ],
@@ -20802,7 +20846,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 18,
-          "elapsedHour": 100,
+          "elapsedHour": 101,
           "elapsedRank": 18,
           "currentPoints": [
             {
@@ -21195,6 +21239,10 @@
             },
             {
               "hour": 100,
+              "rank": 18
+            },
+            {
+              "hour": 101,
               "rank": 18
             }
           ],
@@ -21876,7 +21924,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/27",
-      "updatedAt": "2026/08/31 02:07",
+      "updatedAt": "2026/08/31 03:07",
       "episodeId": "epk2vmkk4g",
       "subtitle": "第8話 現実が恋を阻む・・・あなたを諦めたくない・・・",
       "likes": "1.6万",
@@ -22176,6 +22224,10 @@
         },
         {
           "hour": 76,
+          "likes": 16000
+        },
+        {
+          "hour": 77,
           "likes": 16000
         }
       ],
@@ -22567,6 +22619,10 @@
         {
           "hour": 100,
           "likes": 1465
+        },
+        {
+          "hour": 101,
+          "likes": 1466
         }
       ],
       "rankings": [
@@ -22574,7 +22630,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 4,
-          "elapsedHour": 76,
+          "elapsedHour": 77,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -22876,6 +22932,10 @@
             {
               "hour": 76,
               "rank": 4
+            },
+            {
+              "hour": 77,
+              "rank": 4
             }
           ],
           "previousPoints": [
@@ -22911,7 +22971,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 6,
-          "elapsedHour": 76,
+          "elapsedHour": 77,
           "elapsedRank": 6,
           "currentPoints": [
             {
@@ -23212,6 +23272,10 @@
             },
             {
               "hour": 76,
+              "rank": 6
+            },
+            {
+              "hour": 77,
               "rank": 6
             }
           ],
