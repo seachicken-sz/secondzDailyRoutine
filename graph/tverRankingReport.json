@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/08/31 13:07",
+  "updatedAt": "2026/08/31 14:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/08/31 13:07",
+      "updatedAt": "2026/08/31 14:07",
       "episodeId": "epn08pl88a",
       "subtitle": "「信頼じゃんけん」夏の終わりの決戦！",
       "likes": "1.3万",
@@ -252,6 +252,10 @@
         },
         {
           "hour": 63,
+          "likes": 13000
+        },
+        {
+          "hour": 64,
           "likes": 13000
         }
       ],
@@ -922,7 +926,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 13,
-          "elapsedHour": 63,
+          "elapsedHour": 64,
           "elapsedRank": 13,
           "currentPoints": [
             {
@@ -1163,6 +1167,10 @@
             },
             {
               "hour": 63,
+              "rank": 13
+            },
+            {
+              "hour": 64,
               "rank": 13
             }
           ],
@@ -1827,15 +1835,15 @@
           "nearbyRanking": [
             {
               "rank": 10,
-              "title": "ゴッドタン"
-            },
-            {
-              "rank": 11,
               "title": "おしゃれクリップ"
             },
             {
-              "rank": 12,
+              "rank": 11,
               "title": "有吉クイズ"
+            },
+            {
+              "rank": 12,
+              "title": "ゴッドタン"
             },
             {
               "rank": 13,
@@ -1846,9 +1854,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 40,
-          "elapsedHour": 63,
-          "elapsedRank": 40,
+          "currentRank": 38,
+          "elapsedHour": 64,
+          "elapsedRank": 38,
           "currentPoints": [
             {
               "hour": 12,
@@ -2057,6 +2065,10 @@
             {
               "hour": 63,
               "rank": 40
+            },
+            {
+              "hour": 64,
+              "rank": 38
             }
           ],
           "previousPoints": [
@@ -2359,19 +2371,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 35,
+              "title": "キスは捜査のあとで"
+            },
+            {
+              "rank": 36,
+              "title": "ザ・ノンフィクション"
+            },
+            {
               "rank": 37,
               "title": "親愛なる夫へ～完璧な妻の嘘～"
             },
             {
               "rank": 38,
-              "title": "名探偵コナン"
-            },
-            {
-              "rank": 39,
-              "title": "Your Sky ハレのち恋"
-            },
-            {
-              "rank": 40,
               "title": "タイムレスマン"
             }
           ]
@@ -2381,7 +2393,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/31 13:07",
+      "updatedAt": "2026/08/31 14:07",
       "episodeId": "ep55b7uj3p",
       "subtitle": "【韓国グルメSP】進化系料理&伝統ゲームで爆笑連発!",
       "likes": "1.4万",
@@ -4760,19 +4772,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "全力！脱力タイムズ"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 49,
-              "title": "千原ジュニアの座王"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 50,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "EIGHT-JAM"
             }
           ]
         },
@@ -5273,11 +5285,11 @@
             },
             {
               "rank": 49,
-              "title": "クレヨンしんちゃん"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
-              "title": "探偵！ナイトスクープ"
+              "title": "クレヨンしんちゃん"
             }
           ]
         }
@@ -5286,10 +5298,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/25",
-      "updatedAt": "2026/08/31 13:07",
+      "updatedAt": "2026/08/31 14:07",
       "episodeId": "epguch9hd0",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！後編",
-      "likes": "7053",
+      "likes": "7069",
       "favorites": "6.0万",
       "likePoints": [
         {
@@ -5811,6 +5823,10 @@
         {
           "hour": 133,
           "likes": 7053
+        },
+        {
+          "hour": 134,
+          "likes": 7069
         }
       ],
       "previousLikePoints": [
@@ -7401,11 +7417,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "モモコのOH！ソレ！み～よ！"
+              "title": "あっちこっちAぇ!"
             },
             {
               "rank": 48,
-              "title": "あっちこっちAぇ!"
+              "title": "モモコのOH！ソレ！み～よ！"
             },
             {
               "rank": 49,
@@ -7574,19 +7590,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "全力！脱力タイムズ"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 49,
-              "title": "千原ジュニアの座王"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 50,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "EIGHT-JAM"
             }
           ]
         }
@@ -7595,7 +7611,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/08/27",
-      "updatedAt": "2026/08/31 13:07",
+      "updatedAt": "2026/08/31 14:07",
       "episodeId": "ep7w5egegm",
       "subtitle": "【決勝】大熱戦！謎解き王決定戦SP 第3話",
       "likes": "1.4万",
@@ -8019,6 +8035,10 @@
         },
         {
           "hour": 107,
+          "likes": 14000
+        },
+        {
+          "hour": 108,
           "likes": 14000
         }
       ],
@@ -9338,19 +9358,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "全力！脱力タイムズ"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 49,
-              "title": "千原ジュニアの座王"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 50,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "EIGHT-JAM"
             }
           ]
         },
@@ -9683,11 +9703,11 @@
             },
             {
               "rank": 49,
-              "title": "クレヨンしんちゃん"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
-              "title": "探偵！ナイトスクープ"
+              "title": "クレヨンしんちゃん"
             }
           ]
         }
@@ -9696,10 +9716,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/08/31 13:07",
+      "updatedAt": "2026/08/31 14:07",
       "episodeId": "eppaa3pee6",
       "subtitle": "24時間テレビ企画!巨大弓矢で福島から日本全国にエール",
-      "likes": "5874",
+      "likes": "5886",
       "favorites": "53.3万",
       "likePoints": [
         {
@@ -12307,11 +12327,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "モモコのOH！ソレ！み～よ！"
+              "title": "あっちこっちAぇ!"
             },
             {
               "rank": 48,
-              "title": "あっちこっちAぇ!"
+              "title": "モモコのOH！ソレ！み～よ！"
             },
             {
               "rank": 49,
@@ -12544,19 +12564,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "全力！脱力タイムズ"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 49,
-              "title": "千原ジュニアの座王"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 50,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "EIGHT-JAM"
             }
           ]
         }
@@ -12565,10 +12585,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/08/26",
-      "updatedAt": "2026/08/31 13:07",
+      "updatedAt": "2026/08/31 14:07",
       "episodeId": "ep8ee4pzpw",
       "subtitle": "【山崎育三郎】TV進出の裏にあった真意とは？",
-      "likes": "4274",
+      "likes": "4283",
       "favorites": "12.5万",
       "likePoints": [
         {
@@ -13022,6 +13042,10 @@
         {
           "hour": 132,
           "likes": 4274
+        },
+        {
+          "hour": 133,
+          "likes": 4283
         }
       ],
       "previousLikePoints": [
@@ -13827,19 +13851,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "全力！脱力タイムズ"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 49,
-              "title": "千原ジュニアの座王"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 50,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "EIGHT-JAM"
             }
           ]
         },
@@ -13951,11 +13975,11 @@
             },
             {
               "rank": 49,
-              "title": "クレヨンしんちゃん"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
-              "title": "探偵！ナイトスクープ"
+              "title": "クレヨンしんちゃん"
             }
           ]
         }
@@ -13964,10 +13988,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/08/31 13:07",
+      "updatedAt": "2026/08/31 14:07",
       "episodeId": "ep1aw07474",
       "subtitle": "第142回 風磨ついに結婚寸前！？大賢人・国仲涼子も感動",
-      "likes": "4017",
+      "likes": "4033",
       "favorites": "71.7万",
       "likePoints": [
         {
@@ -14301,6 +14325,10 @@
         {
           "hour": 85,
           "likes": 4017
+        },
+        {
+          "hour": 86,
+          "likes": 4033
         }
       ],
       "previousLikePoints": [
@@ -15383,19 +15411,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "全力！脱力タイムズ"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 49,
-              "title": "千原ジュニアの座王"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 50,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "EIGHT-JAM"
             }
           ]
         },
@@ -15532,11 +15560,11 @@
             },
             {
               "rank": 49,
-              "title": "クレヨンしんちゃん"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
-              "title": "探偵！ナイトスクープ"
+              "title": "クレヨンしんちゃん"
             }
           ]
         }
@@ -15545,7 +15573,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/08/31 13:07",
+      "updatedAt": "2026/08/31 14:07",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
       "likes": "1.0万",
@@ -16854,19 +16882,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "全力！脱力タイムズ"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 49,
-              "title": "千原ジュニアの座王"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 50,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "EIGHT-JAM"
             }
           ]
         },
@@ -17294,11 +17322,11 @@
             },
             {
               "rank": 49,
-              "title": "クレヨンしんちゃん"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 50,
-              "title": "探偵！ナイトスクープ"
+              "title": "クレヨンしんちゃん"
             }
           ]
         }
@@ -17307,10 +17335,10 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/08/31 13:07",
+      "updatedAt": "2026/08/31 14:07",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
-      "likes": "9460",
+      "likes": "9488",
       "favorites": "4.0万",
       "likePoints": [
         {
@@ -17636,6 +17664,10 @@
         {
           "hour": 83,
           "likes": 9460
+        },
+        {
+          "hour": 84,
+          "likes": 9488
         }
       ],
       "previousLikePoints": [
@@ -18317,7 +18349,7 @@
           "type": "talk",
           "label": "トーク",
           "currentRank": 41,
-          "elapsedHour": 83,
+          "elapsedHour": 84,
           "elapsedRank": 41,
           "currentPoints": [
             {
@@ -18634,6 +18666,10 @@
             },
             {
               "hour": 83,
+              "rank": 41
+            },
+            {
+              "hour": 84,
               "rank": 41
             }
           ],
@@ -19034,19 +19070,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "全力！脱力タイムズ"
+              "title": "ダウンタウンのガキの使いやあらへんで！"
             },
             {
               "rank": 48,
-              "title": "あざとくて何が悪いの？"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 49,
-              "title": "千原ジュニアの座王"
+              "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 50,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "EIGHT-JAM"
             }
           ]
         }
@@ -19055,10 +19091,10 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/08/26",
-      "updatedAt": "2026/08/31 13:07",
+      "updatedAt": "2026/08/31 14:07",
       "episodeId": "epsijorwie",
       "subtitle": "#8 最終章!!産み捨てた母と対峙!!",
-      "likes": "1.0万",
+      "likes": "1.1万",
       "favorites": "65.3万",
       "likePoints": [
         {
@@ -19492,6 +19528,10 @@
         {
           "hour": 111,
           "likes": 10000
+        },
+        {
+          "hour": 112,
+          "likes": 11000
         }
       ],
       "previousLikePoints": [
@@ -20157,7 +20197,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 10,
-          "elapsedHour": 111,
+          "elapsedHour": 112,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -20594,6 +20634,10 @@
             },
             {
               "hour": 111,
+              "rank": 10
+            },
+            {
+              "hour": 112,
               "rank": 10
             }
           ],
@@ -21277,9 +21321,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 17,
-          "elapsedHour": 111,
-          "elapsedRank": 17,
+          "currentRank": 19,
+          "elapsedHour": 112,
+          "elapsedRank": 19,
           "currentPoints": [
             {
               "hour": 3,
@@ -21716,6 +21760,10 @@
             {
               "hour": 111,
               "rank": 17
+            },
+            {
+              "hour": 112,
+              "rank": 19
             }
           ],
           "previousPoints": [
@@ -22374,19 +22422,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 14,
+              "rank": 16,
               "title": "かまいたちの知らんけど"
             },
             {
-              "rank": 15,
-              "title": "Tokyo middle 30"
+              "rank": 17,
+              "title": "日曜日の初耳学"
             },
             {
-              "rank": 16,
+              "rank": 18,
               "title": "かまいたちの机上の空論城"
             },
             {
-              "rank": 17,
+              "rank": 19,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -22396,7 +22444,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/08/27",
-      "updatedAt": "2026/08/31 13:07",
+      "updatedAt": "2026/08/31 14:07",
       "episodeId": "epk2vmkk4g",
       "subtitle": "第8話 現実が恋を阻む・・・あなたを諦めたくない・・・",
       "likes": "1.6万",
@@ -22740,6 +22788,10 @@
         },
         {
           "hour": 87,
+          "likes": 16000
+        },
+        {
+          "hour": 88,
           "likes": 16000
         }
       ],
@@ -23175,15 +23227,19 @@
         {
           "hour": 111,
           "likes": 1469
+        },
+        {
+          "hour": 112,
+          "likes": 1469
         }
       ],
       "rankings": [
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 5,
-          "elapsedHour": 87,
-          "elapsedRank": 5,
+          "currentRank": 6,
+          "elapsedHour": 88,
+          "elapsedRank": 6,
           "currentPoints": [
             {
               "hour": 2,
@@ -23528,6 +23584,10 @@
             {
               "hour": 87,
               "rank": 5
+            },
+            {
+              "hour": 88,
+              "rank": 6
             }
           ],
           "previousPoints": [
@@ -23542,10 +23602,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 2,
-              "title": "Ｔシャツが乾くまで"
-            },
-            {
               "rank": 3,
               "title": "一次元の挿し木"
             },
@@ -23555,6 +23611,10 @@
             },
             {
               "rank": 5,
+              "title": "24時間テレビ49「わたしの家族の話～あなたは誰を想う？～」"
+            },
+            {
+              "rank": 6,
               "title": "ラストノート"
             }
           ]
@@ -23562,9 +23622,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 7,
-          "elapsedHour": 87,
-          "elapsedRank": 7,
+          "currentRank": 8,
+          "elapsedHour": 88,
+          "elapsedRank": 8,
           "currentPoints": [
             {
               "hour": 2,
@@ -23909,6 +23969,10 @@
             {
               "hour": 87,
               "rank": 7
+            },
+            {
+              "hour": 88,
+              "rank": 8
             }
           ],
           "previousPoints": [
@@ -23919,10 +23983,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 4,
-              "title": "アメトーーク！"
-            },
-            {
               "rank": 5,
               "title": "告白―25年目の秘密―"
             },
@@ -23932,6 +23992,10 @@
             },
             {
               "rank": 7,
+              "title": "24時間テレビ49「わたしの家族の話～あなたは誰を想う？～」"
+            },
+            {
+              "rank": 8,
               "title": "ラストノート"
             }
           ]
