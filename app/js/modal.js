@@ -236,6 +236,10 @@ function openSettingModal() {
     refreshPushNotificationUi();
   }
 
+  if (typeof refreshSelectModeSettingsUi === "function") {
+    refreshSelectModeSettingsUi();
+  }
+
   settingModalElement.classList.remove("hidden");
 }
 
