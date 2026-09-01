@@ -79,11 +79,11 @@ function showOnlyStep(activeStepElement, options = {}) {
 // 戻るボタン制御
 // ==================================================
 // 上部の「戻る」ボタン押下時に、現在画面に応じて前の画面へ戻す
-function goBackStep() {
+async function goBackStep() {
   // デイリータスク画面は、単純な画面履歴ではなく
   // タスク番号・グループ番号を戻す必要があるため専用処理に回す
-  if (state.currentStepElement === dailyTaskStepElement) {
-    goBackDailyTask();
+ if (state.currentStepElement === dailyTaskStepElement) {
+    await goBackDailyTask();
     return;
   }
 
@@ -121,7 +121,7 @@ function goBackStep() {
 // デイリータスク画面からの戻る制御
 // ==================================================
 // デイリータスク中の戻る操作は、画面ではなく「タスク位置」を戻す
-function goBackDailyTask() {
+async function goBackDailyTask() {
   // 同じグループ内で2件目以降のタスクを表示している場合は、1つ前のタスクに戻る
   if (state.currentDailyTaskIndex > 0) {
     state.currentDailyTaskIndex -= 1;
@@ -145,9 +145,9 @@ function goBackDailyTask() {
   // デイリータスク全体の先頭にいる場合は、通常の画面履歴へ戻す
   const previousStepElement = state.stepHistory.pop();
 
-  // 履歴がない場合は、直前想定のUSEN推しリク画面へ戻す
+  // 履歴がない場合は、実行モードに応じた直前画面へ戻す
   if (!previousStepElement) {
-    showOnlyStep(requestSongStepElement, { recordHistory: false });
+    await showFallbackPreviousStepForDaily();
     return;
   }
 
