@@ -177,6 +177,19 @@ const settingOpenFirstSetupButtonElement = document.getElementById("settingOpenF
 const settingPwaGuideElement = document.getElementById("settingPwaGuide");
 const pushSettingSectionElement = document.getElementById("pushSettingSection");
 const pushSettingFieldsetElement = document.getElementById("pushSettingFieldset");
+// ==================================================
+// DOM: セレクトモード設定
+// ==================================================
+const selectModeSettingSectionElement =  document.getElementById("selectModeSettingSection");
+const selectModeToggleElement =  document.getElementById("selectModeToggle");
+const selectModeStatusTextElement =  document.getElementById("selectModeStatusText");
+const selectModeFeatureFieldsetElement =  document.getElementById("selectModeFeatureFieldset");
+const selectModeSpotifyCheckboxElement =  document.getElementById("selectModeSpotifyCheckbox");
+const selectModeOnceTaskCheckboxElement =  document.getElementById("selectModeOnceTaskCheckbox");
+const selectModeUsenCheckboxElement =  document.getElementById("selectModeUsenCheckbox");
+const selectModeDailyTaskListElement =  document.getElementById("selectModeDailyTaskList");
+const selectModeDailyTaskEmptyTextElement =  document.getElementById("selectModeDailyTaskEmptyText");
+const selectModeSelectionSummaryElement =  document.getElementById("selectModeSelectionSummary");
 
 // ==================================================
 // DOM: STEP 1 Spotify
@@ -250,6 +263,11 @@ const onceTaskRunErrorAreaElement = document.getElementById("onceTaskRunErrorAre
 // ==================================================
 // USEN推しリク曲選択画面全体
 const requestSongStepElement = document.getElementById("requestSongStep");
+// USEN用／デイリー用で表示を切り替える要素
+const requestSongStepTitleElement =  document.getElementById("requestSongStepTitle");
+const requestSongStepDescriptionElement =  document.getElementById("requestSongStepDescription");
+const requestSongHelpButtonElement =  document.getElementById("requestSongHelpButton");
+const selectedRequestSongLabelElement =  document.getElementById("selectedRequestSongLabel");
 // ランキング表示
 const usenRankingInfoElement = document.getElementById("usenRankingInfo");
 // 選択中のリクエスト曲表示エリア
