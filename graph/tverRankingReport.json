@@ -27466,6 +27466,33 @@
       "previousLikePoints": [],
       "rankings": [
         {
+          "type": "talk",
+          "label": "トーク",
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
+          "currentPoints": [],
+          "previousPoints": [],
+          "nearbyRanking": [
+            {
+              "rank": 47,
+              "title": "滝沢カレン＆和田明日香のフィーリンきっちん"
+            },
+            {
+              "rank": 48,
+              "title": "START UP！ドリームエンタ"
+            },
+            {
+              "rank": 49,
+              "title": "輝き続ける"
+            },
+            {
+              "rank": 50,
+              "title": "吉田と粗品と"
+            }
+          ]
+        },
+        {
           "type": "variety",
           "label": "バラエティ",
           "currentRank": null,
@@ -27489,33 +27516,6 @@
             {
               "rank": 50,
               "title": "やすとものどこいこ！？"
-            }
-          ]
-        },
-        {
-          "type": "all",
-          "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
-          "previousPoints": [],
-          "nearbyRanking": [
-            {
-              "rank": 47,
-              "title": "ちいかわ"
-            },
-            {
-              "rank": 48,
-              "title": "月曜から夜ふかし"
-            },
-            {
-              "rank": 49,
-              "title": "スポンジ・シノ"
-            },
-            {
-              "rank": 50,
-              "title": "耳の穴かっぽじって聞け！"
             }
           ]
         }
