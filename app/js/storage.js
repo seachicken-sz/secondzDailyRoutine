@@ -170,10 +170,14 @@ function saveFlowState(openedAction = state.openedAction || "", stepElement = st
   if (!stepElement || stepElement === homeStepElement) {
     return;
   }
-
   const flowState = {
     dateKey: getTodayKey(),
     currentStepId: stepElement.id,
+    routineMode: state.routineMode,
+    requestSongMode: state.requestSongMode,
+    selectModeDailyTaskIds: Array.isArray(state.selectModeDailyTaskIds)
+      ? state.selectModeDailyTaskIds
+      : [],
     selectedSong: state.selectedSong,
     selectedOnceTasks: state.selectedOnceTasks,
     currentOnceTaskIndex: state.currentOnceTaskIndex,
