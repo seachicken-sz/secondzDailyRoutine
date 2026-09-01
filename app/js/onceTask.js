@@ -24,8 +24,8 @@ async function skipOnceTaskSelection() {
   // エラー表示を消す
   hideError(onceListErrorAreaElement);
 
-  // USEN推しリクへ進む
-  await showRequestSongStep();
+  // 通常／セレクトモードに応じた次の画面へ進む
+  await advanceRoutineFrom("onceTask");
 }
 
 // ==================================================
@@ -125,8 +125,8 @@ function bindOnceTaskEvents() {
         console.error("onceListLog送信失敗", error);
       });
 
-      // USEN推しリクへ進む
-      await showRequestSongStep();
+      // 通常／セレクトモードに応じた次の画面へ進む
+      await advanceRoutineFrom("onceTask");
       return;
     }
 
@@ -295,12 +295,24 @@ function buildOnceTaskMessage(task) {
 // ==================================================
 // 対象の期間限定タスクがない場合は、選択画面を表示せずUSEN推しリクへ進む
 async function showOnceTaskSelectStepOrSkip() {
-  if (!Array.isArray(state.onceTasks) || state.onceTasks.length === 0) {
-    state.selectedOnceTasks = [];
-    state.currentOnceTaskIndex = 0;
-    await showRequestSongStep();
-    return;
-  }
+  try {
+    if (!Array.isArray(state.onceTasks) || state.onceTasks.length === 0) {
+      state.onceTasks = await loadOnceTasks();
+    }
 
-  await showOnceTaskSelectStepOrSkip();
+    if (state.onceTasks.length === 0) {
+      state.selectedOnceTasks = [];
+      state.currentOnceTaskIndex = 0;
+      await advanceRoutineFrom("onceTask");
+      return;
+    }
+
+    await showOnceListSelectStep();
+  } catch (error) {
+    console.error(error);
+    showError(
+      onceListErrorAreaElement,
+      "期間限定タスクの読み込みに失敗しました。"
+    );
+  }
 }
