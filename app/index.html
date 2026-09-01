@@ -446,12 +446,13 @@
         <h1>今日のSpotify再生</h1>
         <p class="description">
           1日1曲再生で<strong>月間リスナー数</strong>に貢献😊<br>
-          下のリストから好きな曲を選んで「Spotifyで開く」をタップするとSpotifyで再生されます。<br>
-          <strong>再生されたら、バックでこのアプリ</strong>に戻ってきてください。
+          <strong>Spotify無料会員でもOK!</strong><br>
+          下のリストから好きな曲を選んで「Spotifyで聞く」をタップで再生♪<br>
+          選んだ曲が再生されたら<strong>バックでこのアプリ</strong>に戻ってきてね！
         </p>
         <button class="task-help-button" type="button" data-step-help-key="spotify">やり方をチェック</button>
         <p id="spotifyListenerCount" class="spotify-listener-count"></p>
-        <p>※リリース週にはStationhead(ステヘ)もおすすめ！<br>
+        <p>※Spotify Premium会員またはApple Music会員の方はStationhead(ステヘ)がおすすめ！<br>
         <button type="button" class="text-link-button open-stationhead-modal-button">詳しくはこちら</button></p>
       </header>
 
@@ -460,7 +461,7 @@
         <p id="selectedSongName" class="selected-song"></p>
 
         <button id="openSpotifyButton" class="primary-button">
-          Spotifyで開く
+          Spotifyで聞く
         </button>
 
         <button id="spotifyNextButton" class="secondary-button hidden">
@@ -499,7 +500,7 @@
         <h1>期間限定タスク🗒️</h1>
         <p class="description">
           これ終わってる？期間限定だから早めにやっちゃお👍<br>
-          今やるものにチェックをいれて「次へ」を押してください！<br>
+          今やるものにチェックをいれて「次へ」を押してね！<br>
           <br>
           ※一人一回限定のものは、一度でもやるとチェックが外れます。
         </p>
@@ -668,7 +669,6 @@
         <h1>SNSシェア</h1>
         <p class="description">
           今日やったタスク、せっかくならSNSで共有しない？
-          <strong>※新曲リリースに向けて、みんなでオーエンタムしませんか？</strong>
         </p>
       </header>
 
@@ -696,21 +696,8 @@
       <section class="scroll-area">
         <section class="task-card">        
           <div class="post-preview-tabs" role="tablist" aria-label="投稿先切り替え">
-            <button
-              id="postPreviewXTabButton"
-              class="post-preview-tab active"
-              type="button"
-            >
-              X
-            </button>
-        
-            <button
-              id="postPreviewThreadsTabButton"
-              class="post-preview-tab"
-              type="button"
-            >
-              Threads
-            </button>
+            <button id="postPreviewXTabButton" class="post-preview-tab active" type="button">X</button>
+            <button id="postPreviewThreadsTabButton" class="post-preview-tab" type="button">Threads</button>
           </div>
         
           <section id="postPreviewXPanel" class="post-preview-panel">
@@ -748,9 +735,6 @@
               この内容で画像を生成
             </button>
         </section>
-
-
-
         <section class="bottom-action-area">
           <button id="postNextButton" class="primary-button">
             次へ
@@ -758,6 +742,7 @@
         </section>
       </section>
     </section>
+    
     <!--STEP 6 Youtube-->
     <section id="youtubeAskStep" class="step-screen hidden">
       <header class="header">
