@@ -12,16 +12,15 @@ function bindHomeEvents() {
   // 開始ボタン
   // ==================================================
 
-  // ホーム画面の「開始する」ボタン押下時
-  addClickEvent(startRoutineButtonElement, () => {
+  addClickEvent(startRoutineButtonElement, async () => {
     // アプリ開始ログを送信する
     // ログ送信に失敗してもユーザー操作は止めない
     sendStartLog().catch((error) => {
       console.error("startError", error);
     });
 
-    // Spotify画面へ進む
-    showOnlyStep(spotifyStepElement);
+    // 通常／セレクトモードに応じた最初の画面へ進む
+    await startRoutineByCurrentMode();
   });
     // ==================================================
   // ホーム画面のお知らせボタン
