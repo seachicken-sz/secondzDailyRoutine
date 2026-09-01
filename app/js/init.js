@@ -332,6 +332,8 @@ async function init() {
       state.requestTexts = {};
       state.dailyGroups = [];
     }
+    // セレクトモード設定を読み込み、設定画面と開始ボタンへ反映
+    initializeSelectMode();
     // 一人一回系タスクなど、保存済み完了データのうち不要なものを整理
     cleanupOnceTaskDoneMap(state.onceTasks);
     cleanupDailyTaskDoneMap();
@@ -445,6 +447,22 @@ async function restoreFlowStateOrHome() {
   // 外部ページを開いた状態かどうか
   // 例: Spotifyを開いた後、戻ってきた時に「次へ」ボタンを出すため
   state.openedAction = flowState.openedAction || "";
+  // 通常／セレクトモード
+  state.routineMode =
+    flowState.routineMode === ROUTINE_MODES.select
+      ? ROUTINE_MODES.select
+      : ROUTINE_MODES.normal;
+
+  // USEN用／デイリー用の曲選択画面
+  state.requestSongMode =
+    flowState.requestSongMode === REQUEST_SONG_MODES.daily
+      ? REQUEST_SONG_MODES.daily
+      : REQUEST_SONG_MODES.usen;
+
+  // セレクトモード開始時に確定したデイリータスクID
+  state.selectModeDailyTaskIds = Array.isArray(flowState.selectModeDailyTaskIds)
+    ? flowState.selectModeDailyTaskIds.map(String)
+    : [];
 
   // ==================================================
   // Spotify画面の復元
@@ -498,32 +516,42 @@ async function restoreFlowStateOrHome() {
   }
 
   // ==================================================
-  // USEN推しリク画面の復元
+  // USEN／デイリー用リクエスト曲画面の復元
   // ==================================================
   if (flowState.currentStepId === "requestSongStep") {
-    // showRequestSongStep() 内で state.selectedRequestSong が上書き/描画される可能性に備えて退避
     const restoredRequestSong = state.selectedRequestSong;
+    const restoredRadioRequestSong = state.selectedRadioRequestSong;
 
-    // USEN推しリク画面を読み込み・表示
     await showRequestSongStep();
 
-    // 選択済みリクエスト曲があれば、選択状態を画面に反映
-    if (restoredRequestSong) {
+    if (
+      state.requestSongMode === REQUEST_SONG_MODES.daily &&
+      restoredRadioRequestSong?.name
+    ) {
+      const restoredDailySong = state.requestSongs.find((song) => {
+        return String(song.name || "") === String(restoredRadioRequestSong.name);
+      });
+
+      if (restoredDailySong) {
+        selectRequestSong(restoredDailySong);
+      }
+    } else if (restoredRequestSong) {
       selectRequestSong(restoredRequestSong);
     }
 
-    // USEN推しリクページを開いた後の状態なら、次へボタンを表示してボタン色も復元
-    if (state.openedAction === OPENED_ACTIONS.requestSong) {
+    if (
+      state.requestSongMode === REQUEST_SONG_MODES.usen &&
+      state.openedAction === OPENED_ACTIONS.requestSong
+    ) {
       requestSongNextButtonElement.classList.remove("hidden");
       setButtonStyle(openRequestSongButtonElement, "gray");
       setButtonStyle(requestSongNextButtonElement, "primary");
-
-      // 外部ページを開いた後は曲リストを隠して、戻ってきた時の画面を簡略化
       setSongListVisibility(recommendedRequestSongsElement, false);
       setSongListVisibility(otherRequestSongsWrapperElement, false);
       setSongListVisibility(toggleOtherRequestSongsButtonElement, false);
     }
 
+    saveFlowState(state.openedAction, requestSongStepElement);
     return;
   }
   
