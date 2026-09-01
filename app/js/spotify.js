@@ -67,7 +67,7 @@ function bindSpotifyEvents() {
   
   addClickEvent(stationheadNextButtonElement, async () => {
     state.selectedSong = null;
-    await showOnceListSelectStep();
+    await advanceRoutineFrom("spotify");
   });
   // ==================================================
   // 「BGMなし」ボタン
@@ -78,8 +78,8 @@ function bindSpotifyEvents() {
     // Spotify曲は未選択扱いにする
     state.selectedSong = null;
 
-    // 期間限定タスク選択へ進む
-    await showOnceListSelectStep();
+    // 通常／セレクトモードに応じた次の画面へ進む
+    await advanceRoutineFrom("spotify");
   });
 
   // ==================================================
@@ -88,8 +88,8 @@ function bindSpotifyEvents() {
 
   // Spotifyステップの次へボタン押下時
   addClickEvent(spotifyNextButtonElement, async () => {
-    // 期間限定タスク選択へ進む
-    await showOnceListSelectStep();
+    // 通常／セレクトモードに応じた次の画面へ進む
+    await advanceRoutineFrom("spotify");
   });
 
   // ==================================================
