@@ -101,8 +101,6 @@ function bindDailyTaskEvents() {
   // ==================================================
   // デイリーグループ終了画面：「頑張る！」ボタン
   // ==================================================
-
-  // デイリーグループ終了画面の「頑張る！」ボタン押下時
   addClickEvent(continueDailyGroupButtonElement, () => {
     // 次のデイリータスクグループへ進める
     state.currentDailyGroupIndex += 1;
@@ -110,27 +108,25 @@ function bindDailyTaskEvents() {
     // 次のグループの先頭タスクから開始する
     state.currentDailyTaskIndex = 0;
 
-    // すべてのデイリータスクグループが終わった場合は、SNS共有確認へ進む
-    if (state.currentDailyGroupIndex >= state.dailyGroups.length) {
-      showPostAskStep();
+    const executionGroups = getExecutionDailyGroups();
+
+    // すべての実行対象グループが終わった場合は、SNS共有確認へ進む
+    if (state.currentDailyGroupIndex >= executionGroups.length) {
+      finishRoutineAfterDaily();
       return;
     }
 
-    // 次のデイリータスクグループを表示する
-    // false指定で、デイリータスク全体の再読み込み・初期化はしない
+    // 次のグループを表示する
     showDailyTaskStep(false);
   });
 
   // ==================================================
   // デイリーグループ終了画面：「今日はここまで」ボタン
   // ==================================================
-
-  // デイリーグループ終了画面の「今日はここまで」ボタン押下時
   addClickEvent(stopDailyGroupButtonElement, () => {
     // SNS共有確認へ進む
-    showPostAskStep();
+    finishRoutineAfterDaily();
   });
-}
 
 // ==================================================
 // デイリータスク画面表示
@@ -148,9 +144,11 @@ async function showDailyTaskStep(shouldInitialize = true) {
       state.completedDailyItems = [];
     }
 
-    // デイリータスクがない場合は、SNS共有確認へ進む
-    if (state.dailyGroups.length === 0) {
-      showPostAskStep();
+    const executionGroups = getExecutionDailyGroups();
+
+    // 実行対象のデイリータスクがない場合は、SNS共有確認へ進む
+    if (executionGroups.length === 0) {
+      finishRoutineAfterDaily();
       return;
     }
 
@@ -160,10 +158,7 @@ async function showDailyTaskStep(shouldInitialize = true) {
     // 現在位置のデイリータスクを描画
     renderCurrentDailyTask();
   } catch (error) {
-    // データ読み込みや描画に失敗した場合
     console.error(error);
-
-    // 直前画面であるUSEN推しリク側のエラー表示エリアに出す
     showError(
       requestSongErrorAreaElement,
       "※エラーが発生しました。アプリを立ち上げ直してください。ERROR:list"
@@ -197,7 +192,7 @@ function renderCurrentDailyTask() {
 
   // グループまたはタスクが存在しない場合は、デイリー終了扱いでSNS共有確認へ進む
   if (!group || !item) {
-    showPostAskStep();
+    finishRoutineAfterDaily();
     return;
   }
 
@@ -335,13 +330,15 @@ function showDailyGroupEndStep() {
 
   // グループが存在しない場合は、デイリー終了扱いでSNS共有確認へ進む
   if (!group) {
-    showPostAskStep();
+    finishRoutineAfterDaily();
     return;
   }
 
+  const executionGroups = getExecutionDailyGroups();
+
   // 最後のグループが終わった場合は、グループ終了画面を挟まずSNS共有確認へ進む
-  if (state.currentDailyGroupIndex >= state.dailyGroups.length - 1) {
-    showPostAskStep();
+  if (state.currentDailyGroupIndex >= executionGroups.length - 1) {
+    finishRoutineAfterDaily();
     return;
   }
 
@@ -353,7 +350,7 @@ function showDailyGroupEndStep() {
   // デイリーグループ終了画面を表示
   showOnlyStep(dailyGroupEndStepElement);
 }
-
+  
 // ==================================================
 // 完了済みデイリータスク記録
 // ==================================================
@@ -414,7 +411,8 @@ function recordCompletedDailyItem(item) {
 // ==================================================
 // currentDailyGroupIndex をもとに、現在表示対象のグループを返す
 function getCurrentDailyGroup() {
-  return state.dailyGroups[state.currentDailyGroupIndex];
+  const executionGroups = getExecutionDailyGroups();
+  return executionGroups[state.currentDailyGroupIndex] || null;
 }
 
 // ==================================================
