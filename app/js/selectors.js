@@ -25,7 +25,23 @@ function selectSong(song) {
 }
 
 function selectRequestSong(song) {
-  state.selectedRequestSong = song;
+  if (!song) {
+    return;
+  }
+
+  const dailyMode = isDailyRequestSongMode();
+
+  if (dailyMode) {
+    // デイリー用ではUSENを実行した曲として保存しない
+    state.selectedRequestSong = null;
+    state.selectedRadioRequestSong = {
+      name: song.name || "",
+      source: "dailySelect",
+    };
+  } else {
+    state.selectedRequestSong = song;
+    state.selectedRadioRequestSong = null;
+  }
 
   if (selectedRequestSongNameElement) {
     selectedRequestSongNameElement.textContent = song.name;
@@ -35,16 +51,32 @@ function selectRequestSong(song) {
     selectedRequestSongAreaElement.classList.remove("hidden");
   }
 
-  if (requestSongNextButtonElement) {
-    requestSongNextButtonElement.classList.add("hidden");
+  if (dailyMode) {
+    if (openRequestSongButtonElement) {
+      openRequestSongButtonElement.classList.add("hidden");
+    }
+
+    if (requestSongNextButtonElement) {
+      requestSongNextButtonElement.classList.remove("hidden");
+    }
+
+    setButtonStyle(requestSongNextButtonElement, "primary");
+  } else {
+    if (openRequestSongButtonElement) {
+      openRequestSongButtonElement.classList.remove("hidden");
+    }
+
+    if (requestSongNextButtonElement) {
+      requestSongNextButtonElement.classList.add("hidden");
+    }
+
+    setButtonStyle(openRequestSongButtonElement, "primary");
+    setButtonStyle(requestSongNextButtonElement, "secondary");
   }
-  setButtonStyle(openRequestSongButtonElement, "primary");
-  setButtonStyle(requestSongNextButtonElement, "secondary");
-  
+
   setSongListVisibility(recommendedRequestSongsElement, true);
   setSongListVisibility(toggleOtherRequestSongsButtonElement, true);
-  updateOtherRequestSongsAccordion();  
-
+  updateOtherRequestSongsAccordion();
   updateSelectedButtonStyle(".request-song-button", song);
   hideError(requestSongErrorAreaElement);
 }
