@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026/09/05 05:07",
+  "updatedAt": "2026/09/05 06:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/04",
-      "updatedAt": "2026/09/05 05:07",
+      "updatedAt": "2026/09/05 06:07",
       "episodeId": "ep3le8ldjt",
       "subtitle": "風磨を信じきれる！？信頼ビリビリペン＆タイムDEATH第4弾",
-      "likes": "2726",
+      "likes": "3027",
       "favorites": "78.7万",
       "likePoints": [
         {
@@ -33,6 +33,10 @@
         {
           "hour": 7,
           "likes": 2726
+        },
+        {
+          "hour": 8,
+          "likes": 3027
         }
       ],
       "previousLikePoints": [
@@ -689,10 +693,15 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 46,
+          "elapsedHour": 8,
+          "elapsedRank": 46,
+          "currentPoints": [
+            {
+              "hour": 8,
+              "rank": 46
+            }
+          ],
           "previousPoints": [
             {
               "hour": 4,
@@ -1353,20 +1362,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "サクラミーツ"
+              "rank": 43,
+              "title": "テレビ×ミセス"
             },
             {
-              "rank": 48,
-              "title": "深夜のダイアン"
+              "rank": 44,
+              "title": "かまいたちの机上の空論城"
             },
             {
-              "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "rank": 45,
+              "title": "世界の果てまでイッテQ！"
             },
             {
-              "rank": 50,
-              "title": "世界の何だコレ！？ミステリー"
+              "rank": 46,
+              "title": "タイムレスマン"
             }
           ]
         },
@@ -1678,7 +1687,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 48,
@@ -1690,7 +1699,7 @@
             },
             {
               "rank": 50,
-              "title": "ナゾトレMAXXX"
+              "title": "人生最高レストラン"
             }
           ]
         }
@@ -1699,7 +1708,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/09/05 05:07",
+      "updatedAt": "2026/09/05 06:07",
       "episodeId": "ep55b7uj3p",
       "subtitle": "【韓国グルメSP】進化系料理&伝統ゲームで爆笑連発!",
       "likes": "1.5万",
@@ -4078,19 +4087,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サクラミーツ"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "サクラミーツ"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 50,
-              "title": "世界の何だコレ！？ミステリー"
+              "title": "ザ！世界仰天ニュース"
             }
           ]
         },
@@ -4583,7 +4592,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 48,
@@ -4595,7 +4604,7 @@
             },
             {
               "rank": 50,
-              "title": "ナゾトレMAXXX"
+              "title": "人生最高レストラン"
             }
           ]
         }
@@ -4604,10 +4613,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/25",
-      "updatedAt": "2026/09/05 05:07",
+      "updatedAt": "2026/09/05 06:07",
       "episodeId": "epguch9hd0",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！後編",
-      "likes": "7998",
+      "likes": "8001",
       "favorites": "6.0万",
       "likePoints": [
         {
@@ -6931,11 +6940,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ＪＡＰＡＮをスーツケースにつめ込んで！～世界に日本を持ってった～"
+              "title": "おぎやはぎの愛車遍歴 NO CAR,NO LIFE！"
             },
             {
               "rank": 48,
-              "title": "おぎやはぎの愛車遍歴 NO CAR,NO LIFE！"
+              "title": "くりぃむしちゅーの熊本どぎゃん!?"
             },
             {
               "rank": 49,
@@ -6943,7 +6952,7 @@
             },
             {
               "rank": 50,
-              "title": "THE神業チャレンジ"
+              "title": "WEEKLYワールドサッカー Supported by U-NEXT ～プレミア・ラリーガ ダイジェスト～"
             }
           ]
         },
@@ -7104,19 +7113,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サクラミーツ"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "サクラミーツ"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 50,
-              "title": "世界の何だコレ！？ミステリー"
+              "title": "ザ！世界仰天ニュース"
             }
           ]
         }
@@ -7125,10 +7134,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/09/03",
-      "updatedAt": "2026/09/05 05:07",
+      "updatedAt": "2026/09/05 06:07",
       "episodeId": "epwohyg50q",
       "subtitle": "【ドッキリ】過剰コンプラクイズ",
-      "likes": "9952",
+      "likes": "9960",
       "favorites": "25.0万",
       "likePoints": [
         {
@@ -7322,6 +7331,10 @@
         {
           "hour": 51,
           "likes": 9952
+        },
+        {
+          "hour": 52,
+          "likes": 9960
         }
       ],
       "previousLikePoints": [
@@ -7982,9 +7995,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 32,
-          "elapsedHour": 51,
-          "elapsedRank": 32,
+          "currentRank": 33,
+          "elapsedHour": 52,
+          "elapsedRank": 33,
           "currentPoints": [
             {
               "hour": 8,
@@ -8161,6 +8174,10 @@
             {
               "hour": 51,
               "rank": 32
+            },
+            {
+              "hour": 52,
+              "rank": 33
             }
           ],
           "previousPoints": [
@@ -8479,10 +8496,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 29,
-              "title": "月曜から夜ふかし"
-            },
-            {
               "rank": 30,
               "title": "有吉クイズ"
             },
@@ -8492,6 +8505,10 @@
             },
             {
               "rank": 32,
+              "title": "日曜日の初耳学"
+            },
+            {
+              "rank": 33,
               "title": "ニカゲーム"
             }
           ]
@@ -8769,7 +8786,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 48,
@@ -8781,7 +8798,7 @@
             },
             {
               "rank": 50,
-              "title": "ナゾトレMAXXX"
+              "title": "人生最高レストラン"
             }
           ]
         }
@@ -8790,10 +8807,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/09/05 05:07",
+      "updatedAt": "2026/09/05 06:07",
       "episodeId": "eppaa3pee6",
       "subtitle": "24時間テレビ企画!巨大弓矢で福島から日本全国にエール",
-      "likes": "6561",
+      "likes": "6562",
       "favorites": "53.3万",
       "likePoints": [
         {
@@ -11401,11 +11418,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ＪＡＰＡＮをスーツケースにつめ込んで！～世界に日本を持ってった～"
+              "title": "おぎやはぎの愛車遍歴 NO CAR,NO LIFE！"
             },
             {
               "rank": 48,
-              "title": "おぎやはぎの愛車遍歴 NO CAR,NO LIFE！"
+              "title": "くりぃむしちゅーの熊本どぎゃん!?"
             },
             {
               "rank": 49,
@@ -11413,7 +11430,7 @@
             },
             {
               "rank": 50,
-              "title": "THE神業チャレンジ"
+              "title": "WEEKLYワールドサッカー Supported by U-NEXT ～プレミア・ラリーガ ダイジェスト～"
             }
           ]
         },
@@ -11638,19 +11655,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サクラミーツ"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "サクラミーツ"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 50,
-              "title": "世界の何だコレ！？ミステリー"
+              "title": "ザ！世界仰天ニュース"
             }
           ]
         }
@@ -11659,10 +11676,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/09/02",
-      "updatedAt": "2026/09/05 05:07",
+      "updatedAt": "2026/09/05 06:07",
       "episodeId": "epwprjcodi",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！JUJU登場",
-      "likes": "3985",
+      "likes": "3989",
       "favorites": "12.7万",
       "likePoints": [
         {
@@ -11932,6 +11949,10 @@
         {
           "hour": 76,
           "likes": 3985
+        },
+        {
+          "hour": 77,
+          "likes": 3989
         }
       ],
       "previousLikePoints": [
@@ -12553,19 +12574,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サクラミーツ"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "サクラミーツ"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 50,
-              "title": "世界の何だコレ！？ミステリー"
+              "title": "ザ！世界仰天ニュース"
             }
           ]
         },
@@ -12580,7 +12601,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 48,
@@ -12592,7 +12613,7 @@
             },
             {
               "rank": 50,
-              "title": "ナゾトレMAXXX"
+              "title": "人生最高レストラン"
             }
           ]
         }
@@ -12601,10 +12622,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/09/04",
-      "updatedAt": "2026/09/05 05:07",
+      "updatedAt": "2026/09/05 06:07",
       "episodeId": "epj7984z30",
       "subtitle": "第143回 小池栄子VS渡部篤郎 名俳優の衝撃に一同驚愕",
-      "likes": "3396",
+      "likes": "3413",
       "favorites": "71.7万",
       "likePoints": [
         {
@@ -12714,6 +12735,10 @@
         {
           "hour": 29,
           "likes": 3396
+        },
+        {
+          "hour": 30,
+          "likes": 3413
         }
       ],
       "previousLikePoints": [
@@ -13363,7 +13388,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 9,
-          "elapsedHour": 28,
+          "elapsedHour": 29,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -13440,6 +13465,10 @@
             },
             {
               "hour": 28,
+              "rank": 9
+            },
+            {
+              "hour": 29,
               "rank": 9
             }
           ],
@@ -13676,7 +13705,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 31,
-          "elapsedHour": 28,
+          "elapsedHour": 29,
           "elapsedRank": 31,
           "currentPoints": [
             {
@@ -13729,6 +13758,10 @@
             },
             {
               "hour": 28,
+              "rank": 31
+            },
+            {
+              "hour": 29,
               "rank": 31
             }
           ],
@@ -13785,7 +13818,7 @@
           "nearbyRanking": [
             {
               "rank": 28,
-              "title": "リーガルビート -逆転の法廷-"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 29,
@@ -13806,7 +13839,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/08/08",
-      "updatedAt": "2026/09/05 05:07",
+      "updatedAt": "2026/09/05 06:07",
       "episodeId": "ep5i335i2a",
       "subtitle": "ドッキリも地球を救う4時間テレビSP（1）",
       "likes": "1.1万",
@@ -15115,19 +15148,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サクラミーツ"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "サクラミーツ"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 50,
-              "title": "世界の何だコレ！？ミステリー"
+              "title": "ザ！世界仰天ニュース"
             }
           ]
         },
@@ -15547,7 +15580,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 48,
@@ -15559,7 +15592,7 @@
             },
             {
               "rank": 50,
-              "title": "ナゾトレMAXXX"
+              "title": "人生最高レストラン"
             }
           ]
         }
@@ -15568,7 +15601,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/09/05 05:07",
+      "updatedAt": "2026/09/05 06:07",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
       "likes": "1.0万",
@@ -17535,15 +17568,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
+              "title": "所さんの学校では教えてくれないそこんトコロ！"
             },
             {
               "rank": 48,
-              "title": "にけつッ!!"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 49,
-              "title": "所さんの学校では教えてくれないそこんトコロ！"
+              "title": "にけつッ!!"
             },
             {
               "rank": 50,
@@ -17751,19 +17784,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サクラミーツ"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "サクラミーツ"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 50,
-              "title": "世界の何だコレ！？ミステリー"
+              "title": "ザ！世界仰天ニュース"
             }
           ]
         }
@@ -17772,10 +17805,10 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/09/02",
-      "updatedAt": "2026/09/05 05:07",
+      "updatedAt": "2026/09/05 06:07",
       "episodeId": "epnfgw3vuc",
       "subtitle": "#9 妊娠中の親友を襲う悲劇…涙の別れ",
-      "likes": "9600",
+      "likes": "9626",
       "favorites": "65.3万",
       "likePoints": [
         {
@@ -17989,6 +18022,10 @@
         {
           "hour": 55,
           "likes": 9600
+        },
+        {
+          "hour": 56,
+          "likes": 9626
         }
       ],
       "previousLikePoints": [
@@ -18646,7 +18683,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 6,
-          "elapsedHour": 55,
+          "elapsedHour": 56,
           "elapsedRank": 6,
           "currentPoints": [
             {
@@ -18863,6 +18900,10 @@
             },
             {
               "hour": 55,
+              "rank": 6
+            },
+            {
+              "hour": 56,
               "rank": 6
             }
           ],
@@ -19551,7 +19592,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 8,
-          "elapsedHour": 55,
+          "elapsedHour": 56,
           "elapsedRank": 8,
           "currentPoints": [
             {
@@ -19764,6 +19805,10 @@
             },
             {
               "hour": 55,
+              "rank": 8
+            },
+            {
+              "hour": 56,
               "rank": 8
             }
           ],
@@ -20453,7 +20498,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/03",
-      "updatedAt": "2026/09/05 05:07",
+      "updatedAt": "2026/09/05 06:07",
       "episodeId": "eplbbczp96",
       "subtitle": "第9話 父の最期の願いにあふれる涙・・・幸せの期限",
       "likes": "1.3万",
@@ -20573,6 +20618,10 @@
         },
         {
           "hour": 31,
+          "likes": 13000
+        },
+        {
+          "hour": 32,
           "likes": 13000
         }
       ],
@@ -21234,9 +21283,9 @@
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 1,
-          "elapsedHour": 31,
-          "elapsedRank": 1,
+          "currentRank": 2,
+          "elapsedHour": 32,
+          "elapsedRank": 2,
           "currentPoints": [
             {
               "hour": 2,
@@ -21357,6 +21406,10 @@
             {
               "hour": 31,
               "rank": 1
+            },
+            {
+              "hour": 32,
+              "rank": 2
             }
           ],
           "previousPoints": [
@@ -22028,6 +22081,10 @@
           "nearbyRanking": [
             {
               "rank": 1,
+              "title": "Ｔシャツが乾くまで"
+            },
+            {
+              "rank": 2,
               "title": "ラストノート"
             }
           ]
@@ -22035,9 +22092,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 1,
-          "elapsedHour": 31,
-          "elapsedRank": 1,
+          "currentRank": 2,
+          "elapsedHour": 32,
+          "elapsedRank": 2,
           "currentPoints": [
             {
               "hour": 2,
@@ -22158,6 +22215,10 @@
             {
               "hour": 31,
               "rank": 1
+            },
+            {
+              "hour": 32,
+              "rank": 2
             }
           ],
           "previousPoints": [
@@ -22829,6 +22890,10 @@
           "nearbyRanking": [
             {
               "rank": 1,
+              "title": "Ｔシャツが乾くまで"
+            },
+            {
+              "rank": 2,
               "title": "ラストノート"
             }
           ]
@@ -22838,7 +22903,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/01",
-      "updatedAt": "2026/09/05 05:07",
+      "updatedAt": "2026/09/05 06:07",
       "episodeId": "epjdktoxqf",
       "subtitle": "ウソの雑学を見抜け！サンタック・ホームズ",
       "likes": "1.2万",
@@ -23215,6 +23280,10 @@
         {
           "hour": 101,
           "likes": 12000
+        },
+        {
+          "hour": 102,
+          "likes": 12000
         }
       ],
       "previousLikePoints": [],
@@ -23223,7 +23292,7 @@
           "type": "talk",
           "label": "トーク",
           "currentRank": 46,
-          "elapsedHour": 100,
+          "elapsedHour": 101,
           "elapsedRank": 46,
           "currentPoints": [
             {
@@ -23605,6 +23674,10 @@
             {
               "hour": 100,
               "rank": 46
+            },
+            {
+              "hour": 101,
+              "rank": 46
             }
           ],
           "previousPoints": [],
@@ -23831,19 +23904,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サクラミーツ"
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "サクラミーツ"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 50,
-              "title": "世界の何だコレ！？ミステリー"
+              "title": "ザ！世界仰天ニュース"
             }
           ]
         }
