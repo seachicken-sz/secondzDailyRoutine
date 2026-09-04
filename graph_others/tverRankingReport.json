@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/09/04 10:12",
+  "updatedAt": "2026/09/04 11:10",
   "reports": {
     "sroqs1gopx": {
       "programTitle": "ゲストはROIROM",
       "broadcastDate": "2026/06/26",
-      "updatedAt": "2026/09/04 10:12",
+      "updatedAt": "2026/09/04 11:10",
       "episodeId": "epoh3fu399",
       "subtitle": "MCはマナーの達人アン ミカ",
       "likes": "",
@@ -23,19 +23,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 48,
-              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 49,
-              "title": "やすとも・友近のキメツケ！あくまで個人の感想です"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 50,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "伊集院光＆佐久間宣行の勝手にテレ東批評"
             }
           ]
         },
@@ -50,19 +50,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "いろはに千鳥"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 48,
-              "title": "世界の果てまでイッテQ！"
+              "title": "何か“オモシロいコト”ないの？"
             },
             {
               "rank": 49,
-              "title": "秘密のケンミンSHOW極"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "ナゾトレMAXXX"
+              "title": "Aぇ! groupのQ＆Aぇ!"
             }
           ]
         }
@@ -71,7 +71,7 @@
     "srleu4lcwn": {
       "programTitle": "それSnow Manにやらせて下さい",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/09/04 10:12",
+      "updatedAt": "2026/09/04 11:10",
       "episodeId": "epwk55l23v",
       "subtitle": "ラウール＆天才姉妹がダンス世界大会に出場！密着2年8か月…涙の物語がついに完結",
       "likes": "2.9万",
@@ -683,6 +683,10 @@
         },
         {
           "hour": 159,
+          "likes": 29000
+        },
+        {
+          "hour": 160,
           "likes": 29000
         }
       ],
@@ -1360,9 +1364,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 14,
-          "elapsedHour": 159,
-          "elapsedRank": 14,
+          "currentRank": 13,
+          "elapsedHour": 160,
+          "elapsedRank": 13,
           "currentPoints": [
             {
               "hour": 4,
@@ -1987,6 +1991,10 @@
             {
               "hour": 159,
               "rank": 14
+            },
+            {
+              "hour": 160,
+              "rank": 13
             }
           ],
           "previousPoints": [
@@ -2341,6 +2349,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 10,
+              "title": "ロンドンハーツ"
+            },
+            {
               "rank": 11,
               "title": "夫が寝たあとに"
             },
@@ -2350,10 +2362,6 @@
             },
             {
               "rank": 13,
-              "title": "踊る！さんま御殿!!"
-            },
-            {
-              "rank": 14,
               "title": "それSnow Manにやらせて下さい"
             }
           ]
@@ -2362,7 +2370,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 34,
-          "elapsedHour": 159,
+          "elapsedHour": 160,
           "elapsedRank": 34,
           "currentPoints": [
             {
@@ -2984,6 +2992,10 @@
             {
               "hour": 159,
               "rank": 34
+            },
+            {
+              "hour": 160,
+              "rank": 34
             }
           ],
           "previousPoints": [
@@ -3039,15 +3051,15 @@
           "nearbyRanking": [
             {
               "rank": 31,
-              "title": "ニカゲーム"
+              "title": "夫に不倫をお願いされました"
             },
             {
               "rank": 32,
-              "title": "24時間テレビ49「わたしの家族の話～あなたは誰を想う？～」"
+              "title": "ニカゲーム"
             },
             {
               "rank": 33,
-              "title": "踊る！さんま御殿!!"
+              "title": "24時間テレビ49「わたしの家族の話～あなたは誰を想う？～」"
             },
             {
               "rank": 34,
@@ -3060,10 +3072,10 @@
     "srfgxtv5sb": {
       "programTitle": "いたジャン！",
       "broadcastDate": "2026/09/03",
-      "updatedAt": "2026/09/04 10:12",
+      "updatedAt": "2026/09/04 11:10",
       "episodeId": "ep9148hv5k",
       "subtitle": "第111回 ▽7人だけの夏休み（4）豪華別荘を満喫！",
-      "likes": "4952",
+      "likes": "5060",
       "favorites": "31.5万",
       "likePoints": [
         {
@@ -3189,6 +3201,10 @@
         {
           "hour": 34,
           "likes": 4952
+        },
+        {
+          "hour": 35,
+          "likes": 5060
         }
       ],
       "previousLikePoints": [
@@ -3837,9 +3853,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 41,
-          "elapsedHour": 33,
-          "elapsedRank": 41,
+          "currentRank": 42,
+          "elapsedHour": 34,
+          "elapsedRank": 42,
           "currentPoints": [
             {
               "hour": 19,
@@ -3900,6 +3916,10 @@
             {
               "hour": 33,
               "rank": 41
+            },
+            {
+              "hour": 34,
+              "rank": 42
             }
           ],
           "previousPoints": [
@@ -4002,10 +4022,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 38,
-              "title": "タイムレスマン"
-            },
-            {
               "rank": 39,
               "title": "Iwataniスペシャル 鳥人間コンテスト"
             },
@@ -4015,6 +4031,10 @@
             },
             {
               "rank": 41,
+              "title": "秘密のケンミンSHOW極"
+            },
+            {
+              "rank": 42,
               "title": "いたジャン！"
             }
           ]
@@ -4030,19 +4050,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "news zero"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "ちょっと待とうよ、春虎くん"
+              "title": "news zero"
             },
             {
               "rank": 49,
-              "title": "日曜日の初耳学"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "ぐるぐるナインティナイン"
+              "title": "日曜日の初耳学"
             }
           ]
         }
@@ -4051,7 +4071,7 @@
     "sracdkj75t": {
       "programTitle": "Golden SixTONES",
       "broadcastDate": "2026/08/30",
-      "updatedAt": "2026/09/04 10:12",
+      "updatedAt": "2026/09/04 11:10",
       "episodeId": "epf4nst2hl",
       "subtitle": "24時間テレビ×Golden SixTONES緊急生放送SP!!",
       "likes": "1.1万",
@@ -4383,6 +4403,10 @@
         },
         {
           "hour": 109,
+          "likes": 11000
+        },
+        {
+          "hour": 110,
           "likes": 11000
         }
       ],
@@ -6010,19 +6034,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "いろはに千鳥"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 48,
-              "title": "世界の果てまでイッテQ！"
+              "title": "何か“オモシロいコト”ないの？"
             },
             {
               "rank": 49,
-              "title": "秘密のケンミンSHOW極"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "ナゾトレMAXXX"
+              "title": "Aぇ! groupのQ＆Aぇ!"
             }
           ]
         },
@@ -6339,19 +6363,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "news zero"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "ちょっと待とうよ、春虎くん"
+              "title": "news zero"
             },
             {
               "rank": 49,
-              "title": "日曜日の初耳学"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "ぐるぐるナインティナイン"
+              "title": "日曜日の初耳学"
             }
           ]
         }
@@ -6360,7 +6384,7 @@
     "srz5hf6qnt": {
       "programTitle": "Aぇ! groupのQ＆Aぇ!",
       "broadcastDate": "2026/09/02",
-      "updatedAt": "2026/09/04 10:12",
+      "updatedAt": "2026/09/04 11:10",
       "episodeId": "eph2i3e8vd",
       "subtitle": "＜1＞トレンドメイクを施したAぇ！ベストショット",
       "likes": "1.2万",
@@ -6580,6 +6604,10 @@
         },
         {
           "hour": 58,
+          "likes": 12000
+        },
+        {
+          "hour": 59,
           "likes": 12000
         }
       ],
@@ -7229,9 +7257,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 46,
-          "elapsedHour": 57,
-          "elapsedRank": 46,
+          "currentRank": 50,
+          "elapsedHour": 58,
+          "elapsedRank": 50,
           "currentPoints": [
             {
               "hour": 11,
@@ -7420,6 +7448,10 @@
             {
               "hour": 57,
               "rank": 46
+            },
+            {
+              "hour": 58,
+              "rank": 50
             }
           ],
           "previousPoints": [
@@ -7598,19 +7630,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 43,
-              "title": "マルコポロリ！"
-            },
-            {
-              "rank": 44,
+              "rank": 47,
               "title": "ウチ、“断捨離”しました！"
             },
             {
-              "rank": 45,
-              "title": "かまいたちの机上の空論城"
+              "rank": 48,
+              "title": "何か“オモシロいコト”ないの？"
             },
             {
-              "rank": 46,
+              "rank": 49,
+              "title": "世界の果てまでイッテQ！"
+            },
+            {
+              "rank": 50,
               "title": "Aぇ! groupのQ＆Aぇ!"
             }
           ]
@@ -7696,19 +7728,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "news zero"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "ちょっと待とうよ、春虎くん"
+              "title": "news zero"
             },
             {
               "rank": 49,
-              "title": "日曜日の初耳学"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "ぐるぐるナインティナイン"
+              "title": "日曜日の初耳学"
             }
           ]
         }
@@ -7717,7 +7749,7 @@
     "srfdyr4f12": {
       "programTitle": "なにわ男子の逆転男子",
       "broadcastDate": "2026/08/29",
-      "updatedAt": "2026/09/04 10:12",
+      "updatedAt": "2026/09/04 11:10",
       "episodeId": "eprv6fq0rx",
       "subtitle": "M-1王者たくろう＆レギュラーのネタを完コピ！",
       "likes": "1.1万",
@@ -8261,6 +8293,10 @@
         },
         {
           "hour": 139,
+          "likes": 11000
+        },
+        {
+          "hour": 140,
           "likes": 11000
         }
       ],
@@ -9364,19 +9400,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "いろはに千鳥"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 48,
-              "title": "世界の果てまでイッテQ！"
+              "title": "何か“オモシロいコト”ないの？"
             },
             {
               "rank": 49,
-              "title": "秘密のケンミンSHOW極"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "ナゾトレMAXXX"
+              "title": "Aぇ! groupのQ＆Aぇ!"
             }
           ]
         },
@@ -9449,19 +9485,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "news zero"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "ちょっと待とうよ、春虎くん"
+              "title": "news zero"
             },
             {
               "rank": 49,
-              "title": "日曜日の初耳学"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "ぐるぐるナインティナイン"
+              "title": "日曜日の初耳学"
             }
           ]
         }
@@ -9470,7 +9506,7 @@
     "sr64ope7a7": {
       "programTitle": "限界突破！やってM!LK",
       "broadcastDate": "",
-      "updatedAt": "2026/09/04 10:12",
+      "updatedAt": "2026/09/04 11:10",
       "episodeId": "epq1p12svv",
       "subtitle": "知識をつけろ！前半",
       "likes": "",
@@ -9512,6 +9548,10 @@
         {
           "hour": 9,
           "likes": 2232
+        },
+        {
+          "hour": 10,
+          "likes": 2500
         }
       ],
       "rankings": [
@@ -9530,24 +9570,28 @@
             {
               "hour": 9,
               "rank": 30
+            },
+            {
+              "hour": 10,
+              "rank": 24
             }
           ],
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "いろはに千鳥"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 48,
-              "title": "世界の果てまでイッテQ！"
+              "title": "何か“オモシロいコト”ないの？"
             },
             {
               "rank": 49,
-              "title": "秘密のケンミンSHOW極"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "ナゾトレMAXXX"
+              "title": "Aぇ! groupのQ＆Aぇ!"
             }
           ]
         },
@@ -9562,19 +9606,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "news zero"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "ちょっと待とうよ、春虎くん"
+              "title": "news zero"
             },
             {
               "rank": 49,
-              "title": "日曜日の初耳学"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "ぐるぐるナインティナイン"
+              "title": "日曜日の初耳学"
             }
           ]
         }
@@ -9583,10 +9627,10 @@
     "sra5n6j0w3": {
       "programTitle": "テレビ×ミセス",
       "broadcastDate": "2026/08/31",
-      "updatedAt": "2026/09/04 10:12",
+      "updatedAt": "2026/09/04 11:10",
       "episodeId": "ep0w38m6p0",
       "subtitle": "歌コラボ8連発＆未公開SP★",
-      "likes": "5627",
+      "likes": "5645",
       "favorites": "45.7万",
       "likePoints": [
         {
@@ -9916,6 +9960,10 @@
         {
           "hour": 85,
           "likes": 5627
+        },
+        {
+          "hour": 86,
+          "likes": 5645
         }
       ],
       "previousLikePoints": [
@@ -10556,9 +10604,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 34,
-          "elapsedHour": 85,
-          "elapsedRank": 34,
+          "currentRank": 33,
+          "elapsedHour": 86,
+          "elapsedRank": 33,
           "currentPoints": [
             {
               "hour": 3,
@@ -10891,6 +10939,10 @@
             {
               "hour": 85,
               "rank": 34
+            },
+            {
+              "hour": 86,
+              "rank": 33
             }
           ],
           "previousPoints": [
@@ -11557,8 +11609,12 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 30,
+              "title": "吉田と粗品と"
+            },
+            {
               "rank": 31,
-              "title": "トークィーンズ"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 32,
@@ -11566,10 +11622,6 @@
             },
             {
               "rank": 33,
-              "title": "深夜のダイアン"
-            },
-            {
-              "rank": 34,
               "title": "テレビ×ミセス"
             }
           ]
@@ -12043,19 +12095,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "news zero"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "ちょっと待とうよ、春虎くん"
+              "title": "news zero"
             },
             {
               "rank": 49,
-              "title": "日曜日の初耳学"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "ぐるぐるナインティナイン"
+              "title": "日曜日の初耳学"
             }
           ]
         }
@@ -12064,10 +12116,10 @@
     "sr91aqd0qa": {
       "programTitle": "ニノなのに",
       "broadcastDate": "2026/09/02",
-      "updatedAt": "2026/09/04 10:12",
+      "updatedAt": "2026/09/04 11:10",
       "episodeId": "ep0im06sde",
       "subtitle": "司会は堀田真由！お盆初日何が1番早く観光地に行けるのか？",
-      "likes": "1505",
+      "likes": "1527",
       "favorites": "32.6万",
       "likePoints": [
         {
@@ -12213,6 +12265,10 @@
         {
           "hour": 37,
           "likes": 1505
+        },
+        {
+          "hour": 38,
+          "likes": 1527
         }
       ],
       "previousLikePoints": [
@@ -12881,9 +12937,9 @@
         {
           "type": "talk",
           "label": "トーク",
-          "currentRank": 13,
-          "elapsedHour": 37,
-          "elapsedRank": 13,
+          "currentRank": 15,
+          "elapsedHour": 38,
+          "elapsedRank": 15,
           "currentPoints": [
             {
               "hour": 7,
@@ -13008,6 +13064,10 @@
             {
               "hour": 37,
               "rank": 13
+            },
+            {
+              "hour": 38,
+              "rank": 15
             }
           ],
           "previousPoints": [
@@ -13674,19 +13734,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 10,
-              "title": "日曜日の初耳学"
-            },
-            {
-              "rank": 11,
-              "title": "相席食堂"
-            },
-            {
               "rank": 12,
               "title": "月曜から夜ふかし"
             },
             {
               "rank": 13,
+              "title": "THE突破ファイル"
+            },
+            {
+              "rank": 14,
+              "title": "トークィーンズ"
+            },
+            {
+              "rank": 15,
               "title": "ニノなのに"
             }
           ]
@@ -13694,9 +13754,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 25,
-          "elapsedHour": 37,
-          "elapsedRank": 25,
+          "currentRank": 28,
+          "elapsedHour": 38,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 14,
@@ -13793,6 +13853,10 @@
             {
               "hour": 37,
               "rank": 25
+            },
+            {
+              "hour": 38,
+              "rank": 28
             }
           ],
           "previousPoints": [
@@ -14155,19 +14219,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 22,
-              "title": "相席食堂"
+              "rank": 25,
+              "title": "THE突破ファイル"
             },
             {
-              "rank": 23,
-              "title": "月曜から夜ふかし"
-            },
-            {
-              "rank": 24,
+              "rank": 26,
               "title": "世界の何だコレ！？ミステリー"
             },
             {
-              "rank": 25,
+              "rank": 27,
+              "title": "トークィーンズ"
+            },
+            {
+              "rank": 28,
               "title": "ニノなのに"
             }
           ]
@@ -14177,7 +14241,7 @@
     "srdfz31i5d": {
       "programTitle": "ミキティダイニング",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/09/04 10:12",
+      "updatedAt": "2026/09/04 11:10",
       "episodeId": "epi627g3v8",
       "subtitle": "内田有紀のガチ食生活！timelesz寺西拓人が素顔解禁！",
       "likes": "",
