@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/09/06 01:07",
+  "updatedAt": "2026/09/06 02:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/04",
-      "updatedAt": "2026/09/06 01:07",
+      "updatedAt": "2026/09/06 02:07",
       "episodeId": "ep3le8ldjt",
       "subtitle": "風磨を信じきれる！？信頼ビリビリペン＆タイムDEATH第4弾",
       "likes": "1.0万",
@@ -112,6 +112,10 @@
         },
         {
           "hour": 27,
+          "likes": 10000
+        },
+        {
+          "hour": 28,
           "likes": 10000
         }
       ],
@@ -770,7 +774,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 5,
-          "elapsedHour": 27,
+          "elapsedHour": 28,
           "elapsedRank": 5,
           "currentPoints": [
             {
@@ -851,6 +855,10 @@
             },
             {
               "hour": 27,
+              "rank": 5
+            },
+            {
+              "hour": 28,
               "rank": 5
             }
           ],
@@ -1535,7 +1543,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 14,
-          "elapsedHour": 27,
+          "elapsedHour": 28,
           "elapsedRank": 14,
           "currentPoints": [
             {
@@ -1600,6 +1608,10 @@
             },
             {
               "hour": 27,
+              "rank": 14
+            },
+            {
+              "hour": 28,
               "rank": 14
             }
           ],
@@ -1925,7 +1937,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/09/06 01:07",
+      "updatedAt": "2026/09/06 02:07",
       "episodeId": "ep55b7uj3p",
       "subtitle": "【韓国グルメSP】進化系料理&伝統ゲームで爆笑連発!",
       "likes": "1.6万",
@@ -4809,7 +4821,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 48,
@@ -4821,7 +4833,7 @@
             },
             {
               "rank": 50,
-              "title": "月曜から夜ふかし"
+              "title": "かまいたちの机上の空論城"
             }
           ]
         }
@@ -4830,10 +4842,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/25",
-      "updatedAt": "2026/09/06 01:07",
+      "updatedAt": "2026/09/06 02:07",
       "episodeId": "epguch9hd0",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！後編",
-      "likes": "8120",
+      "likes": "8122",
       "favorites": "6.0万",
       "likePoints": [
         {
@@ -7157,11 +7169,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ダイアンのガチで！ごめんやす"
+              "title": "サタプラ"
             },
             {
               "rank": 48,
-              "title": "サタプラ"
+              "title": "ダイアンのガチで！ごめんやす"
             },
             {
               "rank": 49,
@@ -7351,7 +7363,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/09/03",
-      "updatedAt": "2026/09/06 01:07",
+      "updatedAt": "2026/09/06 02:07",
       "episodeId": "epwohyg50q",
       "subtitle": "【ドッキリ】過剰コンプラクイズ",
       "likes": "1.1万",
@@ -7627,6 +7639,10 @@
         },
         {
           "hour": 71,
+          "likes": 11000
+        },
+        {
+          "hour": 72,
           "likes": 11000
         }
       ],
@@ -8289,7 +8305,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 47,
-          "elapsedHour": 71,
+          "elapsedHour": 72,
           "elapsedRank": 47,
           "currentPoints": [
             {
@@ -8546,6 +8562,10 @@
             },
             {
               "hour": 71,
+              "rank": 47
+            },
+            {
+              "hour": 72,
               "rank": 47
             }
           ],
@@ -8866,15 +8886,15 @@
           "nearbyRanking": [
             {
               "rank": 44,
-              "title": "ぐるぐるナインティナイン"
-            },
-            {
-              "rank": 45,
               "title": "テレビ×ミセス"
             },
             {
-              "rank": 46,
+              "rank": 45,
               "title": "大悟の芸人領収書"
+            },
+            {
+              "rank": 46,
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 47,
@@ -9155,7 +9175,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 48,
@@ -9167,7 +9187,7 @@
             },
             {
               "rank": 50,
-              "title": "月曜から夜ふかし"
+              "title": "かまいたちの机上の空論城"
             }
           ]
         }
@@ -9176,10 +9196,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/09/06 01:07",
+      "updatedAt": "2026/09/06 02:07",
       "episodeId": "eppaa3pee6",
       "subtitle": "24時間テレビ企画!巨大弓矢で福島から日本全国にエール",
-      "likes": "6745",
+      "likes": "6754",
       "favorites": "53.3万",
       "likePoints": [
         {
@@ -11787,11 +11807,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ダイアンのガチで！ごめんやす"
+              "title": "サタプラ"
             },
             {
               "rank": 48,
-              "title": "サタプラ"
+              "title": "ダイアンのガチで！ごめんやす"
             },
             {
               "rank": 49,
@@ -12045,10 +12065,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/09/02",
-      "updatedAt": "2026/09/06 01:07",
+      "updatedAt": "2026/09/06 02:07",
       "episodeId": "epwprjcodi",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！JUJU登場",
-      "likes": "4231",
+      "likes": "4237",
       "favorites": "12.7万",
       "likePoints": [
         {
@@ -12394,6 +12414,10 @@
         {
           "hour": 96,
           "likes": 4231
+        },
+        {
+          "hour": 97,
+          "likes": 4237
         }
       ],
       "previousLikePoints": [
@@ -13042,7 +13066,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 48,
@@ -13054,7 +13078,7 @@
             },
             {
               "rank": 50,
-              "title": "月曜から夜ふかし"
+              "title": "かまいたちの机上の空論城"
             }
           ]
         }
@@ -13063,10 +13087,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/09/04",
-      "updatedAt": "2026/09/06 01:07",
+      "updatedAt": "2026/09/06 02:07",
       "episodeId": "epj7984z30",
       "subtitle": "第143回 小池栄子VS渡部篤郎 名俳優の衝撃に一同驚愕",
-      "likes": "4310",
+      "likes": "4320",
       "favorites": "71.7万",
       "likePoints": [
         {
@@ -13255,7 +13279,7 @@
         },
         {
           "hour": 49,
-          "likes": 4310
+          "likes": 4320
         }
       ],
       "previousLikePoints": [
@@ -13904,9 +13928,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 24,
-          "elapsedHour": 48,
-          "elapsedRank": 24,
+          "currentRank": 25,
+          "elapsedHour": 49,
+          "elapsedRank": 25,
           "currentPoints": [
             {
               "hour": 10,
@@ -14063,6 +14087,10 @@
             {
               "hour": 48,
               "rank": 24
+            },
+            {
+              "hour": 49,
+              "rank": 25
             }
           ],
           "previousPoints": [
@@ -14277,19 +14305,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 21,
+              "rank": 22,
               "title": "月曜から夜ふかし"
             },
             {
-              "rank": 22,
+              "rank": 23,
               "title": "日曜日の初耳学"
             },
             {
-              "rank": 23,
-              "title": "かまいたちの机上の空論城"
+              "rank": 24,
+              "title": "ホンマでっか！？TV"
             },
             {
-              "rank": 24,
+              "rank": 25,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -14479,7 +14507,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 48,
@@ -14491,7 +14519,7 @@
             },
             {
               "rank": 50,
-              "title": "月曜から夜ふかし"
+              "title": "かまいたちの机上の空論城"
             }
           ]
         }
@@ -14500,10 +14528,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/09/05",
-      "updatedAt": "2026/09/06 01:07",
+      "updatedAt": "2026/09/06 02:07",
       "episodeId": "ephzgytav0",
       "subtitle": "CM撮影で落とし穴！ウソ？本当？SP",
-      "likes": "695",
+      "likes": "717",
       "favorites": "80.5万",
       "likePoints": [
         {
@@ -14529,6 +14557,10 @@
         {
           "hour": 6,
           "likes": 695
+        },
+        {
+          "hour": 7,
+          "likes": 717
         }
       ],
       "previousLikePoints": [],
@@ -14536,9 +14568,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 33,
-          "elapsedHour": 6,
-          "elapsedRank": 33,
+          "currentRank": 32,
+          "elapsedHour": 7,
+          "elapsedRank": 32,
           "currentPoints": [
             {
               "hour": 4,
@@ -14551,10 +14583,18 @@
             {
               "hour": 6,
               "rank": 33
+            },
+            {
+              "hour": 7,
+              "rank": 32
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
+            {
+              "rank": 29,
+              "title": "あざとくて何が悪いの？"
+            },
             {
               "rank": 30,
               "title": "有吉クイズ"
@@ -14565,10 +14605,6 @@
             },
             {
               "rank": 32,
-              "title": "世界くらべてみたら"
-            },
-            {
-              "rank": 33,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -14584,7 +14620,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 48,
@@ -14596,7 +14632,7 @@
             },
             {
               "rank": 50,
-              "title": "月曜から夜ふかし"
+              "title": "かまいたちの机上の空論城"
             }
           ]
         }
@@ -14605,7 +14641,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/09/06 01:07",
+      "updatedAt": "2026/09/06 02:07",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
       "likes": "1.0万",
@@ -16584,7 +16620,7 @@
             },
             {
               "rank": 50,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "さんまのお笑い向上委員会"
             }
           ]
         },
@@ -16809,7 +16845,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/09/02",
-      "updatedAt": "2026/09/06 01:07",
+      "updatedAt": "2026/09/06 02:07",
       "episodeId": "epnfgw3vuc",
       "subtitle": "#9 妊娠中の親友を襲う悲劇…涙の別れ",
       "likes": "1.0万",
@@ -17105,6 +17141,10 @@
         },
         {
           "hour": 75,
+          "likes": 10000
+        },
+        {
+          "hour": 76,
           "likes": 10000
         }
       ],
@@ -17763,7 +17803,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 9,
-          "elapsedHour": 75,
+          "elapsedHour": 76,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -18060,6 +18100,10 @@
             },
             {
               "hour": 75,
+              "rank": 9
+            },
+            {
+              "hour": 76,
               "rank": 9
             }
           ],
@@ -18748,7 +18792,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 12,
-          "elapsedHour": 75,
+          "elapsedHour": 76,
           "elapsedRank": 12,
           "currentPoints": [
             {
@@ -19041,6 +19085,10 @@
             },
             {
               "hour": 75,
+              "rank": 12
+            },
+            {
+              "hour": 76,
               "rank": 12
             }
           ],
@@ -19709,7 +19757,7 @@
           "nearbyRanking": [
             {
               "rank": 9,
-              "title": "アメトーーク！"
+              "title": "名探偵のままでいて"
             },
             {
               "rank": 10,
@@ -19730,7 +19778,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/03",
-      "updatedAt": "2026/09/06 01:07",
+      "updatedAt": "2026/09/06 02:07",
       "episodeId": "eplbbczp96",
       "subtitle": "第9話 父の最期の願いにあふれる涙・・・幸せの期限",
       "likes": "1.5万",
@@ -19930,6 +19978,10 @@
         },
         {
           "hour": 51,
+          "likes": 15000
+        },
+        {
+          "hour": 52,
           "likes": 15000
         }
       ],
@@ -20592,7 +20644,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 4,
-          "elapsedHour": 51,
+          "elapsedHour": 52,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -20793,6 +20845,10 @@
             },
             {
               "hour": 51,
+              "rank": 4
+            },
+            {
+              "hour": 52,
               "rank": 4
             }
           ],
@@ -21485,7 +21541,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 4,
-          "elapsedHour": 51,
+          "elapsedHour": 52,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -21686,6 +21742,10 @@
             },
             {
               "hour": 51,
+              "rank": 4
+            },
+            {
+              "hour": 52,
               "rank": 4
             }
           ],
@@ -22379,7 +22439,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/01",
-      "updatedAt": "2026/09/06 01:07",
+      "updatedAt": "2026/09/06 02:07",
       "episodeId": "epjdktoxqf",
       "subtitle": "ウソの雑学を見抜け！サンタック・ホームズ",
       "likes": "1.2万",
@@ -23296,7 +23356,7 @@
             },
             {
               "rank": 50,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "さんまのお笑い向上委員会"
             }
           ]
         },
