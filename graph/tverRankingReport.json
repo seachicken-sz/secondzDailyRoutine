@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/09/07 00:07",
+  "updatedAt": "2026/09/07 01:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/04",
-      "updatedAt": "2026/09/07 00:07",
+      "updatedAt": "2026/09/07 01:07",
       "episodeId": "ep3le8ldjt",
       "subtitle": "風磨を信じきれる！？信頼ビリビリペン＆タイムDEATH第4弾",
       "likes": "1.2万",
@@ -204,6 +204,10 @@
         },
         {
           "hour": 50,
+          "likes": 12000
+        },
+        {
+          "hour": 51,
           "likes": 12000
         }
       ],
@@ -861,9 +865,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 10,
-          "elapsedHour": 50,
-          "elapsedRank": 10,
+          "currentRank": 12,
+          "elapsedHour": 51,
+          "elapsedRank": 12,
           "currentPoints": [
             {
               "hour": 8,
@@ -1036,6 +1040,10 @@
             {
               "hour": 50,
               "rank": 10
+            },
+            {
+              "hour": 51,
+              "rank": 12
             }
           ],
           "previousPoints": [
@@ -1698,19 +1706,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 7,
-              "title": "ハマダ歌謡祭★オオカミ少年"
-            },
-            {
-              "rank": 8,
-              "title": "芸能人が本気で考えた！ドッキリGP"
-            },
-            {
               "rank": 9,
               "title": "テレビ千鳥"
             },
             {
               "rank": 10,
+              "title": "世界の果てまでイッテQ！"
+            },
+            {
+              "rank": 11,
+              "title": "ゴッドタン"
+            },
+            {
+              "rank": 12,
               "title": "タイムレスマン"
             }
           ]
@@ -1718,9 +1726,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 28,
-          "elapsedHour": 50,
-          "elapsedRank": 28,
+          "currentRank": 31,
+          "elapsedHour": 51,
+          "elapsedRank": 31,
           "currentPoints": [
             {
               "hour": 12,
@@ -1877,6 +1885,10 @@
             {
               "hour": 50,
               "rank": 28
+            },
+            {
+              "hour": 51,
+              "rank": 31
             }
           ],
           "previousPoints": [
@@ -2179,19 +2191,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 25,
-              "title": "テレビ千鳥"
+              "rank": 28,
+              "title": "世界の果てまでイッテQ！"
             },
             {
-              "rank": 26,
-              "title": "君の好きは無敵"
-            },
-            {
-              "rank": 27,
+              "rank": 29,
               "title": "クロスロード ～救命救急の約束～"
             },
             {
-              "rank": 28,
+              "rank": 30,
+              "title": "ゴッドタン"
+            },
+            {
+              "rank": 31,
               "title": "タイムレスマン"
             }
           ]
@@ -2201,10 +2213,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/09/06",
-      "updatedAt": "2026/09/07 00:07",
+      "updatedAt": "2026/09/07 01:07",
       "episodeId": "epadro84w6",
       "subtitle": "【テレビ初密着!渋谷で話題の盆踊り大会】原が大潜入!",
-      "likes": "6024",
+      "likes": "6607",
       "favorites": "35.4万",
       "likePoints": [
         {
@@ -2246,6 +2258,10 @@
         {
           "hour": 10,
           "likes": 6024
+        },
+        {
+          "hour": 11,
+          "likes": 6607
         }
       ],
       "previousLikePoints": [
@@ -2918,9 +2934,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 20,
-          "elapsedHour": 10,
-          "elapsedRank": 20,
+          "currentRank": 19,
+          "elapsedHour": 11,
+          "elapsedRank": 19,
           "currentPoints": [
             {
               "hour": 5,
@@ -2945,6 +2961,10 @@
             {
               "hour": 10,
               "rank": 20
+            },
+            {
+              "hour": 11,
+              "rank": 19
             }
           ],
           "previousPoints": [
@@ -3395,6 +3415,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 16,
+              "title": "教えて！ニュースライブ 正義のミカタ"
+            },
+            {
               "rank": 17,
               "title": "さんまのお笑い向上委員会"
             },
@@ -3404,10 +3428,6 @@
             },
             {
               "rank": 19,
-              "title": "探偵！ナイトスクープ"
-            },
-            {
-              "rank": 20,
               "title": "timeleszファミリア"
             }
           ]
@@ -3415,13 +3435,17 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 49,
-          "elapsedHour": 10,
-          "elapsedRank": 49,
+          "currentRank": 48,
+          "elapsedHour": 11,
+          "elapsedRank": 48,
           "currentPoints": [
             {
               "hour": 10,
               "rank": 49
+            },
+            {
+              "hour": 11,
+              "rank": 48
             }
           ],
           "previousPoints": [
@@ -3664,8 +3688,12 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 45,
+              "title": "華大さんと千鳥くん"
+            },
+            {
               "rank": 46,
-              "title": "探偵！ナイトスクープ"
+              "title": "おちたらおわり"
             },
             {
               "rank": 47,
@@ -3673,10 +3701,6 @@
             },
             {
               "rank": 48,
-              "title": "夫に不倫をお願いされました"
-            },
-            {
-              "rank": 49,
               "title": "timeleszファミリア"
             }
           ]
@@ -3686,10 +3710,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/25",
-      "updatedAt": "2026/09/07 00:07",
+      "updatedAt": "2026/09/07 01:07",
       "episodeId": "epguch9hd0",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！後編",
-      "likes": "8246",
+      "likes": "8257",
       "favorites": "6.0万",
       "likePoints": [
         {
@@ -6021,11 +6045,11 @@
             },
             {
               "rank": 49,
-              "title": "ベスコングルメ 〜ベストコンディションで最高の瞬間を！〜"
+              "title": "坂上&指原のつぶれない店"
             },
             {
               "rank": 50,
-              "title": "今宵、町寿司で 市川右團次と小粋な一献"
+              "title": "ベスコングルメ 〜ベストコンディションで最高の瞬間を！〜"
             }
           ]
         },
@@ -6186,15 +6210,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             },
             {
               "rank": 48,
-              "title": "沸騰ワード10"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "テレビ×ミセス"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 50,
@@ -6207,7 +6231,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/09/03",
-      "updatedAt": "2026/09/07 00:07",
+      "updatedAt": "2026/09/07 01:07",
       "episodeId": "epwohyg50q",
       "subtitle": "【ドッキリ】過剰コンプラクイズ",
       "likes": "1.1万",
@@ -6575,6 +6599,10 @@
         },
         {
           "hour": 94,
+          "likes": 11000
+        },
+        {
+          "hour": 95,
           "likes": 11000
         }
       ],
@@ -7842,15 +7870,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             },
             {
               "rank": 48,
-              "title": "沸騰ワード10"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "テレビ×ミセス"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 50,
@@ -8135,15 +8163,15 @@
             },
             {
               "rank": 48,
-              "title": "夫に不倫をお願いされました"
-            },
-            {
-              "rank": 49,
               "title": "timeleszファミリア"
             },
             {
+              "rank": 49,
+              "title": "Golden SixTONES"
+            },
+            {
               "rank": 50,
-              "title": "マツコの知らない世界"
+              "title": "探偵！ナイトスクープ"
             }
           ]
         }
@@ -8152,10 +8180,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/09/02",
-      "updatedAt": "2026/09/07 00:07",
+      "updatedAt": "2026/09/07 01:07",
       "episodeId": "epwprjcodi",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！JUJU登場",
-      "likes": "4386",
+      "likes": "4403",
       "favorites": "12.7万",
       "likePoints": [
         {
@@ -8593,6 +8621,10 @@
         {
           "hour": 119,
           "likes": 4386
+        },
+        {
+          "hour": 120,
+          "likes": 4403
         }
       ],
       "previousLikePoints": [
@@ -9214,15 +9246,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             },
             {
               "rank": 48,
-              "title": "沸騰ワード10"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "テレビ×ミセス"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 50,
@@ -9245,15 +9277,15 @@
             },
             {
               "rank": 48,
-              "title": "夫に不倫をお願いされました"
-            },
-            {
-              "rank": 49,
               "title": "timeleszファミリア"
             },
             {
+              "rank": 49,
+              "title": "Golden SixTONES"
+            },
+            {
               "rank": 50,
-              "title": "マツコの知らない世界"
+              "title": "探偵！ナイトスクープ"
             }
           ]
         }
@@ -9262,10 +9294,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/09/04",
-      "updatedAt": "2026/09/07 00:07",
+      "updatedAt": "2026/09/07 01:07",
       "episodeId": "epj7984z30",
       "subtitle": "第143回 小池栄子VS渡部篤郎 名俳優の衝撃に一同驚愕",
-      "likes": "4757",
+      "likes": "4795",
       "favorites": "71.7万",
       "likePoints": [
         {
@@ -9539,6 +9571,10 @@
         {
           "hour": 72,
           "likes": 4757
+        },
+        {
+          "hour": 73,
+          "likes": 4795
         }
       ],
       "previousLikePoints": [
@@ -10645,15 +10681,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             },
             {
               "rank": 48,
-              "title": "沸騰ワード10"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "テレビ×ミセス"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 50,
@@ -10850,15 +10886,15 @@
             },
             {
               "rank": 48,
-              "title": "夫に不倫をお願いされました"
-            },
-            {
-              "rank": 49,
               "title": "timeleszファミリア"
             },
             {
+              "rank": 49,
+              "title": "Golden SixTONES"
+            },
+            {
               "rank": 50,
-              "title": "マツコの知らない世界"
+              "title": "探偵！ナイトスクープ"
             }
           ]
         }
@@ -10867,10 +10903,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/09/05",
-      "updatedAt": "2026/09/07 00:07",
+      "updatedAt": "2026/09/07 01:07",
       "episodeId": "ephzgytav0",
       "subtitle": "CM撮影で落とし穴！ウソ？本当？SP",
-      "likes": "1562",
+      "likes": "1606",
       "favorites": "80.6万",
       "likePoints": [
         {
@@ -10988,6 +11024,10 @@
         {
           "hour": 29,
           "likes": 1562
+        },
+        {
+          "hour": 30,
+          "likes": 1606
         }
       ],
       "previousLikePoints": [],
@@ -10996,7 +11036,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 8,
-          "elapsedHour": 29,
+          "elapsedHour": 30,
           "elapsedRank": 8,
           "currentPoints": [
             {
@@ -11102,6 +11142,10 @@
             {
               "hour": 29,
               "rank": 8
+            },
+            {
+              "hour": 30,
+              "rank": 8
             }
           ],
           "previousPoints": [],
@@ -11127,9 +11171,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 21,
-          "elapsedHour": 29,
-          "elapsedRank": 21,
+          "currentRank": 23,
+          "elapsedHour": 30,
+          "elapsedRank": 23,
           "currentPoints": [
             {
               "hour": 14,
@@ -11194,24 +11238,28 @@
             {
               "hour": 29,
               "rank": 21
+            },
+            {
+              "hour": 30,
+              "rank": 23
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
-            {
-              "rank": 18,
-              "title": "名探偵コナン"
-            },
-            {
-              "rank": 19,
-              "title": "ハマダ歌謡祭★オオカミ少年"
-            },
             {
               "rank": 20,
               "title": "ミッドナイト屋台２～ル・モンドゥ～"
             },
             {
               "rank": 21,
+              "title": "GTO"
+            },
+            {
+              "rank": 22,
+              "title": "一次元の挿し木"
+            },
+            {
+              "rank": 23,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -11221,7 +11269,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/09/07 00:07",
+      "updatedAt": "2026/09/07 01:07",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
       "likes": "1.1万",
@@ -13196,11 +13244,11 @@
             },
             {
               "rank": 49,
-              "title": "しんごの🌱"
+              "title": "しゃべくり007"
             },
             {
               "rank": 50,
-              "title": "しゃべくり007"
+              "title": "大阪おっさんぽ"
             }
           ]
         },
@@ -13404,15 +13452,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             },
             {
               "rank": 48,
-              "title": "沸騰ワード10"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "テレビ×ミセス"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 50,
@@ -13425,7 +13473,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/09/02",
-      "updatedAt": "2026/09/07 00:07",
+      "updatedAt": "2026/09/07 01:07",
       "episodeId": "epnfgw3vuc",
       "subtitle": "#9 妊娠中の親友を襲う悲劇…涙の別れ",
       "likes": "1.1万",
@@ -13813,6 +13861,10 @@
         },
         {
           "hour": 98,
+          "likes": 11000
+        },
+        {
+          "hour": 99,
           "likes": 11000
         }
       ],
@@ -14471,7 +14523,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 9,
-          "elapsedHour": 98,
+          "elapsedHour": 99,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -14860,6 +14912,10 @@
             },
             {
               "hour": 98,
+              "rank": 9
+            },
+            {
+              "hour": 99,
               "rank": 9
             }
           ],
@@ -15547,9 +15603,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 15,
-          "elapsedHour": 98,
-          "elapsedRank": 15,
+          "currentRank": 14,
+          "elapsedHour": 99,
+          "elapsedRank": 14,
           "currentPoints": [
             {
               "hour": 3,
@@ -15934,6 +15990,10 @@
             {
               "hour": 98,
               "rank": 15
+            },
+            {
+              "hour": 99,
+              "rank": 14
             }
           ],
           "previousPoints": [
@@ -16600,6 +16660,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 11,
+              "title": "マツコ＆有吉 かりそめ天国"
+            },
+            {
               "rank": 12,
               "title": "Tokyo middle 30"
             },
@@ -16609,10 +16673,6 @@
             },
             {
               "rank": 14,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
-            },
-            {
-              "rank": 15,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -16622,11 +16682,11 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/03",
-      "updatedAt": "2026/09/07 00:07",
+      "updatedAt": "2026/09/07 01:07",
       "episodeId": "eplbbczp96",
       "subtitle": "第9話 父の最期の願いにあふれる涙・・・幸せの期限",
       "likes": "1.7万",
-      "favorites": "71.6万",
+      "favorites": "71.5万",
       "likePoints": [
         {
           "hour": 2,
@@ -16914,6 +16974,10 @@
         },
         {
           "hour": 74,
+          "likes": 17000
+        },
+        {
+          "hour": 75,
           "likes": 17000
         }
       ],
@@ -17576,7 +17640,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 4,
-          "elapsedHour": 74,
+          "elapsedHour": 75,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -17869,6 +17933,10 @@
             },
             {
               "hour": 74,
+              "rank": 4
+            },
+            {
+              "hour": 75,
               "rank": 4
             }
           ],
@@ -18541,11 +18609,11 @@
           "nearbyRanking": [
             {
               "rank": 1,
-              "title": "告白―25年目の秘密―"
+              "title": "VIVANT"
             },
             {
               "rank": 2,
-              "title": "VIVANT"
+              "title": "告白―25年目の秘密―"
             },
             {
               "rank": 3,
@@ -18561,7 +18629,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 6,
-          "elapsedHour": 74,
+          "elapsedHour": 75,
           "elapsedRank": 6,
           "currentPoints": [
             {
@@ -18854,6 +18922,10 @@
             },
             {
               "hour": 74,
+              "rank": 6
+            },
+            {
+              "hour": 75,
               "rank": 6
             }
           ],
@@ -19547,7 +19619,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/01",
-      "updatedAt": "2026/09/07 00:07",
+      "updatedAt": "2026/09/07 01:07",
       "episodeId": "epjdktoxqf",
       "subtitle": "ウソの雑学を見抜け！サンタック・ホームズ",
       "likes": "1.2万",
@@ -20088,6 +20160,10 @@
         {
           "hour": 144,
           "likes": 12000
+        },
+        {
+          "hour": 145,
+          "likes": 12000
         }
       ],
       "previousLikePoints": [],
@@ -20544,11 +20620,11 @@
             },
             {
               "rank": 49,
-              "title": "しんごの🌱"
+              "title": "しゃべくり007"
             },
             {
               "rank": 50,
-              "title": "しゃべくり007"
+              "title": "大阪おっさんぽ"
             }
           ]
         },
@@ -20756,15 +20832,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             },
             {
               "rank": 48,
-              "title": "沸騰ワード10"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "テレビ×ミセス"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 50,
