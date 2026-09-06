@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026/09/06 18:07",
+  "updatedAt": "2026/09/06 19:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/04",
-      "updatedAt": "2026/09/06 18:07",
+      "updatedAt": "2026/09/06 19:07",
       "episodeId": "ep3le8ldjt",
       "subtitle": "風磨を信じきれる！？信頼ビリビリペン＆タイムDEATH第4弾",
       "likes": "1.2万",
-      "favorites": "78.7万",
+      "favorites": "78.8万",
       "likePoints": [
         {
           "hour": 1,
@@ -180,6 +180,10 @@
         },
         {
           "hour": 44,
+          "likes": 12000
+        },
+        {
+          "hour": 45,
           "likes": 12000
         }
       ],
@@ -838,7 +842,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 7,
-          "elapsedHour": 44,
+          "elapsedHour": 45,
           "elapsedRank": 7,
           "currentPoints": [
             {
@@ -987,6 +991,10 @@
             },
             {
               "hour": 44,
+              "rank": 7
+            },
+            {
+              "hour": 45,
               "rank": 7
             }
           ],
@@ -1670,9 +1678,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 18,
-          "elapsedHour": 44,
-          "elapsedRank": 18,
+          "currentRank": 19,
+          "elapsedHour": 45,
+          "elapsedRank": 19,
           "currentPoints": [
             {
               "hour": 12,
@@ -1805,6 +1813,10 @@
             {
               "hour": 44,
               "rank": 18
+            },
+            {
+              "hour": 45,
+              "rank": 19
             }
           ],
           "previousPoints": [
@@ -2107,10 +2119,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 15,
-              "title": "かまいたちの知らんけど"
-            },
-            {
               "rank": 16,
               "title": "名探偵コナン"
             },
@@ -2120,6 +2128,10 @@
             },
             {
               "rank": 18,
+              "title": "夏色の雲が恋と嵐をまきおこす"
+            },
+            {
+              "rank": 19,
               "title": "タイムレスマン"
             }
           ]
@@ -2129,10 +2141,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/09/06",
-      "updatedAt": "2026/09/06 18:07",
+      "updatedAt": "2026/09/06 19:07",
       "episodeId": "epadro84w6",
       "subtitle": "【テレビ初密着!渋谷で話題の盆踊り大会】原が大潜入!",
-      "likes": "3580",
+      "likes": "4251",
       "favorites": "35.4万",
       "likePoints": [
         {
@@ -2150,6 +2162,10 @@
         {
           "hour": 4,
           "likes": 3580
+        },
+        {
+          "hour": 5,
+          "likes": 4251
         }
       ],
       "previousLikePoints": [
@@ -2822,10 +2838,15 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 44,
+          "elapsedHour": 5,
+          "elapsedRank": 44,
+          "currentPoints": [
+            {
+              "hour": 5,
+              "rank": 44
+            }
+          ],
           "previousPoints": [
             {
               "hour": 7,
@@ -3274,20 +3295,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "夜明けのラヴィット！"
+              "rank": 41,
+              "title": "踊る！さんま御殿!!"
             },
             {
-              "rank": 48,
-              "title": "週刊さんまとマツコ"
+              "rank": 42,
+              "title": "おしゃれクリップ"
             },
             {
-              "rank": 49,
-              "title": "大悟の芸人領収書"
+              "rank": 43,
+              "title": "千原ジュニアの座王"
             },
             {
-              "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "rank": 44,
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -3539,19 +3560,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "晩酌の流儀５"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "今夜もシリアルキラーと待ち合わせ"
+              "title": "人生最高レストラン"
             },
             {
               "rank": 49,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "バレーボール アジア選手権2026"
+              "title": "晩酌の流儀５"
             }
           ]
         }
@@ -3560,10 +3581,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/08/25",
-      "updatedAt": "2026/09/06 18:07",
+      "updatedAt": "2026/09/06 19:07",
       "episodeId": "epguch9hd0",
       "subtitle": "チョコプラ・timeleszが「行動誘導してドッキリへの誘導」に挑戦！後編",
-      "likes": "8210",
+      "likes": "8220",
       "favorites": "6.0万",
       "likePoints": [
         {
@@ -5887,19 +5908,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "1泊家族"
+              "title": "グッと！地球便"
             },
             {
               "rank": 48,
-              "title": "シューイチ"
+              "title": "今宵、町寿司で 市川右團次と小粋な一献"
             },
             {
               "rank": 49,
-              "title": "有吉ゼミ"
+              "title": "シューイチ"
             },
             {
               "rank": 50,
-              "title": "今宵、町寿司で 市川右團次と小粋な一献"
+              "title": "有吉ゼミ"
             }
           ]
         },
@@ -6060,19 +6081,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夜明けのラヴィット！"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 48,
-              "title": "週刊さんまとマツコ"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             },
             {
               "rank": 49,
-              "title": "大悟の芸人領収書"
+              "title": "デカ盛りハンター"
             },
             {
               "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "かのサンド"
             }
           ]
         }
@@ -6081,7 +6102,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/09/03",
-      "updatedAt": "2026/09/06 18:07",
+      "updatedAt": "2026/09/06 19:07",
       "episodeId": "epwohyg50q",
       "subtitle": "【ドッキリ】過剰コンプラクイズ",
       "likes": "1.1万",
@@ -6425,6 +6446,10 @@
         },
         {
           "hour": 88,
+          "likes": 11000
+        },
+        {
+          "hour": 89,
           "likes": 11000
         }
       ],
@@ -7692,19 +7717,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夜明けのラヴィット！"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 48,
-              "title": "週刊さんまとマツコ"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             },
             {
               "rank": 49,
-              "title": "大悟の芸人領収書"
+              "title": "デカ盛りハンター"
             },
             {
               "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "かのサンド"
             }
           ]
         },
@@ -7981,19 +8006,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "晩酌の流儀５"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "今夜もシリアルキラーと待ち合わせ"
+              "title": "人生最高レストラン"
             },
             {
               "rank": 49,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "バレーボール アジア選手権2026"
+              "title": "晩酌の流儀５"
             }
           ]
         }
@@ -8002,10 +8027,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/09/02",
-      "updatedAt": "2026/09/06 18:07",
+      "updatedAt": "2026/09/06 19:07",
       "episodeId": "epwprjcodi",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！JUJU登場",
-      "likes": "4353",
+      "likes": "4361",
       "favorites": "12.7万",
       "likePoints": [
         {
@@ -8419,6 +8444,10 @@
         {
           "hour": 113,
           "likes": 4353
+        },
+        {
+          "hour": 114,
+          "likes": 4361
         }
       ],
       "previousLikePoints": [
@@ -9040,19 +9069,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夜明けのラヴィット！"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 48,
-              "title": "週刊さんまとマツコ"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             },
             {
               "rank": 49,
-              "title": "大悟の芸人領収書"
+              "title": "デカ盛りハンター"
             },
             {
               "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "かのサンド"
             }
           ]
         },
@@ -9067,19 +9096,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "晩酌の流儀５"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "今夜もシリアルキラーと待ち合わせ"
+              "title": "人生最高レストラン"
             },
             {
               "rank": 49,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "バレーボール アジア選手権2026"
+              "title": "晩酌の流儀５"
             }
           ]
         }
@@ -9088,10 +9117,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/09/04",
-      "updatedAt": "2026/09/06 18:07",
+      "updatedAt": "2026/09/06 19:07",
       "episodeId": "epj7984z30",
       "subtitle": "第143回 小池栄子VS渡部篤郎 名俳優の衝撃に一同驚愕",
-      "likes": "4664",
+      "likes": "4681",
       "favorites": "71.7万",
       "likePoints": [
         {
@@ -9341,6 +9370,10 @@
         {
           "hour": 66,
           "likes": 4664
+        },
+        {
+          "hour": 67,
+          "likes": 4681
         }
       ],
       "previousLikePoints": [
@@ -9990,7 +10023,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 38,
-          "elapsedHour": 65,
+          "elapsedHour": 66,
           "elapsedRank": 38,
           "currentPoints": [
             {
@@ -10216,6 +10249,10 @@
             {
               "hour": 65,
               "rank": 38
+            },
+            {
+              "hour": 66,
+              "rank": 38
             }
           ],
           "previousPoints": [
@@ -10431,11 +10468,11 @@
           "nearbyRanking": [
             {
               "rank": 35,
-              "title": "沸騰ワード10"
+              "title": "夫が寝たあとに"
             },
             {
               "rank": 36,
-              "title": "あっちこっちAぇ!"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 37,
@@ -10632,19 +10669,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "晩酌の流儀５"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "今夜もシリアルキラーと待ち合わせ"
+              "title": "人生最高レストラン"
             },
             {
               "rank": 49,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "バレーボール アジア選手権2026"
+              "title": "晩酌の流儀５"
             }
           ]
         }
@@ -10653,10 +10690,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/09/05",
-      "updatedAt": "2026/09/06 18:07",
+      "updatedAt": "2026/09/06 19:07",
       "episodeId": "ephzgytav0",
       "subtitle": "CM撮影で落とし穴！ウソ？本当？SP",
-      "likes": "1360",
+      "likes": "1423",
       "favorites": "80.5万",
       "likePoints": [
         {
@@ -10750,6 +10787,10 @@
         {
           "hour": 23,
           "likes": 1360
+        },
+        {
+          "hour": 24,
+          "likes": 1423
         }
       ],
       "previousLikePoints": [],
@@ -10757,9 +10798,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 11,
-          "elapsedHour": 23,
-          "elapsedRank": 11,
+          "currentRank": 8,
+          "elapsedHour": 24,
+          "elapsedRank": 8,
           "currentPoints": [
             {
               "hour": 4,
@@ -10840,24 +10881,28 @@
             {
               "hour": 23,
               "rank": 11
+            },
+            {
+              "hour": 24,
+              "rank": 8
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
+              "rank": 5,
+              "title": "かまいたちの知らんけど"
+            },
+            {
+              "rank": 6,
+              "title": "ハマダ歌謡祭★オオカミ少年"
+            },
+            {
+              "rank": 7,
+              "title": "タイムレスマン"
+            },
+            {
               "rank": 8,
-              "title": "テレビ千鳥"
-            },
-            {
-              "rank": 9,
-              "title": "かまいたちの机上の空論城"
-            },
-            {
-              "rank": 10,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
-            },
-            {
-              "rank": 11,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -10865,9 +10910,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 27,
-          "elapsedHour": 23,
-          "elapsedRank": 27,
+          "currentRank": 21,
+          "elapsedHour": 24,
+          "elapsedRank": 21,
           "currentPoints": [
             {
               "hour": 14,
@@ -10908,24 +10953,28 @@
             {
               "hour": 23,
               "rank": 27
+            },
+            {
+              "hour": 24,
+              "rank": 21
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 24,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "rank": 18,
+              "title": "夏色の雲が恋と嵐をまきおこす"
             },
             {
-              "rank": 25,
-              "title": "GTO"
+              "rank": 19,
+              "title": "タイムレスマン"
             },
             {
-              "rank": 26,
-              "title": "君の好きは無敵"
+              "rank": 20,
+              "title": "大追跡～警視庁ＳＳＢＣ強行犯係～ Season2"
             },
             {
-              "rank": 27,
+              "rank": 21,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -10935,11 +10984,11 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/09/06 18:07",
+      "updatedAt": "2026/09/06 19:07",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
       "likes": "1.1万",
-      "favorites": "4.0万",
+      "favorites": "4.1万",
       "likePoints": [
         {
           "hour": 1,
@@ -12902,19 +12951,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "プレバト！！"
+              "title": "大阪おっさんぽ"
             },
             {
               "rank": 48,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "プレバト！！"
             },
             {
               "rank": 49,
-              "title": "所さんの学校では教えてくれないそこんトコロ！"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 50,
-              "title": "大阪おっさんぽ"
+              "title": "所さんの学校では教えてくれないそこんトコロ！"
             }
           ]
         },
@@ -13118,19 +13167,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夜明けのラヴィット！"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 48,
-              "title": "週刊さんまとマツコ"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             },
             {
               "rank": 49,
-              "title": "大悟の芸人領収書"
+              "title": "デカ盛りハンター"
             },
             {
               "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "かのサンド"
             }
           ]
         }
@@ -13139,7 +13188,7 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/09/02",
-      "updatedAt": "2026/09/06 18:07",
+      "updatedAt": "2026/09/06 19:07",
       "episodeId": "epnfgw3vuc",
       "subtitle": "#9 妊娠中の親友を襲う悲劇…涙の別れ",
       "likes": "1.1万",
@@ -13503,6 +13552,10 @@
         },
         {
           "hour": 92,
+          "likes": 11000
+        },
+        {
+          "hour": 93,
           "likes": 11000
         }
       ],
@@ -14161,7 +14214,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 10,
-          "elapsedHour": 92,
+          "elapsedHour": 93,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -14526,6 +14579,10 @@
             },
             {
               "hour": 92,
+              "rank": 10
+            },
+            {
+              "hour": 93,
               "rank": 10
             }
           ],
@@ -15194,11 +15251,11 @@
           "nearbyRanking": [
             {
               "rank": 7,
-              "title": "名探偵のままでいて"
+              "title": "一次元の挿し木"
             },
             {
               "rank": 8,
-              "title": "一次元の挿し木"
+              "title": "名探偵のままでいて"
             },
             {
               "rank": 9,
@@ -15213,9 +15270,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 14,
-          "elapsedHour": 92,
-          "elapsedRank": 14,
+          "currentRank": 15,
+          "elapsedHour": 93,
+          "elapsedRank": 15,
           "currentPoints": [
             {
               "hour": 3,
@@ -15576,6 +15633,10 @@
             {
               "hour": 92,
               "rank": 14
+            },
+            {
+              "hour": 93,
+              "rank": 15
             }
           ],
           "previousPoints": [
@@ -16242,19 +16303,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 11,
-              "title": "一次元の挿し木"
-            },
-            {
               "rank": 12,
-              "title": "Tokyo middle 30"
+              "title": "名探偵のままでいて"
             },
             {
               "rank": 13,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 14,
+              "title": "Tokyo middle 30"
+            },
+            {
+              "rank": 15,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -16264,7 +16325,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/03",
-      "updatedAt": "2026/09/06 18:07",
+      "updatedAt": "2026/09/06 19:07",
       "episodeId": "eplbbczp96",
       "subtitle": "第9話 父の最期の願いにあふれる涙・・・幸せの期限",
       "likes": "1.6万",
@@ -16532,6 +16593,10 @@
         },
         {
           "hour": 68,
+          "likes": 16000
+        },
+        {
+          "hour": 69,
           "likes": 16000
         }
       ],
@@ -17194,7 +17259,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 4,
-          "elapsedHour": 68,
+          "elapsedHour": 69,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -17463,6 +17528,10 @@
             },
             {
               "hour": 68,
+              "rank": 4
+            },
+            {
+              "hour": 69,
               "rank": 4
             }
           ],
@@ -18155,7 +18224,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 5,
-          "elapsedHour": 68,
+          "elapsedHour": 69,
           "elapsedRank": 5,
           "currentPoints": [
             {
@@ -18424,6 +18493,10 @@
             },
             {
               "hour": 68,
+              "rank": 5
+            },
+            {
+              "hour": 69,
               "rank": 5
             }
           ],
@@ -19117,7 +19190,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/01",
-      "updatedAt": "2026/09/06 18:07",
+      "updatedAt": "2026/09/06 19:07",
       "episodeId": "epjdktoxqf",
       "subtitle": "ウソの雑学を見抜け！サンタック・ホームズ",
       "likes": "1.2万",
@@ -19634,6 +19707,10 @@
         {
           "hour": 138,
           "likes": 12000
+        },
+        {
+          "hour": 139,
+          "likes": 12000
         }
       ],
       "previousLikePoints": [],
@@ -20082,19 +20159,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "プレバト！！"
+              "title": "大阪おっさんぽ"
             },
             {
               "rank": 48,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "プレバト！！"
             },
             {
               "rank": 49,
-              "title": "所さんの学校では教えてくれないそこんトコロ！"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 50,
-              "title": "大阪おっさんぽ"
+              "title": "所さんの学校では教えてくれないそこんトコロ！"
             }
           ]
         },
@@ -20302,19 +20379,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夜明けのラヴィット！"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 48,
-              "title": "週刊さんまとマツコ"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             },
             {
               "rank": 49,
-              "title": "大悟の芸人領収書"
+              "title": "デカ盛りハンター"
             },
             {
               "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "かのサンド"
             }
           ]
         }
