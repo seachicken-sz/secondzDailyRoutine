@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/09/10 02:07",
+  "updatedAt": "2026/09/10 03:07",
   "reports": {
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/08/23",
-      "updatedAt": "2026/09/10 02:07",
+      "updatedAt": "2026/09/10 03:07",
       "episodeId": "eppaa3pee6",
       "subtitle": "24時間テレビ企画!巨大弓矢で福島から日本全国にエール",
       "likes": "4889",
@@ -2283,19 +2283,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ニンゲン観察バラエティ モニタリング"
-            },
-            {
-              "rank": 48,
               "title": "坂上&指原のつぶれない店"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "WEEKLYワールドサッカー Supported by U-NEXT ～プレミア・ラリーガ ダイジェスト～"
+            },
+            {
+              "rank": 50,
+              "title": "ゴルフ侍、見参！"
             }
           ]
         },
@@ -2528,7 +2528,7 @@
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 50,
@@ -2541,7 +2541,7 @@
     "sroqs1gopx": {
       "programTitle": "ゲストはROIROM",
       "broadcastDate": "2026/06/26",
-      "updatedAt": "2026/09/10 02:07",
+      "updatedAt": "2026/09/10 03:07",
       "episodeId": "epoh3fu399",
       "subtitle": "MCはマナーの達人アン ミカ",
       "likes": "",
@@ -2595,7 +2595,7 @@
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 50,
@@ -2608,7 +2608,7 @@
     "srleu4lcwn": {
       "programTitle": "それSnow Manにやらせて下さい",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/09/10 02:07",
+      "updatedAt": "2026/09/10 03:07",
       "episodeId": "epwk55l23v",
       "subtitle": "ラウール＆天才姉妹がダンス世界大会に出場！密着2年8か月…涙の物語がついに完結",
       "likes": "3.1万",
@@ -4086,7 +4086,7 @@
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 50,
@@ -4840,7 +4840,7 @@
     "srfgxtv5sb": {
       "programTitle": "いたジャン！",
       "broadcastDate": "2026/09/03",
-      "updatedAt": "2026/09/10 02:07",
+      "updatedAt": "2026/09/10 03:07",
       "episodeId": "ep9148hv5k",
       "subtitle": "第111回 ▽7人だけの夏休み（4）豪華別荘を満喫！",
       "likes": "9769",
@@ -5207,7 +5207,7 @@
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 50,
@@ -5247,7 +5247,7 @@
     "sracdkj75t": {
       "programTitle": "Golden SixTONES",
       "broadcastDate": "2026/09/06",
-      "updatedAt": "2026/09/10 02:07",
+      "updatedAt": "2026/09/10 03:07",
       "episodeId": "epi8kvl54r",
       "subtitle": "Golden SixTONES×映画『白鳥とコウモリ』公開記念!人気企画復習SP",
       "likes": "1.5万",
@@ -5415,6 +5415,10 @@
         },
         {
           "hour": 77,
+          "likes": 15000
+        },
+        {
+          "hour": 78,
           "likes": 15000
         }
       ],
@@ -5829,7 +5833,7 @@
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 50,
@@ -6023,10 +6027,10 @@
     "srz5hf6qnt": {
       "programTitle": "Aぇ! groupのQ＆Aぇ!",
       "broadcastDate": "2026/09/09",
-      "updatedAt": "2026/09/10 02:07",
+      "updatedAt": "2026/09/10 03:07",
       "episodeId": "eprjtwprmd",
       "subtitle": "＜2＞トレンドメイクを施したAぇ！ベストショット",
-      "likes": "8251",
+      "likes": "8288",
       "favorites": "23.7万",
       "likePoints": [
         {
@@ -6108,6 +6112,10 @@
         {
           "hour": 25,
           "likes": 8251
+        },
+        {
+          "hour": 26,
+          "likes": 8288
         }
       ],
       "previousLikePoints": [
@@ -6185,7 +6193,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 23,
-          "elapsedHour": 25,
+          "elapsedHour": 26,
           "elapsedRank": 23,
           "currentPoints": [
             {
@@ -6242,6 +6250,10 @@
             },
             {
               "hour": 25,
+              "rank": 23
+            },
+            {
+              "hour": 26,
               "rank": 23
             }
           ],
@@ -6462,7 +6474,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 49,
-          "elapsedHour": 25,
+          "elapsedHour": 26,
           "elapsedRank": 49,
           "currentPoints": [
             {
@@ -6479,6 +6491,10 @@
             },
             {
               "hour": 25,
+              "rank": 49
+            },
+            {
+              "hour": 26,
               "rank": 49
             }
           ],
@@ -6556,10 +6572,10 @@
     "srfdyr4f12": {
       "programTitle": "なにわ男子の逆転男子",
       "broadcastDate": "2026/09/05",
-      "updatedAt": "2026/09/10 02:07",
+      "updatedAt": "2026/09/10 03:07",
       "episodeId": "epkue36t2c",
       "subtitle": "WEST.重岡「これなら負けへんで！」人間モグラ叩き＆風船走り幅跳び",
-      "likes": "9558",
+      "likes": "9564",
       "favorites": "60.9万",
       "likePoints": [
         {
@@ -6725,6 +6741,10 @@
         {
           "hour": 106,
           "likes": 9558
+        },
+        {
+          "hour": 107,
+          "likes": 9564
         }
       ],
       "previousLikePoints": [],
@@ -7130,7 +7150,7 @@
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 50,
@@ -7187,7 +7207,7 @@
     "sr64ope7a7": {
       "programTitle": "限界突破！やってM!LK",
       "broadcastDate": "",
-      "updatedAt": "2026/09/10 02:07",
+      "updatedAt": "2026/09/10 03:07",
       "episodeId": "epq1p12svv",
       "subtitle": "知識をつけろ！前半",
       "likes": "",
@@ -7356,6 +7376,10 @@
         },
         {
           "hour": 145,
+          "likes": 12000
+        },
+        {
+          "hour": 146,
           "likes": 12000
         }
       ],
@@ -7863,6 +7887,10 @@
             {
               "hour": 145,
               "rank": 50
+            },
+            {
+              "hour": 146,
+              "rank": 50
             }
           ],
           "nearbyRanking": [
@@ -7876,7 +7904,7 @@
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 50,
@@ -8129,10 +8157,10 @@
     "sra5n6j0w3": {
       "programTitle": "テレビ×ミセス",
       "broadcastDate": "2026/09/07",
-      "updatedAt": "2026/09/10 02:07",
+      "updatedAt": "2026/09/10 03:07",
       "episodeId": "ep0mdejjjn",
       "subtitle": "出川＆チョコプラ大人しりとり★ミセスが学校へ！高校生とコラボ★",
-      "likes": "3041",
+      "likes": "3047",
       "favorites": "46.1万",
       "likePoints": [
         {
@@ -8298,6 +8326,10 @@
         {
           "hour": 53,
           "likes": 3041
+        },
+        {
+          "hour": 54,
+          "likes": 3047
         }
       ],
       "previousLikePoints": [],
@@ -8306,7 +8338,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 35,
-          "elapsedHour": 53,
+          "elapsedHour": 54,
           "elapsedRank": 35,
           "currentPoints": [
             {
@@ -8487,6 +8519,10 @@
             },
             {
               "hour": 53,
+              "rank": 35
+            },
+            {
+              "hour": 54,
               "rank": 35
             }
           ],
@@ -9489,11 +9525,11 @@
     "sr91aqd0qa": {
       "programTitle": "ニノなのに",
       "broadcastDate": "2026/09/02",
-      "updatedAt": "2026/09/10 02:07",
+      "updatedAt": "2026/09/10 03:07",
       "episodeId": "ep0im06sde",
       "subtitle": "司会は堀田真由！お盆初日何が1番早く観光地に行けるのか？",
-      "likes": "2431",
-      "favorites": "32.8万",
+      "likes": "2434",
+      "favorites": "32.9万",
       "likePoints": [
         {
           "hour": 129,
@@ -11353,7 +11389,7 @@
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 50,
@@ -11366,7 +11402,7 @@
     "srdfz31i5d": {
       "programTitle": "ミキティダイニング",
       "broadcastDate": "2026/06/27",
-      "updatedAt": "2026/09/10 02:07",
+      "updatedAt": "2026/09/10 03:07",
       "episodeId": "epi627g3v8",
       "subtitle": "内田有紀のガチ食生活！timelesz寺西拓人が素顔解禁！",
       "likes": "",
