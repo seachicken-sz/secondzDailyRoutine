@@ -2081,16 +2081,120 @@ function scrollImagePreviewToFirstPage() {
 // ==============================
 
 /**
- * 画像共有ボタンのイベントを設定する
+ * 画像共有ボタンと共有モーダルのイベントを設定する
  */
 function setupSaveImageButton() {
-  const button = document.getElementById("saveImageButton");
+  const saveButton = document.getElementById("saveImageButton");
+  const closeButton = document.getElementById("shareModalCloseButton");
+  const cancelButton = document.getElementById("shareModalCancelButton");
+  const executeButton = document.getElementById("executeShareButton");
+  const modal = document.getElementById("shareModal");
+  const checkboxes = getShareOptionCheckboxes();
 
-  if (!button) {
+  if (saveButton) {
+    saveButton.addEventListener("click", openShareModal);
+  }
+
+  if (closeButton) {
+    closeButton.addEventListener("click", closeShareModal);
+  }
+
+  if (cancelButton) {
+    cancelButton.addEventListener("click", closeShareModal);
+  }
+
+  if (executeButton) {
+    executeButton.addEventListener("click", saveReportImage);
+  }
+
+  if (modal) {
+    modal.addEventListener("click", (event) => {
+      if (event.target.matches("[data-share-modal-close]")) {
+        closeShareModal();
+      }
+    });
+  }
+
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", updateShareExecuteButton);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal && !modal.hidden) {
+      closeShareModal();
+    }
+  });
+
+  updateShareExecuteButton();
+}
+
+/**
+ * 共有項目のチェックボックスを取得する
+ */
+function getShareOptionCheckboxes() {
+  return [
+    document.getElementById("shareMainImageCheckbox"),
+    document.getElementById("shareSummaryImageCheckbox"),
+    document.getElementById("shareTextCheckbox"),
+    document.getElementById("sharePageUrlCheckbox")
+  ].filter(Boolean);
+}
+
+/**
+ * 共有モーダルを開く
+ */
+function openShareModal() {
+  const modal = document.getElementById("shareModal");
+  const message = document.getElementById("shareModalMessage");
+
+  if (!modal) {
     return;
   }
 
-  button.addEventListener("click", saveReportImage);
+  if (message) {
+    message.hidden = true;
+    message.textContent = "";
+  }
+
+  modal.hidden = false;
+  updateShareExecuteButton();
+
+  const closeButton = document.getElementById("shareModalCloseButton");
+
+  if (closeButton) {
+    closeButton.focus();
+  }
+}
+
+/**
+ * 共有モーダルを閉じる
+ */
+function closeShareModal() {
+  const modal = document.getElementById("shareModal");
+
+  if (!modal) {
+    return;
+  }
+
+  modal.hidden = true;
+
+  const saveButton = document.getElementById("saveImageButton");
+
+  if (saveButton) {
+    saveButton.focus();
+  }
+}
+
+/**
+ * 共有項目がひとつも選ばれていない場合は共有ボタンを無効化する
+ */
+function updateShareExecuteButton() {
+  const executeButton = document.getElementById("executeShareButton");
+  const hasSelectedOption = getShareOptionCheckboxes().some((checkbox) => checkbox.checked);
+
+  if (executeButton) {
+    executeButton.disabled = !hasSelectedOption;
+  }
 }
 
 /**
@@ -2154,96 +2258,216 @@ function downloadBlobAsFile(blob, fileName) {
   link.href = url;
   link.click();
 
-  URL.revokeObjectURL(url);
+  setTimeout(() => {
+    URL.revokeObjectURL(url);
+  }, 1000);
 }
 
 /**
- * レポート部分を画像化して共有する
- *
- * 共有対応端末：
- * - 1枚目：既存レポート画像
- * - 2枚目：現在ランキング画像
- *
- * 共有非対応端末：
- * - PNGとして2枚ダウンロード
+ * テキストとURLをクリップボードへコピーする
  */
-async function saveReportImage() {
-  const target = document.getElementById("reportCaptureArea");
+async function copyShareContentToClipboard(text, pageUrl) {
+  const clipboardText = [text, pageUrl].filter(Boolean).join("\n");
 
-  if (!target || !reportData) {
-    return;
+  if (!clipboardText || !navigator.clipboard) {
+    return false;
   }
 
-  const safeBaseFileName = `${reportData.programTitle}_${reportData.broadcastDate}_ranking-report`
-    .replace(/[\\/:*?"<>|]/g, "-");
-
-  const mainBlob = await captureElementToPngBlob(target, {
-    onclone: (clonedDocument) => {
-      const clonedTarget = clonedDocument.getElementById("reportCaptureArea");
-
-      if (clonedTarget) {
-        clonedTarget.classList.add("is-capturing");
-      }
-    }
-  });
-
-  if (!mainBlob) {
-    return;
+  try {
+    await navigator.clipboard.writeText(clipboardText);
+    return true;
+  } catch (error) {
+    console.log("共有内容をコピーできませんでした", error);
+    return false;
   }
-
-  let summaryTarget = document.querySelector("#currentRankingPreview .current-ranking-report");
-  let summaryBlob = null;
-
-  if (!summaryTarget) {
-    renderCurrentRankingPreview(reportData);
-    summaryTarget = document.querySelector("#currentRankingPreview .current-ranking-report");
-  }
-
-  if (summaryTarget) {
-    summaryBlob = await captureElementToPngBlob(summaryTarget);
-  } else {
-    const summaryElement = createCurrentRankingSummaryElement(reportData);
-    summaryBlob = await captureTemporaryElementToPngBlob(summaryElement);
-  }
-
-  if (!summaryBlob) {
-    return;
-  }
-
-  const mainFile = new File([mainBlob], `${safeBaseFileName}.png`, {
-    type: "image/png"
-  });
-
-  const summaryFile = new File([summaryBlob], `${safeBaseFileName}_current-ranking.png`, {
-    type: "image/png"
-  });
-
-  const files = [
-    mainFile,
-    summaryFile
-  ];
-
-  const shareTitle = buildImageShareTitle();
-  const shareText = buildImageShareText();
-
-  if (navigator.canShare && navigator.canShare({ files })) {
-    try {
-      await navigator.share({
-        files,
-        title: shareTitle,
-        text: shareText
-      });
-      return;
-    } catch (error) {
-      console.log("共有がキャンセルされました", error);
-      return;
-    }
-  }
-
-  downloadBlobAsFile(mainBlob, `${safeBaseFileName}.png`);
-  downloadBlobAsFile(summaryBlob, `${safeBaseFileName}_current-ranking.png`);
 }
 
+/**
+ * 選択された項目を画像化して共有する
+ */
+async function saveReportImage() {
+  const mainImageCheckbox = document.getElementById("shareMainImageCheckbox");
+  const summaryImageCheckbox = document.getElementById("shareSummaryImageCheckbox");
+  const textCheckbox = document.getElementById("shareTextCheckbox");
+  const pageUrlCheckbox = document.getElementById("sharePageUrlCheckbox");
+  const executeButton = document.getElementById("executeShareButton");
+  const message = document.getElementById("shareModalMessage");
+
+  if (!reportData) {
+    return;
+  }
+
+  const shareMainImage = Boolean(mainImageCheckbox?.checked);
+  const shareSummaryImage = Boolean(summaryImageCheckbox?.checked);
+  const shareText = Boolean(textCheckbox?.checked);
+  const sharePageUrl = Boolean(pageUrlCheckbox?.checked);
+
+  if (!shareMainImage && !shareSummaryImage && !shareText && !sharePageUrl) {
+    updateShareExecuteButton();
+    return;
+  }
+
+  if (executeButton) {
+    executeButton.disabled = true;
+  }
+
+  if (message) {
+    message.hidden = true;
+    message.textContent = "";
+  }
+
+  const originalButtonHtml = executeButton?.innerHTML;
+
+  if (executeButton) {
+    executeButton.innerHTML = `
+      <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+      準備中...
+    `;
+  }
+
+  try {
+    const safeBaseFileName = `${reportData.programTitle}_${reportData.broadcastDate}_ranking-report`
+      .replace(/[\\/:*?"<>|]/g, "-");
+
+    const files = [];
+    const downloadableImages = [];
+
+    if (shareMainImage) {
+      const target = document.getElementById("reportCaptureArea");
+
+      if (!target) {
+        throw new Error("グラフ画像の対象が見つかりません。");
+      }
+
+      const mainBlob = await captureElementToPngBlob(target, {
+        onclone: (clonedDocument) => {
+          const clonedTarget = clonedDocument.getElementById("reportCaptureArea");
+
+          if (clonedTarget) {
+            clonedTarget.classList.add("is-capturing");
+          }
+        }
+      });
+
+      if (!mainBlob) {
+        throw new Error("グラフ画像を作成できませんでした。");
+      }
+
+      const mainFileName = `${safeBaseFileName}.png`;
+
+      files.push(new File([mainBlob], mainFileName, {
+        type: "image/png"
+      }));
+
+      downloadableImages.push({
+        blob: mainBlob,
+        fileName: mainFileName
+      });
+    }
+
+    if (shareSummaryImage) {
+      let summaryTarget = document.querySelector("#currentRankingPreview .current-ranking-report");
+
+      if (!summaryTarget) {
+        renderCurrentRankingPreview(reportData);
+        summaryTarget = document.querySelector("#currentRankingPreview .current-ranking-report");
+      }
+
+      let summaryBlob = null;
+
+      if (summaryTarget) {
+        summaryBlob = await captureElementToPngBlob(summaryTarget);
+      } else {
+        const summaryElement = createCurrentRankingSummaryElement(reportData);
+        summaryBlob = await captureTemporaryElementToPngBlob(summaryElement);
+      }
+
+      if (!summaryBlob) {
+        throw new Error("現在ランキング画像を作成できませんでした。");
+      }
+
+      const summaryFileName = `${safeBaseFileName}_current-ranking.png`;
+
+      files.push(new File([summaryBlob], summaryFileName, {
+        type: "image/png"
+      }));
+
+      downloadableImages.push({
+        blob: summaryBlob,
+        fileName: summaryFileName
+      });
+    }
+
+    const shareData = {
+      title: buildImageShareTitle()
+    };
+
+    const text = shareText ? buildImageShareText() : "";
+    const pageUrl = sharePageUrl ? window.location.href : "";
+
+    if (text) {
+      shareData.text = text;
+    }
+
+    if (pageUrl) {
+      shareData.url = pageUrl;
+    }
+
+    if (files.length > 0) {
+      shareData.files = files;
+    }
+
+    const canShareFiles = files.length === 0 ||
+      (typeof navigator.canShare === "function" && navigator.canShare({ files }));
+
+    if (typeof navigator.share === "function" && canShareFiles) {
+      closeShareModal();
+
+      try {
+        await navigator.share(shareData);
+      } catch (error) {
+        if (error.name !== "AbortError") {
+          console.log("共有に失敗しました", error);
+        }
+      }
+
+      return;
+    }
+
+    downloadableImages.forEach(({ blob, fileName }) => {
+      downloadBlobAsFile(blob, fileName);
+    });
+
+    const copied = await copyShareContentToClipboard(text, pageUrl);
+
+    if (message) {
+      if (downloadableImages.length > 0 && copied) {
+        message.textContent = "画像を保存し、投稿文とURLをコピーしました。";
+      } else if (downloadableImages.length > 0) {
+        message.textContent = "画像を保存しました。";
+      } else if (copied) {
+        message.textContent = "投稿内容をコピーしました。";
+      } else {
+        message.textContent = "このブラウザでは共有できませんでした。";
+      }
+
+      message.hidden = false;
+    }
+  } catch (error) {
+    console.error("共有内容の作成に失敗しました", error);
+
+    if (message) {
+      message.textContent = error.message || "共有内容の作成に失敗しました。";
+      message.hidden = false;
+    }
+  } finally {
+    if (executeButton) {
+      executeButton.innerHTML = originalButtonHtml || "選択した内容で共有";
+    }
+
+    updateShareExecuteButton();
+  }
+}
 
 // ==============================
 // 実行開始
