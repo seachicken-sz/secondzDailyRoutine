@@ -101,9 +101,65 @@
 
   <div class="save-area">
     <button id="saveImageButton" class="save-button" type="button">
-      <i class="bi bi-box-arrow-down"></i>
+      <i class="bi bi-share"></i>
       グラフを保存して投稿
     </button>
+  </div>
+
+  <div id="shareModal" class="share-modal" role="dialog" aria-modal="true" aria-labelledby="shareModalTitle" hidden>
+    <div class="share-modal-backdrop" data-share-modal-close></div>
+    <div class="share-modal-content">
+      <div class="share-modal-header">
+        <h2 id="shareModalTitle">共有する項目を選択</h2>
+        <button id="shareModalCloseButton" class="share-modal-close-button" type="button" aria-label="閉じる">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <div class="share-option-list">
+        <label class="share-option">
+          <input id="shareMainImageCheckbox" class="share-option-checkbox" type="checkbox" checked>
+          <span class="share-option-text">
+            <span class="share-option-title">グラフ画像</span>
+            <span class="share-option-description">ランキング推移といいね数のグラフ</span>
+          </span>
+        </label>
+
+        <label class="share-option">
+          <input id="shareSummaryImageCheckbox" class="share-option-checkbox" type="checkbox" checked>
+          <span class="share-option-text">
+            <span class="share-option-title">現在ランキング画像</span>
+            <span class="share-option-description">現在の順位といいね数をまとめた画像</span>
+          </span>
+        </label>
+
+        <label class="share-option">
+          <input id="shareTextCheckbox" class="share-option-checkbox" type="checkbox" checked>
+          <span class="share-option-text">
+            <span class="share-option-title">投稿文</span>
+            <span class="share-option-description">番組名・現在順位・いいね数・TVer URL</span>
+          </span>
+        </label>
+
+        <label class="share-option">
+          <input id="sharePageUrlCheckbox" class="share-option-checkbox" type="checkbox" checked>
+          <span class="share-option-text">
+            <span class="share-option-title">このページのURL</span>
+            <span class="share-option-description">現在表示しているグラフページのURL</span>
+          </span>
+        </label>
+      </div>
+
+      <p id="shareModalMessage" class="share-modal-message" hidden></p>
+
+      <div class="share-modal-actions">
+        <button id="shareModalCancelButton" class="share-modal-cancel-button" type="button">キャンセル</button>
+        <button id="executeShareButton" class="share-modal-execute-button" type="button">
+          <i class="bi bi-share"></i>
+          選択した内容で共有
+        </button>
+      </div>
+    </div>
   </div>
 </body>
 </html>
