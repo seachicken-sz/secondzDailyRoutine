@@ -2398,19 +2398,16 @@ async function saveReportImage() {
       });
     }
 
-    const shareData = {
+        const shareData = {
       title: buildImageShareTitle()
     };
 
     const text = shareText ? buildImageShareText() : "";
     const pageUrl = sharePageUrl ? window.location.href : "";
+    const shareContent = [text, pageUrl].filter(Boolean).join("\n");
 
-    if (text) {
-      shareData.text = text;
-    }
-
-    if (pageUrl) {
-      shareData.url = pageUrl;
+    if (shareContent) {
+      shareData.text = shareContent;
     }
 
     if (files.length > 0) {
