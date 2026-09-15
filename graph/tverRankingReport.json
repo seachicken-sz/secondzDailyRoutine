@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/09/15 08:07",
+  "updatedAt": "2026/09/15 09:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/11",
-      "updatedAt": "2026/09/15 08:07",
+      "updatedAt": "2026/09/15 09:07",
       "episodeId": "epkt4mjnjo",
       "subtitle": "手作りうさぎ＆かき氷－timelesz100",
       "likes": "1.3万",
@@ -52,6 +52,10 @@
         },
         {
           "hour": 82,
+          "likes": 13000
+        },
+        {
+          "hour": 83,
           "likes": 13000
         }
       ],
@@ -389,9 +393,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 23,
-          "elapsedHour": 82,
-          "elapsedRank": 23,
+          "currentRank": 25,
+          "elapsedHour": 83,
+          "elapsedRank": 25,
           "currentPoints": [
             {
               "hour": 7,
@@ -692,6 +696,10 @@
             {
               "hour": 82,
               "rank": 23
+            },
+            {
+              "hour": 83,
+              "rank": 25
             }
           ],
           "previousPoints": [
@@ -1286,19 +1294,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 20,
-              "title": "週刊さんまとマツコ"
-            },
-            {
-              "rank": 21,
-              "title": "有吉ゼミ"
-            },
-            {
               "rank": 22,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 23,
+              "title": "テレビ×ミセス"
+            },
+            {
+              "rank": 24,
+              "title": "ダウンタウンのガキの使いやあらへんで！"
+            },
+            {
+              "rank": 25,
               "title": "タイムレスマン"
             }
           ]
@@ -1306,9 +1314,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 50,
-          "elapsedHour": 82,
-          "elapsedRank": 50,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 12,
@@ -1872,19 +1880,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 48,
-              "title": "韓国ドラマ「太陽を飲み込んだ女」"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 49,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "韓国ドラマ「太陽を飲み込んだ女」"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "テレビ×ミセス"
             }
           ]
         }
@@ -1893,7 +1901,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/09/13",
-      "updatedAt": "2026/09/15 08:07",
+      "updatedAt": "2026/09/15 09:07",
       "episodeId": "ephm83y4hu",
       "subtitle": "【揚げ物をかけたゲームバトル】盛り上がりすぎてハプニング発生!?",
       "likes": "1.1万",
@@ -1941,6 +1949,10 @@
         },
         {
           "hour": 42,
+          "likes": 11000
+        },
+        {
+          "hour": 43,
           "likes": 11000
         }
       ],
@@ -2430,9 +2442,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 9,
-          "elapsedHour": 42,
-          "elapsedRank": 9,
+          "currentRank": 11,
+          "elapsedHour": 43,
+          "elapsedRank": 11,
           "currentPoints": [
             {
               "hour": 5,
@@ -2585,6 +2597,10 @@
             {
               "hour": 42,
               "rank": 9
+            },
+            {
+              "hour": 43,
+              "rank": 11
             }
           ],
           "previousPoints": [
@@ -2947,19 +2963,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 6,
-              "title": "CDTV ライブ! ライブ!"
-            },
-            {
-              "rank": 7,
+              "rank": 8,
               "title": "水曜日のダウンタウン"
             },
             {
-              "rank": 8,
-              "title": "月曜から夜ふかし"
+              "rank": 9,
+              "title": "かまいたちの知らんけど"
             },
             {
-              "rank": 9,
+              "rank": 10,
+              "title": "上田と女が吠える夜"
+            },
+            {
+              "rank": 11,
               "title": "timeleszファミリア"
             }
           ]
@@ -2967,9 +2983,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 26,
-          "elapsedHour": 42,
-          "elapsedRank": 26,
+          "currentRank": 28,
+          "elapsedHour": 43,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 7,
@@ -3114,6 +3130,10 @@
             {
               "hour": 42,
               "rank": 26
+            },
+            {
+              "hour": 43,
+              "rank": 28
             }
           ],
           "previousPoints": [
@@ -3344,19 +3364,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 23,
-              "title": "ファーストクライ 母子救命救急班"
-            },
-            {
-              "rank": 24,
-              "title": "薬屋のひとりごと"
-            },
-            {
               "rank": 25,
-              "title": "さよならノワール"
+              "title": "恋はつづくよどこまでも"
             },
             {
               "rank": 26,
+              "title": "さよならノワール"
+            },
+            {
+              "rank": 27,
+              "title": "かまいたちの知らんけど"
+            },
+            {
+              "rank": 28,
               "title": "timeleszファミリア"
             }
           ]
@@ -3366,10 +3386,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/09/08",
-      "updatedAt": "2026/09/15 08:07",
+      "updatedAt": "2026/09/15 09:07",
       "episodeId": "epalcc1xoi",
       "subtitle": "チョコプラ・timeleszに抜き打ち！ネイチャークエスチョン！番組愛が強いのは誰だ！？",
-      "likes": "7854",
+      "likes": "7864",
       "favorites": "6.0万",
       "likePoints": [
         {
@@ -3923,6 +3943,10 @@
         {
           "hour": 152,
           "likes": 7854
+        },
+        {
+          "hour": 153,
+          "likes": 7864
         }
       ],
       "previousLikePoints": [
@@ -4913,11 +4937,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "いくらかわかる金？"
+              "title": "アンタッチャブルでやらせてもらってます"
             },
             {
               "rank": 48,
-              "title": "アンタッチャブルでやらせてもらってます"
+              "title": "いくらかわかる金？"
             },
             {
               "rank": 49,
@@ -4925,7 +4949,7 @@
             },
             {
               "rank": 50,
-              "title": "ぼる部屋"
+              "title": "GOLF JOKER ～ゴルフジョーカー～"
             }
           ]
         },
@@ -5078,7 +5102,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 48,
@@ -5086,11 +5110,11 @@
             },
             {
               "rank": 49,
-              "title": "徹子の部屋"
+              "title": "ラヴィット！"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "徹子の部屋"
             }
           ]
         }
@@ -5099,7 +5123,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/09/10",
-      "updatedAt": "2026/09/15 08:07",
+      "updatedAt": "2026/09/15 09:07",
       "episodeId": "epx30lemv4",
       "subtitle": "【お互いターゲット】Wフラッシュモブドッキリ",
       "likes": "1.1万",
@@ -5147,6 +5171,10 @@
         },
         {
           "hour": 126,
+          "likes": 11000
+        },
+        {
+          "hour": 127,
           "likes": 11000
         }
       ],
@@ -6006,7 +6034,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 48,
@@ -6014,11 +6042,11 @@
             },
             {
               "rank": 49,
-              "title": "徹子の部屋"
+              "title": "ラヴィット！"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "徹子の部屋"
             }
           ]
         },
@@ -6143,19 +6171,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 48,
-              "title": "韓国ドラマ「太陽を飲み込んだ女」"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 49,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "韓国ドラマ「太陽を飲み込んだ女」"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "テレビ×ミセス"
             }
           ]
         }
@@ -6164,11 +6192,11 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/09/09",
-      "updatedAt": "2026/09/15 08:07",
+      "updatedAt": "2026/09/15 09:07",
       "episodeId": "epv2f01dx0",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！SixTONES登場",
       "likes": "3.6万",
-      "favorites": "14.3万",
+      "favorites": "14.4万",
       "likePoints": [
         {
           "hour": 2,
@@ -6717,6 +6745,10 @@
         {
           "hour": 151,
           "likes": 36000
+        },
+        {
+          "hour": 152,
+          "likes": 36000
         }
       ],
       "previousLikePoints": [
@@ -6794,7 +6826,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 43,
-          "elapsedHour": 151,
+          "elapsedHour": 152,
           "elapsedRank": 43,
           "currentPoints": [
             {
@@ -7384,6 +7416,10 @@
             {
               "hour": 151,
               "rank": 43
+            },
+            {
+              "hour": 152,
+              "rank": 43
             }
           ],
           "previousPoints": [
@@ -7431,11 +7467,11 @@
           "nearbyRanking": [
             {
               "rank": 40,
-              "title": "おしゃれクリップ"
+              "title": "トークィーンズ"
             },
             {
               "rank": 41,
-              "title": "トークィーンズ"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 42,
@@ -7759,19 +7795,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 48,
-              "title": "韓国ドラマ「太陽を飲み込んだ女」"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 49,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "韓国ドラマ「太陽を飲み込んだ女」"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "テレビ×ミセス"
             }
           ]
         }
@@ -7780,10 +7816,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/09/11",
-      "updatedAt": "2026/09/15 08:07",
+      "updatedAt": "2026/09/15 09:07",
       "episodeId": "epiwjo43r9",
       "subtitle": "第144回 小池栄子VS渡部篤郎 名俳優の最弱王が決定！",
-      "likes": "4616",
+      "likes": "4633",
       "favorites": "71.8万",
       "likePoints": [
         {
@@ -7829,6 +7865,10 @@
         {
           "hour": 104,
           "likes": 4616
+        },
+        {
+          "hour": 105,
+          "likes": 4633
         }
       ],
       "previousLikePoints": [
@@ -8531,7 +8571,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 48,
@@ -8539,11 +8579,11 @@
             },
             {
               "rank": 49,
-              "title": "徹子の部屋"
+              "title": "ラヴィット！"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "徹子の部屋"
             }
           ]
         },
@@ -8772,19 +8812,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 48,
-              "title": "韓国ドラマ「太陽を飲み込んだ女」"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 49,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "韓国ドラマ「太陽を飲み込んだ女」"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "テレビ×ミセス"
             }
           ]
         }
@@ -8793,10 +8833,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/09/05",
-      "updatedAt": "2026/09/15 08:07",
+      "updatedAt": "2026/09/15 09:07",
       "episodeId": "ephzgytav0",
       "subtitle": "CM撮影で落とし穴！ウソ？本当？SP",
-      "likes": "2654",
+      "likes": "2661",
       "favorites": "80.7万",
       "likePoints": [
         {
@@ -9558,7 +9598,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 48,
@@ -9566,11 +9606,11 @@
             },
             {
               "rank": 49,
-              "title": "徹子の部屋"
+              "title": "ラヴィット！"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "徹子の部屋"
             }
           ]
         },
@@ -9742,19 +9782,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "週刊さんまとマツコ"
             },
             {
               "rank": 48,
-              "title": "韓国ドラマ「太陽を飲み込んだ女」"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 49,
-              "title": "ダウンタウンのガキの使いやあらへんで！"
+              "title": "韓国ドラマ「太陽を飲み込んだ女」"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "テレビ×ミセス"
             }
           ]
         }
@@ -9763,7 +9803,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/09/15 08:07",
+      "updatedAt": "2026/09/15 09:07",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
       "likes": "1.1万",
@@ -10997,7 +11037,7 @@
             },
             {
               "rank": 48,
-              "title": "上沼・高田のクギズケ！"
+              "title": "ぽかぽか"
             },
             {
               "rank": 49,
@@ -11005,7 +11045,7 @@
             },
             {
               "rank": 50,
-              "title": "ぽかぽか"
+              "title": "上沼・高田のクギズケ！"
             }
           ]
         },
@@ -11209,7 +11249,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 48,
@@ -11217,11 +11257,11 @@
             },
             {
               "rank": 49,
-              "title": "徹子の部屋"
+              "title": "ラヴィット！"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "徹子の部屋"
             }
           ]
         }
@@ -11230,11 +11270,11 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/09/09",
-      "updatedAt": "2026/09/15 08:07",
+      "updatedAt": "2026/09/15 09:07",
       "episodeId": "ep98ynw6vj",
       "subtitle": "最終回 一人にはしませんから",
-      "likes": "1.4万",
-      "favorites": "56.7万",
+      "likes": "1.5万",
+      "favorites": "56.6万",
       "likePoints": [
         {
           "hour": 116,
@@ -11279,6 +11319,10 @@
         {
           "hour": 130,
           "likes": 14000
+        },
+        {
+          "hour": 131,
+          "likes": 15000
         }
       ],
       "previousLikePoints": [
@@ -11432,7 +11476,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 13,
-          "elapsedHour": 130,
+          "elapsedHour": 131,
           "elapsedRank": 13,
           "currentPoints": [
             {
@@ -11945,6 +11989,10 @@
             },
             {
               "hour": 130,
+              "rank": 13
+            },
+            {
+              "hour": 131,
               "rank": 13
             }
           ],
@@ -12617,15 +12665,15 @@
           "nearbyRanking": [
             {
               "rank": 10,
-              "title": "Tokyo middle 30"
+              "title": "夫を殺したはずなのに"
             },
             {
               "rank": 11,
-              "title": "キスは捜査のあとで"
+              "title": "Tokyo middle 30"
             },
             {
               "rank": 12,
-              "title": "恋はつづくよどこまでも"
+              "title": "キスは捜査のあとで"
             },
             {
               "rank": 13,
@@ -12636,9 +12684,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 23,
-          "elapsedHour": 130,
-          "elapsedRank": 23,
+          "currentRank": 24,
+          "elapsedHour": 131,
+          "elapsedRank": 24,
           "currentPoints": [
             {
               "hour": 2,
@@ -13151,6 +13199,10 @@
             {
               "hour": 130,
               "rank": 23
+            },
+            {
+              "hour": 131,
+              "rank": 24
             }
           ],
           "previousPoints": [
@@ -13817,19 +13869,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 20,
+              "rank": 21,
               "title": "水曜日のダウンタウン"
             },
             {
-              "rank": 21,
-              "title": "月曜から夜ふかし"
-            },
-            {
               "rank": 22,
-              "title": "恋はつづくよどこまでも"
+              "title": "キスは捜査のあとで"
             },
             {
               "rank": 23,
+              "title": "薬屋のひとりごと"
+            },
+            {
+              "rank": 24,
               "title": "ファーストクライ 母子救命救急班"
             }
           ]
@@ -13839,7 +13891,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/10",
-      "updatedAt": "2026/09/15 08:07",
+      "updatedAt": "2026/09/15 09:07",
       "episodeId": "epiupuz8nm",
       "subtitle": "第10話 そばにいてほしいのに・・・過ぎ去った恋の残り香",
       "likes": "1.6万",
@@ -13887,6 +13939,10 @@
         },
         {
           "hour": 106,
+          "likes": 16000
+        },
+        {
+          "hour": 107,
           "likes": 16000
         }
       ],
@@ -14132,9 +14188,9 @@
         {
           "type": "drama",
           "label": "ドラマ",
-          "currentRank": 6,
-          "elapsedHour": 106,
-          "elapsedRank": 6,
+          "currentRank": 7,
+          "elapsedHour": 107,
+          "elapsedRank": 7,
           "currentPoints": [
             {
               "hour": 2,
@@ -14551,6 +14607,10 @@
             {
               "hour": 106,
               "rank": 6
+            },
+            {
+              "hour": 107,
+              "rank": 7
             }
           ],
           "previousPoints": [
@@ -15220,10 +15280,6 @@
             }
           ],
           "nearbyRanking": [
-            {
-              "rank": 3,
-              "title": "Ｔシャツが乾くまで"
-            },
             {
               "rank": 4,
               "title": "GTO"
@@ -15234,6 +15290,10 @@
             },
             {
               "rank": 6,
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
+            },
+            {
+              "rank": 7,
               "title": "ラストノート"
             }
           ]
@@ -15241,9 +15301,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 12,
-          "elapsedHour": 106,
-          "elapsedRank": 12,
+          "currentRank": 13,
+          "elapsedHour": 107,
+          "elapsedRank": 13,
           "currentPoints": [
             {
               "hour": 2,
@@ -15660,6 +15720,10 @@
             {
               "hour": 106,
               "rank": 12
+            },
+            {
+              "hour": 107,
+              "rank": 13
             }
           ],
           "previousPoints": [
@@ -16330,19 +16394,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 9,
+              "rank": 10,
               "title": "ワンピース"
             },
             {
-              "rank": 10,
+              "rank": 11,
               "title": "突然ですが占ってもいいですか？"
             },
             {
-              "rank": 11,
-              "title": "ブラックトリック～裁きを操る弁護人～"
+              "rank": 12,
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             },
             {
-              "rank": 12,
+              "rank": 13,
               "title": "ラストノート"
             }
           ]
@@ -16352,7 +16416,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/07",
-      "updatedAt": "2026/09/15 08:07",
+      "updatedAt": "2026/09/15 09:07",
       "episodeId": "epcjl6nn1l",
       "subtitle": "真夏の超吸収フェス",
       "likes": "8035",
@@ -17490,7 +17554,7 @@
             },
             {
               "rank": 48,
-              "title": "上沼・高田のクギズケ！"
+              "title": "ぽかぽか"
             },
             {
               "rank": 49,
@@ -17498,7 +17562,7 @@
             },
             {
               "rank": 50,
-              "title": "ぽかぽか"
+              "title": "上沼・高田のクギズケ！"
             }
           ]
         },
@@ -17747,7 +17811,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 48,
@@ -17755,11 +17819,11 @@
             },
             {
               "rank": 49,
-              "title": "徹子の部屋"
+              "title": "ラヴィット！"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "徹子の部屋"
             }
           ]
         }
