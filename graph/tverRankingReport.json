@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/09/16 10:07",
+  "updatedAt": "2026/09/16 11:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/11",
-      "updatedAt": "2026/09/16 10:07",
+      "updatedAt": "2026/09/16 11:07",
       "episodeId": "epkt4mjnjo",
       "subtitle": "手作りうさぎ＆かき氷－timelesz100",
       "likes": "1.4万",
@@ -144,6 +144,10 @@
         },
         {
           "hour": 108,
+          "likes": 14000
+        },
+        {
+          "hour": 109,
           "likes": 14000
         }
       ],
@@ -482,7 +486,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 39,
-          "elapsedHour": 108,
+          "elapsedHour": 109,
           "elapsedRank": 39,
           "currentPoints": [
             {
@@ -887,6 +891,10 @@
             },
             {
               "hour": 108,
+              "rank": 39
+            },
+            {
+              "hour": 109,
               "rank": 39
             }
           ],
@@ -2068,19 +2076,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "ザ！世界仰天ニュース"
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "ラヴィット！"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "情熱大陸"
             }
           ]
         }
@@ -2089,7 +2097,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/09/13",
-      "updatedAt": "2026/09/16 10:07",
+      "updatedAt": "2026/09/16 11:07",
       "episodeId": "ephm83y4hu",
       "subtitle": "【揚げ物をかけたゲームバトル】盛り上がりすぎてハプニング発生!?",
       "likes": "1.2万",
@@ -2229,6 +2237,10 @@
         },
         {
           "hour": 68,
+          "likes": 12000
+        },
+        {
+          "hour": 69,
           "likes": 12000
         }
       ],
@@ -2718,9 +2730,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 24,
-          "elapsedHour": 68,
-          "elapsedRank": 24,
+          "currentRank": 29,
+          "elapsedHour": 69,
+          "elapsedRank": 29,
           "currentPoints": [
             {
               "hour": 5,
@@ -2977,6 +2989,10 @@
             {
               "hour": 68,
               "rank": 24
+            },
+            {
+              "hour": 69,
+              "rank": 29
             }
           ],
           "previousPoints": [
@@ -3339,19 +3355,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 21,
+              "rank": 26,
+              "title": "あちこちオードリー"
+            },
+            {
+              "rank": 27,
               "title": "一茂×かまいたち ゲンバ"
             },
             {
-              "rank": 22,
+              "rank": 28,
               "title": "それSnow Manにやらせて下さい"
             },
             {
-              "rank": 23,
-              "title": "ロンドンハーツ"
-            },
-            {
-              "rank": 24,
+              "rank": 29,
               "title": "timeleszファミリア"
             }
           ]
@@ -3359,9 +3375,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 49,
-          "elapsedHour": 68,
-          "elapsedRank": 49,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 7,
@@ -3840,20 +3856,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 46,
-              "title": "一茂×かまいたち ゲンバ"
-            },
-            {
               "rank": 47,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "ザ！世界仰天ニュース"
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "ラヴィット！"
+            },
+            {
+              "rank": 50,
+              "title": "情熱大陸"
             }
           ]
         }
@@ -3862,10 +3878,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/16 10:07",
+      "updatedAt": "2026/09/16 11:07",
       "episodeId": "eptlyw7yfw",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！",
-      "likes": "3227",
+      "likes": "3462",
       "favorites": "6.1万",
       "likePoints": [
         {
@@ -3899,6 +3915,10 @@
         {
           "hour": 10,
           "likes": 3227
+        },
+        {
+          "hour": 11,
+          "likes": 3462
         }
       ],
       "previousLikePoints": [
@@ -4511,9 +4531,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 20,
-          "elapsedHour": 10,
-          "elapsedRank": 20,
+          "currentRank": 17,
+          "elapsedHour": 11,
+          "elapsedRank": 17,
           "currentPoints": [
             {
               "hour": 6,
@@ -4534,6 +4554,10 @@
             {
               "hour": 10,
               "rank": 20
+            },
+            {
+              "hour": 11,
+              "rank": 17
             }
           ],
           "previousPoints": [
@@ -4944,19 +4968,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 17,
+              "rank": 14,
+              "title": "Aぇ! groupのQ＆Aぇ!"
+            },
+            {
+              "rank": 15,
+              "title": "1億人の大質問!?笑ってコラえて！"
+            },
+            {
+              "rank": 16,
               "title": "THE神業チャレンジ"
             },
             {
-              "rank": 18,
-              "title": "探偵！ナイトスクープ"
-            },
-            {
-              "rank": 19,
-              "title": "VS.超特急"
-            },
-            {
-              "rank": 20,
+              "rank": 17,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -5041,15 +5065,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "家、ついて行ってイイですか？"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 50,
@@ -5062,7 +5086,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/09/10",
-      "updatedAt": "2026/09/16 10:07",
+      "updatedAt": "2026/09/16 11:07",
       "episodeId": "epx30lemv4",
       "subtitle": "【お互いターゲット】Wフラッシュモブドッキリ",
       "likes": "1.2万",
@@ -5202,6 +5226,10 @@
         },
         {
           "hour": 152,
+          "likes": 12000
+        },
+        {
+          "hour": 153,
           "likes": 12000
         }
       ],
@@ -6061,15 +6089,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "家、ついて行ってイイですか？"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 50,
@@ -6198,19 +6226,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "ザ！世界仰天ニュース"
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "ラヴィット！"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "情熱大陸"
             }
           ]
         }
@@ -6219,10 +6247,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/09/16",
-      "updatedAt": "2026/09/16 10:07",
+      "updatedAt": "2026/09/16 11:07",
       "episodeId": "epw0lvq93h",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！milet登場",
-      "likes": "1779",
+      "likes": "1928",
       "favorites": "14.4万",
       "likePoints": [
         {
@@ -6252,6 +6280,10 @@
         {
           "hour": 9,
           "likes": 1779
+        },
+        {
+          "hour": 10,
+          "likes": 1928
         }
       ],
       "previousLikePoints": [
@@ -7513,15 +7545,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "家、ついて行ってイイですか？"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 50,
@@ -7841,19 +7873,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "ザ！世界仰天ニュース"
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "ラヴィット！"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "情熱大陸"
             }
           ]
         }
@@ -7862,10 +7894,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/09/11",
-      "updatedAt": "2026/09/16 10:07",
+      "updatedAt": "2026/09/16 11:07",
       "episodeId": "epiwjo43r9",
       "subtitle": "第144回 小池栄子VS渡部篤郎 名俳優の最弱王が決定！",
-      "likes": "4907",
+      "likes": "4917",
       "favorites": "71.8万",
       "likePoints": [
         {
@@ -7995,6 +8027,10 @@
         {
           "hour": 130,
           "likes": 4907
+        },
+        {
+          "hour": 131,
+          "likes": 4917
         }
       ],
       "previousLikePoints": [
@@ -8697,15 +8733,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "家、ついて行ってイイですか？"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 50,
@@ -8938,19 +8974,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "ザ！世界仰天ニュース"
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "ラヴィット！"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "情熱大陸"
             }
           ]
         }
@@ -8959,10 +8995,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/09/05",
-      "updatedAt": "2026/09/16 10:07",
+      "updatedAt": "2026/09/16 11:07",
       "episodeId": "ephzgytav0",
       "subtitle": "CM撮影で落とし穴！ウソ？本当？SP",
-      "likes": "2723",
+      "likes": "2725",
       "favorites": "80.7万",
       "likePoints": [
         {
@@ -9724,15 +9760,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "家、ついて行ってイイですか？"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 50,
@@ -9908,19 +9944,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "それSnow Manにやらせて下さい"
+              "title": "ザ！世界仰天ニュース"
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "ラヴィット！"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "情熱大陸"
             }
           ]
         }
@@ -9929,7 +9965,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/09/16 10:07",
+      "updatedAt": "2026/09/16 11:07",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
       "likes": "1.1万",
@@ -11159,19 +11195,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ハマダ歌謡祭★オオカミ少年"
+              "title": "じっくり聞いタロウ～スター近況（秘）報告～"
             },
             {
               "rank": 48,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
               "rank": 49,
-              "title": "５時に夢中！"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 50,
-              "title": "ニノなのに"
+              "title": "５時に夢中！"
             }
           ]
         },
@@ -11375,15 +11411,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "家、ついて行ってイイですか？"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 50,
@@ -11396,11 +11432,11 @@
     "sr286e3aus": {
       "programTitle": "ファーストクライ 母子救命救急班",
       "broadcastDate": "2026/09/09",
-      "updatedAt": "2026/09/16 10:07",
+      "updatedAt": "2026/09/16 11:07",
       "episodeId": "ep98ynw6vj",
       "subtitle": "最終回 一人にはしませんから",
       "likes": "1.5万",
-      "favorites": "55.7万",
+      "favorites": "55.6万",
       "likePoints": [
         {
           "hour": 116,
@@ -11536,6 +11572,10 @@
         },
         {
           "hour": 156,
+          "likes": 15000
+        },
+        {
+          "hour": 157,
           "likes": 15000
         }
       ],
@@ -11690,7 +11730,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 14,
-          "elapsedHour": 156,
+          "elapsedHour": 157,
           "elapsedRank": 14,
           "currentPoints": [
             {
@@ -12307,6 +12347,10 @@
             },
             {
               "hour": 156,
+              "rank": 14
+            },
+            {
+              "hour": 157,
               "rank": 14
             }
           ],
@@ -12999,7 +13043,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 26,
-          "elapsedHour": 156,
+          "elapsedHour": 157,
           "elapsedRank": 26,
           "currentPoints": [
             {
@@ -13616,6 +13660,10 @@
             },
             {
               "hour": 156,
+              "rank": 26
+            },
+            {
+              "hour": 157,
               "rank": 26
             }
           ],
@@ -14292,7 +14340,7 @@
             },
             {
               "rank": 25,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "しゃべくり007"
             },
             {
               "rank": 26,
@@ -14305,7 +14353,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/10",
-      "updatedAt": "2026/09/16 10:07",
+      "updatedAt": "2026/09/16 11:07",
       "episodeId": "epiupuz8nm",
       "subtitle": "第10話 そばにいてほしいのに・・・過ぎ去った恋の残り香",
       "likes": "1.7万",
@@ -14445,6 +14493,10 @@
         },
         {
           "hour": 132,
+          "likes": 17000
+        },
+        {
+          "hour": 133,
           "likes": 17000
         }
       ],
@@ -14691,7 +14743,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 11,
-          "elapsedHour": 132,
+          "elapsedHour": 133,
           "elapsedRank": 11,
           "currentPoints": [
             {
@@ -15212,6 +15264,10 @@
             },
             {
               "hour": 132,
+              "rank": 11
+            },
+            {
+              "hour": 133,
               "rank": 11
             }
           ],
@@ -15904,7 +15960,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 18,
-          "elapsedHour": 132,
+          "elapsedHour": 133,
           "elapsedRank": 18,
           "currentPoints": [
             {
@@ -16425,6 +16481,10 @@
             },
             {
               "hour": 132,
+              "rank": 18
+            },
+            {
+              "hour": 133,
               "rank": 18
             }
           ],
@@ -17101,11 +17161,11 @@
             },
             {
               "rank": 16,
-              "title": "有吉クイズ"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 17,
-              "title": "華大さんと千鳥くん"
+              "title": "有吉クイズ"
             },
             {
               "rank": 18,
@@ -17118,7 +17178,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/07",
-      "updatedAt": "2026/09/16 10:07",
+      "updatedAt": "2026/09/16 11:07",
       "episodeId": "epcjl6nn1l",
       "subtitle": "真夏の超吸収フェス",
       "likes": "8035",
@@ -18252,19 +18312,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ハマダ歌謡祭★オオカミ少年"
+              "title": "じっくり聞いタロウ～スター近況（秘）報告～"
             },
             {
               "rank": 48,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
               "rank": 49,
-              "title": "５時に夢中！"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 50,
-              "title": "ニノなのに"
+              "title": "５時に夢中！"
             }
           ]
         },
@@ -18513,15 +18573,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "家、ついて行ってイイですか？"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 48,
-              "title": "相席食堂"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 50,
