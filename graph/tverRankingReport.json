@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/09/19 17:07",
+  "updatedAt": "2026/09/19 18:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/11",
-      "updatedAt": "2026/09/19 17:07",
+      "updatedAt": "2026/09/19 18:07",
       "episodeId": "epkt4mjnjo",
       "subtitle": "手作りうさぎ＆かき氷－timelesz100",
       "likes": "1.5万",
@@ -1755,15 +1755,15 @@
             },
             {
               "rank": 48,
-              "title": "櫻井･有吉THE夜会"
-            },
-            {
-              "rank": 49,
               "title": "CDTV ライブ! ライブ!"
             },
             {
+              "rank": 49,
+              "title": "櫻井･有吉THE夜会"
+            },
+            {
               "rank": 50,
-              "title": "徹子の部屋"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -2336,19 +2336,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
-            },
-            {
-              "rank": 48,
               "title": "A-Studio＋"
             },
             {
+              "rank": 48,
+              "title": "これ余談なんですけど・・・"
+            },
+            {
               "rank": 49,
-              "title": "絶望できない男"
+              "title": "デカ盛りハンター"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             }
           ]
         }
@@ -2357,7 +2357,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/09/13",
-      "updatedAt": "2026/09/19 17:07",
+      "updatedAt": "2026/09/19 18:07",
       "episodeId": "ephm83y4hu",
       "subtitle": "【揚げ物をかけたゲームバトル】盛り上がりすぎてハプニング発生!?",
       "likes": "1.4万",
@@ -2777,6 +2777,10 @@
         },
         {
           "hour": 147,
+          "likes": 14000
+        },
+        {
+          "hour": 148,
           "likes": 14000
         }
       ],
@@ -3266,9 +3270,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
+          "currentRank": 50,
+          "elapsedHour": 148,
+          "elapsedRank": 50,
           "currentPoints": [
             {
               "hour": 5,
@@ -3725,6 +3729,10 @@
             {
               "hour": 118,
               "rank": 50
+            },
+            {
+              "hour": 148,
+              "rank": 50
             }
           ],
           "previousPoints": [
@@ -4092,15 +4100,15 @@
             },
             {
               "rank": 48,
-              "title": "櫻井･有吉THE夜会"
-            },
-            {
-              "rank": 49,
               "title": "CDTV ライブ! ライブ!"
             },
             {
+              "rank": 49,
+              "title": "櫻井･有吉THE夜会"
+            },
+            {
               "rank": 50,
-              "title": "徹子の部屋"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -4589,19 +4597,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
-            },
-            {
-              "rank": 48,
               "title": "A-Studio＋"
             },
             {
+              "rank": 48,
+              "title": "これ余談なんですけど・・・"
+            },
+            {
               "rank": 49,
-              "title": "絶望できない男"
+              "title": "デカ盛りハンター"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             }
           ]
         }
@@ -4610,10 +4618,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/19 17:07",
+      "updatedAt": "2026/09/19 18:07",
       "episodeId": "eptlyw7yfw",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！",
-      "likes": "7593",
+      "likes": "7614",
       "favorites": "6.1万",
       "likePoints": [
         {
@@ -4927,6 +4935,10 @@
         {
           "hour": 89,
           "likes": 7593
+        },
+        {
+          "hour": 90,
+          "likes": 7614
         }
       ],
       "previousLikePoints": [
@@ -5539,9 +5551,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 31,
-          "elapsedHour": 89,
-          "elapsedRank": 31,
+          "currentRank": 32,
+          "elapsedHour": 90,
+          "elapsedRank": 32,
           "currentPoints": [
             {
               "hour": 6,
@@ -5878,6 +5890,10 @@
             {
               "hour": 89,
               "rank": 31
+            },
+            {
+              "hour": 90,
+              "rank": 32
             }
           ],
           "previousPoints": [
@@ -6288,10 +6304,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 28,
-              "title": "ぐるぐるナインティナイン"
-            },
-            {
               "rank": 29,
               "title": "１×８いこうよ！"
             },
@@ -6301,6 +6313,10 @@
             },
             {
               "rank": 31,
+              "title": "サタプラ"
+            },
+            {
+              "rank": 32,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -6498,15 +6514,15 @@
             },
             {
               "rank": 48,
-              "title": "櫻井･有吉THE夜会"
-            },
-            {
-              "rank": 49,
               "title": "CDTV ライブ! ライブ!"
             },
             {
+              "rank": 49,
+              "title": "櫻井･有吉THE夜会"
+            },
+            {
               "rank": 50,
-              "title": "徹子の部屋"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -6515,10 +6531,10 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/19 17:07",
+      "updatedAt": "2026/09/19 18:07",
       "episodeId": "ep37rqemkc",
       "subtitle": "【珍英語を謎解き】900人vsこの曲英語でわかるかな",
-      "likes": "9139",
+      "likes": "9266",
       "favorites": "25.2万",
       "likePoints": [
         {
@@ -6744,6 +6760,10 @@
         {
           "hour": 63,
           "likes": 9139
+        },
+        {
+          "hour": 64,
+          "likes": 9266
         }
       ],
       "previousLikePoints": [
@@ -6944,9 +6964,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 32,
-          "elapsedHour": 63,
-          "elapsedRank": 32,
+          "currentRank": 30,
+          "elapsedHour": 64,
+          "elapsedRank": 30,
           "currentPoints": [
             {
               "hour": 10,
@@ -7163,6 +7183,10 @@
             {
               "hour": 63,
               "rank": 32
+            },
+            {
+              "hour": 64,
+              "rank": 30
             }
           ],
           "previousPoints": [
@@ -7377,19 +7401,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 27,
+              "title": "千鳥かまいたちゴールデンアワー"
+            },
+            {
+              "rank": 28,
+              "title": "あちこちオードリー"
+            },
+            {
               "rank": 29,
               "title": "踊る！さんま御殿!!"
             },
             {
               "rank": 30,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
-            },
-            {
-              "rank": 31,
-              "title": "しゃべくり007"
-            },
-            {
-              "rank": 32,
               "title": "ニカゲーム"
             }
           ]
@@ -7619,19 +7643,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
-            },
-            {
-              "rank": 48,
               "title": "A-Studio＋"
             },
             {
+              "rank": 48,
+              "title": "これ余談なんですけど・・・"
+            },
+            {
               "rank": 49,
-              "title": "絶望できない男"
+              "title": "デカ盛りハンター"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             }
           ]
         }
@@ -7640,10 +7664,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/09/16",
-      "updatedAt": "2026/09/19 17:07",
+      "updatedAt": "2026/09/19 18:07",
       "episodeId": "epw0lvq93h",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！milet登場",
-      "likes": "4818",
+      "likes": "4833",
       "favorites": "14.6万",
       "likePoints": [
         {
@@ -7929,6 +7953,10 @@
         {
           "hour": 88,
           "likes": 4818
+        },
+        {
+          "hour": 90,
+          "likes": 4833
         }
       ],
       "previousLikePoints": [
@@ -9299,15 +9327,15 @@
             },
             {
               "rank": 48,
-              "title": "櫻井･有吉THE夜会"
-            },
-            {
-              "rank": 49,
               "title": "CDTV ライブ! ライブ!"
             },
             {
+              "rank": 49,
+              "title": "櫻井･有吉THE夜会"
+            },
+            {
               "rank": 50,
-              "title": "徹子の部屋"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -9623,19 +9651,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
-            },
-            {
-              "rank": 48,
               "title": "A-Studio＋"
             },
             {
+              "rank": 48,
+              "title": "これ余談なんですけど・・・"
+            },
+            {
               "rank": 49,
-              "title": "絶望できない男"
+              "title": "デカ盛りハンター"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             }
           ]
         }
@@ -9644,10 +9672,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/09/18",
-      "updatedAt": "2026/09/19 17:07",
+      "updatedAt": "2026/09/19 18:07",
       "episodeId": "epxmyvb204",
       "subtitle": "第145回 豪華あっち向いてホイに新ルール追加で大波乱！",
-      "likes": "3399",
+      "likes": "3430",
       "favorites": "71.8万",
       "likePoints": [
         {
@@ -9793,6 +9821,10 @@
         {
           "hour": 41,
           "likes": 3399
+        },
+        {
+          "hour": 42,
+          "likes": 3430
         }
       ],
       "previousLikePoints": [
@@ -10049,9 +10081,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 35,
-          "elapsedHour": 40,
-          "elapsedRank": 35,
+          "currentRank": 36,
+          "elapsedHour": 41,
+          "elapsedRank": 36,
           "currentPoints": [
             {
               "hour": 12,
@@ -10168,6 +10200,10 @@
             {
               "hour": 40,
               "rank": 35
+            },
+            {
+              "hour": 41,
+              "rank": 36
             }
           ],
           "previousPoints": [
@@ -10390,10 +10426,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 32,
-              "title": "ニカゲーム"
-            },
-            {
               "rank": 33,
               "title": "家、ついて行ってイイですか？"
             },
@@ -10403,6 +10435,10 @@
             },
             {
               "rank": 35,
+              "title": "千原ジュニアの座王"
+            },
+            {
+              "rank": 36,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -10564,19 +10600,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
-            },
-            {
-              "rank": 48,
               "title": "A-Studio＋"
             },
             {
+              "rank": 48,
+              "title": "これ余談なんですけど・・・"
+            },
+            {
               "rank": 49,
-              "title": "絶望できない男"
+              "title": "デカ盛りハンター"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             }
           ]
         }
@@ -10585,10 +10621,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/09/05",
-      "updatedAt": "2026/09/19 17:07",
+      "updatedAt": "2026/09/19 18:07",
       "episodeId": "ephzgytav0",
       "subtitle": "CM撮影で落とし穴！ウソ？本当？SP",
-      "likes": "3217",
+      "likes": "3268",
       "favorites": "80.8万",
       "likePoints": [
         {
@@ -11354,15 +11390,15 @@
             },
             {
               "rank": 48,
-              "title": "櫻井･有吉THE夜会"
-            },
-            {
-              "rank": 49,
               "title": "CDTV ライブ! ライブ!"
             },
             {
+              "rank": 49,
+              "title": "櫻井･有吉THE夜会"
+            },
+            {
               "rank": 50,
-              "title": "徹子の部屋"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -11534,19 +11570,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
-            },
-            {
-              "rank": 48,
               "title": "A-Studio＋"
             },
             {
+              "rank": 48,
+              "title": "これ余談なんですけど・・・"
+            },
+            {
               "rank": 49,
-              "title": "絶望できない男"
+              "title": "デカ盛りハンター"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "もう1度夫婦になりますか？～カモフラージュ夫婦～"
             }
           ]
         }
@@ -11555,17 +11591,13 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/09/19 17:07",
+      "updatedAt": "2026/09/19 18:07",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
       "likes": "1.1万",
       "favorites": "4.0万",
       "likePoints": [],
       "previousLikePoints": [
-        {
-          "hour": 40,
-          "likes": 2668
-        },
         {
           "hour": 41,
           "likes": 2698
@@ -12450,10 +12482,6 @@
           ],
           "previousPoints": [
             {
-              "hour": 40,
-              "rank": 40
-            },
-            {
               "hour": 41,
               "rank": 41
             },
@@ -12517,11 +12545,11 @@
             },
             {
               "rank": 48,
-              "title": "和田明日香とゆる宅飲み"
+              "title": "ぽかぽか"
             },
             {
               "rank": 49,
-              "title": "ぽかぽか"
+              "title": "和田明日香とゆる宅飲み"
             },
             {
               "rank": 50,
@@ -12733,15 +12761,15 @@
             },
             {
               "rank": 48,
-              "title": "櫻井･有吉THE夜会"
-            },
-            {
-              "rank": 49,
               "title": "CDTV ライブ! ライブ!"
             },
             {
+              "rank": 49,
+              "title": "櫻井･有吉THE夜会"
+            },
+            {
               "rank": 50,
-              "title": "徹子の部屋"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -12750,7 +12778,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/19 17:07",
+      "updatedAt": "2026/09/19 18:07",
       "episodeId": "epnqu504ur",
       "subtitle": "第11話 二人がたどり着く最後の余韻・・・出会えてよかった",
       "likes": "1.3万",
@@ -12910,6 +12938,10 @@
         },
         {
           "hour": 43,
+          "likes": 13000
+        },
+        {
+          "hour": 44,
           "likes": 13000
         }
       ],
@@ -13172,7 +13204,7 @@
           "type": "drama",
           "label": "ドラマ",
           "currentRank": 1,
-          "elapsedHour": 43,
+          "elapsedHour": 44,
           "elapsedRank": 1,
           "currentPoints": [
             {
@@ -13341,6 +13373,10 @@
             },
             {
               "hour": 43,
+              "rank": 1
+            },
+            {
+              "hour": 44,
               "rank": 1
             }
           ],
@@ -14017,7 +14053,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 1,
-          "elapsedHour": 43,
+          "elapsedHour": 44,
           "elapsedRank": 1,
           "currentPoints": [
             {
@@ -14186,6 +14222,10 @@
             },
             {
               "hour": 43,
+              "rank": 1
+            },
+            {
+              "hour": 44,
               "rank": 1
             }
           ],
@@ -14863,7 +14903,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/07",
-      "updatedAt": "2026/09/19 17:07",
+      "updatedAt": "2026/09/19 18:07",
       "episodeId": "epcjl6nn1l",
       "subtitle": "真夏の超吸収フェス",
       "likes": "8035",
@@ -16001,11 +16041,11 @@
             },
             {
               "rank": 48,
-              "title": "和田明日香とゆる宅飲み"
+              "title": "ぽかぽか"
             },
             {
               "rank": 49,
-              "title": "ぽかぽか"
+              "title": "和田明日香とゆる宅飲み"
             },
             {
               "rank": 50,
@@ -16262,15 +16302,15 @@
             },
             {
               "rank": 48,
-              "title": "櫻井･有吉THE夜会"
-            },
-            {
-              "rank": 49,
               "title": "CDTV ライブ! ライブ!"
             },
             {
+              "rank": 49,
+              "title": "櫻井･有吉THE夜会"
+            },
+            {
               "rank": 50,
-              "title": "徹子の部屋"
+              "title": "timeleszファミリア"
             }
           ]
         }
