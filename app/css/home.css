@@ -676,6 +676,9 @@
   align-items: center;
   gap: 8px;
 }
+.member-work-link-card-tver.is-unchecked {
+  box-shadow: 0 0 0 2px var(--color-border-accent);
+}
 .member-work-link-main-tver {
   min-width: 0;
 }
