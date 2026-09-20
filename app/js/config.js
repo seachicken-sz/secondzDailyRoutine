@@ -37,6 +37,7 @@ const STORAGE_KEYS = {
   browserFirstVisitModalShown: "secondzDailyRoutineBrowserFirstVisitModalShown",
   pwaFirstVisitModalShown: "secondzDailyRoutinePwaFirstVisitModalShown",
   selectModeSettings: "secondzDailyRoutineSelectModeSettings",
+  tverCheckedEpisodeMap: "secondzDailyRoutineTverCheckedEpisodeMap",
 };
 // ==================================================
 // 定数 - 実行モード
