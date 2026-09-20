@@ -344,3 +344,110 @@ function cleanupOnceTaskDoneMap(tasks) {
     saveOnceTaskDoneMap(doneMap);
   }
 }
+
+// ==================================================
+// TVerチェック状態
+// ==================================================
+
+function loadTverCheckedEpisodeMap() {
+  try {
+    const raw = localStorage.getItem(
+      STORAGE_KEYS.tverCheckedEpisodeMap
+    );
+
+    if (!raw) {
+      return {};
+    }
+
+    const parsed = JSON.parse(raw);
+
+    if (
+      !parsed ||
+      typeof parsed !== "object" ||
+      Array.isArray(parsed)
+    ) {
+      return {};
+    }
+
+    return parsed;
+
+  } catch (error) {
+    console.error(
+      "TVerチェック状態の読込に失敗しました",
+      error
+    );
+
+    return {};
+  }
+}
+
+function saveTverCheckedEpisodeMap(checkedMap) {
+  try {
+    localStorage.setItem(
+      STORAGE_KEYS.tverCheckedEpisodeMap,
+      JSON.stringify(checkedMap)
+    );
+
+  } catch (error) {
+    console.error(
+      "TVerチェック状態の保存に失敗しました",
+      error
+    );
+  }
+}
+
+function isTverEpisodeChecked(episodeId) {
+  const normalizedEpisodeId =
+    String(episodeId || "").trim();
+
+  if (!normalizedEpisodeId) {
+    return false;
+  }
+
+  const checkedMap = loadTverCheckedEpisodeMap();
+
+  return Boolean(checkedMap[normalizedEpisodeId]);
+}
+
+function markTverEpisodeChecked(episodeId) {
+  const normalizedEpisodeId =
+    String(episodeId || "").trim();
+
+  if (!normalizedEpisodeId) {
+    return;
+  }
+
+  const checkedMap = loadTverCheckedEpisodeMap();
+
+  checkedMap[normalizedEpisodeId] = {
+    checkedAt: new Date().toISOString(),
+  };
+
+  saveTverCheckedEpisodeMap(checkedMap);
+}
+
+// 90日を過ぎたTVerチェック状態を削除
+function cleanupTverCheckedEpisodeMap(keepDays = 90) {
+  const checkedMap = loadTverCheckedEpisodeMap();
+  const expireTime =
+    Date.now() - keepDays * 24 * 60 * 60 * 1000;
+
+  let hasChanged = false;
+
+  Object.keys(checkedMap).forEach((episodeId) => {
+    const checkedAtTime =
+      new Date(checkedMap[episodeId]?.checkedAt).getTime();
+
+    if (
+      Number.isNaN(checkedAtTime) ||
+      checkedAtTime < expireTime
+    ) {
+      delete checkedMap[episodeId];
+      hasChanged = true;
+    }
+  });
+
+  if (hasChanged) {
+    saveTverCheckedEpisodeMap(checkedMap);
+  }
+}
