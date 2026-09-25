@@ -11,13 +11,13 @@
   },
   {
     "id": "once_timeleszman_messasge_202609",
-    "name": "「タイムレスマン」に日頃の感想を送ってみよう",
-    "short-name": "タイムレスマン 感想",
+    "name": "「タイムレスマン」に今週の感想を送ってみよう",
+    "short-name": "9/25 タイムレスマン 感想",
     "url": "https://wwws.fujitv.co.jp/ap2/safe/resp/PcWrite?bancode=125000003&type=resprg",
     "repeatType": "once",
-    "from": "202609200000",
-    "to": "202609232359",
-    "notice-message": "連休中に日頃の感想を送ってみよう！\n※好きな企画、もう一度見たい回などがおすすめ！"
+    "from": "202609252300",
+    "to": "202610092200",
+    "notice-message": "今週の新企画どうだった？\nせっかくなら感想を送ってみよう！\nFOD限定映像の感想もいいかもね！"
   },
   {
     "id": "once_timeleszfamiliar_messasge_202609",
@@ -28,5 +28,15 @@
     "from": "202609200000",
     "to": "202609232359",
     "notice-message": "連休中に日頃の感想を送ってみよう！\n番組名に「timeleszファミリア」の記載を忘れずに！\n※好きな企画、もう一度見たい回などがおすすめ！"
+  },
+  {
+    "id": "once_dramaacademy2026summer",
+    "name": "ドラマアカデミー賞 2026夏",
+    "short-name": "ドラマアカデミー賞 2026夏",
+    "url": "https://thetv.jp/feature/drama-academy/",
+    "repeatType": "once",
+    "from": "202609260000",
+    "to": "202610062359",
+    "notice-message": "「ラストノート」と「ファーストクライ」に投票しよう！\n主演男優賞→寺西くん\n助演男優賞→松島くん\n※他は好みで埋めましょう"
   }
 ]
