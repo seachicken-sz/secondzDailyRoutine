@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026/09/26 01:07",
+  "updatedAt": "2026/09/26 02:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/09/26 01:07",
+      "updatedAt": "2026/09/26 02:07",
       "episodeId": "ep5y408jx8",
       "subtitle": "新企画！芸能人どハマりグルメ「ベストバイプライスマン」",
-      "likes": "3906",
+      "likes": "4321",
       "favorites": "78.9万",
       "likePoints": [
         {
@@ -21,6 +21,10 @@
         {
           "hour": 3,
           "likes": 3906
+        },
+        {
+          "hour": 4,
+          "likes": 4321
         }
       ],
       "previousLikePoints": [
@@ -381,9 +385,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 34,
-          "elapsedHour": 3,
-          "elapsedRank": 34,
+          "currentRank": 29,
+          "elapsedHour": 4,
+          "elapsedRank": 29,
           "currentPoints": [
             {
               "hour": 2,
@@ -392,6 +396,10 @@
             {
               "hour": 3,
               "rank": 34
+            },
+            {
+              "hour": 4,
+              "rank": 29
             }
           ],
           "previousPoints": [
@@ -854,19 +862,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 31,
-              "title": "クイズ！あなたは小学5年生より賢いの？"
+              "rank": 26,
+              "title": "あちこちオードリー"
             },
             {
-              "rank": 32,
-              "title": "おしゃれクリップ"
+              "rank": 27,
+              "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
-              "rank": 33,
-              "title": "相席食堂"
+              "rank": 28,
+              "title": "なにわAぇ! の放送させてください！～お蔵入りはドレだ!? 生国民投票ロケバトル～"
             },
             {
-              "rank": 34,
+              "rank": 29,
               "title": "タイムレスマン"
             }
           ]
@@ -874,10 +882,15 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 49,
+          "elapsedHour": 4,
+          "elapsedRank": 49,
+          "currentPoints": [
+            {
+              "hour": 4,
+              "rank": 49
+            }
+          ],
           "previousPoints": [
             {
               "hour": 12,
@@ -1162,20 +1175,20 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 46,
+              "title": "溺愛 ～ 実は、最強ヒーロー ～"
+            },
+            {
               "rank": 47,
               "title": "DAN! DAN! EBiDAN!～新章～"
             },
             {
               "rank": 48,
-              "title": "秋の新ドラマ予告集めました！"
-            },
-            {
-              "rank": 49,
               "title": "なにわAぇ! の放送させてください！～お蔵入りはドレだ!? 生国民投票ロケバトル～"
             },
             {
-              "rank": 50,
-              "title": "初めて恋をした日に読む話"
+              "rank": 49,
+              "title": "タイムレスマン"
             }
           ]
         }
@@ -1184,7 +1197,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/09/20",
-      "updatedAt": "2026/09/26 01:07",
+      "updatedAt": "2026/09/26 02:07",
       "episodeId": "epsok95vrp",
       "subtitle": "【新たな趣味の世界と出会えるロケSP】武田双雲と書道",
       "likes": "1.9万",
@@ -1669,6 +1682,10 @@
         {
           "hour": 131,
           "likes": 19000
+        },
+        {
+          "hour": 132,
+          "likes": 19000
         }
       ],
       "previousLikePoints": [
@@ -2109,9 +2126,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 49,
-          "elapsedHour": 131,
-          "elapsedRank": 49,
+          "currentRank": 50,
+          "elapsedHour": 132,
+          "elapsedRank": 50,
           "currentPoints": [
             {
               "hour": 7,
@@ -2608,6 +2625,10 @@
             {
               "hour": 131,
               "rank": 49
+            },
+            {
+              "hour": 132,
+              "rank": 50
             }
           ],
           "previousPoints": [
@@ -3090,19 +3111,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 46,
+              "rank": 47,
               "title": "いろはに千鳥"
             },
             {
-              "rank": 47,
-              "title": "ウソかホントかわからない やりすぎ都市伝説"
-            },
-            {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 49,
+              "title": "Golden SixTONES"
+            },
+            {
+              "rank": 50,
               "title": "timeleszファミリア"
             }
           ]
@@ -3636,15 +3657,15 @@
             },
             {
               "rank": 48,
-              "title": "秋の新ドラマ予告集めました！"
-            },
-            {
-              "rank": 49,
               "title": "なにわAぇ! の放送させてください！～お蔵入りはドレだ!? 生国民投票ロケバトル～"
             },
             {
+              "rank": 49,
+              "title": "タイムレスマン"
+            },
+            {
               "rank": 50,
-              "title": "初めて恋をした日に読む話"
+              "title": "秋の新ドラマ予告集めました！"
             }
           ]
         }
@@ -3653,10 +3674,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/26 01:07",
+      "updatedAt": "2026/09/26 02:07",
       "episodeId": "eptlyw7yfw",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！",
-      "likes": "9498",
+      "likes": "9502",
       "favorites": "6.2万",
       "likePoints": [
         {
@@ -5844,7 +5865,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "発見！タカトシランド"
+              "title": "有働由美子の健康案内人！"
             },
             {
               "rank": 48,
@@ -5852,11 +5873,11 @@
             },
             {
               "rank": 49,
-              "title": "バナナマンの早起きせっかくグルメ!!"
+              "title": "大阪ほんわかテレビ"
             },
             {
               "rank": 50,
-              "title": "大阪ほんわかテレビ"
+              "title": "くりぃむしちゅーの熊本どぎゃん!?"
             }
           ]
         },
@@ -6049,19 +6070,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ウソかホントかわからない やりすぎ都市伝説"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "ナゾトレMAXXX"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -6070,7 +6091,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/26 01:07",
+      "updatedAt": "2026/09/26 02:07",
       "episodeId": "ep37rqemkc",
       "subtitle": "【珍英語を謎解き】900人vsこの曲英語でわかるかな",
       "likes": "1.4万",
@@ -7425,19 +7446,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ウソかホントかわからない やりすぎ都市伝説"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "ナゾトレMAXXX"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -7674,15 +7695,15 @@
             },
             {
               "rank": 48,
-              "title": "秋の新ドラマ予告集めました！"
-            },
-            {
-              "rank": 49,
               "title": "なにわAぇ! の放送させてください！～お蔵入りはドレだ!? 生国民投票ロケバトル～"
             },
             {
+              "rank": 49,
+              "title": "タイムレスマン"
+            },
+            {
               "rank": 50,
-              "title": "初めて恋をした日に読む話"
+              "title": "秋の新ドラマ予告集めました！"
             }
           ]
         }
@@ -7691,10 +7712,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/26 01:07",
+      "updatedAt": "2026/09/26 02:07",
       "episodeId": "epxyf3j8s9",
       "subtitle": "芸能人アレルギー大検査SP…岡崎紗絵&ACEesが採血!衝撃結果",
-      "likes": "6546",
+      "likes": "6553",
       "favorites": "80.3万",
       "likePoints": [
         {
@@ -8232,19 +8253,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ウソかホントかわからない やりすぎ都市伝説"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "ナゾトレMAXXX"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -8468,15 +8489,15 @@
             },
             {
               "rank": 48,
-              "title": "秋の新ドラマ予告集めました！"
-            },
-            {
-              "rank": 49,
               "title": "なにわAぇ! の放送させてください！～お蔵入りはドレだ!? 生国民投票ロケバトル～"
             },
             {
+              "rank": 49,
+              "title": "タイムレスマン"
+            },
+            {
               "rank": 50,
-              "title": "初めて恋をした日に読む話"
+              "title": "秋の新ドラマ予告集めました！"
             }
           ]
         }
@@ -8485,7 +8506,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/09/23",
-      "updatedAt": "2026/09/26 01:07",
+      "updatedAt": "2026/09/26 02:07",
       "episodeId": "epv424sran",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！INI登場",
       "likes": "1.0万",
@@ -8761,6 +8782,10 @@
         },
         {
           "hour": 72,
+          "likes": 10000
+        },
+        {
+          "hour": 73,
           "likes": 10000
         }
       ],
@@ -9660,19 +9685,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ウソかホントかわからない やりすぎ都市伝説"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "ナゾトレMAXXX"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -9804,15 +9829,15 @@
             },
             {
               "rank": 48,
-              "title": "秋の新ドラマ予告集めました！"
-            },
-            {
-              "rank": 49,
               "title": "なにわAぇ! の放送させてください！～お蔵入りはドレだ!? 生国民投票ロケバトル～"
             },
             {
+              "rank": 49,
+              "title": "タイムレスマン"
+            },
+            {
               "rank": 50,
-              "title": "初めて恋をした日に読む話"
+              "title": "秋の新ドラマ予告集めました！"
             }
           ]
         }
@@ -9821,10 +9846,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/09/26 01:07",
+      "updatedAt": "2026/09/26 02:07",
       "episodeId": "ep7fkjfnnt",
       "subtitle": "第146回 水野美紀ら豪華あっち向いてホイでまさかの涙・・・",
-      "likes": "2826",
+      "likes": "2864",
       "favorites": "71.8万",
       "likePoints": [
         {
@@ -9918,6 +9943,10 @@
         {
           "hour": 25,
           "likes": 2826
+        },
+        {
+          "hour": 26,
+          "likes": 2864
         }
       ],
       "previousLikePoints": [
@@ -10542,9 +10571,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 18,
-          "elapsedHour": 24,
-          "elapsedRank": 18,
+          "currentRank": 19,
+          "elapsedHour": 25,
+          "elapsedRank": 19,
           "currentPoints": [
             {
               "hour": 11,
@@ -10601,6 +10630,10 @@
             {
               "hour": 24,
               "rank": 18
+            },
+            {
+              "hour": 25,
+              "rank": 19
             }
           ],
           "previousPoints": [
@@ -10751,10 +10784,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 15,
-              "title": "相葉ヒロミのお困りですカー？"
-            },
-            {
               "rank": 16,
               "title": "かまいたちの知らんけど"
             },
@@ -10764,6 +10793,10 @@
             },
             {
               "rank": 18,
+              "title": "秘密のケンミンSHOW極"
+            },
+            {
+              "rank": 19,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -10771,9 +10804,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 33,
-          "elapsedHour": 24,
-          "elapsedRank": 33,
+          "currentRank": 34,
+          "elapsedHour": 25,
+          "elapsedRank": 34,
           "currentPoints": [
             {
               "hour": 17,
@@ -10806,6 +10839,10 @@
             {
               "hour": 24,
               "rank": 33
+            },
+            {
+              "hour": 25,
+              "rank": 34
             }
           ],
           "previousPoints": [
@@ -10868,10 +10905,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 30,
-              "title": "大空港～GATE24～"
-            },
-            {
               "rank": 31,
               "title": "踊る！さんま御殿!!"
             },
@@ -10881,6 +10914,10 @@
             },
             {
               "rank": 33,
+              "title": "秘密のケンミンSHOW極"
+            },
+            {
+              "rank": 34,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -10890,10 +10927,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/09/19",
-      "updatedAt": "2026/09/26 01:07",
+      "updatedAt": "2026/09/26 02:07",
       "episodeId": "ephhccb64t",
       "subtitle": "マッサマンvs秒で組体操（秘）おなら！SP",
-      "likes": "3771",
+      "likes": "3778",
       "favorites": "81.0万",
       "likePoints": [
         {
@@ -11459,6 +11496,10 @@
         {
           "hour": 150,
           "likes": 3771
+        },
+        {
+          "hour": 151,
+          "likes": 3778
         }
       ],
       "previousLikePoints": [
@@ -12697,19 +12738,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ウソかホントかわからない やりすぎ都市伝説"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "ナゾトレMAXXX"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -13118,15 +13159,15 @@
             },
             {
               "rank": 48,
-              "title": "秋の新ドラマ予告集めました！"
-            },
-            {
-              "rank": 49,
               "title": "なにわAぇ! の放送させてください！～お蔵入りはドレだ!? 生国民投票ロケバトル～"
             },
             {
+              "rank": 49,
+              "title": "タイムレスマン"
+            },
+            {
               "rank": 50,
-              "title": "初めて恋をした日に読む話"
+              "title": "秋の新ドラマ予告集めました！"
             }
           ]
         }
@@ -13135,7 +13176,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/09/26 01:07",
+      "updatedAt": "2026/09/26 02:07",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
       "likes": "1.2万",
@@ -13150,10 +13191,6 @@
           "elapsedHour": null,
           "elapsedRank": null,
           "currentPoints": [
-            {
-              "hour": 24,
-              "rank": 4
-            },
             {
               "hour": 25,
               "rank": 4
@@ -13515,19 +13552,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ハマダ歌謡祭★オオカミ少年"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
               "rank": 49,
-              "title": "ザワつく！ 金曜日"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 50,
-              "title": "和田明日香とゆる宅飲み"
+              "title": "オードリーさん、ぜひ会ってほしい人がいるんです。"
             }
           ]
         },
@@ -13538,10 +13575,6 @@
           "elapsedHour": null,
           "elapsedRank": null,
           "currentPoints": [
-            {
-              "hour": 24,
-              "rank": 9
-            },
             {
               "hour": 25,
               "rank": 9
@@ -13671,19 +13704,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ウソかホントかわからない やりすぎ都市伝説"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "ナゾトレMAXXX"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -13692,7 +13725,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/26 01:07",
+      "updatedAt": "2026/09/26 02:07",
       "episodeId": "epnqu504ur",
       "subtitle": "第11話 二人がたどり着く最後の余韻・・・出会えてよかった",
       "likes": "1.8万",
@@ -15927,19 +15960,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "中国時代劇「蜀紅錦～紡がれる夢～」"
+              "title": "韓国ドラマ「メンコン 史上最高の私！」"
             },
             {
               "rank": 48,
-              "title": "夫婦と16歳～狂気の隣人～"
+              "title": "サ道 2026～人生をサボりながら、ととのう～"
             },
             {
               "rank": 49,
-              "title": "文学処女"
+              "title": "夫婦と16歳～狂気の隣人～"
             },
             {
               "rank": 50,
-              "title": "韓国ドラマ「メンコン 史上最高の私！」"
+              "title": "文学処女"
             }
           ]
         },
@@ -17288,15 +17321,15 @@
             },
             {
               "rank": 48,
-              "title": "秋の新ドラマ予告集めました！"
-            },
-            {
-              "rank": 49,
               "title": "なにわAぇ! の放送させてください！～お蔵入りはドレだ!? 生国民投票ロケバトル～"
             },
             {
+              "rank": 49,
+              "title": "タイムレスマン"
+            },
+            {
               "rank": 50,
-              "title": "初めて恋をした日に読む話"
+              "title": "秋の新ドラマ予告集めました！"
             }
           ]
         }
@@ -17305,10 +17338,10 @@
     "srp2r8bnrz": {
       "programTitle": "見取り図じゃん",
       "broadcastDate": "",
-      "updatedAt": "2026/09/26 01:07",
+      "updatedAt": "2026/09/26 02:07",
       "episodeId": "epuevpdiit",
       "subtitle": "【あの頃の盛山】大阪転生タンクトップ～初心取り戻し旅～",
-      "likes": "345",
+      "likes": "350",
       "favorites": "36.5万",
       "likePoints": [],
       "previousLikePoints": [],
@@ -17324,19 +17357,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ウソかホントかわからない やりすぎ都市伝説"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "ナゾトレMAXXX"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -17345,7 +17378,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/22",
-      "updatedAt": "2026/09/26 01:07",
+      "updatedAt": "2026/09/26 02:07",
       "episodeId": "epc4m7onou",
       "subtitle": "ねづっち24時／マジック講座",
       "likes": "1.0万",
@@ -17705,6 +17738,10 @@
         },
         {
           "hour": 97,
+          "likes": 10000
+        },
+        {
+          "hour": 98,
           "likes": 10000
         }
       ],
@@ -18760,19 +18797,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ハマダ歌謡祭★オオカミ少年"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
               "rank": 49,
-              "title": "ザワつく！ 金曜日"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 50,
-              "title": "和田明日香とゆる宅飲み"
+              "title": "オードリーさん、ぜひ会ってほしい人がいるんです。"
             }
           ]
         },
@@ -18977,19 +19014,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ウソかホントかわからない やりすぎ都市伝説"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 49,
-              "title": "timeleszファミリア"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "ナゾトレMAXXX"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -18998,10 +19035,10 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/09/26 01:07",
+      "updatedAt": "2026/09/26 02:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
-      "likes": "242",
+      "likes": "243",
       "favorites": "16.0万",
       "likePoints": [],
       "previousLikePoints": [],
@@ -19017,19 +19054,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "中国時代劇「蜀紅錦～紡がれる夢～」"
+              "title": "韓国ドラマ「メンコン 史上最高の私！」"
             },
             {
               "rank": 48,
-              "title": "夫婦と16歳～狂気の隣人～"
+              "title": "サ道 2026～人生をサボりながら、ととのう～"
             },
             {
               "rank": 49,
-              "title": "文学処女"
+              "title": "夫婦と16歳～狂気の隣人～"
             },
             {
               "rank": 50,
-              "title": "韓国ドラマ「メンコン 史上最高の私！」"
+              "title": "文学処女"
             }
           ]
         },
@@ -19048,15 +19085,15 @@
             },
             {
               "rank": 48,
-              "title": "秋の新ドラマ予告集めました！"
-            },
-            {
-              "rank": 49,
               "title": "なにわAぇ! の放送させてください！～お蔵入りはドレだ!? 生国民投票ロケバトル～"
             },
             {
+              "rank": 49,
+              "title": "タイムレスマン"
+            },
+            {
               "rank": 50,
-              "title": "初めて恋をした日に読む話"
+              "title": "秋の新ドラマ予告集めました！"
             }
           ]
         }
