@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/09/28 09:07",
+  "updatedAt": "2026/09/28 10:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/09/28 09:07",
+      "updatedAt": "2026/09/28 10:07",
       "episodeId": "ep5y408jx8",
       "subtitle": "新企画！芸能人どハマりグルメ「ベストバイプライスマン」",
       "likes": "2.4万",
@@ -228,6 +228,10 @@
         },
         {
           "hour": 59,
+          "likes": 24000
+        },
+        {
+          "hour": 60,
           "likes": 24000
         }
       ],
@@ -590,7 +594,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 5,
-          "elapsedHour": 59,
+          "elapsedHour": 60,
           "elapsedRank": 5,
           "currentPoints": [
             {
@@ -823,6 +827,10 @@
             },
             {
               "hour": 59,
+              "rank": 5
+            },
+            {
+              "hour": 60,
               "rank": 5
             }
           ],
@@ -1306,9 +1314,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 4,
-          "elapsedHour": 59,
-          "elapsedRank": 4,
+          "currentRank": 6,
+          "elapsedHour": 60,
+          "elapsedRank": 6,
           "currentPoints": [
             {
               "hour": 4,
@@ -1533,6 +1541,10 @@
             {
               "hour": 59,
               "rank": 4
+            },
+            {
+              "hour": 60,
+              "rank": 6
             }
           ],
           "previousPoints": [
@@ -1819,19 +1831,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 1,
-              "title": "芸能人格付けチェック 秋の3時間半スペシャル"
-            },
-            {
-              "rank": 2,
-              "title": "アメトーーク！"
-            },
-            {
               "rank": 3,
               "title": "ウソかホントかわからない やりすぎ都市伝説"
             },
             {
               "rank": 4,
+              "title": "timeleszファミリア"
+            },
+            {
+              "rank": 5,
+              "title": "VIVANT"
+            },
+            {
+              "rank": 6,
               "title": "タイムレスマン"
             }
           ]
@@ -1841,10 +1853,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/09/27",
-      "updatedAt": "2026/09/28 09:07",
+      "updatedAt": "2026/09/28 10:07",
       "episodeId": "ep60pgu2w9",
       "subtitle": "【熱海SP】日本一絶品BBQ&絶景花火パフォーマンス",
-      "likes": "1.5万",
+      "likes": "1.6万",
       "favorites": "36.1万",
       "likePoints": [
         {
@@ -1914,6 +1926,10 @@
         {
           "hour": 19,
           "likes": 15000
+        },
+        {
+          "hour": 20,
+          "likes": 16000
         }
       ],
       "previousLikePoints": [
@@ -2539,7 +2555,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 4,
-          "elapsedHour": 19,
+          "elapsedHour": 20,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -2604,6 +2620,10 @@
             },
             {
               "hour": 19,
+              "rank": 4
+            },
+            {
+              "hour": 20,
               "rank": 4
             }
           ],
@@ -3143,9 +3163,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 5,
-          "elapsedHour": 19,
-          "elapsedRank": 5,
+          "currentRank": 4,
+          "elapsedHour": 20,
+          "elapsedRank": 4,
           "currentPoints": [
             {
               "hour": 5,
@@ -3206,6 +3226,10 @@
             {
               "hour": 19,
               "rank": 5
+            },
+            {
+              "hour": 20,
+              "rank": 4
             }
           ],
           "previousPoints": [
@@ -3476,6 +3500,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 1,
+              "title": "芸能人格付けチェック 秋の3時間半スペシャル"
+            },
+            {
               "rank": 2,
               "title": "アメトーーク！"
             },
@@ -3485,10 +3513,6 @@
             },
             {
               "rank": 4,
-              "title": "タイムレスマン"
-            },
-            {
-              "rank": 5,
               "title": "timeleszファミリア"
             }
           ]
@@ -3498,7 +3522,7 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/28 09:07",
+      "updatedAt": "2026/09/28 10:07",
       "episodeId": "eptlyw7yfw",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！",
       "likes": "1.0万",
@@ -5689,7 +5713,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "日曜のひるもほめるちゃん"
+              "title": "よるのブランチ"
             },
             {
               "rank": 48,
@@ -5697,7 +5721,7 @@
             },
             {
               "rank": 49,
-              "title": "路線バスで寄り道の旅"
+              "title": "シューイチ"
             },
             {
               "rank": 50,
@@ -5894,7 +5918,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 48,
@@ -5902,11 +5926,11 @@
             },
             {
               "rank": 49,
-              "title": "出没！アド街ック天国"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
-              "title": "ロンドンハーツ"
+              "title": "出没！アド街ック天国"
             }
           ]
         }
@@ -5915,7 +5939,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/28 09:07",
+      "updatedAt": "2026/09/28 10:07",
       "episodeId": "ep37rqemkc",
       "subtitle": "【珍英語を謎解き】900人vsこの曲英語でわかるかな",
       "likes": "1.4万",
@@ -7270,7 +7294,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 48,
@@ -7278,11 +7302,11 @@
             },
             {
               "rank": 49,
-              "title": "出没！アド街ック天国"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
-              "title": "ロンドンハーツ"
+              "title": "出没！アド街ック天国"
             }
           ]
         },
@@ -7515,19 +7539,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Golden SixTONES"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 48,
-              "title": "ドラえもん"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 49,
-              "title": "ブラックトリック～裁きを操る弁護人～"
+              "title": "アンナチュラル"
             },
             {
               "rank": 50,
-              "title": "やすとものどこいこ！？"
+              "title": "突然ですが占ってもいいですか？"
             }
           ]
         }
@@ -7536,10 +7560,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/28 09:07",
+      "updatedAt": "2026/09/28 10:07",
       "episodeId": "epxyf3j8s9",
       "subtitle": "芸能人アレルギー大検査SP…岡崎紗絵&ACEesが採血!衝撃結果",
-      "likes": "6951",
+      "likes": "6959",
       "favorites": "80.3万",
       "likePoints": [
         {
@@ -8077,7 +8101,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 48,
@@ -8085,11 +8109,11 @@
             },
             {
               "rank": 49,
-              "title": "出没！アド街ック天国"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
-              "title": "ロンドンハーツ"
+              "title": "出没！アド街ック天国"
             }
           ]
         },
@@ -8309,19 +8333,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Golden SixTONES"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 48,
-              "title": "ドラえもん"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 49,
-              "title": "ブラックトリック～裁きを操る弁護人～"
+              "title": "アンナチュラル"
             },
             {
               "rank": 50,
-              "title": "やすとものどこいこ！？"
+              "title": "突然ですが占ってもいいですか？"
             }
           ]
         }
@@ -8330,7 +8354,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/09/23",
-      "updatedAt": "2026/09/28 09:07",
+      "updatedAt": "2026/09/28 10:07",
       "episodeId": "epv424sran",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！INI登場",
       "likes": "1.1万",
@@ -8810,6 +8834,10 @@
         },
         {
           "hour": 128,
+          "likes": 11000
+        },
+        {
+          "hour": 129,
           "likes": 11000
         }
       ],
@@ -9709,7 +9737,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 48,
@@ -9717,11 +9745,11 @@
             },
             {
               "rank": 49,
-              "title": "出没！アド街ック天国"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
-              "title": "ロンドンハーツ"
+              "title": "出没！アド街ック天国"
             }
           ]
         },
@@ -9849,19 +9877,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Golden SixTONES"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 48,
-              "title": "ドラえもん"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 49,
-              "title": "ブラックトリック～裁きを操る弁護人～"
+              "title": "アンナチュラル"
             },
             {
               "rank": 50,
-              "title": "やすとものどこいこ！？"
+              "title": "突然ですが占ってもいいですか？"
             }
           ]
         }
@@ -9870,10 +9898,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/09/28 09:07",
+      "updatedAt": "2026/09/28 10:07",
       "episodeId": "ep7fkjfnnt",
       "subtitle": "第146回 水野美紀ら豪華あっち向いてホイでまさかの涙・・・",
-      "likes": "4636",
+      "likes": "4661",
       "favorites": "71.8万",
       "likePoints": [
         {
@@ -10171,6 +10199,10 @@
         {
           "hour": 81,
           "likes": 4636
+        },
+        {
+          "hour": 82,
+          "likes": 4661
         }
       ],
       "previousLikePoints": [
@@ -11125,7 +11157,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 48,
@@ -11133,11 +11165,11 @@
             },
             {
               "rank": 49,
-              "title": "出没！アド街ック天国"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
-              "title": "ロンドンハーツ"
+              "title": "出没！アド街ック天国"
             }
           ]
         },
@@ -11286,19 +11318,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Golden SixTONES"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 48,
-              "title": "ドラえもん"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 49,
-              "title": "ブラックトリック～裁きを操る弁護人～"
+              "title": "アンナチュラル"
             },
             {
               "rank": 50,
-              "title": "やすとものどこいこ！？"
+              "title": "突然ですが占ってもいいですか？"
             }
           ]
         }
@@ -11307,10 +11339,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/09/19",
-      "updatedAt": "2026/09/28 09:07",
+      "updatedAt": "2026/09/28 10:07",
       "episodeId": "ephhccb64t",
       "subtitle": "マッサマンvs秒で組体操（秘）おなら！SP",
-      "likes": "4070",
+      "likes": "4074",
       "favorites": "81.0万",
       "likePoints": [
         {
@@ -13190,7 +13222,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 48,
@@ -13198,11 +13230,11 @@
             },
             {
               "rank": 49,
-              "title": "出没！アド街ック天国"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
-              "title": "ロンドンハーツ"
+              "title": "出没！アド街ック天国"
             }
           ]
         },
@@ -13607,19 +13639,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Golden SixTONES"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 48,
-              "title": "ドラえもん"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 49,
-              "title": "ブラックトリック～裁きを操る弁護人～"
+              "title": "アンナチュラル"
             },
             {
               "rank": 50,
-              "title": "やすとものどこいこ！？"
+              "title": "突然ですが占ってもいいですか？"
             }
           ]
         }
@@ -13628,7 +13660,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/09/28 09:07",
+      "updatedAt": "2026/09/28 10:07",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
       "likes": "1.2万",
@@ -13643,10 +13675,6 @@
           "elapsedHour": null,
           "elapsedRank": null,
           "currentPoints": [
-            {
-              "hour": 80,
-              "rank": 40
-            },
             {
               "hour": 81,
               "rank": 41
@@ -13811,7 +13839,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 48,
@@ -13819,11 +13847,11 @@
             },
             {
               "rank": 49,
-              "title": "出没！アド街ック天国"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
-              "title": "ロンドンハーツ"
+              "title": "出没！アド街ック天国"
             }
           ]
         }
@@ -13832,7 +13860,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/28 09:07",
+      "updatedAt": "2026/09/28 10:07",
       "episodeId": "epnqu504ur",
       "subtitle": "第11話 二人がたどり着く最後の余韻・・・出会えてよかった",
       "likes": "1.8万",
@@ -16071,15 +16099,15 @@
             },
             {
               "rank": 48,
-              "title": "あにいもうと"
+              "title": "スケバン刑事Ⅱ少女鉄仮面伝説"
             },
             {
               "rank": 49,
-              "title": "日本沈没ー希望のひとー"
+              "title": "あにいもうと"
             },
             {
               "rank": 50,
-              "title": "サ道 2026～人生をサボりながら、ととのう～"
+              "title": "日本沈没ー希望のひとー"
             }
           ]
         },
@@ -17424,19 +17452,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Golden SixTONES"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 48,
-              "title": "ドラえもん"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 49,
-              "title": "ブラックトリック～裁きを操る弁護人～"
+              "title": "アンナチュラル"
             },
             {
               "rank": 50,
-              "title": "やすとものどこいこ！？"
+              "title": "突然ですが占ってもいいですか？"
             }
           ]
         }
@@ -17445,7 +17473,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/22",
-      "updatedAt": "2026/09/28 09:07",
+      "updatedAt": "2026/09/28 10:07",
       "episodeId": "epc4m7onou",
       "subtitle": "ねづっち24時／マジック講座",
       "likes": "1.1万",
@@ -18009,6 +18037,10 @@
         },
         {
           "hour": 153,
+          "likes": 11000
+        },
+        {
+          "hour": 154,
           "likes": 11000
         }
       ],
@@ -19281,7 +19313,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "夫が寝たあとに"
+              "title": "土曜ゴールデン"
             },
             {
               "rank": 48,
@@ -19289,11 +19321,11 @@
             },
             {
               "rank": 49,
-              "title": "出没！アド街ック天国"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
-              "title": "ロンドンハーツ"
+              "title": "出没！アド街ック天国"
             }
           ]
         }
@@ -19302,7 +19334,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/09/28 09:07",
+      "updatedAt": "2026/09/28 10:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "294",
@@ -19325,15 +19357,15 @@
             },
             {
               "rank": 48,
-              "title": "あにいもうと"
+              "title": "スケバン刑事Ⅱ少女鉄仮面伝説"
             },
             {
               "rank": 49,
-              "title": "日本沈没ー希望のひとー"
+              "title": "あにいもうと"
             },
             {
               "rank": 50,
-              "title": "サ道 2026～人生をサボりながら、ととのう～"
+              "title": "日本沈没ー希望のひとー"
             }
           ]
         },
@@ -19348,19 +19380,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Golden SixTONES"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 48,
-              "title": "ドラえもん"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 49,
-              "title": "ブラックトリック～裁きを操る弁護人～"
+              "title": "アンナチュラル"
             },
             {
               "rank": 50,
-              "title": "やすとものどこいこ！？"
+              "title": "突然ですが占ってもいいですか？"
             }
           ]
         }
