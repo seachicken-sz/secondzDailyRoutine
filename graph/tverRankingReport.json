@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/09/28 17:07",
+  "updatedAt": "2026/09/28 18:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/09/28 17:07",
+      "updatedAt": "2026/09/28 18:07",
       "episodeId": "ep5y408jx8",
       "subtitle": "新企画！芸能人どハマりグルメ「ベストバイプライスマン」",
       "likes": "2.5万",
@@ -260,6 +260,10 @@
         },
         {
           "hour": 67,
+          "likes": 25000
+        },
+        {
+          "hour": 68,
           "likes": 25000
         }
       ],
@@ -621,9 +625,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 10,
-          "elapsedHour": 67,
-          "elapsedRank": 10,
+          "currentRank": 12,
+          "elapsedHour": 68,
+          "elapsedRank": 12,
           "currentPoints": [
             {
               "hour": 2,
@@ -888,6 +892,10 @@
             {
               "hour": 67,
               "rank": 10
+            },
+            {
+              "hour": 68,
+              "rank": 12
             }
           ],
           "previousPoints": [
@@ -1350,19 +1358,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 7,
-              "title": "世界の果てまでイッテQ！"
-            },
-            {
-              "rank": 8,
-              "title": "有吉クイズ"
-            },
-            {
               "rank": 9,
-              "title": "突然ですが占ってもいいですか？"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             },
             {
               "rank": 10,
+              "title": "突然ですが占ってもいいですか？"
+            },
+            {
+              "rank": 11,
+              "title": "Golden SixTONES"
+            },
+            {
+              "rank": 12,
               "title": "タイムレスマン"
             }
           ]
@@ -1370,9 +1378,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 16,
-          "elapsedHour": 67,
-          "elapsedRank": 16,
+          "currentRank": 18,
+          "elapsedHour": 68,
+          "elapsedRank": 18,
           "currentPoints": [
             {
               "hour": 4,
@@ -1629,6 +1637,10 @@
             {
               "hour": 67,
               "rank": 16
+            },
+            {
+              "hour": 68,
+              "rank": 18
             }
           ],
           "previousPoints": [
@@ -1915,19 +1927,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 13,
-              "title": "Tokyo middle 30"
-            },
-            {
-              "rank": 14,
+              "rank": 15,
               "title": "GTO"
             },
             {
-              "rank": 15,
-              "title": "突然ですが占ってもいいですか？"
+              "rank": 16,
+              "title": "救命病棟24時（第1シリーズ）"
             },
             {
-              "rank": 16,
+              "rank": 17,
+              "title": "Golden SixTONES"
+            },
+            {
+              "rank": 18,
               "title": "タイムレスマン"
             }
           ]
@@ -1937,7 +1949,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/09/27",
-      "updatedAt": "2026/09/28 17:07",
+      "updatedAt": "2026/09/28 18:07",
       "episodeId": "ep60pgu2w9",
       "subtitle": "【熱海SP】日本一絶品BBQ&絶景花火パフォーマンス",
       "likes": "1.8万",
@@ -2041,6 +2053,10 @@
         },
         {
           "hour": 27,
+          "likes": 18000
+        },
+        {
+          "hour": 28,
           "likes": 18000
         }
       ],
@@ -2667,7 +2683,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 4,
-          "elapsedHour": 27,
+          "elapsedHour": 28,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -2764,6 +2780,10 @@
             },
             {
               "hour": 27,
+              "rank": 4
+            },
+            {
+              "hour": 28,
               "rank": 4
             }
           ],
@@ -3304,7 +3324,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 4,
-          "elapsedHour": 27,
+          "elapsedHour": 28,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -3397,6 +3417,10 @@
             },
             {
               "hour": 27,
+              "rank": 4
+            },
+            {
+              "hour": 28,
               "rank": 4
             }
           ],
@@ -3690,7 +3714,7 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/28 17:07",
+      "updatedAt": "2026/09/28 18:07",
       "episodeId": "eptlyw7yfw",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！",
       "likes": "1.0万",
@@ -5881,15 +5905,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "同郷ラブストーリー～恋する里帰り・山口編～"
-            },
-            {
-              "rank": 48,
               "title": "ぐるぐるナインティナイン"
             },
             {
+              "rank": 48,
+              "title": "同郷ラブストーリー～恋する里帰り・山口編～"
+            },
+            {
               "rank": 49,
-              "title": "日曜のひるもほめるちゃん"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 50,
@@ -6086,19 +6110,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ロンドンハーツ"
+              "title": "指原千夏"
             },
             {
               "rank": 48,
-              "title": "A-Studio＋"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 49,
-              "title": "これ余談なんですけど・・・"
+              "title": "笑点"
             },
             {
               "rank": 50,
-              "title": "笑点"
+              "title": "A-Studio＋"
             }
           ]
         }
@@ -6107,7 +6131,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/28 17:07",
+      "updatedAt": "2026/09/28 18:07",
       "episodeId": "ep37rqemkc",
       "subtitle": "【珍英語を謎解き】900人vsこの曲英語でわかるかな",
       "likes": "1.4万",
@@ -7462,19 +7486,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ロンドンハーツ"
+              "title": "指原千夏"
             },
             {
               "rank": 48,
-              "title": "A-Studio＋"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 49,
-              "title": "これ余談なんですけど・・・"
+              "title": "笑点"
             },
             {
               "rank": 50,
-              "title": "笑点"
+              "title": "A-Studio＋"
             }
           ]
         },
@@ -7707,11 +7731,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 49,
@@ -7719,7 +7743,7 @@
             },
             {
               "rank": 50,
-              "title": "クレヨンしんちゃん"
+              "title": "名探偵プリキュア！"
             }
           ]
         }
@@ -7728,10 +7752,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/28 17:07",
+      "updatedAt": "2026/09/28 18:07",
       "episodeId": "epxyf3j8s9",
       "subtitle": "芸能人アレルギー大検査SP…岡崎紗絵&ACEesが採血!衝撃結果",
-      "likes": "7051",
+      "likes": "7066",
       "favorites": "80.3万",
       "likePoints": [
         {
@@ -8269,19 +8293,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ロンドンハーツ"
+              "title": "指原千夏"
             },
             {
               "rank": 48,
-              "title": "A-Studio＋"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 49,
-              "title": "これ余談なんですけど・・・"
+              "title": "笑点"
             },
             {
               "rank": 50,
-              "title": "笑点"
+              "title": "A-Studio＋"
             }
           ]
         },
@@ -8501,11 +8525,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 49,
@@ -8513,7 +8537,7 @@
             },
             {
               "rank": 50,
-              "title": "クレヨンしんちゃん"
+              "title": "名探偵プリキュア！"
             }
           ]
         }
@@ -8522,7 +8546,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/09/23",
-      "updatedAt": "2026/09/28 17:07",
+      "updatedAt": "2026/09/28 18:07",
       "episodeId": "epv424sran",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！INI登場",
       "likes": "1.2万",
@@ -9030,6 +9054,10 @@
         },
         {
           "hour": 136,
+          "likes": 12000
+        },
+        {
+          "hour": 137,
           "likes": 12000
         }
       ],
@@ -9929,19 +9957,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ロンドンハーツ"
+              "title": "指原千夏"
             },
             {
               "rank": 48,
-              "title": "A-Studio＋"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 49,
-              "title": "これ余談なんですけど・・・"
+              "title": "笑点"
             },
             {
               "rank": 50,
-              "title": "笑点"
+              "title": "A-Studio＋"
             }
           ]
         },
@@ -10069,11 +10097,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 49,
@@ -10081,7 +10109,7 @@
             },
             {
               "rank": 50,
-              "title": "クレヨンしんちゃん"
+              "title": "名探偵プリキュア！"
             }
           ]
         }
@@ -10090,10 +10118,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/09/28 17:07",
+      "updatedAt": "2026/09/28 18:07",
       "episodeId": "ep7fkjfnnt",
       "subtitle": "第146回 水野美紀ら豪華あっち向いてホイでまさかの涙・・・",
-      "likes": "4802",
+      "likes": "4820",
       "favorites": "71.8万",
       "likePoints": [
         {
@@ -10423,6 +10451,10 @@
         {
           "hour": 89,
           "likes": 4802
+        },
+        {
+          "hour": 90,
+          "likes": 4820
         }
       ],
       "previousLikePoints": [
@@ -11377,19 +11409,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ロンドンハーツ"
+              "title": "指原千夏"
             },
             {
               "rank": 48,
-              "title": "A-Studio＋"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 49,
-              "title": "これ余談なんですけど・・・"
+              "title": "笑点"
             },
             {
               "rank": 50,
-              "title": "笑点"
+              "title": "A-Studio＋"
             }
           ]
         },
@@ -11538,11 +11570,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 49,
@@ -11550,7 +11582,7 @@
             },
             {
               "rank": 50,
-              "title": "クレヨンしんちゃん"
+              "title": "名探偵プリキュア！"
             }
           ]
         }
@@ -11559,10 +11591,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/09/19",
-      "updatedAt": "2026/09/28 17:07",
+      "updatedAt": "2026/09/28 18:07",
       "episodeId": "ephhccb64t",
       "subtitle": "マッサマンvs秒で組体操（秘）おなら！SP",
-      "likes": "4103",
+      "likes": "4108",
       "favorites": "81.0万",
       "likePoints": [
         {
@@ -13442,19 +13474,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ロンドンハーツ"
+              "title": "指原千夏"
             },
             {
               "rank": 48,
-              "title": "A-Studio＋"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 49,
-              "title": "これ余談なんですけど・・・"
+              "title": "笑点"
             },
             {
               "rank": 50,
-              "title": "笑点"
+              "title": "A-Studio＋"
             }
           ]
         },
@@ -13859,11 +13891,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 49,
@@ -13871,7 +13903,7 @@
             },
             {
               "rank": 50,
-              "title": "クレヨンしんちゃん"
+              "title": "名探偵プリキュア！"
             }
           ]
         }
@@ -13880,7 +13912,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/09/28 17:07",
+      "updatedAt": "2026/09/28 18:07",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
       "likes": "1.2万",
@@ -14004,19 +14036,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 48,
-              "title": "ミキティダイニング"
+              "title": "タビフクヤマ"
             },
             {
               "rank": 49,
-              "title": "開運！なんでも鑑定団"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 50,
-              "title": "いたジャン！"
+              "title": "ミキティダイニング"
             }
           ]
         },
@@ -14031,19 +14063,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ロンドンハーツ"
+              "title": "指原千夏"
             },
             {
               "rank": 48,
-              "title": "A-Studio＋"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 49,
-              "title": "これ余談なんですけど・・・"
+              "title": "笑点"
             },
             {
               "rank": 50,
-              "title": "笑点"
+              "title": "A-Studio＋"
             }
           ]
         }
@@ -14052,7 +14084,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/28 17:07",
+      "updatedAt": "2026/09/28 18:07",
       "episodeId": "epnqu504ur",
       "subtitle": "第11話 二人がたどり着く最後の余韻・・・出会えてよかった",
       "likes": "1.8万",
@@ -16291,7 +16323,7 @@
             },
             {
               "rank": 48,
-              "title": "孤独のグルメ Season2"
+              "title": "韓国ドラマ「ウンヒの涙」"
             },
             {
               "rank": 49,
@@ -17644,11 +17676,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 49,
@@ -17656,7 +17688,7 @@
             },
             {
               "rank": 50,
-              "title": "クレヨンしんちゃん"
+              "title": "名探偵プリキュア！"
             }
           ]
         }
@@ -17665,7 +17697,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/22",
-      "updatedAt": "2026/09/28 17:07",
+      "updatedAt": "2026/09/28 18:07",
       "episodeId": "epc4m7onou",
       "subtitle": "ねづっち24時／マジック講座",
       "likes": "1.1万",
@@ -18261,6 +18293,10 @@
         },
         {
           "hour": 161,
+          "likes": 11000
+        },
+        {
+          "hour": 162,
           "likes": 11000
         }
       ],
@@ -19316,19 +19352,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 48,
-              "title": "ミキティダイニング"
+              "title": "タビフクヤマ"
             },
             {
               "rank": 49,
-              "title": "開運！なんでも鑑定団"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 50,
-              "title": "いたジャン！"
+              "title": "ミキティダイニング"
             }
           ]
         },
@@ -19533,19 +19569,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ロンドンハーツ"
+              "title": "指原千夏"
             },
             {
               "rank": 48,
-              "title": "A-Studio＋"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 49,
-              "title": "これ余談なんですけど・・・"
+              "title": "笑点"
             },
             {
               "rank": 50,
-              "title": "笑点"
+              "title": "A-Studio＋"
             }
           ]
         }
@@ -19554,10 +19590,10 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/09/28 17:07",
+      "updatedAt": "2026/09/28 18:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
-      "likes": "299",
+      "likes": "300",
       "favorites": "16.3万",
       "likePoints": [],
       "previousLikePoints": [],
@@ -19577,7 +19613,7 @@
             },
             {
               "rank": 48,
-              "title": "孤独のグルメ Season2"
+              "title": "韓国ドラマ「ウンヒの涙」"
             },
             {
               "rank": 49,
@@ -19600,11 +19636,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵プリキュア！"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 49,
@@ -19612,7 +19648,7 @@
             },
             {
               "rank": 50,
-              "title": "クレヨンしんちゃん"
+              "title": "名探偵プリキュア！"
             }
           ]
         }
