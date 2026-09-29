@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/09/29 18:07",
+  "updatedAt": "2026/09/29 19:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/09/29 18:07",
+      "updatedAt": "2026/09/29 19:07",
       "episodeId": "ep5y408jx8",
       "subtitle": "新企画！芸能人どハマりグルメ「ベストバイプライスマン」",
       "likes": "2.6万",
@@ -352,6 +352,10 @@
         },
         {
           "hour": 92,
+          "likes": 26000
+        },
+        {
+          "hour": 93,
           "likes": 26000
         }
       ],
@@ -713,9 +717,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 34,
-          "elapsedHour": 92,
-          "elapsedRank": 34,
+          "currentRank": 36,
+          "elapsedHour": 93,
+          "elapsedRank": 36,
           "currentPoints": [
             {
               "hour": 2,
@@ -1080,6 +1084,10 @@
             {
               "hour": 92,
               "rank": 34
+            },
+            {
+              "hour": 93,
+              "rank": 36
             }
           ],
           "previousPoints": [
@@ -1542,19 +1550,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 31,
+              "rank": 33,
               "title": "EIGHT-JAM"
             },
             {
-              "rank": 32,
+              "rank": 34,
               "title": "ポツンと一軒家"
             },
             {
-              "rank": 33,
-              "title": "あざとくて何が悪いの？"
+              "rank": 35,
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
-              "rank": 34,
+              "rank": 36,
               "title": "タイムレスマン"
             }
           ]
@@ -1562,9 +1570,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 49,
-          "elapsedHour": 92,
-          "elapsedRank": 49,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 4,
@@ -2207,20 +2215,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 46,
-              "title": "ポツンと一軒家"
-            },
-            {
               "rank": 47,
               "title": "あざとくて何が悪いの？"
             },
             {
               "rank": 48,
-              "title": "ちいかわ"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 49,
-              "title": "タイムレスマン"
+              "title": "ポツンと一軒家"
+            },
+            {
+              "rank": 50,
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             }
           ]
         }
@@ -2229,7 +2237,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/09/27",
-      "updatedAt": "2026/09/29 18:07",
+      "updatedAt": "2026/09/29 19:07",
       "episodeId": "ep60pgu2w9",
       "subtitle": "【熱海SP】日本一絶品BBQ&絶景花火パフォーマンス",
       "likes": "2.1万",
@@ -2425,6 +2433,10 @@
         },
         {
           "hour": 52,
+          "likes": 21000
+        },
+        {
+          "hour": 53,
           "likes": 21000
         }
       ],
@@ -3051,7 +3063,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 10,
-          "elapsedHour": 52,
+          "elapsedHour": 53,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -3248,6 +3260,10 @@
             },
             {
               "hour": 52,
+              "rank": 10
+            },
+            {
+              "hour": 53,
               "rank": 10
             }
           ],
@@ -3787,9 +3803,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 17,
-          "elapsedHour": 52,
-          "elapsedRank": 17,
+          "currentRank": 18,
+          "elapsedHour": 53,
+          "elapsedRank": 18,
           "currentPoints": [
             {
               "hour": 5,
@@ -3982,6 +3998,10 @@
             {
               "hour": 52,
               "rank": 17
+            },
+            {
+              "hour": 53,
+              "rank": 18
             }
           ],
           "previousPoints": [
@@ -4252,10 +4272,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 14,
-              "title": "ワンピース"
-            },
-            {
               "rank": 15,
               "title": "キスは捜査のあとで"
             },
@@ -4265,6 +4281,10 @@
             },
             {
               "rank": 17,
+              "title": "恋はつづくよどこまでも"
+            },
+            {
+              "rank": 18,
               "title": "timeleszファミリア"
             }
           ]
@@ -4274,7 +4294,7 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/29 18:07",
+      "updatedAt": "2026/09/29 19:07",
       "episodeId": "eptlyw7yfw",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！",
       "likes": "1.0万",
@@ -6465,15 +6485,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "タイムisマネー 挑むが勝ち"
+              "title": "有働由美子の健康案内人！"
             },
             {
               "rank": 48,
-              "title": "よるのブランチ"
+              "title": "勇者東ブクロがRPGみたいに街ブラさんぽする旅番組"
             },
             {
               "rank": 49,
-              "title": "勇者東ブクロがRPGみたいに街ブラさんぽする旅番組"
+              "title": "タイムisマネー 挑むが勝ち"
             },
             {
               "rank": 50,
@@ -6670,7 +6690,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "これ余談なんですけど・・・"
+              "title": "アタシの婚活週報w"
             },
             {
               "rank": 48,
@@ -6678,11 +6698,11 @@
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 50,
-              "title": "さんまのお笑い向上委員会"
+              "title": "限界突破！やってM!LK"
             }
           ]
         }
@@ -6691,7 +6711,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/29 18:07",
+      "updatedAt": "2026/09/29 19:07",
       "episodeId": "ep37rqemkc",
       "subtitle": "【珍英語を謎解き】900人vsこの曲英語でわかるかな",
       "likes": "1.4万",
@@ -8046,7 +8066,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "これ余談なんですけど・・・"
+              "title": "アタシの婚活週報w"
             },
             {
               "rank": 48,
@@ -8054,11 +8074,11 @@
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 50,
-              "title": "さんまのお笑い向上委員会"
+              "title": "限界突破！やってM!LK"
             }
           ]
         },
@@ -8295,15 +8315,15 @@
             },
             {
               "rank": 48,
-              "title": "ちいかわ"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 49,
-              "title": "タイムレスマン"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             }
           ]
         }
@@ -8312,11 +8332,11 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/29 18:07",
+      "updatedAt": "2026/09/29 19:07",
       "episodeId": "epxyf3j8s9",
       "subtitle": "芸能人アレルギー大検査SP…岡崎紗絵&ACEesが採血!衝撃結果",
-      "likes": "7366",
-      "favorites": "80.3万",
+      "likes": "7398",
+      "favorites": "80.4万",
       "likePoints": [
         {
           "hour": 137,
@@ -8853,7 +8873,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "これ余談なんですけど・・・"
+              "title": "アタシの婚活週報w"
             },
             {
               "rank": 48,
@@ -8861,11 +8881,11 @@
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 50,
-              "title": "さんまのお笑い向上委員会"
+              "title": "限界突破！やってM!LK"
             }
           ]
         },
@@ -9089,15 +9109,15 @@
             },
             {
               "rank": 48,
-              "title": "ちいかわ"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 49,
-              "title": "タイムレスマン"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             }
           ]
         }
@@ -9106,7 +9126,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/09/23",
-      "updatedAt": "2026/09/29 18:07",
+      "updatedAt": "2026/09/29 19:07",
       "episodeId": "epv424sran",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！INI登場",
       "likes": "1.2万",
@@ -9698,6 +9718,10 @@
         },
         {
           "hour": 162,
+          "likes": 12000
+        },
+        {
+          "hour": 163,
           "likes": 12000
         }
       ],
@@ -10597,7 +10621,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "これ余談なんですけど・・・"
+              "title": "アタシの婚活週報w"
             },
             {
               "rank": 48,
@@ -10605,11 +10629,11 @@
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 50,
-              "title": "さんまのお笑い向上委員会"
+              "title": "限界突破！やってM!LK"
             }
           ]
         },
@@ -10741,15 +10765,15 @@
             },
             {
               "rank": 48,
-              "title": "ちいかわ"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 49,
-              "title": "タイムレスマン"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             }
           ]
         }
@@ -10758,11 +10782,11 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/09/29 18:07",
+      "updatedAt": "2026/09/29 19:07",
       "episodeId": "ep7fkjfnnt",
       "subtitle": "第146回 水野美紀ら豪華あっち向いてホイでまさかの涙・・・",
-      "likes": "5094",
-      "favorites": "71.7万",
+      "likes": "5109",
+      "favorites": "71.8万",
       "likePoints": [
         {
           "hour": 1,
@@ -11183,6 +11207,10 @@
         {
           "hour": 114,
           "likes": 5094
+        },
+        {
+          "hour": 115,
+          "likes": 5109
         }
       ],
       "previousLikePoints": [
@@ -12137,7 +12165,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "これ余談なんですけど・・・"
+              "title": "アタシの婚活週報w"
             },
             {
               "rank": 48,
@@ -12145,11 +12173,11 @@
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 50,
-              "title": "さんまのお笑い向上委員会"
+              "title": "限界突破！やってM!LK"
             }
           ]
         },
@@ -12302,15 +12330,15 @@
             },
             {
               "rank": 48,
-              "title": "ちいかわ"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 49,
-              "title": "タイムレスマン"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             }
           ]
         }
@@ -12319,10 +12347,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/09/19",
-      "updatedAt": "2026/09/29 18:07",
+      "updatedAt": "2026/09/29 19:07",
       "episodeId": "ephhccb64t",
       "subtitle": "マッサマンvs秒で組体操（秘）おなら！SP",
-      "likes": "4181",
+      "likes": "4183",
       "favorites": "81.0万",
       "likePoints": [
         {
@@ -14202,7 +14230,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "これ余談なんですけど・・・"
+              "title": "アタシの婚活週報w"
             },
             {
               "rank": 48,
@@ -14210,11 +14238,11 @@
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 50,
-              "title": "さんまのお笑い向上委員会"
+              "title": "限界突破！やってM!LK"
             }
           ]
         },
@@ -14623,15 +14651,15 @@
             },
             {
               "rank": 48,
-              "title": "ちいかわ"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 49,
-              "title": "タイムレスマン"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             }
           ]
         }
@@ -14640,7 +14668,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/09/29 18:07",
+      "updatedAt": "2026/09/29 19:07",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
       "likes": "1.2万",
@@ -14654,12 +14682,7 @@
           "currentRank": null,
           "elapsedHour": null,
           "elapsedRank": null,
-          "currentPoints": [
-            {
-              "hour": 113,
-              "rank": 50
-            }
-          ],
+          "currentPoints": [],
           "previousPoints": [],
           "nearbyRanking": [
             {
@@ -14668,7 +14691,7 @@
             },
             {
               "rank": 48,
-              "title": "吉田と粗品と"
+              "title": "やすとも・友近のキメツケ！あくまで個人の感想です"
             },
             {
               "rank": 49,
@@ -14676,7 +14699,7 @@
             },
             {
               "rank": 50,
-              "title": "いたジャン！"
+              "title": "小峠英二の試乗最高"
             }
           ]
         },
@@ -14691,7 +14714,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "これ余談なんですけど・・・"
+              "title": "アタシの婚活週報w"
             },
             {
               "rank": 48,
@@ -14699,11 +14722,11 @@
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 50,
-              "title": "さんまのお笑い向上委員会"
+              "title": "限界突破！やってM!LK"
             }
           ]
         }
@@ -14712,11 +14735,11 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/29 18:07",
+      "updatedAt": "2026/09/29 19:07",
       "episodeId": "epnqu504ur",
       "subtitle": "第11話 二人がたどり着く最後の余韻・・・出会えてよかった",
       "likes": "1.8万",
-      "favorites": "55.5万",
+      "favorites": "55.4万",
       "likePoints": [
         {
           "hour": 3,
@@ -16951,15 +16974,15 @@
             },
             {
               "rank": 48,
-              "title": "相棒 season20"
+              "title": "水曜日の情事～a Wednesday love affair"
             },
             {
               "rank": 49,
-              "title": "ハルとアオのお弁当箱"
+              "title": "相棒 season20"
             },
             {
               "rank": 50,
-              "title": "マイ・セカンド・アオハル"
+              "title": "中国ドラマ「溥儀の料理番～紫禁城 最後の日々」"
             }
           ]
         },
@@ -18308,15 +18331,15 @@
             },
             {
               "rank": 48,
-              "title": "ちいかわ"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 49,
-              "title": "タイムレスマン"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             }
           ]
         }
@@ -18325,7 +18348,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/22",
-      "updatedAt": "2026/09/29 18:07",
+      "updatedAt": "2026/09/29 19:07",
       "episodeId": "epc4m7onou",
       "subtitle": "ねづっち24時／マジック講座",
       "likes": "1.2万",
@@ -20012,7 +20035,7 @@
             },
             {
               "rank": 48,
-              "title": "吉田と粗品と"
+              "title": "やすとも・友近のキメツケ！あくまで個人の感想です"
             },
             {
               "rank": 49,
@@ -20020,7 +20043,7 @@
             },
             {
               "rank": 50,
-              "title": "いたジャン！"
+              "title": "小峠英二の試乗最高"
             }
           ]
         },
@@ -20225,7 +20248,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "これ余談なんですけど・・・"
+              "title": "アタシの婚活週報w"
             },
             {
               "rank": 48,
@@ -20233,11 +20256,11 @@
             },
             {
               "rank": 49,
-              "title": "限界突破！やってM!LK"
+              "title": "真剣遊戯！THE バトル SHOW"
             },
             {
               "rank": 50,
-              "title": "さんまのお笑い向上委員会"
+              "title": "限界突破！やってM!LK"
             }
           ]
         }
@@ -20246,11 +20269,11 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/09/29 18:07",
+      "updatedAt": "2026/09/29 19:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "312",
-      "favorites": "16.3万",
+      "favorites": "16.4万",
       "likePoints": [],
       "previousLikePoints": [],
       "rankings": [
@@ -20269,15 +20292,15 @@
             },
             {
               "rank": 48,
-              "title": "相棒 season20"
+              "title": "水曜日の情事～a Wednesday love affair"
             },
             {
               "rank": 49,
-              "title": "ハルとアオのお弁当箱"
+              "title": "相棒 season20"
             },
             {
               "rank": 50,
-              "title": "マイ・セカンド・アオハル"
+              "title": "中国ドラマ「溥儀の料理番～紫禁城 最後の日々」"
             }
           ]
         },
@@ -20296,15 +20319,15 @@
             },
             {
               "rank": 48,
-              "title": "ちいかわ"
+              "title": "EIGHT-JAM"
             },
             {
               "rank": 49,
-              "title": "タイムレスマン"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 50,
-              "title": "夫が寝たあとに"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             }
           ]
         }
