@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/09/30 01:07",
+  "updatedAt": "2026/09/30 02:08",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/09/30 01:07",
+      "updatedAt": "2026/09/30 02:08",
       "episodeId": "ep5y408jx8",
       "subtitle": "新企画！芸能人どハマりグルメ「ベストバイプライスマン」",
       "likes": "2.6万",
@@ -381,6 +381,10 @@
         {
           "hour": 99,
           "likes": 26000
+        },
+        {
+          "hour": 100,
+          "likes": 26000
         }
       ],
       "previousLikePoints": [
@@ -741,9 +745,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 34,
-          "elapsedHour": 99,
-          "elapsedRank": 34,
+          "currentRank": 33,
+          "elapsedHour": 100,
+          "elapsedRank": 33,
           "currentPoints": [
             {
               "hour": 2,
@@ -1136,6 +1140,10 @@
             {
               "hour": 99,
               "rank": 34
+            },
+            {
+              "hour": 100,
+              "rank": 33
             }
           ],
           "previousPoints": [
@@ -1598,19 +1606,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 31,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
-            },
-            {
-              "rank": 32,
-              "title": "一茂×かまいたち ゲンバ"
-            },
-            {
-              "rank": 33,
+              "rank": 30,
               "title": "かまいガチ"
             },
             {
-              "rank": 34,
+              "rank": 31,
+              "title": "一茂×かまいたち ゲンバ"
+            },
+            {
+              "rank": 32,
+              "title": "帰れマンデー見っけ隊!!"
+            },
+            {
+              "rank": 33,
               "title": "タイムレスマン"
             }
           ]
@@ -1618,9 +1626,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 50,
-          "elapsedHour": 99,
-          "elapsedRank": 50,
+          "currentRank": 49,
+          "elapsedHour": 100,
+          "elapsedRank": 49,
           "currentPoints": [
             {
               "hour": 4,
@@ -2001,6 +2009,10 @@
             {
               "hour": 99,
               "rank": 50
+            },
+            {
+              "hour": 100,
+              "rank": 49
             }
           ],
           "previousPoints": [
@@ -2287,19 +2299,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "キリンチャレンジカップ2026 日本×ベネズエラ"
-            },
-            {
-              "rank": 48,
+              "rank": 46,
               "title": "一茂×かまいたち ゲンバ"
             },
             {
-              "rank": 49,
-              "title": "かまいガチ"
+              "rank": 47,
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
-              "rank": 50,
+              "rank": 48,
+              "title": "キリンチャレンジカップ2026 日本×ベネズエラ"
+            },
+            {
+              "rank": 49,
               "title": "タイムレスマン"
             }
           ]
@@ -2309,7 +2321,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/09/27",
-      "updatedAt": "2026/09/30 01:07",
+      "updatedAt": "2026/09/30 02:08",
       "episodeId": "ep60pgu2w9",
       "subtitle": "【熱海SP】日本一絶品BBQ&絶景花火パフォーマンス",
       "likes": "2.1万",
@@ -2533,6 +2545,10 @@
         },
         {
           "hour": 59,
+          "likes": 21000
+        },
+        {
+          "hour": 60,
           "likes": 21000
         }
       ],
@@ -3159,7 +3175,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 11,
-          "elapsedHour": 59,
+          "elapsedHour": 60,
           "elapsedRank": 11,
           "currentPoints": [
             {
@@ -3384,6 +3400,10 @@
             },
             {
               "hour": 59,
+              "rank": 11
+            },
+            {
+              "hour": 60,
               "rank": 11
             }
           ],
@@ -3924,7 +3944,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 21,
-          "elapsedHour": 59,
+          "elapsedHour": 60,
           "elapsedRank": 21,
           "currentPoints": [
             {
@@ -4145,6 +4165,10 @@
             },
             {
               "hour": 59,
+              "rank": 21
+            },
+            {
+              "hour": 60,
               "rank": 21
             }
           ],
@@ -4438,7 +4462,7 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/30 01:07",
+      "updatedAt": "2026/09/30 02:08",
       "episodeId": "eptlyw7yfw",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！",
       "likes": "1.0万",
@@ -6633,15 +6657,15 @@
             },
             {
               "rank": 48,
-              "title": "櫻井･有吉THE夜会"
+              "title": "勇者東ブクロがRPGみたいに街ブラさんぽする旅番組"
             },
             {
               "rank": 49,
-              "title": "ぼる部屋"
+              "title": "櫻井･有吉THE夜会"
             },
             {
               "rank": 50,
-              "title": "ナンデモ特命係 発見らくちゃく！"
+              "title": "ぼる部屋"
             }
           ]
         },
@@ -6834,19 +6858,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スクール革命！"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "限界突破！やってM!LK"
+              "title": "スクール革命！"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "アタシの婚活週報w"
             }
           ]
         }
@@ -6855,7 +6879,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/30 01:07",
+      "updatedAt": "2026/09/30 02:08",
       "episodeId": "ep37rqemkc",
       "subtitle": "【珍英語を謎解き】900人vsこの曲英語でわかるかな",
       "likes": "1.4万",
@@ -8210,19 +8234,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スクール革命！"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "限界突破！やってM!LK"
+              "title": "スクール革命！"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "アタシの婚活週報w"
             }
           ]
         },
@@ -8455,19 +8479,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "キリンチャレンジカップ2026 日本×ベネズエラ"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 48,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "キリンチャレンジカップ2026 日本×ベネズエラ"
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "ホンマでっか！？TV"
             }
           ]
         }
@@ -8476,7 +8500,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/30 01:07",
+      "updatedAt": "2026/09/30 02:08",
       "episodeId": "epxyf3j8s9",
       "subtitle": "芸能人アレルギー大検査SP…岡崎紗絵&ACEesが採血!衝撃結果",
       "likes": "7451",
@@ -9017,19 +9041,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スクール革命！"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "限界突破！やってM!LK"
+              "title": "スクール革命！"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "アタシの婚活週報w"
             }
           ]
         },
@@ -9249,19 +9273,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "キリンチャレンジカップ2026 日本×ベネズエラ"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 48,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "キリンチャレンジカップ2026 日本×ベネズエラ"
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "ホンマでっか！？TV"
             }
           ]
         }
@@ -9270,15 +9294,15 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/09/30",
-      "updatedAt": "2026/09/30 01:07",
+      "updatedAt": "2026/09/30 02:08",
       "episodeId": "epo8onnz8t",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！新企画「出張 夜の音」",
-      "likes": "215",
+      "likes": "381",
       "favorites": "15.2万",
       "likePoints": [
         {
           "hour": 1,
-          "likes": 215
+          "likes": 381
         }
       ],
       "previousLikePoints": [
@@ -10100,19 +10124,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スクール革命！"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "限界突破！やってM!LK"
+              "title": "スクール革命！"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "アタシの婚活週報w"
             }
           ]
         },
@@ -10240,19 +10264,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "キリンチャレンジカップ2026 日本×ベネズエラ"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 48,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "キリンチャレンジカップ2026 日本×ベネズエラ"
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "ホンマでっか！？TV"
             }
           ]
         }
@@ -10261,10 +10285,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/09/30 01:07",
+      "updatedAt": "2026/09/30 02:08",
       "episodeId": "ep7fkjfnnt",
       "subtitle": "第146回 水野美紀ら豪華あっち向いてホイでまさかの涙・・・",
-      "likes": "5183",
+      "likes": "5190",
       "favorites": "71.7万",
       "likePoints": [
         {
@@ -10714,6 +10738,10 @@
         {
           "hour": 121,
           "likes": 5183
+        },
+        {
+          "hour": 122,
+          "likes": 5190
         }
       ],
       "previousLikePoints": [
@@ -11668,19 +11696,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スクール革命！"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "限界突破！やってM!LK"
+              "title": "スクール革命！"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "アタシの婚活週報w"
             }
           ]
         },
@@ -11829,19 +11857,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "キリンチャレンジカップ2026 日本×ベネズエラ"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 48,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "キリンチャレンジカップ2026 日本×ベネズエラ"
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "ホンマでっか！？TV"
             }
           ]
         }
@@ -11850,10 +11878,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/09/19",
-      "updatedAt": "2026/09/30 01:07",
+      "updatedAt": "2026/09/30 02:08",
       "episodeId": "ephhccb64t",
       "subtitle": "マッサマンvs秒で組体操（秘）おなら！SP",
-      "likes": "4202",
+      "likes": "4204",
       "favorites": "81.0万",
       "likePoints": [
         {
@@ -13733,19 +13761,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スクール革命！"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "限界突破！やってM!LK"
+              "title": "スクール革命！"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "アタシの婚活週報w"
             }
           ]
         },
@@ -14150,19 +14178,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "キリンチャレンジカップ2026 日本×ベネズエラ"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 48,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "キリンチャレンジカップ2026 日本×ベネズエラ"
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "ホンマでっか！？TV"
             }
           ]
         }
@@ -14171,7 +14199,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/09/30 01:07",
+      "updatedAt": "2026/09/30 02:08",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
       "likes": "1.2万",
@@ -14190,19 +14218,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "草彅やすともの うさぎとかめ"
+              "title": "START UP！ドリームエンタ"
             },
             {
               "rank": 48,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "草彅やすともの うさぎとかめ"
             },
             {
               "rank": 49,
-              "title": "いたジャン！"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 50,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "いたジャン！"
             }
           ]
         },
@@ -14217,19 +14245,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スクール革命！"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "限界突破！やってM!LK"
+              "title": "スクール革命！"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "アタシの婚活週報w"
             }
           ]
         }
@@ -14238,7 +14266,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/30 01:07",
+      "updatedAt": "2026/09/30 02:08",
       "episodeId": "epnqu504ur",
       "subtitle": "第11話 二人がたどり着く最後の余韻・・・出会えてよかった",
       "likes": "1.8万",
@@ -16485,7 +16513,7 @@
             },
             {
               "rank": 50,
-              "title": "韓国ドラマ 鳴かない鳥"
+              "title": "文学処女"
             }
           ]
         },
@@ -17830,19 +17858,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "キリンチャレンジカップ2026 日本×ベネズエラ"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 48,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "キリンチャレンジカップ2026 日本×ベネズエラ"
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "ホンマでっか！？TV"
             }
           ]
         }
@@ -17851,7 +17879,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/22",
-      "updatedAt": "2026/09/30 01:07",
+      "updatedAt": "2026/09/30 02:08",
       "episodeId": "epc4m7onou",
       "subtitle": "ねづっち24時／マジック講座",
       "likes": "1.2万",
@@ -19534,19 +19562,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "草彅やすともの うさぎとかめ"
+              "title": "START UP！ドリームエンタ"
             },
             {
               "rank": 48,
-              "title": "千鳥かまいたちゴールデンアワー"
+              "title": "草彅やすともの うさぎとかめ"
             },
             {
               "rank": 49,
-              "title": "いたジャン！"
+              "title": "千鳥かまいたちゴールデンアワー"
             },
             {
               "rank": 50,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "いたジャン！"
             }
           ]
         },
@@ -19751,19 +19779,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スクール革命！"
+              "title": "ラヴィット！"
             },
             {
               "rank": 48,
-              "title": "限界突破！やってM!LK"
+              "title": "スクール革命！"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "限界突破！やってM!LK"
             },
             {
               "rank": 50,
-              "title": "ラヴィット！"
+              "title": "アタシの婚活週報w"
             }
           ]
         }
@@ -19772,7 +19800,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/09/30 01:07",
+      "updatedAt": "2026/09/30 02:08",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "316",
@@ -19803,7 +19831,7 @@
             },
             {
               "rank": 50,
-              "title": "韓国ドラマ 鳴かない鳥"
+              "title": "文学処女"
             }
           ]
         },
@@ -19818,19 +19846,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "キリンチャレンジカップ2026 日本×ベネズエラ"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 48,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "キリンチャレンジカップ2026 日本×ベネズエラ"
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "タイムレスマン"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "ホンマでっか！？TV"
             }
           ]
         }
