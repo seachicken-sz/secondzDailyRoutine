@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/09/30 04:07",
+  "updatedAt": "2026/09/30 05:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/09/30 04:07",
+      "updatedAt": "2026/09/30 05:07",
       "episodeId": "ep5y408jx8",
       "subtitle": "新企画！芸能人どハマりグルメ「ベストバイプライスマン」",
       "likes": "2.6万",
@@ -393,6 +393,10 @@
         {
           "hour": 102,
           "likes": 26000
+        },
+        {
+          "hour": 103,
+          "likes": 26000
         }
       ],
       "previousLikePoints": [
@@ -754,7 +758,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 33,
-          "elapsedHour": 102,
+          "elapsedHour": 103,
           "elapsedRank": 33,
           "currentPoints": [
             {
@@ -1159,6 +1163,10 @@
             },
             {
               "hour": 102,
+              "rank": 33
+            },
+            {
+              "hour": 103,
               "rank": 33
             }
           ],
@@ -1643,7 +1651,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 49,
-          "elapsedHour": 102,
+          "elapsedHour": 103,
           "elapsedRank": 49,
           "currentPoints": [
             {
@@ -2037,6 +2045,10 @@
             {
               "hour": 102,
               "rank": 49
+            },
+            {
+              "hour": 103,
+              "rank": 49
             }
           ],
           "previousPoints": [
@@ -2345,7 +2357,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/09/27",
-      "updatedAt": "2026/09/30 04:07",
+      "updatedAt": "2026/09/30 05:07",
       "episodeId": "ep60pgu2w9",
       "subtitle": "【熱海SP】日本一絶品BBQ&絶景花火パフォーマンス",
       "likes": "2.1万",
@@ -2581,6 +2593,10 @@
         },
         {
           "hour": 62,
+          "likes": 21000
+        },
+        {
+          "hour": 63,
           "likes": 21000
         }
       ],
@@ -3207,7 +3223,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 11,
-          "elapsedHour": 62,
+          "elapsedHour": 63,
           "elapsedRank": 11,
           "currentPoints": [
             {
@@ -3444,6 +3460,10 @@
             },
             {
               "hour": 62,
+              "rank": 11
+            },
+            {
+              "hour": 63,
               "rank": 11
             }
           ],
@@ -3984,7 +4004,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 21,
-          "elapsedHour": 62,
+          "elapsedHour": 63,
           "elapsedRank": 21,
           "currentPoints": [
             {
@@ -4217,6 +4237,10 @@
             },
             {
               "hour": 62,
+              "rank": 21
+            },
+            {
+              "hour": 63,
               "rank": 21
             }
           ],
@@ -4510,7 +4534,7 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/30 04:07",
+      "updatedAt": "2026/09/30 05:07",
       "episodeId": "eptlyw7yfw",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！",
       "likes": "1.0万",
@@ -6906,15 +6930,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ネプリーグ"
-            },
-            {
-              "rank": 48,
               "title": "限界突破！やってM!LK"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "スクール革命！"
+            },
+            {
+              "rank": 49,
+              "title": "ネプリーグ"
             },
             {
               "rank": 50,
@@ -6927,7 +6951,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/30 04:07",
+      "updatedAt": "2026/09/30 05:07",
       "episodeId": "ep37rqemkc",
       "subtitle": "【珍英語を謎解き】900人vsこの曲英語でわかるかな",
       "likes": "1.4万",
@@ -8282,15 +8306,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ネプリーグ"
-            },
-            {
-              "rank": 48,
               "title": "限界突破！やってM!LK"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "スクール革命！"
+            },
+            {
+              "rank": 49,
+              "title": "ネプリーグ"
             },
             {
               "rank": 50,
@@ -8548,7 +8572,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/30 04:07",
+      "updatedAt": "2026/09/30 05:07",
       "episodeId": "epxyf3j8s9",
       "subtitle": "芸能人アレルギー大検査SP…岡崎紗絵&ACEesが採血!衝撃結果",
       "likes": "7451",
@@ -9089,15 +9113,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ネプリーグ"
-            },
-            {
-              "rank": 48,
               "title": "限界突破！やってM!LK"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "スクール革命！"
+            },
+            {
+              "rank": 49,
+              "title": "ネプリーグ"
             },
             {
               "rank": 50,
@@ -9342,10 +9366,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/09/30",
-      "updatedAt": "2026/09/30 04:07",
+      "updatedAt": "2026/09/30 05:07",
       "episodeId": "epo8onnz8t",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！新企画「出張 夜の音」",
-      "likes": "670",
+      "likes": "679",
       "favorites": "15.2万",
       "likePoints": [
         {
@@ -9359,6 +9383,10 @@
         {
           "hour": 3,
           "likes": 670
+        },
+        {
+          "hour": 4,
+          "likes": 679
         }
       ],
       "previousLikePoints": [
@@ -10180,15 +10208,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ネプリーグ"
-            },
-            {
-              "rank": 48,
               "title": "限界突破！やってM!LK"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "スクール革命！"
+            },
+            {
+              "rank": 49,
+              "title": "ネプリーグ"
             },
             {
               "rank": 50,
@@ -10341,10 +10369,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/09/30 04:07",
+      "updatedAt": "2026/09/30 05:07",
       "episodeId": "ep7fkjfnnt",
       "subtitle": "第146回 水野美紀ら豪華あっち向いてホイでまさかの涙・・・",
-      "likes": "5199",
+      "likes": "5198",
       "favorites": "71.7万",
       "likePoints": [
         {
@@ -10802,6 +10830,10 @@
         {
           "hour": 123,
           "likes": 5199
+        },
+        {
+          "hour": 125,
+          "likes": 5198
         }
       ],
       "previousLikePoints": [
@@ -11756,15 +11788,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ネプリーグ"
-            },
-            {
-              "rank": 48,
               "title": "限界突破！やってM!LK"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "スクール革命！"
+            },
+            {
+              "rank": 49,
+              "title": "ネプリーグ"
             },
             {
               "rank": 50,
@@ -11938,10 +11970,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/09/19",
-      "updatedAt": "2026/09/30 04:07",
+      "updatedAt": "2026/09/30 05:07",
       "episodeId": "ephhccb64t",
       "subtitle": "マッサマンvs秒で組体操（秘）おなら！SP",
-      "likes": "4205",
+      "likes": "4206",
       "favorites": "81.0万",
       "likePoints": [
         {
@@ -13821,15 +13853,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ネプリーグ"
-            },
-            {
-              "rank": 48,
               "title": "限界突破！やってM!LK"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "スクール革命！"
+            },
+            {
+              "rank": 49,
+              "title": "ネプリーグ"
             },
             {
               "rank": 50,
@@ -14259,7 +14291,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/09/30 04:07",
+      "updatedAt": "2026/09/30 05:07",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
       "likes": "1.2万",
@@ -14305,15 +14337,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ネプリーグ"
-            },
-            {
-              "rank": 48,
               "title": "限界突破！やってM!LK"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "スクール革命！"
+            },
+            {
+              "rank": 49,
+              "title": "ネプリーグ"
             },
             {
               "rank": 50,
@@ -14326,7 +14358,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/30 04:07",
+      "updatedAt": "2026/09/30 05:07",
       "episodeId": "epnqu504ur",
       "subtitle": "第11話 二人がたどり着く最後の余韻・・・出会えてよかった",
       "likes": "1.8万",
@@ -16561,7 +16593,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ワカコ酒 Season4"
+              "title": "文学処女"
             },
             {
               "rank": 48,
@@ -16569,7 +16601,7 @@
             },
             {
               "rank": 49,
-              "title": "文学処女"
+              "title": "ワカコ酒 Season4"
             },
             {
               "rank": 50,
@@ -17939,7 +17971,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/22",
-      "updatedAt": "2026/09/30 04:07",
+      "updatedAt": "2026/09/30 05:07",
       "episodeId": "epc4m7onou",
       "subtitle": "ねづっち24時／マジック講座",
       "likes": "1.2万",
@@ -19839,15 +19871,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ネプリーグ"
-            },
-            {
-              "rank": 48,
               "title": "限界突破！やってM!LK"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "スクール革命！"
+            },
+            {
+              "rank": 49,
+              "title": "ネプリーグ"
             },
             {
               "rank": 50,
@@ -19860,7 +19892,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/09/30 04:07",
+      "updatedAt": "2026/09/30 05:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "316",
@@ -19879,7 +19911,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ワカコ酒 Season4"
+              "title": "文学処女"
             },
             {
               "rank": 48,
@@ -19887,7 +19919,7 @@
             },
             {
               "rank": 49,
-              "title": "文学処女"
+              "title": "ワカコ酒 Season4"
             },
             {
               "rank": 50,
