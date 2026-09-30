@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/09/30 11:07",
+  "updatedAt": "2026/09/30 12:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/09/30 11:07",
+      "updatedAt": "2026/09/30 12:07",
       "episodeId": "ep5y408jx8",
       "subtitle": "新企画！芸能人どハマりグルメ「ベストバイプライスマン」",
       "likes": "2.6万",
@@ -421,6 +421,10 @@
         {
           "hour": 109,
           "likes": 26000
+        },
+        {
+          "hour": 110,
+          "likes": 26000
         }
       ],
       "previousLikePoints": [
@@ -781,9 +785,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 39,
-          "elapsedHour": 109,
-          "elapsedRank": 39,
+          "currentRank": 40,
+          "elapsedHour": 110,
+          "elapsedRank": 40,
           "currentPoints": [
             {
               "hour": 2,
@@ -1216,6 +1220,10 @@
             {
               "hour": 109,
               "rank": 39
+            },
+            {
+              "hour": 110,
+              "rank": 40
             }
           ],
           "previousPoints": [
@@ -1678,19 +1686,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 36,
-              "title": "あざとくて何が悪いの？"
-            },
-            {
               "rank": 37,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "相席食堂"
             },
             {
               "rank": 38,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "ウチ、“断捨離”しました！"
             },
             {
               "rank": 39,
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
+            },
+            {
+              "rank": 40,
               "title": "タイムレスマン"
             }
           ]
@@ -2392,11 +2400,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵コナン"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 48,
-              "title": "そこまで言って委員会NP"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
@@ -2404,7 +2412,7 @@
             },
             {
               "rank": 50,
-              "title": "マルコポロリ！"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         }
@@ -2413,7 +2421,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/09/27",
-      "updatedAt": "2026/09/30 11:07",
+      "updatedAt": "2026/09/30 12:07",
       "episodeId": "ep60pgu2w9",
       "subtitle": "【熱海SP】日本一絶品BBQ&絶景花火パフォーマンス",
       "likes": "2.1万",
@@ -2677,6 +2685,10 @@
         },
         {
           "hour": 69,
+          "likes": 21000
+        },
+        {
+          "hour": 70,
           "likes": 21000
         }
       ],
@@ -3302,9 +3314,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 14,
-          "elapsedHour": 69,
-          "elapsedRank": 14,
+          "currentRank": 16,
+          "elapsedHour": 70,
+          "elapsedRank": 16,
           "currentPoints": [
             {
               "hour": 4,
@@ -3569,6 +3581,10 @@
             {
               "hour": 69,
               "rank": 14
+            },
+            {
+              "hour": 70,
+              "rank": 16
             }
           ],
           "previousPoints": [
@@ -4087,19 +4103,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 11,
-              "title": "ロンドンハーツ"
-            },
-            {
-              "rank": 12,
-              "title": "上田と女がDEEPに吠える夜"
-            },
-            {
               "rank": 13,
               "title": "芸能人格付けチェック 秋の3時間半スペシャル"
             },
             {
               "rank": 14,
+              "title": "オモウマい店"
+            },
+            {
+              "rank": 15,
+              "title": "ザ！世界仰天ニュース"
+            },
+            {
+              "rank": 16,
               "title": "timeleszファミリア"
             }
           ]
@@ -4107,9 +4123,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 25,
-          "elapsedHour": 69,
-          "elapsedRank": 25,
+          "currentRank": 27,
+          "elapsedHour": 70,
+          "elapsedRank": 27,
           "currentPoints": [
             {
               "hour": 5,
@@ -4370,6 +4386,10 @@
             {
               "hour": 69,
               "rank": 25
+            },
+            {
+              "hour": 70,
+              "rank": 27
             }
           ],
           "previousPoints": [
@@ -4640,19 +4660,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 22,
-              "title": "Tokyo middle 30"
-            },
-            {
-              "rank": 23,
-              "title": "VIVANT"
-            },
-            {
               "rank": 24,
               "title": "芸能人格付けチェック 秋の3時間半スペシャル"
             },
             {
               "rank": 25,
+              "title": "オモウマい店"
+            },
+            {
+              "rank": 26,
+              "title": "ザ！世界仰天ニュース"
+            },
+            {
+              "rank": 27,
               "title": "timeleszファミリア"
             }
           ]
@@ -4662,7 +4682,7 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/30 11:07",
+      "updatedAt": "2026/09/30 12:07",
       "episodeId": "eptlyw7yfw",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！",
       "likes": "1.0万",
@@ -6861,7 +6881,7 @@
             },
             {
               "rank": 49,
-              "title": "リア突WEST.レボリューション"
+              "title": "アッコとジャンボ"
             },
             {
               "rank": 50,
@@ -7062,15 +7082,15 @@
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 49,
-              "title": "ポツンと一軒家"
+              "title": "クイズ！イケメンパラダイス"
             },
             {
               "rank": 50,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "EIGHT-JAM"
             }
           ]
         }
@@ -7079,7 +7099,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/30 11:07",
+      "updatedAt": "2026/09/30 12:07",
       "episodeId": "ep37rqemkc",
       "subtitle": "【珍英語を謎解き】900人vsこの曲英語でわかるかな",
       "likes": "1.4万",
@@ -8438,15 +8458,15 @@
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 49,
-              "title": "ポツンと一軒家"
+              "title": "クイズ！イケメンパラダイス"
             },
             {
               "rank": 50,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "EIGHT-JAM"
             }
           ]
         },
@@ -8679,11 +8699,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵コナン"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 48,
-              "title": "そこまで言って委員会NP"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
@@ -8691,7 +8711,7 @@
             },
             {
               "rank": 50,
-              "title": "マルコポロリ！"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         }
@@ -8700,7 +8720,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/30 11:07",
+      "updatedAt": "2026/09/30 12:07",
       "episodeId": "epxyf3j8s9",
       "subtitle": "芸能人アレルギー大検査SP…岡崎紗絵&ACEesが採血!衝撃結果",
       "likes": "7451",
@@ -9245,15 +9265,15 @@
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 49,
-              "title": "ポツンと一軒家"
+              "title": "クイズ！イケメンパラダイス"
             },
             {
               "rank": 50,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "EIGHT-JAM"
             }
           ]
         },
@@ -9473,11 +9493,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵コナン"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 48,
-              "title": "そこまで言って委員会NP"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
@@ -9485,7 +9505,7 @@
             },
             {
               "rank": 50,
-              "title": "マルコポロリ！"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         }
@@ -9494,10 +9514,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/09/30",
-      "updatedAt": "2026/09/30 11:07",
+      "updatedAt": "2026/09/30 12:07",
       "episodeId": "epo8onnz8t",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！新企画「出張 夜の音」",
-      "likes": "2373",
+      "likes": "2568",
       "favorites": "15.2万",
       "likePoints": [
         {
@@ -9539,6 +9559,10 @@
         {
           "hour": 10,
           "likes": 2373
+        },
+        {
+          "hour": 11,
+          "likes": 2568
         }
       ],
       "previousLikePoints": [
@@ -10364,15 +10388,15 @@
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 49,
-              "title": "ポツンと一軒家"
+              "title": "クイズ！イケメンパラダイス"
             },
             {
               "rank": 50,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "EIGHT-JAM"
             }
           ]
         },
@@ -10500,11 +10524,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵コナン"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 48,
-              "title": "そこまで言って委員会NP"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
@@ -10512,7 +10536,7 @@
             },
             {
               "rank": 50,
-              "title": "マルコポロリ！"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         }
@@ -10521,10 +10545,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/09/30 11:07",
+      "updatedAt": "2026/09/30 12:07",
       "episodeId": "ep7fkjfnnt",
       "subtitle": "第146回 水野美紀ら豪華あっち向いてホイでまさかの涙・・・",
-      "likes": "5258",
+      "likes": "5275",
       "favorites": "71.7万",
       "likePoints": [
         {
@@ -11010,6 +11034,10 @@
         {
           "hour": 131,
           "likes": 5258
+        },
+        {
+          "hour": 132,
+          "likes": 5275
         }
       ],
       "previousLikePoints": [
@@ -11968,15 +11996,15 @@
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 49,
-              "title": "ポツンと一軒家"
+              "title": "クイズ！イケメンパラダイス"
             },
             {
               "rank": 50,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "EIGHT-JAM"
             }
           ]
         },
@@ -12125,11 +12153,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵コナン"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 48,
-              "title": "そこまで言って委員会NP"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
@@ -12137,7 +12165,7 @@
             },
             {
               "rank": 50,
-              "title": "マルコポロリ！"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         }
@@ -12146,10 +12174,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/09/19",
-      "updatedAt": "2026/09/30 11:07",
+      "updatedAt": "2026/09/30 12:07",
       "episodeId": "ephhccb64t",
       "subtitle": "マッサマンvs秒で組体操（秘）おなら！SP",
-      "likes": "4216",
+      "likes": "4218",
       "favorites": "81.0万",
       "likePoints": [
         {
@@ -14033,15 +14061,15 @@
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 49,
-              "title": "ポツンと一軒家"
+              "title": "クイズ！イケメンパラダイス"
             },
             {
               "rank": 50,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "EIGHT-JAM"
             }
           ]
         },
@@ -14446,11 +14474,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵コナン"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 48,
-              "title": "そこまで言って委員会NP"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
@@ -14458,7 +14486,7 @@
             },
             {
               "rank": 50,
-              "title": "マルコポロリ！"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         }
@@ -14467,7 +14495,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/09/30 11:07",
+      "updatedAt": "2026/09/30 12:07",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
       "likes": "1.2万",
@@ -14486,11 +14514,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "秘密のケンミンSHOW極"
+              "title": "滝沢カレン＆和田明日香のフィーリンきっちん"
             },
             {
               "rank": 48,
-              "title": "ダグアウト!!!"
+              "title": "太田上田"
             },
             {
               "rank": 49,
@@ -14498,7 +14526,7 @@
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "ダグアウト!!!"
             }
           ]
         },
@@ -14517,15 +14545,15 @@
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 49,
-              "title": "ポツンと一軒家"
+              "title": "クイズ！イケメンパラダイス"
             },
             {
               "rank": 50,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "EIGHT-JAM"
             }
           ]
         }
@@ -14534,7 +14562,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/30 11:07",
+      "updatedAt": "2026/09/30 12:07",
       "episodeId": "epnqu504ur",
       "subtitle": "第11話 二人がたどり着く最後の余韻・・・出会えてよかった",
       "likes": "1.8万",
@@ -16769,19 +16797,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ボーダーズ 警視庁特殊事件対策班"
-            },
-            {
-              "rank": 48,
               "title": "ダンダリン 労働基準監督官"
             },
             {
+              "rank": 48,
+              "title": "私 結婚できないんじゃなくて､しないんです"
+            },
+            {
               "rank": 49,
-              "title": "中国ドラマ「溥儀の料理番～紫禁城 最後の日々」"
+              "title": "中国時代劇「武則天-The Empress-」"
             },
             {
               "rank": 50,
-              "title": "中国ドラマ「華の出陣～麗将・阿麦の仇討～」"
+              "title": "私があなたといる理由"
             }
           ]
         },
@@ -18126,11 +18154,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵コナン"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 48,
-              "title": "そこまで言って委員会NP"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
@@ -18138,7 +18166,7 @@
             },
             {
               "rank": 50,
-              "title": "マルコポロリ！"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         }
@@ -18147,7 +18175,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/22",
-      "updatedAt": "2026/09/30 11:07",
+      "updatedAt": "2026/09/30 12:07",
       "episodeId": "epc4m7onou",
       "subtitle": "ねづっち24時／マジック講座",
       "likes": "1.2万",
@@ -19830,11 +19858,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "秘密のケンミンSHOW極"
+              "title": "滝沢カレン＆和田明日香のフィーリンきっちん"
             },
             {
               "rank": 48,
-              "title": "ダグアウト!!!"
+              "title": "太田上田"
             },
             {
               "rank": 49,
@@ -19842,7 +19870,7 @@
             },
             {
               "rank": 50,
-              "title": "テレビ×ミセス"
+              "title": "ダグアウト!!!"
             }
           ]
         },
@@ -20051,15 +20079,15 @@
             },
             {
               "rank": 48,
-              "title": "EIGHT-JAM"
+              "title": "帰れマンデー見っけ隊!!"
             },
             {
               "rank": 49,
-              "title": "ポツンと一軒家"
+              "title": "クイズ！イケメンパラダイス"
             },
             {
               "rank": 50,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "EIGHT-JAM"
             }
           ]
         }
@@ -20068,7 +20096,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/09/30 11:07",
+      "updatedAt": "2026/09/30 12:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "316",
@@ -20087,19 +20115,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ボーダーズ 警視庁特殊事件対策班"
-            },
-            {
-              "rank": 48,
               "title": "ダンダリン 労働基準監督官"
             },
             {
+              "rank": 48,
+              "title": "私 結婚できないんじゃなくて､しないんです"
+            },
+            {
               "rank": 49,
-              "title": "中国ドラマ「溥儀の料理番～紫禁城 最後の日々」"
+              "title": "中国時代劇「武則天-The Empress-」"
             },
             {
               "rank": 50,
-              "title": "中国ドラマ「華の出陣～麗将・阿麦の仇討～」"
+              "title": "私があなたといる理由"
             }
           ]
         },
@@ -20114,11 +20142,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "名探偵コナン"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 48,
-              "title": "そこまで言って委員会NP"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
@@ -20126,7 +20154,7 @@
             },
             {
               "rank": 50,
-              "title": "マルコポロリ！"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         }
