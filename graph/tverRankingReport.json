@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/09/30 20:07",
+  "updatedAt": "2026/09/30 21:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/09/30 20:07",
+      "updatedAt": "2026/09/30 21:07",
       "episodeId": "ep5y408jx8",
       "subtitle": "新企画！芸能人どハマりグルメ「ベストバイプライスマン」",
       "likes": "2.6万",
@@ -457,6 +457,10 @@
         {
           "hour": 118,
           "likes": 26000
+        },
+        {
+          "hour": 119,
+          "likes": 26000
         }
       ],
       "previousLikePoints": [
@@ -817,9 +821,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
+          "currentRank": 50,
+          "elapsedHour": 119,
+          "elapsedRank": 50,
           "currentPoints": [
             {
               "hour": 2,
@@ -1284,6 +1288,10 @@
             {
               "hour": 117,
               "rank": 50
+            },
+            {
+              "hour": 119,
+              "rank": 50
             }
           ],
           "previousPoints": [
@@ -1747,19 +1755,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 48,
-              "title": "にけつッ!!"
-            },
-            {
-              "rank": 49,
               "title": "かまいたちの机上の空論城"
             },
             {
+              "rank": 48,
+              "title": "これ余談なんですけど・・・"
+            },
+            {
+              "rank": 49,
+              "title": "かまいガチ"
+            },
+            {
               "rank": 50,
-              "title": "マツコの知らない世界"
+              "title": "タイムレスマン"
             }
           ]
         },
@@ -2460,19 +2468,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "おしゃれクリップ"
+              "title": "キョコロヒー"
             },
             {
               "rank": 48,
-              "title": "キスは捜査のあとで"
-            },
-            {
-              "rank": 49,
               "title": "かまいたちの知らんけど"
             },
             {
+              "rank": 49,
+              "title": "秋の新ドラマ予告集めました！"
+            },
+            {
               "rank": 50,
-              "title": "深夜のダイアン"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             }
           ]
         }
@@ -2481,7 +2489,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/09/27",
-      "updatedAt": "2026/09/30 20:07",
+      "updatedAt": "2026/09/30 21:07",
       "episodeId": "ep60pgu2w9",
       "subtitle": "【熱海SP】日本一絶品BBQ&絶景花火パフォーマンス",
       "likes": "2.2万",
@@ -2781,6 +2789,10 @@
         },
         {
           "hour": 78,
+          "likes": 22000
+        },
+        {
+          "hour": 79,
           "likes": 22000
         }
       ],
@@ -3406,9 +3418,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 29,
-          "elapsedHour": 78,
-          "elapsedRank": 29,
+          "currentRank": 30,
+          "elapsedHour": 79,
+          "elapsedRank": 30,
           "currentPoints": [
             {
               "hour": 4,
@@ -3709,6 +3721,10 @@
             {
               "hour": 78,
               "rank": 29
+            },
+            {
+              "hour": 79,
+              "rank": 30
             }
           ],
           "previousPoints": [
@@ -4227,12 +4243,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 26,
-              "title": "芸能人格付けチェック 秋の3時間半スペシャル"
-            },
-            {
               "rank": 27,
-              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
+              "title": "VIVANT 悪役会議室"
             },
             {
               "rank": 28,
@@ -4240,6 +4252,10 @@
             },
             {
               "rank": 29,
+              "title": "深夜のダイアン"
+            },
+            {
+              "rank": 30,
               "title": "timeleszファミリア"
             }
           ]
@@ -4247,9 +4263,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 41,
-          "elapsedHour": 78,
-          "elapsedRank": 41,
+          "currentRank": 43,
+          "elapsedHour": 79,
+          "elapsedRank": 43,
           "currentPoints": [
             {
               "hour": 5,
@@ -4546,6 +4562,10 @@
             {
               "hour": 78,
               "rank": 41
+            },
+            {
+              "hour": 79,
+              "rank": 43
             }
           ],
           "previousPoints": [
@@ -4816,19 +4836,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 38,
-              "title": "芸能人格付けチェック 秋の3時間半スペシャル"
-            },
-            {
-              "rank": 39,
-              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
-            },
-            {
               "rank": 40,
-              "title": "クイズ！イケメンパラダイス"
+              "title": "VIVANT 悪役会議室"
             },
             {
               "rank": 41,
+              "title": "クイズ！イケメンパラダイス"
+            },
+            {
+              "rank": 42,
+              "title": "深夜のダイアン"
+            },
+            {
+              "rank": 43,
               "title": "timeleszファミリア"
             }
           ]
@@ -4838,7 +4858,7 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/30 20:07",
+      "updatedAt": "2026/09/30 21:07",
       "episodeId": "eptlyw7yfw",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！",
       "likes": "1.0万",
@@ -7029,7 +7049,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "Hello! Music Lab。"
+              "title": "華丸・大吉のなんしようと？"
             },
             {
               "rank": 48,
@@ -7037,11 +7057,11 @@
             },
             {
               "rank": 49,
-              "title": "加登presents はかねこ日記～あの日の続き～"
+              "title": "ニノなのに"
             },
             {
               "rank": 50,
-              "title": "１×８いこうよ！"
+              "title": "ヒロシのぼっちキャンプ Season13"
             }
           ]
         },
@@ -7234,19 +7254,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 48,
-              "title": "にけつッ!!"
-            },
-            {
-              "rank": 49,
               "title": "かまいたちの机上の空論城"
             },
             {
+              "rank": 48,
+              "title": "これ余談なんですけど・・・"
+            },
+            {
+              "rank": 49,
+              "title": "かまいガチ"
+            },
+            {
               "rank": 50,
-              "title": "マツコの知らない世界"
+              "title": "タイムレスマン"
             }
           ]
         }
@@ -7255,7 +7275,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/30 20:07",
+      "updatedAt": "2026/09/30 21:07",
       "episodeId": "ep37rqemkc",
       "subtitle": "【珍英語を謎解き】900人vsこの曲英語でわかるかな",
       "likes": "1.4万",
@@ -8610,19 +8630,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 48,
-              "title": "にけつッ!!"
-            },
-            {
-              "rank": 49,
               "title": "かまいたちの机上の空論城"
             },
             {
+              "rank": 48,
+              "title": "これ余談なんですけど・・・"
+            },
+            {
+              "rank": 49,
+              "title": "かまいガチ"
+            },
+            {
               "rank": 50,
-              "title": "マツコの知らない世界"
+              "title": "タイムレスマン"
             }
           ]
         },
@@ -8855,19 +8875,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "おしゃれクリップ"
+              "title": "キョコロヒー"
             },
             {
               "rank": 48,
-              "title": "キスは捜査のあとで"
-            },
-            {
-              "rank": 49,
               "title": "かまいたちの知らんけど"
             },
             {
+              "rank": 49,
+              "title": "秋の新ドラマ予告集めました！"
+            },
+            {
               "rank": 50,
-              "title": "深夜のダイアン"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             }
           ]
         }
@@ -8876,7 +8896,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/30 20:07",
+      "updatedAt": "2026/09/30 21:07",
       "episodeId": "epxyf3j8s9",
       "subtitle": "芸能人アレルギー大検査SP…岡崎紗絵&ACEesが採血!衝撃結果",
       "likes": "7451",
@@ -9417,19 +9437,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 48,
-              "title": "にけつッ!!"
-            },
-            {
-              "rank": 49,
               "title": "かまいたちの机上の空論城"
             },
             {
+              "rank": 48,
+              "title": "これ余談なんですけど・・・"
+            },
+            {
+              "rank": 49,
+              "title": "かまいガチ"
+            },
+            {
               "rank": 50,
-              "title": "マツコの知らない世界"
+              "title": "タイムレスマン"
             }
           ]
         },
@@ -9649,19 +9669,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "おしゃれクリップ"
+              "title": "キョコロヒー"
             },
             {
               "rank": 48,
-              "title": "キスは捜査のあとで"
-            },
-            {
-              "rank": 49,
               "title": "かまいたちの知らんけど"
             },
             {
+              "rank": 49,
+              "title": "秋の新ドラマ予告集めました！"
+            },
+            {
               "rank": 50,
-              "title": "深夜のダイアン"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             }
           ]
         }
@@ -9670,10 +9690,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/09/30",
-      "updatedAt": "2026/09/30 20:07",
+      "updatedAt": "2026/09/30 21:07",
       "episodeId": "epo8onnz8t",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！新企画「出張 夜の音」",
-      "likes": "3572",
+      "likes": "3708",
       "favorites": "15.3万",
       "likePoints": [
         {
@@ -9743,6 +9763,10 @@
         {
           "hour": 19,
           "likes": 3572
+        },
+        {
+          "hour": 20,
+          "likes": 3708
         }
       ],
       "previousLikePoints": [
@@ -10355,9 +10379,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 27,
-          "elapsedHour": 19,
-          "elapsedRank": 27,
+          "currentRank": 26,
+          "elapsedHour": 20,
+          "elapsedRank": 26,
           "currentPoints": [
             {
               "hour": 12,
@@ -10390,6 +10414,10 @@
             {
               "hour": 19,
               "rank": 27
+            },
+            {
+              "hour": 20,
+              "rank": 26
             }
           ],
           "previousPoints": [
@@ -10596,19 +10624,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 24,
+              "rank": 23,
               "title": "開運！なんでも鑑定団"
             },
             {
-              "rank": 25,
+              "rank": 24,
               "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
             },
             {
-              "rank": 26,
+              "rank": 25,
               "title": "芸能人格付けチェック 秋の3時間半スペシャル"
             },
             {
-              "rank": 27,
+              "rank": 26,
               "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
@@ -10617,7 +10645,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 39,
-          "elapsedHour": 19,
+          "elapsedHour": 20,
           "elapsedRank": 39,
           "currentPoints": [
             {
@@ -10626,6 +10654,10 @@
             },
             {
               "hour": 19,
+              "rank": 39
+            },
+            {
+              "hour": 20,
               "rank": 39
             }
           ],
@@ -10746,11 +10778,11 @@
           "nearbyRanking": [
             {
               "rank": 36,
-              "title": "開運！なんでも鑑定団"
+              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
             },
             {
               "rank": 37,
-              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
+              "title": "アンナチュラル"
             },
             {
               "rank": 38,
@@ -10767,10 +10799,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/09/30 20:07",
+      "updatedAt": "2026/09/30 21:07",
       "episodeId": "ep7fkjfnnt",
       "subtitle": "第146回 水野美紀ら豪華あっち向いてホイでまさかの涙・・・",
-      "likes": "5360",
+      "likes": "5375",
       "favorites": "71.7万",
       "likePoints": [
         {
@@ -11292,6 +11324,10 @@
         {
           "hour": 140,
           "likes": 5360
+        },
+        {
+          "hour": 141,
+          "likes": 5375
         }
       ],
       "previousLikePoints": [
@@ -12246,19 +12282,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 48,
-              "title": "にけつッ!!"
-            },
-            {
-              "rank": 49,
               "title": "かまいたちの机上の空論城"
             },
             {
+              "rank": 48,
+              "title": "これ余談なんですけど・・・"
+            },
+            {
+              "rank": 49,
+              "title": "かまいガチ"
+            },
+            {
               "rank": 50,
-              "title": "マツコの知らない世界"
+              "title": "タイムレスマン"
             }
           ]
         },
@@ -12407,19 +12443,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "おしゃれクリップ"
+              "title": "キョコロヒー"
             },
             {
               "rank": 48,
-              "title": "キスは捜査のあとで"
-            },
-            {
-              "rank": 49,
               "title": "かまいたちの知らんけど"
             },
             {
+              "rank": 49,
+              "title": "秋の新ドラマ予告集めました！"
+            },
+            {
               "rank": 50,
-              "title": "深夜のダイアン"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             }
           ]
         }
@@ -12428,10 +12464,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/09/19",
-      "updatedAt": "2026/09/30 20:07",
+      "updatedAt": "2026/09/30 21:07",
       "episodeId": "ephhccb64t",
       "subtitle": "マッサマンvs秒で組体操（秘）おなら！SP",
-      "likes": "4238",
+      "likes": "4250",
       "favorites": "81.0万",
       "likePoints": [
         {
@@ -14311,19 +14347,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 48,
-              "title": "にけつッ!!"
-            },
-            {
-              "rank": 49,
               "title": "かまいたちの机上の空論城"
             },
             {
+              "rank": 48,
+              "title": "これ余談なんですけど・・・"
+            },
+            {
+              "rank": 49,
+              "title": "かまいガチ"
+            },
+            {
               "rank": 50,
-              "title": "マツコの知らない世界"
+              "title": "タイムレスマン"
             }
           ]
         },
@@ -14728,19 +14764,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "おしゃれクリップ"
+              "title": "キョコロヒー"
             },
             {
               "rank": 48,
-              "title": "キスは捜査のあとで"
-            },
-            {
-              "rank": 49,
               "title": "かまいたちの知らんけど"
             },
             {
+              "rank": 49,
+              "title": "秋の新ドラマ予告集めました！"
+            },
+            {
               "rank": 50,
-              "title": "深夜のダイアン"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             }
           ]
         }
@@ -14749,7 +14785,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/09/30 20:07",
+      "updatedAt": "2026/09/30 21:07",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
       "likes": "1.2万",
@@ -14768,7 +14804,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ニノなのに"
+              "title": "あのちゃんの電電電波"
             },
             {
               "rank": 48,
@@ -14776,7 +14812,7 @@
             },
             {
               "rank": 49,
-              "title": "アベレー女 比べたがるオンナたち"
+              "title": "さらばのこの本ダレが書いとんねん！"
             },
             {
               "rank": 50,
@@ -14795,19 +14831,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 48,
-              "title": "にけつッ!!"
-            },
-            {
-              "rank": 49,
               "title": "かまいたちの机上の空論城"
             },
             {
+              "rank": 48,
+              "title": "これ余談なんですけど・・・"
+            },
+            {
+              "rank": 49,
+              "title": "かまいガチ"
+            },
+            {
               "rank": 50,
-              "title": "マツコの知らない世界"
+              "title": "タイムレスマン"
             }
           ]
         }
@@ -14816,7 +14852,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/30 20:07",
+      "updatedAt": "2026/09/30 21:07",
       "episodeId": "epnqu504ur",
       "subtitle": "第11話 二人がたどり着く最後の余韻・・・出会えてよかった",
       "likes": "1.8万",
@@ -17051,19 +17087,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "kiDnap GAME"
+              "title": "韓国ドラマ「メンコン 史上最高の私！」"
             },
             {
               "rank": 48,
-              "title": "中国ドラマ「溥儀の料理番～紫禁城 最後の日々」"
+              "title": "ワカコ酒 Season4"
             },
             {
               "rank": 49,
-              "title": "まだ結婚できない男"
+              "title": "危険なビーナス"
             },
             {
               "rank": 50,
-              "title": "振り返れば奴がいる"
+              "title": "kiDnap GAME"
             }
           ]
         },
@@ -18408,19 +18444,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "おしゃれクリップ"
+              "title": "キョコロヒー"
             },
             {
               "rank": 48,
-              "title": "キスは捜査のあとで"
-            },
-            {
-              "rank": 49,
               "title": "かまいたちの知らんけど"
             },
             {
+              "rank": 49,
+              "title": "秋の新ドラマ予告集めました！"
+            },
+            {
               "rank": 50,
-              "title": "深夜のダイアン"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             }
           ]
         }
@@ -18429,7 +18465,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/22",
-      "updatedAt": "2026/09/30 20:07",
+      "updatedAt": "2026/09/30 21:07",
       "episodeId": "epc4m7onou",
       "subtitle": "ねづっち24時／マジック講座",
       "likes": "1.2万",
@@ -20112,7 +20148,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ニノなのに"
+              "title": "あのちゃんの電電電波"
             },
             {
               "rank": 48,
@@ -20120,7 +20156,7 @@
             },
             {
               "rank": 49,
-              "title": "アベレー女 比べたがるオンナたち"
+              "title": "さらばのこの本ダレが書いとんねん！"
             },
             {
               "rank": 50,
@@ -20329,19 +20365,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 48,
-              "title": "にけつッ!!"
-            },
-            {
-              "rank": 49,
               "title": "かまいたちの机上の空論城"
             },
             {
+              "rank": 48,
+              "title": "これ余談なんですけど・・・"
+            },
+            {
+              "rank": 49,
+              "title": "かまいガチ"
+            },
+            {
               "rank": 50,
-              "title": "マツコの知らない世界"
+              "title": "タイムレスマン"
             }
           ]
         }
@@ -20350,7 +20386,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/09/30 20:07",
+      "updatedAt": "2026/09/30 21:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "323",
@@ -20369,19 +20405,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "kiDnap GAME"
+              "title": "韓国ドラマ「メンコン 史上最高の私！」"
             },
             {
               "rank": 48,
-              "title": "中国ドラマ「溥儀の料理番～紫禁城 最後の日々」"
+              "title": "ワカコ酒 Season4"
             },
             {
               "rank": 49,
-              "title": "まだ結婚できない男"
+              "title": "危険なビーナス"
             },
             {
               "rank": 50,
-              "title": "振り返れば奴がいる"
+              "title": "kiDnap GAME"
             }
           ]
         },
@@ -20396,19 +20432,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "おしゃれクリップ"
+              "title": "キョコロヒー"
             },
             {
               "rank": 48,
-              "title": "キスは捜査のあとで"
-            },
-            {
-              "rank": 49,
               "title": "かまいたちの知らんけど"
             },
             {
+              "rank": 49,
+              "title": "秋の新ドラマ予告集めました！"
+            },
+            {
               "rank": 50,
-              "title": "深夜のダイアン"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             }
           ]
         }
