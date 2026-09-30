@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/09/30 19:07",
+  "updatedAt": "2026/09/30 20:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/09/30 19:07",
+      "updatedAt": "2026/09/30 20:07",
       "episodeId": "ep5y408jx8",
       "subtitle": "新企画！芸能人どハマりグルメ「ベストバイプライスマン」",
       "likes": "2.6万",
@@ -453,6 +453,10 @@
         {
           "hour": 117,
           "likes": 26000
+        },
+        {
+          "hour": 118,
+          "likes": 26000
         }
       ],
       "previousLikePoints": [
@@ -813,9 +817,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 50,
-          "elapsedHour": 117,
-          "elapsedRank": 50,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 2,
@@ -1747,15 +1751,15 @@
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "にけつッ!!"
             },
             {
               "rank": 49,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "マツコの知らない世界"
             }
           ]
         },
@@ -2456,19 +2460,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの知らんけど"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "クイズ！イケメンパラダイス"
+              "title": "キスは捜査のあとで"
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "深夜のダイアン"
             }
           ]
         }
@@ -2477,7 +2481,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/09/27",
-      "updatedAt": "2026/09/30 19:07",
+      "updatedAt": "2026/09/30 20:07",
       "episodeId": "ep60pgu2w9",
       "subtitle": "【熱海SP】日本一絶品BBQ&絶景花火パフォーマンス",
       "likes": "2.2万",
@@ -2773,6 +2777,10 @@
         },
         {
           "hour": 77,
+          "likes": 22000
+        },
+        {
+          "hour": 78,
           "likes": 22000
         }
       ],
@@ -3398,9 +3406,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 26,
-          "elapsedHour": 77,
-          "elapsedRank": 26,
+          "currentRank": 29,
+          "elapsedHour": 78,
+          "elapsedRank": 29,
           "currentPoints": [
             {
               "hour": 4,
@@ -3697,6 +3705,10 @@
             {
               "hour": 77,
               "rank": 26
+            },
+            {
+              "hour": 78,
+              "rank": 29
             }
           ],
           "previousPoints": [
@@ -4215,19 +4227,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 23,
-              "title": "Aぇ! groupのQ＆Aぇ!"
-            },
-            {
-              "rank": 24,
-              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
-            },
-            {
-              "rank": 25,
-              "title": "開運！なんでも鑑定団"
-            },
-            {
               "rank": 26,
+              "title": "芸能人格付けチェック 秋の3時間半スペシャル"
+            },
+            {
+              "rank": 27,
+              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
+            },
+            {
+              "rank": 28,
+              "title": "クイズ！イケメンパラダイス"
+            },
+            {
+              "rank": 29,
               "title": "timeleszファミリア"
             }
           ]
@@ -4235,9 +4247,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 38,
-          "elapsedHour": 77,
-          "elapsedRank": 38,
+          "currentRank": 41,
+          "elapsedHour": 78,
+          "elapsedRank": 41,
           "currentPoints": [
             {
               "hour": 5,
@@ -4530,6 +4542,10 @@
             {
               "hour": 77,
               "rank": 38
+            },
+            {
+              "hour": 78,
+              "rank": 41
             }
           ],
           "previousPoints": [
@@ -4800,19 +4816,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 35,
-              "title": "Aぇ! groupのQ＆Aぇ!"
-            },
-            {
-              "rank": 36,
-              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
-            },
-            {
-              "rank": 37,
-              "title": "開運！なんでも鑑定団"
-            },
-            {
               "rank": 38,
+              "title": "芸能人格付けチェック 秋の3時間半スペシャル"
+            },
+            {
+              "rank": 39,
+              "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
+            },
+            {
+              "rank": 40,
+              "title": "クイズ！イケメンパラダイス"
+            },
+            {
+              "rank": 41,
               "title": "timeleszファミリア"
             }
           ]
@@ -4822,7 +4838,7 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/30 19:07",
+      "updatedAt": "2026/09/30 20:07",
       "episodeId": "eptlyw7yfw",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！",
       "likes": "1.0万",
@@ -7013,7 +7029,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "華丸・大吉のなんしようと？"
+              "title": "Hello! Music Lab。"
             },
             {
               "rank": 48,
@@ -7025,7 +7041,7 @@
             },
             {
               "rank": 50,
-              "title": "河合＆A.B.C-Z塚田×福井アナ「なんでやねん！？」"
+              "title": "１×８いこうよ！"
             }
           ]
         },
@@ -7222,15 +7238,15 @@
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "にけつッ!!"
             },
             {
               "rank": 49,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "マツコの知らない世界"
             }
           ]
         }
@@ -7239,7 +7255,7 @@
     "srkdvb9xtyj": {
       "programTitle": "ニカゲーム",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/30 19:07",
+      "updatedAt": "2026/09/30 20:07",
       "episodeId": "ep37rqemkc",
       "subtitle": "【珍英語を謎解き】900人vsこの曲英語でわかるかな",
       "likes": "1.4万",
@@ -8598,15 +8614,15 @@
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "にけつッ!!"
             },
             {
               "rank": 49,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "マツコの知らない世界"
             }
           ]
         },
@@ -8839,19 +8855,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの知らんけど"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "クイズ！イケメンパラダイス"
+              "title": "キスは捜査のあとで"
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "深夜のダイアン"
             }
           ]
         }
@@ -8860,7 +8876,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/09/30 19:07",
+      "updatedAt": "2026/09/30 20:07",
       "episodeId": "epxyf3j8s9",
       "subtitle": "芸能人アレルギー大検査SP…岡崎紗絵&ACEesが採血!衝撃結果",
       "likes": "7451",
@@ -9405,15 +9421,15 @@
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "にけつッ!!"
             },
             {
               "rank": 49,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "マツコの知らない世界"
             }
           ]
         },
@@ -9633,19 +9649,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの知らんけど"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "クイズ！イケメンパラダイス"
+              "title": "キスは捜査のあとで"
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "深夜のダイアン"
             }
           ]
         }
@@ -9654,10 +9670,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/09/30",
-      "updatedAt": "2026/09/30 19:07",
+      "updatedAt": "2026/09/30 20:07",
       "episodeId": "epo8onnz8t",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！新企画「出張 夜の音」",
-      "likes": "3432",
+      "likes": "3572",
       "favorites": "15.3万",
       "likePoints": [
         {
@@ -9723,6 +9739,10 @@
         {
           "hour": 18,
           "likes": 3432
+        },
+        {
+          "hour": 19,
+          "likes": 3572
         }
       ],
       "previousLikePoints": [
@@ -10335,9 +10355,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 32,
-          "elapsedHour": 18,
-          "elapsedRank": 32,
+          "currentRank": 27,
+          "elapsedHour": 19,
+          "elapsedRank": 27,
           "currentPoints": [
             {
               "hour": 12,
@@ -10366,6 +10386,10 @@
             {
               "hour": 18,
               "rank": 32
+            },
+            {
+              "hour": 19,
+              "rank": 27
             }
           ],
           "previousPoints": [
@@ -10572,19 +10596,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 29,
-              "title": "キョコロヒー"
+              "rank": 24,
+              "title": "開運！なんでも鑑定団"
             },
             {
-              "rank": 30,
-              "title": "突然ですが占ってもいいですか？"
+              "rank": 25,
+              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
             },
             {
-              "rank": 31,
-              "title": "おしゃれクリップ"
+              "rank": 26,
+              "title": "芸能人格付けチェック 秋の3時間半スペシャル"
             },
             {
-              "rank": 32,
+              "rank": 27,
               "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
@@ -10592,13 +10616,17 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 45,
-          "elapsedHour": 18,
-          "elapsedRank": 45,
+          "currentRank": 39,
+          "elapsedHour": 19,
+          "elapsedRank": 39,
           "currentPoints": [
             {
               "hour": 18,
               "rank": 45
+            },
+            {
+              "hour": 19,
+              "rank": 39
             }
           ],
           "previousPoints": [
@@ -10717,19 +10745,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 42,
-              "title": "突然ですが占ってもいいですか？"
+              "rank": 36,
+              "title": "開運！なんでも鑑定団"
             },
             {
-              "rank": 43,
-              "title": "キスは捜査のあとで"
+              "rank": 37,
+              "title": "世界が騒然！本当にあった(秘)衝撃ファイル"
             },
             {
-              "rank": 44,
-              "title": "おしゃれクリップ"
+              "rank": 38,
+              "title": "芸能人格付けチェック 秋の3時間半スペシャル"
             },
             {
-              "rank": 45,
+              "rank": 39,
               "title": "夜の音 -TOKYO MIDNIGHT MUSIC-"
             }
           ]
@@ -10739,10 +10767,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/09/30 19:07",
+      "updatedAt": "2026/09/30 20:07",
       "episodeId": "ep7fkjfnnt",
       "subtitle": "第146回 水野美紀ら豪華あっち向いてホイでまさかの涙・・・",
-      "likes": "5346",
+      "likes": "5360",
       "favorites": "71.7万",
       "likePoints": [
         {
@@ -11260,6 +11288,10 @@
         {
           "hour": 139,
           "likes": 5346
+        },
+        {
+          "hour": 140,
+          "likes": 5360
         }
       ],
       "previousLikePoints": [
@@ -12218,15 +12250,15 @@
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "にけつッ!!"
             },
             {
               "rank": 49,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "マツコの知らない世界"
             }
           ]
         },
@@ -12375,19 +12407,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの知らんけど"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "クイズ！イケメンパラダイス"
+              "title": "キスは捜査のあとで"
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "深夜のダイアン"
             }
           ]
         }
@@ -12396,10 +12428,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/09/19",
-      "updatedAt": "2026/09/30 19:07",
+      "updatedAt": "2026/09/30 20:07",
       "episodeId": "ephhccb64t",
       "subtitle": "マッサマンvs秒で組体操（秘）おなら！SP",
-      "likes": "4237",
+      "likes": "4238",
       "favorites": "81.0万",
       "likePoints": [
         {
@@ -14283,15 +14315,15 @@
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "にけつッ!!"
             },
             {
               "rank": 49,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "マツコの知らない世界"
             }
           ]
         },
@@ -14696,19 +14728,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの知らんけど"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "クイズ！イケメンパラダイス"
+              "title": "キスは捜査のあとで"
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "深夜のダイアン"
             }
           ]
         }
@@ -14717,7 +14749,7 @@
     "srdsx5l9uq": {
       "programTitle": "ふぉ〜ゆ〜って、だれ？",
       "broadcastDate": "2026/08/28",
-      "updatedAt": "2026/09/30 19:07",
+      "updatedAt": "2026/09/30 20:07",
       "episodeId": "ephnebzf2c",
       "subtitle": "最終回！武道館ライブ＆CDデビュー発表の裏側に密着",
       "likes": "1.2万",
@@ -14736,19 +14768,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 48,
-              "title": "映画「マッチングTRUE LOVE」公開記念！真実の愛を試す！恋リア地獄考察SP"
-            },
-            {
-              "rank": 49,
               "title": "ニノなのに"
             },
             {
-              "rank": 50,
+              "rank": 48,
+              "title": "THE突破ファイル"
+            },
+            {
+              "rank": 49,
               "title": "アベレー女 比べたがるオンナたち"
+            },
+            {
+              "rank": 50,
+              "title": "なるみ・岡村の過ぎるＴＶ"
             }
           ]
         },
@@ -14767,15 +14799,15 @@
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "にけつッ!!"
             },
             {
               "rank": 49,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "マツコの知らない世界"
             }
           ]
         }
@@ -14784,7 +14816,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/09/30 19:07",
+      "updatedAt": "2026/09/30 20:07",
       "episodeId": "epnqu504ur",
       "subtitle": "第11話 二人がたどり着く最後の余韻・・・出会えてよかった",
       "likes": "1.8万",
@@ -17019,19 +17051,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "転校生ナノ"
+              "title": "kiDnap GAME"
             },
             {
               "rank": 48,
-              "title": "振り返れば奴がいる"
+              "title": "中国ドラマ「溥儀の料理番～紫禁城 最後の日々」"
             },
             {
               "rank": 49,
-              "title": "中国時代劇「蜀紅錦～紡がれる夢～」"
+              "title": "まだ結婚できない男"
             },
             {
               "rank": 50,
-              "title": "韓国ドラマ「イブの罠」"
+              "title": "振り返れば奴がいる"
             }
           ]
         },
@@ -18376,19 +18408,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの知らんけど"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "クイズ！イケメンパラダイス"
+              "title": "キスは捜査のあとで"
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "深夜のダイアン"
             }
           ]
         }
@@ -18397,7 +18429,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/22",
-      "updatedAt": "2026/09/30 19:07",
+      "updatedAt": "2026/09/30 20:07",
       "episodeId": "epc4m7onou",
       "subtitle": "ねづっち24時／マジック講座",
       "likes": "1.2万",
@@ -20080,19 +20112,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE突破ファイル"
-            },
-            {
-              "rank": 48,
-              "title": "映画「マッチングTRUE LOVE」公開記念！真実の愛を試す！恋リア地獄考察SP"
-            },
-            {
-              "rank": 49,
               "title": "ニノなのに"
             },
             {
-              "rank": 50,
+              "rank": 48,
+              "title": "THE突破ファイル"
+            },
+            {
+              "rank": 49,
               "title": "アベレー女 比べたがるオンナたち"
+            },
+            {
+              "rank": 50,
+              "title": "なるみ・岡村の過ぎるＴＶ"
             }
           ]
         },
@@ -20301,15 +20333,15 @@
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "にけつッ!!"
             },
             {
               "rank": 49,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 50,
-              "title": "タイムレスマン"
+              "title": "マツコの知らない世界"
             }
           ]
         }
@@ -20318,10 +20350,10 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/09/30 19:07",
+      "updatedAt": "2026/09/30 20:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
-      "likes": "321",
+      "likes": "323",
       "favorites": "16.4万",
       "likePoints": [],
       "previousLikePoints": [],
@@ -20337,19 +20369,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "転校生ナノ"
+              "title": "kiDnap GAME"
             },
             {
               "rank": 48,
-              "title": "振り返れば奴がいる"
+              "title": "中国ドラマ「溥儀の料理番～紫禁城 最後の日々」"
             },
             {
               "rank": 49,
-              "title": "中国時代劇「蜀紅錦～紡がれる夢～」"
+              "title": "まだ結婚できない男"
             },
             {
               "rank": 50,
-              "title": "韓国ドラマ「イブの罠」"
+              "title": "振り返れば奴がいる"
             }
           ]
         },
@@ -20364,19 +20396,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいたちの知らんけど"
+              "title": "おしゃれクリップ"
             },
             {
               "rank": 48,
-              "title": "クイズ！イケメンパラダイス"
+              "title": "キスは捜査のあとで"
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "深夜のダイアン"
             }
           ]
         }
