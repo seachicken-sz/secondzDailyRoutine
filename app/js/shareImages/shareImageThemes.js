@@ -128,25 +128,6 @@ const SHARE_IMAGE_THEMES = {
     ],
     characterComment:'PROMISE'
   },
-  yellow: {
-    main: "#d9ad00",
-    pale: "#fffdf0",
-    dusty: "#d8c58f",
-    line: "#eee4c2",
-    dream: "#fff0aa",
-    dreamSecond: "#ffd8c7",
-    paper: "#fff7e6",
-    paperSecond: "#fffdf8",
-    ink: "#3f332f",
-    mutedInk: "#897d5f",
-    photoBg: "#f6e3a4",
-    shadow: "rgba(86, 68, 28, 0.15)",
-    characterImagePaths: [
-      "../img/shareImg/character/yellow-01.png",
-      "../img/shareImg/character/yellow-02.png"
-    ],
-    characterComment:'DREAM'
-  },
   white: {
     main: "#b8b8b8",
     pale: "#ffffff",
