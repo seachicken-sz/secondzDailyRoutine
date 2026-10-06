@@ -436,6 +436,7 @@ function resetRoutineProgressState() {
   // 途中再開保存を、今回の開始時に再有効化する
   state.isFlowStateSaveDisabled = false;
   
+  state.myCustomFlow = null;
   state.selectedSong = null;
 
   state.selectedOnceTasks = [];
@@ -617,7 +618,10 @@ async function showFirstSelectModeStep() {
   await showSelectModeDailyPartWithoutUsen();
 }
 
-async function advanceRoutineFrom(completedStep) {
+async function advanceRoutineFrom(completedStep, skipMyCustom = false) {
+  if (!skipMyCustom && (completedStep === "spotify" || completedStep === "onceTask")) {
+    return runMyCustomTasks(completedStep === "spotify" ? "afterSpotify" : "afterLimited", completedStep);
+  }
   // 通常モード
   if (!isSelectRoutine()) {
     if (completedStep === "spotify") {
@@ -641,7 +645,7 @@ async function advanceRoutineFrom(completedStep) {
     }
 
     if (completedStep === "daily") {
-      showPostAskStep();
+      runMyCustomTasks("afterDaily", "afterDaily");
     }
 
     return;
@@ -748,13 +752,13 @@ function finishRoutineAfterDaily() {
     return;
   }
 
-  showPostAskStep();
+  runMyCustomTasks("afterDaily", "afterDaily");
 }
 
 function finishSelectModeRoutine() {
   // セレクトモードでも、
   // 最後にSNS共有とYouTubeを必ず実行対象に含める
-  showPostAskStep();
+  runMyCustomTasks("afterDaily", "afterDaily");
 }
 
 // ==================================================
@@ -870,3 +874,4 @@ async function showFallbackPreviousStepForDaily() {
     recordHistory: false,
   });
 }
+

@@ -44,6 +44,7 @@ function showOnlyStep(activeStepElement, options = {}) {
   // HTML側に存在しない要素が混ざっていても落ちないように filter(Boolean) する
   const steps = [
     homeStepElement,
+    myCustomStepElement,
     spotifyStepElement,
     onceListSelectStepElement,
     onceTaskRunStepElement,
@@ -63,6 +64,8 @@ function showOnlyStep(activeStepElement, options = {}) {
     stepElement.classList.toggle("hidden", stepElement !== activeStepElement);
   });
 
+  if (activeStepElement === myCustomStepElement) renderMyCustomTask();
+
   // 現在表示中の画面を state に保存
   state.currentStepElement = activeStepElement;
 
@@ -80,6 +83,13 @@ function showOnlyStep(activeStepElement, options = {}) {
 // ==================================================
 // 上部の「戻る」ボタン押下時に、現在画面に応じて前の画面へ戻す
 async function goBackStep() {
+  if (state.currentStepElement === myCustomStepElement && state.myCustomFlow?.index > 0) {
+    state.myCustomFlow.index -= 1;
+    state.myCustomFlow.opened = false;
+    renderMyCustomTask();
+    saveFlowState();
+    return;
+  }
   // デイリータスク画面は、単純な画面履歴ではなく
   // タスク番号・グループ番号を戻す必要があるため専用処理に回す
  if (state.currentStepElement === dailyTaskStepElement) {
@@ -194,3 +204,4 @@ function updateStepTopActionBar() {
   // 表示条件を満たさない場合は hidden を付ける
   stepTopActionBarElement.classList.toggle("hidden", !shouldShowTopActionBar);
 }
+

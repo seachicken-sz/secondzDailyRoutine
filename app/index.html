@@ -536,6 +536,18 @@
 
       <section id="onceTaskRunErrorArea" class="error-area hidden"></section>
     </section>
+    <section id="myCustomStep" class="step-screen hidden">
+      <header class="header">
+        <h1>マイカスタム</h1>
+        <p id="myCustomTaskProgress" class="description"></p>
+      </header>
+      <section class="task-card">
+        <h2 id="myCustomTaskName" class="task-title"></h2>
+        <div id="myCustomTaskComment" class="notice-box"></div>
+        <button id="openMyCustomTaskButton" type="button" class="primary-button">ページを開く</button>
+        <button id="myCustomNextButton" type="button" class="secondary-button">スキップ</button>
+      </section>
+    </section>
     <!--STEP 3 USEN推しリク-->
     <section id="requestSongStep" class="step-screen hidden">
       <header class="header">
@@ -1195,6 +1207,15 @@
         </fieldset>
       </section>
 
+      <section id="myCustomSettingSection" class="setting-section">
+        <div class="setting-section-header">
+          <h3><i class="bi bi-person-gear"></i>マイカスタム</h3>
+          <p>利用中のサービスや加入しているファンクラブに合わせて、タスクを追加できます。</p>
+        </div>
+        <div id="myCustomSettingList" class="select-mode-feature-list"></div>
+        <p id="myCustomSettingStatus" class="select-mode-auto-save-note" aria-live="polite">読み込み中...</p>
+      </section>
+
       <section id="selectModeSettingSection" class="setting-section">
         <div class="setting-section-header">
           <h3><i class="bi bi-ui-checks-grid"></i>セレクトモード</h3>
@@ -1362,6 +1383,7 @@
 <script src="./js/memberWorks.js" defer></script>
 <script src="./js/setting.js" defer></script>
 <script src="./js/selectMode.js" defer></script>
+<script src="./js/myCustom.js" defer></script>
 <!-- シェア画像 -->
 <script src="./js/shareImages/shareImageThemes.js" defer></script>
 <script src="./js/shareImages/shareImageUtils.js" defer></script>
@@ -1385,3 +1407,4 @@
 <script src="./js/app.js" defer></script>
 </body>
 </html>
+

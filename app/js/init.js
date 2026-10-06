@@ -334,6 +334,7 @@ async function init() {
     }
     // セレクトモード設定を読み込み、設定画面と開始ボタンへ反映
     initializeSelectMode();
+    await initializeMyCustom();
     // 一人一回系タスクなど、保存済み完了データのうち不要なものを整理
     cleanupOnceTaskDoneMap(state.onceTasks);
     cleanupDailyTaskDoneMap();
@@ -467,6 +468,22 @@ async function restoreFlowStateOrHome() {
   // ==================================================
   // Spotify画面の復元
   // ==================================================
+  state.myCustomFlow = flowState.myCustomFlow || null;
+  if (flowState.currentStepId === "myCustomStep") {
+    const flow = state.myCustomFlow;
+    if (flow && Array.isArray(flow.tasks) && Number.isInteger(flow.index) &&
+        flow.index >= 0 && flow.tasks[flow.index]?.name &&
+        /^https?:\/\//i.test(String(flow.tasks[flow.index]?.url || "")) &&
+        ["spotify", "onceTask", "afterUsen", "afterDaily"].includes(flow.continuation)) {
+      renderMyCustomTask();
+      showOnlyStep(myCustomStepElement, { recordHistory: false });
+    } else {
+      clearFlowState();
+      showOnlyStep(homeStepElement, { recordHistory: false });
+    }
+    return;
+  }
+
   if (flowState.currentStepId === "spotifyStep") {
     // Spotify画面を表示
     showOnlyStep(spotifyStepElement, { recordHistory: false });
@@ -603,3 +620,4 @@ async function restoreFlowStateOrHome() {
   clearFlowState();
   showOnlyStep(homeStepElement, { recordHistory: false });
 }
+

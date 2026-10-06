@@ -173,6 +173,7 @@ function saveFlowState(openedAction = state.openedAction || "", stepElement = st
   const flowState = {
     dateKey: getTodayKey(),
     currentStepId: stepElement.id,
+    myCustomFlow: state.myCustomFlow || null,
     routineMode: state.routineMode,
     requestSongMode: state.requestSongMode,
     selectModeDailyTaskIds: Array.isArray(state.selectModeDailyTaskIds)
@@ -451,3 +452,4 @@ function cleanupTverCheckedEpisodeMap(keepDays = 90) {
     saveTverCheckedEpisodeMap(checkedMap);
   }
 }
+

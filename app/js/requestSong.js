@@ -69,7 +69,7 @@ function bindRequestSongEvents() {
     }
 
     // 通常のUSENでは必要に応じて新曲切り替え画面へ進む
-    await showRadioRequestSongOverrideStep();
+    await runMyCustomTasks("afterUsen", "afterUsen");
   });
 }
 
@@ -151,3 +151,4 @@ async function showRequestSongStep() {
     );
   }
 }
+
