@@ -294,7 +294,6 @@ function getCurrentThemeKeyForShareImage() {
     sky: "sky",
     lime: "lime",
     pink: "pink",
-    yellow: "yellow",
     white: "white",
     normal: "normal",
   };
