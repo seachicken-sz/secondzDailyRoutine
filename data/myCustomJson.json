@@ -1,0 +1,28 @@
+[
+  {
+    "id": "unext",
+    "name": "U-NEXT会員",
+    "description": "推し活リクエスト追加投票",
+    "insertPosition": "afterUsen",
+    "tasks": [
+      {
+        "name": "USEN推し活リクエスト追加投票",
+        "url": "https://usen.oshireq.com/campaign/unext",
+        "comment": "ログインしてもう一度投票しよう！"
+      }
+    ]
+  },
+  {
+    "id": "more",
+    "name": "more…会員",
+    "description": "フォトコレクションチェック",
+    "insertPosition": "afterDaily",
+    "tasks": [
+      {
+        "name": "フォトコレクションチェック",
+        "url": "https://fumakikuchi.com/feature/morephotocollection?_normalbrowse_=1",
+        "comment": "フォトコレクション、今日の分はチェックした？"
+      }
+    ]
+  }
+]
