@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/10/07 01:07",
+  "updatedAt": "2026/10/07 02:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/10/07 01:07",
+      "updatedAt": "2026/10/07 02:07",
       "episodeId": "ep5y408jx8",
       "subtitle": "新企画！芸能人どハマりグルメ「ベストバイプライスマン」",
       "likes": "2.8万",
@@ -2095,15 +2095,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "YOUは何しに日本へ？"
-            },
-            {
-              "rank": 48,
               "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "やすとものどこいこ！？"
+            },
+            {
+              "rank": 49,
+              "title": "徹子の部屋"
             },
             {
               "rank": 50,
@@ -2808,19 +2808,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ホンマでっか！？TV"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 48,
-              "title": "踊る！さんま御殿!!"
+              "title": "天狗の台所 Ｓｅａｓｏｎ３"
             },
             {
               "rank": 49,
-              "title": "アンナチュラル"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 50,
-              "title": "日テレ系クイズフェスティバル2026秋"
+              "title": "アンナチュラル"
             }
           ]
         }
@@ -2829,7 +2829,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/10/04",
-      "updatedAt": "2026/10/07 01:07",
+      "updatedAt": "2026/10/07 02:07",
       "episodeId": "epkr0wyoim",
       "subtitle": "広瀬すずとあか抜けチェンジ▼福士蒼汰とグルメバトル",
       "likes": "1.9万",
@@ -3037,6 +3037,10 @@
         },
         {
           "hour": 59,
+          "likes": 19000
+        },
+        {
+          "hour": 60,
           "likes": 19000
         }
       ],
@@ -3695,7 +3699,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 7,
-          "elapsedHour": 59,
+          "elapsedHour": 60,
           "elapsedRank": 7,
           "currentPoints": [
             {
@@ -3916,6 +3920,10 @@
             },
             {
               "hour": 59,
+              "rank": 7
+            },
+            {
+              "hour": 60,
               "rank": 7
             }
           ],
@@ -4600,7 +4608,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 17,
-          "elapsedHour": 59,
+          "elapsedHour": 60,
           "elapsedRank": 17,
           "currentPoints": [
             {
@@ -4813,6 +4821,10 @@
             },
             {
               "hour": 59,
+              "rank": 17
+            },
+            {
+              "hour": 60,
               "rank": 17
             }
           ],
@@ -5209,13 +5221,19 @@
     },
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
-      "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/10/07 01:07",
-      "episodeId": "eptlyw7yfw",
-      "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！",
-      "likes": "1.1万",
+      "broadcastDate": "2026/10/06",
+      "updatedAt": "2026/10/07 02:07",
+      "episodeId": "ep0kb9vkd1",
+      "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！後編",
+      "likes": "849",
       "favorites": "6.3万",
       "likePoints": [
+        {
+          "hour": 2,
+          "likes": 849
+        }
+      ],
+      "previousLikePoints": [
         {
           "hour": 2,
           "likes": 707
@@ -5837,7 +5855,6 @@
           "likes": 9004
         }
       ],
-      "previousLikePoints": [],
       "rankings": [
         {
           "type": "vtr",
@@ -5845,7 +5862,8 @@
           "currentRank": null,
           "elapsedHour": null,
           "elapsedRank": null,
-          "currentPoints": [
+          "currentPoints": [],
+          "previousPoints": [
             {
               "hour": 6,
               "rank": 47
@@ -6387,7 +6405,6 @@
               "rank": 44
             }
           ],
-          "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 47,
@@ -6395,15 +6412,15 @@
             },
             {
               "rank": 48,
-              "title": "M:ZINE"
-            },
-            {
-              "rank": 49,
               "title": "やすとも・友近のキメツケ！あくまで個人の感想です"
             },
             {
+              "rank": 49,
+              "title": "M:ZINE"
+            },
+            {
               "rank": 50,
-              "title": "アンタッチャブルでやらせてもらってます"
+              "title": "なにわAぇ! の放送させてください！～お蔵入りはドレだ!? 生国民投票ロケバトル～"
             }
           ]
         },
@@ -6413,7 +6430,8 @@
           "currentRank": null,
           "elapsedHour": null,
           "elapsedRank": null,
-          "currentPoints": [
+          "currentPoints": [],
+          "previousPoints": [
             {
               "hour": 17,
               "rank": 48
@@ -6523,19 +6541,18 @@
               "rank": 50
             }
           ],
-          "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "YOUは何しに日本へ？"
-            },
-            {
-              "rank": 48,
               "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "やすとものどこいこ！？"
+            },
+            {
+              "rank": 49,
+              "title": "徹子の部屋"
             },
             {
               "rank": 50,
@@ -6548,7 +6565,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/10/07 01:07",
+      "updatedAt": "2026/10/07 02:07",
       "episodeId": "epxyf3j8s9",
       "subtitle": "芸能人アレルギー大検査SP…岡崎紗絵&ACEesが採血!衝撃結果",
       "likes": "7451",
@@ -7089,15 +7106,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "YOUは何しに日本へ？"
-            },
-            {
-              "rank": 48,
               "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "やすとものどこいこ！？"
+            },
+            {
+              "rank": 49,
+              "title": "徹子の部屋"
             },
             {
               "rank": 50,
@@ -7321,19 +7338,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ホンマでっか！？TV"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 48,
-              "title": "踊る！さんま御殿!!"
+              "title": "天狗の台所 Ｓｅａｓｏｎ３"
             },
             {
               "rank": 49,
-              "title": "アンナチュラル"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 50,
-              "title": "日テレ系クイズフェスティバル2026秋"
+              "title": "アンナチュラル"
             }
           ]
         }
@@ -7341,13 +7358,19 @@
     },
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
-      "broadcastDate": "2026/09/30",
-      "updatedAt": "2026/10/07 01:07",
-      "episodeId": "epo8onnz8t",
-      "subtitle": "MC菊池風磨＆畑芽育の音楽番組！新企画「出張 夜の音」",
-      "likes": "6768",
+      "broadcastDate": "2026/10/07",
+      "updatedAt": "2026/10/07 02:07",
+      "episodeId": "epwen9ebwk",
+      "subtitle": "MC菊池風磨＆畑芽育の音楽番組！亀梨和也登場",
+      "likes": "559",
       "favorites": "15.3万",
       "likePoints": [
+        {
+          "hour": 1,
+          "likes": 559
+        }
+      ],
+      "previousLikePoints": [
         {
           "hour": 1,
           "likes": 381
@@ -7925,612 +7948,6 @@
           "likes": 6768
         }
       ],
-      "previousLikePoints": [
-        {
-          "hour": 0,
-          "likes": 376
-        },
-        {
-          "hour": 1,
-          "likes": 1055
-        },
-        {
-          "hour": 2,
-          "likes": 1709
-        },
-        {
-          "hour": 3,
-          "likes": 1830
-        },
-        {
-          "hour": 4,
-          "likes": 1855
-        },
-        {
-          "hour": 5,
-          "likes": 2093
-        },
-        {
-          "hour": 6,
-          "likes": 2513
-        },
-        {
-          "hour": 7,
-          "likes": 3157
-        },
-        {
-          "hour": 8,
-          "likes": 3767
-        },
-        {
-          "hour": 9,
-          "likes": 4415
-        },
-        {
-          "hour": 10,
-          "likes": 5007
-        },
-        {
-          "hour": 11,
-          "likes": 5539
-        },
-        {
-          "hour": 12,
-          "likes": 5943
-        },
-        {
-          "hour": 13,
-          "likes": 6323
-        },
-        {
-          "hour": 14,
-          "likes": 6632
-        },
-        {
-          "hour": 15,
-          "likes": 6910
-        },
-        {
-          "hour": 16,
-          "likes": 7164
-        },
-        {
-          "hour": 17,
-          "likes": 7408
-        },
-        {
-          "hour": 18,
-          "likes": 7636
-        },
-        {
-          "hour": 20,
-          "likes": 7867
-        },
-        {
-          "hour": 21,
-          "likes": 8109
-        },
-        {
-          "hour": 22,
-          "likes": 8553
-        },
-        {
-          "hour": 23,
-          "likes": 8724
-        },
-        {
-          "hour": 24,
-          "likes": 8835
-        },
-        {
-          "hour": 25,
-          "likes": 8874
-        },
-        {
-          "hour": 27,
-          "likes": 8919
-        },
-        {
-          "hour": 28,
-          "likes": 8925
-        },
-        {
-          "hour": 29,
-          "likes": 8957
-        },
-        {
-          "hour": 30,
-          "likes": 8996
-        },
-        {
-          "hour": 31,
-          "likes": 9061
-        },
-        {
-          "hour": 32,
-          "likes": 9137
-        },
-        {
-          "hour": 33,
-          "likes": 9204
-        },
-        {
-          "hour": 34,
-          "likes": 9417
-        },
-        {
-          "hour": 35,
-          "likes": 9484
-        },
-        {
-          "hour": 36,
-          "likes": 9567
-        },
-        {
-          "hour": 37,
-          "likes": 9627
-        },
-        {
-          "hour": 38,
-          "likes": 9670
-        },
-        {
-          "hour": 39,
-          "likes": 9716
-        },
-        {
-          "hour": 40,
-          "likes": 9762
-        },
-        {
-          "hour": 41,
-          "likes": 9814
-        },
-        {
-          "hour": 42,
-          "likes": 9860
-        },
-        {
-          "hour": 43,
-          "likes": 9936
-        },
-        {
-          "hour": 44,
-          "likes": 10000
-        },
-        {
-          "hour": 45,
-          "likes": 10000
-        },
-        {
-          "hour": 46,
-          "likes": 10000
-        },
-        {
-          "hour": 47,
-          "likes": 10000
-        },
-        {
-          "hour": 49,
-          "likes": 10000
-        },
-        {
-          "hour": 50,
-          "likes": 10000
-        },
-        {
-          "hour": 51,
-          "likes": 10000
-        },
-        {
-          "hour": 52,
-          "likes": 10000
-        },
-        {
-          "hour": 53,
-          "likes": 10000
-        },
-        {
-          "hour": 54,
-          "likes": 10000
-        },
-        {
-          "hour": 56,
-          "likes": 10000
-        },
-        {
-          "hour": 57,
-          "likes": 10000
-        },
-        {
-          "hour": 58,
-          "likes": 10000
-        },
-        {
-          "hour": 59,
-          "likes": 10000
-        },
-        {
-          "hour": 60,
-          "likes": 10000
-        },
-        {
-          "hour": 61,
-          "likes": 10000
-        },
-        {
-          "hour": 62,
-          "likes": 10000
-        },
-        {
-          "hour": 63,
-          "likes": 10000
-        },
-        {
-          "hour": 64,
-          "likes": 10000
-        },
-        {
-          "hour": 65,
-          "likes": 10000
-        },
-        {
-          "hour": 66,
-          "likes": 10000
-        },
-        {
-          "hour": 67,
-          "likes": 10000
-        },
-        {
-          "hour": 68,
-          "likes": 10000
-        },
-        {
-          "hour": 70,
-          "likes": 10000
-        },
-        {
-          "hour": 71,
-          "likes": 10000
-        },
-        {
-          "hour": 72,
-          "likes": 10000
-        },
-        {
-          "hour": 73,
-          "likes": 10000
-        },
-        {
-          "hour": 74,
-          "likes": 10000
-        },
-        {
-          "hour": 75,
-          "likes": 10000
-        },
-        {
-          "hour": 77,
-          "likes": 10000
-        },
-        {
-          "hour": 78,
-          "likes": 10000
-        },
-        {
-          "hour": 79,
-          "likes": 10000
-        },
-        {
-          "hour": 80,
-          "likes": 10000
-        },
-        {
-          "hour": 81,
-          "likes": 11000
-        },
-        {
-          "hour": 82,
-          "likes": 11000
-        },
-        {
-          "hour": 83,
-          "likes": 11000
-        },
-        {
-          "hour": 84,
-          "likes": 11000
-        },
-        {
-          "hour": 85,
-          "likes": 11000
-        },
-        {
-          "hour": 86,
-          "likes": 11000
-        },
-        {
-          "hour": 88,
-          "likes": 11000
-        },
-        {
-          "hour": 89,
-          "likes": 11000
-        },
-        {
-          "hour": 90,
-          "likes": 11000
-        },
-        {
-          "hour": 91,
-          "likes": 11000
-        },
-        {
-          "hour": 92,
-          "likes": 11000
-        },
-        {
-          "hour": 93,
-          "likes": 11000
-        },
-        {
-          "hour": 94,
-          "likes": 11000
-        },
-        {
-          "hour": 95,
-          "likes": 11000
-        },
-        {
-          "hour": 96,
-          "likes": 11000
-        },
-        {
-          "hour": 98,
-          "likes": 11000
-        },
-        {
-          "hour": 99,
-          "likes": 11000
-        },
-        {
-          "hour": 100,
-          "likes": 11000
-        },
-        {
-          "hour": 101,
-          "likes": 11000
-        },
-        {
-          "hour": 102,
-          "likes": 11000
-        },
-        {
-          "hour": 103,
-          "likes": 11000
-        },
-        {
-          "hour": 104,
-          "likes": 11000
-        },
-        {
-          "hour": 105,
-          "likes": 11000
-        },
-        {
-          "hour": 106,
-          "likes": 11000
-        },
-        {
-          "hour": 107,
-          "likes": 11000
-        },
-        {
-          "hour": 108,
-          "likes": 11000
-        },
-        {
-          "hour": 109,
-          "likes": 11000
-        },
-        {
-          "hour": 110,
-          "likes": 11000
-        },
-        {
-          "hour": 111,
-          "likes": 11000
-        },
-        {
-          "hour": 112,
-          "likes": 11000
-        },
-        {
-          "hour": 113,
-          "likes": 11000
-        },
-        {
-          "hour": 114,
-          "likes": 11000
-        },
-        {
-          "hour": 115,
-          "likes": 11000
-        },
-        {
-          "hour": 118,
-          "likes": 11000
-        },
-        {
-          "hour": 119,
-          "likes": 11000
-        },
-        {
-          "hour": 120,
-          "likes": 11000
-        },
-        {
-          "hour": 121,
-          "likes": 11000
-        },
-        {
-          "hour": 122,
-          "likes": 11000
-        },
-        {
-          "hour": 123,
-          "likes": 11000
-        },
-        {
-          "hour": 124,
-          "likes": 11000
-        },
-        {
-          "hour": 125,
-          "likes": 11000
-        },
-        {
-          "hour": 126,
-          "likes": 11000
-        },
-        {
-          "hour": 127,
-          "likes": 11000
-        },
-        {
-          "hour": 128,
-          "likes": 11000
-        },
-        {
-          "hour": 129,
-          "likes": 11000
-        },
-        {
-          "hour": 130,
-          "likes": 11000
-        },
-        {
-          "hour": 131,
-          "likes": 11000
-        },
-        {
-          "hour": 132,
-          "likes": 11000
-        },
-        {
-          "hour": 133,
-          "likes": 12000
-        },
-        {
-          "hour": 134,
-          "likes": 12000
-        },
-        {
-          "hour": 136,
-          "likes": 12000
-        },
-        {
-          "hour": 137,
-          "likes": 12000
-        },
-        {
-          "hour": 139,
-          "likes": 12000
-        },
-        {
-          "hour": 140,
-          "likes": 12000
-        },
-        {
-          "hour": 141,
-          "likes": 12000
-        },
-        {
-          "hour": 142,
-          "likes": 12000
-        },
-        {
-          "hour": 144,
-          "likes": 12000
-        },
-        {
-          "hour": 146,
-          "likes": 12000
-        },
-        {
-          "hour": 147,
-          "likes": 12000
-        },
-        {
-          "hour": 148,
-          "likes": 12000
-        },
-        {
-          "hour": 149,
-          "likes": 12000
-        },
-        {
-          "hour": 150,
-          "likes": 12000
-        },
-        {
-          "hour": 151,
-          "likes": 12000
-        },
-        {
-          "hour": 152,
-          "likes": 12000
-        },
-        {
-          "hour": 153,
-          "likes": 12000
-        },
-        {
-          "hour": 155,
-          "likes": 12000
-        },
-        {
-          "hour": 156,
-          "likes": 12000
-        },
-        {
-          "hour": 157,
-          "likes": 12000
-        },
-        {
-          "hour": 158,
-          "likes": 12000
-        },
-        {
-          "hour": 159,
-          "likes": 12000
-        },
-        {
-          "hour": 160,
-          "likes": 12000
-        },
-        {
-          "hour": 162,
-          "likes": 12000
-        },
-        {
-          "hour": 163,
-          "likes": 12000
-        },
-        {
-          "hour": 164,
-          "likes": 12000
-        },
-        {
-          "hour": 165,
-          "likes": 12000
-        },
-        {
-          "hour": 166,
-          "likes": 12000
-        }
-      ],
       "rankings": [
         {
           "type": "variety",
@@ -8538,7 +7955,8 @@
           "currentRank": null,
           "elapsedHour": null,
           "elapsedRank": null,
-          "currentPoints": [
+          "currentPoints": [],
+          "previousPoints": [
             {
               "hour": 12,
               "rank": 49
@@ -8676,220 +8094,18 @@
               "rank": 47
             }
           ],
-          "previousPoints": [
-            {
-              "hour": 8,
-              "rank": 46
-            },
-            {
-              "hour": 9,
-              "rank": 37
-            },
-            {
-              "hour": 10,
-              "rank": 30
-            },
-            {
-              "hour": 11,
-              "rank": 23
-            },
-            {
-              "hour": 12,
-              "rank": 20
-            },
-            {
-              "hour": 13,
-              "rank": 20
-            },
-            {
-              "hour": 14,
-              "rank": 19
-            },
-            {
-              "hour": 15,
-              "rank": 19
-            },
-            {
-              "hour": 16,
-              "rank": 19
-            },
-            {
-              "hour": 17,
-              "rank": 19
-            },
-            {
-              "hour": 18,
-              "rank": 18
-            },
-            {
-              "hour": 19,
-              "rank": 18
-            },
-            {
-              "hour": 20,
-              "rank": 15
-            },
-            {
-              "hour": 21,
-              "rank": 15
-            },
-            {
-              "hour": 22,
-              "rank": 15
-            },
-            {
-              "hour": 23,
-              "rank": 15
-            },
-            {
-              "hour": 24,
-              "rank": 15
-            },
-            {
-              "hour": 25,
-              "rank": 15
-            },
-            {
-              "hour": 26,
-              "rank": 15
-            },
-            {
-              "hour": 27,
-              "rank": 15
-            },
-            {
-              "hour": 28,
-              "rank": 16
-            },
-            {
-              "hour": 29,
-              "rank": 16
-            },
-            {
-              "hour": 30,
-              "rank": 16
-            },
-            {
-              "hour": 31,
-              "rank": 16
-            },
-            {
-              "hour": 32,
-              "rank": 17
-            },
-            {
-              "hour": 33,
-              "rank": 18
-            },
-            {
-              "hour": 34,
-              "rank": 20
-            },
-            {
-              "hour": 35,
-              "rank": 23
-            },
-            {
-              "hour": 36,
-              "rank": 24
-            },
-            {
-              "hour": 37,
-              "rank": 26
-            },
-            {
-              "hour": 38,
-              "rank": 30
-            },
-            {
-              "hour": 39,
-              "rank": 31
-            },
-            {
-              "hour": 40,
-              "rank": 32
-            },
-            {
-              "hour": 41,
-              "rank": 33
-            },
-            {
-              "hour": 42,
-              "rank": 33
-            },
-            {
-              "hour": 43,
-              "rank": 34
-            },
-            {
-              "hour": 44,
-              "rank": 37
-            },
-            {
-              "hour": 45,
-              "rank": 38
-            },
-            {
-              "hour": 46,
-              "rank": 40
-            },
-            {
-              "hour": 47,
-              "rank": 43
-            },
-            {
-              "hour": 48,
-              "rank": 44
-            },
-            {
-              "hour": 49,
-              "rank": 43
-            },
-            {
-              "hour": 50,
-              "rank": 43
-            },
-            {
-              "hour": 51,
-              "rank": 42
-            },
-            {
-              "hour": 52,
-              "rank": 43
-            },
-            {
-              "hour": 53,
-              "rank": 43
-            },
-            {
-              "hour": 54,
-              "rank": 46
-            },
-            {
-              "hour": 55,
-              "rank": 46
-            },
-            {
-              "hour": 56,
-              "rank": 48
-            },
-            {
-              "hour": 57,
-              "rank": 50
-            }
-          ],
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "YOUは何しに日本へ？"
-            },
-            {
-              "rank": 48,
               "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "やすとものどこいこ！？"
+            },
+            {
+              "rank": 49,
+              "title": "徹子の部屋"
             },
             {
               "rank": 50,
@@ -8903,7 +8119,8 @@
           "currentRank": null,
           "elapsedHour": null,
           "elapsedRank": null,
-          "currentPoints": [
+          "currentPoints": [],
+          "previousPoints": [
             {
               "hour": 18,
               "rank": 45
@@ -8993,136 +8210,22 @@
               "rank": 49
             }
           ],
-          "previousPoints": [
-            {
-              "hour": 11,
-              "rank": 46
-            },
-            {
-              "hour": 12,
-              "rank": 42
-            },
-            {
-              "hour": 13,
-              "rank": 41
-            },
-            {
-              "hour": 14,
-              "rank": 40
-            },
-            {
-              "hour": 15,
-              "rank": 37
-            },
-            {
-              "hour": 16,
-              "rank": 35
-            },
-            {
-              "hour": 17,
-              "rank": 35
-            },
-            {
-              "hour": 18,
-              "rank": 32
-            },
-            {
-              "hour": 19,
-              "rank": 31
-            },
-            {
-              "hour": 20,
-              "rank": 27
-            },
-            {
-              "hour": 21,
-              "rank": 27
-            },
-            {
-              "hour": 22,
-              "rank": 27
-            },
-            {
-              "hour": 23,
-              "rank": 26
-            },
-            {
-              "hour": 24,
-              "rank": 26
-            },
-            {
-              "hour": 25,
-              "rank": 27
-            },
-            {
-              "hour": 26,
-              "rank": 27
-            },
-            {
-              "hour": 27,
-              "rank": 27
-            },
-            {
-              "hour": 28,
-              "rank": 28
-            },
-            {
-              "hour": 29,
-              "rank": 28
-            },
-            {
-              "hour": 30,
-              "rank": 28
-            },
-            {
-              "hour": 31,
-              "rank": 28
-            },
-            {
-              "hour": 32,
-              "rank": 31
-            },
-            {
-              "hour": 33,
-              "rank": 32
-            },
-            {
-              "hour": 34,
-              "rank": 36
-            },
-            {
-              "hour": 35,
-              "rank": 41
-            },
-            {
-              "hour": 36,
-              "rank": 42
-            },
-            {
-              "hour": 37,
-              "rank": 45
-            },
-            {
-              "hour": 38,
-              "rank": 49
-            }
-          ],
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ホンマでっか！？TV"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 48,
-              "title": "踊る！さんま御殿!!"
+              "title": "天狗の台所 Ｓｅａｓｏｎ３"
             },
             {
               "rank": 49,
-              "title": "アンナチュラル"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 50,
-              "title": "日テレ系クイズフェスティバル2026秋"
+              "title": "アンナチュラル"
             }
           ]
         }
@@ -9131,10 +8234,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/02",
-      "updatedAt": "2026/10/07 01:07",
+      "updatedAt": "2026/10/07 02:07",
       "episodeId": "ep8qakscxc",
       "subtitle": "第147回 広瀬アリスが大絶叫！芸能人の味覚はいかに！？",
-      "likes": "5330",
+      "likes": "5336",
       "favorites": "71.7万",
       "likePoints": [
         {
@@ -9584,6 +8687,10 @@
         {
           "hour": 121,
           "likes": 5330
+        },
+        {
+          "hour": 122,
+          "likes": 5336
         }
       ],
       "previousLikePoints": [
@@ -10634,15 +9741,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "YOUは何しに日本へ？"
-            },
-            {
-              "rank": 48,
               "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "やすとものどこいこ！？"
+            },
+            {
+              "rank": 49,
+              "title": "徹子の部屋"
             },
             {
               "rank": 50,
@@ -10875,19 +9982,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ホンマでっか！？TV"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 48,
-              "title": "踊る！さんま御殿!!"
+              "title": "天狗の台所 Ｓｅａｓｏｎ３"
             },
             {
               "rank": 49,
-              "title": "アンナチュラル"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 50,
-              "title": "日テレ系クイズフェスティバル2026秋"
+              "title": "アンナチュラル"
             }
           ]
         }
@@ -10896,10 +10003,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/09/19",
-      "updatedAt": "2026/10/07 01:07",
+      "updatedAt": "2026/10/07 02:07",
       "episodeId": "ephhccb64t",
       "subtitle": "マッサマンvs秒で組体操（秘）おなら！SP",
-      "likes": "4659",
+      "likes": "4661",
       "favorites": "81.1万",
       "likePoints": [
         {
@@ -12033,15 +11140,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "YOUは何しに日本へ？"
-            },
-            {
-              "rank": 48,
               "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "やすとものどこいこ！？"
+            },
+            {
+              "rank": 49,
+              "title": "徹子の部屋"
             },
             {
               "rank": 50,
@@ -12293,19 +11400,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ホンマでっか！？TV"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 48,
-              "title": "踊る！さんま御殿!!"
+              "title": "天狗の台所 Ｓｅａｓｏｎ３"
             },
             {
               "rank": 49,
-              "title": "アンナチュラル"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 50,
-              "title": "日テレ系クイズフェスティバル2026秋"
+              "title": "アンナチュラル"
             }
           ]
         }
@@ -12314,7 +11421,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/10/07 01:07",
+      "updatedAt": "2026/10/07 02:07",
       "episodeId": "epnqu504ur",
       "subtitle": "第11話 二人がたどり着く最後の余韻・・・出会えてよかった",
       "likes": "1.8万",
@@ -14549,7 +13656,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ちょっと待とうよ、春虎くん"
+              "title": "大好き！五つ子Ｇｏ³！！"
             },
             {
               "rank": 48,
@@ -14557,11 +13664,11 @@
             },
             {
               "rank": 49,
-              "title": "大好き！五つ子Ｇｏ³！！"
+              "title": "ＤＣＵ"
             },
             {
               "rank": 50,
-              "title": "ＤＣＵ"
+              "title": "文学処女"
             }
           ]
         },
@@ -15906,19 +15013,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ホンマでっか！？TV"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 48,
-              "title": "踊る！さんま御殿!!"
+              "title": "天狗の台所 Ｓｅａｓｏｎ３"
             },
             {
               "rank": 49,
-              "title": "アンナチュラル"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 50,
-              "title": "日テレ系クイズフェスティバル2026秋"
+              "title": "アンナチュラル"
             }
           ]
         }
@@ -15927,7 +15034,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/22",
-      "updatedAt": "2026/10/07 01:07",
+      "updatedAt": "2026/10/07 02:07",
       "episodeId": "epc4m7onou",
       "subtitle": "ねづっち24時／マジック講座",
       "likes": "1.3万",
@@ -16928,11 +16035,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "〜関係者の記憶から出題〜 一番の思い出当てられますか？"
+              "title": "世界一受けたい授業"
             },
             {
               "rank": 48,
-              "title": "世界一受けたい授業"
+              "title": "〜関係者の記憶から出題〜 一番の思い出当てられますか？"
             },
             {
               "rank": 49,
@@ -16940,7 +16047,7 @@
             },
             {
               "rank": 50,
-              "title": "トークィーンズ"
+              "title": "滝沢カレン＆和田明日香のフィーリンきっちん"
             }
           ]
         },
@@ -17104,15 +16211,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "YOUは何しに日本へ？"
-            },
-            {
-              "rank": 48,
               "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "やすとものどこいこ！？"
+            },
+            {
+              "rank": 49,
+              "title": "徹子の部屋"
             },
             {
               "rank": 50,
@@ -17125,10 +16232,10 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/10/07 01:07",
+      "updatedAt": "2026/10/07 02:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
-      "likes": "402",
+      "likes": "403",
       "favorites": "16.8万",
       "likePoints": [],
       "previousLikePoints": [],
@@ -17144,7 +16251,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ちょっと待とうよ、春虎くん"
+              "title": "大好き！五つ子Ｇｏ³！！"
             },
             {
               "rank": 48,
@@ -17152,11 +16259,11 @@
             },
             {
               "rank": 49,
-              "title": "大好き！五つ子Ｇｏ³！！"
+              "title": "ＤＣＵ"
             },
             {
               "rank": 50,
-              "title": "ＤＣＵ"
+              "title": "文学処女"
             }
           ]
         },
@@ -17171,19 +16278,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ホンマでっか！？TV"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 48,
-              "title": "踊る！さんま御殿!!"
+              "title": "天狗の台所 Ｓｅａｓｏｎ３"
             },
             {
               "rank": 49,
-              "title": "アンナチュラル"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 50,
-              "title": "日テレ系クイズフェスティバル2026秋"
+              "title": "アンナチュラル"
             }
           ]
         }
