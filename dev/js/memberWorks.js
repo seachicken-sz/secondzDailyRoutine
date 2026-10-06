@@ -91,6 +91,9 @@ async function initializeMemberWorks() {
     MEMBER_WORKS = memberWorks;
     TVER_RANKING_REPORT_IDS = tverRankingReportIds;
 
+    cleanupTverCheckedEpisodeMap();
+    renderMemberWorks();
+
     renderMemberWorks();
 
   } catch (error) {
@@ -347,8 +350,26 @@ function createWorkItemHtml(item, group) {
  * TVer用リンクカードを生成
  */
 function createTverWorkItemHtml(item, group) {
+  const tverUrl =
+    item[group.urlKey] ||
+    item.platformUrl ||
+    "";
+
+  const episodeId =
+    item.episodeId ||
+    getTverEpisodeId(tverUrl) ||
+    "";
+
+  const uncheckedClass =
+    isTverEpisodeChecked(episodeId)
+      ? ""
+      : " is-unchecked";
+
   return `
-    <div class="member-work-link-card member-work-link-card-tver">
+    <div
+      class="member-work-link-card member-work-link-card-tver${uncheckedClass}"
+      data-tver-episode-card="${escapeHtml(episodeId)}"
+    >
       <span class="member-work-link-main member-work-link-main-tver">
         <span class="member-work-link-title member-work-link-title-tver">
           ${escapeHtml(getProgramDisplayName(item))}
@@ -359,16 +380,16 @@ function createTverWorkItemHtml(item, group) {
 
       <a
         class="member-work-link-button member-work-link-button-tver"
-        href="${escapeHtml(item[group.urlKey])}"
+        href="${escapeHtml(tverUrl)}"
         target="_blank"
         rel="noopener noreferrer"
         data-member-work-link="true"
         data-member-work-group-key="${escapeHtml(group.key)}"
         data-member-work-title="${escapeHtml(getProgramDisplayName(item))}"
-        data-member-work-url="${escapeHtml(item[group.urlKey])}"
+        data-member-work-url="${escapeHtml(tverUrl)}"
         data-member-work-work-type="${escapeHtml(item.workType || "")}"
         data-member-work-program-id="${escapeHtml(item.programId || item.seriesId || "")}"
-        data-member-work-episode-id="${escapeHtml(item.episodeId || getTverEpisodeId(item.platformUrl) || "")}"
+        data-member-work-episode-id="${escapeHtml(episodeId)}"
         data-member-work-members="${escapeHtml(Array.isArray(item.members) ? item.members.join(",") : "")}"
       >
         ${escapeHtml(getTverLinkText(item))}
@@ -523,7 +544,28 @@ function getTverEpisodeId(url) {
       .at(-1) || "";
   }
 }
+/**
+ * 同じTVerエピソードの未チェック表示をすべて解除
+ */
+function updateTverEpisodeCheckedDisplay(episodeId) {
+  const normalizedEpisodeId =
+    String(episodeId || "").trim();
 
+  if (!normalizedEpisodeId || !memberWorksArea) {
+    return;
+  }
+
+  memberWorksArea
+    .querySelectorAll("[data-tver-episode-card]")
+    .forEach((card) => {
+      if (
+        card.dataset.tverEpisodeCard ===
+        normalizedEpisodeId
+      ) {
+        card.classList.remove("is-unchecked");
+      }
+    });
+}
 /**
  * 表示名を取得
  */
@@ -621,6 +663,17 @@ if (memberWorksArea) {
 
     if (!link) {
       return;
+    }
+
+    const groupKey =
+      link.dataset.memberWorkGroupKey || "";
+
+    const episodeId =
+      link.dataset.memberWorkEpisodeId || "";
+
+    if (groupKey === "tver" && episodeId) {
+      markTverEpisodeChecked(episodeId);
+      updateTverEpisodeCheckedDisplay(episodeId);
     }
 
     if (typeof sendMemberWorkLinkLog === "function") {

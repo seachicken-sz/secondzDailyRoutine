@@ -232,17 +232,11 @@ function openSettingModal() {
 
   updateSettingModalState();
 
-  if (
-    typeof refreshPushNotificationUi ===
-    "function"
-  ) {
+  if (typeof refreshPushNotificationUi === "function") {
     refreshPushNotificationUi();
   }
 
-  if (
-    typeof refreshSelectModeSettingsUi ===
-    "function"
-  ) {
+  if (typeof refreshSelectModeSettingsUi === "function") {
     refreshSelectModeSettingsUi();
   }
 

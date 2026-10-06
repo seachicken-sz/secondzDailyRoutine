@@ -223,11 +223,6 @@
               <span class="theme-heart-icon"><i class="bi bi-suit-heart-fill"></i></span>
             </span>
           </button>
-          <button type="button" class="theme-heart-button" data-theme-button="yellow" aria-label="黄色">
-            <span class="theme-heart-chip">
-              <span class="theme-heart-icon"><i class="bi bi-suit-heart-fill"></i></span>
-            </span>
-          </button>
           <button type="button" class="theme-heart-button" data-theme-button="white" aria-label="白">
             <span class="theme-heart-chip">
               <span class="theme-heart-icon"><i class="bi bi-suit-heart-fill"></i></span>
@@ -367,9 +362,6 @@
             <button class="member-filter-chip" data-member="hashimoto">
               橋本
             </button>
-            <button class="member-filter-chip" data-member="inomata">
-              猪俣
-            </button>
             <button class="member-filter-chip" data-member="shinozuka">
               篠塚
             </button>
@@ -446,12 +438,13 @@
         <h1>今日のSpotify再生</h1>
         <p class="description">
           1日1曲再生で<strong>月間リスナー数</strong>に貢献😊<br>
-          下のリストから好きな曲を選んで「Spotifyで開く」をタップするとSpotifyで再生されます。<br>
-          <strong>再生されたら、バックでこのアプリ</strong>に戻ってきてください。
+          <strong>Spotify無料会員でもOK!</strong><br>
+          下のリストから好きな曲を選んで「Spotifyで聞く」をタップで再生♪<br>
+          選んだ曲が再生されたら<strong>バックでこのアプリ</strong>に戻ってきてね！
         </p>
         <button class="task-help-button" type="button" data-step-help-key="spotify">やり方をチェック</button>
         <p id="spotifyListenerCount" class="spotify-listener-count"></p>
-        <p>※リリース週にはStationhead(ステヘ)もおすすめ！<br>
+        <p>※Spotify Premium会員またはApple Music会員の方はStationhead(ステヘ)がおすすめ！<br>
         <button type="button" class="text-link-button open-stationhead-modal-button">詳しくはこちら</button></p>
       </header>
 
@@ -460,7 +453,7 @@
         <p id="selectedSongName" class="selected-song"></p>
 
         <button id="openSpotifyButton" class="primary-button">
-          Spotifyで開く
+          Spotifyで聞く
         </button>
 
         <button id="spotifyNextButton" class="secondary-button hidden">
@@ -499,7 +492,7 @@
         <h1>期間限定タスク🗒️</h1>
         <p class="description">
           これ終わってる？期間限定だから早めにやっちゃお👍<br>
-          今やるものにチェックをいれて「次へ」を押してください！<br>
+          今やるものにチェックをいれて「次へ」を押してね！<br>
           <br>
           ※一人一回限定のものは、一度でもやるとチェックが外れます。
         </p>
@@ -547,16 +540,11 @@
     <section id="requestSongStep" class="step-screen hidden">
       <header class="header">
         <h1 id="requestSongStepTitle">USEN推し活リクエスト📻</h1>
-      
         <p id="requestSongStepDescription" class="description">
           曲を選んで<strong>「ページを開く」</strong>をタップ！<br>
           「USEN推し活リクエスト」でリクエストしよ！
         </p>
-      
-        <button id="requestSongHelpButton" class="task-help-button" type="button" data-step-help-key="usenRequest">
-          やり方をチェック
-        </button>
-      
+        <button id="requestSongHelpButton" class="task-help-button" type="button" data-step-help-key="usenRequest">やり方をチェック</button>
         <p id="usenRankingInfo" class="usen-ranking-info hidden"></p>
       </header>
 
@@ -673,7 +661,6 @@
         <h1>SNSシェア</h1>
         <p class="description">
           今日やったタスク、せっかくならSNSで共有しない？
-          <strong>※新曲リリースに向けて、みんなでオーエンタムしませんか？</strong>
         </p>
       </header>
 
@@ -701,21 +688,8 @@
       <section class="scroll-area">
         <section class="task-card">        
           <div class="post-preview-tabs" role="tablist" aria-label="投稿先切り替え">
-            <button
-              id="postPreviewXTabButton"
-              class="post-preview-tab active"
-              type="button"
-            >
-              X
-            </button>
-        
-            <button
-              id="postPreviewThreadsTabButton"
-              class="post-preview-tab"
-              type="button"
-            >
-              Threads
-            </button>
+            <button id="postPreviewXTabButton" class="post-preview-tab active" type="button">X</button>
+            <button id="postPreviewThreadsTabButton" class="post-preview-tab" type="button">Threads</button>
           </div>
         
           <section id="postPreviewXPanel" class="post-preview-panel">
@@ -753,9 +727,6 @@
               この内容で画像を生成
             </button>
         </section>
-
-
-
         <section class="bottom-action-area">
           <button id="postNextButton" class="primary-button">
             次へ
@@ -763,6 +734,7 @@
         </section>
       </section>
     </section>
+    
     <!--STEP 6 Youtube-->
     <section id="youtubeAskStep" class="step-screen hidden">
       <header class="header">
@@ -992,12 +964,6 @@
             </button>
   
             <button type="button" class="share-image-theme-button share-image-theme-button-pink" data-share-image-theme="pink" aria-label="ピンク">
-              <span class="share-image-theme-chip">
-                <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
-              </span>
-            </button>
-  
-            <button type="button" class="share-image-theme-button share-image-theme-button-yellow" data-share-image-theme="yellow" aria-label="黄色">
               <span class="share-image-theme-chip">
                 <span class="share-image-theme-icon"><i class="bi bi-suit-heart-fill"></i></span>
               </span>
@@ -1238,32 +1204,27 @@
             自分の余力と元気に合わせて無理なく応援していきましょう！
           </p>
         </div>
-      
+
         <div class="select-mode-toggle-row">
           <div class="select-mode-toggle-text">
             <strong>セレクトモード</strong>
             <small id="selectModeStatusText">現在：確認中...</small>
           </div>
-      
+
           <label class="select-mode-switch">
-            <input
-              id="selectModeToggle"
-              class="select-mode-switch-input"
-              type="checkbox"
-              aria-label="セレクトモードを切り替える"
-            >
+            <input id="selectModeToggle" class="select-mode-switch-input" type="checkbox" aria-label="セレクトモードを切り替える">
             <span class="select-mode-switch-slider"></span>
           </label>
         </div>
-      
+
         <p class="select-mode-auto-save-note">
           <i class="bi bi-check-circle"></i>
           変更内容は自動で保存されます。
         </p>
-      
+
         <fieldset id="selectModeFeatureFieldset" class="select-mode-fieldset">
           <legend>セレクトする内容</legend>
-      
+
           <div class="select-mode-feature-list">
             <label class="select-mode-check-card">
               <input id="selectModeSpotifyCheckbox" type="checkbox">
@@ -1272,7 +1233,7 @@
                 <small>タスク消化中にSpotifyでBGMを再生します。</small>
               </span>
             </label>
-      
+
             <label class="select-mode-check-card">
               <input id="selectModeOnceTaskCheckbox" type="checkbox">
               <span class="select-mode-check-main">
@@ -1280,7 +1241,7 @@
                 <small>現在実施中の期間限定タスクを表示します。</small>
               </span>
             </label>
-      
+
             <label class="select-mode-check-card">
               <input id="selectModeUsenCheckbox" type="checkbox">
               <span class="select-mode-check-main">
@@ -1290,21 +1251,21 @@
             </label>
           </div>
         </fieldset>
-      
+
         <section class="select-mode-daily-area">
           <div class="select-mode-daily-header">
             <div>
               <h4>デイリータスク</h4>
               <p>実行したいタスクを個別に選べます。</p>
             </div>
-      
+
             <p id="selectModeSelectionSummary" class="select-mode-selection-summary">
-              機能 0件・デイリー 0件を選択中
+              機能 0件 ＋ デイリー 0件を選択中
             </p>
           </div>
-      
+
           <div id="selectModeDailyTaskList" class="select-mode-daily-list"></div>
-      
+
           <p id="selectModeDailyTaskEmptyText" class="select-mode-empty-text hidden">
             現在選べるデイリータスクがありません。
           </p>

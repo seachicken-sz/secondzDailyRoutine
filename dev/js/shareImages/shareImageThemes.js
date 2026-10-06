@@ -28,7 +28,8 @@ const SHARE_IMAGE_THEMES = {
     photoBg: "#f6b7bd",
     shadow: "rgba(88, 62, 42, 0.16)",
     characterImagePaths: [
-      "../img/shareImg/character/red-01.png"
+      "../img/shareImg/character/red-01.png",
+       "../img/shareImg/character/red-02.png"
     ],
     characterComment:'WITH YOU'
   },
@@ -46,7 +47,8 @@ const SHARE_IMAGE_THEMES = {
     photoBg: "#d6c7ef",
     shadow: "rgba(78, 58, 88, 0.16)",
     characterImagePaths: [
-      "../img/shareImg/character/purple-01.png"
+      "../img/shareImg/character/purple-01.png",
+      "../img/shareImg/character/purple-02.png"
     ],
     characterComment:'♡♡'
   },
@@ -64,7 +66,8 @@ const SHARE_IMAGE_THEMES = {
     photoBg: "#d7edcf",
     shadow: "rgba(76, 72, 44, 0.15)",
     characterImagePaths: [
-      "../img/shareImg/character/green-01.png"
+      "../img/shareImg/character/green-01.png",
+      "../img/shareImg/character/green-02.png"
     ],
     characterComment:'BIG LOVE'
   },
@@ -82,7 +85,8 @@ const SHARE_IMAGE_THEMES = {
     photoBg: "#c7eaf7",
     shadow: "rgba(58, 74, 88, 0.15)",
     characterImagePaths: [
-      "../img/shareImg/character/sky-01.png"
+      "../img/shareImg/character/sky-01.png",
+      "../img/shareImg/character/sky-02.png"
     ],
     characterComment:'143'
   },
@@ -100,7 +104,8 @@ const SHARE_IMAGE_THEMES = {
     photoBg: "#e4f2bd",
     shadow: "rgba(76, 72, 44, 0.15)",
     characterImagePaths: [
-      "../img/shareImg/character/lime-01.png"
+      "../img/shareImg/character/lime-01.png",
+      "../img/shareImg/character/lime-02.png"
     ],
     characterComment:'WE ARE FAMILY'
   },
@@ -118,27 +123,10 @@ const SHARE_IMAGE_THEMES = {
     photoBg: "#f8c3d2",
     shadow: "rgba(88, 62, 62, 0.15)",
     characterImagePaths: [
-      "../img/shareImg/character/pink-01.png"
+      "../img/shareImg/character/pink-01.png",
+      "../img/shareImg/character/pink-02.png"
     ],
     characterComment:'PROMISE'
-  },
-  yellow: {
-    main: "#d9ad00",
-    pale: "#fffdf0",
-    dusty: "#d8c58f",
-    line: "#eee4c2",
-    dream: "#fff0aa",
-    dreamSecond: "#ffd8c7",
-    paper: "#fff7e6",
-    paperSecond: "#fffdf8",
-    ink: "#3f332f",
-    mutedInk: "#897d5f",
-    photoBg: "#f6e3a4",
-    shadow: "rgba(86, 68, 28, 0.15)",
-    characterImagePaths: [
-      "../img/shareImg/character/yellow-01.png"
-    ],
-    characterComment:'DREAM'
   },
   white: {
     main: "#b8b8b8",
@@ -154,7 +142,8 @@ const SHARE_IMAGE_THEMES = {
     photoBg: "#ececec",
     shadow: "rgba(70, 64, 58, 0.14)",
     characterImagePaths: [
-      "../img/shareImg/character/white-01.png"
+      "../img/shareImg/character/white-01.png",
+      "../img/shareImg/character/white-02.png"
     ],
     characterComment:'BABY'
   }

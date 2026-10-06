@@ -37,8 +37,8 @@ const STORAGE_KEYS = {
   browserFirstVisitModalShown: "secondzDailyRoutineBrowserFirstVisitModalShown",
   pwaFirstVisitModalShown: "secondzDailyRoutinePwaFirstVisitModalShown",
   selectModeSettings: "secondzDailyRoutineSelectModeSettings",
+  tverCheckedEpisodeMap: "secondzDailyRoutineTverCheckedEpisodeMap",
 };
-
 // ==================================================
 // 定数 - 実行モード
 // ==================================================
@@ -51,8 +51,6 @@ const REQUEST_SONG_MODES = Object.freeze({
   usen: "usen",
   daily: "daily",
 });
-
-
 // ==================================================
 // 定数 - デイリータスク日付切替
 // ==================================================

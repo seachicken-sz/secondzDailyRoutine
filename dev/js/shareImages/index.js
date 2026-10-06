@@ -6,7 +6,9 @@
     "styles/stationeryPlanner.js",
     "styles/yumekawaGradient.js",
     "styles/characterPhotoList.js",
-    "styles/characterSimpleCard.js"
+    "styles/characterSimpleCard.js",
+    "styles/fireworks.js",
+    "styles/fireworksCharacter.js"
   ];
 
   const currentScript = document.currentScript;

@@ -294,7 +294,6 @@ function getCurrentThemeKeyForShareImage() {
     sky: "sky",
     lime: "lime",
     pink: "pink",
-    yellow: "yellow",
     white: "white",
     normal: "normal",
   };
@@ -349,7 +348,7 @@ function getShareImageBgmText() {
 
   const name = state.selectedSong.name || "";
 
-  return name ? `BGM：${name}` : "";
+  return name ? `Spotify：${name}` : "";
 }
 
 // ==================================================

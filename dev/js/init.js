@@ -331,13 +331,9 @@ async function init() {
       console.error("ホーム用デイリータスク読み込み失敗", dailyLoadError);
       state.requestTexts = {};
       state.dailyGroups = [];
-      state.requestSongs = [];
     }
-
-    // セレクトモード設定を読み込み、
-    // デイリータスク一覧と開始ボタン文言を反映
+    // セレクトモード設定を読み込み、設定画面と開始ボタンへ反映
     initializeSelectMode();
-
     // 一人一回系タスクなど、保存済み完了データのうち不要なものを整理
     cleanupOnceTaskDoneMap(state.onceTasks);
     cleanupDailyTaskDoneMap();
@@ -451,8 +447,7 @@ async function restoreFlowStateOrHome() {
   // 外部ページを開いた状態かどうか
   // 例: Spotifyを開いた後、戻ってきた時に「次へ」ボタンを出すため
   state.openedAction = flowState.openedAction || "";
-
-    // 通常／セレクトモード
+  // 通常／セレクトモード
   state.routineMode =
     flowState.routineMode === ROUTINE_MODES.select
       ? ROUTINE_MODES.select
@@ -465,10 +460,9 @@ async function restoreFlowStateOrHome() {
       : REQUEST_SONG_MODES.usen;
 
   // セレクトモード開始時に確定したデイリータスクID
-  state.selectModeDailyTaskIds =
-    Array.isArray(flowState.selectModeDailyTaskIds)
-      ? flowState.selectModeDailyTaskIds.map(String)
-      : [];
+  state.selectModeDailyTaskIds = Array.isArray(flowState.selectModeDailyTaskIds)
+    ? flowState.selectModeDailyTaskIds.map(String)
+    : [];
 
   // ==================================================
   // Spotify画面の復元
@@ -525,26 +519,18 @@ async function restoreFlowStateOrHome() {
   // USEN／デイリー用リクエスト曲画面の復元
   // ==================================================
   if (flowState.currentStepId === "requestSongStep") {
-    const restoredRequestSong =
-      state.selectedRequestSong;
-
-    const restoredRadioRequestSong =
-      state.selectedRadioRequestSong;
+    const restoredRequestSong = state.selectedRequestSong;
+    const restoredRadioRequestSong = state.selectedRadioRequestSong;
 
     await showRequestSongStep();
 
     if (
-      state.requestSongMode ===
-        REQUEST_SONG_MODES.daily &&
+      state.requestSongMode === REQUEST_SONG_MODES.daily &&
       restoredRadioRequestSong?.name
     ) {
-      const restoredDailySong =
-        state.requestSongs.find((song) => {
-          return (
-            String(song.name || "") ===
-            String(restoredRadioRequestSong.name)
-          );
-        });
+      const restoredDailySong = state.requestSongs.find((song) => {
+        return String(song.name || "") === String(restoredRadioRequestSong.name);
+      });
 
       if (restoredDailySong) {
         selectRequestSong(restoredDailySong);
@@ -554,46 +540,18 @@ async function restoreFlowStateOrHome() {
     }
 
     if (
-      state.requestSongMode ===
-        REQUEST_SONG_MODES.usen &&
-      state.openedAction ===
-        OPENED_ACTIONS.requestSong
+      state.requestSongMode === REQUEST_SONG_MODES.usen &&
+      state.openedAction === OPENED_ACTIONS.requestSong
     ) {
-      requestSongNextButtonElement.classList.remove(
-        "hidden"
-      );
-
-      setButtonStyle(
-        openRequestSongButtonElement,
-        "gray"
-      );
-
-      setButtonStyle(
-        requestSongNextButtonElement,
-        "primary"
-      );
-
-      setSongListVisibility(
-        recommendedRequestSongsElement,
-        false
-      );
-
-      setSongListVisibility(
-        otherRequestSongsWrapperElement,
-        false
-      );
-
-      setSongListVisibility(
-        toggleOtherRequestSongsButtonElement,
-        false
-      );
+      requestSongNextButtonElement.classList.remove("hidden");
+      setButtonStyle(openRequestSongButtonElement, "gray");
+      setButtonStyle(requestSongNextButtonElement, "primary");
+      setSongListVisibility(recommendedRequestSongsElement, false);
+      setSongListVisibility(otherRequestSongsWrapperElement, false);
+      setSongListVisibility(toggleOtherRequestSongsButtonElement, false);
     }
 
-    saveFlowState(
-      state.openedAction,
-      requestSongStepElement
-    );
-
+    saveFlowState(state.openedAction, requestSongStepElement);
     return;
   }
   

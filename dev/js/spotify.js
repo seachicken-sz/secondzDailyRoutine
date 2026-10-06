@@ -65,42 +65,32 @@ function bindSpotifyEvents() {
   // Stationhead利用後の「次へ」ボタン
   // ==================================================
   
-  addClickEvent(
-    stationheadNextButtonElement,
-    async () => {
-      state.selectedSong = null;
-
-      await advanceRoutineFrom("spotify");
-    }
-  );
+  addClickEvent(stationheadNextButtonElement, async () => {
+    state.selectedSong = null;
+    await advanceRoutineFrom("spotify");
+  });
   // ==================================================
   // 「BGMなし」ボタン
   // ==================================================
 
   // BGMなしボタン押下時
-  addClickEvent(
-    skipSpotifyButtonElement,
-    async () => {
-      // Spotify曲は未選択扱いにする
-      state.selectedSong = null;
+  addClickEvent(skipSpotifyButtonElement, async () => {
+    // Spotify曲は未選択扱いにする
+    state.selectedSong = null;
 
-      // 次に選択されている機能へ進む
-      await advanceRoutineFrom("spotify");
-    }
-  );
+    // 通常／セレクトモードに応じた次の画面へ進む
+    await advanceRoutineFrom("spotify");
+  });
 
   // ==================================================
   // 「次へ」ボタン
   // ==================================================
 
   // Spotifyステップの次へボタン押下時
-    addClickEvent(
-      spotifyNextButtonElement,
-      async () => {
-        // 次に選択されている機能へ進む
-        await advanceRoutineFrom("spotify");
-      }
-    );
+  addClickEvent(spotifyNextButtonElement, async () => {
+    // 通常／セレクトモードに応じた次の画面へ進む
+    await advanceRoutineFrom("spotify");
+  });
 
   // ==================================================
   // 「その他」アコーディオン
