@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/10/10 07:07",
+  "updatedAt": "2026/10/10 08:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/10/10 07:07",
+      "updatedAt": "2026/10/10 08:07",
       "episodeId": "ep5y408jx8",
       "subtitle": "新企画！芸能人どハマりグルメ「ベストバイプライスマン」",
       "likes": "2.8万",
@@ -1285,11 +1285,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "マツコの知らない世界"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
@@ -1297,7 +1297,7 @@
             },
             {
               "rank": 50,
-              "title": "A-Studio＋"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             }
           ]
         },
@@ -1717,19 +1717,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EBiDAN熱中！ゲンジブハウス"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 48,
-              "title": "絶望できない男"
-            },
-            {
-              "rank": 49,
               "title": "これ余談なんですけど・・・"
             },
             {
+              "rank": 49,
+              "title": "テレビ千鳥"
+            },
+            {
               "rank": 50,
-              "title": "林修の今知りたいでしょ！"
+              "title": "絶望できない男"
             }
           ]
         }
@@ -1738,7 +1738,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/10/04",
-      "updatedAt": "2026/10/10 07:07",
+      "updatedAt": "2026/10/10 08:07",
       "episodeId": "epkr0wyoim",
       "subtitle": "広瀬すずとあか抜けチェンジ▼福士蒼汰とグルメバトル",
       "likes": "2.1万",
@@ -2226,6 +2226,10 @@
         },
         {
           "hour": 137,
+          "likes": 21000
+        },
+        {
+          "hour": 138,
           "likes": 21000
         }
       ],
@@ -2883,9 +2887,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 45,
-          "elapsedHour": 137,
-          "elapsedRank": 45,
+          "currentRank": 48,
+          "elapsedHour": 138,
+          "elapsedRank": 48,
           "currentPoints": [
             {
               "hour": 3,
@@ -3414,6 +3418,10 @@
             {
               "hour": 137,
               "rank": 45
+            },
+            {
+              "hour": 138,
+              "rank": 48
             }
           ],
           "previousPoints": [
@@ -4076,19 +4084,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 42,
+              "rank": 45,
+              "title": "探偵！ナイトスクープ"
+            },
+            {
+              "rank": 46,
               "title": "ナゾトレMAXXX"
             },
             {
-              "rank": 43,
-              "title": "沸騰ワード10"
-            },
-            {
-              "rank": 44,
+              "rank": 47,
               "title": "有吉クイズ"
             },
             {
-              "rank": 45,
+              "rank": 48,
               "title": "timeleszファミリア"
             }
           ]
@@ -4774,19 +4782,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EBiDAN熱中！ゲンジブハウス"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 48,
-              "title": "絶望できない男"
-            },
-            {
-              "rank": 49,
               "title": "これ余談なんですけど・・・"
             },
             {
+              "rank": 49,
+              "title": "テレビ千鳥"
+            },
+            {
               "rank": 50,
-              "title": "林修の今知りたいでしょ！"
+              "title": "絶望できない男"
             }
           ]
         }
@@ -4795,10 +4803,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/06",
-      "updatedAt": "2026/10/10 07:07",
+      "updatedAt": "2026/10/10 08:07",
       "episodeId": "ep0kb9vkd1",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！後編",
-      "likes": "9663",
+      "likes": "9681",
       "favorites": "6.4万",
       "likePoints": [
         {
@@ -5080,6 +5088,10 @@
         {
           "hour": 79,
           "likes": 9663
+        },
+        {
+          "hour": 80,
+          "likes": 9681
         }
       ],
       "previousLikePoints": [
@@ -5709,7 +5721,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 30,
-          "elapsedHour": 79,
+          "elapsedHour": 80,
           "elapsedRank": 30,
           "currentPoints": [
             {
@@ -6006,6 +6018,10 @@
             },
             {
               "hour": 79,
+              "rank": 30
+            },
+            {
+              "hour": 80,
               "rank": 30
             }
           ],
@@ -6554,11 +6570,11 @@
           "nearbyRanking": [
             {
               "rank": 27,
-              "title": "秘密のケンミンSHOW極"
+              "title": "あっちこっちAぇ!"
             },
             {
               "rank": 28,
-              "title": "あっちこっちAぇ!"
+              "title": "秘密のケンミンSHOW極"
             },
             {
               "rank": 29,
@@ -6819,11 +6835,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "マツコの知らない世界"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
@@ -6831,7 +6847,7 @@
             },
             {
               "rank": 50,
-              "title": "A-Studio＋"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             }
           ]
         }
@@ -6840,7 +6856,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/10/10 07:07",
+      "updatedAt": "2026/10/10 08:07",
       "episodeId": "epxyf3j8s9",
       "subtitle": "芸能人アレルギー大検査SP…岡崎紗絵&ACEesが採血!衝撃結果",
       "likes": "7451",
@@ -7381,11 +7397,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "マツコの知らない世界"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
@@ -7393,7 +7409,7 @@
             },
             {
               "rank": 50,
-              "title": "A-Studio＋"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             }
           ]
         },
@@ -7613,19 +7629,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EBiDAN熱中！ゲンジブハウス"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 48,
-              "title": "絶望できない男"
-            },
-            {
-              "rank": 49,
               "title": "これ余談なんですけど・・・"
             },
             {
+              "rank": 49,
+              "title": "テレビ千鳥"
+            },
+            {
               "rank": 50,
-              "title": "林修の今知りたいでしょ！"
+              "title": "絶望できない男"
             }
           ]
         }
@@ -7634,10 +7650,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/10/07",
-      "updatedAt": "2026/10/10 07:07",
+      "updatedAt": "2026/10/10 08:07",
       "episodeId": "epwen9ebwk",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！亀梨和也登場",
-      "likes": "8095",
+      "likes": "8108",
       "favorites": "15.6万",
       "likePoints": [
         {
@@ -7891,6 +7907,10 @@
         {
           "hour": 78,
           "likes": 8095
+        },
+        {
+          "hour": 79,
+          "likes": 8108
         }
       ],
       "previousLikePoints": [
@@ -8809,11 +8829,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "マツコの知らない世界"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
@@ -8821,7 +8841,7 @@
             },
             {
               "rank": 50,
-              "title": "A-Studio＋"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             }
           ]
         },
@@ -8990,19 +9010,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EBiDAN熱中！ゲンジブハウス"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 48,
-              "title": "絶望できない男"
-            },
-            {
-              "rank": 49,
               "title": "これ余談なんですけど・・・"
             },
             {
+              "rank": 49,
+              "title": "テレビ千鳥"
+            },
+            {
               "rank": 50,
-              "title": "林修の今知りたいでしょ！"
+              "title": "絶望できない男"
             }
           ]
         }
@@ -9011,10 +9031,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/09",
-      "updatedAt": "2026/10/10 07:07",
+      "updatedAt": "2026/10/10 08:07",
       "episodeId": "epbofnt3e1",
       "subtitle": "第148回 広瀬アリスが大爆発！？企画初の全員正解なるか",
-      "likes": "3301",
+      "likes": "3340",
       "favorites": "71.7万",
       "likePoints": [
         {
@@ -9132,6 +9152,10 @@
         {
           "hour": 31,
           "likes": 3301
+        },
+        {
+          "hour": 32,
+          "likes": 3340
         }
       ],
       "previousLikePoints": [
@@ -9744,9 +9768,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 13,
-          "elapsedHour": 30,
-          "elapsedRank": 13,
+          "currentRank": 14,
+          "elapsedHour": 31,
+          "elapsedRank": 14,
           "currentPoints": [
             {
               "hour": 10,
@@ -9831,6 +9855,10 @@
             {
               "hour": 30,
               "rank": 13
+            },
+            {
+              "hour": 31,
+              "rank": 14
             }
           ],
           "previousPoints": [
@@ -10065,10 +10093,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 10,
-              "title": "M!LKの爆裂ミッション"
-            },
-            {
               "rank": 11,
               "title": "THE突破ファイル"
             },
@@ -10078,6 +10102,10 @@
             },
             {
               "rank": 13,
+              "title": "ニンゲン観察バラエティ モニタリング"
+            },
+            {
+              "rank": 14,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -10085,9 +10113,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 36,
-          "elapsedHour": 30,
-          "elapsedRank": 36,
+          "currentRank": 39,
+          "elapsedHour": 31,
+          "elapsedRank": 39,
           "currentPoints": [
             {
               "hour": 17,
@@ -10144,6 +10172,10 @@
             {
               "hour": 30,
               "rank": 36
+            },
+            {
+              "hour": 31,
+              "rank": 39
             }
           ],
           "previousPoints": [
@@ -10286,19 +10318,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 33,
-              "title": "THE突破ファイル"
+              "rank": 36,
+              "title": "まめとむぎ"
             },
             {
-              "rank": 34,
-              "title": "終末の同窓会"
-            },
-            {
-              "rank": 35,
+              "rank": 37,
               "title": "夫が寝たあとに"
             },
             {
-              "rank": 36,
+              "rank": 38,
+              "title": "ニンゲン観察バラエティ モニタリング"
+            },
+            {
+              "rank": 39,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -10308,10 +10340,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/09/19",
-      "updatedAt": "2026/10/10 07:07",
+      "updatedAt": "2026/10/10 08:07",
       "episodeId": "ephhccb64t",
       "subtitle": "マッサマンvs秒で組体操（秘）おなら！SP",
-      "likes": "5058",
+      "likes": "5069",
       "favorites": "81.1万",
       "likePoints": [
         {
@@ -11445,11 +11477,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "マツコの知らない世界"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
@@ -11457,7 +11489,7 @@
             },
             {
               "rank": 50,
-              "title": "A-Studio＋"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             }
           ]
         },
@@ -11705,19 +11737,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EBiDAN熱中！ゲンジブハウス"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 48,
-              "title": "絶望できない男"
-            },
-            {
-              "rank": 49,
               "title": "これ余談なんですけど・・・"
             },
             {
+              "rank": 49,
+              "title": "テレビ千鳥"
+            },
+            {
               "rank": 50,
-              "title": "林修の今知りたいでしょ！"
+              "title": "絶望できない男"
             }
           ]
         }
@@ -11726,7 +11758,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/10/10 07:07",
+      "updatedAt": "2026/10/10 08:07",
       "episodeId": "epnqu504ur",
       "subtitle": "第11話 二人がたどり着く最後の余韻・・・出会えてよかった",
       "likes": "1.8万",
@@ -13047,19 +13079,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "GTO"
-            },
-            {
-              "rank": 48,
               "title": "韓国ドラマ「メンコン 史上最高の私！」"
             },
             {
+              "rank": 48,
+              "title": "GTO"
+            },
+            {
               "rank": 49,
-              "title": "中国ドラマ「溥儀の料理番～紫禁城 最後の日々」"
+              "title": "中国ドラマ「春花焔～Kill Me Love Me～」"
             },
             {
               "rank": 50,
-              "title": "中国ドラマ「春花焔～Kill Me Love Me～」"
+              "title": "中国ドラマ「溥儀の料理番～紫禁城 最後の日々」"
             }
           ]
         },
@@ -13743,19 +13775,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EBiDAN熱中！ゲンジブハウス"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 48,
-              "title": "絶望できない男"
-            },
-            {
-              "rank": 49,
               "title": "これ余談なんですけど・・・"
             },
             {
+              "rank": 49,
+              "title": "テレビ千鳥"
+            },
+            {
               "rank": 50,
-              "title": "林修の今知りたいでしょ！"
+              "title": "絶望できない男"
             }
           ]
         }
@@ -13764,7 +13796,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/22",
-      "updatedAt": "2026/10/10 07:07",
+      "updatedAt": "2026/10/10 08:07",
       "episodeId": "epc4m7onou",
       "subtitle": "ねづっち24時／マジック講座",
       "likes": "1.3万",
@@ -14765,19 +14797,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スクール革命！"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 48,
-              "title": "滝沢カレン＆和田明日香のフィーリンきっちん"
+              "title": "スクール革命！"
             },
             {
               "rank": 49,
-              "title": "よるのブランチ"
+              "title": "オードリーさん、ぜひ会ってほしい人がいるんです。"
             },
             {
               "rank": 50,
-              "title": "オードリーさん、ぜひ会ってほしい人がいるんです。"
+              "title": "滝沢カレン＆和田明日香のフィーリンきっちん"
             }
           ]
         },
@@ -14941,11 +14973,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "有吉クイズ"
             },
             {
               "rank": 48,
-              "title": "マツコの知らない世界"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 49,
@@ -14953,7 +14985,7 @@
             },
             {
               "rank": 50,
-              "title": "A-Studio＋"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             }
           ]
         }
@@ -14962,7 +14994,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/10/10 07:07",
+      "updatedAt": "2026/10/10 08:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "436",
@@ -14981,19 +15013,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "GTO"
-            },
-            {
-              "rank": 48,
               "title": "韓国ドラマ「メンコン 史上最高の私！」"
             },
             {
+              "rank": 48,
+              "title": "GTO"
+            },
+            {
               "rank": 49,
-              "title": "中国ドラマ「溥儀の料理番～紫禁城 最後の日々」"
+              "title": "中国ドラマ「春花焔～Kill Me Love Me～」"
             },
             {
               "rank": 50,
-              "title": "中国ドラマ「春花焔～Kill Me Love Me～」"
+              "title": "中国ドラマ「溥儀の料理番～紫禁城 最後の日々」"
             }
           ]
         },
@@ -15008,19 +15040,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EBiDAN熱中！ゲンジブハウス"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 48,
-              "title": "絶望できない男"
-            },
-            {
-              "rank": 49,
               "title": "これ余談なんですけど・・・"
             },
             {
+              "rank": 49,
+              "title": "テレビ千鳥"
+            },
+            {
               "rank": 50,
-              "title": "林修の今知りたいでしょ！"
+              "title": "絶望できない男"
             }
           ]
         }
