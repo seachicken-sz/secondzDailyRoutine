@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/10/09 19:07",
+  "updatedAt": "2026/10/09 20:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/10/09 19:07",
+      "updatedAt": "2026/10/09 20:07",
       "episodeId": "ep5y408jx8",
       "subtitle": "新企画！芸能人どハマりグルメ「ベストバイプライスマン」",
       "likes": "2.8万",
@@ -2095,19 +2095,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "深夜のダイアン"
-            },
-            {
-              "rank": 48,
               "title": "timeleszファミリア"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "有吉の壁"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "突然ですが占ってもいいですか？"
+            },
+            {
+              "rank": 50,
+              "title": "ラヴィット！"
             }
           ]
         },
@@ -2808,19 +2808,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "救命病棟24時（第2シリーズ）"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 48,
-              "title": "まめとむぎ"
+              "title": "きんつくろい-金繕い-"
             },
             {
               "rank": 49,
-              "title": "林修の今知りたいでしょ！"
+              "title": "救命病棟24時（第2シリーズ）"
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "まめとむぎ"
             }
           ]
         }
@@ -2829,7 +2829,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/10/04",
-      "updatedAt": "2026/10/09 19:07",
+      "updatedAt": "2026/10/09 20:07",
       "episodeId": "epkr0wyoim",
       "subtitle": "広瀬すずとあか抜けチェンジ▼福士蒼汰とグルメバトル",
       "likes": "2.1万",
@@ -3269,6 +3269,10 @@
         },
         {
           "hour": 125,
+          "likes": 21000
+        },
+        {
+          "hour": 126,
           "likes": 21000
         }
       ],
@@ -3926,9 +3930,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 48,
-          "elapsedHour": 125,
-          "elapsedRank": 48,
+          "currentRank": 47,
+          "elapsedHour": 126,
+          "elapsedRank": 47,
           "currentPoints": [
             {
               "hour": 3,
@@ -4409,6 +4413,10 @@
             {
               "hour": 125,
               "rank": 48
+            },
+            {
+              "hour": 126,
+              "rank": 47
             }
           ],
           "previousPoints": [
@@ -5071,19 +5079,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 44,
+              "title": "マツコの知らない世界"
+            },
+            {
               "rank": 45,
-              "title": "有吉クイズ"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 46,
-              "title": "日テレ系クイズフェスティバル2026秋"
-            },
-            {
-              "rank": 47,
               "title": "深夜のダイアン"
             },
             {
-              "rank": 48,
+              "rank": 47,
               "title": "timeleszファミリア"
             }
           ]
@@ -5769,19 +5777,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "救命病棟24時（第2シリーズ）"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 48,
-              "title": "まめとむぎ"
+              "title": "きんつくろい-金繕い-"
             },
             {
               "rank": 49,
-              "title": "林修の今知りたいでしょ！"
+              "title": "救命病棟24時（第2シリーズ）"
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "まめとむぎ"
             }
           ]
         }
@@ -5790,10 +5798,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/06",
-      "updatedAt": "2026/10/09 19:07",
+      "updatedAt": "2026/10/09 20:07",
       "episodeId": "ep0kb9vkd1",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！後編",
-      "likes": "9493",
+      "likes": "9527",
       "favorites": "6.4万",
       "likePoints": [
         {
@@ -6027,6 +6035,10 @@
         {
           "hour": 67,
           "likes": 9493
+        },
+        {
+          "hour": 68,
+          "likes": 9527
         }
       ],
       "previousLikePoints": [
@@ -6656,7 +6668,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 23,
-          "elapsedHour": 67,
+          "elapsedHour": 68,
           "elapsedRank": 23,
           "currentPoints": [
             {
@@ -6905,6 +6917,10 @@
             },
             {
               "hour": 67,
+              "rank": 23
+            },
+            {
+              "hour": 68,
               "rank": 23
             }
           ],
@@ -7453,11 +7469,11 @@
           "nearbyRanking": [
             {
               "rank": 20,
-              "title": "孝太郎＆ちさ子 プラチナファミリー 華麗なる一家をのぞき見"
+              "title": "見取り図の間取り図ミステリー"
             },
             {
               "rank": 21,
-              "title": "見取り図の間取り図ミステリー"
+              "title": "孝太郎＆ちさ子 プラチナファミリー 華麗なる一家をのぞき見"
             },
             {
               "rank": 22,
@@ -7718,19 +7734,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "深夜のダイアン"
-            },
-            {
-              "rank": 48,
               "title": "timeleszファミリア"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "有吉の壁"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "突然ですが占ってもいいですか？"
+            },
+            {
+              "rank": 50,
+              "title": "ラヴィット！"
             }
           ]
         }
@@ -7739,7 +7755,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/10/09 19:07",
+      "updatedAt": "2026/10/09 20:07",
       "episodeId": "epxyf3j8s9",
       "subtitle": "芸能人アレルギー大検査SP…岡崎紗絵&ACEesが採血!衝撃結果",
       "likes": "7451",
@@ -8280,19 +8296,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "深夜のダイアン"
-            },
-            {
-              "rank": 48,
               "title": "timeleszファミリア"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "有吉の壁"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "突然ですが占ってもいいですか？"
+            },
+            {
+              "rank": 50,
+              "title": "ラヴィット！"
             }
           ]
         },
@@ -8512,19 +8528,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "救命病棟24時（第2シリーズ）"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 48,
-              "title": "まめとむぎ"
+              "title": "きんつくろい-金繕い-"
             },
             {
               "rank": 49,
-              "title": "林修の今知りたいでしょ！"
+              "title": "救命病棟24時（第2シリーズ）"
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "まめとむぎ"
             }
           ]
         }
@@ -8533,10 +8549,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/10/07",
-      "updatedAt": "2026/10/09 19:07",
+      "updatedAt": "2026/10/09 20:07",
       "episodeId": "epwen9ebwk",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！亀梨和也登場",
-      "likes": "7886",
+      "likes": "7915",
       "favorites": "15.6万",
       "likePoints": [
         {
@@ -8750,6 +8766,10 @@
         {
           "hour": 66,
           "likes": 7886
+        },
+        {
+          "hour": 67,
+          "likes": 7915
         }
       ],
       "previousLikePoints": [
@@ -9668,19 +9688,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "深夜のダイアン"
-            },
-            {
-              "rank": 48,
               "title": "timeleszファミリア"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "有吉の壁"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "突然ですが占ってもいいですか？"
+            },
+            {
+              "rank": 50,
+              "title": "ラヴィット！"
             }
           ]
         },
@@ -9849,19 +9869,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "救命病棟24時（第2シリーズ）"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 48,
-              "title": "まめとむぎ"
+              "title": "きんつくろい-金繕い-"
             },
             {
               "rank": 49,
-              "title": "林修の今知りたいでしょ！"
+              "title": "救命病棟24時（第2シリーズ）"
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "まめとむぎ"
             }
           ]
         }
@@ -9870,10 +9890,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/09",
-      "updatedAt": "2026/10/09 19:07",
+      "updatedAt": "2026/10/09 20:07",
       "episodeId": "epbofnt3e1",
       "subtitle": "第148回 広瀬アリスが大爆発！？企画初の全員正解なるか",
-      "likes": "2615",
+      "likes": "2731",
       "favorites": "71.7万",
       "likePoints": [
         {
@@ -9943,6 +9963,10 @@
         {
           "hour": 19,
           "likes": 2615
+        },
+        {
+          "hour": 20,
+          "likes": 2731
         }
       ],
       "previousLikePoints": [
@@ -10555,9 +10579,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 22,
-          "elapsedHour": 18,
-          "elapsedRank": 22,
+          "currentRank": 19,
+          "elapsedHour": 19,
+          "elapsedRank": 19,
           "currentPoints": [
             {
               "hour": 10,
@@ -10594,6 +10618,10 @@
             {
               "hour": 18,
               "rank": 22
+            },
+            {
+              "hour": 19,
+              "rank": 19
             }
           ],
           "previousPoints": [
@@ -10828,19 +10856,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 19,
+              "rank": 16,
+              "title": "踊る！さんま御殿!!"
+            },
+            {
+              "rank": 17,
+              "title": "見取り図じゃん"
+            },
+            {
+              "rank": 18,
               "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
-              "rank": 20,
-              "title": "かまいガチ"
-            },
-            {
-              "rank": 21,
-              "title": "クレイジージャーニー"
-            },
-            {
-              "rank": 22,
+              "rank": 19,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -10848,9 +10876,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 46,
-          "elapsedHour": 18,
-          "elapsedRank": 46,
+          "currentRank": 42,
+          "elapsedHour": 19,
+          "elapsedRank": 42,
           "currentPoints": [
             {
               "hour": 17,
@@ -10859,6 +10887,10 @@
             {
               "hour": 18,
               "rank": 46
+            },
+            {
+              "hour": 19,
+              "rank": 42
             }
           ],
           "previousPoints": [
@@ -11001,19 +11033,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 43,
-              "title": "波うららかに、めおと日和（2025）"
+              "rank": 39,
+              "title": "踊る！さんま御殿!!"
             },
             {
-              "rank": 44,
-              "title": "かまいガチ"
+              "rank": 40,
+              "title": "見取り図じゃん"
             },
             {
-              "rank": 45,
-              "title": "クレイジージャーニー"
+              "rank": 41,
+              "title": "ニンゲン観察バラエティ モニタリング"
             },
             {
-              "rank": 46,
+              "rank": 42,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -11023,10 +11055,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/09/19",
-      "updatedAt": "2026/10/09 19:07",
+      "updatedAt": "2026/10/09 20:07",
       "episodeId": "ephhccb64t",
       "subtitle": "マッサマンvs秒で組体操（秘）おなら！SP",
-      "likes": "4937",
+      "likes": "4947",
       "favorites": "81.1万",
       "likePoints": [
         {
@@ -12160,19 +12192,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "深夜のダイアン"
-            },
-            {
-              "rank": 48,
               "title": "timeleszファミリア"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "有吉の壁"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "突然ですが占ってもいいですか？"
+            },
+            {
+              "rank": 50,
+              "title": "ラヴィット！"
             }
           ]
         },
@@ -12420,19 +12452,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "救命病棟24時（第2シリーズ）"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 48,
-              "title": "まめとむぎ"
+              "title": "きんつくろい-金繕い-"
             },
             {
               "rank": 49,
-              "title": "林修の今知りたいでしょ！"
+              "title": "救命病棟24時（第2シリーズ）"
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "まめとむぎ"
             }
           ]
         }
@@ -12441,7 +12473,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/10/09 19:07",
+      "updatedAt": "2026/10/09 20:07",
       "episodeId": "epnqu504ur",
       "subtitle": "第11話 二人がたどり着く最後の余韻・・・出会えてよかった",
       "likes": "1.8万",
@@ -13762,15 +13794,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "GTO"
+              "title": "韓国ドラマ「ウンヒの涙」"
             },
             {
               "rank": 48,
-              "title": "義理の兄は推し小説家!? 〜小悪魔弟×拗らせチェリー〜"
+              "title": "【韓国ドラマ】とにかくアツく掃除しろ！～恋した彼は潔癖王子！？～"
             },
             {
               "rank": 49,
-              "title": "【韓国ドラマ】とにかくアツく掃除しろ！～恋した彼は潔癖王子！？～"
+              "title": "韓国ドラマ「メンコン 史上最高の私！」"
             },
             {
               "rank": 50,
@@ -14458,19 +14490,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "救命病棟24時（第2シリーズ）"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 48,
-              "title": "まめとむぎ"
+              "title": "きんつくろい-金繕い-"
             },
             {
               "rank": 49,
-              "title": "林修の今知りたいでしょ！"
+              "title": "救命病棟24時（第2シリーズ）"
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "まめとむぎ"
             }
           ]
         }
@@ -14479,7 +14511,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/22",
-      "updatedAt": "2026/10/09 19:07",
+      "updatedAt": "2026/10/09 20:07",
       "episodeId": "epc4m7onou",
       "subtitle": "ねづっち24時／マジック講座",
       "likes": "1.3万",
@@ -15480,19 +15512,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "紙とさまぁ～ず"
             },
             {
               "rank": 48,
-              "title": "ぽかぽか"
-            },
-            {
-              "rank": 49,
               "title": "芸能人格付けチェック 秋の3時間半スペシャル"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "スクール革命！"
+            },
+            {
+              "rank": 50,
+              "title": "ぽかぽか"
             }
           ]
         },
@@ -15656,19 +15688,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "深夜のダイアン"
-            },
-            {
-              "rank": 48,
               "title": "timeleszファミリア"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "有吉の壁"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "突然ですが占ってもいいですか？"
+            },
+            {
+              "rank": 50,
+              "title": "ラヴィット！"
             }
           ]
         }
@@ -15677,7 +15709,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/10/09 19:07",
+      "updatedAt": "2026/10/09 20:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "436",
@@ -15696,15 +15728,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "GTO"
+              "title": "韓国ドラマ「ウンヒの涙」"
             },
             {
               "rank": 48,
-              "title": "義理の兄は推し小説家!? 〜小悪魔弟×拗らせチェリー〜"
+              "title": "【韓国ドラマ】とにかくアツく掃除しろ！～恋した彼は潔癖王子！？～"
             },
             {
               "rank": 49,
-              "title": "【韓国ドラマ】とにかくアツく掃除しろ！～恋した彼は潔癖王子！？～"
+              "title": "韓国ドラマ「メンコン 史上最高の私！」"
             },
             {
               "rank": 50,
@@ -15723,19 +15755,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "救命病棟24時（第2シリーズ）"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 48,
-              "title": "まめとむぎ"
+              "title": "きんつくろい-金繕い-"
             },
             {
               "rank": 49,
-              "title": "林修の今知りたいでしょ！"
+              "title": "救命病棟24時（第2シリーズ）"
             },
             {
               "rank": 50,
-              "title": "あちこちオードリー"
+              "title": "まめとむぎ"
             }
           ]
         }
