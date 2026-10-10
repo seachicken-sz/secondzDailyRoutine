@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/10/10 20:08",
+  "updatedAt": "2026/10/10 21:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/10/10 20:08",
+      "updatedAt": "2026/10/10 21:07",
       "episodeId": "ep5y408jx8",
       "subtitle": "新企画！芸能人どハマりグルメ「ベストバイプライスマン」",
       "likes": "2.8万",
@@ -1285,19 +1285,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "timeleszファミリア"
-            },
-            {
-              "rank": 48,
               "title": "ウソかホントかわからない やりすぎ都市伝説"
             },
             {
+              "rank": 48,
+              "title": "櫻井･有吉THE夜会"
+            },
+            {
               "rank": 49,
-              "title": "ホンマでっか！？TV"
+              "title": "ラヴィット！"
             },
             {
               "rank": 50,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "おしゃれクリップ"
             }
           ]
         },
@@ -1717,19 +1717,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
+              "title": "付き合ってあげてもいいかな"
             },
             {
               "rank": 48,
-              "title": "かのサンド"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
-              "title": "踊る！さんま御殿!!"
+              "title": "世界の果てまでイッテQ！"
             }
           ]
         }
@@ -1738,7 +1738,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/10/04",
-      "updatedAt": "2026/10/10 20:08",
+      "updatedAt": "2026/10/10 21:07",
       "episodeId": "epkr0wyoim",
       "subtitle": "広瀬すずとあか抜けチェンジ▼福士蒼汰とグルメバトル",
       "likes": "2.1万",
@@ -2278,6 +2278,10 @@
         },
         {
           "hour": 150,
+          "likes": 21000
+        },
+        {
+          "hour": 151,
           "likes": 21000
         }
       ],
@@ -2935,9 +2939,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 47,
-          "elapsedHour": 150,
-          "elapsedRank": 47,
+          "currentRank": 46,
+          "elapsedHour": 151,
+          "elapsedRank": 46,
           "currentPoints": [
             {
               "hour": 3,
@@ -3494,6 +3498,10 @@
             {
               "hour": 150,
               "rank": 47
+            },
+            {
+              "hour": 151,
+              "rank": 46
             }
           ],
           "previousPoints": [
@@ -4156,19 +4164,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 43,
+              "title": "有吉クイズ"
+            },
+            {
               "rank": 44,
               "title": "M!LKに言ってみ？"
             },
             {
               "rank": 45,
-              "title": "櫻井･有吉THE夜会"
-            },
-            {
-              "rank": 46,
               "title": "Aぇ! groupのQ＆Aぇ!"
             },
             {
-              "rank": 47,
+              "rank": 46,
               "title": "timeleszファミリア"
             }
           ]
@@ -4854,19 +4862,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
+              "title": "付き合ってあげてもいいかな"
             },
             {
               "rank": 48,
-              "title": "かのサンド"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
-              "title": "踊る！さんま御殿!!"
+              "title": "世界の果てまでイッテQ！"
             }
           ]
         }
@@ -4875,10 +4883,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/06",
-      "updatedAt": "2026/10/10 20:08",
+      "updatedAt": "2026/10/10 21:07",
       "episodeId": "ep0kb9vkd1",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！後編",
-      "likes": "9890",
+      "likes": "9905",
       "favorites": "6.4万",
       "likePoints": [
         {
@@ -5212,6 +5220,10 @@
         {
           "hour": 92,
           "likes": 9890
+        },
+        {
+          "hour": 93,
+          "likes": 9905
         }
       ],
       "previousLikePoints": [
@@ -5840,9 +5852,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 38,
-          "elapsedHour": 92,
-          "elapsedRank": 38,
+          "currentRank": 39,
+          "elapsedHour": 93,
+          "elapsedRank": 39,
           "currentPoints": [
             {
               "hour": 5,
@@ -6191,6 +6203,10 @@
             {
               "hour": 92,
               "rank": 38
+            },
+            {
+              "hour": 93,
+              "rank": 39
             }
           ],
           "previousPoints": [
@@ -6737,19 +6753,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 35,
-              "title": "サンドウィッチマン＆芦田愛菜の博士ちゃん"
-            },
-            {
               "rank": 36,
-              "title": "大改造!!劇的ビフォーアフター"
+              "title": "住人十色～家の数だけある 家族のカタチ～"
             },
             {
               "rank": 37,
-              "title": "くりぃむしちゅーの熊本どぎゃん!?"
+              "title": "大改造!!劇的ビフォーアフター"
             },
             {
               "rank": 38,
+              "title": "シューイチ"
+            },
+            {
+              "rank": 39,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -7003,19 +7019,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "timeleszファミリア"
-            },
-            {
-              "rank": 48,
               "title": "ウソかホントかわからない やりすぎ都市伝説"
             },
             {
+              "rank": 48,
+              "title": "櫻井･有吉THE夜会"
+            },
+            {
               "rank": 49,
-              "title": "ホンマでっか！？TV"
+              "title": "ラヴィット！"
             },
             {
               "rank": 50,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "おしゃれクリップ"
             }
           ]
         }
@@ -7024,7 +7040,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/10/10 20:08",
+      "updatedAt": "2026/10/10 21:07",
       "episodeId": "epxyf3j8s9",
       "subtitle": "芸能人アレルギー大検査SP…岡崎紗絵&ACEesが採血!衝撃結果",
       "likes": "7451",
@@ -7565,19 +7581,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "timeleszファミリア"
-            },
-            {
-              "rank": 48,
               "title": "ウソかホントかわからない やりすぎ都市伝説"
             },
             {
+              "rank": 48,
+              "title": "櫻井･有吉THE夜会"
+            },
+            {
               "rank": 49,
-              "title": "ホンマでっか！？TV"
+              "title": "ラヴィット！"
             },
             {
               "rank": 50,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "おしゃれクリップ"
             }
           ]
         },
@@ -7797,19 +7813,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
+              "title": "付き合ってあげてもいいかな"
             },
             {
               "rank": 48,
-              "title": "かのサンド"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
-              "title": "踊る！さんま御殿!!"
+              "title": "世界の果てまでイッテQ！"
             }
           ]
         }
@@ -7818,10 +7834,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/10/07",
-      "updatedAt": "2026/10/10 20:08",
+      "updatedAt": "2026/10/10 21:07",
       "episodeId": "epwen9ebwk",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！亀梨和也登場",
-      "likes": "8342",
+      "likes": "8357",
       "favorites": "15.6万",
       "likePoints": [
         {
@@ -8127,6 +8143,10 @@
         {
           "hour": 91,
           "likes": 8342
+        },
+        {
+          "hour": 92,
+          "likes": 8357
         }
       ],
       "previousLikePoints": [
@@ -9045,19 +9065,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "timeleszファミリア"
-            },
-            {
-              "rank": 48,
               "title": "ウソかホントかわからない やりすぎ都市伝説"
             },
             {
+              "rank": 48,
+              "title": "櫻井･有吉THE夜会"
+            },
+            {
               "rank": 49,
-              "title": "ホンマでっか！？TV"
+              "title": "ラヴィット！"
             },
             {
               "rank": 50,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "おしゃれクリップ"
             }
           ]
         },
@@ -9226,19 +9246,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
+              "title": "付き合ってあげてもいいかな"
             },
             {
               "rank": 48,
-              "title": "かのサンド"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
-              "title": "踊る！さんま御殿!!"
+              "title": "世界の果てまでイッテQ！"
             }
           ]
         }
@@ -9247,10 +9267,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/09",
-      "updatedAt": "2026/10/10 20:08",
+      "updatedAt": "2026/10/10 21:07",
       "episodeId": "epbofnt3e1",
       "subtitle": "第148回 広瀬アリスが大爆発！？企画初の全員正解なるか",
-      "likes": "3768",
+      "likes": "3800",
       "favorites": "71.7万",
       "likePoints": [
         {
@@ -9420,6 +9440,10 @@
         {
           "hour": 44,
           "likes": 3768
+        },
+        {
+          "hour": 45,
+          "likes": 3800
         }
       ],
       "previousLikePoints": [
@@ -10032,9 +10056,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 26,
-          "elapsedHour": 43,
-          "elapsedRank": 26,
+          "currentRank": 28,
+          "elapsedHour": 44,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 10,
@@ -10171,6 +10195,10 @@
             {
               "hour": 43,
               "rank": 26
+            },
+            {
+              "hour": 44,
+              "rank": 28
             }
           ],
           "previousPoints": [
@@ -10405,19 +10433,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 23,
-              "title": "千原ジュニアの座王"
-            },
-            {
-              "rank": 24,
-              "title": "これ余談なんですけど・・・"
-            },
-            {
               "rank": 25,
               "title": "夫が寝たあとに"
             },
             {
               "rank": 26,
+              "title": "教えて！ニュースライブ 正義のミカタ"
+            },
+            {
+              "rank": 27,
+              "title": "トークィーンズ"
+            },
+            {
+              "rank": 28,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -10663,19 +10691,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
+              "title": "付き合ってあげてもいいかな"
             },
             {
               "rank": 48,
-              "title": "かのサンド"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
-              "title": "踊る！さんま御殿!!"
+              "title": "世界の果てまでイッテQ！"
             }
           ]
         }
@@ -10683,13 +10711,19 @@
     },
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
-      "broadcastDate": "2026/09/19",
-      "updatedAt": "2026/10/10 20:08",
-      "episodeId": "ephhccb64t",
-      "subtitle": "マッサマンvs秒で組体操（秘）おなら！SP",
-      "likes": "5284",
-      "favorites": "81.1万",
+      "broadcastDate": "2026/10/10",
+      "updatedAt": "2026/10/10 21:07",
+      "episodeId": "ep6jb9yo8g",
+      "subtitle": "SnowManヤバい選抜が大モメSP前編",
+      "likes": "354",
+      "favorites": "81.2万",
       "likePoints": [
+        {
+          "hour": 2,
+          "likes": 354
+        }
+      ],
+      "previousLikePoints": [
         {
           "hour": 2,
           "likes": 301
@@ -11331,7 +11365,6 @@
           "likes": 3905
         }
       ],
-      "previousLikePoints": [],
       "rankings": [
         {
           "type": "variety",
@@ -11339,7 +11372,8 @@
           "currentRank": null,
           "elapsedHour": null,
           "elapsedRank": null,
-          "currentPoints": [
+          "currentPoints": [],
+          "previousPoints": [
             {
               "hour": 5,
               "rank": 46
@@ -11817,23 +11851,22 @@
               "rank": 50
             }
           ],
-          "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "timeleszファミリア"
-            },
-            {
-              "rank": 48,
               "title": "ウソかホントかわからない やりすぎ都市伝説"
             },
             {
+              "rank": 48,
+              "title": "櫻井･有吉THE夜会"
+            },
+            {
               "rank": 49,
-              "title": "ホンマでっか！？TV"
+              "title": "ラヴィット！"
             },
             {
               "rank": 50,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "おしゃれクリップ"
             }
           ]
         },
@@ -11843,7 +11876,8 @@
           "currentRank": null,
           "elapsedHour": null,
           "elapsedRank": null,
-          "currentPoints": [
+          "currentPoints": [],
+          "previousPoints": [
             {
               "hour": 14,
               "rank": 48
@@ -12077,23 +12111,22 @@
               "rank": 49
             }
           ],
-          "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
+              "title": "付き合ってあげてもいいかな"
             },
             {
               "rank": 48,
-              "title": "かのサンド"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
-              "title": "踊る！さんま御殿!!"
+              "title": "世界の果てまでイッテQ！"
             }
           ]
         }
@@ -12102,7 +12135,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/10/10 20:08",
+      "updatedAt": "2026/10/10 21:07",
       "episodeId": "epnqu504ur",
       "subtitle": "第11話 二人がたどり着く最後の余韻・・・出会えてよかった",
       "likes": "1.8万",
@@ -13423,19 +13456,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "中国ドラマ「春花焔～Kill Me Love Me～」"
+              "title": "フェイクマミー"
             },
             {
               "rank": 48,
-              "title": "メディカルチーム レディ・ダ・ヴィンチの診断"
+              "title": "中国ドラマ「春花焔～Kill Me Love Me～」"
             },
             {
               "rank": 49,
-              "title": "最愛"
+              "title": "メディカルチーム レディ・ダ・ヴィンチの診断"
             },
             {
               "rank": 50,
-              "title": "マイ・セカンド・アオハル"
+              "title": "韓国ドラマ 会いたい～I Miss You～"
             }
           ]
         },
@@ -14119,19 +14152,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
+              "title": "付き合ってあげてもいいかな"
             },
             {
               "rank": 48,
-              "title": "かのサンド"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
-              "title": "踊る！さんま御殿!!"
+              "title": "世界の果てまでイッテQ！"
             }
           ]
         }
@@ -14140,7 +14173,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/22",
-      "updatedAt": "2026/10/10 20:08",
+      "updatedAt": "2026/10/10 21:07",
       "episodeId": "epc4m7onou",
       "subtitle": "ねづっち24時／マジック講座",
       "likes": "1.3万",
@@ -15141,19 +15174,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "スクール革命！"
+              "title": "見取り図の間取り図ミステリー"
             },
             {
               "rank": 48,
-              "title": "痛快！明石家電視台"
+              "title": "スクール革命！"
             },
             {
               "rank": 49,
-              "title": "おまかせ話食 濱太郎"
+              "title": "相葉◎×部"
             },
             {
               "rank": 50,
-              "title": "にけつッ!!"
+              "title": "おまかせ話食 濱太郎"
             }
           ]
         },
@@ -15317,19 +15350,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "timeleszファミリア"
-            },
-            {
-              "rank": 48,
               "title": "ウソかホントかわからない やりすぎ都市伝説"
             },
             {
+              "rank": 48,
+              "title": "櫻井･有吉THE夜会"
+            },
+            {
               "rank": 49,
-              "title": "ホンマでっか！？TV"
+              "title": "ラヴィット！"
             },
             {
               "rank": 50,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "おしゃれクリップ"
             }
           ]
         }
@@ -15338,7 +15371,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/10/10 20:08",
+      "updatedAt": "2026/10/10 21:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "436",
@@ -15357,19 +15390,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "中国ドラマ「春花焔～Kill Me Love Me～」"
+              "title": "フェイクマミー"
             },
             {
               "rank": 48,
-              "title": "メディカルチーム レディ・ダ・ヴィンチの診断"
+              "title": "中国ドラマ「春花焔～Kill Me Love Me～」"
             },
             {
               "rank": 49,
-              "title": "最愛"
+              "title": "メディカルチーム レディ・ダ・ヴィンチの診断"
             },
             {
               "rank": 50,
-              "title": "マイ・セカンド・アオハル"
+              "title": "韓国ドラマ 会いたい～I Miss You～"
             }
           ]
         },
@@ -15384,19 +15417,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ千鳥"
+              "title": "付き合ってあげてもいいかな"
             },
             {
               "rank": 48,
-              "title": "かのサンド"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 50,
-              "title": "踊る！さんま御殿!!"
+              "title": "世界の果てまでイッテQ！"
             }
           ]
         }
