@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/10/12 01:07",
+  "updatedAt": "2026/10/12 02:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/10/12 01:07",
+      "updatedAt": "2026/10/12 02:07",
       "episodeId": "ep5y408jx8",
       "subtitle": "新企画！芸能人どハマりグルメ「ベストバイプライスマン」",
       "likes": "2.8万",
@@ -1293,7 +1293,7 @@
             },
             {
               "rank": 49,
-              "title": "有吉クイズ"
+              "title": "笑点"
             },
             {
               "rank": 50,
@@ -1717,19 +1717,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "終末の同窓会"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 48,
-              "title": "救命病棟24時（第2シリーズ）"
+              "title": "終末の同窓会"
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "救命病棟24時（第2シリーズ）"
             },
             {
               "rank": 50,
-              "title": "世界の果てまでイッテQ！"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             }
           ]
         }
@@ -1738,10 +1738,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/10/11",
-      "updatedAt": "2026/10/12 01:07",
+      "updatedAt": "2026/10/12 02:07",
       "episodeId": "epypg75xrf",
       "subtitle": "【秋の最強着こなし術】あか抜け迷子を60分間で大変身",
-      "likes": "8827",
+      "likes": "8971",
       "favorites": "36.6万",
       "likePoints": [
         {
@@ -1787,6 +1787,10 @@
         {
           "hour": 11,
           "likes": 8827
+        },
+        {
+          "hour": 12,
+          "likes": 8971
         }
       ],
       "previousLikePoints": [
@@ -2400,7 +2404,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 12,
-          "elapsedHour": 11,
+          "elapsedHour": 12,
           "elapsedRank": 12,
           "currentPoints": [
             {
@@ -2433,6 +2437,10 @@
             },
             {
               "hour": 11,
+              "rank": 12
+            },
+            {
+              "hour": 12,
               "rank": 12
             }
           ],
@@ -3085,7 +3093,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 30,
-          "elapsedHour": 11,
+          "elapsedHour": 12,
           "elapsedRank": 30,
           "currentPoints": [
             {
@@ -3106,6 +3114,10 @@
             },
             {
               "hour": 11,
+              "rank": 30
+            },
+            {
+              "hour": 12,
               "rank": 30
             }
           ],
@@ -3435,7 +3447,7 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/06",
-      "updatedAt": "2026/10/12 01:07",
+      "updatedAt": "2026/10/12 02:07",
       "episodeId": "ep0kb9vkd1",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！後編",
       "likes": "1.0万",
@@ -3887,6 +3899,10 @@
         },
         {
           "hour": 121,
+          "likes": 10000
+        },
+        {
+          "hour": 122,
           "likes": 10000
         }
       ],
@@ -5470,11 +5486,11 @@
             },
             {
               "rank": 48,
-              "title": "秘密のケンミンSHOW極"
+              "title": "大改造!!劇的ビフォーアフター"
             },
             {
               "rank": 49,
-              "title": "大改造!!劇的ビフォーアフター"
+              "title": "秘密のケンミンSHOW極"
             },
             {
               "rank": 50,
@@ -5739,7 +5755,7 @@
             },
             {
               "rank": 49,
-              "title": "有吉クイズ"
+              "title": "笑点"
             },
             {
               "rank": 50,
@@ -5752,10 +5768,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/10/11",
-      "updatedAt": "2026/10/12 01:07",
+      "updatedAt": "2026/10/12 02:07",
       "episodeId": "epo01dpzn5",
       "subtitle": "福島の米を守る(秘)大作戦&新宿ミツバチが暑さで大ピンチ!",
-      "likes": "4459",
+      "likes": "4613",
       "favorites": "53.8万",
       "likePoints": [
         {
@@ -5781,6 +5797,10 @@
         {
           "hour": 6,
           "likes": 4459
+        },
+        {
+          "hour": 7,
+          "likes": 4613
         }
       ],
       "previousLikePoints": [],
@@ -5788,9 +5808,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 14,
-          "elapsedHour": 6,
-          "elapsedRank": 14,
+          "currentRank": 13,
+          "elapsedHour": 7,
+          "elapsedRank": 13,
           "currentPoints": [
             {
               "hour": 2,
@@ -5811,10 +5831,18 @@
             {
               "hour": 6,
               "rank": 14
+            },
+            {
+              "hour": 7,
+              "rank": 13
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
+            {
+              "rank": 10,
+              "title": "かのサンド"
+            },
             {
               "rank": 11,
               "title": "クレイジージャーニー"
@@ -5825,10 +5853,6 @@
             },
             {
               "rank": 13,
-              "title": "住人十色～家の数だけある 家族のカタチ～"
-            },
-            {
-              "rank": 14,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -5836,9 +5860,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 46,
-          "elapsedHour": 6,
-          "elapsedRank": 46,
+          "currentRank": 43,
+          "elapsedHour": 7,
+          "elapsedRank": 43,
           "currentPoints": [
             {
               "hour": 5,
@@ -5847,24 +5871,28 @@
             {
               "hour": 6,
               "rank": 46
+            },
+            {
+              "hour": 7,
+              "rank": 43
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
+              "rank": 40,
+              "title": "かのサンド"
+            },
+            {
+              "rank": 41,
+              "title": "クレイジージャーニー"
+            },
+            {
+              "rank": 42,
+              "title": "がっちりマンデー!!"
+            },
+            {
               "rank": 43,
-              "title": "Golden SixTONES"
-            },
-            {
-              "rank": 44,
-              "title": "ロンドンハーツ"
-            },
-            {
-              "rank": 45,
-              "title": "街グルメをマジ探索！かまいまち"
-            },
-            {
-              "rank": 46,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -5874,7 +5902,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/10/12 01:07",
+      "updatedAt": "2026/10/12 02:07",
       "episodeId": "epxyf3j8s9",
       "subtitle": "芸能人アレルギー大検査SP…岡崎紗絵&ACEesが採血!衝撃結果",
       "likes": "7451",
@@ -6423,7 +6451,7 @@
             },
             {
               "rank": 49,
-              "title": "有吉クイズ"
+              "title": "笑点"
             },
             {
               "rank": 50,
@@ -6647,19 +6675,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "終末の同窓会"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 48,
-              "title": "救命病棟24時（第2シリーズ）"
+              "title": "終末の同窓会"
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "救命病棟24時（第2シリーズ）"
             },
             {
               "rank": 50,
-              "title": "世界の果てまでイッテQ！"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             }
           ]
         }
@@ -6668,10 +6696,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/10/07",
-      "updatedAt": "2026/10/12 01:07",
+      "updatedAt": "2026/10/12 02:07",
       "episodeId": "epwen9ebwk",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！亀梨和也登場",
-      "likes": "8691",
+      "likes": "8702",
       "favorites": "15.6万",
       "likePoints": [
         {
@@ -7093,6 +7121,10 @@
         {
           "hour": 120,
           "likes": 8691
+        },
+        {
+          "hour": 121,
+          "likes": 8702
         }
       ],
       "previousLikePoints": [
@@ -8019,7 +8051,7 @@
             },
             {
               "rank": 49,
-              "title": "有吉クイズ"
+              "title": "笑点"
             },
             {
               "rank": 50,
@@ -8192,19 +8224,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "終末の同窓会"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 48,
-              "title": "救命病棟24時（第2シリーズ）"
+              "title": "終末の同窓会"
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "救命病棟24時（第2シリーズ）"
             },
             {
               "rank": 50,
-              "title": "世界の果てまでイッテQ！"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             }
           ]
         }
@@ -8213,10 +8245,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/09",
-      "updatedAt": "2026/10/12 01:07",
+      "updatedAt": "2026/10/12 02:07",
       "episodeId": "epbofnt3e1",
       "subtitle": "第148回 広瀬アリスが大爆発！？企画初の全員正解なるか",
-      "likes": "4308",
+      "likes": "4315",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -8502,6 +8534,10 @@
         {
           "hour": 73,
           "likes": 4308
+        },
+        {
+          "hour": 74,
+          "likes": 4315
         }
       ],
       "previousLikePoints": [
@@ -9560,7 +9596,7 @@
             },
             {
               "rank": 49,
-              "title": "有吉クイズ"
+              "title": "笑点"
             },
             {
               "rank": 50,
@@ -9809,19 +9845,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "終末の同窓会"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 48,
-              "title": "救命病棟24時（第2シリーズ）"
+              "title": "終末の同窓会"
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "救命病棟24時（第2シリーズ）"
             },
             {
               "rank": 50,
-              "title": "世界の果てまでイッテQ！"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             }
           ]
         }
@@ -9830,10 +9866,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/10",
-      "updatedAt": "2026/10/12 01:07",
+      "updatedAt": "2026/10/12 02:07",
       "episodeId": "ep6jb9yo8g",
       "subtitle": "SnowManヤバい選抜が大モメSP前編",
-      "likes": "7051",
+      "likes": "7116",
       "favorites": "81.5万",
       "likePoints": [
         {
@@ -9951,6 +9987,10 @@
         {
           "hour": 30,
           "likes": 7051
+        },
+        {
+          "hour": 31,
+          "likes": 7116
         }
       ],
       "previousLikePoints": [
@@ -10600,7 +10640,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 4,
-          "elapsedHour": 30,
+          "elapsedHour": 31,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -10709,6 +10749,10 @@
             },
             {
               "hour": 30,
+              "rank": 4
+            },
+            {
+              "hour": 31,
               "rank": 4
             }
           ],
@@ -11213,7 +11257,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 11,
-          "elapsedHour": 30,
+          "elapsedHour": 31,
           "elapsedRank": 11,
           "currentPoints": [
             {
@@ -11314,6 +11358,10 @@
             },
             {
               "hour": 30,
+              "rank": 11
+            },
+            {
+              "hour": 31,
               "rank": 11
             }
           ],
@@ -11575,7 +11623,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/10/12 01:07",
+      "updatedAt": "2026/10/12 02:07",
       "episodeId": "epnqu504ur",
       "subtitle": "第11話 二人がたどり着く最後の余韻・・・出会えてよかった",
       "likes": "1.8万",
@@ -13592,19 +13640,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "終末の同窓会"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 48,
-              "title": "救命病棟24時（第2シリーズ）"
+              "title": "終末の同窓会"
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "救命病棟24時（第2シリーズ）"
             },
             {
               "rank": 50,
-              "title": "世界の果てまでイッテQ！"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             }
           ]
         }
@@ -13613,7 +13661,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/22",
-      "updatedAt": "2026/10/12 01:07",
+      "updatedAt": "2026/10/12 02:07",
       "episodeId": "epc4m7onou",
       "subtitle": "ねづっち24時／マジック講座",
       "likes": "1.3万",
@@ -14622,11 +14670,11 @@
             },
             {
               "rank": 49,
-              "title": "しんごの🌱"
+              "title": "秘密のケンミンSHOW極"
             },
             {
               "rank": 50,
-              "title": "秘密のケンミンSHOW極"
+              "title": "しんごの🌱"
             }
           ]
         },
@@ -14798,7 +14846,7 @@
             },
             {
               "rank": 49,
-              "title": "有吉クイズ"
+              "title": "笑点"
             },
             {
               "rank": 50,
@@ -14811,7 +14859,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/10/12 01:07",
+      "updatedAt": "2026/10/12 02:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "436",
@@ -14857,19 +14905,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "終末の同窓会"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 48,
-              "title": "救命病棟24時（第2シリーズ）"
+              "title": "終末の同窓会"
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "救命病棟24時（第2シリーズ）"
             },
             {
               "rank": 50,
-              "title": "世界の果てまでイッテQ！"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             }
           ]
         }
