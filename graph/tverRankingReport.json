@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/10/11 20:07",
+  "updatedAt": "2026/10/11 21:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/10/11 20:07",
+      "updatedAt": "2026/10/11 21:07",
       "episodeId": "ep5y408jx8",
       "subtitle": "新企画！芸能人どハマりグルメ「ベストバイプライスマン」",
       "likes": "2.8万",
@@ -1289,15 +1289,15 @@
             },
             {
               "rank": 48,
-              "title": "がっちりマンデー!!"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 49,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "池上彰のニュースそうだったのか!!"
             },
             {
               "rank": 50,
-              "title": "ザ！世界仰天ニュース"
+              "title": "沸騰ワード10"
             }
           ]
         },
@@ -1717,19 +1717,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "赤灯えれじい"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 48,
-              "title": "ホタルの嫁入り"
-            },
-            {
-              "rank": 49,
               "title": "終末の同窓会"
             },
             {
+              "rank": 49,
+              "title": "赤灯えれじい"
+            },
+            {
               "rank": 50,
-              "title": "ドラえもん"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         }
@@ -1738,10 +1738,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/10/11",
-      "updatedAt": "2026/10/11 20:07",
+      "updatedAt": "2026/10/11 21:07",
       "episodeId": "epypg75xrf",
       "subtitle": "【秋の最強着こなし術】あか抜け迷子を60分間で大変身",
-      "likes": "5935",
+      "likes": "6664",
       "favorites": "36.6万",
       "likePoints": [
         {
@@ -1767,6 +1767,10 @@
         {
           "hour": 6,
           "likes": 5935
+        },
+        {
+          "hour": 7,
+          "likes": 6664
         }
       ],
       "previousLikePoints": [
@@ -2379,9 +2383,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 19,
-          "elapsedHour": 6,
-          "elapsedRank": 19,
+          "currentRank": 17,
+          "elapsedHour": 7,
+          "elapsedRank": 17,
           "currentPoints": [
             {
               "hour": 4,
@@ -2394,6 +2398,10 @@
             {
               "hour": 6,
               "rank": 19
+            },
+            {
+              "hour": 7,
+              "rank": 17
             }
           ],
           "previousPoints": [
@@ -3024,19 +3032,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 16,
+              "rank": 14,
+              "title": "さんまのお笑い向上委員会"
+            },
+            {
+              "rank": 15,
               "title": "ゴッドタン"
             },
             {
+              "rank": 16,
+              "title": "教えて！ニュースライブ 正義のミカタ"
+            },
+            {
               "rank": 17,
-              "title": "探偵！ナイトスクープ"
-            },
-            {
-              "rank": 18,
-              "title": "全力！脱力タイムズ"
-            },
-            {
-              "rank": 19,
               "title": "timeleszファミリア"
             }
           ]
@@ -3044,10 +3052,15 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 45,
+          "elapsedHour": 7,
+          "elapsedRank": 45,
+          "currentPoints": [
+            {
+              "hour": 7,
+              "rank": 45
+            }
+          ],
           "previousPoints": [
             {
               "hour": 5,
@@ -3352,20 +3365,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "赤灯えれじい"
+              "rank": 42,
+              "title": "救命病棟24時（第2シリーズ）"
             },
             {
-              "rank": 48,
-              "title": "ホタルの嫁入り"
+              "rank": 43,
+              "title": "VIVANT"
             },
             {
-              "rank": 49,
-              "title": "終末の同窓会"
+              "rank": 44,
+              "title": "Google Pixel presents ANOTHER SKY"
             },
             {
-              "rank": 50,
-              "title": "ドラえもん"
+              "rank": 45,
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -3374,7 +3387,7 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/06",
-      "updatedAt": "2026/10/11 20:07",
+      "updatedAt": "2026/10/11 21:07",
       "episodeId": "ep0kb9vkd1",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！後編",
       "likes": "1.0万",
@@ -3806,6 +3819,10 @@
         },
         {
           "hour": 116,
+          "likes": 10000
+        },
+        {
+          "hour": 117,
           "likes": 10000
         }
       ],
@@ -5385,15 +5402,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上沼・高田のクギズケ！"
+              "title": "大改造!!劇的ビフォーアフター"
             },
             {
               "rank": 48,
-              "title": "サンドウィッチマン＆芦田愛菜の博士ちゃん"
+              "title": "フットマップ"
             },
             {
               "rank": 49,
-              "title": "シューイチ"
+              "title": "サンドウィッチマン＆芦田愛菜の博士ちゃん"
             },
             {
               "rank": 50,
@@ -5654,15 +5671,15 @@
             },
             {
               "rank": 48,
-              "title": "がっちりマンデー!!"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 49,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "池上彰のニュースそうだったのか!!"
             },
             {
               "rank": 50,
-              "title": "ザ！世界仰天ニュース"
+              "title": "沸騰ワード10"
             }
           ]
         }
@@ -5670,39 +5687,53 @@
     },
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
-      "broadcastDate": "",
-      "updatedAt": "2026/10/11 20:07",
+      "broadcastDate": "2026/10/11",
+      "updatedAt": "2026/10/11 21:07",
       "episodeId": "epo01dpzn5",
       "subtitle": "福島の米を守る(秘)大作戦&新宿ミツバチが暑さで大ピンチ!",
-      "likes": "1160",
+      "likes": "2013",
       "favorites": "53.8万",
-      "likePoints": [],
+      "likePoints": [
+        {
+          "hour": 1,
+          "likes": 1160
+        },
+        {
+          "hour": 2,
+          "likes": 2013
+        }
+      ],
       "previousLikePoints": [],
       "rankings": [
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 37,
+          "elapsedHour": 2,
+          "elapsedRank": 37,
+          "currentPoints": [
+            {
+              "hour": 2,
+              "rank": 37
+            }
+          ],
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "上沼・高田のクギズケ！"
+              "rank": 34,
+              "title": "ONE N' ONLYのフルアウトTV"
             },
             {
-              "rank": 48,
-              "title": "サンドウィッチマン＆芦田愛菜の博士ちゃん"
+              "rank": 35,
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
-              "rank": 49,
-              "title": "シューイチ"
+              "rank": 36,
+              "title": "アンタッチャブルでやらせてもらってます"
             },
             {
-              "rank": 50,
-              "title": "リア突WEST.レボリューション"
+              "rank": 37,
+              "title": "ザ！鉄腕！DASH!!"
             }
           ]
         },
@@ -5721,15 +5752,15 @@
             },
             {
               "rank": 48,
-              "title": "がっちりマンデー!!"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 49,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "池上彰のニュースそうだったのか!!"
             },
             {
               "rank": 50,
-              "title": "ザ！世界仰天ニュース"
+              "title": "沸騰ワード10"
             }
           ]
         }
@@ -5738,7 +5769,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/09/15",
-      "updatedAt": "2026/10/11 20:07",
+      "updatedAt": "2026/10/11 21:07",
       "episodeId": "epxyf3j8s9",
       "subtitle": "芸能人アレルギー大検査SP…岡崎紗絵&ACEesが採血!衝撃結果",
       "likes": "7451",
@@ -6283,15 +6314,15 @@
             },
             {
               "rank": 48,
-              "title": "がっちりマンデー!!"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 49,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "池上彰のニュースそうだったのか!!"
             },
             {
               "rank": 50,
-              "title": "ザ！世界仰天ニュース"
+              "title": "沸騰ワード10"
             }
           ]
         },
@@ -6511,19 +6542,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "赤灯えれじい"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 48,
-              "title": "ホタルの嫁入り"
-            },
-            {
-              "rank": 49,
               "title": "終末の同窓会"
             },
             {
+              "rank": 49,
+              "title": "赤灯えれじい"
+            },
+            {
               "rank": 50,
-              "title": "ドラえもん"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         }
@@ -6532,10 +6563,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/10/07",
-      "updatedAt": "2026/10/11 20:07",
+      "updatedAt": "2026/10/11 21:07",
       "episodeId": "epwen9ebwk",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！亀梨和也登場",
-      "likes": "8601",
+      "likes": "8620",
       "favorites": "15.6万",
       "likePoints": [
         {
@@ -6937,6 +6968,10 @@
         {
           "hour": 115,
           "likes": 8601
+        },
+        {
+          "hour": 116,
+          "likes": 8620
         }
       ],
       "previousLikePoints": [
@@ -7859,15 +7894,15 @@
             },
             {
               "rank": 48,
-              "title": "がっちりマンデー!!"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 49,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "池上彰のニュースそうだったのか!!"
             },
             {
               "rank": 50,
-              "title": "ザ！世界仰天ニュース"
+              "title": "沸騰ワード10"
             }
           ]
         },
@@ -8036,19 +8071,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "赤灯えれじい"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 48,
-              "title": "ホタルの嫁入り"
-            },
-            {
-              "rank": 49,
               "title": "終末の同窓会"
             },
             {
+              "rank": 49,
+              "title": "赤灯えれじい"
+            },
+            {
               "rank": 50,
-              "title": "ドラえもん"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         }
@@ -8057,10 +8092,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/09",
-      "updatedAt": "2026/10/11 20:07",
+      "updatedAt": "2026/10/11 21:07",
       "episodeId": "epbofnt3e1",
       "subtitle": "第148回 広瀬アリスが大爆発！？企画初の全員正解なるか",
-      "likes": "4190",
+      "likes": "4213",
       "favorites": "71.7万",
       "likePoints": [
         {
@@ -8326,6 +8361,10 @@
         {
           "hour": 68,
           "likes": 4190
+        },
+        {
+          "hour": 69,
+          "likes": 4213
         }
       ],
       "previousLikePoints": [
@@ -9380,15 +9419,15 @@
             },
             {
               "rank": 48,
-              "title": "がっちりマンデー!!"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 49,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "池上彰のニュースそうだったのか!!"
             },
             {
               "rank": 50,
-              "title": "ザ！世界仰天ニュース"
+              "title": "沸騰ワード10"
             }
           ]
         },
@@ -9633,19 +9672,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "赤灯えれじい"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 48,
-              "title": "ホタルの嫁入り"
-            },
-            {
-              "rank": 49,
               "title": "終末の同窓会"
             },
             {
+              "rank": 49,
+              "title": "赤灯えれじい"
+            },
+            {
               "rank": 50,
-              "title": "ドラえもん"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         }
@@ -9654,11 +9693,11 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/10",
-      "updatedAt": "2026/10/11 20:07",
+      "updatedAt": "2026/10/11 21:07",
       "episodeId": "ep6jb9yo8g",
       "subtitle": "SnowManヤバい選抜が大モメSP前編",
-      "likes": "6141",
-      "favorites": "81.4万",
+      "likes": "6390",
+      "favorites": "81.5万",
       "likePoints": [
         {
           "hour": 2,
@@ -9755,6 +9794,10 @@
         {
           "hour": 25,
           "likes": 6141
+        },
+        {
+          "hour": 26,
+          "likes": 6390
         }
       ],
       "previousLikePoints": [
@@ -10403,9 +10446,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 4,
-          "elapsedHour": 25,
-          "elapsedRank": 4,
+          "currentRank": 5,
+          "elapsedHour": 26,
+          "elapsedRank": 5,
           "currentPoints": [
             {
               "hour": 4,
@@ -10494,6 +10537,10 @@
             {
               "hour": 25,
               "rank": 4
+            },
+            {
+              "hour": 26,
+              "rank": 5
             }
           ],
           "previousPoints": [
@@ -10976,10 +11023,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 1,
-              "title": "オールスター感謝祭’26秋"
-            },
-            {
               "rank": 2,
               "title": "それSnow Manにやらせて下さい"
             },
@@ -10989,6 +11032,10 @@
             },
             {
               "rank": 4,
+              "title": "オールスター後夜祭"
+            },
+            {
+              "rank": 5,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -10997,7 +11044,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 11,
-          "elapsedHour": 25,
+          "elapsedHour": 26,
           "elapsedRank": 11,
           "currentPoints": [
             {
@@ -11078,6 +11125,10 @@
             },
             {
               "hour": 25,
+              "rank": 11
+            },
+            {
+              "hour": 26,
               "rank": 11
             }
           ],
@@ -11318,7 +11369,7 @@
           "nearbyRanking": [
             {
               "rank": 8,
-              "title": "メリーベリーラブ"
+              "title": "再生のウズメ"
             },
             {
               "rank": 9,
@@ -11326,7 +11377,7 @@
             },
             {
               "rank": 10,
-              "title": "再生のウズメ"
+              "title": "オールスター後夜祭"
             },
             {
               "rank": 11,
@@ -11339,7 +11390,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/09/17",
-      "updatedAt": "2026/10/11 20:07",
+      "updatedAt": "2026/10/11 21:07",
       "episodeId": "epnqu504ur",
       "subtitle": "第11話 二人がたどり着く最後の余韻・・・出会えてよかった",
       "likes": "1.8万",
@@ -12664,15 +12715,15 @@
             },
             {
               "rank": 48,
-              "title": "御上先生"
+              "title": "ただ愛する仲"
             },
             {
               "rank": 49,
-              "title": "溺愛 ～ 実は、最強ヒーロー ～"
+              "title": "御上先生"
             },
             {
               "rank": 50,
-              "title": "ただ愛する仲"
+              "title": "溺愛 ～ 実は、最強ヒーロー ～"
             }
           ]
         },
@@ -13356,19 +13407,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "赤灯えれじい"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 48,
-              "title": "ホタルの嫁入り"
-            },
-            {
-              "rank": 49,
               "title": "終末の同窓会"
             },
             {
+              "rank": 49,
+              "title": "赤灯えれじい"
+            },
+            {
               "rank": 50,
-              "title": "ドラえもん"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         }
@@ -13377,7 +13428,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/09/22",
-      "updatedAt": "2026/10/11 20:07",
+      "updatedAt": "2026/10/11 21:07",
       "episodeId": "epc4m7onou",
       "subtitle": "ねづっち24時／マジック講座",
       "likes": "1.3万",
@@ -14378,7 +14429,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "大阪おっさんぽ"
+              "title": "音道楽√"
             },
             {
               "rank": 48,
@@ -14386,7 +14437,7 @@
             },
             {
               "rank": 49,
-              "title": "新婚さんいらっしゃい！"
+              "title": "上沼・高田のクギズケ！"
             },
             {
               "rank": 50,
@@ -14558,15 +14609,15 @@
             },
             {
               "rank": 48,
-              "title": "がっちりマンデー!!"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 49,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "池上彰のニュースそうだったのか!!"
             },
             {
               "rank": 50,
-              "title": "ザ！世界仰天ニュース"
+              "title": "沸騰ワード10"
             }
           ]
         }
@@ -14575,7 +14626,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/10/11 20:07",
+      "updatedAt": "2026/10/11 21:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "436",
@@ -14598,15 +14649,15 @@
             },
             {
               "rank": 48,
-              "title": "御上先生"
+              "title": "ただ愛する仲"
             },
             {
               "rank": 49,
-              "title": "溺愛 ～ 実は、最強ヒーロー ～"
+              "title": "御上先生"
             },
             {
               "rank": 50,
-              "title": "ただ愛する仲"
+              "title": "溺愛 ～ 実は、最強ヒーロー ～"
             }
           ]
         },
@@ -14621,19 +14672,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "赤灯えれじい"
+              "title": "探偵！ナイトスクープ"
             },
             {
               "rank": 48,
-              "title": "ホタルの嫁入り"
-            },
-            {
-              "rank": 49,
               "title": "終末の同窓会"
             },
             {
+              "rank": 49,
+              "title": "赤灯えれじい"
+            },
+            {
               "rank": 50,
-              "title": "ドラえもん"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         }
