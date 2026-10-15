@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/10/16 04:07",
+  "updatedAt": "2026/10/16 05:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/09/25",
-      "updatedAt": "2026/10/16 04:07",
+      "updatedAt": "2026/10/16 05:07",
       "episodeId": "ep5y408jx8",
       "subtitle": "新企画！芸能人どハマりグルメ「ベストバイプライスマン」",
       "likes": "2.9万",
@@ -1285,11 +1285,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "深夜のダイアン"
+              "title": "アメトーーク！"
             },
             {
               "rank": 48,
-              "title": "アメトーーク！"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 49,
@@ -1738,7 +1738,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/10/11",
-      "updatedAt": "2026/10/16 04:07",
+      "updatedAt": "2026/10/16 05:07",
       "episodeId": "epypg75xrf",
       "subtitle": "【秋の最強着こなし術】あか抜け迷子を60分間で大変身",
       "likes": "1.7万",
@@ -2178,6 +2178,10 @@
         },
         {
           "hour": 110,
+          "likes": 17000
+        },
+        {
+          "hour": 111,
           "likes": 17000
         }
       ],
@@ -2791,9 +2795,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 42,
-          "elapsedHour": 110,
-          "elapsedRank": 42,
+          "currentRank": 43,
+          "elapsedHour": 111,
+          "elapsedRank": 43,
           "currentPoints": [
             {
               "hour": 4,
@@ -3218,6 +3222,10 @@
             {
               "hour": 110,
               "rank": 42
+            },
+            {
+              "hour": 111,
+              "rank": 43
             }
           ],
           "previousPoints": [
@@ -3848,12 +3856,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 39,
-              "title": "テレビ×ミセス"
-            },
-            {
               "rank": 40,
-              "title": "徹子の部屋"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 41,
@@ -3861,6 +3865,10 @@
             },
             {
               "rank": 42,
+              "title": "THE突破ファイル"
+            },
+            {
+              "rank": 43,
               "title": "timeleszファミリア"
             }
           ]
@@ -4451,7 +4459,7 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/06",
-      "updatedAt": "2026/10/16 04:07",
+      "updatedAt": "2026/10/16 05:07",
       "episodeId": "ep0kb9vkd1",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！後編",
       "likes": "1.1万",
@@ -5524,11 +5532,11 @@
             },
             {
               "rank": 49,
-              "title": "草彅やすともの うさぎとかめ"
+              "title": "見取り図の間取り図ミステリー"
             },
             {
               "rank": 50,
-              "title": "王様のブランチ"
+              "title": "草彅やすともの うさぎとかめ"
             }
           ]
         },
@@ -5672,11 +5680,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "深夜のダイアン"
+              "title": "アメトーーク！"
             },
             {
               "rank": 48,
-              "title": "アメトーーク！"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 49,
@@ -5693,7 +5701,7 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/10/11",
-      "updatedAt": "2026/10/16 04:07",
+      "updatedAt": "2026/10/16 05:07",
       "episodeId": "epo01dpzn5",
       "subtitle": "福島の米を守る(秘)大作戦&新宿ミツバチが暑さで大ピンチ!",
       "likes": "1.3万",
@@ -6114,6 +6122,10 @@
         {
           "hour": 105,
           "likes": 13000
+        },
+        {
+          "hour": 106,
+          "likes": 13000
         }
       ],
       "previousLikePoints": [],
@@ -6122,7 +6134,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 19,
-          "elapsedHour": 105,
+          "elapsedHour": 106,
           "elapsedRank": 19,
           "currentPoints": [
             {
@@ -6536,21 +6548,25 @@
             {
               "hour": 105,
               "rank": 19
+            },
+            {
+              "hour": 106,
+              "rank": 19
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 16,
-              "title": "世界まる見え！テレビ特捜部"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 17,
-              "title": "Travis JapanノJUST！シン日本遺産"
+              "title": "世界まる見え！テレビ特捜部"
             },
             {
               "rank": 18,
-              "title": "林修の今知りたいでしょ！"
+              "title": "Travis JapanノJUST！シン日本遺産"
             },
             {
               "rank": 19,
@@ -6858,11 +6874,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "深夜のダイアン"
+              "title": "アメトーーク！"
             },
             {
               "rank": 48,
-              "title": "アメトーーク！"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 49,
@@ -6879,10 +6895,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/10/14",
-      "updatedAt": "2026/10/16 04:07",
+      "updatedAt": "2026/10/16 05:07",
       "episodeId": "epfa8610gj",
       "subtitle": "【夜の音】MC菊池風磨＆畑芽育の音楽番組！imase登場",
-      "likes": "3921",
+      "likes": "3927",
       "favorites": "15.6万",
       "likePoints": [
         {
@@ -7084,6 +7100,10 @@
         {
           "hour": 51,
           "likes": 3921
+        },
+        {
+          "hour": 52,
+          "likes": 3927
         }
       ],
       "previousLikePoints": [
@@ -7950,11 +7970,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "深夜のダイアン"
+              "title": "アメトーーク！"
             },
             {
               "rank": 48,
-              "title": "アメトーーク！"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 49,
@@ -8063,10 +8083,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/16",
-      "updatedAt": "2026/10/16 04:07",
+      "updatedAt": "2026/10/16 05:07",
       "episodeId": "epwnsus2z9",
       "subtitle": "第149回 風磨が大久保佳代子にタジタジ！？王者が決まる",
-      "likes": "368",
+      "likes": "429",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -8084,6 +8104,10 @@
         {
           "hour": 4,
           "likes": 368
+        },
+        {
+          "hour": 5,
+          "likes": 429
         }
       ],
       "previousLikePoints": [
@@ -8957,11 +8981,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "深夜のダイアン"
+              "title": "アメトーーク！"
             },
             {
               "rank": 48,
-              "title": "アメトーーク！"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 49,
@@ -9098,7 +9122,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/10",
-      "updatedAt": "2026/10/16 04:07",
+      "updatedAt": "2026/10/16 05:07",
       "episodeId": "ep6jb9yo8g",
       "subtitle": "SnowManヤバい選抜が大モメSP前編",
       "likes": "1.1万",
@@ -9610,6 +9634,10 @@
         },
         {
           "hour": 129,
+          "likes": 11000
+        },
+        {
+          "hour": 130,
           "likes": 11000
         }
       ],
@@ -10260,7 +10288,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 38,
-          "elapsedHour": 129,
+          "elapsedHour": 130,
           "elapsedRank": 38,
           "currentPoints": [
             {
@@ -10761,6 +10789,10 @@
             },
             {
               "hour": 129,
+              "rank": 38
+            },
+            {
+              "hour": 130,
               "rank": 38
             }
           ],
@@ -11879,7 +11911,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/10/16 04:07",
+      "updatedAt": "2026/10/16 05:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "2.9万",
@@ -11898,11 +11930,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "韓国時代劇「オクニョ～運命の女～」"
+              "title": "修学旅行で仲良くないグループに入りました"
             },
             {
               "rank": 48,
-              "title": "アンナチュラル"
+              "title": "溺愛 ～ 実は、最強ヒーロー ～"
             },
             {
               "rank": 49,
@@ -11910,7 +11942,7 @@
             },
             {
               "rank": 50,
-              "title": "Answer～警視庁検証捜査官"
+              "title": "アンナチュラル"
             }
           ]
         },
@@ -11946,10 +11978,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/10/16 04:07",
+      "updatedAt": "2026/10/16 05:07",
       "episodeId": "epqhz4xlsk",
       "subtitle": "横浜流星＆小栗旬VS神フェイク！松尾タイムレス原ペアダンスで試練",
-      "likes": "1714",
+      "likes": "1717",
       "favorites": "13.4万",
       "likePoints": [
         {
@@ -12175,6 +12207,10 @@
         {
           "hour": 57,
           "likes": 1714
+        },
+        {
+          "hour": 58,
+          "likes": 1717
         }
       ],
       "previousLikePoints": [],
@@ -12183,7 +12219,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 29,
-          "elapsedHour": 57,
+          "elapsedHour": 58,
           "elapsedRank": 29,
           "currentPoints": [
             {
@@ -12401,17 +12437,21 @@
             {
               "hour": 57,
               "rank": 29
+            },
+            {
+              "hour": 58,
+              "rank": 29
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 26,
-              "title": "ポツンと一軒家"
+              "title": "ヒロシのぼっちキャンプ Season14"
             },
             {
               "rank": 27,
-              "title": "ヒロシのぼっちキャンプ Season14"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 28,
@@ -12434,11 +12474,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "深夜のダイアン"
+              "title": "アメトーーク！"
             },
             {
               "rank": 48,
-              "title": "アメトーーク！"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 49,
@@ -12455,7 +12495,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/10/16 04:07",
+      "updatedAt": "2026/10/16 05:07",
       "episodeId": "ep6j6ajewm",
       "subtitle": "名探偵シノ",
       "likes": "1.0万",
@@ -12759,6 +12799,10 @@
         },
         {
           "hour": 76,
+          "likes": 10000
+        },
+        {
+          "hour": 77,
           "likes": 10000
         }
       ],
@@ -13393,7 +13437,7 @@
           "type": "talk",
           "label": "トーク",
           "currentRank": 34,
-          "elapsedHour": 75,
+          "elapsedHour": 76,
           "elapsedRank": 34,
           "currentPoints": [
             {
@@ -13666,6 +13710,10 @@
             },
             {
               "hour": 75,
+              "rank": 34
+            },
+            {
+              "hour": 76,
               "rank": 34
             }
           ],
@@ -14383,11 +14431,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "深夜のダイアン"
+              "title": "アメトーーク！"
             },
             {
               "rank": 48,
-              "title": "アメトーーク！"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 49,
@@ -14404,7 +14452,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/10/16 04:07",
+      "updatedAt": "2026/10/16 05:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "436",
@@ -14423,11 +14471,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "韓国時代劇「オクニョ～運命の女～」"
+              "title": "修学旅行で仲良くないグループに入りました"
             },
             {
               "rank": 48,
-              "title": "アンナチュラル"
+              "title": "溺愛 ～ 実は、最強ヒーロー ～"
             },
             {
               "rank": 49,
@@ -14435,7 +14483,7 @@
             },
             {
               "rank": 50,
-              "title": "Answer～警視庁検証捜査官"
+              "title": "アンナチュラル"
             }
           ]
         },
