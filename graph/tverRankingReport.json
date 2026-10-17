@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026/10/17 15:07",
+  "updatedAt": "2026/10/17 16:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/10/16",
-      "updatedAt": "2026/10/17 15:07",
+      "updatedAt": "2026/10/17 16:07",
       "episodeId": "epya6km6jn",
       "subtitle": "timelesz100＆うさぎ製作の舞台裏",
-      "likes": "9633",
+      "likes": "9935",
       "favorites": "78.9万",
       "likePoints": [
         {
@@ -77,6 +77,10 @@
         {
           "hour": 17,
           "likes": 9633
+        },
+        {
+          "hour": 18,
+          "likes": 9935
         }
       ],
       "previousLikePoints": [
@@ -738,7 +742,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 7,
-          "elapsedHour": 17,
+          "elapsedHour": 18,
           "elapsedRank": 7,
           "currentPoints": [
             {
@@ -795,6 +799,10 @@
             },
             {
               "hour": 17,
+              "rank": 7
+            },
+            {
+              "hour": 18,
               "rank": 7
             }
           ],
@@ -1431,7 +1439,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 23,
-          "elapsedHour": 17,
+          "elapsedHour": 18,
           "elapsedRank": 23,
           "currentPoints": [
             {
@@ -1460,6 +1468,10 @@
             },
             {
               "hour": 17,
+              "rank": 23
+            },
+            {
+              "hour": 18,
               "rank": 23
             }
           ],
@@ -1872,11 +1884,11 @@
           "nearbyRanking": [
             {
               "rank": 20,
-              "title": "おかえり、初恋。"
+              "title": "まめとむぎ"
             },
             {
               "rank": 21,
-              "title": "まめとむぎ"
+              "title": "おかえり、初恋。"
             },
             {
               "rank": 22,
@@ -1893,7 +1905,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/10/11",
-      "updatedAt": "2026/10/17 15:07",
+      "updatedAt": "2026/10/17 16:07",
       "episodeId": "epypg75xrf",
       "subtitle": "【秋の最強着こなし術】あか抜け迷子を60分間で大変身",
       "likes": "1.8万",
@@ -2473,6 +2485,10 @@
         },
         {
           "hour": 145,
+          "likes": 18000
+        },
+        {
+          "hour": 146,
           "likes": 18000
         }
       ],
@@ -4805,11 +4821,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "全力！脱力タイムズ"
+              "title": "名探偵コナン"
             },
             {
               "rank": 48,
-              "title": "名探偵コナン"
+              "title": "付き合ってあげてもいいかな"
             },
             {
               "rank": 49,
@@ -4817,7 +4833,7 @@
             },
             {
               "rank": 50,
-              "title": "これ余談なんですけど・・・"
+              "title": "晩酌の流儀５"
             }
           ]
         }
@@ -4826,7 +4842,7 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/06",
-      "updatedAt": "2026/10/17 15:07",
+      "updatedAt": "2026/10/17 16:07",
       "episodeId": "ep0kb9vkd1",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！後編",
       "likes": "1.1万",
@@ -5895,15 +5911,15 @@
             },
             {
               "rank": 48,
-              "title": "坂上&指原のつぶれない店"
+              "title": "草彅やすともの うさぎとかめ"
             },
             {
               "rank": 49,
-              "title": "Travis JapanノJUST！シン日本遺産"
+              "title": "坂上&指原のつぶれない店"
             },
             {
               "rank": 50,
-              "title": "草彅やすともの うさぎとかめ"
+              "title": "Travis JapanノJUST！シン日本遺産"
             }
           ]
         },
@@ -6068,7 +6084,7 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/10/11",
-      "updatedAt": "2026/10/17 15:07",
+      "updatedAt": "2026/10/17 16:07",
       "episodeId": "epo01dpzn5",
       "subtitle": "福島の米を守る(秘)大作戦&新宿ミツバチが暑さで大ピンチ!",
       "likes": "1.4万",
@@ -6629,6 +6645,10 @@
         {
           "hour": 140,
           "likes": 14000
+        },
+        {
+          "hour": 141,
+          "likes": 14000
         }
       ],
       "previousLikePoints": [],
@@ -6636,9 +6656,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 23,
-          "elapsedHour": 140,
-          "elapsedRank": 23,
+          "currentRank": 24,
+          "elapsedHour": 141,
+          "elapsedRank": 24,
           "currentPoints": [
             {
               "hour": 2,
@@ -7191,24 +7211,28 @@
             {
               "hour": 140,
               "rank": 23
+            },
+            {
+              "hour": 141,
+              "rank": 24
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 20,
+              "rank": 21,
               "title": "よるのブランチ"
             },
             {
-              "rank": 21,
+              "rank": 22,
               "title": "ザ！世界仰天ニュース"
             },
             {
-              "rank": 22,
-              "title": "M:ZINE"
+              "rank": 23,
+              "title": "華丸・大吉のなんしようと？"
             },
             {
-              "rank": 23,
+              "rank": 24,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -7534,10 +7558,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/10/14",
-      "updatedAt": "2026/10/17 15:07",
+      "updatedAt": "2026/10/17 16:07",
       "episodeId": "epfa8610gj",
       "subtitle": "【夜の音】MC菊池風磨＆畑芽育の音楽番組！imase登場",
-      "likes": "4452",
+      "likes": "4463",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -7875,6 +7899,10 @@
         {
           "hour": 86,
           "likes": 4452
+        },
+        {
+          "hour": 87,
+          "likes": 4463
         }
       ],
       "previousLikePoints": [
@@ -8833,11 +8861,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "全力！脱力タイムズ"
+              "title": "名探偵コナン"
             },
             {
               "rank": 48,
-              "title": "名探偵コナン"
+              "title": "付き合ってあげてもいいかな"
             },
             {
               "rank": 49,
@@ -8845,7 +8873,7 @@
             },
             {
               "rank": 50,
-              "title": "これ余談なんですけど・・・"
+              "title": "晩酌の流儀５"
             }
           ]
         }
@@ -8854,10 +8882,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/16",
-      "updatedAt": "2026/10/17 15:07",
+      "updatedAt": "2026/10/17 16:07",
       "episodeId": "epwnsus2z9",
       "subtitle": "第149回 風磨が大久保佳代子にタジタジ！？王者が決まる",
-      "likes": "3924",
+      "likes": "3966",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -9015,6 +9043,10 @@
         {
           "hour": 39,
           "likes": 3924
+        },
+        {
+          "hour": 40,
+          "likes": 3966
         }
       ],
       "previousLikePoints": [
@@ -9679,9 +9711,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 31,
-          "elapsedHour": 38,
-          "elapsedRank": 31,
+          "currentRank": 33,
+          "elapsedHour": 39,
+          "elapsedRank": 33,
           "currentPoints": [
             {
               "hour": 12,
@@ -9790,6 +9822,10 @@
             {
               "hour": 38,
               "rank": 31
+            },
+            {
+              "hour": 39,
+              "rank": 33
             }
           ],
           "previousPoints": [
@@ -9996,19 +10032,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 28,
-              "title": "Golden SixTONES"
-            },
-            {
-              "rank": 29,
-              "title": "相席食堂"
-            },
-            {
               "rank": 30,
               "title": "秘密のケンミンSHOW極"
             },
             {
               "rank": 31,
+              "title": "嗚呼!!みんなの動物園"
+            },
+            {
+              "rank": 32,
+              "title": "金曜ミステリークラブ!!!"
+            },
+            {
+              "rank": 33,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -10162,11 +10198,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "全力！脱力タイムズ"
+              "title": "名探偵コナン"
             },
             {
               "rank": 48,
-              "title": "名探偵コナン"
+              "title": "付き合ってあげてもいいかな"
             },
             {
               "rank": 49,
@@ -10174,7 +10210,7 @@
             },
             {
               "rank": 50,
-              "title": "これ余談なんですけど・・・"
+              "title": "晩酌の流儀５"
             }
           ]
         }
@@ -10183,7 +10219,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/10",
-      "updatedAt": "2026/10/17 15:07",
+      "updatedAt": "2026/10/17 16:07",
       "episodeId": "ep6jb9yo8g",
       "subtitle": "SnowManヤバい選抜が大モメSP前編",
       "likes": "1.2万",
@@ -10836,6 +10872,10 @@
         {
           "hour": 164,
           "likes": 12000
+        },
+        {
+          "hour": 165,
+          "likes": 12000
         }
       ],
       "previousLikePoints": [
@@ -11485,7 +11525,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 46,
-          "elapsedHour": 164,
+          "elapsedHour": 165,
           "elapsedRank": 46,
           "currentPoints": [
             {
@@ -12126,6 +12166,10 @@
             },
             {
               "hour": 164,
+              "rank": 46
+            },
+            {
+              "hour": 165,
               "rank": 46
             }
           ],
@@ -13223,11 +13267,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "全力！脱力タイムズ"
+              "title": "名探偵コナン"
             },
             {
               "rank": 48,
-              "title": "名探偵コナン"
+              "title": "付き合ってあげてもいいかな"
             },
             {
               "rank": 49,
@@ -13235,7 +13279,7 @@
             },
             {
               "rank": 50,
-              "title": "これ余談なんですけど・・・"
+              "title": "晩酌の流儀５"
             }
           ]
         }
@@ -13244,7 +13288,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/10/17 15:07",
+      "updatedAt": "2026/10/17 16:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "2.9万",
@@ -13263,11 +13307,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "韓国ドラマ 鳴かない鳥"
+              "title": "深夜食堂 ６"
             },
             {
               "rank": 48,
-              "title": "深夜食堂 ６"
+              "title": "韓国ドラマ 鳴かない鳥"
             },
             {
               "rank": 49,
@@ -13275,7 +13319,7 @@
             },
             {
               "rank": 50,
-              "title": "【韓国ドラマ】とにかくアツく掃除しろ！～恋した彼は潔癖王子！？～"
+              "title": "『もうええわ』（第37回ヤングシナリオ大賞）"
             }
           ]
         },
@@ -13290,11 +13334,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "全力！脱力タイムズ"
+              "title": "名探偵コナン"
             },
             {
               "rank": 48,
-              "title": "名探偵コナン"
+              "title": "付き合ってあげてもいいかな"
             },
             {
               "rank": 49,
@@ -13302,7 +13346,7 @@
             },
             {
               "rank": 50,
-              "title": "これ余談なんですけど・・・"
+              "title": "晩酌の流儀５"
             }
           ]
         }
@@ -13311,10 +13355,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/10/17 15:07",
+      "updatedAt": "2026/10/17 16:07",
       "episodeId": "epqhz4xlsk",
       "subtitle": "横浜流星＆小栗旬VS神フェイク！松尾タイムレス原ペアダンスで試練",
-      "likes": "1927",
+      "likes": "1934",
       "favorites": "13.4万",
       "likePoints": [
         {
@@ -13680,6 +13724,10 @@
         {
           "hour": 92,
           "likes": 1927
+        },
+        {
+          "hour": 93,
+          "likes": 1934
         }
       ],
       "previousLikePoints": [],
@@ -13687,9 +13735,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 40,
-          "elapsedHour": 92,
-          "elapsedRank": 40,
+          "currentRank": 43,
+          "elapsedHour": 93,
+          "elapsedRank": 43,
           "currentPoints": [
             {
               "hour": 3,
@@ -14046,24 +14094,28 @@
             {
               "hour": 92,
               "rank": 40
+            },
+            {
+              "hour": 93,
+              "rank": 43
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 37,
-              "title": "住人十色～家の数だけある 家族のカタチ～"
-            },
-            {
-              "rank": 38,
-              "title": "1億人の大質問!?笑ってコラえて！"
-            },
-            {
-              "rank": 39,
-              "title": "バナナマンのせっかくグルメ!!"
-            },
-            {
               "rank": 40,
+              "title": "ZIP!"
+            },
+            {
+              "rank": 41,
+              "title": "サタプラ"
+            },
+            {
+              "rank": 42,
+              "title": "くりぃむしちゅーの熊本どぎゃん!?"
+            },
+            {
+              "rank": 43,
               "title": "THE神業チャレンジ"
             }
           ]
@@ -14100,7 +14152,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/10/17 15:07",
+      "updatedAt": "2026/10/17 16:07",
       "episodeId": "ep6j6ajewm",
       "subtitle": "名探偵シノ",
       "likes": "1.1万",
@@ -14544,6 +14596,10 @@
         },
         {
           "hour": 111,
+          "likes": 11000
+        },
+        {
+          "hour": 112,
           "likes": 11000
         }
       ],
@@ -15923,15 +15979,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "日曜日の初耳学"
+              "title": "見取り図の間取り図ミステリー"
             },
             {
               "rank": 48,
-              "title": "ポツンと一軒家"
+              "title": "音道楽√"
             },
             {
               "rank": 49,
-              "title": "音道楽√"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 50,
@@ -16297,7 +16353,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/10/17 15:07",
+      "updatedAt": "2026/10/17 16:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "436",
@@ -16316,11 +16372,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "韓国ドラマ 鳴かない鳥"
+              "title": "深夜食堂 ６"
             },
             {
               "rank": 48,
-              "title": "深夜食堂 ６"
+              "title": "韓国ドラマ 鳴かない鳥"
             },
             {
               "rank": 49,
@@ -16328,7 +16384,7 @@
             },
             {
               "rank": 50,
-              "title": "【韓国ドラマ】とにかくアツく掃除しろ！～恋した彼は潔癖王子！？～"
+              "title": "『もうええわ』（第37回ヤングシナリオ大賞）"
             }
           ]
         },
@@ -16343,11 +16399,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "全力！脱力タイムズ"
+              "title": "名探偵コナン"
             },
             {
               "rank": 48,
-              "title": "名探偵コナン"
+              "title": "付き合ってあげてもいいかな"
             },
             {
               "rank": 49,
@@ -16355,7 +16411,7 @@
             },
             {
               "rank": 50,
-              "title": "これ余談なんですけど・・・"
+              "title": "晩酌の流儀５"
             }
           ]
         }
