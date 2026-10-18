@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/10/18 15:07",
+  "updatedAt": "2026/10/18 16:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/10/16",
-      "updatedAt": "2026/10/18 15:07",
+      "updatedAt": "2026/10/18 16:07",
       "episodeId": "epya6km6jn",
       "subtitle": "timelesz100＆うさぎ製作の舞台裏",
       "likes": "1.4万",
@@ -172,6 +172,10 @@
         },
         {
           "hour": 41,
+          "likes": 14000
+        },
+        {
+          "hour": 42,
           "likes": 14000
         }
       ],
@@ -833,9 +837,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 6,
-          "elapsedHour": 41,
-          "elapsedRank": 6,
+          "currentRank": 7,
+          "elapsedHour": 42,
+          "elapsedRank": 7,
           "currentPoints": [
             {
               "hour": 4,
@@ -984,6 +988,10 @@
             {
               "hour": 41,
               "rank": 6
+            },
+            {
+              "hour": 42,
+              "rank": 7
             }
           ],
           "previousPoints": [
@@ -1598,10 +1606,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 3,
-              "title": "アメトーーク！"
-            },
-            {
               "rank": 4,
               "title": "水曜日のダウンタウン"
             },
@@ -1611,6 +1615,10 @@
             },
             {
               "rank": 6,
+              "title": "上田と女が吠える夜"
+            },
+            {
+              "rank": 7,
               "title": "タイムレスマン"
             }
           ]
@@ -1618,9 +1626,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 23,
-          "elapsedHour": 41,
-          "elapsedRank": 23,
+          "currentRank": 25,
+          "elapsedHour": 42,
+          "elapsedRank": 25,
           "currentPoints": [
             {
               "hour": 10,
@@ -1745,6 +1753,10 @@
             {
               "hour": 41,
               "rank": 23
+            },
+            {
+              "hour": 42,
+              "rank": 25
             }
           ],
           "previousPoints": [
@@ -2155,19 +2167,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 20,
-              "title": "メリーベリーラブ"
-            },
-            {
-              "rank": 21,
-              "title": "薬屋のひとりごと"
-            },
-            {
               "rank": 22,
               "title": "「東京リベンジャーズ」 三天戦争編"
             },
             {
               "rank": 23,
+              "title": "kiDnap GAME"
+            },
+            {
+              "rank": 24,
+              "title": "上田と女が吠える夜"
+            },
+            {
+              "rank": 25,
               "title": "タイムレスマン"
             }
           ]
@@ -2177,15 +2189,19 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/10/18",
-      "updatedAt": "2026/10/18 15:07",
+      "updatedAt": "2026/10/18 16:07",
       "episodeId": "epu2qm5dbn",
       "subtitle": "二文字に人生を込めろ!武田双雲と新企画…二文字書道",
-      "likes": "1841",
+      "likes": "3491",
       "favorites": "36.7万",
       "likePoints": [
         {
           "hour": 1,
           "likes": 1841
+        },
+        {
+          "hour": 2,
+          "likes": 3491
         }
       ],
       "previousLikePoints": [
@@ -3395,7 +3411,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "出没！アド街ック天国"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 48,
@@ -3403,11 +3419,11 @@
             },
             {
               "rank": 49,
-              "title": "夜明けのラヴィット！"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 50,
-              "title": "朝だ！生です旅サラダ"
+              "title": "夜明けのラヴィット！"
             }
           ]
         },
@@ -3675,19 +3691,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "晩酌の流儀５"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 48,
-              "title": "赤灯えれじい"
+              "title": "ゴッドタン"
             },
             {
               "rank": 49,
-              "title": "芸人総選挙 お笑いの日ver.(お笑いの日2026)"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "妻を引退します"
+              "title": "ドラえもん"
             }
           ]
         }
@@ -3696,7 +3712,7 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/06",
-      "updatedAt": "2026/10/18 15:07",
+      "updatedAt": "2026/10/18 16:07",
       "episodeId": "ep0kb9vkd1",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！後編",
       "likes": "1.1万",
@@ -4769,11 +4785,11 @@
             },
             {
               "rank": 49,
-              "title": "うどんMAPサタデー"
+              "title": "なりゆき街道旅"
             },
             {
               "rank": 50,
-              "title": "ＪＡＰＡＮをスーツケースにつめ込んで！～世界に日本を持ってった～"
+              "title": "うどんMAPサタデー"
             }
           ]
         },
@@ -4917,7 +4933,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "出没！アド街ック天国"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 48,
@@ -4925,11 +4941,11 @@
             },
             {
               "rank": 49,
-              "title": "夜明けのラヴィット！"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 50,
-              "title": "朝だ！生です旅サラダ"
+              "title": "夜明けのラヴィット！"
             }
           ]
         }
@@ -4938,7 +4954,7 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/10/11",
-      "updatedAt": "2026/10/18 15:07",
+      "updatedAt": "2026/10/18 16:07",
       "episodeId": "epo01dpzn5",
       "subtitle": "福島の米を守る(秘)大作戦&新宿ミツバチが暑さで大ピンチ!",
       "likes": "1.5万",
@@ -5595,6 +5611,10 @@
         {
           "hour": 164,
           "likes": 15000
+        },
+        {
+          "hour": 165,
+          "likes": 15000
         }
       ],
       "previousLikePoints": [],
@@ -5603,7 +5623,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 20,
-          "elapsedHour": 164,
+          "elapsedHour": 165,
           "elapsedRank": 20,
           "currentPoints": [
             {
@@ -6253,6 +6273,10 @@
             {
               "hour": 164,
               "rank": 20
+            },
+            {
+              "hour": 165,
+              "rank": 20
             }
           ],
           "previousPoints": [],
@@ -6575,7 +6599,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "出没！アド街ック天国"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 48,
@@ -6583,11 +6607,11 @@
             },
             {
               "rank": 49,
-              "title": "夜明けのラヴィット！"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 50,
-              "title": "朝だ！生です旅サラダ"
+              "title": "夜明けのラヴィット！"
             }
           ]
         }
@@ -6596,10 +6620,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/10/14",
-      "updatedAt": "2026/10/18 15:07",
+      "updatedAt": "2026/10/18 16:07",
       "episodeId": "epfa8610gj",
       "subtitle": "【夜の音】MC菊池風磨＆畑芽育の音楽番組！imase登場",
-      "likes": "4704",
+      "likes": "4714",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -7033,6 +7057,10 @@
         {
           "hour": 110,
           "likes": 4704
+        },
+        {
+          "hour": 111,
+          "likes": 4714
         }
       ],
       "previousLikePoints": [
@@ -7899,7 +7927,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "出没！アド街ック天国"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 48,
@@ -7907,11 +7935,11 @@
             },
             {
               "rank": 49,
-              "title": "夜明けのラヴィット！"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 50,
-              "title": "朝だ！生です旅サラダ"
+              "title": "夜明けのラヴィット！"
             }
           ]
         },
@@ -7991,19 +8019,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "晩酌の流儀５"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 48,
-              "title": "赤灯えれじい"
+              "title": "ゴッドタン"
             },
             {
               "rank": 49,
-              "title": "芸人総選挙 お笑いの日ver.(お笑いの日2026)"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "妻を引退します"
+              "title": "ドラえもん"
             }
           ]
         }
@@ -8012,10 +8040,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/16",
-      "updatedAt": "2026/10/18 15:07",
+      "updatedAt": "2026/10/18 16:07",
       "episodeId": "epwnsus2z9",
       "subtitle": "第149回 風磨が大久保佳代子にタジタジ！？王者が決まる",
-      "likes": "4587",
+      "likes": "4597",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -8269,6 +8297,10 @@
         {
           "hour": 63,
           "likes": 4587
+        },
+        {
+          "hour": 64,
+          "likes": 4597
         }
       ],
       "previousLikePoints": [
@@ -9311,7 +9343,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "出没！アド街ック天国"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 48,
@@ -9319,11 +9351,11 @@
             },
             {
               "rank": 49,
-              "title": "夜明けのラヴィット！"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 50,
-              "title": "朝だ！生です旅サラダ"
+              "title": "夜明けのラヴィット！"
             }
           ]
         },
@@ -9476,19 +9508,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "晩酌の流儀５"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 48,
-              "title": "赤灯えれじい"
+              "title": "ゴッドタン"
             },
             {
               "rank": 49,
-              "title": "芸人総選挙 お笑いの日ver.(お笑いの日2026)"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "妻を引退します"
+              "title": "ドラえもん"
             }
           ]
         }
@@ -9497,7 +9529,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/10",
-      "updatedAt": "2026/10/18 15:07",
+      "updatedAt": "2026/10/18 16:07",
       "episodeId": "ep6jb9yo8g",
       "subtitle": "SnowManヤバい選抜が大モメSP前編",
       "likes": "1.2万",
@@ -10854,7 +10886,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "出没！アド街ック天国"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 48,
@@ -10862,11 +10894,11 @@
             },
             {
               "rank": 49,
-              "title": "夜明けのラヴィット！"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 50,
-              "title": "朝だ！生です旅サラダ"
+              "title": "夜明けのラヴィット！"
             }
           ]
         },
@@ -11234,19 +11266,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "晩酌の流儀５"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 48,
-              "title": "赤灯えれじい"
+              "title": "ゴッドタン"
             },
             {
               "rank": 49,
-              "title": "芸人総選挙 お笑いの日ver.(お笑いの日2026)"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "妻を引退します"
+              "title": "ドラえもん"
             }
           ]
         }
@@ -11255,7 +11287,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/10/18 15:07",
+      "updatedAt": "2026/10/18 16:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "2.9万",
@@ -11278,7 +11310,7 @@
             },
             {
               "rank": 48,
-              "title": "韓国ドラマ「ピンクのリップスティック」"
+              "title": "真田十勇士 SHADOWS OF THE TEN NINJA"
             },
             {
               "rank": 49,
@@ -11286,7 +11318,7 @@
             },
             {
               "rank": 50,
-              "title": "キャスター"
+              "title": "韓国ドラマ「ピンクのリップスティック」"
             }
           ]
         },
@@ -11301,19 +11333,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "晩酌の流儀５"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 48,
-              "title": "赤灯えれじい"
+              "title": "ゴッドタン"
             },
             {
               "rank": 49,
-              "title": "芸人総選挙 お笑いの日ver.(お笑いの日2026)"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "妻を引退します"
+              "title": "ドラえもん"
             }
           ]
         }
@@ -11322,10 +11354,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/10/18 15:07",
+      "updatedAt": "2026/10/18 16:07",
       "episodeId": "epqhz4xlsk",
       "subtitle": "横浜流星＆小栗旬VS神フェイク！松尾タイムレス原ペアダンスで試練",
-      "likes": "2051",
+      "likes": "2059",
       "favorites": "13.4万",
       "likePoints": [
         {
@@ -11787,6 +11819,10 @@
         {
           "hour": 116,
           "likes": 2051
+        },
+        {
+          "hour": 117,
+          "likes": 2059
         }
       ],
       "previousLikePoints": [],
@@ -12255,11 +12291,11 @@
             },
             {
               "rank": 49,
-              "title": "うどんMAPサタデー"
+              "title": "なりゆき街道旅"
             },
             {
               "rank": 50,
-              "title": "ＪＡＰＡＮをスーツケースにつめ込んで！～世界に日本を持ってった～"
+              "title": "うどんMAPサタデー"
             }
           ]
         },
@@ -12274,7 +12310,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "出没！アド街ック天国"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 48,
@@ -12282,11 +12318,11 @@
             },
             {
               "rank": 49,
-              "title": "夜明けのラヴィット！"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 50,
-              "title": "朝だ！生です旅サラダ"
+              "title": "夜明けのラヴィット！"
             }
           ]
         }
@@ -12295,7 +12331,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/10/18 15:07",
+      "updatedAt": "2026/10/18 16:07",
       "episodeId": "ep6j6ajewm",
       "subtitle": "名探偵シノ",
       "likes": "1.1万",
@@ -12835,6 +12871,10 @@
         },
         {
           "hour": 135,
+          "likes": 11000
+        },
+        {
+          "hour": 136,
           "likes": 11000
         }
       ],
@@ -14214,7 +14254,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ポツンと一軒家"
+              "title": "音道楽√"
             },
             {
               "rank": 48,
@@ -14222,11 +14262,11 @@
             },
             {
               "rank": 49,
-              "title": "開運！なんでも鑑定団"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 50,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "開運！なんでも鑑定団"
             }
           ]
         },
@@ -14567,7 +14607,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "出没！アド街ック天国"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 48,
@@ -14575,11 +14615,11 @@
             },
             {
               "rank": 49,
-              "title": "夜明けのラヴィット！"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             },
             {
               "rank": 50,
-              "title": "朝だ！生です旅サラダ"
+              "title": "夜明けのラヴィット！"
             }
           ]
         }
@@ -14588,7 +14628,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/10/18 15:07",
+      "updatedAt": "2026/10/18 16:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "436",
@@ -14611,7 +14651,7 @@
             },
             {
               "rank": 48,
-              "title": "韓国ドラマ「ピンクのリップスティック」"
+              "title": "真田十勇士 SHADOWS OF THE TEN NINJA"
             },
             {
               "rank": 49,
@@ -14619,7 +14659,7 @@
             },
             {
               "rank": 50,
-              "title": "キャスター"
+              "title": "韓国ドラマ「ピンクのリップスティック」"
             }
           ]
         },
@@ -14634,19 +14674,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "晩酌の流儀５"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 48,
-              "title": "赤灯えれじい"
+              "title": "ゴッドタン"
             },
             {
               "rank": 49,
-              "title": "芸人総選挙 お笑いの日ver.(お笑いの日2026)"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "妻を引退します"
+              "title": "ドラえもん"
             }
           ]
         }
