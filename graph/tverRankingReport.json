@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/10/18 16:07",
+  "updatedAt": "2026/10/18 17:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/10/16",
-      "updatedAt": "2026/10/18 16:07",
+      "updatedAt": "2026/10/18 17:07",
       "episodeId": "epya6km6jn",
       "subtitle": "timelesz100＆うさぎ製作の舞台裏",
       "likes": "1.4万",
@@ -176,6 +176,10 @@
         },
         {
           "hour": 42,
+          "likes": 14000
+        },
+        {
+          "hour": 43,
           "likes": 14000
         }
       ],
@@ -837,9 +841,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 7,
-          "elapsedHour": 42,
-          "elapsedRank": 7,
+          "currentRank": 8,
+          "elapsedHour": 43,
+          "elapsedRank": 8,
           "currentPoints": [
             {
               "hour": 4,
@@ -992,6 +996,10 @@
             {
               "hour": 42,
               "rank": 7
+            },
+            {
+              "hour": 43,
+              "rank": 8
             }
           ],
           "previousPoints": [
@@ -1606,10 +1614,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 4,
-              "title": "水曜日のダウンタウン"
-            },
-            {
               "rank": 5,
               "title": "月曜から夜ふかし"
             },
@@ -1619,6 +1623,10 @@
             },
             {
               "rank": 7,
+              "title": "嗚呼!!みんなの動物園"
+            },
+            {
+              "rank": 8,
               "title": "タイムレスマン"
             }
           ]
@@ -1627,7 +1635,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 25,
-          "elapsedHour": 42,
+          "elapsedHour": 43,
           "elapsedRank": 25,
           "currentPoints": [
             {
@@ -1756,6 +1764,10 @@
             },
             {
               "hour": 42,
+              "rank": 25
+            },
+            {
+              "hour": 43,
               "rank": 25
             }
           ],
@@ -2189,11 +2201,11 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/10/18",
-      "updatedAt": "2026/10/18 16:07",
+      "updatedAt": "2026/10/18 17:07",
       "episodeId": "epu2qm5dbn",
       "subtitle": "二文字に人生を込めろ!武田双雲と新企画…二文字書道",
-      "likes": "3491",
-      "favorites": "36.7万",
+      "likes": "2990",
+      "favorites": "36.8万",
       "likePoints": [
         {
           "hour": 1,
@@ -2202,6 +2214,10 @@
         {
           "hour": 2,
           "likes": 3491
+        },
+        {
+          "hour": 3,
+          "likes": 2990
         }
       ],
       "previousLikePoints": [
@@ -2874,10 +2890,15 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 50,
+          "elapsedHour": 3,
+          "elapsedRank": 50,
+          "currentPoints": [
+            {
+              "hour": 3,
+              "rank": 50
+            }
+          ],
           "previousPoints": [
             {
               "hour": 4,
@@ -3411,19 +3432,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "林修の今知りたいでしょ！"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 49,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
-              "title": "夜明けのラヴィット！"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -3695,15 +3716,15 @@
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
-            },
-            {
-              "rank": 49,
               "title": "さんまのお笑い向上委員会"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "ドラえもん"
+            },
+            {
+              "rank": 50,
+              "title": "嘘をついた私たち"
             }
           ]
         }
@@ -3712,7 +3733,7 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/06",
-      "updatedAt": "2026/10/18 16:07",
+      "updatedAt": "2026/10/18 17:07",
       "episodeId": "ep0kb9vkd1",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！後編",
       "likes": "1.1万",
@@ -4777,19 +4798,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "本日はダイアンなり！シーズン3"
             },
             {
               "rank": 48,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
               "rank": 49,
-              "title": "なりゆき街道旅"
+              "title": "うどんMAPサタデー"
             },
             {
               "rank": 50,
-              "title": "うどんMAPサタデー"
+              "title": "ニンゲン観察バラエティ モニタリング"
             }
           ]
         },
@@ -4933,19 +4954,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "林修の今知りたいでしょ！"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 49,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
-              "title": "夜明けのラヴィット！"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -4954,7 +4975,7 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/10/11",
-      "updatedAt": "2026/10/18 16:07",
+      "updatedAt": "2026/10/18 17:07",
       "episodeId": "epo01dpzn5",
       "subtitle": "福島の米を守る(秘)大作戦&新宿ミツバチが暑さで大ピンチ!",
       "likes": "1.5万",
@@ -5615,6 +5636,10 @@
         {
           "hour": 165,
           "likes": 15000
+        },
+        {
+          "hour": 166,
+          "likes": 15000
         }
       ],
       "previousLikePoints": [],
@@ -5623,7 +5648,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 20,
-          "elapsedHour": 165,
+          "elapsedHour": 166,
           "elapsedRank": 20,
           "currentPoints": [
             {
@@ -6277,6 +6302,10 @@
             {
               "hour": 165,
               "rank": 20
+            },
+            {
+              "hour": 166,
+              "rank": 20
             }
           ],
           "previousPoints": [],
@@ -6287,11 +6316,11 @@
             },
             {
               "rank": 18,
-              "title": "世界くらべてみたら"
+              "title": "IMP.の「できません」は言いません"
             },
             {
               "rank": 19,
-              "title": "IMP.の「できません」は言いません"
+              "title": "バナナマンの早起きせっかくグルメ!!"
             },
             {
               "rank": 20,
@@ -6599,19 +6628,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "林修の今知りたいでしょ！"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 49,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
-              "title": "夜明けのラヴィット！"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -6620,10 +6649,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/10/14",
-      "updatedAt": "2026/10/18 16:07",
+      "updatedAt": "2026/10/18 17:07",
       "episodeId": "epfa8610gj",
       "subtitle": "【夜の音】MC菊池風磨＆畑芽育の音楽番組！imase登場",
-      "likes": "4714",
+      "likes": "4717",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -7061,6 +7090,10 @@
         {
           "hour": 111,
           "likes": 4714
+        },
+        {
+          "hour": 112,
+          "likes": 4717
         }
       ],
       "previousLikePoints": [
@@ -7927,19 +7960,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "林修の今知りたいでしょ！"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 49,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
-              "title": "夜明けのラヴィット！"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -8023,15 +8056,15 @@
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
-            },
-            {
-              "rank": 49,
               "title": "さんまのお笑い向上委員会"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "ドラえもん"
+            },
+            {
+              "rank": 50,
+              "title": "嘘をついた私たち"
             }
           ]
         }
@@ -8040,10 +8073,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/16",
-      "updatedAt": "2026/10/18 16:07",
+      "updatedAt": "2026/10/18 17:07",
       "episodeId": "epwnsus2z9",
       "subtitle": "第149回 風磨が大久保佳代子にタジタジ！？王者が決まる",
-      "likes": "4597",
+      "likes": "4600",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -8301,6 +8334,10 @@
         {
           "hour": 64,
           "likes": 4597
+        },
+        {
+          "hour": 65,
+          "likes": 4600
         }
       ],
       "previousLikePoints": [
@@ -9343,19 +9380,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "林修の今知りたいでしょ！"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 49,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
-              "title": "夜明けのラヴィット！"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -9512,15 +9549,15 @@
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
-            },
-            {
-              "rank": 49,
               "title": "さんまのお笑い向上委員会"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "ドラえもん"
+            },
+            {
+              "rank": 50,
+              "title": "嘘をついた私たち"
             }
           ]
         }
@@ -9529,7 +9566,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/10",
-      "updatedAt": "2026/10/18 16:07",
+      "updatedAt": "2026/10/18 17:07",
       "episodeId": "ep6jb9yo8g",
       "subtitle": "SnowManヤバい選抜が大モメSP前編",
       "likes": "1.2万",
@@ -10886,19 +10923,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "林修の今知りたいでしょ！"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 49,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
-              "title": "夜明けのラヴィット！"
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -11270,15 +11307,15 @@
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
-            },
-            {
-              "rank": 49,
               "title": "さんまのお笑い向上委員会"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "ドラえもん"
+            },
+            {
+              "rank": 50,
+              "title": "嘘をついた私たち"
             }
           ]
         }
@@ -11287,7 +11324,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/10/18 16:07",
+      "updatedAt": "2026/10/18 17:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "2.9万",
@@ -11306,11 +11343,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "相棒 season25"
+              "title": "体感予報"
             },
             {
               "rank": 48,
-              "title": "真田十勇士 SHADOWS OF THE TEN NINJA"
+              "title": "相棒 season25"
             },
             {
               "rank": 49,
@@ -11337,15 +11374,15 @@
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
-            },
-            {
-              "rank": 49,
               "title": "さんまのお笑い向上委員会"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "ドラえもん"
+            },
+            {
+              "rank": 50,
+              "title": "嘘をついた私たち"
             }
           ]
         }
@@ -11354,10 +11391,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/10/18 16:07",
+      "updatedAt": "2026/10/18 17:07",
       "episodeId": "epqhz4xlsk",
       "subtitle": "横浜流星＆小栗旬VS神フェイク！松尾タイムレス原ペアダンスで試練",
-      "likes": "2059",
+      "likes": "2058",
       "favorites": "13.4万",
       "likePoints": [
         {
@@ -11823,6 +11860,10 @@
         {
           "hour": 117,
           "likes": 2059
+        },
+        {
+          "hour": 118,
+          "likes": 2058
         }
       ],
       "previousLikePoints": [],
@@ -12283,19 +12324,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "本日はダイアンなり！シーズン3"
             },
             {
               "rank": 48,
-              "title": "ニンゲン観察バラエティ モニタリング"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
               "rank": 49,
-              "title": "なりゆき街道旅"
+              "title": "うどんMAPサタデー"
             },
             {
               "rank": 50,
-              "title": "うどんMAPサタデー"
+              "title": "ニンゲン観察バラエティ モニタリング"
             }
           ]
         },
@@ -12310,19 +12351,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "林修の今知りたいでしょ！"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 49,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
-              "title": "夜明けのラヴィット！"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -12331,7 +12372,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/10/18 16:07",
+      "updatedAt": "2026/10/18 17:07",
       "episodeId": "ep6j6ajewm",
       "subtitle": "名探偵シノ",
       "likes": "1.1万",
@@ -12875,6 +12916,10 @@
         },
         {
           "hour": 136,
+          "likes": 11000
+        },
+        {
+          "hour": 137,
           "likes": 11000
         }
       ],
@@ -14254,19 +14299,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "音道楽√"
-            },
-            {
-              "rank": 48,
               "title": "日曜日の初耳学"
             },
             {
+              "rank": 48,
+              "title": "スクール革命！"
+            },
+            {
               "rank": 49,
-              "title": "ポツンと一軒家"
+              "title": "開運！なんでも鑑定団"
             },
             {
               "rank": 50,
-              "title": "開運！なんでも鑑定団"
+              "title": "相葉◎×部"
             }
           ]
         },
@@ -14607,19 +14652,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "林修の今知りたいでしょ！"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 48,
-              "title": "ロンドンハーツ"
+              "title": "林修の今知りたいでしょ！"
             },
             {
               "rank": 49,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "ロンドンハーツ"
             },
             {
               "rank": 50,
-              "title": "夜明けのラヴィット！"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -14628,7 +14673,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/10/18 16:07",
+      "updatedAt": "2026/10/18 17:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "436",
@@ -14647,11 +14692,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "相棒 season25"
+              "title": "体感予報"
             },
             {
               "rank": 48,
-              "title": "真田十勇士 SHADOWS OF THE TEN NINJA"
+              "title": "相棒 season25"
             },
             {
               "rank": 49,
@@ -14678,15 +14723,15 @@
             },
             {
               "rank": 48,
-              "title": "ゴッドタン"
-            },
-            {
-              "rank": 49,
               "title": "さんまのお笑い向上委員会"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "ドラえもん"
+            },
+            {
+              "rank": 50,
+              "title": "嘘をついた私たち"
             }
           ]
         }
