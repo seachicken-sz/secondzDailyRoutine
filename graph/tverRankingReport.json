@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/10/18 19:07",
+  "updatedAt": "2026/10/18 20:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/10/16",
-      "updatedAt": "2026/10/18 19:07",
+      "updatedAt": "2026/10/18 20:07",
       "episodeId": "epya6km6jn",
       "subtitle": "timelesz100＆うさぎ製作の舞台裏",
       "likes": "1.4万",
@@ -188,6 +188,10 @@
         },
         {
           "hour": 45,
+          "likes": 14000
+        },
+        {
+          "hour": 46,
           "likes": 14000
         }
       ],
@@ -849,9 +853,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 8,
-          "elapsedHour": 45,
-          "elapsedRank": 8,
+          "currentRank": 9,
+          "elapsedHour": 46,
+          "elapsedRank": 9,
           "currentPoints": [
             {
               "hour": 4,
@@ -1016,6 +1020,10 @@
             {
               "hour": 45,
               "rank": 8
+            },
+            {
+              "hour": 46,
+              "rank": 9
             }
           ],
           "previousPoints": [
@@ -1630,10 +1638,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 5,
-              "title": "月曜から夜ふかし"
-            },
-            {
               "rank": 6,
               "title": "嗚呼!!みんなの動物園"
             },
@@ -1643,6 +1647,10 @@
             },
             {
               "rank": 8,
+              "title": "かまいたちの知らんけど"
+            },
+            {
+              "rank": 9,
               "title": "タイムレスマン"
             }
           ]
@@ -1650,9 +1658,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 26,
-          "elapsedHour": 45,
-          "elapsedRank": 26,
+          "currentRank": 27,
+          "elapsedHour": 46,
+          "elapsedRank": 27,
           "currentPoints": [
             {
               "hour": 10,
@@ -1793,6 +1801,10 @@
             {
               "hour": 45,
               "rank": 26
+            },
+            {
+              "hour": 46,
+              "rank": 27
             }
           ],
           "previousPoints": [
@@ -2203,10 +2215,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 23,
-              "title": "kiDnap GAME"
-            },
-            {
               "rank": 24,
               "title": "「東京リベンジャーズ」 三天戦争編"
             },
@@ -2216,6 +2224,10 @@
             },
             {
               "rank": 26,
+              "title": "かまいたちの知らんけど"
+            },
+            {
+              "rank": 27,
               "title": "タイムレスマン"
             }
           ]
@@ -2225,10 +2237,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/10/18",
-      "updatedAt": "2026/10/18 19:07",
+      "updatedAt": "2026/10/18 20:07",
       "episodeId": "epu2qm5dbn",
       "subtitle": "二文字に人生を込めろ!武田双雲と新企画…二文字書道",
-      "likes": "5486",
+      "likes": "6419",
       "favorites": "36.8万",
       "likePoints": [
         {
@@ -2250,6 +2262,10 @@
         {
           "hour": 5,
           "likes": 5486
+        },
+        {
+          "hour": 6,
+          "likes": 6419
         }
       ],
       "previousLikePoints": [
@@ -2922,9 +2938,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 29,
-          "elapsedHour": 5,
-          "elapsedRank": 29,
+          "currentRank": 27,
+          "elapsedHour": 6,
+          "elapsedRank": 27,
           "currentPoints": [
             {
               "hour": 3,
@@ -2937,6 +2953,10 @@
             {
               "hour": 5,
               "rank": 29
+            },
+            {
+              "hour": 6,
+              "rank": 27
             }
           ],
           "previousPoints": [
@@ -3471,19 +3491,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 26,
-              "title": "世界の果てまでイッテQ！"
+              "rank": 24,
+              "title": "テレビ千鳥"
             },
             {
-              "rank": 27,
+              "rank": 25,
+              "title": "上田と女がDEEPに吠える夜"
+            },
+            {
+              "rank": 26,
               "title": "高校アカペラ日本一決定戦！ハモネプハイスクール2026"
             },
             {
-              "rank": 28,
-              "title": "Golden SixTONES"
-            },
-            {
-              "rank": 29,
+              "rank": 27,
               "title": "timeleszファミリア"
             }
           ]
@@ -3756,7 +3776,7 @@
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 49,
@@ -3764,7 +3784,7 @@
             },
             {
               "rank": 50,
-              "title": "テレビ千鳥"
+              "title": "探偵！ナイトスクープ"
             }
           ]
         }
@@ -3773,7 +3793,7 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/06",
-      "updatedAt": "2026/10/18 19:07",
+      "updatedAt": "2026/10/18 20:07",
       "episodeId": "ep0kb9vkd1",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！後編",
       "likes": "1.1万",
@@ -4838,19 +4858,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "本日はダイアンなり！シーズン3"
+              "title": "ＪＡＰＡＮをスーツケースにつめ込んで！～世界に日本を持ってった～"
             },
             {
               "rank": 48,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "うどんMAPサタデー"
             },
             {
               "rank": 49,
-              "title": "夢テレビ2026"
+              "title": "グッと！地球便"
             },
             {
               "rank": 50,
-              "title": "ＪＡＰＡＮをスーツケースにつめ込んで！～世界に日本を持ってった～"
+              "title": "ニンゲン観察バラエティ モニタリング"
             }
           ]
         },
@@ -5002,11 +5022,11 @@
             },
             {
               "rank": 49,
-              "title": "放送作家松田好花リスタート"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 50,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "ロンドンハーツ"
             }
           ]
         }
@@ -5015,10 +5035,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/10/14",
-      "updatedAt": "2026/10/18 19:07",
+      "updatedAt": "2026/10/18 20:07",
       "episodeId": "epfa8610gj",
       "subtitle": "【夜の音】MC菊池風磨＆畑芽育の音楽番組！imase登場",
-      "likes": "4739",
+      "likes": "4756",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -5468,6 +5488,10 @@
         {
           "hour": 114,
           "likes": 4739
+        },
+        {
+          "hour": 115,
+          "likes": 4756
         }
       ],
       "previousLikePoints": [
@@ -6342,11 +6366,11 @@
             },
             {
               "rank": 49,
-              "title": "放送作家松田好花リスタート"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 50,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "ロンドンハーツ"
             }
           ]
         },
@@ -6430,7 +6454,7 @@
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 49,
@@ -6438,7 +6462,7 @@
             },
             {
               "rank": 50,
-              "title": "テレビ千鳥"
+              "title": "探偵！ナイトスクープ"
             }
           ]
         }
@@ -6447,10 +6471,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/16",
-      "updatedAt": "2026/10/18 19:07",
+      "updatedAt": "2026/10/18 20:07",
       "episodeId": "epwnsus2z9",
       "subtitle": "第149回 風磨が大久保佳代子にタジタジ！？王者が決まる",
-      "likes": "4640",
+      "likes": "4661",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -6720,6 +6744,10 @@
         {
           "hour": 67,
           "likes": 4640
+        },
+        {
+          "hour": 68,
+          "likes": 4661
         }
       ],
       "previousLikePoints": [
@@ -7770,11 +7798,11 @@
             },
             {
               "rank": 49,
-              "title": "放送作家松田好花リスタート"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 50,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "ロンドンハーツ"
             }
           ]
         },
@@ -7931,7 +7959,7 @@
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 49,
@@ -7939,7 +7967,7 @@
             },
             {
               "rank": 50,
-              "title": "テレビ千鳥"
+              "title": "探偵！ナイトスクープ"
             }
           ]
         }
@@ -7948,7 +7976,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/10",
-      "updatedAt": "2026/10/18 19:07",
+      "updatedAt": "2026/10/18 20:07",
       "episodeId": "ep6jb9yo8g",
       "subtitle": "SnowManヤバい選抜が大モメSP前編",
       "likes": "1.2万",
@@ -9313,11 +9341,11 @@
             },
             {
               "rank": 49,
-              "title": "放送作家松田好花リスタート"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 50,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "ロンドンハーツ"
             }
           ]
         },
@@ -9689,7 +9717,7 @@
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 49,
@@ -9697,7 +9725,7 @@
             },
             {
               "rank": 50,
-              "title": "テレビ千鳥"
+              "title": "探偵！ナイトスクープ"
             }
           ]
         }
@@ -9706,7 +9734,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/10/18 19:07",
+      "updatedAt": "2026/10/18 20:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "2.9万",
@@ -9725,15 +9753,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ただ愛する仲"
+              "title": "深夜食堂 ６"
             },
             {
               "rank": 48,
-              "title": "ディア・シスター"
+              "title": "体感予報"
             },
             {
               "rank": 49,
-              "title": "恋する警護24時"
+              "title": "ディア・シスター"
             },
             {
               "rank": 50,
@@ -9756,7 +9784,7 @@
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 49,
@@ -9764,7 +9792,7 @@
             },
             {
               "rank": 50,
-              "title": "テレビ千鳥"
+              "title": "探偵！ナイトスクープ"
             }
           ]
         }
@@ -9773,10 +9801,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/10/18 19:07",
+      "updatedAt": "2026/10/18 20:07",
       "episodeId": "epqhz4xlsk",
       "subtitle": "横浜流星＆小栗旬VS神フェイク！松尾タイムレス原ペアダンスで試練",
-      "likes": "2076",
+      "likes": "2086",
       "favorites": "13.4万",
       "likePoints": [
         {
@@ -10254,6 +10282,10 @@
         {
           "hour": 120,
           "likes": 2076
+        },
+        {
+          "hour": 121,
+          "likes": 2086
         }
       ],
       "previousLikePoints": [],
@@ -10714,19 +10746,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "本日はダイアンなり！シーズン3"
+              "title": "ＪＡＰＡＮをスーツケースにつめ込んで！～世界に日本を持ってった～"
             },
             {
               "rank": 48,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "うどんMAPサタデー"
             },
             {
               "rank": 49,
-              "title": "夢テレビ2026"
+              "title": "グッと！地球便"
             },
             {
               "rank": 50,
-              "title": "ＪＡＰＡＮをスーツケースにつめ込んで！～世界に日本を持ってった～"
+              "title": "ニンゲン観察バラエティ モニタリング"
             }
           ]
         },
@@ -10749,11 +10781,11 @@
             },
             {
               "rank": 49,
-              "title": "放送作家松田好花リスタート"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 50,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "ロンドンハーツ"
             }
           ]
         }
@@ -10762,7 +10794,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/10/18 19:07",
+      "updatedAt": "2026/10/18 20:07",
       "episodeId": "ep6j6ajewm",
       "subtitle": "名探偵シノ",
       "likes": "1.1万",
@@ -11318,6 +11350,10 @@
         },
         {
           "hour": 139,
+          "likes": 11000
+        },
+        {
+          "hour": 140,
           "likes": 11000
         }
       ],
@@ -12697,11 +12733,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "おしゃれクリップ"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 48,
-              "title": "ポツンと一軒家"
+              "title": "ミキティダイニング"
             },
             {
               "rank": 49,
@@ -13058,11 +13094,11 @@
             },
             {
               "rank": 49,
-              "title": "放送作家松田好花リスタート"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 50,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "ロンドンハーツ"
             }
           ]
         }
@@ -13071,7 +13107,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/10/18 19:07",
+      "updatedAt": "2026/10/18 20:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "436",
@@ -13090,15 +13126,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ただ愛する仲"
+              "title": "深夜食堂 ６"
             },
             {
               "rank": 48,
-              "title": "ディア・シスター"
+              "title": "体感予報"
             },
             {
               "rank": 49,
-              "title": "恋する警護24時"
+              "title": "ディア・シスター"
             },
             {
               "rank": 50,
@@ -13121,7 +13157,7 @@
             },
             {
               "rank": 48,
-              "title": "探偵！ナイトスクープ"
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
               "rank": 49,
@@ -13129,7 +13165,7 @@
             },
             {
               "rank": 50,
-              "title": "テレビ千鳥"
+              "title": "探偵！ナイトスクープ"
             }
           ]
         }
