@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/10/19 13:07",
+  "updatedAt": "2026/10/19 14:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/10/16",
-      "updatedAt": "2026/10/19 13:07",
+      "updatedAt": "2026/10/19 14:07",
       "episodeId": "epya6km6jn",
       "subtitle": "timelesz100＆うさぎ製作の舞台裏",
       "likes": "1.5万",
@@ -248,6 +248,10 @@
         },
         {
           "hour": 63,
+          "likes": 15000
+        },
+        {
+          "hour": 64,
           "likes": 15000
         }
       ],
@@ -910,7 +914,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 22,
-          "elapsedHour": 63,
+          "elapsedHour": 64,
           "elapsedRank": 22,
           "currentPoints": [
             {
@@ -1147,6 +1151,10 @@
             },
             {
               "hour": 63,
+              "rank": 22
+            },
+            {
+              "hour": 64,
               "rank": 22
             }
           ],
@@ -1763,7 +1771,7 @@
           "nearbyRanking": [
             {
               "rank": 19,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
               "rank": 20,
@@ -1782,9 +1790,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 45,
-          "elapsedHour": 63,
-          "elapsedRank": 45,
+          "currentRank": 46,
+          "elapsedHour": 64,
+          "elapsedRank": 46,
           "currentPoints": [
             {
               "hour": 10,
@@ -1997,6 +2005,10 @@
             {
               "hour": 63,
               "rank": 45
+            },
+            {
+              "hour": 64,
+              "rank": 46
             }
           ],
           "previousPoints": [
@@ -2407,19 +2419,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 42,
-              "title": "かまいたちの机上の空論城"
-            },
-            {
               "rank": 43,
               "title": "A-Studio＋"
             },
             {
               "rank": 44,
-              "title": "名探偵コナン"
+              "title": "小麦とバターと復讐と"
             },
             {
               "rank": 45,
+              "title": "名探偵コナン"
+            },
+            {
+              "rank": 46,
               "title": "タイムレスマン"
             }
           ]
@@ -2429,7 +2441,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/10/18",
-      "updatedAt": "2026/10/19 13:07",
+      "updatedAt": "2026/10/19 14:07",
       "episodeId": "epu2qm5dbn",
       "subtitle": "二文字に人生を込めろ!武田双雲と新企画…二文字書道",
       "likes": "1.3万",
@@ -2513,6 +2525,10 @@
         },
         {
           "hour": 23,
+          "likes": 13000
+        },
+        {
+          "hour": 24,
           "likes": 13000
         }
       ],
@@ -3186,9 +3202,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 8,
-          "elapsedHour": 23,
-          "elapsedRank": 8,
+          "currentRank": 6,
+          "elapsedHour": 24,
+          "elapsedRank": 6,
           "currentPoints": [
             {
               "hour": 3,
@@ -3273,6 +3289,10 @@
             {
               "hour": 23,
               "rank": 8
+            },
+            {
+              "hour": 24,
+              "rank": 6
             }
           ],
           "previousPoints": [
@@ -3807,19 +3827,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 5,
-              "title": "水曜日のダウンタウン"
+              "rank": 3,
+              "title": "アメトーーク！"
             },
             {
-              "rank": 6,
+              "rank": 4,
               "title": "世界の果てまでイッテQ！"
             },
             {
-              "rank": 7,
-              "title": "月曜から夜ふかし"
+              "rank": 5,
+              "title": "かまいたちの知らんけど"
             },
             {
-              "rank": 8,
+              "rank": 6,
               "title": "timeleszファミリア"
             }
           ]
@@ -3827,9 +3847,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 23,
-          "elapsedHour": 23,
-          "elapsedRank": 23,
+          "currentRank": 21,
+          "elapsedHour": 24,
+          "elapsedRank": 21,
           "currentPoints": [
             {
               "hour": 7,
@@ -3898,6 +3918,10 @@
             {
               "hour": 23,
               "rank": 23
+            },
+            {
+              "hour": 24,
+              "rank": 21
             }
           ],
           "previousPoints": [
@@ -4156,19 +4180,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 20,
-              "title": "もうパパ！"
-            },
-            {
-              "rank": 21,
-              "title": "月曜から夜ふかし"
-            },
-            {
-              "rank": 22,
+              "rank": 18,
               "title": "世界の果てまでイッテQ！"
             },
             {
-              "rank": 23,
+              "rank": 19,
+              "title": "かまいたちの知らんけど"
+            },
+            {
+              "rank": 20,
+              "title": "ダウト ‐15年目の復讐‐"
+            },
+            {
+              "rank": 21,
               "title": "timeleszファミリア"
             }
           ]
@@ -4178,7 +4202,7 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/06",
-      "updatedAt": "2026/10/19 13:07",
+      "updatedAt": "2026/10/19 14:07",
       "episodeId": "ep0kb9vkd1",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！後編",
       "likes": "1.1万",
@@ -5243,7 +5267,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "王様のブランチ"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
               "rank": 48,
@@ -5255,7 +5279,7 @@
             },
             {
               "rank": 50,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "王様のブランチ"
             }
           ]
         },
@@ -5399,7 +5423,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "オールスター感謝祭’26秋"
             },
             {
               "rank": 48,
@@ -5411,7 +5435,7 @@
             },
             {
               "rank": 50,
-              "title": "おしゃれクリップ"
+              "title": "1億人の大質問!?笑ってコラえて！"
             }
           ]
         }
@@ -5420,10 +5444,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/10/14",
-      "updatedAt": "2026/10/19 13:07",
+      "updatedAt": "2026/10/19 14:07",
       "episodeId": "epfa8610gj",
       "subtitle": "【夜の音】MC菊池風磨＆畑芽育の音楽番組！imase登場",
-      "likes": "4930",
+      "likes": "4941",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -5933,6 +5957,10 @@
         {
           "hour": 132,
           "likes": 4930
+        },
+        {
+          "hour": 133,
+          "likes": 4941
         }
       ],
       "previousLikePoints": [
@@ -6799,7 +6827,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "オールスター感謝祭’26秋"
             },
             {
               "rank": 48,
@@ -6811,7 +6839,7 @@
             },
             {
               "rank": 50,
-              "title": "おしゃれクリップ"
+              "title": "1億人の大質問!?笑ってコラえて！"
             }
           ]
         },
@@ -6891,15 +6919,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "小麦とバターと復讐と"
-            },
-            {
-              "rank": 48,
               "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "華大さんと千鳥くん"
+            },
+            {
+              "rank": 49,
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 50,
@@ -6912,10 +6940,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/16",
-      "updatedAt": "2026/10/19 13:07",
+      "updatedAt": "2026/10/19 14:07",
       "episodeId": "epwnsus2z9",
       "subtitle": "第149回 風磨が大久保佳代子にタジタジ！？王者が決まる",
-      "likes": "4886",
+      "likes": "4910",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -7241,6 +7269,10 @@
         {
           "hour": 85,
           "likes": 4886
+        },
+        {
+          "hour": 86,
+          "likes": 4910
         }
       ],
       "previousLikePoints": [
@@ -8283,7 +8315,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "オールスター感謝祭’26秋"
             },
             {
               "rank": 48,
@@ -8295,7 +8327,7 @@
             },
             {
               "rank": 50,
-              "title": "おしゃれクリップ"
+              "title": "1億人の大質問!?笑ってコラえて！"
             }
           ]
         },
@@ -8448,15 +8480,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "小麦とバターと復讐と"
-            },
-            {
-              "rank": 48,
               "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "華大さんと千鳥くん"
+            },
+            {
+              "rank": 49,
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 50,
@@ -8469,7 +8501,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/10",
-      "updatedAt": "2026/10/19 13:07",
+      "updatedAt": "2026/10/19 14:07",
       "episodeId": "ep6jb9yo8g",
       "subtitle": "SnowManヤバい選抜が大モメSP前編",
       "likes": "1.3万",
@@ -9826,7 +9858,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "オールスター感謝祭’26秋"
             },
             {
               "rank": 48,
@@ -9838,7 +9870,7 @@
             },
             {
               "rank": 50,
-              "title": "おしゃれクリップ"
+              "title": "1億人の大質問!?笑ってコラえて！"
             }
           ]
         },
@@ -10206,15 +10238,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "小麦とバターと復讐と"
-            },
-            {
-              "rank": 48,
               "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "華大さんと千鳥くん"
+            },
+            {
+              "rank": 49,
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 50,
@@ -10227,7 +10259,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/10/19 13:07",
+      "updatedAt": "2026/10/19 14:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "2.9万",
@@ -10246,7 +10278,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ただ愛する仲"
+              "title": "深夜食堂 ６"
             },
             {
               "rank": 48,
@@ -10254,11 +10286,11 @@
             },
             {
               "rank": 49,
-              "title": "深夜食堂 ６"
+              "title": "ただ愛する仲"
             },
             {
               "rank": 50,
-              "title": "韓国ドラマ 会いたい～I Miss You～"
+              "title": "南田南弁護士は天才肌"
             }
           ]
         },
@@ -10273,15 +10305,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "小麦とバターと復讐と"
-            },
-            {
-              "rank": 48,
               "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "華大さんと千鳥くん"
+            },
+            {
+              "rank": 49,
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 50,
@@ -10294,10 +10326,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/10/19 13:07",
+      "updatedAt": "2026/10/19 14:07",
       "episodeId": "epqhz4xlsk",
       "subtitle": "横浜流星＆小栗旬VS神フェイク！松尾タイムレス原ペアダンスで試練",
-      "likes": "2162",
+      "likes": "2166",
       "favorites": "13.4万",
       "likePoints": [
         {
@@ -10835,6 +10867,10 @@
         {
           "hour": 138,
           "likes": 2162
+        },
+        {
+          "hour": 139,
+          "likes": 2166
         }
       ],
       "previousLikePoints": [],
@@ -11295,7 +11331,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "王様のブランチ"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
               "rank": 48,
@@ -11307,7 +11343,7 @@
             },
             {
               "rank": 50,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "title": "王様のブランチ"
             }
           ]
         },
@@ -11322,7 +11358,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "オールスター感謝祭’26秋"
             },
             {
               "rank": 48,
@@ -11334,7 +11370,7 @@
             },
             {
               "rank": 50,
-              "title": "おしゃれクリップ"
+              "title": "1億人の大質問!?笑ってコラえて！"
             }
           ]
         }
@@ -11343,7 +11379,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/10/19 13:07",
+      "updatedAt": "2026/10/19 14:07",
       "episodeId": "ep6j6ajewm",
       "subtitle": "名探偵シノ",
       "likes": "1.1万",
@@ -11955,6 +11991,10 @@
         },
         {
           "hour": 157,
+          "likes": 11000
+        },
+        {
+          "hour": 158,
           "likes": 11000
         }
       ],
@@ -13687,7 +13727,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "title": "オールスター感謝祭’26秋"
             },
             {
               "rank": 48,
@@ -13699,7 +13739,7 @@
             },
             {
               "rank": 50,
-              "title": "おしゃれクリップ"
+              "title": "1億人の大質問!?笑ってコラえて！"
             }
           ]
         }
@@ -13708,7 +13748,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/10/19 13:07",
+      "updatedAt": "2026/10/19 14:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "436",
@@ -13727,7 +13767,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ただ愛する仲"
+              "title": "深夜食堂 ６"
             },
             {
               "rank": 48,
@@ -13735,11 +13775,11 @@
             },
             {
               "rank": 49,
-              "title": "深夜食堂 ６"
+              "title": "ただ愛する仲"
             },
             {
               "rank": 50,
-              "title": "韓国ドラマ 会いたい～I Miss You～"
+              "title": "南田南弁護士は天才肌"
             }
           ]
         },
@@ -13754,15 +13794,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "小麦とバターと復讐と"
-            },
-            {
-              "rank": 48,
               "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
-              "rank": 49,
+              "rank": 48,
               "title": "華大さんと千鳥くん"
+            },
+            {
+              "rank": 49,
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 50,
