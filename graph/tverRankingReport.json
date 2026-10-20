@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/10/21 06:07",
+  "updatedAt": "2026/10/21 07:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/10/16",
-      "updatedAt": "2026/10/21 06:07",
+      "updatedAt": "2026/10/21 07:07",
       "episodeId": "epya6km6jn",
       "subtitle": "timelesz100＆うさぎ製作の舞台裏",
       "likes": "1.6万",
@@ -412,6 +412,10 @@
         },
         {
           "hour": 104,
+          "likes": 16000
+        },
+        {
+          "hour": 105,
           "likes": 16000
         }
       ],
@@ -1074,7 +1078,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 42,
-          "elapsedHour": 104,
+          "elapsedHour": 105,
           "elapsedRank": 42,
           "currentPoints": [
             {
@@ -1475,6 +1479,10 @@
             },
             {
               "hour": 104,
+              "rank": 42
+            },
+            {
+              "hour": 105,
               "rank": 42
             }
           ],
@@ -2095,11 +2103,11 @@
             },
             {
               "rank": 40,
-              "title": "ゴッドタン"
+              "title": "ザ！世界仰天ニュース"
             },
             {
               "rank": 41,
-              "title": "芸人総選挙 お笑いの日ver.(お笑いの日2026)"
+              "title": "ゴッドタン"
             },
             {
               "rank": 42,
@@ -2765,7 +2773,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/10/18",
-      "updatedAt": "2026/10/21 06:07",
+      "updatedAt": "2026/10/21 07:07",
       "episodeId": "epu2qm5dbn",
       "subtitle": "二文字に人生を込めろ!武田双雲と新企画…二文字書道",
       "likes": "1.7万",
@@ -3013,6 +3021,10 @@
         },
         {
           "hour": 64,
+          "likes": 17000
+        },
+        {
+          "hour": 65,
           "likes": 17000
         }
       ],
@@ -3687,7 +3699,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 22,
-          "elapsedHour": 64,
+          "elapsedHour": 65,
           "elapsedRank": 22,
           "currentPoints": [
             {
@@ -3936,6 +3948,10 @@
             },
             {
               "hour": 64,
+              "rank": 22
+            },
+            {
+              "hour": 65,
               "rank": 22
             }
           ],
@@ -4492,7 +4508,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 50,
-          "elapsedHour": 64,
+          "elapsedHour": 65,
           "elapsedRank": 50,
           "currentPoints": [
             {
@@ -4721,6 +4737,10 @@
             },
             {
               "hour": 64,
+              "rank": 50
+            },
+            {
+              "hour": 65,
               "rank": 50
             }
           ],
@@ -5002,10 +5022,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/10/21 06:07",
+      "updatedAt": "2026/10/21 07:07",
       "episodeId": "ep9m1yswrh",
       "subtitle": "チョコプラ・timeleszが緊急特別企画「抜き打ちネイチャークイズ追試編」に挑む！",
-      "likes": "1423",
+      "likes": "2019",
       "favorites": "6.5万",
       "likePoints": [
         {
@@ -5031,6 +5051,10 @@
         {
           "hour": 6,
           "likes": 1423
+        },
+        {
+          "hour": 7,
+          "likes": 2019
         }
       ],
       "previousLikePoints": [
@@ -5683,9 +5707,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 43,
-          "elapsedHour": 6,
-          "elapsedRank": 43,
+          "currentRank": 33,
+          "elapsedHour": 7,
+          "elapsedRank": 33,
           "currentPoints": [
             {
               "hour": 5,
@@ -5694,6 +5718,10 @@
             {
               "hour": 6,
               "rank": 43
+            },
+            {
+              "hour": 7,
+              "rank": 33
             }
           ],
           "previousPoints": [
@@ -6100,19 +6128,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 40,
-              "title": "よるのブランチ"
+              "rank": 30,
+              "title": "世界くらべてみたら"
             },
             {
-              "rank": 41,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "rank": 31,
+              "title": "なりゆき街道旅"
             },
             {
-              "rank": 42,
-              "title": "ゴルフ侍、見参！"
+              "rank": 32,
+              "title": "M!LKの爆裂ミッション"
             },
             {
-              "rank": 43,
+              "rank": 33,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -6261,15 +6289,15 @@
             },
             {
               "rank": 48,
-              "title": "ドラマでクイズ！THEキリヌキ"
-            },
-            {
-              "rank": 49,
               "title": "THE神業チャレンジ"
             },
             {
+              "rank": 49,
+              "title": "ドラマでクイズ！THEキリヌキ"
+            },
+            {
               "rank": 50,
-              "title": "おしゃれクリップ"
+              "title": "上田と女がDEEPに吠える夜"
             }
           ]
         }
@@ -6278,10 +6306,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/10/21 06:07",
+      "updatedAt": "2026/10/21 07:07",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
-      "likes": "631",
+      "likes": "722",
       "favorites": "81.1万",
       "likePoints": [
         {
@@ -6319,6 +6347,10 @@
         {
           "hour": 9,
           "likes": 631
+        },
+        {
+          "hour": 10,
+          "likes": 722
         }
       ],
       "previousLikePoints": [],
@@ -6326,9 +6358,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 44,
-          "elapsedHour": 9,
-          "elapsedRank": 44,
+          "currentRank": 40,
+          "elapsedHour": 10,
+          "elapsedRank": 40,
           "currentPoints": [
             {
               "hour": 6,
@@ -6345,24 +6377,28 @@
             {
               "hour": 9,
               "rank": 44
+            },
+            {
+              "hour": 10,
+              "rank": 40
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 41,
-              "title": "芸人総選挙 お笑いの日ver.(お笑いの日2026)"
+              "rank": 37,
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
-              "rank": 42,
-              "title": "タイムレスマン"
+              "rank": 38,
+              "title": "東野・岡村の旅猿29 ～プライベートでごめんなさい…"
             },
             {
-              "rank": 43,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "rank": 39,
+              "title": "嗚呼!!みんなの動物園"
             },
             {
-              "rank": 44,
+              "rank": 40,
               "title": "ザ！世界仰天ニュース"
             }
           ]
@@ -6399,10 +6435,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/10/21",
-      "updatedAt": "2026/10/21 06:07",
+      "updatedAt": "2026/10/21 07:07",
       "episodeId": "ep1zm2tfi9",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！FUNKY MONKEY BΛBY'S登場",
-      "likes": "595",
+      "likes": "842",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -6428,6 +6464,10 @@
         {
           "hour": 5,
           "likes": 595
+        },
+        {
+          "hour": 6,
+          "likes": 842
         }
       ],
       "previousLikePoints": [
@@ -7141,15 +7181,15 @@
             },
             {
               "rank": 48,
-              "title": "ドラマでクイズ！THEキリヌキ"
-            },
-            {
-              "rank": 49,
               "title": "THE神業チャレンジ"
             },
             {
+              "rank": 49,
+              "title": "ドラマでクイズ！THEキリヌキ"
+            },
+            {
               "rank": 50,
-              "title": "おしゃれクリップ"
+              "title": "上田と女がDEEPに吠える夜"
             }
           ]
         },
@@ -7185,10 +7225,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/16",
-      "updatedAt": "2026/10/21 06:07",
+      "updatedAt": "2026/10/21 07:07",
       "episodeId": "epwnsus2z9",
       "subtitle": "第149回 風磨が大久保佳代子にタジタジ！？王者が決まる",
-      "likes": "5295",
+      "likes": "5301",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -7670,6 +7710,10 @@
         {
           "hour": 126,
           "likes": 5295
+        },
+        {
+          "hour": 127,
+          "likes": 5301
         }
       ],
       "previousLikePoints": [
@@ -8716,15 +8760,15 @@
             },
             {
               "rank": 48,
-              "title": "ドラマでクイズ！THEキリヌキ"
-            },
-            {
-              "rank": 49,
               "title": "THE神業チャレンジ"
             },
             {
+              "rank": 49,
+              "title": "ドラマでクイズ！THEキリヌキ"
+            },
+            {
               "rank": 50,
-              "title": "おしゃれクリップ"
+              "title": "上田と女がDEEPに吠える夜"
             }
           ]
         },
@@ -8898,11 +8942,11 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/10",
-      "updatedAt": "2026/10/21 06:07",
+      "updatedAt": "2026/10/21 07:07",
       "episodeId": "ep6jb9yo8g",
       "subtitle": "SnowManヤバい選抜が大モメSP前編",
       "likes": "1.3万",
-      "favorites": "82.0万",
+      "favorites": "81.9万",
       "likePoints": [
         {
           "hour": 2,
@@ -10259,15 +10303,15 @@
             },
             {
               "rank": 48,
-              "title": "ドラマでクイズ！THEキリヌキ"
-            },
-            {
-              "rank": 49,
               "title": "THE神業チャレンジ"
             },
             {
+              "rank": 49,
+              "title": "ドラマでクイズ！THEキリヌキ"
+            },
+            {
               "rank": 50,
-              "title": "おしゃれクリップ"
+              "title": "上田と女がDEEPに吠える夜"
             }
           ]
         },
@@ -10656,7 +10700,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/10/21 06:07",
+      "updatedAt": "2026/10/21 07:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "2.9万",
@@ -10687,7 +10731,7 @@
             },
             {
               "rank": 50,
-              "title": "中国時代劇「扶揺(フーヤオ)～伝説の皇后～」"
+              "title": "中国ドラマ「溥儀の料理番～紫禁城 最後の日々」"
             }
           ]
         },
@@ -10723,10 +10767,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/10/21 06:07",
+      "updatedAt": "2026/10/21 07:07",
       "episodeId": "epopy9ad0i",
       "subtitle": "スノーマン向井VS松岡修造軍＆タイムレス篠塚ンダホクレーンで神業",
-      "likes": "2775",
+      "likes": "3011",
       "favorites": "13.5万",
       "likePoints": [
         {
@@ -10768,6 +10812,10 @@
         {
           "hour": 11,
           "likes": 2775
+        },
+        {
+          "hour": 12,
+          "likes": 3011
         }
       ],
       "previousLikePoints": [
@@ -11428,9 +11476,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 15,
-          "elapsedHour": 11,
-          "elapsedRank": 15,
+          "currentRank": 14,
+          "elapsedHour": 12,
+          "elapsedRank": 14,
           "currentPoints": [
             {
               "hour": 3,
@@ -11467,6 +11515,10 @@
             {
               "hour": 11,
               "rank": 15
+            },
+            {
+              "hour": 12,
+              "rank": 14
             }
           ],
           "previousPoints": [
@@ -12017,8 +12069,12 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 12,
+              "rank": 11,
               "title": "ザ！世界仰天ニュース"
+            },
+            {
+              "rank": 12,
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 13,
@@ -12026,10 +12082,6 @@
             },
             {
               "rank": 14,
-              "title": "ドラマでクイズ！THEキリヌキ"
-            },
-            {
-              "rank": 15,
               "title": "THE神業チャレンジ"
             }
           ]
@@ -12037,9 +12089,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 49,
-          "elapsedHour": 11,
-          "elapsedRank": 49,
+          "currentRank": 48,
+          "elapsedHour": 12,
+          "elapsedRank": 48,
           "currentPoints": [
             {
               "hour": 10,
@@ -12048,13 +12100,21 @@
             {
               "hour": 11,
               "rank": 49
+            },
+            {
+              "hour": 12,
+              "rank": 48
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
             {
+              "rank": 45,
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+            },
+            {
               "rank": 46,
-              "title": "かまいガチ"
+              "title": "世界まる見え！テレビ特捜部"
             },
             {
               "rank": 47,
@@ -12062,10 +12122,6 @@
             },
             {
               "rank": 48,
-              "title": "ドラマでクイズ！THEキリヌキ"
-            },
-            {
-              "rank": 49,
               "title": "THE神業チャレンジ"
             }
           ]
@@ -12075,10 +12131,10 @@
     "srp2r8bnrz": {
       "programTitle": "見取り図じゃん",
       "broadcastDate": "",
-      "updatedAt": "2026/10/21 06:07",
+      "updatedAt": "2026/10/21 07:07",
       "episodeId": "ep0v2kciut",
       "subtitle": "【異色タッグ激戦】井口＆ダウ蓮見vsこたけ＆森田…びちゃびちゃ論",
-      "likes": "1716",
+      "likes": "1717",
       "favorites": "37.1万",
       "likePoints": [],
       "previousLikePoints": [],
@@ -12098,15 +12154,15 @@
             },
             {
               "rank": 48,
-              "title": "ドラマでクイズ！THEキリヌキ"
-            },
-            {
-              "rank": 49,
               "title": "THE神業チャレンジ"
             },
             {
+              "rank": 49,
+              "title": "ドラマでクイズ！THEキリヌキ"
+            },
+            {
               "rank": 50,
-              "title": "おしゃれクリップ"
+              "title": "上田と女がDEEPに吠える夜"
             }
           ]
         }
@@ -12115,7 +12171,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/10/21 06:07",
+      "updatedAt": "2026/10/21 07:07",
       "episodeId": "ep6j6ajewm",
       "subtitle": "名探偵シノ",
       "likes": "1.2万",
@@ -13172,7 +13228,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "川島・山内のマンガ沼"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 48,
@@ -13380,15 +13436,15 @@
             },
             {
               "rank": 48,
-              "title": "ドラマでクイズ！THEキリヌキ"
-            },
-            {
-              "rank": 49,
               "title": "THE神業チャレンジ"
             },
             {
+              "rank": 49,
+              "title": "ドラマでクイズ！THEキリヌキ"
+            },
+            {
               "rank": 50,
-              "title": "おしゃれクリップ"
+              "title": "上田と女がDEEPに吠える夜"
             }
           ]
         }
@@ -13397,7 +13453,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/10/21 06:07",
+      "updatedAt": "2026/10/21 07:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "436",
@@ -13428,7 +13484,7 @@
             },
             {
               "rank": 50,
-              "title": "中国時代劇「扶揺(フーヤオ)～伝説の皇后～」"
+              "title": "中国ドラマ「溥儀の料理番～紫禁城 最後の日々」"
             }
           ]
         },
