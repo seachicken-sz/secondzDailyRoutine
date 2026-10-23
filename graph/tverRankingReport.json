@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026/10/24 02:07",
+  "updatedAt": "2026/10/24 03:18",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/10/23",
-      "updatedAt": "2026/10/24 02:07",
+      "updatedAt": "2026/10/24 03:18",
       "episodeId": "epnlaxqqpd",
       "subtitle": "サッと作れる漢の麺料理＆SNSアイコン対決！",
-      "likes": "3128",
+      "likes": "3345",
       "favorites": "78.8万",
       "likePoints": [
         {
@@ -21,6 +21,10 @@
         {
           "hour": 4,
           "likes": 3128
+        },
+        {
+          "hour": 5,
+          "likes": 3345
         }
       ],
       "previousLikePoints": [
@@ -661,10 +665,15 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 44,
+          "elapsedHour": 5,
+          "elapsedRank": 44,
+          "currentPoints": [
+            {
+              "hour": 5,
+              "rank": 44
+            }
+          ],
           "previousPoints": [
             {
               "hour": 4,
@@ -1101,20 +1110,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "ニカゲーム"
+              "rank": 41,
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
-              "rank": 48,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "rank": 42,
+              "title": "ホンマでっか！？TV"
             },
             {
-              "rank": 49,
-              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
+              "rank": 43,
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
-              "rank": 50,
-              "title": "クレイジージャーニー"
+              "rank": 44,
+              "title": "タイムレスマン"
             }
           ]
         },
@@ -1371,7 +1380,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/10/18",
-      "updatedAt": "2026/10/24 02:07",
+      "updatedAt": "2026/10/24 03:18",
       "episodeId": "epu2qm5dbn",
       "subtitle": "二文字に人生を込めろ!武田双雲と新企画…二文字書道",
       "likes": "1.8万",
@@ -1859,6 +1868,10 @@
         },
         {
           "hour": 132,
+          "likes": 18000
+        },
+        {
+          "hour": 133,
           "likes": 18000
         }
       ],
@@ -3526,19 +3539,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ニカゲーム"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 48,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "ニカゲーム"
             },
             {
               "rank": 49,
-              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 50,
-              "title": "クレイジージャーニー"
+              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
             }
           ]
         },
@@ -4060,10 +4073,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/10/24 02:07",
+      "updatedAt": "2026/10/24 03:18",
       "episodeId": "ep9m1yswrh",
       "subtitle": "チョコプラ・timeleszが緊急特別企画「抜き打ちネイチャークイズ追試編」に挑む！",
-      "likes": "8318",
+      "likes": "8331",
       "favorites": "6.5万",
       "likePoints": [
         {
@@ -4329,6 +4342,10 @@
         {
           "hour": 74,
           "likes": 8318
+        },
+        {
+          "hour": 75,
+          "likes": 8331
         }
       ],
       "previousLikePoints": [
@@ -4981,9 +4998,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 25,
-          "elapsedHour": 74,
-          "elapsedRank": 25,
+          "currentRank": 26,
+          "elapsedHour": 75,
+          "elapsedRank": 26,
           "currentPoints": [
             {
               "hour": 5,
@@ -5264,6 +5281,10 @@
             {
               "hour": 74,
               "rank": 25
+            },
+            {
+              "hour": 75,
+              "rank": 26
             }
           ],
           "previousPoints": [
@@ -5670,19 +5691,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 22,
-              "title": "ポツンと一軒家"
-            },
-            {
               "rank": 23,
               "title": "M!LKの爆裂ミッション"
             },
             {
               "rank": 24,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 25,
+              "title": "バナナマンのせっかくグルメ!!"
+            },
+            {
+              "rank": 26,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -5932,19 +5953,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ニカゲーム"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 48,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "ニカゲーム"
             },
             {
               "rank": 49,
-              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 50,
-              "title": "クレイジージャーニー"
+              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
             }
           ]
         }
@@ -5953,10 +5974,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/10/24 02:07",
+      "updatedAt": "2026/10/24 03:18",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
-      "likes": "2430",
+      "likes": "2443",
       "favorites": "81.3万",
       "likePoints": [
         {
@@ -6234,6 +6255,10 @@
         {
           "hour": 77,
           "likes": 2430
+        },
+        {
+          "hour": 78,
+          "likes": 2443
         }
       ],
       "previousLikePoints": [],
@@ -6242,7 +6267,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 40,
-          "elapsedHour": 77,
+          "elapsedHour": 78,
           "elapsedRank": 40,
           "currentPoints": [
             {
@@ -6532,6 +6557,10 @@
             {
               "hour": 77,
               "rank": 40
+            },
+            {
+              "hour": 78,
+              "rank": 40
             }
           ],
           "previousPoints": [],
@@ -6715,10 +6744,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/10/21",
-      "updatedAt": "2026/10/24 02:07",
+      "updatedAt": "2026/10/24 03:18",
       "episodeId": "ep1zm2tfi9",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！FUNKY MONKEY BΛBY'S登場",
-      "likes": "3461",
+      "likes": "3462",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -6956,6 +6985,10 @@
         {
           "hour": 73,
           "likes": 3461
+        },
+        {
+          "hour": 75,
+          "likes": 3462
         }
       ],
       "previousLikePoints": [
@@ -7665,19 +7698,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ニカゲーム"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 48,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "ニカゲーム"
             },
             {
               "rank": 49,
-              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 50,
-              "title": "クレイジージャーニー"
+              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
             }
           ]
         },
@@ -7713,10 +7746,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/23",
-      "updatedAt": "2026/10/24 02:07",
+      "updatedAt": "2026/10/24 03:18",
       "episodeId": "epdgv2gyzp",
       "subtitle": "第150回 母子の絆を競うクイズ「おかあさんといっしょ」",
-      "likes": "3158",
+      "likes": "3186",
       "favorites": "71.6万",
       "likePoints": [
         {
@@ -7806,6 +7839,10 @@
         {
           "hour": 26,
           "likes": 3158
+        },
+        {
+          "hour": 27,
+          "likes": 3186
         }
       ],
       "previousLikePoints": [
@@ -8447,7 +8484,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 17,
-          "elapsedHour": 25,
+          "elapsedHour": 27,
           "elapsedRank": 17,
           "currentPoints": [
             {
@@ -8504,6 +8541,10 @@
             },
             {
               "hour": 25,
+              "rank": 17
+            },
+            {
+              "hour": 27,
               "rank": 17
             }
           ],
@@ -8700,7 +8741,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 47,
-          "elapsedHour": 25,
+          "elapsedHour": 27,
           "elapsedRank": 47,
           "currentPoints": [
             {
@@ -8717,6 +8758,10 @@
             },
             {
               "hour": 25,
+              "rank": 47
+            },
+            {
+              "hour": 27,
               "rank": 47
             }
           ],
@@ -8790,7 +8835,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/10",
-      "updatedAt": "2026/10/24 02:07",
+      "updatedAt": "2026/10/24 03:18",
       "episodeId": "ep6jb9yo8g",
       "subtitle": "SnowManヤバい選抜が大モメSP前編",
       "likes": "1.3万",
@@ -10147,19 +10192,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ニカゲーム"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 48,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "ニカゲーム"
             },
             {
               "rank": 49,
-              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 50,
-              "title": "クレイジージャーニー"
+              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
             }
           ]
         },
@@ -10548,7 +10593,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/10/24 02:07",
+      "updatedAt": "2026/10/24 03:18",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "2.9万",
@@ -10571,11 +10616,11 @@
             },
             {
               "rank": 48,
-              "title": "SQUALL"
+              "title": "お前のほうからキスしてくれよ"
             },
             {
               "rank": 49,
-              "title": "真田十勇士 SHADOWS OF THE TEN NINJA"
+              "title": "SQUALL"
             },
             {
               "rank": 50,
@@ -10615,10 +10660,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/10/24 02:07",
+      "updatedAt": "2026/10/24 03:18",
       "episodeId": "epopy9ad0i",
       "subtitle": "スノーマン向井VS松岡修造軍＆タイムレス篠塚ンダホクレーンで神業",
-      "likes": "7072",
+      "likes": "7073",
       "favorites": "13.6万",
       "likePoints": [
         {
@@ -10900,6 +10945,10 @@
         {
           "hour": 79,
           "likes": 7072
+        },
+        {
+          "hour": 80,
+          "likes": 7073
         }
       ],
       "previousLikePoints": [
@@ -11561,7 +11610,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 18,
-          "elapsedHour": 79,
+          "elapsedHour": 80,
           "elapsedRank": 18,
           "currentPoints": [
             {
@@ -11870,6 +11919,10 @@
             },
             {
               "hour": 79,
+              "rank": 18
+            },
+            {
+              "hour": 80,
               "rank": 18
             }
           ],
@@ -12614,19 +12667,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ニカゲーム"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 48,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "ニカゲーム"
             },
             {
               "rank": 49,
-              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 50,
-              "title": "クレイジージャーニー"
+              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
             }
           ]
         }
@@ -12635,10 +12688,10 @@
     "srp2r8bnrz": {
       "programTitle": "見取り図じゃん",
       "broadcastDate": "",
-      "updatedAt": "2026/10/24 02:07",
+      "updatedAt": "2026/10/24 03:18",
       "episodeId": "epqca53xub",
       "subtitle": "【高野、壊れる？】森田蓮見こたけvs井口尾形…びちゃびちゃ論",
-      "likes": "691",
+      "likes": "696",
       "favorites": "37.1万",
       "likePoints": [],
       "previousLikePoints": [],
@@ -12654,19 +12707,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ニカゲーム"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 48,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "ニカゲーム"
             },
             {
               "rank": 49,
-              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 50,
-              "title": "クレイジージャーニー"
+              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
             }
           ]
         }
@@ -12675,7 +12728,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/10/24 02:07",
+      "updatedAt": "2026/10/24 03:18",
       "episodeId": "ep6j6ajewm",
       "subtitle": "名探偵シノ",
       "likes": "1.2万",
@@ -13732,7 +13785,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "滝沢カレン＆和田明日香のフィーリンきっちん"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 48,
@@ -13744,7 +13797,7 @@
             },
             {
               "rank": 50,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "所さんの学校では教えてくれないそこんトコロ！"
             }
           ]
         },
@@ -13936,19 +13989,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ニカゲーム"
+              "title": "千鳥の鬼レンチャン"
             },
             {
               "rank": 48,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "ニカゲーム"
             },
             {
               "rank": 49,
-              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 50,
-              "title": "クレイジージャーニー"
+              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
             }
           ]
         }
@@ -13957,7 +14010,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/10/24 02:07",
+      "updatedAt": "2026/10/24 03:18",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "436",
@@ -13980,11 +14033,11 @@
             },
             {
               "rank": 48,
-              "title": "SQUALL"
+              "title": "お前のほうからキスしてくれよ"
             },
             {
               "rank": 49,
-              "title": "真田十勇士 SHADOWS OF THE TEN NINJA"
+              "title": "SQUALL"
             },
             {
               "rank": 50,
