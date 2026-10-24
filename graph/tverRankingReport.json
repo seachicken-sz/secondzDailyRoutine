@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/10/24 21:07",
+  "updatedAt": "2026/10/24 22:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/10/23",
-      "updatedAt": "2026/10/24 21:07",
+      "updatedAt": "2026/10/24 22:07",
       "episodeId": "epnlaxqqpd",
       "subtitle": "サッと作れる漢の麺料理＆SNSアイコン対決！",
       "likes": "1.0万",
@@ -92,6 +92,10 @@
         },
         {
           "hour": 23,
+          "likes": 10000
+        },
+        {
+          "hour": 24,
           "likes": 10000
         }
       ],
@@ -734,7 +738,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 4,
-          "elapsedHour": 23,
+          "elapsedHour": 24,
           "elapsedRank": 4,
           "currentPoints": [
             {
@@ -811,6 +815,10 @@
             },
             {
               "hour": 23,
+              "rank": 4
+            },
+            {
+              "hour": 24,
               "rank": 4
             }
           ],
@@ -1270,9 +1278,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 19,
-          "elapsedHour": 23,
-          "elapsedRank": 19,
+          "currentRank": 18,
+          "elapsedHour": 24,
+          "elapsedRank": 18,
           "currentPoints": [
             {
               "hour": 12,
@@ -1321,6 +1329,10 @@
             {
               "hour": 23,
               "rank": 19
+            },
+            {
+              "hour": 24,
+              "rank": 18
             }
           ],
           "previousPoints": [
@@ -1547,6 +1559,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 15,
+              "title": "メリーベリーラブ"
+            },
+            {
               "rank": 16,
               "title": "上田と女が吠える夜"
             },
@@ -1556,10 +1572,6 @@
             },
             {
               "rank": 18,
-              "title": "いろはの恋は時代をかける"
-            },
-            {
-              "rank": 19,
               "title": "タイムレスマン"
             }
           ]
@@ -1569,7 +1581,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/10/18",
-      "updatedAt": "2026/10/24 21:07",
+      "updatedAt": "2026/10/24 22:07",
       "episodeId": "epu2qm5dbn",
       "subtitle": "二文字に人生を込めろ!武田双雲と新企画…二文字書道",
       "likes": "1.9万",
@@ -2129,6 +2141,10 @@
         },
         {
           "hour": 151,
+          "likes": 19000
+        },
+        {
+          "hour": 152,
           "likes": 19000
         }
       ],
@@ -3796,19 +3812,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図じゃん"
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "見取り図じゃん"
             }
           ]
         },
@@ -4309,19 +4325,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 48,
-              "title": "深夜残業～肉食後輩の片恋研修"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 49,
-              "title": "天狗の台所 Ｓｅａｓｏｎ３"
+              "title": "深夜残業～肉食後輩の片恋研修"
             },
             {
               "rank": 50,
-              "title": "ホタルの嫁入り"
+              "title": "妻を引退します"
             }
           ]
         }
@@ -4330,10 +4346,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/10/24 21:07",
+      "updatedAt": "2026/10/24 22:07",
       "episodeId": "ep9m1yswrh",
       "subtitle": "チョコプラ・timeleszが緊急特別企画「抜き打ちネイチャークイズ追試編」に挑む！",
-      "likes": "8723",
+      "likes": "8757",
       "favorites": "6.5万",
       "likePoints": [
         {
@@ -4671,6 +4687,10 @@
         {
           "hour": 93,
           "likes": 8723
+        },
+        {
+          "hour": 94,
+          "likes": 8757
         }
       ],
       "previousLikePoints": [
@@ -5323,9 +5343,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 38,
-          "elapsedHour": 93,
-          "elapsedRank": 38,
+          "currentRank": 39,
+          "elapsedHour": 94,
+          "elapsedRank": 39,
           "currentPoints": [
             {
               "hour": 5,
@@ -5682,6 +5702,10 @@
             {
               "hour": 93,
               "rank": 38
+            },
+            {
+              "hour": 94,
+              "rank": 39
             }
           ],
           "previousPoints": [
@@ -6088,12 +6112,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 35,
-              "title": "世界くらべてみたら"
-            },
-            {
               "rank": 36,
-              "title": "ニノなのに"
+              "title": "大阪ほんわかテレビ"
             },
             {
               "rank": 37,
@@ -6101,6 +6121,10 @@
             },
             {
               "rank": 38,
+              "title": "ニノなのに"
+            },
+            {
+              "rank": 39,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -6350,19 +6374,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図じゃん"
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "見取り図じゃん"
             }
           ]
         }
@@ -6371,10 +6395,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/10/24 21:07",
+      "updatedAt": "2026/10/24 22:07",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
-      "likes": "2597",
+      "likes": "2610",
       "favorites": "81.3万",
       "likePoints": [
         {
@@ -6724,6 +6748,10 @@
         {
           "hour": 96,
           "likes": 2597
+        },
+        {
+          "hour": 97,
+          "likes": 2610
         }
       ],
       "previousLikePoints": [],
@@ -6731,9 +6759,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 49,
-          "elapsedHour": 96,
-          "elapsedRank": 49,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 6,
@@ -7103,20 +7131,20 @@
           "previousPoints": [],
           "nearbyRanking": [
             {
-              "rank": 46,
-              "title": "痛快！明石家電視台"
-            },
-            {
               "rank": 47,
-              "title": "見取り図じゃん"
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "Golden SixTONES"
+            },
+            {
+              "rank": 50,
+              "title": "見取り図じゃん"
             }
           ]
         },
@@ -7260,19 +7288,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 48,
-              "title": "深夜残業～肉食後輩の片恋研修"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 49,
-              "title": "天狗の台所 Ｓｅａｓｏｎ３"
+              "title": "深夜残業～肉食後輩の片恋研修"
             },
             {
               "rank": 50,
-              "title": "ホタルの嫁入り"
+              "title": "妻を引退します"
             }
           ]
         }
@@ -7281,10 +7309,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/10/21",
-      "updatedAt": "2026/10/24 21:07",
+      "updatedAt": "2026/10/24 22:07",
       "episodeId": "ep1zm2tfi9",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！FUNKY MONKEY BΛBY'S登場",
-      "likes": "3663",
+      "likes": "3682",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -7582,6 +7610,10 @@
         {
           "hour": 92,
           "likes": 3663
+        },
+        {
+          "hour": 93,
+          "likes": 3682
         }
       ],
       "previousLikePoints": [
@@ -8291,19 +8323,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図じゃん"
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "見取り図じゃん"
             }
           ]
         },
@@ -8318,19 +8350,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 48,
-              "title": "深夜残業～肉食後輩の片恋研修"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 49,
-              "title": "天狗の台所 Ｓｅａｓｏｎ３"
+              "title": "深夜残業～肉食後輩の片恋研修"
             },
             {
               "rank": 50,
-              "title": "ホタルの嫁入り"
+              "title": "妻を引退します"
             }
           ]
         }
@@ -8339,10 +8371,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/23",
-      "updatedAt": "2026/10/24 21:07",
+      "updatedAt": "2026/10/24 22:07",
       "episodeId": "epdgv2gyzp",
       "subtitle": "第150回 母子の絆を競うクイズ「おかあさんといっしょ」",
-      "likes": "3866",
+      "likes": "3916",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -8504,6 +8536,10 @@
         {
           "hour": 45,
           "likes": 3866
+        },
+        {
+          "hour": 46,
+          "likes": 3916
         }
       ],
       "previousLikePoints": [
@@ -9144,9 +9180,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 39,
-          "elapsedHour": 44,
-          "elapsedRank": 39,
+          "currentRank": 41,
+          "elapsedHour": 45,
+          "elapsedRank": 41,
           "currentPoints": [
             {
               "hour": 11,
@@ -9275,6 +9311,10 @@
             {
               "hour": 44,
               "rank": 39
+            },
+            {
+              "hour": 45,
+              "rank": 41
             }
           ],
           "previousPoints": [
@@ -9449,19 +9489,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 36,
+              "rank": 38,
               "title": "ケンコバのほろ酔いビジホ泊 全国版"
             },
             {
-              "rank": 37,
-              "title": "有吉クイズ"
-            },
-            {
-              "rank": 38,
+              "rank": 39,
               "title": "トークィーンズ"
             },
             {
-              "rank": 39,
+              "rank": 40,
+              "title": "痛快！明石家電視台"
+            },
+            {
+              "rank": 41,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -9555,19 +9595,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 48,
-              "title": "深夜残業～肉食後輩の片恋研修"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 49,
-              "title": "天狗の台所 Ｓｅａｓｏｎ３"
+              "title": "深夜残業～肉食後輩の片恋研修"
             },
             {
               "rank": 50,
-              "title": "ホタルの嫁入り"
+              "title": "妻を引退します"
             }
           ]
         }
@@ -9576,7 +9616,7 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/10",
-      "updatedAt": "2026/10/24 21:07",
+      "updatedAt": "2026/10/24 22:07",
       "episodeId": "ep6jb9yo8g",
       "subtitle": "SnowManヤバい選抜が大モメSP前編",
       "likes": "1.3万",
@@ -10933,19 +10973,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図じゃん"
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "見取り図じゃん"
             }
           ]
         },
@@ -11313,19 +11353,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 48,
-              "title": "深夜残業～肉食後輩の片恋研修"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 49,
-              "title": "天狗の台所 Ｓｅａｓｏｎ３"
+              "title": "深夜残業～肉食後輩の片恋研修"
             },
             {
               "rank": 50,
-              "title": "ホタルの嫁入り"
+              "title": "妻を引退します"
             }
           ]
         }
@@ -11334,7 +11374,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/10/24 21:07",
+      "updatedAt": "2026/10/24 22:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "2.9万",
@@ -11365,7 +11405,7 @@
             },
             {
               "rank": 50,
-              "title": "中国ドラマ「春花焔～Kill Me Love Me～」"
+              "title": "ディア・シスター"
             }
           ]
         },
@@ -11380,19 +11420,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 48,
-              "title": "深夜残業～肉食後輩の片恋研修"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 49,
-              "title": "天狗の台所 Ｓｅａｓｏｎ３"
+              "title": "深夜残業～肉食後輩の片恋研修"
             },
             {
               "rank": 50,
-              "title": "ホタルの嫁入り"
+              "title": "妻を引退します"
             }
           ]
         }
@@ -11401,10 +11441,10 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/10/24 21:07",
+      "updatedAt": "2026/10/24 22:07",
       "episodeId": "epopy9ad0i",
       "subtitle": "スノーマン向井VS松岡修造軍＆タイムレス篠塚ンダホクレーンで神業",
-      "likes": "7381",
+      "likes": "7406",
       "favorites": "13.6万",
       "likePoints": [
         {
@@ -11758,6 +11798,10 @@
         {
           "hour": 98,
           "likes": 7381
+        },
+        {
+          "hour": 99,
+          "likes": 7406
         }
       ],
       "previousLikePoints": [
@@ -12418,9 +12462,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 26,
-          "elapsedHour": 98,
-          "elapsedRank": 26,
+          "currentRank": 25,
+          "elapsedHour": 99,
+          "elapsedRank": 25,
           "currentPoints": [
             {
               "hour": 3,
@@ -12805,6 +12849,10 @@
             {
               "hour": 98,
               "rank": 26
+            },
+            {
+              "hour": 99,
+              "rank": 25
             }
           ],
           "previousPoints": [
@@ -13355,19 +13403,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 22,
+              "title": "知識の扉よ開け！ドア×ドア クエスト"
+            },
+            {
               "rank": 23,
-              "title": "華丸・大吉のなんしようと？"
+              "title": "よるのブランチ"
             },
             {
               "rank": 24,
-              "title": "住人十色～家の数だけある 家族のカタチ～"
+              "title": "華丸・大吉のなんしようと？"
             },
             {
               "rank": 25,
-              "title": "発見！タカトシランド"
-            },
-            {
-              "rank": 26,
               "title": "THE神業チャレンジ"
             }
           ]
@@ -13548,19 +13596,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図じゃん"
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "見取り図じゃん"
             }
           ]
         }
@@ -13569,10 +13617,10 @@
     "srp2r8bnrz": {
       "programTitle": "見取り図じゃん",
       "broadcastDate": "",
-      "updatedAt": "2026/10/24 21:07",
+      "updatedAt": "2026/10/24 22:07",
       "episodeId": "epqca53xub",
       "subtitle": "【高野、壊れる？】森田蓮見こたけvs井口尾形…びちゃびちゃ論",
-      "likes": "912",
+      "likes": "924",
       "favorites": "37.1万",
       "likePoints": [],
       "previousLikePoints": [],
@@ -13588,19 +13636,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図じゃん"
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "見取り図じゃん"
             }
           ]
         }
@@ -13609,7 +13657,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/10/24 21:07",
+      "updatedAt": "2026/10/24 22:07",
       "episodeId": "ep6j6ajewm",
       "subtitle": "名探偵シノ",
       "likes": "1.2万",
@@ -14666,11 +14714,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "やすとものいたって真剣です"
+              "title": "開運！なんでも鑑定団"
             },
             {
               "rank": 48,
-              "title": "開運！なんでも鑑定団"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 49,
@@ -14678,7 +14726,7 @@
             },
             {
               "rank": 50,
-              "title": "ポツンと一軒家"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             }
           ]
         },
@@ -14870,19 +14918,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図じゃん"
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
               "rank": 48,
-              "title": "Golden SixTONES"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "見取り図じゃん"
             }
           ]
         }
@@ -14891,7 +14939,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/10/24 21:07",
+      "updatedAt": "2026/10/24 22:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "436",
@@ -14922,7 +14970,7 @@
             },
             {
               "rank": 50,
-              "title": "中国ドラマ「春花焔～Kill Me Love Me～」"
+              "title": "ディア・シスター"
             }
           ]
         },
@@ -14937,19 +14985,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 48,
-              "title": "深夜残業～肉食後輩の片恋研修"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 49,
-              "title": "天狗の台所 Ｓｅａｓｏｎ３"
+              "title": "深夜残業～肉食後輩の片恋研修"
             },
             {
               "rank": 50,
-              "title": "ホタルの嫁入り"
+              "title": "妻を引退します"
             }
           ]
         }
