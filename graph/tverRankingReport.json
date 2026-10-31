@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/11/01 06:07",
+  "updatedAt": "2026/11/01 07:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/10/30",
-      "updatedAt": "2026/11/01 06:07",
+      "updatedAt": "2026/11/01 07:07",
       "episodeId": "epw22ovqi4",
       "subtitle": "あなたの食生活に役立つ！ヘルシーチェックマン",
       "likes": "1.0万",
@@ -136,6 +136,10 @@
         },
         {
           "hour": 32,
+          "likes": 10000
+        },
+        {
+          "hour": 33,
           "likes": 10000
         }
       ],
@@ -626,7 +630,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 6,
-          "elapsedHour": 32,
+          "elapsedHour": 33,
           "elapsedRank": 6,
           "currentPoints": [
             {
@@ -739,6 +743,10 @@
             },
             {
               "hour": 32,
+              "rank": 6
+            },
+            {
+              "hour": 33,
               "rank": 6
             }
           ],
@@ -1335,7 +1343,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 20,
-          "elapsedHour": 32,
+          "elapsedHour": 33,
           "elapsedRank": 20,
           "currentPoints": [
             {
@@ -1420,6 +1428,10 @@
             },
             {
               "hour": 32,
+              "rank": 20
+            },
+            {
+              "hour": 33,
               "rank": 20
             }
           ],
@@ -1693,10 +1705,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/10/18",
-      "updatedAt": "2026/11/01 06:07",
+      "updatedAt": "2026/11/01 07:07",
       "episodeId": "epu2qm5dbn",
       "subtitle": "二文字に人生を込めろ!武田双雲と新企画…二文字書道",
-      "likes": "2.0万",
+      "likes": "2.1万",
       "favorites": "37.0万",
       "likePoints": [
         {
@@ -2703,11 +2715,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 49,
@@ -2715,7 +2727,7 @@
             },
             {
               "rank": 50,
-              "title": "家、ついて行ってイイですか？"
+              "title": "ザワつく！ 金曜日"
             }
           ]
         },
@@ -3224,11 +3236,11 @@
             },
             {
               "rank": 49,
-              "title": "妻を引退します"
+              "title": "名探偵コナン"
             },
             {
               "rank": 50,
-              "title": "名探偵コナン"
+              "title": "妻を引退します"
             }
           ]
         }
@@ -3237,10 +3249,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/27",
-      "updatedAt": "2026/11/01 06:07",
+      "updatedAt": "2026/11/01 07:07",
       "episodeId": "epbtlmzlxr",
       "subtitle": "新企画！チョコプラ・timeleszが「できる？できない？予想クイズ」に挑戦！",
-      "likes": "7681",
+      "likes": "7687",
       "favorites": "6.6万",
       "likePoints": [
         {
@@ -3650,6 +3662,10 @@
         {
           "hour": 102,
           "likes": 7681
+        },
+        {
+          "hour": 103,
+          "likes": 7687
         }
       ],
       "previousLikePoints": [
@@ -3858,9 +3874,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 49,
-          "elapsedHour": 102,
-          "elapsedRank": 49,
+          "currentRank": 50,
+          "elapsedHour": 103,
+          "elapsedRank": 50,
           "currentPoints": [
             {
               "hour": 6,
@@ -4245,6 +4261,10 @@
             {
               "hour": 102,
               "rank": 49
+            },
+            {
+              "hour": 103,
+              "rank": 50
             }
           ],
           "previousPoints": [
@@ -4859,19 +4879,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 46,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
-            },
-            {
               "rank": 47,
-              "title": "ヒロシのぼっちキャンプ Season14"
+              "title": "見取り図の間取り図ミステリー"
             },
             {
               "rank": 48,
-              "title": "フットマップ"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
               "rank": 49,
+              "title": "ヒロシのぼっちキャンプ Season14"
+            },
+            {
+              "rank": 50,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -5113,11 +5133,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 49,
@@ -5125,7 +5145,7 @@
             },
             {
               "rank": 50,
-              "title": "家、ついて行ってイイですか？"
+              "title": "ザワつく！ 金曜日"
             }
           ]
         }
@@ -5134,10 +5154,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/10/25",
-      "updatedAt": "2026/11/01 06:07",
+      "updatedAt": "2026/11/01 07:07",
       "episodeId": "epc54pty2t",
       "subtitle": "100kg超巨大ホシエイ釣り上げろ!特大ホクホク竜田揚げ",
-      "likes": "4737",
+      "likes": "4753",
       "favorites": "54.4万",
       "likePoints": [
         {
@@ -5735,6 +5755,10 @@
         {
           "hour": 155,
           "likes": 4737
+        },
+        {
+          "hour": 156,
+          "likes": 4753
         }
       ],
       "previousLikePoints": [],
@@ -5743,7 +5767,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 33,
-          "elapsedHour": 155,
+          "elapsedHour": 156,
           "elapsedRank": 33,
           "currentPoints": [
             {
@@ -6356,6 +6380,10 @@
             },
             {
               "hour": 155,
+              "rank": 33
+            },
+            {
+              "hour": 156,
               "rank": 33
             }
           ],
@@ -7024,11 +7052,11 @@
           "nearbyRanking": [
             {
               "rank": 30,
-              "title": "ポツンと一軒家"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 31,
-              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 32,
@@ -7481,11 +7509,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 49,
@@ -7493,7 +7521,7 @@
             },
             {
               "rank": 50,
-              "title": "家、ついて行ってイイですか？"
+              "title": "ザワつく！ 金曜日"
             }
           ]
         }
@@ -7502,10 +7530,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/01 06:07",
+      "updatedAt": "2026/11/01 07:07",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
-      "likes": "3268",
+      "likes": "3265",
       "favorites": "81.4万",
       "likePoints": [
         {
@@ -8087,11 +8115,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 49,
@@ -8099,7 +8127,7 @@
             },
             {
               "rank": 50,
-              "title": "家、ついて行ってイイですか？"
+              "title": "ザワつく！ 金曜日"
             }
           ]
         },
@@ -8251,11 +8279,11 @@
             },
             {
               "rank": 49,
-              "title": "妻を引退します"
+              "title": "名探偵コナン"
             },
             {
               "rank": 50,
-              "title": "名探偵コナン"
+              "title": "妻を引退します"
             }
           ]
         }
@@ -8264,7 +8292,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/10/21",
-      "updatedAt": "2026/11/01 06:07",
+      "updatedAt": "2026/11/01 07:07",
       "episodeId": "ep1zm2tfi9",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！FUNKY MONKEY BΛBY'S登場",
       "likes": "4215",
@@ -8509,11 +8537,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 49,
@@ -8521,7 +8549,7 @@
             },
             {
               "rank": 50,
-              "title": "家、ついて行ってイイですか？"
+              "title": "ザワつく！ 金曜日"
             }
           ]
         },
@@ -8544,11 +8572,11 @@
             },
             {
               "rank": 49,
-              "title": "妻を引退します"
+              "title": "名探偵コナン"
             },
             {
               "rank": 50,
-              "title": "名探偵コナン"
+              "title": "妻を引退します"
             }
           ]
         }
@@ -8557,10 +8585,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/30",
-      "updatedAt": "2026/11/01 06:07",
+      "updatedAt": "2026/11/01 07:07",
       "episodeId": "ep3faityl7",
       "subtitle": "第151回 3時福田が母も知らない恋愛事情を告白＆母の涙",
-      "likes": "3421",
+      "likes": "3430",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -8778,6 +8806,10 @@
         {
           "hour": 54,
           "likes": 3421
+        },
+        {
+          "hour": 55,
+          "likes": 3430
         }
       ],
       "previousLikePoints": [
@@ -9492,11 +9524,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 49,
@@ -9504,7 +9536,7 @@
             },
             {
               "rank": 50,
-              "title": "家、ついて行ってイイですか？"
+              "title": "ザワつく！ 金曜日"
             }
           ]
         },
@@ -9560,11 +9592,11 @@
             },
             {
               "rank": 49,
-              "title": "妻を引退します"
+              "title": "名探偵コナン"
             },
             {
               "rank": 50,
-              "title": "名探偵コナン"
+              "title": "妻を引退します"
             }
           ]
         }
@@ -9573,10 +9605,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/31",
-      "updatedAt": "2026/11/01 06:07",
+      "updatedAt": "2026/11/01 07:07",
       "episodeId": "ep3jm0ld38",
       "subtitle": "マッサマン＆マツダマン（秘）あ哺乳類SP前編",
-      "likes": "1160",
+      "likes": "1227",
       "favorites": "82.1万",
       "likePoints": [
         {
@@ -9618,6 +9650,10 @@
         {
           "hour": 11,
           "likes": 1160
+        },
+        {
+          "hour": 12,
+          "likes": 1227
         }
       ],
       "previousLikePoints": [],
@@ -9625,9 +9661,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 29,
-          "elapsedHour": 11,
-          "elapsedRank": 29,
+          "currentRank": 28,
+          "elapsedHour": 12,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 5,
@@ -9656,6 +9692,10 @@
             {
               "hour": 11,
               "rank": 29
+            },
+            {
+              "hour": 12,
+              "rank": 28
             }
           ],
           "previousPoints": [
@@ -10326,8 +10366,12 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 26,
+              "rank": 25,
               "title": "なにわ男子の逆転男子"
+            },
+            {
+              "rank": 26,
+              "title": "これ余談なんですけど・・・"
             },
             {
               "rank": 27,
@@ -10335,10 +10379,6 @@
             },
             {
               "rank": 28,
-              "title": "ロンドンハーツ"
-            },
-            {
-              "rank": 29,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -10715,11 +10755,11 @@
             },
             {
               "rank": 49,
-              "title": "妻を引退します"
+              "title": "名探偵コナン"
             },
             {
               "rank": 50,
-              "title": "名探偵コナン"
+              "title": "妻を引退します"
             }
           ]
         }
@@ -10728,7 +10768,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/11/01 06:07",
+      "updatedAt": "2026/11/01 07:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "",
@@ -10782,11 +10822,11 @@
             },
             {
               "rank": 49,
-              "title": "妻を引退します"
+              "title": "名探偵コナン"
             },
             {
               "rank": 50,
-              "title": "名探偵コナン"
+              "title": "妻を引退します"
             }
           ]
         }
@@ -10795,7 +10835,7 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/01 06:07",
+      "updatedAt": "2026/11/01 07:07",
       "episodeId": "epopy9ad0i",
       "subtitle": "スノーマン向井VS松岡修造軍＆タイムレス篠塚ンダホクレーンで神業",
       "likes": "8586",
@@ -12205,19 +12245,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ヒロシのぼっちキャンプ Season14"
+              "title": "見取り図の間取り図ミステリー"
             },
             {
               "rank": 48,
-              "title": "フットマップ"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             },
             {
               "rank": 49,
-              "title": "地球まるごと大実験 ネイチャーティーチャー"
+              "title": "ヒロシのぼっちキャンプ Season14"
             },
             {
               "rank": 50,
-              "title": "おぎやはぎの愛車遍歴 NO CAR,NO LIFE！"
+              "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
         },
@@ -12397,11 +12437,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 49,
@@ -12409,7 +12449,7 @@
             },
             {
               "rank": 50,
-              "title": "家、ついて行ってイイですか？"
+              "title": "ザワつく！ 金曜日"
             }
           ]
         }
@@ -12418,10 +12458,10 @@
     "srp2r8bnrz": {
       "programTitle": "見取り図じゃん",
       "broadcastDate": "",
-      "updatedAt": "2026/11/01 06:07",
+      "updatedAt": "2026/11/01 07:07",
       "episodeId": "epvq7s95fw",
       "subtitle": "【秘技伝授】ブクロ激怒で口説き術公開＆女子アナ妻に怒られろ",
-      "likes": "522",
+      "likes": "521",
       "favorites": "37.1万",
       "likePoints": [],
       "previousLikePoints": [],
@@ -12437,11 +12477,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 49,
@@ -12449,7 +12489,7 @@
             },
             {
               "rank": 50,
-              "title": "家、ついて行ってイイですか？"
+              "title": "ザワつく！ 金曜日"
             }
           ]
         }
@@ -12458,7 +12498,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/11/01 06:07",
+      "updatedAt": "2026/11/01 07:07",
       "episodeId": "ep6j6ajewm",
       "subtitle": "名探偵シノ",
       "likes": "1.3万",
@@ -12858,19 +12898,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "吉田と粗品と"
+              "title": "開運！なんでも鑑定団"
             },
             {
               "rank": 48,
-              "title": "やすとものいたって真剣です"
+              "title": "吉田と粗品と"
             },
             {
               "rank": 49,
-              "title": "オー！マイゴッド！私だけの神様、教えます"
+              "title": "やすとものいたって真剣です"
             },
             {
               "rank": 50,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "オー！マイゴッド！私だけの神様、教えます"
             }
           ]
         },
@@ -13062,11 +13102,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "クレイジージャーニー"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 48,
-              "title": "ザワつく！ 金曜日"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 49,
@@ -13074,7 +13114,7 @@
             },
             {
               "rank": 50,
-              "title": "家、ついて行ってイイですか？"
+              "title": "ザワつく！ 金曜日"
             }
           ]
         }
@@ -13083,7 +13123,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/11/01 06:07",
+      "updatedAt": "2026/11/01 07:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "",
@@ -13137,11 +13177,11 @@
             },
             {
               "rank": 49,
-              "title": "妻を引退します"
+              "title": "名探偵コナン"
             },
             {
               "rank": 50,
-              "title": "名探偵コナン"
+              "title": "妻を引退します"
             }
           ]
         }
