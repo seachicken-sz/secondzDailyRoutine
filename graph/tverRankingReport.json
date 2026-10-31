@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/11/01 04:07",
+  "updatedAt": "2026/11/01 05:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/10/30",
-      "updatedAt": "2026/11/01 04:07",
+      "updatedAt": "2026/11/01 05:07",
       "episodeId": "epw22ovqi4",
       "subtitle": "あなたの食生活に役立つ！ヘルシーチェックマン",
       "likes": "1.0万",
@@ -128,6 +128,10 @@
         },
         {
           "hour": 30,
+          "likes": 10000
+        },
+        {
+          "hour": 31,
           "likes": 10000
         }
       ],
@@ -618,7 +622,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 6,
-          "elapsedHour": 30,
+          "elapsedHour": 31,
           "elapsedRank": 6,
           "currentPoints": [
             {
@@ -723,6 +727,10 @@
             },
             {
               "hour": 30,
+              "rank": 6
+            },
+            {
+              "hour": 31,
               "rank": 6
             }
           ],
@@ -1319,7 +1327,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 20,
-          "elapsedHour": 30,
+          "elapsedHour": 31,
           "elapsedRank": 20,
           "currentPoints": [
             {
@@ -1396,6 +1404,10 @@
             },
             {
               "hour": 30,
+              "rank": 20
+            },
+            {
+              "hour": 31,
               "rank": 20
             }
           ],
@@ -1669,7 +1681,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/10/18",
-      "updatedAt": "2026/11/01 04:07",
+      "updatedAt": "2026/11/01 05:07",
       "episodeId": "epu2qm5dbn",
       "subtitle": "二文字に人生を込めろ!武田双雲と新企画…二文字書道",
       "likes": "2.0万",
@@ -2683,15 +2695,15 @@
             },
             {
               "rank": 48,
-              "title": "秘密のケンミンSHOW極"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 49,
-              "title": "家、ついて行ってイイですか？"
+              "title": "秘密のケンミンSHOW極"
             },
             {
               "rank": 50,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         },
@@ -3192,19 +3204,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "世界の果てまでイッテQ！"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "ほんとにあった怖い話"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "妻を引退します"
             },
             {
               "rank": 50,
-              "title": "妻を引退します"
+              "title": "全力！脱力タイムズ"
             }
           ]
         }
@@ -3213,10 +3225,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/27",
-      "updatedAt": "2026/11/01 04:07",
+      "updatedAt": "2026/11/01 05:07",
       "episodeId": "epbtlmzlxr",
       "subtitle": "新企画！チョコプラ・timeleszが「できる？できない？予想クイズ」に挑戦！",
-      "likes": "7677",
+      "likes": "7680",
       "favorites": "6.6万",
       "likePoints": [
         {
@@ -3618,6 +3630,10 @@
         {
           "hour": 100,
           "likes": 7677
+        },
+        {
+          "hour": 101,
+          "likes": 7680
         }
       ],
       "previousLikePoints": [
@@ -3826,9 +3842,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 48,
-          "elapsedHour": 100,
-          "elapsedRank": 48,
+          "currentRank": 49,
+          "elapsedHour": 101,
+          "elapsedRank": 49,
           "currentPoints": [
             {
               "hour": 6,
@@ -4205,6 +4221,10 @@
             {
               "hour": 100,
               "rank": 48
+            },
+            {
+              "hour": 101,
+              "rank": 49
             }
           ],
           "previousPoints": [
@@ -4819,19 +4839,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 45,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
-            },
-            {
               "rank": 46,
-              "title": "ヒロシのぼっちキャンプ Season14"
-            },
-            {
-              "rank": 47,
               "title": "土曜のあさはほめるちゃん"
             },
             {
+              "rank": 47,
+              "title": "ヒロシのぼっちキャンプ Season14"
+            },
+            {
               "rank": 48,
+              "title": "バナナマンの早起きせっかくグルメ!!"
+            },
+            {
+              "rank": 49,
               "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
@@ -5077,15 +5097,15 @@
             },
             {
               "rank": 48,
-              "title": "秘密のケンミンSHOW極"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 49,
-              "title": "家、ついて行ってイイですか？"
+              "title": "秘密のケンミンSHOW極"
             },
             {
               "rank": 50,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         }
@@ -5094,10 +5114,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/10/25",
-      "updatedAt": "2026/11/01 04:07",
+      "updatedAt": "2026/11/01 05:07",
       "episodeId": "epc54pty2t",
       "subtitle": "100kg超巨大ホシエイ釣り上げろ!特大ホクホク竜田揚げ",
-      "likes": "4722",
+      "likes": "4728",
       "favorites": "54.4万",
       "likePoints": [
         {
@@ -5687,6 +5707,10 @@
         {
           "hour": 153,
           "likes": 4722
+        },
+        {
+          "hour": 154,
+          "likes": 4728
         }
       ],
       "previousLikePoints": [],
@@ -5695,7 +5719,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 33,
-          "elapsedHour": 153,
+          "elapsedHour": 154,
           "elapsedRank": 33,
           "currentPoints": [
             {
@@ -6300,6 +6324,10 @@
             },
             {
               "hour": 153,
+              "rank": 33
+            },
+            {
+              "hour": 154,
               "rank": 33
             }
           ],
@@ -7429,15 +7457,15 @@
             },
             {
               "rank": 48,
-              "title": "秘密のケンミンSHOW極"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 49,
-              "title": "家、ついて行ってイイですか？"
+              "title": "秘密のケンミンSHOW極"
             },
             {
               "rank": 50,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         }
@@ -7446,7 +7474,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/01 04:07",
+      "updatedAt": "2026/11/01 05:07",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
       "likes": "3265",
@@ -8035,15 +8063,15 @@
             },
             {
               "rank": 48,
-              "title": "秘密のケンミンSHOW極"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 49,
-              "title": "家、ついて行ってイイですか？"
+              "title": "秘密のケンミンSHOW極"
             },
             {
               "rank": 50,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         },
@@ -8187,19 +8215,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "世界の果てまでイッテQ！"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "ほんとにあった怖い話"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "妻を引退します"
             },
             {
               "rank": 50,
-              "title": "妻を引退します"
+              "title": "全力！脱力タイムズ"
             }
           ]
         }
@@ -8208,7 +8236,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/10/21",
-      "updatedAt": "2026/11/01 04:07",
+      "updatedAt": "2026/11/01 05:07",
       "episodeId": "ep1zm2tfi9",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！FUNKY MONKEY BΛBY'S登場",
       "likes": "4215",
@@ -8457,15 +8485,15 @@
             },
             {
               "rank": 48,
-              "title": "秘密のケンミンSHOW極"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 49,
-              "title": "家、ついて行ってイイですか？"
+              "title": "秘密のケンミンSHOW極"
             },
             {
               "rank": 50,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         },
@@ -8480,19 +8508,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "世界の果てまでイッテQ！"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "ほんとにあった怖い話"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "妻を引退します"
             },
             {
               "rank": 50,
-              "title": "妻を引退します"
+              "title": "全力！脱力タイムズ"
             }
           ]
         }
@@ -8501,10 +8529,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/30",
-      "updatedAt": "2026/11/01 04:07",
+      "updatedAt": "2026/11/01 05:07",
       "episodeId": "ep3faityl7",
       "subtitle": "第151回 3時福田が母も知らない恋愛事情を告白＆母の涙",
-      "likes": "3403",
+      "likes": "3417",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -8714,6 +8742,10 @@
         {
           "hour": 52,
           "likes": 3403
+        },
+        {
+          "hour": 53,
+          "likes": 3417
         }
       ],
       "previousLikePoints": [
@@ -9432,15 +9464,15 @@
             },
             {
               "rank": 48,
-              "title": "秘密のケンミンSHOW極"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 49,
-              "title": "家、ついて行ってイイですか？"
+              "title": "秘密のケンミンSHOW極"
             },
             {
               "rank": 50,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         },
@@ -9488,19 +9520,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "世界の果てまでイッテQ！"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "ほんとにあった怖い話"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "妻を引退します"
             },
             {
               "rank": 50,
-              "title": "妻を引退します"
+              "title": "全力！脱力タイムズ"
             }
           ]
         }
@@ -9509,10 +9541,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/31",
-      "updatedAt": "2026/11/01 04:07",
+      "updatedAt": "2026/11/01 05:07",
       "episodeId": "ep3jm0ld38",
       "subtitle": "マッサマン＆マツダマン（秘）あ哺乳類SP前編",
-      "likes": "1080",
+      "likes": "1110",
       "favorites": "82.1万",
       "likePoints": [
         {
@@ -9546,6 +9578,10 @@
         {
           "hour": 9,
           "likes": 1080
+        },
+        {
+          "hour": 10,
+          "likes": 1110
         }
       ],
       "previousLikePoints": [],
@@ -9553,9 +9589,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 30,
-          "elapsedHour": 9,
-          "elapsedRank": 30,
+          "currentRank": 29,
+          "elapsedHour": 10,
+          "elapsedRank": 29,
           "currentPoints": [
             {
               "hour": 5,
@@ -9576,6 +9612,10 @@
             {
               "hour": 9,
               "rank": 30
+            },
+            {
+              "hour": 10,
+              "rank": 29
             }
           ],
           "previousPoints": [
@@ -10246,8 +10286,12 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 27,
+              "rank": 26,
               "title": "なにわ男子の逆転男子"
+            },
+            {
+              "rank": 27,
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 28,
@@ -10255,10 +10299,6 @@
             },
             {
               "rank": 29,
-              "title": "夜明けのラヴィット！"
-            },
-            {
-              "rank": 30,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -10627,19 +10667,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "世界の果てまでイッテQ！"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "ほんとにあった怖い話"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "妻を引退します"
             },
             {
               "rank": 50,
-              "title": "妻を引退します"
+              "title": "全力！脱力タイムズ"
             }
           ]
         }
@@ -10648,7 +10688,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/11/01 04:07",
+      "updatedAt": "2026/11/01 05:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "",
@@ -10694,19 +10734,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "世界の果てまでイッテQ！"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "ほんとにあった怖い話"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "妻を引退します"
             },
             {
               "rank": 50,
-              "title": "妻を引退します"
+              "title": "全力！脱力タイムズ"
             }
           ]
         }
@@ -10715,7 +10755,7 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/01 04:07",
+      "updatedAt": "2026/11/01 05:07",
       "episodeId": "epopy9ad0i",
       "subtitle": "スノーマン向井VS松岡修造軍＆タイムレス篠塚ンダホクレーンで神業",
       "likes": "8586",
@@ -12125,15 +12165,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "土曜のあさはほめるちゃん"
+              "title": "ヒロシのぼっちキャンプ Season14"
             },
             {
               "rank": 48,
-              "title": "地球まるごと大実験 ネイチャーティーチャー"
+              "title": "バナナマンの早起きせっかくグルメ!!"
             },
             {
               "rank": 49,
-              "title": "バナナマンの早起きせっかくグルメ!!"
+              "title": "地球まるごと大実験 ネイチャーティーチャー"
             },
             {
               "rank": 50,
@@ -12321,15 +12361,15 @@
             },
             {
               "rank": 48,
-              "title": "秘密のケンミンSHOW極"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 49,
-              "title": "家、ついて行ってイイですか？"
+              "title": "秘密のケンミンSHOW極"
             },
             {
               "rank": 50,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         }
@@ -12338,7 +12378,7 @@
     "srp2r8bnrz": {
       "programTitle": "見取り図じゃん",
       "broadcastDate": "",
-      "updatedAt": "2026/11/01 04:07",
+      "updatedAt": "2026/11/01 05:07",
       "episodeId": "epvq7s95fw",
       "subtitle": "【秘技伝授】ブクロ激怒で口説き術公開＆女子アナ妻に怒られろ",
       "likes": "522",
@@ -12361,15 +12401,15 @@
             },
             {
               "rank": 48,
-              "title": "秘密のケンミンSHOW極"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 49,
-              "title": "家、ついて行ってイイですか？"
+              "title": "秘密のケンミンSHOW極"
             },
             {
               "rank": 50,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         }
@@ -12378,7 +12418,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/11/01 04:07",
+      "updatedAt": "2026/11/01 05:07",
       "episodeId": "ep6j6ajewm",
       "subtitle": "名探偵シノ",
       "likes": "1.3万",
@@ -12778,7 +12818,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "吉田と粗品と"
+              "title": "開運！なんでも鑑定団"
             },
             {
               "rank": 48,
@@ -12986,15 +13026,15 @@
             },
             {
               "rank": 48,
-              "title": "秘密のケンミンSHOW極"
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
               "rank": 49,
-              "title": "家、ついて行ってイイですか？"
+              "title": "秘密のケンミンSHOW極"
             },
             {
               "rank": 50,
-              "title": "出川哲朗の充電させてもらえませんか？"
+              "title": "家、ついて行ってイイですか？"
             }
           ]
         }
@@ -13003,7 +13043,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/11/01 04:07",
+      "updatedAt": "2026/11/01 05:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "",
@@ -13049,19 +13089,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "世界の果てまでイッテQ！"
+              "title": "マツコの知らない世界"
             },
             {
               "rank": 48,
-              "title": "ほんとにあった怖い話"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 49,
-              "title": "全力！脱力タイムズ"
+              "title": "妻を引退します"
             },
             {
               "rank": 50,
-              "title": "妻を引退します"
+              "title": "全力！脱力タイムズ"
             }
           ]
         }
