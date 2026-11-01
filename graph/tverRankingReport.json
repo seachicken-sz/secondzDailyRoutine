@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/11/01 14:07",
+  "updatedAt": "2026/11/01 15:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/10/30",
-      "updatedAt": "2026/11/01 14:07",
+      "updatedAt": "2026/11/01 15:07",
       "episodeId": "epw22ovqi4",
       "subtitle": "あなたの食生活に役立つ！ヘルシーチェックマン",
       "likes": "1.1万",
@@ -164,6 +164,10 @@
         },
         {
           "hour": 40,
+          "likes": 11000
+        },
+        {
+          "hour": 41,
           "likes": 11000
         }
       ],
@@ -653,9 +657,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 7,
-          "elapsedHour": 40,
-          "elapsedRank": 7,
+          "currentRank": 9,
+          "elapsedHour": 41,
+          "elapsedRank": 9,
           "currentPoints": [
             {
               "hour": 4,
@@ -796,6 +800,10 @@
             {
               "hour": 40,
               "rank": 7
+            },
+            {
+              "hour": 41,
+              "rank": 9
             }
           ],
           "previousPoints": [
@@ -1370,19 +1378,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 4,
-              "title": "マツコ＆有吉 かりそめ天国"
-            },
-            {
-              "rank": 5,
-              "title": "上田と女が吠える夜"
-            },
-            {
               "rank": 6,
               "title": "M!LKの爆裂ミッション"
             },
             {
               "rank": 7,
+              "title": "かまいたちの机上の空論城"
+            },
+            {
+              "rank": 8,
+              "title": "嗚呼!!みんなの動物園"
+            },
+            {
+              "rank": 9,
               "title": "タイムレスマン"
             }
           ]
@@ -1390,9 +1398,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 29,
-          "elapsedHour": 40,
-          "elapsedRank": 29,
+          "currentRank": 31,
+          "elapsedHour": 41,
+          "elapsedRank": 31,
           "currentPoints": [
             {
               "hour": 12,
@@ -1505,6 +1513,10 @@
             {
               "hour": 40,
               "rank": 29
+            },
+            {
+              "hour": 41,
+              "rank": 31
             }
           ],
           "previousPoints": [
@@ -1755,19 +1767,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 26,
-              "title": "いろはの恋は時代をかける"
-            },
-            {
-              "rank": 27,
+              "rank": 28,
               "title": "「東京リベンジャーズ」 三天戦争編"
             },
             {
-              "rank": 28,
-              "title": "メリーベリーラブ"
+              "rank": 29,
+              "title": "かまいたちの机上の空論城"
             },
             {
-              "rank": 29,
+              "rank": 30,
+              "title": "嗚呼!!みんなの動物園"
+            },
+            {
+              "rank": 31,
               "title": "タイムレスマン"
             }
           ]
@@ -1776,19 +1788,24 @@
     },
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
-      "broadcastDate": "2026/10/18",
-      "updatedAt": "2026/11/01 14:07",
-      "episodeId": "epu2qm5dbn",
-      "subtitle": "二文字に人生を込めろ!武田双雲と新企画…二文字書道",
-      "likes": "2.1万",
+      "broadcastDate": "2026/11/01",
+      "updatedAt": "2026/11/01 15:07",
+      "episodeId": "ep3eckoi43",
+      "subtitle": "【秋のごちそうSP】サンマ・栗…関西芸人とガチバトル",
+      "likes": "1250",
       "favorites": "37.1万",
       "likePoints": [
+        {
+          "hour": 1,
+          "likes": 1250
+        }
+      ],
+      "previousLikePoints": [
         {
           "hour": 170,
           "likes": 19000
         }
       ],
-      "previousLikePoints": [],
       "rankings": [
         {
           "type": "variety",
@@ -1796,7 +1813,8 @@
           "currentRank": null,
           "elapsedHour": null,
           "elapsedRank": null,
-          "currentPoints": [
+          "currentPoints": [],
+          "previousPoints": [
             {
               "hour": 3,
               "rank": 50
@@ -2254,552 +2272,22 @@
               "rank": 50
             }
           ],
-          "previousPoints": [
-            {
-              "hour": 4,
-              "rank": 35
-            },
-            {
-              "hour": 5,
-              "rank": 26
-            },
-            {
-              "hour": 6,
-              "rank": 19
-            },
-            {
-              "hour": 7,
-              "rank": 17
-            },
-            {
-              "hour": 8,
-              "rank": 15
-            },
-            {
-              "hour": 9,
-              "rank": 12
-            },
-            {
-              "hour": 10,
-              "rank": 12
-            },
-            {
-              "hour": 11,
-              "rank": 12
-            },
-            {
-              "hour": 12,
-              "rank": 12
-            },
-            {
-              "hour": 13,
-              "rank": 12
-            },
-            {
-              "hour": 14,
-              "rank": 12
-            },
-            {
-              "hour": 15,
-              "rank": 12
-            },
-            {
-              "hour": 16,
-              "rank": 12
-            },
-            {
-              "hour": 17,
-              "rank": 12
-            },
-            {
-              "hour": 18,
-              "rank": 12
-            },
-            {
-              "hour": 19,
-              "rank": 11
-            },
-            {
-              "hour": 20,
-              "rank": 11
-            },
-            {
-              "hour": 21,
-              "rank": 11
-            },
-            {
-              "hour": 22,
-              "rank": 9
-            },
-            {
-              "hour": 23,
-              "rank": 8
-            },
-            {
-              "hour": 24,
-              "rank": 8
-            },
-            {
-              "hour": 25,
-              "rank": 7
-            },
-            {
-              "hour": 26,
-              "rank": 9
-            },
-            {
-              "hour": 27,
-              "rank": 9
-            },
-            {
-              "hour": 28,
-              "rank": 10
-            },
-            {
-              "hour": 29,
-              "rank": 11
-            },
-            {
-              "hour": 30,
-              "rank": 12
-            },
-            {
-              "hour": 31,
-              "rank": 11
-            },
-            {
-              "hour": 32,
-              "rank": 11
-            },
-            {
-              "hour": 33,
-              "rank": 11
-            },
-            {
-              "hour": 34,
-              "rank": 12
-            },
-            {
-              "hour": 35,
-              "rank": 12
-            },
-            {
-              "hour": 36,
-              "rank": 12
-            },
-            {
-              "hour": 37,
-              "rank": 12
-            },
-            {
-              "hour": 38,
-              "rank": 12
-            },
-            {
-              "hour": 39,
-              "rank": 12
-            },
-            {
-              "hour": 40,
-              "rank": 12
-            },
-            {
-              "hour": 41,
-              "rank": 12
-            },
-            {
-              "hour": 42,
-              "rank": 13
-            },
-            {
-              "hour": 43,
-              "rank": 13
-            },
-            {
-              "hour": 44,
-              "rank": 13
-            },
-            {
-              "hour": 45,
-              "rank": 13
-            },
-            {
-              "hour": 46,
-              "rank": 13
-            },
-            {
-              "hour": 47,
-              "rank": 13
-            },
-            {
-              "hour": 48,
-              "rank": 13
-            },
-            {
-              "hour": 49,
-              "rank": 13
-            },
-            {
-              "hour": 50,
-              "rank": 14
-            },
-            {
-              "hour": 51,
-              "rank": 15
-            },
-            {
-              "hour": 52,
-              "rank": 16
-            },
-            {
-              "hour": 53,
-              "rank": 18
-            },
-            {
-              "hour": 54,
-              "rank": 19
-            },
-            {
-              "hour": 55,
-              "rank": 20
-            },
-            {
-              "hour": 56,
-              "rank": 20
-            },
-            {
-              "hour": 57,
-              "rank": 20
-            },
-            {
-              "hour": 58,
-              "rank": 20
-            },
-            {
-              "hour": 59,
-              "rank": 20
-            },
-            {
-              "hour": 60,
-              "rank": 20
-            },
-            {
-              "hour": 61,
-              "rank": 20
-            },
-            {
-              "hour": 62,
-              "rank": 20
-            },
-            {
-              "hour": 63,
-              "rank": 20
-            },
-            {
-              "hour": 64,
-              "rank": 20
-            },
-            {
-              "hour": 65,
-              "rank": 21
-            },
-            {
-              "hour": 66,
-              "rank": 21
-            },
-            {
-              "hour": 67,
-              "rank": 22
-            },
-            {
-              "hour": 68,
-              "rank": 23
-            },
-            {
-              "hour": 69,
-              "rank": 24
-            },
-            {
-              "hour": 70,
-              "rank": 28
-            },
-            {
-              "hour": 71,
-              "rank": 28
-            },
-            {
-              "hour": 72,
-              "rank": 29
-            },
-            {
-              "hour": 73,
-              "rank": 30
-            },
-            {
-              "hour": 74,
-              "rank": 30
-            },
-            {
-              "hour": 75,
-              "rank": 31
-            },
-            {
-              "hour": 76,
-              "rank": 31
-            },
-            {
-              "hour": 77,
-              "rank": 35
-            },
-            {
-              "hour": 78,
-              "rank": 34
-            },
-            {
-              "hour": 79,
-              "rank": 34
-            },
-            {
-              "hour": 80,
-              "rank": 34
-            },
-            {
-              "hour": 81,
-              "rank": 34
-            },
-            {
-              "hour": 82,
-              "rank": 36
-            },
-            {
-              "hour": 83,
-              "rank": 36
-            },
-            {
-              "hour": 84,
-              "rank": 35
-            },
-            {
-              "hour": 85,
-              "rank": 35
-            },
-            {
-              "hour": 86,
-              "rank": 35
-            },
-            {
-              "hour": 87,
-              "rank": 35
-            },
-            {
-              "hour": 88,
-              "rank": 35
-            },
-            {
-              "hour": 89,
-              "rank": 35
-            },
-            {
-              "hour": 90,
-              "rank": 35
-            },
-            {
-              "hour": 91,
-              "rank": 35
-            },
-            {
-              "hour": 92,
-              "rank": 35
-            },
-            {
-              "hour": 94,
-              "rank": 36
-            },
-            {
-              "hour": 95,
-              "rank": 37
-            },
-            {
-              "hour": 96,
-              "rank": 37
-            },
-            {
-              "hour": 97,
-              "rank": 38
-            },
-            {
-              "hour": 98,
-              "rank": 38
-            },
-            {
-              "hour": 99,
-              "rank": 40
-            },
-            {
-              "hour": 100,
-              "rank": 40
-            },
-            {
-              "hour": 101,
-              "rank": 43
-            },
-            {
-              "hour": 102,
-              "rank": 43
-            },
-            {
-              "hour": 103,
-              "rank": 43
-            },
-            {
-              "hour": 104,
-              "rank": 43
-            },
-            {
-              "hour": 105,
-              "rank": 43
-            },
-            {
-              "hour": 106,
-              "rank": 43
-            },
-            {
-              "hour": 107,
-              "rank": 42
-            },
-            {
-              "hour": 108,
-              "rank": 42
-            },
-            {
-              "hour": 109,
-              "rank": 42
-            },
-            {
-              "hour": 110,
-              "rank": 42
-            },
-            {
-              "hour": 111,
-              "rank": 43
-            },
-            {
-              "hour": 112,
-              "rank": 44
-            },
-            {
-              "hour": 113,
-              "rank": 45
-            },
-            {
-              "hour": 114,
-              "rank": 45
-            },
-            {
-              "hour": 115,
-              "rank": 46
-            },
-            {
-              "hour": 116,
-              "rank": 47
-            },
-            {
-              "hour": 117,
-              "rank": 48
-            },
-            {
-              "hour": 118,
-              "rank": 49
-            },
-            {
-              "hour": 119,
-              "rank": 49
-            },
-            {
-              "hour": 120,
-              "rank": 50
-            },
-            {
-              "hour": 125,
-              "rank": 50
-            },
-            {
-              "hour": 126,
-              "rank": 50
-            },
-            {
-              "hour": 127,
-              "rank": 48
-            },
-            {
-              "hour": 128,
-              "rank": 48
-            },
-            {
-              "hour": 129,
-              "rank": 49
-            },
-            {
-              "hour": 130,
-              "rank": 48
-            },
-            {
-              "hour": 131,
-              "rank": 48
-            },
-            {
-              "hour": 132,
-              "rank": 49
-            },
-            {
-              "hour": 133,
-              "rank": 50
-            },
-            {
-              "hour": 134,
-              "rank": 50
-            },
-            {
-              "hour": 157,
-              "rank": 50
-            },
-            {
-              "hour": 158,
-              "rank": 49
-            },
-            {
-              "hour": 160,
-              "rank": 50
-            },
-            {
-              "hour": 161,
-              "rank": 50
-            },
-            {
-              "hour": 166,
-              "rank": 50
-            },
-            {
-              "hour": 167,
-              "rank": 47
-            }
-          ],
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 48,
-              "title": "ハマダ歌謡祭★オオカミ少年"
+              "title": "出没！アド街ック天国"
             },
             {
               "rank": 49,
-              "title": "あちこちオードリー"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 50,
-              "title": "がっちりマンデー!!"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             }
           ]
         },
@@ -2809,7 +2297,8 @@
           "currentRank": null,
           "elapsedHour": null,
           "elapsedRank": null,
-          "currentPoints": [
+          "currentPoints": [],
+          "previousPoints": [
             {
               "hour": 7,
               "rank": 49
@@ -3043,276 +2532,22 @@
               "rank": 50
             }
           ],
-          "previousPoints": [
-            {
-              "hour": 7,
-              "rank": 45
-            },
-            {
-              "hour": 8,
-              "rank": 41
-            },
-            {
-              "hour": 9,
-              "rank": 33
-            },
-            {
-              "hour": 10,
-              "rank": 31
-            },
-            {
-              "hour": 11,
-              "rank": 30
-            },
-            {
-              "hour": 12,
-              "rank": 30
-            },
-            {
-              "hour": 13,
-              "rank": 30
-            },
-            {
-              "hour": 14,
-              "rank": 30
-            },
-            {
-              "hour": 15,
-              "rank": 30
-            },
-            {
-              "hour": 16,
-              "rank": 28
-            },
-            {
-              "hour": 17,
-              "rank": 28
-            },
-            {
-              "hour": 18,
-              "rank": 26
-            },
-            {
-              "hour": 19,
-              "rank": 24
-            },
-            {
-              "hour": 20,
-              "rank": 24
-            },
-            {
-              "hour": 21,
-              "rank": 23
-            },
-            {
-              "hour": 22,
-              "rank": 21
-            },
-            {
-              "hour": 23,
-              "rank": 20
-            },
-            {
-              "hour": 24,
-              "rank": 20
-            },
-            {
-              "hour": 25,
-              "rank": 18
-            },
-            {
-              "hour": 26,
-              "rank": 20
-            },
-            {
-              "hour": 27,
-              "rank": 20
-            },
-            {
-              "hour": 28,
-              "rank": 21
-            },
-            {
-              "hour": 29,
-              "rank": 22
-            },
-            {
-              "hour": 30,
-              "rank": 23
-            },
-            {
-              "hour": 31,
-              "rank": 22
-            },
-            {
-              "hour": 32,
-              "rank": 22
-            },
-            {
-              "hour": 33,
-              "rank": 22
-            },
-            {
-              "hour": 34,
-              "rank": 24
-            },
-            {
-              "hour": 35,
-              "rank": 24
-            },
-            {
-              "hour": 36,
-              "rank": 24
-            },
-            {
-              "hour": 37,
-              "rank": 24
-            },
-            {
-              "hour": 38,
-              "rank": 24
-            },
-            {
-              "hour": 39,
-              "rank": 24
-            },
-            {
-              "hour": 40,
-              "rank": 24
-            },
-            {
-              "hour": 41,
-              "rank": 24
-            },
-            {
-              "hour": 42,
-              "rank": 24
-            },
-            {
-              "hour": 43,
-              "rank": 25
-            },
-            {
-              "hour": 44,
-              "rank": 25
-            },
-            {
-              "hour": 45,
-              "rank": 26
-            },
-            {
-              "hour": 46,
-              "rank": 27
-            },
-            {
-              "hour": 47,
-              "rank": 27
-            },
-            {
-              "hour": 48,
-              "rank": 28
-            },
-            {
-              "hour": 49,
-              "rank": 28
-            },
-            {
-              "hour": 50,
-              "rank": 30
-            },
-            {
-              "hour": 51,
-              "rank": 32
-            },
-            {
-              "hour": 52,
-              "rank": 33
-            },
-            {
-              "hour": 53,
-              "rank": 35
-            },
-            {
-              "hour": 54,
-              "rank": 36
-            },
-            {
-              "hour": 55,
-              "rank": 37
-            },
-            {
-              "hour": 56,
-              "rank": 38
-            },
-            {
-              "hour": 57,
-              "rank": 38
-            },
-            {
-              "hour": 58,
-              "rank": 38
-            },
-            {
-              "hour": 59,
-              "rank": 40
-            },
-            {
-              "hour": 60,
-              "rank": 40
-            },
-            {
-              "hour": 61,
-              "rank": 40
-            },
-            {
-              "hour": 62,
-              "rank": 40
-            },
-            {
-              "hour": 63,
-              "rank": 40
-            },
-            {
-              "hour": 64,
-              "rank": 40
-            },
-            {
-              "hour": 65,
-              "rank": 41
-            },
-            {
-              "hour": 66,
-              "rank": 41
-            },
-            {
-              "hour": 67,
-              "rank": 42
-            },
-            {
-              "hour": 68,
-              "rank": 44
-            },
-            {
-              "hour": 69,
-              "rank": 46
-            }
-          ],
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
-            },
-            {
-              "rank": 48,
               "title": "華大さんと千鳥くん"
             },
             {
+              "rank": 48,
+              "title": "もうパパ！"
+            },
+            {
               "rank": 49,
-              "title": "小麦とバターと復讐と"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "もうパパ！"
+              "title": "A-Studio＋"
             }
           ]
         }
@@ -3321,10 +2556,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/27",
-      "updatedAt": "2026/11/01 14:07",
+      "updatedAt": "2026/11/01 15:07",
       "episodeId": "epbtlmzlxr",
       "subtitle": "新企画！チョコプラ・timeleszが「できる？できない？予想クイズ」に挑戦！",
-      "likes": "7755",
+      "likes": "7763",
       "favorites": "6.6万",
       "likePoints": [
         {
@@ -3762,6 +2997,10 @@
         {
           "hour": 110,
           "likes": 7755
+        },
+        {
+          "hour": 111,
+          "likes": 7763
         }
       ],
       "previousLikePoints": [
@@ -4980,11 +4219,11 @@
             },
             {
               "rank": 48,
-              "title": "本日はダイアンなり！シーズン3"
+              "title": "発見！仰天！！プレミアもん！！！ 土曜はダメよ！"
             },
             {
               "rank": 49,
-              "title": "発見！仰天！！プレミアもん！！！ 土曜はダメよ！"
+              "title": "本日はダイアンなり！シーズン3"
             },
             {
               "rank": 50,
@@ -5229,19 +4468,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 48,
-              "title": "ハマダ歌謡祭★オオカミ少年"
+              "title": "出没！アド街ック天国"
             },
             {
               "rank": 49,
-              "title": "あちこちオードリー"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 50,
-              "title": "がっちりマンデー!!"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             }
           ]
         }
@@ -5250,10 +4489,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/10/25",
-      "updatedAt": "2026/11/01 14:07",
+      "updatedAt": "2026/11/01 15:07",
       "episodeId": "epc54pty2t",
       "subtitle": "100kg超巨大ホシエイ釣り上げろ!特大ホクホク竜田揚げ",
-      "likes": "4906",
+      "likes": "4933",
       "favorites": "54.4万",
       "likePoints": [
         {
@@ -5879,6 +5118,10 @@
         {
           "hour": 163,
           "likes": 4906
+        },
+        {
+          "hour": 164,
+          "likes": 4933
         }
       ],
       "previousLikePoints": [],
@@ -5886,9 +5129,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 39,
-          "elapsedHour": 163,
-          "elapsedRank": 39,
+          "currentRank": 36,
+          "elapsedHour": 164,
+          "elapsedRank": 36,
           "currentPoints": [
             {
               "hour": 2,
@@ -6529,6 +5772,10 @@
             {
               "hour": 163,
               "rank": 39
+            },
+            {
+              "hour": 164,
+              "rank": 36
             }
           ],
           "previousPoints": [
@@ -7195,19 +6442,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 33,
+              "title": "王様のブランチ"
+            },
+            {
+              "rank": 34,
+              "title": "知識の扉よ開け！ドア×ドア クエスト"
+            },
+            {
+              "rank": 35,
+              "title": "バナナマンのせっかくグルメ!!"
+            },
+            {
               "rank": 36,
-              "title": "ONE N' ONLYのフルアウトTV"
-            },
-            {
-              "rank": 37,
-              "title": "シューイチ"
-            },
-            {
-              "rank": 38,
-              "title": "世界くらべてみたら"
-            },
-            {
-              "rank": 39,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -7653,19 +6900,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 48,
-              "title": "ハマダ歌謡祭★オオカミ少年"
+              "title": "出没！アド街ック天国"
             },
             {
               "rank": 49,
-              "title": "あちこちオードリー"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 50,
-              "title": "がっちりマンデー!!"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             }
           ]
         }
@@ -7674,10 +6921,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/01 14:07",
+      "updatedAt": "2026/11/01 15:07",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
-      "likes": "3274",
+      "likes": "3277",
       "favorites": "81.4万",
       "likePoints": [
         {
@@ -8259,19 +7506,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 48,
-              "title": "ハマダ歌謡祭★オオカミ少年"
+              "title": "出没！アド街ック天国"
             },
             {
               "rank": 49,
-              "title": "あちこちオードリー"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 50,
-              "title": "がっちりマンデー!!"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             }
           ]
         },
@@ -8415,19 +7662,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
-            },
-            {
-              "rank": 48,
               "title": "華大さんと千鳥くん"
             },
             {
+              "rank": 48,
+              "title": "もうパパ！"
+            },
+            {
               "rank": 49,
-              "title": "小麦とバターと復讐と"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "もうパパ！"
+              "title": "A-Studio＋"
             }
           ]
         }
@@ -8436,7 +7683,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/10/21",
-      "updatedAt": "2026/11/01 14:07",
+      "updatedAt": "2026/11/01 15:07",
       "episodeId": "ep1zm2tfi9",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！FUNKY MONKEY BΛBY'S登場",
       "likes": "4215",
@@ -8681,19 +7928,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 48,
-              "title": "ハマダ歌謡祭★オオカミ少年"
+              "title": "出没！アド街ック天国"
             },
             {
               "rank": 49,
-              "title": "あちこちオードリー"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 50,
-              "title": "がっちりマンデー!!"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             }
           ]
         },
@@ -8708,19 +7955,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
-            },
-            {
-              "rank": 48,
               "title": "華大さんと千鳥くん"
             },
             {
+              "rank": 48,
+              "title": "もうパパ！"
+            },
+            {
               "rank": 49,
-              "title": "小麦とバターと復讐と"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "もうパパ！"
+              "title": "A-Studio＋"
             }
           ]
         }
@@ -8729,10 +7976,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/30",
-      "updatedAt": "2026/11/01 14:07",
+      "updatedAt": "2026/11/01 15:07",
       "episodeId": "ep3faityl7",
       "subtitle": "第151回 3時福田が母も知らない恋愛事情を告白＆母の涙",
-      "likes": "3512",
+      "likes": "3523",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -8978,6 +8225,10 @@
         {
           "hour": 62,
           "likes": 3512
+        },
+        {
+          "hour": 63,
+          "likes": 3523
         }
       ],
       "previousLikePoints": [
@@ -9692,19 +8943,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 48,
-              "title": "ハマダ歌謡祭★オオカミ少年"
+              "title": "出没！アド街ック天国"
             },
             {
               "rank": 49,
-              "title": "あちこちオードリー"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 50,
-              "title": "がっちりマンデー!!"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             }
           ]
         },
@@ -9752,19 +9003,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
-            },
-            {
-              "rank": 48,
               "title": "華大さんと千鳥くん"
             },
             {
+              "rank": 48,
+              "title": "もうパパ！"
+            },
+            {
               "rank": 49,
-              "title": "小麦とバターと復讐と"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "もうパパ！"
+              "title": "A-Studio＋"
             }
           ]
         }
@@ -9773,10 +9024,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/31",
-      "updatedAt": "2026/11/01 14:07",
+      "updatedAt": "2026/11/01 15:07",
       "episodeId": "ep3jm0ld38",
       "subtitle": "マッサマン＆マツダマン（秘）あ哺乳類SP前編",
-      "likes": "2089",
+      "likes": "2186",
       "favorites": "82.2万",
       "likePoints": [
         {
@@ -9846,6 +9097,10 @@
         {
           "hour": 19,
           "likes": 2089
+        },
+        {
+          "hour": 20,
+          "likes": 2186
         }
       ],
       "previousLikePoints": [],
@@ -9853,9 +9108,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 12,
-          "elapsedHour": 19,
-          "elapsedRank": 12,
+          "currentRank": 11,
+          "elapsedHour": 20,
+          "elapsedRank": 11,
           "currentPoints": [
             {
               "hour": 5,
@@ -9912,6 +9167,10 @@
             {
               "hour": 19,
               "rank": 12
+            },
+            {
+              "hour": 20,
+              "rank": 11
             }
           ],
           "previousPoints": [
@@ -10582,8 +9841,12 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 9,
+              "rank": 8,
               "title": "嗚呼!!みんなの動物園"
+            },
+            {
+              "rank": 9,
+              "title": "タイムレスマン"
             },
             {
               "rank": 10,
@@ -10591,10 +9854,6 @@
             },
             {
               "rank": 11,
-              "title": "教えて！ニュースライブ 正義のミカタ"
-            },
-            {
-              "rank": 12,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -10602,13 +9861,17 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 41,
-          "elapsedHour": 19,
-          "elapsedRank": 41,
+          "currentRank": 40,
+          "elapsedHour": 20,
+          "elapsedRank": 40,
           "currentPoints": [
             {
               "hour": 19,
               "rank": 41
+            },
+            {
+              "hour": 20,
+              "rank": 40
             }
           ],
           "previousPoints": [
@@ -10967,8 +10230,12 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 38,
+              "rank": 37,
               "title": "名探偵コナン"
+            },
+            {
+              "rank": 38,
+              "title": "おかえり、初恋。"
             },
             {
               "rank": 39,
@@ -10976,10 +10243,6 @@
             },
             {
               "rank": 40,
-              "title": "教えて！ニュースライブ 正義のミカタ"
-            },
-            {
-              "rank": 41,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -10989,11 +10252,11 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/11/01 14:07",
+      "updatedAt": "2026/11/01 15:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "",
-      "favorites": "46.5万",
+      "favorites": "46.4万",
       "likePoints": [],
       "previousLikePoints": [],
       "rankings": [
@@ -11035,19 +10298,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
-            },
-            {
-              "rank": 48,
               "title": "華大さんと千鳥くん"
             },
             {
+              "rank": 48,
+              "title": "もうパパ！"
+            },
+            {
               "rank": 49,
-              "title": "小麦とバターと復讐と"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "もうパパ！"
+              "title": "A-Studio＋"
             }
           ]
         }
@@ -11056,7 +10319,7 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/01 14:07",
+      "updatedAt": "2026/11/01 15:07",
       "episodeId": "epopy9ad0i",
       "subtitle": "スノーマン向井VS松岡修造軍＆タイムレス篠塚ンダホクレーンで神業",
       "likes": "8586",
@@ -12470,11 +11733,11 @@
             },
             {
               "rank": 48,
-              "title": "本日はダイアンなり！シーズン3"
+              "title": "発見！仰天！！プレミアもん！！！ 土曜はダメよ！"
             },
             {
               "rank": 49,
-              "title": "発見！仰天！！プレミアもん！！！ 土曜はダメよ！"
+              "title": "本日はダイアンなり！シーズン3"
             },
             {
               "rank": 50,
@@ -12658,19 +11921,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 48,
-              "title": "ハマダ歌謡祭★オオカミ少年"
+              "title": "出没！アド街ック天国"
             },
             {
               "rank": 49,
-              "title": "あちこちオードリー"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 50,
-              "title": "がっちりマンデー!!"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             }
           ]
         }
@@ -12679,10 +11942,10 @@
     "srp2r8bnrz": {
       "programTitle": "見取り図じゃん",
       "broadcastDate": "",
-      "updatedAt": "2026/11/01 14:07",
+      "updatedAt": "2026/11/01 15:07",
       "episodeId": "epvq7s95fw",
       "subtitle": "【秘技伝授】ブクロ激怒で口説き術公開＆女子アナ妻に怒られろ",
-      "likes": "539",
+      "likes": "545",
       "favorites": "37.1万",
       "likePoints": [],
       "previousLikePoints": [],
@@ -12698,19 +11961,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 48,
-              "title": "ハマダ歌謡祭★オオカミ少年"
+              "title": "出没！アド街ック天国"
             },
             {
               "rank": 49,
-              "title": "あちこちオードリー"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 50,
-              "title": "がっちりマンデー!!"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             }
           ]
         }
@@ -12719,7 +11982,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/11/01 14:07",
+      "updatedAt": "2026/11/01 15:07",
       "episodeId": "ep6j6ajewm",
       "subtitle": "名探偵シノ",
       "likes": "1.3万",
@@ -13123,11 +12386,11 @@
             },
             {
               "rank": 48,
-              "title": "いろはに千鳥"
+              "title": "相葉◎×部"
             },
             {
               "rank": 49,
-              "title": "相葉◎×部"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 50,
@@ -13323,19 +12586,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉ゼミ"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 48,
-              "title": "ハマダ歌謡祭★オオカミ少年"
+              "title": "出没！アド街ック天国"
             },
             {
               "rank": 49,
-              "title": "あちこちオードリー"
+              "title": "有吉ゼミ"
             },
             {
               "rank": 50,
-              "title": "がっちりマンデー!!"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             }
           ]
         }
@@ -13344,7 +12607,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/11/01 14:07",
+      "updatedAt": "2026/11/01 15:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "",
@@ -13390,19 +12653,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
-            },
-            {
-              "rank": 48,
               "title": "華大さんと千鳥くん"
             },
             {
+              "rank": 48,
+              "title": "もうパパ！"
+            },
+            {
               "rank": 49,
-              "title": "小麦とバターと復讐と"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 50,
-              "title": "もうパパ！"
+              "title": "A-Studio＋"
             }
           ]
         }
