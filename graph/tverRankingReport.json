@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/11/01 20:07",
+  "updatedAt": "2026/11/01 21:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/10/30",
-      "updatedAt": "2026/11/01 20:07",
+      "updatedAt": "2026/11/01 21:07",
       "episodeId": "epw22ovqi4",
       "subtitle": "あなたの食生活に役立つ！ヘルシーチェックマン",
       "likes": "1.2万",
@@ -188,6 +188,10 @@
         },
         {
           "hour": 46,
+          "likes": 12000
+        },
+        {
+          "hour": 47,
           "likes": 12000
         }
       ],
@@ -677,9 +681,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 11,
-          "elapsedHour": 46,
-          "elapsedRank": 11,
+          "currentRank": 12,
+          "elapsedHour": 47,
+          "elapsedRank": 12,
           "currentPoints": [
             {
               "hour": 4,
@@ -844,6 +848,10 @@
             {
               "hour": 46,
               "rank": 11
+            },
+            {
+              "hour": 47,
+              "rank": 12
             }
           ],
           "previousPoints": [
@@ -1418,19 +1426,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 8,
-              "title": "M!LKの爆裂ミッション"
-            },
-            {
               "rank": 9,
               "title": "芸能人が本気で考えた！ドッキリGP"
             },
             {
               "rank": 10,
-              "title": "月曜から夜ふかし"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 11,
+              "title": "月曜から夜ふかし"
+            },
+            {
+              "rank": 12,
               "title": "タイムレスマン"
             }
           ]
@@ -1439,7 +1447,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 35,
-          "elapsedHour": 46,
+          "elapsedHour": 47,
           "elapsedRank": 35,
           "currentPoints": [
             {
@@ -1576,6 +1584,10 @@
             },
             {
               "hour": 46,
+              "rank": 35
+            },
+            {
+              "hour": 47,
               "rank": 35
             }
           ],
@@ -1828,15 +1840,15 @@
           "nearbyRanking": [
             {
               "rank": 32,
-              "title": "kiDnap GAME"
+              "title": "ハイド＆シーク 0秒前の彼女"
             },
             {
               "rank": 33,
-              "title": "月曜から夜ふかし"
+              "title": "kiDnap GAME"
             },
             {
               "rank": 34,
-              "title": "ハイド＆シーク 0秒前の彼女"
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 35,
@@ -1849,10 +1861,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/11/01",
-      "updatedAt": "2026/11/01 20:07",
+      "updatedAt": "2026/11/01 21:07",
       "episodeId": "ep3eckoi43",
       "subtitle": "【秋のごちそうSP】サンマ・栗…関西芸人とガチバトル",
-      "likes": "5009",
+      "likes": "5560",
       "favorites": "37.1万",
       "likePoints": [
         {
@@ -1878,6 +1890,10 @@
         {
           "hour": 6,
           "likes": 5009
+        },
+        {
+          "hour": 7,
+          "likes": 5560
         }
       ],
       "previousLikePoints": [
@@ -1890,9 +1906,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 30,
-          "elapsedHour": 6,
-          "elapsedRank": 30,
+          "currentRank": 27,
+          "elapsedHour": 7,
+          "elapsedRank": 27,
           "currentPoints": [
             {
               "hour": 4,
@@ -1905,6 +1921,10 @@
             {
               "hour": 6,
               "rank": 30
+            },
+            {
+              "hour": 7,
+              "rank": 27
             }
           ],
           "previousPoints": [
@@ -2367,19 +2387,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 24,
+              "title": "テレビ千鳥"
+            },
+            {
+              "rank": 25,
+              "title": "ザッツ M!LK"
+            },
+            {
+              "rank": 26,
+              "title": "探偵！ナイトスクープ"
+            },
+            {
               "rank": 27,
-              "title": "なにわ男子の逆転男子"
-            },
-            {
-              "rank": 28,
-              "title": "夫が寝たあとに"
-            },
-            {
-              "rank": 29,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
-            },
-            {
-              "rank": 30,
               "title": "timeleszファミリア"
             }
           ]
@@ -2632,11 +2652,11 @@
             },
             {
               "rank": 48,
-              "title": "ドラえもん"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "ドラえもん"
             },
             {
               "rank": 50,
@@ -2649,10 +2669,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/27",
-      "updatedAt": "2026/11/01 20:07",
+      "updatedAt": "2026/11/01 21:07",
       "episodeId": "epbtlmzlxr",
       "subtitle": "新企画！チョコプラ・timeleszが「できる？できない？予想クイズ」に挑戦！",
-      "likes": "7818",
+      "likes": "7833",
       "favorites": "6.6万",
       "likePoints": [
         {
@@ -3114,6 +3134,10 @@
         {
           "hour": 116,
           "likes": 7818
+        },
+        {
+          "hour": 117,
+          "likes": 7833
         }
       ],
       "previousLikePoints": [
@@ -4328,19 +4352,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "キテレツキテル！"
+              "title": "絶景＆世界遺産 火曜の良純孝太郎"
             },
             {
               "rank": 48,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
-            },
-            {
-              "rank": 49,
               "title": "グッと！地球便"
             },
             {
+              "rank": 49,
+              "title": "キテレツキテル！"
+            },
+            {
               "rank": 50,
-              "title": "発見！仰天！！プレミアもん！！！ 土曜はダメよ！"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             }
           ]
         },
@@ -4581,7 +4605,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 48,
@@ -4589,11 +4613,11 @@
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "サンドウィッチマン＆芦田愛菜の博士ちゃん"
             },
             {
               "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -4601,13 +4625,22 @@
     },
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
-      "broadcastDate": "",
-      "updatedAt": "2026/11/01 20:07",
+      "broadcastDate": "2026/11/01",
+      "updatedAt": "2026/11/01 21:07",
       "episodeId": "ep75xoyx88",
       "subtitle": "トレーラーハウスづくり大詰め&働くミツバチの一生に密着",
-      "likes": "746",
+      "likes": "1253",
       "favorites": "54.4万",
-      "likePoints": [],
+      "likePoints": [
+        {
+          "hour": 1,
+          "likes": 746
+        },
+        {
+          "hour": 2,
+          "likes": 1253
+        }
+      ],
       "previousLikePoints": [
         {
           "hour": 1,
@@ -5254,10 +5287,15 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 41,
+          "elapsedHour": 2,
+          "elapsedRank": 41,
+          "currentPoints": [
+            {
+              "hour": 2,
+              "rank": 41
+            }
+          ],
           "previousPoints": [
             {
               "hour": 2,
@@ -5918,20 +5956,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "キテレツキテル！"
+              "rank": 38,
+              "title": "ゴルフ侍、見参！"
             },
             {
-              "rank": 48,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
+              "rank": 39,
+              "title": "世界くらべてみたら"
             },
             {
-              "rank": 49,
-              "title": "グッと！地球便"
+              "rank": 40,
+              "title": "ONE N' ONLYのフルアウトTV"
             },
             {
-              "rank": 50,
-              "title": "発見！仰天！！プレミアもん！！！ 土曜はダメよ！"
+              "rank": 41,
+              "title": "ザ！鉄腕！DASH!!"
             }
           ]
         },
@@ -6087,7 +6125,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 48,
@@ -6095,11 +6133,11 @@
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "サンドウィッチマン＆芦田愛菜の博士ちゃん"
             },
             {
               "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -6108,10 +6146,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/01 20:07",
+      "updatedAt": "2026/11/01 21:07",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
-      "likes": "3299",
+      "likes": "3296",
       "favorites": "81.5万",
       "likePoints": [
         {
@@ -6693,7 +6731,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 48,
@@ -6701,11 +6739,11 @@
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "サンドウィッチマン＆芦田愛菜の博士ちゃん"
             },
             {
               "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "かまいガチ"
             }
           ]
         },
@@ -6853,11 +6891,11 @@
             },
             {
               "rank": 48,
-              "title": "ドラえもん"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "ドラえもん"
             },
             {
               "rank": 50,
@@ -6870,7 +6908,7 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/10/21",
-      "updatedAt": "2026/11/01 20:07",
+      "updatedAt": "2026/11/01 21:07",
       "episodeId": "ep1zm2tfi9",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！FUNKY MONKEY BΛBY'S登場",
       "likes": "4215",
@@ -7115,7 +7153,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 48,
@@ -7123,11 +7161,11 @@
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "サンドウィッチマン＆芦田愛菜の博士ちゃん"
             },
             {
               "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "かまいガチ"
             }
           ]
         },
@@ -7146,11 +7184,11 @@
             },
             {
               "rank": 48,
-              "title": "ドラえもん"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "ドラえもん"
             },
             {
               "rank": 50,
@@ -7163,10 +7201,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/30",
-      "updatedAt": "2026/11/01 20:07",
+      "updatedAt": "2026/11/01 21:07",
       "episodeId": "ep3faityl7",
       "subtitle": "第151回 3時福田が母も知らない恋愛事情を告白＆母の涙",
-      "likes": "3588",
+      "likes": "3598",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -7436,6 +7474,10 @@
         {
           "hour": 68,
           "likes": 3588
+        },
+        {
+          "hour": 69,
+          "likes": 3598
         }
       ],
       "previousLikePoints": [
@@ -8150,7 +8192,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 48,
@@ -8158,11 +8200,11 @@
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "サンドウィッチマン＆芦田愛菜の博士ちゃん"
             },
             {
               "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "かまいガチ"
             }
           ]
         },
@@ -8214,11 +8256,11 @@
             },
             {
               "rank": 48,
-              "title": "ドラえもん"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "ドラえもん"
             },
             {
               "rank": 50,
@@ -8231,10 +8273,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/31",
-      "updatedAt": "2026/11/01 20:07",
+      "updatedAt": "2026/11/01 21:07",
       "episodeId": "ep3jm0ld38",
       "subtitle": "マッサマン＆マツダマン（秘）あ哺乳類SP前編",
-      "likes": "2745",
+      "likes": "2849",
       "favorites": "82.2万",
       "likePoints": [
         {
@@ -8328,6 +8370,10 @@
         {
           "hour": 25,
           "likes": 2745
+        },
+        {
+          "hour": 26,
+          "likes": 2849
         }
       ],
       "previousLikePoints": [],
@@ -8336,7 +8382,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 9,
-          "elapsedHour": 25,
+          "elapsedHour": 26,
           "elapsedRank": 9,
           "currentPoints": [
             {
@@ -8417,6 +8463,10 @@
             },
             {
               "hour": 25,
+              "rank": 9
+            },
+            {
+              "hour": 26,
               "rank": 9
             }
           ],
@@ -9108,9 +9158,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 29,
-          "elapsedHour": 25,
-          "elapsedRank": 29,
+          "currentRank": 26,
+          "elapsedHour": 26,
+          "elapsedRank": 26,
           "currentPoints": [
             {
               "hour": 19,
@@ -9139,6 +9189,10 @@
             {
               "hour": 25,
               "rank": 29
+            },
+            {
+              "hour": 26,
+              "rank": 26
             }
           ],
           "previousPoints": [
@@ -9497,19 +9551,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 26,
+              "rank": 23,
+              "title": "かまいたちの机上の空論城"
+            },
+            {
+              "rank": 24,
+              "title": "薬屋のひとりごと"
+            },
+            {
+              "rank": 25,
               "title": "M!LKの爆裂ミッション"
             },
             {
-              "rank": 27,
-              "title": "真田十勇士 SHADOWS OF THE TEN NINJA"
-            },
-            {
-              "rank": 28,
-              "title": "いろはの恋は時代をかける"
-            },
-            {
-              "rank": 29,
+              "rank": 26,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -9519,7 +9573,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/11/01 20:07",
+      "updatedAt": "2026/11/01 21:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "",
@@ -9569,11 +9623,11 @@
             },
             {
               "rank": 48,
-              "title": "ドラえもん"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "ドラえもん"
             },
             {
               "rank": 50,
@@ -9586,7 +9640,7 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/01 20:07",
+      "updatedAt": "2026/11/01 21:07",
       "episodeId": "epopy9ad0i",
       "subtitle": "スノーマン向井VS松岡修造軍＆タイムレス篠塚ンダホクレーンで神業",
       "likes": "8586",
@@ -10996,19 +11050,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "キテレツキテル！"
+              "title": "絶景＆世界遺産 火曜の良純孝太郎"
             },
             {
               "rank": 48,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
-            },
-            {
-              "rank": 49,
               "title": "グッと！地球便"
             },
             {
+              "rank": 49,
+              "title": "キテレツキテル！"
+            },
+            {
               "rank": 50,
-              "title": "発見！仰天！！プレミアもん！！！ 土曜はダメよ！"
+              "title": "巷のウワサ大検証！それって実際どうなの会"
             }
           ]
         },
@@ -11188,7 +11242,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 48,
@@ -11196,11 +11250,11 @@
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "サンドウィッチマン＆芦田愛菜の博士ちゃん"
             },
             {
               "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -11209,10 +11263,10 @@
     "srp2r8bnrz": {
       "programTitle": "見取り図じゃん",
       "broadcastDate": "",
-      "updatedAt": "2026/11/01 20:07",
+      "updatedAt": "2026/11/01 21:07",
       "episodeId": "epvq7s95fw",
       "subtitle": "【秘技伝授】ブクロ激怒で口説き術公開＆女子アナ妻に怒られろ",
-      "likes": "573",
+      "likes": "583",
       "favorites": "37.1万",
       "likePoints": [],
       "previousLikePoints": [],
@@ -11228,7 +11282,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 48,
@@ -11236,11 +11290,11 @@
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "サンドウィッチマン＆芦田愛菜の博士ちゃん"
             },
             {
               "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -11249,7 +11303,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/11/01 20:07",
+      "updatedAt": "2026/11/01 21:07",
       "episodeId": "ep6j6ajewm",
       "subtitle": "名探偵シノ",
       "likes": "1.3万",
@@ -11653,7 +11707,7 @@
             },
             {
               "rank": 48,
-              "title": "草彅やすともの うさぎとかめ"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 49,
@@ -11853,7 +11907,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "踊る！さんま御殿!!"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 48,
@@ -11861,11 +11915,11 @@
             },
             {
               "rank": 49,
-              "title": "かまいガチ"
+              "title": "サンドウィッチマン＆芦田愛菜の博士ちゃん"
             },
             {
               "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "かまいガチ"
             }
           ]
         }
@@ -11874,7 +11928,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/11/01 20:07",
+      "updatedAt": "2026/11/01 21:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "",
@@ -11924,11 +11978,11 @@
             },
             {
               "rank": 48,
-              "title": "ドラえもん"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 49,
-              "title": "教えて！ニュースライブ 正義のミカタ"
+              "title": "ドラえもん"
             },
             {
               "rank": 50,
