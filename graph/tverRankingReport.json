@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026/11/01 23:07",
+  "updatedAt": "2026/11/02 00:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/10/30",
-      "updatedAt": "2026/11/01 23:07",
+      "updatedAt": "2026/11/02 00:07",
       "episodeId": "epw22ovqi4",
       "subtitle": "あなたの食生活に役立つ！ヘルシーチェックマン",
       "likes": "1.2万",
-      "favorites": "78.9万",
+      "favorites": "79.0万",
       "likePoints": [
         {
           "hour": 1,
@@ -200,6 +200,10 @@
         },
         {
           "hour": 49,
+          "likes": 12000
+        },
+        {
+          "hour": 50,
           "likes": 12000
         }
       ],
@@ -690,7 +694,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 14,
-          "elapsedHour": 49,
+          "elapsedHour": 50,
           "elapsedRank": 14,
           "currentPoints": [
             {
@@ -867,6 +871,10 @@
             },
             {
               "hour": 49,
+              "rank": 14
+            },
+            {
+              "hour": 50,
               "rank": 14
             }
           ],
@@ -1443,15 +1451,15 @@
           "nearbyRanking": [
             {
               "rank": 11,
-              "title": "月曜から夜ふかし"
-            },
-            {
-              "rank": 12,
               "title": "ゴッドタン"
             },
             {
-              "rank": 13,
+              "rank": 12,
               "title": "一茂×かまいたち ゲンバ"
+            },
+            {
+              "rank": 13,
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 14,
@@ -1462,9 +1470,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 38,
-          "elapsedHour": 49,
-          "elapsedRank": 38,
+          "currentRank": 39,
+          "elapsedHour": 50,
+          "elapsedRank": 39,
           "currentPoints": [
             {
               "hour": 12,
@@ -1613,6 +1621,10 @@
             {
               "hour": 49,
               "rank": 38
+            },
+            {
+              "hour": 50,
+              "rank": 39
             }
           ],
           "previousPoints": [
@@ -1863,12 +1875,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 35,
-              "title": "「東京リベンジャーズ」 三天戦争編"
-            },
-            {
               "rank": 36,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "「東京リベンジャーズ」 三天戦争編"
             },
             {
               "rank": 37,
@@ -1876,6 +1884,10 @@
             },
             {
               "rank": 38,
+              "title": "名探偵コナン"
+            },
+            {
+              "rank": 39,
               "title": "タイムレスマン"
             }
           ]
@@ -1885,11 +1897,11 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/11/01",
-      "updatedAt": "2026/11/01 23:07",
+      "updatedAt": "2026/11/02 00:07",
       "episodeId": "ep3eckoi43",
       "subtitle": "【秋のごちそうSP】サンマ・栗…関西芸人とガチバトル",
-      "likes": "6131",
-      "favorites": "36.7万",
+      "likes": "6378",
+      "favorites": "37.1万",
       "likePoints": [
         {
           "hour": 1,
@@ -1926,6 +1938,10 @@
         {
           "hour": 9,
           "likes": 6131
+        },
+        {
+          "hour": 10,
+          "likes": 6378
         }
       ],
       "previousLikePoints": [
@@ -1938,9 +1954,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 19,
-          "elapsedHour": 9,
-          "elapsedRank": 19,
+          "currentRank": 17,
+          "elapsedHour": 10,
+          "elapsedRank": 17,
           "currentPoints": [
             {
               "hour": 4,
@@ -1965,6 +1981,10 @@
             {
               "hour": 9,
               "rank": 19
+            },
+            {
+              "hour": 10,
+              "rank": 17
             }
           ],
           "previousPoints": [
@@ -2427,19 +2447,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 14,
+              "title": "タイムレスマン"
+            },
+            {
+              "rank": 15,
+              "title": "出川哲朗の充電させてもらえませんか？"
+            },
+            {
               "rank": 16,
               "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 17,
-              "title": "しゃべくり007"
-            },
-            {
-              "rank": 18,
-              "title": "マツコの知らない世界"
-            },
-            {
-              "rank": 19,
               "title": "timeleszファミリア"
             }
           ]
@@ -2447,10 +2467,15 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 46,
+          "elapsedHour": 10,
+          "elapsedRank": 46,
+          "currentPoints": [
+            {
+              "hour": 10,
+              "rank": 46
+            }
+          ],
           "previousPoints": [
             {
               "hour": 7,
@@ -2687,20 +2712,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "しゃべくり007"
+              "rank": 43,
+              "title": "クレヨンしんちゃん"
             },
             {
-              "rank": 48,
-              "title": "ドラえもん"
+              "rank": 44,
+              "title": "出川哲朗の充電させてもらえませんか？"
             },
             {
-              "rank": 49,
-              "title": "情熱大陸"
+              "rank": 45,
+              "title": "さんまのお笑い向上委員会"
             },
             {
-              "rank": 50,
-              "title": "マツコの知らない世界"
+              "rank": 46,
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -2709,11 +2734,11 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/27",
-      "updatedAt": "2026/11/01 23:07",
+      "updatedAt": "2026/11/02 00:07",
       "episodeId": "epbtlmzlxr",
       "subtitle": "新企画！チョコプラ・timeleszが「できる？できない？予想クイズ」に挑戦！",
-      "likes": "7849",
-      "favorites": "6.4万",
+      "likes": "7855",
+      "favorites": "6.6万",
       "likePoints": [
         {
           "hour": 1,
@@ -3186,6 +3211,10 @@
         {
           "hour": 119,
           "likes": 7849
+        },
+        {
+          "hour": 120,
+          "likes": 7855
         }
       ],
       "previousLikePoints": [
@@ -4404,11 +4433,11 @@
             },
             {
               "rank": 48,
-              "title": "シューイチ"
+              "title": "フットマップ"
             },
             {
               "rank": 49,
-              "title": "グッと！地球便"
+              "title": "シューイチ"
             },
             {
               "rank": 50,
@@ -4657,15 +4686,15 @@
             },
             {
               "rank": 48,
-              "title": "夜明けのラヴィット！"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 49,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "夜明けのラヴィット！"
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "千鳥の鬼レンチャン"
             }
           ]
         }
@@ -4674,11 +4703,11 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/11/01",
-      "updatedAt": "2026/11/01 23:07",
+      "updatedAt": "2026/11/02 00:07",
       "episodeId": "ep75xoyx88",
       "subtitle": "トレーラーハウスづくり大詰め&働くミツバチの一生に密着",
-      "likes": "1782",
-      "favorites": "54.1万",
+      "likes": "2013",
+      "favorites": "54.4万",
       "likePoints": [
         {
           "hour": 1,
@@ -4695,6 +4724,10 @@
         {
           "hour": 4,
           "likes": 1782
+        },
+        {
+          "hour": 5,
+          "likes": 2013
         }
       ],
       "previousLikePoints": [
@@ -5343,9 +5376,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 22,
-          "elapsedHour": 4,
-          "elapsedRank": 22,
+          "currentRank": 17,
+          "elapsedHour": 5,
+          "elapsedRank": 17,
           "currentPoints": [
             {
               "hour": 2,
@@ -5358,6 +5391,10 @@
             {
               "hour": 4,
               "rank": 22
+            },
+            {
+              "hour": 5,
+              "rank": 17
             }
           ],
           "previousPoints": [
@@ -6020,19 +6057,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 19,
-              "title": "IMP.の「できません」は言いません"
+              "rank": 14,
+              "title": "バナナマンの早起きせっかくグルメ!!"
             },
             {
-              "rank": 20,
-              "title": "ごぶごぶ"
+              "rank": 15,
+              "title": "サンドウィッチマン＆芦田愛菜の博士ちゃん"
             },
             {
-              "rank": 21,
-              "title": "オモウマい店"
+              "rank": 16,
+              "title": "1億人の大質問!?笑ってコラえて！"
             },
             {
-              "rank": 22,
+              "rank": 17,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -6193,15 +6230,15 @@
             },
             {
               "rank": 48,
-              "title": "夜明けのラヴィット！"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 49,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "夜明けのラヴィット！"
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "千鳥の鬼レンチャン"
             }
           ]
         }
@@ -6210,11 +6247,11 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/01 23:07",
+      "updatedAt": "2026/11/02 00:07",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
-      "likes": "3302",
-      "favorites": "81.0万",
+      "likes": "3303",
+      "favorites": "81.5万",
       "likePoints": [
         {
           "hour": 115,
@@ -6799,15 +6836,15 @@
             },
             {
               "rank": 48,
-              "title": "夜明けのラヴィット！"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 49,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "夜明けのラヴィット！"
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "千鳥の鬼レンチャン"
             }
           ]
         },
@@ -6959,11 +6996,11 @@
             },
             {
               "rank": 49,
-              "title": "情熱大陸"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 50,
-              "title": "マツコの知らない世界"
+              "title": "情熱大陸"
             }
           ]
         }
@@ -6972,11 +7009,11 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/10/21",
-      "updatedAt": "2026/11/01 23:07",
+      "updatedAt": "2026/11/02 00:07",
       "episodeId": "ep1zm2tfi9",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！FUNKY MONKEY BΛBY'S登場",
       "likes": "4215",
-      "favorites": "15.7万",
+      "favorites": "15.6万",
       "likePoints": [
         {
           "hour": 111,
@@ -7221,15 +7258,15 @@
             },
             {
               "rank": 48,
-              "title": "夜明けのラヴィット！"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 49,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "夜明けのラヴィット！"
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "千鳥の鬼レンチャン"
             }
           ]
         },
@@ -7252,11 +7289,11 @@
             },
             {
               "rank": 49,
-              "title": "情熱大陸"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 50,
-              "title": "マツコの知らない世界"
+              "title": "情熱大陸"
             }
           ]
         }
@@ -7265,11 +7302,11 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/30",
-      "updatedAt": "2026/11/01 23:07",
+      "updatedAt": "2026/11/02 00:07",
       "episodeId": "ep3faityl7",
       "subtitle": "第151回 3時福田が母も知らない恋愛事情を告白＆母の涙",
-      "likes": "3615",
-      "favorites": "71.6万",
+      "likes": "3627",
+      "favorites": "71.5万",
       "likePoints": [
         {
           "hour": 1,
@@ -7550,6 +7587,10 @@
         {
           "hour": 71,
           "likes": 3615
+        },
+        {
+          "hour": 72,
+          "likes": 3627
         }
       ],
       "previousLikePoints": [
@@ -8268,15 +8309,15 @@
             },
             {
               "rank": 48,
-              "title": "夜明けのラヴィット！"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 49,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "夜明けのラヴィット！"
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "千鳥の鬼レンチャン"
             }
           ]
         },
@@ -8332,11 +8373,11 @@
             },
             {
               "rank": 49,
-              "title": "情熱大陸"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 50,
-              "title": "マツコの知らない世界"
+              "title": "情熱大陸"
             }
           ]
         }
@@ -8345,11 +8386,11 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/31",
-      "updatedAt": "2026/11/01 23:07",
+      "updatedAt": "2026/11/02 00:07",
       "episodeId": "ep3jm0ld38",
       "subtitle": "マッサマン＆マツダマン（秘）あ哺乳類SP前編",
-      "likes": "2926",
-      "favorites": "81.9万",
+      "likes": "2984",
+      "favorites": "82.3万",
       "likePoints": [
         {
           "hour": 2,
@@ -8454,6 +8495,10 @@
         {
           "hour": 28,
           "likes": 2926
+        },
+        {
+          "hour": 29,
+          "likes": 2984
         }
       ],
       "previousLikePoints": [],
@@ -8462,7 +8507,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 8,
-          "elapsedHour": 28,
+          "elapsedHour": 29,
           "elapsedRank": 8,
           "currentPoints": [
             {
@@ -8555,6 +8600,10 @@
             },
             {
               "hour": 28,
+              "rank": 8
+            },
+            {
+              "hour": 29,
               "rank": 8
             }
           ],
@@ -9246,9 +9295,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 25,
-          "elapsedHour": 28,
-          "elapsedRank": 25,
+          "currentRank": 24,
+          "elapsedHour": 29,
+          "elapsedRank": 24,
           "currentPoints": [
             {
               "hour": 19,
@@ -9289,6 +9338,10 @@
             {
               "hour": 28,
               "rank": 25
+            },
+            {
+              "hour": 29,
+              "rank": 24
             }
           ],
           "previousPoints": [
@@ -9647,6 +9700,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 21,
+              "title": "上田と女が吠える夜"
+            },
+            {
               "rank": 22,
               "title": "かまいたちの机上の空論城"
             },
@@ -9656,10 +9713,6 @@
             },
             {
               "rank": 24,
-              "title": "溺愛 ～ 実は、最強ヒーロー ～"
-            },
-            {
-              "rank": 25,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -9669,11 +9722,11 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/11/01 23:07",
+      "updatedAt": "2026/11/02 00:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "",
-      "favorites": "47.4万",
+      "favorites": "46.4万",
       "likePoints": [],
       "previousLikePoints": [],
       "rankings": [
@@ -9688,11 +9741,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "十六夜膳房 -いざよいぜんぼう-"
+              "title": "復讐カレシ～溺愛社長の顔にはウラがある～"
             },
             {
               "rank": 48,
-              "title": "復讐カレシ～溺愛社長の顔にはウラがある～"
+              "title": "十六夜膳房 -いざよいぜんぼう-"
             },
             {
               "rank": 49,
@@ -9723,11 +9776,11 @@
             },
             {
               "rank": 49,
-              "title": "情熱大陸"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 50,
-              "title": "マツコの知らない世界"
+              "title": "情熱大陸"
             }
           ]
         }
@@ -9736,11 +9789,11 @@
     "srccv4o30w": {
       "programTitle": "THE神業チャレンジ",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/01 23:07",
+      "updatedAt": "2026/11/02 00:07",
       "episodeId": "epopy9ad0i",
       "subtitle": "スノーマン向井VS松岡修造軍＆タイムレス篠塚ンダホクレーンで神業",
       "likes": "8586",
-      "favorites": "13.4万",
+      "favorites": "13.6万",
       "likePoints": [
         {
           "hour": 117,
@@ -11150,11 +11203,11 @@
             },
             {
               "rank": 48,
-              "title": "シューイチ"
+              "title": "フットマップ"
             },
             {
               "rank": 49,
-              "title": "グッと！地球便"
+              "title": "シューイチ"
             },
             {
               "rank": 50,
@@ -11342,15 +11395,15 @@
             },
             {
               "rank": 48,
-              "title": "夜明けのラヴィット！"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 49,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "夜明けのラヴィット！"
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "千鳥の鬼レンチャン"
             }
           ]
         }
@@ -11359,10 +11412,10 @@
     "srp2r8bnrz": {
       "programTitle": "見取り図じゃん",
       "broadcastDate": "",
-      "updatedAt": "2026/11/01 23:07",
+      "updatedAt": "2026/11/02 00:07",
       "episodeId": "epvq7s95fw",
       "subtitle": "【秘技伝授】ブクロ激怒で口説き術公開＆女子アナ妻に怒られろ",
-      "likes": "584",
+      "likes": "585",
       "favorites": "37.1万",
       "likePoints": [],
       "previousLikePoints": [],
@@ -11382,15 +11435,15 @@
             },
             {
               "rank": 48,
-              "title": "夜明けのラヴィット！"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 49,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "夜明けのラヴィット！"
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "千鳥の鬼レンチャン"
             }
           ]
         }
@@ -11399,11 +11452,11 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/10/13",
-      "updatedAt": "2026/11/01 23:07",
+      "updatedAt": "2026/11/02 00:07",
       "episodeId": "ep6j6ajewm",
       "subtitle": "名探偵シノ",
       "likes": "1.3万",
-      "favorites": "3.3万",
+      "favorites": "3.6万",
       "likePoints": [],
       "previousLikePoints": [],
       "rankings": [
@@ -12007,15 +12060,15 @@
             },
             {
               "rank": 48,
-              "title": "夜明けのラヴィット！"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 49,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "夜明けのラヴィット！"
             },
             {
               "rank": 50,
-              "title": "かまいガチ"
+              "title": "千鳥の鬼レンチャン"
             }
           ]
         }
@@ -12024,11 +12077,11 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/11/01 23:07",
+      "updatedAt": "2026/11/02 00:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "",
-      "favorites": "16.8万",
+      "favorites": "16.6万",
       "likePoints": [],
       "previousLikePoints": [],
       "rankings": [
@@ -12043,11 +12096,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "十六夜膳房 -いざよいぜんぼう-"
+              "title": "復讐カレシ～溺愛社長の顔にはウラがある～"
             },
             {
               "rank": 48,
-              "title": "復讐カレシ～溺愛社長の顔にはウラがある～"
+              "title": "十六夜膳房 -いざよいぜんぼう-"
             },
             {
               "rank": 49,
@@ -12078,11 +12131,11 @@
             },
             {
               "rank": 49,
-              "title": "情熱大陸"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 50,
-              "title": "マツコの知らない世界"
+              "title": "情熱大陸"
             }
           ]
         }
