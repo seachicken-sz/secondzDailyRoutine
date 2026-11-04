@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/11/04 19:07",
+  "updatedAt": "2026/11/04 20:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/10/30",
-      "updatedAt": "2026/11/04 19:07",
+      "updatedAt": "2026/11/04 20:07",
       "episodeId": "epw22ovqi4",
       "subtitle": "あなたの食生活に役立つ！ヘルシーチェックマン",
       "likes": "1.5万",
@@ -368,6 +368,10 @@
         },
         {
           "hour": 113,
+          "likes": 15000
+        },
+        {
+          "hour": 117,
           "likes": 15000
         }
       ],
@@ -857,9 +861,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 46,
-          "elapsedHour": 117,
-          "elapsedRank": 46,
+          "currentRank": 44,
+          "elapsedHour": 118,
+          "elapsedRank": 44,
           "currentPoints": [
             {
               "hour": 4,
@@ -1308,6 +1312,10 @@
             {
               "hour": 117,
               "rank": 46
+            },
+            {
+              "hour": 118,
+              "rank": 44
             }
           ],
           "previousPoints": [
@@ -1882,19 +1890,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 41,
+              "title": "岡田准一とロバート秋山の今さらシロー！"
+            },
+            {
+              "rank": 42,
+              "title": "ゴッドタン"
+            },
+            {
               "rank": 43,
-              "title": "バナナサンド"
+              "title": "ラヴィット！"
             },
             {
               "rank": 44,
-              "title": "THE ハイカロリーズ"
-            },
-            {
-              "rank": 45,
-              "title": "千鳥の鬼レンチャン"
-            },
-            {
-              "rank": 46,
               "title": "タイムレスマン"
             }
           ]
@@ -2356,7 +2364,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "永野＆くるまのひっかかりニーチェ"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
@@ -2364,11 +2372,11 @@
             },
             {
               "rank": 49,
-              "title": "VIVANT 悪役会議室"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "おかえり、初恋。"
             }
           ]
         }
@@ -2377,7 +2385,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/11/01",
-      "updatedAt": "2026/11/04 19:07",
+      "updatedAt": "2026/11/04 20:07",
       "episodeId": "ep3eckoi43",
       "subtitle": "【秋のごちそうSP】サンマ・栗…関西芸人とガチバトル",
       "likes": "1.2万",
@@ -2586,6 +2594,10 @@
         {
           "hour": 73,
           "likes": 12000
+        },
+        {
+          "hour": 77,
+          "likes": 12000
         }
       ],
       "previousLikePoints": [
@@ -2598,9 +2610,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 39,
-          "elapsedHour": 77,
-          "elapsedRank": 39,
+          "currentRank": 37,
+          "elapsedHour": 78,
+          "elapsedRank": 37,
           "currentPoints": [
             {
               "hour": 4,
@@ -2897,6 +2909,10 @@
             {
               "hour": 77,
               "rank": 39
+            },
+            {
+              "hour": 78,
+              "rank": 37
             }
           ],
           "previousPoints": [
@@ -3359,19 +3375,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 34,
+              "title": "家、ついて行ってイイですか？"
+            },
+            {
+              "rank": 35,
+              "title": "くりぃむナンタラ"
+            },
+            {
               "rank": 36,
               "title": "スポンジ・シノ"
             },
             {
               "rank": 37,
-              "title": "ラヴィット！"
-            },
-            {
-              "rank": 38,
-              "title": "一茂×かまいたち ゲンバ"
-            },
-            {
-              "rank": 39,
               "title": "timeleszファミリア"
             }
           ]
@@ -3793,7 +3809,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "永野＆くるまのひっかかりニーチェ"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
@@ -3801,11 +3817,11 @@
             },
             {
               "rank": 49,
-              "title": "VIVANT 悪役会議室"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "おかえり、初恋。"
             }
           ]
         }
@@ -3814,10 +3830,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/27",
-      "updatedAt": "2026/11/04 19:07",
+      "updatedAt": "2026/11/04 20:07",
       "episodeId": "epbtlmzlxr",
       "subtitle": "新企画！チョコプラ・timeleszが「できる？できない？予想クイズ」に挑戦！",
-      "likes": "8370",
+      "likes": "8390",
       "favorites": "6.6万",
       "likePoints": [
         {
@@ -5661,15 +5677,15 @@
             },
             {
               "rank": 48,
-              "title": "アッコとジャンボ"
+              "title": "ゴルフ侍、見参！"
             },
             {
               "rank": 49,
-              "title": "ナンデモ特命係 発見らくちゃく！"
+              "title": "ロバート秋山の市民プール万歳"
             },
             {
               "rank": 50,
-              "title": "地球まるごと大実験 ネイチャーティーチャー"
+              "title": "河合＆A.B.C-Z塚田×福井アナ「なんでやねん！？」"
             }
           ]
         },
@@ -5910,19 +5926,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "THE ハイカロリーズ"
             },
             {
               "rank": 48,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "櫻井･有吉THE夜会"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
         }
@@ -5931,10 +5947,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/11/01",
-      "updatedAt": "2026/11/04 19:07",
+      "updatedAt": "2026/11/04 20:07",
       "episodeId": "ep75xoyx88",
       "subtitle": "トレーラーハウスづくり大詰め&働くミツバチの一生に密着",
-      "likes": "7490",
+      "likes": "7552",
       "favorites": "54.5万",
       "likePoints": [
         {
@@ -6120,6 +6136,10 @@
         {
           "hour": 68,
           "likes": 7490
+        },
+        {
+          "hour": 72,
+          "likes": 7552
         }
       ],
       "previousLikePoints": [
@@ -6769,7 +6789,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 13,
-          "elapsedHour": 72,
+          "elapsedHour": 73,
           "elapsedRank": 13,
           "currentPoints": [
             {
@@ -7054,6 +7074,10 @@
             },
             {
               "hour": 72,
+              "rank": 13
+            },
+            {
+              "hour": 73,
               "rank": 13
             }
           ],
@@ -7726,7 +7750,7 @@
             },
             {
               "rank": 12,
-              "title": "世界まる見え！テレビ特捜部"
+              "title": "ニノなのに"
             },
             {
               "rank": 13,
@@ -8059,19 +8083,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "THE ハイカロリーズ"
             },
             {
               "rank": 48,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "櫻井･有吉THE夜会"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
         }
@@ -8080,10 +8104,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/04 19:07",
+      "updatedAt": "2026/11/04 20:07",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
-      "likes": "3462",
+      "likes": "3470",
       "favorites": "81.5万",
       "likePoints": [
         {
@@ -8665,19 +8689,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "THE ハイカロリーズ"
             },
             {
               "rank": 48,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "櫻井･有吉THE夜会"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
         },
@@ -8821,7 +8845,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "永野＆くるまのひっかかりニーチェ"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
@@ -8829,11 +8853,11 @@
             },
             {
               "rank": 49,
-              "title": "VIVANT 悪役会議室"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "おかえり、初恋。"
             }
           ]
         }
@@ -8842,10 +8866,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/11/04",
-      "updatedAt": "2026/11/04 19:07",
+      "updatedAt": "2026/11/04 20:07",
       "episodeId": "ephjmgcrvk",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！柴咲コウ登場",
-      "likes": "1876",
+      "likes": "2091",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -8879,6 +8903,10 @@
         {
           "hour": 14,
           "likes": 1876
+        },
+        {
+          "hour": 19,
+          "likes": 2091
         }
       ],
       "previousLikePoints": [
@@ -9063,19 +9091,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "THE ハイカロリーズ"
             },
             {
               "rank": 48,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "櫻井･有吉THE夜会"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
         },
@@ -9090,7 +9118,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "永野＆くるまのひっかかりニーチェ"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
@@ -9098,11 +9126,11 @@
             },
             {
               "rank": 49,
-              "title": "VIVANT 悪役会議室"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "おかえり、初恋。"
             }
           ]
         }
@@ -9111,10 +9139,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/10/30",
-      "updatedAt": "2026/11/04 19:07",
+      "updatedAt": "2026/11/04 20:07",
       "episodeId": "ep3faityl7",
       "subtitle": "第151回 3時福田が母も知らない恋愛事情を告白＆母の涙",
-      "likes": "4171",
+      "likes": "4202",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -9564,6 +9592,10 @@
         {
           "hour": 135,
           "likes": 4171
+        },
+        {
+          "hour": 139,
+          "likes": 4202
         }
       ],
       "previousLikePoints": [
@@ -10278,19 +10310,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "THE ハイカロリーズ"
             },
             {
               "rank": 48,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "櫻井･有吉THE夜会"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
         },
@@ -10338,7 +10370,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "永野＆くるまのひっかかりニーチェ"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
@@ -10346,11 +10378,11 @@
             },
             {
               "rank": 49,
-              "title": "VIVANT 悪役会議室"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "おかえり、初恋。"
             }
           ]
         }
@@ -10359,10 +10391,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/31",
-      "updatedAt": "2026/11/04 19:07",
+      "updatedAt": "2026/11/04 20:07",
       "episodeId": "ep3jm0ld38",
       "subtitle": "マッサマン＆マツダマン（秘）あ哺乳類SP前編",
-      "likes": "4758",
+      "likes": "4791",
       "favorites": "82.4万",
       "likePoints": [
         {
@@ -10636,6 +10668,10 @@
         {
           "hour": 92,
           "likes": 4758
+        },
+        {
+          "hour": 96,
+          "likes": 4791
         }
       ],
       "previousLikePoints": [],
@@ -10643,9 +10679,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 48,
-          "elapsedHour": 96,
-          "elapsedRank": 48,
+          "currentRank": 50,
+          "elapsedHour": 97,
+          "elapsedRank": 50,
           "currentPoints": [
             {
               "hour": 5,
@@ -11010,6 +11046,10 @@
             {
               "hour": 96,
               "rank": 48
+            },
+            {
+              "hour": 97,
+              "rank": 50
             }
           ],
           "previousPoints": [
@@ -11680,19 +11720,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 45,
-              "title": "千鳥の鬼レンチャン"
-            },
-            {
-              "rank": 46,
-              "title": "タイムレスマン"
-            },
-            {
               "rank": 47,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "THE ハイカロリーズ"
             },
             {
               "rank": 48,
+              "title": "いろはに千鳥"
+            },
+            {
+              "rank": 49,
+              "title": "櫻井･有吉THE夜会"
+            },
+            {
+              "rank": 50,
               "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
@@ -12250,7 +12290,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "永野＆くるまのひっかかりニーチェ"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
@@ -12258,11 +12298,11 @@
             },
             {
               "rank": 49,
-              "title": "VIVANT 悪役会議室"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "おかえり、初恋。"
             }
           ]
         }
@@ -12271,7 +12311,7 @@
     "srns83dbgi": {
       "programTitle": "ラストノート",
       "broadcastDate": "2026/07/23",
-      "updatedAt": "2026/11/04 19:07",
+      "updatedAt": "2026/11/04 20:07",
       "episodeId": "epc9atfkcn",
       "subtitle": "第3話 もう忘れたくて・・・全部終わらせたはずなのに",
       "likes": "",
@@ -12294,11 +12334,11 @@
             },
             {
               "rank": 48,
-              "title": "晩酌の流儀５"
+              "title": "韓国ドラマ「復讐の化身 ヨン・スジョン」"
             },
             {
               "rank": 49,
-              "title": "韓国ドラマ「復讐の化身 ヨン・スジョン」"
+              "title": "晩酌の流儀５"
             },
             {
               "rank": 50,
@@ -12317,7 +12357,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "永野＆くるまのひっかかりニーチェ"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
@@ -12325,11 +12365,11 @@
             },
             {
               "rank": 49,
-              "title": "VIVANT 悪役会議室"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "おかえり、初恋。"
             }
           ]
         }
@@ -12338,10 +12378,10 @@
     "srp2r8bnrz": {
       "programTitle": "見取り図じゃん",
       "broadcastDate": "",
-      "updatedAt": "2026/11/04 19:07",
+      "updatedAt": "2026/11/04 20:07",
       "episodeId": "epvq7s95fw",
       "subtitle": "【秘技伝授】ブクロ激怒で口説き術公開＆女子アナ妻に怒られろ",
-      "likes": "761",
+      "likes": "774",
       "favorites": "37.1万",
       "likePoints": [],
       "previousLikePoints": [],
@@ -12357,19 +12397,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "THE ハイカロリーズ"
             },
             {
               "rank": 48,
-              "title": "芸能人が本気で考えた！ドッキリGP"
+              "title": "いろはに千鳥"
             },
             {
               "rank": 49,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "櫻井･有吉THE夜会"
             },
             {
               "rank": 50,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "芸能人が本気で考えた！ドッキリGP"
             }
           ]
         }
@@ -12378,10 +12418,10 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/11/03",
-      "updatedAt": "2026/11/04 19:07",
+      "updatedAt": "2026/11/04 20:07",
       "episodeId": "epm8lq2z41",
       "subtitle": "激辛PK",
-      "likes": "7834",
+      "likes": "7981",
       "favorites": "3.7万",
       "likePoints": [
         {
@@ -12499,6 +12539,10 @@
         {
           "hour": 39,
           "likes": 7834
+        },
+        {
+          "hour": 43,
+          "likes": 7981
         }
       ],
       "previousLikePoints": [],
@@ -12507,7 +12551,7 @@
           "type": "talk",
           "label": "トーク",
           "currentRank": 14,
-          "elapsedHour": 42,
+          "elapsedHour": 43,
           "elapsedRank": 14,
           "currentPoints": [
             {
@@ -12652,6 +12696,10 @@
             },
             {
               "hour": 42,
+              "rank": 14
+            },
+            {
+              "hour": 43,
               "rank": 14
             }
           ],
@@ -13040,15 +13088,15 @@
           "nearbyRanking": [
             {
               "rank": 11,
-              "title": "相席食堂"
+              "title": "人生が変わる1分間の深イイ話"
             },
             {
               "rank": 12,
-              "title": "Golden SixTONES"
+              "title": "開運！なんでも鑑定団"
             },
             {
               "rank": 13,
-              "title": "開運！なんでも鑑定団"
+              "title": "Golden SixTONES"
             },
             {
               "rank": 14,
@@ -13060,7 +13108,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 36,
-          "elapsedHour": 42,
+          "elapsedHour": 43,
           "elapsedRank": 36,
           "currentPoints": [
             {
@@ -13177,6 +13225,10 @@
             },
             {
               "hour": 42,
+              "rank": 36
+            },
+            {
+              "hour": 43,
               "rank": 36
             }
           ],
@@ -13361,15 +13413,15 @@
           "nearbyRanking": [
             {
               "rank": 33,
-              "title": "家、ついて行ってイイですか？"
+              "title": "Aぇ! groupのQ＆Aぇ!"
             },
             {
               "rank": 34,
-              "title": "深夜のダイアン"
+              "title": "家、ついて行ってイイですか？"
             },
             {
               "rank": 35,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "くりぃむナンタラ"
             },
             {
               "rank": 36,
@@ -13382,7 +13434,7 @@
     "srp0jpngl8": {
       "programTitle": "サ道 2026～人生をサボりながら、ととのう～",
       "broadcastDate": "",
-      "updatedAt": "2026/11/04 19:07",
+      "updatedAt": "2026/11/04 20:07",
       "episodeId": "ep0u4jciod",
       "subtitle": "第三話",
       "likes": "",
@@ -13405,11 +13457,11 @@
             },
             {
               "rank": 48,
-              "title": "晩酌の流儀５"
+              "title": "韓国ドラマ「復讐の化身 ヨン・スジョン」"
             },
             {
               "rank": 49,
-              "title": "韓国ドラマ「復讐の化身 ヨン・スジョン」"
+              "title": "晩酌の流儀５"
             },
             {
               "rank": 50,
@@ -13428,7 +13480,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "永野＆くるまのひっかかりニーチェ"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
@@ -13436,11 +13488,11 @@
             },
             {
               "rank": 49,
-              "title": "VIVANT 悪役会議室"
+              "title": "相席食堂"
             },
             {
               "rank": 50,
-              "title": "CDTV ライブ! ライブ!"
+              "title": "おかえり、初恋。"
             }
           ]
         }
