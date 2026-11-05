@@ -176,8 +176,8 @@ function renderTverMode() {
     const checked = isTverEpisodeChecked(watchKey);
     const checkbox = `<label class="tver-mode-check" title="視聴済み"><input type="checkbox" data-tver-watch="${escapeTverModeHtml(watchKey)}" ${checked ? "checked" : ""} aria-label="${escapeTverModeHtml(item.title)}を視聴済みにする"><span>見た</span></label>`;
     const ranking = item.rankings.map(rank => {
-      const value = item.displayRankType === "current" ? rank.currentRank : rank.bestRank;
-      return `<div class="tver-mode-compact-rank"><span>${escapeTverModeHtml(rank.label)}<br class="tver-mode-rank-break">${item.displayRankType === "current" ? "現在順位" : "最高順位"}</span><strong>${value === null ? (item.displayRankType === "current" ? "圏外" : "記録なし") : tverModeRankText(value)}</strong></div>`;
+      const value = rank.bestRank;
+      return `<div class="tver-mode-compact-rank"><span>${escapeTverModeHtml(rank.label)}<br class="tver-mode-rank-break">最高順位</span><strong>${value === null ? "記録なし" : tverModeRankText(value)}</strong></div>`;
     }).join("");
     const graph = item.graphUrl ? `<a href="${escapeTverModeHtml(item.graphUrl)}" target="_blank" rel="noopener noreferrer" aria-label="グラフ" title="グラフ"><i class="bi bi-graph-up-arrow"></i></a>` : "";
     return `<article class="tver-mode-card ${item.hasReport ? "" : "is-simple"}" data-tver-episode-card="${escapeTverModeHtml(item.episodeId)}">
@@ -224,9 +224,9 @@ async function shareTverModeRecord(key) {
   const lines = [item.title, item.subtitle];
   if (item.hasReport) {
     item.rankings.forEach(rank => {
-      const value = item.displayRankType === "current" ? rank.currentRank : rank.bestRank;
-      lines.push(rank.label + " " + (item.displayRankType === "current" ? "現在" : "最高") + "：" +
-        (value === null ? (item.displayRankType === "current" ? "圏外" : "記録なし") : tverModeRankText(value)));
+      const value = rank.bestRank;
+      lines.push(rank.label + " 最高：" +
+        (value === null ? "記録なし" : tverModeRankText(value)));
     });
     lines.push("いいね：" + item.likesText + " / お気に入り：" + item.favoritesText);
   }
