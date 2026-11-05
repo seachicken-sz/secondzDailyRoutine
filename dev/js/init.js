@@ -356,6 +356,7 @@ async function init() {
     // 保存済みの途中再開データがあれば復元
     // なければホーム画面を表示
     await restoreFlowStateOrHome();
+    initializeTverMode();
     // ブラウザアクセスかつ初回のみ初回設定モーダル表示
     autoOpenFirstSetupModalIfNeeded();
     //PWA用初回モーダル表示
