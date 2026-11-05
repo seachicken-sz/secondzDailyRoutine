@@ -1,3 +1,19 @@
-/* TVerモード専用スタイル
- * TODO: 仕様確定後に実装
- */
+/* ホームの既存レイアウトを維持しながら表示領域だけ切り替える */
+#normalHomeContent {
+  display: contents;
+}
+
+#tverModeContent {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+#tverModeToggleButton[aria-pressed="true"] {
+  color: var(--color-accent, #207d70);
+  background: var(--color-surface, #f5f5f5);
+  border-radius: 8px;
+}
+
+.tver-mode-header {
+  margin-bottom: 16px;
+}
