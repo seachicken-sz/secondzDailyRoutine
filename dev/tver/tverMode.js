@@ -96,13 +96,13 @@ function renderTverMode() {
       <div class="tver-mode-stat">
         <span class="tver-mode-stat-label">${escapeTverModeHtml(rank.label)}</span>
         <strong>${tverModeRankText(rank.currentRank)}</strong>
-        ${tverModeChangeHtml(rank.improvement)}
+        ${rank.currentRank === null ? "" : tverModeChangeHtml(rank.improvement)}
       </div>`).join("");
     const comparisons = item.rankings.map((rank) => `
       <div class="tver-mode-compare-row">
         <span>${escapeTverModeHtml(rank.label)}</span>
         <span>同時間帯：${tverModeCompareText(rank.previousRank, "位")}</span>
-        <span>前回最高：${tverModeRankText(rank.previousBestRank)}</span>
+        <span>前回最高：${rank.previousBestRank === null ? "記録なし" : tverModeRankText(rank.previousBestRank)}</span>
       </div>`).join("");
     return `
       <article class="tver-mode-card" data-tver-episode-card="${escapeTverModeHtml(item.episodeId)}">
