@@ -123,3 +123,51 @@
 .tver-mode-counts div {
   background: var(--color-surface-soft, #f2f2f2);
 }
+
+/* 共通ロゴ直下のTVerモード見出し・設定行 */
+.tver-mode-header { margin: -3px 0 14px; }
+.tver-mode-header h2 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.4;
+  color: var(--color-brand);
+  text-align: center;
+}
+.tver-mode-header-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+}
+.tver-mode-default-setting {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  cursor: pointer;
+  font-size: 11px;
+  line-height: 1.3;
+  color: var(--color-text);
+}
+.tver-mode-default-setting input {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  margin: 0;
+  accent-color: var(--color-brand);
+}
+.tver-mode-header-meta #tverModeUpdatedAt {
+  margin: 0;
+  flex: 0 1 auto;
+  text-align: right;
+  white-space: nowrap;
+  font-size: 10px;
+  line-height: 1.3;
+  color: var(--color-text-muted);
+}
+@media (max-width: 380px) {
+  .tver-mode-default-setting { font-size: 10px; }
+  .tver-mode-header-meta #tverModeUpdatedAt { font-size: 9px; }
+}
