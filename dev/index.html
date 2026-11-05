@@ -181,14 +181,14 @@
         <button id="tverModeToggleButton" type="button" class="button secondary update-notice-button" aria-label="TVerモードに切り替え" aria-pressed="false"><i class="bi bi-tv"></i></button>
       </div>
 
-      <div id="normalHomeContent">
-        <header class="home-header">
-          <!--ロゴ-->
-          <div class="home-logo-area">
-            <img id="homeLogoImage" src="../img/logo.png" alt="タムごとDaily">
-          </div>
-        </header>
+      <!-- 通常ホームとTVerモードの共通ロゴ -->
+      <header class="home-header">
+        <div class="home-logo-area">
+          <img id="homeLogoImage" src="../img/logo.png" alt="タムごとDaily">
+        </div>
+      </header>
 
+      <div id="normalHomeContent">
       <section class="home-action-area">
         <button id="startRoutineButton" class="primary-button">
           開始する
@@ -441,8 +441,14 @@
     <!--TVerモード-->
     <div id="tverModeContent" class="tver-mode-content hidden">
       <div class="tver-mode-header">
-        <h2>TVerチェック</h2>
-        <p id="tverModeUpdatedAt"></p>
+        <h2>TVerチェックモード</h2>
+        <div class="tver-mode-header-meta">
+          <label class="tver-mode-default-setting" for="tverModeDefaultCheckbox">
+            <input id="tverModeDefaultCheckbox" type="checkbox">
+            <span>このモードをdefault表示にする</span>
+          </label>
+          <p id="tverModeUpdatedAt"></p>
+        </div>
       </div>
       <div id="tverModeList" class="tver-mode-list"></div>
     </div>
