@@ -27,7 +27,10 @@ async function loadTverModeData() {
       const episodeId = String(item.episodeId || "").trim();
       const candidate = reportData.reports[seriesId];
       // レポートが旧エピソードのものなら紐付けない。
-      const report = candidate && episodeId && candidate.episodeId === episodeId ? candidate : null;
+      const report = candidate && episodeId && String(candidate.episodeId || "") === episodeId ? candidate : null;
+      // ランキングの有無に関わらず、memberWorksで判明しているエピソード情報を表示する。
+      const broadcastDate = item.broadcastDate || report?.broadcastDate || "";
+      const episodeTitle = item.episodeTitle || item.subtitle || report?.subtitle || "";
       const rankings = Array.isArray(report?.rankings) ? report.rankings.map(rank => ({
         label: String(rank.label || rank.type || "ランキング"),
         currentRank: getTverModeRank(rank.currentRank),
@@ -39,11 +42,11 @@ async function loadTverModeData() {
       return {
         index, seriesId, episodeId,
         // 同一エピソードの放送日を優先。未取得番組は登録曜日・時刻から直近の放送予定日時を推定。
-        sortTimestamp: getTverModeSortTimestamp(report?.broadcastDate, item.weekday, item.time, nowJst),
+        sortTimestamp: getTverModeSortTimestamp(broadcastDate, item.weekday, item.time, nowJst),
         members: Array.isArray(item.members) ? item.members : [],
         title: item.title || item.programName || report?.programTitle || "TVer",
-        subtitle: report?.subtitle || "",
-        broadcastDate: report?.broadcastDate || "",
+        subtitle: episodeTitle,
+        broadcastDate,
         updatedAt: report?.updatedAt || "",
         seriesUrl: item.platformUrl,
         graphUrl: report ? TVER_MODE_GRAPH_PATH + "?id=" + encodeURIComponent(seriesId) : "",
