@@ -13,16 +13,34 @@ function initializeTverMode() {
     if (input) markTverModeChecked(input.dataset.tverWatch, input.checked);
   });
 
-  let enabled = false;
+  const defaultCheckbox = document.getElementById("tverModeDefaultCheckbox");
+  let defaultEnabled = false;
   try {
-    enabled = localStorage.getItem(STORAGE_KEYS.tverModeEnabled) === "true";
+    const savedDefault = localStorage.getItem(STORAGE_KEYS.tverModeDefault);
+    // 旧仕様ではモードON/OFF自体が保存されていたため、初回だけ移行。
+    defaultEnabled = savedDefault === null
+      ? localStorage.getItem(STORAGE_KEYS.tverModeEnabled) === "true"
+      : savedDefault === "true";
+    if (savedDefault === null) {
+      localStorage.setItem(STORAGE_KEYS.tverModeDefault, String(defaultEnabled));
+    }
   } catch (error) {
-    console.warn("TVerモード設定を読み込めませんでした", error);
+    console.warn("TVerデフォルト設定を読み込めませんでした", error);
   }
-  setTverModeEnabled(enabled, { save: false });
+  if (defaultCheckbox) {
+    defaultCheckbox.checked = defaultEnabled;
+    defaultCheckbox.addEventListener("change", () => {
+      try {
+        localStorage.setItem(STORAGE_KEYS.tverModeDefault, String(defaultCheckbox.checked));
+      } catch (error) {
+        console.warn("TVerデフォルト設定を保存できませんでした", error);
+      }
+    });
+  }
+  setTverModeEnabled(defaultEnabled);
 }
 
-function setTverModeEnabled(enabled, options = {}) {
+function setTverModeEnabled(enabled) {
   const toggle = document.getElementById("tverModeToggleButton");
   const normal = document.getElementById("normalHomeContent");
   const tver = document.getElementById("tverModeContent");
@@ -38,13 +56,7 @@ function setTverModeEnabled(enabled, options = {}) {
   toggle.title = enabled ? "通常モードに戻る" : "TVerモードに切り替え";
   if (enabled) loadAndRenderTverMode();
 
-  if (options.save !== false) {
-    try {
-      localStorage.setItem(STORAGE_KEYS.tverModeEnabled, String(enabled));
-    } catch (error) {
-      console.warn("TVerモード設定を保存できませんでした", error);
-    }
-  }
+
 }
 
 let tverModeRecords = [];
