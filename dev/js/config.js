@@ -39,6 +39,7 @@ const STORAGE_KEYS = {
   selectModeSettings: "secondzDailyRoutineSelectModeSettings",
   tverCheckedEpisodeMap: "secondzDailyRoutineTverCheckedEpisodeMap",
   tverModeEnabled: "secondzDailyRoutineTverModeEnabled",
+  tverModeDefault: "secondzDailyRoutineTverModeDefault",
 };
 // ==================================================
 // 定数 - 実行モード
