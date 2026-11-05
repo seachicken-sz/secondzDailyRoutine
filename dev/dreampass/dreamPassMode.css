@@ -18,3 +18,31 @@
 .dream-pass-card-rank strong { font-size: 22px; font-weight: 800; color: var(--color-brand); }
 .dream-pass-vote-button { display: flex; gap: 5px; justify-content: center; align-items: center; min-height: 44px; margin-top: auto; padding: 9px; border-radius: 9px; background: var(--color-brand); color: var(--color-text-inverse); font-size: 15px; font-weight: 800; text-decoration: none; text-align: center; }
 .dream-pass-vote-button i { font-size: 13px; }
+
+/* モード名の下に、起動時表示の設定を左寄せで配置 */
+.dream-pass-default-setting {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 11px;
+  line-height: 1.3;
+  color: var(--color-text);
+  cursor: pointer;
+}
+.dream-pass-default-setting input {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  margin: 0;
+  accent-color: var(--color-brand);
+}
+/* セクションの説明文はカード一覧の直前に表示 */
+.dream-pass-section-description {
+  margin: 0 0 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
