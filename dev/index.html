@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="./css/task.css" />
   <link rel="stylesheet" href="./css/utility.css" />
   <link rel="stylesheet" href="./tver/tverMode.css" />
+  <link rel="stylesheet" href="./dreampass/dreamPassMode.css" />
   
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" href="../img/icon-180.png">
@@ -179,6 +180,7 @@
         <button id="updateNoticeButton" type="button" class="button secondary update-notice-button"><i class="bi bi-bell"></i></button>
         <button id="settingButton" type="button" class="button secondary update-notice-button" aria-label="設定を開く"><i class="bi bi-gear"></i></button>
         <button id="tverModeToggleButton" type="button" class="button secondary update-notice-button" aria-label="TVerモードに切り替え" aria-pressed="false"><i class="bi bi-tv"></i></button>
+        <button id="dreamPassModeToggleButton" type="button" class="button secondary update-notice-button" aria-label="ドリパスチェックモードに切り替え" aria-pressed="false"><i class="bi bi-ticket-perforated"></i></button>
       </div>
 
       <!-- 通常ホームとTVerモードの共通ロゴ -->
@@ -451,6 +453,12 @@
         </div>
       </div>
       <div id="tverModeList" class="tver-mode-list"></div>
+    </div>
+
+    <!--ドリパスチェックモード-->
+    <div id="dreamPassModeContent" class="hidden">
+      <header class="dream-pass-mode-header"><h2>ドリパスチェックモード</h2></header>
+      <div id="dreamPassModeList"></div>
     </div>
     
     </section>
@@ -1428,6 +1436,8 @@
 <!-- TVerモード -->
 <script src="./tver/tverData.js" defer></script>
 <script src="./tver/tverMode.js" defer></script>
+<!-- ドリパスチェックモード -->
+<script src="./dreampass/dreamPassMode.js" defer></script>
 <!-- 起動 -->
 <script src="./js/app.js" defer></script>
 </body>
