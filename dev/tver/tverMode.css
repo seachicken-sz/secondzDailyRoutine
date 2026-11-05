@@ -33,3 +33,29 @@
   color: inherit; text-decoration: none; cursor: pointer;
 }
 .tver-mode-actions button:first-child { background: var(--color-accent, #207d70); color: white; border-color: transparent; }
+
+/* 一覧カードは2列、展開したカードは1列全幅 */
+.tver-mode-list { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 10px; }
+.tver-mode-card { min-width: 0; padding: 11px; gap: 8px; display: flex; flex-direction: column; }
+.tver-mode-card.is-expanded { grid-column: 1 / -1; }
+.tver-mode-card-heading { align-items: flex-start; }
+.tver-mode-card-heading h3 { min-width: 0; font-size: 13px; line-height: 1.4; overflow-wrap: anywhere; }
+.tver-mode-check { flex: 0 0 20px; display: flex; justify-content: center; align-items: center; }
+.tver-mode-check input { width: 18px; height: 18px; margin: 0; accent-color: var(--color-accent, #207d70); }
+.tver-mode-card-date { font-size: 11px; opacity: .75; margin: 0; }
+.tver-mode-rank-summary { display: grid; gap: 5px; }
+.tver-mode-compact-rank { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2px 5px; align-items: baseline; }
+.tver-mode-compact-rank span { font-size: 10px; opacity: .8; }
+.tver-mode-compact-rank strong { font-size: 14px; }
+.tver-mode-counts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px; }
+.tver-mode-counts div { min-width: 0; padding: 6px 3px; background: var(--color-background, #f8f8f8); border-radius: 7px; text-align: center; display: flex; flex-direction: column; }
+.tver-mode-counts span { font-size: 10px; }
+.tver-mode-counts strong { font-size: 13px; overflow-wrap: anywhere; }
+.tver-mode-no-ranking { margin: 9px 0; font-size: 11px; opacity: .75; }
+.tver-mode-actions { display: flex; grid-template-columns: none; gap: 6px; justify-content: center; margin-top: auto; }
+.tver-mode-actions button, .tver-mode-actions a { min-width: 34px; height: 34px; min-height: 34px; padding: 0; font-size: 17px; }
+.tver-mode-actions button:first-child { background: transparent; color: inherit; border-color: var(--color-border, #ddd); }
+.tver-mode-detail-toggle { border: 0; border-top: 1px solid var(--color-border, #ddd); background: transparent; color: inherit; padding: 8px 0 0; font: inherit; font-size: 12px; cursor: pointer; }
+.tver-mode-details { border-top: 1px solid var(--color-border, #ddd); margin-top: 5px; padding-top: 8px; }
+.tver-mode-details h4 { margin: 12px 0 5px; font-size: 13px; }
+.tver-mode-details > p { font-size: 12px; }
