@@ -214,3 +214,19 @@
   align-self: stretch;
   box-sizing: border-box;
 }
+
+/* 放送日と同じ文字サイズでエピソードタイトルを最大2行表示 */
+.tver-mode-episode-title {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.4;
+  max-height: 2.8em;
+  min-width: 0;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  color: var(--color-text-muted);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
