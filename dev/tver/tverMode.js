@@ -1,4 +1,40 @@
 // TVerモード：通常ホームとの切替・視聴チェック・共有
+// 通常・TVer・ドリパスの起動時表示は一つのキーで排他管理する。
+function getHomeDefaultMode() {
+  try {
+    const mode = localStorage.getItem(STORAGE_KEYS.homeDefaultMode);
+    if (mode === "normal" || mode === "tver" || mode === "dreampass") return mode;
+    // TVer単独だった旧設定から一度だけ移行する。
+    const legacy = localStorage.getItem(STORAGE_KEYS.tverModeDefault);
+    const migrated = legacy === "true" ||
+      (legacy === null && localStorage.getItem(STORAGE_KEYS.tverModeEnabled) === "true")
+      ? "tver" : "normal";
+    localStorage.setItem(STORAGE_KEYS.homeDefaultMode, migrated);
+    return migrated;
+  } catch (error) {
+    console.warn("起動時の表示設定を読み込めませんでした", error);
+    return "normal";
+  }
+}
+function syncHomeDefaultModeCheckboxes() {
+  const mode = getHomeDefaultMode();
+  const tver = document.getElementById("tverModeDefaultCheckbox");
+  const dreamPass = document.getElementById("dreamPassModeDefaultCheckbox");
+  if (tver) tver.checked = mode === "tver";
+  if (dreamPass) dreamPass.checked = mode === "dreampass";
+}
+function setHomeDefaultMode(nextMode, changedMode) {
+  // 選択中のチェックを解除した場合のみ通常ホームに戻す。
+  const current = getHomeDefaultMode();
+  const mode = nextMode === "normal" && current !== changedMode ? current : nextMode;
+  try {
+    localStorage.setItem(STORAGE_KEYS.homeDefaultMode, mode);
+  } catch (error) {
+    console.warn("起動時の表示設定を保存できませんでした", error);
+  }
+  syncHomeDefaultModeCheckboxes();
+}
+
 function initializeTverMode() {
   const toggle = document.getElementById("tverModeToggleButton");
   const list = document.getElementById("tverModeList");
@@ -14,30 +50,13 @@ function initializeTverMode() {
   });
 
   const defaultCheckbox = document.getElementById("tverModeDefaultCheckbox");
-  let defaultEnabled = false;
-  try {
-    const savedDefault = localStorage.getItem(STORAGE_KEYS.tverModeDefault);
-    // 旧仕様ではモードON/OFF自体が保存されていたため、初回だけ移行。
-    defaultEnabled = savedDefault === null
-      ? localStorage.getItem(STORAGE_KEYS.tverModeEnabled) === "true"
-      : savedDefault === "true";
-    if (savedDefault === null) {
-      localStorage.setItem(STORAGE_KEYS.tverModeDefault, String(defaultEnabled));
-    }
-  } catch (error) {
-    console.warn("TVerデフォルト設定を読み込めませんでした", error);
-  }
   if (defaultCheckbox) {
-    defaultCheckbox.checked = defaultEnabled;
-    defaultCheckbox.addEventListener("change", () => {
-      try {
-        localStorage.setItem(STORAGE_KEYS.tverModeDefault, String(defaultCheckbox.checked));
-      } catch (error) {
-        console.warn("TVerデフォルト設定を保存できませんでした", error);
-      }
-    });
+    defaultCheckbox.addEventListener("change", () =>
+      setHomeDefaultMode(defaultCheckbox.checked ? "tver" : "normal", "tver")
+    );
   }
-  setTverModeEnabled(defaultEnabled);
+  syncHomeDefaultModeCheckboxes();
+  setTverModeEnabled(getHomeDefaultMode() === "tver");
 }
 
 function setTverModeEnabled(enabled) {
