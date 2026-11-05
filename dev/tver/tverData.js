@@ -20,6 +20,7 @@ async function loadTverModeData() {
     console.warn("ランキング取得不可。簡易カードを表示します", error);
   }
 
+  const nowJst = getTverModeJapanNow();
   const records = works.filter(item => item.workType === "tv" && item.platformUrl)
     .map((item, index) => {
       const seriesId = getTverModeSeriesId(item.platformUrl);
@@ -37,6 +38,8 @@ async function loadTverModeData() {
       })) : [];
       return {
         index, seriesId, episodeId,
+        // 同一エピソードの放送日を優先。未取得番組は登録曜日・時刻から直近の放送予定日時を推定。
+        sortTimestamp: getTverModeSortTimestamp(report?.broadcastDate, item.weekday, item.time, nowJst),
         members: Array.isArray(item.members) ? item.members : [],
         title: item.title || item.programName || report?.programTitle || "TVer",
         subtitle: report?.subtitle || "",
@@ -54,13 +57,36 @@ async function loadTverModeData() {
         previousBestLikes: report ? getTverModeMaximum(report.previousLikePoints, "likes") : null
       };
     });
-  records.sort((a, b) => {
-    if (a.broadcastDate && b.broadcastDate) return b.broadcastDate.localeCompare(a.broadcastDate) || a.index - b.index;
-    if (a.broadcastDate) return -1;
-    if (b.broadcastDate) return 1;
-    return a.index - b.index;
-  });
+  records.sort((a, b) => b.sortTimestamp - a.sortTimestamp || a.index - b.index);
   return { updatedAt: reportData.updatedAt || "", records };
+}
+
+// 曜日・時刻による並び順は日本時間を基準にする（放送日として画面には表示しない）。
+function getTverModeJapanNow() {
+  const parts = Object.fromEntries(new Intl.DateTimeFormat("en-US", {
+    timeZone: "Asia/Tokyo", year: "numeric", month: "2-digit", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", hourCycle: "h23"
+  }).formatToParts(new Date()).filter(x => x.type !== "literal").map(x => [x.type, Number(x.value)]));
+  return Date.UTC(parts.year, parts.month - 1, parts.day, parts.hour, parts.minute);
+}
+function getTverModeSortTimestamp(broadcastDate, weekday, time, nowJst) {
+  if (broadcastDate) {
+    const match = String(broadcastDate).match(/^(\d{4})[-/](\d{1,2})[-/](\d{1,2})/);
+    if (match) {
+      return Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+    }
+  }
+  if (!Number.isInteger(weekday) || weekday < 0 || weekday > 6) return 0;
+  const current = new Date(nowJst);
+  const currentWeekday = current.getUTCDay();
+  const m = String(time || "00:00").match(/^(\d{1,2}):(\d{2})$/);
+  const hours = m ? Number(m[1]) : 0;
+  const minutes = m ? Number(m[2]) : 0;
+  const startOfToday = Date.UTC(current.getUTCFullYear(), current.getUTCMonth(), current.getUTCDate());
+  let estimated = startOfToday - ((currentWeekday - weekday + 7) % 7) * 86400000 +
+    (hours * 60 + minutes) * 60000;
+  if (estimated > nowJst) estimated -= 7 * 86400000;
+  return estimated;
 }
 
 function getTverModeSeriesId(url) {
