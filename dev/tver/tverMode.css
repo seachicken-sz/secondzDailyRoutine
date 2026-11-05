@@ -1,19 +1,35 @@
-/* ホームの既存レイアウトを維持しながら表示領域だけ切り替える */
-#normalHomeContent {
-  display: contents;
-}
-
-#tverModeContent {
-  flex-shrink: 0;
-  width: 100%;
-}
-
+/* TVerモード。通常ホームのflex直下レイアウトを維持 */
+#normalHomeContent { display: contents; }
+#tverModeContent { flex-shrink: 0; width: 100%; padding: 6px 0 24px; }
 #tverModeToggleButton[aria-pressed="true"] {
   color: var(--color-accent, #207d70);
   background: var(--color-surface, #f5f5f5);
   border-radius: 8px;
 }
-
-.tver-mode-header {
-  margin-bottom: 16px;
+.tver-mode-header { margin-bottom: 16px; }
+.tver-mode-header h2 { margin: 0 0 4px; font-size: 20px; }
+.tver-mode-header p { margin: 0; font-size: 12px; color: var(--color-text-secondary, #777); }
+.tver-mode-list { display: grid; gap: 14px; }
+.tver-mode-card { padding: 14px; background: var(--color-surface, #fff); border-radius: var(--radius-card, 12px); box-shadow: var(--shadow-card, 0 1px 7px #0001); }
+.tver-mode-card-heading { display: flex; justify-content: space-between; gap: 12px; align-items: start; }
+.tver-mode-card-heading h3 { margin: 0; font-size: 17px; }
+.tver-mode-card-heading p { font-size: 12px; margin: 5px 0 0; line-height: 1.5; }
+.tver-mode-watch-status { white-space: nowrap; font-size: 11px; padding: 4px 7px; background: var(--color-background, #f3f3f3); border-radius: 100px; }
+.tver-mode-record-date { margin: 12px 0 8px; font-size: 11px; opacity: .75; }
+.tver-mode-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.tver-mode-stat { padding: 10px; min-width: 0; background: var(--color-background, #f8f8f8); border-radius: 9px; }
+.tver-mode-stat-label { display: block; font-size: 11px; opacity: .75; }
+.tver-mode-stat strong { font-size: 22px; display: inline-block; margin-top: 4px; }
+.tver-mode-improvement { display: inline-block; margin-left: 6px; font-size: 11px; font-weight: bold; color: #168457; }
+.tver-mode-previous { margin-top: 14px; border-top: 1px solid var(--color-border, #ddd); padding-top: 10px; }
+.tver-mode-previous h4 { margin: 0 0 8px; font-size: 13px; }
+.tver-mode-compare-row { display: flex; flex-wrap: wrap; gap: 6px 12px; justify-content: space-between; padding: 5px 0; font-size: 11px; border-bottom: 1px solid var(--color-border, #eee); }
+.tver-mode-compare-row > span:first-child { font-weight: bold; width: 100%; }
+.tver-mode-note { font-size: 10px; line-height: 1.5; opacity: .75; margin: 9px 0 0; }
+.tver-mode-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
+.tver-mode-actions button, .tver-mode-actions a {
+  font: inherit; font-size: 13px; min-height: 40px; display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--color-border, #ddd); border-radius: 8px; background: transparent;
+  color: inherit; text-decoration: none; cursor: pointer;
 }
+.tver-mode-actions button:first-child { background: var(--color-accent, #207d70); color: white; border-color: transparent; }
