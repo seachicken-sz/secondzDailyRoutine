@@ -35,11 +35,22 @@
 .tver-mode-actions button:first-child { background: var(--color-accent, #207d70); color: white; border-color: transparent; }
 
 /* 一覧カードは2列、展開したカードは1列全幅 */
-.tver-mode-list { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 10px; }
+.tver-mode-list { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: 10px; }
 .tver-mode-card { min-width: 0; padding: 11px; gap: 8px; display: flex; flex-direction: column; }
 .tver-mode-card.is-expanded { grid-column: 1 / -1; }
 .tver-mode-card-heading { align-items: flex-start; }
-.tver-mode-card-heading h3 { min-width: 0; font-size: 13px; line-height: 1.4; overflow-wrap: anywhere; }
+.tver-mode-card-heading h3 {
+  min-width: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  height: 2.8em;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
 .tver-mode-check { flex: 0 0 20px; display: flex; justify-content: center; align-items: center; }
 .tver-mode-check input { width: 18px; height: 18px; margin: 0; accent-color: var(--color-accent, #207d70); }
 .tver-mode-card-date { font-size: 11px; opacity: .75; margin: 0; }
