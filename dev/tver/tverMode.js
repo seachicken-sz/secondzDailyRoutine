@@ -49,6 +49,17 @@ function setTverModeEnabled(enabled) {
   if (enabled && state.currentStepElement !== homeStepElement) {
     showOnlyStep(homeStepElement, { recordHistory: false, saveFlow: false });
   }
+  if (enabled) {
+    const dreamContent = document.getElementById("dreamPassModeContent");
+    const dreamToggle = document.getElementById("dreamPassModeToggleButton");
+    if (dreamContent) dreamContent.classList.add("hidden");
+    homeStepElement.classList.remove("dream-pass-mode-active");
+    if (dreamToggle) {
+      dreamToggle.setAttribute("aria-pressed", "false");
+      dreamToggle.setAttribute("aria-label", "ドリパスチェックモードに切り替え");
+      dreamToggle.title = "ドリパスチェックモードに切り替え";
+    }
+  }
   normal.classList.toggle("hidden", enabled);
   tver.classList.toggle("hidden", !enabled);
   homeStepElement.classList.toggle("tver-mode-active", enabled);
