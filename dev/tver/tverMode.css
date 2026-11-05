@@ -171,3 +171,12 @@
   .tver-mode-default-setting { font-size: 10px; }
   .tver-mode-header-meta #tverModeUpdatedAt { font-size: 9px; }
 }
+
+/* TVerモードのみ：共通ロゴと見出しの間隔を詰める */
+#homeStep.tver-mode-active > .home-header { margin-bottom: 0; min-height: 0; }
+#homeStep.tver-mode-active .home-logo-area { margin-bottom: 0; }
+#homeStep.tver-mode-active .tver-mode-header { margin-top: -6px; }
+#homeStep.tver-mode-active .tver-mode-header h2 { margin-bottom: 1.4em; }
+
+/* ジャンル名と現在／最高順位を2行で表示 */
+.tver-mode-compact-rank span { line-height: 1.4; }
