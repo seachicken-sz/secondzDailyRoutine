@@ -37,6 +37,7 @@ async function loadTverModeData() {
       })) : [];
       return {
         index, seriesId, episodeId,
+        members: Array.isArray(item.members) ? item.members : [],
         title: item.title || item.programName || report?.programTitle || "TVer",
         subtitle: report?.subtitle || "",
         broadcastDate: report?.broadcastDate || "",
