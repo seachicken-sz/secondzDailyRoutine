@@ -203,3 +203,14 @@
   font-weight: 800;
   line-height: 1.4;
 }
+
+/* 各行は高い方のカードに合わせて同じ高さにする */
+.tver-mode-list {
+  grid-auto-rows: auto;
+  align-items: stretch;
+}
+.tver-mode-list > .tver-mode-card {
+  height: 100%;
+  align-self: stretch;
+  box-sizing: border-box;
+}
