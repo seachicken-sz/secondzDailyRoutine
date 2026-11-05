@@ -106,6 +106,32 @@ function formatTverModeBroadcastDate(value) {
   return match ? match[1] + "/" + match[2].padStart(2, "0") + "/" + match[3].padStart(2, "0") : text;
 }
 
+// 出演者ハートはテーマのメンバーカラーに対応する。
+const TVER_MEMBER_HEARTS = {
+  shori: { name: "佐藤勝利", color: "#ef4444" },
+  fuma: { name: "菊池風磨", color: "#8b5cf6" },
+  so: { name: "松島聡", color: "#22c55e" },
+  teranishi: { name: "寺西拓人", color: "#38bdf8" },
+  hara: { name: "原嘉孝", color: "#84cc16" },
+  hashimoto: { name: "橋本将生", color: "#f472b6" },
+  shinozuka: { name: "篠塚大輝", color: "#ffffff" }
+};
+function tverModeCastHtml(members) {
+  if (!Array.isArray(members) || !members.length) return "";
+  if (members.includes("all")) {
+    return '<div class="tver-mode-cast"><span class="tver-mode-cast-all">ALL</span></div>';
+  }
+  const hearts = members.map(id => {
+    const member = TVER_MEMBER_HEARTS[id];
+    if (!member) return "";
+    return '<i class="bi bi-suit-heart-fill tver-mode-member-heart' +
+      (id === "shinozuka" ? ' is-white' : '') + '" style="color:' + member.color +
+      '" role="img" aria-label="' + escapeTverModeHtml(member.name) +
+      '" title="' + escapeTverModeHtml(member.name) + '"></i>';
+  }).join("");
+  return hearts ? '<div class="tver-mode-cast" aria-label="出演メンバー">' + hearts + '</div>' : "";
+}
+
 function renderTverMode() {
   const list = document.getElementById("tverModeList");
   if (!list) return;
@@ -125,6 +151,7 @@ function renderTverMode() {
     }).join("");
     const graph = item.graphUrl ? `<a href="${escapeTverModeHtml(item.graphUrl)}" target="_blank" rel="noopener noreferrer" aria-label="グラフ" title="グラフ"><i class="bi bi-graph-up-arrow"></i></a>` : "";
     return `<article class="tver-mode-card ${item.hasReport ? "" : "is-simple"}" data-tver-episode-card="${escapeTverModeHtml(item.episodeId)}">
+      ${tverModeCastHtml(item.members)}
       <div class="tver-mode-card-heading"><h3>${escapeTverModeHtml(item.title)}</h3>${checkbox}</div>
       ${item.broadcastDate ? `<p class="tver-mode-card-date">${escapeTverModeHtml(formatTverModeBroadcastDate(item.broadcastDate))} 放送</p>` : ""}
       ${item.hasReport ? `<div class="tver-mode-rank-summary">${ranking || "順位データなし"}</div>
