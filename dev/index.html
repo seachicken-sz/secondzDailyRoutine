@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="./css/home.css" />
   <link rel="stylesheet" href="./css/task.css" />
   <link rel="stylesheet" href="./css/utility.css" />
+  <link rel="stylesheet" href="./tver/tverMode.css" />
   
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" href="../img/icon-180.png">
@@ -177,10 +178,12 @@
       <div id="home-top-share-btn-wrap">
         <button id="updateNoticeButton" type="button" class="button secondary update-notice-button"><i class="bi bi-bell"></i></button>
         <button id="settingButton" type="button" class="button secondary update-notice-button" aria-label="設定を開く"><i class="bi bi-gear"></i></button>
+        <button id="tverModeToggleButton" type="button" class="button secondary update-notice-button" aria-label="TVerモードに切り替え" aria-pressed="false"><i class="bi bi-tv"></i></button>
       </div>
-      <header class="home-header">
-        <!--ロゴ-->
-        <div class="home-logo-area">
+
+      <div id="normalHomeContent">
+        <header class="home-header">
+          <!--ロゴ-->
           <img id="homeLogoImage" src="../img/logo.png" alt="タムごとDaily">
         </div>
       </header>
@@ -431,6 +434,18 @@
         <button id="homeBackToTopButton" class="home-back-to-top-button hidden hidden" type="button" aria-label="上に戻る">
           <i class="bi bi-arrow-up"></i>
         </button>
+        
+    </div>
+    
+    <!--TVerモード-->
+    <div id="tverModeContent" class="tver-mode-content hidden">
+      <div class="tver-mode-header">
+        <h2>TVerチェック</h2>
+        <p id="tverModeUpdatedAt"></p>
+      </div>
+      <div id="tverModeList" class="tver-mode-list"></div>
+    </div>
+    
     </section>
     <!--STEP 1 Spotify-->
     <section id="spotifyStep" class="step-screen hidden">
@@ -1403,6 +1418,9 @@
 <script src="./js/dailyTask.js" defer></script>
 <script src="./js/post.js" defer></script>
 <script src="./js/youtube.js" defer></script>
+<!-- TVerモード -->
+<script src="./tver/tverData.js" defer></script>
+<script src="./tver/tverMode.js" defer></script>
 <!-- 起動 -->
 <script src="./js/app.js" defer></script>
 </body>
