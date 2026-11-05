@@ -49,7 +49,6 @@ function setTverModeEnabled(enabled, options = {}) {
 
 let tverModeRecords = [];
 let tverModeLoadRequest = 0;
-const tverModeExpanded = new Set();
 async function loadAndRenderTverMode() {
   const list = document.getElementById("tverModeList");
   const updated = document.getElementById("tverModeUpdatedAt");
@@ -97,16 +96,14 @@ function renderTverMode() {
   }
   list.innerHTML = tverModeRecords.map(item => {
     const key = item.seriesId || item.seriesUrl;
-    const expanded = item.hasReport && tverModeExpanded.has(key);
     const checked = item.episodeId && isTverEpisodeChecked(item.episodeId);
-    const checkbox = item.episodeId ? `<label class="tver-mode-check" title="視聴済み"><input type="checkbox" data-tver-watch="${escapeTverModeHtml(item.episodeId)}" ${checked ? "checked" : ""} aria-label="${escapeTverModeHtml(item.title)}を視聴済みにする"></label>` : "";
+    const checkbox = item.episodeId ? `<label class="tver-mode-check" title="視聴済み"><input type="checkbox" data-tver-watch="${escapeTverModeHtml(item.episodeId)}" ${checked ? "checked" : ""} aria-label="${escapeTverModeHtml(item.title)}を視聴済みにする"><span>見た</span></label>` : "";
     const ranking = item.rankings.map(rank => {
       const value = item.displayRankType === "current" ? rank.currentRank : rank.bestRank;
       return `<div class="tver-mode-compact-rank"><span>${escapeTverModeHtml(rank.label)}・${item.displayRankType === "current" ? "現在順位" : "最高順位"}</span><strong>${value === null ? (item.displayRankType === "current" ? "圏外" : "記録なし") : tverModeRankText(value)}</strong></div>`;
     }).join("");
-    const compare = item.rankings.map(rank => `<div class="tver-mode-compare-row"><span>${escapeTverModeHtml(rank.label)}：現在 ${tverModeRankText(rank.currentRank)} / 最高 ${rank.bestRank === null ? "記録なし" : tverModeRankText(rank.bestRank)}</span><span>前回同時間帯：${tverModeCompareText(rank.previousRank, "位")}</span><span>前回最高：${rank.previousBestRank === null ? "記録なし" : tverModeRankText(rank.previousBestRank)}</span>${rank.currentRank === null ? "" : tverModeChangeHtml(rank.improvement)}</div>`).join("");
     const graph = item.graphUrl ? `<a href="${escapeTverModeHtml(item.graphUrl)}" target="_blank" rel="noopener noreferrer" aria-label="グラフ" title="グラフ"><i class="bi bi-graph-up-arrow"></i></a>` : "";
-    return `<article class="tver-mode-card ${expanded ? "is-expanded" : ""} ${item.hasReport ? "" : "is-simple"}" data-tver-episode-card="${escapeTverModeHtml(item.episodeId)}">
+    return `<article class="tver-mode-card ${item.hasReport ? "" : "is-simple"}" data-tver-episode-card="${escapeTverModeHtml(item.episodeId)}">
       <div class="tver-mode-card-heading"><h3>${escapeTverModeHtml(item.title)}</h3>${checkbox}</div>
       ${item.broadcastDate ? `<p class="tver-mode-card-date">${escapeTverModeHtml(item.broadcastDate)}</p>` : ""}
       ${item.hasReport ? `<div class="tver-mode-rank-summary">${ranking || "順位データなし"}</div>
@@ -116,14 +113,6 @@ function renderTverMode() {
         <a href="${escapeTverModeHtml(item.seriesUrl)}" target="_blank" rel="noopener noreferrer" aria-label="TVerで見る" title="TVerで見る" data-tver-series-link="${escapeTverModeHtml(item.episodeId)}"><i class="bi bi-play-btn"></i></a>
         <button type="button" data-tver-share="${escapeTverModeHtml(key)}" aria-label="共有" title="共有"><i class="bi bi-share"></i></button>
       </div>
-      ${item.hasReport ? `<button type="button" class="tver-mode-detail-toggle" data-tver-expand="${escapeTverModeHtml(key)}" aria-expanded="${expanded}">${expanded ? "詳細を閉じる" : "詳細を見る"} <i class="bi bi-chevron-${expanded ? "up" : "down"}"></i></button>
-        ${expanded ? `<div class="tver-mode-details">
-          <p>${escapeTverModeHtml(item.subtitle)}</p><p class="tver-mode-record-date">取得：${escapeTverModeHtml(item.updatedAt)}</p>
-          <h4>現在・最高順位と前回比較</h4>${compare || "<p>記録なし</p>"}
-          <h4>いいね数の前回比較</h4>
-          <div class="tver-mode-compare-row"><span>同時間帯：${tverModeCompareText(item.previousLikes, "")}</span><span>前回最高：${formatTverModeNumber(item.previousBestLikes)}</span>${tverModeChangeHtml(item.likeImprovement)}</div>
-          <p class="tver-mode-note">同時間帯は公開からの経過時間（±1時間）で比較。元データに正確な取得日時がない記録は日時を表示しません。</p>
-        </div>` : ""}` : ""}
     </article>`;
   }).join("");
 }
@@ -141,14 +130,6 @@ function markTverModeChecked(episodeId, checked) {
 }
 
 function handleTverModeClick(event) {
-  const expand = event.target.closest("[data-tver-expand]");
-  if (expand) {
-    const key = expand.dataset.tverExpand;
-    if (tverModeExpanded.has(key)) tverModeExpanded.delete(key);
-    else tverModeExpanded.add(key);
-    renderTverMode();
-    return;
-  }
   const link = event.target.closest("[data-tver-series-link]");
   if (link && link.dataset.tverSeriesLink) {
     markTverModeChecked(link.dataset.tverSeriesLink, true);
