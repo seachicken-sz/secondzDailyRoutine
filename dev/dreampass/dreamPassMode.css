@@ -1,0 +1,20 @@
+/* ドリパスチェックモード：共通ロゴは通常時と同じ位置、下の余白のみ縮小 */
+#homeStep.dream-pass-mode-active > .home-header { margin-bottom: 0; }
+#dreamPassModeContent { width: 100%; flex-shrink: 0; padding: 6px 0 24px; }
+#dreamPassModeToggleButton[aria-pressed="true"] {
+  color: var(--color-brand);
+  background: var(--color-surface);
+  border-radius: 8px;
+}
+.dream-pass-mode-header { margin: 0 0 14px; text-align: center; }
+.dream-pass-mode-header h2 { margin: 0 0 0.9em; font-size: 19px; line-height: 1.4; font-weight: 800; color: var(--color-brand); }
+.dream-pass-section { margin-bottom: 20px; }
+.dream-pass-section-title { margin: 0 0 9px; font-size: 15px; font-weight: 800; color: var(--color-text); }
+.dream-pass-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; align-items: stretch; }
+.dream-pass-card { min-width: 0; height: 100%; padding: 11px; background: var(--color-surface); border-radius: var(--radius-card, 12px); box-shadow: var(--shadow-card); display: flex; flex-direction: column; gap: 9px; }
+.dream-pass-card h3 { min-width: 0; height: 4.2em; margin: 0; font-size: 13px; line-height: 1.4; overflow: hidden; overflow-wrap: anywhere; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; }
+.dream-pass-card-rank { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 12px 4px; border-radius: 8px; background: var(--color-surface-soft); text-align: center; }
+.dream-pass-card-rank span { font-size: 11px; color: var(--color-text-muted); }
+.dream-pass-card-rank strong { font-size: 22px; font-weight: 800; color: var(--color-brand); }
+.dream-pass-vote-button { display: flex; gap: 5px; justify-content: center; align-items: center; min-height: 44px; margin-top: auto; padding: 9px; border-radius: 9px; background: var(--color-brand); color: var(--color-text-inverse); font-size: 15px; font-weight: 800; text-decoration: none; text-align: center; }
+.dream-pass-vote-button i { font-size: 13px; }
