@@ -184,6 +184,7 @@ function renderTverMode() {
       ${tverModeCastHtml(item.members)}
       <div class="tver-mode-card-heading"><h3>${escapeTverModeHtml(item.title)}</h3>${checkbox}</div>
       ${item.broadcastDate ? `<p class="tver-mode-card-date">${escapeTverModeHtml(formatTverModeBroadcastDate(item.broadcastDate))} 放送</p>` : ""}
+      ${item.subtitle ? `<p class="tver-mode-episode-title" title="${escapeTverModeHtml(item.subtitle)}">${escapeTverModeHtml(item.subtitle)}</p>` : ""}
       ${item.hasReport ? `<div class="tver-mode-rank-summary">${ranking || "順位データなし"}</div>
         <div class="tver-mode-counts"><div><span>いいね</span><strong>${escapeTverModeHtml(item.likesText)}</strong></div><div><span>お気に入り</span><strong>${escapeTverModeHtml(item.favoritesText)}</strong></div></div>` : '<p class="tver-mode-no-ranking">ランキング取得なし</p>'}
       <div class="tver-mode-actions">
