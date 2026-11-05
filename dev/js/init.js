@@ -357,6 +357,7 @@ async function init() {
     // なければホーム画面を表示
     await restoreFlowStateOrHome();
     initializeTverMode();
+    initializeDreamPassMode();
     // ブラウザアクセスかつ初回のみ初回設定モーダル表示
     autoOpenFirstSetupModalIfNeeded();
     //PWA用初回モーダル表示
