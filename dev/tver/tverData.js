@@ -52,7 +52,6 @@ async function loadTverModeData() {
         graphUrl: report ? TVER_MODE_GRAPH_PATH + "?id=" + encodeURIComponent(seriesId) : "",
         hasReport: Boolean(report),
         rankings,
-        displayRankType: rankings.some(rank => rank.currentRank !== null) ? "current" : "best",
         likesText: report?.likes == null ? "—" : String(report.likes),
         favoritesText: report?.favorites == null ? "—" : String(report.favorites),
         likeImprovement: report ? getTverModeImprovement(report.likePoints, "likes", false) : null,
