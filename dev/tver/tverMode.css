@@ -173,10 +173,33 @@
 }
 
 /* TVerモードのみ：共通ロゴと見出しの間隔を詰める */
-#homeStep.tver-mode-active > .home-header { margin-bottom: 0; min-height: 0; }
-#homeStep.tver-mode-active .home-logo-area { margin-bottom: 0; }
-#homeStep.tver-mode-active .tver-mode-header { margin-top: -6px; }
+#homeStep.tver-mode-active > .home-header { margin-bottom: 0; }
+#homeStep.tver-mode-active .tver-mode-header { margin-top: 0; }
 #homeStep.tver-mode-active .tver-mode-header h2 { margin-bottom: 1.4em; }
 
 /* ジャンル名と現在／最高順位を2行で表示 */
 .tver-mode-compact-rank span { line-height: 1.4; }
+
+/* TVerカードの出演者：カード先頭左寄せ */
+.tver-mode-cast {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 5px;
+  min-height: 16px;
+  line-height: 1;
+}
+.tver-mode-member-heart {
+  font-size: 14px;
+  line-height: 1;
+}
+.tver-mode-member-heart.is-white {
+  -webkit-text-stroke: 1px #9ca3af;
+}
+.tver-mode-cast-all {
+  color: var(--color-brand);
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.4;
+}
