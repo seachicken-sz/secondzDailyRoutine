@@ -4,55 +4,61 @@ const TVER_MODE_WORKS_PATH = "../data/memberWorksJson.json";
 const TVER_MODE_GRAPH_PATH = "../graph/";
 
 async function loadTverModeData() {
-  const [reportResponse, worksResponse] = await Promise.all([
-    fetch(TVER_MODE_REPORT_PATH, { cache: "no-store" }),
-    fetch(TVER_MODE_WORKS_PATH, { cache: "no-store" })
-  ]);
-  if (!reportResponse.ok || !worksResponse.ok) {
-    throw new Error("TVerデータを取得できませんでした");
+  // memberWorksを表示の正とする。レポート取得失敗時も番組一覧を表示。
+  const worksResponse = await fetch(TVER_MODE_WORKS_PATH, { cache: "no-store" });
+  if (!worksResponse.ok) throw new Error("memberWorksの取得に失敗しました");
+  const works = await worksResponse.json();
+  if (!Array.isArray(works)) throw new Error("memberWorksの形式が正しくありません");
+
+  let reportData = { reports: {}, updatedAt: "" };
+  try {
+    const response = await fetch(TVER_MODE_REPORT_PATH, { cache: "no-store" });
+    if (!response.ok) throw new Error("ランキング取得失敗: " + response.status);
+    const data = await response.json();
+    if (data && typeof data.reports === "object" && data.reports) reportData = data;
+  } catch (error) {
+    console.warn("ランキング取得不可。簡易カードを表示します", error);
   }
 
-  const [reportData, works] = await Promise.all([
-    reportResponse.json(),
-    worksResponse.json()
-  ]);
-  if (!reportData?.reports || !Array.isArray(works)) {
-    throw new Error("TVerデータ形式が正しくありません");
-  }
-
-  // 配信中の対象はmemberWorksJsonのTVerリンクを基準にする。
-  // 一覧から除いたエピソードは表示せず、ランキングだけの古い履歴も表示しない。
-  const activeWorks = works.filter((item) =>
-    item.workType === "tv" && item.platformUrl && item.episodeId
-  );
-  const records = activeWorks.map((item) => {
-    const seriesId = getTverModeSeriesId(item.platformUrl);
-    const report = reportData.reports[seriesId];
-    if (!report || String(report.episodeId || "") !== String(item.episodeId)) return null;
-    return {
-      seriesId,
-      episodeId: String(item.episodeId),
-      title: report.programTitle || item.title || "TVer",
-      subtitle: report.subtitle || "",
-      broadcastDate: report.broadcastDate || "",
-      updatedAt: report.updatedAt || reportData.updatedAt || "",
-      seriesUrl: item.platformUrl,
-      graphUrl: TVER_MODE_GRAPH_PATH + "?id=" + encodeURIComponent(seriesId),
-      likesText: String(report.likes ?? "—"),
-      currentLikes: getTverModeLatestValue(report.likePoints, "likes"),
-      likeImprovement: getTverModeImprovement(report.likePoints, "likes", false),
-      previousLikes: getTverModeComparable(report.previousLikePoints, report.likePoints, "likes"),
-      previousBestLikes: getTverModeMaximum(report.previousLikePoints, "likes"),
-      rankings: Array.isArray(report.rankings) ? report.rankings.map((rank) => ({
+  const records = works.filter(item => item.workType === "tv" && item.platformUrl)
+    .map((item, index) => {
+      const seriesId = getTverModeSeriesId(item.platformUrl);
+      const episodeId = String(item.episodeId || "").trim();
+      const candidate = reportData.reports[seriesId];
+      // レポートが旧エピソードのものなら紐付けない。
+      const report = candidate && episodeId && candidate.episodeId === episodeId ? candidate : null;
+      const rankings = Array.isArray(report?.rankings) ? report.rankings.map(rank => ({
         label: String(rank.label || rank.type || "ランキング"),
         currentRank: getTverModeRank(rank.currentRank),
+        bestRank: getTverModeMinimum(rank.currentPoints, "rank"),
         improvement: getTverModeImprovement(rank.currentPoints, "rank", true),
         previousRank: getTverModeComparable(rank.previousPoints, rank.currentPoints, "rank"),
         previousBestRank: getTverModeMinimum(rank.previousPoints, "rank")
-      })) : []
-    };
-  }).filter(Boolean);
-  records.sort((a, b) => (b.broadcastDate || "").localeCompare(a.broadcastDate || ""));
+      })) : [];
+      return {
+        index, seriesId, episodeId,
+        title: item.title || item.programName || report?.programTitle || "TVer",
+        subtitle: report?.subtitle || "",
+        broadcastDate: report?.broadcastDate || "",
+        updatedAt: report?.updatedAt || "",
+        seriesUrl: item.platformUrl,
+        graphUrl: report ? TVER_MODE_GRAPH_PATH + "?id=" + encodeURIComponent(seriesId) : "",
+        hasReport: Boolean(report),
+        rankings,
+        displayRankType: rankings.some(rank => rank.currentRank !== null) ? "current" : "best",
+        likesText: report?.likes == null ? "—" : String(report.likes),
+        favoritesText: report?.favorites == null ? "—" : String(report.favorites),
+        likeImprovement: report ? getTverModeImprovement(report.likePoints, "likes", false) : null,
+        previousLikes: report ? getTverModeComparable(report.previousLikePoints, report.likePoints, "likes") : null,
+        previousBestLikes: report ? getTverModeMaximum(report.previousLikePoints, "likes") : null
+      };
+    });
+  records.sort((a, b) => {
+    if (a.broadcastDate && b.broadcastDate) return b.broadcastDate.localeCompare(a.broadcastDate) || a.index - b.index;
+    if (a.broadcastDate) return -1;
+    if (b.broadcastDate) return 1;
+    return a.index - b.index;
+  });
   return { updatedAt: reportData.updatedAt || "", records };
 }
 
