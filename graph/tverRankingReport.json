@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/11/06 21:07",
+  "updatedAt": "2026/11/06 22:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/10/30",
-      "updatedAt": "2026/11/06 21:07",
+      "updatedAt": "2026/11/06 22:07",
       "episodeId": "epw22ovqi4",
       "subtitle": "あなたの食生活に役立つ！ヘルシーチェックマン",
       "likes": "1.6万",
@@ -961,9 +961,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 36,
-          "elapsedHour": 167,
-          "elapsedRank": 36,
+          "currentRank": null,
+          "elapsedHour": null,
+          "elapsedRank": null,
           "currentPoints": [
             {
               "hour": 4,
@@ -2178,20 +2178,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 33,
-              "title": "ニカゲーム"
+              "rank": 47,
+              "title": "ゴッドタン"
             },
             {
-              "rank": 34,
-              "title": "大悟の芸人領収書"
+              "rank": 48,
+              "title": "A-Studio＋"
             },
             {
-              "rank": 35,
-              "title": "相席食堂"
+              "rank": 49,
+              "title": "timeleszファミリア"
             },
             {
-              "rank": 36,
-              "title": "タイムレスマン"
+              "rank": 50,
+              "title": "サクラミーツ"
             }
           ]
         },
@@ -2652,11 +2652,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "再生のウズメ"
+              "title": "もうパパ！"
             },
             {
               "rank": 48,
-              "title": "もうパパ！"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 49,
@@ -2664,7 +2664,7 @@
             },
             {
               "rank": 50,
-              "title": "世界の果てまでイッテQ！"
+              "title": "何か“オモシロいコト”ないの？"
             }
           ]
         }
@@ -2673,7 +2673,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/11/01",
-      "updatedAt": "2026/11/06 21:07",
+      "updatedAt": "2026/11/06 22:07",
       "episodeId": "ep3eckoi43",
       "subtitle": "【秋のごちそうSP】サンマ・栗…関西芸人とガチバトル",
       "likes": "1.4万",
@@ -2986,6 +2986,10 @@
         {
           "hour": 127,
           "likes": 14000
+        },
+        {
+          "hour": 128,
+          "likes": 14000
         }
       ],
       "previousLikePoints": [
@@ -2998,9 +3002,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 48,
-          "elapsedHour": 127,
-          "elapsedRank": 48,
+          "currentRank": 49,
+          "elapsedHour": 128,
+          "elapsedRank": 49,
           "currentPoints": [
             {
               "hour": 4,
@@ -3485,6 +3489,10 @@
             {
               "hour": 127,
               "rank": 48
+            },
+            {
+              "hour": 128,
+              "rank": 49
             }
           ],
           "previousPoints": [
@@ -3947,19 +3955,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 45,
-              "title": "ナゾトレMAXXX"
-            },
-            {
               "rank": 46,
-              "title": "ゴッドタン"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 47,
-              "title": "ONE N' ONLYのフルアウトTV"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
+              "title": "A-Studio＋"
+            },
+            {
+              "rank": 49,
               "title": "timeleszファミリア"
             }
           ]
@@ -4381,11 +4389,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "再生のウズメ"
+              "title": "もうパパ！"
             },
             {
               "rank": 48,
-              "title": "もうパパ！"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 49,
@@ -4393,7 +4401,7 @@
             },
             {
               "rank": 50,
-              "title": "世界の果てまでイッテQ！"
+              "title": "何か“オモシロいコト”ないの？"
             }
           ]
         }
@@ -4402,10 +4410,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/27",
-      "updatedAt": "2026/11/06 21:07",
+      "updatedAt": "2026/11/06 22:07",
       "episodeId": "epbtlmzlxr",
       "subtitle": "新企画！チョコプラ・timeleszが「できる？できない？予想クイズ」に挑戦！",
-      "likes": "8624",
+      "likes": "8627",
       "favorites": "6.6万",
       "likePoints": [
         {
@@ -6245,7 +6253,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "やすとも・友近のキメツケ！あくまで個人の感想です"
+              "title": "VS.超特急"
             },
             {
               "rank": 48,
@@ -6253,11 +6261,11 @@
             },
             {
               "rank": 49,
-              "title": "有吉くんの正直さんぽ"
+              "title": "やすとも・友近のキメツケ！あくまで個人の感想です"
             },
             {
               "rank": 50,
-              "title": "山里バカリのクイズ！ゼツメツちゃん"
+              "title": "住人十色～家の数だけある 家族のカタチ～"
             }
           ]
         },
@@ -6498,19 +6506,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ONE N' ONLYのフルアウトTV"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "timeleszファミリア"
+              "title": "A-Studio＋"
             },
             {
               "rank": 49,
-              "title": "オモウマい店"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 50,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "サクラミーツ"
             }
           ]
         }
@@ -6519,10 +6527,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/11/01",
-      "updatedAt": "2026/11/06 21:07",
+      "updatedAt": "2026/11/06 22:07",
       "episodeId": "ep75xoyx88",
       "subtitle": "トレーラーハウスづくり大詰め&働くミツバチの一生に密着",
-      "likes": "8373",
+      "likes": "8400",
       "favorites": "54.6万",
       "likePoints": [
         {
@@ -6812,6 +6820,10 @@
         {
           "hour": 122,
           "likes": 8373
+        },
+        {
+          "hour": 123,
+          "likes": 8400
         }
       ],
       "previousLikePoints": [
@@ -7461,7 +7473,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 25,
-          "elapsedHour": 122,
+          "elapsedHour": 123,
           "elapsedRank": 25,
           "currentPoints": [
             {
@@ -7938,6 +7950,10 @@
             },
             {
               "hour": 122,
+              "rank": 25
+            },
+            {
+              "hour": 123,
               "rank": 25
             }
           ],
@@ -8606,11 +8622,11 @@
             },
             {
               "rank": 23,
-              "title": "よるのブランチ"
+              "title": "ピエール瀧のあなたのことを廃してます"
             },
             {
               "rank": 24,
-              "title": "ヒロシのぼっちキャンプ Season14"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 25,
@@ -8943,19 +8959,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ONE N' ONLYのフルアウトTV"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "timeleszファミリア"
+              "title": "A-Studio＋"
             },
             {
               "rank": 49,
-              "title": "オモウマい店"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 50,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "サクラミーツ"
             }
           ]
         }
@@ -8964,7 +8980,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/06 21:07",
+      "updatedAt": "2026/11/06 22:07",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
       "likes": "3592",
@@ -9549,19 +9565,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ONE N' ONLYのフルアウトTV"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "timeleszファミリア"
+              "title": "A-Studio＋"
             },
             {
               "rank": 49,
-              "title": "オモウマい店"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 50,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "サクラミーツ"
             }
           ]
         },
@@ -9705,11 +9721,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "再生のウズメ"
+              "title": "もうパパ！"
             },
             {
               "rank": 48,
-              "title": "もうパパ！"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 49,
@@ -9717,7 +9733,7 @@
             },
             {
               "rank": 50,
-              "title": "世界の果てまでイッテQ！"
+              "title": "何か“オモシロいコト”ないの？"
             }
           ]
         }
@@ -9726,10 +9742,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/11/04",
-      "updatedAt": "2026/11/06 21:07",
+      "updatedAt": "2026/11/06 22:07",
       "episodeId": "ephjmgcrvk",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！柴咲コウ登場",
-      "likes": "3627",
+      "likes": "3647",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -9851,6 +9867,10 @@
         {
           "hour": 68,
           "likes": 3627
+        },
+        {
+          "hour": 69,
+          "likes": 3647
         }
       ],
       "previousLikePoints": [
@@ -10128,19 +10148,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ONE N' ONLYのフルアウトTV"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "timeleszファミリア"
+              "title": "A-Studio＋"
             },
             {
               "rank": 49,
-              "title": "オモウマい店"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 50,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "サクラミーツ"
             }
           ]
         },
@@ -10155,11 +10175,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "再生のウズメ"
+              "title": "もうパパ！"
             },
             {
               "rank": 48,
-              "title": "もうパパ！"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 49,
@@ -10167,7 +10187,7 @@
             },
             {
               "rank": 50,
-              "title": "世界の果てまでイッテQ！"
+              "title": "何か“オモシロいコト”ないの？"
             }
           ]
         }
@@ -10176,10 +10196,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/06 21:07",
+      "updatedAt": "2026/11/06 22:07",
       "episodeId": "epohjt1ixg",
       "subtitle": "第152回 岸井ゆきの味覚危機！？揉めまくりでチーム崩壊",
-      "likes": "2437",
+      "likes": "2496",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -10249,6 +10269,10 @@
         {
           "hour": 21,
           "likes": 2437
+        },
+        {
+          "hour": 22,
+          "likes": 2496
         }
       ],
       "previousLikePoints": [
@@ -10737,9 +10761,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 19,
-          "elapsedHour": 20,
-          "elapsedRank": 19,
+          "currentRank": 18,
+          "elapsedHour": 21,
+          "elapsedRank": 18,
           "currentPoints": [
             {
               "hour": 11,
@@ -10776,6 +10800,10 @@
             {
               "hour": 20,
               "rank": 19
+            },
+            {
+              "hour": 21,
+              "rank": 18
             }
           ],
           "previousPoints": [
@@ -10910,19 +10938,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 15,
+              "title": "EBiDAN熱中！ゲンジブハウス"
+            },
+            {
               "rank": 16,
               "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 17,
-              "title": "EBiDAN熱中！ゲンジブハウス"
+              "title": "有吉クイズ"
             },
             {
               "rank": 18,
-              "title": "上田と女が吠える夜"
-            },
-            {
-              "rank": 19,
               "title": "何か“オモシロいコト”ないの？"
             }
           ]
@@ -10930,19 +10958,24 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 50,
+          "elapsedHour": 21,
+          "elapsedRank": 50,
+          "currentPoints": [
+            {
+              "hour": 21,
+              "rank": 50
+            }
+          ],
           "previousPoints": [],
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "再生のウズメ"
+              "title": "もうパパ！"
             },
             {
               "rank": 48,
-              "title": "もうパパ！"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 49,
@@ -10950,7 +10983,7 @@
             },
             {
               "rank": 50,
-              "title": "世界の果てまでイッテQ！"
+              "title": "何か“オモシロいコト”ないの？"
             }
           ]
         }
@@ -10959,10 +10992,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/31",
-      "updatedAt": "2026/11/06 21:07",
+      "updatedAt": "2026/11/06 22:07",
       "episodeId": "ep3jm0ld38",
       "subtitle": "マッサマン＆マツダマン（秘）あ哺乳類SP前編",
-      "likes": "5233",
+      "likes": "5242",
       "favorites": "82.4万",
       "likePoints": [
         {
@@ -11340,6 +11373,10 @@
         {
           "hour": 146,
           "likes": 5233
+        },
+        {
+          "hour": 147,
+          "likes": 5242
         }
       ],
       "previousLikePoints": [],
@@ -12389,19 +12426,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ONE N' ONLYのフルアウトTV"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "timeleszファミリア"
+              "title": "A-Studio＋"
             },
             {
               "rank": 49,
-              "title": "オモウマい店"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 50,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "サクラミーツ"
             }
           ]
         },
@@ -12958,11 +12995,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "再生のウズメ"
+              "title": "もうパパ！"
             },
             {
               "rank": 48,
-              "title": "もうパパ！"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 49,
@@ -12970,7 +13007,7 @@
             },
             {
               "rank": 50,
-              "title": "世界の果てまでイッテQ！"
+              "title": "何か“オモシロいコト”ないの？"
             }
           ]
         }
@@ -12979,10 +13016,10 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/11/03",
-      "updatedAt": "2026/11/06 21:07",
+      "updatedAt": "2026/11/06 22:07",
       "episodeId": "epm8lq2z41",
       "subtitle": "激辛PK",
-      "likes": "9268",
+      "likes": "9280",
       "favorites": "3.8万",
       "likePoints": [
         {
@@ -13204,6 +13241,10 @@
         {
           "hour": 93,
           "likes": 9268
+        },
+        {
+          "hour": 94,
+          "likes": 9280
         }
       ],
       "previousLikePoints": [],
@@ -13211,9 +13252,9 @@
         {
           "type": "talk",
           "label": "トーク",
-          "currentRank": 40,
-          "elapsedHour": 92,
-          "elapsedRank": 40,
+          "currentRank": 39,
+          "elapsedHour": 93,
+          "elapsedRank": 39,
           "currentPoints": [
             {
               "hour": 7,
@@ -13538,6 +13579,10 @@
             {
               "hour": 92,
               "rank": 40
+            },
+            {
+              "hour": 93,
+              "rank": 39
             }
           ],
           "previousPoints": [
@@ -13924,19 +13969,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 36,
+              "title": "いろはに千鳥"
+            },
+            {
               "rank": 37,
-              "title": "和田明日香とゆる宅飲み"
-            },
-            {
-              "rank": 38,
-              "title": "全力！脱力タイムズ"
-            },
-            {
-              "rank": 39,
               "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
-              "rank": 40,
+              "rank": 38,
+              "title": "和田明日香とゆる宅飲み"
+            },
+            {
+              "rank": 39,
               "title": "スポンジ・シノ"
             }
           ]
@@ -14278,19 +14323,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ONE N' ONLYのフルアウトTV"
+              "title": "ゴッドタン"
             },
             {
               "rank": 48,
-              "title": "timeleszファミリア"
+              "title": "A-Studio＋"
             },
             {
               "rank": 49,
-              "title": "オモウマい店"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 50,
-              "title": "Aぇ! groupのQ＆Aぇ!"
+              "title": "サクラミーツ"
             }
           ]
         }
