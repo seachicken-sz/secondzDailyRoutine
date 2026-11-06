@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026/11/07 04:07",
+  "updatedAt": "2026/11/07 05:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/07 04:07",
+      "updatedAt": "2026/11/07 05:07",
       "episodeId": "epcqbq5j8j",
       "subtitle": "食通厳選グルメ続々！ベストバイプライスマン",
-      "likes": "2881",
+      "likes": "2927",
       "favorites": "79.0万",
       "likePoints": [
         {
@@ -33,6 +33,10 @@
         {
           "hour": 6,
           "likes": 2881
+        },
+        {
+          "hour": 7,
+          "likes": 2927
         }
       ],
       "previousLikePoints": [
@@ -505,10 +509,15 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 50,
+          "elapsedHour": 7,
+          "elapsedRank": 50,
+          "currentPoints": [
+            {
+              "hour": 7,
+              "rank": 50
+            }
+          ],
           "previousPoints": [
             {
               "hour": 4,
@@ -1154,11 +1163,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ゴッドタン"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "ゴッドタン"
             },
             {
               "rank": 49,
@@ -1166,7 +1175,7 @@
             },
             {
               "rank": 50,
-              "title": "Golden SixTONES"
+              "title": "タイムレスマン"
             }
           ]
         },
@@ -1403,7 +1412,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/11/01",
-      "updatedAt": "2026/11/07 04:07",
+      "updatedAt": "2026/11/07 05:07",
       "episodeId": "ep3eckoi43",
       "subtitle": "【秋のごちそうSP】サンマ・栗…関西芸人とガチバトル",
       "likes": "1.4万",
@@ -1744,6 +1753,10 @@
         {
           "hour": 134,
           "likes": 14000
+        },
+        {
+          "hour": 135,
+          "likes": 14000
         }
       ],
       "previousLikePoints": [
@@ -1757,7 +1770,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 49,
-          "elapsedHour": 134,
+          "elapsedHour": 135,
           "elapsedRank": 49,
           "currentPoints": [
             {
@@ -2267,6 +2280,10 @@
             {
               "hour": 134,
               "rank": 49
+            },
+            {
+              "hour": 135,
+              "rank": 49
             }
           ],
           "previousPoints": [
@@ -2734,11 +2751,11 @@
             },
             {
               "rank": 47,
-              "title": "ゴッドタン"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "ゴッドタン"
             },
             {
               "rank": 49,
@@ -3184,10 +3201,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/27",
-      "updatedAt": "2026/11/07 04:07",
+      "updatedAt": "2026/11/07 05:07",
       "episodeId": "epbtlmzlxr",
       "subtitle": "新企画！チョコプラ・timeleszが「できる？できない？予想クイズ」に挑戦！",
-      "likes": "8649",
+      "likes": "8644",
       "favorites": "6.6万",
       "likePoints": [
         {
@@ -5280,11 +5297,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ゴッドタン"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "ゴッドタン"
             },
             {
               "rank": 49,
@@ -5292,7 +5309,7 @@
             },
             {
               "rank": 50,
-              "title": "Golden SixTONES"
+              "title": "タイムレスマン"
             }
           ]
         }
@@ -5301,10 +5318,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/11/01",
-      "updatedAt": "2026/11/07 04:07",
+      "updatedAt": "2026/11/07 05:07",
       "episodeId": "ep75xoyx88",
       "subtitle": "トレーラーハウスづくり大詰め&働くミツバチの一生に密着",
-      "likes": "8487",
+      "likes": "8486",
       "favorites": "54.6万",
       "likePoints": [
         {
@@ -5622,6 +5639,10 @@
         {
           "hour": 129,
           "likes": 8487
+        },
+        {
+          "hour": 130,
+          "likes": 8486
         }
       ],
       "previousLikePoints": [
@@ -6271,7 +6292,7 @@
           "type": "vtr",
           "label": "VTR/ロケ",
           "currentRank": 26,
-          "elapsedHour": 129,
+          "elapsedHour": 130,
           "elapsedRank": 26,
           "currentPoints": [
             {
@@ -6772,6 +6793,10 @@
             },
             {
               "hour": 129,
+              "rank": 26
+            },
+            {
+              "hour": 130,
               "rank": 26
             }
           ],
@@ -7436,15 +7461,15 @@
           "nearbyRanking": [
             {
               "rank": 23,
-              "title": "沸騰ワード10"
+              "title": "絶景＆世界遺産 火曜の良純孝太郎"
             },
             {
               "rank": 24,
-              "title": "クレイジージャーニー"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 25,
-              "title": "探偵！ナイトスクープ"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 26,
@@ -7777,11 +7802,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ゴッドタン"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "ゴッドタン"
             },
             {
               "rank": 49,
@@ -7789,7 +7814,7 @@
             },
             {
               "rank": 50,
-              "title": "Golden SixTONES"
+              "title": "タイムレスマン"
             }
           ]
         }
@@ -7798,10 +7823,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/07 04:07",
+      "updatedAt": "2026/11/07 05:07",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
-      "likes": "3609",
+      "likes": "3610",
       "favorites": "81.5万",
       "likePoints": [
         {
@@ -8383,11 +8408,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ゴッドタン"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "ゴッドタン"
             },
             {
               "rank": 49,
@@ -8395,7 +8420,7 @@
             },
             {
               "rank": 50,
-              "title": "Golden SixTONES"
+              "title": "タイムレスマン"
             }
           ]
         },
@@ -8560,10 +8585,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/11/04",
-      "updatedAt": "2026/11/07 04:07",
+      "updatedAt": "2026/11/07 05:07",
       "episodeId": "ephjmgcrvk",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！柴咲コウ登場",
-      "likes": "3733",
+      "likes": "3735",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -8709,6 +8734,10 @@
         {
           "hour": 76,
           "likes": 3733
+        },
+        {
+          "hour": 77,
+          "likes": 3735
         }
       ],
       "previousLikePoints": [
@@ -8986,11 +9015,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ゴッドタン"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "ゴッドタン"
             },
             {
               "rank": 49,
@@ -8998,7 +9027,7 @@
             },
             {
               "rank": 50,
-              "title": "Golden SixTONES"
+              "title": "タイムレスマン"
             }
           ]
         },
@@ -9034,10 +9063,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/07 04:07",
+      "updatedAt": "2026/11/07 05:07",
       "episodeId": "epohjt1ixg",
       "subtitle": "第152回 岸井ゆきの味覚危機！？揉めまくりでチーム崩壊",
-      "likes": "2919",
+      "likes": "2916",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -9135,6 +9164,10 @@
         {
           "hour": 28,
           "likes": 2919
+        },
+        {
+          "hour": 29,
+          "likes": 2916
         }
       ],
       "previousLikePoints": [
@@ -9624,7 +9657,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 14,
-          "elapsedHour": 27,
+          "elapsedHour": 28,
           "elapsedRank": 14,
           "currentPoints": [
             {
@@ -9685,6 +9718,10 @@
             },
             {
               "hour": 27,
+              "rank": 14
+            },
+            {
+              "hour": 28,
               "rank": 14
             }
           ],
@@ -9841,7 +9878,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 47,
-          "elapsedHour": 27,
+          "elapsedHour": 28,
           "elapsedRank": 47,
           "currentPoints": [
             {
@@ -9866,6 +9903,10 @@
             },
             {
               "hour": 27,
+              "rank": 47
+            },
+            {
+              "hour": 28,
               "rank": 47
             }
           ],
@@ -9894,10 +9935,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/31",
-      "updatedAt": "2026/11/07 04:07",
+      "updatedAt": "2026/11/07 05:07",
       "episodeId": "ep3jm0ld38",
       "subtitle": "マッサマン＆マツダマン（秘）あ哺乳類SP前編",
-      "likes": "5299",
+      "likes": "5303",
       "favorites": "82.4万",
       "likePoints": [
         {
@@ -10303,6 +10344,10 @@
         {
           "hour": 153,
           "likes": 5299
+        },
+        {
+          "hour": 154,
+          "likes": 5303
         }
       ],
       "previousLikePoints": [],
@@ -11352,11 +11397,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ゴッドタン"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "ゴッドタン"
             },
             {
               "rank": 49,
@@ -11364,7 +11409,7 @@
             },
             {
               "rank": 50,
-              "title": "Golden SixTONES"
+              "title": "タイムレスマン"
             }
           ]
         },
@@ -11942,10 +11987,10 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/11/03",
-      "updatedAt": "2026/11/07 04:07",
+      "updatedAt": "2026/11/07 05:07",
       "episodeId": "epm8lq2z41",
       "subtitle": "激辛PK",
-      "likes": "9363",
+      "likes": "9365",
       "favorites": "3.8万",
       "likePoints": [
         {
@@ -12195,6 +12240,10 @@
         {
           "hour": 100,
           "likes": 9363
+        },
+        {
+          "hour": 101,
+          "likes": 9365
         }
       ],
       "previousLikePoints": [],
@@ -12203,7 +12252,7 @@
           "type": "talk",
           "label": "トーク",
           "currentRank": 45,
-          "elapsedHour": 99,
+          "elapsedHour": 100,
           "elapsedRank": 45,
           "currentPoints": [
             {
@@ -12552,6 +12601,10 @@
             },
             {
               "hour": 99,
+              "rank": 45
+            },
+            {
+              "hour": 100,
               "rank": 45
             }
           ],
@@ -13293,11 +13346,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ゴッドタン"
+              "title": "深夜のダイアン"
             },
             {
               "rank": 48,
-              "title": "深夜のダイアン"
+              "title": "ゴッドタン"
             },
             {
               "rank": 49,
@@ -13305,7 +13358,7 @@
             },
             {
               "rank": 50,
-              "title": "Golden SixTONES"
+              "title": "タイムレスマン"
             }
           ]
         }
