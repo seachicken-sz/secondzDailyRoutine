@@ -452,6 +452,15 @@
           <p id="tverModeUpdatedAt"></p>
         </div>
       </div>
+      <div class="check-mode-controls">
+        <div id="tverMemberFilter" class="member-filter-grid check-mode-member-filter" aria-label="TVer出演者で絞り込み"></div>
+        <label class="check-mode-sort-label">並び順
+          <select id="tverSortOrder" class="check-mode-sort-select" aria-label="TVerの並び順">
+            <option value="newest">新しい順</option>
+            <option value="oldest">古い順</option>
+          </select>
+        </label>
+      </div>
       <div id="tverModeList" class="tver-mode-list"></div>
     </div>
 
@@ -464,6 +473,15 @@
           <span>起動時にこの画面を表示する</span>
         </label>
       </header>
+      <div class="check-mode-controls">
+        <div id="dreamPassMemberFilter" class="member-filter-grid check-mode-member-filter" aria-label="ドリパス出演者で絞り込み"></div>
+        <label class="check-mode-sort-label">投票中の並び順
+          <select id="dreamPassSortOrder" class="check-mode-sort-select" aria-label="ドリパス投票中の並び順">
+            <option value="asc">順位が上から</option>
+            <option value="desc">順位が下から</option>
+          </select>
+        </label>
+      </div>
       <div id="dreamPassModeList"></div>
     </div>
     
