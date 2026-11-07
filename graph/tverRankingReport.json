@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026/11/08 06:07",
+  "updatedAt": "2026/11/08 07:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/08 06:07",
+      "updatedAt": "2026/11/08 07:07",
       "episodeId": "epcqbq5j8j",
       "subtitle": "食通厳選グルメ続々！ベストバイプライスマン",
-      "likes": "9646",
+      "likes": "9638",
       "favorites": "79.0万",
       "likePoints": [
         {
@@ -133,6 +133,10 @@
         {
           "hour": 32,
           "likes": 9646
+        },
+        {
+          "hour": 33,
+          "likes": 9638
         }
       ],
       "previousLikePoints": [
@@ -606,7 +610,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 5,
-          "elapsedHour": 32,
+          "elapsedHour": 33,
           "elapsedRank": 5,
           "currentPoints": [
             {
@@ -711,6 +715,10 @@
             },
             {
               "hour": 32,
+              "rank": 5
+            },
+            {
+              "hour": 33,
               "rank": 5
             }
           ],
@@ -1379,7 +1387,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 21,
-          "elapsedHour": 32,
+          "elapsedHour": 33,
           "elapsedRank": 21,
           "currentPoints": [
             {
@@ -1456,6 +1464,10 @@
             },
             {
               "hour": 32,
+              "rank": 21
+            },
+            {
+              "hour": 33,
               "rank": 21
             }
           ],
@@ -1685,7 +1697,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/11/01",
-      "updatedAt": "2026/11/08 06:07",
+      "updatedAt": "2026/11/08 07:07",
       "episodeId": "ep3eckoi43",
       "subtitle": "【秋のごちそうSP】サンマ・栗…関西芸人とガチバトル",
       "likes": "1.4万",
@@ -2125,6 +2137,10 @@
         },
         {
           "hour": 160,
+          "likes": 14000
+        },
+        {
+          "hour": 161,
           "likes": 14000
         }
       ],
@@ -3120,19 +3136,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EBiDAN熱中！ゲンジブハウス"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 48,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 49,
-              "title": "トークィーンズ"
+              "title": "嗚呼!!みんなの動物園"
             },
             {
               "rank": 50,
-              "title": "秘密のケンミンSHOW極"
+              "title": "EBiDAN熱中！ゲンジブハウス"
             }
           ]
         },
@@ -3553,7 +3569,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千原ジュニアの座王"
+              "title": "嘘をついた私たち"
             },
             {
               "rank": 48,
@@ -3561,7 +3577,7 @@
             },
             {
               "rank": 49,
-              "title": "嘘をついた私たち"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 50,
@@ -3574,10 +3590,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/27",
-      "updatedAt": "2026/11/08 06:07",
+      "updatedAt": "2026/11/08 07:07",
       "episodeId": "epbtlmzlxr",
       "subtitle": "新企画！チョコプラ・timeleszが「できる？できない？予想クイズ」に挑戦！",
-      "likes": "8773",
+      "likes": "8772",
       "favorites": "6.6万",
       "likePoints": [
         {
@@ -5417,19 +5433,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ヒロシのぼっちキャンプ Season14"
-            },
-            {
-              "rank": 48,
-              "title": "見取り図の間取り図ミステリー"
-            },
-            {
-              "rank": 49,
               "title": "土曜のあさはほめるちゃん"
             },
             {
+              "rank": 48,
+              "title": "ヒロシのぼっちキャンプ Season14"
+            },
+            {
+              "rank": 49,
+              "title": "見取り図の間取り図ミステリー"
+            },
+            {
               "rank": 50,
-              "title": "フットマップ"
+              "title": "あっちこっちAぇ!"
             }
           ]
         },
@@ -5670,19 +5686,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EBiDAN熱中！ゲンジブハウス"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 48,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 49,
-              "title": "トークィーンズ"
+              "title": "嗚呼!!みんなの動物園"
             },
             {
               "rank": 50,
-              "title": "秘密のケンミンSHOW極"
+              "title": "EBiDAN熱中！ゲンジブハウス"
             }
           ]
         }
@@ -5691,7 +5707,7 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/11/01",
-      "updatedAt": "2026/11/08 06:07",
+      "updatedAt": "2026/11/08 07:07",
       "episodeId": "ep75xoyx88",
       "subtitle": "トレーラーハウスづくり大詰め&働くミツバチの一生に密着",
       "likes": "9022",
@@ -6111,6 +6127,10 @@
         },
         {
           "hour": 155,
+          "likes": 9022
+        },
+        {
+          "hour": 156,
           "likes": 9022
         }
       ],
@@ -6760,9 +6780,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 26,
-          "elapsedHour": 155,
-          "elapsedRank": 26,
+          "currentRank": 27,
+          "elapsedHour": 156,
+          "elapsedRank": 27,
           "currentPoints": [
             {
               "hour": 2,
@@ -7367,6 +7387,10 @@
             {
               "hour": 155,
               "rank": 26
+            },
+            {
+              "hour": 156,
+              "rank": 27
             }
           ],
           "previousPoints": [
@@ -8029,19 +8053,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 23,
-              "title": "飯尾くっきー！のハンコください！あなたの名字で旅してます"
-            },
-            {
               "rank": 24,
-              "title": "ピエール瀧のあなたのことを廃してます"
+              "title": "かまいたちの知らんけど"
             },
             {
               "rank": 25,
-              "title": "そこまで言って委員会NP"
+              "title": "ピエール瀧のあなたのことを廃してます"
             },
             {
               "rank": 26,
+              "title": "そこまで言って委員会NP"
+            },
+            {
+              "rank": 27,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -8371,19 +8395,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EBiDAN熱中！ゲンジブハウス"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 48,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 49,
-              "title": "トークィーンズ"
+              "title": "嗚呼!!みんなの動物園"
             },
             {
               "rank": 50,
-              "title": "秘密のケンミンSHOW極"
+              "title": "EBiDAN熱中！ゲンジブハウス"
             }
           ]
         }
@@ -8392,10 +8416,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/08 06:07",
+      "updatedAt": "2026/11/08 07:07",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
-      "likes": "3690",
+      "likes": "3688",
       "favorites": "81.6万",
       "likePoints": [
         {
@@ -8977,19 +9001,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EBiDAN熱中！ゲンジブハウス"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 48,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 49,
-              "title": "トークィーンズ"
+              "title": "嗚呼!!みんなの動物園"
             },
             {
               "rank": 50,
-              "title": "秘密のケンミンSHOW極"
+              "title": "EBiDAN熱中！ゲンジブハウス"
             }
           ]
         },
@@ -9133,7 +9157,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千原ジュニアの座王"
+              "title": "嘘をついた私たち"
             },
             {
               "rank": 48,
@@ -9141,7 +9165,7 @@
             },
             {
               "rank": 49,
-              "title": "嘘をついた私たち"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 50,
@@ -9154,10 +9178,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/11/04",
-      "updatedAt": "2026/11/08 06:07",
+      "updatedAt": "2026/11/08 07:07",
       "episodeId": "ephjmgcrvk",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！柴咲コウ登場",
-      "likes": "4023",
+      "likes": "4025",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -9395,6 +9419,10 @@
         {
           "hour": 101,
           "likes": 4023
+        },
+        {
+          "hour": 102,
+          "likes": 4025
         }
       ],
       "previousLikePoints": [
@@ -9672,19 +9700,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EBiDAN熱中！ゲンジブハウス"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 48,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 49,
-              "title": "トークィーンズ"
+              "title": "嗚呼!!みんなの動物園"
             },
             {
               "rank": 50,
-              "title": "秘密のケンミンSHOW極"
+              "title": "EBiDAN熱中！ゲンジブハウス"
             }
           ]
         },
@@ -9699,7 +9727,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千原ジュニアの座王"
+              "title": "嘘をついた私たち"
             },
             {
               "rank": 48,
@@ -9707,7 +9735,7 @@
             },
             {
               "rank": 49,
-              "title": "嘘をついた私たち"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 50,
@@ -9720,10 +9748,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/08 06:07",
+      "updatedAt": "2026/11/08 07:07",
       "episodeId": "epohjt1ixg",
       "subtitle": "第152回 岸井ゆきの味覚危機！？揉めまくりでチーム崩壊",
-      "likes": "3653",
+      "likes": "3657",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -9921,6 +9949,10 @@
         {
           "hour": 54,
           "likes": 3653
+        },
+        {
+          "hour": 55,
+          "likes": 3657
         }
       ],
       "previousLikePoints": [
@@ -10410,7 +10442,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 39,
-          "elapsedHour": 53,
+          "elapsedHour": 54,
           "elapsedRank": 39,
           "currentPoints": [
             {
@@ -10575,6 +10607,10 @@
             },
             {
               "hour": 53,
+              "rank": 39
+            },
+            {
+              "hour": 54,
               "rank": 39
             }
           ],
@@ -10775,7 +10811,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千原ジュニアの座王"
+              "title": "嘘をついた私たち"
             },
             {
               "rank": 48,
@@ -10783,7 +10819,7 @@
             },
             {
               "rank": 49,
-              "title": "嘘をついた私たち"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 50,
@@ -10796,10 +10832,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/31",
-      "updatedAt": "2026/11/08 06:07",
+      "updatedAt": "2026/11/08 07:07",
       "episodeId": "ep3jm0ld38",
       "subtitle": "マッサマン＆マツダマン（秘）あ哺乳類SP前編",
-      "likes": "5467",
+      "likes": "5468",
       "favorites": "82.5万",
       "likePoints": [
         {
@@ -11653,19 +11689,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EBiDAN熱中！ゲンジブハウス"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 48,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 49,
-              "title": "トークィーンズ"
+              "title": "嗚呼!!みんなの動物園"
             },
             {
               "rank": 50,
-              "title": "秘密のケンミンSHOW極"
+              "title": "EBiDAN熱中！ゲンジブハウス"
             }
           ]
         },
@@ -11869,7 +11905,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "千原ジュニアの座王"
+              "title": "嘘をついた私たち"
             },
             {
               "rank": 48,
@@ -11877,7 +11913,7 @@
             },
             {
               "rank": 49,
-              "title": "嘘をついた私たち"
+              "title": "千原ジュニアの座王"
             },
             {
               "rank": 50,
@@ -11890,10 +11926,10 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/11/03",
-      "updatedAt": "2026/11/08 06:07",
+      "updatedAt": "2026/11/08 07:07",
       "episodeId": "epm8lq2z41",
       "subtitle": "激辛PK",
-      "likes": "9695",
+      "likes": "9691",
       "favorites": "3.8万",
       "likePoints": [
         {
@@ -12243,6 +12279,10 @@
         {
           "hour": 126,
           "likes": 9695
+        },
+        {
+          "hour": 127,
+          "likes": 9691
         }
       ],
       "previousLikePoints": [],
@@ -13028,11 +13068,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "THE突破ファイル"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 48,
-              "title": "いろはに千鳥"
+              "title": "THE突破ファイル"
             },
             {
               "rank": 49,
@@ -13040,7 +13080,7 @@
             },
             {
               "rank": 50,
-              "title": "FRUITS ZIPPERのNEW KAWAIIってしてよ？"
+              "title": "いろはに千鳥"
             }
           ]
         },
@@ -13381,19 +13421,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "EBiDAN熱中！ゲンジブハウス"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 48,
-              "title": "嗚呼!!みんなの動物園"
+              "title": "ホンマでっか！？TV"
             },
             {
               "rank": 49,
-              "title": "トークィーンズ"
+              "title": "嗚呼!!みんなの動物園"
             },
             {
               "rank": 50,
-              "title": "秘密のケンミンSHOW極"
+              "title": "EBiDAN熱中！ゲンジブハウス"
             }
           ]
         }
