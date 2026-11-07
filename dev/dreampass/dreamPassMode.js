@@ -2,11 +2,22 @@
 const DREAM_PASS_WORKS_URL = "../data/memberWorksJson.json";
 let dreamPassRecords = [];
 let dreamPassLoadVersion = 0;
+let dreamPassSelectedMembers = new Set(["all"]);
+let dreamPassSortOrder = "asc";
 
 function initializeDreamPassMode() {
   const toggle = document.getElementById("dreamPassModeToggleButton");
   if (!toggle) return;
   toggle.addEventListener("click", () => setDreamPassModeEnabled(toggle.getAttribute("aria-pressed") !== "true"));
+  dreamPassSelectedMembers = createCheckModeMemberFilter("dreamPassMemberFilter", renderDreamPassMode);
+  const sort = document.getElementById("dreamPassSortOrder");
+  if (sort) {
+    sort.value = dreamPassSortOrder;
+    sort.addEventListener("change", () => {
+      dreamPassSortOrder = sort.value === "desc" ? "desc" : "asc";
+      renderDreamPassMode();
+    });
+  }
   const defaultCheckbox = document.getElementById("dreamPassModeDefaultCheckbox");
   if (defaultCheckbox) {
     defaultCheckbox.addEventListener("change", () =>
@@ -99,13 +110,21 @@ function dreamPassCardHtml(item, isVoting) {
 function renderDreamPassMode() {
   const list = document.getElementById("dreamPassModeList");
   if (!list) return;
-  const voting = dreamPassRecords.filter(item => item.workType === "dreampass")
-    .sort((a, b) => (dreamPassRank(a.rank) ?? Infinity) - (dreamPassRank(b.rank) ?? Infinity));
-  const candidates = dreamPassRecords.filter(item => item.workType === "dreampass_kouho");
+  const visibleRecords = dreamPassRecords.filter(item =>
+    isCheckModeMemberVisible(item, dreamPassSelectedMembers));
+  const voting = visibleRecords.filter(item => item.workType === "dreampass")
+    .sort((a, b) => {
+      const rankA = dreamPassRank(a.rank), rankB = dreamPassRank(b.rank);
+      // 未取得の順位は昇順・降順のどちらでも最後。
+      if (rankA === null) return rankB === null ? 0 : 1;
+      if (rankB === null) return -1;
+      return dreamPassSortOrder === "desc" ? rankB - rankA : rankA - rankB;
+    });
+  const candidates = visibleRecords.filter(item => item.workType === "dreampass_kouho");
   const section = (heading, description, items, isVoting) => items.length
     ? `<section class="dream-pass-section"><h3 class="dream-pass-section-title">${heading}</h3><p class="dream-pass-section-description">${description}</p><div class="dream-pass-grid">${items.map(item => dreamPassCardHtml(item, isVoting)).join("")}</div></section>`
     : "";
   list.innerHTML = section("投票中", "再上映のチャンス！見たい作品に投票しよ！", voting, true) +
     section("上映候補入り", "上映候補入りした作品はこちら！見たい作品にはファン登録しておこ！", candidates, false);
-  if (!list.innerHTML) list.textContent = "ドリパスの登録作品はありません。";
+  if (!list.innerHTML) list.textContent = "選択したメンバーの作品はありません。";
 }
