@@ -35,6 +35,50 @@ function setHomeDefaultMode(nextMode, changedMode) {
   syncHomeDefaultModeCheckboxes();
 }
 
+// 既存の「メンバーごと」と同じ、複数選択できる出演者フィルター。
+const CHECK_MODE_MEMBERS = [
+  ["all", "全員"], ["shori", "佐藤"], ["fuma", "菊池"], ["so", "松島"],
+  ["teranishi", "寺西"], ["hara", "原"], ["hashimoto", "橋本"], ["shinozuka", "篠塚"]
+];
+function createCheckModeMemberFilter(elementId, onFilterChange) {
+  const container = document.getElementById(elementId);
+  const selected = new Set(["all"]);
+  if (!container) return selected;
+  container.innerHTML = CHECK_MODE_MEMBERS.map(([id, label]) =>
+    '<button type="button" class="member-filter-chip' + (id === "all" ? " active" : "") +
+    '" data-check-mode-member="' + id + '" aria-pressed="' + (id === "all" ? "true" : "false") +
+    '">' + label + '</button>'
+  ).join("");
+  container.addEventListener("click", event => {
+    const button = event.target.closest("[data-check-mode-member]");
+    if (!button || !container.contains(button)) return;
+    const member = button.dataset.checkModeMember;
+    if (member === "all") {
+      selected.clear();
+      selected.add("all");
+    } else {
+      selected.delete("all");
+      if (selected.has(member)) selected.delete(member);
+      else selected.add(member);
+      if (!selected.size) selected.add("all");
+    }
+    container.querySelectorAll("[data-check-mode-member]").forEach(item => {
+      const active = selected.has(item.dataset.checkModeMember);
+      item.classList.toggle("active", active);
+      item.setAttribute("aria-pressed", String(active));
+    });
+    onFilterChange();
+  });
+  return selected;
+}
+function isCheckModeMemberVisible(item, selected) {
+  return selected.has("all") || (Array.isArray(item.members) &&
+    (item.members.includes("all") || item.members.some(member => selected.has(member))));
+}
+
+let tverSelectedMembers = new Set(["all"]);
+let tverSortOrder = "newest";
+
 function initializeTverMode() {
   const toggle = document.getElementById("tverModeToggleButton");
   const list = document.getElementById("tverModeList");
@@ -43,6 +87,15 @@ function initializeTverMode() {
   toggle.addEventListener("click", () => {
     setTverModeEnabled(toggle.getAttribute("aria-pressed") !== "true");
   });
+  tverSelectedMembers = createCheckModeMemberFilter("tverMemberFilter", renderTverMode);
+  const sort = document.getElementById("tverSortOrder");
+  if (sort) {
+    sort.value = tverSortOrder;
+    sort.addEventListener("change", () => {
+      tverSortOrder = sort.value === "oldest" ? "oldest" : "newest";
+      renderTverMode();
+    });
+  }
   list.addEventListener("click", handleTverModeClick);
   list.addEventListener("change", (event) => {
     const input = event.target.closest("input[data-tver-watch]");
@@ -169,7 +222,14 @@ function renderTverMode() {
     list.textContent = "memberWorksに登録されたTVer番組はありません。";
     return;
   }
-  list.innerHTML = tverModeRecords.map(item => {
+  const visibleRecords = tverModeRecords.filter(item => isCheckModeMemberVisible(item, tverSelectedMembers))
+    .sort((a, b) => (tverSortOrder === "oldest" ? a.sortTimestamp - b.sortTimestamp :
+      b.sortTimestamp - a.sortTimestamp) || a.index - b.index);
+  if (!visibleRecords.length) {
+    list.textContent = "選択したメンバーの番組はありません。";
+    return;
+  }
+  list.innerHTML = visibleRecords.map(item => {
     const key = item.seriesId || item.seriesUrl;
     // episodeIdがない番組はシリーズ単位のチェックとして保持。
     const watchKey = item.episodeId || (item.seriesId ? "series:" + item.seriesId : "url:" + item.seriesUrl);
