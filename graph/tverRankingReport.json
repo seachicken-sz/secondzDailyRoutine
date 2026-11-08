@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/11/08 22:07",
+  "updatedAt": "2026/11/08 23:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/08 22:07",
+      "updatedAt": "2026/11/08 23:07",
       "episodeId": "epcqbq5j8j",
       "subtitle": "食通厳選グルメ続々！ベストバイプライスマン",
       "likes": "1.1万",
@@ -196,6 +196,10 @@
         },
         {
           "hour": 48,
+          "likes": 11000
+        },
+        {
+          "hour": 49,
           "likes": 11000
         }
       ],
@@ -670,7 +674,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 14,
-          "elapsedHour": 48,
+          "elapsedHour": 49,
           "elapsedRank": 14,
           "currentPoints": [
             {
@@ -839,6 +843,10 @@
             },
             {
               "hour": 48,
+              "rank": 14
+            },
+            {
+              "hour": 49,
               "rank": 14
             }
           ],
@@ -1487,15 +1495,15 @@
           "nearbyRanking": [
             {
               "rank": 11,
-              "title": "一茂×かまいたち ゲンバ"
-            },
-            {
-              "rank": 12,
               "title": "ゴッドタン"
             },
             {
-              "rank": 13,
+              "rank": 12,
               "title": "さんまのお笑い向上委員会"
+            },
+            {
+              "rank": 13,
+              "title": "ニノなのに"
             },
             {
               "rank": 14,
@@ -1507,7 +1515,7 @@
           "type": "all",
           "label": "総合",
           "currentRank": 44,
-          "elapsedHour": 48,
+          "elapsedHour": 49,
           "elapsedRank": 44,
           "currentPoints": [
             {
@@ -1648,6 +1656,10 @@
             },
             {
               "hour": 48,
+              "rank": 44
+            },
+            {
+              "hour": 49,
               "rank": 44
             }
           ],
@@ -1860,11 +1872,11 @@
             },
             {
               "rank": 42,
-              "title": "ジャンクSPORTS"
+              "title": "仮面ライダーマイス"
             },
             {
               "rank": 43,
-              "title": "さんまのお笑い向上委員会"
+              "title": "ジャンクSPORTS"
             },
             {
               "rank": 44,
@@ -1877,10 +1889,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/11/08",
-      "updatedAt": "2026/11/08 22:07",
+      "updatedAt": "2026/11/08 23:07",
       "episodeId": "epy0yvjl1k",
       "subtitle": "箱根・草津の癒し温泉旅!白熱クイズ…最新の情報満載",
-      "likes": "5858",
+      "likes": "6427",
       "favorites": "37.2万",
       "likePoints": [
         {
@@ -1914,6 +1926,10 @@
         {
           "hour": 8,
           "likes": 5858
+        },
+        {
+          "hour": 9,
+          "likes": 6427
         }
       ],
       "previousLikePoints": [
@@ -2386,9 +2402,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 21,
-          "elapsedHour": 8,
-          "elapsedRank": 21,
+          "currentRank": 19,
+          "elapsedHour": 9,
+          "elapsedRank": 19,
           "currentPoints": [
             {
               "hour": 4,
@@ -2409,6 +2425,10 @@
             {
               "hour": 8,
               "rank": 21
+            },
+            {
+              "hour": 9,
+              "rank": 19
             }
           ],
           "previousPoints": [
@@ -2931,19 +2951,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 16,
+              "title": "世界くらべてみたら"
+            },
+            {
+              "rank": 17,
+              "title": "テレビ千鳥"
+            },
+            {
               "rank": 18,
               "title": "全力！脱力タイムズ"
             },
             {
               "rank": 19,
-              "title": "マツコ＆有吉 かりそめ天国"
-            },
-            {
-              "rank": 20,
-              "title": "教えて！ニュースライブ 正義のミカタ"
-            },
-            {
-              "rank": 21,
               "title": "timeleszファミリア"
             }
           ]
@@ -2951,10 +2971,15 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 50,
+          "elapsedHour": 9,
+          "elapsedRank": 50,
+          "currentPoints": [
+            {
+              "hour": 9,
+              "rank": 50
+            }
+          ],
           "previousPoints": [
             {
               "hour": 10,
@@ -3144,7 +3169,7 @@
             },
             {
               "rank": 50,
-              "title": "もうパパ！"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -3153,10 +3178,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/27",
-      "updatedAt": "2026/11/08 22:07",
+      "updatedAt": "2026/11/08 23:07",
       "episodeId": "epbtlmzlxr",
       "subtitle": "新企画！チョコプラ・timeleszが「できる？できない？予想クイズ」に挑戦！",
-      "likes": "8873",
+      "likes": "8880",
       "favorites": "6.6万",
       "likePoints": [
         {
@@ -4996,7 +5021,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "フットマップ"
+              "title": "ぼる部屋"
             },
             {
               "rank": 48,
@@ -5004,11 +5029,11 @@
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "フットマップ"
             },
             {
               "rank": 50,
-              "title": "華丸・大吉のなんしようと？"
+              "title": "ザ！世界仰天ニュース"
             }
           ]
         },
@@ -5249,19 +5274,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図じゃん"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 48,
-              "title": "バズリズム02"
+              "title": "いたジャン！"
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             },
             {
               "rank": 50,
-              "title": "新しいカギ"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             }
           ]
         }
@@ -5270,10 +5295,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/08 22:07",
+      "updatedAt": "2026/11/08 23:07",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
-      "likes": "3755",
+      "likes": "3759",
       "favorites": "81.6万",
       "likePoints": [
         {
@@ -5855,19 +5880,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図じゃん"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 48,
-              "title": "バズリズム02"
+              "title": "いたジャン！"
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             },
             {
               "rank": 50,
-              "title": "新しいカギ"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             }
           ]
         },
@@ -6023,7 +6048,7 @@
             },
             {
               "rank": 50,
-              "title": "もうパパ！"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -6032,10 +6057,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/11/04",
-      "updatedAt": "2026/11/08 22:07",
+      "updatedAt": "2026/11/08 23:07",
       "episodeId": "ephjmgcrvk",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！柴咲コウ登場",
-      "likes": "4187",
+      "likes": "4192",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -6337,6 +6362,10 @@
         {
           "hour": 117,
           "likes": 4187
+        },
+        {
+          "hour": 118,
+          "likes": 4192
         }
       ],
       "previousLikePoints": [
@@ -6614,19 +6643,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図じゃん"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 48,
-              "title": "バズリズム02"
+              "title": "いたジャン！"
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             },
             {
               "rank": 50,
-              "title": "新しいカギ"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             }
           ]
         },
@@ -6653,7 +6682,7 @@
             },
             {
               "rank": 50,
-              "title": "もうパパ！"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -6662,10 +6691,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/08 22:07",
+      "updatedAt": "2026/11/08 23:07",
       "episodeId": "epohjt1ixg",
       "subtitle": "第152回 岸井ゆきの味覚危機！？揉めまくりでチーム崩壊",
-      "likes": "3911",
+      "likes": "3920",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -6927,6 +6956,10 @@
         {
           "hour": 70,
           "likes": 3911
+        },
+        {
+          "hour": 71,
+          "likes": 3920
         }
       ],
       "previousLikePoints": [
@@ -7737,19 +7770,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図じゃん"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 48,
-              "title": "バズリズム02"
+              "title": "いたジャン！"
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             },
             {
               "rank": 50,
-              "title": "新しいカギ"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             }
           ]
         },
@@ -7813,7 +7846,7 @@
             },
             {
               "rank": 50,
-              "title": "もうパパ！"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -7822,10 +7855,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/31",
-      "updatedAt": "2026/11/08 22:07",
+      "updatedAt": "2026/11/08 23:07",
       "episodeId": "ep3jm0ld38",
       "subtitle": "マッサマン＆マツダマン（秘）あ哺乳類SP前編",
-      "likes": "5583",
+      "likes": "5592",
       "favorites": "82.5万",
       "likePoints": [
         {
@@ -8679,19 +8712,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図じゃん"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 48,
-              "title": "バズリズム02"
+              "title": "いたジャン！"
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             },
             {
               "rank": 50,
-              "title": "新しいカギ"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             }
           ]
         },
@@ -8907,7 +8940,7 @@
             },
             {
               "rank": 50,
-              "title": "もうパパ！"
+              "title": "timeleszファミリア"
             }
           ]
         }
@@ -8916,10 +8949,10 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/11/03",
-      "updatedAt": "2026/11/08 22:07",
+      "updatedAt": "2026/11/08 23:07",
       "episodeId": "epm8lq2z41",
       "subtitle": "激辛PK",
-      "likes": "9891",
+      "likes": "9896",
       "favorites": "3.8万",
       "likePoints": [
         {
@@ -9333,6 +9366,10 @@
         {
           "hour": 142,
           "likes": 9891
+        },
+        {
+          "hour": 143,
+          "likes": 9896
         }
       ],
       "previousLikePoints": [],
@@ -10122,15 +10159,15 @@
             },
             {
               "rank": 48,
-              "title": "開運！なんでも鑑定団"
+              "title": "所さんの学校では教えてくれないそこんトコロ！"
             },
             {
               "rank": 49,
-              "title": "日曜日の初耳学"
+              "title": "オー！マイゴッド！私だけの神様、教えます"
             },
             {
               "rank": 50,
-              "title": "プレバト！！"
+              "title": "開運！なんでも鑑定団"
             }
           ]
         },
@@ -10471,19 +10508,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "見取り図じゃん"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 48,
-              "title": "バズリズム02"
+              "title": "いたジャン！"
             },
             {
               "rank": 49,
-              "title": "世界の果てまでイッテQ！"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             },
             {
               "rank": 50,
-              "title": "新しいカギ"
+              "title": "二軒目どうする？～ツマミのハナシ～"
             }
           ]
         }
