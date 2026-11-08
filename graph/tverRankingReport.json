@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/11/08 16:07",
+  "updatedAt": "2026/11/08 18:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/08 16:07",
+      "updatedAt": "2026/11/08 18:07",
       "episodeId": "epcqbq5j8j",
       "subtitle": "食通厳選グルメ続々！ベストバイプライスマン",
       "likes": "1.0万",
@@ -172,6 +172,14 @@
         },
         {
           "hour": 42,
+          "likes": 10000
+        },
+        {
+          "hour": 43,
+          "likes": 10000
+        },
+        {
+          "hour": 44,
           "likes": 10000
         }
       ],
@@ -645,9 +653,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 7,
-          "elapsedHour": 42,
-          "elapsedRank": 7,
+          "currentRank": 8,
+          "elapsedHour": 44,
+          "elapsedRank": 8,
           "currentPoints": [
             {
               "hour": 7,
@@ -792,6 +800,14 @@
             {
               "hour": 42,
               "rank": 7
+            },
+            {
+              "hour": 43,
+              "rank": 8
+            },
+            {
+              "hour": 44,
+              "rank": 8
             }
           ],
           "previousPoints": [
@@ -1438,19 +1454,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 4,
+              "rank": 5,
               "title": "M!LKの爆裂ミッション"
             },
             {
-              "rank": 5,
-              "title": "かまいたちの机上の空論城"
-            },
-            {
               "rank": 6,
-              "title": "ニノなのに"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 7,
+              "title": "ニノなのに"
+            },
+            {
+              "rank": 8,
               "title": "タイムレスマン"
             }
           ]
@@ -1458,9 +1474,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 30,
-          "elapsedHour": 42,
-          "elapsedRank": 30,
+          "currentRank": 31,
+          "elapsedHour": 44,
+          "elapsedRank": 31,
           "currentPoints": [
             {
               "hour": 14,
@@ -1577,6 +1593,14 @@
             {
               "hour": 42,
               "rank": 30
+            },
+            {
+              "hour": 43,
+              "rank": 32
+            },
+            {
+              "hour": 44,
+              "rank": 31
             }
           ],
           "previousPoints": [
@@ -1783,19 +1807,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 27,
+              "rank": 28,
               "title": "メリーベリーラブ"
             },
             {
-              "rank": 28,
-              "title": "名探偵コナン"
-            },
-            {
               "rank": 29,
-              "title": "ライフトレード"
+              "title": "ニノなのに"
             },
             {
               "rank": 30,
+              "title": "ライフトレード"
+            },
+            {
+              "rank": 31,
               "title": "タイムレスマン"
             }
           ]
@@ -1805,11 +1829,11 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/11/08",
-      "updatedAt": "2026/11/08 16:07",
+      "updatedAt": "2026/11/08 18:07",
       "episodeId": "epy0yvjl1k",
       "subtitle": "箱根・草津の癒し温泉旅!白熱クイズ…最新の情報満載",
-      "likes": "2650",
-      "favorites": "37.1万",
+      "likes": "3008",
+      "favorites": "37.2万",
       "likePoints": [
         {
           "hour": 1,
@@ -1818,6 +1842,14 @@
         {
           "hour": 2,
           "likes": 2650
+        },
+        {
+          "hour": 3,
+          "likes": 2232
+        },
+        {
+          "hour": 4,
+          "likes": 3008
         }
       ],
       "previousLikePoints": [
@@ -2290,10 +2322,15 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 47,
+          "elapsedHour": 4,
+          "elapsedRank": 47,
+          "currentPoints": [
+            {
+              "hour": 4,
+              "rank": 47
+            }
+          ],
           "previousPoints": [
             {
               "hour": 4,
@@ -2814,20 +2851,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "これ余談なんですけど・・・"
-            },
-            {
-              "rank": 48,
-              "title": "大悟の芸人領収書"
-            },
-            {
-              "rank": 49,
+              "rank": 44,
               "title": "出没！アド街ック天国"
             },
             {
-              "rank": 50,
-              "title": "有吉トークキングダム"
+              "rank": 45,
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+            },
+            {
+              "rank": 46,
+              "title": "櫻井･有吉THE夜会"
+            },
+            {
+              "rank": 47,
+              "title": "timeleszファミリア"
             }
           ]
         },
@@ -3015,15 +3052,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "晩酌の流儀５"
+              "title": "相棒 season25"
             },
             {
               "rank": 48,
-              "title": "ドラえもん"
+              "title": "女帝"
             },
             {
               "rank": 49,
-              "title": "世界くらべてみたら"
+              "title": "ドラえもん"
             },
             {
               "rank": 50,
@@ -3036,10 +3073,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/27",
-      "updatedAt": "2026/11/08 16:07",
+      "updatedAt": "2026/11/08 18:07",
       "episodeId": "epbtlmzlxr",
       "subtitle": "新企画！チョコプラ・timeleszが「できる？できない？予想クイズ」に挑戦！",
-      "likes": "8841",
+      "likes": "8842",
       "favorites": "6.6万",
       "likePoints": [
         {
@@ -4879,19 +4916,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "アンタッチャブルでやらせてもらってます"
             },
             {
               "rank": 48,
-              "title": "ザ！世界仰天ニュース"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 49,
-              "title": "土曜はナニする！？日帰りぷらっとりっぷ"
+              "title": "ザ！世界仰天ニュース"
             },
             {
               "rank": 50,
-              "title": "発見！仰天！！プレミアもん！！！ 土曜はダメよ！"
+              "title": "サンドウィッチマン＆芦田愛菜の博士ちゃん"
             }
           ]
         },
@@ -5132,7 +5169,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "これ余談なんですけど・・・"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 48,
@@ -5140,11 +5177,11 @@
             },
             {
               "rank": 49,
-              "title": "出没！アド街ック天国"
+              "title": "D.U.N.K."
             },
             {
               "rank": 50,
-              "title": "有吉トークキングダム"
+              "title": "これ余談なんですけど・・・"
             }
           ]
         }
@@ -5153,10 +5190,10 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/11/01",
-      "updatedAt": "2026/11/08 16:07",
+      "updatedAt": "2026/11/08 18:07",
       "episodeId": "ep75xoyx88",
       "subtitle": "トレーラーハウスづくり大詰め&働くミツバチの一生に密着",
-      "likes": "9378",
+      "likes": "9460",
       "favorites": "54.6万",
       "likePoints": [
         {
@@ -5614,6 +5651,14 @@
         {
           "hour": 165,
           "likes": 9378
+        },
+        {
+          "hour": 166,
+          "likes": 9390
+        },
+        {
+          "hour": 167,
+          "likes": 9460
         }
       ],
       "previousLikePoints": [
@@ -6262,9 +6307,9 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 29,
-          "elapsedHour": 165,
-          "elapsedRank": 29,
+          "currentRank": 27,
+          "elapsedHour": 167,
+          "elapsedRank": 27,
           "currentPoints": [
             {
               "hour": 2,
@@ -6909,6 +6954,14 @@
             {
               "hour": 165,
               "rank": 29
+            },
+            {
+              "hour": 166,
+              "rank": 29
+            },
+            {
+              "hour": 167,
+              "rank": 27
             }
           ],
           "previousPoints": [
@@ -7571,19 +7624,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 26,
+              "rank": 24,
               "title": "おぎやはぎの愛車遍歴 NO CAR,NO LIFE！"
             },
             {
+              "rank": 25,
+              "title": "有吉くんの正直さんぽ"
+            },
+            {
+              "rank": 26,
+              "title": "オモウマい店"
+            },
+            {
               "rank": 27,
-              "title": "巷のウワサ大検証！それって実際どうなの会"
-            },
-            {
-              "rank": 28,
-              "title": "ニンゲン観察バラエティ モニタリング"
-            },
-            {
-              "rank": 29,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -7913,7 +7966,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "これ余談なんですけど・・・"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 48,
@@ -7921,11 +7974,11 @@
             },
             {
               "rank": 49,
-              "title": "出没！アド街ック天国"
+              "title": "D.U.N.K."
             },
             {
               "rank": 50,
-              "title": "有吉トークキングダム"
+              "title": "これ余談なんですけど・・・"
             }
           ]
         }
@@ -7934,7 +7987,7 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/08 16:07",
+      "updatedAt": "2026/11/08 18:07",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
       "likes": "3731",
@@ -8519,7 +8572,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "これ余談なんですけど・・・"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 48,
@@ -8527,11 +8580,11 @@
             },
             {
               "rank": 49,
-              "title": "出没！アド街ック天国"
+              "title": "D.U.N.K."
             },
             {
               "rank": 50,
-              "title": "有吉トークキングダム"
+              "title": "これ余談なんですけど・・・"
             }
           ]
         },
@@ -8675,15 +8728,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "晩酌の流儀５"
+              "title": "相棒 season25"
             },
             {
               "rank": 48,
-              "title": "ドラえもん"
+              "title": "女帝"
             },
             {
               "rank": 49,
-              "title": "世界くらべてみたら"
+              "title": "ドラえもん"
             },
             {
               "rank": 50,
@@ -8696,10 +8749,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/11/04",
-      "updatedAt": "2026/11/08 16:07",
+      "updatedAt": "2026/11/08 18:07",
       "episodeId": "ephjmgcrvk",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！柴咲コウ登場",
-      "likes": "4120",
+      "likes": "4129",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -8977,6 +9030,14 @@
         {
           "hour": 111,
           "likes": 4120
+        },
+        {
+          "hour": 112,
+          "likes": 4118
+        },
+        {
+          "hour": 113,
+          "likes": 4129
         }
       ],
       "previousLikePoints": [
@@ -9254,7 +9315,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "これ余談なんですけど・・・"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 48,
@@ -9262,11 +9323,11 @@
             },
             {
               "rank": 49,
-              "title": "出没！アド街ック天国"
+              "title": "D.U.N.K."
             },
             {
               "rank": 50,
-              "title": "有吉トークキングダム"
+              "title": "これ余談なんですけど・・・"
             }
           ]
         },
@@ -9281,15 +9342,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "晩酌の流儀５"
+              "title": "相棒 season25"
             },
             {
               "rank": 48,
-              "title": "ドラえもん"
+              "title": "女帝"
             },
             {
               "rank": 49,
-              "title": "世界くらべてみたら"
+              "title": "ドラえもん"
             },
             {
               "rank": 50,
@@ -9302,10 +9363,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/08 16:07",
+      "updatedAt": "2026/11/08 18:07",
       "episodeId": "epohjt1ixg",
       "subtitle": "第152回 岸井ゆきの味覚危機！？揉めまくりでチーム崩壊",
-      "likes": "3819",
+      "likes": "3836",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -9543,6 +9604,14 @@
         {
           "hour": 64,
           "likes": 3819
+        },
+        {
+          "hour": 65,
+          "likes": 3817
+        },
+        {
+          "hour": 66,
+          "likes": 3836
         }
       ],
       "previousLikePoints": [
@@ -10353,7 +10422,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "これ余談なんですけど・・・"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 48,
@@ -10361,11 +10430,11 @@
             },
             {
               "rank": 49,
-              "title": "出没！アド街ック天国"
+              "title": "D.U.N.K."
             },
             {
               "rank": 50,
-              "title": "有吉トークキングダム"
+              "title": "これ余談なんですけど・・・"
             }
           ]
         },
@@ -10417,15 +10486,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "晩酌の流儀５"
+              "title": "相棒 season25"
             },
             {
               "rank": 48,
-              "title": "ドラえもん"
+              "title": "女帝"
             },
             {
               "rank": 49,
-              "title": "世界くらべてみたら"
+              "title": "ドラえもん"
             },
             {
               "rank": 50,
@@ -10438,10 +10507,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/31",
-      "updatedAt": "2026/11/08 16:07",
+      "updatedAt": "2026/11/08 18:07",
       "episodeId": "ep3jm0ld38",
       "subtitle": "マッサマン＆マツダマン（秘）あ哺乳類SP前編",
-      "likes": "5543",
+      "likes": "5546",
       "favorites": "82.5万",
       "likePoints": [
         {
@@ -11295,7 +11364,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "これ余談なんですけど・・・"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 48,
@@ -11303,11 +11372,11 @@
             },
             {
               "rank": 49,
-              "title": "出没！アド街ック天国"
+              "title": "D.U.N.K."
             },
             {
               "rank": 50,
-              "title": "有吉トークキングダム"
+              "title": "これ余談なんですけど・・・"
             }
           ]
         },
@@ -11511,15 +11580,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "晩酌の流儀５"
+              "title": "相棒 season25"
             },
             {
               "rank": 48,
-              "title": "ドラえもん"
+              "title": "女帝"
             },
             {
               "rank": 49,
-              "title": "世界くらべてみたら"
+              "title": "ドラえもん"
             },
             {
               "rank": 50,
@@ -11532,10 +11601,10 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/11/03",
-      "updatedAt": "2026/11/08 16:07",
+      "updatedAt": "2026/11/08 18:07",
       "episodeId": "epm8lq2z41",
       "subtitle": "激辛PK",
-      "likes": "9827",
+      "likes": "9832",
       "favorites": "3.8万",
       "likePoints": [
         {
@@ -11925,6 +11994,14 @@
         {
           "hour": 136,
           "likes": 9827
+        },
+        {
+          "hour": 137,
+          "likes": 9819
+        },
+        {
+          "hour": 138,
+          "likes": 9832
         }
       ],
       "previousLikePoints": [],
@@ -12710,19 +12787,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "大阪おっさんぽ"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 48,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "プレバト！！"
             },
             {
               "rank": 49,
-              "title": "相葉◎×部"
+              "title": "開運！なんでも鑑定団"
             },
             {
               "rank": 50,
-              "title": "有吉・カズの超考察 日本人はバカなのか？"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             }
           ]
         },
@@ -13063,7 +13140,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "これ余談なんですけど・・・"
+              "title": "timeleszファミリア"
             },
             {
               "rank": 48,
@@ -13071,11 +13148,11 @@
             },
             {
               "rank": 49,
-              "title": "出没！アド街ック天国"
+              "title": "D.U.N.K."
             },
             {
               "rank": 50,
-              "title": "有吉トークキングダム"
+              "title": "これ余談なんですけど・・・"
             }
           ]
         }
