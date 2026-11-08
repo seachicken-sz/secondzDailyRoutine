@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/11/09 00:07",
+  "updatedAt": "2026/11/09 01:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/09 00:07",
+      "updatedAt": "2026/11/09 01:07",
       "episodeId": "epcqbq5j8j",
       "subtitle": "食通厳選グルメ続々！ベストバイプライスマン",
       "likes": "1.1万",
@@ -204,6 +204,10 @@
         },
         {
           "hour": 50,
+          "likes": 11000
+        },
+        {
+          "hour": 51,
           "likes": 11000
         }
       ],
@@ -677,9 +681,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 15,
-          "elapsedHour": 50,
-          "elapsedRank": 15,
+          "currentRank": 18,
+          "elapsedHour": 51,
+          "elapsedRank": 18,
           "currentPoints": [
             {
               "hour": 7,
@@ -856,6 +860,10 @@
             {
               "hour": 50,
               "rank": 15
+            },
+            {
+              "hour": 51,
+              "rank": 18
             }
           ],
           "previousPoints": [
@@ -1502,19 +1510,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 12,
-              "title": "さんまのお笑い向上委員会"
-            },
-            {
-              "rank": 13,
-              "title": "VIVANT最終回直前SP"
-            },
-            {
-              "rank": 14,
+              "rank": 15,
               "title": "ニノなのに"
             },
             {
-              "rank": 15,
+              "rank": 16,
+              "title": "timeleszファミリア"
+            },
+            {
+              "rank": 17,
+              "title": "マルコポロリ！"
+            },
+            {
+              "rank": 18,
               "title": "タイムレスマン"
             }
           ]
@@ -1522,9 +1530,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 45,
-          "elapsedHour": 50,
-          "elapsedRank": 45,
+          "currentRank": 48,
+          "elapsedHour": 51,
+          "elapsedRank": 48,
           "currentPoints": [
             {
               "hour": 14,
@@ -1673,6 +1681,10 @@
             {
               "hour": 50,
               "rank": 45
+            },
+            {
+              "hour": 51,
+              "rank": 48
             }
           ],
           "previousPoints": [
@@ -1879,19 +1891,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 42,
-              "title": "クレヨンしんちゃん"
-            },
-            {
-              "rank": 43,
-              "title": "ニノなのに"
-            },
-            {
-              "rank": 44,
+              "rank": 45,
               "title": "ジャンクSPORTS"
             },
             {
-              "rank": 45,
+              "rank": 46,
+              "title": "timeleszファミリア"
+            },
+            {
+              "rank": 47,
+              "title": "マルコポロリ！"
+            },
+            {
+              "rank": 48,
               "title": "タイムレスマン"
             }
           ]
@@ -1901,10 +1913,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/11/08",
-      "updatedAt": "2026/11/09 00:07",
+      "updatedAt": "2026/11/09 01:07",
       "episodeId": "epy0yvjl1k",
       "subtitle": "箱根・草津の癒し温泉旅!白熱クイズ…最新の情報満載",
-      "likes": "6654",
+      "likes": "7431",
       "favorites": "37.2万",
       "likePoints": [
         {
@@ -1946,6 +1958,10 @@
         {
           "hour": 10,
           "likes": 6654
+        },
+        {
+          "hour": 11,
+          "likes": 7431
         }
       ],
       "previousLikePoints": [
@@ -2418,9 +2434,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 17,
-          "elapsedHour": 10,
-          "elapsedRank": 17,
+          "currentRank": 16,
+          "elapsedHour": 11,
+          "elapsedRank": 16,
           "currentPoints": [
             {
               "hour": 4,
@@ -2449,6 +2465,10 @@
             {
               "hour": 10,
               "rank": 17
+            },
+            {
+              "hour": 11,
+              "rank": 16
             }
           ],
           "previousPoints": [
@@ -2971,19 +2991,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 13,
+              "title": "さんまのお笑い向上委員会"
+            },
+            {
               "rank": 14,
-              "title": "ニノなのに"
+              "title": "世界の果てまでイッテQ！"
             },
             {
               "rank": 15,
-              "title": "タイムレスマン"
+              "title": "ニノなのに"
             },
             {
               "rank": 16,
-              "title": "A-Studio＋"
-            },
-            {
-              "rank": 17,
               "title": "timeleszファミリア"
             }
           ]
@@ -2991,9 +3011,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 47,
-          "elapsedHour": 10,
-          "elapsedRank": 47,
+          "currentRank": 46,
+          "elapsedHour": 11,
+          "elapsedRank": 46,
           "currentPoints": [
             {
               "hour": 9,
@@ -3002,6 +3022,10 @@
             {
               "hour": 10,
               "rank": 47
+            },
+            {
+              "hour": 11,
+              "rank": 46
             }
           ],
           "previousPoints": [
@@ -3180,19 +3204,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 43,
+              "title": "世界の果てまでイッテQ！"
+            },
+            {
               "rank": 44,
-              "title": "ジャンクSPORTS"
+              "title": "ニノなのに"
             },
             {
               "rank": 45,
-              "title": "タイムレスマン"
+              "title": "ジャンクSPORTS"
             },
             {
               "rank": 46,
-              "title": "A-Studio＋"
-            },
-            {
-              "rank": 47,
               "title": "timeleszファミリア"
             }
           ]
@@ -3202,10 +3226,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/27",
-      "updatedAt": "2026/11/09 00:07",
+      "updatedAt": "2026/11/09 01:07",
       "episodeId": "epbtlmzlxr",
       "subtitle": "新企画！チョコプラ・timeleszが「できる？できない？予想クイズ」に挑戦！",
-      "likes": "8886",
+      "likes": "8907",
       "favorites": "6.6万",
       "likePoints": [
         {
@@ -5049,15 +5073,15 @@
             },
             {
               "rank": 48,
-              "title": "バナナマンのせっかくグルメ!!"
-            },
-            {
-              "rank": 49,
               "title": "グッと！地球便"
             },
             {
+              "rank": 49,
+              "title": "バナナマンのせっかくグルメ!!"
+            },
+            {
               "rank": 50,
-              "title": "フットマップ"
+              "title": "ザ！世界仰天ニュース"
             }
           ]
         },
@@ -5298,19 +5322,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
-              "title": "坂上どうぶつ王国"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 50,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             }
           ]
         }
@@ -5319,10 +5343,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/09 00:07",
+      "updatedAt": "2026/11/09 01:07",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
-      "likes": "3762",
+      "likes": "3770",
       "favorites": "81.6万",
       "likePoints": [
         {
@@ -5904,19 +5928,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
-              "title": "坂上どうぶつ王国"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 50,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             }
           ]
         },
@@ -6060,15 +6084,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "timeleszファミリア"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 48,
-              "title": "世界の果てまでイッテQ！"
+              "title": "タイムレスマン"
             },
             {
               "rank": 49,
-              "title": "マルコポロリ！"
+              "title": "A-Studio＋"
             },
             {
               "rank": 50,
@@ -6081,10 +6105,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/11/04",
-      "updatedAt": "2026/11/09 00:07",
+      "updatedAt": "2026/11/09 01:07",
       "episodeId": "ephjmgcrvk",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！柴咲コウ登場",
-      "likes": "4201",
+      "likes": "4222",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -6394,6 +6418,10 @@
         {
           "hour": 119,
           "likes": 4201
+        },
+        {
+          "hour": 120,
+          "likes": 4222
         }
       ],
       "previousLikePoints": [
@@ -6671,19 +6699,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
-              "title": "坂上どうぶつ王国"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 50,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             }
           ]
         },
@@ -6698,15 +6726,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "timeleszファミリア"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 48,
-              "title": "世界の果てまでイッテQ！"
+              "title": "タイムレスマン"
             },
             {
               "rank": 49,
-              "title": "マルコポロリ！"
+              "title": "A-Studio＋"
             },
             {
               "rank": 50,
@@ -6719,10 +6747,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/09 00:07",
+      "updatedAt": "2026/11/09 01:07",
       "episodeId": "epohjt1ixg",
       "subtitle": "第152回 岸井ゆきの味覚危機！？揉めまくりでチーム崩壊",
-      "likes": "3936",
+      "likes": "3964",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -6992,6 +7020,10 @@
         {
           "hour": 72,
           "likes": 3936
+        },
+        {
+          "hour": 73,
+          "likes": 3964
         }
       ],
       "previousLikePoints": [
@@ -7802,19 +7834,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
-              "title": "坂上どうぶつ王国"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 50,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             }
           ]
         },
@@ -7866,15 +7898,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "timeleszファミリア"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 48,
-              "title": "世界の果てまでイッテQ！"
+              "title": "タイムレスマン"
             },
             {
               "rank": 49,
-              "title": "マルコポロリ！"
+              "title": "A-Studio＋"
             },
             {
               "rank": 50,
@@ -7887,10 +7919,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/31",
-      "updatedAt": "2026/11/09 00:07",
+      "updatedAt": "2026/11/09 01:07",
       "episodeId": "ep3jm0ld38",
       "subtitle": "マッサマン＆マツダマン（秘）あ哺乳類SP前編",
-      "likes": "5597",
+      "likes": "5604",
       "favorites": "82.5万",
       "likePoints": [
         {
@@ -8744,19 +8776,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
-              "title": "坂上どうぶつ王国"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 50,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             }
           ]
         },
@@ -8960,15 +8992,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "timeleszファミリア"
+              "title": "マルコポロリ！"
             },
             {
               "rank": 48,
-              "title": "世界の果てまでイッテQ！"
+              "title": "タイムレスマン"
             },
             {
               "rank": 49,
-              "title": "マルコポロリ！"
+              "title": "A-Studio＋"
             },
             {
               "rank": 50,
@@ -8981,10 +9013,10 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/11/03",
-      "updatedAt": "2026/11/09 00:07",
+      "updatedAt": "2026/11/09 01:07",
       "episodeId": "epm8lq2z41",
       "subtitle": "激辛PK",
-      "likes": "9904",
+      "likes": "9921",
       "favorites": "3.8万",
       "likePoints": [
         {
@@ -9406,6 +9438,10 @@
         {
           "hour": 144,
           "likes": 9904
+        },
+        {
+          "hour": 145,
+          "likes": 9921
         }
       ],
       "previousLikePoints": [],
@@ -10199,7 +10235,7 @@
             },
             {
               "rank": 49,
-              "title": "オー！マイゴッド！私だけの神様、教えます"
+              "title": "上沼・高田のクギズケ！"
             },
             {
               "rank": 50,
@@ -10544,19 +10580,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "かまいガチ"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
-              "title": "坂上どうぶつ王国"
+              "title": "かまいガチ"
             },
             {
               "rank": 49,
-              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
+              "title": "坂上どうぶつ王国"
             },
             {
               "rank": 50,
-              "title": "二軒目どうする？～ツマミのハナシ～"
+              "title": "さまぁ～ず×さまぁ～ず BS さまぁ～ず"
             }
           ]
         }
