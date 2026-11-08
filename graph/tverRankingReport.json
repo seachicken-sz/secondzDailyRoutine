@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/11/08 19:07",
+  "updatedAt": "2026/11/08 20:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/08 19:07",
+      "updatedAt": "2026/11/08 20:07",
       "episodeId": "epcqbq5j8j",
       "subtitle": "食通厳選グルメ続々！ベストバイプライスマン",
       "likes": "1.0万",
@@ -184,6 +184,10 @@
         },
         {
           "hour": 45,
+          "likes": 10000
+        },
+        {
+          "hour": 46,
           "likes": 10000
         }
       ],
@@ -658,7 +662,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 10,
-          "elapsedHour": 45,
+          "elapsedHour": 46,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -815,6 +819,10 @@
             },
             {
               "hour": 45,
+              "rank": 10
+            },
+            {
+              "hour": 46,
               "rank": 10
             }
           ],
@@ -1463,11 +1471,11 @@
           "nearbyRanking": [
             {
               "rank": 7,
-              "title": "ニノなのに"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 8,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "ニノなのに"
             },
             {
               "rank": 9,
@@ -1482,9 +1490,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 34,
-          "elapsedHour": 45,
-          "elapsedRank": 34,
+          "currentRank": 37,
+          "elapsedHour": 46,
+          "elapsedRank": 37,
           "currentPoints": [
             {
               "hour": 14,
@@ -1613,6 +1621,10 @@
             {
               "hour": 45,
               "rank": 34
+            },
+            {
+              "hour": 46,
+              "rank": 37
             }
           ],
           "previousPoints": [
@@ -1819,19 +1831,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 31,
-              "title": "ライフトレード"
-            },
-            {
-              "rank": 32,
-              "title": "上田と女がDEEPに吠える夜"
-            },
-            {
-              "rank": 33,
-              "title": "ハイド＆シーク 0秒前の彼女"
-            },
-            {
               "rank": 34,
+              "title": "おいしい給食 season4"
+            },
+            {
+              "rank": 35,
+              "title": "おかえり、初恋。"
+            },
+            {
+              "rank": 36,
+              "title": "kiDnap GAME"
+            },
+            {
+              "rank": 37,
               "title": "タイムレスマン"
             }
           ]
@@ -1841,10 +1853,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/11/08",
-      "updatedAt": "2026/11/08 19:07",
+      "updatedAt": "2026/11/08 20:07",
       "episodeId": "epy0yvjl1k",
       "subtitle": "箱根・草津の癒し温泉旅!白熱クイズ…最新の情報満載",
-      "likes": "3985",
+      "likes": "4656",
       "favorites": "37.2万",
       "likePoints": [
         {
@@ -1866,6 +1878,10 @@
         {
           "hour": 5,
           "likes": 3985
+        },
+        {
+          "hour": 6,
+          "likes": 4656
         }
       ],
       "previousLikePoints": [
@@ -2338,9 +2354,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 39,
-          "elapsedHour": 5,
-          "elapsedRank": 39,
+          "currentRank": 29,
+          "elapsedHour": 6,
+          "elapsedRank": 29,
           "currentPoints": [
             {
               "hour": 4,
@@ -2349,6 +2365,10 @@
             {
               "hour": 5,
               "rank": 39
+            },
+            {
+              "hour": 6,
+              "rank": 29
             }
           ],
           "previousPoints": [
@@ -2871,19 +2891,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 36,
-              "title": "1億人の大質問!?笑ってコラえて！"
+              "rank": 26,
+              "title": "有吉クイズ"
             },
             {
-              "rank": 37,
-              "title": "バズリズム02"
+              "rank": 27,
+              "title": "ロンドンハーツ"
             },
             {
-              "rank": 38,
-              "title": "坂上どうぶつ王国"
+              "rank": 28,
+              "title": "知識の扉よ開け！ドア×ドア クエスト"
             },
             {
-              "rank": 39,
+              "rank": 29,
               "title": "timeleszファミリア"
             }
           ]
@@ -3072,19 +3092,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 48,
-              "title": "相棒 season25"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 49,
-              "title": "女帝"
+              "title": "仮面ライダーマイス"
             },
             {
               "rank": 50,
-              "title": "ゴッドタン"
+              "title": "相棒 season25"
             }
           ]
         }
@@ -3093,10 +3113,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/27",
-      "updatedAt": "2026/11/08 19:07",
+      "updatedAt": "2026/11/08 20:07",
       "episodeId": "epbtlmzlxr",
       "subtitle": "新企画！チョコプラ・timeleszが「できる？できない？予想クイズ」に挑戦！",
-      "likes": "8852",
+      "likes": "8864",
       "favorites": "6.6万",
       "likePoints": [
         {
@@ -4936,19 +4956,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "世界まる見え！テレビ特捜部"
+              "title": "有吉・カズの超考察 日本人はバカなのか？"
             },
             {
               "rank": 48,
-              "title": "ゴルフ侍、見参！"
-            },
-            {
-              "rank": 49,
               "title": "バナナマンのせっかくグルメ!!"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "ザ！世界仰天ニュース"
+            },
+            {
+              "rank": 50,
+              "title": "サンドウィッチマン＆芦田愛菜の博士ちゃん"
             }
           ]
         },
@@ -5189,2816 +5209,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ぐるぐるナインティナイン"
+              "title": "新しいカギ"
             },
             {
               "rank": 48,
+              "title": "夜明けのラヴィット！"
+            },
+            {
+              "rank": 49,
+              "title": "大悟の芸人領収書"
+            },
+            {
+              "rank": 50,
               "title": "ケンコバのほろ酔いビジホ泊 全国版"
-            },
-            {
-              "rank": 49,
-              "title": "Golden SixTONES"
-            },
-            {
-              "rank": 50,
-              "title": "櫻井･有吉THE夜会"
-            }
-          ]
-        }
-      ]
-    },
-    "sr1bzatukq": {
-      "programTitle": "ザ！鉄腕！DASH!!",
-      "broadcastDate": "2026/11/01",
-      "updatedAt": "2026/11/08 19:07",
-      "episodeId": "ep75xoyx88",
-      "subtitle": "トレーラーハウスづくり大詰め&働くミツバチの一生に密着",
-      "likes": "9460",
-      "favorites": "54.6万",
-      "likePoints": [
-        {
-          "hour": 1,
-          "likes": 746
-        },
-        {
-          "hour": 2,
-          "likes": 1253
-        },
-        {
-          "hour": 3,
-          "likes": 1828
-        },
-        {
-          "hour": 4,
-          "likes": 1782
-        },
-        {
-          "hour": 5,
-          "likes": 2013
-        },
-        {
-          "hour": 6,
-          "likes": 2752
-        },
-        {
-          "hour": 7,
-          "likes": 2844
-        },
-        {
-          "hour": 8,
-          "likes": 2921
-        },
-        {
-          "hour": 9,
-          "likes": 2964
-        },
-        {
-          "hour": 10,
-          "likes": 3023
-        },
-        {
-          "hour": 11,
-          "likes": 3125
-        },
-        {
-          "hour": 12,
-          "likes": 3249
-        },
-        {
-          "hour": 13,
-          "likes": 3457
-        },
-        {
-          "hour": 14,
-          "likes": 3639
-        },
-        {
-          "hour": 15,
-          "likes": 3819
-        },
-        {
-          "hour": 16,
-          "likes": 3998
-        },
-        {
-          "hour": 18,
-          "likes": 4312
-        },
-        {
-          "hour": 37,
-          "likes": 6041
-        },
-        {
-          "hour": 38,
-          "likes": 6096
-        },
-        {
-          "hour": 39,
-          "likes": 6187
-        },
-        {
-          "hour": 40,
-          "likes": 6284
-        },
-        {
-          "hour": 41,
-          "likes": 6353
-        },
-        {
-          "hour": 42,
-          "likes": 6428
-        },
-        {
-          "hour": 43,
-          "likes": 6496
-        },
-        {
-          "hour": 44,
-          "likes": 6500
-        },
-        {
-          "hour": 45,
-          "likes": 6558
-        },
-        {
-          "hour": 46,
-          "likes": 6669
-        },
-        {
-          "hour": 47,
-          "likes": 6729
-        },
-        {
-          "hour": 48,
-          "likes": 6805
-        },
-        {
-          "hour": 49,
-          "likes": 6879
-        },
-        {
-          "hour": 50,
-          "likes": 6874
-        },
-        {
-          "hour": 51,
-          "likes": 6960
-        },
-        {
-          "hour": 52,
-          "likes": 7096
-        },
-        {
-          "hour": 53,
-          "likes": 7138
-        },
-        {
-          "hour": 54,
-          "likes": 7171
-        },
-        {
-          "hour": 55,
-          "likes": 7183
-        },
-        {
-          "hour": 56,
-          "likes": 7189
-        },
-        {
-          "hour": 57,
-          "likes": 7198
-        },
-        {
-          "hour": 58,
-          "likes": 7197
-        },
-        {
-          "hour": 59,
-          "likes": 7215
-        },
-        {
-          "hour": 60,
-          "likes": 7231
-        },
-        {
-          "hour": 61,
-          "likes": 7247
-        },
-        {
-          "hour": 65,
-          "likes": 7397
-        },
-        {
-          "hour": 66,
-          "likes": 7432
-        },
-        {
-          "hour": 67,
-          "likes": 7464
-        },
-        {
-          "hour": 68,
-          "likes": 7490
-        },
-        {
-          "hour": 72,
-          "likes": 7552
-        },
-        {
-          "hour": 79,
-          "likes": 7782
-        },
-        {
-          "hour": 80,
-          "likes": 7790
-        },
-        {
-          "hour": 88,
-          "likes": 7881
-        },
-        {
-          "hour": 96,
-          "likes": 8022
-        },
-        {
-          "hour": 97,
-          "likes": 8046
-        },
-        {
-          "hour": 99,
-          "likes": 8073
-        },
-        {
-          "hour": 100,
-          "likes": 8090
-        },
-        {
-          "hour": 101,
-          "likes": 8104
-        },
-        {
-          "hour": 102,
-          "likes": 8153
-        },
-        {
-          "hour": 103,
-          "likes": 8154
-        },
-        {
-          "hour": 106,
-          "likes": 8158
-        },
-        {
-          "hour": 107,
-          "likes": 8166
-        },
-        {
-          "hour": 108,
-          "likes": 8174
-        },
-        {
-          "hour": 109,
-          "likes": 8189
-        },
-        {
-          "hour": 110,
-          "likes": 8201
-        },
-        {
-          "hour": 111,
-          "likes": 8217
-        },
-        {
-          "hour": 113,
-          "likes": 8249
-        },
-        {
-          "hour": 114,
-          "likes": 8258
-        },
-        {
-          "hour": 115,
-          "likes": 8276
-        },
-        {
-          "hour": 116,
-          "likes": 8295
-        },
-        {
-          "hour": 117,
-          "likes": 8308
-        },
-        {
-          "hour": 118,
-          "likes": 8314
-        },
-        {
-          "hour": 119,
-          "likes": 8327
-        },
-        {
-          "hour": 121,
-          "likes": 8375
-        },
-        {
-          "hour": 122,
-          "likes": 8373
-        },
-        {
-          "hour": 123,
-          "likes": 8400
-        },
-        {
-          "hour": 124,
-          "likes": 8419
-        },
-        {
-          "hour": 125,
-          "likes": 8441
-        },
-        {
-          "hour": 126,
-          "likes": 8472
-        },
-        {
-          "hour": 127,
-          "likes": 8482
-        },
-        {
-          "hour": 128,
-          "likes": 8486
-        },
-        {
-          "hour": 129,
-          "likes": 8487
-        },
-        {
-          "hour": 130,
-          "likes": 8486
-        },
-        {
-          "hour": 131,
-          "likes": 8495
-        },
-        {
-          "hour": 133,
-          "likes": 8521
-        },
-        {
-          "hour": 134,
-          "likes": 8533
-        },
-        {
-          "hour": 135,
-          "likes": 8550
-        },
-        {
-          "hour": 136,
-          "likes": 8580
-        },
-        {
-          "hour": 137,
-          "likes": 8598
-        },
-        {
-          "hour": 138,
-          "likes": 8638
-        },
-        {
-          "hour": 139,
-          "likes": 8673
-        },
-        {
-          "hour": 140,
-          "likes": 8695
-        },
-        {
-          "hour": 141,
-          "likes": 8725
-        },
-        {
-          "hour": 142,
-          "likes": 8718
-        },
-        {
-          "hour": 143,
-          "likes": 8747
-        },
-        {
-          "hour": 144,
-          "likes": 8801
-        },
-        {
-          "hour": 145,
-          "likes": 8830
-        },
-        {
-          "hour": 146,
-          "likes": 8875
-        },
-        {
-          "hour": 147,
-          "likes": 8911
-        },
-        {
-          "hour": 148,
-          "likes": 8927
-        },
-        {
-          "hour": 149,
-          "likes": 8949
-        },
-        {
-          "hour": 150,
-          "likes": 8980
-        },
-        {
-          "hour": 151,
-          "likes": 8997
-        },
-        {
-          "hour": 152,
-          "likes": 9001
-        },
-        {
-          "hour": 153,
-          "likes": 9006
-        },
-        {
-          "hour": 154,
-          "likes": 9015
-        },
-        {
-          "hour": 155,
-          "likes": 9022
-        },
-        {
-          "hour": 156,
-          "likes": 9022
-        },
-        {
-          "hour": 157,
-          "likes": 9045
-        },
-        {
-          "hour": 158,
-          "likes": 9047
-        },
-        {
-          "hour": 159,
-          "likes": 9080
-        },
-        {
-          "hour": 160,
-          "likes": 9143
-        },
-        {
-          "hour": 161,
-          "likes": 9179
-        },
-        {
-          "hour": 162,
-          "likes": 9175
-        },
-        {
-          "hour": 163,
-          "likes": 9218
-        },
-        {
-          "hour": 164,
-          "likes": 9325
-        },
-        {
-          "hour": 165,
-          "likes": 9378
-        },
-        {
-          "hour": 166,
-          "likes": 9390
-        },
-        {
-          "hour": 167,
-          "likes": 9460
-        }
-      ],
-      "previousLikePoints": [
-        {
-          "hour": 1,
-          "likes": 403
-        },
-        {
-          "hour": 2,
-          "likes": 131
-        },
-        {
-          "hour": 3,
-          "likes": 440
-        },
-        {
-          "hour": 4,
-          "likes": 1235
-        },
-        {
-          "hour": 5,
-          "likes": 1375
-        },
-        {
-          "hour": 6,
-          "likes": 1469
-        },
-        {
-          "hour": 7,
-          "likes": 1510
-        },
-        {
-          "hour": 8,
-          "likes": 1553
-        },
-        {
-          "hour": 9,
-          "likes": 1577
-        },
-        {
-          "hour": 10,
-          "likes": 1569
-        },
-        {
-          "hour": 11,
-          "likes": 1628
-        },
-        {
-          "hour": 12,
-          "likes": 1722
-        },
-        {
-          "hour": 14,
-          "likes": 1915
-        },
-        {
-          "hour": 15,
-          "likes": 2052
-        },
-        {
-          "hour": 16,
-          "likes": 2119
-        },
-        {
-          "hour": 17,
-          "likes": 2216
-        },
-        {
-          "hour": 18,
-          "likes": 2312
-        },
-        {
-          "hour": 19,
-          "likes": 2391
-        },
-        {
-          "hour": 20,
-          "likes": 2451
-        },
-        {
-          "hour": 21,
-          "likes": 2502
-        },
-        {
-          "hour": 24,
-          "likes": 2702
-        },
-        {
-          "hour": 25,
-          "likes": 2780
-        },
-        {
-          "hour": 26,
-          "likes": 2870
-        },
-        {
-          "hour": 27,
-          "likes": 2919
-        },
-        {
-          "hour": 28,
-          "likes": 3089
-        },
-        {
-          "hour": 29,
-          "likes": 3129
-        },
-        {
-          "hour": 30,
-          "likes": 3159
-        },
-        {
-          "hour": 31,
-          "likes": 3179
-        },
-        {
-          "hour": 32,
-          "likes": 3192
-        },
-        {
-          "hour": 33,
-          "likes": 3200
-        },
-        {
-          "hour": 34,
-          "likes": 3216
-        },
-        {
-          "hour": 35,
-          "likes": 3228
-        },
-        {
-          "hour": 36,
-          "likes": 3243
-        },
-        {
-          "hour": 37,
-          "likes": 3256
-        },
-        {
-          "hour": 38,
-          "likes": 3278
-        },
-        {
-          "hour": 40,
-          "likes": 3338
-        },
-        {
-          "hour": 42,
-          "likes": 3396
-        },
-        {
-          "hour": 43,
-          "likes": 3417
-        },
-        {
-          "hour": 44,
-          "likes": 3437
-        },
-        {
-          "hour": 45,
-          "likes": 3456
-        },
-        {
-          "hour": 46,
-          "likes": 3473
-        },
-        {
-          "hour": 47,
-          "likes": 3508
-        },
-        {
-          "hour": 48,
-          "likes": 3522
-        },
-        {
-          "hour": 49,
-          "likes": 3562
-        },
-        {
-          "hour": 51,
-          "likes": 3588
-        },
-        {
-          "hour": 52,
-          "likes": 3641
-        },
-        {
-          "hour": 53,
-          "likes": 3658
-        },
-        {
-          "hour": 54,
-          "likes": 3674
-        },
-        {
-          "hour": 55,
-          "likes": 3682
-        },
-        {
-          "hour": 56,
-          "likes": 3685
-        },
-        {
-          "hour": 57,
-          "likes": 3687
-        },
-        {
-          "hour": 58,
-          "likes": 3691
-        },
-        {
-          "hour": 59,
-          "likes": 3701
-        },
-        {
-          "hour": 60,
-          "likes": 3713
-        },
-        {
-          "hour": 61,
-          "likes": 3738
-        },
-        {
-          "hour": 62,
-          "likes": 3751
-        },
-        {
-          "hour": 63,
-          "likes": 3767
-        },
-        {
-          "hour": 64,
-          "likes": 3783
-        },
-        {
-          "hour": 65,
-          "likes": 3798
-        },
-        {
-          "hour": 66,
-          "likes": 3813
-        },
-        {
-          "hour": 67,
-          "likes": 3828
-        },
-        {
-          "hour": 68,
-          "likes": 3837
-        },
-        {
-          "hour": 69,
-          "likes": 3848
-        },
-        {
-          "hour": 70,
-          "likes": 3861
-        },
-        {
-          "hour": 71,
-          "likes": 3876
-        },
-        {
-          "hour": 72,
-          "likes": 3899
-        },
-        {
-          "hour": 73,
-          "likes": 3924
-        },
-        {
-          "hour": 74,
-          "likes": 3945
-        },
-        {
-          "hour": 75,
-          "likes": 3971
-        },
-        {
-          "hour": 76,
-          "likes": 3964
-        },
-        {
-          "hour": 77,
-          "likes": 3978
-        },
-        {
-          "hour": 78,
-          "likes": 4010
-        },
-        {
-          "hour": 79,
-          "likes": 4012
-        },
-        {
-          "hour": 80,
-          "likes": 4022
-        },
-        {
-          "hour": 81,
-          "likes": 4024
-        },
-        {
-          "hour": 82,
-          "likes": 4021
-        },
-        {
-          "hour": 83,
-          "likes": 4026
-        },
-        {
-          "hour": 84,
-          "likes": 4033
-        },
-        {
-          "hour": 85,
-          "likes": 4042
-        },
-        {
-          "hour": 86,
-          "likes": 4047
-        },
-        {
-          "hour": 87,
-          "likes": 4054
-        },
-        {
-          "hour": 88,
-          "likes": 4068
-        },
-        {
-          "hour": 89,
-          "likes": 4078
-        },
-        {
-          "hour": 90,
-          "likes": 4085
-        },
-        {
-          "hour": 91,
-          "likes": 4097
-        },
-        {
-          "hour": 92,
-          "likes": 4109
-        },
-        {
-          "hour": 93,
-          "likes": 4117
-        },
-        {
-          "hour": 94,
-          "likes": 4121
-        },
-        {
-          "hour": 95,
-          "likes": 4129
-        },
-        {
-          "hour": 96,
-          "likes": 4134
-        },
-        {
-          "hour": 97,
-          "likes": 4156
-        },
-        {
-          "hour": 98,
-          "likes": 4158
-        },
-        {
-          "hour": 99,
-          "likes": 4170
-        },
-        {
-          "hour": 100,
-          "likes": 4196
-        },
-        {
-          "hour": 101,
-          "likes": 4208
-        },
-        {
-          "hour": 102,
-          "likes": 4230
-        },
-        {
-          "hour": 103,
-          "likes": 4233
-        },
-        {
-          "hour": 104,
-          "likes": 4239
-        },
-        {
-          "hour": 105,
-          "likes": 4241
-        },
-        {
-          "hour": 106,
-          "likes": 4241
-        },
-        {
-          "hour": 107,
-          "likes": 4241
-        },
-        {
-          "hour": 108,
-          "likes": 4243
-        },
-        {
-          "hour": 109,
-          "likes": 4252
-        },
-        {
-          "hour": 110,
-          "likes": 4257
-        },
-        {
-          "hour": 111,
-          "likes": 4263
-        },
-        {
-          "hour": 112,
-          "likes": 4273
-        },
-        {
-          "hour": 113,
-          "likes": 4286
-        },
-        {
-          "hour": 114,
-          "likes": 4292
-        },
-        {
-          "hour": 115,
-          "likes": 4306
-        },
-        {
-          "hour": 116,
-          "likes": 4314
-        },
-        {
-          "hour": 117,
-          "likes": 4324
-        },
-        {
-          "hour": 118,
-          "likes": 4334
-        },
-        {
-          "hour": 119,
-          "likes": 4346
-        },
-        {
-          "hour": 120,
-          "likes": 4353
-        },
-        {
-          "hour": 121,
-          "likes": 4366
-        },
-        {
-          "hour": 122,
-          "likes": 4384
-        },
-        {
-          "hour": 123,
-          "likes": 4395
-        },
-        {
-          "hour": 124,
-          "likes": 4409
-        },
-        {
-          "hour": 125,
-          "likes": 4417
-        },
-        {
-          "hour": 126,
-          "likes": 4418
-        },
-        {
-          "hour": 127,
-          "likes": 4426
-        },
-        {
-          "hour": 128,
-          "likes": 4437
-        },
-        {
-          "hour": 129,
-          "likes": 4440
-        },
-        {
-          "hour": 130,
-          "likes": 4447
-        },
-        {
-          "hour": 131,
-          "likes": 4451
-        },
-        {
-          "hour": 132,
-          "likes": 4458
-        },
-        {
-          "hour": 133,
-          "likes": 4460
-        },
-        {
-          "hour": 134,
-          "likes": 4469
-        },
-        {
-          "hour": 135,
-          "likes": 4481
-        },
-        {
-          "hour": 136,
-          "likes": 4491
-        },
-        {
-          "hour": 137,
-          "likes": 4496
-        },
-        {
-          "hour": 138,
-          "likes": 4508
-        },
-        {
-          "hour": 139,
-          "likes": 4526
-        },
-        {
-          "hour": 140,
-          "likes": 4521
-        },
-        {
-          "hour": 141,
-          "likes": 4533
-        },
-        {
-          "hour": 142,
-          "likes": 4560
-        },
-        {
-          "hour": 143,
-          "likes": 4573
-        },
-        {
-          "hour": 144,
-          "likes": 4589
-        },
-        {
-          "hour": 145,
-          "likes": 4602
-        },
-        {
-          "hour": 146,
-          "likes": 4611
-        },
-        {
-          "hour": 147,
-          "likes": 4638
-        },
-        {
-          "hour": 148,
-          "likes": 4668
-        },
-        {
-          "hour": 149,
-          "likes": 4684
-        },
-        {
-          "hour": 150,
-          "likes": 4694
-        },
-        {
-          "hour": 151,
-          "likes": 4708
-        },
-        {
-          "hour": 152,
-          "likes": 4719
-        },
-        {
-          "hour": 153,
-          "likes": 4722
-        },
-        {
-          "hour": 154,
-          "likes": 4728
-        },
-        {
-          "hour": 155,
-          "likes": 4737
-        },
-        {
-          "hour": 156,
-          "likes": 4753
-        },
-        {
-          "hour": 157,
-          "likes": 4769
-        },
-        {
-          "hour": 158,
-          "likes": 4778
-        },
-        {
-          "hour": 159,
-          "likes": 4798
-        },
-        {
-          "hour": 160,
-          "likes": 4808
-        },
-        {
-          "hour": 161,
-          "likes": 4837
-        },
-        {
-          "hour": 163,
-          "likes": 4906
-        },
-        {
-          "hour": 164,
-          "likes": 4933
-        },
-        {
-          "hour": 165,
-          "likes": 4973
-        },
-        {
-          "hour": 166,
-          "likes": 4964
-        },
-        {
-          "hour": 167,
-          "likes": 5018
-        }
-      ],
-      "rankings": [
-        {
-          "type": "vtr",
-          "label": "VTR/ロケ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [
-            {
-              "hour": 2,
-              "rank": 41
-            },
-            {
-              "hour": 3,
-              "rank": 29
-            },
-            {
-              "hour": 4,
-              "rank": 22
-            },
-            {
-              "hour": 5,
-              "rank": 17
-            },
-            {
-              "hour": 6,
-              "rank": 14
-            },
-            {
-              "hour": 7,
-              "rank": 13
-            },
-            {
-              "hour": 8,
-              "rank": 12
-            },
-            {
-              "hour": 9,
-              "rank": 12
-            },
-            {
-              "hour": 10,
-              "rank": 12
-            },
-            {
-              "hour": 11,
-              "rank": 12
-            },
-            {
-              "hour": 12,
-              "rank": 12
-            },
-            {
-              "hour": 13,
-              "rank": 12
-            },
-            {
-              "hour": 14,
-              "rank": 11
-            },
-            {
-              "hour": 15,
-              "rank": 10
-            },
-            {
-              "hour": 16,
-              "rank": 9
-            },
-            {
-              "hour": 17,
-              "rank": 9
-            },
-            {
-              "hour": 18,
-              "rank": 7
-            },
-            {
-              "hour": 19,
-              "rank": 7
-            },
-            {
-              "hour": 20,
-              "rank": 7
-            },
-            {
-              "hour": 21,
-              "rank": 7
-            },
-            {
-              "hour": 22,
-              "rank": 7
-            },
-            {
-              "hour": 23,
-              "rank": 7
-            },
-            {
-              "hour": 24,
-              "rank": 7
-            },
-            {
-              "hour": 25,
-              "rank": 7
-            },
-            {
-              "hour": 26,
-              "rank": 7
-            },
-            {
-              "hour": 27,
-              "rank": 7
-            },
-            {
-              "hour": 28,
-              "rank": 7
-            },
-            {
-              "hour": 29,
-              "rank": 7
-            },
-            {
-              "hour": 30,
-              "rank": 7
-            },
-            {
-              "hour": 31,
-              "rank": 7
-            },
-            {
-              "hour": 32,
-              "rank": 7
-            },
-            {
-              "hour": 33,
-              "rank": 8
-            },
-            {
-              "hour": 34,
-              "rank": 8
-            },
-            {
-              "hour": 35,
-              "rank": 8
-            },
-            {
-              "hour": 36,
-              "rank": 8
-            },
-            {
-              "hour": 37,
-              "rank": 8
-            },
-            {
-              "hour": 38,
-              "rank": 8
-            },
-            {
-              "hour": 39,
-              "rank": 8
-            },
-            {
-              "hour": 40,
-              "rank": 8
-            },
-            {
-              "hour": 41,
-              "rank": 8
-            },
-            {
-              "hour": 42,
-              "rank": 9
-            },
-            {
-              "hour": 43,
-              "rank": 9
-            },
-            {
-              "hour": 44,
-              "rank": 9
-            },
-            {
-              "hour": 45,
-              "rank": 9
-            },
-            {
-              "hour": 46,
-              "rank": 9
-            },
-            {
-              "hour": 47,
-              "rank": 9
-            },
-            {
-              "hour": 48,
-              "rank": 10
-            },
-            {
-              "hour": 49,
-              "rank": 10
-            },
-            {
-              "hour": 50,
-              "rank": 12
-            },
-            {
-              "hour": 51,
-              "rank": 13
-            },
-            {
-              "hour": 52,
-              "rank": 13
-            },
-            {
-              "hour": 53,
-              "rank": 14
-            },
-            {
-              "hour": 54,
-              "rank": 14
-            },
-            {
-              "hour": 55,
-              "rank": 14
-            },
-            {
-              "hour": 56,
-              "rank": 14
-            },
-            {
-              "hour": 57,
-              "rank": 14
-            },
-            {
-              "hour": 58,
-              "rank": 14
-            },
-            {
-              "hour": 59,
-              "rank": 14
-            },
-            {
-              "hour": 60,
-              "rank": 14
-            },
-            {
-              "hour": 61,
-              "rank": 14
-            },
-            {
-              "hour": 62,
-              "rank": 13
-            },
-            {
-              "hour": 63,
-              "rank": 13
-            },
-            {
-              "hour": 64,
-              "rank": 13
-            },
-            {
-              "hour": 65,
-              "rank": 13
-            },
-            {
-              "hour": 66,
-              "rank": 14
-            },
-            {
-              "hour": 67,
-              "rank": 14
-            },
-            {
-              "hour": 68,
-              "rank": 13
-            },
-            {
-              "hour": 69,
-              "rank": 13
-            },
-            {
-              "hour": 70,
-              "rank": 13
-            },
-            {
-              "hour": 71,
-              "rank": 13
-            },
-            {
-              "hour": 72,
-              "rank": 13
-            },
-            {
-              "hour": 73,
-              "rank": 13
-            },
-            {
-              "hour": 74,
-              "rank": 12
-            },
-            {
-              "hour": 75,
-              "rank": 12
-            },
-            {
-              "hour": 76,
-              "rank": 12
-            },
-            {
-              "hour": 77,
-              "rank": 14
-            },
-            {
-              "hour": 79,
-              "rank": 14
-            },
-            {
-              "hour": 80,
-              "rank": 14
-            },
-            {
-              "hour": 81,
-              "rank": 14
-            },
-            {
-              "hour": 82,
-              "rank": 14
-            },
-            {
-              "hour": 83,
-              "rank": 14
-            },
-            {
-              "hour": 84,
-              "rank": 14
-            },
-            {
-              "hour": 85,
-              "rank": 14
-            },
-            {
-              "hour": 86,
-              "rank": 14
-            },
-            {
-              "hour": 87,
-              "rank": 14
-            },
-            {
-              "hour": 88,
-              "rank": 14
-            },
-            {
-              "hour": 89,
-              "rank": 14
-            },
-            {
-              "hour": 90,
-              "rank": 14
-            },
-            {
-              "hour": 91,
-              "rank": 14
-            },
-            {
-              "hour": 92,
-              "rank": 14
-            },
-            {
-              "hour": 93,
-              "rank": 17
-            },
-            {
-              "hour": 94,
-              "rank": 18
-            },
-            {
-              "hour": 95,
-              "rank": 18
-            },
-            {
-              "hour": 96,
-              "rank": 19
-            },
-            {
-              "hour": 97,
-              "rank": 19
-            },
-            {
-              "hour": 98,
-              "rank": 18
-            },
-            {
-              "hour": 99,
-              "rank": 18
-            },
-            {
-              "hour": 100,
-              "rank": 18
-            },
-            {
-              "hour": 101,
-              "rank": 19
-            },
-            {
-              "hour": 102,
-              "rank": 21
-            },
-            {
-              "hour": 103,
-              "rank": 22
-            },
-            {
-              "hour": 104,
-              "rank": 22
-            },
-            {
-              "hour": 106,
-              "rank": 23
-            },
-            {
-              "hour": 107,
-              "rank": 23
-            },
-            {
-              "hour": 108,
-              "rank": 23
-            },
-            {
-              "hour": 109,
-              "rank": 23
-            },
-            {
-              "hour": 110,
-              "rank": 23
-            },
-            {
-              "hour": 111,
-              "rank": 23
-            },
-            {
-              "hour": 112,
-              "rank": 23
-            },
-            {
-              "hour": 113,
-              "rank": 25
-            },
-            {
-              "hour": 114,
-              "rank": 25
-            },
-            {
-              "hour": 115,
-              "rank": 25
-            },
-            {
-              "hour": 116,
-              "rank": 25
-            },
-            {
-              "hour": 117,
-              "rank": 27
-            },
-            {
-              "hour": 118,
-              "rank": 27
-            },
-            {
-              "hour": 119,
-              "rank": 27
-            },
-            {
-              "hour": 120,
-              "rank": 27
-            },
-            {
-              "hour": 121,
-              "rank": 26
-            },
-            {
-              "hour": 122,
-              "rank": 25
-            },
-            {
-              "hour": 123,
-              "rank": 25
-            },
-            {
-              "hour": 124,
-              "rank": 25
-            },
-            {
-              "hour": 126,
-              "rank": 25
-            },
-            {
-              "hour": 127,
-              "rank": 25
-            },
-            {
-              "hour": 128,
-              "rank": 25
-            },
-            {
-              "hour": 129,
-              "rank": 26
-            },
-            {
-              "hour": 130,
-              "rank": 26
-            },
-            {
-              "hour": 131,
-              "rank": 26
-            },
-            {
-              "hour": 132,
-              "rank": 26
-            },
-            {
-              "hour": 133,
-              "rank": 26
-            },
-            {
-              "hour": 134,
-              "rank": 26
-            },
-            {
-              "hour": 135,
-              "rank": 27
-            },
-            {
-              "hour": 136,
-              "rank": 27
-            },
-            {
-              "hour": 137,
-              "rank": 25
-            },
-            {
-              "hour": 138,
-              "rank": 24
-            },
-            {
-              "hour": 139,
-              "rank": 24
-            },
-            {
-              "hour": 140,
-              "rank": 24
-            },
-            {
-              "hour": 141,
-              "rank": 23
-            },
-            {
-              "hour": 142,
-              "rank": 22
-            },
-            {
-              "hour": 143,
-              "rank": 23
-            },
-            {
-              "hour": 144,
-              "rank": 23
-            },
-            {
-              "hour": 145,
-              "rank": 23
-            },
-            {
-              "hour": 146,
-              "rank": 24
-            },
-            {
-              "hour": 147,
-              "rank": 27
-            },
-            {
-              "hour": 148,
-              "rank": 27
-            },
-            {
-              "hour": 149,
-              "rank": 26
-            },
-            {
-              "hour": 150,
-              "rank": 28
-            },
-            {
-              "hour": 151,
-              "rank": 27
-            },
-            {
-              "hour": 152,
-              "rank": 27
-            },
-            {
-              "hour": 153,
-              "rank": 26
-            },
-            {
-              "hour": 154,
-              "rank": 26
-            },
-            {
-              "hour": 155,
-              "rank": 26
-            },
-            {
-              "hour": 156,
-              "rank": 27
-            },
-            {
-              "hour": 157,
-              "rank": 27
-            },
-            {
-              "hour": 158,
-              "rank": 27
-            },
-            {
-              "hour": 159,
-              "rank": 28
-            },
-            {
-              "hour": 160,
-              "rank": 28
-            },
-            {
-              "hour": 161,
-              "rank": 28
-            },
-            {
-              "hour": 162,
-              "rank": 27
-            },
-            {
-              "hour": 163,
-              "rank": 28
-            },
-            {
-              "hour": 164,
-              "rank": 29
-            },
-            {
-              "hour": 165,
-              "rank": 29
-            },
-            {
-              "hour": 166,
-              "rank": 29
-            },
-            {
-              "hour": 167,
-              "rank": 27
-            }
-          ],
-          "previousPoints": [
-            {
-              "hour": 2,
-              "rank": 40
-            },
-            {
-              "hour": 3,
-              "rank": 28
-            },
-            {
-              "hour": 4,
-              "rank": 20
-            },
-            {
-              "hour": 5,
-              "rank": 18
-            },
-            {
-              "hour": 6,
-              "rank": 18
-            },
-            {
-              "hour": 7,
-              "rank": 14
-            },
-            {
-              "hour": 8,
-              "rank": 14
-            },
-            {
-              "hour": 9,
-              "rank": 14
-            },
-            {
-              "hour": 10,
-              "rank": 14
-            },
-            {
-              "hour": 11,
-              "rank": 14
-            },
-            {
-              "hour": 12,
-              "rank": 14
-            },
-            {
-              "hour": 13,
-              "rank": 13
-            },
-            {
-              "hour": 14,
-              "rank": 13
-            },
-            {
-              "hour": 15,
-              "rank": 12
-            },
-            {
-              "hour": 16,
-              "rank": 10
-            },
-            {
-              "hour": 17,
-              "rank": 9
-            },
-            {
-              "hour": 18,
-              "rank": 8
-            },
-            {
-              "hour": 19,
-              "rank": 6
-            },
-            {
-              "hour": 20,
-              "rank": 4
-            },
-            {
-              "hour": 21,
-              "rank": 4
-            },
-            {
-              "hour": 22,
-              "rank": 4
-            },
-            {
-              "hour": 23,
-              "rank": 4
-            },
-            {
-              "hour": 24,
-              "rank": 4
-            },
-            {
-              "hour": 25,
-              "rank": 4
-            },
-            {
-              "hour": 26,
-              "rank": 4
-            },
-            {
-              "hour": 27,
-              "rank": 4
-            },
-            {
-              "hour": 28,
-              "rank": 4
-            },
-            {
-              "hour": 29,
-              "rank": 4
-            },
-            {
-              "hour": 30,
-              "rank": 5
-            },
-            {
-              "hour": 31,
-              "rank": 5
-            },
-            {
-              "hour": 32,
-              "rank": 5
-            },
-            {
-              "hour": 33,
-              "rank": 5
-            },
-            {
-              "hour": 34,
-              "rank": 5
-            },
-            {
-              "hour": 35,
-              "rank": 5
-            },
-            {
-              "hour": 36,
-              "rank": 5
-            },
-            {
-              "hour": 37,
-              "rank": 5
-            },
-            {
-              "hour": 38,
-              "rank": 6
-            },
-            {
-              "hour": 39,
-              "rank": 6
-            },
-            {
-              "hour": 40,
-              "rank": 6
-            },
-            {
-              "hour": 41,
-              "rank": 8
-            },
-            {
-              "hour": 42,
-              "rank": 9
-            },
-            {
-              "hour": 43,
-              "rank": 9
-            },
-            {
-              "hour": 44,
-              "rank": 9
-            },
-            {
-              "hour": 45,
-              "rank": 11
-            },
-            {
-              "hour": 46,
-              "rank": 11
-            },
-            {
-              "hour": 47,
-              "rank": 13
-            },
-            {
-              "hour": 48,
-              "rank": 13
-            },
-            {
-              "hour": 49,
-              "rank": 15
-            },
-            {
-              "hour": 50,
-              "rank": 15
-            },
-            {
-              "hour": 51,
-              "rank": 16
-            },
-            {
-              "hour": 52,
-              "rank": 16
-            },
-            {
-              "hour": 53,
-              "rank": 17
-            },
-            {
-              "hour": 54,
-              "rank": 16
-            },
-            {
-              "hour": 55,
-              "rank": 16
-            },
-            {
-              "hour": 56,
-              "rank": 16
-            },
-            {
-              "hour": 57,
-              "rank": 16
-            },
-            {
-              "hour": 58,
-              "rank": 16
-            },
-            {
-              "hour": 59,
-              "rank": 16
-            },
-            {
-              "hour": 60,
-              "rank": 16
-            },
-            {
-              "hour": 61,
-              "rank": 16
-            },
-            {
-              "hour": 62,
-              "rank": 18
-            },
-            {
-              "hour": 63,
-              "rank": 18
-            },
-            {
-              "hour": 64,
-              "rank": 19
-            },
-            {
-              "hour": 65,
-              "rank": 19
-            },
-            {
-              "hour": 66,
-              "rank": 19
-            },
-            {
-              "hour": 67,
-              "rank": 19
-            },
-            {
-              "hour": 68,
-              "rank": 20
-            },
-            {
-              "hour": 69,
-              "rank": 20
-            },
-            {
-              "hour": 70,
-              "rank": 20
-            },
-            {
-              "hour": 71,
-              "rank": 22
-            },
-            {
-              "hour": 72,
-              "rank": 23
-            },
-            {
-              "hour": 73,
-              "rank": 25
-            },
-            {
-              "hour": 74,
-              "rank": 23
-            },
-            {
-              "hour": 75,
-              "rank": 23
-            },
-            {
-              "hour": 76,
-              "rank": 23
-            },
-            {
-              "hour": 77,
-              "rank": 23
-            },
-            {
-              "hour": 78,
-              "rank": 24
-            },
-            {
-              "hour": 79,
-              "rank": 24
-            },
-            {
-              "hour": 80,
-              "rank": 24
-            },
-            {
-              "hour": 81,
-              "rank": 25
-            },
-            {
-              "hour": 82,
-              "rank": 26
-            },
-            {
-              "hour": 83,
-              "rank": 26
-            },
-            {
-              "hour": 84,
-              "rank": 26
-            },
-            {
-              "hour": 85,
-              "rank": 29
-            },
-            {
-              "hour": 86,
-              "rank": 28
-            },
-            {
-              "hour": 87,
-              "rank": 27
-            },
-            {
-              "hour": 88,
-              "rank": 28
-            },
-            {
-              "hour": 89,
-              "rank": 27
-            },
-            {
-              "hour": 90,
-              "rank": 27
-            },
-            {
-              "hour": 91,
-              "rank": 27
-            },
-            {
-              "hour": 92,
-              "rank": 27
-            },
-            {
-              "hour": 93,
-              "rank": 29
-            },
-            {
-              "hour": 94,
-              "rank": 29
-            },
-            {
-              "hour": 95,
-              "rank": 29
-            },
-            {
-              "hour": 96,
-              "rank": 29
-            },
-            {
-              "hour": 97,
-              "rank": 27
-            },
-            {
-              "hour": 98,
-              "rank": 24
-            },
-            {
-              "hour": 99,
-              "rank": 25
-            },
-            {
-              "hour": 100,
-              "rank": 27
-            },
-            {
-              "hour": 101,
-              "rank": 30
-            },
-            {
-              "hour": 102,
-              "rank": 30
-            },
-            {
-              "hour": 103,
-              "rank": 30
-            },
-            {
-              "hour": 104,
-              "rank": 30
-            },
-            {
-              "hour": 105,
-              "rank": 30
-            },
-            {
-              "hour": 106,
-              "rank": 30
-            },
-            {
-              "hour": 107,
-              "rank": 30
-            },
-            {
-              "hour": 108,
-              "rank": 30
-            },
-            {
-              "hour": 109,
-              "rank": 30
-            },
-            {
-              "hour": 110,
-              "rank": 30
-            },
-            {
-              "hour": 111,
-              "rank": 30
-            },
-            {
-              "hour": 112,
-              "rank": 30
-            },
-            {
-              "hour": 113,
-              "rank": 30
-            },
-            {
-              "hour": 114,
-              "rank": 31
-            },
-            {
-              "hour": 115,
-              "rank": 31
-            },
-            {
-              "hour": 116,
-              "rank": 30
-            },
-            {
-              "hour": 117,
-              "rank": 30
-            },
-            {
-              "hour": 118,
-              "rank": 30
-            },
-            {
-              "hour": 119,
-              "rank": 29
-            },
-            {
-              "hour": 120,
-              "rank": 28
-            },
-            {
-              "hour": 121,
-              "rank": 28
-            },
-            {
-              "hour": 122,
-              "rank": 28
-            },
-            {
-              "hour": 123,
-              "rank": 29
-            },
-            {
-              "hour": 124,
-              "rank": 29
-            },
-            {
-              "hour": 126,
-              "rank": 30
-            },
-            {
-              "hour": 127,
-              "rank": 30
-            },
-            {
-              "hour": 128,
-              "rank": 31
-            },
-            {
-              "hour": 129,
-              "rank": 31
-            },
-            {
-              "hour": 130,
-              "rank": 32
-            },
-            {
-              "hour": 131,
-              "rank": 32
-            },
-            {
-              "hour": 132,
-              "rank": 32
-            },
-            {
-              "hour": 133,
-              "rank": 33
-            },
-            {
-              "hour": 134,
-              "rank": 33
-            },
-            {
-              "hour": 135,
-              "rank": 32
-            },
-            {
-              "hour": 136,
-              "rank": 32
-            },
-            {
-              "hour": 137,
-              "rank": 31
-            },
-            {
-              "hour": 138,
-              "rank": 32
-            },
-            {
-              "hour": 139,
-              "rank": 32
-            },
-            {
-              "hour": 140,
-              "rank": 32
-            },
-            {
-              "hour": 141,
-              "rank": 32
-            },
-            {
-              "hour": 142,
-              "rank": 31
-            },
-            {
-              "hour": 143,
-              "rank": 31
-            },
-            {
-              "hour": 144,
-              "rank": 33
-            },
-            {
-              "hour": 145,
-              "rank": 32
-            },
-            {
-              "hour": 146,
-              "rank": 32
-            },
-            {
-              "hour": 147,
-              "rank": 32
-            },
-            {
-              "hour": 148,
-              "rank": 32
-            },
-            {
-              "hour": 149,
-              "rank": 31
-            },
-            {
-              "hour": 150,
-              "rank": 30
-            },
-            {
-              "hour": 151,
-              "rank": 31
-            },
-            {
-              "hour": 152,
-              "rank": 32
-            },
-            {
-              "hour": 153,
-              "rank": 33
-            },
-            {
-              "hour": 154,
-              "rank": 33
-            },
-            {
-              "hour": 155,
-              "rank": 33
-            },
-            {
-              "hour": 156,
-              "rank": 33
-            },
-            {
-              "hour": 157,
-              "rank": 32
-            },
-            {
-              "hour": 158,
-              "rank": 35
-            },
-            {
-              "hour": 159,
-              "rank": 37
-            },
-            {
-              "hour": 160,
-              "rank": 39
-            },
-            {
-              "hour": 161,
-              "rank": 39
-            },
-            {
-              "hour": 163,
-              "rank": 39
-            },
-            {
-              "hour": 164,
-              "rank": 36
-            },
-            {
-              "hour": 165,
-              "rank": 36
-            },
-            {
-              "hour": 166,
-              "rank": 36
-            },
-            {
-              "hour": 167,
-              "rank": 36
-            }
-          ],
-          "nearbyRanking": [
-            {
-              "rank": 47,
-              "title": "世界まる見え！テレビ特捜部"
-            },
-            {
-              "rank": 48,
-              "title": "ゴルフ侍、見参！"
-            },
-            {
-              "rank": 49,
-              "title": "バナナマンのせっかくグルメ!!"
-            },
-            {
-              "rank": 50,
-              "title": "ザ！世界仰天ニュース"
-            }
-          ]
-        },
-        {
-          "type": "variety",
-          "label": "バラエティ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [
-            {
-              "hour": 9,
-              "rank": 50
-            },
-            {
-              "hour": 10,
-              "rank": 46
-            },
-            {
-              "hour": 11,
-              "rank": 45
-            },
-            {
-              "hour": 12,
-              "rank": 43
-            },
-            {
-              "hour": 13,
-              "rank": 41
-            },
-            {
-              "hour": 14,
-              "rank": 39
-            },
-            {
-              "hour": 15,
-              "rank": 39
-            },
-            {
-              "hour": 16,
-              "rank": 37
-            },
-            {
-              "hour": 17,
-              "rank": 36
-            },
-            {
-              "hour": 18,
-              "rank": 31
-            },
-            {
-              "hour": 19,
-              "rank": 30
-            },
-            {
-              "hour": 20,
-              "rank": 30
-            },
-            {
-              "hour": 21,
-              "rank": 29
-            },
-            {
-              "hour": 22,
-              "rank": 28
-            },
-            {
-              "hour": 23,
-              "rank": 24
-            },
-            {
-              "hour": 24,
-              "rank": 24
-            },
-            {
-              "hour": 25,
-              "rank": 23
-            },
-            {
-              "hour": 26,
-              "rank": 24
-            },
-            {
-              "hour": 27,
-              "rank": 25
-            },
-            {
-              "hour": 28,
-              "rank": 27
-            },
-            {
-              "hour": 29,
-              "rank": 28
-            },
-            {
-              "hour": 30,
-              "rank": 28
-            },
-            {
-              "hour": 31,
-              "rank": 28
-            },
-            {
-              "hour": 32,
-              "rank": 28
-            },
-            {
-              "hour": 33,
-              "rank": 29
-            },
-            {
-              "hour": 34,
-              "rank": 29
-            },
-            {
-              "hour": 35,
-              "rank": 29
-            },
-            {
-              "hour": 36,
-              "rank": 29
-            },
-            {
-              "hour": 37,
-              "rank": 30
-            },
-            {
-              "hour": 38,
-              "rank": 31
-            },
-            {
-              "hour": 39,
-              "rank": 32
-            },
-            {
-              "hour": 40,
-              "rank": 34
-            },
-            {
-              "hour": 41,
-              "rank": 37
-            },
-            {
-              "hour": 42,
-              "rank": 38
-            },
-            {
-              "hour": 43,
-              "rank": 40
-            },
-            {
-              "hour": 44,
-              "rank": 40
-            },
-            {
-              "hour": 45,
-              "rank": 41
-            },
-            {
-              "hour": 46,
-              "rank": 42
-            },
-            {
-              "hour": 47,
-              "rank": 44
-            },
-            {
-              "hour": 48,
-              "rank": 46
-            },
-            {
-              "hour": 49,
-              "rank": 47
-            },
-            {
-              "hour": 50,
-              "rank": 49
-            },
-            {
-              "hour": 51,
-              "rank": 48
-            }
-          ],
-          "previousPoints": [
-            {
-              "hour": 12,
-              "rank": 49
-            },
-            {
-              "hour": 13,
-              "rank": 49
-            },
-            {
-              "hour": 14,
-              "rank": 48
-            },
-            {
-              "hour": 15,
-              "rank": 46
-            },
-            {
-              "hour": 16,
-              "rank": 42
-            },
-            {
-              "hour": 17,
-              "rank": 39
-            },
-            {
-              "hour": 18,
-              "rank": 38
-            },
-            {
-              "hour": 19,
-              "rank": 34
-            },
-            {
-              "hour": 20,
-              "rank": 31
-            },
-            {
-              "hour": 21,
-              "rank": 31
-            },
-            {
-              "hour": 22,
-              "rank": 31
-            },
-            {
-              "hour": 23,
-              "rank": 27
-            },
-            {
-              "hour": 24,
-              "rank": 23
-            },
-            {
-              "hour": 25,
-              "rank": 23
-            },
-            {
-              "hour": 26,
-              "rank": 24
-            },
-            {
-              "hour": 27,
-              "rank": 26
-            },
-            {
-              "hour": 28,
-              "rank": 27
-            },
-            {
-              "hour": 29,
-              "rank": 27
-            },
-            {
-              "hour": 30,
-              "rank": 28
-            },
-            {
-              "hour": 31,
-              "rank": 30
-            },
-            {
-              "hour": 32,
-              "rank": 32
-            },
-            {
-              "hour": 33,
-              "rank": 32
-            },
-            {
-              "hour": 34,
-              "rank": 32
-            },
-            {
-              "hour": 35,
-              "rank": 32
-            },
-            {
-              "hour": 36,
-              "rank": 32
-            },
-            {
-              "hour": 37,
-              "rank": 32
-            },
-            {
-              "hour": 38,
-              "rank": 34
-            },
-            {
-              "hour": 39,
-              "rank": 37
-            },
-            {
-              "hour": 40,
-              "rank": 38
-            },
-            {
-              "hour": 41,
-              "rank": 43
-            },
-            {
-              "hour": 42,
-              "rank": 45
-            },
-            {
-              "hour": 43,
-              "rank": 45
-            },
-            {
-              "hour": 44,
-              "rank": 46
-            },
-            {
-              "hour": 45,
-              "rank": 49
-            },
-            {
-              "hour": 46,
-              "rank": 49
-            }
-          ],
-          "nearbyRanking": [
-            {
-              "rank": 47,
-              "title": "ぐるぐるナインティナイン"
-            },
-            {
-              "rank": 48,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
-            },
-            {
-              "rank": 49,
-              "title": "Golden SixTONES"
-            },
-            {
-              "rank": 50,
-              "title": "櫻井･有吉THE夜会"
             }
           ]
         }
@@ -8007,10 +5230,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/08 19:07",
+      "updatedAt": "2026/11/08 20:07",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
-      "likes": "3736",
+      "likes": "3741",
       "favorites": "81.6万",
       "likePoints": [
         {
@@ -8592,19 +5815,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ぐるぐるナインティナイン"
+              "title": "新しいカギ"
             },
             {
               "rank": 48,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "夜明けのラヴィット！"
             },
             {
               "rank": 49,
-              "title": "Golden SixTONES"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 50,
-              "title": "櫻井･有吉THE夜会"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             }
           ]
         },
@@ -8748,19 +5971,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 48,
-              "title": "相棒 season25"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 49,
-              "title": "女帝"
+              "title": "仮面ライダーマイス"
             },
             {
               "rank": 50,
-              "title": "ゴッドタン"
+              "title": "相棒 season25"
             }
           ]
         }
@@ -8769,10 +5992,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/11/04",
-      "updatedAt": "2026/11/08 19:07",
+      "updatedAt": "2026/11/08 20:07",
       "episodeId": "ephjmgcrvk",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！柴咲コウ登場",
-      "likes": "4142",
+      "likes": "4157",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -9062,6 +6285,10 @@
         {
           "hour": 114,
           "likes": 4142
+        },
+        {
+          "hour": 115,
+          "likes": 4157
         }
       ],
       "previousLikePoints": [
@@ -9339,19 +6566,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ぐるぐるナインティナイン"
+              "title": "新しいカギ"
             },
             {
               "rank": 48,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "夜明けのラヴィット！"
             },
             {
               "rank": 49,
-              "title": "Golden SixTONES"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 50,
-              "title": "櫻井･有吉THE夜会"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             }
           ]
         },
@@ -9366,19 +6593,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 48,
-              "title": "相棒 season25"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 49,
-              "title": "女帝"
+              "title": "仮面ライダーマイス"
             },
             {
               "rank": 50,
-              "title": "ゴッドタン"
+              "title": "相棒 season25"
             }
           ]
         }
@@ -9387,10 +6614,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/08 19:07",
+      "updatedAt": "2026/11/08 20:07",
       "episodeId": "epohjt1ixg",
       "subtitle": "第152回 岸井ゆきの味覚危機！？揉めまくりでチーム崩壊",
-      "likes": "3848",
+      "likes": "3868",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -9640,6 +6867,10 @@
         {
           "hour": 67,
           "likes": 3848
+        },
+        {
+          "hour": 68,
+          "likes": 3868
         }
       ],
       "previousLikePoints": [
@@ -10450,19 +7681,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ぐるぐるナインティナイン"
+              "title": "新しいカギ"
             },
             {
               "rank": 48,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "夜明けのラヴィット！"
             },
             {
               "rank": 49,
-              "title": "Golden SixTONES"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 50,
-              "title": "櫻井･有吉THE夜会"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             }
           ]
         },
@@ -10514,19 +7745,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 48,
-              "title": "相棒 season25"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 49,
-              "title": "女帝"
+              "title": "仮面ライダーマイス"
             },
             {
               "rank": 50,
-              "title": "ゴッドタン"
+              "title": "相棒 season25"
             }
           ]
         }
@@ -10535,10 +7766,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/31",
-      "updatedAt": "2026/11/08 19:07",
+      "updatedAt": "2026/11/08 20:07",
       "episodeId": "ep3jm0ld38",
       "subtitle": "マッサマン＆マツダマン（秘）あ哺乳類SP前編",
-      "likes": "5547",
+      "likes": "5558",
       "favorites": "82.5万",
       "likePoints": [
         {
@@ -11392,19 +8623,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ぐるぐるナインティナイン"
+              "title": "新しいカギ"
             },
             {
               "rank": 48,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "夜明けのラヴィット！"
             },
             {
               "rank": 49,
-              "title": "Golden SixTONES"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 50,
-              "title": "櫻井･有吉THE夜会"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             }
           ]
         },
@@ -11608,19 +8839,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "マツコ＆有吉 かりそめ天国"
+              "title": "一茂×かまいたち ゲンバ"
             },
             {
               "rank": 48,
-              "title": "相棒 season25"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 49,
-              "title": "女帝"
+              "title": "仮面ライダーマイス"
             },
             {
               "rank": 50,
-              "title": "ゴッドタン"
+              "title": "相棒 season25"
             }
           ]
         }
@@ -11629,10 +8860,10 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/11/03",
-      "updatedAt": "2026/11/08 19:07",
+      "updatedAt": "2026/11/08 20:07",
       "episodeId": "epm8lq2z41",
       "subtitle": "激辛PK",
-      "likes": "9852",
+      "likes": "9869",
       "favorites": "3.8万",
       "likePoints": [
         {
@@ -12034,6 +9265,10 @@
         {
           "hour": 139,
           "likes": 9852
+        },
+        {
+          "hour": 140,
+          "likes": 9869
         }
       ],
       "previousLikePoints": [],
@@ -12823,15 +10058,15 @@
             },
             {
               "rank": 48,
-              "title": "プレバト！！"
+              "title": "草彅やすともの うさぎとかめ"
             },
             {
               "rank": 49,
-              "title": "開運！なんでも鑑定団"
+              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
               "rank": 50,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "開運！なんでも鑑定団"
             }
           ]
         },
@@ -13172,19 +10407,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ぐるぐるナインティナイン"
+              "title": "新しいカギ"
             },
             {
               "rank": 48,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "夜明けのラヴィット！"
             },
             {
               "rank": 49,
-              "title": "Golden SixTONES"
+              "title": "大悟の芸人領収書"
             },
             {
               "rank": 50,
-              "title": "櫻井･有吉THE夜会"
+              "title": "ケンコバのほろ酔いビジホ泊 全国版"
             }
           ]
         }
