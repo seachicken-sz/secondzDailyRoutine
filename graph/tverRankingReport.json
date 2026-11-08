@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/11/08 20:07",
+  "updatedAt": "2026/11/08 21:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/08 20:07",
+      "updatedAt": "2026/11/08 21:07",
       "episodeId": "epcqbq5j8j",
       "subtitle": "食通厳選グルメ続々！ベストバイプライスマン",
       "likes": "1.0万",
@@ -188,6 +188,10 @@
         },
         {
           "hour": 46,
+          "likes": 10000
+        },
+        {
+          "hour": 47,
           "likes": 10000
         }
       ],
@@ -661,9 +665,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 10,
-          "elapsedHour": 46,
-          "elapsedRank": 10,
+          "currentRank": 11,
+          "elapsedHour": 47,
+          "elapsedRank": 11,
           "currentPoints": [
             {
               "hour": 7,
@@ -824,6 +828,10 @@
             {
               "hour": 46,
               "rank": 10
+            },
+            {
+              "hour": 47,
+              "rank": 11
             }
           ],
           "previousPoints": [
@@ -1470,19 +1478,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 7,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
-            },
-            {
               "rank": 8,
-              "title": "ニノなのに"
+              "title": "爆笑そっくりものまね紅白歌合戦スペシャル"
             },
             {
               "rank": 9,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "ニノなのに"
             },
             {
               "rank": 10,
+              "title": "上田と女がDEEPに吠える夜"
+            },
+            {
+              "rank": 11,
               "title": "タイムレスマン"
             }
           ]
@@ -1490,9 +1498,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 37,
-          "elapsedHour": 46,
-          "elapsedRank": 37,
+          "currentRank": 38,
+          "elapsedHour": 47,
+          "elapsedRank": 38,
           "currentPoints": [
             {
               "hour": 14,
@@ -1625,6 +1633,10 @@
             {
               "hour": 46,
               "rank": 37
+            },
+            {
+              "hour": 47,
+              "rank": 38
             }
           ],
           "previousPoints": [
@@ -1831,10 +1843,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 34,
-              "title": "おいしい給食 season4"
-            },
-            {
               "rank": 35,
               "title": "おかえり、初恋。"
             },
@@ -1844,6 +1852,10 @@
             },
             {
               "rank": 37,
+              "title": "ジャンクSPORTS"
+            },
+            {
+              "rank": 38,
               "title": "タイムレスマン"
             }
           ]
@@ -1853,10 +1865,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/11/08",
-      "updatedAt": "2026/11/08 20:07",
+      "updatedAt": "2026/11/08 21:07",
       "episodeId": "epy0yvjl1k",
       "subtitle": "箱根・草津の癒し温泉旅!白熱クイズ…最新の情報満載",
-      "likes": "4656",
+      "likes": "5369",
       "favorites": "37.2万",
       "likePoints": [
         {
@@ -1882,6 +1894,10 @@
         {
           "hour": 6,
           "likes": 4656
+        },
+        {
+          "hour": 7,
+          "likes": 5369
         }
       ],
       "previousLikePoints": [
@@ -2354,9 +2370,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 29,
-          "elapsedHour": 6,
-          "elapsedRank": 29,
+          "currentRank": 22,
+          "elapsedHour": 7,
+          "elapsedRank": 22,
           "currentPoints": [
             {
               "hour": 4,
@@ -2369,6 +2385,10 @@
             {
               "hour": 6,
               "rank": 29
+            },
+            {
+              "hour": 7,
+              "rank": 22
             }
           ],
           "previousPoints": [
@@ -2891,19 +2911,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 26,
-              "title": "有吉クイズ"
+              "rank": 19,
+              "title": "マツコ＆有吉 かりそめ天国"
             },
             {
-              "rank": 27,
-              "title": "ロンドンハーツ"
+              "rank": 20,
+              "title": "教えて！ニュースライブ 正義のミカタ"
             },
             {
-              "rank": 28,
-              "title": "知識の扉よ開け！ドア×ドア クエスト"
+              "rank": 21,
+              "title": "月曜から夜ふかし"
             },
             {
-              "rank": 29,
+              "rank": 22,
               "title": "timeleszファミリア"
             }
           ]
@@ -3092,15 +3112,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 48,
-              "title": "さんまのお笑い向上委員会"
+              "title": "仮面ライダーマイス"
             },
             {
               "rank": 49,
-              "title": "仮面ライダーマイス"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 50,
@@ -3113,10 +3133,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/27",
-      "updatedAt": "2026/11/08 20:07",
+      "updatedAt": "2026/11/08 21:07",
       "episodeId": "epbtlmzlxr",
       "subtitle": "新企画！チョコプラ・timeleszが「できる？できない？予想クイズ」に挑戦！",
-      "likes": "8864",
+      "likes": "8862",
       "favorites": "6.6万",
       "likePoints": [
         {
@@ -4956,19 +4976,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "有吉・カズの超考察 日本人はバカなのか？"
+              "title": "上沼・高田のクギズケ！"
             },
             {
               "rank": 48,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "シューイチ"
             },
             {
               "rank": 49,
-              "title": "ザ！世界仰天ニュース"
+              "title": "有吉・カズの超考察 日本人はバカなのか？"
             },
             {
               "rank": 50,
-              "title": "サンドウィッチマン＆芦田愛菜の博士ちゃん"
+              "title": "ザ！世界仰天ニュース"
             }
           ]
         },
@@ -5209,19 +5229,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "新しいカギ"
+              "title": "かのサンド"
             },
             {
               "rank": 48,
-              "title": "夜明けのラヴィット！"
+              "title": "がっちりマンデー!!"
             },
             {
               "rank": 49,
-              "title": "大悟の芸人領収書"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "夜明けのラヴィット！"
             }
           ]
         }
@@ -5230,10 +5250,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/08 20:07",
+      "updatedAt": "2026/11/08 21:07",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
-      "likes": "3741",
+      "likes": "3744",
       "favorites": "81.6万",
       "likePoints": [
         {
@@ -5815,19 +5835,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "新しいカギ"
+              "title": "かのサンド"
             },
             {
               "rank": 48,
-              "title": "夜明けのラヴィット！"
+              "title": "がっちりマンデー!!"
             },
             {
               "rank": 49,
-              "title": "大悟の芸人領収書"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "夜明けのラヴィット！"
             }
           ]
         },
@@ -5971,15 +5991,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 48,
-              "title": "さんまのお笑い向上委員会"
+              "title": "仮面ライダーマイス"
             },
             {
               "rank": 49,
-              "title": "仮面ライダーマイス"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 50,
@@ -5992,10 +6012,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/11/04",
-      "updatedAt": "2026/11/08 20:07",
+      "updatedAt": "2026/11/08 21:07",
       "episodeId": "ephjmgcrvk",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！柴咲コウ登場",
-      "likes": "4157",
+      "likes": "4177",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -6289,6 +6309,10 @@
         {
           "hour": 115,
           "likes": 4157
+        },
+        {
+          "hour": 116,
+          "likes": 4177
         }
       ],
       "previousLikePoints": [
@@ -6566,19 +6590,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "新しいカギ"
+              "title": "かのサンド"
             },
             {
               "rank": 48,
-              "title": "夜明けのラヴィット！"
+              "title": "がっちりマンデー!!"
             },
             {
               "rank": 49,
-              "title": "大悟の芸人領収書"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "夜明けのラヴィット！"
             }
           ]
         },
@@ -6593,15 +6617,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 48,
-              "title": "さんまのお笑い向上委員会"
+              "title": "仮面ライダーマイス"
             },
             {
               "rank": 49,
-              "title": "仮面ライダーマイス"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 50,
@@ -6614,10 +6638,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/08 20:07",
+      "updatedAt": "2026/11/08 21:07",
       "episodeId": "epohjt1ixg",
       "subtitle": "第152回 岸井ゆきの味覚危機！？揉めまくりでチーム崩壊",
-      "likes": "3868",
+      "likes": "3897",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -6871,6 +6895,10 @@
         {
           "hour": 68,
           "likes": 3868
+        },
+        {
+          "hour": 69,
+          "likes": 3897
         }
       ],
       "previousLikePoints": [
@@ -7681,19 +7709,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "新しいカギ"
+              "title": "かのサンド"
             },
             {
               "rank": 48,
-              "title": "夜明けのラヴィット！"
+              "title": "がっちりマンデー!!"
             },
             {
               "rank": 49,
-              "title": "大悟の芸人領収書"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "夜明けのラヴィット！"
             }
           ]
         },
@@ -7745,15 +7773,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 48,
-              "title": "さんまのお笑い向上委員会"
+              "title": "仮面ライダーマイス"
             },
             {
               "rank": 49,
-              "title": "仮面ライダーマイス"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 50,
@@ -7766,10 +7794,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/31",
-      "updatedAt": "2026/11/08 20:07",
+      "updatedAt": "2026/11/08 21:07",
       "episodeId": "ep3jm0ld38",
       "subtitle": "マッサマン＆マツダマン（秘）あ哺乳類SP前編",
-      "likes": "5558",
+      "likes": "5577",
       "favorites": "82.5万",
       "likePoints": [
         {
@@ -8623,19 +8651,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "新しいカギ"
+              "title": "かのサンド"
             },
             {
               "rank": 48,
-              "title": "夜明けのラヴィット！"
+              "title": "がっちりマンデー!!"
             },
             {
               "rank": 49,
-              "title": "大悟の芸人領収書"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "夜明けのラヴィット！"
             }
           ]
         },
@@ -8839,15 +8867,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "テレビ千鳥"
             },
             {
               "rank": 48,
-              "title": "さんまのお笑い向上委員会"
+              "title": "仮面ライダーマイス"
             },
             {
               "rank": 49,
-              "title": "仮面ライダーマイス"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 50,
@@ -8860,10 +8888,10 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/11/03",
-      "updatedAt": "2026/11/08 20:07",
+      "updatedAt": "2026/11/08 21:07",
       "episodeId": "epm8lq2z41",
       "subtitle": "激辛PK",
-      "likes": "9869",
+      "likes": "9875",
       "favorites": "3.8万",
       "likePoints": [
         {
@@ -9269,6 +9297,10 @@
         {
           "hour": 140,
           "likes": 9869
+        },
+        {
+          "hour": 141,
+          "likes": 9875
         }
       ],
       "previousLikePoints": [],
@@ -10054,19 +10086,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "テレビ×ミセス"
+              "title": "所さんの学校では教えてくれないそこんトコロ！"
             },
             {
               "rank": 48,
-              "title": "草彅やすともの うさぎとかめ"
-            },
-            {
-              "rank": 49,
               "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
             },
             {
-              "rank": 50,
+              "rank": 49,
               "title": "開運！なんでも鑑定団"
+            },
+            {
+              "rank": 50,
+              "title": "プレバト！！"
             }
           ]
         },
@@ -10407,19 +10439,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "新しいカギ"
+              "title": "かのサンド"
             },
             {
               "rank": 48,
-              "title": "夜明けのラヴィット！"
+              "title": "がっちりマンデー!!"
             },
             {
               "rank": 49,
-              "title": "大悟の芸人領収書"
+              "title": "ぐるぐるナインティナイン"
             },
             {
               "rank": 50,
-              "title": "ケンコバのほろ酔いビジホ泊 全国版"
+              "title": "夜明けのラヴィット！"
             }
           ]
         }
