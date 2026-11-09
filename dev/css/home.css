@@ -1189,6 +1189,9 @@
   cursor: not-allowed;
 }
 
+/* 移動前のナビ(48px)が占めていたヘッダー高さを保持してロゴの位置を維持 */
+#home-top-share-btn-wrap { min-height: 48px; }
+
 /* 共通モード切り替え：HOME導線・各チェックモード内のタブのみ */
 .home-mode-switcher {
   display: grid;
