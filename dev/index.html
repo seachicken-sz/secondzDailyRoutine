@@ -190,17 +190,7 @@
       <div id="home-top-share-btn-wrap">
         <button id="updateNoticeButton" type="button" class="button secondary update-notice-button"><i class="bi bi-bell"></i></button>
         <button id="settingButton" type="button" class="button secondary update-notice-button" aria-label="設定を開く"><i class="bi bi-gear"></i></button>
-        <div class="home-mode-switcher" role="group" aria-label="表示モード切り替え">
-          <button id="homeModeToggleButton" type="button" class="home-mode-button" aria-label="HOMEを表示" aria-pressed="true" title="HOME">
-            <i class="bi bi-house" aria-hidden="true"></i><span>HOME</span>
-          </button>
-          <button id="tverModeToggleButton" type="button" class="home-mode-button" aria-label="TVerチェックモードを表示" aria-pressed="false" title="TVer">
-            <i class="bi bi-tv" aria-hidden="true"></i><span>TVer</span>
-          </button>
-          <button id="dreamPassModeToggleButton" type="button" class="home-mode-button" aria-label="ドリパスチェックモードを表示" aria-pressed="false" title="ドリパス">
-            <i class="bi bi-ticket-perforated" aria-hidden="true"></i><span>ドリパス</span>
-          </button>
-        </div>
+>
       </div>
 
       <!-- 通常ホームとTVerモードの共通ロゴ -->
@@ -216,6 +206,14 @@
           開始する
         </button>
         </section>
+        <div class="home-check-mode-links" role="group" aria-label="チェックモードへ移動">
+          <button type="button" class="home-check-mode-link" data-home-mode="tver">
+            <i class="bi bi-tv" aria-hidden="true"></i><span>TVerチェック</span>
+          </button>
+          <button type="button" class="home-check-mode-link" data-home-mode="dreampass">
+            <i class="bi bi-ticket-perforated" aria-hidden="true"></i><span>ドリパスチェック</span>
+          </button>
+        </div>
     
         <section class="home-color-change-area">
       <div class="theme-heart-grid" aria-label="テーマカラー選択">
@@ -464,6 +462,17 @@
     <div id="tverModeContent" class="tver-mode-content hidden">
       <div class="tver-mode-header">
         <h2>TVerチェックモード</h2>
+        <div class="home-mode-switcher check-mode-tab-nav" role="group" aria-label="表示モード切り替え">
+          <button id="homeModeToggleButton" data-home-mode="home" type="button" class="home-mode-button" aria-label="HOMEを表示" aria-pressed="true" title="HOME">
+            <i class="bi bi-house" aria-hidden="true"></i><span>HOME</span>
+          </button>
+          <button id="tverModeToggleButton" data-home-mode="tver" type="button" class="home-mode-button" aria-label="TVerチェックモードを表示" aria-pressed="false" title="TVer">
+            <i class="bi bi-tv" aria-hidden="true"></i><span>TVer</span>
+          </button>
+          <button id="dreamPassModeToggleButton" data-home-mode="dreampass" type="button" class="home-mode-button" aria-label="ドリパスチェックモードを表示" aria-pressed="false" title="ドリパス">
+            <i class="bi bi-ticket-perforated" aria-hidden="true"></i><span>ドリパス</span>
+          </button>
+        </div
         <div class="tver-mode-header-meta">
           <label class="tver-mode-default-setting" for="tverModeDefaultCheckbox">
             <input id="tverModeDefaultCheckbox" type="checkbox">
@@ -491,6 +500,17 @@
     <div id="dreamPassModeContent" class="hidden">
       <header class="dream-pass-mode-header">
         <h2>ドリパスチェックモード</h2>
+        <div class="home-mode-switcher check-mode-tab-nav" role="group" aria-label="表示モード切り替え">
+          <button data-home-mode="home" type="button" class="home-mode-button" aria-label="HOMEを表示" aria-pressed="false" title="HOME">
+            <i class="bi bi-house" aria-hidden="true"></i><span>HOME</span>
+          </button>
+          <button data-home-mode="tver" type="button" class="home-mode-button" aria-label="TVerチェックモードを表示" aria-pressed="false" title="TVer">
+            <i class="bi bi-tv" aria-hidden="true"></i><span>TVer</span>
+          </button>
+          <button data-home-mode="dreampass" type="button" class="home-mode-button" aria-label="ドリパスチェックモードを表示" aria-pressed="false" title="ドリパス">
+            <i class="bi bi-ticket-perforated" aria-hidden="true"></i><span>ドリパス</span>
+          </button>
+        </div
         <label class="dream-pass-default-setting" for="dreamPassModeDefaultCheckbox">
           <input id="dreamPassModeDefaultCheckbox" type="checkbox">
           <span>起動時にこの画面を表示する</span>
