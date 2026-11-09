@@ -179,8 +179,17 @@
       <div id="home-top-share-btn-wrap">
         <button id="updateNoticeButton" type="button" class="button secondary update-notice-button"><i class="bi bi-bell"></i></button>
         <button id="settingButton" type="button" class="button secondary update-notice-button" aria-label="設定を開く"><i class="bi bi-gear"></i></button>
-        <button id="tverModeToggleButton" type="button" class="button secondary update-notice-button" aria-label="TVerモードに切り替え" aria-pressed="false"><i class="bi bi-tv"></i></button>
-        <button id="dreamPassModeToggleButton" type="button" class="button secondary update-notice-button" aria-label="ドリパスチェックモードに切り替え" aria-pressed="false"><i class="bi bi-ticket-perforated"></i></button>
+        <div class="home-mode-switcher" role="group" aria-label="表示モード切り替え">
+          <button id="homeModeToggleButton" type="button" class="home-mode-button" aria-label="HOMEを表示" aria-pressed="true" title="HOME">
+            <i class="bi bi-house" aria-hidden="true"></i><span>HOME</span>
+          </button>
+          <button id="tverModeToggleButton" type="button" class="home-mode-button" aria-label="TVerチェックモードを表示" aria-pressed="false" title="TVer">
+            <i class="bi bi-tv" aria-hidden="true"></i><span>TVer</span>
+          </button>
+          <button id="dreamPassModeToggleButton" type="button" class="home-mode-button" aria-label="ドリパスチェックモードを表示" aria-pressed="false" title="ドリパス">
+            <i class="bi bi-ticket-perforated" aria-hidden="true"></i><span>ドリパス</span>
+          </button>
+        </div>
       </div>
 
       <!-- 通常ホームとTVerモードの共通ロゴ -->
