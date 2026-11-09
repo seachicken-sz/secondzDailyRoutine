@@ -46,3 +46,33 @@
   line-height: 1.5;
   color: var(--color-text-muted);
 }
+
+/* TVerとロゴ・モード見出し・起動時チェックの縦間隔を統一 */
+#homeStep.dream-pass-mode-active #dreamPassModeContent { padding-top: 3px; }
+#homeStep.dream-pass-mode-active .dream-pass-mode-header { margin-top: 0; }
+#homeStep.dream-pass-mode-active .dream-pass-mode-header h2 { margin-bottom: 2.1em; }
+
+/* 投票中の見出しとソートを同じ行に。狭い場合はソートを下へ */
+.dream-pass-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin-bottom: 9px;
+}
+.dream-pass-section-heading .dream-pass-section-title {
+  margin: 0;
+  color: var(--color-brand);
+  font-size: 15px;
+}
+.dream-pass-section-heading .check-mode-sort-label {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+@media (max-width: 365px) {
+  .dream-pass-section-heading .check-mode-sort-label {
+    flex-basis: 100%;
+    justify-content: flex-end;
+  }
+}
