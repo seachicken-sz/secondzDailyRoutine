@@ -1188,3 +1188,49 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+/* HOME / TVer / ドリパスの共通モード切り替え */
+#home-top-share-btn-wrap { align-items: center; }
+.home-mode-switcher {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: 12px;
+}
+#home-top-share-btn-wrap .home-mode-switcher .home-mode-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-width: 52px;
+  min-height: 48px;
+  padding: 4px 5px;
+  background: transparent;
+  color: #666;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+}
+#home-top-share-btn-wrap .home-mode-switcher .home-mode-button i {
+  font-size: 22px;
+  line-height: 1;
+}
+#home-top-share-btn-wrap .home-mode-switcher .home-mode-button span {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+#home-top-share-btn-wrap .home-mode-switcher .home-mode-button.is-active,
+#home-top-share-btn-wrap .home-mode-switcher .home-mode-button[aria-pressed="true"] {
+  color: var(--color-brand);
+  background: var(--color-brand-soft);
+}
+@media (max-width: 360px) {
+  .home-mode-switcher { margin-left: 8px; gap: 1px; }
+  #home-top-share-btn-wrap .home-mode-switcher .home-mode-button {
+    min-width: 44px;
+    padding-inline: 2px;
+  }
+}
