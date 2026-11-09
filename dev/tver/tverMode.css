@@ -266,3 +266,8 @@
   font: inherit;
   font-size: 12px;
 }
+
+/* 共通ロゴ位置は維持し、TVerだけロゴ下から見出しまでを半分に */
+#homeStep.tver-mode-active #tverModeContent { padding-top: 3px; }
+#homeStep.tver-mode-active .tver-mode-header { margin-top: 0; }
+#homeStep.tver-mode-active .tver-mode-header h2 { margin-bottom: 2.1em; }
