@@ -84,18 +84,24 @@ let tverUnwatchedOnly = false;
 function syncHomeModeButtons() {
   const dream = !document.getElementById("dreamPassModeContent")?.classList.contains("hidden");
   const tver = !document.getElementById("tverModeContent")?.classList.contains("hidden");
-  const active = dream ? "dream" : tver ? "tver" : "home";
-  for (const [mode, id] of [
-    ["home", "homeModeToggleButton"],
-    ["tver", "tverModeToggleButton"],
-    ["dream", "dreamPassModeToggleButton"]
-  ]) {
-    const button = document.getElementById(id);
-    if (!button) continue;
-    const selected = active === mode;
+  const active = dream ? "dreampass" : tver ? "tver" : "home";
+  document.querySelectorAll(".check-mode-tab-nav [data-home-mode]").forEach(button => {
+    const selected = button.dataset.homeMode === active;
     button.setAttribute("aria-pressed", String(selected));
     button.classList.toggle("is-active", selected);
-  }
+  });
+}
+function initializeHomeModeNavigation() {
+  // 画面ごとに同じタブを配置するため、共通の遷移処理をイベント委譲する。
+  document.querySelectorAll(".check-mode-tab-nav, .home-check-mode-links").forEach(nav => {
+    nav.addEventListener("click", event => {
+      const button = event.target.closest("button[data-home-mode]");
+      if (!button || !nav.contains(button)) return;
+      if (button.dataset.homeMode === "home") showNormalHomeMode();
+      else if (button.dataset.homeMode === "tver") setTverModeEnabled(true);
+      else if (button.dataset.homeMode === "dreampass") setDreamPassModeEnabled(true);
+    });
+  });
 }
 function showNormalHomeMode() {
   document.getElementById("normalHomeContent")?.classList.remove("hidden");
@@ -110,8 +116,7 @@ function initializeTverMode() {
   const list = document.getElementById("tverModeList");
   if (!toggle || !list) return;
 
-  toggle.addEventListener("click", () => setTverModeEnabled(true));
-  document.getElementById("homeModeToggleButton")?.addEventListener("click", showNormalHomeMode);
+  initializeHomeModeNavigation();
   tverSelectedMembers = createCheckModeMemberFilter("tverMemberFilter", renderTverMode);
   const sort = document.getElementById("tverSortOrder");
   if (sort) {
