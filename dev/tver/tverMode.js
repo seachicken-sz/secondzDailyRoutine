@@ -78,6 +78,7 @@ function isCheckModeMemberVisible(item, selected) {
 
 let tverSelectedMembers = new Set(["all"]);
 let tverSortOrder = "newest";
+let tverUnwatchedOnly = false;
 
 function initializeTverMode() {
   const toggle = document.getElementById("tverModeToggleButton");
@@ -93,6 +94,15 @@ function initializeTverMode() {
     sort.value = tverSortOrder;
     sort.addEventListener("change", () => {
       tverSortOrder = sort.value === "oldest" ? "oldest" : "newest";
+      renderTverMode();
+    });
+  }
+  const unwatchedChip = document.getElementById("tverUnwatchedOnly");
+  if (unwatchedChip) {
+    unwatchedChip.addEventListener("click", () => {
+      tverUnwatchedOnly = !tverUnwatchedOnly;
+      unwatchedChip.classList.toggle("active", tverUnwatchedOnly);
+      unwatchedChip.setAttribute("aria-pressed", String(tverUnwatchedOnly));
       renderTverMode();
     });
   }
@@ -222,11 +232,16 @@ function renderTverMode() {
     list.textContent = "memberWorksに登録されたTVer番組はありません。";
     return;
   }
-  const visibleRecords = tverModeRecords.filter(item => isCheckModeMemberVisible(item, tverSelectedMembers))
+  const visibleRecords = tverModeRecords.filter(item => {
+    if (!isCheckModeMemberVisible(item, tverSelectedMembers)) return false;
+    if (!tverUnwatchedOnly) return true;
+    const watchKey = item.episodeId || (item.seriesId ? "series:" + item.seriesId : "url:" + item.seriesUrl);
+    return !isTverEpisodeChecked(watchKey);
+  })
     .sort((a, b) => (tverSortOrder === "oldest" ? a.sortTimestamp - b.sortTimestamp :
       b.sortTimestamp - a.sortTimestamp) || a.index - b.index);
   if (!visibleRecords.length) {
-    list.textContent = "選択したメンバーの番組はありません。";
+    list.textContent = tverUnwatchedOnly ? "未視聴の番組はありません。" : "選択したメンバーの番組はありません。";
     return;
   }
   list.innerHTML = visibleRecords.map(item => {
