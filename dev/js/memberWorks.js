@@ -51,13 +51,33 @@ const MEMBER_WORK_LINK_GROUPS = [
       item.workType === "dreampass" &&
       Boolean(item.platformUrl)
   },
-    {
+  {
     key: "dreampass_kouho",
     label: "ドリパス上映候補入り",
     description: "上映候補入りした作品はこちら！見たい作品にはファン登録しておこ！",
     urlKey: "platformUrl",
     isTarget: (item) =>
       item.workType === "dreampass_kouho" &&
+      Boolean(item.platformUrl)
+  },
+  {
+    key: "dreampass_hanbai",
+    label: "上映決定",
+    description: "上映が決まった作品のチケット情報はこちら！",
+    urlKey: "platformUrl",
+    isTarget: (item) =>
+      item.workType === "dreampass_hanbai" &&
+      item.status === "成立" &&
+      Boolean(item.platformUrl)
+  },
+  {
+    key: "dreampass_ticket_pending",
+    label: "チケット情報",
+    description: "上映の成立状況やチケット情報はイベントページで確認してね！",
+    urlKey: "platformUrl",
+    isTarget: (item) =>
+      item.workType === "dreampass_hanbai" &&
+      item.status !== "成立" &&
       Boolean(item.platformUrl)
   }
 ];
@@ -336,6 +356,9 @@ function createWorkItemHtml(item, group) {
           ${escapeHtml(getProgramDisplayName(item))}
         </span>
 
+        ${item.workType === "dreampass_hanbai" && item.status === "未成立"
+          ? '<span class="member-work-link-limit">上映未成立</span>'
+          : ""}
         ${buildRemainingText(item)}
       </span>
 

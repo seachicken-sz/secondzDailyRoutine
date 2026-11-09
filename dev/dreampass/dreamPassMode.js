@@ -70,7 +70,9 @@ async function loadDreamPassMode() {
     if (!Array.isArray(works)) throw new Error("memberWorksのデータ形式が不正です");
     if (version !== dreamPassLoadVersion) return;
     dreamPassRecords = works.filter(item =>
-      (item.workType === "dreampass" || item.workType === "dreampass_kouho") && item.platformUrl
+      (item.workType === "dreampass" ||
+        item.workType === "dreampass_kouho" ||
+        item.workType === "dreampass_hanbai") && item.platformUrl
     );
     renderDreamPassMode();
   } catch (error) {
@@ -99,11 +101,13 @@ function dreamPassCastHtml(members) {
 function dreamPassCardHtml(item, isVoting) {
   const rank = dreamPassRank(item.rank);
   const cast = dreamPassCastHtml(item.members);
-  const label = isVoting ? "投票する" : "作品を見る";
+  const isTicket = item.workType === "dreampass_hanbai";
+  const label = isTicket ? "チケット情報を見る" : isVoting ? "投票する" : "作品を見る";
   return `<article class="dream-pass-card">
     ${cast || '<div class="tver-mode-cast" aria-hidden="true"></div>'}
     <h3 title="${dreamPassSafeHtml(item.title)}">${dreamPassSafeHtml(item.title)}</h3>
     ${isVoting ? `<div class="dream-pass-card-rank"><span>現在順位</span><strong>${rank === null ? "順位未取得" : rank.toLocaleString("ja-JP") + "位"}</strong></div>` : ""}
+    ${isTicket && item.status === "未成立" ? '<p class="dream-pass-section-description">上映未成立</p>' : ""}
     <a class="dream-pass-vote-button" href="${dreamPassSafeHtml(item.platformUrl)}" target="_blank" rel="noopener noreferrer">${label}<i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
   </article>`;
 }
@@ -122,10 +126,13 @@ function renderDreamPassMode() {
       return dreamPassSortOrder === "desc" ? rankB - rankA : rankA - rankB;
     });
   const candidates = visibleRecords.filter(item => item.workType === "dreampass_kouho");
-  const section = (heading, description, items, isVoting) => items.length
+  const tickets = visibleRecords.filter(item => item.workType === "dreampass_hanbai");
+  const confirmed = tickets.filter(item => item.status === "成立");
+  const pending = tickets.filter(item => item.status !== "成立");
+  const section = (heading, description, items, isVoting, icon = isVoting ? "🗳️" : "✅") => items.length
     ? `<section class="dream-pass-section">
       <div class="dream-pass-section-heading">
-        <h3 class="dream-pass-section-title">${isVoting ? "🗳️" : "✅"}${heading}</h3>
+        <h3 class="dream-pass-section-title">${icon}${heading}</h3>
         ${isVoting ? `<label class="check-mode-sort-label">並び順
           <select id="dreamPassSortOrder" class="check-mode-sort-select" aria-label="投票中の作品の並び順">
             <option value="asc" ${dreamPassSortOrder === "asc" ? "selected" : ""}>順位昇順</option>
@@ -136,6 +143,8 @@ function renderDreamPassMode() {
       <div class="dream-pass-grid">${items.map(item => dreamPassCardHtml(item, isVoting)).join("")}</div>
     </section>` : "";
   list.innerHTML = section("投票中", "再上映のチャンス！見たい作品に投票しよ！", voting, true) +
-    section("上映候補入り", "上映候補入りした作品はこちら！見たい作品にはファン登録しておこ！", candidates, false);
+    section("上映候補入り", "上映候補入りした作品はこちら！見たい作品にはファン登録しておこ！", candidates, false) +
+    section("上映決定", "上映が決まった作品のチケット情報はこちら！", confirmed, false, "🎬") +
+    section("チケット情報", "上映の成立状況やチケット情報はイベントページで確認してね！", pending, false, "🎟️");
   if (!list.innerHTML) list.textContent = "選択したメンバーの作品はありません。";
 }
