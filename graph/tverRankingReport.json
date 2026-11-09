@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/11/09 08:07",
+  "updatedAt": "2026/11/09 09:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/09 08:07",
+      "updatedAt": "2026/11/09 09:07",
       "episodeId": "epcqbq5j8j",
       "subtitle": "食通厳選グルメ続々！ベストバイプライスマン",
       "likes": "1.1万",
@@ -236,6 +236,10 @@
         },
         {
           "hour": 58,
+          "likes": 11000
+        },
+        {
+          "hour": 59,
           "likes": 11000
         }
       ],
@@ -709,9 +713,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 19,
-          "elapsedHour": 58,
-          "elapsedRank": 19,
+          "currentRank": 20,
+          "elapsedHour": 59,
+          "elapsedRank": 20,
           "currentPoints": [
             {
               "hour": 7,
@@ -920,6 +924,10 @@
             {
               "hour": 58,
               "rank": 19
+            },
+            {
+              "hour": 59,
+              "rank": 20
             }
           ],
           "previousPoints": [
@@ -1566,19 +1574,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 16,
+              "rank": 17,
               "title": "さんまのお笑い向上委員会"
             },
             {
-              "rank": 17,
+              "rank": 18,
               "title": "ニノなのに"
             },
             {
-              "rank": 18,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "rank": 19,
+              "title": "有吉クイズ"
             },
             {
-              "rank": 19,
+              "rank": 20,
               "title": "タイムレスマン"
             }
           ]
@@ -1972,19 +1980,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
-            },
-            {
-              "rank": 48,
               "title": "ジャンクSPORTS"
             },
             {
+              "rank": 48,
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+            },
+            {
               "rank": 49,
-              "title": "ニノなのに"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "ニノなのに"
             }
           ]
         }
@@ -1993,10 +2001,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/11/08",
-      "updatedAt": "2026/11/09 08:07",
+      "updatedAt": "2026/11/09 09:07",
       "episodeId": "epy0yvjl1k",
       "subtitle": "箱根・草津の癒し温泉旅!白熱クイズ…最新の情報満載",
-      "likes": "8087",
+      "likes": "8323",
       "favorites": "37.2万",
       "likePoints": [
         {
@@ -2070,6 +2078,10 @@
         {
           "hour": 18,
           "likes": 8087
+        },
+        {
+          "hour": 19,
+          "likes": 8323
         }
       ],
       "previousLikePoints": [
@@ -2542,9 +2554,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 13,
-          "elapsedHour": 18,
-          "elapsedRank": 13,
+          "currentRank": 12,
+          "elapsedHour": 19,
+          "elapsedRank": 12,
           "currentPoints": [
             {
               "hour": 4,
@@ -2605,6 +2617,10 @@
             {
               "hour": 18,
               "rank": 13
+            },
+            {
+              "hour": 19,
+              "rank": 12
             }
           ],
           "previousPoints": [
@@ -3127,6 +3143,10 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 9,
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
+            },
+            {
               "rank": 10,
               "title": "華大さんと千鳥くん"
             },
@@ -3136,10 +3156,6 @@
             },
             {
               "rank": 12,
-              "title": "ゴッドタン"
-            },
-            {
-              "rank": 13,
               "title": "timeleszファミリア"
             }
           ]
@@ -3147,9 +3163,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 39,
-          "elapsedHour": 18,
-          "elapsedRank": 39,
+          "currentRank": 36,
+          "elapsedHour": 19,
+          "elapsedRank": 36,
           "currentPoints": [
             {
               "hour": 9,
@@ -3190,6 +3206,10 @@
             {
               "hour": 18,
               "rank": 39
+            },
+            {
+              "hour": 19,
+              "rank": 36
             }
           ],
           "previousPoints": [
@@ -3368,19 +3388,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 33,
+              "title": "仮面ライダーマイス"
+            },
+            {
+              "rank": 34,
+              "title": "爆笑そっくりものまね紅白歌合戦スペシャル"
+            },
+            {
+              "rank": 35,
+              "title": "真田十勇士 SHADOWS OF THE TEN NINJA"
+            },
+            {
               "rank": 36,
-              "title": "ゴッドタン"
-            },
-            {
-              "rank": 37,
-              "title": "名探偵コナン"
-            },
-            {
-              "rank": 38,
-              "title": "おいしい給食 season4"
-            },
-            {
-              "rank": 39,
               "title": "timeleszファミリア"
             }
           ]
@@ -3390,10 +3410,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/27",
-      "updatedAt": "2026/11/09 08:07",
+      "updatedAt": "2026/11/09 09:07",
       "episodeId": "epbtlmzlxr",
       "subtitle": "新企画！チョコプラ・timeleszが「できる？できない？予想クイズ」に挑戦！",
-      "likes": "8924",
+      "likes": "8928",
       "favorites": "6.6万",
       "likePoints": [
         {
@@ -5241,11 +5261,11 @@
             },
             {
               "rank": 49,
-              "title": "ちょっと北九州行ってきました！"
+              "title": "ザ！世界仰天ニュース"
             },
             {
               "rank": 50,
-              "title": "ザ！世界仰天ニュース"
+              "title": "ちょっと北九州行ってきました！"
             }
           ]
         },
@@ -5490,11 +5510,11 @@
             },
             {
               "rank": 48,
-              "title": "千原ジュニアの座王"
+              "title": "知識の扉よ開け！ドア×ドア クエスト"
             },
             {
               "rank": 49,
-              "title": "いたジャン！"
+              "title": "突然ですが占ってもいいですか？"
             },
             {
               "rank": 50,
@@ -5507,10 +5527,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/09 08:07",
+      "updatedAt": "2026/11/09 09:07",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
-      "likes": "3790",
+      "likes": "3789",
       "favorites": "81.6万",
       "likePoints": [
         {
@@ -6096,11 +6116,11 @@
             },
             {
               "rank": 48,
-              "title": "千原ジュニアの座王"
+              "title": "知識の扉よ開け！ドア×ドア クエスト"
             },
             {
               "rank": 49,
-              "title": "いたジャン！"
+              "title": "突然ですが占ってもいいですか？"
             },
             {
               "rank": 50,
@@ -6248,19 +6268,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
-            },
-            {
-              "rank": 48,
               "title": "ジャンクSPORTS"
             },
             {
+              "rank": 48,
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+            },
+            {
               "rank": 49,
-              "title": "ニノなのに"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "ニノなのに"
             }
           ]
         }
@@ -6269,10 +6289,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/11/04",
-      "updatedAt": "2026/11/09 08:07",
+      "updatedAt": "2026/11/09 09:07",
       "episodeId": "ephjmgcrvk",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！柴咲コウ登場",
-      "likes": "4241",
+      "likes": "4246",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -6614,6 +6634,10 @@
         {
           "hour": 127,
           "likes": 4241
+        },
+        {
+          "hour": 128,
+          "likes": 4246
         }
       ],
       "previousLikePoints": [
@@ -6895,11 +6919,11 @@
             },
             {
               "rank": 48,
-              "title": "千原ジュニアの座王"
+              "title": "知識の扉よ開け！ドア×ドア クエスト"
             },
             {
               "rank": 49,
-              "title": "いたジャン！"
+              "title": "突然ですが占ってもいいですか？"
             },
             {
               "rank": 50,
@@ -6918,19 +6942,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
-            },
-            {
-              "rank": 48,
               "title": "ジャンクSPORTS"
             },
             {
+              "rank": 48,
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+            },
+            {
               "rank": 49,
-              "title": "ニノなのに"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "ニノなのに"
             }
           ]
         }
@@ -6939,10 +6963,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/09 08:07",
+      "updatedAt": "2026/11/09 09:07",
       "episodeId": "epohjt1ixg",
       "subtitle": "第152回 岸井ゆきの味覚危機！？揉めまくりでチーム崩壊",
-      "likes": "3996",
+      "likes": "4008",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -7244,6 +7268,10 @@
         {
           "hour": 80,
           "likes": 3996
+        },
+        {
+          "hour": 81,
+          "likes": 4008
         }
       ],
       "previousLikePoints": [
@@ -8058,11 +8086,11 @@
             },
             {
               "rank": 48,
-              "title": "千原ジュニアの座王"
+              "title": "知識の扉よ開け！ドア×ドア クエスト"
             },
             {
               "rank": 49,
-              "title": "いたジャン！"
+              "title": "突然ですが占ってもいいですか？"
             },
             {
               "rank": 50,
@@ -8118,19 +8146,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
-            },
-            {
-              "rank": 48,
               "title": "ジャンクSPORTS"
             },
             {
+              "rank": 48,
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+            },
+            {
               "rank": 49,
-              "title": "ニノなのに"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "ニノなのに"
             }
           ]
         }
@@ -8139,10 +8167,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/31",
-      "updatedAt": "2026/11/09 08:07",
+      "updatedAt": "2026/11/09 09:07",
       "episodeId": "ep3jm0ld38",
       "subtitle": "マッサマン＆マツダマン（秘）あ哺乳類SP前編",
-      "likes": "5619",
+      "likes": "5616",
       "favorites": "82.5万",
       "likePoints": [
         {
@@ -9000,11 +9028,11 @@
             },
             {
               "rank": 48,
-              "title": "千原ジュニアの座王"
+              "title": "知識の扉よ開け！ドア×ドア クエスト"
             },
             {
               "rank": 49,
-              "title": "いたジャン！"
+              "title": "突然ですが占ってもいいですか？"
             },
             {
               "rank": 50,
@@ -9212,19 +9240,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "さんまのお笑い向上委員会"
-            },
-            {
-              "rank": 48,
               "title": "ジャンクSPORTS"
             },
             {
+              "rank": 48,
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+            },
+            {
               "rank": 49,
-              "title": "ニノなのに"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 50,
-              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
+              "title": "ニノなのに"
             }
           ]
         }
@@ -9233,10 +9261,10 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/11/03",
-      "updatedAt": "2026/11/09 08:07",
+      "updatedAt": "2026/11/09 09:07",
       "episodeId": "epm8lq2z41",
       "subtitle": "激辛PK",
-      "likes": "9948",
+      "likes": "9956",
       "favorites": "3.8万",
       "likePoints": [
         {
@@ -9690,6 +9718,10 @@
         {
           "hour": 152,
           "likes": 9948
+        },
+        {
+          "hour": 153,
+          "likes": 9956
         }
       ],
       "previousLikePoints": [],
@@ -10832,11 +10864,11 @@
             },
             {
               "rank": 48,
-              "title": "千原ジュニアの座王"
+              "title": "知識の扉よ開け！ドア×ドア クエスト"
             },
             {
               "rank": 49,
-              "title": "いたジャン！"
+              "title": "突然ですが占ってもいいですか？"
             },
             {
               "rank": 50,
