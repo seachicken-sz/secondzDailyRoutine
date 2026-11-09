@@ -454,12 +454,15 @@
       </div>
       <div class="check-mode-controls">
         <div id="tverMemberFilter" class="member-filter-grid check-mode-member-filter" aria-label="TVer出演者で絞り込み"></div>
-        <label class="check-mode-sort-label">並び順
-          <select id="tverSortOrder" class="check-mode-sort-select" aria-label="TVerの並び順">
-            <option value="newest">新しい順</option>
-            <option value="oldest">古い順</option>
-          </select>
-        </label>
+        <div class="tver-mode-filter-sort-row">
+          <button id="tverUnwatchedOnly" class="member-filter-chip tver-mode-unwatched-chip" type="button" aria-pressed="false">未視聴のみ表示</button>
+          <label class="check-mode-sort-label">並び順
+            <select id="tverSortOrder" class="check-mode-sort-select" aria-label="TVerの並び順">
+              <option value="newest">新しい順</option>
+              <option value="oldest">古い順</option>
+            </select>
+          </label>
+        </div>
       </div>
       <div id="tverModeList" class="tver-mode-list"></div>
     </div>
