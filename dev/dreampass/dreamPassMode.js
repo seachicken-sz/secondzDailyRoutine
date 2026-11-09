@@ -143,7 +143,7 @@ function renderDreamPassMode() {
     </section>` : "";
   list.innerHTML = section("投票中", "再上映のチャンス！見たい作品に投票しよ！", voting, true) +
     section("上映候補入り", "上映候補入りした作品はこちら！見たい作品にはファン登録しておこ！", candidates, false) +
-    section("上映決定", "上映が決まった作品のチケット情報はこちら！", confirmed, false, "🎬") +
+    section("チケット販売中", "チケット販売が決まったよ！詳細はドリパスのページで！", confirmed, false, "🎬") +
     section("チケット情報", "上映の成立状況やチケット情報はイベントページで確認してね！", pending, false, "🎟️");
   if (!list.innerHTML) list.textContent = "選択したメンバーの作品はありません。";
 }
