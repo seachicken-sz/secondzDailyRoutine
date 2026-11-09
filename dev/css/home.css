@@ -1234,3 +1234,19 @@
     padding-inline: 2px;
   }
 }
+
+/* メニュー：HOME配下のリンクは常時展開し、子項目として字下げ */
+.home-menu-home-children {
+  padding-left: 18px;
+  border-left: 2px solid var(--color-border-soft);
+  margin-left: 15px;
+}
+.home-menu-home-children .home-menu-child-link {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.home-menu-page-index .home-menu-mode-link {
+  font-weight: 700;
+}
