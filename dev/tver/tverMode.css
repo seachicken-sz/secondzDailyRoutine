@@ -305,3 +305,11 @@
   font-size: 13px;
   line-height: 1.5;
 }
+
+/* モード見出し直下の共通タブ。ロゴと他コンテンツには影響させない */
+#homeStep.tver-mode-active .tver-mode-header h2 {
+  margin-bottom: 14px;
+}
+#tverModeContent .check-mode-tab-nav {
+  margin-bottom: 28px;
+}
