@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/11/09 11:07",
+  "updatedAt": "2026/11/09 12:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/09 11:07",
+      "updatedAt": "2026/11/09 12:07",
       "episodeId": "epcqbq5j8j",
       "subtitle": "食通厳選グルメ続々！ベストバイプライスマン",
       "likes": "1.1万",
@@ -248,6 +248,10 @@
         },
         {
           "hour": 61,
+          "likes": 11000
+        },
+        {
+          "hour": 62,
           "likes": 11000
         }
       ],
@@ -721,9 +725,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 21,
-          "elapsedHour": 61,
-          "elapsedRank": 21,
+          "currentRank": 22,
+          "elapsedHour": 62,
+          "elapsedRank": 22,
           "currentPoints": [
             {
               "hour": 7,
@@ -944,6 +948,10 @@
             {
               "hour": 61,
               "rank": 21
+            },
+            {
+              "hour": 62,
+              "rank": 22
             }
           ],
           "previousPoints": [
@@ -1590,12 +1598,8 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 18,
-              "title": "さんまのお笑い向上委員会"
-            },
-            {
               "rank": 19,
-              "title": "ニノなのに"
+              "title": "さんまのお笑い向上委員会"
             },
             {
               "rank": 20,
@@ -1603,6 +1607,10 @@
             },
             {
               "rank": 21,
+              "title": "ニノなのに"
+            },
+            {
+              "rank": 22,
               "title": "タイムレスマン"
             }
           ]
@@ -2000,11 +2008,11 @@
             },
             {
               "rank": 48,
-              "title": "クレヨンしんちゃん"
+              "title": "妻を引退します"
             },
             {
               "rank": 49,
-              "title": "妻を引退します"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 50,
@@ -2017,10 +2025,10 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/11/08",
-      "updatedAt": "2026/11/09 11:07",
+      "updatedAt": "2026/11/09 12:07",
       "episodeId": "epy0yvjl1k",
       "subtitle": "箱根・草津の癒し温泉旅!白熱クイズ…最新の情報満載",
-      "likes": "8600",
+      "likes": "8866",
       "favorites": "37.2万",
       "likePoints": [
         {
@@ -2106,6 +2114,10 @@
         {
           "hour": 21,
           "likes": 8600
+        },
+        {
+          "hour": 22,
+          "likes": 8866
         }
       ],
       "previousLikePoints": [
@@ -2579,7 +2591,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 10,
-          "elapsedHour": 21,
+          "elapsedHour": 22,
           "elapsedRank": 10,
           "currentPoints": [
             {
@@ -2652,6 +2664,10 @@
             },
             {
               "hour": 21,
+              "rank": 10
+            },
+            {
+              "hour": 22,
               "rank": 10
             }
           ],
@@ -3180,11 +3196,11 @@
             },
             {
               "rank": 8,
-              "title": "かまいたちの机上の空論城"
+              "title": "有吉クイズ"
             },
             {
               "rank": 9,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 10,
@@ -3195,9 +3211,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 29,
-          "elapsedHour": 21,
-          "elapsedRank": 29,
+          "currentRank": 28,
+          "elapsedHour": 22,
+          "elapsedRank": 28,
           "currentPoints": [
             {
               "hour": 9,
@@ -3250,6 +3266,10 @@
             {
               "hour": 21,
               "rank": 29
+            },
+            {
+              "hour": 22,
+              "rank": 28
             }
           ],
           "previousPoints": [
@@ -3428,19 +3448,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 25,
+              "title": "有吉クイズ"
+            },
+            {
               "rank": 26,
-              "title": "あにいもうと"
+              "title": "かまいたちの机上の空論城"
             },
             {
               "rank": 27,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
+              "title": "あにいもうと"
             },
             {
               "rank": 28,
-              "title": "薬屋のひとりごと"
-            },
-            {
-              "rank": 29,
               "title": "timeleszファミリア"
             }
           ]
@@ -3450,10 +3470,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/27",
-      "updatedAt": "2026/11/09 11:07",
+      "updatedAt": "2026/11/09 12:07",
       "episodeId": "epbtlmzlxr",
       "subtitle": "新企画！チョコプラ・timeleszが「できる？できない？予想クイズ」に挑戦！",
-      "likes": "8928",
+      "likes": "8936",
       "favorites": "6.6万",
       "likePoints": [
         {
@@ -5293,19 +5313,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "バナナマンのせっかくグルメ!!"
+              "title": "ONE N' ONLYのフルアウトTV"
             },
             {
               "rank": 48,
-              "title": "ベスコングルメ 〜ベストコンディションで最高の瞬間を！〜"
+              "title": "バナナマンのせっかくグルメ!!"
             },
             {
               "rank": 49,
-              "title": "はじめまして、iiONDOです"
+              "title": "路線バスで寄り道の旅"
             },
             {
               "rank": 50,
-              "title": "サタプラ"
+              "title": "はじめまして、iiONDOです"
             }
           ]
         },
@@ -5546,19 +5566,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "笑点"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
-              "title": "なにわ男子の逆転男子"
-            },
-            {
-              "rank": 49,
               "title": "かまいガチ"
             },
             {
+              "rank": 49,
+              "title": "なにわ男子の逆転男子"
+            },
+            {
               "rank": 50,
-              "title": "千原ジュニアの座王"
+              "title": "大悟の芸人領収書"
             }
           ]
         }
@@ -5567,10 +5587,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/09 11:07",
+      "updatedAt": "2026/11/09 12:07",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
-      "likes": "3791",
+      "likes": "3795",
       "favorites": "81.6万",
       "likePoints": [
         {
@@ -6152,19 +6172,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "笑点"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
-              "title": "なにわ男子の逆転男子"
-            },
-            {
-              "rank": 49,
               "title": "かまいガチ"
             },
             {
+              "rank": 49,
+              "title": "なにわ男子の逆転男子"
+            },
+            {
               "rank": 50,
-              "title": "千原ジュニアの座王"
+              "title": "大悟の芸人領収書"
             }
           ]
         },
@@ -6312,11 +6332,11 @@
             },
             {
               "rank": 48,
-              "title": "クレヨンしんちゃん"
+              "title": "妻を引退します"
             },
             {
               "rank": 49,
-              "title": "妻を引退します"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 50,
@@ -6329,10 +6349,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/11/04",
-      "updatedAt": "2026/11/09 11:07",
+      "updatedAt": "2026/11/09 12:07",
       "episodeId": "ephjmgcrvk",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！柴咲コウ登場",
-      "likes": "4250",
+      "likes": "4262",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -6686,6 +6706,10 @@
         {
           "hour": 130,
           "likes": 4250
+        },
+        {
+          "hour": 131,
+          "likes": 4262
         }
       ],
       "previousLikePoints": [
@@ -6963,19 +6987,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "笑点"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
-              "title": "なにわ男子の逆転男子"
-            },
-            {
-              "rank": 49,
               "title": "かまいガチ"
             },
             {
+              "rank": 49,
+              "title": "なにわ男子の逆転男子"
+            },
+            {
               "rank": 50,
-              "title": "千原ジュニアの座王"
+              "title": "大悟の芸人領収書"
             }
           ]
         },
@@ -6994,11 +7018,11 @@
             },
             {
               "rank": 48,
-              "title": "クレヨンしんちゃん"
+              "title": "妻を引退します"
             },
             {
               "rank": 49,
-              "title": "妻を引退します"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 50,
@@ -7011,10 +7035,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/09 11:07",
+      "updatedAt": "2026/11/09 12:07",
       "episodeId": "epohjt1ixg",
       "subtitle": "第152回 岸井ゆきの味覚危機！？揉めまくりでチーム崩壊",
-      "likes": "4017",
+      "likes": "4032",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -7328,6 +7352,10 @@
         {
           "hour": 83,
           "likes": 4017
+        },
+        {
+          "hour": 84,
+          "likes": 4032
         }
       ],
       "previousLikePoints": [
@@ -8138,19 +8166,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "笑点"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
-              "title": "なにわ男子の逆転男子"
-            },
-            {
-              "rank": 49,
               "title": "かまいガチ"
             },
             {
+              "rank": 49,
+              "title": "なにわ男子の逆転男子"
+            },
+            {
               "rank": 50,
-              "title": "千原ジュニアの座王"
+              "title": "大悟の芸人領収書"
             }
           ]
         },
@@ -8206,11 +8234,11 @@
             },
             {
               "rank": 48,
-              "title": "クレヨンしんちゃん"
+              "title": "妻を引退します"
             },
             {
               "rank": 49,
-              "title": "妻を引退します"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 50,
@@ -8223,10 +8251,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/31",
-      "updatedAt": "2026/11/09 11:07",
+      "updatedAt": "2026/11/09 12:07",
       "episodeId": "ep3jm0ld38",
       "subtitle": "マッサマン＆マツダマン（秘）あ哺乳類SP前編",
-      "likes": "5630",
+      "likes": "5635",
       "favorites": "82.5万",
       "likePoints": [
         {
@@ -9080,19 +9108,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "笑点"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
-              "title": "なにわ男子の逆転男子"
-            },
-            {
-              "rank": 49,
               "title": "かまいガチ"
             },
             {
+              "rank": 49,
+              "title": "なにわ男子の逆転男子"
+            },
+            {
               "rank": 50,
-              "title": "千原ジュニアの座王"
+              "title": "大悟の芸人領収書"
             }
           ]
         },
@@ -9300,11 +9328,11 @@
             },
             {
               "rank": 48,
-              "title": "クレヨンしんちゃん"
+              "title": "妻を引退します"
             },
             {
               "rank": 49,
-              "title": "妻を引退します"
+              "title": "そこまで言って委員会NP"
             },
             {
               "rank": 50,
@@ -9317,10 +9345,10 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/11/03",
-      "updatedAt": "2026/11/09 11:07",
+      "updatedAt": "2026/11/09 12:07",
       "episodeId": "epm8lq2z41",
       "subtitle": "激辛PK",
-      "likes": "9976",
+      "likes": "1.0万",
       "favorites": "3.8万",
       "likePoints": [
         {
@@ -9786,6 +9814,10 @@
         {
           "hour": 155,
           "likes": 9976
+        },
+        {
+          "hour": 156,
+          "likes": 10000
         }
       ],
       "previousLikePoints": [],
@@ -10924,19 +10956,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "笑点"
+              "title": "それSnow Manにやらせて下さい"
             },
             {
               "rank": 48,
-              "title": "なにわ男子の逆転男子"
-            },
-            {
-              "rank": 49,
               "title": "かまいガチ"
             },
             {
+              "rank": 49,
+              "title": "なにわ男子の逆転男子"
+            },
+            {
               "rank": 50,
-              "title": "千原ジュニアの座王"
+              "title": "大悟の芸人領収書"
             }
           ]
         }
