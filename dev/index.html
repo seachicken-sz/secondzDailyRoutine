@@ -63,18 +63,29 @@
         <button id="closeHomeMenuButton" class="home-menu-close-button" type="button" aria-label="メニューを閉じる">×</button>
       
         <h2 class="home-menu-title">メニュー</h2>
-        <section class="home-menu-accordion home-menu-page-index">
-          <button type="button" class="home-menu-item home-menu-page-link" data-home-menu-scroll-target="memberWorksCard">
-            <span><i class="bi bi-link-45deg"></i>メンバーごと便利リンク集</span>
-          </button>
-          <button type="button" class="home-menu-item home-menu-page-link" data-home-menu-scroll-target="homeDailyExtraCard">
-            <span><i class="bi bi-stars"></i>おかわりDaily</span>
-          </button>
-          <button type="button" class="home-menu-item home-menu-page-link" data-home-menu-scroll-target="homeInfoCard">
-            <span><i class="bi bi-calendar-heart"></i>最近のタムごと</span>
-          </button>
-        </section>
         <div class="home-menu-scroll">
+          <section class="home-menu-accordion home-menu-page-index" aria-label="画面移動">
+            <button type="button" class="home-menu-item home-menu-page-link home-menu-mode-link" data-home-menu-mode="home">
+              <span><i class="bi bi-house"></i>HOME</span>
+            </button>
+            <div class="home-menu-home-children">
+              <button type="button" class="home-menu-item home-menu-page-link home-menu-child-link" data-home-menu-scroll-target="memberWorksCard">
+                <span><i class="bi bi-link-45deg"></i>メンバーごと便利リンク集</span>
+              </button>
+              <button type="button" class="home-menu-item home-menu-page-link home-menu-child-link" data-home-menu-scroll-target="homeDailyExtraCard">
+                <span><i class="bi bi-stars"></i>おかわりDaily</span>
+              </button>
+              <button type="button" class="home-menu-item home-menu-page-link home-menu-child-link" data-home-menu-scroll-target="homeInfoCard">
+                <span><i class="bi bi-calendar-heart"></i>最近のタムごと</span>
+              </button>
+            </div>
+            <button type="button" class="home-menu-item home-menu-page-link home-menu-mode-link" data-home-menu-mode="tver">
+              <span><i class="bi bi-tv"></i>TVerチェックモード</span>
+            </button>
+            <button type="button" class="home-menu-item home-menu-page-link home-menu-mode-link" data-home-menu-mode="dreampass">
+              <span><i class="bi bi-ticket-perforated"></i>ドリパスチェックモード</span>
+            </button>
+          </section>
           <section class="home-menu-accordion">
             <button type="button" class="home-menu-item" data-home-menu-accordion="1minutes_moode">
               <span><i class="bi bi-clock"></i>お試しモード</span>
