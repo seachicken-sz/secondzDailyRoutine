@@ -76,3 +76,11 @@
     justify-content: flex-end;
   }
 }
+
+/* モード見出し直下の共通タブ。ロゴと他コンテンツには影響させない */
+#homeStep.dream-pass-mode-active .dream-pass-mode-header h2 {
+  margin-bottom: 14px;
+}
+#dreamPassModeContent .check-mode-tab-nav {
+  margin-bottom: 28px;
+}
