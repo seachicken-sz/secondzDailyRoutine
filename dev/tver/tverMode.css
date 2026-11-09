@@ -271,3 +271,28 @@
 #homeStep.tver-mode-active #tverModeContent { padding-top: 3px; }
 #homeStep.tver-mode-active .tver-mode-header { margin-top: 0; }
 #homeStep.tver-mode-active .tver-mode-header h2 { margin-bottom: 2.1em; }
+
+/* 未視聴チップを左、並び順を右へ。狭い画面はソートが折り返す */
+.tver-mode-filter-sort-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+.tver-mode-unwatched-chip {
+  min-height: 34px;
+  padding: 5px 12px;
+  font-size: 12px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.tver-mode-filter-sort-row .check-mode-sort-label {
+  margin-left: auto;
+  flex: 0 0 auto;
+}
+@media (max-width: 355px) {
+  .tver-mode-filter-sort-row .check-mode-sort-label {
+    flex-basis: 100%;
+    justify-content: flex-end;
+  }
+}
