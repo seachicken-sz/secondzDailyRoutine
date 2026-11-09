@@ -8,7 +8,6 @@ let dreamPassSortOrder = "asc";
 function initializeDreamPassMode() {
   const toggle = document.getElementById("dreamPassModeToggleButton");
   if (!toggle) return;
-  toggle.addEventListener("click", () => setDreamPassModeEnabled(true));
   dreamPassSelectedMembers = createCheckModeMemberFilter("dreamPassMemberFilter", renderDreamPassMode);
   const list = document.getElementById("dreamPassModeList");
   if (list) {
