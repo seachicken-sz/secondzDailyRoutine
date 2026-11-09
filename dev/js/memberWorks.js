@@ -62,8 +62,8 @@ const MEMBER_WORK_LINK_GROUPS = [
   },
   {
     key: "dreampass_hanbai",
-    label: "上映決定",
-    description: "上映が決まった作品のチケット情報はこちら！",
+    label: "ドリパスチケット販売中！",
+    description: "チケット販売が決まったよ！詳細はドリパスのページで！",
     urlKey: "platformUrl",
     isTarget: (item) =>
       item.workType === "dreampass_hanbai" &&

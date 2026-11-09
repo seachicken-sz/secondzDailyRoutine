@@ -667,7 +667,8 @@
 .member-link-section-dreampass .member-link-section-title::before {
   content: "🎬";
 }
-.member-link-section-dreampass_kouho .member-link-section-title::before {
+.member-link-section-dreampass_kouho .member-link-section-title::before,
+.member-link-section-dreampass_hanbai .member-link-section-title::before {
   content: "🎬";
 }
 .member-work-link-card-tver {
