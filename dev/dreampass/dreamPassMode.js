@@ -8,7 +8,7 @@ let dreamPassSortOrder = "asc";
 function initializeDreamPassMode() {
   const toggle = document.getElementById("dreamPassModeToggleButton");
   if (!toggle) return;
-  toggle.addEventListener("click", () => setDreamPassModeEnabled(toggle.getAttribute("aria-pressed") !== "true"));
+  toggle.addEventListener("click", () => setDreamPassModeEnabled(true));
   dreamPassSelectedMembers = createCheckModeMemberFilter("dreamPassMemberFilter", renderDreamPassMode);
   const list = document.getElementById("dreamPassModeList");
   if (list) {
@@ -54,6 +54,7 @@ function setDreamPassModeEnabled(enabled) {
   toggle.setAttribute("aria-pressed", String(enabled));
   toggle.setAttribute("aria-label", enabled ? "通常モードに戻る" : "ドリパスチェックモードに切り替え");
   toggle.title = enabled ? "通常モードに戻る" : "ドリパスチェックモードに切り替え";
+  syncHomeModeButtons();
   if (enabled) void loadDreamPassMode();
 }
 
