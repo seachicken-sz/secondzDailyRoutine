@@ -296,3 +296,12 @@
     justify-content: flex-end;
   }
 }
+
+/* 番組0件時の案内はカード2列分を使い、不自然な途中改行を防ぐ */
+.tver-mode-empty-message {
+  grid-column: 1 / -1;
+  margin: 8px 0;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.5;
+}
