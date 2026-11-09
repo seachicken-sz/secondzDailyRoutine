@@ -229,7 +229,7 @@ function renderTverMode() {
   const list = document.getElementById("tverModeList");
   if (!list) return;
   if (!tverModeRecords.length) {
-    list.textContent = "memberWorksに登録されたTVer番組はありません。";
+    list.innerHTML = '<p class="tver-mode-empty-message">memberWorksに登録されたTVer番組はありません。</p>';
     return;
   }
   const visibleRecords = tverModeRecords.filter(item => {
@@ -241,7 +241,7 @@ function renderTverMode() {
     .sort((a, b) => (tverSortOrder === "oldest" ? a.sortTimestamp - b.sortTimestamp :
       b.sortTimestamp - a.sortTimestamp) || a.index - b.index);
   if (!visibleRecords.length) {
-    list.textContent = tverUnwatchedOnly ? "未視聴の番組はありません。" : "選択したメンバーの番組はありません。";
+    list.innerHTML = `<p class="tver-mode-empty-message">${tverUnwatchedOnly ? "未視聴の番組はありません。" : "選択したメンバーの番組はありません。"}</p>`;
     return;
   }
   list.innerHTML = visibleRecords.map(item => {
