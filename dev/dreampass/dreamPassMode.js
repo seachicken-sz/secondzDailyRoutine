@@ -10,11 +10,11 @@ function initializeDreamPassMode() {
   if (!toggle) return;
   toggle.addEventListener("click", () => setDreamPassModeEnabled(toggle.getAttribute("aria-pressed") !== "true"));
   dreamPassSelectedMembers = createCheckModeMemberFilter("dreamPassMemberFilter", renderDreamPassMode);
-  const sort = document.getElementById("dreamPassSortOrder");
-  if (sort) {
-    sort.value = dreamPassSortOrder;
-    sort.addEventListener("change", () => {
-      dreamPassSortOrder = sort.value === "desc" ? "desc" : "asc";
+  const list = document.getElementById("dreamPassModeList");
+  if (list) {
+    list.addEventListener("change", event => {
+      if (event.target.id !== "dreamPassSortOrder") return;
+      dreamPassSortOrder = event.target.value === "desc" ? "desc" : "asc";
       renderDreamPassMode();
     });
   }
@@ -122,8 +122,18 @@ function renderDreamPassMode() {
     });
   const candidates = visibleRecords.filter(item => item.workType === "dreampass_kouho");
   const section = (heading, description, items, isVoting) => items.length
-    ? `<section class="dream-pass-section"><h3 class="dream-pass-section-title">${heading}</h3><p class="dream-pass-section-description">${description}</p><div class="dream-pass-grid">${items.map(item => dreamPassCardHtml(item, isVoting)).join("")}</div></section>`
-    : "";
+    ? `<section class="dream-pass-section">
+      <div class="dream-pass-section-heading">
+        <h3 class="dream-pass-section-title">${isVoting ? "🗳️" : "✅"}${heading}</h3>
+        ${isVoting ? `<label class="check-mode-sort-label">並び順
+          <select id="dreamPassSortOrder" class="check-mode-sort-select" aria-label="投票中の作品の並び順">
+            <option value="asc" ${dreamPassSortOrder === "asc" ? "selected" : ""}>順位昇順</option>
+            <option value="desc" ${dreamPassSortOrder === "desc" ? "selected" : ""}>順位降順</option>
+          </select></label>` : ""}
+      </div>
+      <p class="dream-pass-section-description">${description}</p>
+      <div class="dream-pass-grid">${items.map(item => dreamPassCardHtml(item, isVoting)).join("")}</div>
+    </section>` : "";
   list.innerHTML = section("投票中", "再上映のチャンス！見たい作品に投票しよ！", voting, true) +
     section("上映候補入り", "上映候補入りした作品はこちら！見たい作品にはファン登録しておこ！", candidates, false);
   if (!list.innerHTML) list.textContent = "選択したメンバーの作品はありません。";
