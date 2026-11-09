@@ -1294,11 +1294,32 @@ function bindHomeMenuAccordionEvents() {
 }
 
 function bindHomeMenuAnchorEvents() {
-  const anchorButtons = document.querySelectorAll("[data-home-menu-scroll-target]");
-  anchorButtons.forEach((button) => {
+  const menu = document.getElementById("homeSlideMenu");
+  if (!menu) return;
+
+  menu.querySelectorAll("[data-home-menu-mode]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const mode = button.dataset.homeMenuMode;
+      closeHomeMenu();
+      if (mode === "home") {
+        showNormalHomeMode();
+        homeStepElement.scrollTo({ top: 0, behavior: "smooth" });
+      } else if (mode === "tver") {
+        setTverModeEnabled(true);
+        homeStepElement.scrollTo({ top: 0, behavior: "smooth" });
+      } else if (mode === "dreampass") {
+        setDreamPassModeEnabled(true);
+        homeStepElement.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    });
+  });
+
+  menu.querySelectorAll("[data-home-menu-scroll-target]").forEach((button) => {
     button.addEventListener("click", () => {
       const targetId = button.dataset.homeMenuScrollTarget;
       closeHomeMenu();
+      // 他のモードでは通常HOMEを表示してから座標を計算する。
+      showNormalHomeMode();
       requestAnimationFrame(() => {
         scrollHomeToElement(targetId);
       });
