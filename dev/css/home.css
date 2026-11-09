@@ -1189,50 +1189,77 @@
   cursor: not-allowed;
 }
 
-/* HOME / TVer / ドリパスの共通モード切り替え */
-#home-top-share-btn-wrap { align-items: center; }
+/* 共通モード切り替え：HOME導線・各チェックモード内のタブのみ */
 .home-mode-switcher {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  margin-left: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
 }
-#home-top-share-btn-wrap .home-mode-switcher .home-mode-button {
+.home-mode-switcher .home-mode-button {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2px;
-  min-width: 52px;
+  min-width: 0;
   min-height: 48px;
-  padding: 4px 5px;
-  background: transparent;
-  color: #666;
-  border: 0;
+  padding: 5px 4px;
+  border: 1px solid var(--color-border-soft);
   border-radius: 9px;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
   cursor: pointer;
 }
-#home-top-share-btn-wrap .home-mode-switcher .home-mode-button i {
+.home-mode-switcher .home-mode-button i {
   font-size: 22px;
   line-height: 1;
 }
-#home-top-share-btn-wrap .home-mode-switcher .home-mode-button span {
+.home-mode-switcher .home-mode-button span {
   font-size: 10px;
   font-weight: 700;
   line-height: 1.1;
   white-space: nowrap;
 }
-#home-top-share-btn-wrap .home-mode-switcher .home-mode-button.is-active,
-#home-top-share-btn-wrap .home-mode-switcher .home-mode-button[aria-pressed="true"] {
+.home-mode-switcher .home-mode-button.is-active,
+.home-mode-switcher .home-mode-button[aria-pressed="true"] {
   color: var(--color-brand);
   background: var(--color-brand-soft);
+  border-color: var(--color-brand-border);
 }
+.home-check-mode-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0 16px;
+  margin: 0 0 14px;
+}
+.home-check-mode-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 0;
+  min-height: 42px;
+  padding: 9px 8px;
+  border: 1px solid var(--color-brand-border);
+  border-radius: 10px;
+  color: var(--color-brand);
+  background: var(--color-surface);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.home-check-mode-link i { font-size: 17px; }
+#normalHomeContent .home-action-area { margin-bottom: 8px; }
 @media (max-width: 360px) {
-  .home-mode-switcher { margin-left: 8px; gap: 1px; }
-  #home-top-share-btn-wrap .home-mode-switcher .home-mode-button {
-    min-width: 44px;
-    padding-inline: 2px;
-  }
+  .home-mode-switcher { gap: 4px; }
+  .home-mode-switcher .home-mode-button { padding-inline: 2px; }
+  .home-check-mode-links { gap: 6px; }
+  .home-check-mode-link { gap: 4px; padding-inline: 4px; font-size: 11px; }
 }
 
 /* メニュー：HOME配下のリンクは常時展開し、子項目として字下げ */
