@@ -80,14 +80,38 @@ let tverSelectedMembers = new Set(["all"]);
 let tverSortOrder = "newest";
 let tverUnwatchedOnly = false;
 
+// 3つのモードボタンを表示内容と同期する。起動時のデフォルト設定は変更しない。
+function syncHomeModeButtons() {
+  const dream = !document.getElementById("dreamPassModeContent")?.classList.contains("hidden");
+  const tver = !document.getElementById("tverModeContent")?.classList.contains("hidden");
+  const active = dream ? "dream" : tver ? "tver" : "home";
+  for (const [mode, id] of [
+    ["home", "homeModeToggleButton"],
+    ["tver", "tverModeToggleButton"],
+    ["dream", "dreamPassModeToggleButton"]
+  ]) {
+    const button = document.getElementById(id);
+    if (!button) continue;
+    const selected = active === mode;
+    button.setAttribute("aria-pressed", String(selected));
+    button.classList.toggle("is-active", selected);
+  }
+}
+function showNormalHomeMode() {
+  document.getElementById("normalHomeContent")?.classList.remove("hidden");
+  document.getElementById("tverModeContent")?.classList.add("hidden");
+  document.getElementById("dreamPassModeContent")?.classList.add("hidden");
+  homeStepElement.classList.remove("tver-mode-active", "dream-pass-mode-active");
+  syncHomeModeButtons();
+}
+
 function initializeTverMode() {
   const toggle = document.getElementById("tverModeToggleButton");
   const list = document.getElementById("tverModeList");
   if (!toggle || !list) return;
 
-  toggle.addEventListener("click", () => {
-    setTverModeEnabled(toggle.getAttribute("aria-pressed") !== "true");
-  });
+  toggle.addEventListener("click", () => setTverModeEnabled(true));
+  document.getElementById("homeModeToggleButton")?.addEventListener("click", showNormalHomeMode);
   tverSelectedMembers = createCheckModeMemberFilter("tverMemberFilter", renderTverMode);
   const sort = document.getElementById("tverSortOrder");
   if (sort) {
@@ -148,6 +172,7 @@ function setTverModeEnabled(enabled) {
   toggle.setAttribute("aria-pressed", String(enabled));
   toggle.setAttribute("aria-label", enabled ? "通常モードに戻る" : "TVerモードに切り替え");
   toggle.title = enabled ? "通常モードに戻る" : "TVerモードに切り替え";
+  syncHomeModeButtons();
   if (enabled) loadAndRenderTverMode();
 
 
