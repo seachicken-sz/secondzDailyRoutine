@@ -233,12 +233,19 @@
 
 /* TVer・ドリパス共通の出演者絞り込みと並び替え */
 .check-mode-controls { display: grid; gap: 10px; margin: 0 0 14px; }
-.check-mode-member-filter { display: flex; flex-wrap: wrap; gap: 6px; }
+/* メンバーチップ8個を画面幅に合わせて常に1行に配置 */
+.check-mode-member-filter {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 3px;
+}
 .check-mode-member-filter .member-filter-chip {
-  min-height: 30px;
   min-width: 0;
-  padding: 3px 11px;
-  font-size: 12px;
+  min-height: 30px;
+  padding: 3px 0;
+  font-size: 11px;
+  white-space: nowrap;
+  text-align: center;
 }
 .check-mode-sort-label {
   display: flex;
