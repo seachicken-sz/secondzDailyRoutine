@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/11/10 15:14",
+  "updatedAt": "2026/11/10 16:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/10 15:14",
+      "updatedAt": "2026/11/10 16:07",
       "episodeId": "epcqbq5j8j",
       "subtitle": "食通厳選グルメ続々！ベストバイプライスマン",
       "likes": "1.2万",
@@ -360,6 +360,10 @@
         },
         {
           "hour": 89,
+          "likes": 12000
+        },
+        {
+          "hour": 90,
           "likes": 12000
         }
       ],
@@ -834,7 +838,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 44,
-          "elapsedHour": 89,
+          "elapsedHour": 90,
           "elapsedRank": 44,
           "currentPoints": [
             {
@@ -1167,6 +1171,10 @@
             },
             {
               "hour": 89,
+              "rank": 44
+            },
+            {
+              "hour": 90,
               "rank": 44
             }
           ],
@@ -2220,19 +2228,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "SQUALL"
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 49,
-              "title": "おかえり、初恋。"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 50,
-              "title": "溺愛 ～ 実は、最強ヒーロー ～"
+              "title": "かまいたちの机上の空論城"
             }
           ]
         }
@@ -2241,7 +2249,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/11/08",
-      "updatedAt": "2026/11/10 15:14",
+      "updatedAt": "2026/11/10 16:07",
       "episodeId": "epy0yvjl1k",
       "subtitle": "箱根・草津の癒し温泉旅!白熱クイズ…最新の情報満載",
       "likes": "1.1万",
@@ -2441,6 +2449,10 @@
         },
         {
           "hour": 49,
+          "likes": 11000
+        },
+        {
+          "hour": 50,
           "likes": 11000
         }
       ],
@@ -2914,9 +2926,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 13,
-          "elapsedHour": 49,
-          "elapsedRank": 13,
+          "currentRank": 14,
+          "elapsedHour": 50,
+          "elapsedRank": 14,
           "currentPoints": [
             {
               "hour": 4,
@@ -3101,6 +3113,10 @@
             {
               "hour": 49,
               "rank": 13
+            },
+            {
+              "hour": 50,
+              "rank": 14
             }
           ],
           "previousPoints": [
@@ -3623,10 +3639,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 10,
-              "title": "大悟の芸人領収書"
-            },
-            {
               "rank": 11,
               "title": "水曜日のダウンタウン"
             },
@@ -3636,6 +3648,10 @@
             },
             {
               "rank": 13,
+              "title": "有吉ゼミ"
+            },
+            {
+              "rank": 14,
               "title": "timeleszファミリア"
             }
           ]
@@ -3643,9 +3659,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 36,
-          "elapsedHour": 49,
-          "elapsedRank": 36,
+          "currentRank": 37,
+          "elapsedHour": 50,
+          "elapsedRank": 37,
           "currentPoints": [
             {
               "hour": 9,
@@ -3810,6 +3826,10 @@
             {
               "hour": 49,
               "rank": 36
+            },
+            {
+              "hour": 50,
+              "rank": 37
             }
           ],
           "previousPoints": [
@@ -3988,10 +4008,6 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 33,
-              "title": "お前のほうからキスしてくれよ"
-            },
-            {
               "rank": 34,
               "title": "修学旅行で仲良くないグループに入りました２"
             },
@@ -4001,6 +4017,10 @@
             },
             {
               "rank": 36,
+              "title": "有吉ゼミ"
+            },
+            {
+              "rank": 37,
               "title": "timeleszファミリア"
             }
           ]
@@ -4010,10 +4030,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/10/27",
-      "updatedAt": "2026/11/10 15:14",
+      "updatedAt": "2026/11/10 16:07",
       "episodeId": "epbtlmzlxr",
       "subtitle": "新企画！チョコプラ・timeleszが「できる？できない？予想クイズ」に挑戦！",
-      "likes": "9125",
+      "likes": "9131",
       "favorites": "6.7万",
       "likePoints": [
         {
@@ -6106,19 +6126,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "やすとものどこいこ！？"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 48,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 49,
-              "title": "VIVANT 悪役会議室"
+              "title": "世界まる見え！テレビ特捜部"
             },
             {
               "rank": 50,
-              "title": "さんまのお笑い向上委員会"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         }
@@ -6127,10 +6147,10 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/10/20",
-      "updatedAt": "2026/11/10 15:14",
+      "updatedAt": "2026/11/10 16:07",
       "episodeId": "epbkgepmvg",
       "subtitle": "次々患者が亡くなる…横浜の病院で起きた連続殺人の真実",
-      "likes": "3968",
+      "likes": "3985",
       "favorites": "81.6万",
       "likePoints": [
         {
@@ -6712,19 +6732,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "やすとものどこいこ！？"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 48,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 49,
-              "title": "VIVANT 悪役会議室"
+              "title": "世界まる見え！テレビ特捜部"
             },
             {
               "rank": 50,
-              "title": "さんまのお笑い向上委員会"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         },
@@ -6868,19 +6888,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "SQUALL"
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 49,
-              "title": "おかえり、初恋。"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 50,
-              "title": "溺愛 ～ 実は、最強ヒーロー ～"
+              "title": "かまいたちの机上の空論城"
             }
           ]
         }
@@ -6889,10 +6909,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/11/04",
-      "updatedAt": "2026/11/10 15:14",
+      "updatedAt": "2026/11/10 16:07",
       "episodeId": "ephjmgcrvk",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！柴咲コウ登場",
-      "likes": "4502",
+      "likes": "4517",
       "favorites": "15.7万",
       "likePoints": [
         {
@@ -7350,6 +7370,10 @@
         {
           "hour": 159,
           "likes": 4502
+        },
+        {
+          "hour": 160,
+          "likes": 4517
         }
       ],
       "previousLikePoints": [
@@ -7627,19 +7651,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "やすとものどこいこ！？"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 48,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 49,
-              "title": "VIVANT 悪役会議室"
+              "title": "世界まる見え！テレビ特捜部"
             },
             {
               "rank": 50,
-              "title": "さんまのお笑い向上委員会"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         },
@@ -7654,19 +7678,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "SQUALL"
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 49,
-              "title": "おかえり、初恋。"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 50,
-              "title": "溺愛 ～ 実は、最強ヒーロー ～"
+              "title": "かまいたちの机上の空論城"
             }
           ]
         }
@@ -7675,10 +7699,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/10 15:14",
+      "updatedAt": "2026/11/10 16:07",
       "episodeId": "epohjt1ixg",
       "subtitle": "第152回 岸井ゆきの味覚危機！？揉めまくりでチーム崩壊",
-      "likes": "4295",
+      "likes": "4302",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -8104,6 +8128,10 @@
         {
           "hour": 111,
           "likes": 4295
+        },
+        {
+          "hour": 112,
+          "likes": 4302
         }
       ],
       "previousLikePoints": [
@@ -8914,19 +8942,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "やすとものどこいこ！？"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 48,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 49,
-              "title": "VIVANT 悪役会議室"
+              "title": "世界まる見え！テレビ特捜部"
             },
             {
               "rank": 50,
-              "title": "さんまのお笑い向上委員会"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         },
@@ -8978,19 +9006,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "SQUALL"
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 49,
-              "title": "おかえり、初恋。"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 50,
-              "title": "溺愛 ～ 実は、最強ヒーロー ～"
+              "title": "かまいたちの机上の空論城"
             }
           ]
         }
@@ -8999,10 +9027,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/31",
-      "updatedAt": "2026/11/10 15:14",
+      "updatedAt": "2026/11/10 16:07",
       "episodeId": "ep3jm0ld38",
       "subtitle": "マッサマン＆マツダマン（秘）あ哺乳類SP前編",
-      "likes": "5744",
+      "likes": "5750",
       "favorites": "82.5万",
       "likePoints": [
         {
@@ -9856,19 +9884,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "やすとものどこいこ！？"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 48,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 49,
-              "title": "VIVANT 悪役会議室"
+              "title": "世界まる見え！テレビ特捜部"
             },
             {
               "rank": 50,
-              "title": "さんまのお笑い向上委員会"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         },
@@ -10072,19 +10100,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "上田と女がDEEPに吠える夜"
+              "title": "SQUALL"
             },
             {
               "rank": 48,
-              "title": "かまいたちの机上の空論城"
+              "title": "上田と女がDEEPに吠える夜"
             },
             {
               "rank": 49,
-              "title": "おかえり、初恋。"
+              "title": "クレイジージャーニー"
             },
             {
               "rank": 50,
-              "title": "溺愛 ～ 実は、最強ヒーロー ～"
+              "title": "かまいたちの机上の空論城"
             }
           ]
         }
@@ -10093,7 +10121,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/11/03",
-      "updatedAt": "2026/11/10 15:14",
+      "updatedAt": "2026/11/10 16:07",
       "episodeId": "epm8lq2z41",
       "subtitle": "激辛PK",
       "likes": "1.0万",
@@ -11026,19 +11054,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "飯島直子の今夜一杯いっちゃう？"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
               "rank": 48,
-              "title": "骨までしゃぶらせて 賛否で結構あるあるの宴"
+              "title": "飯島直子の今夜一杯いっちゃう？"
             },
             {
               "rank": 49,
-              "title": "開運！なんでも鑑定団"
+              "title": "川島・山内のマンガ沼"
             },
             {
               "rank": 50,
-              "title": "川島・山内のマンガ沼"
+              "title": "ダグアウト!!!"
             }
           ]
         },
@@ -11202,19 +11230,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "やすとものどこいこ！？"
+              "title": "上田と女が吠える夜"
             },
             {
               "rank": 48,
-              "title": "耳の穴かっぽじって聞け！"
+              "title": "やすとものどこいこ！？"
             },
             {
               "rank": 49,
-              "title": "VIVANT 悪役会議室"
+              "title": "世界まる見え！テレビ特捜部"
             },
             {
               "rank": 50,
-              "title": "さんまのお笑い向上委員会"
+              "title": "VIVANT 悪役会議室"
             }
           ]
         }
