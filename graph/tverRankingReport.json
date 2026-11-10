@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026/11/11 06:07",
+  "updatedAt": "2026/11/11 07:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/11 06:07",
+      "updatedAt": "2026/11/11 07:07",
       "episodeId": "epcqbq5j8j",
       "subtitle": "食通厳選グルメ続々！ベストバイプライスマン",
       "likes": "1.2万",
@@ -420,6 +420,10 @@
         },
         {
           "hour": 104,
+          "likes": 12000
+        },
+        {
+          "hour": 105,
           "likes": 12000
         }
       ],
@@ -894,7 +898,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 42,
-          "elapsedHour": 104,
+          "elapsedHour": 105,
           "elapsedRank": 42,
           "currentPoints": [
             {
@@ -1287,6 +1291,10 @@
             },
             {
               "hour": 104,
+              "rank": 42
+            },
+            {
+              "hour": 105,
               "rank": 42
             }
           ],
@@ -2344,7 +2352,7 @@
             },
             {
               "rank": 48,
-              "title": "踊る！さんま御殿!!"
+              "title": "修学旅行で仲良くないグループに入りました２"
             },
             {
               "rank": 49,
@@ -2361,7 +2369,7 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/11/08",
-      "updatedAt": "2026/11/11 06:07",
+      "updatedAt": "2026/11/11 07:07",
       "episodeId": "epy0yvjl1k",
       "subtitle": "箱根・草津の癒し温泉旅!白熱クイズ…最新の情報満載",
       "likes": "1.2万",
@@ -2621,6 +2629,10 @@
         },
         {
           "hour": 64,
+          "likes": 12000
+        },
+        {
+          "hour": 65,
           "likes": 12000
         }
       ],
@@ -3095,7 +3107,7 @@
           "type": "variety",
           "label": "バラエティ",
           "currentRank": 23,
-          "elapsedHour": 64,
+          "elapsedHour": 65,
           "elapsedRank": 23,
           "currentPoints": [
             {
@@ -3340,6 +3352,10 @@
             },
             {
               "hour": 64,
+              "rank": 23
+            },
+            {
+              "hour": 65,
               "rank": 23
             }
           ],
@@ -4273,7 +4289,7 @@
             },
             {
               "rank": 48,
-              "title": "踊る！さんま御殿!!"
+              "title": "修学旅行で仲良くないグループに入りました２"
             },
             {
               "rank": 49,
@@ -4290,10 +4306,10 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/11/10",
-      "updatedAt": "2026/11/11 06:07",
+      "updatedAt": "2026/11/11 07:07",
       "episodeId": "epnkti4qlo",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！未公開編",
-      "likes": "1196",
+      "likes": "1626",
       "favorites": "6.7万",
       "likePoints": [
         {
@@ -4319,6 +4335,10 @@
         {
           "hour": 6,
           "likes": 1196
+        },
+        {
+          "hour": 7,
+          "likes": 1626
         }
       ],
       "previousLikePoints": [
@@ -4927,10 +4947,15 @@
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": null,
-          "elapsedHour": null,
-          "elapsedRank": null,
-          "currentPoints": [],
+          "currentRank": 40,
+          "elapsedHour": 7,
+          "elapsedRank": 40,
+          "currentPoints": [
+            {
+              "hour": 7,
+              "rank": 40
+            }
+          ],
           "previousPoints": [
             {
               "hour": 6,
@@ -5347,20 +5372,20 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 47,
-              "title": "林修の今知りたいでしょ！"
+              "rank": 37,
+              "title": "がっちりマンデー!!"
             },
             {
-              "rank": 48,
-              "title": "ONE N' ONLYのフルアウトTV"
+              "rank": 38,
+              "title": "D.U.N.K."
             },
             {
-              "rank": 49,
-              "title": "おぎやはぎの愛車遍歴 NO CAR,NO LIFE！"
+              "rank": 39,
+              "title": "サンド＆キスマイの気になるマン"
             },
             {
-              "rank": 50,
-              "title": "オードリー春日の知らない街で自腹せんべろ"
+              "rank": 40,
+              "title": "地球まるごと大実験 ネイチャーティーチャー"
             }
           ]
         },
@@ -5496,19 +5521,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ！世界仰天ニュース"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 48,
-              "title": "ＪＡＰＡＮをスーツケースにつめ込んで！～世界に日本を持ってった～"
+              "title": "ゴッドタン"
             },
             {
               "rank": 49,
-              "title": "千鳥の鬼レンチャン"
+              "title": "ＪＡＰＡＮをスーツケースにつめ込んで！～世界に日本を持ってった～"
             },
             {
               "rank": 50,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "千鳥の鬼レンチャン"
             }
           ]
         }
@@ -5517,11 +5542,11 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/11/10",
-      "updatedAt": "2026/11/11 06:07",
+      "updatedAt": "2026/11/11 07:07",
       "episodeId": "ep3jpwc9fs",
       "subtitle": "食の危険!人気店ハンバーグで緊急入院!アレ食べ顔面麻痺女性の動画",
-      "likes": "684",
-      "favorites": "81.7万",
+      "likes": "758",
+      "favorites": "81.6万",
       "likePoints": [
         {
           "hour": 1,
@@ -5558,6 +5583,10 @@
         {
           "hour": 9,
           "likes": 684
+        },
+        {
+          "hour": 10,
+          "likes": 758
         }
       ],
       "previousLikePoints": [
@@ -5766,9 +5795,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 47,
-          "elapsedHour": 9,
-          "elapsedRank": 47,
+          "currentRank": 43,
+          "elapsedHour": 10,
+          "elapsedRank": 43,
           "currentPoints": [
             {
               "hour": 8,
@@ -5777,6 +5806,10 @@
             {
               "hour": 9,
               "rank": 47
+            },
+            {
+              "hour": 10,
+              "rank": 43
             }
           ],
           "previousPoints": [
@@ -6147,19 +6180,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 44,
-              "title": "ラヴィット！"
+              "rank": 40,
+              "title": "爆笑そっくりものまね紅白歌合戦スペシャル"
             },
             {
-              "rank": 45,
-              "title": "ポツンと一軒家"
+              "rank": 41,
+              "title": "上田と女が吠える夜"
             },
             {
-              "rank": 46,
-              "title": "ゴッドタン"
+              "rank": 42,
+              "title": "タイムレスマン"
             },
             {
-              "rank": 47,
+              "rank": 43,
               "title": "ザ！世界仰天ニュース"
             }
           ]
@@ -6308,7 +6341,7 @@
             },
             {
               "rank": 48,
-              "title": "踊る！さんま御殿!!"
+              "title": "修学旅行で仲良くないグループに入りました２"
             },
             {
               "rank": 49,
@@ -6325,10 +6358,10 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/11/11",
-      "updatedAt": "2026/11/11 06:07",
+      "updatedAt": "2026/11/11 07:07",
       "episodeId": "epw9i6fkz6",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！生田斗真登場",
-      "likes": "842",
+      "likes": "1082",
       "favorites": "15.8万",
       "likePoints": [
         {
@@ -6350,6 +6383,10 @@
         {
           "hour": 5,
           "likes": 842
+        },
+        {
+          "hour": 6,
+          "likes": 1082
         }
       ],
       "previousLikePoints": [
@@ -6943,19 +6980,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ！世界仰天ニュース"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 48,
-              "title": "ＪＡＰＡＮをスーツケースにつめ込んで！～世界に日本を持ってった～"
+              "title": "ゴッドタン"
             },
             {
               "rank": 49,
-              "title": "千鳥の鬼レンチャン"
+              "title": "ＪＡＰＡＮをスーツケースにつめ込んで！～世界に日本を持ってった～"
             },
             {
               "rank": 50,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "千鳥の鬼レンチャン"
             }
           ]
         },
@@ -6974,7 +7011,7 @@
             },
             {
               "rank": 48,
-              "title": "踊る！さんま御殿!!"
+              "title": "修学旅行で仲良くないグループに入りました２"
             },
             {
               "rank": 49,
@@ -6991,10 +7028,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/11/06",
-      "updatedAt": "2026/11/11 06:07",
+      "updatedAt": "2026/11/11 07:07",
       "episodeId": "epohjt1ixg",
       "subtitle": "第152回 岸井ゆきの味覚危機！？揉めまくりでチーム崩壊",
-      "likes": "4428",
+      "likes": "4432",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -7480,6 +7517,10 @@
         {
           "hour": 126,
           "likes": 4428
+        },
+        {
+          "hour": 127,
+          "likes": 4432
         }
       ],
       "previousLikePoints": [
@@ -8290,19 +8331,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ！世界仰天ニュース"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 48,
-              "title": "ＪＡＰＡＮをスーツケースにつめ込んで！～世界に日本を持ってった～"
+              "title": "ゴッドタン"
             },
             {
               "rank": 49,
-              "title": "千鳥の鬼レンチャン"
+              "title": "ＪＡＰＡＮをスーツケースにつめ込んで！～世界に日本を持ってった～"
             },
             {
               "rank": 50,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "千鳥の鬼レンチャン"
             }
           ]
         },
@@ -8358,7 +8399,7 @@
             },
             {
               "rank": 48,
-              "title": "踊る！さんま御殿!!"
+              "title": "修学旅行で仲良くないグループに入りました２"
             },
             {
               "rank": 49,
@@ -8375,10 +8416,10 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/31",
-      "updatedAt": "2026/11/11 06:07",
+      "updatedAt": "2026/11/11 07:07",
       "episodeId": "ep3jm0ld38",
       "subtitle": "マッサマン＆マツダマン（秘）あ哺乳類SP前編",
-      "likes": "5803",
+      "likes": "5809",
       "favorites": "82.5万",
       "likePoints": [
         {
@@ -9232,19 +9273,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ！世界仰天ニュース"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 48,
-              "title": "ＪＡＰＡＮをスーツケースにつめ込んで！～世界に日本を持ってった～"
+              "title": "ゴッドタン"
             },
             {
               "rank": 49,
-              "title": "千鳥の鬼レンチャン"
+              "title": "ＪＡＰＡＮをスーツケースにつめ込んで！～世界に日本を持ってった～"
             },
             {
               "rank": 50,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "千鳥の鬼レンチャン"
             }
           ]
         },
@@ -9452,7 +9493,7 @@
             },
             {
               "rank": 48,
-              "title": "踊る！さんま御殿!!"
+              "title": "修学旅行で仲良くないグループに入りました２"
             },
             {
               "rank": 49,
@@ -9469,7 +9510,7 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/11/03",
-      "updatedAt": "2026/11/11 06:07",
+      "updatedAt": "2026/11/11 07:07",
       "episodeId": "epm8lq2z41",
       "subtitle": "激辛PK",
       "likes": "1.0万",
@@ -10402,19 +10443,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "じっくり聞いタロウ～スター近況（秘）報告～"
+              "title": "ありえへん∞世界"
             },
             {
               "rank": 48,
-              "title": "ハマダ歌謡祭★オオカミ少年"
+              "title": "いたジャン！"
             },
             {
               "rank": 49,
-              "title": "スクール革命！"
+              "title": "ハマダ歌謡祭★オオカミ少年"
             },
             {
               "rank": 50,
-              "title": "いろはに千鳥"
+              "title": "じっくり聞いタロウ～スター近況（秘）報告～"
             }
           ]
         },
@@ -10578,19 +10619,19 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ザ！世界仰天ニュース"
+              "title": "ポツンと一軒家"
             },
             {
               "rank": 48,
-              "title": "ＪＡＰＡＮをスーツケースにつめ込んで！～世界に日本を持ってった～"
+              "title": "ゴッドタン"
             },
             {
               "rank": 49,
-              "title": "千鳥の鬼レンチャン"
+              "title": "ＪＡＰＡＮをスーツケースにつめ込んで！～世界に日本を持ってった～"
             },
             {
               "rank": 50,
-              "title": "有吉ぃぃeeeee！～そうだ！今からお前んチでゲームしない？"
+              "title": "千鳥の鬼レンチャン"
             }
           ]
         }
