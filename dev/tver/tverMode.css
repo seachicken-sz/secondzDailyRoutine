@@ -1,11 +1,6 @@
 /* TVerモード。通常ホームのflex直下レイアウトを維持 */
 #normalHomeContent { display: contents; }
 #tverModeContent { flex-shrink: 0; width: 100%; padding: 6px 0 24px; }
-#tverModeToggleButton[aria-pressed="true"] {
-  color: var(--color-accent, #207d70);
-  background: var(--color-surface, #f5f5f5);
-  border-radius: 8px;
-}
 .tver-mode-header { margin-bottom: 16px; }
 .tver-mode-header h2 { margin: 0 0 4px; font-size: 20px; }
 .tver-mode-header p { margin: 0; font-size: 12px; color: var(--color-text-secondary, #777); }
