@@ -333,3 +333,38 @@
   font-size: 15px; cursor: pointer;
 }
 .tver-mode-group-episode .tver-mode-check { flex: 0 0 20px; }
+
+/* 番組ごとにまとめたカード：各回の操作とランキングを分離 */
+.tver-mode-card.is-grouped .tver-mode-group-episode {
+  display: block;
+  min-width: 0;
+}
+.tver-mode-group-episode-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+.tver-mode-group-episode-head .tver-mode-group-episode-title {
+  flex: 1;
+  min-width: 0;
+}
+.tver-mode-group-episode-head > a,
+.tver-mode-group-episode-head > button {
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 7px;
+  background: transparent;
+  color: inherit;
+  text-decoration: none;
+  font: inherit;
+  font-size: 15px;
+  cursor: pointer;
+}
+.tver-mode-group-episode > .tver-mode-rank-summary,
+.tver-mode-group-episode > .tver-mode-counts { margin-top: 7px; }
