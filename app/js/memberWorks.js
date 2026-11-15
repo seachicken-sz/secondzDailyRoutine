@@ -51,13 +51,33 @@ const MEMBER_WORK_LINK_GROUPS = [
       item.workType === "dreampass" &&
       Boolean(item.platformUrl)
   },
-    {
+  {
     key: "dreampass_kouho",
     label: "ドリパス上映候補入り",
     description: "上映候補入りした作品はこちら！見たい作品にはファン登録しておこ！",
     urlKey: "platformUrl",
     isTarget: (item) =>
       item.workType === "dreampass_kouho" &&
+      Boolean(item.platformUrl)
+  },
+  {
+    key: "dreampass_hanbai",
+    label: "ドリパスチケット販売中！",
+    description: "チケット販売が決まったよ！詳細はドリパスのページで！",
+    urlKey: "platformUrl",
+    isTarget: (item) =>
+      item.workType === "dreampass_hanbai" &&
+      item.status === "成立" &&
+      Boolean(item.platformUrl)
+  },
+  {
+    key: "dreampass_ticket_pending",
+    label: "チケット情報",
+    description: "上映の成立状況やチケット情報はイベントページで確認してね！",
+    urlKey: "platformUrl",
+    isTarget: (item) =>
+      item.workType === "dreampass_hanbai" &&
+      item.status !== "成立" &&
       Boolean(item.platformUrl)
   }
 ];
@@ -336,6 +356,9 @@ function createWorkItemHtml(item, group) {
           ${escapeHtml(getProgramDisplayName(item))}
         </span>
 
+        ${item.workType === "dreampass_hanbai" && item.status === "未成立"
+          ? '<span class="member-work-link-limit">上映未成立</span>'
+          : ""}
         ${buildRemainingText(item)}
       </span>
 
@@ -347,6 +370,25 @@ function createWorkItemHtml(item, group) {
 }
 
 /**
+ * 番組に含まれている全エピソードIDを読み取る（旧形式も対応）。
+ */
+function getTverWorkEpisodeIds(item) {
+  const ids = [];
+  const add = value => {
+    const id = String(value || "").trim();
+    if (/^ep[a-zA-Z0-9]+$/.test(id) && !ids.includes(id)) ids.push(id);
+  };
+  if (Array.isArray(item.episodes)) {
+    item.episodes.forEach(episode => add(episode?.id || episode?.episodeId));
+  }
+  const list = Array.isArray(item.episodeIds) ? item.episodeIds :
+    String(item.episodeIds || "").split(/[,、\s]+/);
+  list.forEach(add);
+  add(item.episodeId);
+  return ids;
+}
+
+/**
  * TVer用リンクカードを生成
  */
 function createTverWorkItemHtml(item, group) {
@@ -355,20 +397,16 @@ function createTverWorkItemHtml(item, group) {
     item.platformUrl ||
     "";
 
-  const episodeId =
-    item.episodeId ||
-    getTverEpisodeId(tverUrl) ||
-    "";
-
-  const uncheckedClass =
-    isTverEpisodeChecked(episodeId)
-      ? ""
-      : " is-unchecked";
+  const episodeIds = getTverWorkEpisodeIds(item);
+  const episodeId = episodeIds[0] || "";
+  const uncheckedClass = episodeIds.length && episodeIds.every(id => isTverEpisodeChecked(id))
+    ? "" : " is-unchecked";
 
   return `
     <div
       class="member-work-link-card member-work-link-card-tver${uncheckedClass}"
       data-tver-episode-card="${escapeHtml(episodeId)}"
+      data-tver-episode-ids="${escapeHtml(episodeIds.join(","))}"
     >
       <span class="member-work-link-main member-work-link-main-tver">
         <span class="member-work-link-title member-work-link-title-tver">
@@ -390,6 +428,7 @@ function createTverWorkItemHtml(item, group) {
         data-member-work-work-type="${escapeHtml(item.workType || "")}"
         data-member-work-program-id="${escapeHtml(item.programId || item.seriesId || "")}"
         data-member-work-episode-id="${escapeHtml(episodeId)}"
+        data-member-work-episode-ids="${escapeHtml(episodeIds.join(","))}"
         data-member-work-members="${escapeHtml(Array.isArray(item.members) ? item.members.join(",") : "")}"
       >
         ${escapeHtml(getTverLinkText(item))}
@@ -559,10 +598,13 @@ function updateTverEpisodeCheckedDisplay(episodeId) {
     .querySelectorAll("[data-tver-episode-card]")
     .forEach((card) => {
       if (
-        card.dataset.tverEpisodeCard ===
-        normalizedEpisodeId
+        (card.dataset.tverEpisodeIds || card.dataset.tverEpisodeCard || "")
+          .split(",").includes(normalizedEpisodeId)
       ) {
-        card.classList.remove("is-unchecked");
+        const ids = (card.dataset.tverEpisodeIds || card.dataset.tverEpisodeCard || "")
+          .split(",").filter(Boolean);
+        card.classList.toggle("is-unchecked",
+          !ids.length || ids.some(id => !isTverEpisodeChecked(id)));
       }
     });
 }
@@ -671,9 +713,12 @@ if (memberWorksArea) {
     const episodeId =
       link.dataset.memberWorkEpisodeId || "";
 
-    if (groupKey === "tver" && episodeId) {
-      markTverEpisodeChecked(episodeId);
-      updateTverEpisodeCheckedDisplay(episodeId);
+    if (groupKey === "tver") {
+      const ids = (link.dataset.memberWorkEpisodeIds || episodeId)
+        .split(",").map(id => id.trim()).filter(id => /^ep[a-zA-Z0-9]+$/.test(id));
+      ids.forEach(id => markTverEpisodeChecked(id));
+      ids.forEach(id => updateTverEpisodeCheckedDisplay(id));
+      if (typeof renderTverMode === "function") renderTverMode();
     }
 
     if (typeof sendMemberWorkLinkLog === "function") {
