@@ -275,7 +275,7 @@ function renderTverMode() {
     return;
   }
   list.innerHTML = visibleRecords.map(item => {
-    const key = item.seriesId || item.seriesUrl;
+    const key = item.episodeId || item.seriesId || item.seriesUrl;
     // episodeIdがない番組はシリーズ単位のチェックとして保持。
     const watchKey = item.episodeId || (item.seriesId ? "series:" + item.seriesId : "url:" + item.seriesUrl);
     const checked = isTverEpisodeChecked(watchKey);
@@ -294,7 +294,7 @@ function renderTverMode() {
         <div class="tver-mode-counts"><div><span>いいね</span><strong>${escapeTverModeHtml(item.likesText)}</strong></div><div><span>お気に入り</span><strong>${escapeTverModeHtml(item.favoritesText)}</strong></div></div>` : '<p class="tver-mode-no-ranking">ランキング取得なし</p>'}
       <div class="tver-mode-actions">
         ${graph}
-        <a href="${escapeTverModeHtml(item.seriesUrl)}" target="_blank" rel="noopener noreferrer" aria-label="TVerで見る" title="TVerで見る" data-tver-series-link="${escapeTverModeHtml(watchKey)}"><i class="bi bi-play-btn"></i></a>
+        <a href="${escapeTverModeHtml(item.watchUrl || item.seriesUrl)}" target="_blank" rel="noopener noreferrer" aria-label="TVerで見る" title="TVerで見る" data-tver-series-link="${escapeTverModeHtml(watchKey)}"><i class="bi bi-play-btn"></i></a>
         <button type="button" data-tver-share="${escapeTverModeHtml(key)}" aria-label="共有" title="共有"><i class="bi bi-box-arrow-up"></i></button>
       </div>
     </article>`;
@@ -324,7 +324,7 @@ function handleTverModeClick(event) {
 }
 
 async function shareTverModeRecord(key) {
-  const item = tverModeRecords.find(record => (record.seriesId || record.seriesUrl) === key);
+  const item = tverModeRecords.find(record => (record.episodeId || record.seriesId || record.seriesUrl) === key);
   if (!item) return;
   const lines = [item.title, item.subtitle];
   if (item.hasReport) {
@@ -335,7 +335,7 @@ async function shareTverModeRecord(key) {
     });
     lines.push("いいね：" + item.likesText + " / お気に入り：" + item.favoritesText);
   }
-  lines.push(item.seriesUrl);
+  lines.push(item.watchUrl || item.seriesUrl);
   const text = lines.filter(Boolean).join("\n");
   try {
     if (navigator.share) await navigator.share({ text });
