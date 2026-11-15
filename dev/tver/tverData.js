@@ -22,45 +22,80 @@ async function loadTverModeData() {
 
   const nowJst = getTverModeJapanNow();
   const records = works.filter(item => item.workType === "tv" && item.platformUrl)
-    .map((item, index) => {
+    .flatMap((item, index) => {
       const seriesId = getTverModeSeriesId(item.platformUrl);
-      const episodeId = String(item.episodeId || "").trim();
       const candidate = reportData.reports[seriesId];
-      // レポートが旧エピソードのものなら紐付けない。
-      const report = candidate && episodeId && String(candidate.episodeId || "") === episodeId ? candidate : null;
-      // ランキングの有無に関わらず、memberWorksで判明しているエピソード情報を表示する。
-      const broadcastDate = item.broadcastDate || report?.broadcastDate || "";
-      const episodeTitle = item.episodeTitle || item.subtitle || report?.subtitle || "";
-      const rankings = Array.isArray(report?.rankings) ? report.rankings.map(rank => ({
-        label: String(rank.label || rank.type || "ランキング"),
-        currentRank: getTverModeRank(rank.currentRank),
-        bestRank: getTverModeMinimum(rank.currentPoints, "rank"),
-        improvement: getTverModeImprovement(rank.currentPoints, "rank", true),
-        previousRank: getTverModeComparable(rank.previousPoints, rank.currentPoints, "rank"),
-        previousBestRank: getTverModeMinimum(rank.previousPoints, "rank")
-      })) : [];
-      return {
-        index, seriesId, episodeId,
-        // 同一エピソードの放送日を優先。未取得番組は登録曜日・時刻から直近の放送予定日時を推定。
-        sortTimestamp: getTverModeSortTimestamp(broadcastDate, item.weekday, item.time, nowJst),
-        members: Array.isArray(item.members) ? item.members : [],
-        title: item.title || item.programName || report?.programTitle || "TVer",
-        subtitle: episodeTitle,
-        broadcastDate,
-        updatedAt: report?.updatedAt || "",
-        seriesUrl: item.platformUrl,
-        graphUrl: report ? TVER_MODE_GRAPH_PATH + "?id=" + encodeURIComponent(seriesId) : "",
-        hasReport: Boolean(report),
-        rankings,
-        likesText: report?.likes == null ? "—" : String(report.likes),
-        favoritesText: report?.favorites == null ? "—" : String(report.favorites),
-        likeImprovement: report ? getTverModeImprovement(report.likePoints, "likes", false) : null,
-        previousLikes: report ? getTverModeComparable(report.previousLikePoints, report.likePoints, "likes") : null,
-        previousBestLikes: report ? getTverModeMaximum(report.previousLikePoints, "likes") : null
-      };
+      // episodes配列があれば各回を独立したカードとして扱う。旧JSONも引き続き読める。
+      const episodes = getTverModeWorkEpisodes(item);
+      return episodes.map((episode, episodeIndex) => {
+        const episodeId = episode.id;
+        // グラフは同じepisodeIdを持つ回にだけ表示する。
+        const report = candidate && episodeId && String(candidate.episodeId || "") === episodeId ? candidate : null;
+        const broadcastDate = episode.broadcastDate || item.broadcastDate || report?.broadcastDate || "";
+        const episodeTitle = episode.title || (episodeIndex === 0 ? item.episodeTitle || item.subtitle : "") || report?.subtitle || "";
+        const rankings = Array.isArray(report?.rankings) ? report.rankings.map(rank => ({
+          label: String(rank.label || rank.type || "ランキング"),
+          currentRank: getTverModeRank(rank.currentRank),
+          bestRank: getTverModeMinimum(rank.currentPoints, "rank"),
+          improvement: getTverModeImprovement(rank.currentPoints, "rank", true),
+          previousRank: getTverModeComparable(rank.previousPoints, rank.currentPoints, "rank"),
+          previousBestRank: getTverModeMinimum(rank.previousPoints, "rank")
+        })) : [];
+        return {
+          index: index * 1000 + episodeIndex, seriesId, episodeId,
+          sortTimestamp: getTverModeSortTimestamp(broadcastDate, item.weekday, item.time, nowJst),
+          members: Array.isArray(item.members) ? item.members : [],
+          title: item.title || item.programName || report?.programTitle || "TVer",
+          subtitle: episodeTitle,
+          broadcastDate,
+          updatedAt: report?.updatedAt || "",
+          seriesUrl: item.platformUrl,
+          watchUrl: episode.url || item.platformUrl,
+          graphUrl: report ? TVER_MODE_GRAPH_PATH + "?id=" + encodeURIComponent(seriesId) : "",
+          hasReport: Boolean(report),
+          rankings,
+          likesText: report?.likes == null ? "—" : String(report.likes),
+          favoritesText: report?.favorites == null ? "—" : String(report.favorites),
+          likeImprovement: report ? getTverModeImprovement(report.likePoints, "likes", false) : null,
+          previousLikes: report ? getTverModeComparable(report.previousLikePoints, report.likePoints, "likes") : null,
+          previousBestLikes: report ? getTverModeMaximum(report.previousLikePoints, "likes") : null
+        };
+      });
     });
   records.sort((a, b) => b.sortTimestamp - a.sortTimestamp || a.index - b.index);
   return { updatedAt: reportData.updatedAt || "", records };
+}
+
+
+// 新JSONのepisodes（ID・タイトル・URL）を優先し、旧フィールドにも対応する。
+function getTverModeWorkEpisodes(item) {
+  const seen = new Set();
+  const result = [];
+  const add = (id, title, url, broadcastDate = "") => {
+    const episodeId = String(id || "").trim();
+    if (!/^ep[a-zA-Z0-9]+$/.test(episodeId) || seen.has(episodeId)) return;
+    seen.add(episodeId);
+    result.push({
+      id: episodeId,
+      title: String(title || "").trim(),
+      url: String(url || "").trim() || "https://tver.jp/episodes/" + episodeId,
+      broadcastDate: String(broadcastDate || "").trim()
+    });
+  };
+  if (Array.isArray(item.episodes)) {
+    item.episodes.forEach(episode => {
+      if (episode && typeof episode === "object")
+        add(episode.id || episode.episodeId, episode.title || episode.episodeTitle,
+          episode.url || episode.episodeUrl, episode.broadcastDate);
+    });
+  }
+  const ids = Array.isArray(item.episodeIds) ? item.episodeIds :
+    String(item.episodeIds || "").split(/[,、\s]+/).filter(Boolean);
+  const titles = Array.isArray(item.episodeTitles) ? item.episodeTitles : [];
+  ids.forEach((id, index) => add(id, titles[index] || (index === 0 ? item.episodeTitle : ""), ""));
+  add(item.episodeId, item.episodeTitle || item.subtitle, "");
+  // ID未取得の場合も番組カードを残す。
+  return result.length ? result : [{ id: "", title: String(item.episodeTitle || item.subtitle || ""), url: "", broadcastDate: "" }];
 }
 
 // 曜日・時刻による並び順は日本時間を基準にする（放送日として画面には表示しない）。
