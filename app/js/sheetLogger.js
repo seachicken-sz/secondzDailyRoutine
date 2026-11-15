@@ -808,6 +808,27 @@ async function sendMemberWorkLinkLog(data) {
   });
 }
 /**
+ * TVer・ドリパスチェックモードの利用ログを既存のmemberLinkシートへ送信する。
+ * GAS側の受信種別を増やさず、groupKey / itemIdで操作を区別する。
+ */
+async function sendCheckModeLog(mode, event, data = {}) {
+  if (!["tver", "dreampass"].includes(mode)) return false;
+  const eventName = String(event || "open");
+  const url = data.url || location.href;
+  return sendMemberWorkLinkLog({
+    groupKey: mode + "_mode",
+    itemId: createLogItemId(mode + "Mode", eventName + "_" +
+      (data.episodeId || data.programId || data.title || "screen")),
+    title: data.title || mode + " mode " + eventName,
+    url,
+    workType: data.workType || eventName,
+    programId: data.programId || "",
+    episodeId: data.episodeId || "",
+    members: data.members || ""
+  });
+}
+
+/**
  * ラジオリクエスト用の新曲切り替えログを送信する
  *
  * taskType は requestSong のまま、
