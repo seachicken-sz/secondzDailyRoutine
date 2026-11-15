@@ -11,6 +11,16 @@ function initializeDreamPassMode() {
   dreamPassSelectedMembers = createCheckModeMemberFilter("dreamPassMemberFilter", renderDreamPassMode);
   const list = document.getElementById("dreamPassModeList");
   if (list) {
+    list.addEventListener("click", event => {
+      const link = event.target.closest("a[data-dreampass-mode-link]");
+      if (!link || !list.contains(link)) return;
+      if (typeof sendCheckModeLog === "function") void sendCheckModeLog("dreampass", "link", {
+        title: link.dataset.dreampassTitle || "",
+        programId: link.dataset.dreampassWorkId || "",
+        workType: link.dataset.dreampassType || "",
+        url: link.href
+      });
+    });
     list.addEventListener("change", event => {
       if (event.target.id !== "dreamPassSortOrder") return;
       dreamPassSortOrder = event.target.value === "desc" ? "desc" : "asc";
@@ -34,6 +44,7 @@ function setDreamPassModeEnabled(enabled) {
   const tver = document.getElementById("tverModeContent");
   const tverToggle = document.getElementById("tverModeToggleButton");
   if (!toggle || !content || !normal || !tver) return;
+  const wasHidden = content.classList.contains("hidden");
   if (enabled && state.currentStepElement !== homeStepElement) {
     showOnlyStep(homeStepElement, { recordHistory: false, saveFlow: false });
   }
@@ -54,7 +65,11 @@ function setDreamPassModeEnabled(enabled) {
   toggle.setAttribute("aria-label", enabled ? "通常モードに戻る" : "ドリパスチェックモードに切り替え");
   toggle.title = enabled ? "通常モードに戻る" : "ドリパスチェックモードに切り替え";
   syncHomeModeButtons();
-  if (enabled) void loadDreamPassMode();
+  if (enabled) {
+    if (wasHidden && typeof sendCheckModeLog === "function")
+      void sendCheckModeLog("dreampass", "open");
+    void loadDreamPassMode();
+  }
 }
 
 async function loadDreamPassMode() {
@@ -107,7 +122,7 @@ function dreamPassCardHtml(item, isVoting) {
     <h3 title="${dreamPassSafeHtml(item.title)}">${dreamPassSafeHtml(item.title)}</h3>
     ${isVoting ? `<div class="dream-pass-card-rank"><span>現在順位</span><strong>${rank === null ? "順位未取得" : rank.toLocaleString("ja-JP") + "位"}</strong></div>` : ""}
     ${isTicket && item.status === "未成立" ? '<p class="dream-pass-section-description">上映未成立</p>' : ""}
-    <a class="dream-pass-vote-button" href="${dreamPassSafeHtml(item.platformUrl)}" target="_blank" rel="noopener noreferrer">${label}<i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+    <a class="dream-pass-vote-button" href="${dreamPassSafeHtml(item.platformUrl)}" target="_blank" rel="noopener noreferrer" data-dreampass-mode-link="true" data-dreampass-title="${dreamPassSafeHtml(item.title)}" data-dreampass-type="${dreamPassSafeHtml(item.workType)}" data-dreampass-work-id="${dreamPassSafeHtml(item.platformUrl.split(/[?#]/)[0].split("/").pop())}">${label}<i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
   </article>`;
 }
 
