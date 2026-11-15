@@ -1,11 +1,6 @@
 /* ドリパスチェックモード：共通ロゴは通常時と同じ位置、下の余白のみ縮小 */
 #homeStep.dream-pass-mode-active > .home-header { margin-bottom: 0; }
 #dreamPassModeContent { width: 100%; flex-shrink: 0; padding: 6px 0 24px; }
-#dreamPassModeToggleButton[aria-pressed="true"] {
-  color: var(--color-brand);
-  background: var(--color-surface);
-  border-radius: 8px;
-}
 .dream-pass-mode-header { margin: 0 0 14px; text-align: center; }
 .dream-pass-mode-header h2 { margin: 0 0 0.9em; font-size: 19px; line-height: 1.4; font-weight: 800; color: var(--color-brand); }
 .dream-pass-section { margin-bottom: 20px; }
