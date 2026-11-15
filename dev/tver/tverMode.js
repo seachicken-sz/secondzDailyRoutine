@@ -255,6 +255,58 @@ function tverModeCastHtml(members) {
   return hearts ? '<div class="tver-mode-cast" aria-label="出演メンバー">' + hearts + '</div>' : "";
 }
 
+// ランキング情報のない回だけ、同じ番組のエピソードを1枚にまとめる。
+function groupTverModeUnrankedRecords(records) {
+  const groups = new Map();
+  const result = [];
+  records.forEach(item => {
+    if (item.hasReport) {
+      result.push(item);
+      return;
+    }
+    const groupKey = item.seriesId || item.seriesUrl;
+    // series ID単位。異なる番組IDがない場合はURLを使用する。
+    if (!groups.has(groupKey)) {
+      const group = { ...item, groupedEpisodes: [item] };
+      groups.set(groupKey, group);
+      result.push(group);
+    } else {
+      const group = groups.get(groupKey);
+      if (!group.groupedEpisodes.some(existing =>
+        item.episodeId && existing.episodeId === item.episodeId)) {
+        group.groupedEpisodes.push(item);
+      }
+    }
+  });
+  return result;
+}
+
+function getTverModeWatchKey(item) {
+  return item.episodeId || (item.seriesId ? "series:" + item.seriesId : "url:" + item.seriesUrl);
+}
+
+// 複数回をまとめたカード。チェック・視聴リンク・共有はエピソード単位のまま。
+function tverModeGroupedCardHtml(item) {
+  const episodeRows = item.groupedEpisodes.map(episode => {
+    const watchKey = getTverModeWatchKey(episode);
+    const checked = isTverEpisodeChecked(watchKey);
+    const episodeTitle = episode.subtitle || "エピソードタイトル未取得";
+    const shareKey = episode.episodeId || episode.seriesId || episode.seriesUrl;
+    return `<div class="tver-mode-group-episode">
+      <label class="tver-mode-check" title="視聴済み"><input type="checkbox" data-tver-watch="${escapeTverModeHtml(watchKey)}" ${checked ? "checked" : ""} aria-label="${escapeTverModeHtml(episodeTitle)}を視聴済みにする"><span>見た</span></label>
+      <span class="tver-mode-group-episode-title" title="${escapeTverModeHtml(episodeTitle)}">${escapeTverModeHtml(episodeTitle)}</span>
+      <a href="${escapeTverModeHtml(episode.watchUrl || episode.seriesUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeTverModeHtml(episodeTitle)}をTVerで見る" title="TVerで見る" data-tver-series-link="${escapeTverModeHtml(watchKey)}"><i class="bi bi-play-btn"></i></a>
+      <button type="button" data-tver-share="${escapeTverModeHtml(shareKey)}" aria-label="${escapeTverModeHtml(episodeTitle)}を共有" title="共有"><i class="bi bi-box-arrow-up"></i></button>
+    </div>`;
+  }).join("");
+  return `<article class="tver-mode-card is-simple is-grouped">
+    ${tverModeCastHtml(item.members)}
+    <div class="tver-mode-card-heading"><h3>${escapeTverModeHtml(item.title)}</h3></div>
+    <p class="tver-mode-no-ranking">ランキング取得なし・${item.groupedEpisodes.length}エピソード</p>
+    <div class="tver-mode-group-episodes">${episodeRows}</div>
+  </article>`;
+}
+
 function renderTverMode() {
   const list = document.getElementById("tverModeList");
   if (!list) return;
@@ -265,7 +317,7 @@ function renderTverMode() {
   const visibleRecords = tverModeRecords.filter(item => {
     if (!isCheckModeMemberVisible(item, tverSelectedMembers)) return false;
     if (!tverUnwatchedOnly) return true;
-    const watchKey = item.episodeId || (item.seriesId ? "series:" + item.seriesId : "url:" + item.seriesUrl);
+    const watchKey = getTverModeWatchKey(item);
     return !isTverEpisodeChecked(watchKey);
   })
     .sort((a, b) => (tverSortOrder === "oldest" ? a.sortTimestamp - b.sortTimestamp :
@@ -274,10 +326,12 @@ function renderTverMode() {
     list.innerHTML = `<p class="tver-mode-empty-message">${tverUnwatchedOnly ? "未視聴の番組はありません。" : "選択したメンバーの番組はありません。"}</p>`;
     return;
   }
-  list.innerHTML = visibleRecords.map(item => {
+  const displayRecords = groupTverModeUnrankedRecords(visibleRecords);
+  list.innerHTML = displayRecords.map(item => {
+    if (item.groupedEpisodes && item.groupedEpisodes.length > 1) return tverModeGroupedCardHtml(item);
     const key = item.episodeId || item.seriesId || item.seriesUrl;
     // episodeIdがない番組はシリーズ単位のチェックとして保持。
-    const watchKey = item.episodeId || (item.seriesId ? "series:" + item.seriesId : "url:" + item.seriesUrl);
+    const watchKey = getTverModeWatchKey(item);
     const checked = isTverEpisodeChecked(watchKey);
     const checkbox = `<label class="tver-mode-check" title="視聴済み"><input type="checkbox" data-tver-watch="${escapeTverModeHtml(watchKey)}" ${checked ? "checked" : ""} aria-label="${escapeTverModeHtml(item.title)}を視聴済みにする"><span>見た</span></label>`;
     const ranking = item.rankings.map(rank => {
