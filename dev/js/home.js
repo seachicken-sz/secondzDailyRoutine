@@ -376,6 +376,17 @@ function createHomeExtraTaskDetail({ task, source, index }) {
   summaryLabel.className = "home-extra-task-summary-label";
   summaryLabel.textContent = getHomeExtraTaskName(task, source);
 
+  // 期間限定のお知らせにアイコン指定がある場合のみ表示。
+  if (source === "once" && task?.icon) {
+    const icon = document.createElement("img");
+    icon.className = "home-extra-task-icon";
+    icon.src = task.icon;
+    icon.alt = "";
+    icon.loading = "lazy";
+    icon.decoding = "async";
+    summary.appendChild(icon);
+  }
+
   const doneMark = document.createElement("span");
   doneMark.className = "home-extra-task-done-mark show-when-daily-done";
   doneMark.textContent = "✅";
