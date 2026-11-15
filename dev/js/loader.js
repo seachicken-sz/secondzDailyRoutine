@@ -28,7 +28,21 @@ async function loadOnceTasks() {
     throw new Error("onceListJson.json が配列形式ではありません。");
   }
 
-  return tasks.filter((task) => {
+  // /dev 限定告知。本番と共通の onceListJson.json にはまだ反映しない。
+  const devAnnouncements = [{
+    id: "once_new_release_nav_20261116",
+    name: "新曲応援ナビ",
+    "short-name": "新曲応援ナビ",
+    url: "https://seachicken-sz.github.io/secondzNewReleaseNav/",
+    icon: "https://seachicken-sz.github.io/secondzNewReleaseNav/img/new-release-nav-icon-192.png",
+    repeatType: "daily",
+    from: "202611160000",
+    to: "202612212359",
+    "notice-message": "CDは2/3発売、デジタル先行配信は11/25から！\nどうしていいか分からない人向けに応援ナビを作りました！\n特典を比較したり、加入サブスクからできる新曲応援をチェックしたり……etc"
+  }];
+  const mergedTasks = tasks.filter(task => task?.id !== "once_new_release_nav_20261116")
+    .concat(devAnnouncements);
+  return mergedTasks.filter((task) => {
     return task && task.name && isWithinPeriod(task.from, task.to);
   });
 }
