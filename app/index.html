@@ -32,9 +32,9 @@
   <link rel="stylesheet" href="./css/home.css" />
   <link rel="stylesheet" href="./css/task.css" />
   <link rel="stylesheet" href="./css/utility.css" />
-  
   <link rel="stylesheet" href="./tver/tverMode.css" />
   <link rel="stylesheet" href="./dreampass/dreamPassMode.css" />
+  
   <link rel="manifest" href="../manifest.json">
   <link rel="apple-touch-icon" href="../img/icon-180.png">
   <link rel="icon" type="image/png" href="../img/icon-180.png">
@@ -63,18 +63,29 @@
         <button id="closeHomeMenuButton" class="home-menu-close-button" type="button" aria-label="メニューを閉じる">×</button>
       
         <h2 class="home-menu-title">メニュー</h2>
-        <section class="home-menu-accordion home-menu-page-index">
-          <button type="button" class="home-menu-item home-menu-page-link" data-home-menu-scroll-target="memberWorksCard">
-            <span><i class="bi bi-link-45deg"></i>メンバーごと便利リンク集</span>
-          </button>
-          <button type="button" class="home-menu-item home-menu-page-link" data-home-menu-scroll-target="homeDailyExtraCard">
-            <span><i class="bi bi-stars"></i>おかわりDaily</span>
-          </button>
-          <button type="button" class="home-menu-item home-menu-page-link" data-home-menu-scroll-target="homeInfoCard">
-            <span><i class="bi bi-calendar-heart"></i>最近のタムごと</span>
-          </button>
-        </section>
         <div class="home-menu-scroll">
+          <section class="home-menu-accordion home-menu-page-index" aria-label="画面移動">
+            <button type="button" class="home-menu-item home-menu-page-link home-menu-mode-link" data-home-menu-mode="home">
+              <span><i class="bi bi-house"></i>HOME</span>
+            </button>
+            <div class="home-menu-home-children">
+              <button type="button" class="home-menu-item home-menu-page-link home-menu-child-link" data-home-menu-scroll-target="memberWorksCard">
+                <span><i class="bi bi-link-45deg"></i>メンバーごと便利リンク集</span>
+              </button>
+              <button type="button" class="home-menu-item home-menu-page-link home-menu-child-link" data-home-menu-scroll-target="homeDailyExtraCard">
+                <span><i class="bi bi-stars"></i>おかわりDaily</span>
+              </button>
+              <button type="button" class="home-menu-item home-menu-page-link home-menu-child-link" data-home-menu-scroll-target="homeInfoCard">
+                <span><i class="bi bi-calendar-heart"></i>最近のタムごと</span>
+              </button>
+            </div>
+            <button type="button" class="home-menu-item home-menu-page-link home-menu-mode-link" data-home-menu-mode="tver">
+              <span><i class="bi bi-tv"></i>TVerチェックモード</span>
+            </button>
+            <button type="button" class="home-menu-item home-menu-page-link home-menu-mode-link" data-home-menu-mode="dreampass">
+              <span><i class="bi bi-ticket-perforated"></i>ドリパスチェックモード</span>
+            </button>
+          </section>
           <section class="home-menu-accordion">
             <button type="button" class="home-menu-item" data-home-menu-accordion="1minutes_moode">
               <span><i class="bi bi-clock"></i>お試しモード</span>
@@ -172,18 +183,19 @@
               <a class="primary-button" href="https://docs.google.com/forms/d/e/1FAIpQLScsX4mHxLIRujrZy2bElGDuOfGI8OQgJapFwBiAcGQKPZCzWw/viewform?usp=sharing&amp;ouid=105111966497500869107" target="_blank">タスク追加のご要望</a>
               <p><br>返信をご希望の方はXのDMからお願いいたします。</p>
               <a href="https://x.com/tsunakan_r" target="_blank" class="text-link-button">ツナ缶 - X</a>
+              <p>機能追加・改修などのお知らせは運営用Xでご案内しています。</p>
+              <a href="https://x.com/tamgoto_daily" target="_blank" rel="noopener noreferrer" class="text-link-button">タムごとDaily 更新情報 - X（@tamgoto_daily）</a>
             </div>
           </section>
         </div>
-          <button type="button" class="home-menu-item home-menu-page-link home-menu-mode-link" data-home-menu-mode="tver"><span><i class="bi bi-tv"></i>TVerチェックモード</span></button>
-          <button type="button" class="home-menu-item home-menu-page-link home-menu-mode-link" data-home-menu-mode="dreampass"><span><i class="bi bi-ticket-perforated"></i>ドリパスチェックモード</span></button>
       </nav>
       <div id="home-top-share-btn-wrap">
         <button id="updateNoticeButton" type="button" class="button secondary update-notice-button"><i class="bi bi-bell"></i></button>
         <button id="settingButton" type="button" class="button secondary update-notice-button" aria-label="設定を開く"><i class="bi bi-gear"></i></button>
       </div>
+
+      <!-- 通常ホームとTVerモードの共通ロゴ -->
       <header class="home-header">
-        <!--ロゴ-->
         <div class="home-logo-area">
           <img id="homeLogoImage" src="../img/logo.png" alt="タムごとDaily">
         </div>
@@ -291,6 +303,25 @@
             <p class="request-ranking-loading">読み込み中...</p>
           </div>
         </section>
+
+      <!--期間限定お知らせ：新曲応援ナビ（開発版のみ）-->
+      <section class="home-card date-visible-block" data-fromdate="2026-11-16T00:00:00+09:00" data-todate="2026-12-21T23:59:59+09:00">
+        <h2 class="ruby-h"><ruby>新曲応援ナビ<rt>new release</rt></ruby></h2>
+        <div class="card-link">
+          <a href="https://seachicken-sz.github.io/secondzNewReleaseNav/" target="_blank" rel="noopener noreferrer">
+            <img src="https://seachicken-sz.github.io/secondzNewReleaseNav/img/new-release-nav-icon-192.png" alt="新曲応援ナビのアイコン">
+            <span class="card-link-text">
+              <strong>「ザユウノメイ/本当のことを言うと」</strong>
+              <small>2/3に新曲両A面シングルの発売が決定🎊<br>
+                特典も盛りだくさん！<br>
+                そんなわけでどうしていいか分からない人向けに応援ナビを作りました！<br>
+                特典を比較したり、加入サブスクからできる新曲応援をチェックしたり……etc<br>
+                迷われている方はぜひチェックしてみてくださいね！
+              </small>
+            </span>
+          </a>
+        </div>
+      </section>
 
       <!--期間限定お知らせ事-->
       <section class="home-card date-visible-block" data-fromdate="2026-06-13T00:00:00+09:00" data-todate="2026-06-15T23:59:59+09:00">
@@ -431,6 +462,11 @@
             やっていて困ったこと、感想、こんなことできる？ などはこちらからお送りください。
           </p>
           <a href="https://mond.how/ja/tsunakan_r" target="_blank" rel="noopener noreferrer" class="primary-button feedback-link-button">mond</a>
+          <p class="feedback-text"><br>
+            <strong>機能改善・追加のお知らせ</strong><br>
+            タムごとDailyの新機能や改修・不具合修正の情報をXでお知らせしています！
+          </p>
+          <a href="https://x.com/tamgoto_daily" target="_blank" rel="noopener noreferrer" class="primary-button feedback-link-button">更新情報を見る</a>
         </section>
         <!--ホームのボタン-->
         <section class="home-button-area">
@@ -444,8 +480,9 @@
         <button id="homeBackToTopButton" class="home-back-to-top-button hidden hidden" type="button" aria-label="上に戻る">
           <i class="bi bi-arrow-up"></i>
         </button>
-      </div>
-
+        
+    </div>
+    
     <!--TVerモード-->
     <div id="tverModeContent" class="tver-mode-content hidden">
       <div class="tver-mode-header">
@@ -1482,12 +1519,12 @@
 <script src="./js/dailyTask.js" defer></script>
 <script src="./js/post.js" defer></script>
 <script src="./js/youtube.js" defer></script>
-<!-- 起動 -->
 <!-- TVerモード -->
 <script src="./tver/tverData.js" defer></script>
 <script src="./tver/tverMode.js" defer></script>
 <!-- ドリパスチェックモード -->
 <script src="./dreampass/dreamPassMode.js" defer></script>
+<!-- 起動 -->
 <script src="./js/app.js" defer></script>
 </body>
 </html>
