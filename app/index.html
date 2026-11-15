@@ -33,6 +33,8 @@
   <link rel="stylesheet" href="./css/task.css" />
   <link rel="stylesheet" href="./css/utility.css" />
   
+  <link rel="stylesheet" href="./tver/tverMode.css" />
+  <link rel="stylesheet" href="./dreampass/dreamPassMode.css" />
   <link rel="manifest" href="../manifest.json">
   <link rel="apple-touch-icon" href="../img/icon-180.png">
   <link rel="icon" type="image/png" href="../img/icon-180.png">
@@ -173,6 +175,8 @@
             </div>
           </section>
         </div>
+          <button type="button" class="home-menu-item home-menu-page-link home-menu-mode-link" data-home-menu-mode="tver"><span><i class="bi bi-tv"></i>TVerチェックモード</span></button>
+          <button type="button" class="home-menu-item home-menu-page-link home-menu-mode-link" data-home-menu-mode="dreampass"><span><i class="bi bi-ticket-perforated"></i>ドリパスチェックモード</span></button>
       </nav>
       <div id="home-top-share-btn-wrap">
         <button id="updateNoticeButton" type="button" class="button secondary update-notice-button"><i class="bi bi-bell"></i></button>
@@ -185,11 +189,20 @@
         </div>
       </header>
 
+      <div id="normalHomeContent">
       <section class="home-action-area">
         <button id="startRoutineButton" class="primary-button">
           開始する
         </button>
         </section>
+        <div class="home-check-mode-links" role="group" aria-label="チェックモードへ移動">
+          <button type="button" class="home-check-mode-link" data-home-mode="tver">
+            <i class="bi bi-tv" aria-hidden="true"></i><span>TVerチェック</span>
+          </button>
+          <button type="button" class="home-check-mode-link" data-home-mode="dreampass">
+            <i class="bi bi-ticket-perforated" aria-hidden="true"></i><span>ドリパスチェック</span>
+          </button>
+        </div>
     
         <section class="home-color-change-area">
       <div class="theme-heart-grid" aria-label="テーマカラー選択">
@@ -431,6 +444,72 @@
         <button id="homeBackToTopButton" class="home-back-to-top-button hidden hidden" type="button" aria-label="上に戻る">
           <i class="bi bi-arrow-up"></i>
         </button>
+      </div>
+
+    <!--TVerモード-->
+    <div id="tverModeContent" class="tver-mode-content hidden">
+      <div class="tver-mode-header">
+        <h2>TVerチェックモード</h2>
+        <div class="home-mode-switcher check-mode-tab-nav" role="group" aria-label="表示モード切り替え">
+          <button id="homeModeToggleButton" data-home-mode="home" type="button" class="home-mode-button" aria-label="HOMEを表示" aria-pressed="true" title="HOME">
+            <i class="bi bi-house" aria-hidden="true"></i><span>HOME</span>
+          </button>
+          <button id="tverModeToggleButton" data-home-mode="tver" type="button" class="home-mode-button" aria-label="TVerチェックモードを表示" aria-pressed="false" title="TVer">
+            <i class="bi bi-tv" aria-hidden="true"></i><span>TVer</span>
+          </button>
+          <button id="dreamPassModeToggleButton" data-home-mode="dreampass" type="button" class="home-mode-button" aria-label="ドリパスチェックモードを表示" aria-pressed="false" title="ドリパス">
+            <i class="bi bi-ticket-perforated" aria-hidden="true"></i><span>ドリパス</span>
+          </button>
+        </div>
+        <div class="tver-mode-header-meta">
+          <label class="tver-mode-default-setting" for="tverModeDefaultCheckbox">
+            <input id="tverModeDefaultCheckbox" type="checkbox">
+            <span>起動時にこの画面を表示する</span>
+          </label>
+          <p id="tverModeUpdatedAt"></p>
+        </div>
+      </div>
+      <div class="check-mode-controls">
+        <div id="tverMemberFilter" class="member-filter-grid check-mode-member-filter" aria-label="TVer出演者で絞り込み"></div>
+        <div class="tver-mode-filter-sort-row">
+          <button id="tverUnwatchedOnly" class="member-filter-chip tver-mode-unwatched-chip" type="button" aria-pressed="false">未視聴のみ表示</button>
+          <label class="check-mode-sort-label">並び順
+            <select id="tverSortOrder" class="check-mode-sort-select" aria-label="TVerの並び順">
+              <option value="newest">新しい順</option>
+              <option value="oldest">古い順</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div id="tverModeList" class="tver-mode-list"></div>
+    </div>
+
+    <!--ドリパスチェックモード-->
+    <div id="dreamPassModeContent" class="hidden">
+      <header class="dream-pass-mode-header">
+        <h2>ドリパスチェックモード</h2>
+        <div class="home-mode-switcher check-mode-tab-nav" role="group" aria-label="表示モード切り替え">
+          <button data-home-mode="home" type="button" class="home-mode-button" aria-label="HOMEを表示" aria-pressed="false" title="HOME">
+            <i class="bi bi-house" aria-hidden="true"></i><span>HOME</span>
+          </button>
+          <button data-home-mode="tver" type="button" class="home-mode-button" aria-label="TVerチェックモードを表示" aria-pressed="false" title="TVer">
+            <i class="bi bi-tv" aria-hidden="true"></i><span>TVer</span>
+          </button>
+          <button data-home-mode="dreampass" type="button" class="home-mode-button" aria-label="ドリパスチェックモードを表示" aria-pressed="false" title="ドリパス">
+            <i class="bi bi-ticket-perforated" aria-hidden="true"></i><span>ドリパス</span>
+          </button>
+        </div>
+        <label class="dream-pass-default-setting" for="dreamPassModeDefaultCheckbox">
+          <input id="dreamPassModeDefaultCheckbox" type="checkbox">
+          <span>起動時にこの画面を表示する</span>
+        </label>
+      </header>
+      <div class="check-mode-controls">
+        <div id="dreamPassMemberFilter" class="member-filter-grid check-mode-member-filter" aria-label="ドリパス出演者で絞り込み"></div>
+      </div>
+      <div id="dreamPassModeList"></div>
+    </div>
+    
     </section>
     <!--STEP 1 Spotify-->
     <section id="spotifyStep" class="step-screen hidden">
@@ -1404,6 +1483,11 @@
 <script src="./js/post.js" defer></script>
 <script src="./js/youtube.js" defer></script>
 <!-- 起動 -->
+<!-- TVerモード -->
+<script src="./tver/tverData.js" defer></script>
+<script src="./tver/tverMode.js" defer></script>
+<!-- ドリパスチェックモード -->
+<script src="./dreampass/dreamPassMode.js" defer></script>
 <script src="./js/app.js" defer></script>
 </body>
 </html>
