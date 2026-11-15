@@ -368,3 +368,51 @@
 }
 .tver-mode-group-episode > .tver-mode-rank-summary,
 .tver-mode-group-episode > .tver-mode-counts { margin-top: 7px; }
+
+/* 単数・複数回共通：チェック＋タイトル → 操作ボタン → ランキングの3段構成 */
+.tver-mode-card.is-grouped .tver-mode-group-episode-head {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  align-items: start;
+  gap: 7px;
+  min-width: 0;
+}
+.tver-mode-card.is-grouped .tver-mode-group-episode-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  max-height: 4.5em;
+  min-width: 0;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.tver-mode-card.is-grouped .tver-mode-group-episode-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+  margin: 7px 0 0;
+}
+.tver-mode-card.is-grouped .tver-mode-group-episode-actions > a,
+.tver-mode-card.is-grouped .tver-mode-group-episode-actions > button {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 7px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.tver-mode-card.is-grouped .tver-mode-group-episode > .tver-mode-rank-summary,
+.tver-mode-card.is-grouped .tver-mode-group-episode > .tver-mode-counts {
+  margin-top: 8px;
+}
