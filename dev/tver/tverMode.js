@@ -333,7 +333,7 @@ function tverModeGroupedCardHtml(item) {
   return `<article class="tver-mode-card is-grouped">
     ${tverModeCastHtml(item.members)}
     <div class="tver-mode-card-heading"><h3>${escapeTverModeHtml(item.title)}</h3></div>
-    ${item.groupedEpisodes.length > 1 ? `<p class="tver-mode-no-ranking">${item.groupedEpisodes.length}エピソード</p>` : ""}
+    <p class="tver-mode-no-ranking">${item.groupedEpisodes.length}エピソード</p>
     <div class="tver-mode-group-episodes">${episodeRows}</div>
   </article>`;
 }
