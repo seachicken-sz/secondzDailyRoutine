@@ -380,10 +380,12 @@
 .tver-mode-card.is-grouped .tver-mode-group-episode-title {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
   overflow: hidden;
-  max-height: 4.5em;
+  height: 3em;
+  min-height: 3em;
+  max-height: 3em;
   min-width: 0;
   line-height: 1.5;
   overflow-wrap: anywhere;
@@ -416,3 +418,6 @@
 .tver-mode-card.is-grouped .tver-mode-group-episode > .tver-mode-counts {
   margin-top: 8px;
 }
+
+/* エピソード件数の上下余白をなくす */
+.tver-mode-card.is-grouped .tver-mode-no-ranking { margin-top: 0; margin-bottom: 0; }
