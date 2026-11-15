@@ -38,6 +38,9 @@ const STORAGE_KEYS = {
   pwaFirstVisitModalShown: "secondzDailyRoutinePwaFirstVisitModalShown",
   selectModeSettings: "secondzDailyRoutineSelectModeSettings",
   tverCheckedEpisodeMap: "secondzDailyRoutineTverCheckedEpisodeMap",
+  tverModeEnabled: "secondzDailyRoutineTverModeEnabled",
+  tverModeDefault: "secondzDailyRoutineTverModeDefault",
+  homeDefaultMode: "secondzDailyRoutineHomeDefaultMode",
 };
 // ==================================================
 // 定数 - 実行モード
