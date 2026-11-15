@@ -138,7 +138,17 @@ function initializeTverMode() {
   list.addEventListener("click", handleTverModeClick);
   list.addEventListener("change", (event) => {
     const input = event.target.closest("input[data-tver-watch]");
-    if (input) markTverModeChecked(input.dataset.tverWatch, input.checked);
+    if (input) {
+      markTverModeChecked(input.dataset.tverWatch, input.checked);
+      const episode = tverModeRecords.find(item => getTverModeWatchKey(item) === input.dataset.tverWatch);
+      if (typeof sendCheckModeLog === "function") void sendCheckModeLog("tver",
+        input.checked ? "check" : "uncheck", {
+          episodeId: episode?.episodeId || "",
+          programId: episode?.seriesId || "",
+          title: episode?.title || "TVer視聴チェック",
+          url: episode?.watchUrl || episode?.seriesUrl || location.href
+        });
+    }
   });
 
   const defaultCheckbox = document.getElementById("tverModeDefaultCheckbox");
@@ -156,6 +166,7 @@ function setTverModeEnabled(enabled) {
   const normal = document.getElementById("normalHomeContent");
   const tver = document.getElementById("tverModeContent");
   if (!toggle || !normal || !tver) return;
+  const wasHidden = tver.classList.contains("hidden");
 
   if (enabled && state.currentStepElement !== homeStepElement) {
     showOnlyStep(homeStepElement, { recordHistory: false, saveFlow: false });
@@ -178,7 +189,11 @@ function setTverModeEnabled(enabled) {
   toggle.setAttribute("aria-label", enabled ? "通常モードに戻る" : "TVerモードに切り替え");
   toggle.title = enabled ? "通常モードに戻る" : "TVerモードに切り替え";
   syncHomeModeButtons();
-  if (enabled) loadAndRenderTverMode();
+  if (enabled) {
+    if (wasHidden && typeof sendCheckModeLog === "function")
+      void sendCheckModeLog("tver", "open");
+    loadAndRenderTverMode();
+  }
 
 
 }
@@ -385,10 +400,25 @@ function handleTverModeClick(event) {
   const link = event.target.closest("[data-tver-series-link]");
   if (link && link.dataset.tverSeriesLink) {
     markTverModeChecked(link.dataset.tverSeriesLink, true);
+    const ep = tverModeRecords.find(item => getTverModeWatchKey(item) === link.dataset.tverSeriesLink);
+    if (typeof sendCheckModeLog === "function") void sendCheckModeLog("tver", "link", {
+      episodeId: ep?.episodeId || "",
+      programId: ep?.seriesId || "",
+      title: ep?.title || "TVer",
+      url: link.href
+    });
     return;
   }
   const share = event.target.closest("[data-tver-share]");
-  if (share) void shareTverModeRecord(share.dataset.tverShare);
+  if (share) {
+    const ep = tverModeRecords.find(item =>
+      (item.episodeId || item.seriesId || item.seriesUrl) === share.dataset.tverShare);
+    if (typeof sendCheckModeLog === "function") void sendCheckModeLog("tver", "share", {
+      episodeId: ep?.episodeId || "", programId: ep?.seriesId || "",
+      title: ep?.title || "TVer", url: ep?.watchUrl || ep?.seriesUrl || location.href
+    });
+    void shareTverModeRecord(share.dataset.tverShare);
+  }
 }
 
 async function shareTverModeRecord(key) {
