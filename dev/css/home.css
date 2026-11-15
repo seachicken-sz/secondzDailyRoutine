@@ -1279,12 +1279,3 @@
 .home-menu-page-index .home-menu-mode-link {
   font-weight: 700;
 }
-
-/* 期間限定お知らせのアプリアイコン */
-.home-extra-task-summary .home-extra-task-icon {
-  width: 32px;
-  height: 32px;
-  flex: 0 0 32px;
-  border-radius: 8px;
-  object-fit: cover;
-}
