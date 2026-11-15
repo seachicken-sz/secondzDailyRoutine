@@ -255,17 +255,12 @@ function tverModeCastHtml(members) {
   return hearts ? '<div class="tver-mode-cast" aria-label="出演メンバー">' + hearts + '</div>' : "";
 }
 
-// ランキング情報のない回だけ、同じ番組のエピソードを1枚にまとめる。
-function groupTverModeUnrankedRecords(records) {
+// 同じ番組の全エピソードをランキング有無に関係なく1カードへまとめる。
+function groupTverModeRecordsByProgram(records) {
   const groups = new Map();
   const result = [];
   records.forEach(item => {
-    if (item.hasReport) {
-      result.push(item);
-      return;
-    }
     const groupKey = item.seriesId || item.seriesUrl;
-    // series ID単位。異なる番組IDがない場合はURLを使用する。
     if (!groups.has(groupKey)) {
       const group = { ...item, groupedEpisodes: [item] };
       groups.set(groupKey, group);
@@ -273,9 +268,11 @@ function groupTverModeUnrankedRecords(records) {
     } else {
       const group = groups.get(groupKey);
       if (!group.groupedEpisodes.some(existing =>
-        item.episodeId && existing.episodeId === item.episodeId)) {
+        item.episodeId ? existing.episodeId === item.episodeId : !existing.episodeId)) {
         group.groupedEpisodes.push(item);
       }
+      // グループ内の出演者も失わない。
+      group.members = [...new Set([...group.members, ...item.members])];
     }
   });
   return result;
@@ -285,24 +282,41 @@ function getTverModeWatchKey(item) {
   return item.episodeId || (item.seriesId ? "series:" + item.seriesId : "url:" + item.seriesUrl);
 }
 
-// 複数回をまとめたカード。チェック・視聴リンク・共有はエピソード単位のまま。
+// 複数回を持つ番組カード。各回のタイトル・視聴チェック・再生・共有・ランキングを維持。
 function tverModeGroupedCardHtml(item) {
   const episodeRows = item.groupedEpisodes.map(episode => {
     const watchKey = getTverModeWatchKey(episode);
     const checked = isTverEpisodeChecked(watchKey);
     const episodeTitle = episode.subtitle || "エピソードタイトル未取得";
     const shareKey = episode.episodeId || episode.seriesId || episode.seriesUrl;
+    const rankings = episode.hasReport ? episode.rankings.map(rank =>
+      `<div class="tver-mode-compact-rank"><span>${escapeTverModeHtml(rank.label)}<br class="tver-mode-rank-break">最高順位</span><strong>${rank.bestRank === null ? "記録なし" : tverModeRankText(rank.bestRank)}</strong></div>`
+    ).join("") : "";
+    const rankingSection = episode.hasReport
+      ? `<div class="tver-mode-rank-summary">${rankings || "順位データなし"}</div>
+         <div class="tver-mode-counts">
+           <div><span>いいね</span><strong>${escapeTverModeHtml(episode.likesText)}</strong></div>
+           <div><span>お気に入り</span><strong>${escapeTverModeHtml(episode.favoritesText)}</strong></div>
+         </div>`
+      : "";
+    const graphLink = episode.graphUrl
+      ? `<a href="${escapeTverModeHtml(episode.graphUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeTverModeHtml(episodeTitle)}のグラフ" title="グラフ"><i class="bi bi-graph-up-arrow"></i></a>`
+      : "";
     return `<div class="tver-mode-group-episode">
-      <label class="tver-mode-check" title="視聴済み"><input type="checkbox" data-tver-watch="${escapeTverModeHtml(watchKey)}" ${checked ? "checked" : ""} aria-label="${escapeTverModeHtml(episodeTitle)}を視聴済みにする"><span>見た</span></label>
-      <span class="tver-mode-group-episode-title" title="${escapeTverModeHtml(episodeTitle)}">${escapeTverModeHtml(episodeTitle)}</span>
-      <a href="${escapeTverModeHtml(episode.watchUrl || episode.seriesUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeTverModeHtml(episodeTitle)}をTVerで見る" title="TVerで見る" data-tver-series-link="${escapeTverModeHtml(watchKey)}"><i class="bi bi-play-btn"></i></a>
-      <button type="button" data-tver-share="${escapeTverModeHtml(shareKey)}" aria-label="${escapeTverModeHtml(episodeTitle)}を共有" title="共有"><i class="bi bi-box-arrow-up"></i></button>
+      <div class="tver-mode-group-episode-head">
+        <label class="tver-mode-check" title="視聴済み"><input type="checkbox" data-tver-watch="${escapeTverModeHtml(watchKey)}" ${checked ? "checked" : ""} aria-label="${escapeTverModeHtml(episodeTitle)}を視聴済みにする"><span>見た</span></label>
+        <span class="tver-mode-group-episode-title" title="${escapeTverModeHtml(episodeTitle)}">${escapeTverModeHtml(episodeTitle)}</span>
+        ${graphLink}
+        <a href="${escapeTverModeHtml(episode.watchUrl || episode.seriesUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeTverModeHtml(episodeTitle)}をTVerで見る" title="TVerで見る" data-tver-series-link="${escapeTverModeHtml(watchKey)}"><i class="bi bi-play-btn"></i></a>
+        <button type="button" data-tver-share="${escapeTverModeHtml(shareKey)}" aria-label="${escapeTverModeHtml(episodeTitle)}を共有" title="共有"><i class="bi bi-box-arrow-up"></i></button>
+      </div>
+      ${rankingSection}
     </div>`;
   }).join("");
-  return `<article class="tver-mode-card is-simple is-grouped">
+  return `<article class="tver-mode-card is-grouped">
     ${tverModeCastHtml(item.members)}
     <div class="tver-mode-card-heading"><h3>${escapeTverModeHtml(item.title)}</h3></div>
-    <p class="tver-mode-no-ranking">ランキング取得なし・${item.groupedEpisodes.length}エピソード</p>
+    <p class="tver-mode-no-ranking">${item.groupedEpisodes.length}エピソード</p>
     <div class="tver-mode-group-episodes">${episodeRows}</div>
   </article>`;
 }
@@ -326,7 +340,7 @@ function renderTverMode() {
     list.innerHTML = `<p class="tver-mode-empty-message">${tverUnwatchedOnly ? "未視聴の番組はありません。" : "選択したメンバーの番組はありません。"}</p>`;
     return;
   }
-  const displayRecords = groupTverModeUnrankedRecords(visibleRecords);
+  const displayRecords = groupTverModeRecordsByProgram(visibleRecords);
   list.innerHTML = displayRecords.map(item => {
     if (item.groupedEpisodes && item.groupedEpisodes.length > 1) return tverModeGroupedCardHtml(item);
     const key = item.episodeId || item.seriesId || item.seriesUrl;
