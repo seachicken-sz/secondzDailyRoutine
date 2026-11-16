@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026/11/16 12:07",
+  "updatedAt": "2026/11/16 13:07",
   "reports": {
     "srq085btpl": {
       "programTitle": "タイムレスマン",
       "broadcastDate": "2026/11/13",
-      "updatedAt": "2026/11/16 12:07",
+      "updatedAt": "2026/11/16 13:07",
       "episodeId": "ep8pb663ur",
       "subtitle": "timelesz100＆韓国ロケ先出しSP",
       "likes": "1.2万",
-      "favorites": "",
+      "favorites": "79.0万",
       "likePoints": [
         {
           "hour": 49,
@@ -64,6 +64,10 @@
         },
         {
           "hour": 62,
+          "likes": 12000
+        },
+        {
+          "hour": 63,
           "likes": 12000
         }
       ],
@@ -597,9 +601,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 17,
-          "elapsedHour": 62,
-          "elapsedRank": 17,
+          "currentRank": 18,
+          "elapsedHour": 63,
+          "elapsedRank": 18,
           "currentPoints": [
             {
               "hour": 7,
@@ -824,6 +828,10 @@
             {
               "hour": 62,
               "rank": 17
+            },
+            {
+              "hour": 63,
+              "rank": 18
             }
           ],
           "previousPoints": [
@@ -1250,19 +1258,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 14,
-              "title": "マルコポロリ！"
-            },
-            {
               "rank": 15,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
-            },
-            {
-              "rank": 16,
               "title": "ゴッドタン"
             },
             {
+              "rank": 16,
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
+            },
+            {
               "rank": 17,
+              "title": "週刊さんまとマツコ"
+            },
+            {
+              "rank": 18,
               "title": "タイムレスマン"
             }
           ]
@@ -1270,9 +1278,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 45,
-          "elapsedHour": 62,
-          "elapsedRank": 45,
+          "currentRank": 46,
+          "elapsedHour": 63,
+          "elapsedRank": 46,
           "currentPoints": [
             {
               "hour": 14,
@@ -1469,6 +1477,10 @@
             {
               "hour": 62,
               "rank": 45
+            },
+            {
+              "hour": 63,
+              "rank": 46
             }
           ],
           "previousPoints": [
@@ -1651,19 +1663,19 @@
           ],
           "nearbyRanking": [
             {
-              "rank": 42,
-              "title": "サクサクヒムヒム☆推しの降る夜☆"
-            },
-            {
               "rank": 43,
               "title": "ゴッドタン"
             },
             {
               "rank": 44,
-              "title": "相棒 season25"
+              "title": "サクサクヒムヒム☆推しの降る夜☆"
             },
             {
               "rank": 45,
+              "title": "週刊さんまとマツコ"
+            },
+            {
+              "rank": 46,
               "title": "タイムレスマン"
             }
           ]
@@ -1673,11 +1685,11 @@
     "srg8u5vpld": {
       "programTitle": "timeleszファミリア",
       "broadcastDate": "2026/11/15",
-      "updatedAt": "2026/11/16 12:07",
+      "updatedAt": "2026/11/16 13:07",
       "episodeId": "epu9624u10",
       "subtitle": "美食の神【餃子・唐揚げ・BBQ】絶品グルメでクイズ",
-      "likes": "9481",
-      "favorites": "37.0万",
+      "likes": "9673",
+      "favorites": "37.2万",
       "likePoints": [
         {
           "hour": 9,
@@ -1734,6 +1746,10 @@
         {
           "hour": 22,
           "likes": 9481
+        },
+        {
+          "hour": 23,
+          "likes": 9673
         }
       ],
       "previousLikePoints": [
@@ -2170,9 +2186,9 @@
         {
           "type": "variety",
           "label": "バラエティ",
-          "currentRank": 12,
-          "elapsedHour": 22,
-          "elapsedRank": 12,
+          "currentRank": 11,
+          "elapsedHour": 23,
+          "elapsedRank": 11,
           "currentPoints": [
             {
               "hour": 4,
@@ -2249,6 +2265,10 @@
             {
               "hour": 22,
               "rank": 12
+            },
+            {
+              "hour": 23,
+              "rank": 11
             }
           ],
           "previousPoints": [
@@ -2615,19 +2635,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 8,
+              "title": "嗚呼!!みんなの動物園"
+            },
+            {
               "rank": 9,
-              "title": "A-Studio＋"
+              "title": "月曜から夜ふかし"
             },
             {
               "rank": 10,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "A-Studio＋"
             },
             {
               "rank": 11,
-              "title": "有吉クイズ"
-            },
-            {
-              "rank": 12,
               "title": "timeleszファミリア"
             }
           ]
@@ -2635,9 +2655,9 @@
         {
           "type": "all",
           "label": "総合",
-          "currentRank": 30,
-          "elapsedHour": 22,
-          "elapsedRank": 30,
+          "currentRank": 29,
+          "elapsedHour": 23,
+          "elapsedRank": 29,
           "currentPoints": [
             {
               "hour": 10,
@@ -2690,6 +2710,10 @@
             {
               "hour": 22,
               "rank": 30
+            },
+            {
+              "hour": 23,
+              "rank": 29
             }
           ],
           "previousPoints": [
@@ -2900,19 +2924,19 @@
           ],
           "nearbyRanking": [
             {
+              "rank": 26,
+              "title": "いろはの恋は時代をかける"
+            },
+            {
               "rank": 27,
-              "title": "まめとむぎ"
+              "title": "A-Studio＋"
             },
             {
               "rank": 28,
-              "title": "一茂×かまいたち ゲンバ"
+              "title": "まめとむぎ"
             },
             {
               "rank": 29,
-              "title": "有吉クイズ"
-            },
-            {
-              "rank": 30,
               "title": "timeleszファミリア"
             }
           ]
@@ -2922,11 +2946,11 @@
     "sr9q4n3zsc": {
       "programTitle": "地球まるごと大実験 ネイチャーティーチャー",
       "broadcastDate": "2026/11/10",
-      "updatedAt": "2026/11/16 12:07",
+      "updatedAt": "2026/11/16 13:07",
       "episodeId": "epnkti4qlo",
       "subtitle": "チョコプラ・timeleszが日本最大級の動物専門学校に大潜入！ネイチャー特別課外授業SP！未公開編",
-      "likes": "7872",
-      "favorites": "6.6万",
+      "likes": "7876",
+      "favorites": "6.7万",
       "likePoints": [
         {
           "hour": 1,
@@ -3207,6 +3231,10 @@
         {
           "hour": 132,
           "likes": 7872
+        },
+        {
+          "hour": 133,
+          "likes": 7876
         }
       ],
       "previousLikePoints": [
@@ -4621,11 +4649,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "フットマップ"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 48,
-              "title": "沸騰ワード10"
+              "title": "フットマップ"
             },
             {
               "rank": 49,
@@ -4858,15 +4886,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "出没！アド街ック天国"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "全力！脱力タイムズ"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "笑点"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 50,
@@ -4879,11 +4907,11 @@
     "sr1bzatukq": {
       "programTitle": "ザ！鉄腕！DASH!!",
       "broadcastDate": "2026/11/15",
-      "updatedAt": "2026/11/16 12:07",
+      "updatedAt": "2026/11/16 13:07",
       "episodeId": "eplzrxow9s",
       "subtitle": "【グリル厄介】城島・横山・糸井嘉男がスズメバチの巣を駆除!仙台の料理人が調理!",
-      "likes": "867",
-      "favorites": "54.4万",
+      "likes": "889",
+      "favorites": "54.7万",
       "likePoints": [
         {
           "hour": 4,
@@ -4940,6 +4968,10 @@
         {
           "hour": 17,
           "likes": 867
+        },
+        {
+          "hour": 18,
+          "likes": 889
         }
       ],
       "previousLikePoints": [
@@ -4998,15 +5030,19 @@
         {
           "hour": 17,
           "likes": 1044
+        },
+        {
+          "hour": 18,
+          "likes": 1089
         }
       ],
       "rankings": [
         {
           "type": "vtr",
           "label": "VTR/ロケ",
-          "currentRank": 16,
-          "elapsedHour": 17,
-          "elapsedRank": 16,
+          "currentRank": 14,
+          "elapsedHour": 18,
+          "elapsedRank": 14,
           "currentPoints": [
             {
               "hour": 4,
@@ -5063,24 +5099,28 @@
             {
               "hour": 17,
               "rank": 16
+            },
+            {
+              "hour": 18,
+              "rank": 14
             }
           ],
           "previousPoints": [],
           "nearbyRanking": [
+            {
+              "rank": 11,
+              "title": "あっちこっちAぇ!"
+            },
+            {
+              "rank": 12,
+              "title": "クレイジージャーニー"
+            },
             {
               "rank": 13,
               "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 14,
-              "title": "住人十色～家の数だけある 家族のカタチ～"
-            },
-            {
-              "rank": 15,
-              "title": "ぐるぐるナインティナイン"
-            },
-            {
-              "rank": 16,
               "title": "ザ！鉄腕！DASH!!"
             }
           ]
@@ -5096,15 +5136,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "出没！アド街ック天国"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "全力！脱力タイムズ"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "笑点"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 50,
@@ -5117,11 +5157,11 @@
     "srtgttx5vc": {
       "programTitle": "ザ！世界仰天ニュース",
       "broadcastDate": "2026/11/10",
-      "updatedAt": "2026/11/16 12:07",
+      "updatedAt": "2026/11/16 13:07",
       "episodeId": "ep3jpwc9fs",
       "subtitle": "食の危険!人気店ハンバーグで緊急入院!アレ食べ顔面麻痺女性の動画",
-      "likes": "2895",
-      "favorites": "81.5万",
+      "likes": "2901",
+      "favorites": "81.7万",
       "likePoints": [
         {
           "hour": 1,
@@ -5414,6 +5454,10 @@
         {
           "hour": 135,
           "likes": 2895
+        },
+        {
+          "hour": 136,
+          "likes": 2901
         }
       ],
       "previousLikePoints": [
@@ -6300,15 +6344,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "出没！アド街ック天国"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "全力！脱力タイムズ"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "笑点"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 50,
@@ -6549,15 +6593,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "仮面ライダーマイス"
+              "title": "名探偵コナン"
             },
             {
               "rank": 48,
-              "title": "名探偵プリキュア！"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 50,
@@ -6570,11 +6614,11 @@
     "srv5ck6m6m": {
       "programTitle": "夜の音 -TOKYO MIDNIGHT MUSIC-",
       "broadcastDate": "2026/11/11",
-      "updatedAt": "2026/11/16 12:07",
+      "updatedAt": "2026/11/16 13:07",
       "episodeId": "epw9i6fkz6",
       "subtitle": "MC菊池風磨＆畑芽育の音楽番組！生田斗真登場",
-      "likes": "5340",
-      "favorites": "15.7万",
+      "likes": "5345",
+      "favorites": "15.8万",
       "likePoints": [
         {
           "hour": 0,
@@ -6835,6 +6879,10 @@
         {
           "hour": 131,
           "likes": 5340
+        },
+        {
+          "hour": 132,
+          "likes": 5345
         }
       ],
       "previousLikePoints": [
@@ -7529,15 +7577,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "出没！アド街ック天国"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "全力！脱力タイムズ"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "笑点"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 50,
@@ -7556,15 +7604,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "仮面ライダーマイス"
+              "title": "名探偵コナン"
             },
             {
               "rank": 48,
-              "title": "名探偵プリキュア！"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 50,
@@ -7577,10 +7625,10 @@
     "srajiec0m4": {
       "programTitle": "何か“オモシロいコト”ないの？",
       "broadcastDate": "2026/11/13",
-      "updatedAt": "2026/11/16 12:07",
+      "updatedAt": "2026/11/16 13:07",
       "episodeId": "epi1o9lymo",
       "subtitle": "第153回 岸井ゆきの味覚はいかに！最後は怖すぎる展開！",
-      "likes": "3728",
+      "likes": "3745",
       "favorites": "71.5万",
       "likePoints": [
         {
@@ -7630,6 +7678,10 @@
         {
           "hour": 84,
           "likes": 3728
+        },
+        {
+          "hour": 85,
+          "likes": 3745
         }
       ],
       "previousLikePoints": [
@@ -8568,15 +8620,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "出没！アド街ック天国"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "全力！脱力タイムズ"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "笑点"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 50,
@@ -8649,15 +8701,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "仮面ライダーマイス"
+              "title": "名探偵コナン"
             },
             {
               "rank": 48,
-              "title": "名探偵プリキュア！"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 50,
@@ -8670,11 +8722,11 @@
     "sr8y9zb5qo": {
       "programTitle": "芸能人が本気で考えた！ドッキリGP",
       "broadcastDate": "2026/10/31",
-      "updatedAt": "2026/11/16 12:07",
+      "updatedAt": "2026/11/16 13:07",
       "episodeId": "ep3jm0ld38",
       "subtitle": "マッサマン＆マツダマン（秘）あ哺乳類SP前編",
-      "likes": "6178",
-      "favorites": "82.2万",
+      "likes": "6182",
+      "favorites": "82.5万",
       "likePoints": [
         {
           "hour": 2,
@@ -9527,15 +9579,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "出没！アド街ック天国"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "全力！脱力タイムズ"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "笑点"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 50,
@@ -9743,15 +9795,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "仮面ライダーマイス"
+              "title": "名探偵コナン"
             },
             {
               "rank": 48,
-              "title": "名探偵プリキュア！"
+              "title": "メシドラ ～兼近＆真之介のグルメドライブ～"
             },
             {
               "rank": 49,
-              "title": "週刊さんまとマツコ"
+              "title": "華大さんと千鳥くん"
             },
             {
               "rank": 50,
@@ -9764,11 +9816,11 @@
     "srvpzndoz4": {
       "programTitle": "スポンジ・シノ",
       "broadcastDate": "2026/11/03",
-      "updatedAt": "2026/11/16 12:07",
+      "updatedAt": "2026/11/16 13:07",
       "episodeId": "epm8lq2z41",
       "subtitle": "激辛PK",
       "likes": "1.0万",
-      "favorites": "3.6万",
+      "favorites": "3.8万",
       "likePoints": [
         {
           "hour": 8,
@@ -10697,7 +10749,7 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "ニノなのに"
+              "title": "朝だ！生です旅サラダ"
             },
             {
               "rank": 48,
@@ -10873,15 +10925,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "出没！アド街ック天国"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "全力！脱力タイムズ"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "笑点"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 50,
@@ -10894,10 +10946,10 @@
     "sr8yi8pts1": {
       "programTitle": "実録！奇跡の救出劇",
       "broadcastDate": "",
-      "updatedAt": "2026/11/16 12:07",
+      "updatedAt": "2026/11/16 13:07",
       "episodeId": "epyojyzzpe",
       "subtitle": "実録！奇跡の救出劇timelesz原、海上自衛隊にガチ入隊！後編",
-      "likes": "3510",
+      "likes": "3516",
       "favorites": "",
       "likePoints": [],
       "previousLikePoints": [],
@@ -10913,11 +10965,11 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "フットマップ"
+              "title": "沸騰ワード10"
             },
             {
               "rank": 48,
-              "title": "沸騰ワード10"
+              "title": "フットマップ"
             },
             {
               "rank": 49,
@@ -10940,15 +10992,15 @@
           "nearbyRanking": [
             {
               "rank": 47,
-              "title": "出没！アド街ック天国"
+              "title": "ジョブチューン ～アノ職業のヒミツぶっちゃけます！"
             },
             {
               "rank": 48,
-              "title": "全力！脱力タイムズ"
+              "title": "テレビ×ミセス"
             },
             {
               "rank": 49,
-              "title": "笑点"
+              "title": "全力！脱力タイムズ"
             },
             {
               "rank": 50,
