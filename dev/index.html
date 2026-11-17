@@ -344,7 +344,7 @@
         <section class="home-card schedule-timely">
           <h2 class="ruby-h"><ruby>スケジュール<rt>schedule</rt></ruby></h2>
           <div class="card-link">
-            <a href="https://timely-iota-eight.vercel.app/" target="_blank" rel="noopener noreferrer" onclick="if (/iPhone|iPad|iPod/.test(navigator.userAgent) && (window.matchMedia('(display-mode: standalone)').matches || navigator.standalone)) { event.preventDefault(); window.location.href = 'x-safari-https://timely-iota-eight.vercel.app/'; }">
+            <a href="https://timely-iota-eight.vercel.app/" target="_blank" rel="noopener noreferrer" onclick="if (window.matchMedia('(display-mode: standalone)').matches || navigator.standalone) { if (/iPhone|iPad|iPod/.test(navigator.userAgent)) { event.preventDefault(); window.location.href = 'x-safari-https://timely-iota-eight.vercel.app/'; } else if (/Android/.test(navigator.userAgent)) { event.preventDefault(); window.location.href = 'intent://timely-iota-eight.vercel.app/#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=https%3A%2F%2Ftimely-iota-eight.vercel.app%2F;end'; } }">
               <img src="https://timely-iota-eight.vercel.app/icon-192.png" alt="Timely">
               <span class="card-link-text">
                 <strong>Timely</strong>
