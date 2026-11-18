@@ -60,6 +60,15 @@ function bindSpotifyEvents() {
     if (stationheadNextButtonElement) {
       stationheadNextButtonElement.classList.remove("hidden");
     }
+    if (typeof sendMemberWorkLinkLog === "function") {
+      void sendMemberWorkLinkLog({
+        groupKey: "stationhead",
+        itemId: "stationhead_routine",
+        title: "Stationhead secondz",
+        url: openStationheadButtonElement.href,
+        workType: "open"
+      }).catch(console.error);
+    }
     state.openedAction = "stationhead";
     saveFlowState(state.openedAction, spotifyStepElement);
     refreshSpotifyActionButtons();
