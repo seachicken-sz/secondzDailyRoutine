@@ -1440,3 +1440,10 @@
 #settingModal .setting-save-close-button { display: block; width: 100%; box-sizing: border-box; margin-top: 20px; text-align: center; }
 #settingModal #settingOpenUsenModeButton.secondary-button { background: #fff; color: var(--color-brand); border: 1px solid var(--color-border); }
 #settingModal #settingOpenUsenModeButton.secondary-button:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; }
+
+/* 設定目次：各項目のタイトル右側に状態を表示 */
+.setting-modal-index-title { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-width: 0; }
+.setting-modal-index-title > strong { flex: 1; min-width: 0; }
+.setting-modal-index-status { flex: 0 0 auto; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.setting-modal-index-status.is-on { color: var(--color-brand); font-weight: 800; }
+.setting-modal-index-status.is-off { color: #a9a9a9; font-weight: 400; }
