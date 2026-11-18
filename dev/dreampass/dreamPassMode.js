@@ -170,7 +170,10 @@ function renderDreamPassMode() {
   const pinned = dreamPassRecords.filter(item => dreamPassPinnedIds.has(dreamPassPinKey(item)));
   const pinnedKeys = new Set(pinned.map(item => dreamPassPinKey(item)));
   const pinnedUnique = pinned.filter((item, index) =>
-    pinned.findIndex(record => dreamPassPinKey(record) === dreamPassPinKey(item)) === index);
+    pinned.findIndex(record => dreamPassPinKey(record) === dreamPassPinKey(item)) === index)
+    // Setの挿入順＝お気に入り登録順。通常一覧の順位sortとは独立させる。
+    .sort((a, b) => [...dreamPassPinnedIds].indexOf(dreamPassPinKey(a)) -
+      [...dreamPassPinnedIds].indexOf(dreamPassPinKey(b)));
   const visibleRecords = dreamPassRecords.filter(item =>
     !pinnedKeys.has(dreamPassPinKey(item)) &&
     isCheckModeMemberVisible(item, dreamPassSelectedMembers));
