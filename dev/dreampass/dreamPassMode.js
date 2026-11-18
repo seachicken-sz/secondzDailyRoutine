@@ -166,9 +166,12 @@ function dreamPassCardHtml(item, isVoting) {
 function renderDreamPassMode() {
   const list = document.getElementById("dreamPassModeList");
   if (!list) return;
-  // ピン留めした作品はフィルター・順位sortの対象外。
-  const pinned = dreamPassRecords.filter(item => dreamPassPinnedIds.has(dreamPassPinKey(item)));
-  const pinnedKeys = new Set(pinned.map(item => dreamPassPinKey(item)));
+  // お気に入りもメンバー絞り込みの対象。登録情報は維持する。
+  const pinned = dreamPassRecords.filter(item =>
+    dreamPassPinnedIds.has(dreamPassPinKey(item)) &&
+    isCheckModeMemberVisible(item, dreamPassSelectedMembers));
+  // 非表示のお気に入りが通常一覧に紛れないよう、登録済みIDをすべて除外。
+  const pinnedKeys = new Set(dreamPassPinnedIds);
   const pinnedUnique = pinned.filter((item, index) =>
     pinned.findIndex(record => dreamPassPinKey(record) === dreamPassPinKey(item)) === index)
     // Setの挿入順＝お気に入り登録順。通常一覧の順位sortとは独立させる。
