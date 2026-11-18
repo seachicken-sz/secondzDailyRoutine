@@ -68,6 +68,7 @@ function showOnlyStep(activeStepElement, options = {}) {
 
   // 現在表示中の画面を state に保存
   state.currentStepElement = activeStepElement;
+  if (activeStepElement === spotifyStepElement) applyRoutineSpotifyDisplay();
 
   // ホーム以外では上部の「戻る」「使い方」バーを表示する
   updateStepTopActionBar();
