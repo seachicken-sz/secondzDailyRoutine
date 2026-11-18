@@ -34,6 +34,7 @@
   <link rel="stylesheet" href="./css/utility.css" />
   <link rel="stylesheet" href="./tver/tverMode.css" />
   <link rel="stylesheet" href="./dreampass/dreamPassMode.css" />
+  <link rel="stylesheet" href="./usen/usenMode.css" />
   
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" href="../img/icon-180.png">
@@ -85,6 +86,7 @@
             <button type="button" class="home-menu-item home-menu-page-link home-menu-mode-link" data-home-menu-mode="dreampass">
               <span><i class="bi bi-ticket-perforated"></i>ドリパスチェックモード</span>
             </button>
+            <button type="button" class="home-menu-item home-menu-page-link home-menu-mode-link" data-home-menu-mode="usen"><span><i class="bi bi-music-note-list"></i>USENチェックモード</span></button>
           </section>
           <section class="home-menu-accordion">
             <button type="button" class="home-menu-item" data-home-menu-accordion="1minutes_moode">
@@ -215,6 +217,7 @@
           <button type="button" class="home-check-mode-link" data-home-mode="dreampass">
             <i class="bi bi-ticket-perforated" aria-hidden="true"></i><span>ドリパスチェック</span>
           </button>
+          <button type="button" class="home-check-mode-link" data-home-mode="usen"><i class="bi bi-music-note-list" aria-hidden="true"></i><span>USENチェック</span></button>
         </div>
     
         <section class="home-color-change-area">
@@ -502,6 +505,7 @@
           <button id="dreamPassModeToggleButton" data-home-mode="dreampass" type="button" class="home-mode-button" aria-label="ドリパスチェックモードを表示" aria-pressed="false" title="ドリパス">
             <i class="bi bi-ticket-perforated" aria-hidden="true"></i><span>ドリパス</span>
           </button>
+          <button data-home-mode="usen" type="button" class="home-mode-button" aria-label="USENチェックモードを表示" aria-pressed="false" title="USEN"><i class="bi bi-music-note-list" aria-hidden="true"></i><span>USEN</span></button>
         </div>
         <div class="tver-mode-header-meta">
           <label class="tver-mode-default-setting" for="tverModeDefaultCheckbox">
@@ -540,6 +544,7 @@
           <button data-home-mode="dreampass" type="button" class="home-mode-button" aria-label="ドリパスチェックモードを表示" aria-pressed="false" title="ドリパス">
             <i class="bi bi-ticket-perforated" aria-hidden="true"></i><span>ドリパス</span>
           </button>
+          <button data-home-mode="usen" type="button" class="home-mode-button" aria-label="USENチェックモードを表示" aria-pressed="false" title="USEN"><i class="bi bi-music-note-list" aria-hidden="true"></i><span>USEN</span></button>
         </div>
         <label class="dream-pass-default-setting" for="dreamPassModeDefaultCheckbox">
           <input id="dreamPassModeDefaultCheckbox" type="checkbox">
@@ -552,6 +557,42 @@
       <div id="dreamPassModeList"></div>
     </div>
     
+    <!-- USENチェックモード（devのみ） -->
+    <div id="usenModeContent" class="hidden">
+      <header class="usen-mode-header">
+        <h2>USENチェックモード</h2>
+        <div class="home-mode-switcher check-mode-tab-nav" role="group" aria-label="表示モード切り替え">
+          <button data-home-mode="home" type="button" class="home-mode-button"><i class="bi bi-house" aria-hidden="true"></i><span>HOME</span></button>
+          <button data-home-mode="tver" type="button" class="home-mode-button"><i class="bi bi-tv" aria-hidden="true"></i><span>TVer</span></button>
+          <button data-home-mode="dreampass" type="button" class="home-mode-button"><i class="bi bi-ticket-perforated" aria-hidden="true"></i><span>ドリパス</span></button>
+          <button data-home-mode="usen" type="button" class="home-mode-button"><i class="bi bi-music-note-list" aria-hidden="true"></i><span>USEN</span></button>
+        </div>
+        <label class="usen-mode-default-setting" for="usenModeDefaultCheckbox"><input id="usenModeDefaultCheckbox" type="checkbox"><span>起動時にこの画面を表示する</span></label>
+      </header>
+      <nav class="usen-mode-inner-tabs" role="tablist" aria-label="USENモード内の表示">
+        <button id="usenRequestTab" type="button" role="tab" aria-controls="usenRequestPanel" aria-selected="true">リクエスト</button>
+        <button id="usenRankingTab" type="button" role="tab" aria-controls="usenRankingPanel" aria-selected="false">順位</button>
+      </nav>
+      <section id="usenRequestPanel" role="tabpanel" aria-labelledby="usenRequestTab">
+        <div class="usen-mode-section-heading"><h3>今日のおすすめ曲</h3></div>
+        <div id="usenRecommendedSongs" class="usen-mode-song-list"></div>
+        <div class="usen-mode-section-heading"><h3>曲を探してリクエスト</h3></div>
+        <input id="usenSongSearch" class="usen-mode-search" type="search" placeholder="曲名を検索" aria-label="リクエスト曲を検索">
+        <div class="usen-mode-filter-row"><button id="usenAllSongsFilter" type="button" class="active" aria-pressed="true">すべて</button><button id="usenFavoriteSongsFilter" type="button" aria-pressed="false"><i class="bi bi-heart" aria-hidden="true"></i> お気に入り</button><button id="usenRandomSong" type="button"><i class="bi bi-shuffle" aria-hidden="true"></i> おまかせ</button></div>
+        <div id="usenRequestSongs" class="usen-mode-song-list"></div>
+        <p id="usenRequestStatus" class="usen-mode-caption" aria-live="polite"></p>
+      </section>
+      <section id="usenRankingPanel" class="hidden" role="tabpanel" aria-labelledby="usenRankingTab">
+        <div class="usen-mode-section-heading usen-mode-ranking-heading"><h3>現在のランクイン曲</h3><span id="usenRankingUpdated">最終取得 --</span></div>
+        <div id="usenCurrentRanks" class="usen-mode-rank-list"></div>
+        <div class="usen-mode-section-heading"><h3>今週分のグラフ</h3></div>
+        <div id="usenChartEmpty" class="usen-mode-caption hidden">今週の順位データはありません。</div>
+        <div class="usen-mode-chart-wrap"><canvas id="usenWeeklyChart" aria-label="今週分の順位推移グラフ" role="img"></canvas></div>
+        <div id="usenChartLegend" class="usen-mode-chart-legend"></div>
+        <a class="primary-button usen-mode-details-link" href="../usen_ranking/" target="_blank" rel="noopener noreferrer">もっと詳しく見る <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+      </section>
+    </div>
+
     </section>
     <!--STEP 1 Spotify-->
     <section id="spotifyStep" class="step-screen hidden">
@@ -1526,6 +1567,9 @@
 <script src="./tver/tverMode.js" defer></script>
 <!-- ドリパスチェックモード -->
 <script src="./dreampass/dreamPassMode.js" defer></script>
+<!-- USENチェックモード -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
+<script src="./usen/usenMode.js" defer></script>
 <!-- 起動 -->
 <script src="./js/app.js" defer></script>
 </body>
