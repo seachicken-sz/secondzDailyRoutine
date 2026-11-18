@@ -89,11 +89,29 @@ function usenModeSongRow(song) {
   return '<div class="usen-mode-song-row"><a class="usen-mode-song-link" data-usen-song="'+usenModeEscape(id)+'" href="'+usenModeEscape(url)+'" target="_blank" rel="noopener noreferrer"><span class="usen-mode-crown">'+(rank?'<i class="bi bi-crown-fill" aria-label="ランクイン中"></i>':'')+'</span><span class="usen-mode-song-name">'+usenModeEscape(song.name)+'</span><span class="usen-mode-row-arrow member-work-link-arrow" aria-hidden="true"><i class="bi bi-chevron-right"></i></span></a><button type="button" class="usen-mode-favorite'+(isFavorite?" is-favorite":"")+'" data-usen-favorite="'+usenModeEscape(id)+'" aria-label="お気に入り'+(isFavorite?"解除":"登録")+'"><i class="bi bi-heart'+(isFavorite?"-fill":"")+'"></i></button></div>';
 }
 function usenModeRenderSongs() {
-  const songs=usenModeRequestSongs.filter(s=>String(s.url||"").trim());
-  const recommended=document.getElementById("usenRecommendedSongs"),list=document.getElementById("usenRequestSongs");
-  if(recommended)recommended.innerHTML=songs.filter(s=>s.flag===true).map(usenModeSongRow).join("")||'<p class="usen-mode-caption">おすすめ曲はありません。</p>';
-  const query=(document.getElementById("usenSongSearch")?.value||"").toLocaleLowerCase("ja");
-  const filtered=songs.filter(s=>(usenModeFilter!=="favorites"||usenModeFavorites.includes(usenModeSongId(s)))&&s.name.toLocaleLowerCase("ja").includes(query));
+  // 同一曲を「おすすめ」と一覧へ重複描画しない。検索・お気に入り時は単一リストで表示する。
+  const seen=new Set();
+  const songs=usenModeRequestSongs.filter(song=>{
+    if(!String(song.url||"").trim())return false;
+    const id=usenModeSongId(song);
+    if(seen.has(id))return false;
+    seen.add(id);
+    return true;
+  });
+  const recommended=document.getElementById("usenRecommendedSongs");
+  const list=document.getElementById("usenRequestSongs");
+  const query=(document.getElementById("usenSongSearch")?.value||"").trim().toLocaleLowerCase("ja");
+  const showRecommended=usenModeFilter==="all"&&!query;
+  if(recommended) {
+    const heading=recommended.previousElementSibling;
+    recommended.classList.toggle("hidden",!showRecommended);
+    heading?.classList.toggle("hidden",!showRecommended);
+    if(showRecommended)recommended.innerHTML=songs.filter(s=>s.flag===true).map(usenModeSongRow).join("")||'<p class="usen-mode-caption">おすすめ曲はありません。</p>';
+  }
+  const filtered=songs.filter(s=>
+    (usenModeFilter!=="favorites"||usenModeFavorites.includes(usenModeSongId(s)))&&
+    s.name.toLocaleLowerCase("ja").includes(query)&&
+    (!showRecommended||s.flag!==true));
   if(list)list.innerHTML=filtered.map(usenModeSongRow).join("")||'<p class="usen-mode-caption">該当する曲はありません。</p>';
 }
 function usenModeFormatDate(s) {
