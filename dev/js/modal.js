@@ -237,7 +237,7 @@ function showSettingModalPage(page) {
     custom: { title: "マイカスタム", section: "myCustomSettingSection" },
     select: { title: "セレクトモード", section: "selectModeSettingSection" },
     usen: { title: "USEN推し活設定", section: "usenRoutineSettingSection" },
-    bgm: { title: "今日のBGM設定", section: "bgmRoutineSettingSection" }
+    bgm: { title: "今日のSpotify再生設定", section: "bgmRoutineSettingSection" }
   };
   const isPwa = typeof isStandaloneMode === "function" && isStandaloneMode();
   if (page === "usen" || page === "bgm") refreshRoutineMusicSettingsUi();
