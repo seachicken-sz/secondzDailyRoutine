@@ -182,7 +182,7 @@ if (pwaFirstVisitModalElement) {
   addClickEvent(document.getElementById("settingModalBackButton"), () => showSettingModalPage("index"));
   document.getElementById("settingModalIndex")?.addEventListener("click", event => {
     const button = event.target.closest("[data-setting-open]");
-    if (button) showSettingModalPage(button.dataset.settingOpen);
+    if (button && !button.disabled) showSettingModalPage(button.dataset.settingOpen);
   });
   
   addClickEvent(settingOpenFirstSetupButtonElement, () => {
@@ -236,14 +236,16 @@ function showSettingModalPage(page) {
     custom: { title: "マイカスタム", section: "myCustomSettingSection" },
     select: { title: "セレクトモード", section: "selectModeSettingSection" }
   };
-  const target = Object.prototype.hasOwnProperty.call(pages, page) ? page : "index";
+  const isPwa = typeof isStandaloneMode === "function" && isStandaloneMode();
+  const target = page === "push" && !isPwa ? "index" :
+    Object.prototype.hasOwnProperty.call(pages, page) ? page : "index";
   const index = target === "index";
   document.getElementById("settingModalIndex")?.classList.toggle("hidden", !index);
   Object.entries(pages).forEach(([name, config]) => {
     document.getElementById(config.section)?.classList.toggle("hidden", name !== target);
   });
   const guide = document.getElementById("settingPwaGuide");
-  if (guide) guide.classList.toggle("hidden", target !== "push" || isStandaloneMode());
+  if (guide) guide.classList.toggle("hidden", target !== "push" || isPwa);
   document.getElementById("settingModalBackButton")?.classList.toggle("hidden", index);
   const title = document.getElementById("settingModalTitle");
   if (title) title.textContent = index ? "設定" : pages[target].title;
@@ -284,6 +286,12 @@ function updateSettingModalState() {
 
   settingPwaGuideElement?.classList.toggle("hidden", isPwa);
   pushSettingSectionElement?.classList.toggle("is-disabled", !isPwa);
+  const pushIndexButton = document.querySelector('#settingModalIndex [data-setting-open="push"]');
+  if (pushIndexButton) {
+    pushIndexButton.disabled = !isPwa;
+    pushIndexButton.setAttribute("aria-disabled", String(!isPwa));
+    pushIndexButton.title = isPwa ? "" : "プッシュ通知はホーム画面に追加したアプリから設定できます";
+  }
 
   if (pushSettingFieldsetElement) {
     pushSettingFieldsetElement.disabled = !isPwa;
