@@ -393,7 +393,7 @@ function renderTverMode() {
     b.sortTimestamp - a.sortTimestamp) || a.index - b.index);
   const normal = groupTverModeRecordsByProgram(visibleRecords);
   const pinnedHtml = pinned.length
-    ? '<div class="check-mode-pinned-heading"><i class="bi bi-pin-angle-fill" aria-hidden="true"></i>ピン留め</div>' +
+    ? '<div class="check-mode-pinned-heading"><i class="bi bi-pin-angle-fill" aria-hidden="true"></i>お気に入り</div>' +
       pinned.map(item => tverModeGroupedCardHtml(item)).join("")
     : "";
   const normalHtml = normal.map(item => tverModeGroupedCardHtml(item)).join("");
