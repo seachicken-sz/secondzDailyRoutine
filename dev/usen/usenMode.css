@@ -1,0 +1,35 @@
+/* USENチェックモード：TVer・ドリパスと共通の外枠なしレイアウト */
+#homeStep.usen-mode-active > .home-header { margin-bottom: 0; }
+#usenModeContent { width: 100%; flex-shrink: 0; padding: 3px 0 24px; }
+.usen-mode-header { margin: 0 0 14px; text-align: center; }
+.usen-mode-header h2 { margin: 0 0 14px; font-size: 19px; line-height: 1.4; font-weight: 800; color: var(--color-brand); }
+#usenModeContent .check-mode-tab-nav { margin-bottom: 28px; }
+.usen-mode-default-setting { display: flex; gap: 4px; align-items: center; font-size: 11px; color: var(--color-text); text-align: left; cursor: pointer; }
+.usen-mode-default-setting input { width: 14px; height: 14px; margin: 0; accent-color: var(--color-brand); }
+.usen-mode-inner-tabs { display: flex; gap: 0; margin: 0 0 22px; border-bottom: 2px solid var(--color-border); }
+.usen-mode-inner-tabs button { flex: 1; border: 0; border-bottom: 3px solid transparent; padding: 12px 5px 10px; margin-bottom: -2px; background: transparent; color: var(--color-text-muted); font: inherit; font-weight: 700; cursor: pointer; }
+.usen-mode-inner-tabs button[aria-selected="true"] { color: var(--color-brand); border-bottom-color: var(--color-brand); }
+.usen-mode-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 6px 10px; margin: 0 0 10px; }
+.usen-mode-section-heading:not(:first-child) { margin-top: 23px; }
+.usen-mode-section-heading h3 { font-size: 15px; font-weight: 800; color: var(--color-brand); margin: 0; }
+.usen-mode-ranking-heading > span { color: var(--color-text-muted); font-size: 10px; white-space: nowrap; }
+.usen-mode-song-list, .usen-mode-rank-list { width: 100%; }
+.usen-mode-song-row, .usen-mode-rank-row { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 48px; padding: 10px 4px; border: 0; border-bottom: 1px solid var(--color-border); background: transparent; color: var(--color-text); font: inherit; text-align: left; text-decoration: none; box-sizing: border-box; }
+.usen-mode-song-row { cursor: pointer; }
+.usen-mode-song-name { min-width: 0; flex: 1; font-size: 13px; overflow-wrap: anywhere; }
+.usen-mode-crown { display: flex; align-items: center; justify-content: center; flex: 0 0 1em; width: 1em; color: var(--color-brand); }
+.usen-mode-row-arrow.member-work-link-arrow { flex: 0 0 auto; margin-left: auto; }
+.usen-mode-rank-row strong { font-size: 17px; color: var(--color-brand); white-space: nowrap; margin-left: auto; }
+.usen-mode-search { width: 100%; min-height: 40px; border: 1px solid var(--color-border); border-radius: 8px; padding: 8px 12px; background: var(--color-surface); color: var(--color-text); font: inherit; font-size: 13px; }
+.usen-mode-filter-row { display: flex; gap: 8px; margin: 10px 0; flex-wrap: wrap; }
+.usen-mode-filter-row button { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 20px; padding: 6px 12px; color: var(--color-text); font: inherit; font-size: 12px; cursor: pointer; }
+.usen-mode-filter-row button.active { background: var(--color-brand); border-color: var(--color-brand); color: var(--color-text-inverse); }
+.usen-mode-song-row .usen-mode-favorite { background: none; border: 0; color: var(--color-text-muted); padding: 5px 8px; cursor: pointer; flex: 0 0 auto; }
+.usen-mode-song-row .usen-mode-favorite.is-favorite { color: var(--color-brand); }
+.usen-mode-caption { font-size: 11px; line-height: 1.5; color: var(--color-text-muted); }
+.usen-mode-chart-wrap { position: relative; width: 100%; height: 270px; margin: 8px 0 12px; }
+.usen-mode-chart-legend { display: flex; flex-wrap: wrap; gap: 6px 12px; margin-bottom: 15px; font-size: 11px; }
+.usen-mode-chart-legend span { display: inline-flex; gap: 5px; align-items: center; }
+.usen-mode-chart-legend i { width: 10px; height: 3px; display: inline-block; }
+.usen-mode-details-link { display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; width: 100%; box-sizing: border-box; }
+@media(max-width: 380px) { .usen-mode-ranking-heading > span { font-size: 9px; } .usen-mode-section-heading h3 { font-size: 14px; } }
