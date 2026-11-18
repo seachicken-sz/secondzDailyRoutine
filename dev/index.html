@@ -603,7 +603,10 @@
         <div id="usenRecommendedSongs" class="usen-mode-song-list"></div>
         <div class="usen-mode-section-heading"><h3>曲を探す</h3></div>
         <div class="usen-mode-filter-row" role="group" aria-label="曲一覧の表示切替"><button id="usenAllSongsFilter" type="button" class="active" aria-pressed="true">すべて</button><button id="usenFavoriteSongsFilter" type="button" aria-pressed="false"><i class="bi bi-heart" aria-hidden="true"></i> お気に入り</button></div>
-        <input id="usenSongSearch" class="usen-mode-search" type="search" placeholder="曲名を検索" aria-label="曲名を検索">
+        <div class="usen-mode-search-wrap">
+          <input id="usenSongSearch" class="usen-mode-search" type="text" placeholder="曲名を検索" aria-label="曲名を検索" autocomplete="off">
+          <button id="usenSongSearchClear" class="usen-mode-search-clear hidden" type="button" aria-label="検索内容をクリア" title="検索内容をクリア"><i class="bi bi-x-circle-fill" aria-hidden="true"></i></button>
+        </div>
         <div id="usenRequestSongs" class="usen-mode-song-list"></div>
         <p id="usenRequestStatus" class="usen-mode-caption" aria-live="polite"></p>
       </section>
