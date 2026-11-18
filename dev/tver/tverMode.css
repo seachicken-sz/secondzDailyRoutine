@@ -430,3 +430,8 @@
 .check-mode-card-top-row { display: flex; align-items: center; justify-content: space-between; gap: 6px; min-height: 30px; }
 .check-mode-card-top-row > .tver-mode-cast { flex: 1; min-width: 0; justify-content: flex-start; }
 .check-mode-card-top-row > .check-mode-pin-button { flex: 0 0 30px; margin-left: auto; }
+
+/* お気に入りは通常カードとは独立したブロックで表示 */
+.tver-mode-pinned-section { display: grid; gap: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--color-border); }
+.tver-mode-pinned-section > .check-mode-pinned-heading { margin: 0; }
+.tver-mode-pinned-list { display: grid; gap: 14px; }
