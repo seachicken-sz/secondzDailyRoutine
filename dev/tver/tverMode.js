@@ -382,9 +382,12 @@ function renderTverMode() {
     list.innerHTML = '<p class="tver-mode-empty-message">memberWorksに登録されたTVer番組はありません。</p>';
     return;
   }
-  // ピン留めはフィルターとsortの対象外。番組IDで保持する。
-  const pinned = groupTverModeRecordsByProgram(tverModeRecords)
-    .filter(item => tverModePinnedIds.has(getTverModePinKey(item)))
+  // ピン留め済みの番組もメンバー・未視聴フィルターに連動する。
+  // 絞り込みはエピソード単位で行い、ピン登録自体は変更しない。
+  const pinned = groupTverModeRecordsByProgram(tverModeRecords.filter(item =>
+    tverModePinnedIds.has(getTverModePinKey(item)) &&
+    isCheckModeMemberVisible(item, tverSelectedMembers) &&
+    (!tverUnwatchedOnly || !isTverEpisodeChecked(getTverModeWatchKey(item)))))
     .sort((a, b) => [...tverModePinnedIds].indexOf(getTverModePinKey(a)) -
       [...tverModePinnedIds].indexOf(getTverModePinKey(b)));
   const visibleRecords = tverModeRecords.filter(item => {
