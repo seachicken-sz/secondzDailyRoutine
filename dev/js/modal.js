@@ -183,6 +183,7 @@ if (pwaFirstVisitModalElement) {
     const button = event.target.closest("[data-setting-save-close]");
     if (button && settingModalElement.contains(button)) closeSettingModal();
   });
+  settingModalElement?.addEventListener("change", () => refreshSettingModalIndexStatus());
   bindRoutineMusicSettingsEvents();
   addClickEvent(document.getElementById("settingModalBackButton"), () => showSettingModalPage("index"));
   document.getElementById("settingModalIndex")?.addEventListener("click", event => {
@@ -235,19 +236,39 @@ function openUsageModal() {
 }
 
 
+function refreshSettingModalIndexStatus() {
+  const music = typeof getRoutineMusicSettings === "function" ? getRoutineMusicSettings() : { bgm: "manual", usen: "manual" };
+  const statuses = {
+    push: typeof getSavedPushSetting === "function" && getSavedPushSetting() !== "off",
+    custom: typeof loadMyCustomIds === "function" && loadMyCustomIds().length > 0,
+    select: typeof getSelectModeSettings === "function" && getSelectModeSettings().enabled === true,
+    bgm: music.bgm !== "manual",
+    usen: music.usen !== "manual"
+  };
+  Object.entries(statuses).forEach(([key, enabled]) => {
+    const status = document.querySelector('#settingModalIndex [data-setting-status="' + key + '"]');
+    if (!status) return;
+    status.textContent = enabled ? "ON" : "OFF";
+    status.classList.toggle("is-on", enabled);
+    status.classList.toggle("is-off", !enabled);
+    status.setAttribute("aria-label", key + (enabled ? " ON" : " OFF"));
+  });
+}
+
 function showSettingModalPage(page) {
   const pages = {
-    push: { title: "プッシュ通知", section: "pushSettingSection" },
-    custom: { title: "マイカスタム", section: "myCustomSettingSection" },
-    select: { title: "セレクトモード", section: "selectModeSettingSection" },
-    usen: { title: "USEN推し活設定", section: "usenRoutineSettingSection" },
-    bgm: { title: "今日のSpotify再生設定", section: "bgmRoutineSettingSection" }
+    push: { title: "プッシュ通知設定", section: "pushSettingSection" },
+    custom: { title: "マイカスタム設定", section: "myCustomSettingSection" },
+    select: { title: "セレクトモード設定", section: "selectModeSettingSection" },
+    bgm: { title: "「今日のSpotify再生」設定", section: "bgmRoutineSettingSection" },
+    usen: { title: "「USEN推し活」設定", section: "usenRoutineSettingSection" }
   };
   const isPwa = typeof isStandaloneMode === "function" && isStandaloneMode();
   if (page === "usen" || page === "bgm") refreshRoutineMusicSettingsUi();
   const target = page === "push" && !isPwa ? "index" :
     Object.prototype.hasOwnProperty.call(pages, page) ? page : "index";
   const index = target === "index";
+  if (index) refreshSettingModalIndexStatus();
   document.getElementById("settingModalIndex")?.classList.toggle("hidden", !index);
   Object.entries(pages).forEach(([name, config]) => {
     document.getElementById(config.section)?.classList.toggle("hidden", name !== target);
