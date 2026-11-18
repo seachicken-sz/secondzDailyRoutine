@@ -3,7 +3,7 @@
 function getHomeDefaultMode() {
   try {
     const mode = localStorage.getItem(STORAGE_KEYS.homeDefaultMode);
-    if (mode === "normal" || mode === "tver" || mode === "dreampass") return mode;
+    if (mode === "normal" || mode === "tver" || mode === "dreampass" || mode === "usen") return mode;
     // TVer単独だった旧設定から一度だけ移行する。
     const legacy = localStorage.getItem(STORAGE_KEYS.tverModeDefault);
     const migrated = legacy === "true" ||
@@ -20,8 +20,10 @@ function syncHomeDefaultModeCheckboxes() {
   const mode = getHomeDefaultMode();
   const tver = document.getElementById("tverModeDefaultCheckbox");
   const dreamPass = document.getElementById("dreamPassModeDefaultCheckbox");
+  const usen = document.getElementById("usenModeDefaultCheckbox");
   if (tver) tver.checked = mode === "tver";
   if (dreamPass) dreamPass.checked = mode === "dreampass";
+  if (usen) usen.checked = mode === "usen";
 }
 function setHomeDefaultMode(nextMode, changedMode) {
   // 選択中のチェックを解除した場合のみ通常ホームに戻す。
@@ -84,7 +86,8 @@ let tverUnwatchedOnly = false;
 function syncHomeModeButtons() {
   const dream = !document.getElementById("dreamPassModeContent")?.classList.contains("hidden");
   const tver = !document.getElementById("tverModeContent")?.classList.contains("hidden");
-  const active = dream ? "dreampass" : tver ? "tver" : "home";
+  const usen = !document.getElementById("usenModeContent")?.classList.contains("hidden");
+  const active = usen ? "usen" : dream ? "dreampass" : tver ? "tver" : "home";
   document.querySelectorAll(".check-mode-tab-nav [data-home-mode]").forEach(button => {
     const selected = button.dataset.homeMode === active;
     button.setAttribute("aria-pressed", String(selected));
@@ -100,6 +103,7 @@ function initializeHomeModeNavigation() {
       if (button.dataset.homeMode === "home") showNormalHomeMode();
       else if (button.dataset.homeMode === "tver") setTverModeEnabled(true);
       else if (button.dataset.homeMode === "dreampass") setDreamPassModeEnabled(true);
+      else if (button.dataset.homeMode === "usen") setUsenModeEnabled(true);
     });
   });
 }
@@ -107,7 +111,8 @@ function showNormalHomeMode() {
   document.getElementById("normalHomeContent")?.classList.remove("hidden");
   document.getElementById("tverModeContent")?.classList.add("hidden");
   document.getElementById("dreamPassModeContent")?.classList.add("hidden");
-  homeStepElement.classList.remove("tver-mode-active", "dream-pass-mode-active");
+  document.getElementById("usenModeContent")?.classList.add("hidden");
+  homeStepElement.classList.remove("tver-mode-active", "dream-pass-mode-active", "usen-mode-active");
   syncHomeModeButtons();
 }
 
@@ -175,6 +180,8 @@ function setTverModeEnabled(enabled) {
     const dreamContent = document.getElementById("dreamPassModeContent");
     const dreamToggle = document.getElementById("dreamPassModeToggleButton");
     if (dreamContent) dreamContent.classList.add("hidden");
+    document.getElementById("usenModeContent")?.classList.add("hidden");
+    homeStepElement.classList.remove("usen-mode-active");
     homeStepElement.classList.remove("dream-pass-mode-active");
     if (dreamToggle) {
       dreamToggle.setAttribute("aria-pressed", "false");
