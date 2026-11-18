@@ -21,7 +21,7 @@ function initializeUsenMode() {
   document.getElementById("usenModeDefaultCheckbox")?.addEventListener("change",e=>setHomeDefaultMode(e.target.checked?"usen":"normal","usen"));
   document.getElementById("usenRequestTab")?.addEventListener("click",()=>usenModeSetTab("request"));
   document.getElementById("usenRankingTab")?.addEventListener("click",()=>usenModeSetTab("ranking"));
-  document.getElementById("usenSongSearch")?.addEventListener("input",usenModeRenderSongs);
+  document.getElementById("usenSongSearch")?.addEventListener("input",usenModeRenderSongList);
   document.getElementById("usenAllSongsFilter")?.addEventListener("click",()=>usenModeSetFilter("all"));
   document.getElementById("usenFavoriteSongsFilter")?.addEventListener("click",()=>usenModeSetFilter("favorites"));
   document.getElementById("usenModeContent")?.addEventListener("click",async event=>{
@@ -73,7 +73,7 @@ function usenModeSetFilter(filter) {
     const b=document.getElementById("usen"+t+"SongsFilter");
     if(b){const selected=(t==="All"?"all":"favorites")===filter;b.classList.toggle("active",selected);b.setAttribute("aria-pressed",String(selected));}
   });
-  usenModeRenderSongs();
+  usenModeRenderSongList();
 }
 function usenModeSongId(song){return String(song.id||song.name);}
 function usenModeAvailableSongs() {
