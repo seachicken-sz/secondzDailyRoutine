@@ -179,6 +179,11 @@ if (pwaFirstVisitModalElement) {
   });
   
   addClickEvent(closeSettingModalButtonElement, closeSettingModal);
+  addClickEvent(document.getElementById("settingModalBackButton"), () => showSettingModalPage("index"));
+  document.getElementById("settingModalIndex")?.addEventListener("click", event => {
+    const button = event.target.closest("[data-setting-open]");
+    if (button) showSettingModalPage(button.dataset.settingOpen);
+  });
   
   addClickEvent(settingOpenFirstSetupButtonElement, () => {
     closeSettingModal();
@@ -225,12 +230,34 @@ function openUsageModal() {
 }
 
 
+function showSettingModalPage(page) {
+  const pages = {
+    push: { title: "プッシュ通知", section: "pushSettingSection" },
+    custom: { title: "マイカスタム", section: "myCustomSettingSection" },
+    select: { title: "セレクトモード", section: "selectModeSettingSection" }
+  };
+  const target = Object.prototype.hasOwnProperty.call(pages, page) ? page : "index";
+  const index = target === "index";
+  document.getElementById("settingModalIndex")?.classList.toggle("hidden", !index);
+  Object.entries(pages).forEach(([name, config]) => {
+    document.getElementById(config.section)?.classList.toggle("hidden", name !== target);
+  });
+  const guide = document.getElementById("settingPwaGuide");
+  if (guide) guide.classList.toggle("hidden", target !== "push" || isStandaloneMode());
+  document.getElementById("settingModalBackButton")?.classList.toggle("hidden", index);
+  const title = document.getElementById("settingModalTitle");
+  if (title) title.textContent = index ? "設定" : pages[target].title;
+  const body = document.querySelector("#settingModal .setting-modal-body");
+  if (body) body.scrollTop = 0;
+}
+
 function openSettingModal() {
   if (!settingModalElement) {
     return;
   }
 
   updateSettingModalState();
+  showSettingModalPage("index");
 
   if (typeof refreshPushNotificationUi === "function") {
     refreshPushNotificationUi();
@@ -249,6 +276,7 @@ function closeSettingModal() {
   }
 
   settingModalElement.classList.add("hidden");
+  showSettingModalPage("index");
 }
 
 function updateSettingModalState() {
