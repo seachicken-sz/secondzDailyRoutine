@@ -445,6 +445,14 @@ function applyRoutineSpotifyDisplay() {
   if (data.bgm === "manual") {
     if (!state.selectedSong) selected?.classList.add("hidden");
     else selected?.classList.remove("hidden");
+    // Spotifyを開いた直後の簡略表示以外では、曲リストの非表示状態を復元する。
+    const spotifyOpened = state.openedAction === OPENED_ACTIONS.spotify &&
+      spotifyNextButtonElement && !spotifyNextButtonElement.classList.contains("hidden");
+    if (!spotifyOpened) {
+      setSongListVisibility(recommendedSongsElement, true);
+      setSongListVisibility(toggleOtherSongsButtonElement, true);
+      updateOtherSongsAccordion();
+    }
     return;
   }
   if (!songs.length) {
