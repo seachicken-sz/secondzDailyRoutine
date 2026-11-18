@@ -319,3 +319,156 @@ function autoOpenPwaFirstVisitModalIfNeeded() {
   openPwaFirstVisitModal();
   localStorage.setItem(STORAGE_KEYS.pwaFirstVisitModalShown, "true");
 }
+
+// ==================================================
+// USEN推し活・今日のBGM 個人設定（ブラウザ内保存）
+// ==================================================
+const ROUTINE_MUSIC_SETTINGS_KEY = "secondzDailyRoutineMusicSettings";
+const ROUTINE_USEN_FAVORITES_KEY = "secondzDailyRoutineUsenModeFavorites";
+let routineSpotifySongCatalog = [];
+function getRoutineMusicSettings() {
+  const defaults = { usen: "manual", bgm: "manual", fixedSongId: "" };
+  try {
+    const data = JSON.parse(localStorage.getItem(ROUTINE_MUSIC_SETTINGS_KEY) || "{}");
+    return {
+      usen: ["manual", "recommended", "favorites"].includes(data.usen) ? data.usen : defaults.usen,
+      bgm: ["manual", "recommended", "fixed", "stationhead"].includes(data.bgm) ? data.bgm : defaults.bgm,
+      fixedSongId: typeof data.fixedSongId === "string" ? data.fixedSongId : ""
+    };
+  } catch (error) { return defaults; }
+}
+function saveRoutineMusicSettings(data) {
+  try { localStorage.setItem(ROUTINE_MUSIC_SETTINGS_KEY, JSON.stringify(data)); }
+  catch (error) { console.warn("音楽設定を保存できませんでした", error); }
+}
+function getRoutineUsenFavorites() {
+  try {
+    const data = JSON.parse(localStorage.getItem(ROUTINE_USEN_FAVORITES_KEY) || "[]");
+    return Array.isArray(data) ? new Set(data.map(String)) : new Set();
+  } catch (error) { return new Set(); }
+}
+function getRoutineUsenFavoriteSongs(songs) {
+  const favorites = getRoutineUsenFavorites();
+  return (songs || []).filter(song =>
+    favorites.has(String(song.id || song.name)) && String(song.url || "").trim());
+}
+function getValidatedRoutineMusicSettings() {
+  const data = getRoutineMusicSettings();
+  // お気に入りを全部解除したら通常選択へ自動的に戻す。
+  if (data.usen === "favorites" && !getRoutineUsenFavoriteSongs(state.requestSongs).length) {
+    data.usen = "manual";
+    saveRoutineMusicSettings(data);
+  }
+  return data;
+}
+function getRoutineSpotifySongId(song) { return String(song?.id || song?.url || ""); }
+function refreshRoutineMusicSettingsUi() {
+  const data = getValidatedRoutineMusicSettings();
+  const favorites = getRoutineUsenFavoriteSongs(state.requestSongs);
+  const favoriteRadio = document.querySelector('#settingModal input[name="usenRoutineSetting"][value="favorites"]');
+  if (favoriteRadio) favoriteRadio.disabled = favorites.length === 0;
+  document.querySelectorAll('#settingModal input[name="usenRoutineSetting"]').forEach(input => {
+    input.checked = input.value === data.usen;
+  });
+  document.querySelectorAll('#settingModal input[name="bgmRoutineSetting"]').forEach(input => {
+    input.checked = input.value === data.bgm;
+  });
+  const select = document.getElementById("bgmRoutineFixedSong");
+  if (select) {
+    const previous = data.fixedSongId;
+    select.replaceChildren();
+    routineSpotifySongCatalog.forEach(song => {
+      const option = document.createElement("option");
+      option.value = getRoutineSpotifySongId(song);
+      option.textContent = song.name;
+      select.appendChild(option);
+    });
+    if (routineSpotifySongCatalog.length) {
+      const valid = routineSpotifySongCatalog.some(song => getRoutineSpotifySongId(song) === previous);
+      const id = valid ? previous : getRoutineSpotifySongId(routineSpotifySongCatalog[0]);
+      select.value = id;
+      if (data.bgm === "fixed" && id !== previous) {
+        data.fixedSongId = id;
+        saveRoutineMusicSettings(data);
+      }
+    }
+  }
+  document.getElementById("bgmRoutineFixedSongWrap")?.classList.toggle("hidden", data.bgm !== "fixed");
+}
+function bindRoutineMusicSettingsEvents() {
+  const modal = document.getElementById("settingModal");
+  if (!modal) return;
+  modal.addEventListener("change", event => {
+    const input = event.target;
+    const data = getRoutineMusicSettings();
+    if (input.matches('input[name="usenRoutineSetting"]')) {
+      if (input.value === "favorites" && !getRoutineUsenFavoriteSongs(state.requestSongs).length) return;
+      data.usen = input.value;
+    } else if (input.matches('input[name="bgmRoutineSetting"]')) {
+      data.bgm = input.value;
+      if (data.bgm === "fixed" && !data.fixedSongId && routineSpotifySongCatalog.length) {
+        data.fixedSongId = getRoutineSpotifySongId(routineSpotifySongCatalog[0]);
+      }
+    } else if (input.id === "bgmRoutineFixedSong") {
+      data.fixedSongId = input.value;
+    } else return;
+    saveRoutineMusicSettings(data);
+    refreshRoutineMusicSettingsUi();
+  });
+  document.getElementById("settingOpenUsenModeButton")?.addEventListener("click", () => {
+    closeSettingModal();
+    setUsenModeEnabled(true);
+  });
+}
+function applyRoutineSpotifyDisplay() {
+  const step = document.getElementById("spotifyStep");
+  if (!step) return;
+  const data = getRoutineMusicSettings();
+  const songs = routineSpotifySongCatalog;
+  const recommended = songs.filter(song => song.flag === true);
+  const section = document.getElementById("recommendedSongs")?.closest(".song-section");
+  const otherSection = document.getElementById("toggleOtherSongsButton")?.closest(".song-section");
+  const station = document.getElementById("openStationheadButton");
+  const stationNext = document.getElementById("stationheadNextButton");
+  const selected = document.getElementById("selectedArea");
+  const skip = document.getElementById("skipSpotifyButton");
+  const autoMode = data.bgm !== "manual";
+  section?.classList.toggle("hidden", autoMode);
+  otherSection?.classList.toggle("hidden", autoMode);
+  if (station) station.classList.toggle("hidden", data.bgm !== "stationhead");
+  if (stationNext && data.bgm !== "stationhead") stationNext.classList.add("hidden");
+  if (skip) skip.classList.remove("hidden");
+  if (data.bgm === "stationhead") {
+    selected?.classList.add("hidden");
+    return;
+  }
+  if (data.bgm === "manual") {
+    if (!state.selectedSong) selected?.classList.add("hidden");
+    else selected?.classList.remove("hidden");
+    return;
+  }
+  if (!songs.length) {
+    // 曲データ取得失敗時は選択を強制せずBGMなしで進められる。
+    selected?.classList.add("hidden");
+    return;
+  }
+  let chosen = null;
+  if (state.selectedSong && songs.some(song => getRoutineSpotifySongId(song) === getRoutineSpotifySongId(state.selectedSong))) {
+    chosen = songs.find(song => getRoutineSpotifySongId(song) === getRoutineSpotifySongId(state.selectedSong));
+  }
+  if (!chosen && data.bgm === "fixed") {
+    chosen = songs.find(song => getRoutineSpotifySongId(song) === data.fixedSongId) || songs[0];
+  }
+  if (!chosen && data.bgm === "recommended") {
+    const pool = recommended.length ? recommended : songs;
+    chosen = pool[Math.floor(Math.random() * pool.length)];
+  }
+  if (chosen && getRoutineSpotifySongId(chosen) !== getRoutineSpotifySongId(state.selectedSong)) {
+    selectSong(chosen);
+  } else if (chosen) {
+    if (document.getElementById("selectedSongName")) document.getElementById("selectedSongName").textContent = chosen.name;
+    selected?.classList.remove("hidden");
+  }
+  section?.classList.add("hidden");
+  otherSection?.classList.add("hidden");
+}
