@@ -179,6 +179,10 @@ if (pwaFirstVisitModalElement) {
   });
   
   addClickEvent(closeSettingModalButtonElement, closeSettingModal);
+  settingModalElement?.addEventListener("click", event => {
+    const button = event.target.closest("[data-setting-save-close]");
+    if (button && settingModalElement.contains(button)) closeSettingModal();
+  });
   bindRoutineMusicSettingsEvents();
   addClickEvent(document.getElementById("settingModalBackButton"), () => showSettingModalPage("index"));
   document.getElementById("settingModalIndex")?.addEventListener("click", event => {
