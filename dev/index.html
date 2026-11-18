@@ -26,15 +26,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   
+  <!-- 更新時のみJS/CSSへキャッシュ回避パラメータを付与 -->
+  <script>
+    window.tamugotoFreshAssetUrl = function(path) {
+      const token = new URLSearchParams(location.search).get("refreshAssets");
+      return token && /^(\.\/|\.\.\/)/.test(path)
+        ? path + (path.includes("?") ? "&" : "?") + "refreshAssets=" + encodeURIComponent(token)
+        : path;
+    };
+  </script>
   <!--CSS読み込み-->
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/modal.css" />
-  <link rel="stylesheet" href="./css/home.css" />
-  <link rel="stylesheet" href="./css/task.css" />
-  <link rel="stylesheet" href="./css/utility.css" />
-  <link rel="stylesheet" href="./tver/tverMode.css" />
-  <link rel="stylesheet" href="./dreampass/dreamPassMode.css" />
-  <link rel="stylesheet" href="./usen/usenMode.css" />
+  <script>document.write('<link rel="stylesheet" href="' + tamugotoFreshAssetUrl("./css/style.css") + '">');</script>
+  <script>document.write('<link rel="stylesheet" href="' + tamugotoFreshAssetUrl("./css/modal.css") + '">');</script>
+  <script>document.write('<link rel="stylesheet" href="' + tamugotoFreshAssetUrl("./css/home.css") + '">');</script>
+  <script>document.write('<link rel="stylesheet" href="' + tamugotoFreshAssetUrl("./css/task.css") + '">');</script>
+  <script>document.write('<link rel="stylesheet" href="' + tamugotoFreshAssetUrl("./css/utility.css") + '">');</script>
+  <script>document.write('<link rel="stylesheet" href="' + tamugotoFreshAssetUrl("./tver/tverMode.css") + '">');</script>
+  <script>document.write('<link rel="stylesheet" href="' + tamugotoFreshAssetUrl("./dreampass/dreamPassMode.css") + '">');</script>
+  <script>document.write('<link rel="stylesheet" href="' + tamugotoFreshAssetUrl("./usen/usenMode.css") + '">');</script>
   
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" href="../img/icon-180.png">
@@ -195,6 +204,7 @@
       <div id="home-top-share-btn-wrap">
         <button id="updateNoticeButton" type="button" class="button secondary update-notice-button"><i class="bi bi-bell"></i></button>
         <button id="settingButton" type="button" class="button secondary update-notice-button" aria-label="設定を開く"><i class="bi bi-gear"></i></button>
+        <button id="refreshAllButton" type="button" class="button secondary update-notice-button" aria-label="JS・CSS・データを再取得して更新" title="最新データに更新"><i class="bi bi-arrow-clockwise" aria-hidden="true"></i></button>
       </div>
 
       <!-- 通常ホームとTVerモードの共通ロゴ -->
@@ -1572,54 +1582,64 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.js"></script>
 <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 <!-- 基本・共通 -->
-<script src="./js/config.js" defer></script>
-<script src="./js/state.js" defer></script>
-<script src="./js/dom.js" defer></script>
-<script src="./js/utils.js" defer></script>
-<script src="./js/pushNotification.js" defer></script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/config.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/state.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/dom.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/utils.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/pushNotification.js") + '" defer><' + '/script>');</script>
 <!-- データ・保存・ログ -->
-<script src="./js/loader.js" defer></script>
-<script src="./js/sheetLogger.js" defer></script>
-<script src="./js/storage.js" defer></script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/loader.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/sheetLogger.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/storage.js") + '" defer><' + '/script>');</script>
 <!-- 描画・UI補助 -->
-<script src="./js/postBuilder.js" defer></script>
-<script src="./js/renderers.js" defer></script>
-<script src="./js/selectors.js" defer></script>
-<script src="./js/musicTop.js" defer></script>
-<script src="./js/theme.js" defer></script>
-<script src="./js/memberWorks.js" defer></script>
-<script src="./js/setting.js" defer></script>
-<script src="./js/selectMode.js" defer></script>
-<script src="./js/myCustom.js" defer></script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/postBuilder.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/renderers.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/selectors.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/musicTop.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/theme.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/memberWorks.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/setting.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/selectMode.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/myCustom.js") + '" defer><' + '/script>');</script>
 <!-- シェア画像 -->
-<script src="./js/shareImages/shareImageThemes.js" defer></script>
-<script src="./js/shareImages/shareImageUtils.js" defer></script>
-<script src="./js/shareImages/index.js" defer></script>
-<script src="./js/shareImages/shareImage.js" defer></script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/shareImages/shareImageThemes.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/shareImages/shareImageUtils.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/shareImages/index.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/shareImages/shareImage.js") + '" defer><' + '/script>');</script>
 <!-- 遷移・初期化 -->
-<script src="./js/navigation.js" defer></script>
-<script src="./js/init.js" defer></script>
-<script src="./js/modal.js" defer></script>
-<script src="./js/stepHelpModal.js" defer></script> 
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/navigation.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/init.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/modal.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/stepHelpModal.js") + '" defer><' + '/script>');</script> 
 <!-- 画面別 -->
-<script src="./js/home.js" defer></script>
-<script src="./js/spotify.js" defer></script>
-<script src="./js/onceTask.js" defer></script>
-<script src="./js/requestSong.js" defer></script>
-<script src="./js/radioRequestSongOverride.js" defer></script>
-<script src="./js/dailyTask.js" defer></script>
-<script src="./js/post.js" defer></script>
-<script src="./js/youtube.js" defer></script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/home.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/spotify.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/onceTask.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/requestSong.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/radioRequestSongOverride.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/dailyTask.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/post.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/youtube.js") + '" defer><' + '/script>');</script>
 <!-- TVerモード -->
-<script src="./tver/tverData.js" defer></script>
-<script src="./tver/tverMode.js" defer></script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./tver/tverData.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./tver/tverMode.js") + '" defer><' + '/script>');</script>
 <!-- ドリパスチェックモード -->
-<script src="./dreampass/dreamPassMode.js" defer></script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./dreampass/dreamPassMode.js") + '" defer><' + '/script>');</script>
 <!-- USENチェックモード -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
-<script src="./usen/usenMode.js" defer></script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./usen/usenMode.js") + '" defer><' + '/script>');</script>
 <!-- 起動 -->
-<script src="./js/app.js" defer></script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/app.js") + '" defer><' + '/script>');</script>
+<script>
+  document.getElementById("refreshAllButton")?.addEventListener("click", function() {
+    this.disabled = true;
+    this.setAttribute("aria-label", "更新中");
+    // 完了履歴や個人設定は削除しない。
+    const url = new URL(location.href);
+    url.searchParams.set("refreshAssets", String(Date.now()));
+    location.replace(url.href);
+  });
+</script>
 </body>
 </html>
 
