@@ -1210,7 +1210,7 @@
 /* 共通モード切り替え：HOME導線・各チェックモード内のタブのみ */
 .home-mode-switcher {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 6px;
   width: 100%;
   max-width: 460px;
@@ -1236,10 +1236,14 @@
   line-height: 1;
 }
 .home-mode-switcher .home-mode-button span {
+  display: block;
+  max-width: 100%;
   font-size: 10px;
   font-weight: 700;
   line-height: 1.1;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
 }
 .home-mode-switcher .home-mode-button.is-active,
 .home-mode-switcher .home-mode-button[aria-pressed="true"] {
@@ -1276,6 +1280,8 @@
 @media (max-width: 360px) {
   .home-mode-switcher { gap: 4px; }
   .home-mode-switcher .home-mode-button { padding-inline: 2px; }
+  .home-mode-switcher .home-mode-button i { font-size: 20px; }
+  .home-mode-switcher .home-mode-button span { font-size: 9px; }
   .home-check-mode-links { gap: 6px; }
   .home-check-mode-link { gap: 4px; padding-inline: 4px; font-size: 11px; }
 }
