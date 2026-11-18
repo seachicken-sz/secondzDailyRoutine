@@ -576,9 +576,9 @@
       <section id="usenRequestPanel" role="tabpanel" aria-labelledby="usenRequestTab">
         <div class="usen-mode-section-heading"><h3>今日のおすすめ曲</h3></div>
         <div id="usenRecommendedSongs" class="usen-mode-song-list"></div>
-        <div class="usen-mode-section-heading"><h3>曲を探してリクエスト</h3></div>
-        <input id="usenSongSearch" class="usen-mode-search" type="search" placeholder="曲名を検索" aria-label="リクエスト曲を検索">
-        <div class="usen-mode-filter-row"><button id="usenAllSongsFilter" type="button" class="active" aria-pressed="true">すべて</button><button id="usenFavoriteSongsFilter" type="button" aria-pressed="false"><i class="bi bi-heart" aria-hidden="true"></i> お気に入り</button><button id="usenRandomSong" type="button"><i class="bi bi-shuffle" aria-hidden="true"></i> おまかせ</button></div>
+        <div class="usen-mode-section-heading"><h3>曲を探す</h3></div>
+        <div class="usen-mode-filter-row" role="group" aria-label="曲一覧の表示切替"><button id="usenAllSongsFilter" type="button" class="active" aria-pressed="true">すべて</button><button id="usenFavoriteSongsFilter" type="button" aria-pressed="false"><i class="bi bi-heart" aria-hidden="true"></i> お気に入り</button></div>
+        <input id="usenSongSearch" class="usen-mode-search" type="search" placeholder="曲名を検索" aria-label="曲名を検索">
         <div id="usenRequestSongs" class="usen-mode-song-list"></div>
         <p id="usenRequestStatus" class="usen-mode-caption" aria-live="polite"></p>
       </section>
@@ -589,7 +589,7 @@
         <div id="usenChartEmpty" class="usen-mode-caption hidden">今週の順位データはありません。</div>
         <div class="usen-mode-chart-wrap"><canvas id="usenWeeklyChart" aria-label="今週分の順位推移グラフ" role="img"></canvas></div>
         <div id="usenChartLegend" class="usen-mode-chart-legend"></div>
-        <a class="primary-button usen-mode-details-link" href="../usen_ranking/" target="_blank" rel="noopener noreferrer">もっと詳しく見る <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+        <a class="primary-button usen-mode-details-link" href="../usen_ranking/">詳しく見る</a>
       </section>
     </div>
 
