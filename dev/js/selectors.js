@@ -13,6 +13,7 @@ function selectSong(song) {
   if (spotifyNextButtonElement) {
     spotifyNextButtonElement.classList.add("hidden");
   }
+  refreshSpotifyActionButtons();
   setButtonStyle(openSpotifyButtonElement, "primary");
   setButtonStyle(spotifyNextButtonElement, "secondary");
   

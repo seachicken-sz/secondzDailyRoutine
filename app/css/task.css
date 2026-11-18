@@ -332,3 +332,6 @@
 .spotify-skip-area.stationhead-mode-active #openStationheadButton { order: 0; }
 .spotify-skip-area.stationhead-mode-active #skipSpotifyButton { order: 1; }
 .spotify-skip-area.stationhead-mode-active #stationheadNextButton { order: 2; }
+
+/* Stationhead接続後のボタンは白にする */
+.spotify-skip-area.stationhead-mode-active #openStationheadButton.stationhead-opened { background: #fff; color: var(--color-brand); border: 1px solid var(--color-border); }

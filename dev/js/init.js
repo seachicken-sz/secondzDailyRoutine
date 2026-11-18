@@ -509,7 +509,10 @@ async function restoreFlowStateOrHome() {
       spotifyNextButtonElement.classList.remove("hidden");
       setButtonStyle(openSpotifyButtonElement, "gray");
       setButtonStyle(spotifyNextButtonElement, "primary");
+    } else if (state.openedAction === "stationhead") {
+      stationheadNextButtonElement?.classList.remove("hidden");
     }
+    refreshSpotifyActionButtons();
 
     return;
   }

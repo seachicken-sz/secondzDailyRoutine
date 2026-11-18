@@ -420,6 +420,12 @@ function bindRoutineMusicSettingsEvents() {
     setUsenModeEnabled(true);
   });
 }
+function refreshSpotifyActionButtons() {
+  const stationOpened = !!stationheadNextButtonElement && !stationheadNextButtonElement.classList.contains("hidden");
+  const spotifyOpened = !!spotifyNextButtonElement && !spotifyNextButtonElement.classList.contains("hidden");
+  document.getElementById("openStationheadButton")?.classList.toggle("stationhead-opened", stationOpened);
+  skipSpotifyButtonElement?.classList.toggle("hidden", stationOpened || spotifyOpened);
+}
 function applyRoutineSpotifyDisplay() {
   const step = document.getElementById("spotifyStep");
   if (!step) return;
@@ -443,7 +449,7 @@ function applyRoutineSpotifyDisplay() {
     station.closest(".spotify-skip-area")?.classList.toggle("stationhead-mode-active", stationheadMode);
   }
   if (stationNext && data.bgm !== "stationhead") stationNext.classList.add("hidden");
-  if (skip) skip.classList.remove("hidden");
+  refreshSpotifyActionButtons();
   if (data.bgm === "stationhead") {
     selected?.classList.add("hidden");
     return;

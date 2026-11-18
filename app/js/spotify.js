@@ -27,6 +27,7 @@ function bindSpotifyEvents() {
     if (spotifyNextButtonElement) {
       spotifyNextButtonElement.classList.remove("hidden");
     }
+    refreshSpotifyActionButtons();
 
     // 開くボタンは押下済み表示、次へボタンを主ボタン表示にする
     setButtonStyle(openSpotifyButtonElement, "gray");
@@ -59,6 +60,9 @@ function bindSpotifyEvents() {
     if (stationheadNextButtonElement) {
       stationheadNextButtonElement.classList.remove("hidden");
     }
+    state.openedAction = "stationhead";
+    saveFlowState(state.openedAction, spotifyStepElement);
+    refreshSpotifyActionButtons();
   });
   
   // ==================================================
