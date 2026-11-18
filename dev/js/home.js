@@ -1323,6 +1323,9 @@ function bindHomeMenuAnchorEvents() {
       } else if (mode === "dreampass") {
         setDreamPassModeEnabled(true);
         homeStepElement.scrollTo({ top: 0, behavior: "smooth" });
+      } else if (mode === "usen") {
+        setUsenModeEnabled(true);
+        homeStepElement.scrollTo({ top: 0, behavior: "smooth" });
       }
     });
   });
