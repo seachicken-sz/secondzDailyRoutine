@@ -435,7 +435,7 @@ function applyRoutineSpotifyDisplay() {
   const autoMode = data.bgm !== "manual";
   section?.classList.toggle("hidden", autoMode);
   otherSection?.classList.toggle("hidden", autoMode);
-  if (station) station.classList.toggle("hidden", data.bgm !== "stationhead");
+  if (station) station.classList.toggle("hidden", data.bgm !== "stationhead" && data.bgm !== "manual");
   if (stationNext && data.bgm !== "stationhead") stationNext.classList.add("hidden");
   if (skip) skip.classList.remove("hidden");
   if (data.bgm === "stationhead") {
