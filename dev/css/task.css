@@ -326,7 +326,9 @@
 
 
 /* Stationhead接続確認モードのみ、接続ボタンをBGMなしより上に表示 */
-.spotify-skip-area.stationhead-mode-active { display: flex; flex-direction: column; }
+.spotify-skip-area.stationhead-mode-active { display: flex; flex-direction: column; gap: 10px; }
+.spotify-skip-area.stationhead-mode-active > .primary-button,
+.spotify-skip-area.stationhead-mode-active > .secondary-button { margin-top: 0; }
 .spotify-skip-area.stationhead-mode-active #openStationheadButton { order: 0; }
 .spotify-skip-area.stationhead-mode-active #skipSpotifyButton { order: 1; }
 .spotify-skip-area.stationhead-mode-active #stationheadNextButton { order: 2; }
