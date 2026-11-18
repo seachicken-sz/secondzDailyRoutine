@@ -435,7 +435,13 @@ function applyRoutineSpotifyDisplay() {
   const autoMode = data.bgm !== "manual";
   section?.classList.toggle("hidden", autoMode);
   otherSection?.classList.toggle("hidden", autoMode);
-  if (station) station.classList.toggle("hidden", data.bgm !== "stationhead" && data.bgm !== "manual");
+  if (station) {
+    const stationheadMode = data.bgm === "stationhead";
+    station.classList.toggle("hidden", !stationheadMode && data.bgm !== "manual");
+    station.classList.toggle("primary-button", stationheadMode);
+    station.classList.toggle("secondary-button", !stationheadMode);
+    station.closest(".spotify-skip-area")?.classList.toggle("stationhead-mode-active", stationheadMode);
+  }
   if (stationNext && data.bgm !== "stationhead") stationNext.classList.add("hidden");
   if (skip) skip.classList.remove("hidden");
   if (data.bgm === "stationhead") {
