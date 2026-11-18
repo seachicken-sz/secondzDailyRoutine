@@ -47,7 +47,7 @@ function initializeUsenMode() {
     const request=event.target.closest("a[data-usen-song]");
     if(!request)return;
     const song=usenModeRequestSongs.find(s=>String(s.id||s.name)===request.dataset.usenSong);
-    if(!song)return;
+    if(!song||!usenModeSafeSongUrl(song)){event.preventDefault();return;}
     if(typeof markDailyTaskDone==="function")markDailyTaskDone({id:"home_usen_request"},"usenMode");
     if(typeof sendRequestSongLog==="function")void sendRequestSongLog(song).catch(console.error);
     // 既存のおかわりDailyにも完了を反映
@@ -86,11 +86,20 @@ function usenModeSetFilter(filter) {
   });
   usenModeRenderSongList();
 }
+function usenModeSafeSongUrl(song) {
+  const raw=String(song?.url||"").trim();
+  if(!/^\d+$/.test(raw)&&!/^https:\/\//i.test(raw))return null;
+  try {
+    const url=new URL(buildRequestSongUrl(raw));
+    if(url.protocol!=="https:"||url.hostname!=="usen.oshireq.com"||url.port||url.username||url.password||!/^\/song\/\d+\/?$/.test(url.pathname))return null;
+    return url.href;
+  }catch{return null;}
+}
 function usenModeSongId(song){return String(song.id||song.name);}
 function usenModeAvailableSongs() {
   const seen=new Set();
   return usenModeRequestSongs.filter(song=>{
-    if(!song||!song.name||!String(song.url||"").trim())return false;
+    if(!song||!song.name||!usenModeSafeSongUrl(song))return false;
     const id=usenModeSongId(song);
     if(seen.has(id))return false;
     seen.add(id);
@@ -104,7 +113,8 @@ function usenModeCrownSvg() {
 function usenModeSongRow(song) {
   const id=usenModeSongId(song),isFavorite=usenModeFavorites.includes(id);
   const ranked=usenModeCurrentRanks().some(r=>String(r.songId)===String(song.url)||String(r.songTitle)===song.name);
-  const url=buildRequestSongUrl(song.url);
+  const url=usenModeSafeSongUrl(song);
+  if(!url)return "";
   return '<div class="usen-mode-song-row member-work-link-card">'+
     '<button type="button" class="usen-mode-favorite'+(isFavorite?' is-favorite':'')+'" data-usen-favorite="'+usenModeEscape(id)+'" aria-label="'+usenModeEscape(song.name)+'をお気に入り'+(isFavorite?'解除':'登録')+'" aria-pressed="'+isFavorite+'"><i class="bi bi-heart'+(isFavorite?'-fill':'')+'" aria-hidden="true"></i></button>'+
     '<a class="usen-mode-song-link" data-usen-song="'+usenModeEscape(id)+'" href="'+usenModeEscape(url)+'" target="_blank" rel="noopener noreferrer">'+
