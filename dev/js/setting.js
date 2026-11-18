@@ -460,8 +460,7 @@ function applyRoutineSpotifyDisplay() {
     chosen = songs.find(song => getRoutineSpotifySongId(song) === data.fixedSongId) || songs[0];
   }
   if (!chosen && data.bgm === "recommended") {
-    const pool = recommended.length ? recommended : songs;
-    chosen = pool[Math.floor(Math.random() * pool.length)];
+    if (recommended.length) chosen = recommended[Math.floor(Math.random() * recommended.length)];
   }
   if (chosen && getRoutineSpotifySongId(chosen) !== getRoutineSpotifySongId(state.selectedSong)) {
     selectSong(chosen);
