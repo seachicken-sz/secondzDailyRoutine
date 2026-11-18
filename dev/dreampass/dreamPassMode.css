@@ -82,6 +82,5 @@
 
 /* 作品カード右上のピンと上部固定セクション */
 .dream-pass-card { position: relative; }
-.dream-pass-card > .check-mode-pin-button { position: absolute; top: 5px; right: 5px; }
-.dream-pass-card > .tver-mode-cast { padding-right: 28px; min-height: 22px; }
+/* ハート・ピンは共通の横並び行で揃え、絶対配置を使わない */
 .dream-pass-section-title .bi-pin-angle-fill { margin-right: 6px; }
