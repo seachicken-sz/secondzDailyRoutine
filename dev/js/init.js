@@ -307,6 +307,7 @@ async function init() {
     initializeSetupGuide();
     // Spotify曲一覧JSONを読み込む
     const songs = await loadSpotifySongs();
+    routineSpotifySongCatalog = songs;
     // flag === true の曲をおすすめ欄へ、それ以外を「その他」欄へ分ける
     const recommendedSongs = songs.filter((song) => song.flag === true);
     const otherSongs = songs.filter((song) => song.flag !== true);
@@ -501,6 +502,7 @@ async function restoreFlowStateOrHome() {
     if (state.selectedSong) {
       selectSong(state.selectedSong);
     }
+    applyRoutineSpotifyDisplay();
 
     // Spotifyを開いた後の状態なら、次へボタンを表示してボタン色も復元
     if (state.openedAction === OPENED_ACTIONS.spotify) {
