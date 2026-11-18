@@ -42,7 +42,7 @@ function initializeUsenMode() {
     // 既存のおかわりDailyにも完了を反映
     if(typeof renderHomeUsenExtraList==="function")renderHomeUsenExtraList();
     if(typeof renderHomeDailyExtraList==="function")renderHomeDailyExtraList(state.dailyGroups||[]);
-    document.getElementById("usenRequestStatus").textContent="ページを開きました。リクエストの実行は公式サイトでお願いします。";
+
   });
   syncHomeDefaultModeCheckboxes();
   if(getHomeDefaultMode()==="usen")setUsenModeEnabled(true);
