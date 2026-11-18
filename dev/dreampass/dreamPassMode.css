@@ -79,3 +79,9 @@
 #dreamPassModeContent .check-mode-tab-nav {
   margin-bottom: 28px;
 }
+
+/* 作品カード右上のピンと上部固定セクション */
+.dream-pass-card { position: relative; }
+.dream-pass-card > .check-mode-pin-button { position: absolute; top: 5px; right: 5px; }
+.dream-pass-card > .tver-mode-cast { padding-right: 28px; min-height: 22px; }
+.dream-pass-section-title .bi-pin-angle-fill { margin-right: 6px; }
