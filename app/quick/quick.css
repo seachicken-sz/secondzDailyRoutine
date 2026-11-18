@@ -11,6 +11,14 @@
 
 .quick-page {
   min-height: 100dvh;
+  touch-action: manipulation;
+}
+
+/* iOS Safariの入力欄フォーカス時の自動拡大を防ぐ */
+.quick-page input:not([type="checkbox"]):not([type="radio"]),
+.quick-page textarea,
+.quick-page select {
+  font-size: 16px;
 }
 
 .quick-app {
