@@ -200,7 +200,7 @@ function renderDreamPassMode() {
       <div class="dream-pass-grid">${items.map(item => dreamPassCardHtml(item, isVoting)).join("")}</div>
     </section>` : "";
   const pinnedHtml = pinnedUnique.length
-    ? `<section class="dream-pass-section"><div class="dream-pass-section-heading"><h3 class="dream-pass-section-title"><i class="bi bi-pin-angle-fill" aria-hidden="true"></i>ピン留め</h3></div><div class="dream-pass-grid">${pinnedUnique.map(item => dreamPassCardHtml(item, item.workType === "dreampass")).join("")}</div></section>`
+    ? `<section class="dream-pass-section"><div class="dream-pass-section-heading"><h3 class="dream-pass-section-title"><i class="bi bi-pin-angle-fill" aria-hidden="true"></i>お気に入り</h3></div><div class="dream-pass-grid">${pinnedUnique.map(item => dreamPassCardHtml(item, item.workType === "dreampass")).join("")}</div></section>`
     : "";
   list.innerHTML = pinnedHtml + section("投票中", "再上映のチャンス！見たい作品に投票しよ！", voting, true) +
     section("上映候補入り", "上映候補入りした作品はこちら！見たい作品にはファン登録しておこ！", candidates, false) +
