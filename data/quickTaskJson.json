@@ -2,14 +2,6 @@
   "active": true,
   "items": [
     {
-      "id": "daily_mon",
-      "name": "エムオン！",
-      "short-name": "エムオン！",
-      "url": "https://www.m-on.jp/request/?action_request_search=True&artist_id=19237",
-      "comment": "「timeleszの楽曲一覧」の下からリクエストしたい曲をタップ！",
-      "input-flag": false
-    },
-    {
       "id": "daily_nack5",
       "name": "NACK5",
       "short-name": "NACK5",
@@ -28,6 +20,14 @@
       "request-input": "■曲名",
       "comment": "①「>>リクエストの登録はこちら！」をタップ\n②「■曲名」欄にペーストまたは貼り付けを行うと曲名が自動で入ります！",
       "input-flag": true
+    },
+    {
+      "id": "daily_and_shino",
+      "name": "…&シノ！ from timelesz",
+      "short-name": "&シノ",
+      "url": "https://www.tbsradio.jp/and/",
+      "comment": "番組ページからメッセージを送ろう！",
+      "input-flag": false
     }
   ]
 }
