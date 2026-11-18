@@ -81,6 +81,32 @@ function isCheckModeMemberVisible(item, selected) {
 let tverSelectedMembers = new Set(["all"]);
 let tverSortOrder = "newest";
 let tverUnwatchedOnly = false;
+const TVER_MODE_PINS_KEY = "secondzDailyRoutineTverModePinnedPrograms";
+let tverModePinnedIds = new Set();
+function getTverModePinKey(item) {
+  return item.seriesId ? "series:" + item.seriesId :
+    item.seriesUrl ? "url:" + item.seriesUrl.split(/[?#]/)[0].replace(/\/+$/, "") : "";
+}
+function loadTverModePins() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(TVER_MODE_PINS_KEY) || "[]");
+    tverModePinnedIds = new Set(Array.isArray(saved) ? saved.filter(id => typeof id === "string") : []);
+  } catch (error) { tverModePinnedIds = new Set(); }
+}
+function toggleTverModePin(key) {
+  if (!key) return;
+  if (tverModePinnedIds.has(key)) tverModePinnedIds.delete(key);
+  else tverModePinnedIds.add(key);
+  try { localStorage.setItem(TVER_MODE_PINS_KEY, JSON.stringify([...tverModePinnedIds])); }
+  catch (error) { console.warn("TVerピン留めを保存できませんでした", error); }
+  renderTverMode();
+}
+function tverModePinButtonHtml(item) {
+  const key = getTverModePinKey(item);
+  if (!key) return "";
+  const pinned = tverModePinnedIds.has(key);
+  return `<button type="button" class="check-mode-pin-button${pinned ? " is-pinned" : ""}" data-tver-pin="${escapeTverModeHtml(key)}" aria-pressed="${pinned}" aria-label="${pinned ? "ピン留め解除" : "ピン留め"}" title="${pinned ? "ピン留め解除" : "先頭にピン留め"}"><i class="bi bi-pin-angle${pinned ? "-fill" : ""}" aria-hidden="true"></i></button>`;
+}
 
 // 3つのモードボタンを表示内容と同期する。起動時のデフォルト設定は変更しない。
 function syncHomeModeButtons() {
@@ -122,6 +148,7 @@ function initializeTverMode() {
   if (!toggle || !list) return;
 
   initializeHomeModeNavigation();
+  loadTverModePins();
   tverSelectedMembers = createCheckModeMemberFilter("tverMemberFilter", renderTverMode);
   const sort = document.getElementById("tverSortOrder");
   if (sort) {
@@ -339,7 +366,7 @@ function tverModeGroupedCardHtml(item) {
   }).join("");
   return `<article class="tver-mode-card is-grouped">
     ${tverModeCastHtml(item.members)}
-    <div class="tver-mode-card-heading"><h3>${escapeTverModeHtml(item.title)}</h3></div>
+    <div class="tver-mode-card-heading"><h3>${escapeTverModeHtml(item.title)}</h3>${tverModePinButtonHtml(item)}</div>
     <p class="tver-mode-no-ranking">${item.groupedEpisodes.length}エピソード</p>
     <div class="tver-mode-group-episodes">${episodeRows}</div>
   </article>`;
@@ -352,18 +379,24 @@ function renderTverMode() {
     list.innerHTML = '<p class="tver-mode-empty-message">memberWorksに登録されたTVer番組はありません。</p>';
     return;
   }
+  // ピン留めはフィルターとsortの対象外。番組IDで保持する。
+  const pinned = groupTverModeRecordsByProgram(tverModeRecords)
+    .filter(item => tverModePinnedIds.has(getTverModePinKey(item)));
   const visibleRecords = tverModeRecords.filter(item => {
+    if (tverModePinnedIds.has(getTverModePinKey(item))) return false;
     if (!isCheckModeMemberVisible(item, tverSelectedMembers)) return false;
     return !tverUnwatchedOnly || !isTverEpisodeChecked(getTverModeWatchKey(item));
   }).sort((a, b) => (tverSortOrder === "oldest" ? a.sortTimestamp - b.sortTimestamp :
     b.sortTimestamp - a.sortTimestamp) || a.index - b.index);
-  if (!visibleRecords.length) {
-    list.innerHTML = `<p class="tver-mode-empty-message">${tverUnwatchedOnly ? "未視聴の番組はありません。" : "選択したメンバーの番組はありません。"}</p>`;
-    return;
-  }
-  // 単数回・複数回とも同じ配置で描画する。
-  list.innerHTML = groupTverModeRecordsByProgram(visibleRecords)
-    .map(item => tverModeGroupedCardHtml(item)).join("");
+  const normal = groupTverModeRecordsByProgram(visibleRecords);
+  const pinnedHtml = pinned.length
+    ? '<div class="check-mode-pinned-heading"><i class="bi bi-pin-angle-fill" aria-hidden="true"></i>ピン留め</div>' +
+      pinned.map(item => tverModeGroupedCardHtml(item)).join("")
+    : "";
+  const normalHtml = normal.map(item => tverModeGroupedCardHtml(item)).join("");
+  list.innerHTML = pinnedHtml + (normalHtml || (!pinned.length
+    ? `<p class="tver-mode-empty-message">${tverUnwatchedOnly ? "未視聴の番組はありません。" : "選択したメンバーの番組はありません。"}</p>`
+    : ""));
 }
 
 function markTverModeChecked(episodeId, checked) {
@@ -379,6 +412,11 @@ function markTverModeChecked(episodeId, checked) {
 }
 
 function handleTverModeClick(event) {
+  const pin = event.target.closest("[data-tver-pin]");
+  if (pin) {
+    toggleTverModePin(pin.dataset.tverPin);
+    return;
+  }
   const link = event.target.closest("[data-tver-series-link]");
   if (link && link.dataset.tverSeriesLink) {
     markTverModeChecked(link.dataset.tverSeriesLink, true);
