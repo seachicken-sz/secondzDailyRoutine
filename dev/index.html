@@ -1332,7 +1332,7 @@
         <button type="button" class="setting-modal-index-item" data-setting-open="custom"><span class="setting-modal-index-icon"><i class="bi bi-person-gear"></i></span><span class="setting-modal-index-text"><strong>マイカスタム</strong><small>利用中のサブスク・ファンクラブの設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
         <button type="button" class="setting-modal-index-item" data-setting-open="select"><span class="setting-modal-index-icon"><i class="bi bi-ui-checks-grid"></i></span><span class="setting-modal-index-text"><strong>セレクトモード</strong><small>自分で選んだタスクだけで実行できるセレクトモードの設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
         <button type="button" class="setting-modal-index-item" data-setting-open="usen"><span class="setting-modal-index-icon"><i class="bi bi-music-note-list"></i></span><span class="setting-modal-index-text"><strong>USEN推し活設定</strong><small>USEN推し活リクエストの設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
-        <button type="button" class="setting-modal-index-item" data-setting-open="bgm"><span class="setting-modal-index-icon"><i class="bi bi-headphones"></i></span><span class="setting-modal-index-text"><strong>今日のBGM設定</strong><small>タスク中に聞く音楽の設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+        <button type="button" class="setting-modal-index-item" data-setting-open="bgm"><span class="setting-modal-index-icon"><i class="bi bi-headphones"></i></span><span class="setting-modal-index-text"><strong>今日のSpotify再生設定</strong><small>タスク中に聴く音楽の設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </nav>
       <section id="settingPwaGuide" class="setting-pwa-guide hidden">
         <p>
@@ -1346,8 +1346,8 @@
       <section id="usenRoutineSettingSection" class="setting-section hidden">
         <div class="setting-section-header"><h3><i class="bi bi-music-note-list"></i>USEN推し活設定</h3><p>USEN推し活リクエストの設定</p></div>
         <fieldset class="setting-fieldset"><div class="setting-radio-list">
-          <label class="setting-radio-card"><input type="radio" name="usenRoutineSetting" value="manual" checked><span><strong>毎回自分で選ぶ</strong><small>現在と同じ曲選択画面</small></span></label>
-          <label class="setting-radio-card"><input type="radio" name="usenRoutineSetting" value="recommended"><span><strong>おすすめ曲を自動選択</strong><small>おすすめ曲の先頭を選択して表示</small></span></label>
+          <label class="setting-radio-card"><input type="radio" name="usenRoutineSetting" value="manual" checked><span><strong>毎回自分で選ぶ <small class="setting-default-label">（初期設定）</small></strong><small>リクエストする曲を毎回選択</small></span></label>
+          <label class="setting-radio-card"><input type="radio" name="usenRoutineSetting" value="recommended"><span><strong>おすすめ曲を自動選択</strong><small>おすすめ曲の先頭を自動選択</small></span></label>
           <label id="usenRoutineFavoritesOption" class="setting-radio-card"><input type="radio" name="usenRoutineSetting" value="favorites"><span><strong>お気に入り曲を固定表示する</strong><small>おすすめ曲の代わりにお気に入り曲を表示</small></span></label>
         </div></fieldset>
         <p class="select-mode-auto-save-note">変更内容は自動で保存されます。</p>
@@ -1355,13 +1355,13 @@
         <button type="button" id="settingOpenUsenModeButton" class="primary-button setting-routine-navigation">USENチェックモードを開く</button>
       </section>
       <section id="bgmRoutineSettingSection" class="setting-section hidden">
-        <div class="setting-section-header"><h3><i class="bi bi-headphones"></i>今日のBGM設定</h3><p>タスク中に聞く音楽の設定</p></div>
+        <div class="setting-section-header"><h3><i class="bi bi-headphones"></i>今日のSpotify再生設定</h3><p>タスク中に聴く音楽の設定</p></div>
         <fieldset class="setting-fieldset"><div class="setting-radio-list">
-          <label class="setting-radio-card"><input type="radio" name="bgmRoutineSetting" value="manual" checked><span><strong>毎回自分で選ぶ</strong><small>現在と同じ曲選択画面</small></span></label>
-          <label class="setting-radio-card"><input type="radio" name="bgmRoutineSetting" value="recommended"><span><strong>おすすめ曲を自動選択</strong><small>おすすめ曲からランダムで1曲選択</small></span></label>
-          <label class="setting-radio-card"><input type="radio" name="bgmRoutineSetting" value="fixed"><span><strong>選択した曲のみ再生する</strong><small>指定したSpotify曲を選択済みにする</small></span></label>
+          <label class="setting-radio-card"><input type="radio" name="bgmRoutineSetting" value="manual" checked><span><strong>毎回自分で選ぶ <small class="setting-default-label">（初期設定）</small></strong><small>再生する曲を毎回選択</small></span></label>
+          <label class="setting-radio-card"><input type="radio" name="bgmRoutineSetting" value="recommended"><span><strong>おすすめ曲を自動選択</strong><small>おすすめ曲からランダムに1曲選択</small></span></label>
+          <label class="setting-radio-card"><input type="radio" name="bgmRoutineSetting" value="fixed"><span><strong>選択した曲のみ再生する</strong><small>指定した曲を自動選択</small></span></label>
           <div id="bgmRoutineFixedSongWrap" class="setting-routine-fixed-wrap hidden"><label for="bgmRoutineFixedSong">再生する曲</label><select id="bgmRoutineFixedSong" class="check-mode-sort-select"></select></div>
-          <label class="setting-radio-card"><input type="radio" name="bgmRoutineSetting" value="stationhead"><span><strong>Stationheadへの接続確認にする</strong><small>Stationhead接続とBGMなしのみを表示</small></span></label>
+          <label class="setting-radio-card"><input type="radio" name="bgmRoutineSetting" value="stationhead"><span><strong>Stationheadへの接続確認にする</strong><small>BGM選択の代わりにStationhead接続を確認</small></span></label>
         </div></fieldset>
         <p class="select-mode-auto-save-note">変更内容は自動で保存されます。</p>
       </section>
