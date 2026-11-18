@@ -118,7 +118,7 @@ function setPushSaveButtonLoading(isLoading) {
   }
 
   saveButton.disabled = isLoading;
-  saveButton.textContent = isLoading ? "保存中..." : "設定を保存";
+  saveButton.textContent = isLoading ? "保存中..." : "保存して閉じる";
 }
 
 function getPushStatusLabel(pushSetting) {
@@ -202,36 +202,35 @@ async function savePushSetting() {
 
   if (!selectedSetting) {
     alert("通知設定を選んでください。");
-    return;
+    return false;
   }
 
   if (selectedSetting === "off") {
-    await stopDailyPush();
-    return;
+    return await stopDailyPush();
   }
 
-  await setDailyPushTime(selectedSetting);
+  return await setDailyPushTime(selectedSetting);
 }
 
 async function setDailyPushTime(pushTime) {
   if (!isPushAvailablePwaMode()) {
     alert("通知はホーム画面に追加したアプリから設定できます。");
     await refreshPushNotificationUi();
-    return;
+    return false;
   }
 
   setPushSaveButtonLoading(true);
 
   try {
-    await runWithOneSignal(async function (OneSignal) {
+    return await runWithOneSignal(async function (OneSignal) {
       if (!isOneSignalPushSupported(OneSignal)) {
         alert("この端末ではプッシュ通知に対応していません。");
-        return;
+        return false;
       }
 
       if ("Notification" in window && Notification.permission === "denied") {
         alert("通知がブロックされています。端末やブラウザの通知設定を確認してください。");
-        return;
+        return false;
       }
 
       if ("Notification" in window && Notification.permission !== "granted") {
@@ -240,7 +239,7 @@ async function setDailyPushTime(pushTime) {
 
       if ("Notification" in window && Notification.permission !== "granted") {
         alert("通知が許可されませんでした。端末の通知設定を確認してください。");
-        return;
+        return false;
       }
 
       if (OneSignal.User?.PushSubscription?.optIn) {
@@ -260,10 +259,12 @@ async function setDailyPushTime(pushTime) {
       setPushStatusText(getPushStatusLabel(pushTime));
 
       alert(`${pushTime === "08" ? "8時" : "18時"}の通知を設定しました。`);
+      return true;
     });
   } catch (error) {
     console.error("通知設定に失敗しました。", error);
     alert("通知設定に失敗しました。時間をおいて再度お試しください。");
+    return false;
   } finally {
     setPushSaveButtonLoading(false);
     await refreshPushNotificationUi();
@@ -278,7 +279,7 @@ async function stopDailyPush() {
   setPushSaveButtonLoading(true);
 
   try {
-    await runWithOneSignal(async function (OneSignal) {
+    return await runWithOneSignal(async function (OneSignal) {
       await OneSignal.User.addTags({
         push_enabled: "false",
         push_time: "off",
@@ -296,10 +297,12 @@ async function stopDailyPush() {
       setPushStatusText("現在：通知OFF");
 
       alert("通知を停止しました。");
+      return true;
     });
   } catch (error) {
     console.error("通知停止に失敗しました。", error);
     alert("通知停止に失敗しました。時間をおいて再度お試しください。");
+    return false;
   } finally {
     setPushSaveButtonLoading(false);
     await refreshPushNotificationUi();
@@ -337,8 +340,14 @@ function initializePushNotificationSettings() {
   setPushStatusText(getPushStatusLabel(getSavedPushSetting()));
 
   if (saveButton) {
-    saveButton.addEventListener("click", () => {
-      savePushSetting();
+    saveButton.addEventListener("click", async () => {
+      if (saveButton.disabled) return;
+      saveButton.disabled = true;
+      try {
+        if (await savePushSetting() === true) closeSettingModal();
+      } finally {
+        saveButton.disabled = false;
+      }
     });
   }
 }

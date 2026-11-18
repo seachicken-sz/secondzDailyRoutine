@@ -3,7 +3,7 @@
 function getHomeDefaultMode() {
   try {
     const mode = localStorage.getItem(STORAGE_KEYS.homeDefaultMode);
-    if (mode === "normal" || mode === "tver" || mode === "dreampass") return mode;
+    if (mode === "normal" || mode === "tver" || mode === "dreampass" || mode === "usen") return mode;
     // TVer単独だった旧設定から一度だけ移行する。
     const legacy = localStorage.getItem(STORAGE_KEYS.tverModeDefault);
     const migrated = legacy === "true" ||
@@ -20,8 +20,10 @@ function syncHomeDefaultModeCheckboxes() {
   const mode = getHomeDefaultMode();
   const tver = document.getElementById("tverModeDefaultCheckbox");
   const dreamPass = document.getElementById("dreamPassModeDefaultCheckbox");
+  const usen = document.getElementById("usenModeDefaultCheckbox");
   if (tver) tver.checked = mode === "tver";
   if (dreamPass) dreamPass.checked = mode === "dreampass";
+  if (usen) usen.checked = mode === "usen";
 }
 function setHomeDefaultMode(nextMode, changedMode) {
   // 選択中のチェックを解除した場合のみ通常ホームに戻す。
@@ -79,12 +81,39 @@ function isCheckModeMemberVisible(item, selected) {
 let tverSelectedMembers = new Set(["all"]);
 let tverSortOrder = "newest";
 let tverUnwatchedOnly = false;
+const TVER_MODE_PINS_KEY = "secondzDailyRoutineTverModePinnedPrograms";
+let tverModePinnedIds = new Set();
+function getTverModePinKey(item) {
+  return item.seriesId ? "series:" + item.seriesId :
+    item.seriesUrl ? "url:" + item.seriesUrl.split(/[?#]/)[0].replace(/\/+$/, "") : "";
+}
+function loadTverModePins() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(TVER_MODE_PINS_KEY) || "[]");
+    tverModePinnedIds = new Set(Array.isArray(saved) ? saved.filter(id => typeof id === "string") : []);
+  } catch (error) { tverModePinnedIds = new Set(); }
+}
+function toggleTverModePin(key) {
+  if (!key) return;
+  if (tverModePinnedIds.has(key)) tverModePinnedIds.delete(key);
+  else tverModePinnedIds.add(key);
+  try { localStorage.setItem(TVER_MODE_PINS_KEY, JSON.stringify([...tverModePinnedIds])); }
+  catch (error) { console.warn("TVerピン留めを保存できませんでした", error); }
+  renderTverMode();
+}
+function tverModePinButtonHtml(item) {
+  const key = getTverModePinKey(item);
+  if (!key) return "";
+  const pinned = tverModePinnedIds.has(key);
+  return `<button type="button" class="check-mode-pin-button${pinned ? " is-pinned" : ""}" data-tver-pin="${escapeTverModeHtml(key)}" aria-pressed="${pinned}" aria-label="${pinned ? "ピン留め解除" : "ピン留め"}" title="${pinned ? "ピン留め解除" : "先頭にピン留め"}"><i class="bi bi-pin-angle${pinned ? "-fill" : ""}" aria-hidden="true"></i></button>`;
+}
 
 // 3つのモードボタンを表示内容と同期する。起動時のデフォルト設定は変更しない。
 function syncHomeModeButtons() {
   const dream = !document.getElementById("dreamPassModeContent")?.classList.contains("hidden");
   const tver = !document.getElementById("tverModeContent")?.classList.contains("hidden");
-  const active = dream ? "dreampass" : tver ? "tver" : "home";
+  const usen = !document.getElementById("usenModeContent")?.classList.contains("hidden");
+  const active = usen ? "usen" : dream ? "dreampass" : tver ? "tver" : "home";
   document.querySelectorAll(".check-mode-tab-nav [data-home-mode]").forEach(button => {
     const selected = button.dataset.homeMode === active;
     button.setAttribute("aria-pressed", String(selected));
@@ -100,6 +129,7 @@ function initializeHomeModeNavigation() {
       if (button.dataset.homeMode === "home") showNormalHomeMode();
       else if (button.dataset.homeMode === "tver") setTverModeEnabled(true);
       else if (button.dataset.homeMode === "dreampass") setDreamPassModeEnabled(true);
+      else if (button.dataset.homeMode === "usen") setUsenModeEnabled(true);
     });
   });
 }
@@ -107,7 +137,8 @@ function showNormalHomeMode() {
   document.getElementById("normalHomeContent")?.classList.remove("hidden");
   document.getElementById("tverModeContent")?.classList.add("hidden");
   document.getElementById("dreamPassModeContent")?.classList.add("hidden");
-  homeStepElement.classList.remove("tver-mode-active", "dream-pass-mode-active");
+  document.getElementById("usenModeContent")?.classList.add("hidden");
+  homeStepElement.classList.remove("tver-mode-active", "dream-pass-mode-active", "usen-mode-active");
   syncHomeModeButtons();
 }
 
@@ -117,6 +148,7 @@ function initializeTverMode() {
   if (!toggle || !list) return;
 
   initializeHomeModeNavigation();
+  loadTverModePins();
   tverSelectedMembers = createCheckModeMemberFilter("tverMemberFilter", renderTverMode);
   const sort = document.getElementById("tverSortOrder");
   if (sort) {
@@ -175,6 +207,8 @@ function setTverModeEnabled(enabled) {
     const dreamContent = document.getElementById("dreamPassModeContent");
     const dreamToggle = document.getElementById("dreamPassModeToggleButton");
     if (dreamContent) dreamContent.classList.add("hidden");
+    document.getElementById("usenModeContent")?.classList.add("hidden");
+    homeStepElement.classList.remove("usen-mode-active");
     homeStepElement.classList.remove("dream-pass-mode-active");
     if (dreamToggle) {
       dreamToggle.setAttribute("aria-pressed", "false");
@@ -331,7 +365,10 @@ function tverModeGroupedCardHtml(item) {
     </div>`;
   }).join("");
   return `<article class="tver-mode-card is-grouped">
-    ${tverModeCastHtml(item.members)}
+    <div class="check-mode-card-top-row">
+      ${tverModeCastHtml(item.members)}
+      ${tverModePinButtonHtml(item)}
+    </div>
     <div class="tver-mode-card-heading"><h3>${escapeTverModeHtml(item.title)}</h3></div>
     <p class="tver-mode-no-ranking">${item.groupedEpisodes.length}エピソード</p>
     <div class="tver-mode-group-episodes">${episodeRows}</div>
@@ -345,18 +382,32 @@ function renderTverMode() {
     list.innerHTML = '<p class="tver-mode-empty-message">memberWorksに登録されたTVer番組はありません。</p>';
     return;
   }
+  // ピン留め済みの番組もメンバー・未視聴フィルターに連動する。
+  // 絞り込みはエピソード単位で行い、ピン登録自体は変更しない。
+  const pinned = groupTverModeRecordsByProgram(tverModeRecords.filter(item =>
+    tverModePinnedIds.has(getTverModePinKey(item)) &&
+    isCheckModeMemberVisible(item, tverSelectedMembers) &&
+    (!tverUnwatchedOnly || !isTverEpisodeChecked(getTverModeWatchKey(item)))))
+    .sort((a, b) => [...tverModePinnedIds].indexOf(getTverModePinKey(a)) -
+      [...tverModePinnedIds].indexOf(getTverModePinKey(b)));
   const visibleRecords = tverModeRecords.filter(item => {
+    if (tverModePinnedIds.has(getTverModePinKey(item))) return false;
     if (!isCheckModeMemberVisible(item, tverSelectedMembers)) return false;
     return !tverUnwatchedOnly || !isTverEpisodeChecked(getTverModeWatchKey(item));
   }).sort((a, b) => (tverSortOrder === "oldest" ? a.sortTimestamp - b.sortTimestamp :
     b.sortTimestamp - a.sortTimestamp) || a.index - b.index);
-  if (!visibleRecords.length) {
-    list.innerHTML = `<p class="tver-mode-empty-message">${tverUnwatchedOnly ? "未視聴の番組はありません。" : "選択したメンバーの番組はありません。"}</p>`;
-    return;
-  }
-  // 単数回・複数回とも同じ配置で描画する。
-  list.innerHTML = groupTverModeRecordsByProgram(visibleRecords)
-    .map(item => tverModeGroupedCardHtml(item)).join("");
+  const normal = groupTverModeRecordsByProgram(visibleRecords);
+  const pinnedHtml = pinned.length
+    ? '<section class="tver-mode-pinned-section" aria-label="お気に入り">' +
+      '<h3 class="check-mode-pinned-heading"><i class="bi bi-pin-angle-fill" aria-hidden="true"></i>お気に入り</h3>' +
+      '<div class="tver-mode-pinned-list">' +
+      pinned.map(item => tverModeGroupedCardHtml(item)).join("") +
+      '</div></section>'
+    : "";
+  const normalHtml = normal.map(item => tverModeGroupedCardHtml(item)).join("");
+  list.innerHTML = pinnedHtml + (normalHtml || (!pinned.length
+    ? `<p class="tver-mode-empty-message">${tverUnwatchedOnly ? "未視聴の番組はありません。" : "選択したメンバーの番組はありません。"}</p>`
+    : ""));
 }
 
 function markTverModeChecked(episodeId, checked) {
@@ -372,6 +423,11 @@ function markTverModeChecked(episodeId, checked) {
 }
 
 function handleTverModeClick(event) {
+  const pin = event.target.closest("[data-tver-pin]");
+  if (pin) {
+    toggleTverModePin(pin.dataset.tverPin);
+    return;
+  }
   const link = event.target.closest("[data-tver-series-link]");
   if (link && link.dataset.tverSeriesLink) {
     markTverModeChecked(link.dataset.tverSeriesLink, true);

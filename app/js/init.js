@@ -6,8 +6,9 @@
 // ==================================================
 // ホーム画面：初回設定カード表示制御
 // ==================================================
-// PWAとしてホーム画面から起動済みの場合、
-// ホーム画面の「まずはホーム画面に追加」カードを非表示にする
+// PWAとして起動中、またはブラウザで非表示を選択済みなら案内カードを隠す
+const HOME_INSTALL_GUIDE_HIDDEN_KEY = "hideHomeInstallGuide";
+
 function updateHomeInstallGuideVisibility() {
   const firstVisitModalSnsElement = document.getElementById("firstVisitModalSns");
 
@@ -31,7 +32,8 @@ function updateHomeInstallGuideVisibility() {
     "facebook_in_app",
   ].includes(browserType);
 
-  const shouldShowInstallGuide = !isStandalone;
+  const isGuideHiddenByUser = localStorage.getItem(HOME_INSTALL_GUIDE_HIDDEN_KEY) === "true";
+  const shouldShowInstallGuide = !isStandalone && !isGuideHiddenByUser;
   const shouldShowSnsGuide =
     !isStandalone &&
     isMobile &&
@@ -51,9 +53,13 @@ function updateHomeInstallGuideVisibility() {
     !shouldShowInstallGuide
   );
 
-  homeInstallGuideMenuElement?.classList.toggle(
+  // 初回設定メニューは、案内カードを閉じた後も利用できるように残す
+  homeInstallGuideMenuElement?.classList.remove("hidden");
+  const hideCheckbox = document.getElementById("homeInstallGuideHideCheckbox");
+  if (hideCheckbox) hideCheckbox.checked = isGuideHiddenByUser;
+  document.getElementById("homeMenuShowInstallGuideButton")?.classList.toggle(
     "hidden",
-    !shouldShowInstallGuide
+    isStandalone || !isGuideHiddenByUser
   );
 
   firstVisitModalSnsElement?.classList.toggle(
@@ -301,6 +307,7 @@ async function init() {
     initializeSetupGuide();
     // Spotify曲一覧JSONを読み込む
     const songs = await loadSpotifySongs();
+    routineSpotifySongCatalog = songs;
     // flag === true の曲をおすすめ欄へ、それ以外を「その他」欄へ分ける
     const recommendedSongs = songs.filter((song) => song.flag === true);
     const otherSongs = songs.filter((song) => song.flag !== true);
@@ -358,6 +365,7 @@ async function init() {
     await restoreFlowStateOrHome();
     initializeTverMode();
     initializeDreamPassMode();
+    initializeUsenMode();
     // ブラウザアクセスかつ初回のみ初回設定モーダル表示
     autoOpenFirstSetupModalIfNeeded();
     //PWA用初回モーダル表示
@@ -494,6 +502,7 @@ async function restoreFlowStateOrHome() {
     if (state.selectedSong) {
       selectSong(state.selectedSong);
     }
+    applyRoutineSpotifyDisplay();
 
     // Spotifyを開いた後の状態なら、次へボタンを表示してボタン色も復元
     if (state.openedAction === OPENED_ACTIONS.spotify) {

@@ -1410,3 +1410,40 @@
     flex-direction: column;
   }
 }
+
+/* 設定モーダル：目次から同じモーダル内で個別設定へ移動 */
+.setting-modal-header-title { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.setting-modal-back-button { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 34px; width: 34px; height: 34px; border: 0; border-radius: 9px; color: var(--color-brand); background: var(--color-surface-soft); font-size: 19px; cursor: pointer; }
+.setting-modal-back-button:focus-visible, .setting-modal-index-item:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; }
+.setting-modal-index { display: grid; gap: 10px; }
+.setting-modal-index-item { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 72px; padding: 13px 14px; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-surface); color: var(--color-text); font: inherit; text-align: left; cursor: pointer; }
+.setting-modal-index-icon { flex: 0 0 32px; width: 32px; display: inline-flex; justify-content: center; align-items: center; font-size: 21px; color: var(--color-brand); }
+.setting-modal-index-text { flex: 1; min-width: 0; display: grid; gap: 4px; }
+.setting-modal-index-text strong { font-size: 14px; }
+.setting-modal-index-text small { color: var(--color-text-muted); font-size: 11px; line-height: 1.4; }
+.setting-modal-index-item > .bi-chevron-right { flex: 0 0 auto; color: var(--color-brand); font-size: 15px; }
+#settingModal .setting-section { margin: 0; }
+#settingModal .setting-modal-index.hidden, #settingModal .setting-section.hidden, #settingModal #settingPwaGuide.hidden, #settingModal .setting-modal-back-button.hidden { display: none !important; }
+
+/* PWA以外ではプッシュ通知の目次項目を非活性化 */
+#settingModal .setting-modal-index-item:disabled { opacity: .45; filter: grayscale(1); cursor: not-allowed; }
+
+/* USEN/BGM設定 */
+#settingModal .setting-routine-note { margin: 14px 0 10px; color: var(--color-text-muted); font-size: 12px; line-height: 1.6; }
+#settingModal .setting-routine-navigation { display: block; width: 100%; box-sizing: border-box; text-align: center; }
+#settingModal .setting-radio-card:has(input:disabled) { opacity: .45; cursor: not-allowed; }
+#settingModal .setting-routine-fixed-wrap { display: grid; gap: 7px; padding: 0 6px 9px 24px; font-size: 13px; }
+#settingModal .setting-routine-fixed-wrap.hidden { display: none !important; }
+#settingModal .setting-routine-fixed-wrap select { width: 100%; max-width: none; }
+
+/* 各設定画面の保存して閉じる操作とUSEN画面への白背景ボタン */
+#settingModal .setting-save-close-button { display: block; width: 100%; box-sizing: border-box; margin-top: 20px; text-align: center; }
+#settingModal #settingOpenUsenModeButton.secondary-button { background: #fff; color: var(--color-brand); border: 1px solid var(--color-border); }
+#settingModal #settingOpenUsenModeButton.secondary-button:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; }
+
+/* 設定目次：各項目のタイトル右側に状態を表示 */
+.setting-modal-index-title { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-width: 0; }
+.setting-modal-index-title > strong { flex: 1; min-width: 0; }
+.setting-modal-index-status { flex: 0 0 auto; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.setting-modal-index-status.is-on { color: var(--color-brand); font-weight: 800; }
+.setting-modal-index-status.is-off { color: #a9a9a9; font-weight: 400; }

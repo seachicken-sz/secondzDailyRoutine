@@ -52,6 +52,19 @@ function bindHomeEvents() {
     openFirstSetupModal();
   });
 
+  document.getElementById("homeInstallGuideHideCheckbox")?.addEventListener("change", (event) => {
+    if (!event.target.checked) return;
+    localStorage.setItem(HOME_INSTALL_GUIDE_HIDDEN_KEY, "true");
+    updateHomeInstallGuideVisibility();
+  });
+
+  addClickEvent(document.getElementById("homeMenuShowInstallGuideButton"), () => {
+    localStorage.removeItem(HOME_INSTALL_GUIDE_HIDDEN_KEY);
+    updateHomeInstallGuideVisibility();
+    closeHomeMenu();
+    homeInstallGuideCardElement?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
   addClickEvent(homeMenuUsageButtonElement, () => {
     closeHomeMenu();
     openUsageModal();
@@ -1309,6 +1322,9 @@ function bindHomeMenuAnchorEvents() {
         homeStepElement.scrollTo({ top: 0, behavior: "smooth" });
       } else if (mode === "dreampass") {
         setDreamPassModeEnabled(true);
+        homeStepElement.scrollTo({ top: 0, behavior: "smooth" });
+      } else if (mode === "usen") {
+        setUsenModeEnabled(true);
         homeStepElement.scrollTo({ top: 0, behavior: "smooth" });
       }
     });

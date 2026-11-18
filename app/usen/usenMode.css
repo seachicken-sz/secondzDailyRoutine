@@ -1,0 +1,55 @@
+/* USENチェックモード：TVer・ドリパスと共通の外枠なしレイアウト */
+#homeStep.usen-mode-active > .home-header { margin-bottom: 0; }
+#usenModeContent { width: 100%; flex-shrink: 0; padding: 3px 0 24px; }
+.usen-mode-header { margin: 0 0 14px; text-align: center; }
+.usen-mode-header h2 { margin: 0 0 14px; font-size: 19px; line-height: 1.4; font-weight: 800; color: var(--color-brand); }
+#usenModeContent .check-mode-tab-nav { margin-bottom: 28px; }
+.usen-mode-default-setting { display: flex; gap: 4px; align-items: center; font-size: 11px; color: var(--color-text); text-align: left; cursor: pointer; }
+.usen-mode-default-setting input { width: 14px; height: 14px; margin: 0; accent-color: var(--color-brand); }
+.usen-mode-inner-tabs { display: flex; gap: 0; margin: 0 0 22px; border-bottom: 2px solid var(--color-border); }
+.usen-mode-inner-tabs button { flex: 1; border: 0; border-bottom: 3px solid transparent; padding: 12px 5px 10px; margin-bottom: -2px; background: transparent; color: var(--color-text-muted); font: inherit; font-weight: 700; cursor: pointer; }
+.usen-mode-inner-tabs button[aria-selected="true"] { color: var(--color-brand); border-bottom-color: var(--color-brand); }
+.usen-mode-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 6px 10px; margin: 0 0 10px; }
+.usen-mode-section-heading:not(:first-child) { margin-top: 23px; }
+.usen-mode-section-heading h3 { font-size: 15px; font-weight: 800; color: var(--color-brand); margin: 0; }
+.usen-mode-ranking-heading > span { color: var(--color-text-muted); font-size: 10px; white-space: nowrap; }
+.usen-mode-song-list { display: grid; gap: 8px; }
+.usen-mode-rank-list { width: 100%; }
+.usen-mode-song-row.member-work-link-card { width: 100%; box-sizing: border-box; gap: 9px; padding: 0 12px 0 9px; }
+.usen-mode-favorite { display: inline-flex; justify-content: center; align-items: center; flex: 0 0 34px; width: 34px; height: 44px; padding: 0; border: 0; background: transparent; color: var(--color-text-muted); font-size: 19px; cursor: pointer; }
+.usen-mode-favorite.is-favorite { color: var(--color-brand); }
+.usen-mode-favorite:focus-visible, .usen-mode-song-link:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; border-radius: 6px; }
+.usen-mode-song-link { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex: 1; min-width: 0; min-height: 48px; padding: 10px 0; box-sizing: border-box; color: var(--color-text); text-decoration: none; }
+.usen-mode-song-name.member-work-link-title { flex: 1; min-width: 0; white-space: normal; overflow: visible; text-overflow: clip; overflow-wrap: anywhere; }
+.usen-mode-crown { display: inline-block; flex: none; width: 16px; height: 16px; margin-left: 5px; vertical-align: -2px; color: var(--color-brand); }
+.usen-mode-rank-row { display: flex; align-items: center; gap: 10px; width: 100%; padding: 10px 4px; border-bottom: 1px solid var(--color-border); color: var(--color-text); }
+.usen-mode-rank-row .usen-mode-song-name { min-width: 0; flex: 1; overflow-wrap: anywhere; }
+.usen-mode-rank-row strong { font-size: 17px; color: var(--color-brand); white-space: nowrap; margin-left: auto; }
+.usen-mode-search { width: 100%; min-height: 40px; border: 1px solid var(--color-border); border-radius: 8px; padding: 8px 12px; background: var(--color-surface); color: var(--color-text); font: inherit; font-size: 13px; margin-bottom: 10px; }
+.usen-mode-filter-row { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; margin: 10px 0; }
+.usen-mode-filter-row button { min-height: 38px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 9px; padding: 6px 12px; color: var(--color-text); font: inherit; font-size: 12px; cursor: pointer; }
+.usen-mode-filter-row button.active { background: var(--color-brand); border-color: var(--color-brand); color: var(--color-text-inverse); }
+.usen-mode-caption { font-size: 11px; line-height: 1.5; color: var(--color-text-muted); }
+.usen-mode-chart-wrap { position: relative; width: 100%; height: 270px; margin: 8px 0 12px; }
+.usen-mode-chart-legend { display: flex; flex-wrap: wrap; gap: 6px 12px; margin-bottom: 15px; font-size: 11px; }
+.usen-mode-chart-legend span { display: inline-flex; gap: 5px; align-items: center; }
+.usen-mode-chart-legend i { width: 10px; height: 3px; display: inline-block; }
+.usen-mode-details-link { display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; width: 100%; box-sizing: border-box; }
+@media(max-width: 380px) { .usen-mode-ranking-heading > span { font-size: 9px; } .usen-mode-section-heading h3 { font-size: 14px; } }
+
+/* 追加投票チャンス：今日のおすすめ曲の直前に折り畳み表示 */
+.usen-mode-extra-votes { margin: 0 0 23px; border: 1px solid var(--color-border); border-radius: 10px; background: var(--color-surface); overflow: hidden; }
+.usen-mode-extra-votes > summary { padding: 13px 14px; color: var(--color-brand); font-size: 14px; font-weight: 800; cursor: pointer; }
+.usen-mode-extra-votes[open] > summary { border-bottom: 1px solid var(--color-border); }
+.usen-mode-extra-votes-body { padding: 15px 14px 18px; }
+.usen-mode-extra-vote-item + .usen-mode-extra-vote-item { margin-top: 26px; }
+.usen-mode-extra-vote-item h3 { margin: 0 0 8px; color: var(--color-brand); font-size: 14px; line-height: 1.5; font-weight: 800; }
+.usen-mode-extra-vote-item p { margin: 0 0 13px; font-size: 13px; line-height: 1.6; color: var(--color-text); }
+.usen-mode-extra-vote-button.primary-button { display: flex; align-items: center; justify-content: center; width: 100%; box-sizing: border-box; text-align: center; }
+
+/* 曲名検索のワンタップクリア */
+.usen-mode-search-wrap { position: relative; margin-bottom: 10px; }
+.usen-mode-search-wrap .usen-mode-search { margin-bottom: 0; padding-right: 42px; }
+.usen-mode-search-clear { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); display: inline-flex; justify-content: center; align-items: center; width: 36px; height: 36px; border: 0; background: transparent; color: var(--color-text-muted); font-size: 18px; cursor: pointer; }
+.usen-mode-search-clear.hidden { display: none; }
+.usen-mode-search-clear:focus-visible { outline: 2px solid var(--color-brand); outline-offset: -2px; border-radius: 8px; }

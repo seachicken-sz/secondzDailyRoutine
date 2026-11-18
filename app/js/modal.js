@@ -179,6 +179,17 @@ if (pwaFirstVisitModalElement) {
   });
   
   addClickEvent(closeSettingModalButtonElement, closeSettingModal);
+  settingModalElement?.addEventListener("click", event => {
+    const button = event.target.closest("[data-setting-save-close]");
+    if (button && settingModalElement.contains(button)) closeSettingModal();
+  });
+  settingModalElement?.addEventListener("change", () => refreshSettingModalIndexStatus());
+  bindRoutineMusicSettingsEvents();
+  addClickEvent(document.getElementById("settingModalBackButton"), () => showSettingModalPage("index"));
+  document.getElementById("settingModalIndex")?.addEventListener("click", event => {
+    const button = event.target.closest("[data-setting-open]");
+    if (button && !button.disabled) showSettingModalPage(button.dataset.settingOpen);
+  });
   
   addClickEvent(settingOpenFirstSetupButtonElement, () => {
     closeSettingModal();
@@ -225,12 +236,60 @@ function openUsageModal() {
 }
 
 
+function refreshSettingModalIndexStatus() {
+  const music = typeof getRoutineMusicSettings === "function" ? getRoutineMusicSettings() : { bgm: "manual", usen: "manual" };
+  const statuses = {
+    push: typeof getSavedPushSetting === "function" && getSavedPushSetting() !== "off",
+    custom: typeof loadMyCustomIds === "function" && loadMyCustomIds().length > 0,
+    select: typeof getSelectModeSettings === "function" && getSelectModeSettings().enabled === true,
+    bgm: music.bgm !== "manual",
+    usen: music.usen !== "manual"
+  };
+  Object.entries(statuses).forEach(([key, enabled]) => {
+    const status = document.querySelector('#settingModalIndex [data-setting-status="' + key + '"]');
+    if (!status) return;
+    status.textContent = enabled ? "ON" : "OFF";
+    status.classList.toggle("is-on", enabled);
+    status.classList.toggle("is-off", !enabled);
+    status.setAttribute("aria-label", key + (enabled ? " ON" : " OFF"));
+  });
+}
+
+function showSettingModalPage(page) {
+  const pages = {
+    push: { title: "プッシュ通知設定", section: "pushSettingSection" },
+    custom: { title: "マイカスタム設定", section: "myCustomSettingSection" },
+    select: { title: "セレクトモード設定", section: "selectModeSettingSection" },
+    bgm: { title: "「今日のSpotify再生」設定", section: "bgmRoutineSettingSection" },
+    usen: { title: "「USEN推し活」設定", section: "usenRoutineSettingSection" }
+  };
+  const isPwa = typeof isStandaloneMode === "function" && isStandaloneMode();
+  if (page === "usen" || page === "bgm") refreshRoutineMusicSettingsUi();
+  const target = page === "push" && !isPwa ? "index" :
+    Object.prototype.hasOwnProperty.call(pages, page) ? page : "index";
+  const index = target === "index";
+  if (index) refreshSettingModalIndexStatus();
+  document.getElementById("settingModalIndex")?.classList.toggle("hidden", !index);
+  Object.entries(pages).forEach(([name, config]) => {
+    document.getElementById(config.section)?.classList.toggle("hidden", name !== target);
+  });
+  const guide = document.getElementById("settingPwaGuide");
+  if (guide) guide.classList.toggle("hidden", target !== "push" || isPwa);
+  document.getElementById("settingModalBackButton")?.classList.toggle("hidden", index);
+  const title = document.getElementById("settingModalTitle");
+  if (title) title.textContent = index ? "設定" : pages[target].title;
+  const body = document.querySelector("#settingModal .setting-modal-body");
+  if (body) body.scrollTop = 0;
+}
+
 function openSettingModal() {
   if (!settingModalElement) {
     return;
   }
 
   updateSettingModalState();
+  refreshRoutineMusicSettingsUi();
+  showSettingModalPage("index");
 
   if (typeof refreshPushNotificationUi === "function") {
     refreshPushNotificationUi();
@@ -249,6 +308,7 @@ function closeSettingModal() {
   }
 
   settingModalElement.classList.add("hidden");
+  showSettingModalPage("index");
 }
 
 function updateSettingModalState() {
@@ -256,6 +316,12 @@ function updateSettingModalState() {
 
   settingPwaGuideElement?.classList.toggle("hidden", isPwa);
   pushSettingSectionElement?.classList.toggle("is-disabled", !isPwa);
+  const pushIndexButton = document.querySelector('#settingModalIndex [data-setting-open="push"]');
+  if (pushIndexButton) {
+    pushIndexButton.disabled = !isPwa;
+    pushIndexButton.setAttribute("aria-disabled", String(!isPwa));
+    pushIndexButton.title = isPwa ? "" : "プッシュ通知はホーム画面に追加したアプリから設定できます";
+  }
 
   if (pushSettingFieldsetElement) {
     pushSettingFieldsetElement.disabled = !isPwa;

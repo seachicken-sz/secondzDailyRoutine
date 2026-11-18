@@ -26,14 +26,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   
+  <!-- 更新時のみJS/CSSへキャッシュ回避パラメータを付与 -->
+  <script>
+    window.tamugotoFreshAssetUrl = function(path) {
+      const token = new URLSearchParams(location.search).get("refreshAssets");
+      return token && /^(\.\/|\.\.\/)/.test(path)
+        ? path + (path.includes("?") ? "&" : "?") + "refreshAssets=" + encodeURIComponent(token)
+        : path;
+    };
+  </script>
   <!--CSS読み込み-->
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/modal.css" />
-  <link rel="stylesheet" href="./css/home.css" />
-  <link rel="stylesheet" href="./css/task.css" />
-  <link rel="stylesheet" href="./css/utility.css" />
-  <link rel="stylesheet" href="./tver/tverMode.css" />
-  <link rel="stylesheet" href="./dreampass/dreamPassMode.css" />
+  <script>document.write('<link rel="stylesheet" href="' + tamugotoFreshAssetUrl("./css/style.css") + '">');</script>
+  <script>document.write('<link rel="stylesheet" href="' + tamugotoFreshAssetUrl("./css/modal.css") + '">');</script>
+  <script>document.write('<link rel="stylesheet" href="' + tamugotoFreshAssetUrl("./css/home.css") + '">');</script>
+  <script>document.write('<link rel="stylesheet" href="' + tamugotoFreshAssetUrl("./css/task.css") + '">');</script>
+  <script>document.write('<link rel="stylesheet" href="' + tamugotoFreshAssetUrl("./css/utility.css") + '">');</script>
+  <script>document.write('<link rel="stylesheet" href="' + tamugotoFreshAssetUrl("./tver/tverMode.css") + '">');</script>
+  <script>document.write('<link rel="stylesheet" href="' + tamugotoFreshAssetUrl("./dreampass/dreamPassMode.css") + '">');</script>
+  <script>document.write('<link rel="stylesheet" href="' + tamugotoFreshAssetUrl("./usen/usenMode.css") + '">');</script>
   
   <link rel="manifest" href="../manifest.json">
   <link rel="apple-touch-icon" href="../img/icon-180.png">
@@ -85,6 +95,7 @@
             <button type="button" class="home-menu-item home-menu-page-link home-menu-mode-link" data-home-menu-mode="dreampass">
               <span><i class="bi bi-ticket-perforated"></i>ドリパスチェックモード</span>
             </button>
+            <button type="button" class="home-menu-item home-menu-page-link home-menu-mode-link" data-home-menu-mode="usen"><span><i class="bi bi-music-note-list"></i>USENチェックモード</span></button>
           </section>
           <section class="home-menu-accordion">
             <button type="button" class="home-menu-item" data-home-menu-accordion="1minutes_moode">
@@ -133,6 +144,7 @@
             <div class="home-menu-detail hidden" data-home-menu-detail="setup">
               <img loading="lazy" decoding="async" src="../img/setting/setting_whypwa.png" alt="ホーム画面に追加するとページを開いた後にツールに戻るのがとっても楽！">
               <button type="button" class="primary-button" id="homeMenuSetupButton">詳しく見る</button>
+              <button type="button" class="secondary-button hidden" id="homeMenuShowInstallGuideButton">「はじめに」を再表示</button>
             </div>
           </section>
       
@@ -192,6 +204,7 @@
       <div id="home-top-share-btn-wrap">
         <button id="updateNoticeButton" type="button" class="button secondary update-notice-button"><i class="bi bi-bell"></i></button>
         <button id="settingButton" type="button" class="button secondary update-notice-button" aria-label="設定を開く"><i class="bi bi-gear"></i></button>
+        <button id="refreshAllButton" type="button" class="button secondary update-notice-button" aria-label="JS・CSS・データを再取得して更新" title="最新データに更新"><i class="bi bi-arrow-clockwise" aria-hidden="true"></i></button>
       </div>
 
       <!-- 通常ホームとTVerモードの共通ロゴ -->
@@ -214,6 +227,7 @@
           <button type="button" class="home-check-mode-link" data-home-mode="dreampass">
             <i class="bi bi-ticket-perforated" aria-hidden="true"></i><span>ドリパスチェック</span>
           </button>
+          <button type="button" class="home-check-mode-link" data-home-mode="usen"><i class="bi bi-music-note-list" aria-hidden="true"></i><span>USENチェック</span></button>
         </div>
     
         <section class="home-color-change-area">
@@ -295,6 +309,10 @@
             <a class="secondary-button" href="https://x.com/tsunakan_r" target="_blank">作成者にヘルプ要請</a><br><br>
             無理のない範囲でtimeleszをオーエンタムしていきましょう！
           </p>
+          <label class="home-install-hide-option" for="homeInstallGuideHideCheckbox">
+            <input type="checkbox" id="homeInstallGuideHideCheckbox">
+            <span>次回からこの案内を表示しない</span>
+          </label>
         
 
         </section>
@@ -344,7 +362,7 @@
         <section class="home-card schedule-timely">
           <h2 class="ruby-h"><ruby>スケジュール<rt>schedule</rt></ruby></h2>
           <div class="card-link">
-            <a href="https://timely-iota-eight.vercel.app/" tartget="_blank">
+            <a href="https://timely-iota-eight.vercel.app/" target="_blank" rel="noopener noreferrer" onclick="if (window.matchMedia('(display-mode: standalone)').matches || navigator.standalone) { if (/iPhone|iPad|iPod/.test(navigator.userAgent)) { event.preventDefault(); window.location.href = 'x-safari-https://timely-iota-eight.vercel.app/'; } else if (/Android/.test(navigator.userAgent)) { event.preventDefault(); window.location.href = 'intent://timely-iota-eight.vercel.app/#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=https%3A%2F%2Ftimely-iota-eight.vercel.app%2F;end'; } }">
               <img src="https://timely-iota-eight.vercel.app/icon-192.png" alt="Timely">
               <span class="card-link-text">
                 <strong>Timely</strong>
@@ -497,6 +515,7 @@
           <button id="dreamPassModeToggleButton" data-home-mode="dreampass" type="button" class="home-mode-button" aria-label="ドリパスチェックモードを表示" aria-pressed="false" title="ドリパス">
             <i class="bi bi-ticket-perforated" aria-hidden="true"></i><span>ドリパス</span>
           </button>
+          <button data-home-mode="usen" type="button" class="home-mode-button" aria-label="USENチェックモードを表示" aria-pressed="false" title="USEN"><i class="bi bi-music-note-list" aria-hidden="true"></i><span>USEN</span></button>
         </div>
         <div class="tver-mode-header-meta">
           <label class="tver-mode-default-setting" for="tverModeDefaultCheckbox">
@@ -535,6 +554,7 @@
           <button data-home-mode="dreampass" type="button" class="home-mode-button" aria-label="ドリパスチェックモードを表示" aria-pressed="false" title="ドリパス">
             <i class="bi bi-ticket-perforated" aria-hidden="true"></i><span>ドリパス</span>
           </button>
+          <button data-home-mode="usen" type="button" class="home-mode-button" aria-label="USENチェックモードを表示" aria-pressed="false" title="USEN"><i class="bi bi-music-note-list" aria-hidden="true"></i><span>USEN</span></button>
         </div>
         <label class="dream-pass-default-setting" for="dreamPassModeDefaultCheckbox">
           <input id="dreamPassModeDefaultCheckbox" type="checkbox">
@@ -547,6 +567,60 @@
       <div id="dreamPassModeList"></div>
     </div>
     
+    <!-- USENチェックモード（devのみ） -->
+    <div id="usenModeContent" class="hidden">
+      <header class="usen-mode-header">
+        <h2>USENチェックモード</h2>
+        <div class="home-mode-switcher check-mode-tab-nav" role="group" aria-label="表示モード切り替え">
+          <button data-home-mode="home" type="button" class="home-mode-button"><i class="bi bi-house" aria-hidden="true"></i><span>HOME</span></button>
+          <button data-home-mode="tver" type="button" class="home-mode-button"><i class="bi bi-tv" aria-hidden="true"></i><span>TVer</span></button>
+          <button data-home-mode="dreampass" type="button" class="home-mode-button"><i class="bi bi-ticket-perforated" aria-hidden="true"></i><span>ドリパス</span></button>
+          <button data-home-mode="usen" type="button" class="home-mode-button"><i class="bi bi-music-note-list" aria-hidden="true"></i><span>USEN</span></button>
+        </div>
+        <label class="usen-mode-default-setting" for="usenModeDefaultCheckbox"><input id="usenModeDefaultCheckbox" type="checkbox"><span>起動時にこの画面を表示する</span></label>
+      </header>
+      <nav class="usen-mode-inner-tabs" role="tablist" aria-label="USENモード内の表示">
+        <button id="usenRequestTab" type="button" role="tab" aria-controls="usenRequestPanel" aria-selected="true">リクエスト</button>
+        <button id="usenRankingTab" type="button" role="tab" aria-controls="usenRankingPanel" aria-selected="false">順位</button>
+      </nav>
+      <section id="usenRequestPanel" role="tabpanel" aria-labelledby="usenRequestTab">
+        <details class="usen-mode-extra-votes">
+          <summary>もう一回投票チャンスがあるかも…？</summary>
+          <div class="usen-mode-extra-votes-body">
+            <section class="usen-mode-extra-vote-item">
+              <h3>「推しリクMAP」でダイソーや松屋に行ったら投票チャンス！</h3>
+              <p>このMAPから「推せる店」を選んでリクエストを受け取り投票♪</p>
+              <a href="https://map.usenspot.com/oshireq" target="_blank" rel="noopener noreferrer" class="primary-button usen-mode-extra-vote-button">推しリクMAPを開く</a>
+            </section>
+            <section class="usen-mode-extra-vote-item">
+              <h3>U-NEXT加入者の方へ！</h3>
+              <p>U-NEXT会員はログインでもう一度投票できるよ！</p>
+              <a href="https://usen.oshireq.com/campaign/unext" target="_blank" rel="noopener noreferrer" class="primary-button usen-mode-extra-vote-button">U-NEXTで投票する</a>
+            </section>
+          </div>
+        </details>
+        <div class="usen-mode-section-heading"><h3>今日のおすすめ曲</h3></div>
+        <div id="usenRecommendedSongs" class="usen-mode-song-list"></div>
+        <div class="usen-mode-section-heading"><h3>曲を探す</h3></div>
+        <div class="usen-mode-filter-row" role="group" aria-label="曲一覧の表示切替"><button id="usenAllSongsFilter" type="button" class="active" aria-pressed="true">すべて</button><button id="usenFavoriteSongsFilter" type="button" aria-pressed="false"><i class="bi bi-heart" aria-hidden="true"></i> お気に入り</button></div>
+        <div class="usen-mode-search-wrap">
+          <input id="usenSongSearch" class="usen-mode-search" type="text" placeholder="曲名を検索" aria-label="曲名を検索" autocomplete="off">
+          <button id="usenSongSearchClear" class="usen-mode-search-clear hidden" type="button" aria-label="検索内容をクリア" title="検索内容をクリア"><i class="bi bi-x-circle-fill" aria-hidden="true"></i></button>
+        </div>
+        <div id="usenRequestSongs" class="usen-mode-song-list"></div>
+        <p id="usenRequestStatus" class="usen-mode-caption" aria-live="polite"></p>
+      </section>
+      <section id="usenRankingPanel" class="hidden" role="tabpanel" aria-labelledby="usenRankingTab">
+        <div class="usen-mode-section-heading usen-mode-ranking-heading"><h3>現在のランクイン曲</h3><span id="usenRankingUpdated">最終取得 --</span></div>
+        <div id="usenCurrentRanks" class="usen-mode-rank-list"></div>
+        <div class="usen-mode-section-heading"><h3>今週分のグラフ</h3></div>
+        <div id="usenChartEmpty" class="usen-mode-caption hidden">今週の順位データはありません。</div>
+        <div class="usen-mode-chart-wrap"><canvas id="usenWeeklyChart" aria-label="今週分の順位推移グラフ" role="img"></canvas></div>
+        <div id="usenChartLegend" class="usen-mode-chart-legend"></div>
+        <a class="primary-button usen-mode-details-link" href="../usen_ranking/">詳しく見る</a>
+      </section>
+    </div>
+
     </section>
     <!--STEP 1 Spotify-->
     <section id="spotifyStep" class="step-screen hidden">
@@ -1261,11 +1335,18 @@
 <div id="settingModal" class="modal-overlay hidden">
   <div class="modal-content setting-modal-content" role="dialog" aria-modal="true" aria-labelledby="settingModalTitle">
     <div class="modal-header">
-      <h2 id="settingModalTitle" class="modal-title">設定</h2>
+      <div class="setting-modal-header-title"><button id="settingModalBackButton" class="setting-modal-back-button hidden" type="button" aria-label="設定一覧に戻る"><i class="bi bi-arrow-left" aria-hidden="true"></i></button><h2 id="settingModalTitle" class="modal-title">設定</h2></div>
       <button id="closeSettingModalButton" class="modal-close-button" type="button" aria-label="閉じる">×</button>
     </div>
 
     <div class="modal-body setting-modal-body">
+      <nav id="settingModalIndex" class="setting-modal-index" aria-label="設定項目">
+        <button type="button" class="setting-modal-index-item" data-setting-open="push"><span class="setting-modal-index-icon"><i class="bi bi-bell"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>プッシュ通知設定</strong><span class="setting-modal-index-status is-off" data-setting-status="push" aria-label="プッシュ通知設定 OFF">OFF</span></span><small>リマイド通知の時刻・ON/OFFの設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+        <button type="button" class="setting-modal-index-item" data-setting-open="custom"><span class="setting-modal-index-icon"><i class="bi bi-person-gear"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>マイカスタム設定</strong><span class="setting-modal-index-status is-off" data-setting-status="custom" aria-label="マイカスタム設定 OFF">OFF</span></span><small>利用中のサブスク・ファンクラブの設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+        <button type="button" class="setting-modal-index-item" data-setting-open="select"><span class="setting-modal-index-icon"><i class="bi bi-ui-checks-grid"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>セレクトモード設定</strong><span class="setting-modal-index-status is-off" data-setting-status="select" aria-label="セレクトモード設定 OFF">OFF</span></span><small>好きなタスクだけ選んでルーチンを組める設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+        <button type="button" class="setting-modal-index-item" data-setting-open="bgm"><span class="setting-modal-index-icon"><i class="bi bi-headphones"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>「今日のSpotify再生」設定</strong><span class="setting-modal-index-status is-off" data-setting-status="bgm" aria-label="「今日のSpotify再生」設定 OFF">OFF</span></span><small>タスク中に聴ける音楽の設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+        <button type="button" class="setting-modal-index-item" data-setting-open="usen"><span class="setting-modal-index-icon"><i class="bi bi-music-note-list"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>「USEN推し活」設定</strong><span class="setting-modal-index-status is-off" data-setting-status="usen" aria-label="「USEN推し活」設定 OFF">OFF</span></span><small>USEN推し活リクエストの設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </nav>
       <section id="settingPwaGuide" class="setting-pwa-guide hidden">
         <p>
           Push通知はホーム画面に追加したアプリからのみ利用できます。
@@ -1275,7 +1356,31 @@
         </button>
       </section>
 
-      <section id="pushSettingSection" class="setting-section">
+      <section id="usenRoutineSettingSection" class="setting-section hidden">
+        <div class="setting-section-header"><h3><i class="bi bi-music-note-list"></i>USEN推し活設定</h3><p>USEN推し活リクエストの設定</p></div>
+        <fieldset class="setting-fieldset"><div class="setting-radio-list">
+          <label class="setting-radio-card"><input type="radio" name="usenRoutineSetting" value="manual" checked><span><strong>毎回自分で選ぶ <small class="setting-default-label">（初期設定）</small></strong><small>リクエストする曲を毎回選択</small></span></label>
+          <label class="setting-radio-card"><input type="radio" name="usenRoutineSetting" value="recommended"><span><strong>おすすめ曲を自動選択</strong><small>おすすめ曲の先頭を自動選択</small></span></label>
+          <label id="usenRoutineFavoritesOption" class="setting-radio-card"><input type="radio" name="usenRoutineSetting" value="favorites"><span><strong>お気に入り曲を固定表示する</strong><small>おすすめ曲の代わりにお気に入り曲を表示</small></span></label>
+        </div></fieldset>
+        <p class="select-mode-auto-save-note">変更内容は自動で保存されます。</p>
+        <p class="setting-routine-note">お気に入り曲はUSENチェックモードから設定できます。</p>
+        <button type="button" id="settingOpenUsenModeButton" class="secondary-button setting-routine-navigation">USENチェックモードを開く</button>
+        <button type="button" class="primary-button setting-save-close-button" data-setting-save-close>保存して閉じる</button>
+      </section>
+      <section id="bgmRoutineSettingSection" class="setting-section hidden">
+        <div class="setting-section-header"><h3><i class="bi bi-headphones"></i>今日のSpotify再生設定</h3><p>タスク中に聴く音楽の設定</p></div>
+        <fieldset class="setting-fieldset"><div class="setting-radio-list">
+          <label class="setting-radio-card"><input type="radio" name="bgmRoutineSetting" value="manual" checked><span><strong>毎回自分で選ぶ <small class="setting-default-label">（初期設定）</small></strong><small>再生する曲を毎回選択</small></span></label>
+          <label class="setting-radio-card"><input type="radio" name="bgmRoutineSetting" value="recommended"><span><strong>おすすめ曲を自動選択</strong><small>おすすめ曲からランダムに1曲選択</small></span></label>
+          <label class="setting-radio-card"><input type="radio" name="bgmRoutineSetting" value="fixed"><span><strong>選択した曲のみ再生する</strong><small>指定した曲を自動選択</small></span></label>
+          <div id="bgmRoutineFixedSongWrap" class="setting-routine-fixed-wrap hidden"><label for="bgmRoutineFixedSong">再生する曲</label><select id="bgmRoutineFixedSong" class="check-mode-sort-select"></select></div>
+          <label class="setting-radio-card"><input type="radio" name="bgmRoutineSetting" value="stationhead"><span><strong>Stationheadへの接続確認にする</strong><small>BGM選択の代わりにStationhead接続を確認</small></span></label>
+        </div></fieldset>
+        <p class="select-mode-auto-save-note">変更内容は自動で保存されます。</p>
+        <button type="button" class="primary-button setting-save-close-button" data-setting-save-close>保存して閉じる</button>
+      </section>
+      <section id="pushSettingSection" class="setting-section hidden">
         <div class="setting-section-header">
           <h3><i class="bi bi-bell"></i>プッシュ通知</h3>
           <p>タムごとDailyからの通知を受け取れます。<br>
@@ -1313,23 +1418,24 @@
           </div>
       
           <div class="setting-action-row">
-            <button type="button" id="pushSaveButton" class="primary-button">
-              設定を保存
+            <button type="button" id="pushSaveButton" class="primary-button setting-save-close-button">
+              保存して閉じる
             </button>
           </div>
         </fieldset>
       </section>
 
-      <section id="myCustomSettingSection" class="setting-section">
+      <section id="myCustomSettingSection" class="setting-section hidden">
         <div class="setting-section-header">
           <h3><i class="bi bi-person-gear"></i>マイカスタム</h3>
           <p>利用中のサービスや加入しているファンクラブに合わせて、タスクを追加できます。</p>
         </div>
         <div id="myCustomSettingList" class="select-mode-feature-list"></div>
         <p id="myCustomSettingStatus" class="select-mode-auto-save-note" aria-live="polite">読み込み中...</p>
+        <button type="button" class="primary-button setting-save-close-button" data-setting-save-close>保存して閉じる</button>
       </section>
 
-      <section id="selectModeSettingSection" class="setting-section">
+      <section id="selectModeSettingSection" class="setting-section hidden">
         <div class="setting-section-header">
           <h3><i class="bi bi-ui-checks-grid"></i>セレクトモード</h3>
           <p>
@@ -1404,6 +1510,7 @@
             現在選べるデイリータスクがありません。
           </p>
         </section>
+        <button type="button" class="primary-button setting-save-close-button" data-setting-save-close>保存して閉じる</button>
       </section>
     </div>
   </div>
@@ -1478,51 +1585,64 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.js"></script>
 <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 <!-- 基本・共通 -->
-<script src="./js/config.js" defer></script>
-<script src="./js/state.js" defer></script>
-<script src="./js/dom.js" defer></script>
-<script src="./js/utils.js" defer></script>
-<script src="./js/pushNotification.js" defer></script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/config.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/state.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/dom.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/utils.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/pushNotification.js") + '" defer><' + '/script>');</script>
 <!-- データ・保存・ログ -->
-<script src="./js/loader.js" defer></script>
-<script src="./js/sheetLogger.js" defer></script>
-<script src="./js/storage.js" defer></script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/loader.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/sheetLogger.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/storage.js") + '" defer><' + '/script>');</script>
 <!-- 描画・UI補助 -->
-<script src="./js/postBuilder.js" defer></script>
-<script src="./js/renderers.js" defer></script>
-<script src="./js/selectors.js" defer></script>
-<script src="./js/musicTop.js" defer></script>
-<script src="./js/theme.js" defer></script>
-<script src="./js/memberWorks.js" defer></script>
-<script src="./js/setting.js" defer></script>
-<script src="./js/selectMode.js" defer></script>
-<script src="./js/myCustom.js" defer></script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/postBuilder.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/renderers.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/selectors.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/musicTop.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/theme.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/memberWorks.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/setting.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/selectMode.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/myCustom.js") + '" defer><' + '/script>');</script>
 <!-- シェア画像 -->
-<script src="./js/shareImages/shareImageThemes.js" defer></script>
-<script src="./js/shareImages/shareImageUtils.js" defer></script>
-<script src="./js/shareImages/index.js" defer></script>
-<script src="./js/shareImages/shareImage.js" defer></script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/shareImages/shareImageThemes.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/shareImages/shareImageUtils.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/shareImages/index.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/shareImages/shareImage.js") + '" defer><' + '/script>');</script>
 <!-- 遷移・初期化 -->
-<script src="./js/navigation.js" defer></script>
-<script src="./js/init.js" defer></script>
-<script src="./js/modal.js" defer></script>
-<script src="./js/stepHelpModal.js" defer></script> 
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/navigation.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/init.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/modal.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/stepHelpModal.js") + '" defer><' + '/script>');</script> 
 <!-- 画面別 -->
-<script src="./js/home.js" defer></script>
-<script src="./js/spotify.js" defer></script>
-<script src="./js/onceTask.js" defer></script>
-<script src="./js/requestSong.js" defer></script>
-<script src="./js/radioRequestSongOverride.js" defer></script>
-<script src="./js/dailyTask.js" defer></script>
-<script src="./js/post.js" defer></script>
-<script src="./js/youtube.js" defer></script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/home.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/spotify.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/onceTask.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/requestSong.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/radioRequestSongOverride.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/dailyTask.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/post.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/youtube.js") + '" defer><' + '/script>');</script>
 <!-- TVerモード -->
-<script src="./tver/tverData.js" defer></script>
-<script src="./tver/tverMode.js" defer></script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./tver/tverData.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./tver/tverMode.js") + '" defer><' + '/script>');</script>
 <!-- ドリパスチェックモード -->
-<script src="./dreampass/dreamPassMode.js" defer></script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./dreampass/dreamPassMode.js") + '" defer><' + '/script>');</script>
+<!-- USENチェックモード -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./usen/usenMode.js") + '" defer><' + '/script>');</script>
 <!-- 起動 -->
-<script src="./js/app.js" defer></script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/app.js") + '" defer><' + '/script>');</script>
+<script>
+  document.getElementById("refreshAllButton")?.addEventListener("click", function() {
+    this.disabled = true;
+    this.setAttribute("aria-label", "更新中");
+    // 完了履歴や個人設定は削除しない。
+    const url = new URL(location.href);
+    url.searchParams.set("refreshAssets", String(Date.now()));
+    location.replace(url.href);
+  });
+</script>
 </body>
 </html>
 

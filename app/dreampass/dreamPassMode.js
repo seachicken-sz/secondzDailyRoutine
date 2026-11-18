@@ -4,14 +4,44 @@ let dreamPassRecords = [];
 let dreamPassLoadVersion = 0;
 let dreamPassSelectedMembers = new Set(["all"]);
 let dreamPassSortOrder = "asc";
+const DREAM_PASS_PINS_KEY = "secondzDailyRoutineDreamPassPinnedWorks";
+let dreamPassPinnedIds = new Set();
+function dreamPassPinKey(item) {
+  // イベントURLは変化するので、可能な限り作品ID（m数字）に紐づける。
+  const url = String(item.workUrl || item.platformUrl || "");
+  const match = url.match(/\/m(\d+)(?:[/?#]|$)/);
+  return match ? "m" + match[1] : url.split(/[?#]/)[0].replace(/\/+$/, "");
+}
+function loadDreamPassPins() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(DREAM_PASS_PINS_KEY) || "[]");
+    dreamPassPinnedIds = new Set(Array.isArray(saved) ? saved.filter(id => typeof id === "string") : []);
+  } catch (error) { dreamPassPinnedIds = new Set(); }
+}
+function toggleDreamPassPin(key) {
+  if (!key) return;
+  if (dreamPassPinnedIds.has(key)) dreamPassPinnedIds.delete(key);
+  else dreamPassPinnedIds.add(key);
+  try { localStorage.setItem(DREAM_PASS_PINS_KEY, JSON.stringify([...dreamPassPinnedIds])); }
+  catch (error) { console.warn("ドリパスピン留めを保存できませんでした", error); }
+  renderDreamPassMode();
+}
+function dreamPassPinButtonHtml(item) {
+  const key = dreamPassPinKey(item);
+  const pinned = dreamPassPinnedIds.has(key);
+  return `<button type="button" class="check-mode-pin-button${pinned ? " is-pinned" : ""}" data-dreampass-pin="${dreamPassSafeHtml(key)}" aria-pressed="${pinned}" aria-label="${pinned ? "ピン留め解除" : "ピン留め"}" title="${pinned ? "ピン留め解除" : "先頭にピン留め"}"><i class="bi bi-pin-angle${pinned ? "-fill" : ""}" aria-hidden="true"></i></button>`;
+}
 
 function initializeDreamPassMode() {
   const toggle = document.getElementById("dreamPassModeToggleButton");
   if (!toggle) return;
+  loadDreamPassPins();
   dreamPassSelectedMembers = createCheckModeMemberFilter("dreamPassMemberFilter", renderDreamPassMode);
   const list = document.getElementById("dreamPassModeList");
   if (list) {
     list.addEventListener("click", event => {
+      const pin = event.target.closest("[data-dreampass-pin]");
+      if (pin) { toggleDreamPassPin(pin.dataset.dreampassPin); return; }
       const link = event.target.closest("a[data-dreampass-mode-link]");
       if (!link || !list.contains(link)) return;
       if (typeof sendCheckModeLog === "function") void sendCheckModeLog("dreampass", "link", {
@@ -56,6 +86,10 @@ function setDreamPassModeEnabled(enabled) {
       tverToggle.setAttribute("aria-label", "TVerモードに切り替え");
       tverToggle.title = "TVerモードに切り替え";
     }
+  }
+  if (enabled) {
+    document.getElementById("usenModeContent")?.classList.add("hidden");
+    homeStepElement.classList.remove("usen-mode-active");
   }
   content.classList.toggle("hidden", !enabled);
   normal.classList.toggle("hidden", enabled);
@@ -118,7 +152,10 @@ function dreamPassCardHtml(item, isVoting) {
   const isTicket = item.workType === "dreampass_hanbai";
   const label = isTicket ? "チケット情報を見る" : isVoting ? "投票する" : "作品を見る";
   return `<article class="dream-pass-card">
-    ${cast || '<div class="tver-mode-cast" aria-hidden="true"></div>'}
+    <div class="check-mode-card-top-row">
+      ${cast || '<div class="tver-mode-cast" aria-hidden="true"></div>'}
+      ${dreamPassPinButtonHtml(item)}
+    </div>
     <h3 title="${dreamPassSafeHtml(item.title)}">${dreamPassSafeHtml(item.title)}</h3>
     ${isVoting ? `<div class="dream-pass-card-rank"><span>現在順位</span><strong>${rank === null ? "順位未取得" : rank.toLocaleString("ja-JP") + "位"}</strong></div>` : ""}
     ${isTicket && item.status === "未成立" ? '<p class="dream-pass-section-description">上映未成立</p>' : ""}
@@ -129,7 +166,19 @@ function dreamPassCardHtml(item, isVoting) {
 function renderDreamPassMode() {
   const list = document.getElementById("dreamPassModeList");
   if (!list) return;
+  // お気に入りもメンバー絞り込みの対象。登録情報は維持する。
+  const pinned = dreamPassRecords.filter(item =>
+    dreamPassPinnedIds.has(dreamPassPinKey(item)) &&
+    isCheckModeMemberVisible(item, dreamPassSelectedMembers));
+  // 非表示のお気に入りが通常一覧に紛れないよう、登録済みIDをすべて除外。
+  const pinnedKeys = new Set(dreamPassPinnedIds);
+  const pinnedUnique = pinned.filter((item, index) =>
+    pinned.findIndex(record => dreamPassPinKey(record) === dreamPassPinKey(item)) === index)
+    // Setの挿入順＝お気に入り登録順。通常一覧の順位sortとは独立させる。
+    .sort((a, b) => [...dreamPassPinnedIds].indexOf(dreamPassPinKey(a)) -
+      [...dreamPassPinnedIds].indexOf(dreamPassPinKey(b)));
   const visibleRecords = dreamPassRecords.filter(item =>
+    !pinnedKeys.has(dreamPassPinKey(item)) &&
     isCheckModeMemberVisible(item, dreamPassSelectedMembers));
   const voting = visibleRecords.filter(item => item.workType === "dreampass")
     .sort((a, b) => {
@@ -156,7 +205,10 @@ function renderDreamPassMode() {
       <p class="dream-pass-section-description">${description}</p>
       <div class="dream-pass-grid">${items.map(item => dreamPassCardHtml(item, isVoting)).join("")}</div>
     </section>` : "";
-  list.innerHTML = section("投票中", "再上映のチャンス！見たい作品に投票しよ！", voting, true) +
+  const pinnedHtml = pinnedUnique.length
+    ? `<section class="dream-pass-section"><div class="dream-pass-section-heading"><h3 class="dream-pass-section-title"><i class="bi bi-pin-angle-fill" aria-hidden="true"></i>お気に入り</h3></div><div class="dream-pass-grid">${pinnedUnique.map(item => dreamPassCardHtml(item, item.workType === "dreampass")).join("")}</div></section>`
+    : "";
+  list.innerHTML = pinnedHtml + section("投票中", "再上映のチャンス！見たい作品に投票しよ！", voting, true) +
     section("上映候補入り", "上映候補入りした作品はこちら！見たい作品にはファン登録しておこ！", candidates, false) +
     section("チケット販売中", "チケット販売が決まったよ！詳細はドリパスのページで！", confirmed, false, "🎬") +
     section("チケット情報", "上映の成立状況やチケット情報はイベントページで確認してね！", pending, false, "🎟️");

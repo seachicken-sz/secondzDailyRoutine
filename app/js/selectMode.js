@@ -152,23 +152,15 @@ function bindSelectModeEvents() {
   selectModeToggleElement?.addEventListener("change", () => {
     const settings = getSelectModeSettings();
 
+    // 未選択の状態でONにした場合は、Spotifyだけを初期選択する。
     if (
       selectModeToggleElement.checked &&
       !hasRunnableSelectModeSelection(settings)
     ) {
-      selectModeToggleElement.checked = false;
-      settings.enabled = false;
-
-      saveSelectModeSettings(settings);
-
-      refreshSelectModeSettingsUi({
-        statusMessage: "実行する内容を1つ以上選んでください。",
-      });
-
-      return;
+      settings.features.spotify = true;
     }
 
-    // ON／OFFだけ切り替え、選択内容は削除しない
+    // OFFにした場合も選択内容は削除しない
     settings.enabled = selectModeToggleElement.checked;
 
     saveSelectModeSettings(settings);
