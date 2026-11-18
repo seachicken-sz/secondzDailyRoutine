@@ -1424,3 +1424,6 @@
 .setting-modal-index-item > .bi-chevron-right { flex: 0 0 auto; color: var(--color-brand); font-size: 15px; }
 #settingModal .setting-section { margin: 0; }
 #settingModal .setting-modal-index.hidden, #settingModal .setting-section.hidden, #settingModal #settingPwaGuide.hidden, #settingModal .setting-modal-back-button.hidden { display: none !important; }
+
+/* PWA以外ではプッシュ通知の目次項目を非活性化 */
+#settingModal .setting-modal-index-item:disabled { opacity: .45; filter: grayscale(1); cursor: not-allowed; }
