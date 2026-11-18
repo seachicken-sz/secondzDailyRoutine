@@ -24,20 +24,14 @@ function initializeUsenMode() {
   document.getElementById("usenSongSearch")?.addEventListener("input",usenModeRenderSongs);
   document.getElementById("usenAllSongsFilter")?.addEventListener("click",()=>usenModeSetFilter("all"));
   document.getElementById("usenFavoriteSongsFilter")?.addEventListener("click",()=>usenModeSetFilter("favorites"));
-  document.getElementById("usenRandomSong")?.addEventListener("click",()=>{
-    const songs=usenModeRequestSongs.filter(s=>String(s.url||"").trim());
-    if(!songs.length)return;
-    const song=songs[Math.floor(Math.random()*songs.length)];
-    const search=document.getElementById("usenSongSearch"); if(search)search.value=song.name;
-    usenModeSetFilter("all");
-  });
   document.getElementById("usenModeContent")?.addEventListener("click",async event=>{
     const favorite=event.target.closest("[data-usen-favorite]");
     if(favorite) {
       const id=favorite.dataset.usenFavorite;
       usenModeFavorites=usenModeFavorites.includes(id)?usenModeFavorites.filter(v=>v!==id):[...usenModeFavorites,id];
       try { localStorage.setItem(USEN_MODE_FAVORITES_KEY,JSON.stringify(usenModeFavorites)); } catch(e){console.warn(e);}
-      usenModeRenderSongs();return;
+      usenModeSyncFavoriteButtons();
+      usenModeRenderSongList();return;
     }
     const request=event.target.closest("a[data-usen-song]");
     if(!request)return;
@@ -82,37 +76,60 @@ function usenModeSetFilter(filter) {
   usenModeRenderSongs();
 }
 function usenModeSongId(song){return String(song.id||song.name);}
-function usenModeSongRow(song) {
-  const id=usenModeSongId(song),isFavorite=usenModeFavorites.includes(id);
-  const rank=usenModeCurrentRanks().some(r=>String(r.songId)===String(song.url)||String(r.songTitle)===song.name);
-  const url=buildRequestSongUrl(song.url);
-  return '<div class="usen-mode-song-row"><a class="usen-mode-song-link" data-usen-song="'+usenModeEscape(id)+'" href="'+usenModeEscape(url)+'" target="_blank" rel="noopener noreferrer"><span class="usen-mode-crown">'+(rank?'<i class="bi bi-crown-fill" aria-label="ランクイン中"></i>':'')+'</span><span class="usen-mode-song-name">'+usenModeEscape(song.name)+'</span><span class="usen-mode-row-arrow member-work-link-arrow" aria-hidden="true"><i class="bi bi-chevron-right"></i></span></a><button type="button" class="usen-mode-favorite'+(isFavorite?" is-favorite":"")+'" data-usen-favorite="'+usenModeEscape(id)+'" aria-label="お気に入り'+(isFavorite?"解除":"登録")+'"><i class="bi bi-heart'+(isFavorite?"-fill":"")+'"></i></button></div>';
-}
-function usenModeRenderSongs() {
-  // 同一曲を「おすすめ」と一覧へ重複描画しない。検索・お気に入り時は単一リストで表示する。
+function usenModeAvailableSongs() {
   const seen=new Set();
-  const songs=usenModeRequestSongs.filter(song=>{
-    if(!String(song.url||"").trim())return false;
+  return usenModeRequestSongs.filter(song=>{
+    if(!song||!song.name||!String(song.url||"").trim())return false;
     const id=usenModeSongId(song);
     if(seen.has(id))return false;
     seen.add(id);
     return true;
   });
+}
+function usenModeCrownSvg() {
+  // Bootstrap Icons に crown-fill は存在しないため SVG で表示する。
+  return '<svg class="usen-mode-crown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" role="img" aria-label="ランクイン中"><path d="M2 7a2 2 0 1 1 3.4 1.43L8 11l3.15-5.25a2 2 0 1 1 1.7 0L16 11l2.6-2.57A2 2 0 1 1 21 9l-1.5 9h-15L3 9a2 2 0 0 1-1-2Zm3.35 9h13.3l.75-4.55-3.73 3.69L12 9.02l-3.67 6.12-3.73-3.69L5.35 16Zm-.85 3h15v2h-15v-2Z"/></svg>';
+}
+function usenModeSongRow(song) {
+  const id=usenModeSongId(song),isFavorite=usenModeFavorites.includes(id);
+  const ranked=usenModeCurrentRanks().some(r=>String(r.songId)===String(song.url)||String(r.songTitle)===song.name);
+  const url=buildRequestSongUrl(song.url);
+  return '<div class="usen-mode-song-row member-work-link-card">'+
+    '<button type="button" class="usen-mode-favorite'+(isFavorite?' is-favorite':'')+'" data-usen-favorite="'+usenModeEscape(id)+'" aria-label="'+usenModeEscape(song.name)+'をお気に入り'+(isFavorite?'解除':'登録')+'" aria-pressed="'+isFavorite+'"><i class="bi bi-heart'+(isFavorite?'-fill':'')+'" aria-hidden="true"></i></button>'+
+    '<a class="usen-mode-song-link" data-usen-song="'+usenModeEscape(id)+'" href="'+usenModeEscape(url)+'" target="_blank" rel="noopener noreferrer">'+
+    '<span class="usen-mode-song-name member-work-link-title">'+usenModeEscape(song.name)+(ranked?usenModeCrownSvg():'')+'</span>'+
+    '<span class="member-work-link-arrow" aria-hidden="true"><i class="bi bi-chevron-right"></i></span></a></div>';
+}
+function usenModeSyncFavoriteButtons() {
+  document.querySelectorAll("#usenModeContent [data-usen-favorite]").forEach(button=>{
+    const selected=usenModeFavorites.includes(button.dataset.usenFavorite);
+    button.classList.toggle("is-favorite",selected);
+    button.setAttribute("aria-pressed",String(selected));
+    button.setAttribute("aria-label",(button.closest(".usen-mode-song-row")?.querySelector(".usen-mode-song-name")?.textContent||"曲")+"をお気に入り"+(selected?"解除":"登録"));
+    const icon=button.querySelector("i");
+    if(icon)icon.className="bi bi-heart"+(selected?"-fill":"");
+  });
+}
+function usenModeRenderRecommendedSongs() {
   const recommended=document.getElementById("usenRecommendedSongs");
+  if(!recommended)return;
+  const songs=usenModeAvailableSongs().filter(s=>s.flag===true);
+  recommended.innerHTML=songs.map(usenModeSongRow).join("")||'<p class="usen-mode-caption">おすすめ曲はありません。</p>';
+}
+function usenModeRenderSongList() {
   const list=document.getElementById("usenRequestSongs");
+  if(!list)return;
   const query=(document.getElementById("usenSongSearch")?.value||"").trim().toLocaleLowerCase("ja");
-  const showRecommended=usenModeFilter==="all"&&!query;
-  if(recommended) {
-    const heading=recommended.previousElementSibling;
-    recommended.classList.toggle("hidden",!showRecommended);
-    heading?.classList.toggle("hidden",!showRecommended);
-    if(showRecommended)recommended.innerHTML=songs.filter(s=>s.flag===true).map(usenModeSongRow).join("")||'<p class="usen-mode-caption">おすすめ曲はありません。</p>';
-  }
-  const filtered=songs.filter(s=>
-    (usenModeFilter!=="favorites"||usenModeFavorites.includes(usenModeSongId(s)))&&
-    s.name.toLocaleLowerCase("ja").includes(query)&&
-    (!showRecommended||s.flag!==true));
-  if(list)list.innerHTML=filtered.map(usenModeSongRow).join("")||'<p class="usen-mode-caption">該当する曲はありません。</p>';
+  const filtered=usenModeAvailableSongs().filter(song=>
+    (usenModeFilter!=="favorites"||usenModeFavorites.includes(usenModeSongId(song)))&&
+    song.name.toLocaleLowerCase("ja").includes(query));
+  // 「すべて」は通常曲→おすすめ曲。おすすめは上の固定欄にも掲載する。
+  if(usenModeFilter==="all")filtered.sort((a,b)=>Number(a.flag===true)-Number(b.flag===true));
+  list.innerHTML=filtered.map(usenModeSongRow).join("")||'<p class="usen-mode-caption">該当する曲はありません。</p>';
+}
+function usenModeRenderSongs() {
+  usenModeRenderRecommendedSongs();
+  usenModeRenderSongList();
 }
 function usenModeFormatDate(s) {
   if(!s)return "--";
