@@ -1435,3 +1435,8 @@
 #settingModal .setting-routine-fixed-wrap { display: grid; gap: 7px; padding: 0 6px 9px 24px; font-size: 13px; }
 #settingModal .setting-routine-fixed-wrap.hidden { display: none !important; }
 #settingModal .setting-routine-fixed-wrap select { width: 100%; max-width: none; }
+
+/* 各設定画面の保存して閉じる操作とUSEN画面への白背景ボタン */
+#settingModal .setting-save-close-button { display: block; width: 100%; box-sizing: border-box; margin-top: 20px; text-align: center; }
+#settingModal #settingOpenUsenModeButton.secondary-button { background: #fff; color: var(--color-brand); border: 1px solid var(--color-border); }
+#settingModal #settingOpenUsenModeButton.secondary-button:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; }
