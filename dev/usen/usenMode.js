@@ -21,7 +21,18 @@ function initializeUsenMode() {
   document.getElementById("usenModeDefaultCheckbox")?.addEventListener("change",e=>setHomeDefaultMode(e.target.checked?"usen":"normal","usen"));
   document.getElementById("usenRequestTab")?.addEventListener("click",()=>usenModeSetTab("request"));
   document.getElementById("usenRankingTab")?.addEventListener("click",()=>usenModeSetTab("ranking"));
-  document.getElementById("usenSongSearch")?.addEventListener("input",usenModeRenderSongList);
+  const songSearch = document.getElementById("usenSongSearch");
+  const songSearchClear = document.getElementById("usenSongSearchClear");
+  const syncSongSearchClear = () => songSearchClear?.classList.toggle("hidden",!songSearch?.value);
+  songSearch?.addEventListener("input",()=>{ syncSongSearchClear(); usenModeRenderSongList(); });
+  songSearchClear?.addEventListener("click",()=>{
+    if (!songSearch) return;
+    songSearch.value = "";
+    syncSongSearchClear();
+    usenModeRenderSongList();
+    songSearch.focus();
+  });
+  syncSongSearchClear();
   document.getElementById("usenAllSongsFilter")?.addEventListener("click",()=>usenModeSetFilter("all"));
   document.getElementById("usenFavoriteSongsFilter")?.addEventListener("click",()=>usenModeSetFilter("favorites"));
   document.getElementById("usenModeContent")?.addEventListener("click",async event=>{
