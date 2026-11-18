@@ -36,3 +36,13 @@
 .usen-mode-chart-legend i { width: 10px; height: 3px; display: inline-block; }
 .usen-mode-details-link { display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; width: 100%; box-sizing: border-box; }
 @media(max-width: 380px) { .usen-mode-ranking-heading > span { font-size: 9px; } .usen-mode-section-heading h3 { font-size: 14px; } }
+
+/* 追加投票チャンス：今日のおすすめ曲の直前に折り畳み表示 */
+.usen-mode-extra-votes { margin: 0 0 23px; border: 1px solid var(--color-border); border-radius: 10px; background: var(--color-surface); overflow: hidden; }
+.usen-mode-extra-votes > summary { padding: 13px 14px; color: var(--color-brand); font-size: 14px; font-weight: 800; cursor: pointer; }
+.usen-mode-extra-votes[open] > summary { border-bottom: 1px solid var(--color-border); }
+.usen-mode-extra-votes-body { padding: 15px 14px 18px; }
+.usen-mode-extra-vote-item + .usen-mode-extra-vote-item { margin-top: 26px; }
+.usen-mode-extra-vote-item h3 { margin: 0 0 8px; color: var(--color-brand); font-size: 14px; line-height: 1.5; font-weight: 800; }
+.usen-mode-extra-vote-item p { margin: 0 0 13px; font-size: 13px; line-height: 1.6; color: var(--color-text); }
+.usen-mode-extra-vote-button.primary-button { display: flex; align-items: center; justify-content: center; width: 100%; box-sizing: border-box; text-align: center; }
