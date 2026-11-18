@@ -152,8 +152,10 @@ function dreamPassCardHtml(item, isVoting) {
   const isTicket = item.workType === "dreampass_hanbai";
   const label = isTicket ? "チケット情報を見る" : isVoting ? "投票する" : "作品を見る";
   return `<article class="dream-pass-card">
-    ${dreamPassPinButtonHtml(item)}
-    ${cast || '<div class="tver-mode-cast" aria-hidden="true"></div>'}
+    <div class="check-mode-card-top-row">
+      ${cast || '<div class="tver-mode-cast" aria-hidden="true"></div>'}
+      ${dreamPassPinButtonHtml(item)}
+    </div>
     <h3 title="${dreamPassSafeHtml(item.title)}">${dreamPassSafeHtml(item.title)}</h3>
     ${isVoting ? `<div class="dream-pass-card-rank"><span>現在順位</span><strong>${rank === null ? "順位未取得" : rank.toLocaleString("ja-JP") + "位"}</strong></div>` : ""}
     ${isTicket && item.status === "未成立" ? '<p class="dream-pass-section-description">上映未成立</p>' : ""}
