@@ -100,6 +100,21 @@ if (pwaFirstVisitModalElement) {
     addClickEvent(button, openStationheadModal);
   });
 
+  // 案内モーダルからsecondzチャンネルへ移動した際のログ
+  stationheadModalElement?.addEventListener("click", (event) => {
+    const link = event.target.closest("a[href=\"https://www.stationhead.com/c/secondz\"]");
+    if (!link || !stationheadModalElement.contains(link)) return;
+    if (typeof sendMemberWorkLinkLog === "function") {
+      void sendMemberWorkLinkLog({
+        groupKey: "stationhead",
+        itemId: "stationhead_modal",
+        title: "Stationhead secondz",
+        url: link.href,
+        workType: "open"
+      }).catch(console.error);
+    }
+  });
+
   // 閉じるボタン
   addClickEvent(closeStationheadModalButtonElement, closeStationheadModal);
 
