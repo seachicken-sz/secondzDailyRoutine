@@ -57,6 +57,10 @@ function setDreamPassModeEnabled(enabled) {
       tverToggle.title = "TVerモードに切り替え";
     }
   }
+  if (enabled) {
+    document.getElementById("usenModeContent")?.classList.add("hidden");
+    homeStepElement.classList.remove("usen-mode-active");
+  }
   content.classList.toggle("hidden", !enabled);
   normal.classList.toggle("hidden", enabled);
   homeStepElement.classList.toggle("dream-pass-mode-active", enabled);
