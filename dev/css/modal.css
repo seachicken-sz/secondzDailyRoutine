@@ -1427,3 +1427,11 @@
 
 /* PWA以外ではプッシュ通知の目次項目を非活性化 */
 #settingModal .setting-modal-index-item:disabled { opacity: .45; filter: grayscale(1); cursor: not-allowed; }
+
+/* USEN/BGM設定 */
+#settingModal .setting-routine-note { margin: 14px 0 10px; color: var(--color-text-muted); font-size: 12px; line-height: 1.6; }
+#settingModal .setting-routine-navigation { display: block; width: 100%; box-sizing: border-box; text-align: center; }
+#settingModal .setting-radio-card:has(input:disabled) { opacity: .45; cursor: not-allowed; }
+#settingModal .setting-routine-fixed-wrap { display: grid; gap: 7px; padding: 0 6px 9px 24px; font-size: 13px; }
+#settingModal .setting-routine-fixed-wrap.hidden { display: none !important; }
+#settingModal .setting-routine-fixed-wrap select { width: 100%; max-width: none; }
