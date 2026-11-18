@@ -808,11 +808,11 @@ async function sendMemberWorkLinkLog(data) {
   });
 }
 /**
- * TVer・ドリパスチェックモードの利用ログを既存のmemberLinkシートへ送信する。
+ * TVer・ドリパス・USENモードの利用ログを既存のmemberLinkシートへ送信する。
  * GAS側の受信種別を増やさず、groupKey / itemIdで操作を区別する。
  */
 async function sendCheckModeLog(mode, event, data = {}) {
-  if (!["tver", "dreampass"].includes(mode)) return false;
+  if (!["tver", "dreampass", "usen"].includes(mode)) return false;
   const eventName = String(event || "open");
   const url = data.url || location.href;
   return sendMemberWorkLinkLog({
