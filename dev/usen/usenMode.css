@@ -15,7 +15,9 @@
 .usen-mode-ranking-heading > span { color: var(--color-text-muted); font-size: 10px; white-space: nowrap; }
 .usen-mode-song-list, .usen-mode-rank-list { width: 100%; }
 .usen-mode-song-row, .usen-mode-rank-row { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 48px; padding: 10px 4px; border: 0; border-bottom: 1px solid var(--color-border); background: transparent; color: var(--color-text); font: inherit; text-align: left; text-decoration: none; box-sizing: border-box; }
-.usen-mode-song-row { cursor: pointer; }
+.usen-mode-song-row { padding: 0; }
+.usen-mode-song-link { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; min-height: 48px; padding: 10px 4px; box-sizing: border-box; text-decoration: none; color: var(--color-text); }
+.usen-mode-song-link:focus-visible { outline: 2px solid var(--color-brand); outline-offset: -2px; }
 .usen-mode-song-name { min-width: 0; flex: 1; font-size: 13px; overflow-wrap: anywhere; }
 .usen-mode-crown { display: flex; align-items: center; justify-content: center; flex: 0 0 1em; width: 1em; color: var(--color-brand); }
 .usen-mode-row-arrow.member-work-link-arrow { flex: 0 0 auto; margin-left: auto; }
