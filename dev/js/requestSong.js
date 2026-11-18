@@ -115,32 +115,44 @@ async function showRequestSongStep() {
     const otherRequestSongs = availableSongs.filter((song) => {
       return song.flag !== true;
     });
+    const routineSetting = isDailyRequestSongMode() ? "manual" : getValidatedRoutineMusicSettings().usen;
+    const favoriteSongs = routineSetting === "favorites"
+      ? getRoutineUsenFavoriteSongs(availableSongs) : [];
+    const primarySongs = routineSetting === "favorites"
+      ? favoriteSongs : recommendedRequestSongs;
+    const remainingSongs = routineSetting === "favorites"
+      ? availableSongs.filter(song => !favoriteSongs.includes(song)) : otherRequestSongs;
 
     renderRequestSongList(
       recommendedRequestSongsElement,
-      recommendedRequestSongs
+      primarySongs
     );
 
     renderRequestSongList(
       otherRequestSongsElement,
-      otherRequestSongs
+      remainingSongs
     );
 
     if (
-      recommendedRequestSongs.length === 0 &&
+      primarySongs.length === 0 &&
       recommendedRequestSongsElement
     ) {
       recommendedRequestSongsElement.innerHTML =
         `<p class="empty-text">${MESSAGES.empty.recommendedSongs}</p>`;
     }
 
-    if (otherRequestSongs.length === 0 && otherRequestSongsElement) {
+    if (remainingSongs.length === 0 && otherRequestSongsElement) {
       otherRequestSongsElement.innerHTML =
         `<p class="empty-text">${MESSAGES.empty.otherSongs}</p>`;
     }
 
     updateOtherRequestSongsAccordion();
     applyRequestSongStepMode();
+    if (routineSetting === "recommended" && recommendedRequestSongs.length) {
+      selectRequestSong(recommendedRequestSongs[0]);
+    }
+    const songScrollArea = recommendedRequestSongsElement?.closest(".scroll-area");
+    songScrollArea?.classList.toggle("hidden", routineSetting === "recommended" && recommendedRequestSongs.length > 0);
     showOnlyStep(requestSongStepElement);
     hideError(requestSongErrorAreaElement);
   } catch (error) {
