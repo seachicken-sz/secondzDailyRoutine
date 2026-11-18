@@ -1312,3 +1312,8 @@
 .home-menu-page-index .home-menu-mode-link {
   font-weight: 700;
 }
+
+/* 更新ボタン：通知・設定と同じサイズ、枠線なしのテーマカラー */
+#home-top-share-btn-wrap #refreshAllButton { color: var(--color-brand); background: transparent; border: none; }
+#home-top-share-btn-wrap #refreshAllButton:disabled { opacity: .55; }
+#home-top-share-btn-wrap #refreshAllButton:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; }
