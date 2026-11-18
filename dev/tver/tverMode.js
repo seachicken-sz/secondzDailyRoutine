@@ -384,7 +384,9 @@ function renderTverMode() {
   }
   // ピン留めはフィルターとsortの対象外。番組IDで保持する。
   const pinned = groupTverModeRecordsByProgram(tverModeRecords)
-    .filter(item => tverModePinnedIds.has(getTverModePinKey(item)));
+    .filter(item => tverModePinnedIds.has(getTverModePinKey(item)))
+    .sort((a, b) => [...tverModePinnedIds].indexOf(getTverModePinKey(a)) -
+      [...tverModePinnedIds].indexOf(getTverModePinKey(b)));
   const visibleRecords = tverModeRecords.filter(item => {
     if (tverModePinnedIds.has(getTverModePinKey(item))) return false;
     if (!isCheckModeMemberVisible(item, tverSelectedMembers)) return false;
@@ -393,8 +395,11 @@ function renderTverMode() {
     b.sortTimestamp - a.sortTimestamp) || a.index - b.index);
   const normal = groupTverModeRecordsByProgram(visibleRecords);
   const pinnedHtml = pinned.length
-    ? '<div class="check-mode-pinned-heading"><i class="bi bi-pin-angle-fill" aria-hidden="true"></i>お気に入り</div>' +
-      pinned.map(item => tverModeGroupedCardHtml(item)).join("")
+    ? '<section class="tver-mode-pinned-section" aria-label="お気に入り">' +
+      '<h3 class="check-mode-pinned-heading"><i class="bi bi-pin-angle-fill" aria-hidden="true"></i>お気に入り</h3>' +
+      '<div class="tver-mode-pinned-list">' +
+      pinned.map(item => tverModeGroupedCardHtml(item)).join("") +
+      '</div></section>'
     : "";
   const normalHtml = normal.map(item => tverModeGroupedCardHtml(item)).join("");
   list.innerHTML = pinnedHtml + (normalHtml || (!pinned.length
