@@ -243,7 +243,10 @@
   line-height: 1.25;
 }
 .home-logo-area img {
-  height: 120px;
+  max-height: 120px;
+  max-width: calc(100% - 29px);
+  width: auto;
+  height: auto;
   display: block;
   margin: 0 auto;
 }
@@ -1253,7 +1256,7 @@
 }
 .home-check-mode-links {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
   padding: 0 16px;
   margin: 0 0 14px;
@@ -1275,7 +1278,17 @@
   font-weight: 700;
   cursor: pointer;
 }
-.home-check-mode-link i { font-size: 17px; }
+.home-check-mode-link i { font-size: 17px; flex-shrink: 0; }
+.home-check-mode-link span { min-width: 0; white-space: nowrap; }
+@media (max-width: 400px) {
+  /* SE/小型iPhone: 3ボタン横一列、ラベルも折り返さない */
+  .home-check-mode-links { gap: 6px; }
+  .home-check-mode-link { flex-direction: column; gap: 3px; padding: 7px 2px; font-size: 10px; }
+  .home-check-mode-link i { font-size: 16px; }
+}
+@media (max-width: 350px) {
+  .home-check-mode-link { font-size: 9px; }
+}
 #normalHomeContent .home-action-area { margin-bottom: 8px; }
 @media (max-width: 360px) {
   .home-mode-switcher { gap: 4px; }
@@ -1283,7 +1296,7 @@
   .home-mode-switcher .home-mode-button i { font-size: 20px; }
   .home-mode-switcher .home-mode-button span { font-size: 9px; }
   .home-check-mode-links { gap: 6px; }
-  .home-check-mode-link { gap: 4px; padding-inline: 4px; font-size: 11px; }
+  .home-check-mode-link { gap: 3px; padding-inline: 2px; }
 }
 
 /* メニュー：HOME配下のリンクは常時展開し、子項目として字下げ */
