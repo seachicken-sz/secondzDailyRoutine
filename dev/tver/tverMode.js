@@ -365,8 +365,11 @@ function tverModeGroupedCardHtml(item) {
     </div>`;
   }).join("");
   return `<article class="tver-mode-card is-grouped">
-    ${tverModeCastHtml(item.members)}
-    <div class="tver-mode-card-heading"><h3>${escapeTverModeHtml(item.title)}</h3>${tverModePinButtonHtml(item)}</div>
+    <div class="check-mode-card-top-row">
+      ${tverModeCastHtml(item.members)}
+      ${tverModePinButtonHtml(item)}
+    </div>
+    <div class="tver-mode-card-heading"><h3>${escapeTverModeHtml(item.title)}</h3></div>
     <p class="tver-mode-no-ranking">${item.groupedEpisodes.length}エピソード</p>
     <div class="tver-mode-group-episodes">${episodeRows}</div>
   </article>`;
