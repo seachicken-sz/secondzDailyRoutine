@@ -179,6 +179,7 @@ if (pwaFirstVisitModalElement) {
   });
   
   addClickEvent(closeSettingModalButtonElement, closeSettingModal);
+  bindRoutineMusicSettingsEvents();
   addClickEvent(document.getElementById("settingModalBackButton"), () => showSettingModalPage("index"));
   document.getElementById("settingModalIndex")?.addEventListener("click", event => {
     const button = event.target.closest("[data-setting-open]");
@@ -234,9 +235,12 @@ function showSettingModalPage(page) {
   const pages = {
     push: { title: "プッシュ通知", section: "pushSettingSection" },
     custom: { title: "マイカスタム", section: "myCustomSettingSection" },
-    select: { title: "セレクトモード", section: "selectModeSettingSection" }
+    select: { title: "セレクトモード", section: "selectModeSettingSection" },
+    usen: { title: "USEN推し活設定", section: "usenRoutineSettingSection" },
+    bgm: { title: "今日のBGM設定", section: "bgmRoutineSettingSection" }
   };
   const isPwa = typeof isStandaloneMode === "function" && isStandaloneMode();
+  if (page === "usen" || page === "bgm") refreshRoutineMusicSettingsUi();
   const target = page === "push" && !isPwa ? "index" :
     Object.prototype.hasOwnProperty.call(pages, page) ? page : "index";
   const index = target === "index";
@@ -259,6 +263,7 @@ function openSettingModal() {
   }
 
   updateSettingModalState();
+  refreshRoutineMusicSettingsUi();
   showSettingModalPage("index");
 
   if (typeof refreshPushNotificationUi === "function") {
