@@ -46,3 +46,10 @@
 .usen-mode-extra-vote-item h3 { margin: 0 0 8px; color: var(--color-brand); font-size: 14px; line-height: 1.5; font-weight: 800; }
 .usen-mode-extra-vote-item p { margin: 0 0 13px; font-size: 13px; line-height: 1.6; color: var(--color-text); }
 .usen-mode-extra-vote-button.primary-button { display: flex; align-items: center; justify-content: center; width: 100%; box-sizing: border-box; text-align: center; }
+
+/* 曲名検索のワンタップクリア */
+.usen-mode-search-wrap { position: relative; margin-bottom: 10px; }
+.usen-mode-search-wrap .usen-mode-search { margin-bottom: 0; padding-right: 42px; }
+.usen-mode-search-clear { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); display: inline-flex; justify-content: center; align-items: center; width: 36px; height: 36px; border: 0; background: transparent; color: var(--color-text-muted); font-size: 18px; cursor: pointer; }
+.usen-mode-search-clear.hidden { display: none; }
+.usen-mode-search-clear:focus-visible { outline: 2px solid var(--color-brand); outline-offset: -2px; border-radius: 8px; }
