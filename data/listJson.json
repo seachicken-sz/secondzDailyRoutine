@@ -34,6 +34,16 @@
         "input-flag": true
       },
       {
+        "id": "daily_one morning",
+        "name": "ONE MORNING",
+        "short-name": "ONE MORNING",
+        "url": "https://www.tfm.co.jp/f/om/message",
+        "request-type": "text",
+        "request-input": "メッセージ&リクエスト",
+        "comment": "①コーナーは「ベストヒッツリクエスト」を選択\n②メアドなどを入力\n③「メッセージ&リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "input-flag": true
+      },
+      {
         "id": "daily_andshino",
         "name": "&シノ",
         "short-name": "&シノ",
