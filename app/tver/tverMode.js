@@ -332,7 +332,13 @@ function getTverModeWatchKey(item) {
 }
 
 // 複数回を持つ番組カード。各回のタイトル・視聴チェック・再生・共有・ランキングを維持。
-function tverModeGroupedCardHtml(item) {
+function tverModeGroupedCardHtml(item, nowJst) {
+  const isNew = item.groupedEpisodes.some(episode => {
+    if (!episode.broadcastDate) return false;
+    const broadcastDay = getTverModeSortTimestamp(episode.broadcastDate, null, null, nowJst);
+    const elapsed = nowJst - broadcastDay;
+    return broadcastDay > 0 && elapsed >= 0 && elapsed < 2 * 86400000;
+  });
   const episodeRows = item.groupedEpisodes.map(episode => {
     const watchKey = getTverModeWatchKey(episode);
     const checked = isTverEpisodeChecked(watchKey);
@@ -364,13 +370,13 @@ function tverModeGroupedCardHtml(item) {
       ${rankingSection}
     </div>`;
   }).join("");
-  return `<article class="tver-mode-card is-grouped">
+  return `<article class="tver-mode-card is-grouped" style="padding-top:5.5px">
     <div class="check-mode-card-top-row">
       ${tverModeCastHtml(item.members)}
       ${tverModePinButtonHtml(item)}
     </div>
     <div class="tver-mode-card-heading"><h3>${escapeTverModeHtml(item.title)}</h3></div>
-    <p class="tver-mode-no-ranking">${item.groupedEpisodes.length}エピソード</p>
+    <p class="tver-mode-no-ranking"${isNew ? ' style="display:flex;justify-content:space-between;align-items:baseline;gap:4px;opacity:1"' : ""}>${item.groupedEpisodes.length}エピソード${isNew ? ' <span style="color:var(--color-brand);font-weight:800">NEW!</span>' : ""}</p>
     <div class="tver-mode-group-episodes">${episodeRows}</div>
   </article>`;
 }
@@ -397,14 +403,15 @@ function renderTverMode() {
   }).sort((a, b) => (tverSortOrder === "oldest" ? a.sortTimestamp - b.sortTimestamp :
     b.sortTimestamp - a.sortTimestamp) || a.index - b.index);
   const normal = groupTverModeRecordsByProgram(visibleRecords);
+  const nowJst = getTverModeJapanNow();
   const pinnedHtml = pinned.length
     ? '<section class="tver-mode-pinned-section" aria-label="お気に入り">' +
       '<h3 class="check-mode-pinned-heading"><i class="bi bi-pin-angle-fill" aria-hidden="true"></i>お気に入り</h3>' +
       '<div class="tver-mode-pinned-list">' +
-      pinned.map(item => tverModeGroupedCardHtml(item)).join("") +
+      pinned.map(item => tverModeGroupedCardHtml(item, nowJst)).join("") +
       '</div></section>'
     : "";
-  const normalHtml = normal.map(item => tverModeGroupedCardHtml(item)).join("");
+  const normalHtml = normal.map(item => tverModeGroupedCardHtml(item, nowJst)).join("");
   list.innerHTML = pinnedHtml + (normalHtml || (!pinned.length
     ? `<p class="tver-mode-empty-message">${tverUnwatchedOnly ? "未視聴の番組はありません。" : "選択したメンバーの番組はありません。"}</p>`
     : ""));
