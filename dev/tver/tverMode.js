@@ -376,7 +376,7 @@ function tverModeGroupedCardHtml(item, nowJst) {
       ${tverModePinButtonHtml(item)}
     </div>
     <div class="tver-mode-card-heading"><h3>${escapeTverModeHtml(item.title)}</h3></div>
-    <p class="tver-mode-no-ranking"${isNew ? ' style="opacity:1"' : ""}>${item.groupedEpisodes.length}エピソード${isNew ? ' <span style="margin-left:4px;color:var(--color-brand);font-weight:800">NEW!</span>' : ""}</p>
+    <p class="tver-mode-no-ranking"${isNew ? ' style="display:flex;justify-content:space-between;align-items:baseline;gap:4px;opacity:1"' : ""}>${item.groupedEpisodes.length}エピソード${isNew ? ' <span style="color:var(--color-brand);font-weight:800">NEW!</span>' : ""}</p>
     <div class="tver-mode-group-episodes">${episodeRows}</div>
   </article>`;
 }
