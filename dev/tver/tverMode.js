@@ -370,14 +370,13 @@ function tverModeGroupedCardHtml(item, nowJst) {
       ${rankingSection}
     </div>`;
   }).join("");
-  return `<article class="tver-mode-card is-grouped">
-    ${isNew ? '<span style="position:absolute;top:1px;left:11px;color:var(--color-brand);font-size:10px;font-weight:800;line-height:10px;pointer-events:none">NEW!</span>' : ""}
+  return `<article class="tver-mode-card is-grouped" style="padding-top:5.5px">
     <div class="check-mode-card-top-row">
       ${tverModeCastHtml(item.members)}
       ${tverModePinButtonHtml(item)}
     </div>
     <div class="tver-mode-card-heading"><h3>${escapeTverModeHtml(item.title)}</h3></div>
-    <p class="tver-mode-no-ranking">${item.groupedEpisodes.length}エピソード</p>
+    <p class="tver-mode-no-ranking"${isNew ? ' style="opacity:1"' : ""}>${item.groupedEpisodes.length}エピソード${isNew ? ' <span style="margin-left:4px;color:var(--color-brand);font-weight:800">NEW!</span>' : ""}</p>
     <div class="tver-mode-group-episodes">${episodeRows}</div>
   </article>`;
 }
