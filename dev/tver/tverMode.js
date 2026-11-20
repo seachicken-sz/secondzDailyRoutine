@@ -332,7 +332,13 @@ function getTverModeWatchKey(item) {
 }
 
 // 複数回を持つ番組カード。各回のタイトル・視聴チェック・再生・共有・ランキングを維持。
-function tverModeGroupedCardHtml(item) {
+function tverModeGroupedCardHtml(item, nowJst) {
+  const isNew = item.groupedEpisodes.some(episode => {
+    if (!episode.broadcastDate) return false;
+    const broadcastDay = getTverModeSortTimestamp(episode.broadcastDate, null, null, nowJst);
+    const elapsed = nowJst - broadcastDay;
+    return broadcastDay > 0 && elapsed >= 0 && elapsed < 2 * 86400000;
+  });
   const episodeRows = item.groupedEpisodes.map(episode => {
     const watchKey = getTverModeWatchKey(episode);
     const checked = isTverEpisodeChecked(watchKey);
@@ -365,6 +371,7 @@ function tverModeGroupedCardHtml(item) {
     </div>`;
   }).join("");
   return `<article class="tver-mode-card is-grouped">
+    ${isNew ? '<span style="position:absolute;top:1px;left:11px;color:var(--color-brand);font-size:10px;font-weight:800;line-height:10px;pointer-events:none">NEW!</span>' : ""}
     <div class="check-mode-card-top-row">
       ${tverModeCastHtml(item.members)}
       ${tverModePinButtonHtml(item)}
@@ -397,14 +404,15 @@ function renderTverMode() {
   }).sort((a, b) => (tverSortOrder === "oldest" ? a.sortTimestamp - b.sortTimestamp :
     b.sortTimestamp - a.sortTimestamp) || a.index - b.index);
   const normal = groupTverModeRecordsByProgram(visibleRecords);
+  const nowJst = getTverModeJapanNow();
   const pinnedHtml = pinned.length
     ? '<section class="tver-mode-pinned-section" aria-label="お気に入り">' +
       '<h3 class="check-mode-pinned-heading"><i class="bi bi-pin-angle-fill" aria-hidden="true"></i>お気に入り</h3>' +
       '<div class="tver-mode-pinned-list">' +
-      pinned.map(item => tverModeGroupedCardHtml(item)).join("") +
+      pinned.map(item => tverModeGroupedCardHtml(item, nowJst)).join("") +
       '</div></section>'
     : "";
-  const normalHtml = normal.map(item => tverModeGroupedCardHtml(item)).join("");
+  const normalHtml = normal.map(item => tverModeGroupedCardHtml(item, nowJst)).join("");
   list.innerHTML = pinnedHtml + (normalHtml || (!pinned.length
     ? `<p class="tver-mode-empty-message">${tverUnwatchedOnly ? "未視聴の番組はありません。" : "選択したメンバーの番組はありません。"}</p>`
     : ""));
