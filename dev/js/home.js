@@ -519,6 +519,7 @@ function updateDailyStartedTodayClass() {
   const isStarted = hasDoneDailyGroup || hasDoneUsenGroup;
 
   document.body.classList.toggle("daily-started-today", isStarted);
+  updateStartRoutineButtonLabel();
 }
 
 // ==================================================
@@ -1057,6 +1058,7 @@ async function openHomeExtraTaskPage(task, source) {
     typeof markDailyTaskDone === "function"
   ) {
     markDailyTaskDone(task, source === "usen" ? "homeUsen" : "home");
+    updateStartRoutineButtonLabel();
     renderHomeUsenExtraList();
     renderHomeDailyExtraList(state.dailyGroups || []);
   }
@@ -1373,6 +1375,7 @@ function markHomeUsenTaskDoneFromRoutine() {
   }
 
   markDailyTaskDone(task, "homeUsen");
+  updateStartRoutineButtonLabel();
 
   if (typeof renderHomeUsenExtraList === "function") {
     renderHomeUsenExtraList();
