@@ -12,8 +12,8 @@
     "styles/honkoto.js"
   ];
 
-  const currentScript = document.currentScript;
-  const basePath = currentScript.src.replace("index.js", "");
+  const loaderUrl = new URL(document.currentScript.src);
+  const refreshToken = loaderUrl.searchParams.get("refreshAssets");
 
   function loadScript(index) {
     if (index >= styleFiles.length) {
@@ -23,7 +23,11 @@
     }
 
     const script = document.createElement("script");
-    script.src = `${basePath}${styleFiles[index]}`;
+    const styleUrl = new URL(styleFiles[index], loaderUrl);
+    if (refreshToken) {
+      styleUrl.searchParams.set("refreshAssets", refreshToken);
+    }
+    script.src = styleUrl.href;
     script.onload = () => loadScript(index + 1);
     script.onerror = () => loadScript(index + 1);
     document.head.appendChild(script);
