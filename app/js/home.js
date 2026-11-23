@@ -1167,40 +1167,13 @@ function buildHomeExtraTaskShareText(task, source, platform = "x") {
 
 let homeRequestSongs = [];
 
-async function loadHomeRequestSongOptions() {
-  const requestSongs = state.requestSongs;
-  let overrides;
-
-  try {
-    overrides = await loadRadioRequestSongOverrides();
-  } catch (error) {
-    console.warn("おかわりDailyのラジオリクエスト曲の読み込みに失敗しました。", error);
-    return requestSongs;
-  }
-
-  const songName = (song) => String(song.name || "").trim();
-  const overrideSongsByName = new Map();
-
-  for (const override of overrides) {
-    const name = String(override.songName).trim();
-    // 同名曲がUSENにもある場合は既存の曲データを使う
-    const matchingSongs = requestSongs.filter((song) => songName(song) === name);
-    const existingSong = matchingSongs.find((song) => String(song.url || "").trim());
-    overrideSongsByName.set(name, existingSong || matchingSongs[0] || { name });
-  }
-
-  return [
-    ...overrideSongsByName.values(),
-    ...requestSongs.filter((song) => !overrideSongsByName.has(songName(song))),
-  ];
-}
-
 async function initializeHomeRequestSongSelect() {
   if (!homeRequestSongSelectElement || !homeRequestSongSelectAreaElement) {
     return;
   }
 
-  homeRequestSongs = await loadHomeRequestSongOptions();
+  const { overrideSongs, regularSongs } = await loadDailyRequestSongOptions(state.requestSongs);
+  homeRequestSongs = [...overrideSongs, ...regularSongs];
   homeRequestSongSelectElement.innerHTML = "";
 
   if (homeRequestSongs.length === 0) {

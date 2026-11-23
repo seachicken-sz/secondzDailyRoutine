@@ -81,6 +81,34 @@ async function loadRadioRequestSongOverrides() {
   });
 }
 
+// ホームのおかわりDailyとデイリー用の曲選択で同じ候補を使う。
+async function loadDailyRequestSongOptions(requestSongs) {
+  let overrides;
+
+  try {
+    overrides = await loadRadioRequestSongOverrides();
+  } catch (error) {
+    console.warn("ラジオリクエスト曲の読み込みに失敗しました。", error);
+    return { overrideSongs: [], regularSongs: requestSongs };
+  }
+
+  const songName = (song) => String(song.name || "").trim();
+  const overrideSongsByName = new Map();
+
+  for (const override of overrides) {
+    const name = String(override.songName).trim();
+    // 同名の既存曲があれば、USENのURL付きデータを優先する。
+    const matchingSongs = requestSongs.filter((song) => songName(song) === name);
+    const existingSong = matchingSongs.find((song) => String(song.url || "").trim());
+    overrideSongsByName.set(name, existingSong || matchingSongs[0] || { name });
+  }
+
+  return {
+    overrideSongs: [...overrideSongsByName.values()],
+    regularSongs: requestSongs.filter((song) => !overrideSongsByName.has(songName(song))),
+  };
+}
+
 //リクエスト文章読み込み
 async function loadRequestTexts() {
   const requestTexts = await loadJsonFile(DATA_PATHS.requestTexts, "requestTextJson.json");

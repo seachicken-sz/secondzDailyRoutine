@@ -103,27 +103,26 @@ async function showRequestSongStep() {
 
     const dailyMode = isDailyRequestSongMode();
 
-    // 通常USENではURLがある曲だけ、デイリー用では全曲を表示する
-    const availableSongs = dailyMode
-      ? (isSelectRoutine() ? await loadSelectModeDailyRequestSongs() : state.requestSongs)
-      : state.requestSongs.filter((song) => {
-          return String(song.url || "").trim() !== "";
-        });
+    // USENはURL付きの曲を使い、デイリー用は期間内のラジオ曲も選べる。
+    const { overrideSongs, regularSongs } = dailyMode
+      ? await loadDailyRequestSongOptions(state.requestSongs)
+      : {
+          overrideSongs: [],
+          regularSongs: state.requestSongs.filter((song) => String(song.url || "").trim() !== ""),
+        };
 
-    const recommendedRequestSongs = availableSongs.filter((song) => {
-      return song.flag === true;
-    });
-
-    const otherRequestSongs = availableSongs.filter((song) => {
-      return song.flag !== true;
-    });
+    const recommendedRequestSongs = [
+      ...overrideSongs,
+      ...regularSongs.filter((song) => song.flag === true),
+    ];
+    const otherRequestSongs = regularSongs.filter((song) => song.flag !== true);
     const routineSetting = dailyMode ? "manual" : getValidatedRoutineMusicSettings().usen;
     const favoriteSongs = routineSetting === "favorites"
-      ? getRoutineUsenFavoriteSongs(availableSongs) : [];
+      ? getRoutineUsenFavoriteSongs(regularSongs) : [];
     const primarySongs = routineSetting === "favorites"
       ? favoriteSongs : recommendedRequestSongs;
     const remainingSongs = routineSetting === "favorites"
-      ? availableSongs.filter(song => !favoriteSongs.includes(song)) : otherRequestSongs;
+      ? regularSongs.filter(song => !favoriteSongs.includes(song)) : otherRequestSongs;
 
     renderRequestSongList(
       recommendedRequestSongsElement,
@@ -164,29 +163,4 @@ async function showRequestSongStep() {
       "※エラーが発生しました。アプリを立ち上げ直してください。ERROR:requestSong"
     );
   }
-}
-
-
-// セレクトモードのデイリー用では、期間内のラジオ曲をおすすめの先頭に並べる
-async function loadSelectModeDailyRequestSongs() {
-  let overrides;
-
-  try {
-    overrides = await loadRadioRequestSongOverrides();
-  } catch (error) {
-    console.warn("ラジオリクエスト曲の読み込みに失敗しました。", error);
-    return state.requestSongs;
-  }
-
-  const overrideSongsByName = new Map();
-
-  for (const override of overrides) {
-    const name = String(override.songName).trim();
-    overrideSongsByName.set(name, { name, flag: true });
-  }
-
-  return [
-    ...overrideSongsByName.values(),
-    ...state.requestSongs.filter((song) => !overrideSongsByName.has(String(song.name).trim())),
-  ];
 }
