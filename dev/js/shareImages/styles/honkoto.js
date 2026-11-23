@@ -20,8 +20,8 @@ const HONKOTO_LAYOUT = {
 };
 
 async function renderHonkoto({canvas, ctx, theme, themeKey, dateText, tasks, userName = "", characterImage = null}, showCharacter = false) {
-  const memberColor = themeKey === "white" ? "#777777" : (theme?.main || HONKOTO_GREEN);
-  const memberPale = theme?.pale || "#f5f6ed";
+  const memberColor = themeKey === "lime" ? "#a39112" : (themeKey === "white" ? "#777777" : (theme?.main || HONKOTO_GREEN));
+  const memberPale = themeKey === "lime" ? "#fffbe8" : (theme?.pale || "#f5f6ed");
   const panelH = HONKOTO_LAYOUT.panelPaddingTop + tasks.length * HONKOTO_LAYOUT.rowHeight + HONKOTO_LAYOUT.panelPaddingBottom;
   const bottomPadding = showCharacter ? 340 : HONKOTO_LAYOUT.bottomPadding;
   const neededHeight = HONKOTO_LAYOUT.panelY + panelH + bottomPadding;
