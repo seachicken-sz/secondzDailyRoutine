@@ -99,7 +99,10 @@ function renderMyCustomTask() {
 }
 
 async function continueAfterMyCustom(continuation) {
-  if (continuation === "afterUsen") return showRadioRequestSongOverrideStep();
+  if (continuation === "afterUsen") {
+    if (state.remainingRoutineMode && !hasExecutionDailyTasks()) return finishRoutineAfterDaily();
+    return showRadioRequestSongOverrideStep();
+  }
   if (continuation === "afterDaily") return showPostAskStep();
   if (continuation === "spotify" || continuation === "onceTask") {
     return advanceRoutineFrom(continuation, true);
