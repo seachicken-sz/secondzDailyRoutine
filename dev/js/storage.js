@@ -175,6 +175,8 @@ function saveFlowState(openedAction = state.openedAction || "", stepElement = st
     currentStepId: stepElement.id,
     myCustomFlow: state.myCustomFlow || null,
     routineMode: state.routineMode,
+    remainingRoutineMode: state.remainingRoutineMode,
+    remainingRoutineDailyTaskKeys: state.remainingRoutineDailyTaskKeys,
     requestSongMode: state.requestSongMode,
     selectModeDailyTaskIds: Array.isArray(state.selectModeDailyTaskIds)
       ? state.selectModeDailyTaskIds
