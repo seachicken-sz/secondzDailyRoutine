@@ -19,11 +19,12 @@ const HONKOTO_LAYOUT = {
   bottomPadding: 310
 };
 
-SHARE_IMAGE_RENDERERS.honkoto = async function ({canvas, ctx, theme, themeKey, dateText, tasks, userName = ""}) {
+async function renderHonkoto({canvas, ctx, theme, themeKey, dateText, tasks, userName = "", characterImage = null}, showCharacter = false) {
   const memberColor = themeKey === "white" ? "#777777" : (theme?.main || HONKOTO_GREEN);
   const memberPale = theme?.pale || "#f5f6ed";
   const panelH = HONKOTO_LAYOUT.panelPaddingTop + tasks.length * HONKOTO_LAYOUT.rowHeight + HONKOTO_LAYOUT.panelPaddingBottom;
-  const neededHeight = HONKOTO_LAYOUT.panelY + panelH + HONKOTO_LAYOUT.bottomPadding;
+  const bottomPadding = showCharacter ? 340 : HONKOTO_LAYOUT.bottomPadding;
+  const neededHeight = HONKOTO_LAYOUT.panelY + panelH + bottomPadding;
 
   canvas.width = CANVAS_WIDTH;
   canvas.height = Math.max(MIN_CANVAS_HEIGHT, neededHeight);
@@ -104,6 +105,11 @@ SHARE_IMAGE_RENDERERS.honkoto = async function ({canvas, ctx, theme, themeKey, d
     ctx.restore();
   });
 
+  if (showCharacter) drawFireworksMiniCharacter(ctx, canvas, characterImage);
+
   // 曲名・発売日の告知は表示せず、既存のクレジットを残す。
   drawToolCredit(ctx, canvas, HONKOTO_FONT, userName, hexToRgba(memberColor, 0.65));
-};
+}
+
+SHARE_IMAGE_RENDERERS.honkoto = renderHonkoto;
+SHARE_IMAGE_RENDERERS.honkotoCharacter = (options) => renderHonkoto(options, true);
