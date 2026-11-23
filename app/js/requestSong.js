@@ -101,9 +101,11 @@ async function showRequestSongStep() {
       state.requestSongs = await loadRequestSongs();
     }
 
+    const dailyMode = isDailyRequestSongMode();
+
     // 通常USENではURLがある曲だけ、デイリー用では全曲を表示する
-    const availableSongs = isDailyRequestSongMode()
-      ? state.requestSongs
+    const availableSongs = dailyMode
+      ? (isSelectRoutine() ? await loadSelectModeDailyRequestSongs() : state.requestSongs)
       : state.requestSongs.filter((song) => {
           return String(song.url || "").trim() !== "";
         });
@@ -115,7 +117,7 @@ async function showRequestSongStep() {
     const otherRequestSongs = availableSongs.filter((song) => {
       return song.flag !== true;
     });
-    const routineSetting = isDailyRequestSongMode() ? "manual" : getValidatedRoutineMusicSettings().usen;
+    const routineSetting = dailyMode ? "manual" : getValidatedRoutineMusicSettings().usen;
     const favoriteSongs = routineSetting === "favorites"
       ? getRoutineUsenFavoriteSongs(availableSongs) : [];
     const primarySongs = routineSetting === "favorites"
@@ -164,3 +166,27 @@ async function showRequestSongStep() {
   }
 }
 
+
+// セレクトモードのデイリー用では、期間内のラジオ曲をおすすめの先頭に並べる
+async function loadSelectModeDailyRequestSongs() {
+  let overrides;
+
+  try {
+    overrides = await loadRadioRequestSongOverrides();
+  } catch (error) {
+    console.warn("ラジオリクエスト曲の読み込みに失敗しました。", error);
+    return state.requestSongs;
+  }
+
+  const overrideSongsByName = new Map();
+
+  for (const override of overrides) {
+    const name = String(override.songName).trim();
+    overrideSongsByName.set(name, { name, flag: true });
+  }
+
+  return [
+    ...overrideSongsByName.values(),
+    ...state.requestSongs.filter((song) => !overrideSongsByName.has(String(song.name).trim())),
+  ];
+}
