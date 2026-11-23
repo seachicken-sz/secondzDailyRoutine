@@ -389,6 +389,8 @@ async function init() {
       state.currentStepElement = homeStepElement;
       // 上部ナビゲーションバーの表示状態を更新
       updateStepTopActionBar();
+    } finally {
+      window.finishRefreshLoading?.();
     }
 }
 
