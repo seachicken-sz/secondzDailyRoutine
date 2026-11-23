@@ -45,12 +45,26 @@
   <script>document.write('<link rel="stylesheet" href="' + tamugotoFreshAssetUrl("./dreampass/dreamPassMode.css") + '">');</script>
   <script>document.write('<link rel="stylesheet" href="' + tamugotoFreshAssetUrl("./usen/usenMode.css") + '">');</script>
   
+  <style>
+    #refreshLoadingOverlay { display: none; position: fixed; inset: 0; z-index: 2147483647; align-items: center; justify-content: center; background: rgba(255,255,255,.84); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); }
+    html.refresh-loading #refreshLoadingOverlay { display: flex; }
+    .refresh-loading-content { display: flex; flex-direction: column; align-items: center; gap: 18px; color: #4b645d; font-family: "Zen Maru Gothic", sans-serif; font-size: 20px; font-weight: 700; }
+    .refresh-loading-spinner { width: 46px; height: 46px; border: 4px solid rgba(63,191,168,.2); border-top-color: #3fbfa8; border-radius: 50%; animation: refresh-loading-spin .85s linear infinite; }
+    @keyframes refresh-loading-spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { .refresh-loading-spinner { animation-duration: 2s; } }
+  </style>
+  <script>
+    if (new URLSearchParams(location.search).has("refreshAssets")) document.documentElement.classList.add("refresh-loading");
+  </script>
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" href="../img/icon-180.png">
   <link rel="icon" type="image/png" href="../img/icon-180.png">
   <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+  <div id="refreshLoadingOverlay" role="status" aria-live="polite" aria-label="Loading...">
+    <div class="refresh-loading-content"><div class="refresh-loading-spinner" aria-hidden="true"></div><span>Loading...</span></div>
+  </div>
   <main class="app">
     <!--共通パーツ-->
     <div id="stepTopActionBar" class="step-top-action-bar hidden">
@@ -1636,14 +1650,32 @@
 <!-- 起動 -->
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/app.js") + '" defer><' + '/script>');</script>
 <script>
-  document.getElementById("refreshAllButton")?.addEventListener("click", function() {
-    this.disabled = true;
-    this.setAttribute("aria-label", "更新中");
-    // 完了履歴や個人設定は削除しない。
-    const url = new URL(location.href);
-    url.searchParams.set("refreshAssets", String(Date.now()));
-    location.replace(url.href);
-  });
+  (function() {
+    let loadingFallbackTimer = null;
+    const refreshed = new URLSearchParams(location.search).has("refreshAssets");
+    window.finishRefreshLoading = function() {
+      document.documentElement.classList.remove("refresh-loading");
+      if (loadingFallbackTimer !== null) clearTimeout(loadingFallbackTimer);
+      loadingFallbackTimer = null;
+      if (refreshed) {
+        const url = new URL(location.href);
+        url.searchParams.delete("refreshAssets");
+        history.replaceState(history.state, "", url.href);
+      }
+    };
+    if (refreshed) loadingFallbackTimer = setTimeout(window.finishRefreshLoading, 20000);
+    document.getElementById("refreshAllButton")?.addEventListener("click", function() {
+      this.disabled = true;
+      this.setAttribute("aria-label", "更新中");
+      document.documentElement.classList.add("refresh-loading");
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        // 完了履歴や個人設定は削除しない。
+        const url = new URL(location.href);
+        url.searchParams.set("refreshAssets", String(Date.now()));
+        location.replace(url.href);
+      }));
+    });
+  })();
 </script>
 </body>
 </html>
