@@ -6,11 +6,13 @@ const HONKOTO_FONT = '"Zen Maru Gothic", sans-serif';
 const HONKOTO_IMAGE_PATH = "../img/shareImg/honkoto/botanical.svg";
 const HONKOTO_GREEN = "#65775c";
 
-SHARE_IMAGE_RENDERERS.honkoto = async function ({canvas, ctx, dateText, titleText, tasks, userName = ""}) {
+SHARE_IMAGE_RENDERERS.honkoto = async function ({canvas, ctx, theme, themeKey, dateText, titleText, tasks, userName = ""}) {
+  const memberColor = themeKey === "white" ? "#777777" : (theme?.main || HONKOTO_GREEN);
+  const memberPale = theme?.pale || "#f5f6ed";
   const rowHeight = 80;
   const listTop = 475;
   const cardBottom = listTop + tasks.length * rowHeight + 62;
-  const neededHeight = cardBottom + 365;
+  const neededHeight = cardBottom + 175;
 
   canvas.width = CANVAS_WIDTH;
   canvas.height = Math.max(MIN_CANVAS_HEIGHT, neededHeight);
@@ -20,7 +22,7 @@ SHARE_IMAGE_RENDERERS.honkoto = async function ({canvas, ctx, dateText, titleTex
   const background = ctx.createLinearGradient(0, 0, 0, canvas.height);
   background.addColorStop(0, "#faf9f2");
   background.addColorStop(0.65, "#fdfcf7");
-  background.addColorStop(1, "#f5f6ed");
+  background.addColorStop(1, memberPale);
   ctx.fillStyle = background;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -35,6 +37,10 @@ SHARE_IMAGE_RENDERERS.honkoto = async function ({canvas, ctx, dateText, titleTex
     }
   }
 
+  // 花の背景を保ったまま選択メンカラを淡く重ねる。
+  ctx.fillStyle = hexToRgba(memberColor, 0.055);
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
   // 上部のアプリ名は表示せず、既存の共有画像に近いサイズの見出しを使う。
   ctx.save();
   ctx.shadowColor = "rgba(61,81,53,.12)";
@@ -45,13 +51,13 @@ SHARE_IMAGE_RENDERERS.honkoto = async function ({canvas, ctx, dateText, titleTex
   ctx.fill();
   ctx.restore();
 
-  ctx.strokeStyle = "rgba(146,173,135,.34)";
+  ctx.strokeStyle = hexToRgba(memberColor, 0.34);
   ctx.lineWidth = 2;
   roundRectStroke(ctx, 90, 205, 900, cardBottom - 205, 34);
 
   ctx.textBaseline = "top";
   ctx.textAlign = "left";
-  ctx.fillStyle = HONKOTO_GREEN;
+  ctx.fillStyle = memberColor;
   ctx.font = `500 36px ${HONKOTO_FONT}`;
   ctx.fillText(formatDateToMonthDay(dateText), 150, 265);
   ctx.textAlign = "right";
@@ -62,7 +68,7 @@ SHARE_IMAGE_RENDERERS.honkoto = async function ({canvas, ctx, dateText, titleTex
   ctx.font = `700 68px ${HONKOTO_FONT}`;
   ctx.fillText(titleText || "タスク完了！", 150, 338);
 
-  ctx.strokeStyle = "rgba(157,183,128,.75)";
+  ctx.strokeStyle = hexToRgba(memberColor, 0.75);
   ctx.lineWidth = 5;
   ctx.beginPath();
   ctx.moveTo(152, 431);
@@ -71,7 +77,7 @@ SHARE_IMAGE_RENDERERS.honkoto = async function ({canvas, ctx, dateText, titleTex
 
   tasks.forEach((task, index) => {
     const y = listTop + index * rowHeight;
-    ctx.strokeStyle = "#8ea67b";
+    ctx.strokeStyle = memberColor;
     ctx.lineWidth = 3;
     roundRectStroke(ctx, 151, y + 2, 43, 43, 7);
     ctx.beginPath();
@@ -83,7 +89,7 @@ SHARE_IMAGE_RENDERERS.honkoto = async function ({canvas, ctx, dateText, titleTex
     ctx.fillStyle = "#333c31";
     ctx.font = `500 35px ${HONKOTO_FONT}`;
     drawEllipsizedText(ctx, String(task), 235, y + 4, 680);
-    ctx.strokeStyle = "rgba(113,142,102,.2)";
+    ctx.strokeStyle = hexToRgba(memberColor, 0.2);
     ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.moveTo(235, y + 57);
@@ -91,13 +97,5 @@ SHARE_IMAGE_RENDERERS.honkoto = async function ({canvas, ctx, dateText, titleTex
     ctx.stroke();
   });
 
-  const titleY = cardBottom + 58;
-  ctx.textAlign = "center";
-  ctx.fillStyle = HONKOTO_GREEN;
-  ctx.font = '56px "Klee One", "Zen Maru Gothic", sans-serif';
-  ctx.fillText("本当のことを言うと", CANVAS_WIDTH / 2, titleY);
-  ctx.font = '32px "Klee One", "Zen Maru Gothic", sans-serif';
-  ctx.fillText("2026.11.25 Digital Release", CANVAS_WIDTH / 2, titleY + 84);
-
-  drawToolCredit(ctx, canvas, HONKOTO_FONT, userName, "rgba(69,86,61,.65)");
+  drawToolCredit(ctx, canvas, HONKOTO_FONT, userName, hexToRgba(memberColor, 0.65));
 };
