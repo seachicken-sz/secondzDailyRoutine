@@ -408,14 +408,31 @@ function updateSelectModeSelectionSummary() {
     `機能 ${featureCount}件・デイリー ${dailyCount}件を選択中`;
 }
 
+function getRemainingRoutineStatus() {
+  const groups = Array.isArray(state.dailyGroups) ? state.dailyGroups : [];
+  const items = groups.flatMap((group) => getDailyGroupItems(group));
+  const usenDone = isDailyTaskDone({ id: "home_usen_request" });
+  const completedCount = items.filter((item) => isDailyTaskDone(item)).length;
+  const remainingItems = items.filter((item) => !isDailyTaskDone(item));
+  const hasProgress = usenDone || completedCount > 0;
+
+  return {
+    enabled: hasProgress && (!usenDone || remainingItems.length > 0),
+    usenDone,
+    remainingTaskKeys: remainingItems.map((item) => getDailyTaskStorageKey(item)),
+  };
+}
+
 function updateStartRoutineButtonLabel() {
   if (!startRoutineButtonElement) {
     return;
   }
 
-  startRoutineButtonElement.textContent =
-    getSelectModeSettings().enabled
-      ? "選んだタスクで始める"
+  const settings = getSelectModeSettings();
+  startRoutineButtonElement.textContent = settings.enabled
+    ? "選んだタスクで始める"
+    : getRemainingRoutineStatus().enabled
+      ? "残りのルーチンを開始"
       : "開始する";
 }
 
@@ -433,6 +450,8 @@ function resetRoutineProgressState() {
 
   state.selectedOnceTasks = [];
   state.currentOnceTaskIndex = 0;
+  state.remainingRoutineMode = false;
+  state.remainingRoutineDailyTaskKeys = [];
 
   state.selectedRequestSong = null;
   state.selectedRadioRequestSong = null;
@@ -458,6 +477,10 @@ async function startRoutineByCurrentMode() {
     state.routineMode = ROUTINE_MODES.normal;
     state.requestSongMode = REQUEST_SONG_MODES.usen;
     state.selectModeDailyTaskIds = [];
+
+    const remaining = getRemainingRoutineStatus();
+    state.remainingRoutineMode = remaining.enabled;
+    state.remainingRoutineDailyTaskKeys = remaining.enabled ? remaining.remainingTaskKeys : [];
 
     showOnlyStep(spotifyStepElement);
     return;
@@ -513,9 +536,17 @@ function getExecutionDailyGroups() {
     ? state.dailyGroups
     : [];
 
-  // 通常モードは、従来どおり元のグループ構成を使う
+  // 通常モードの残りルーチンは、開始時に確定した未実行タスクだけを元のグループ順で回る
   if (!isSelectRoutine()) {
-    return groups;
+    if (!state.remainingRoutineMode) {
+      return groups;
+    }
+
+    const remainingKeys = new Set(state.remainingRoutineDailyTaskKeys);
+    return groups.map((group) => ({
+      ...group,
+      items: getDailyGroupItems(group).filter((item) => remainingKeys.has(getDailyTaskStorageKey(item))),
+    })).filter((group) => group.items.length > 0);
   }
 
   const selectedIdSet = new Set(
@@ -617,7 +648,11 @@ async function advanceRoutineFrom(completedStep, skipMyCustom = false) {
   // 通常モード
   if (!isSelectRoutine()) {
     if (completedStep === "spotify") {
-      await showOnceTaskSelectStepOrSkip();
+      if (state.remainingRoutineMode) {
+        await advanceRemainingRoutineAfterSpotify();
+      } else {
+        await showOnceTaskSelectStepOrSkip();
+      }
       return;
     }
 
@@ -693,6 +728,17 @@ async function advanceRoutineFrom(completedStep, skipMyCustom = false) {
   if (completedStep === "daily") {
     finishSelectModeRoutine();
   }
+}
+
+// Spotifyの後、期間限定を省略してUSENまたは未実行デイリーへ進む
+async function advanceRemainingRoutineAfterSpotify() {
+  if (!isDailyTaskDone({ id: "home_usen_request" })) {
+    state.requestSongMode = REQUEST_SONG_MODES.usen;
+    await showRequestSongStep();
+    return;
+  }
+
+  await showSelectModeDailyPartWithoutUsen();
 }
 
 // USENを実行せずデイリーへ進む
@@ -824,9 +870,11 @@ function applyRequestSongStepMode() {
 
 async function showFallbackPreviousStepForDaily() {
   if (!isSelectRoutine()) {
-    state.requestSongMode =
-      REQUEST_SONG_MODES.usen;
-
+    if (state.remainingRoutineMode && state.requestSongMode === REQUEST_SONG_MODES.daily) {
+      await showRequestSongStep();
+      return;
+    }
+    state.requestSongMode = REQUEST_SONG_MODES.usen;
     await showRequestSongStep();
     return;
   }
