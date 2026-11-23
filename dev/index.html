@@ -234,6 +234,7 @@
         <button id="startRoutineButton" class="primary-button">
           開始する
         </button>
+        <button id="reward01HomeButton" type="button" class="secondary-button hidden" style="margin-top:10px">ごほうびトレカを見る</button>
         </section>
         <div class="home-check-mode-links" role="group" aria-label="チェックモードへ移動">
           <button type="button" class="home-check-mode-link" data-home-mode="tver">
@@ -1019,6 +1020,8 @@
         </p>
         <a href="https://mond.how/ja/tsunakan_r" target="_blank" rel="noopener noreferrer" class="primary-button feedback-link-button">mond</a>
       </section>
+
+    <section id="reward01FinishArea" class="task-card" style="text-align:center"></section>
       <section class="task-card">
         <button id="backHomeButton" class="secondary-button no-margin-button">
           ホームに戻る
@@ -1026,6 +1029,18 @@
       </section>
     </section>
   </main>
+
+
+  <!-- ごほうびトレカ01 -->
+  <div id="reward01Modal" class="hidden" role="dialog" aria-modal="true" aria-label="ごほうびトレカ" style="position:fixed;inset:0;z-index:10020;background:rgba(0,0,0,.78);padding:16px;overflow:auto;align-items:flex-start;justify-content:center">
+    <div style="width:min(100%,390px);margin:auto;background:var(--color-bg,#fff);color:var(--color-text,#222);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center"><strong>ごほうびトレカ</strong><button type="button" id="reward01CloseButton" class="secondary-button">閉じる</button></div>
+      <canvas id="reward01Canvas" width="720" height="960" style="width:min(100%,320px);height:auto;align-self:center;border-radius:20px"></canvas>
+      <label for="reward01Nickname">カードの名前（任意）</label><input id="reward01Nickname" maxlength="15" type="text" placeholder="名前を入力" style="padding:10px;border:1px solid #999;border-radius:8px;background:transparent;color:inherit">
+      <button id="reward01SaveButton" type="button" class="primary-button">PNG画像を保存</button>
+      <div style="font-size:13px">過去のカード</div><div id="reward01History" style="display:flex;flex-wrap:wrap;gap:6px"></div>
+    </div>
+  </div>
 
   <!--使い方モーダル-->
   <div id="usageModal" class="modal-overlay hidden">
@@ -1648,6 +1663,7 @@
 <!-- USENチェックモード -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./usen/usenMode.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/rewardCard.js") + '" defer><' + '/script>');</script>
 <!-- 起動 -->
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/app.js") + '" defer><' + '/script>');</script>
 <script>
