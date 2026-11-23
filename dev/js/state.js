@@ -2,6 +2,8 @@ const state = {
   routineMode: ROUTINE_MODES.normal,　// 通常モード／セレクトモード
   requestSongMode: REQUEST_SONG_MODES.usen,  // USEN用／デイリー用の曲選択画面
   selectModeDailyTaskIds: [], // セレクトモード開始時に選ばれたデイリータスクID
+  remainingRoutineMode: false,
+  remainingRoutineDailyTaskKeys: [],
 
   selectedSong: null,
   isOtherSongsOpen: false,
