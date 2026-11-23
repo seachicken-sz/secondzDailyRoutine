@@ -15,6 +15,7 @@ function showPlaceholderNextStep(message) {
 
   // 完了画面へ遷移
   showOnlyStep(placeholderNextStepElement);
+  if (typeof awardReward01AtFinish === "function") awardReward01AtFinish();
 }
 
 // ==================================================
