@@ -1165,14 +1165,45 @@ function buildHomeExtraTaskShareText(task, source, platform = "x") {
 // ホーム：コピー用リクエスト曲選択
 // ==================================================
 
-function initializeHomeRequestSongSelect() {
+let homeRequestSongs = [];
+
+async function loadHomeRequestSongOptions() {
+  const requestSongs = state.requestSongs;
+  let overrides;
+
+  try {
+    overrides = await loadRadioRequestSongOverrides();
+  } catch (error) {
+    console.warn("おかわりDailyのラジオリクエスト曲の読み込みに失敗しました。", error);
+    return requestSongs;
+  }
+
+  const songName = (song) => String(song.name || "").trim();
+  const overrideSongsByName = new Map();
+
+  for (const override of overrides) {
+    const name = String(override.songName).trim();
+    // 同名曲がUSENにもある場合は既存の曲データを使う
+    const matchingSongs = requestSongs.filter((song) => songName(song) === name);
+    const existingSong = matchingSongs.find((song) => String(song.url || "").trim());
+    overrideSongsByName.set(name, existingSong || matchingSongs[0] || { name });
+  }
+
+  return [
+    ...overrideSongsByName.values(),
+    ...requestSongs.filter((song) => !overrideSongsByName.has(songName(song))),
+  ];
+}
+
+async function initializeHomeRequestSongSelect() {
   if (!homeRequestSongSelectElement || !homeRequestSongSelectAreaElement) {
     return;
   }
 
+  homeRequestSongs = await loadHomeRequestSongOptions();
   homeRequestSongSelectElement.innerHTML = "";
 
-  if (!Array.isArray(state.requestSongs) || state.requestSongs.length === 0) {
+  if (homeRequestSongs.length === 0) {
     state.homeSelectedRequestSong = null;
     homeRequestSongSelectAreaElement.classList.add("hidden");
     renderHomeUsenExtraList();
@@ -1180,30 +1211,16 @@ function initializeHomeRequestSongSelect() {
     return;
   }
 
-  const defaultSong =
-    state.requestSongs.find((song) => song && song.flag === true) ||
-    state.requestSongs.find((song) => song && song.name) ||
-    null;
+  const previousSong = state.homeSelectedRequestSong;
+  state.homeSelectedRequestSong = homeRequestSongs.find((song) =>
+    song.name === previousSong?.name && song.url === previousSong?.url
+  ) || getDefaultHomeRequestSong();
 
-  state.homeSelectedRequestSong = state.homeSelectedRequestSong || defaultSong;
-
-  state.requestSongs.forEach((song, index) => {
-    if (!song || !song.name) {
-      return;
-    }
-
+  homeRequestSongs.forEach((song, index) => {
     const option = document.createElement("option");
     option.value = String(index);
     option.textContent = song.name;
-
-    if (
-      state.homeSelectedRequestSong &&
-      song.name === state.homeSelectedRequestSong.name &&
-      song.url === state.homeSelectedRequestSong.url
-    ) {
-      option.selected = true;
-    }
-
+    option.selected = song === state.homeSelectedRequestSong;
     homeRequestSongSelectElement.appendChild(option);
   });
 
@@ -1219,28 +1236,24 @@ function bindHomeRequestSongSelectEvents() {
 
   homeRequestSongSelectElement.addEventListener("change", () => {
     const selectedIndex = Number(homeRequestSongSelectElement.value);
-
-    if (Number.isNaN(selectedIndex)) {
-      state.homeSelectedRequestSong = null;
-    } else {
-      state.homeSelectedRequestSong = state.requestSongs[selectedIndex] || null;
-    }
+    state.homeSelectedRequestSong = homeRequestSongs[selectedIndex] || null;
 
     renderHomeUsenExtraList();
     renderHomeDailyExtraList(state.dailyGroups || []);
   });
 }
 
-function getHomeSelectedRequestSong() {
-  if (state.homeSelectedRequestSong?.name) {
-    return state.homeSelectedRequestSong;
-  }
-
+function getDefaultHomeRequestSong() {
   return (
-    state.requestSongs.find((song) => song && song.flag === true) ||
-    state.requestSongs.find((song) => song && song.name) ||
+    homeRequestSongs.find((song) => song.flag === true) ||
+    homeRequestSongs.find((song) => song.name === state.requestSongs[0]?.name) ||
+    homeRequestSongs[0] ||
     null
   );
+}
+
+function getHomeSelectedRequestSong() {
+  return state.homeSelectedRequestSong || getDefaultHomeRequestSong();
 }
 
 function getHomeSelectedRequestSongName() {

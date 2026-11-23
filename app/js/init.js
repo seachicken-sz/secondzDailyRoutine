@@ -350,7 +350,7 @@ async function init() {
     // ホーム画面のお知らせ/Information一覧を描画
     renderHomeInfoList(homeInfoList);   
     // ホーム用リクエスト曲プルダウンを描画
-    initializeHomeRequestSongSelect();
+    await initializeHomeRequestSongSelect();
     // ホームのおかわりDailyを描画
     renderHomeDailyExtraList(state.dailyGroups);
     // ホームの期間限定タスクを描画
