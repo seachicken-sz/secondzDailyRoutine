@@ -59,6 +59,7 @@ function awardReward01AtFinish() {
   button.addEventListener("click", () => openReward01Card(card.dayKey));
   area.append(heading, button);
   updateReward01HomeButton();
+  bindRewardCollectionEvents();
 }
 function updateReward01HomeButton() {
   const button = document.getElementById("reward01HomeButton");
@@ -113,6 +114,10 @@ function closeReward01Card() {
   const modal = document.getElementById("reward01Modal");
   if (modal) { modal.classList.add("hidden"); modal.style.display = "none"; }
   document.body.style.overflow = "";
+  if (rewardCollectionReturnOnCardClose) {
+    rewardCollectionReturnOnCardClose = false;
+    openRewardCollection();
+  }
 }
 function drawReward01Canvas(canvas, card) {
   const c = canvas.getContext("2d");
@@ -160,4 +165,129 @@ function bindReward01Events() {
     if(event.target.id==="reward01Modal")closeReward01Card();
   });
   updateReward01HomeButton();
+}
+
+
+// ごほうびコレクション：未実装のカードも図鑑として表示する
+const REWARD_COLLECTION_TYPES = [
+  { id: "01", title: "ラジリクはね、やっとかないと。" },
+  { id: "02", title: "努力好きなもんで" },
+  { id: "03", title: "肩外れるぐらいやりました" },
+  { id: "04", title: "ファンをなめてもらっちゃ困ります" },
+  { id: "05", title: "全タスク脱落無し" },
+  { id: "06", title: "お前本当は天使なんじゃないか？" }
+];
+let rewardCollectionView = "date";
+let rewardCollectionReturnOnCardClose = false;
+function openRewardCollection() {
+  const modal = document.getElementById("rewardCollectionModal");
+  if (!modal) return;
+  rewardCollectionReturnOnCardClose = false;
+  modal.classList.remove("hidden");
+  modal.style.display = "flex";
+  document.body.style.overflow = "hidden";
+  renderRewardCollection();
+}
+function closeRewardCollection() {
+  const modal = document.getElementById("rewardCollectionModal");
+  if (modal) {
+    modal.classList.add("hidden");
+    modal.style.display = "none";
+  }
+  document.body.style.overflow = "";
+}
+function openRewardCollectionCard(dayKey) {
+  closeRewardCollection();
+  rewardCollectionReturnOnCardClose = true;
+  openReward01Card(dayKey);
+}
+function renderRewardCollection() {
+  const body = document.getElementById("rewardCollectionBody");
+  const summary = document.getElementById("rewardCollectionSummary");
+  const dateTab = document.getElementById("rewardCollectionDateTab");
+  const typeTab = document.getElementById("rewardCollectionTypeTab");
+  if (!body || !summary || !dateTab || !typeTab) return;
+  const cards = loadReward01Cards().slice().sort((a,b)=>b.dayKey.localeCompare(a.dayKey));
+  body.replaceChildren();
+  dateTab.className = rewardCollectionView === "date" ? "primary-button" : "secondary-button";
+  typeTab.className = rewardCollectionView === "type" ? "primary-button" : "secondary-button";
+  dateTab.style.flex = typeTab.style.flex = "1";
+  const obtainedColors = new Set(cards.map(card=>"01:"+card.colorIndex));
+  summary.textContent = cards.length+"枚獲得 ／ カード "+obtainedColors.size+" / "+(REWARD_COLLECTION_TYPES.length*REWARD01_COLORS.length)+"種類";
+  if (rewardCollectionView === "date") {
+    if (!cards.length) {
+      const empty = document.createElement("p");
+      empty.textContent = "まだ獲得したカードはありません。";
+      body.appendChild(empty);
+      return;
+    }
+    const grid = document.createElement("div");
+    grid.style.cssText = "display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;";
+    cards.forEach(card=>{
+      const b=document.createElement("button");
+      b.type="button";
+      b.style.cssText="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:148px;padding:12px 8px;text-align:center;border:1px solid var(--color-border,#8886);border-radius:12px;background:var(--color-bg,#fff);color:inherit;cursor:pointer;";
+      const number=document.createElement("strong");
+      number.textContent="01";
+      number.style.cssText="font-size:23px;color:"+ (REWARD01_COLORS[card.colorIndex]?.code||"#ccc")+";";
+      const title=document.createElement("span");
+      title.textContent=REWARD_COLLECTION_TYPES[0].title;
+      title.style.cssText="font-size:13px;font-weight:600;";
+      const date=document.createElement("span");
+      date.textContent=card.dayKey.slice(0,4)+"/"+card.dayKey.slice(4,6)+"/"+card.dayKey.slice(6,8)+" ・ "+card.count+" TASKS";
+      date.style.cssText="font-size:11px;opacity:.7;";
+      b.append(number,title,date);
+      b.addEventListener("click",()=>openRewardCollectionCard(card.dayKey));
+      grid.appendChild(b);
+    });
+    body.appendChild(grid);
+    return;
+  }
+  const list=document.createElement("div");
+  list.style.cssText="display:flex;flex-direction:column;gap:10px;";
+  REWARD_COLLECTION_TYPES.forEach(type=>{
+    const related=type.id==="01"?cards:[];
+    const block=document.createElement("div");
+    block.style.cssText="padding:12px;border:1px solid var(--color-border,#8886);border-radius:12px;";
+    const head=document.createElement("div");
+    head.style.cssText="display:flex;align-items:center;gap:12px;margin-bottom:10px;";
+    const number=document.createElement("strong");
+    number.textContent=type.id;
+    number.style.cssText="font-size:23px;opacity:"+(related.length?"1":".35")+";";
+    const name=document.createElement("span");
+    name.textContent=related.length?type.title:"？？？";
+    name.style.cssText="font-size:13px;font-weight:600;flex:1;";
+    const count=document.createElement("span");
+    count.textContent=(new Set(related.map(c=>c.colorIndex))).size+"/7";
+    count.style.cssText="font-size:12px;opacity:.7;";
+    head.append(number,name,count);
+    const hearts=document.createElement("div");
+    hearts.style.cssText="display:flex;gap:7px;flex-wrap:wrap;align-items:center;";
+    REWARD01_COLORS.forEach((color,index)=>{
+      const owned=related.find(card=>card.colorIndex===index);
+      const heart=document.createElement(owned?"button":"span");
+      if(owned){heart.type="button";heart.addEventListener("click",()=>openRewardCollectionCard(owned.dayKey));}
+      heart.textContent="♥";
+      heart.title=color.name+(owned?"：獲得済み":"：未取得");
+      heart.setAttribute("aria-label",heart.title);
+      heart.style.cssText="display:inline-flex;justify-content:center;align-items:center;width:32px;height:32px;border:0;border-radius:7px;background:transparent;font-size:26px;line-height:1;"+(owned?"cursor:pointer;color:"+color.code+";"+(index===6?"text-shadow:0 0 2px #555;":""):"color:#aaa;opacity:.28;");
+      hearts.appendChild(heart);
+    });
+    block.append(head,hearts);
+    list.appendChild(block);
+  });
+  body.appendChild(list);
+}
+function bindRewardCollectionEvents() {
+  document.getElementById("rewardCollectionButton")?.addEventListener("click",openRewardCollection);
+  document.getElementById("rewardCollectionCloseButton")?.addEventListener("click",closeRewardCollection);
+  document.getElementById("rewardCollectionModal")?.addEventListener("click",event=>{
+    if(event.target.id==="rewardCollectionModal")closeRewardCollection();
+  });
+  document.getElementById("rewardCollectionDateTab")?.addEventListener("click",()=>{
+    rewardCollectionView="date";renderRewardCollection();
+  });
+  document.getElementById("rewardCollectionTypeTab")?.addEventListener("click",()=>{
+    rewardCollectionView="type";renderRewardCollection();
+  });
 }
