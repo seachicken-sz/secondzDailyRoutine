@@ -432,7 +432,7 @@ function updateStartRoutineButtonLabel() {
   startRoutineButtonElement.textContent = settings.enabled
     ? "選んだタスクで始める"
     : getRemainingRoutineStatus().enabled
-      ? "残りのルーチンを開始"
+      ? "もう少しやる？"
       : "開始する";
 }
 
