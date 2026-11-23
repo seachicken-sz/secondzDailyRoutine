@@ -10,7 +10,7 @@
         "url": "https://tfm.co.jp/f/countdownjapan/message",
         "request-type": "text",
         "request-input": "メッセージ&リクエスト",
-        "comment": "①メアドなどを入力\n②「メッセージ&リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "comment": "①ラジオネームなど、フォームの必須項目を入力\n②「メッセージ&リクエスト」にコピーされたリクエスト文を貼り付け",
         "input-flag": true
       },
       {
@@ -20,7 +20,7 @@
         "url": "https://www.nack5.co.jp/message/270/",
         "request-type": "music",
         "request-input": "タイトル",
-        "comment": "※ページが開くまで時間がかかる場合があります。\n①ラジオネーム、アーティストを入力\n②「タイトル」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "comment": "※ページが開くまで時間がかかる場合があります。\n①ラジオネームを入力\n②「アーティスト」に「timelesz」と入力\n③「タイトル」にコピーされた曲名を貼り付け",
         "input-flag": true
       },
       {
@@ -28,9 +28,9 @@
         "name": "All-Time Best",
         "short-name": "All-Time Best",
         "url": "https://www.tfm.co.jp/f/atb/form",
-        "request-type": "text",
+        "request-type": "text-atb",
         "request-input": "メッセージ&リクエスト",
-        "comment": "①コーナーは「ハロースマイルリクエスト」を選択\n②メアドなどを入力\n③「メッセージ&リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "comment": "①コーナーは「ハロースマイルリクエスト」を選択\n②ラジオネームやメールアドレスなどを入力\n③「メッセージ&リクエスト」にコピーされたリクエスト文を貼り付け",
         "input-flag": true
       },
       {
@@ -38,9 +38,9 @@
         "name": "ONE MORNING",
         "short-name": "ONE MORNING",
         "url": "https://www.tfm.co.jp/f/om/message",
-        "request-type": "text",
+        "request-type": "text-onemorning",
         "request-input": "メッセージ&リクエスト",
-        "comment": "①コーナーは「ベストヒッツリクエスト」を選択\n②メアドなどを入力\n③「メッセージ&リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "comment": "①コーナーは「ベストヒッツリクエスト」を選択\n②ラジオネームやメールアドレスなどを入力\n③「メッセージ&リクエスト」にコピーされたリクエスト文を貼り付け",
         "input-flag": true
       },
       {
@@ -48,7 +48,7 @@
         "name": "&シノ",
         "short-name": "&シノ",
         "url": "https://www.tbsradio.jp/articles/program/and/",
-        "comment": "最新記事をタップ！アクセスランクがあがるよ！",
+        "comment": "最新記事を開いてチェックしよう！",
         "input-flag": false
       }
     ]
@@ -64,7 +64,7 @@
         "url": "https://form.jfn.co.jp/neojaponism/message",
         "request-type": "text",
         "request-input": "メッセージ&リクエスト",
-        "comment": "①メアドなどを入力\n②「メッセージ&リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "comment": "①ラジオネームなど、フォームの必須項目を入力\n②「メッセージ&リクエスト」にコピーされたリクエスト文を貼り付け",
         "input-flag": true
       },
       {
@@ -74,7 +74,7 @@
         "url": "https://fmfukuoka.co.jp/message/?m=reform",
         "request-type": "music-slash-artist",
         "request-input": "リクエスト(曲名／アーティスト名)",
-        "comment": "①番組名は「BUTCH COUNTDOWN RADIO」を選択\n②「リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "comment": "①番組名は「BUTCH COUNTDOWN RADIO」を選択\n②「リクエスト(曲名／アーティスト名)」に貼り付け",
         "input-flag": true
       },
       {
@@ -84,7 +84,7 @@
         "url": "https://www.tfm.co.jp/f/sc/message",
         "request-type": "text",
         "request-input": "メッセージ",
-        "comment": "①コーナーは「楽曲リクエスト」を選択\n②「メッセージ」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "comment": "①コーナーは「楽曲リクエスト」を選択\n②「メッセージ」にコピーされたリクエスト文を貼り付け\n③フォームの必須項目を入力",
         "input-flag": true
       },
       {
@@ -94,7 +94,7 @@
         "url": "https://www.lawson.co.jp/lab/cshotstation/art/1308047_7551.html",
         "request-type": "music",
         "request-input": "■曲名",
-        "comment": "①「>>リクエストの登録はこちら！」をタップ\n②「■曲名」欄にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "comment": "①「リクエストの登録はこちら！」をタップ\n②リクエストニックネームを入力\n③「アーティスト名」に「timelesz」と入力\n④「曲名」にコピーされた曲名を貼り付け",
         "input-flag": true
       },
       {
@@ -104,7 +104,7 @@
         "url": "https://ssl.1242.com/aplform/form/aplform.php?fcode=m10&_ga=2.93010205.1251474916.1712812603-56772365.1712812603",
         "request-type": "music-slash-artist",
         "request-input": "リクエスト曲",
-        "comment": "①メアドなどを入力\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "comment": "①「リクエスト曲」に貼り付け\n②その曲にまつわる思い出やエピソードを添えて送ろう！",
         "input-flag": true
       },
       {
@@ -112,9 +112,9 @@
         "name": "パペットスンスンのDJ SUNSUN",
         "short-name": "パペットスンスン",
         "url": "https://www.tfm.co.jp/f/dj_sunsun/message",
-        "request-type": "text",
+        "request-type": "text-djsunsun",
         "request-input": "メッセージ&リクエスト",
-        "comment": "①メアドなどを入力\n②「メッセージ&リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります！\n③できたらスンスンにメッセージを入れましょう",
+        "comment": "①フォームの必須項目を入力\n②「メッセージ&リクエスト」にコピーされたリクエスト文を貼り付け\n③スンスンに伝えたいことがあればひとこと添えよう！",
         "input-flag": true
       }
     ]
@@ -130,17 +130,17 @@
         "url": "https://funky802.com/service/Request/index/member/1106",
         "request-type": "music",
         "request-input": "リクエスト曲",
-        "comment": "①メアドなどを入力\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "comment": "①番組名が「TACTY IN THE MORNING」か確認\n②「リクエスト曲」にコピーされた曲名を貼り付け\n③アーティスト名に「timelesz」、ラジオネームまたは匿名希望、メールアドレスを入力",
         "input-flag": true
       },
       {
         "id": "daily_saturdayamusic",
-        "name": "FM802 SATURDAY AMUSIC ISLANDS  MORNING EDITION",
+        "name": "FM802 SATURDAY AMUSIC ISLANDS MORNING EDITION",
         "short-name": "SATURDAY AMUSIC",
         "url": "https://funky802.com/service/Request/index/member/1612",
         "request-type": "music",
         "request-input": "リクエスト曲",
-        "comment": "①メアドなどを入力\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "comment": "①番組名が「SATURDAY AMUSIC ISLANDS MORNING EDITION」か確認\n②「リクエスト曲」にコピーされた曲名を貼り付け\n③アーティスト名に「timelesz」、ラジオネームまたは匿名希望、メールアドレスを入力",
         "input-flag": true
       },
       {
@@ -150,63 +150,53 @@
         "url": "https://funky802.com/service/Request/index/member/1712",
         "request-type": "music",
         "request-input": "リクエスト曲",
-        "comment": "①メアドなどを入力\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "comment": "①番組名が「OSAKAN HOT 100」か確認\n②「リクエスト曲」にコピーされた曲名を貼り付け\n③アーティスト名に「timelesz」、ラジオネームまたは匿名希望、メールアドレスを入力",
         "input-flag": true
       },
       {
-        "id": "daily_yakult1000music",
-        "name": "Kiss FM Yakult1000Music",
-        "short-name": "Yakult1000Music",
-        "url": "https://www.kiss-fm.co.jp/requestmessage/request/2779/",
+        "id": "daily_fmosaka_loveflap",
+        "name": "FM大阪 LOVE FLAP",
+        "short-name": "LOVE FLAP",
+        "url": "https://fmosaka.futureartist.net/enquete/42575",
         "request-type": "music",
-        "request-input": "リクエスト曲",
-        "comment": "①メアドなどを入力\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "request-input": "曲名",
+        "comment": "①お名前・メールアドレスなど、フォームの必須項目を入力\n②「アーティスト名」に「timelesz」と入力\n③「曲名」にコピーされた曲名を貼り付け",
         "input-flag": true
       },
       {
-        "id": "daily_JoyTuneRadio",
-        "name": "Kiss FM Joy Tune Radio",
-        "short-name": "Joy Tune Radio",
-        "url": "https://www.kiss-fm.co.jp/requestmessage/request/2804/",
+        "id": "daily_fmcocolo_request",
+        "name": "FM COCOLO おとといラジオ",
+        "short-name": "おとといラジオ",
+        "url": "https://cocolo.jp/i/req/2180",
         "request-type": "music",
         "request-input": "リクエスト曲",
-        "comment": "①メアドなどを入力\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
-        "input-flag": false
+        "comment": "①番組名が「おとといラジオ」になっていることを確認\n②「リクエスト曲」にコピーされた曲名を貼り付け\n③アーティスト名に「timelesz」、ラジオネームとメールアドレスを入力",
+        "input-flag": true
+      },
+      {
+        "id": "daily_mbs_musicpark",
+        "name": "清水綾音のMBSミュージックパーク",
+        "short-name": "MBSミュージックパーク",
+        "url": "https://form.mbs.jp/zs/2ZBEOu",
+        "request-type": "text-mbs-musicpark",
+        "request-input": "メッセージ",
+        "comment": "①「題名」に「楽曲リクエスト」と入力\n②「メッセージ」にコピーされたリクエスト文を貼り付け\n③フォームの必須項目を入力して送信",
+        "input-flag": true
       }
     ]
   },
   {
-    "listName": "もうちょい行けたりする？",
+    "listName": "関東局ももうちょっと頑張る？",
     "lastFlag": false,
     "items": [
-      {
-        "id": "daily_MorningBrush",
-        "name": "Date FM Morning Brush",
-        "short-name": "Morning Brush",
-        "url": "https://forms.datefm.co.jp/request?",
-        "request-type": "music",
-        "request-input": "リクエスト曲",
-        "comment": "①番組名は「Morning Brush」を選択\n②「リクエスト曲」に入力\n③ラジオネームとメールアドレスを入力",
-        "input-flag": true
-      },
-      {
-        "id": "daily_kyomeiranbu",
-        "name": "Date FM 響鳴乱舞",
-        "short-name": "響鳴乱舞",
-        "url": "https://forms.datefm.co.jp/request?",
-        "request-type": "music",
-        "request-input": "リクエスト曲",
-        "comment": "①番組名は「響鳴乱舞 仙台 DATE-MON」を選択\n②「リクエスト曲」に入力\n③ラジオネームとメールアドレスを入力",
-        "input-flag": true
-      },
       {
         "id": "daily_blueocean",
         "name": "TOKYO FM Blue Ocean",
         "short-name": "Blue Ocean",
         "url": "https://www.tfm.co.jp/f/bo/message",
-        "request-type": "text",
+        "request-type": "text-blueocean",
         "request-input": "メッセージ&リクエスト",
-        "comment": "①「【レコメンドフライデー】あなたがオーシャンヌとシェアしたいおすすめ楽曲」を選択\n②メアドなどを入力\n③メッセージ＆リクエストにペースト",
+        "comment": "①「【レコメンドフライデー】あなたがオーシャンヌとシェアしたいおすすめ楽曲」を選択\n②ラジオネームなどフォームの必須項目を入力\n③「メッセージ&リクエスト」にコピーされたリクエスト文を貼り付け",
         "input-flag": true
       },
       {
@@ -216,9 +206,71 @@
         "url": "https://www.tfm.co.jp/f/darehana/form",
         "request-type": "text",
         "request-input": "メッセージ&リクエスト",
-        "comment": "①「リクエスト」を選択\n②メアドなどを入力\n③メッセージ＆リクエストにペースト",
+        "comment": "①コーナーは「リクエスト」を選択\n②ラジオネームやメールアドレスなどを入力\n③「メッセージ&リクエスト」にコピーされたリクエスト文を貼り付け",
         "input-flag": true
       },
+      {
+        "id": "daily_fmyokohama_radiohitsradio",
+        "name": "FMヨコハマ Radio HITS Radio",
+        "short-name": "Radio HITS Radio",
+        "url": "https://www.fmyokohama.co.jp/form/message?p=209",
+        "request-type": "text-radiohitsradio",
+        "request-input": "メッセージ",
+        "comment": "①宛先が「Radio HITS Radio」になっていることを確認\n②「メッセージ」にコピーされたリクエスト文を貼り付け\n③個人情報の取り扱いに同意して送信",
+        "input-flag": true
+      }
+    ]
+  },
+  {
+    "listName": "東日本の局に届くようにがんばろ！",
+    "lastFlag": false,
+    "items": [
+      {
+        "id": "daily_northwave_kim",
+        "name": "FM NORTH WAVE KAT’S IN THE MORNING",
+        "short-name": "カツモニ",
+        "url": "https://www.fmnorth.co.jp/kim-form/",
+        "request-type": "text-katsumoni",
+        "request-input": "メッセージ",
+        "comment": "①「メッセージ」にコピーされたリクエスト文を貼り付け\n②「リクエスト曲」に曲名を入力",
+        "input-flag": true
+      },
+      {
+        "id": "daily_fmniigata_soundsplash",
+        "name": "FM-NIIGATA SOUND SPLASH",
+        "short-name": "SOUND SPLASH",
+        "url": "https://www.fmniigata.com/program/15/request_message/160",
+        "request-type": "text",
+        "request-input": "メッセージをどうぞ！",
+        "comment": "①ログインするか必須項目を入力\n②「メッセージをどうぞ！」にコピーされたリクエスト文を貼り付け\n③「リクエスト曲をどうぞ！！」に曲名を入力",
+        "input-flag": true
+      },
+      {
+        "id": "daily_MorningBrush",
+        "name": "Date FM Morning Brush",
+        "short-name": "Morning Brush",
+        "url": "https://forms.datefm.co.jp/request?",
+        "request-type": "music",
+        "request-input": "リクエスト曲",
+        "comment": "①番組名は「Morning Brush」を選択\n②「リクエスト曲」にコピーされた曲名を貼り付け\n③アーティスト名に「timelesz」と入力\n④ラジオネームとメールアドレスを入力",
+        "input-flag": true
+      },
+      {
+        "id": "daily_kyomeiranbu",
+        "name": "Date FM 響鳴乱舞",
+        "short-name": "響鳴乱舞",
+        "url": "https://forms.datefm.co.jp/request?",
+        "request-type": "music",
+        "request-input": "リクエスト曲",
+        "comment": "①番組名は「響鳴乱舞 仙台 DATE-MON」を選択\n②「リクエスト曲」にコピーされた曲名を貼り付け\n③アーティスト名に「timelesz」と入力\n④ラジオネームとメールアドレスを入力",
+        "input-flag": true
+      }
+    ]
+  },
+  {
+    "listName": "東海にも送ってみよ！",
+    "lastFlag": false,
+    "items": [
       {
         "id": "daily_morningbreeze",
         "name": "FM AICHI MORNING BREEZE",
@@ -226,7 +278,7 @@
         "url": "https://fma.co.jp/f/req/?cd=morningbreeze",
         "request-type": "music",
         "request-input": "リクエスト曲",
-        "comment": "①メアドなどを入力\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "comment": "①「リクエスト曲」にコピーされた曲名を貼り付け\n②「アーティスト名」に「timelesz」と入力\n③必須項目を入力",
         "input-flag": true
       },
       {
@@ -236,7 +288,119 @@
         "url": "https://fma.co.jp/f/req/?cd=afternooncolors",
         "request-type": "music",
         "request-input": "リクエスト曲",
-        "comment": "①メアドなどを入力\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "comment": "①「リクエスト曲」にコピーされた曲名を貼り付け\n②「アーティスト名」に「timelesz」と入力\n③必須項目を入力",
+        "input-flag": true
+      },
+      {
+        "id": "daily_tokairadio_groove929",
+        "name": "東海ラジオ GRooVE929",
+        "short-name": "GRooVE929",
+        "url": "https://form.tokairadio.jp/grv",
+        "request-type": "text",
+        "request-input": "メッセージ",
+        "comment": "①「コーナー選択」は「フリーメッセージ」を選択\n②「メッセージ」にコピーされたリクエスト文を貼り付け",
+        "input-flag": true
+      },
+      {
+        "id": "daily_tokairadio_sunnysmiles",
+        "name": "東海ラジオ Sunny Smiles",
+        "short-name": "Sunny Smiles",
+        "url": "https://form.tokairadio.jp/sny",
+        "request-type": "music",
+        "request-input": "曲名",
+        "comment": "①「リクエスト」を選択、アーティスト名に「timelesz」と入力\n②「曲名」にコピーされた曲名を貼り付け",
+        "input-flag": true
+      },
+      {
+        "id": "daily_tokairadio_lifehackers",
+        "name": "東海ラジオ LIFE HACKERS!",
+        "short-name": "LIFE HACKERS!",
+        "url": "https://form.tokairadio.jp/hks",
+        "request-type": "text-lunchrequest",
+        "request-input": "メッセージ",
+        "comment": "①「ランチリクエスト」を選択\n②「メッセージ」にコピーされたリクエスト文を貼り付け",
+        "input-flag": true
+      },
+      {
+        "id": "daily_tokairadio_ohmychannel",
+        "name": "東海ラジオ OH! MY CHANNEL!",
+        "short-name": "OH! MY CHANNEL!",
+        "url": "https://form.tokairadio.jp/omc",
+        "request-type": "music",
+        "request-input": "曲名",
+        "comment": "①「曲のリクエスト」を選び、アーティスト名に「timelesz」と入力\n②「曲名」にコピーされた曲名を貼り付け",
+        "input-flag": true
+      },
+      {
+        "id": "daily_tokairadio_breeze",
+        "name": "東海ラジオ bre:eze",
+        "short-name": "bre:eze",
+        "url": "https://form.tokairadio.jp/brz",
+        "request-type": "text",
+        "request-input": "メッセージ",
+        "comment": "①「曲リクエスト」を選び、アーティスト名に「timelesz」と入力\n②「メッセージ」にコピーされたリクエスト文を貼り付け",
+        "input-flag": true
+      }
+    ]
+  },
+  {
+    "listName": "関西局にももうちょっと頑張る？",
+    "lastFlag": false,
+    "items": [
+      {
+        "id": "daily_yakult1000music",
+        "name": "Kiss FM Yakult1000Music",
+        "short-name": "Yakult1000Music",
+        "url": "https://www.kiss-fm.co.jp/requestmessage/request/2779/",
+        "request-type": "music",
+        "request-input": "リクエスト曲",
+        "comment": "①Kissネームなど必須項目を入力\n②「リクエストアーティスト」に「timelesz」と入力\n③「リクエスト曲」にコピーされた曲名を貼り付け",
+        "input-flag": true
+      },
+      {
+        "id": "daily_JoyTuneRadio",
+        "name": "Kiss FM Joy Tune Radio",
+        "short-name": "Joy Tune Radio",
+        "url": "https://www.kiss-fm.co.jp/requestmessage/request/2804/",
+        "request-type": "music",
+        "request-input": "リクエスト曲",
+        "comment": "①Kissネームなど必須項目を入力\n②「リクエストアーティスト」に「timelesz」と入力\n③「リクエスト曲」にコピーされた曲名を貼り付け",
+        "input-flag": true
+      },
+      {
+        "id": "daily_alphastation_request",
+        "name": "α-STATION ONE FINE DAY",
+        "short-name": "ONE FINE DAY",
+        "url": "https://fm-kyoto.jp/message/?program=ONE+FINE+DAY",
+        "request-type": "music",
+        "request-input": "リクエスト 曲名",
+        "comment": "①番組名が「ONE FINE DAY」になっていることを確認\n②「リクエスト アーティスト名」に「timelesz」と入力\n③「リクエスト 曲名」に貼り付け",
+        "input-flag": true
+      },
+      {
+        "id": "daily_eradio_request",
+        "name": "e-radio style!",
+        "short-name": "style!",
+        "url": "https://www.e-radio.co.jp/form/index.php?id=11",
+        "request-type": "music",
+        "request-input": "曲名",
+        "comment": "①番組名は「style!」を選択\n②「曲名」にコピーされた曲名を貼り付け\n③「アーティスト名」に「timelesz」と入力",
+        "input-flag": true
+      }
+    ]
+  },
+  {
+    "listName": "九州局にも送ってみない？",
+    "lastFlag": false,
+    "items": [
+      {
+        "id": "daily_crossfm_request",
+        "name": "CROSS FM DAY+",
+        "short-name": "DAY+",
+        "url": "https://www.crossfm.co.jp/request/k_index.php?pgm_id=346",
+        "request-type": "music",
+        "request-input": "リクエスト曲",
+        "comment": "①番組名が「DAY+」になっていることを確認\n②「アーティスト名」に「timelesz」と入力\n③「リクエスト曲」にコピーされた曲名を貼り付け",
         "input-flag": true
       },
       {
@@ -246,16 +410,80 @@
         "url": "https://fmfukuoka.co.jp/message/?m=reform",
         "request-type": "music-slash-artist",
         "request-input": "リクエスト(曲名／アーティスト名)",
-        "comment": "①番組名は「DIG!!!!!!!! FUKUOKA」を選択\n②「リクエスト」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "comment": "①番組名は「DIG!!!!!!!! FUKUOKA」を選択\n②「リクエスト(曲名／アーティスト名)」に貼り付け",
+        "input-flag": true
+      }
+    ]
+  },
+  {
+    "listName": "聡ちゃんの静岡にも送る？🗻",
+    "lastFlag": false,
+    "items": [
+      {
+        "id": "daily_kmix_moveon",
+        "name": "K-MIX MOVE ON",
+        "short-name": "MOVE ON",
+        "url": "https://k-mix.co.jp/message-move",
+        "request-type": "music",
+        "request-input": "リクエスト（曲名）",
+        "comment": "①「リクエスト（曲名）」にコピーされた曲名を貼り付け\n②「リクエスト（アーティスト）」に「timelesz」と入力\n③ラジオネーム・メールアドレスを入力し、「メッセージ」にリクエストした理由などをひとこと添える",
         "input-flag": true
       },
       {
-        "id": "daily_oshiraku_suikun",
-        "name": "推し楽",
-        "short-name": "推し楽",
-        "url": "https://fan.books.rakuten.co.jp/tags/25743/news",
-        "comment": "①楽天アカウントでログイン\n②ニュースを選ぶ\n③「心の声を届ける(画面上部の♡)」からリアクションを送ろう！(1日10回まで)",
-        "input-flag": false
+        "id": "daily_kmix_goodtie",
+        "name": "K-MIX GOOD-TIE!",
+        "short-name": "GOOD-TIE!",
+        "url": "https://k-mix.co.jp/message-good",
+        "request-type": "music",
+        "request-input": "リクエスト（曲名）",
+        "comment": "①「リクエスト（曲名）」にコピーされた曲名を貼り付け\n②「リクエスト（アーティスト）」に「timelesz」と入力\n③ラジオネーム・メールアドレスを入力し、「メッセージ」にリクエストした理由などをひとこと添える",
+        "input-flag": true
+      }
+    ]
+  },
+  {
+    "listName": "TV出演もリクエストしてみよ！",
+    "lastFlag": false,
+    "items": [
+      {
+        "id": "daily_tv_star",
+        "name": "フジテレビ STAR",
+        "short-name": "STAR",
+        "url": "https://wwws.fujitv.co.jp/ap2/safe/resp/PcWrite?bancode=526000006&type=resprg",
+        "request-type": "text-tv-star",
+        "request-input": "メッセージ内容",
+        "comment": "①「メッセージ内容」にコピーされた文章を貼り付け\n②その他必須項目を入力して送信",
+        "input-flag": true
+      },
+      {
+        "id": "daily_tv_mstation",
+        "name": "テレビ朝日 MUSIC STATION",
+        "short-name": "Mステ",
+        "url": "https://www.tv-asahi.co.jp/music/sec/opinion/",
+        "request-type": "text-tv-mstation",
+        "request-input": "ご意見・リクエスト",
+        "comment": "①「投稿する」をタップ\n②ご意見・リクエストの本文にコピーされた文章を貼り付け\n③フォームの案内に沿って入力",
+        "input-flag": true
+      },
+      {
+        "id": "daily_tv_cdtv",
+        "name": "TBS CDTVライブ！ライブ！",
+        "short-name": "CDTV",
+        "url": "https://cgi.tbs.co.jp/ppshw/pc/contact/4945/enquete.do",
+        "request-type": "text-tv-cdtv",
+        "request-input": "内容",
+        "comment": "①内容種別は「要望」を選択\n②番組名に「CDTVライブ！ライブ！」、件名に「timeleszの出演希望」と入力\n③「内容」にコピーされた文章を貼り付け、必須項目を入力",
+        "input-flag": true
+      },
+      {
+        "id": "daily_tv_buzzrhythm",
+        "name": "日本テレビ バズリズム02",
+        "short-name": "バズリズム02",
+        "url": "https://ntvcrm.f-form.com/ntvgoikenfbform",
+        "request-type": "text-tv-buzzrhythm",
+        "request-input": "内容（1000字以内）",
+        "comment": "①「番組名・件名」に「バズリズム02／timeleszの出演希望」と入力\n②「内容」にコピーされた文章を貼り付け\n③フォームの必須項目を入力",
+        "input-flag": true
       }
     ]
   },
@@ -270,7 +498,7 @@
         "url": "https://www.fmyokohama.co.jp/present/11794",
         "request-type": "music",
         "request-input": "曲名",
-        "comment": "①メアドなどを入力\n②「曲名」にペーストまたは貼り付けを行うと曲名が自動で入ります！\n③ドライブエピソードを記入",
+        "comment": "①「同意する」にチェックして「次へ」をタップ\n②「曲名」にコピーされた曲名を貼り付け\n③車の中で聴いたときの思い出を書いて送信！",
         "input-flag": true
       },
       {
@@ -280,7 +508,7 @@
         "url": "https://www.fmyokohama.co.jp/present/10065",
         "request-type": "music",
         "request-input": "曲名",
-        "comment": "①メアドなどを入力\n②「曲名」にペーストまたは貼り付けを行うと曲名が自動で入ります！\n③ドライブやデートエピソードを記入",
+        "comment": "①「同意する」にチェックして「次へ」をタップ\n②「曲名」にコピーされた曲名を貼り付け\n③ドライブの時に聞きたい理由を添えて送信！",
         "input-flag": true
       },
       {
@@ -290,7 +518,17 @@
         "url": "https://www.fmfuji.jp/mail.php?cd=128",
         "request-type": "music",
         "request-input": "リクエスト曲名",
-        "comment": "①メアドなどを入力\n②「リクエスト曲」にペーストまたは貼り付けを行うと曲名が自動で入ります！",
+        "comment": "①番組名を確認\n②「リクエスト曲名」にコピーされた曲名を貼り付け\n③「アーティスト」に「timelesz」と入力\n④ラジオネームやメッセージなど、フォームの案内に沿って入力",
+        "input-flag": true
+      },
+      {
+        "id": "daily_joqr_minnanongakushitsu",
+        "name": "文化放送 みんなの音楽室",
+        "short-name": "みんなの音楽室",
+        "url": "https://form.joqr.co.jp/@joqr-mo",
+        "request-type": "text-minnanongakushitsu",
+        "request-input": "メッセージ内容",
+        "comment": "①ラジオネームを入力し、コーナー名に「みんなのリクエスト」と入力\n②「メッセージ内容」にコピーされたリクエスト文を貼り付け\n③曲にまつわる思い出や、誰に届けたいかをひとこと添えて送信",
         "input-flag": true
       }
     ]
