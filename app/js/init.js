@@ -389,6 +389,8 @@ async function init() {
       state.currentStepElement = homeStepElement;
       // 上部ナビゲーションバーの表示状態を更新
       updateStepTopActionBar();
+    } finally {
+      window.finishRefreshLoading?.();
     }
 }
 
@@ -463,6 +465,10 @@ async function restoreFlowStateOrHome() {
     flowState.routineMode === ROUTINE_MODES.select
       ? ROUTINE_MODES.select
       : ROUTINE_MODES.normal;
+  state.remainingRoutineMode = state.routineMode === ROUTINE_MODES.normal && flowState.remainingRoutineMode === true;
+  state.remainingRoutineDailyTaskKeys = state.remainingRoutineMode && Array.isArray(flowState.remainingRoutineDailyTaskKeys)
+    ? flowState.remainingRoutineDailyTaskKeys.map(String)
+    : [];
 
   // USEN用／デイリー用の曲選択画面
   state.requestSongMode =
