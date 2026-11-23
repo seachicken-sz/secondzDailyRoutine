@@ -11,6 +11,6 @@
 </defs>
 <circle cx="80" cy="65" r="330" fill="url(#light)"/><circle cx="930" cy="780" r="260" fill="url(#light)"/>
 <g opacity=".32" filter="url(#blur)"><circle cx="140" cy="230" r="75" fill="#a7c995"/><circle cx="975" cy="820" r="90" fill="#bad8a7"/><circle cx="855" cy="60" r="65" fill="#e9e4af"/></g>
-<use href="#sprig" x="-25" y="-36"/><use href="#sprig" x="825" y="790" transform="rotate(185 825 790)"/><use href="#sprig" x="1065" y="20" transform="rotate(74 1065 20) scale(.62)"/>
+<use href="#sprig" x="-25" y="-36"/><use href="#sprig" x="1065" y="20" transform="rotate(74 1065 20) scale(.62)"/>
 <g fill="#fff" opacity=".62"><circle cx="380" cy="145" r="6"/><circle cx="825" cy="200" r="7"/><circle cx="140" cy="860" r="8"/><circle cx="940" cy="500" r="5"/></g>
 </svg>
