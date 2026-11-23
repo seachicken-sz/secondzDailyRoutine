@@ -54,7 +54,8 @@
     @media (prefers-reduced-motion: reduce) { .refresh-loading-spinner { animation-duration: 2s; } }
   </style>
   <script>
-    if (new URLSearchParams(location.search).has("refreshAssets")) document.documentElement.classList.add("refresh-loading");
+    // 通常起動・PWA起動・更新後のいずれも、初期化完了までLoadingを表示する。
+    document.documentElement.classList.add("refresh-loading");
   </script>
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" href="../img/icon-180.png">
@@ -1663,7 +1664,8 @@
         history.replaceState(history.state, "", url.href);
       }
     };
-    if (refreshed) loadingFallbackTimer = setTimeout(window.finishRefreshLoading, 20000);
+    // 通常起動時も初期化が止まった場合に画面を操作できるようにする。
+    loadingFallbackTimer = setTimeout(window.finishRefreshLoading, 20000);
     document.getElementById("refreshAllButton")?.addEventListener("click", function() {
       this.disabled = true;
       this.setAttribute("aria-label", "更新中");
