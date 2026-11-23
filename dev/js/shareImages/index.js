@@ -8,7 +8,8 @@
     "styles/characterPhotoList.js",
     "styles/characterSimpleCard.js",
     "styles/fireworks.js",
-    "styles/fireworksCharacter.js"
+    "styles/fireworksCharacter.js",
+    "styles/honkoto.js"
   ];
 
   const currentScript = document.currentScript;
