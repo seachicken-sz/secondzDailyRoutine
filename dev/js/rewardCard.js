@@ -61,8 +61,11 @@ function awardReward01AtFinish() {
   updateReward01HomeButton();
 }
 function updateReward01HomeButton() {
+  const hasCards = loadReward01Cards().length > 0;
   const button = document.getElementById("reward01HomeButton");
-  if (button) button.classList.toggle("hidden", loadReward01Cards().length === 0);
+  if (button) button.classList.toggle("hidden", !hasCards);
+  const collectionButton = document.getElementById("rewardCollectionButton");
+  if (collectionButton) collectionButton.classList.toggle("hidden", !hasCards);
 }
 function openReward01Card(dayKey) {
   const cards = loadReward01Cards();
@@ -243,9 +246,10 @@ function renderRewardCollection() {
   if (!body || !summary || !dateTab || !typeTab) return;
   const cards = loadReward01Cards().slice().sort((a,b)=>b.dayKey.localeCompare(a.dayKey));
   body.replaceChildren();
-  dateTab.className = rewardCollectionView === "date" ? "primary-button" : "secondary-button";
-  typeTab.className = rewardCollectionView === "type" ? "primary-button" : "secondary-button";
-  dateTab.style.flex = typeTab.style.flex = "1";
+  dateTab.classList.toggle("active", rewardCollectionView === "date");
+  typeTab.classList.toggle("active", rewardCollectionView === "type");
+  dateTab.setAttribute("aria-selected", String(rewardCollectionView === "date"));
+  typeTab.setAttribute("aria-selected", String(rewardCollectionView === "type"));
   const obtainedColors = new Set(cards.map(card=>"01:"+card.colorIndex));
   summary.textContent = cards.length+"枚獲得 ／ カード "+obtainedColors.size+" / "+(REWARD_COLLECTION_TYPES.length*REWARD01_COLORS.length)+"種類";
   if (rewardCollectionView === "date") {
