@@ -432,15 +432,36 @@ function createRewardMiniCard(card, onClick) {
   button.style.cssText = "display:flex;flex-direction:column;min-width:0;aspect-ratio:1/1;padding:12px;border:0;border-radius:12px;background:#121212;color:#f6f6f6;text-align:left;cursor:pointer;overflow:hidden;font-family:Arial,sans-serif;";
   const number = document.createElement("strong");
   number.textContent = typeId;
-  number.style.cssText = "font-size:25px;line-height:1.1;color:"+color+";"+(card.colorIndex===6?"text-shadow:0 0 2px #777;":"");
+  number.style.cssText = "font-size:36px;line-height:1.1;color:"+color+";"+(card.colorIndex===6?"text-shadow:0 0 2px #777;":"");
   const title = document.createElement("span");
-  title.textContent = getRewardMiniTitleLines(typeId).join("\n");
-  title.style.cssText = "display:flex;flex:1;align-items:center;min-height:0;padding:8px 0;font-size:clamp(10px,2.9vw,14px);font-weight:700;line-height:1.45;color:#fff;white-space:pre-line;overflow-wrap:anywhere;text-align:left;";
+  const lines = getRewardMiniTitleLines(typeId);
+  title.textContent = lines.join("\n");
+  title.style.cssText = "display:block;margin-top:auto;padding:10px 0 8px;font-size:18px;font-weight:700;line-height:1.4;color:#fff;white-space:pre-line;text-align:left;";
+  const divider = document.createElement("span");
+  divider.style.cssText = "display:block;width:100%;height:1px;background:#555;flex-shrink:0;margin-bottom:7px;";
   const date = document.createElement("span");
   const day = card.dayKey || getDailyTaskDayKey();
   date.textContent = day.slice(0,4)+"/"+day.slice(4,6)+"/"+day.slice(6,8);
   date.style.cssText = "font-size:10px;line-height:1.2;color:#bcbcbc;white-space:nowrap;";
-  button.append(number,title,date);
+  button.append(number,title,divider,date);
+  // 表示中のカード幅と各行の実測文字幅から最大のフォントサイズを決める。
+  const context = document.createElement("canvas").getContext("2d");
+  const fitTitle = () => {
+    const availableWidth = button.clientWidth - 24;
+    if (!context || availableWidth <= 0) return;
+    let size = 20;
+    while (size > 9) {
+      context.font = "700 "+size+"px Arial,sans-serif";
+      if (lines.every(line => context.measureText(line).width <= availableWidth)) break;
+      size -= 0.5;
+    }
+    title.style.fontSize = size+"px";
+  };
+  if (typeof ResizeObserver === "function") {
+    new ResizeObserver(fitTitle).observe(button);
+  } else {
+    requestAnimationFrame(fitTitle);
+  }
   if (onClick) button.addEventListener("click",onClick);
   return button;
 }
