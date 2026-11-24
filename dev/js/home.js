@@ -1248,28 +1248,30 @@ function getHomeSelectedRequestSongName() {
 }
 
 function buildHomeDailyTaskCopyText(item) {
-  const requestType = item["request-type"];
-  const templateValue = state.requestTexts[requestType];
-
-  if (!requestType || !templateValue) {
-    return "";
-  }
-
   const musicName = getHomeSelectedRequestSongName();
+  if (!musicName) return "";
 
-  if (!musicName) {
-    return "";
-  }
+  const template = selectDailyRequestTextTemplate(item, "home_");
+  return normalizeDisplayNewlines(formatRadioRequestText(template, musicName));
+}
 
-  const template = pickRequestTextTemplate(templateValue, `home_${requestType}`);
+function refreshHomeDailyTaskCopyTexts(settingKey) {
+  if (!homeDailyExtraListElement) return;
 
-  if (!template) {
-    return "";
-  }
+  HOME_EXTRA_DAILY_TASKS.forEach((task, index) => {
+    if (getRadioRequestTextSettingKey(task) !== settingKey) return;
 
-  return template
-    .replaceAll("musicname", musicName)
-    .replaceAll("\\n", "\n");
+    const openButton = homeDailyExtraListElement.querySelector(
+      `[data-home-extra-action="open"][data-source="daily"][data-index="${index}"]`
+    );
+    const actions = openButton?.closest(".home-extra-task-actions");
+    if (!actions) return;
+
+    task._preparedHomeCopyText = buildHomeDailyTaskCopyText(task);
+    actions.parentElement.querySelector(".daily-task-copy-preview")?.remove();
+    const preview = createHomeDailyTaskCopyPreview(task, "daily");
+    if (preview) actions.before(preview);
+  });
 }
 
 function openHomeMenu() {

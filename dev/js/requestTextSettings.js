@@ -51,6 +51,22 @@ function getAvailableRadioRequestTextFavorites(entry, value) {
   return getRadioRequestTextExamples(value).filter((text) => entry.favorites.includes(text));
 }
 
+function selectDailyRequestTextTemplate(item, historyPrefix = "") {
+  const settingKey = getRadioRequestTextSettingKey(item);
+  const setting = settingKey ? getRadioRequestTextSetting(settingKey) : null;
+  const original = getOriginalRadioRequestText(setting);
+  if (original) return original;
+
+  const requestType = item?.["request-type"];
+  const templates = state.requestTexts[requestType];
+  if (!requestType || !templates) return "";
+
+  const favorites = getAvailableRadioRequestTextFavorites(setting, templates);
+  return favorites.length
+    ? pickRequestTextTemplate(favorites, `${historyPrefix}favorites_${settingKey}`)
+    : pickRequestTextTemplate(templates, `${historyPrefix}${requestType}`);
+}
+
 function formatRadioRequestText(template, songName) {
   return template.replaceAll(/musicname|［曲名］/g, () => songName);
 }
@@ -203,6 +219,7 @@ function bindRequestTextSettings() {
         current._preparedCopyText = buildDailyTaskCopyText(current);
         updateDailyTaskCopyPreview(current);
       }
+      refreshHomeDailyTaskCopyTexts(key);
     }
   }
 
