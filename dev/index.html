@@ -1453,12 +1453,16 @@
             <button type="button" class="post-preview-tab" data-request-text-mode="fixed" aria-pressed="false">固定</button>
           </div>
           <div id="requestTextRandomSettings" class="request-text-settings">
-            <div class="request-text-actions">
-              <button type="button" id="requestTextSelectAll" class="secondary-button compact-button">すべてチェック</button>
-              <button type="button" id="requestTextClearAll" class="secondary-button compact-button">すべて外す</button>
+            <div class="request-text-bulk-actions">
+              <button type="button" id="requestTextSelectAll">すべてチェック</button>
+              <button type="button" id="requestTextClearAll">すべて外す</button>
             </div>
             <p id="requestTextCandidateNote" class="select-mode-auto-save-note" aria-live="polite"></p>
-            <div id="requestTextCandidateList" class="check-list" role="group" aria-label="ランダムの抽選候補" tabindex="0"></div>
+            <div id="requestTextCandidateList" role="group" aria-label="ランダムの抽選候補" tabindex="0">
+              <label class="request-text-choice request-text-original-choice"><input type="checkbox" id="requestTextIncludeOriginal" aria-controls="requestTextOriginalEditorPanel">オリジナル文章を使う</label>
+              <div id="requestTextRandomEditorSlot"></div>
+              <div id="requestTextPresetChoices"></div>
+            </div>
           </div>
           <div id="requestTextFixedSettings" class="request-text-settings hidden">
             <label for="requestTextExample">プリセット例文</label>
@@ -1466,10 +1470,12 @@
               <select id="requestTextExample"></select>
               <button type="button" id="requestTextUseExample" class="secondary-button compact-button" aria-label="プリセット例文を固定文に入れる">↓</button>
             </div>
-            <label id="requestTextEditorLabel">固定のリクエスト文</label>
-            <div id="requestTextEditor" contenteditable="true" role="textbox" aria-multiline="true" aria-labelledby="requestTextEditorLabel"></div>
-            <div class="request-text-actions">
-              <button type="button" id="requestTextInsertSong" class="secondary-button">曲名を挿入</button>
+            <label class="request-text-choice request-text-original-choice"><input type="checkbox" id="requestTextUseOriginal" aria-controls="requestTextOriginalEditorPanel">オリジナル文章を使う</label>
+            <div id="requestTextFixedEditorSlot">
+              <div id="requestTextOriginalEditorPanel" class="request-text-original-editor hidden">
+                <div id="requestTextEditor" contenteditable="true" role="textbox" aria-multiline="true" aria-label="オリジナル文章"></div>
+                <button type="button" id="requestTextInsertSong">曲名を挿入</button>
+              </div>
             </div>
             <div>
               <strong id="requestTextPreviewLabel">プレビュー</strong>

@@ -1463,10 +1463,53 @@
   display: none;
 }
 
-.request-text-actions {
+.request-text-bulk-actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  gap: 12px;
+}
+
+.request-text-bulk-actions button,
+#requestTextInsertSong {
+  width: auto;
+  padding: 4px 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-brand);
+  font: inherit;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.request-text-bulk-actions button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.request-text-choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  padding: 4px 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.request-text-choice input {
+  flex: none;
+  margin: 0.2em 0 0;
+}
+
+.request-text-original-choice {
+  font-weight: 700;
+}
+
+.request-text-original-editor {
+  display: grid;
+  justify-items: start;
+  gap: 3px;
+  padding: 3px 0 6px;
 }
 
 #requestTextProgram,
