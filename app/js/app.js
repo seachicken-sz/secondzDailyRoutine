@@ -25,6 +25,8 @@ bindModalEvents();
 bindSelectModeEvents();
 // ホーム画面イベント登録
 bindHomeEvents();
+// ごほうびカードの閲覧イベント
+bindReward01Events();
 // Spotify画面イベント登録
 bindSpotifyEvents();
 // 期間限定タスク画面イベント登録
