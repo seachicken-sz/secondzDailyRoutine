@@ -1463,7 +1463,6 @@
   display: none;
 }
 
-.request-text-modes,
 .request-text-actions {
   display: flex;
   flex-wrap: wrap;
@@ -1471,6 +1470,7 @@
 }
 
 #requestTextProgram,
+#requestTextExample,
 #requestTextEditor {
   width: 100%;
   padding: 10px;
@@ -1516,4 +1516,12 @@
 
 #requestTextPreview {
   margin: 6px 0 10px;
+}
+
+@media (orientation: portrait) {
+  #settingModal.is-request-text-settings .setting-modal-content {
+    box-sizing: border-box;
+    width: 90vw;
+    max-width: none;
+  }
 }

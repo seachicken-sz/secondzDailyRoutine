@@ -284,6 +284,7 @@ function showSettingModalPage(page) {
   const target = page === "push" && !isPwa ? "index" :
     Object.prototype.hasOwnProperty.call(pages, page) ? page : "index";
   const index = target === "index";
+  settingModalElement?.classList.toggle("is-request-text-settings", target === "requestText");
   if (index) refreshSettingModalIndexStatus();
   document.getElementById("settingModalIndex")?.classList.toggle("hidden", !index);
   Object.entries(pages).forEach(([name, config]) => {

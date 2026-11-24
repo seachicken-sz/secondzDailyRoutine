@@ -284,7 +284,9 @@ function setDailyTaskStepHelpKey(item) {
 // デイリータスク用コピー文作成
 // ==================================================
 function buildDailyTaskCopyText(item) {
-  const original = getOriginalRadioRequestText(item);
+  const settingKey = getRadioRequestTextSettingKey(item);
+  const textSetting = settingKey ? getRadioRequestTextSetting(settingKey) : null;
+  const original = getOriginalRadioRequestText(textSetting);
   if (original) {
     return formatRadioRequestText(original, getSelectedRadioRequestSongName());
   }
@@ -299,7 +301,10 @@ function buildDailyTaskCopyText(item) {
     return "";
   }
   // 複数候補がある場合だけランダムに1つ選ぶ
-  const template = pickRequestTextTemplate(templateValue, requestType);
+  const favorites = getAvailableRadioRequestTextFavorites(textSetting, templateValue);
+  const template = favorites.length
+    ? pickRequestTextTemplate(favorites, `favorites_${settingKey}`)
+    : pickRequestTextTemplate(templateValue, requestType);
   if (!template) {
     return "";
   }
