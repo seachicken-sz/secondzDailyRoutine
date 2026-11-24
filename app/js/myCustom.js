@@ -3,6 +3,30 @@ const myCustomStepElement = document.getElementById("myCustomStep");
 const MY_CUSTOM_STORAGE_KEY = "tamugotoDailyMyCustom:" + location.pathname;
 const MY_CUSTOM_POSITIONS = ["afterSpotify", "afterLimited", "afterUsen", "afterDaily"];
 let myCustomOptions = [];
+const PHOTO_COLLECTION_DONE_KEY = "tamugotoDailyPhotoCollectionDone:app";
+
+function getPhotoCollectionDayKey(date = new Date()) {
+  return new Date(date.getTime() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
+}
+
+function isPhotoCollectionTask(task) {
+  return /^https:\/\/fumakikuchi\.com\/feature\/morephotocollection(?:[?#]|$)/i.test(String(task?.url || ""));
+}
+
+function isMyCustomDailyTaskDone(task) {
+  if (task?._localTask === true) return isDailyTaskDone(task);
+  if (isPhotoCollectionTask(task)) return localStorage.getItem(PHOTO_COLLECTION_DONE_KEY) === getPhotoCollectionDayKey();
+  return false;
+}
+
+// 開いた直後の画面は「次へ」を押せるよう保持し、それ以外の完了済みタスクを除外する。
+function skipCompletedMyCustomTasks(flow) {
+  if (!flow || !Array.isArray(flow.tasks)) return false;
+  while (flow.index < flow.tasks.length && !flow.opened && isMyCustomDailyTaskDone(flow.tasks[flow.index])) {
+    flow.index += 1;
+  }
+  return flow.index < flow.tasks.length;
+}
 
 function loadMyCustomIds() {
   try {
@@ -79,8 +103,9 @@ function getMyCustomTasks(position) {
 async function runMyCustomTasks(position, continuation) {
   const tasks = getMyCustomTasks(position);
   if (position === "afterDaily") tasks.push(...getRoutineLocalTasks());
-  if (!tasks.length) return continueAfterMyCustom(continuation);
-  state.myCustomFlow = { tasks, index: 0, continuation, opened: false };
+  const pendingTasks = tasks.filter(task => !isMyCustomDailyTaskDone(task));
+  if (!pendingTasks.length) return continueAfterMyCustom(continuation);
+  state.myCustomFlow = { tasks: pendingTasks, index: 0, continuation, opened: false };
   renderMyCustomTask();
   showOnlyStep(myCustomStepElement);
 }
@@ -143,6 +168,15 @@ function bindMyCustomEvents() {
     const flow = state.myCustomFlow;
     const task = flow?.tasks?.[flow.index];
     if (!task) return;
+    if (!flow.opened && isMyCustomDailyTaskDone(task)) {
+      if (skipCompletedMyCustomTasks(flow)) {
+        renderMyCustomTask();
+        saveFlowState();
+      } else {
+        await continueAfterMyCustom(flow.continuation);
+      }
+      return;
+    }
     if (task._localTask) {
       const copyText = getMyCustomLocalCopyText(task);
       if (copyText) {
@@ -157,6 +191,9 @@ function bindMyCustomEvents() {
       if (state.myCustomFlow !== flow || flow.tasks[flow.index] !== task) return;
       recordCompletedDailyItem(task);
     }
+    if (isPhotoCollectionTask(task)) {
+      localStorage.setItem(PHOTO_COLLECTION_DONE_KEY, getPhotoCollectionDayKey());
+    }
     flow.opened = true;
     renderMyCustomTask();
     saveFlowState();
@@ -165,9 +202,9 @@ function bindMyCustomEvents() {
   addClickEvent(document.getElementById("myCustomNextButton"), async () => {
     const flow = state.myCustomFlow;
     if (!flow) return;
-    if (flow.index + 1 < flow.tasks.length) {
-      flow.index += 1;
-      flow.opened = false;
+    flow.index += 1;
+    flow.opened = false;
+    if (skipCompletedMyCustomTasks(flow)) {
       renderMyCustomTask();
       saveFlowState();
       return;

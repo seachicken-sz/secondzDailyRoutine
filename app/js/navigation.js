@@ -23,6 +23,10 @@ function showPlaceholderNextStep(message) {
 // ==================================================
 // 指定されたステップ画面だけを表示し、それ以外のステップ画面を非表示にする
 function showOnlyStep(activeStepElement, options = {}) {
+  if (activeStepElement === myCustomStepElement && state.myCustomFlow && !skipCompletedMyCustomTasks(state.myCustomFlow)) {
+    void continueAfterMyCustom(state.myCustomFlow.continuation);
+    return;
+  }
   // 表示対象の画面要素がない場合は処理しない
   if (!activeStepElement) {
     console.error("表示対象の画面が見つかりません。");
@@ -87,11 +91,16 @@ function showOnlyStep(activeStepElement, options = {}) {
 // 上部の「戻る」ボタン押下時に、現在画面に応じて前の画面へ戻す
 async function goBackStep() {
   if (state.currentStepElement === myCustomStepElement && state.myCustomFlow?.index > 0) {
-    state.myCustomFlow.index -= 1;
-    state.myCustomFlow.opened = false;
-    renderMyCustomTask();
-    saveFlowState();
-    return;
+    const flow = state.myCustomFlow;
+    let previousIndex = flow.index - 1;
+    while (previousIndex >= 0 && isMyCustomDailyTaskDone(flow.tasks[previousIndex])) previousIndex -= 1;
+    if (previousIndex >= 0) {
+      flow.index = previousIndex;
+      flow.opened = false;
+      renderMyCustomTask();
+      saveFlowState();
+      return;
+    }
   }
   // デイリータスク画面は、単純な画面履歴ではなく
   // タスク番号・グループ番号を戻す必要があるため専用処理に回す
