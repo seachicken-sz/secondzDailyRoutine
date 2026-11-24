@@ -761,15 +761,22 @@
     </section>
     <section id="myCustomStep" class="step-screen hidden">
       <header class="header">
-        <h1>マイカスタム</h1>
+        <h1 id="myCustomStepTitle">マイカスタム</h1>
         <p id="myCustomTaskProgress" class="description"></p>
       </header>
       <section class="task-card">
+        <p id="myCustomLocalGroupName" class="group-label hidden"></p>
         <h2 id="myCustomTaskName" class="task-title"></h2>
         <div id="myCustomTaskComment" class="notice-box"></div>
+        <div id="myCustomLocalCopyPreview" class="daily-task-copy-preview hidden">
+          <p class="daily-task-copy-preview-note">「ページを開く」を押すと以下がコピーされます。</p>
+          <div id="myCustomLocalCopyText" class="daily-task-copy-preview-text"></div>
+          <p id="myCustomLocalCopyTarget" class="daily-task-copy-preview-note"></p>
+        </div>
         <button id="openMyCustomTaskButton" type="button" class="primary-button">ページを開く</button>
         <button id="myCustomNextButton" type="button" class="secondary-button">スキップ</button>
       </section>
+      <section id="myCustomLocalError" class="error-area hidden" role="status"></section>
     </section>
     <!--STEP 3 USEN推しリク-->
     <section id="requestSongStep" class="step-screen hidden">

@@ -494,7 +494,8 @@ async function restoreFlowStateOrHome() {
     const flow = state.myCustomFlow;
     if (flow && Array.isArray(flow.tasks) && Number.isInteger(flow.index) &&
         flow.index >= 0 && flow.tasks[flow.index]?.name &&
-        /^https?:\/\//i.test(String(flow.tasks[flow.index]?.url || "")) &&
+        (/^https?:\/\//i.test(String(flow.tasks[flow.index]?.url || "")) ||
+         (flow.tasks[flow.index]._localTask === true && /^mailto:/i.test(String(flow.tasks[flow.index].url || "")))) &&
         ["spotify", "onceTask", "afterUsen", "afterDaily"].includes(flow.continuation)) {
       renderMyCustomTask();
       showOnlyStep(myCustomStepElement, { recordHistory: false });

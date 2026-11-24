@@ -78,6 +78,7 @@ function getMyCustomTasks(position) {
 
 async function runMyCustomTasks(position, continuation) {
   const tasks = getMyCustomTasks(position);
+  if (position === "afterDaily") tasks.push(...getRoutineLocalTasks());
   if (!tasks.length) return continueAfterMyCustom(continuation);
   state.myCustomFlow = { tasks, index: 0, continuation, opened: false };
   renderMyCustomTask();
@@ -88,14 +89,42 @@ function renderMyCustomTask() {
   const flow = state.myCustomFlow;
   const task = flow?.tasks?.[flow.index];
   if (!task) return;
+  const local = task._localTask === true;
+  document.getElementById("myCustomStepTitle").textContent = local ? "ローカルタスク" : "マイカスタム";
+  const groupName = document.getElementById("myCustomLocalGroupName");
+  groupName.textContent = local ? task._localGroupName || "" : "";
+  groupName.classList.toggle("hidden", !local);
+  const progressTasks = flow.tasks.filter(item => Boolean(item._localTask) === local);
+  const progressIndex = flow.tasks.slice(0, flow.index + 1).filter(item => Boolean(item._localTask) === local).length;
   document.getElementById("myCustomTaskProgress").textContent =
-    (flow.index + 1) + " / " + flow.tasks.length;
+    progressIndex + " / " + progressTasks.length;
+  renderMyCustomLocalCopyPreview(task);
+  hideError(document.getElementById("myCustomLocalError"));
   document.getElementById("myCustomTaskName").textContent = task.name;
   document.getElementById("myCustomTaskComment").textContent =
     normalizeDisplayNewlines(task.comment || "");
   setButtonStyle(document.getElementById("openMyCustomTaskButton"), flow.opened ? "gray" : "primary");
   setButtonStyle(document.getElementById("myCustomNextButton"), flow.opened ? "primary" : "secondary");
   document.getElementById("myCustomNextButton").textContent = flow.opened ? "次へ" : "スキップ";
+}
+
+function getMyCustomLocalCopyText(task) {
+  if (!task?._localTask || task["input-flag"] !== true) return "";
+  const template = selectDailyRequestTextTemplate(task);
+  // USEN・デイリー用の曲選択を省略した場合は、おかわりDailyの選択曲を使用する。
+  const songName = getSelectedRadioRequestSongName() || getHomeSelectedRequestSongName();
+  if (!songName && /musicname|［曲名］/.test(template)) return "";
+  return normalizeDisplayNewlines(formatRadioRequestText(template, songName));
+}
+
+function renderMyCustomLocalCopyPreview(task) {
+  const text = getMyCustomLocalCopyText(task);
+  const preview = document.getElementById("myCustomLocalCopyPreview");
+  const target = task?.["request-input"];
+  document.getElementById("myCustomLocalCopyText").textContent = text;
+  document.getElementById("myCustomLocalCopyTarget").textContent =
+    target ? "「" + target + "」にペーストしてください。" : "指定の入力欄にペーストしてください。";
+  preview.classList.toggle("hidden", !text);
 }
 
 async function continueAfterMyCustom(continuation) {
@@ -110,10 +139,24 @@ async function continueAfterMyCustom(continuation) {
 }
 
 function bindMyCustomEvents() {
-  addClickEvent(document.getElementById("openMyCustomTaskButton"), () => {
+  addClickEvent(document.getElementById("openMyCustomTaskButton"), async () => {
     const flow = state.myCustomFlow;
     const task = flow?.tasks?.[flow.index];
     if (!task) return;
+    if (task._localTask) {
+      const copyText = getMyCustomLocalCopyText(task);
+      if (copyText) {
+        try {
+          await navigator.clipboard.writeText(copyText);
+        } catch (error) {
+          console.error(error);
+          showError(document.getElementById("myCustomLocalError"), MESSAGES.errors.dailyCopyFailed);
+          return;
+        }
+      }
+      if (state.myCustomFlow !== flow || flow.tasks[flow.index] !== task) return;
+      recordCompletedDailyItem(task);
+    }
     flow.opened = true;
     renderMyCustomTask();
     saveFlowState();

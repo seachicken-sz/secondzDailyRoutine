@@ -92,7 +92,7 @@ function getSelectableDailyTaskIds() {
     return [];
   }
 
-  return state.dailyGroups.flatMap((group) => {
+  return state.dailyGroups.filter(group => !group.localFlag).flatMap((group) => {
     const items = Array.isArray(group?.items) ? group.items : [];
 
     return items
@@ -124,7 +124,7 @@ function cleanupMissingSelectModeDailyTaskIds() {
   const settings = getSelectModeSettings();
 
   const cleanedIds = settings.dailyTaskIds.filter((taskId) => {
-    return validIdSet.has(taskId) || taskId.startsWith("local_");
+    return validIdSet.has(taskId);
   });
 
   if (cleanedIds.length === settings.dailyTaskIds.length) {
@@ -308,7 +308,7 @@ function renderSelectModeDailyTaskList() {
   selectModeDailyTaskListElement.innerHTML = "";
 
   const groups = Array.isArray(state.dailyGroups)
-    ? state.dailyGroups
+    ? state.dailyGroups.filter(group => !group.localFlag)
     : [];
 
   const settings = getSelectModeSettings();
@@ -409,7 +409,7 @@ function updateSelectModeSelectionSummary() {
 }
 
 function getRemainingRoutineStatus() {
-  const groups = Array.isArray(state.dailyGroups) ? state.dailyGroups : [];
+  const groups = Array.isArray(state.dailyGroups) ? state.dailyGroups.filter(group => !group.localFlag) : [];
   const items = groups.flatMap((group) => getDailyGroupItems(group));
   const usenDone = isDailyTaskDone({ id: "home_usen_request" });
   const completedCount = items.filter((item) => isDailyTaskDone(item)).length;
@@ -431,11 +431,6 @@ function getSelectModeFeatureDoneItem(featureName) {
 function getRoutineStartStatus(settings = getSelectModeSettings()) {
   const remaining = getRemainingRoutineStatus();
 
-  // 通常タスクのクリア特典を維持しつつ、未実行のローカルタスクにも進める。
-  if (hasPendingLocalDailyTasks() && typeof getReward01Eligibility === "function" && getReward01Eligibility().eligible) {
-    return { remaining, resume: true, showSpotify: false };
-  }
-
   if (!settings.enabled) {
     return { remaining, resume: remaining.enabled, showSpotify: true };
   }
@@ -443,7 +438,7 @@ function getRoutineStartStatus(settings = getSelectModeSettings()) {
   const selectedIds = getValidSelectedDailyTaskIds(settings);
   const features = settings.features;
   const selectedDone = hasRunnableSelectModeSelection(settings) &&
-    selectedIds.length === settings.dailyTaskIds.filter(id => !id.startsWith("local_") || selectedIds.includes(id)).length &&
+    selectedIds.length === settings.dailyTaskIds.length &&
     selectedIds.every((id) => isDailyTaskDone({ id })) &&
     (!features.usen || remaining.usenDone) &&
     (!features.spotify || isDailyTaskDone(getSelectModeFeatureDoneItem("spotify"))) &&
@@ -462,7 +457,7 @@ function updateStartRoutineButtonLabel() {
   }
 
   const isAllClear = typeof getReward01Eligibility === "function" &&
-    getReward01Eligibility().eligible && !hasPendingLocalDailyTasks();
+    getReward01Eligibility().eligible;
   if (isAllClear) {
     startRoutineButtonElement.textContent = "ALL CLEAR！";
     return;
@@ -582,9 +577,9 @@ function isSelectModeFeatureSelected(featureName) {
 // 今回実行するデイリータスク
 // ==================================================
 function getExecutionDailyGroups() {
-  const groups = Array.isArray(state.routineLocalGroupCodes)
-    ? composeDailyGroups(state.routineLocalGroupCodes)
-    : Array.isArray(state.dailyGroups) ? state.dailyGroups : [];
+  const groups = Array.isArray(state.dailyGroups)
+    ? state.dailyGroups.filter(group => !group.localFlag)
+    : [];
 
   // 通常モードの残りルーチンは、開始時に確定した未実行タスクだけを元のグループ順で回る
   if (!isSelectRoutine()) {
@@ -654,7 +649,6 @@ function doesExecutionDailyNeedRequestSong() {
       return false;
     }
 
-    if (isLocalRequestText(item)) return /musicname|［曲名］/.test(getLocalRequestText(requestType));
     const template = state.requestTexts?.[requestType];
 
     if (Array.isArray(template)) {

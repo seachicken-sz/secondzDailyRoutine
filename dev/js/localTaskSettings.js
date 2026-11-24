@@ -17,18 +17,21 @@ function getEnabledLocalDailyGroups(codes = readEnabledLocalGroupCodes()) {
 }
 
 function composeDailyGroups(codes = readEnabledLocalGroupCodes()) {
-  const local = getEnabledLocalDailyGroups(codes);
-  if (!local.length) return state.baseDailyGroups;
-  const groups = [...state.baseDailyGroups, ...local];
-  return groups.map((group, index) => ({ ...group, lastFlag: index === groups.length - 1 }));
+  // ホームと文章設定の一覧にはローカルを含める。通常の実行対象は別途絞り込む。
+  return [...state.baseDailyGroups, ...getEnabledLocalDailyGroups(codes)];
 }
 
 function isEnabledLocalItem(item) {
   return getEnabledLocalDailyGroups().some(group => group.items.some(task => task.id === item?.id));
 }
 
-function hasPendingLocalDailyTasks() {
-  return getEnabledLocalDailyGroups().some(group => group.items.some(item => !isDailyTaskDone(item)));
+function getRoutineLocalTasks() {
+  const codes = Array.isArray(state.routineLocalGroupCodes)
+    ? state.routineLocalGroupCodes : readEnabledLocalGroupCodes();
+  return getEnabledLocalDailyGroups(codes).flatMap(group => group.items
+    .filter(item => item?.name && /^(https?:\/\/|mailto:)/i.test(String(item.url || "")))
+    .filter(item => !state.remainingRoutineMode || !isDailyTaskDone(item))
+    .map(item => ({ ...item, _localTask: true, _localGroupName: group.listName })));
 }
 
 function isLocalRequestText(item) {
@@ -75,6 +78,10 @@ function saveLocalRequestText(type, text) {
     updateDailyTaskCopyPreview(current);
   }
   refreshHomeDailyTaskCopyTexts(key);
+  if (state.currentStepElement === myCustomStepElement &&
+      getRadioRequestTextSettingKey(state.myCustomFlow?.tasks?.[state.myCustomFlow.index]) === key) {
+    renderMyCustomTask();
+  }
 }
 
 // 同じ request-type の文章は両設定画面で同じ保存データを参照する。
