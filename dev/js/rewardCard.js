@@ -23,7 +23,7 @@ function saveReward01Cards(cards) {
 }
 function getReward01Eligibility() {
   const groups = Array.isArray(state.dailyGroups) ? state.dailyGroups : [];
-  const tasks = groups.flatMap(group => getDailyGroupItems(group));
+  const tasks = groups.filter(group => !group.localFlag).flatMap(group => getDailyGroupItems(group));
   const unique = [...new Map(tasks.map(item => [getDailyTaskStorageKey(item), item])).values()]
     .filter(item => getDailyTaskStorageKey(item));
   const completed = unique.filter(item => isDailyTaskDone(item)).length;

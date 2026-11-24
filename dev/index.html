@@ -1434,6 +1434,7 @@
           <button type="button" class="setting-modal-index-item" data-setting-open="custom"><span class="setting-modal-index-icon"><i class="bi bi-person-gear"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>加入サービス・追加タスク</strong><span class="setting-modal-index-status is-off" data-setting-status="custom" aria-label="加入サービス・追加タスク OFF">OFF</span></span><small>加入サービスに合わせてタスクを追加</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
           <button type="button" class="setting-modal-index-item" data-setting-open="bgm"><span class="setting-modal-index-icon"><i class="bi bi-headphones"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>Spotify設定</strong><span class="setting-modal-index-status is-off" data-setting-status="bgm" aria-label="Spotify設定 OFF">OFF</span></span><small>タスク中に聴ける音楽の設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
           <button type="button" class="setting-modal-index-item" data-setting-open="usen"><span class="setting-modal-index-icon"><i class="bi bi-music-note-list"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>USEN推しリク設定</strong><span class="setting-modal-index-status is-off" data-setting-status="usen" aria-label="USEN推しリク設定 OFF">OFF</span></span><small>USEN推し活リクエストの設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+          <button type="button" class="setting-modal-index-item" data-setting-open="local"><span class="setting-modal-index-icon"><i class="bi bi-geo-alt"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>ローカルタスク設定</strong><span class="setting-modal-index-status is-off" data-setting-status="local" aria-label="ローカルタスク設定 OFF">OFF</span></span><small>地元のラジオへのリクエストを追加</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
           <button type="button" class="setting-modal-index-item" data-setting-open="requestText"><span class="setting-modal-index-icon"><i class="bi bi-pencil-square" aria-hidden="true"></i></span><span class="setting-modal-index-text"><strong>ラジオリクエスト文</strong><small>番組ごとにコピーする文章を設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
         </section>
       </nav>
@@ -1444,6 +1445,14 @@
         <button type="button" id="settingOpenFirstSetupButton" class="primary-button">
           ホーム画面に追加する
         </button>
+      </section>
+
+      <section id="localTaskSettingSection" class="setting-section hidden">
+        <div class="setting-section-header"><h3>ローカルタスクについて</h3><p>Billboard JAPANのラジオ集計対象外として扱うラジオ局へのリクエストです。地元のラジオでtimeleszの曲を流したい方向けの機能です。</p><p>リクエスト文章は、ご自身の言葉や曲への思いを添えてカスタムすることをおすすめします。</p></div>
+        <h3>都道府県を選択</h3>
+        <div id="localTaskSettingList" class="select-mode-feature-list"></div>
+        <p id="localTaskSettingStatus" class="select-mode-auto-save-note" role="status"></p>
+        <button type="button" class="primary-button setting-save-close-button" data-setting-save-close>保存して閉じる</button>
       </section>
 
       <section id="requestTextSettingSection" class="setting-section hidden">
@@ -1484,6 +1493,7 @@
               <p id="requestTextPreview"></p>
             </div>
           </div>
+          <div id="requestTextLocalSettings" class="request-text-settings hidden"></div>
           <p class="select-mode-auto-save-note">変更はこの端末に保存されます。</p>
           <button type="button" class="primary-button setting-save-close-button" data-setting-save-close>保存して閉じる</button>
         </div>
@@ -1736,6 +1746,7 @@
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/memberWorks.js") + '" defer><' + '/script>');</script>
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/setting.js") + '" defer><' + '/script>');</script>
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/requestTextSettings.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/localTaskSettings.js") + '" defer><' + '/script>');</script>
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/selectMode.js") + '" defer><' + '/script>');</script>
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/myCustom.js") + '" defer><' + '/script>');</script>
 <!-- シェア画像 -->

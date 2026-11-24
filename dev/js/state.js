@@ -22,6 +22,10 @@ const state = {
 
   requestTexts: {},
   dailyGroups: [],
+  baseDailyGroups: [],
+  localDailyGroups: [],
+  localDailyGroupsLoaded: false,
+  routineLocalGroupCodes: null,
   currentDailyGroupIndex: 0,
   completedDailyGroupIndexes: [],
   dailyGroupHistory: [],

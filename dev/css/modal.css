@@ -1658,3 +1658,17 @@
     max-width: none;
   }
 }
+
+/* ローカルタスク設定 */
+.local-task-group { min-width: 0; }
+.local-task-details { display: grid; gap: 10px; padding: 8px 0 8px 18px; }
+.local-task-details.hidden { display: none; }
+.local-task-detail { padding: 8px 0; border-bottom: 1px solid var(--color-border-light); overflow-wrap: anywhere; }
+.local-task-detail p { white-space: pre-wrap; font-size: 0.85rem; margin: 6px 0 0; }
+.local-request-editor { display: grid; gap: 6px; min-width: 0; padding: 10px; border-radius: 10px; background: var(--color-surface-soft); }
+.local-request-textarea { box-sizing: border-box; width: 100%; min-height: 7em; padding: 10px; border: 1px solid var(--color-border); border-radius: 10px; background: var(--color-surface); color: var(--color-text); font: inherit; font-size: 16px; resize: vertical; }
+.local-request-edit-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.local-request-edit-action { width: auto; padding: 4px 0.5em; border: 0; border-radius: 4px; background: var(--color-surface); color: var(--color-brand); font: inherit; font-size: 0.8rem; cursor: pointer; }
+#requestTextSettingForm.is-local-request-text { grid-template-rows: auto auto minmax(0, 1fr) auto auto; }
+#requestTextLocalSettings { min-height: 0; overflow-y: auto; align-content: start; }
+#requestTextSettingForm.is-local-request-text .post-preview-tabs { display: none; }

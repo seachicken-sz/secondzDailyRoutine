@@ -430,6 +430,8 @@ async function restoreFlowStateOrHome() {
   // state復元
   // ==================================================
   // Spotifyで選択していた曲
+  state.routineLocalGroupCodes = Array.isArray(flowState.routineLocalGroupCodes)
+    ? flowState.routineLocalGroupCodes.map(String) : [];
   state.selectedSong = flowState.selectedSong || null;
 
   // 選択済みの期間限定タスク

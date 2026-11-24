@@ -21,6 +21,7 @@ function readRadioRequestTextSettings() {
 
 function getRadioRequestTextSettingKey(item) {
   if (!isCustomizableRadioRequest(item)) return "";
+  if (isLocalRequestText(item)) return getLocalRequestTextKey(item["request-type"]);
   return item["request-type"] === "text" ? GENERIC_RADIO_REQUEST_TEXT_KEY : item.id;
 }
 
@@ -88,6 +89,7 @@ function selectDailyRequestTextTemplate(item, historyPrefix = "") {
   const settingKey = getRadioRequestTextSettingKey(item);
   const requestType = item?.["request-type"];
   const templates = state.requestTexts[requestType];
+  if (isLocalRequestText(item)) return getLocalRequestText(requestType);
   if (!settingKey) return pickRequestTextTemplate(templates, `${historyPrefix}${requestType}`);
 
   const setting = getRadioRequestTextSetting(settingKey);
@@ -111,6 +113,8 @@ function bindRequestTextSettings() {
   const modes = form.querySelectorAll("[data-request-text-mode]");
   const example = document.getElementById("requestTextExample");
   const randomSettings = document.getElementById("requestTextRandomSettings");
+  const localSettings = document.getElementById("requestTextLocalSettings");
+  const modeTabs = form.querySelector("[aria-label=\"使う文章\"]");
   const candidateList = document.getElementById("requestTextCandidateList");
   const presetChoices = document.getElementById("requestTextPresetChoices");
   const includeOriginalCheckbox = document.getElementById("requestTextIncludeOriginal");
@@ -195,6 +199,10 @@ function bindRequestTextSettings() {
   }
 
   function setOptionMode(option, entry) {
+    if (isLocalRequestText(items.get(option.value))) {
+      option.textContent = getLocalRequestTextLabel(items.get(option.value)["request-type"]);
+      return;
+    }
     const modeLabel = isFixedRequestTextMode(entry) ? "固定" : "ランダム";
     const name = option.value === GENERIC_RADIO_REQUEST_TEXT_KEY
       ? "汎用メッセージ"
@@ -225,6 +233,20 @@ function bindRequestTextSettings() {
   }
 
   function showProgram() {
+    const item = items.get(program.value);
+    const local = isLocalRequestText(item);
+    modeTabs.classList.toggle("hidden", local);
+    localSettings.classList.toggle("hidden", !local);
+    form.classList.toggle("is-local-request-text", local);
+    if (local) {
+      randomSettings.classList.add("hidden");
+      fixedSettings.classList.add("hidden");
+      localSettings.replaceChildren(createLocalRequestTextEditor(item["request-type"], getEnabledLocalItemsForType(item["request-type"]), status));
+      saveCloseButton.disabled = false;
+      status.textContent = "";
+      return;
+    }
+    localSettings.replaceChildren();
     const entry = getRadioRequestTextSetting(program.value);
     mode = isFixedRequestTextMode(entry) ? "fixed" : "random";
     fixedText = getFixedRequestText(entry);
@@ -416,7 +438,8 @@ function bindRequestTextSettings() {
         return;
       }
       items = new Map(state.dailyGroups.flatMap((group) => group.items)
-        .filter(isCustomizableRadioRequest).map((item) => [getRadioRequestTextSettingKey(item), item]));
+        .filter(item => isCustomizableRadioRequest(item) && (!isLocalRequestText(item) || isEnabledLocalItem(item)))
+        .map((item) => [getRadioRequestTextSettingKey(item), item]));
       if (!items.size) {
         status.textContent = "設定できる番組がありません。";
         return;

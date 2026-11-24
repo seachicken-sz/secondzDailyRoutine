@@ -124,7 +124,7 @@ function cleanupMissingSelectModeDailyTaskIds() {
   const settings = getSelectModeSettings();
 
   const cleanedIds = settings.dailyTaskIds.filter((taskId) => {
-    return validIdSet.has(taskId);
+    return validIdSet.has(taskId) || taskId.startsWith("local_");
   });
 
   if (cleanedIds.length === settings.dailyTaskIds.length) {
@@ -431,6 +431,11 @@ function getSelectModeFeatureDoneItem(featureName) {
 function getRoutineStartStatus(settings = getSelectModeSettings()) {
   const remaining = getRemainingRoutineStatus();
 
+  // 通常タスクのクリア特典を維持しつつ、未実行のローカルタスクにも進める。
+  if (hasPendingLocalDailyTasks() && typeof getReward01Eligibility === "function" && getReward01Eligibility().eligible) {
+    return { remaining, resume: true, showSpotify: false };
+  }
+
   if (!settings.enabled) {
     return { remaining, resume: remaining.enabled, showSpotify: true };
   }
@@ -438,7 +443,7 @@ function getRoutineStartStatus(settings = getSelectModeSettings()) {
   const selectedIds = getValidSelectedDailyTaskIds(settings);
   const features = settings.features;
   const selectedDone = hasRunnableSelectModeSelection(settings) &&
-    selectedIds.length === settings.dailyTaskIds.length &&
+    selectedIds.length === settings.dailyTaskIds.filter(id => !id.startsWith("local_") || selectedIds.includes(id)).length &&
     selectedIds.every((id) => isDailyTaskDone({ id })) &&
     (!features.usen || remaining.usenDone) &&
     (!features.spotify || isDailyTaskDone(getSelectModeFeatureDoneItem("spotify"))) &&
@@ -457,7 +462,7 @@ function updateStartRoutineButtonLabel() {
   }
 
   const isAllClear = typeof getReward01Eligibility === "function" &&
-    getReward01Eligibility().eligible;
+    getReward01Eligibility().eligible && !hasPendingLocalDailyTasks();
   if (isAllClear) {
     startRoutineButtonElement.textContent = "ALL CLEAR！";
     return;
@@ -512,6 +517,7 @@ async function startRoutineByCurrentMode() {
   const { remaining, resume, showSpotify } = getRoutineStartStatus(settings);
 
   resetRoutineProgressState();
+  state.routineLocalGroupCodes = readEnabledLocalGroupCodes();
 
   // セレクトの全完了後も、通常モードの残りルーチンを再利用する
   if (!settings.enabled || resume) {
@@ -576,9 +582,9 @@ function isSelectModeFeatureSelected(featureName) {
 // 今回実行するデイリータスク
 // ==================================================
 function getExecutionDailyGroups() {
-  const groups = Array.isArray(state.dailyGroups)
-    ? state.dailyGroups
-    : [];
+  const groups = Array.isArray(state.routineLocalGroupCodes)
+    ? composeDailyGroups(state.routineLocalGroupCodes)
+    : Array.isArray(state.dailyGroups) ? state.dailyGroups : [];
 
   // 通常モードの残りルーチンは、開始時に確定した未実行タスクだけを元のグループ順で回る
   if (!isSelectRoutine()) {
@@ -648,6 +654,7 @@ function doesExecutionDailyNeedRequestSong() {
       return false;
     }
 
+    if (isLocalRequestText(item)) return /musicname|［曲名］/.test(getLocalRequestText(requestType));
     const template = state.requestTexts?.[requestType];
 
     if (Array.isArray(template)) {
