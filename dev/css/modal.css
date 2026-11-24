@@ -1481,6 +1481,11 @@
   cursor: pointer;
 }
 
+#requestTextInsertSong {
+  border-radius: 4px;
+  background: var(--color-surface-soft);
+}
+
 .request-text-bulk-actions button:disabled {
   opacity: 0.45;
   cursor: default;

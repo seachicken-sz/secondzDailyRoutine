@@ -61,17 +61,13 @@ function getSelectedRequestTextPresets(entry, presets) {
   return presets;
 }
 
-function usesOriginalRequestText(entry) {
-  return entry?.useOriginal ?? Boolean(isFixedRequestTextMode(entry) && getFixedRequestText(entry));
-}
-
 function includesOriginalRequestText(entry) {
   return entry?.includeOriginal ?? Boolean(entry?.includeFixed === true && getFixedRequestText(entry));
 }
 
 function getAppliedFixedRequestText(entry, presets) {
-  if (usesOriginalRequestText(entry)) return getFixedRequestText(entry);
-  return presets.includes(entry?.fixedPreset) ? entry.fixedPreset : "";
+  if (entry?.useOriginal !== true && presets.includes(entry?.fixedPreset)) return entry.fixedPreset;
+  return getFixedRequestText(entry);
 }
 
 function getRequestTextCandidates(entry, presets) {
@@ -118,7 +114,6 @@ function bindRequestTextSettings() {
   const candidateList = document.getElementById("requestTextCandidateList");
   const presetChoices = document.getElementById("requestTextPresetChoices");
   const includeOriginalCheckbox = document.getElementById("requestTextIncludeOriginal");
-  const useOriginalCheckbox = document.getElementById("requestTextUseOriginal");
   const editorPanel = document.getElementById("requestTextOriginalEditorPanel");
   const randomEditorSlot = document.getElementById("requestTextRandomEditorSlot");
   const fixedEditorSlot = document.getElementById("requestTextFixedEditorSlot");
@@ -158,7 +153,6 @@ function bindRequestTextSettings() {
       text: fixedText,
       selectedPresets: selectedPresets.size === presets.length ? null : [...selectedPresets],
       includeOriginal: includeOriginalCheckbox.checked,
-      useOriginal: useOriginalCheckbox.checked,
       fixedPreset
     };
   }
@@ -179,7 +173,7 @@ function bindRequestTextSettings() {
       editorSlot.append(editorPanel);
       editorSelection = null;
     }
-    editorPanel.classList.toggle("hidden", !(fixed ? useOriginalCheckbox.checked : includeOriginalCheckbox.checked));
+    editorPanel.classList.toggle("hidden", !fixed && !includeOriginalCheckbox.checked);
 
     const total = presets.length + 1;
     const checked = selectedPresets.size + Number(includeOriginalCheckbox.checked);
@@ -187,10 +181,11 @@ function bindRequestTextSettings() {
     clearAllButton.disabled = checked === 0;
 
     const entry = getCurrentEntry();
-    const candidates = getRequestTextCandidates({ ...entry, mode: "random" }, presets);
-    candidateNote.textContent = candidates.length
-      ? `選んだ ${candidates.length} 件から抽選します。`
-      : "抽選候補がありません。リクエスト文はコピーされません。";
+    candidateNote.textContent = checked ? `選んだ ${checked} 件` :
+      "抽選候補がありません。リクエスト文はコピーされません。";
+    if (includeOriginalCheckbox.checked && !fixedText) {
+      candidateNote.textContent += "（オリジナル文章は入力後に抽選対象になります）";
+    }
 
     const songName = getSelectedRadioRequestSongName();
     const fixedTemplate = getAppliedFixedRequestText(entry, presets);
@@ -237,9 +232,8 @@ function bindRequestTextSettings() {
     presets = getRadioRequestTextExamples(state.requestTexts[requestType]);
     selectedPresets = new Set(getSelectedRequestTextPresets(entry, presets));
     includeOriginalCheckbox.checked = includesOriginalRequestText(entry);
-    useOriginalCheckbox.checked = usesOriginalRequestText(entry);
-    fixedPreset = presets.includes(entry?.fixedPreset) ? entry.fixedPreset : "";
-    setEditorText(fixedText);
+    fixedPreset = entry?.useOriginal !== true && presets.includes(entry?.fixedPreset) ? entry.fixedPreset : "";
+    setEditorText(mode === "fixed" ? fixedPreset || fixedText : fixedText);
     example.replaceChildren(...presets.map((text) => new Option(formatRadioRequestText(text, RADIO_REQUEST_SONG_TOKEN), text)));
     example.disabled = presets.length === 0;
     if (fixedPreset) example.value = fixedPreset;
@@ -288,6 +282,7 @@ function bindRequestTextSettings() {
 
   function saveEditorText() {
     fixedText = editor.innerText.replaceAll(RADIO_REQUEST_SONG_TOKEN, "musicname").trim();
+    if (mode === "fixed") fixedPreset = "";
     saveTextSettings();
   }
 
@@ -376,11 +371,11 @@ function bindRequestTextSettings() {
   modes.forEach((button) => button.addEventListener("click", () => {
     if (mode === button.dataset.requestTextMode) return;
     mode = button.dataset.requestTextMode;
+    setEditorText(mode === "fixed" ? fixedPreset || fixedText : fixedText);
     saveTextSettings();
   }));
   example.addEventListener("change", renderPanel);
   includeOriginalCheckbox.addEventListener("change", saveTextSettings);
-  useOriginalCheckbox.addEventListener("change", saveTextSettings);
   presetChoices.addEventListener("change", (event) => {
     const checkbox = event.target;
     if (checkbox.checked) selectedPresets.add(checkbox.value);
@@ -404,13 +399,8 @@ function bindRequestTextSettings() {
   });
   exampleButton.addEventListener("click", () => {
     if (!example.value) return;
-    if (useOriginalCheckbox.checked) {
-      if (fixedText && !window.confirm("オリジナル文章を選んだ例文で上書きしますか？")) return;
-      fixedText = example.value;
-      setEditorText(fixedText);
-    } else {
-      fixedPreset = example.value;
-    }
+    fixedPreset = example.value;
+    setEditorText(fixedPreset);
     saveTextSettings();
   });
 
