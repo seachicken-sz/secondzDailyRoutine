@@ -501,6 +501,13 @@ function resetRoutineProgressState() {
   state.stepHistory = [];
   state.openedAction = "";
 
+  // 新規開始時は前回のSpotify・Stationheadの押下済み表示をリセットする。
+  spotifyNextButtonElement?.classList.add("hidden");
+  stationheadNextButtonElement?.classList.add("hidden");
+  setButtonStyle(openSpotifyButtonElement, "primary");
+  setButtonStyle(spotifyNextButtonElement, "secondary");
+  refreshSpotifyActionButtons();
+
   state.isSheetLogSentInCurrentFlow = false;
 
   clearFlowState();
