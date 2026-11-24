@@ -62,6 +62,7 @@ function awardReward01AtFinish() {
   const area = document.getElementById("reward01FinishArea");
   if (!area) return;
   area.replaceChildren();
+  area.classList.toggle("hidden", !eligible);
   if (!eligible) return;
   const dayKey = getDailyTaskDayKey();
   const cards = loadReward01Cards();
@@ -85,13 +86,15 @@ function awardReward01AtFinish() {
     saveReward01Cards(cards);
   }
   const heading = document.createElement("h3");
-  heading.textContent = "ごほうびトレカを獲得！";
+  heading.textContent = "CLEAR COLLECTION";
+  const description = document.createElement("p");
+  description.textContent = "お疲れ様です！！今日の全デイリータスクをクリアしたあなたにささやかな贈り物です！";
   const button = document.createElement("button");
   button.type = "button";
   button.className = "primary-button";
   button.textContent = "獲得したカードを見る";
   button.addEventListener("click", () => openReward01Card(card.dayKey));
-  area.append(heading, button);
+  area.append(heading, description, button);
   updateReward01HomeButton();
 }
 function updateReward01HomeButton() {
@@ -154,7 +157,7 @@ function openReward01Card(dayKey) {
       if (typeof navigator.share === "function" &&
           (!navigator.canShare || navigator.canShare({ files: [file] }))) {
         try {
-          await navigator.share({ files: [file], title: "タムごとDaily ごほうびトレカ" });
+          await navigator.share({ files: [file], title: "タムごとDaily CLEAR COLLECTION" });
           return;
         } catch (error) {
           if (error.name === "AbortError") return;
