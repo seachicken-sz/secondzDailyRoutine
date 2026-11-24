@@ -452,7 +452,7 @@ async function sendAccessLog() {
  * @returns {Promise<boolean>}
  */
 async function sendStartLog(event = "start") {
-  const normalizedEvent = event === "finish" ? "finish" : "start";
+  const normalizedEvent = ["start", "finish", "allclear"].includes(event) ? event : "start";
 
   const item = createSheetItem({}, {
     itemId: `flow_${normalizedEvent}`,
