@@ -524,7 +524,23 @@
     ],
     "weekday": 1,
     "time": "24:15",
-    "platformUrl": "https://tver.jp/series/srvpzndoz4"
+    "platformUrl": "https://tver.jp/series/srvpzndoz4",
+    "episodeId": "ep4qltyt2q",
+    "episodeIds": [
+      "ep4qltyt2q"
+    ],
+    "episodes": [
+      {
+        "id": "ep4qltyt2q",
+        "title": "ドリブルストップ・チャレンジ",
+        "url": "https://tver.jp/episodes/ep4qltyt2q",
+        "broadcastDate": "2026/11/23"
+      }
+    ],
+    "episodeTitles": [
+      "ドリブルストップ・チャレンジ"
+    ],
+    "episodeTitle": "ドリブルストップ・チャレンジ"
   },
   {
     "title": "実録！奇跡の救出劇",
@@ -561,16 +577,6 @@
     "episodeTitle": "実録！奇跡の救出劇timelesz原、海上自衛隊にガチ入隊！後編"
   },
   {
-    "title": "真剣遊戯！THE バトル SHOW",
-    "workType": "tv",
-    "members": [
-      "teranishi"
-    ],
-    "weekday": 1,
-    "time": "20:00",
-    "platformUrl": "https://tver.jp/series/srxmvipjc2"
-  },
-  {
     "title": "こちら予備自衛英雄補?!",
     "workType": "tv",
     "members": [
@@ -578,13 +584,20 @@
     ],
     "weekday": 3,
     "platformUrl": "https://tver.jp/series/srpyus1d8b",
-    "episodeId": "epepokcvfa",
+    "episodeId": "eplo60jtuq",
     "episodeIds": [
+      "eplo60jtuq",
       "epepokcvfa",
       "epxe7a86c7",
       "epxuke5ydr"
     ],
     "episodes": [
+      {
+        "id": "eplo60jtuq",
+        "title": "5話 予備自ヒーロー次々合体！まさかの別人に！？",
+        "url": "https://tver.jp/episodes/eplo60jtuq",
+        "broadcastDate": "2026/02/04"
+      },
       {
         "id": "epepokcvfa",
         "title": "4話 ウチらの能力しょぼくね？",
@@ -605,11 +618,12 @@
       }
     ],
     "episodeTitles": [
+      "5話 予備自ヒーロー次々合体！まさかの別人に！？",
       "4話 ウチらの能力しょぼくね？",
       "2話 サエの能力?!",
       "1話 嘘がつけないどん底ヒーロー誕生!?"
     ],
-    "episodeTitle": "4話 ウチらの能力しょぼくね？"
+    "episodeTitle": "5話 予備自ヒーロー次々合体！まさかの別人に！？"
   },
   {
     "title": "見取り図じゃん",
@@ -634,5 +648,38 @@
       "止まらぬ本音（小声）盗み聞き「大声では言えないけど、小声なら言える会」"
     ],
     "episodeTitle": "止まらぬ本音（小声）盗み聞き「大声では言えないけど、小声なら言える会」"
+  },
+  {
+    "title": "大病院占拠",
+    "workType": "tv",
+    "members": [
+      "fuma"
+    ],
+    "weekday": 1,
+    "platformUrl": "https://tver.jp/series/srxmr1z44t",
+    "episodeId": "epgk59rym9",
+    "episodeIds": [
+      "epgk59rym9",
+      "epaencaw0g"
+    ],
+    "episodes": [
+      {
+        "id": "epgk59rym9",
+        "title": "大病院占拠第6話",
+        "url": "https://tver.jp/episodes/epgk59rym9",
+        "broadcastDate": "2026/11/23"
+      },
+      {
+        "id": "epaencaw0g",
+        "title": "大病院占拠第7話",
+        "url": "https://tver.jp/episodes/epaencaw0g",
+        "broadcastDate": "2026/11/23"
+      }
+    ],
+    "episodeTitles": [
+      "大病院占拠第6話",
+      "大病院占拠第7話"
+    ],
+    "episodeTitle": "大病院占拠第6話"
   }
 ]
