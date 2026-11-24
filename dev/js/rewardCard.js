@@ -19,6 +19,7 @@ function loadReward01Cards() {
 }
 function saveReward01Cards(cards) {
   localStorage.setItem(REWARD01_KEY, JSON.stringify(cards));
+  updateReward01HomeButton();
 }
 function getReward01Eligibility() {
   const groups = Array.isArray(state.dailyGroups) ? state.dailyGroups : [];
@@ -61,11 +62,11 @@ function awardReward01AtFinish() {
   updateReward01HomeButton();
 }
 function updateReward01HomeButton() {
-  const hasCards = loadReward01Cards().length > 0;
-  const button = document.getElementById("reward01HomeButton");
-  if (button) button.classList.toggle("hidden", !hasCards);
   const collectionButton = document.getElementById("rewardCollectionButton");
-  if (collectionButton) collectionButton.classList.toggle("hidden", !hasCards);
+  if (!collectionButton) return;
+  const hasCards = loadReward01Cards().length > 0;
+  collectionButton.classList.toggle("hidden", !hasCards);
+  collectionButton.setAttribute("aria-hidden", String(!hasCards));
 }
 function openReward01Card(dayKey) {
   const cards = loadReward01Cards();
@@ -195,12 +196,16 @@ function drawReward01Canvas(canvas, card) {
   c.restore();
 }
 function bindReward01Events() {
-  document.getElementById("reward01HomeButton")?.addEventListener("click",()=>openReward01Card());
   document.getElementById("reward01CloseButton")?.addEventListener("click",closeReward01Card);
   document.getElementById("reward01Modal")?.addEventListener("click",event=>{
     if(event.target.id==="reward01Modal")closeReward01Card();
   });
   updateReward01HomeButton();
+  document.addEventListener("DOMContentLoaded", updateReward01HomeButton);
+  window.addEventListener("pageshow", updateReward01HomeButton);
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) updateReward01HomeButton();
+  });
   bindRewardCollectionEvents();
 }
 
