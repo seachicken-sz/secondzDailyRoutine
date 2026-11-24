@@ -274,6 +274,7 @@ function showSettingModalPage(page) {
   const pages = {
     push: { title: "プッシュ通知設定", section: "pushSettingSection" },
     custom: { title: "マイカスタム設定", section: "myCustomSettingSection" },
+    requestText: { title: "リクエスト文章設定", section: "requestTextSettingSection" },
     select: { title: "セレクトモード設定", section: "selectModeSettingSection" },
     bgm: { title: "「今日のSpotify再生」設定", section: "bgmRoutineSettingSection" },
     usen: { title: "「USEN推し活」設定", section: "usenRoutineSettingSection" }
@@ -295,6 +296,7 @@ function showSettingModalPage(page) {
   if (title) title.textContent = index ? "設定" : pages[target].title;
   const body = document.querySelector("#settingModal .setting-modal-body");
   if (body) body.scrollTop = 0;
+  if (target === "requestText") openRequestTextSettings();
 }
 
 function openSettingModal() {

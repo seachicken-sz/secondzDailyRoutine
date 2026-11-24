@@ -284,6 +284,11 @@ function setDailyTaskStepHelpKey(item) {
 // デイリータスク用コピー文作成
 // ==================================================
 function buildDailyTaskCopyText(item) {
+  const original = getOriginalRadioRequestText(item);
+  if (original) {
+    return formatRadioRequestText(original, getSelectedRadioRequestSongName());
+  }
+
   // dailyTaskJson 側の request-type
   const requestType = item["request-type"];
   // requestTextJson 側のテンプレート
@@ -301,7 +306,7 @@ function buildDailyTaskCopyText(item) {
   // 選択中のラジオリクエスト曲名
   const musicName = getSelectedRadioRequestSongName();
   // テンプレート内の musicname を選択曲名で置換する
-  return template.replaceAll("musicname", musicName);
+  return template.replaceAll("musicname", () => musicName);
 }
 
 // ==================================================
