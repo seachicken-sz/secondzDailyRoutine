@@ -428,6 +428,13 @@ function updateStartRoutineButtonLabel() {
     return;
   }
 
+  const isAllClear = typeof getReward01Eligibility === "function" &&
+    getReward01Eligibility().eligible;
+  if (isAllClear) {
+    startRoutineButtonElement.textContent = "ALL CLEAR！";
+    return;
+  }
+
   const settings = getSelectModeSettings();
   startRoutineButtonElement.textContent = settings.enabled
     ? "選んだタスクで始める"
