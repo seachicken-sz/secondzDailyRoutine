@@ -27,35 +27,21 @@
     const list = element("rewardTestCollectionList");
     if (!list) return;
     list.replaceChildren();
+    const grid = document.createElement("div");
+    grid.style.cssText = "display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;";
     REWARD_COLLECTION_TYPES.filter(type => REWARD_AVAILABLE_TYPES.includes(type.id)).forEach(type => {
-      const item = document.createElement("section");
-      item.style.cssText = "padding:12px;border:1px solid var(--color-border,#ccc);border-radius:12px;";
-      const heading = document.createElement("div");
-      heading.style.cssText = "display:flex;gap:12px;align-items:center;margin-bottom:10px;";
-      const number = document.createElement("strong");
-      number.style.fontSize = "23px";
-      number.textContent = type.id;
-      const title = document.createElement("span");
-      title.style.cssText = "font-size:13px;font-weight:600;flex:1;";
-      title.textContent = type.title;
-      const count = document.createElement("span");
-      count.style.cssText = "font-size:12px;opacity:.7;";
-      count.textContent = "7 / 7";
-      heading.append(number, title, count);
-      const hearts = document.createElement("div");
-      hearts.style.cssText = "display:flex;gap:7px;flex-wrap:wrap;";
-      REWARD01_COLORS.forEach((color, index) => {
-        const heart = document.createElement("button");
-        heart.type = "button";
-        heart.textContent = "♥";
-        heart.setAttribute("aria-label", type.id + " " + color.name + "の試験カードを見る");
-        heart.style.cssText = "display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;padding:0;border:0;border-radius:7px;background:transparent;font-size:26px;cursor:pointer;color:" + color.code + ";" + (index === 6 ? "text-shadow:0 0 2px #555;" : "");
-        heart.addEventListener("click", () => openTestCard(type, index));
-        hearts.appendChild(heart);
+      REWARD01_COLORS.forEach((color, colorIndex) => {
+        const card = {
+          typeId: type.id,
+          colorIndex,
+          dayKey: getDailyTaskDayKey(),
+          count: 48,
+          nickname: ""
+        };
+        grid.appendChild(createRewardMiniCard(card, () => openTestCard(type, colorIndex)));
       });
-      item.append(heading, hearts);
-      list.appendChild(item);
     });
+    list.appendChild(grid);
   }
 
   function openTestCard(type, colorIndex) {
