@@ -13,6 +13,18 @@ function bindHomeEvents() {
   // ==================================================
 
   addClickEvent(startRoutineButtonElement, async () => {
+    // 全クリア後は、当日のカードを表示。未獲得ならFinish画面で獲得する。
+    if (typeof getReward01Eligibility === "function" && getReward01Eligibility().eligible) {
+      const dayKey = getDailyTaskDayKey();
+      const earned = loadReward01Cards().some((card) => card.dayKey === dayKey);
+      if (earned) {
+        openReward01Card(dayKey);
+      } else {
+        showPlaceholderNextStep(MESSAGES.finish);
+      }
+      return;
+    }
+
     // アプリ開始ログを送信する
     // ログ送信に失敗してもユーザー操作は止めない
     sendStartLog().catch((error) => {
