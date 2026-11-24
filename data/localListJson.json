@@ -1,0 +1,212 @@
+[
+  {
+    "listName": "北海道",
+    "prefectureCode": 1,
+    "prefectureName": "北海道",
+    "lastFlag": false,
+    "items": [
+      {
+        "id": "local_stv_rikupura",
+        "name": "STVラジオ リクエストプラザ",
+        "short-name": "リクエストプラザ",
+        "url": "mailto:rikupura@stv.jp?subject=%E6%A5%BD%E6%9B%B2%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88",
+        "request-type": "text-stv",
+        "request-input": "メール本文",
+        "comment": "月〜金曜 8:00~10:00放送\n\n①メール本文にコピーされたリクエスト文を貼り付け\n②必要に応じて編集して送信",
+        "input-flag": true
+      }
+    ]
+  },
+  {
+    "listName": "青森県",
+    "prefectureCode": 2,
+    "prefectureName": "青森県",
+    "lastFlag": false,
+    "items": [
+      {
+        "id": "local_fmaomori_gmu",
+        "name": "FM青森 GMUのGourmet Music Time",
+        "short-name": "Gourmet Music Time",
+        "url": "https://afb.co.jp/request/gmu_musictime/",
+        "request-type": "text-fmaomori",
+        "request-input": "メッセージ",
+        "comment": "毎週水曜 19:00～19:30放送\n\n①「リクエスト」を選択\n②曲名・アーティスト名を入力 \n③「メッセージ」に貼り付け",
+        "input-flag": true
+      },
+      {
+        "id": "local_fmaomori_hirumott",
+        "name": "FM青森 ヒルモット！ FRIDAY",
+        "short-name": "ヒルモット！ FRIDAY",
+        "url": "https://afb.co.jp/request/hirumott/",
+        "request-type": "text-fmaomori",
+        "request-input": "メッセージ",
+        "comment": "毎週金曜 11:30～12:55\n\n①「リクエスト」を選択\n②曲名・アーティスト名を入力 \n③「メッセージ」に貼り付け",
+        "input-flag": true
+      },
+      {
+        "id": "local_fmaomori_radiomott",
+        "name": "FM青森 ラジmott!",
+        "short-name": "ラジmott!",
+        "url": "https://afb.co.jp/request/radi-mott/",
+        "request-type": "text-fmaomori",
+        "request-input": "メッセージ",
+        "comment": "月～木 16:50～18:55 放送\n金曜 15:00～18:55 放送\n\n①「リクエスト」を選択\n②曲名・アーティスト名を入力 \n③「メッセージ」に貼り付け",
+        "input-flag": true
+      }
+    ]
+  },
+  {
+    "listName": "岩手県",
+    "prefectureCode": 3,
+    "prefectureName": "岩手県",
+    "lastFlag": false,
+    "items": [
+      {
+        "id": "local_fmiwate_youcanradio",
+        "name": "FM岩手 夕刊ラジオ",
+        "short-name": "夕刊ラジオ",
+        "url": "https://www.fmii.co.jp/youcanradio/request_form.html",
+        "request-type": "text-fmiwate",
+        "request-input": "メッセージ",
+        "comment": "月～木 16:30～18:55 放送\n金曜 16:00～18:55 放送\n\n①曲名・アーティスト名を入力\n②「メッセージ」に貼り付け\n③ラジオネームを入力",
+        "input-flag": true
+      }
+    ]
+  },
+  {
+    "listName": "秋田県",
+    "prefectureCode": 5,
+    "prefectureName": "秋田県",
+    "lastFlag": false,
+    "items": [
+      {
+        "id": "local_abs_asadori",
+        "name": "ABS秋田放送 あさ採りワイド秋田便",
+        "short-name": "あさ採りワイド秋田便",
+        "url": "https://www.akita-abs.co.jp/asa-mail/",
+        "request-type": "text-abs",
+        "request-input": "メッセージ",
+        "comment": "月～金 7:30～10:50放送\n\n①「メッセージ」に貼り付け\n②聞きたい理由を添えてみよう",
+        "input-flag": true
+      }
+    ]
+  },
+  {
+    "listName": "宮城県",
+    "prefectureCode": 4,
+    "prefectureName": "宮城県",
+    "lastFlag": false,
+    "items": [
+      {
+        "id": "local_tbc_musicsketch",
+        "name": "TBC東北放送 千倉真理 ミュージックスケッチ",
+        "short-name": "ミュージックスケッチ",
+        "url": "mailto:mari@1260.jp?subject=%E6%A5%BD%E6%9B%B2%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88",
+        "request-type": "text-tbc",
+        "request-input": "メール本文",
+        "comment": "毎週日曜 12:00～12:55放送\n\n①メール本文にコピーされたリクエスト文を貼り付け\n②必要に応じて編集して送信",
+        "input-flag": true
+      }
+    ]
+  },
+  {
+    "listName": "山形県",
+    "prefectureCode": 6,
+    "prefectureName": "山形県",
+    "lastFlag": false,
+    "items": [
+      {
+        "id": "local_ybc_weekendscramble",
+        "name": "YBC山形放送 じんちゃん かおりのウィークエンドスクランブル",
+        "short-name": "ウィークエンドスクランブル",
+        "url": "https://www.ybc.co.jp/radio/requestbox/ws/",
+        "request-type": "text-ybc",
+        "request-input": "メッセージ",
+        "comment": "毎週土曜日 15:00～17:00生放送\n\n①「メッセージ」に貼り付け\n②聞きたい理由を添えてみよう",
+        "input-flag": true
+      }
+    ]
+  },
+  {
+    "listName": "群馬県",
+    "prefectureCode": 10,
+    "prefectureName": "群馬県",
+    "lastFlag": false,
+    "items": [
+      {
+        "id": "local_fmgunma_waifree",
+        "name": "FM群馬 WAI WAI Groovin’ フリーリクエスト",
+        "short-name": "WAI WAI Groovin’ フリーリクエスト",
+        "url": "https://www.fmgunma.com/message/wg-free/",
+        "request-type": "text-fmgunma",
+        "request-input": "番組宛のメッセージ",
+        "comment": "月～金 7:30～11:00放送\n\n①ラジオネーム・リクエスト曲・アーティスト名を入力\n②「番組宛てのメッセージ」に貼り付け",
+        "input-flag": true
+      },
+      {
+        "id": "local_fmgunma_waimorning",
+        "name": "FM群馬 WAI WAI Groovin’ 朝一リクエスト",
+        "short-name": "WAI WAI Groovin’ 朝一リクエスト",
+        "url": "https://www.fmgunma.com/message/wg-morning/",
+        "request-type": "text-fmgunma",
+        "request-input": "番組宛のメッセージ",
+        "comment": "※前回放送終了後11時～放送当日6時の投稿が対象\n\n①ラジオネーム・リクエスト曲・アーティスト名を入力\n②「番組宛てのメッセージ」に貼り付け",
+        "input-flag": true
+      }
+    ]
+  },
+  {
+    "listName": "福井県",
+    "prefectureCode": 18,
+    "prefectureName": "福井県",
+    "lastFlag": false,
+    "items": [
+      {
+        "id": "local_fbc_yaza",
+        "name": "FBCラジオ ザ・リクエストやざ！",
+        "short-name": "ザ・リクエストやざ！",
+        "url": "mailto:yaza@fbc.jp?subject=%E6%A5%BD%E6%9B%B2%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88",
+        "request-type": "text-fbc",
+        "request-input": "メール本文",
+        "comment": "毎週土曜 13:00～15:00放送\n\n①本文にコピーされたリクエスト文を貼り付け\n②ラジオネームと聴きたい理由を添えて送信",
+        "input-flag": true
+      }
+    ]
+  },
+  {
+    "listName": "長野県",
+    "prefectureCode": 20,
+    "prefectureName": "長野県",
+    "lastFlag": false,
+    "items": [
+      {
+        "id": "local_sbc_jukebox",
+        "name": "SBC信越放送 サンデー・ミュージックBOX 思い出のジュークBOX",
+        "short-name": "思い出のジュークBOX",
+        "url": "mailto:box@sbc21.co.jp?subject=%E6%80%9D%E3%81%84%E5%87%BA%E3%81%AE%E3%82%B8%E3%83%A5%E3%83%BC%E3%82%AFBOX",
+        "request-type": "text-sbc",
+        "request-input": "メール本文",
+        "comment": "毎週日曜 17:00～18:00放送\n\n①本文にコピーされたリクエスト文を貼り付け\n②ラジオネームと思い出やエピソードを添えて送信",
+        "input-flag": true
+      }
+    ]
+  },
+  {
+    "listName": "京都府",
+    "prefectureCode": 26,
+    "prefectureName": "京都府",
+    "lastFlag": true,
+    "items": [
+      {
+        "id": "local_kbs_gogo",
+        "name": "KBSラジオ 山崎弘士のGOGOリクエスト",
+        "short-name": "GOGOリクエスト",
+        "url": "https://www.kbs-kyoto.co.jp/mailform/radio/go.htm",
+        "request-type": "text-kbs",
+        "request-input": "メッセージ",
+        "comment": "毎週日曜 15:00～16:55放送\n\n①リクエスト曲・歌手名を入力 \n②「メッセージ」にコピーされたリクエスト文を貼り付け\n（絵文字・機種依存文字は使用しない）",
+        "input-flag": true
+      }
+    ]
+  }
+]
