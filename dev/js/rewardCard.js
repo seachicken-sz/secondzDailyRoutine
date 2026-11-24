@@ -433,7 +433,7 @@ function createRewardMiniCard(card, onClick) {
   const button = document.createElement("button");
   button.type = "button";
   button.className = "reward-mini-card";
-  button.style.cssText = "display:flex;flex-direction:column;min-width:0;aspect-ratio:1/1;padding:12px;border:0;border-radius:12px;background:"+background+";color:"+foreground+";text-align:left;cursor:pointer;overflow:hidden;font-family:Arial,sans-serif;";
+  button.style.cssText = "display:flex;flex-direction:column;min-width:0;aspect-ratio:1/1;padding:12px;border:0;border-radius:12px;background:"+background+";color:"+foreground+";"+(isSpecial&&card.colorIndex===6?"box-shadow:inset 0 0 0 2px rgba(17,17,17,.45);":"")+"text-align:left;cursor:pointer;overflow:hidden;font-family:Arial,sans-serif;";
   const number = document.createElement("strong");
   number.textContent = typeId;
   number.style.cssText = "font-size:36px;line-height:1.1;color:"+(isSpecial?foreground:color)+";"+(!isSpecial&&card.colorIndex===6?"text-shadow:0 0 2px #777;":"");
