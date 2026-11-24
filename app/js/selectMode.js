@@ -423,6 +423,34 @@ function getRemainingRoutineStatus() {
   };
 }
 
+// Spotify・期間限定は画面通過を18時切替の完了履歴に記録する
+function getSelectModeFeatureDoneItem(featureName) {
+  return { id: `__select_mode_step_${featureName}` };
+}
+
+function getRoutineStartStatus(settings = getSelectModeSettings()) {
+  const remaining = getRemainingRoutineStatus();
+
+  if (!settings.enabled) {
+    return { remaining, resume: remaining.enabled, showSpotify: true };
+  }
+
+  const selectedIds = getValidSelectedDailyTaskIds(settings);
+  const features = settings.features;
+  const selectedDone = hasRunnableSelectModeSelection(settings) &&
+    selectedIds.length === settings.dailyTaskIds.length &&
+    selectedIds.every((id) => isDailyTaskDone({ id })) &&
+    (!features.usen || remaining.usenDone) &&
+    (!features.spotify || isDailyTaskDone(getSelectModeFeatureDoneItem("spotify"))) &&
+    (!features.onceTask || isDailyTaskDone(getSelectModeFeatureDoneItem("onceTask")));
+
+  return {
+    remaining,
+    resume: selectedDone && (!remaining.usenDone || remaining.remainingTaskKeys.length > 0),
+    showSpotify: features.spotify === true,
+  };
+}
+
 function updateStartRoutineButtonLabel() {
   if (!startRoutineButtonElement) {
     return;
@@ -436,10 +464,11 @@ function updateStartRoutineButtonLabel() {
   }
 
   const settings = getSelectModeSettings();
-  startRoutineButtonElement.textContent = settings.enabled
-    ? "選んだタスクで始める"
-    : getRemainingRoutineStatus().enabled
-      ? "もう少しやる？"
+  const { resume } = getRoutineStartStatus(settings);
+  startRoutineButtonElement.textContent = resume
+    ? "もう少しやる？"
+    : settings.enabled
+      ? "選んだタスクで始める"
       : "開始する";
 }
 
@@ -478,18 +507,24 @@ function resetRoutineProgressState() {
 async function startRoutineByCurrentMode() {
   const settings = getSelectModeSettings();
 
+  const { remaining, resume, showSpotify } = getRoutineStartStatus(settings);
+
   resetRoutineProgressState();
 
-  if (!settings.enabled) {
+  // セレクトの全完了後も、通常モードの残りルーチンを再利用する
+  if (!settings.enabled || resume) {
     state.routineMode = ROUTINE_MODES.normal;
     state.requestSongMode = REQUEST_SONG_MODES.usen;
     state.selectModeDailyTaskIds = [];
 
-    const remaining = getRemainingRoutineStatus();
-    state.remainingRoutineMode = remaining.enabled;
-    state.remainingRoutineDailyTaskKeys = remaining.enabled ? remaining.remainingTaskKeys : [];
+    state.remainingRoutineMode = resume;
+    state.remainingRoutineDailyTaskKeys = resume ? remaining.remainingTaskKeys : [];
 
-    showOnlyStep(spotifyStepElement);
+    if (showSpotify) {
+      showOnlyStep(spotifyStepElement);
+    } else {
+      await advanceRemainingRoutineAfterSpotify();
+    }
     return;
   }
 
@@ -649,6 +684,11 @@ async function showFirstSelectModeStep() {
 }
 
 async function advanceRoutineFrom(completedStep, skipMyCustom = false) {
+  if (!skipMyCustom && isSelectRoutine() &&
+      (completedStep === "spotify" || completedStep === "onceTask")) {
+    markDailyTaskDone(getSelectModeFeatureDoneItem(completedStep), "selectMode");
+  }
+
   if (!skipMyCustom && (completedStep === "spotify" || completedStep === "onceTask")) {
     return runMyCustomTasks(completedStep === "spotify" ? "afterSpotify" : "afterLimited", completedStep);
   }
@@ -879,6 +919,12 @@ async function showFallbackPreviousStepForDaily() {
   if (!isSelectRoutine()) {
     if (state.remainingRoutineMode && state.requestSongMode === REQUEST_SONG_MODES.daily) {
       await showRequestSongStep();
+      return;
+    }
+    if (state.remainingRoutineMode && !state.selectedRequestSong &&
+        isDailyTaskDone({ id: "home_usen_request" })) {
+      clearFlowState();
+      showOnlyStep(homeStepElement, { recordHistory: false });
       return;
     }
     state.requestSongMode = REQUEST_SONG_MODES.usen;
