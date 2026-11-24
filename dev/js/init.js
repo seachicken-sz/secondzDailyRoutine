@@ -497,8 +497,12 @@ async function restoreFlowStateOrHome() {
         (/^https?:\/\//i.test(String(flow.tasks[flow.index]?.url || "")) ||
          (flow.tasks[flow.index]._localTask === true && /^mailto:/i.test(String(flow.tasks[flow.index].url || "")))) &&
         ["spotify", "onceTask", "afterUsen", "afterDaily"].includes(flow.continuation)) {
-      renderMyCustomTask();
-      showOnlyStep(myCustomStepElement, { recordHistory: false });
+      if (skipCompletedMyCustomTasks(flow)) {
+        renderMyCustomTask();
+        showOnlyStep(myCustomStepElement, { recordHistory: false });
+      } else {
+        await continueAfterMyCustom(flow.continuation);
+      }
     } else {
       clearFlowState();
       showOnlyStep(homeStepElement, { recordHistory: false });

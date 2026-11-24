@@ -30,7 +30,7 @@ function getRoutineLocalTasks() {
     ? state.routineLocalGroupCodes : readEnabledLocalGroupCodes();
   return getEnabledLocalDailyGroups(codes).flatMap(group => group.items
     .filter(item => item?.name && /^(https?:\/\/|mailto:)/i.test(String(item.url || "")))
-    .filter(item => !state.remainingRoutineMode || !isDailyTaskDone(item))
+    .filter(item => !isDailyTaskDone(item))
     .map(item => ({ ...item, _localTask: true, _localGroupName: group.listName })));
 }
 
