@@ -414,6 +414,56 @@ function openRewardCollectionCard(dayKey) {
   rewardCollectionReturnOnCardClose = true;
   openReward01Card(dayKey);
 }
+// 日付順と試験用の共通ミニカード。実カードの称号・改行を踏襲する。
+function getRewardMiniTitleLines(typeId) {
+  if (typeId === "01") return ["ラジリクはね、", "やっとかないと。"];
+  if (typeId === "06") return ["お前本当は", "天使なんじゃないか？"];
+  const title = REWARD_COLLECTION_TYPES.find(type => type.id === typeId)?.title || "？？？";
+  if (typeId !== "03" && typeId !== "04") return [title];
+  const ctx = document.createElement("canvas").getContext("2d");
+  ctx.font = "700 58px sans-serif";
+  const lines = [];let line = "";
+  for (const character of Array.from(title)) {
+    if (line && ctx.measureText(line + character).width > 600) {
+      lines.push(line);line = character;
+    } else line += character;
+  }
+  if (line) lines.push(line);
+  return lines;
+}
+function createRewardMiniCard(card, onClick) {
+  const typeId = card.typeId || "01";
+  const color = REWARD01_COLORS[card.colorIndex]?.code || "#bbb";
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "reward-mini-card";
+  button.style.cssText = "display:flex;flex-direction:column;gap:0;min-width:0;aspect-ratio:3/4;padding:12px;border:0;border-radius:12px;background:#121212;color:#f6f6f6;text-align:left;cursor:pointer;overflow:hidden;font-family:Arial,sans-serif;";
+  const number = document.createElement("strong");
+  number.textContent = typeId;
+  number.style.cssText = "font-size:23px;line-height:1.1;color:#eee;";
+  const english = document.createElement("strong");
+  const labels = { "01":"RADIO", "02":"EFFORT", "03":"CLEAR", "04":"CLEAR", "05":"SURVIVE", "06":"ANGEL?" };
+  english.textContent = labels[typeId] || "CLEAR";
+  english.style.cssText = "font-size:clamp(15px,4vw,24px);font-weight:900;letter-spacing:-.6px;line-height:1.1;margin-top:11px;white-space:nowrap;";
+  const colorLine = document.createElement("span");
+  colorLine.style.cssText = "width:52%;height:3px;background:"+color+";margin:5px 0 9px;flex-shrink:0;";
+  const status = document.createElement("span");
+  status.textContent = "ALL CLEAR";
+  status.style.cssText = "font-size:10px;letter-spacing:.4px;font-weight:700;color:"+color+";";
+  const meta = document.createElement("span");
+  const day = card.dayKey || getDailyTaskDayKey();
+  meta.textContent = day.slice(0,4)+"/"+day.slice(4,6)+"/"+day.slice(6,8)+"  "+(card.count ?? 48)+" TASKS";
+  meta.style.cssText = "font-size:9px;line-height:1.5;color:#bcbcbc;white-space:nowrap;margin-top:3px;";
+  const title = document.createElement("span");
+  title.textContent = getRewardMiniTitleLines(typeId).join("\n");
+  title.style.cssText = "display:block;margin-top:auto;padding:12px 0 9px;font-size:clamp(9px,2.8vw,13px);font-weight:700;line-height:1.5;color:#fff;white-space:pre-line;overflow-wrap:anywhere;text-align:left;";
+  const footer = document.createElement("span");
+  footer.textContent = "タムごとDaily";
+  footer.style.cssText = "border-top:1px solid #444;padding-top:6px;font-size:9px;color:#aaa;text-align:center;";
+  button.append(number,english,colorLine,status,meta,title,footer);
+  if (onClick) button.addEventListener("click",onClick);
+  return button;
+}
 function renderRewardCollection() {
   const body = document.getElementById("rewardCollectionBody");
   const summary = document.getElementById("rewardCollectionSummary");
@@ -427,7 +477,7 @@ function renderRewardCollection() {
   dateTab.setAttribute("aria-selected", String(rewardCollectionView === "date"));
   typeTab.setAttribute("aria-selected", String(rewardCollectionView === "type"));
   const obtainedColors = new Set(cards.map(card=>(card.typeId || "01")+":"+card.colorIndex));
-  summary.textContent = cards.length+"枚獲得 ／ カード "+obtainedColors.size+" / "+(REWARD_COLLECTION_TYPES.length*REWARD01_COLORS.length)+"種類";
+  summary.textContent = obtainedColors.size+"/"+(REWARD_COLLECTION_TYPES.length*REWARD01_COLORS.length)+"獲得";
   if (rewardCollectionView === "date") {
     if (!cards.length) {
       const empty = document.createElement("p");
@@ -437,23 +487,7 @@ function renderRewardCollection() {
     }
     const grid = document.createElement("div");
     grid.style.cssText = "display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;";
-    cards.forEach(card=>{
-      const b=document.createElement("button");
-      b.type="button";
-      b.style.cssText="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:148px;padding:12px 8px;text-align:center;border:1px solid var(--color-border,#8886);border-radius:12px;background:var(--color-bg,#fff);color:inherit;cursor:pointer;";
-      const number=document.createElement("strong");
-      number.textContent=card.typeId || "01";
-      number.style.cssText="font-size:23px;color:"+ (REWARD01_COLORS[card.colorIndex]?.code||"#ccc")+";";
-      const title=document.createElement("span");
-      title.textContent=REWARD_COLLECTION_TYPES.find(type=>type.id===(card.typeId || "01"))?.title || "？？？";
-      title.style.cssText="font-size:13px;font-weight:600;";
-      const date=document.createElement("span");
-      date.textContent=card.dayKey.slice(0,4)+"/"+card.dayKey.slice(4,6)+"/"+card.dayKey.slice(6,8)+" ・ "+card.count+" TASKS";
-      date.style.cssText="font-size:11px;opacity:.7;";
-      b.append(number,title,date);
-      b.addEventListener("click",()=>openRewardCollectionCard(card.dayKey));
-      grid.appendChild(b);
-    });
+    cards.forEach(card => grid.appendChild(createRewardMiniCard(card, () => openRewardCollectionCard(card.dayKey))));
     body.appendChild(grid);
     return;
   }
