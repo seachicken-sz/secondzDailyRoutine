@@ -32,12 +32,16 @@ function getRadioRequestTextSetting(key, settings = readRadioRequestTextSettings
   const previous = state.dailyGroups.flatMap((group) => group.items)
     .filter((item) => getRadioRequestTextSettingKey(item) === key)
     .map((item) => Object.hasOwn(settings, item.id) ? settings[item.id] : null);
-  return previous.find(getOriginalRadioRequestText) ||
+  return previous.find((entry) => isFixedRequestTextMode(entry) && getFixedRequestText(entry)) ||
     previous.find((entry) => typeof entry?.text === "string" && entry.text.trim()) || null;
 }
 
-function getOriginalRadioRequestText(entry) {
-  return entry?.mode === "original" && typeof entry.text === "string" ? entry.text.trim() : "";
+function isFixedRequestTextMode(entry) {
+  return entry?.mode === "fixed" || entry?.mode === "original";
+}
+
+function getFixedRequestText(entry) {
+  return typeof entry?.text === "string" ? entry.text.trim() : "";
 }
 
 function getRadioRequestTextExamples(value) {
@@ -46,25 +50,37 @@ function getRadioRequestTextExamples(value) {
     .map((text) => text.trim()).filter(Boolean))];
 }
 
-function getAvailableRadioRequestTextFavorites(entry, value) {
-  if (!Array.isArray(entry?.favorites) || !entry.favorites.length) return [];
-  return getRadioRequestTextExamples(value).filter((text) => entry.favorites.includes(text));
+function getSelectedRequestTextPresets(entry, presets) {
+  if (Array.isArray(entry?.selectedPresets)) {
+    return presets.filter((text) => entry.selectedPresets.includes(text));
+  }
+  if (Array.isArray(entry?.favorites) && !Object.hasOwn(entry, "selectedPresets")) {
+    const previous = presets.filter((text) => entry.favorites.includes(text));
+    if (previous.length) return previous;
+  }
+  return presets;
+}
+
+function getRequestTextCandidates(entry, presets) {
+  const fixedText = getFixedRequestText(entry);
+  if (isFixedRequestTextMode(entry) && fixedText) return [fixedText];
+
+  const selected = getSelectedRequestTextPresets(entry, presets);
+  if (fixedText && entry?.includeFixed !== false && !selected.includes(fixedText)) {
+    return [...selected, fixedText];
+  }
+  return selected;
 }
 
 function selectDailyRequestTextTemplate(item, historyPrefix = "") {
   const settingKey = getRadioRequestTextSettingKey(item);
-  const setting = settingKey ? getRadioRequestTextSetting(settingKey) : null;
-  const original = getOriginalRadioRequestText(setting);
-  if (original) return original;
-
   const requestType = item?.["request-type"];
   const templates = state.requestTexts[requestType];
-  if (!requestType || !templates) return "";
+  if (!settingKey) return pickRequestTextTemplate(templates, `${historyPrefix}${requestType}`);
 
-  const favorites = getAvailableRadioRequestTextFavorites(setting, templates);
-  return favorites.length
-    ? pickRequestTextTemplate(favorites, `${historyPrefix}favorites_${settingKey}`)
-    : pickRequestTextTemplate(templates, `${historyPrefix}${requestType}`);
+  const setting = getRadioRequestTextSetting(settingKey);
+  const candidates = getRequestTextCandidates(setting, getRadioRequestTextExamples(templates));
+  return pickRequestTextTemplate(candidates, `${historyPrefix}request_${settingKey}`);
 }
 
 function formatRadioRequestText(template, songName) {
@@ -82,10 +98,12 @@ function bindRequestTextSettings() {
   const program = document.getElementById("requestTextProgram");
   const modes = form.querySelectorAll("[data-request-text-mode]");
   const example = document.getElementById("requestTextExample");
-  const favoriteSettings = document.getElementById("requestTextFavoriteSettings");
-  const favoriteList = document.getElementById("requestTextFavoriteList");
-  const favoriteNote = document.getElementById("requestTextFavoriteNote");
-  const originalSettings = document.getElementById("requestTextOriginalSettings");
+  const randomSettings = document.getElementById("requestTextRandomSettings");
+  const candidateList = document.getElementById("requestTextCandidateList");
+  const candidateNote = document.getElementById("requestTextCandidateNote");
+  const selectAllButton = document.getElementById("requestTextSelectAll");
+  const clearAllButton = document.getElementById("requestTextClearAll");
+  const fixedSettings = document.getElementById("requestTextFixedSettings");
   const editor = document.getElementById("requestTextEditor");
   const previewLabel = document.getElementById("requestTextPreviewLabel");
   const preview = document.getElementById("requestTextPreview");
@@ -93,61 +111,64 @@ function bindRequestTextSettings() {
   const exampleButton = document.getElementById("requestTextUseExample");
   let items = new Map();
   let editorSelection = null;
-  let mode = "standard";
-  let originalText = "";
-  let favorites = new Set();
+  let mode = "random";
+  let fixedText = "";
+  let presets = [];
+  let selectedPresets = new Set();
+  let includeFixed = true;
 
-  function getTemplateValue() {
-    return state.requestTexts[items.get(program.value)?.["request-type"]];
+  function createCandidateRow(text, isFixed) {
+    const label = document.createElement("label");
+    label.className = "check-item";
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.value = text;
+    checkbox.checked = isFixed ? includeFixed : selectedPresets.has(text);
+    if (isFixed) checkbox.dataset.fixed = "";
+    const description = document.createElement("span");
+    const textLabel = formatRadioRequestText(text, RADIO_REQUEST_SONG_TOKEN);
+    description.textContent = isFixed ? `固定のリクエスト文\n${textLabel}` : textLabel;
+    label.append(checkbox, description);
+    return label;
   }
 
-  function getExampleOptionLabel(text) {
-    const label = formatRadioRequestText(text, RADIO_REQUEST_SONG_TOKEN);
-    return favorites.has(text) ? `★ ${label}` : label;
-  }
-
-  function renderExamples() {
-    const templates = getRadioRequestTextExamples(getTemplateValue());
-    example.replaceChildren(...templates.map((text) => new Option(getExampleOptionLabel(text), text)));
-    example.disabled = templates.length === 0;
-
-    favoriteList.replaceChildren(...templates.map((text) => {
-      const label = document.createElement("label");
-      label.className = "check-item";
-      const checkbox = document.createElement("input");
-      checkbox.type = "checkbox";
-      checkbox.value = text;
-      checkbox.checked = favorites.has(text);
-      label.append(checkbox, formatRadioRequestText(text, RADIO_REQUEST_SONG_TOKEN));
-      return label;
-    }));
+  function renderCandidateList() {
+    const rows = presets.map((text) => createCandidateRow(text, false));
+    if (fixedText) rows.unshift(createCandidateRow(fixedText, true));
+    candidateList.replaceChildren(...rows);
+    candidateList.scrollTop = 0;
   }
 
   function renderPanel() {
-    const original = mode === "original";
+    const fixed = mode === "fixed";
     modes.forEach((button) => {
       const selected = button.dataset.requestTextMode === mode;
       button.classList.toggle("active", selected);
       button.setAttribute("aria-pressed", String(selected));
     });
-    originalSettings.classList.toggle("hidden", !original);
-    favoriteSettings.classList.toggle("hidden", original);
+    fixedSettings.classList.toggle("hidden", !fixed);
+    randomSettings.classList.toggle("hidden", fixed);
     exampleButton.disabled = example.disabled;
 
-    favoriteNote.textContent = example.disabled ? "標準の例文がありません。" :
-      favorites.size ? `チェックした ${favorites.size} 件から抽選します。` :
-      "チェックした例文がお気に入りになります。チェックがない場合はすべての例文から抽選します。";
+    const total = presets.length + Number(Boolean(fixedText));
+    const checked = selectedPresets.size + Number(Boolean(fixedText) && includeFixed);
+    selectAllButton.disabled = checked === total;
+    clearAllButton.disabled = checked === 0;
+    if (checked) {
+      const candidates = getRequestTextCandidates({ selectedPresets: [...selectedPresets], text: fixedText, includeFixed }, presets);
+      candidateNote.textContent = `選んだ ${candidates.length} 件から抽選します。`;
+    } else {
+      candidateNote.textContent = "抽選候補がありません。リクエスト文はコピーされません。";
+    }
 
     const songName = getSelectedRadioRequestSongName();
-    previewLabel.textContent = original && originalText ? "プレビュー" : "標準の例文";
+    previewLabel.textContent = fixedText ? "プレビュー" : "プリセット例文";
     if (!songName) previewLabel.textContent += "（サンプル曲名）";
-    preview.textContent = formatRadioRequestText(
-      (original && originalText) || example.value, songName || RADIO_REQUEST_SAMPLE_SONG
-    );
+    preview.textContent = formatRadioRequestText(fixedText || example.value, songName || RADIO_REQUEST_SAMPLE_SONG);
   }
 
   function setOptionMode(option, entry) {
-    const modeLabel = getOriginalRadioRequestText(entry) ? "オリジナル" : "標準";
+    const modeLabel = isFixedRequestTextMode(entry) ? "固定" : "ランダム";
     const name = option.value === GENERIC_RADIO_REQUEST_TEXT_KEY
       ? "汎用メッセージ"
       : items.get(option.value).name;
@@ -178,14 +199,19 @@ function bindRequestTextSettings() {
 
   function showProgram() {
     const entry = getRadioRequestTextSetting(program.value);
-    mode = entry?.mode === "original" ? "original" : "standard";
-    originalText = typeof entry?.text === "string" ? entry.text : "";
-    favorites = new Set(getAvailableRadioRequestTextFavorites(entry, getTemplateValue()));
-    setEditorText(originalText);
-    renderExamples();
+    mode = isFixedRequestTextMode(entry) ? "fixed" : "random";
+    fixedText = getFixedRequestText(entry);
+    const requestType = items.get(program.value)?.["request-type"];
+    presets = getRadioRequestTextExamples(state.requestTexts[requestType]);
+    selectedPresets = new Set(getSelectedRequestTextPresets(entry, presets));
+    includeFixed = entry?.includeFixed !== false;
+    setEditorText(fixedText);
+    example.replaceChildren(...presets.map((text) => new Option(formatRadioRequestText(text, RADIO_REQUEST_SONG_TOKEN), text)));
+    example.disabled = presets.length === 0;
+    renderCandidateList();
     renderPanel();
     saveCloseButton.disabled = false;
-    status.textContent = mode === "original" && !originalText ? "文章が空の間は標準文を使います。" : "";
+    status.textContent = mode === "fixed" && !fixedText ? "固定文が空の間はランダムで選びます。" : "";
   }
 
   function saveTextSettings() {
@@ -195,7 +221,12 @@ function bindRequestTextSettings() {
 
     const saved = readRadioRequestTextSettings();
     const previous = getRadioRequestTextSetting(key, saved);
-    const entry = { mode, text: originalText, favorites: [...favorites] };
+    const entry = {
+      mode,
+      text: fixedText,
+      selectedPresets: selectedPresets.size === presets.length ? null : [...selectedPresets],
+      includeFixed
+    };
     try {
       localStorage.setItem(RADIO_REQUEST_TEXT_STORAGE_KEY, JSON.stringify({ ...saved, [key]: entry }));
     } catch {
@@ -206,14 +237,13 @@ function bindRequestTextSettings() {
 
     saveCloseButton.disabled = false;
     setOptionMode(program.selectedOptions[0], entry);
-    status.textContent = mode === "original" && !originalText ? "文章が空の間は標準文を使います。" : "";
+    status.textContent = mode === "fixed" && !fixedText ? "固定文が空の間はランダムで選びます。" : "";
 
     // 実行中のタスクを設定から編集しても、表示とコピー内容が一致するようにする。
-    const activeOriginal = getOriginalRadioRequestText(entry);
-    const previousFavorites = getAvailableRadioRequestTextFavorites(previous, getTemplateValue());
-    const favoritesChanged = previousFavorites.length !== favorites.size ||
-      previousFavorites.some((text) => !favorites.has(text));
-    if (getOriginalRadioRequestText(previous) !== activeOriginal || (!activeOriginal && favoritesChanged)) {
+    const previousCandidates = getRequestTextCandidates(previous, presets);
+    const candidates = getRequestTextCandidates(entry, presets);
+    if (previousCandidates.length !== candidates.length ||
+        previousCandidates.some((text, index) => text !== candidates[index])) {
       const current = getCurrentDailyTaskItem();
       if (getRadioRequestTextSettingKey(current) === key) {
         current._preparedCopyText = buildDailyTaskCopyText(current);
@@ -224,7 +254,7 @@ function bindRequestTextSettings() {
   }
 
   function saveEditorText() {
-    originalText = editor.innerText.replaceAll(RADIO_REQUEST_SONG_TOKEN, "musicname").trim();
+    fixedText = editor.innerText.replaceAll(RADIO_REQUEST_SONG_TOKEN, "musicname").trim();
     saveTextSettings();
   }
 
@@ -311,26 +341,39 @@ function bindRequestTextSettings() {
 
   program.addEventListener("change", showProgram);
   modes.forEach((button) => button.addEventListener("click", () => {
+    if (mode === button.dataset.requestTextMode) return;
     mode = button.dataset.requestTextMode;
+    if (mode === "random") renderCandidateList();
     saveTextSettings();
   }));
   example.addEventListener("change", renderPanel);
-  favoriteList.addEventListener("change", (event) => {
+  candidateList.addEventListener("change", (event) => {
     const checkbox = event.target;
-    if (checkbox.checked) favorites.add(checkbox.value);
-    else favorites.delete(checkbox.value);
-    const option = Array.from(example.options).find((item) => item.value === checkbox.value);
-    if (option) option.textContent = getExampleOptionLabel(checkbox.value);
+    if ("fixed" in checkbox.dataset) includeFixed = checkbox.checked;
+    else if (checkbox.checked) selectedPresets.add(checkbox.value);
+    else selectedPresets.delete(checkbox.value);
     saveTextSettings();
   });
+
+  function setAllCandidates(checked) {
+    selectedPresets = new Set(checked ? presets : []);
+    includeFixed = checked;
+    candidateList.querySelectorAll("input").forEach((checkbox) => {
+      checkbox.checked = checked;
+    });
+    saveTextSettings();
+  }
+
+  selectAllButton.addEventListener("click", () => setAllCandidates(true));
+  clearAllButton.addEventListener("click", () => setAllCandidates(false));
   document.getElementById("requestTextInsertSong").addEventListener("click", () => {
     insertInEditor(createSongToken());
   });
   exampleButton.addEventListener("click", () => {
     if (!example.value) return;
-    if (originalText && !window.confirm("入力中の文章を選んだ例文で上書きしますか？")) return;
-    originalText = example.value;
-    setEditorText(originalText);
+    if (fixedText && !window.confirm("固定のリクエスト文を選んだ例文で上書きしますか？")) return;
+    fixedText = example.value;
+    setEditorText(fixedText);
     saveTextSettings();
   });
 

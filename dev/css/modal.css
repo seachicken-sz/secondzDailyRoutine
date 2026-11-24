@@ -1525,6 +1525,75 @@
 #settingModal.is-request-text-settings .setting-modal-body {
   flex: 1;
   min-height: 0;
+  overflow: hidden;
+}
+
+#requestTextSettingSection {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+}
+
+#requestTextSettingForm {
+  flex: 1;
+  min-height: 0;
+  grid-template-rows: auto auto auto minmax(0, 1fr) auto auto;
+}
+
+#requestTextSettingForm .post-preview-tabs {
+  margin: 0;
+}
+
+#requestTextRandomSettings {
+  min-height: 0;
+  grid-template-rows: auto auto minmax(0, 1fr);
+}
+
+#requestTextCandidateList,
+#requestTextFixedSettings {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  align-content: start;
+}
+
+#requestTextCandidateList span {
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+#requestTextCandidateNote,
+#requestTextSettingForm > .select-mode-auto-save-note {
+  margin: 0;
+}
+
+#settingModal #requestTextSettingForm .setting-save-close-button {
+  margin-top: 0;
+}
+
+.request-text-example-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+}
+
+#requestTextUseExample {
+  min-width: 44px;
+  font-size: 1.2rem;
+}
+
+@media (max-height: 430px) {
+  #settingModal.is-request-text-settings .setting-modal-body,
+  #settingModal #requestTextSettingSection {
+    padding: 8px;
+  }
+
+  #requestTextSettingForm,
+  #requestTextRandomSettings {
+    gap: 4px;
+  }
 }
 
 @media (orientation: portrait) {

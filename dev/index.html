@@ -1449,18 +1449,24 @@
           <label for="requestTextProgram">番組・メッセージ</label>
           <select id="requestTextProgram"></select>
           <div class="post-preview-tabs" role="group" aria-label="使う文章">
-            <button type="button" class="post-preview-tab active" data-request-text-mode="standard" aria-pressed="true">標準</button>
-            <button type="button" class="post-preview-tab" data-request-text-mode="original" aria-pressed="false">オリジナル</button>
+            <button type="button" class="post-preview-tab active" data-request-text-mode="random" aria-pressed="true">ランダム</button>
+            <button type="button" class="post-preview-tab" data-request-text-mode="fixed" aria-pressed="false">固定</button>
           </div>
-          <div id="requestTextFavoriteSettings" class="request-text-settings">
-            <p id="requestTextFavoriteNote" class="select-mode-auto-save-note" aria-live="polite"></p>
-            <div id="requestTextFavoriteList" class="check-list" role="group" aria-label="お気に入りに登録する標準文"></div>
+          <div id="requestTextRandomSettings" class="request-text-settings">
+            <div class="request-text-actions">
+              <button type="button" id="requestTextSelectAll" class="secondary-button compact-button">すべてチェック</button>
+              <button type="button" id="requestTextClearAll" class="secondary-button compact-button">すべて外す</button>
+            </div>
+            <p id="requestTextCandidateNote" class="select-mode-auto-save-note" aria-live="polite"></p>
+            <div id="requestTextCandidateList" class="check-list" role="group" aria-label="ランダムの抽選候補" tabindex="0"></div>
           </div>
-          <div id="requestTextOriginalSettings" class="request-text-settings hidden">
-            <label for="requestTextExample">標準の例文</label>
-            <select id="requestTextExample"></select>
-            <button type="button" id="requestTextUseExample" class="secondary-button">選んだ例文を使う</button>
-            <label id="requestTextEditorLabel">オリジナルの文章</label>
+          <div id="requestTextFixedSettings" class="request-text-settings hidden">
+            <label for="requestTextExample">プリセット例文</label>
+            <div class="request-text-example-row">
+              <select id="requestTextExample"></select>
+              <button type="button" id="requestTextUseExample" class="secondary-button compact-button" aria-label="プリセット例文を固定文に入れる">↓</button>
+            </div>
+            <label id="requestTextEditorLabel">固定のリクエスト文</label>
             <div id="requestTextEditor" contenteditable="true" role="textbox" aria-multiline="true" aria-labelledby="requestTextEditorLabel"></div>
             <div class="request-text-actions">
               <button type="button" id="requestTextInsertSong" class="secondary-button">曲名を挿入</button>
