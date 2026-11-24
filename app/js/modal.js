@@ -276,8 +276,8 @@ function showSettingModalPage(page) {
     custom: { title: "加入サービス・追加タスク", section: "myCustomSettingSection" },
     requestText: { title: "ラジオリクエスト文", section: "requestTextSettingSection" },
     select: { title: "セレクトモード設定", section: "selectModeSettingSection" },
-    bgm: { title: "Spotifyの曲選び", section: "bgmRoutineSettingSection" },
-    usen: { title: "USENの曲選び", section: "usenRoutineSettingSection" }
+    bgm: { title: "Spotify設定", section: "bgmRoutineSettingSection" },
+    usen: { title: "USEN推しリク設定", section: "usenRoutineSettingSection" }
   };
   const isPwa = typeof isStandaloneMode === "function" && isStandaloneMode();
   if (page === "usen" || page === "bgm") refreshRoutineMusicSettingsUi();
