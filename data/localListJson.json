@@ -74,24 +74,6 @@
     ]
   },
   {
-    "listName": "秋田県",
-    "prefectureCode": 5,
-    "prefectureName": "秋田県",
-    "lastFlag": false,
-    "items": [
-      {
-        "id": "local_abs_asadori",
-        "name": "ABS秋田放送 あさ採りワイド秋田便",
-        "short-name": "あさ採りワイド秋田便",
-        "url": "https://www.akita-abs.co.jp/asa-mail/",
-        "request-type": "text-abs",
-        "request-input": "メッセージ",
-        "comment": "月～金 7:30～10:50放送\n\n①「メッセージ」に貼り付け\n②聞きたい理由を添えてみよう",
-        "input-flag": true
-      }
-    ]
-  },
-  {
     "listName": "宮城県",
     "prefectureCode": 4,
     "prefectureName": "宮城県",
@@ -105,6 +87,24 @@
         "request-type": "text-tbc",
         "request-input": "メール本文",
         "comment": "毎週日曜 12:00～12:55放送\n\n①メール本文にコピーされたリクエスト文を貼り付け\n②必要に応じて編集して送信",
+        "input-flag": true
+      }
+    ]
+  },
+  {
+    "listName": "秋田県",
+    "prefectureCode": 5,
+    "prefectureName": "秋田県",
+    "lastFlag": false,
+    "items": [
+      {
+        "id": "local_abs_asadori",
+        "name": "ABS秋田放送 あさ採りワイド秋田便",
+        "short-name": "あさ採りワイド秋田便",
+        "url": "https://www.akita-abs.co.jp/asa-mail/",
+        "request-type": "text-abs",
+        "request-input": "メッセージ",
+        "comment": "月～金 7:30～10:50放送\n\n①「メッセージ」に貼り付け\n②聞きたい理由を添えてみよう",
         "input-flag": true
       }
     ]
