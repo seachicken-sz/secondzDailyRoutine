@@ -67,7 +67,7 @@ function bindRequestTextSettings() {
   const modes = form.querySelectorAll("[data-request-text-mode]");
   const example = document.getElementById("requestTextExample");
   const favoriteSettings = document.getElementById("requestTextFavoriteSettings");
-  const favoriteButton = document.getElementById("requestTextFavoriteExample");
+  const favoriteList = document.getElementById("requestTextFavoriteList");
   const favoriteNote = document.getElementById("requestTextFavoriteNote");
   const originalSettings = document.getElementById("requestTextOriginalSettings");
   const editor = document.getElementById("requestTextEditor");
@@ -85,14 +85,26 @@ function bindRequestTextSettings() {
     return state.requestTexts[items.get(program.value)?.["request-type"]];
   }
 
-  function renderExamples(selected = "") {
-    const options = getRadioRequestTextExamples(getTemplateValue()).map((text) => {
-      const label = formatRadioRequestText(text, RADIO_REQUEST_SONG_TOKEN);
-      return new Option(favorites.has(text) ? `★ ${label}` : label, text);
-    });
-    example.replaceChildren(...options);
-    example.disabled = options.length === 0;
-    if (options.some((option) => option.value === selected)) example.value = selected;
+  function getExampleOptionLabel(text) {
+    const label = formatRadioRequestText(text, RADIO_REQUEST_SONG_TOKEN);
+    return favorites.has(text) ? `★ ${label}` : label;
+  }
+
+  function renderExamples() {
+    const templates = getRadioRequestTextExamples(getTemplateValue());
+    example.replaceChildren(...templates.map((text) => new Option(getExampleOptionLabel(text), text)));
+    example.disabled = templates.length === 0;
+
+    favoriteList.replaceChildren(...templates.map((text) => {
+      const label = document.createElement("label");
+      label.className = "check-item";
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.value = text;
+      checkbox.checked = favorites.has(text);
+      label.append(checkbox, formatRadioRequestText(text, RADIO_REQUEST_SONG_TOKEN));
+      return label;
+    }));
   }
 
   function renderPanel() {
@@ -103,15 +115,12 @@ function bindRequestTextSettings() {
       button.setAttribute("aria-pressed", String(selected));
     });
     originalSettings.classList.toggle("hidden", !original);
-    favoriteSettings.classList.toggle("hidden", original || example.disabled);
+    favoriteSettings.classList.toggle("hidden", original);
     exampleButton.disabled = example.disabled;
 
-    const isFavorite = favorites.has(example.value);
-    favoriteButton.setAttribute("aria-pressed", String(isFavorite));
-    favoriteButton.textContent = isFavorite ? "★ お気に入り登録済み" : "☆ お気に入りに登録";
-    favoriteNote.textContent = favorites.size
-      ? `お気に入り ${favorites.size} 件から抽選します。`
-      : "すべての例文から抽選します。";
+    favoriteNote.textContent = example.disabled ? "標準の例文がありません。" :
+      favorites.size ? `チェックした ${favorites.size} 件から抽選します。` :
+      "チェックした例文がお気に入りになります。チェックがない場合はすべての例文から抽選します。";
 
     const songName = getSelectedRadioRequestSongName();
     previewLabel.textContent = original && originalText ? "プレビュー" : "標準の例文";
@@ -289,12 +298,12 @@ function bindRequestTextSettings() {
     saveTextSettings();
   }));
   example.addEventListener("change", renderPanel);
-  favoriteButton.addEventListener("click", () => {
-    const selected = example.value;
-    if (!selected) return;
-    if (favorites.has(selected)) favorites.delete(selected);
-    else favorites.add(selected);
-    renderExamples(selected);
+  favoriteList.addEventListener("change", (event) => {
+    const checkbox = event.target;
+    if (checkbox.checked) favorites.add(checkbox.value);
+    else favorites.delete(checkbox.value);
+    const option = Array.from(example.options).find((item) => item.value === checkbox.value);
+    if (option) option.textContent = getExampleOptionLabel(checkbox.value);
     saveTextSettings();
   });
   document.getElementById("requestTextInsertSong").addEventListener("click", () => {
