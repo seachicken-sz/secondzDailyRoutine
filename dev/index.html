@@ -219,7 +219,7 @@
       <div id="home-top-share-btn-wrap">
         <button id="updateNoticeButton" type="button" class="button secondary update-notice-button"><i class="bi bi-bell"></i></button>
         <button id="settingButton" type="button" class="button secondary update-notice-button" aria-label="設定を開く"><i class="bi bi-gear"></i></button>
-        <button id="rewardCollectionButton" type="button" class="button secondary update-notice-button" aria-label="ごほうびコレクションを開く" title="ごほうびコレクション"><i class="bi bi-award"></i></button>
+        <button id="rewardCollectionButton" type="button" class="button secondary update-notice-button hidden" aria-label="CLEAR COLLECTIONを開く" title="CLEAR COLLECTION"><i class="bi bi-award"></i></button>
         <button id="refreshAllButton" type="button" class="button secondary update-notice-button" aria-label="JS・CSS・データを再取得して更新" title="最新データに更新"><i class="bi bi-arrow-clockwise" aria-hidden="true"></i></button>
       </div>
 
@@ -1033,10 +1033,10 @@
 
 
 
-  <!-- ごほうびコレクション -->
-  <div id="rewardCollectionModal" class="hidden" role="dialog" aria-modal="true" aria-label="ごほうびコレクション" style="position:fixed;inset:0;z-index:10019;background:rgba(0,0,0,.75);padding:16px;overflow:auto;align-items:flex-start;justify-content:center">
+  <!-- CLEAR COLLECTION -->
+  <div id="rewardCollectionModal" class="hidden" role="dialog" aria-modal="true" aria-label="CLEAR COLLECTION" style="position:fixed;inset:0;z-index:10019;background:rgba(0,0,0,.75);padding:16px;overflow:auto;align-items:flex-start;justify-content:center">
     <div style="width:min(100%,440px);margin:auto;background:var(--color-bg,#fff);color:var(--color-text,#222);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:14px">
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><strong>ごほうびコレクション</strong><button id="rewardCollectionCloseButton" type="button" class="secondary-button">閉じる</button></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><strong>CLEAR COLLECTION</strong><button id="rewardCollectionCloseButton" type="button" class="secondary-button">閉じる</button></div>
       <div style="display:flex;gap:8px"><button id="rewardCollectionDateTab" type="button" class="primary-button" style="flex:1">日付順</button><button id="rewardCollectionTypeTab" type="button" class="secondary-button" style="flex:1">カード種別</button></div>
       <div id="rewardCollectionSummary" style="font-size:12px;opacity:.7"></div>
       <div id="rewardCollectionBody"></div>
@@ -1047,7 +1047,7 @@
   <div id="reward01Modal" class="modal-overlay hidden" style="z-index:10020">
     <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="reward01ModalTitle" style="width:min(100%,440px)">
       <div class="modal-header">
-        <h2 id="reward01ModalTitle" class="modal-title">ごほうびトレカ</h2>
+        <h2 id="reward01ModalTitle" class="modal-title">CARD 01</h2>
         <button type="button" id="reward01CloseButton" class="modal-close-button" aria-label="閉じる">×</button>
       </div>
       <div class="modal-body" style="display:flex;flex-direction:column;gap:12px">
