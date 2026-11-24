@@ -57,6 +57,24 @@ function drawUnownedRewardCard(cards) {
   return candidates[candidates.length - 1];
 }
 
+// 同一日のallclearログは1回だけ送信。dev/appの検証履歴は分ける。
+const REWARD_ALL_CLEAR_LOG_KEY = "secondzDailyRoutineAllClearLogSent:" + (location.pathname.includes("/dev/") ? "dev" : "app");
+const rewardAllClearLogPending = new Set();
+async function sendRewardAllClearLogOnce(dayKey) {
+  if (localStorage.getItem(REWARD_ALL_CLEAR_LOG_KEY) === dayKey ||
+      rewardAllClearLogPending.has(dayKey)) return;
+  rewardAllClearLogPending.add(dayKey);
+  try {
+    // ログ送信失敗は獲得処理に影響させない。失敗時は次回Finish表示で再送可能。
+    if (await sendStartLog("allclear")) {
+      localStorage.setItem(REWARD_ALL_CLEAR_LOG_KEY, dayKey);
+    }
+  } catch (error) {
+    console.error("CLEAR COLLECTIONのログ送信に失敗", error);
+  } finally {
+    rewardAllClearLogPending.delete(dayKey);
+  }
+}
 function awardReward01AtFinish() {
   const { eligible, count } = getReward01Eligibility();
   const area = document.getElementById("reward01FinishArea");
@@ -65,6 +83,7 @@ function awardReward01AtFinish() {
   area.classList.toggle("hidden", !eligible);
   if (!eligible) return;
   const dayKey = getDailyTaskDayKey();
+  void sendRewardAllClearLogOnce(dayKey);
   const cards = loadReward01Cards();
   let card = cards.find(item => item.dayKey === dayKey);
   if (!card) {
