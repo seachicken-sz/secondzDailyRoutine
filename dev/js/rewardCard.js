@@ -76,7 +76,21 @@ function openReward01Card(dayKey) {
   modal.classList.remove("hidden");
   modal.style.display = "flex";
   document.body.style.overflow = "hidden";
-  nameInput.value = card.nickname || "";
+  // 初回は空欄。過去に入力した名前があれば、新しいカードでも初期値として使う。
+  // 既存カードに保存されている名前はそのカード固有の値を優先する。
+  const rememberedName = localStorage.getItem(REWARD01_NAME_KEY) || "";
+  nameInput.value = card.nickname || rememberedName;
+  if (!card.nickname && rememberedName) {
+    card.nickname = rememberedName;
+    const stored = loadReward01Cards();
+    const storedCard = stored.find(item => item.dayKey === card.dayKey);
+    if (storedCard) {
+      storedCard.nickname = rememberedName;
+      saveReward01Cards(stored);
+    }
+  }
+  const shareError = document.getElementById("reward01ShareError");
+  if (shareError) { shareError.textContent = ""; shareError.classList.add("hidden"); }
   list.replaceChildren();
   [...cards].reverse().forEach(item => {
     const button = document.createElement("button");
@@ -97,15 +111,46 @@ function openReward01Card(dayKey) {
       target.nickname = nextName;
       saveReward01Cards(updated);
     }
-    localStorage.setItem(REWARD01_NAME_KEY, nextName);
+    // 空欄に戻しても、以前入力した名前の記憶は消さない。
+    if (nextName.trim()) localStorage.setItem(REWARD01_NAME_KEY, nextName);
     drawReward01Canvas(canvas, card);
   };
   const saveButton = document.getElementById("reward01SaveButton");
-  saveButton.onclick = () => {
-    const link = document.createElement("a");
-    link.download = "tamugoto-card-01-" + card.dayKey + ".png";
-    link.href = canvas.toDataURL("image/png");
-    link.click();
+  saveButton.onclick = async () => {
+    const shareError = document.getElementById("reward01ShareError");
+    if (shareError) { shareError.textContent = ""; shareError.classList.add("hidden"); }
+    try {
+      const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+      if (!blob) throw new Error("PNG画像を生成できませんでした");
+      const file = new File([blob], "tamugoto-card-01-" + card.dayKey + ".png", { type: "image/png" });
+
+      // iPhone/PWAなどで共有可能なら、SNSや写真保存を選べる共有シートを表示する。
+      if (typeof navigator.share === "function" &&
+          (!navigator.canShare || navigator.canShare({ files: [file] }))) {
+        try {
+          await navigator.share({ files: [file], title: "タムごとDaily ごほうびトレカ" });
+          return;
+        } catch (error) {
+          if (error.name === "AbortError") return;
+          // 共有APIの実行失敗はダウンロードへフォールバックする。
+          console.error("ごほうびトレカの共有に失敗", error);
+        }
+      }
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = file.name;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    } catch (error) {
+      console.error("ごほうびトレカの保存・共有に失敗", error);
+      if (shareError) {
+        shareError.textContent = "画像の保存・共有に失敗しました。もう一度お試しください。";
+        shareError.classList.remove("hidden");
+      }
+    }
   };
   drawReward01Canvas(canvas, card);
 }
