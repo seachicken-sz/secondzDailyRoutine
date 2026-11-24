@@ -23,6 +23,8 @@ const state = {
   requestTexts: {},
   dailyGroups: [],
   currentDailyGroupIndex: 0,
+  completedDailyGroupIndexes: [],
+  dailyGroupHistory: [],
   currentDailyTaskIndex: 0,
   completedDailyItems: [],
 

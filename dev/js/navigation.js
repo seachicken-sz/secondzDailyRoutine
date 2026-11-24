@@ -144,14 +144,17 @@ async function goBackDailyTask() {
 
   // グループ先頭にいるが、前のグループがある場合は、
   // 前グループの最後のタスクに戻る
-  if (state.currentDailyGroupIndex > 0) {
-    state.currentDailyGroupIndex -= 1;
+  if (state.dailyGroupHistory.length > 0) {
+    state.currentDailyGroupIndex = state.dailyGroupHistory.pop();
+    state.completedDailyGroupIndexes = state.completedDailyGroupIndexes.filter((index) => index !== state.currentDailyGroupIndex);
 
     const previousGroup = getCurrentDailyGroup();
     const previousGroupItems = getDailyGroupItems(previousGroup);
 
     state.currentDailyTaskIndex = Math.max(previousGroupItems.length - 1, 0);
+    state.openedAction = "";
     renderCurrentDailyTask();
+    saveFlowState();
     return;
   }
 
@@ -181,6 +184,8 @@ function goBackFromDailyGroupEnd() {
 
   // グループ内の最後のタスク番号に戻す
   state.currentDailyTaskIndex = Math.max(currentGroupItems.length - 1, 0);
+  state.completedDailyGroupIndexes = state.completedDailyGroupIndexes.filter((index) => index !== state.currentDailyGroupIndex);
+  state.openedAction = "";
 
   // デイリータスク画面を表示する
   showOnlyStep(dailyTaskStepElement, { recordHistory: false });

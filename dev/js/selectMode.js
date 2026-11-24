@@ -493,6 +493,8 @@ function resetRoutineProgressState() {
   state.selectedRadioRequestSong = null;
 
   state.currentDailyGroupIndex = 0;
+  state.completedDailyGroupIndexes = [];
+  state.dailyGroupHistory = [];
   state.currentDailyTaskIndex = 0;
   state.completedDailyItems = [];
 

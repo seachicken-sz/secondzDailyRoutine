@@ -448,6 +448,9 @@ async function restoreFlowStateOrHome() {
   
   // デイリータスクの現在グループ位置
   state.currentDailyGroupIndex = Number(flowState.currentDailyGroupIndex) || 0;
+  const legacyGroupIndexes = Array.from({ length: Math.max(0, state.currentDailyGroupIndex) }, (_, index) => index);
+  state.completedDailyGroupIndexes = Array.isArray(flowState.completedDailyGroupIndexes) ? flowState.completedDailyGroupIndexes : legacyGroupIndexes;
+  state.dailyGroupHistory = Array.isArray(flowState.dailyGroupHistory) ? flowState.dailyGroupHistory : legacyGroupIndexes;
 
   // デイリータスクの現在タスク位置
   state.currentDailyTaskIndex = Number(flowState.currentDailyTaskIndex) || 0;
@@ -624,6 +627,13 @@ async function restoreFlowStateOrHome() {
   }
 
   // ==================================================
+  // デイリーグループ終了画面の復元
+  if (flowState.currentStepId === "dailyGroupEndStep") {
+    await ensureDailyDataLoaded();
+    showDailyGroupEndStep();
+    return;
+  }
+
   // その他の画面の復元
   // ==================================================
   // 上記で個別復元していない画面は、currentStepId と一致するDOMを探す
