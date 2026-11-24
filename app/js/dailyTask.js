@@ -284,24 +284,8 @@ function setDailyTaskStepHelpKey(item) {
 // デイリータスク用コピー文作成
 // ==================================================
 function buildDailyTaskCopyText(item) {
-  // dailyTaskJson 側の request-type
-  const requestType = item["request-type"];
-  // requestTextJson 側のテンプレート
-  // 文字列 or 配列のどちらもありえる
-  const templateValue = state.requestTexts[requestType];
-  // request-type またはテンプレートがない場合はコピー文なし
-  if (!requestType || !templateValue) {
-    return "";
-  }
-  // 複数候補がある場合だけランダムに1つ選ぶ
-  const template = pickRequestTextTemplate(templateValue, requestType);
-  if (!template) {
-    return "";
-  }
-  // 選択中のラジオリクエスト曲名
-  const musicName = getSelectedRadioRequestSongName();
-  // テンプレート内の musicname を選択曲名で置換する
-  return template.replaceAll("musicname", musicName);
+  const template = selectDailyRequestTextTemplate(item);
+  return formatRadioRequestText(template, getSelectedRadioRequestSongName());
 }
 
 // ==================================================

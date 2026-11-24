@@ -273,16 +273,18 @@ function refreshSettingModalIndexStatus() {
 function showSettingModalPage(page) {
   const pages = {
     push: { title: "プッシュ通知設定", section: "pushSettingSection" },
-    custom: { title: "マイカスタム設定", section: "myCustomSettingSection" },
+    custom: { title: "加入サービス・追加タスク", section: "myCustomSettingSection" },
+    requestText: { title: "ラジオリクエスト文", section: "requestTextSettingSection" },
     select: { title: "セレクトモード設定", section: "selectModeSettingSection" },
-    bgm: { title: "「今日のSpotify再生」設定", section: "bgmRoutineSettingSection" },
-    usen: { title: "「USEN推し活」設定", section: "usenRoutineSettingSection" }
+    bgm: { title: "Spotifyの曲選び", section: "bgmRoutineSettingSection" },
+    usen: { title: "USENの曲選び", section: "usenRoutineSettingSection" }
   };
   const isPwa = typeof isStandaloneMode === "function" && isStandaloneMode();
   if (page === "usen" || page === "bgm") refreshRoutineMusicSettingsUi();
   const target = page === "push" && !isPwa ? "index" :
     Object.prototype.hasOwnProperty.call(pages, page) ? page : "index";
   const index = target === "index";
+  settingModalElement?.classList.toggle("is-request-text-settings", target === "requestText");
   if (index) refreshSettingModalIndexStatus();
   document.getElementById("settingModalIndex")?.classList.toggle("hidden", !index);
   Object.entries(pages).forEach(([name, config]) => {
@@ -295,6 +297,7 @@ function showSettingModalPage(page) {
   if (title) title.textContent = index ? "設定" : pages[target].title;
   const body = document.querySelector("#settingModal .setting-modal-body");
   if (body) body.scrollTop = 0;
+  if (target === "requestText") openRequestTextSettings();
 }
 
 function openSettingModal() {

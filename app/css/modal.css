@@ -1416,6 +1416,8 @@
 .setting-modal-back-button { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 34px; width: 34px; height: 34px; border: 0; border-radius: 9px; color: var(--color-brand); background: var(--color-surface-soft); font-size: 19px; cursor: pointer; }
 .setting-modal-back-button:focus-visible, .setting-modal-index-item:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; }
 .setting-modal-index { display: grid; gap: 10px; }
+.setting-modal-index-group { display: grid; gap: 10px; margin-top: 6px; }
+.setting-modal-index-heading { margin: 0; padding: 0 4px; color: var(--color-text-muted); font-size: 14px; }
 .setting-modal-index-item { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 72px; padding: 13px 14px; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-surface); color: var(--color-text); font: inherit; text-align: left; cursor: pointer; }
 .setting-modal-index-icon { flex: 0 0 32px; width: 32px; display: inline-flex; justify-content: center; align-items: center; font-size: 21px; color: var(--color-brand); }
 .setting-modal-index-text { flex: 1; min-width: 0; display: grid; gap: 4px; }
@@ -1451,4 +1453,208 @@
 /* CLEAR COLLECTION: モーダル内でもSNSシェアと同じトグル形状を見せる */
 #rewardCollectionModal .post-preview-tabs {
   background: var(--color-surface-media, #eaeaea);
+}
+
+.request-text-settings {
+  display: grid;
+  gap: 10px;
+}
+
+.request-text-settings.hidden,
+.request-text-status:empty {
+  display: none;
+}
+
+.request-text-bulk-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.request-text-bulk-actions button,
+#requestTextInsertSong {
+  width: auto;
+  padding: 4px 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-brand);
+  font: inherit;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+#requestTextInsertSong {
+  padding-inline: 0.5em;
+  border-radius: 4px;
+  background: var(--color-surface-soft);
+}
+
+.request-text-bulk-actions button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.request-text-choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  padding: 7px 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+#requestTextPresetChoices > .request-text-choice {
+  border-top: 1px solid var(--color-border-light);
+}
+
+.request-text-choice input {
+  flex: none;
+  margin: 0.2em 0 0;
+}
+
+.request-text-original-choice {
+  font-weight: 700;
+}
+
+.request-text-original-editor {
+  display: grid;
+  justify-items: start;
+  gap: 3px;
+  padding: 3px 0 6px;
+}
+
+#requestTextProgram,
+#requestTextExample,
+#requestTextEditor {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 16px;
+}
+
+#requestTextEditor {
+  min-height: 7em;
+}
+
+#requestTextEditor,
+#requestTextPreview {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.request-text-song-token {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface-soft);
+}
+
+.request-text-song-token button {
+  border: 0;
+  padding: 0 5px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.request-text-song-token button::before {
+  content: "×";
+}
+
+#requestTextPreview {
+  margin: 6px 0 10px;
+}
+
+#settingModal.is-request-text-settings .setting-modal-content {
+  height: min(90svh, 840px);
+}
+
+#settingModal.is-request-text-settings .setting-modal-body {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+#requestTextSettingSection {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+}
+
+#requestTextSettingForm {
+  flex: 1;
+  min-height: 0;
+  grid-template-rows: auto auto auto minmax(0, 1fr) auto auto;
+}
+
+#requestTextSettingForm .post-preview-tabs {
+  margin: 0;
+}
+
+#requestTextRandomSettings {
+  min-height: 0;
+  grid-template-rows: auto auto minmax(0, 1fr);
+}
+
+#requestTextCandidateList,
+#requestTextFixedSettings {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  align-content: start;
+}
+
+#requestTextCandidateList span {
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+#requestTextCandidateNote,
+#requestTextSettingForm > .select-mode-auto-save-note {
+  margin: 0;
+}
+
+#settingModal #requestTextSettingForm .setting-save-close-button {
+  margin-top: 0;
+}
+
+.request-text-example-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+}
+
+#requestTextUseExample {
+  min-width: 44px;
+  font-size: 1.2rem;
+}
+
+@media (max-height: 430px) {
+  #settingModal.is-request-text-settings .setting-modal-body,
+  #settingModal #requestTextSettingSection {
+    padding: 8px;
+  }
+
+  #requestTextSettingForm,
+  #requestTextRandomSettings {
+    gap: 4px;
+  }
+}
+
+@media (orientation: portrait) {
+  #settingModal.is-request-text-settings .setting-modal-content {
+    box-sizing: border-box;
+    width: 90vw;
+    max-width: none;
+  }
 }

@@ -1427,11 +1427,15 @@
 
     <div class="modal-body setting-modal-body">
       <nav id="settingModalIndex" class="setting-modal-index" aria-label="設定項目">
-        <button type="button" class="setting-modal-index-item" data-setting-open="push"><span class="setting-modal-index-icon"><i class="bi bi-bell"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>プッシュ通知設定</strong><span class="setting-modal-index-status is-off" data-setting-status="push" aria-label="プッシュ通知設定 OFF">OFF</span></span><small>リマイド通知の時刻・ON/OFFの設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
-        <button type="button" class="setting-modal-index-item" data-setting-open="custom"><span class="setting-modal-index-icon"><i class="bi bi-person-gear"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>マイカスタム設定</strong><span class="setting-modal-index-status is-off" data-setting-status="custom" aria-label="マイカスタム設定 OFF">OFF</span></span><small>利用中のサブスク・ファンクラブの設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
-        <button type="button" class="setting-modal-index-item" data-setting-open="select"><span class="setting-modal-index-icon"><i class="bi bi-ui-checks-grid"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>セレクトモード設定</strong><span class="setting-modal-index-status is-off" data-setting-status="select" aria-label="セレクトモード設定 OFF">OFF</span></span><small>好きなタスクだけ選んでルーチンを組める設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
-        <button type="button" class="setting-modal-index-item" data-setting-open="bgm"><span class="setting-modal-index-icon"><i class="bi bi-headphones"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>「今日のSpotify再生」設定</strong><span class="setting-modal-index-status is-off" data-setting-status="bgm" aria-label="「今日のSpotify再生」設定 OFF">OFF</span></span><small>タスク中に聴ける音楽の設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
-        <button type="button" class="setting-modal-index-item" data-setting-open="usen"><span class="setting-modal-index-icon"><i class="bi bi-music-note-list"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>「USEN推し活」設定</strong><span class="setting-modal-index-status is-off" data-setting-status="usen" aria-label="「USEN推し活」設定 OFF">OFF</span></span><small>USEN推し活リクエストの設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+        <button type="button" class="setting-modal-index-item" data-setting-open="push"><span class="setting-modal-index-icon"><i class="bi bi-bell"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>プッシュ通知設定</strong><span class="setting-modal-index-status is-off" data-setting-status="push" aria-label="プッシュ通知設定 OFF">OFF</span></span><small>リマインド通知の時刻・ON/OFFの設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+        <button type="button" class="setting-modal-index-item" data-setting-open="select"><span class="setting-modal-index-icon"><i class="bi bi-ui-checks-grid"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>セレクトモード設定</strong><span class="setting-modal-index-status is-off" data-setting-status="select" aria-label="セレクトモード設定 OFF">OFF</span></span><small>「開始する」で進むタスクを選ぶ</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+        <section class="setting-modal-index-group" aria-labelledby="myCustomIndexHeading">
+          <h3 id="myCustomIndexHeading" class="setting-modal-index-heading">マイカスタム</h3>
+          <button type="button" class="setting-modal-index-item" data-setting-open="custom"><span class="setting-modal-index-icon"><i class="bi bi-person-gear"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>加入サービス・追加タスク</strong><span class="setting-modal-index-status is-off" data-setting-status="custom" aria-label="加入サービス・追加タスク OFF">OFF</span></span><small>加入サービスに合わせてタスクを追加</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+          <button type="button" class="setting-modal-index-item" data-setting-open="bgm"><span class="setting-modal-index-icon"><i class="bi bi-headphones"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>Spotifyの曲選び</strong><span class="setting-modal-index-status is-off" data-setting-status="bgm" aria-label="Spotifyの曲選び OFF">OFF</span></span><small>タスク中に聴く曲の選び方</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+          <button type="button" class="setting-modal-index-item" data-setting-open="usen"><span class="setting-modal-index-icon"><i class="bi bi-music-note-list"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>USENの曲選び</strong><span class="setting-modal-index-status is-off" data-setting-status="usen" aria-label="USENの曲選び OFF">OFF</span></span><small>USENでリクエストする曲の選び方</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+          <button type="button" class="setting-modal-index-item" data-setting-open="requestText"><span class="setting-modal-index-icon"><i class="bi bi-pencil-square" aria-hidden="true"></i></span><span class="setting-modal-index-text"><strong>ラジオリクエスト文</strong><small>番組ごとにコピーする文章を設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+        </section>
       </nav>
       <section id="settingPwaGuide" class="setting-pwa-guide hidden">
         <p>
@@ -1442,8 +1446,51 @@
         </button>
       </section>
 
+      <section id="requestTextSettingSection" class="setting-section hidden">
+        <p id="requestTextSettingStatus" class="request-text-status" role="status"></p>
+        <div id="requestTextSettingForm" class="request-text-settings hidden">
+          <label for="requestTextProgram">番組・メッセージ</label>
+          <select id="requestTextProgram"></select>
+          <div class="post-preview-tabs" role="group" aria-label="使う文章">
+            <button type="button" class="post-preview-tab active" data-request-text-mode="random" aria-pressed="true">ランダム</button>
+            <button type="button" class="post-preview-tab" data-request-text-mode="fixed" aria-pressed="false">固定</button>
+          </div>
+          <div id="requestTextRandomSettings" class="request-text-settings">
+            <div class="request-text-bulk-actions">
+              <button type="button" id="requestTextSelectAll">すべてチェック</button>
+              <button type="button" id="requestTextClearAll">すべて外す</button>
+            </div>
+            <p id="requestTextCandidateNote" class="select-mode-auto-save-note" aria-live="polite"></p>
+            <div id="requestTextCandidateList" role="group" aria-label="ランダムの抽選候補" tabindex="0">
+              <label class="request-text-choice request-text-original-choice"><input type="checkbox" id="requestTextIncludeOriginal" aria-controls="requestTextOriginalEditorPanel">オリジナル文章を使う</label>
+              <div id="requestTextRandomEditorSlot"></div>
+              <div id="requestTextPresetChoices"></div>
+            </div>
+          </div>
+          <div id="requestTextFixedSettings" class="request-text-settings hidden">
+            <label for="requestTextExample">プリセット例文</label>
+            <div class="request-text-example-row">
+              <select id="requestTextExample"></select>
+              <button type="button" id="requestTextUseExample" class="secondary-button compact-button" aria-label="プリセット例文を固定文に入れる">↓</button>
+            </div>
+            <div id="requestTextFixedEditorSlot">
+              <div id="requestTextOriginalEditorPanel" class="request-text-original-editor hidden">
+                <div id="requestTextEditor" contenteditable="true" role="textbox" aria-multiline="true" aria-label="オリジナル文章"></div>
+                <button type="button" id="requestTextInsertSong">曲名を挿入</button>
+              </div>
+            </div>
+            <div>
+              <strong id="requestTextPreviewLabel">プレビュー</strong>
+              <p id="requestTextPreview"></p>
+            </div>
+          </div>
+          <p class="select-mode-auto-save-note">変更はこの端末に保存されます。</p>
+          <button type="button" class="primary-button setting-save-close-button" data-setting-save-close>保存して閉じる</button>
+        </div>
+      </section>
+
       <section id="usenRoutineSettingSection" class="setting-section hidden">
-        <div class="setting-section-header"><h3><i class="bi bi-music-note-list"></i>USEN推し活設定</h3><p>USEN推し活リクエストの設定</p></div>
+        <div class="setting-section-header"><h3><i class="bi bi-music-note-list"></i>USENの曲選び</h3><p>USENでリクエストする曲の選び方</p></div>
         <fieldset class="setting-fieldset"><div class="setting-radio-list">
           <label class="setting-radio-card"><input type="radio" name="usenRoutineSetting" value="manual" checked><span><strong>毎回自分で選ぶ <small class="setting-default-label">（初期設定）</small></strong><small>リクエストする曲を毎回選択</small></span></label>
           <label class="setting-radio-card"><input type="radio" name="usenRoutineSetting" value="recommended"><span><strong>おすすめ曲を自動選択</strong><small>おすすめ曲の先頭を自動選択</small></span></label>
@@ -1455,7 +1502,7 @@
         <button type="button" class="primary-button setting-save-close-button" data-setting-save-close>保存して閉じる</button>
       </section>
       <section id="bgmRoutineSettingSection" class="setting-section hidden">
-        <div class="setting-section-header"><h3><i class="bi bi-headphones"></i>今日のSpotify再生設定</h3><p>タスク中に聴く音楽の設定</p></div>
+        <div class="setting-section-header"><h3><i class="bi bi-headphones"></i>Spotifyの曲選び</h3><p>タスク中に聴く音楽の設定</p></div>
         <fieldset class="setting-fieldset"><div class="setting-radio-list">
           <label class="setting-radio-card"><input type="radio" name="bgmRoutineSetting" value="manual" checked><span><strong>毎回自分で選ぶ <small class="setting-default-label">（初期設定）</small></strong><small>再生する曲を毎回選択</small></span></label>
           <label class="setting-radio-card"><input type="radio" name="bgmRoutineSetting" value="recommended"><span><strong>おすすめ曲を自動選択</strong><small>おすすめ曲からランダムに1曲選択</small></span></label>
@@ -1513,7 +1560,7 @@
 
       <section id="myCustomSettingSection" class="setting-section hidden">
         <div class="setting-section-header">
-          <h3><i class="bi bi-person-gear"></i>マイカスタム</h3>
+          <h3><i class="bi bi-person-gear"></i>加入サービス・追加タスク</h3>
           <p>利用中のサービスや加入しているファンクラブに合わせて、タスクを追加できます。</p>
         </div>
         <div id="myCustomSettingList" class="select-mode-feature-list"></div>
@@ -1688,6 +1735,7 @@
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/theme.js") + '" defer><' + '/script>');</script>
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/memberWorks.js") + '" defer><' + '/script>');</script>
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/setting.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/requestTextSettings.js") + '" defer><' + '/script>');</script>
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/selectMode.js") + '" defer><' + '/script>');</script>
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/myCustom.js") + '" defer><' + '/script>');</script>
 <!-- シェア画像 -->
