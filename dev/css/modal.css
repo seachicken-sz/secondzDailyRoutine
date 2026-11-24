@@ -1518,6 +1518,15 @@
   margin: 6px 0 10px;
 }
 
+#settingModal.is-request-text-settings .setting-modal-content {
+  height: min(90svh, 840px);
+}
+
+#settingModal.is-request-text-settings .setting-modal-body {
+  flex: 1;
+  min-height: 0;
+}
+
 @media (orientation: portrait) {
   #settingModal.is-request-text-settings .setting-modal-content {
     box-sizing: border-box;
