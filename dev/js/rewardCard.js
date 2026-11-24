@@ -59,7 +59,6 @@ function awardReward01AtFinish() {
   button.addEventListener("click", () => openReward01Card(card.dayKey));
   area.append(heading, button);
   updateReward01HomeButton();
-  bindRewardCollectionEvents();
 }
 function updateReward01HomeButton() {
   const button = document.getElementById("reward01HomeButton");
@@ -165,6 +164,7 @@ function bindReward01Events() {
     if(event.target.id==="reward01Modal")closeReward01Card();
   });
   updateReward01HomeButton();
+  bindRewardCollectionEvents();
 }
 
 
