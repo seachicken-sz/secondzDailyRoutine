@@ -223,14 +223,7 @@ function drawReward0304Canvas(canvas, card) {
     c.fillStyle = "#a9a9a9";c.font = "400 " + size + "px sans-serif";
     c.fillText(card.nickname, 52, 598);
   }
-  const lines = [];let line = "";
-  c.font = "700 58px sans-serif";
-  for (const character of Array.from(title)) {
-    if (line && c.measureText(line + character).width > 600) {
-      lines.push(line);line = character;
-    } else line += character;
-  }
-  if (line) lines.push(line);
+  const lines = getRewardMiniTitleLines(card.typeId);
   const lineHeight = 78;
   const firstY = 720 - ((lines.length - 1) * lineHeight) / 2;
   c.fillStyle = "#f6f6f6";c.font = "700 58px sans-serif";
@@ -417,19 +410,10 @@ function openRewardCollectionCard(dayKey) {
 // 日付順と試験用の共通ミニカード。実カードの称号・改行を踏襲する。
 function getRewardMiniTitleLines(typeId) {
   if (typeId === "01") return ["ラジリクはね、", "やっとかないと。"];
+  if (typeId === "03") return ["肩外れてもいいと", "思ってやってるから。"];
+  if (typeId === "04") return ["ファンを舐めて", "もらっちゃ困ります。"];
   if (typeId === "06") return ["お前本当は", "天使なんじゃないか？"];
-  const title = REWARD_COLLECTION_TYPES.find(type => type.id === typeId)?.title || "？？？";
-  if (typeId !== "03" && typeId !== "04") return [title];
-  const ctx = document.createElement("canvas").getContext("2d");
-  ctx.font = "700 58px sans-serif";
-  const lines = [];let line = "";
-  for (const character of Array.from(title)) {
-    if (line && ctx.measureText(line + character).width > 600) {
-      lines.push(line);line = character;
-    } else line += character;
-  }
-  if (line) lines.push(line);
-  return lines;
+  return [REWARD_COLLECTION_TYPES.find(type => type.id === typeId)?.title || "？？？"];
 }
 function createRewardMiniCard(card, onClick) {
   const typeId = card.typeId || "01";
@@ -437,30 +421,18 @@ function createRewardMiniCard(card, onClick) {
   const button = document.createElement("button");
   button.type = "button";
   button.className = "reward-mini-card";
-  button.style.cssText = "display:flex;flex-direction:column;gap:0;min-width:0;aspect-ratio:3/4;padding:12px;border:0;border-radius:12px;background:#121212;color:#f6f6f6;text-align:left;cursor:pointer;overflow:hidden;font-family:Arial,sans-serif;";
+  button.style.cssText = "display:flex;flex-direction:column;min-width:0;aspect-ratio:1/1;padding:12px;border:0;border-radius:12px;background:#121212;color:#f6f6f6;text-align:left;cursor:pointer;overflow:hidden;font-family:Arial,sans-serif;";
   const number = document.createElement("strong");
   number.textContent = typeId;
-  number.style.cssText = "font-size:23px;line-height:1.1;color:#eee;";
-  const english = document.createElement("strong");
-  const labels = { "01":"RADIO", "02":"EFFORT", "03":"CLEAR", "04":"CLEAR", "05":"SURVIVE", "06":"ANGEL?" };
-  english.textContent = labels[typeId] || "CLEAR";
-  english.style.cssText = "font-size:clamp(15px,4vw,24px);font-weight:900;letter-spacing:-.6px;line-height:1.1;margin-top:11px;white-space:nowrap;";
-  const colorLine = document.createElement("span");
-  colorLine.style.cssText = "width:52%;height:3px;background:"+color+";margin:5px 0 9px;flex-shrink:0;";
-  const status = document.createElement("span");
-  status.textContent = "ALL CLEAR";
-  status.style.cssText = "font-size:10px;letter-spacing:.4px;font-weight:700;color:"+color+";";
-  const meta = document.createElement("span");
-  const day = card.dayKey || getDailyTaskDayKey();
-  meta.textContent = day.slice(0,4)+"/"+day.slice(4,6)+"/"+day.slice(6,8)+"  "+(card.count ?? 48)+" TASKS";
-  meta.style.cssText = "font-size:9px;line-height:1.5;color:#bcbcbc;white-space:nowrap;margin-top:3px;";
+  number.style.cssText = "font-size:25px;line-height:1.1;color:"+color+";"+(card.colorIndex===6?"text-shadow:0 0 2px #777;":"");
   const title = document.createElement("span");
   title.textContent = getRewardMiniTitleLines(typeId).join("\n");
-  title.style.cssText = "display:block;margin-top:auto;padding:12px 0 9px;font-size:clamp(9px,2.8vw,13px);font-weight:700;line-height:1.5;color:#fff;white-space:pre-line;overflow-wrap:anywhere;text-align:left;";
-  const footer = document.createElement("span");
-  footer.textContent = "タムごとDaily";
-  footer.style.cssText = "border-top:1px solid #444;padding-top:6px;font-size:9px;color:#aaa;text-align:center;";
-  button.append(number,english,colorLine,status,meta,title,footer);
+  title.style.cssText = "display:flex;flex:1;align-items:center;min-height:0;padding:8px 0;font-size:clamp(10px,2.9vw,14px);font-weight:700;line-height:1.45;color:#fff;white-space:pre-line;overflow-wrap:anywhere;text-align:left;";
+  const date = document.createElement("span");
+  const day = card.dayKey || getDailyTaskDayKey();
+  date.textContent = day.slice(0,4)+"/"+day.slice(4,6)+"/"+day.slice(6,8);
+  date.style.cssText = "font-size:10px;line-height:1.2;color:#bcbcbc;white-space:nowrap;";
+  button.append(number,title,date);
   if (onClick) button.addEventListener("click",onClick);
   return button;
 }
