@@ -435,7 +435,7 @@ function openExternalTaskUrl(url) {
     return;
   }
 
-  if (isStandaloneMode()) {
+  if (/^mailto:/i.test(url) || isStandaloneMode()) {
     location.href = url;
     return;
   }

@@ -92,7 +92,7 @@ function getSelectableDailyTaskIds() {
     return [];
   }
 
-  return state.dailyGroups.flatMap((group) => {
+  return state.dailyGroups.filter(group => !group.localFlag).flatMap((group) => {
     const items = Array.isArray(group?.items) ? group.items : [];
 
     return items
@@ -308,7 +308,7 @@ function renderSelectModeDailyTaskList() {
   selectModeDailyTaskListElement.innerHTML = "";
 
   const groups = Array.isArray(state.dailyGroups)
-    ? state.dailyGroups
+    ? state.dailyGroups.filter(group => !group.localFlag)
     : [];
 
   const settings = getSelectModeSettings();
@@ -409,7 +409,7 @@ function updateSelectModeSelectionSummary() {
 }
 
 function getRemainingRoutineStatus() {
-  const groups = Array.isArray(state.dailyGroups) ? state.dailyGroups : [];
+  const groups = Array.isArray(state.dailyGroups) ? state.dailyGroups.filter(group => !group.localFlag) : [];
   const items = groups.flatMap((group) => getDailyGroupItems(group));
   const usenDone = isDailyTaskDone({ id: "home_usen_request" });
   const completedCount = items.filter((item) => isDailyTaskDone(item)).length;
@@ -512,6 +512,7 @@ async function startRoutineByCurrentMode() {
   const { remaining, resume, showSpotify } = getRoutineStartStatus(settings);
 
   resetRoutineProgressState();
+  state.routineLocalGroupCodes = readEnabledLocalGroupCodes();
 
   // セレクトの全完了後も、通常モードの残りルーチンを再利用する
   if (!settings.enabled || resume) {
@@ -577,7 +578,7 @@ function isSelectModeFeatureSelected(featureName) {
 // ==================================================
 function getExecutionDailyGroups() {
   const groups = Array.isArray(state.dailyGroups)
-    ? state.dailyGroups
+    ? state.dailyGroups.filter(group => !group.localFlag)
     : [];
 
   // 通常モードの残りルーチンは、開始時に確定した未実行タスクだけを元のグループ順で回る

@@ -20,6 +20,7 @@ const DATA_PATHS = {
   radioRequestSongOverrides: "../data/radioRequestSongOverrideJson.json",
   requestTexts: "../data/requestTextJson.json",
   dailyGroups: "../data/listJson.json",
+  localGroups: "../data/localListJson.json",
   youtubePlaylists: "../data/youtubePlayListJson.json",
   youtubeMvs: "../data/youtubeMVListJson.json",
   youtubeOthers: "../data/youtubeOtherListJson.json",

@@ -430,6 +430,8 @@ async function restoreFlowStateOrHome() {
   // state復元
   // ==================================================
   // Spotifyで選択していた曲
+  state.routineLocalGroupCodes = Array.isArray(flowState.routineLocalGroupCodes)
+    ? flowState.routineLocalGroupCodes.map(String) : [];
   state.selectedSong = flowState.selectedSong || null;
 
   // 選択済みの期間限定タスク
@@ -492,7 +494,8 @@ async function restoreFlowStateOrHome() {
     const flow = state.myCustomFlow;
     if (flow && Array.isArray(flow.tasks) && Number.isInteger(flow.index) &&
         flow.index >= 0 && flow.tasks[flow.index]?.name &&
-        /^https?:\/\//i.test(String(flow.tasks[flow.index]?.url || "")) &&
+        (/^https?:\/\//i.test(String(flow.tasks[flow.index]?.url || "")) ||
+         (flow.tasks[flow.index]._localTask === true && /^mailto:/i.test(String(flow.tasks[flow.index].url || "")))) &&
         ["spotify", "onceTask", "afterUsen", "afterDaily"].includes(flow.continuation)) {
       renderMyCustomTask();
       showOnlyStep(myCustomStepElement, { recordHistory: false });

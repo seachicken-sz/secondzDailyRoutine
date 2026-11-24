@@ -256,6 +256,7 @@ function refreshSettingModalIndexStatus() {
   const statuses = {
     push: typeof getSavedPushSetting === "function" && getSavedPushSetting() !== "off",
     custom: typeof loadMyCustomIds === "function" && loadMyCustomIds().length > 0,
+    local: getEnabledLocalDailyGroups().length > 0,
     select: typeof getSelectModeSettings === "function" && getSelectModeSettings().enabled === true,
     bgm: music.bgm !== "manual",
     usen: music.usen !== "manual"
@@ -274,6 +275,7 @@ function showSettingModalPage(page) {
   const pages = {
     push: { title: "プッシュ通知設定", section: "pushSettingSection" },
     custom: { title: "加入サービス・追加タスク", section: "myCustomSettingSection" },
+    local: { title: "ローカルタスク設定", section: "localTaskSettingSection" },
     requestText: { title: "ラジオリクエスト文", section: "requestTextSettingSection" },
     select: { title: "セレクトモード設定", section: "selectModeSettingSection" },
     bgm: { title: "Spotify設定", section: "bgmRoutineSettingSection" },
@@ -297,6 +299,7 @@ function showSettingModalPage(page) {
   if (title) title.textContent = index ? "設定" : pages[target].title;
   const body = document.querySelector("#settingModal .setting-modal-body");
   if (body) body.scrollTop = 0;
+  if (target === "local") openLocalTaskSettings();
   if (target === "requestText") openRequestTextSettings();
 }
 

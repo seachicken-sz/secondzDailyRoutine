@@ -128,9 +128,26 @@ async function loadDailyGroups() {
     throw new Error("listJson.json が配列形式ではありません。");
   }
 
-  return groups.filter((group) => {
+  state.baseDailyGroups = groups.filter((group) => {
     return group && group.listName && Array.isArray(group.items) && group.items.length > 0;
   });
+  await loadLocalDailyGroups();
+  return composeDailyGroups();
+}
+
+// ローカルタスクの取得失敗で通常のデイリータスクを止めない。
+async function loadLocalDailyGroups() {
+  try {
+    const groups = await loadJsonFile(DATA_PATHS.localGroups, "localListJson.json");
+    if (!Array.isArray(groups)) throw new Error("localListJson.json が配列形式ではありません。");
+    state.localDailyGroups = groups.filter(group => group?.listName &&
+      group.prefectureCode != null && Array.isArray(group.items) && group.items.length)
+      .map(group => ({ ...group, localFlag: true }));
+    state.localDailyGroupsLoaded = true;
+  } catch (error) {
+    state.localDailyGroupsLoaded = false;
+    console.warn("ローカルタスクの読み込みに失敗しました。", error);
+  }
 }
 
 //メンバーお仕事読み込み
