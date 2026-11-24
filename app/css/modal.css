@@ -1447,3 +1447,8 @@
 .setting-modal-index-status { flex: 0 0 auto; font-size: 12px; font-weight: 700; white-space: nowrap; }
 .setting-modal-index-status.is-on { color: var(--color-brand); font-weight: 800; }
 .setting-modal-index-status.is-off { color: #a9a9a9; font-weight: 400; }
+
+/* CLEAR COLLECTION: モーダル内でもSNSシェアと同じトグル形状を見せる */
+#rewardCollectionModal .post-preview-tabs {
+  background: var(--color-surface-media, #eaeaea);
+}
