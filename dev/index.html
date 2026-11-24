@@ -1034,12 +1034,20 @@
 
 
   <!-- CLEAR COLLECTION -->
-  <div id="rewardCollectionModal" class="hidden" role="dialog" aria-modal="true" aria-label="CLEAR COLLECTION" style="position:fixed;inset:0;z-index:10019;background:rgba(0,0,0,.75);padding:16px;overflow:auto;align-items:flex-start;justify-content:center">
-    <div style="width:min(100%,440px);margin:auto;background:var(--color-bg,#fff);color:var(--color-text,#222);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:14px">
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><strong>CLEAR COLLECTION</strong><button id="rewardCollectionCloseButton" type="button" class="secondary-button">閉じる</button></div>
-      <div style="display:flex;gap:8px"><button id="rewardCollectionDateTab" type="button" class="primary-button" style="flex:1">日付順</button><button id="rewardCollectionTypeTab" type="button" class="secondary-button" style="flex:1">カード種別</button></div>
-      <div id="rewardCollectionSummary" style="font-size:12px;opacity:.7"></div>
-      <div id="rewardCollectionBody"></div>
+  <div id="rewardCollectionModal" class="modal-overlay hidden" style="z-index:10019">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="rewardCollectionModalTitle" style="width:min(100%,440px);height:90dvh;max-height:90dvh">
+      <div class="modal-header">
+        <h2 id="rewardCollectionModalTitle" class="modal-title">CLEAR COLLECTION</h2>
+        <button id="rewardCollectionCloseButton" type="button" class="modal-close-button" aria-label="閉じる">×</button>
+      </div>
+      <div class="modal-body" style="display:flex;flex-direction:column;min-height:0;flex:1">
+        <div class="post-preview-tabs" role="tablist" aria-label="コレクションの表示切り替え" style="flex-shrink:0">
+          <button id="rewardCollectionDateTab" class="post-preview-tab active" type="button" role="tab" aria-selected="true" aria-controls="rewardCollectionBody">日付順</button>
+          <button id="rewardCollectionTypeTab" class="post-preview-tab" type="button" role="tab" aria-selected="false" aria-controls="rewardCollectionBody">カード種別</button>
+        </div>
+        <div id="rewardCollectionSummary" style="font-size:12px;opacity:.7;flex-shrink:0;margin-bottom:12px"></div>
+        <div id="rewardCollectionBody"></div>
+      </div>
     </div>
   </div>
 
