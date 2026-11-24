@@ -218,6 +218,16 @@
         "request-input": "メッセージ",
         "comment": "①宛先が「Radio HITS Radio」になっていることを確認\n②「メッセージ」にコピーされたリクエスト文を貼り付け\n③個人情報の取り扱いに同意して送信",
         "input-flag": true
+      },
+      {
+        "id": "daily_nack5_2",
+        "name": "NACK5 汎用フォーム",
+        "short-name": "NACK5",
+        "url": "https://www.nack5.co.jp/message/53/",
+        "request-type": "text",
+        "request-input": "リクエスト楽曲を教えて下さい！",
+        "comment": "①ラジオネームを入力\n②「リクエスト楽曲を教えて下さい！」に貼り付け",
+        "input-flag": false
       }
     ]
   },
