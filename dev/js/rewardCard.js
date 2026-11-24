@@ -189,7 +189,65 @@ function closeReward01Card() {
     openRewardCollection();
   }
 }
+function drawReward0304Canvas(canvas, card) {
+  const c = canvas.getContext("2d");
+  const accent = REWARD01_COLORS[card.colorIndex]?.code || REWARD01_COLORS[0].code;
+  const type = REWARD_COLLECTION_TYPES.find(item => item.id === card.typeId);
+  const title = type?.title || "";
+  c.clearRect(0, 0, 720, 960);
+  c.fillStyle = "#121212";
+  c.beginPath();c.roundRect(0, 0, 720, 960, 52);c.fill();
+  c.save();c.beginPath();c.roundRect(0, 0, 720, 960, 52);c.clip();
+  c.textAlign = "left";
+  c.fillStyle = "#eeeeee";c.font = "400 58px sans-serif";
+  c.fillText(card.typeId, 52, 112);
+  c.save();c.globalAlpha = .065;c.font = "700 500px sans-serif";
+  c.strokeStyle = "#fff";c.lineWidth = 3;c.textAlign = "right";
+  c.strokeText(card.typeId, 770, 570);c.restore();
+  c.fillStyle = "#eeeeee";c.font = "700 90px sans-serif";c.fillText("CLEAR", 52, 300);
+  c.fillStyle = accent;c.fillRect(52, 328, 272, 11);
+  c.fillStyle = "#bcbcbc";c.font = "400 48px sans-serif";c.fillText("COLLECTION", 52, 408);
+  c.strokeStyle = "#444";c.beginPath();c.moveTo(52, 450);c.lineTo(668, 450);c.stroke();
+  c.fillStyle = accent;c.font = "700 29px sans-serif";c.fillText("ALL CLEAR", 52, 507);
+  const date = card.dayKey.slice(0,4) + "/" + card.dayKey.slice(4,6) + "/" + card.dayKey.slice(6,8);
+  c.fillStyle = "#bcbcbc";c.font = "500 27px sans-serif";c.fillText(date, 52, 553);
+  c.fillStyle = accent;c.font = "700 27px sans-serif";c.fillText(String(card.count), 245, 553);
+  c.fillStyle = "#bcbcbc";c.font = "500 27px sans-serif";c.fillText("TASKS", 287, 553);
+  if (card.nickname) {
+    let size = 25;
+    while (size > 18) {
+      c.font = "400 " + size + "px sans-serif";
+      if (c.measureText(card.nickname).width <= 616) break;
+      size--;
+    }
+    c.fillStyle = "#a9a9a9";c.font = "400 " + size + "px sans-serif";
+    c.fillText(card.nickname, 52, 598);
+  }
+  const lines = [];let line = "";
+  c.font = "700 58px sans-serif";
+  for (const character of Array.from(title)) {
+    if (line && c.measureText(line + character).width > 600) {
+      lines.push(line);line = character;
+    } else line += character;
+  }
+  if (line) lines.push(line);
+  const lineHeight = 78;
+  const firstY = 720 - ((lines.length - 1) * lineHeight) / 2;
+  c.fillStyle = "#f6f6f6";c.font = "700 58px sans-serif";
+  lines.forEach((value, i) => c.fillText(value, 52, firstY + lineHeight * i));
+  c.strokeStyle = "#444";c.beginPath();c.moveTo(52, 861);c.lineTo(668, 861);c.stroke();
+  c.textAlign = "center";c.fillStyle = "#a6a6a6";c.font = "500 22px sans-serif";
+  c.fillText("タムごとDaily", 360, 902);
+  c.fillStyle = "#858585";c.font = "400 17px sans-serif";
+  c.fillText("非公式ファンメイドツール", 360, 934);
+  c.restore();
+}
+
 function drawReward01Canvas(canvas, card) {
+  if (card.typeId === "03" || card.typeId === "04") {
+    drawReward0304Canvas(canvas, card);
+    return;
+  }
   if (card.typeId === "05" || card.typeId === "06") {
     drawReward0506Canvas(canvas, card);
     return;
@@ -331,7 +389,7 @@ const REWARD_COLLECTION_TYPES = [
   { id: "05", title: "脱落タスクなし！" },
   { id: "06", title: "お前本当は天使なんじゃないか？" }
 ];
-const REWARD_AVAILABLE_TYPES = ["01", "02", "05", "06"];
+const REWARD_AVAILABLE_TYPES = ["01", "02", "03", "04", "05", "06"];
 let rewardCollectionView = "date";
 let rewardCollectionReturnOnCardClose = false;
 function openRewardCollection() {
