@@ -220,6 +220,17 @@
         <button id="updateNoticeButton" type="button" class="button secondary update-notice-button"><i class="bi bi-bell"></i></button>
         <button id="settingButton" type="button" class="button secondary update-notice-button" aria-label="設定を開く"><i class="bi bi-gear"></i></button>
         <button id="rewardCollectionButton" type="button" class="button secondary update-notice-button hidden" aria-label="CLEAR COLLECTIONを開く" title="CLEAR COLLECTION"><i class="bi bi-award"></i></button>
+        <script>
+          // PWAのスクリプトキャッシュに左右されず、保存済みカードの有無を初期表示へ反映する。
+          try {
+            const storedCards = JSON.parse(localStorage.getItem("tamugotoRewardCard01History") || "[]");
+            if (Array.isArray(storedCards) && storedCards.some(card => card && /^\d{8}$/.test(card.dayKey))) {
+              document.getElementById("rewardCollectionButton").classList.remove("hidden");
+            }
+          } catch (error) {
+            console.error("CLEAR COLLECTIONの表示判定に失敗", error);
+          }
+        </script>
         <button id="refreshAllButton" type="button" class="button secondary update-notice-button" aria-label="JS・CSS・データを再取得して更新" title="最新データに更新"><i class="bi bi-arrow-clockwise" aria-hidden="true"></i></button>
       </div>
 
