@@ -187,6 +187,8 @@ function saveFlowState(openedAction = state.openedAction || "", stepElement = st
     selectedRequestSong: state.selectedRequestSong,
     selectedRadioRequestSong: state.selectedRadioRequestSong,
     currentDailyGroupIndex: state.currentDailyGroupIndex,
+    completedDailyGroupIndexes: state.completedDailyGroupIndexes,
+    dailyGroupHistory: state.dailyGroupHistory,
     currentDailyTaskIndex: state.currentDailyTaskIndex,
     completedDailyItems: state.completedDailyItems,
     openedAction

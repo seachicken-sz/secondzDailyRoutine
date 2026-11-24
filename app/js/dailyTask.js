@@ -102,21 +102,17 @@ function bindDailyTaskEvents() {
   // デイリーグループ終了画面：「頑張る！」ボタン
   // ==================================================
   addClickEvent(continueDailyGroupButtonElement, () => {
-    // 次のデイリータスクグループへ進める
-    state.currentDailyGroupIndex += 1;
-
-    // 次のグループの先頭タスクから開始する
-    state.currentDailyTaskIndex = 0;
-
-    const executionGroups = getExecutionDailyGroups();
-
-    // すべての実行対象グループが終わった場合は、SNS共有確認へ進む
-    if (state.currentDailyGroupIndex >= executionGroups.length) {
+    const remaining = getRemainingDailyGroupEntries();
+    if (!remaining.length) {
       finishRoutineAfterDaily();
       return;
     }
-
-    // 次のグループを表示する
+    const selectedIndex = Number(document.getElementById("nextDailyGroupSelect")?.value);
+    const next = remaining.find((entry) => entry.index === selectedIndex) || remaining[0];
+    state.dailyGroupHistory.push(state.currentDailyGroupIndex);
+    state.currentDailyGroupIndex = next.index;
+    state.currentDailyTaskIndex = 0;
+    state.openedAction = "";
     showDailyTaskStep(false);
   });
 
@@ -140,6 +136,8 @@ async function showDailyTaskStep(shouldInitialize = true) {
       state.requestTexts = await loadRequestTexts();
       state.dailyGroups = await loadDailyGroups();
       state.currentDailyGroupIndex = 0;
+      state.completedDailyGroupIndexes = [];
+      state.dailyGroupHistory = [];
       state.currentDailyTaskIndex = 0;
       state.completedDailyItems = [];
     }
@@ -324,6 +322,12 @@ function buildDailyTaskHeaderDescription() {
 // デイリーグループ終了画面表示
 // ==================================================
 // 現在グループのタスクが終わった時に、次のグループへ進むか中断するかを選ばせる
+function getRemainingDailyGroupEntries() {
+  return getExecutionDailyGroups().map((group, index) => ({
+    group, index, count: getDailyGroupItems(group).length,
+  })).filter((entry) => entry.count > 0 && !state.completedDailyGroupIndexes.includes(entry.index));
+}
+
 function showDailyGroupEndStep() {
   // 現在のグループを取得
   const group = getCurrentDailyGroup();
@@ -334,10 +338,13 @@ function showDailyGroupEndStep() {
     return;
   }
 
-  const executionGroups = getExecutionDailyGroups();
+  if (!state.completedDailyGroupIndexes.includes(state.currentDailyGroupIndex)) {
+    state.completedDailyGroupIndexes.push(state.currentDailyGroupIndex);
+  }
+  const remaining = getRemainingDailyGroupEntries();
 
-  // 最後のグループが終わった場合は、グループ終了画面を挟まずSNS共有確認へ進む
-  if (state.currentDailyGroupIndex >= executionGroups.length - 1) {
+  // 未完了グループがなくなったらSNS共有確認へ進む
+  if (!remaining.length) {
     finishRoutineAfterDaily();
     return;
   }
@@ -347,6 +354,25 @@ function showDailyGroupEndStep() {
     endedGroupNameElement.textContent = `「${group.listName}」はここまで！`;
   }
 
+  const select = document.getElementById("nextDailyGroupSelect");
+  const single = document.getElementById("nextDailyGroupSingle");
+  const total = document.getElementById("remainingDailyTaskCount");
+  if (select && single && total) {
+    select.replaceChildren();
+    remaining.forEach(({ index, group, count }) => {
+      const option = document.createElement("option");
+      option.value = String(index);
+      option.textContent = `${group.listName}（${count}件）`;
+      select.appendChild(option);
+    });
+    select.value = String(remaining[0].index);
+    select.classList.toggle("hidden", remaining.length === 1);
+    single.classList.toggle("hidden", remaining.length !== 1);
+    single.textContent = select.options[0].textContent;
+    total.textContent = `残りのデイリータスク：${remaining.reduce((sum, entry) => sum + entry.count, 0)}件`;
+  }
+
+  state.openedAction = "";
   // デイリーグループ終了画面を表示
   showOnlyStep(dailyGroupEndStepElement);
 }
