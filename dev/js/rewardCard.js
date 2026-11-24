@@ -34,6 +34,29 @@ function getReward01Eligibility() {
     count: completed + (usenDone ? 1 : 0)
   };
 }
+// 各種別の優遇カラー。未解放の03・04も設定のみ保持する。
+const REWARD_COLOR_BONUS = { "01": "紫", "02": "白", "03": "赤", "04": "緑" };
+const REWARD_COLOR_BONUS_WEIGHT = 5;
+
+function drawUnownedRewardCard(cards) {
+  const owned = new Set(cards.map(card => (card.typeId || "01") + ":" + card.colorIndex));
+  const candidates = REWARD_AVAILABLE_TYPES.flatMap(typeId =>
+    REWARD01_COLORS.map((color, colorIndex) => ({
+      typeId,
+      colorIndex,
+      weight: REWARD_COLOR_BONUS[typeId] === color.name ? REWARD_COLOR_BONUS_WEIGHT : 1
+    })).filter(candidate => !owned.has(candidate.typeId + ":" + candidate.colorIndex))
+  );
+  if (candidates.length === 0) return null;
+  const totalWeight = candidates.reduce((sum, candidate) => sum + candidate.weight, 0);
+  let random = Math.random() * totalWeight;
+  for (const candidate of candidates) {
+    random -= candidate.weight;
+    if (random < 0) return candidate;
+  }
+  return candidates[candidates.length - 1];
+}
+
 function awardReward01AtFinish() {
   const { eligible, count } = getReward01Eligibility();
   const area = document.getElementById("reward01FinishArea");
@@ -44,9 +67,18 @@ function awardReward01AtFinish() {
   const cards = loadReward01Cards();
   let card = cards.find(item => item.dayKey === dayKey);
   if (!card) {
+    const selection = drawUnownedRewardCard(cards);
+    if (!selection) {
+      const heading = document.createElement("h3");
+      heading.textContent = "CLEAR COLLECTION コンプリート！";
+      const message = document.createElement("p");
+      message.textContent = "現在抽選できるカードをすべて獲得済みです。";
+      area.append(heading, message);
+      updateReward01HomeButton();
+      return;
+    }
     card = {
-      dayKey, typeId: REWARD_AVAILABLE_TYPES[Math.floor(Math.random() * REWARD_AVAILABLE_TYPES.length)],
-      colorIndex: Math.floor(Math.random() * REWARD01_COLORS.length),
+      dayKey, typeId: selection.typeId, colorIndex: selection.colorIndex,
       count, nickname: localStorage.getItem(REWARD01_NAME_KEY) || ""
     };
     cards.push(card);
