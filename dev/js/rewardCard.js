@@ -221,9 +221,9 @@ function bindReward01Events() {
 const REWARD_COLLECTION_TYPES = [
   { id: "01", title: "ラジリクはね、やっとかないと。" },
   { id: "02", title: "努力好きなんで。" },
-  { id: "03", title: "肩外れるぐらいやりました" },
-  { id: "04", title: "ファンをなめてもらっちゃ困ります" },
-  { id: "05", title: "全タスク脱落無し" },
+  { id: "03", title: "肩外れてもいいと思ってやってるから。" },
+  { id: "04", title: "ファンを舐めてもらっちゃ困ります。" },
+  { id: "05", title: "全タスク脱落無し！" },
   { id: "06", title: "お前本当は天使なんじゃないか？" }
 ];
 const REWARD_AVAILABLE_TYPES = ["01", "02"];
