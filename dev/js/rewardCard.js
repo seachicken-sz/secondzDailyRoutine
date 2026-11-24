@@ -76,19 +76,8 @@ function openReward01Card(dayKey) {
   modal.classList.remove("hidden");
   modal.style.display = "flex";
   document.body.style.overflow = "hidden";
-  // 初回は空欄。過去に入力した名前があれば、新しいカードでも初期値として使う。
-  // 既存カードに保存されている名前はそのカード固有の値を優先する。
-  const rememberedName = localStorage.getItem(REWARD01_NAME_KEY) || "";
-  nameInput.value = card.nickname || rememberedName;
-  if (!card.nickname && rememberedName) {
-    card.nickname = rememberedName;
-    const stored = loadReward01Cards();
-    const storedCard = stored.find(item => item.dayKey === card.dayKey);
-    if (storedCard) {
-      storedCard.nickname = rememberedName;
-      saveReward01Cards(stored);
-    }
-  }
+  // カード固有の名前を表示。初回は空欄で、入力済みの名前は新規獲得時に引き継ぐ。
+  nameInput.value = card.nickname || "";
   const shareError = document.getElementById("reward01ShareError");
   if (shareError) { shareError.textContent = ""; shareError.classList.add("hidden"); }
   list.replaceChildren();
