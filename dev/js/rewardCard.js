@@ -204,7 +204,15 @@ function drawReward0304Canvas(canvas, card) {
   c.save();c.globalAlpha = .065;c.font = "700 500px sans-serif";
   c.strokeStyle = "#fff";c.lineWidth = 3;c.textAlign = "right";
   c.strokeText(card.typeId, 770, 570);c.restore();
-  c.fillStyle = "#eeeeee";c.font = "700 90px sans-serif";c.fillText("CLEAR", 52, 300);
+  const englishTitle = card.typeId === "03" ? "NOT YET" : "WE DID IT!";
+  c.fillStyle = "#eeeeee";
+  let englishSize = 90;
+  do {
+    c.font = "700 " + englishSize + "px sans-serif";
+    if (c.measureText(englishTitle).width <= 616) break;
+    englishSize--;
+  } while (englishSize > 18);
+  c.fillText(englishTitle, 52, 300);
   c.fillStyle = accent;c.fillRect(52, 328, 272, 11);
   c.fillStyle = "#bcbcbc";c.font = "400 48px sans-serif";c.fillText("COLLECTION", 52, 408);
   c.strokeStyle = "#444";c.beginPath();c.moveTo(52, 450);c.lineTo(668, 450);c.stroke();
