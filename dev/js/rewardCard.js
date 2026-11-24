@@ -1,4 +1,4 @@
-// ごほうびトレカ 01（開発版）
+// ごほうびトレカ 01・02（開発版）
 const REWARD01_KEY = "tamugotoRewardCard01History";
 const REWARD01_NAME_KEY = "tamugotoRewardCardNickname";
 const REWARD01_COLORS = [
@@ -45,7 +45,8 @@ function awardReward01AtFinish() {
   let card = cards.find(item => item.dayKey === dayKey);
   if (!card) {
     card = {
-      dayKey, colorIndex: Math.floor(Math.random() * REWARD01_COLORS.length),
+      dayKey, typeId: REWARD_AVAILABLE_TYPES[Math.floor(Math.random() * REWARD_AVAILABLE_TYPES.length)],
+      colorIndex: Math.floor(Math.random() * REWARD01_COLORS.length),
       count, nickname: localStorage.getItem(REWARD01_NAME_KEY) || ""
     };
     cards.push(card);
@@ -115,7 +116,7 @@ function openReward01Card(dayKey) {
     try {
       const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
       if (!blob) throw new Error("PNG画像を生成できませんでした");
-      const file = new File([blob], "tamugoto-card-01-" + card.dayKey + ".png", { type: "image/png" });
+      const file = new File([blob], "tamugoto-card-" + (card.typeId || "01") + "-" + card.dayKey + ".png", { type: "image/png" });
 
       // iPhone/PWAなどで共有可能なら、SNSや写真保存を選べる共有シートを表示する。
       if (typeof navigator.share === "function" &&
@@ -175,12 +176,14 @@ function drawReward01Canvas(canvas, card) {
   c.clearRect(0,0,720,960);
   c.fillStyle="#121212";c.beginPath();c.roundRect(0,0,720,960,52);c.fill();
   c.save();c.beginPath();c.roundRect(0,0,720,960,52);c.clip();
-  text("01",52,112,59,"#eeeeee");
+  const typeId = card.typeId || "01";
+  const isEffort = typeId === "02";
+  text(typeId,52,112,59,"#eeeeee");
   c.save();c.globalAlpha=.07;c.strokeStyle="#fff";c.lineWidth=3;
-  c.font="700 500px sans-serif";c.textAlign="right";c.strokeText("01",770,575);c.restore();
-  text("RADIO",52,306,132,"#f1f1f1","700");
+  c.font="700 500px sans-serif";c.textAlign="right";c.strokeText(typeId,770,575);c.restore();
+  text(isEffort ? "EFFORT" : "RADIO",52,306,isEffort ? 112 : 132,"#f1f1f1","700");
   c.fillStyle=accent;c.fillRect(52,333,272,11);
-  text("REQUEST",52,407,48,"#bcbcbc");
+  text(isEffort ? "KEEP GOING" : "REQUEST",52,407,isEffort ? 46 : 48,"#bcbcbc");
   line(450);
   text("ALL CLEAR",52,507,29,accent,"700");
   let x=52;
@@ -188,8 +191,12 @@ function drawReward01Canvas(canvas, card) {
   x+=text(String(card.count),x,553,27,accent,"700")+8;
   text("TASKS",x,553,27,"#bcbcbc","500");
   if(card.nickname)text(card.nickname,52,598,fit(card.nickname,616,25,"400"),"#a9a9a9");
-  text("ラジリクはね、",52,713,fit("ラジリクはね、",616,68),"#f7f7f7","700");
-  text("やっとかないと。",52,805,fit("やっとかないと。",616,68),"#f7f7f7","700");
+  if (isEffort) {
+    text("努力好きなんで。",52,751,fit("努力好きなんで。",616,68),"#f7f7f7","700");
+  } else {
+    text("ラジリクはね、",52,713,fit("ラジリクはね、",616,68),"#f7f7f7","700");
+    text("やっとかないと。",52,805,fit("やっとかないと。",616,68),"#f7f7f7","700");
+  }
   line(861);
   text("タムごとDaily",360,902,22,"#a6a6a6","500","center");
   text("非公式ファンメイドツール",360,934,17,"#858585","400","center");
@@ -213,12 +220,13 @@ function bindReward01Events() {
 // ごほうびコレクション：未実装のカードも図鑑として表示する
 const REWARD_COLLECTION_TYPES = [
   { id: "01", title: "ラジリクはね、やっとかないと。" },
-  { id: "02", title: "努力好きなもんで" },
+  { id: "02", title: "努力好きなんで。" },
   { id: "03", title: "肩外れるぐらいやりました" },
   { id: "04", title: "ファンをなめてもらっちゃ困ります" },
   { id: "05", title: "全タスク脱落無し" },
   { id: "06", title: "お前本当は天使なんじゃないか？" }
 ];
+const REWARD_AVAILABLE_TYPES = ["01", "02"];
 let rewardCollectionView = "date";
 let rewardCollectionReturnOnCardClose = false;
 function openRewardCollection() {
@@ -255,7 +263,7 @@ function renderRewardCollection() {
   typeTab.classList.toggle("active", rewardCollectionView === "type");
   dateTab.setAttribute("aria-selected", String(rewardCollectionView === "date"));
   typeTab.setAttribute("aria-selected", String(rewardCollectionView === "type"));
-  const obtainedColors = new Set(cards.map(card=>"01:"+card.colorIndex));
+  const obtainedColors = new Set(cards.map(card=>(card.typeId || "01")+":"+card.colorIndex));
   summary.textContent = cards.length+"枚獲得 ／ カード "+obtainedColors.size+" / "+(REWARD_COLLECTION_TYPES.length*REWARD01_COLORS.length)+"種類";
   if (rewardCollectionView === "date") {
     if (!cards.length) {
@@ -271,10 +279,10 @@ function renderRewardCollection() {
       b.type="button";
       b.style.cssText="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:148px;padding:12px 8px;text-align:center;border:1px solid var(--color-border,#8886);border-radius:12px;background:var(--color-bg,#fff);color:inherit;cursor:pointer;";
       const number=document.createElement("strong");
-      number.textContent="01";
+      number.textContent=card.typeId || "01";
       number.style.cssText="font-size:23px;color:"+ (REWARD01_COLORS[card.colorIndex]?.code||"#ccc")+";";
       const title=document.createElement("span");
-      title.textContent=REWARD_COLLECTION_TYPES[0].title;
+      title.textContent=REWARD_COLLECTION_TYPES.find(type=>type.id===(card.typeId || "01"))?.title || "？？？";
       title.style.cssText="font-size:13px;font-weight:600;";
       const date=document.createElement("span");
       date.textContent=card.dayKey.slice(0,4)+"/"+card.dayKey.slice(4,6)+"/"+card.dayKey.slice(6,8)+" ・ "+card.count+" TASKS";
@@ -289,7 +297,7 @@ function renderRewardCollection() {
   const list=document.createElement("div");
   list.style.cssText="display:flex;flex-direction:column;gap:10px;";
   REWARD_COLLECTION_TYPES.forEach(type=>{
-    const related=type.id==="01"?cards:[];
+    const related=cards.filter(card=>(card.typeId || "01")===type.id);
     const block=document.createElement("div");
     block.style.cssText="padding:12px;border:1px solid var(--color-border,#8886);border-radius:12px;";
     const head=document.createElement("div");
