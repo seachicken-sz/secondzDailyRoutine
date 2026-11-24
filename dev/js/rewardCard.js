@@ -1,4 +1,4 @@
-// ごほうびトレカ 01・02（開発版）
+// ごほうびトレカ 01・02・05・06（開発版）
 const REWARD01_KEY = "tamugotoRewardCard01History";
 const REWARD01_NAME_KEY = "tamugotoRewardCardNickname";
 const REWARD01_COLORS = [
@@ -158,6 +158,10 @@ function closeReward01Card() {
   }
 }
 function drawReward01Canvas(canvas, card) {
+  if (card.typeId === "05" || card.typeId === "06") {
+    drawReward0506Canvas(canvas, card);
+    return;
+  }
   const c = canvas.getContext("2d");
   const accent = REWARD01_COLORS[card.colorIndex]?.code || REWARD01_COLORS[0].code;
   const x0 = 52, right = 668;
@@ -202,6 +206,75 @@ function drawReward01Canvas(canvas, card) {
   text("非公式ファンメイドツール",360,934,17,"#858585","400","center");
   c.restore();
 }
+
+const REWARD0506_PALETTES = [
+  { bg: "#b32329", band: "#e4d4af" },
+  { bg: "#71368c", band: "#e6cc7c" },
+  { bg: "#167047", band: "#efb9a1" },
+  { bg: "#338ba8", band: "#efb08c" },
+  { bg: "#789e27", band: "#c9b4e8" },
+  { bg: "#be4f83", band: "#bcd9c5" },
+  { bg: "#f1f1ed", band: "#303036" }
+];
+function drawReward0506Canvas(canvas, card) {
+  const c = canvas.getContext("2d");
+  const is05 = card.typeId === "05";
+  const palette = REWARD0506_PALETTES[card.colorIndex] || REWARD0506_PALETTES[0];
+  const isWhite = card.colorIndex === 6;
+  const black = "#111111", white = "#ffffff";
+  c.clearRect(0,0,720,960);
+  c.save();c.beginPath();c.roundRect(0,0,720,960,38);c.clip();
+  c.fillStyle = palette.bg;c.fillRect(0,0,720,960);
+  const text = (str,x,y,size,color,weight="700",align="left",font="Arial,sans-serif") => {
+    c.font=weight+" "+size+"px "+font;c.fillStyle=color;c.textAlign=align;c.textBaseline="middle";
+    c.fillText(str,x,y);return c.measureText(str).width;
+  };
+  const fit=(str,max,size,weight="700")=>{
+    while(size>18){c.font=weight+" "+size+"px Arial,sans-serif";
+      if(c.measureText(str).width<=max)break;size--;
+    }return size;
+  };
+  const condensed=(str,x,y,size,maxWidth)=>{
+    c.save();c.font="900 "+size+"px Impact,'Arial Narrow','Arial Black',sans-serif";
+    const raw=c.measureText(str).width;
+    c.translate(x,y);c.scale(Math.min(.79,maxWidth/raw),1);
+    c.fillStyle=black;c.textAlign="center";c.textBaseline="middle";c.fillText(str,0,0);c.restore();
+  };
+  const overlaid=(str,y,size)=>{
+    const adjusted=fit(str,680,size,"900");
+    c.font="900 "+adjusted+"px Arial,sans-serif";c.textAlign="center";c.textBaseline="middle";
+    if(isWhite){c.lineJoin="round";c.lineWidth=3.5;c.strokeStyle=black;c.strokeText(str,360,y);}
+    c.fillStyle=white;c.fillText(str,360,y);
+  };
+  c.fillStyle=palette.band;c.fillRect(0,48,720,79);
+  text(card.typeId,47,88,47,isWhite?white:black,"900");
+  text("FULL POWER SECONDZ!!",673,88,31,isWhite?white:black,"900","right");
+  const centerY=435;
+  condensed(is05?"SURVIVE":"ANGEL?",360,centerY,208,704);
+  if(is05){
+    overlaid("脱落タスクなし！",centerY,84);
+  }else{
+    overlaid("お前本当は",centerY-47,76);
+    overlaid("天使なんじゃないか？",centerY+47,76);
+  }
+  c.fillStyle=isWhite?palette.band:black;c.fillRect(52,624,616,2);
+  if(isWhite){
+    c.fillStyle=palette.band;c.beginPath();c.roundRect(52,645,237,63,5);c.fill();
+    text("ALL CLEAR",68,677,33,white,"800");
+  }else{
+    text("ALL CLEAR",52,676,36,white,"800");
+  }
+  let x=52;
+  x+=text(card.dayKey.slice(0,4)+"/"+card.dayKey.slice(4,6)+"/"+card.dayKey.slice(6,8),x,735,28,black,"500")+23;
+  x+=text(String(card.count),x,735,28,isWhite?palette.band:white,"900")+9;
+  text("TASKS",x,735,28,black,"500");
+  if(card.nickname)text(card.nickname,52,793,fit(card.nickname,616,29,"500"),black,"500");
+  c.fillStyle=isWhite?palette.band:black;c.fillRect(52,834,616,2);
+  text("タムごとDaily",360,886,26,black,"600","center");
+  text("非公式ファンメイドツール",360,927,19,black,"400","center");
+  c.restore();
+}
+
 function bindReward01Events() {
   document.getElementById("reward01CloseButton")?.addEventListener("click",closeReward01Card);
   document.getElementById("reward01Modal")?.addEventListener("click",event=>{
@@ -223,10 +296,10 @@ const REWARD_COLLECTION_TYPES = [
   { id: "02", title: "努力好きなんで。" },
   { id: "03", title: "肩外れてもいいと思ってやってるから。" },
   { id: "04", title: "ファンを舐めてもらっちゃ困ります。" },
-  { id: "05", title: "全タスク脱落無し！" },
+  { id: "05", title: "脱落タスクなし！" },
   { id: "06", title: "お前本当は天使なんじゃないか？" }
 ];
-const REWARD_AVAILABLE_TYPES = ["01", "02"];
+const REWARD_AVAILABLE_TYPES = ["01", "02", "05", "06"];
 let rewardCollectionView = "date";
 let rewardCollectionReturnOnCardClose = false;
 function openRewardCollection() {
