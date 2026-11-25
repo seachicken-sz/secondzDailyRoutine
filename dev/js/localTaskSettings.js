@@ -44,7 +44,8 @@ function getLocalRequestTextKey(type) {
 
 function getLocalRequestTextDefault(type) {
   const value = state.requestTexts?.[type];
-  return value?.localFlag === true && typeof value.text === "string" ? value.text : "";
+  if (value?.localFlag !== true) return "";
+  return getRadioRequestTextExamples(value)[0] || "";
 }
 
 function getLocalRequestText(type) {
@@ -59,6 +60,8 @@ function getEnabledLocalItemsForType(type) {
 
 function getLocalRequestTextLabel(type) {
   const items = getEnabledLocalItemsForType(type);
+  const programName = getRequestTextProgramName(type);
+  if (programName) return "ローカル：" + programName + (items.length > 1 ? "（共通）" : "");
   return items.length > 1
     ? "ローカル：" + items.map(item => item["short-name"] || item.name).join("・") + "（共通）"
     : "ローカル：" + (items[0]?.name || type);
