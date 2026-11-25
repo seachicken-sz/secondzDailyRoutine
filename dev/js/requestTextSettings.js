@@ -7,7 +7,7 @@ let requestTextSettingsUi;
 function isCustomizableRadioRequest(item) {
   const type = item?.["request-type"];
   return item?.["input-flag"] === true && Boolean(item.id) && typeof type === "string" &&
-    (type === "text" || (type.startsWith("text-") && !type.startsWith("text-tv-")));
+    (type === "text" || type.startsWith("text-"));
 }
 
 function readRadioRequestTextSettings() {
@@ -45,7 +45,17 @@ function getFixedRequestText(entry) {
   return typeof entry?.text === "string" ? entry.text.trim() : "";
 }
 
+function getRequestTextValue(value) {
+  return value && typeof value === "object" && !Array.isArray(value) ? value.text : value;
+}
+
+function getRequestTextProgramName(type) {
+  const name = state.requestTexts?.[type]?.programName;
+  return typeof name === "string" ? name.trim() : "";
+}
+
 function getRadioRequestTextExamples(value) {
+  value = getRequestTextValue(value);
   const templates = Array.isArray(value) ? value : [value];
   return [...new Set(templates.filter((text) => typeof text === "string")
     .map((text) => text.trim()).filter(Boolean))];
@@ -88,7 +98,7 @@ function getRequestTextCandidates(entry, presets) {
 function selectDailyRequestTextTemplate(item, historyPrefix = "") {
   const settingKey = getRadioRequestTextSettingKey(item);
   const requestType = item?.["request-type"];
-  const templates = state.requestTexts[requestType];
+  const templates = getRequestTextValue(state.requestTexts[requestType]);
   if (isLocalRequestText(item)) return getLocalRequestText(requestType);
   if (!settingKey) return pickRequestTextTemplate(templates, `${historyPrefix}${requestType}`);
 
@@ -194,7 +204,7 @@ function bindRequestTextSettings() {
     const songName = getSelectedRadioRequestSongName();
     const fixedTemplate = getAppliedFixedRequestText(entry, presets);
     previewLabel.textContent = fixedTemplate ? "プレビュー" : "プリセット例文";
-    if (!songName) previewLabel.textContent += "（サンプル曲名）";
+    if (!songName && /musicname|［曲名］/.test(fixedTemplate || example.value)) previewLabel.textContent += "（サンプル曲名）";
     preview.textContent = formatRadioRequestText(fixedTemplate || example.value, songName || RADIO_REQUEST_SAMPLE_SONG);
   }
 
@@ -204,9 +214,10 @@ function bindRequestTextSettings() {
       return;
     }
     const modeLabel = isFixedRequestTextMode(entry) ? "固定" : "ランダム";
-    const name = option.value === GENERIC_RADIO_REQUEST_TEXT_KEY
+    const item = items.get(option.value);
+    const name = getRequestTextProgramName(item["request-type"]) || (option.value === GENERIC_RADIO_REQUEST_TEXT_KEY
       ? "汎用メッセージ"
-      : items.get(option.value).name;
+      : item.name);
     option.textContent = `${name}（${modeLabel}）`;
   }
 
