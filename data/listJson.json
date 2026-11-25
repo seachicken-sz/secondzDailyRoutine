@@ -8,7 +8,7 @@
         "name": "全農 COUNTDOWN JAPAN",
         "short-name": "COUNTDOWN JAPAN",
         "url": "https://tfm.co.jp/f/countdownjapan/message",
-        "request-type": "text",
+        "request-type": "text-countdownjapan",
         "request-input": "メッセージ&リクエスト",
         "comment": "①ラジオネームなど、フォームの必須項目を入力\n②「メッセージ&リクエスト」にコピーされたリクエスト文を貼り付け",
         "input-flag": true
@@ -62,7 +62,7 @@
         "name": "ネオジャポのFight For The Radio",
         "short-name": "Fight For The Radio",
         "url": "https://form.jfn.co.jp/neojaponism/message",
-        "request-type": "text",
+        "request-type": "text-fightfortheradio",
         "request-input": "メッセージ&リクエスト",
         "comment": "①ラジオネームなど、フォームの必須項目を入力\n②「メッセージ&リクエスト」にコピーされたリクエスト文を貼り付け",
         "input-flag": true
@@ -82,7 +82,7 @@
         "name": "SkyrocketCompany",
         "short-name": "SkyrocketCompany",
         "url": "https://www.tfm.co.jp/f/sc/message",
-        "request-type": "text",
+        "request-type": "text-skyrocketcompany",
         "request-input": "メッセージ",
         "comment": "①コーナーは「楽曲リクエスト」を選択\n②「メッセージ」にコピーされたリクエスト文を貼り付け\n③フォームの必須項目を入力",
         "input-flag": true
@@ -204,7 +204,7 @@
         "name": "TOKYO FM 山崎怜奈の誰かに話したかったこと。",
         "short-name": "山崎怜奈の誰かに話したかったこと。",
         "url": "https://www.tfm.co.jp/f/darehana/form",
-        "request-type": "text",
+        "request-type": "text-darehana",
         "request-input": "メッセージ&リクエスト",
         "comment": "①コーナーは「リクエスト」を選択\n②ラジオネームやメールアドレスなどを入力\n③「メッセージ&リクエスト」にコピーされたリクエスト文を貼り付け",
         "input-flag": true
@@ -224,10 +224,10 @@
         "name": "NACK5 汎用フォーム",
         "short-name": "NACK5",
         "url": "https://www.nack5.co.jp/message/53/",
-        "request-type": "text",
+        "request-type": "text-nack5",
         "request-input": "リクエスト楽曲を教えて下さい！",
         "comment": "①ラジオネームを入力\n②「リクエスト楽曲を教えて下さい！」に貼り付け",
-        "input-flag": false
+        "input-flag": true
       }
     ]
   },
@@ -250,7 +250,7 @@
         "name": "FM-NIIGATA SOUND SPLASH",
         "short-name": "SOUND SPLASH",
         "url": "https://www.fmniigata.com/program/15/request_message/160",
-        "request-type": "text",
+        "request-type": "text-soundsplash",
         "request-input": "メッセージをどうぞ！",
         "comment": "①ログインするか必須項目を入力\n②「メッセージをどうぞ！」にコピーされたリクエスト文を貼り付け\n③「リクエスト曲をどうぞ！！」に曲名を入力",
         "input-flag": true
@@ -306,7 +306,7 @@
         "name": "東海ラジオ GRooVE929",
         "short-name": "GRooVE929",
         "url": "https://form.tokairadio.jp/grv",
-        "request-type": "text",
+        "request-type": "text-groove929",
         "request-input": "メッセージ",
         "comment": "①「コーナー選択」は「フリーメッセージ」を選択\n②「メッセージ」にコピーされたリクエスト文を貼り付け",
         "input-flag": true
@@ -346,7 +346,7 @@
         "name": "東海ラジオ bre:eze",
         "short-name": "bre:eze",
         "url": "https://form.tokairadio.jp/brz",
-        "request-type": "text",
+        "request-type": "text-breeze",
         "request-input": "メッセージ",
         "comment": "①「曲リクエスト」を選び、アーティスト名に「timelesz」と入力\n②「メッセージ」にコピーされたリクエスト文を貼り付け",
         "input-flag": true
