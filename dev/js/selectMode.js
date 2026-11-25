@@ -656,15 +656,18 @@ function doesExecutionDailyNeedRequestSong() {
       return false;
     }
 
-    const template = state.requestTexts?.[requestType];
+    const settingKey = getRadioRequestTextSettingKey(item);
+    const template = isLocalRequestText(item) ? getLocalRequestText(requestType) : settingKey
+      ? getRequestTextCandidates(getRadioRequestTextSetting(settingKey), getRadioRequestTextExamples(state.requestTexts?.[requestType]))
+      : getRequestTextValue(state.requestTexts?.[requestType]);
 
     if (Array.isArray(template)) {
       return template.some((text) => {
-        return String(text || "").includes("musicname");
+        return /musicname|［曲名］/.test(String(text || ""));
       });
     }
 
-    return String(template || "").includes("musicname");
+    return /musicname|［曲名］/.test(String(template || ""));
   });
 }
 
