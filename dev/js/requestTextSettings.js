@@ -274,8 +274,7 @@ function bindRequestTextSettings() {
     candidateList.scrollTop = 0;
     renderPanel();
     saveCloseButton.disabled = false;
-    status.textContent = mode === "fixed" && !getAppliedFixedRequestText(getCurrentEntry(), presets)
-      ? "固定文を選ぶか入力するまではランダムで選びます。" : "";
+    status.textContent = "";
   }
 
   function saveTextSettings() {
@@ -296,8 +295,7 @@ function bindRequestTextSettings() {
 
     saveCloseButton.disabled = false;
     setOptionMode(program.selectedOptions[0], entry);
-    status.textContent = mode === "fixed" && !getAppliedFixedRequestText(getCurrentEntry(), presets)
-      ? "固定文を選ぶか入力するまではランダムで選びます。" : "";
+    status.textContent = "";
 
     // 実行中のタスクを設定から編集しても、表示とコピー内容が一致するようにする。
     const previousCandidates = getRequestTextCandidates(previous, presets);
