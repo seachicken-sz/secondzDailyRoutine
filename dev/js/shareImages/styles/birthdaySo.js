@@ -7,7 +7,7 @@ const BIRTHDAY_SO_ASSET_DIR = "../img/shareImg/birthday/20261127/";
 const BIRTHDAY_SO_LAYOUT = {
   titleY: 95, dateY: 178, panelX: 120, panelY: 225, panelW: 840,
   rowHeight: 76, panelPaddingTop: 44, panelPaddingBottom: 62,
-  illustrationW: 930, illustrationGap: 20, bottomPadding: 28
+  illustrationW: 930, illustrationGap: 45, bottomPadding: 28
 };
 
 function drawBirthdaySoBackground(ctx, canvas, theme) {
@@ -18,10 +18,11 @@ function drawBirthdaySoBackground(ctx, canvas, theme) {
   ctx.fillStyle = g;
   ctx.fillRect(0, 0, canvas.width, h);
   // 固定の相対座標で、再描画しても配置が変わらない玉ボケ。
-  const balls = [[80,.065,120],[300,.043,54],[980,.12,145],[790,.046,75],
-    [90,.25,110],[970,.28,80],[50,.46,145],[1000,.50,110],
-    [60,.66,92],[890,.64,145],[1020,.82,80],[135,.92,130],
-    [800,.96,100],[130,.36,38],[960,.38,44],[390,.12,36]];
+  const balls = [[80,.065,120],[300,.043,54],[980,.12,105],[790,.046,75],
+    [90,.25,110],[970,.28,80],[50,.46,100],[1000,.50,110],
+    [60,.66,92],[890,.64,105],[1020,.82,80],[135,.92,85],
+    [800,.96,70],[130,.36,38],[960,.38,44],[390,.12,36],
+    [38,.18,25],[1040,.21,32],[72,.57,23],[1000,.69,35],[540,.83,24],[940,.91,28]];
   balls.forEach(([x, ratio, r]) => {
     const y = h * ratio;
     const a = ratio > .73 ? .22 : .43;
@@ -42,22 +43,23 @@ function drawBirthdaySoBranches(ctx, canvas, branch, panelBottom) {
   ctx.save();
   ctx.globalAlpha = .85;
   // 左上は上端から垂れる向き、右下はカード下端を基準に配置。
-  ctx.translate(265, -35);
+  ctx.translate(320, -45);
   ctx.rotate(Math.PI / 2);
-  ctx.drawImage(branch, 0, 0, 350, 350 * ratio);
+  ctx.drawImage(branch, 0, 0, 455, 455 * ratio);
   ctx.restore();
   ctx.save();
   ctx.globalAlpha = .8;
-  ctx.translate(canvas.width + 30, panelBottom + 35);
+  ctx.translate(canvas.width + 45, panelBottom + 48);
   ctx.rotate(Math.PI);
-  ctx.drawImage(branch, 0, 0, 250, 250 * ratio);
+  ctx.drawImage(branch, 0, 0, 375, 375 * ratio);
   ctx.restore();
 }
 
 function drawBirthdaySoSparkles(ctx, canvas, panelBottom) {
   const points = [[70,155,13],[970,75,11],[1002,285,15],[52,canvas.height*.42,9],
     [1010,canvas.height*.54,16],[57,panelBottom-90,11],[1007,panelBottom-55,10],
-    [480,panelBottom+20,10],[945,panelBottom+30,12]];
+    [480,panelBottom+20,10],[945,panelBottom+30,12],
+    [110,80,5],[930,190,6],[44,canvas.height*.31,5],[1030,canvas.height*.63,6],[40,panelBottom+24,5]];
   ctx.save();
   ctx.fillStyle = "rgba(255,255,255,.78)";
   points.forEach(([x,y,r]) => {
@@ -83,7 +85,7 @@ async function renderBirthdaySo({canvas, ctx, theme, dateText, tasks, userName =
   const illustrationH = biscuit ? l.illustrationW * biscuit.naturalHeight / biscuit.naturalWidth : 260;
   canvas.width = CANVAS_WIDTH;
   canvas.height = Math.max(MIN_CANVAS_HEIGHT, Math.ceil(panelBottom + l.illustrationGap + illustrationH + l.bottomPadding));
-  const illustrationY = canvas.height - l.bottomPadding - illustrationH;
+  const illustrationY = panelBottom + l.illustrationGap;
   drawBirthdaySoBackground(ctx, canvas, theme);
   drawBirthdaySoBranches(ctx, canvas, branch, panelBottom);
 
@@ -150,7 +152,7 @@ async function renderBirthdaySo({canvas, ctx, theme, dateText, tasks, userName =
   ctx.textBaseline = "bottom";
   ctx.font = `26px ${BIRTHDAY_SO_FONT}`;
   const right = CANVAS_WIDTH - 75;
-  const bottom = canvas.height - 30;
+  const bottom = illustrationY + illustrationH - 2;
   ctx.fillText(SHARE_IMAGE_TOOL_NAME, right, userName ? bottom - 30 : bottom);
   if (userName) drawEllipsizedText(ctx, userName, right, bottom, 420);
   ctx.restore();
