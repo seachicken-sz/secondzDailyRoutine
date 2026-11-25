@@ -13,7 +13,7 @@ const BIRTHDAY_SO_LAYOUT = {
 function drawBirthdaySoBackground(ctx, canvas, theme, themeKey) {
   const h = canvas.height;
   const g = ctx.createLinearGradient(0, 0, 0, h);
-  [[0, themeKey === "white" ? "#ffffff" : (theme.dream || theme.pale)], [0.22, "#f5eee8"], [0.36, "#c7d9b9"],
+  [[0, themeKey === "white" ? "#ffffff" : (themeKey === "pink" ? "#ffe2ed" : (theme.dream || theme.pale))], [0.22, "#f5eee8"], [0.36, "#c7d9b9"],
     [0.50, "#719c70"], [0.72, "#47814e"], [1, "#30613a"]].forEach(([p, color]) => g.addColorStop(p, color));
   ctx.fillStyle = g;
   ctx.fillRect(0, 0, canvas.width, h);
