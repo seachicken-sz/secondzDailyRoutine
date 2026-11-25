@@ -1178,6 +1178,62 @@ function buildHomeExtraTaskShareText(task, source, platform = "x") {
 // ==================================================
 
 let homeRequestSongs = [];
+let homeOverrideSongs = [];
+let homeRequestSongDayKey = null;
+let homeManualRequestSong = null;
+let homeRequestSongRefreshPending = false;
+const HOME_REQUEST_SONG_STORAGE_KEY = "secondzDailyRoutineHomeRequestSong";
+
+function loadHomeManualRequestSong(dayKey) {
+  try {
+    const saved = JSON.parse(localStorage.getItem(HOME_REQUEST_SONG_STORAGE_KEY) || "null");
+    if (saved?.dayKey === dayKey && saved.song?.name) return saved.song;
+  } catch (error) {
+    console.warn("おかわりDailyの選曲読み込み失敗", error);
+  }
+  return null;
+}
+
+function saveHomeManualRequestSong(song) {
+  homeManualRequestSong = song;
+  try {
+    if (song) {
+      localStorage.setItem(HOME_REQUEST_SONG_STORAGE_KEY, JSON.stringify({
+        dayKey: homeRequestSongDayKey,
+        song: { name: song.name, url: song.url }
+      }));
+    } else {
+      localStorage.removeItem(HOME_REQUEST_SONG_STORAGE_KEY);
+    }
+  } catch (error) {
+    console.warn("おかわりDailyの選曲保存失敗", error);
+  }
+}
+
+function syncHomeRequestSongDay() {
+  const dayKey = getDailyTaskDayKey();
+  if (homeRequestSongDayKey === dayKey) return false;
+  homeRequestSongDayKey = dayKey;
+  homeManualRequestSong = loadHomeManualRequestSong(dayKey);
+  if (!homeManualRequestSong) saveHomeManualRequestSong(null);
+  state.homeSelectedRequestSong = homeRequestSongs.find((song) =>
+    song.name === homeManualRequestSong?.name && song.url === homeManualRequestSong?.url
+  ) || getDefaultHomeRequestSong();
+  return true;
+}
+
+async function refreshHomeRequestSongDay() {
+  if (homeRequestSongDayKey === null || homeRequestSongRefreshPending ||
+      homeRequestSongDayKey === getDailyTaskDayKey()) return;
+  homeRequestSongRefreshPending = true;
+  try {
+    await initializeHomeRequestSongSelect();
+  } catch (error) {
+    console.warn("おかわりDailyの選曲更新失敗", error);
+  } finally {
+    homeRequestSongRefreshPending = false;
+  }
+}
 
 async function initializeHomeRequestSongSelect() {
   if (!homeRequestSongSelectElement || !homeRequestSongSelectAreaElement) {
@@ -1185,7 +1241,9 @@ async function initializeHomeRequestSongSelect() {
   }
 
   const { overrideSongs, regularSongs } = await loadDailyRequestSongOptions(state.requestSongs);
+  homeOverrideSongs = overrideSongs;
   homeRequestSongs = [...overrideSongs, ...regularSongs];
+  syncHomeRequestSongDay();
   homeRequestSongSelectElement.innerHTML = "";
 
   if (homeRequestSongs.length === 0) {
@@ -1196,10 +1254,12 @@ async function initializeHomeRequestSongSelect() {
     return;
   }
 
-  const previousSong = state.homeSelectedRequestSong;
-  state.homeSelectedRequestSong = homeRequestSongs.find((song) =>
+  const previousSong = homeManualRequestSong;
+  const manualSong = homeRequestSongs.find((song) =>
     song.name === previousSong?.name && song.url === previousSong?.url
-  ) || getDefaultHomeRequestSong();
+  );
+  if (previousSong && !manualSong) saveHomeManualRequestSong(null);
+  state.homeSelectedRequestSong = manualSong || getDefaultHomeRequestSong();
 
   homeRequestSongs.forEach((song, index) => {
     const option = document.createElement("option");
@@ -1221,15 +1281,25 @@ function bindHomeRequestSongSelectEvents() {
 
   homeRequestSongSelectElement.addEventListener("change", () => {
     const selectedIndex = Number(homeRequestSongSelectElement.value);
+    syncHomeRequestSongDay();
     state.homeSelectedRequestSong = homeRequestSongs[selectedIndex] || null;
+    saveHomeManualRequestSong(state.homeSelectedRequestSong);
 
     renderHomeUsenExtraList();
     renderHomeDailyExtraList(state.dailyGroups || []);
+  });
+
+  setInterval(refreshHomeRequestSongDay, 1000);
+  window.addEventListener("pageshow", refreshHomeRequestSongDay);
+  window.addEventListener("focus", refreshHomeRequestSongDay);
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) refreshHomeRequestSongDay();
   });
 }
 
 function getDefaultHomeRequestSong() {
   return (
+    homeOverrideSongs[0] ||
     homeRequestSongs.find((song) => song.flag === true) ||
     homeRequestSongs.find((song) => song.name === state.requestSongs[0]?.name) ||
     homeRequestSongs[0] ||
