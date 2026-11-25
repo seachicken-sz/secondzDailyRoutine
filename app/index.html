@@ -1442,7 +1442,7 @@
           <button type="button" class="setting-modal-index-item" data-setting-open="bgm"><span class="setting-modal-index-icon"><i class="bi bi-headphones"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>Spotify設定</strong><span class="setting-modal-index-status is-off" data-setting-status="bgm" aria-label="Spotify設定 OFF">OFF</span></span><small>タスク中に聴ける音楽の設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
           <button type="button" class="setting-modal-index-item" data-setting-open="usen"><span class="setting-modal-index-icon"><i class="bi bi-music-note-list"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>USEN推しリク設定</strong><span class="setting-modal-index-status is-off" data-setting-status="usen" aria-label="USEN推しリク設定 OFF">OFF</span></span><small>USEN推し活リクエストの設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
           <button type="button" class="setting-modal-index-item" data-setting-open="local"><span class="setting-modal-index-icon"><i class="bi bi-geo-alt"></i></span><span class="setting-modal-index-text"><span class="setting-modal-index-title"><strong>ローカルタスク設定</strong><span class="setting-modal-index-status is-off" data-setting-status="local" aria-label="ローカルタスク設定 OFF">OFF</span></span><small>地元のラジオへのリクエストを追加</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
-          <button type="button" class="setting-modal-index-item" data-setting-open="requestText"><span class="setting-modal-index-icon"><i class="bi bi-pencil-square" aria-hidden="true"></i></span><span class="setting-modal-index-text"><strong>ラジオリクエスト文</strong><small>番組ごとにコピーする文章を設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+          <button type="button" class="setting-modal-index-item" data-setting-open="requestText"><span class="setting-modal-index-icon"><i class="bi bi-pencil-square" aria-hidden="true"></i></span><span class="setting-modal-index-text"><strong>リクエスト文章</strong><small>番組ごとにコピーする文章を設定</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
         </section>
       </nav>
       <section id="settingPwaGuide" class="setting-pwa-guide hidden">
@@ -1467,10 +1467,6 @@
         <div id="requestTextSettingForm" class="request-text-settings hidden">
           <label for="requestTextProgram">番組・メッセージ</label>
           <select id="requestTextProgram"></select>
-          <div class="post-preview-tabs" role="group" aria-label="使う文章">
-            <button type="button" class="post-preview-tab active" data-request-text-mode="random" aria-pressed="true">ランダム</button>
-            <button type="button" class="post-preview-tab" data-request-text-mode="fixed" aria-pressed="false">固定</button>
-          </div>
           <div id="requestTextRandomSettings" class="request-text-settings">
             <div class="request-text-bulk-actions">
               <button type="button" id="requestTextSelectAll">すべてチェック</button>
@@ -1479,25 +1475,13 @@
             <p id="requestTextCandidateNote" class="select-mode-auto-save-note" aria-live="polite"></p>
             <div id="requestTextCandidateList" role="group" aria-label="ランダムの抽選候補" tabindex="0">
               <label class="request-text-choice request-text-original-choice"><input type="checkbox" id="requestTextIncludeOriginal" aria-controls="requestTextOriginalEditorPanel">オリジナル文章を使う</label>
-              <div id="requestTextRandomEditorSlot"></div>
-              <div id="requestTextPresetChoices"></div>
-            </div>
-          </div>
-          <div id="requestTextFixedSettings" class="request-text-settings hidden">
-            <label for="requestTextExample">プリセット例文</label>
-            <div class="request-text-example-row">
-              <select id="requestTextExample"></select>
-              <button type="button" id="requestTextUseExample" class="secondary-button compact-button" aria-label="プリセット例文を固定文に入れる">↓</button>
-            </div>
-            <div id="requestTextFixedEditorSlot">
-              <div id="requestTextOriginalEditorPanel" class="request-text-original-editor hidden">
-                <div id="requestTextEditor" contenteditable="true" role="textbox" aria-multiline="true" aria-label="オリジナル文章"></div>
-                <button type="button" id="requestTextInsertSong">曲名を挿入</button>
+              <div id="requestTextRandomEditorSlot">
+                <div id="requestTextOriginalEditorPanel" class="request-text-original-editor hidden">
+                  <div id="requestTextEditor" contenteditable="true" role="textbox" aria-multiline="true" aria-label="オリジナル文章"></div>
+                  <button type="button" id="requestTextInsertSong">曲名を挿入</button>
+                </div>
               </div>
-            </div>
-            <div>
-              <strong id="requestTextPreviewLabel">プレビュー</strong>
-              <p id="requestTextPreview"></p>
+              <div id="requestTextPresetChoices"></div>
             </div>
           </div>
           <div id="requestTextLocalSettings" class="request-text-settings hidden"></div>

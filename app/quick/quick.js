@@ -768,7 +768,9 @@ function prepareQuickDailyCopyText(item) {
     return quickState.preparedCopyTextMap[item.id];
   }
 
-  const templateValue = quickState.requestTexts[item["request-type"]];
+  const rawTemplate = quickState.requestTexts[item["request-type"]];
+  const templateValue = rawTemplate && typeof rawTemplate === "object" && !Array.isArray(rawTemplate)
+    ? rawTemplate.text : rawTemplate;
 
   if (!templateValue) {
     return "";
