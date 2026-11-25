@@ -61,8 +61,8 @@ function drawBirthdaySoSparkles(ctx, canvas, panelBottom) {
     [480,panelBottom+20,10],[945,panelBottom+30,12],
     [110,80,5],[930,190,6],[44,canvas.height*.31,5],[1030,canvas.height*.63,6],[40,panelBottom+24,5]];
   ctx.save();
-  ctx.fillStyle = "rgba(255,255,255,.78)";
-  points.forEach(([x,y,r]) => {
+  points.forEach(([x,y,r], index) => {
+    ctx.fillStyle = index % 3 === 0 ? "#fff0c6" : "rgba(255,255,255,.88)";
     ctx.beginPath();
     ctx.moveTo(x,y-r);
     ctx.quadraticCurveTo(x+1,y-1,x+r,y);
@@ -70,6 +70,34 @@ function drawBirthdaySoSparkles(ctx, canvas, panelBottom) {
     ctx.quadraticCurveTo(x-1,y+1,x-r,y);
     ctx.quadraticCurveTo(x-1,y-1,x,y-r);
     ctx.fill();
+    // 大きな光の周囲に小さな光の粒を添える。
+    if (index < 12) {
+      ctx.fillStyle = index % 2 === 0 ? "rgba(255,240,198,.9)" : "rgba(255,255,255,.8)";
+      [[-r-12,-r*.7,2.8],[r+9,r*.6,2]].forEach(([dx,dy,size]) => {
+        ctx.beginPath();
+        ctx.arc(x+dx,y+dy,size,0,Math.PI*2);
+        ctx.fill();
+      });
+    }
+  });
+  // 手描き風ハート。カード外側の余白に限定する。
+  const hearts = [[66,220,12,-.26],[1015,canvas.height*.35,13,.24],
+    [48,panelBottom-35,10,-.2],[1030,panelBottom+80,12,.25]];
+  hearts.forEach(([x,y,r,angle], index) => {
+    ctx.save();
+    ctx.translate(x,y);
+    ctx.rotate(angle);
+    ctx.scale(r/12,r/12);
+    ctx.strokeStyle = index % 2 === 0 ? "rgba(255,240,198,.88)" : "rgba(255,255,255,.78)";
+    ctx.lineWidth = 2;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+    ctx.beginPath();
+    ctx.moveTo(0,8);
+    ctx.bezierCurveTo(-25,-7,-10,-21,0,-8);
+    ctx.bezierCurveTo(11,-22,24,-7,0,8);
+    ctx.stroke();
+    ctx.restore();
   });
   ctx.restore();
 }
@@ -100,6 +128,12 @@ async function renderBirthdaySo({canvas, ctx, theme, dateText, tasks, userName =
   ctx.beginPath();
   ctx.moveTo(420, 143);
   ctx.quadraticCurveTo(540, 138, 660, 143);
+  ctx.stroke();
+  ctx.strokeStyle = "#e7cc91";
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(424, 148);
+  ctx.quadraticCurveTo(540, 143, 656, 148);
   ctx.stroke();
   ctx.font = `500 28px ${BIRTHDAY_SO_TITLE_FONT}`;
   ctx.fillText(dateText || "-", CANVAS_WIDTH / 2, l.dateY);
