@@ -10,10 +10,10 @@ const BIRTHDAY_SO_LAYOUT = {
   illustrationW: 930, illustrationGap: 45, bottomPadding: 28
 };
 
-function drawBirthdaySoBackground(ctx, canvas, theme) {
+function drawBirthdaySoBackground(ctx, canvas, theme, themeKey) {
   const h = canvas.height;
   const g = ctx.createLinearGradient(0, 0, 0, h);
-  [[0, theme.dream || theme.pale], [0.22, "#f5eee8"], [0.36, "#c7d9b9"],
+  [[0, themeKey === "white" ? "#ffffff" : (theme.dream || theme.pale)], [0.22, "#f5eee8"], [0.36, "#c7d9b9"],
     [0.50, "#719c70"], [0.72, "#47814e"], [1, "#30613a"]].forEach(([p, color]) => g.addColorStop(p, color));
   ctx.fillStyle = g;
   ctx.fillRect(0, 0, canvas.width, h);
@@ -102,7 +102,7 @@ function drawBirthdaySoSparkles(ctx, canvas, panelBottom) {
   ctx.restore();
 }
 
-async function renderBirthdaySo({canvas, ctx, theme, dateText, tasks, userName = ""}) {
+async function renderBirthdaySo({canvas, ctx, theme, themeKey, dateText, tasks, userName = ""}) {
   const l = BIRTHDAY_SO_LAYOUT;
   const [branch, biscuit] = await Promise.all([
     loadShareImageAsset(BIRTHDAY_SO_ASSET_DIR + "branch.png"),
@@ -114,7 +114,7 @@ async function renderBirthdaySo({canvas, ctx, theme, dateText, tasks, userName =
   canvas.width = CANVAS_WIDTH;
   canvas.height = Math.max(MIN_CANVAS_HEIGHT, Math.ceil(panelBottom + l.illustrationGap + illustrationH + l.bottomPadding));
   const illustrationY = panelBottom + l.illustrationGap;
-  drawBirthdaySoBackground(ctx, canvas, theme);
+  drawBirthdaySoBackground(ctx, canvas, theme, themeKey);
   drawBirthdaySoBranches(ctx, canvas, branch, panelBottom);
 
   ctx.save();
