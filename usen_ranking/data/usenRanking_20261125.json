@@ -6,30 +6,35 @@
     "startAt": "2026-11-25T18:00:00+09:00",
     "endAt": "2026-12-02T18:00:00+09:00"
   },
-  "latestCapturedAt": "2026-11-25T18:20:03+09:00",
-  "snapshotCount": 1,
+  "latestCapturedAt": "2026-11-25T19:20:04+09:00",
+  "snapshotCount": 2,
   "snapshots": [
-    "2026-11-25T18:20:03+09:00"
+    "2026-11-25T18:20:03+09:00",
+    "2026-11-25T19:20:04+09:00"
   ],
   "songs": [
     {
       "songId": "6914128",
       "songTitle": "消えない花火",
       "url": "https://usen.oshireq.com/song/6914128",
-      "currentRank": 17,
-      "bestRank": 17,
+      "currentRank": 16,
+      "bestRank": 16,
       "worstRank": 17,
       "firstSeenAt": "2026-11-25T18:20:03+09:00",
-      "lastSeenAt": "2026-11-25T18:20:03+09:00",
+      "lastSeenAt": "2026-11-25T19:20:04+09:00",
       "points": [
         {
           "capturedAt": "2026-11-25T18:20:03+09:00",
           "rank": 17
+        },
+        {
+          "capturedAt": "2026-11-25T19:20:04+09:00",
+          "rank": 16
         }
       ]
     }
   ],
-  "updatedAt": "2026-11-25T18:20:42+09:00",
-  "rowCount": 1,
+  "updatedAt": "2026-11-25T19:20:53+09:00",
+  "rowCount": 2,
   "songCount": 1
 }
