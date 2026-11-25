@@ -43,9 +43,9 @@ function drawBirthdaySoBranches(ctx, canvas, branch, panelBottom) {
   ctx.save();
   ctx.globalAlpha = .85;
   // 左上は上端から垂れる向き、右下はカード下端を基準に配置。
-  ctx.translate(340, -85);
+  ctx.translate(340, -225);
   ctx.rotate(Math.PI / 2);
-  ctx.drawImage(branch, 0, 0, 600, 600 * ratio);
+  ctx.drawImage(branch, 0, 0, 800, 800 * ratio);
   ctx.restore();
   ctx.save();
   ctx.globalAlpha = .8;
