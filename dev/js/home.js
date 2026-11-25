@@ -1249,9 +1249,8 @@ function getHomeSelectedRequestSongName() {
 
 function buildHomeDailyTaskCopyText(item) {
   const musicName = getHomeSelectedRequestSongName();
-  if (!musicName) return "";
-
   const template = selectDailyRequestTextTemplate(item, "home_");
+  if (!musicName && /musicname|［曲名］/.test(template)) return "";
   return normalizeDisplayNewlines(formatRadioRequestText(template, musicName));
 }
 
