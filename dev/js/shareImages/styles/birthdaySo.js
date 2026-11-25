@@ -1,0 +1,159 @@
+// ==================================================
+// So Goodday♡ — 2026/11/27 誕生日記念シェア画像
+// ==================================================
+const BIRTHDAY_SO_FONT = '"Zen Maru Gothic", sans-serif';
+const BIRTHDAY_SO_TITLE_FONT = '"Klee One", "Zen Maru Gothic", sans-serif';
+const BIRTHDAY_SO_ASSET_DIR = "../img/shareImg/birthday/20261127/";
+const BIRTHDAY_SO_LAYOUT = {
+  titleY: 95, dateY: 178, panelX: 120, panelY: 225, panelW: 840,
+  rowHeight: 76, panelPaddingTop: 44, panelPaddingBottom: 62,
+  illustrationW: 930, illustrationGap: 20, bottomPadding: 28
+};
+
+function drawBirthdaySoBackground(ctx, canvas, theme) {
+  const h = canvas.height;
+  const g = ctx.createLinearGradient(0, 0, 0, h);
+  [[0, theme.dream || theme.pale], [0.22, "#f5eee8"], [0.36, "#c7d9b9"],
+    [0.50, "#719c70"], [0.72, "#47814e"], [1, "#30613a"]].forEach(([p, color]) => g.addColorStop(p, color));
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, canvas.width, h);
+  // 固定の相対座標で、再描画しても配置が変わらない玉ボケ。
+  const balls = [[80,.065,120],[300,.043,54],[980,.12,145],[790,.046,75],
+    [90,.25,110],[970,.28,80],[50,.46,145],[1000,.50,110],
+    [60,.66,92],[890,.64,145],[1020,.82,80],[135,.92,130],
+    [800,.96,100],[130,.36,38],[960,.38,44],[390,.12,36]];
+  balls.forEach(([x, ratio, r]) => {
+    const y = h * ratio;
+    const a = ratio > .73 ? .22 : .43;
+    const b = ctx.createRadialGradient(x, y, 0, x, y, r);
+    b.addColorStop(0, "rgba(255,255,255," + a + ")");
+    b.addColorStop(.65, "rgba(255,255,255," + a * .85 + ")");
+    b.addColorStop(1, "rgba(255,255,255,0)");
+    ctx.fillStyle = b;
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, Math.PI * 2);
+    ctx.fill();
+  });
+}
+
+function drawBirthdaySoBranches(ctx, canvas, branch, panelBottom) {
+  if (!branch) return;
+  const ratio = branch.naturalHeight / branch.naturalWidth;
+  ctx.save();
+  ctx.globalAlpha = .85;
+  // 左上は上端から垂れる向き、右下はカード下端を基準に配置。
+  ctx.translate(265, -35);
+  ctx.rotate(Math.PI / 2);
+  ctx.drawImage(branch, 0, 0, 350, 350 * ratio);
+  ctx.restore();
+  ctx.save();
+  ctx.globalAlpha = .8;
+  ctx.translate(canvas.width + 30, panelBottom + 35);
+  ctx.rotate(Math.PI);
+  ctx.drawImage(branch, 0, 0, 250, 250 * ratio);
+  ctx.restore();
+}
+
+function drawBirthdaySoSparkles(ctx, canvas, panelBottom) {
+  const points = [[70,155,13],[970,75,11],[1002,285,15],[52,canvas.height*.42,9],
+    [1010,canvas.height*.54,16],[57,panelBottom-90,11],[1007,panelBottom-55,10],
+    [480,panelBottom+20,10],[945,panelBottom+30,12]];
+  ctx.save();
+  ctx.fillStyle = "rgba(255,255,255,.78)";
+  points.forEach(([x,y,r]) => {
+    ctx.beginPath();
+    ctx.moveTo(x,y-r);
+    ctx.quadraticCurveTo(x+1,y-1,x+r,y);
+    ctx.quadraticCurveTo(x+1,y+1,x,y+r);
+    ctx.quadraticCurveTo(x-1,y+1,x-r,y);
+    ctx.quadraticCurveTo(x-1,y-1,x,y-r);
+    ctx.fill();
+  });
+  ctx.restore();
+}
+
+async function renderBirthdaySo({canvas, ctx, theme, dateText, tasks, userName = ""}) {
+  const l = BIRTHDAY_SO_LAYOUT;
+  const [branch, biscuit] = await Promise.all([
+    loadShareImageAsset(BIRTHDAY_SO_ASSET_DIR + "branch.png"),
+    loadShareImageAsset(BIRTHDAY_SO_ASSET_DIR + "biscuit.png")
+  ]);
+  const panelH = l.panelPaddingTop + tasks.length * l.rowHeight + l.panelPaddingBottom;
+  const panelBottom = l.panelY + panelH;
+  const illustrationH = biscuit ? l.illustrationW * biscuit.naturalHeight / biscuit.naturalWidth : 260;
+  canvas.width = CANVAS_WIDTH;
+  canvas.height = Math.max(MIN_CANVAS_HEIGHT, Math.ceil(panelBottom + l.illustrationGap + illustrationH + l.bottomPadding));
+  const illustrationY = canvas.height - l.bottomPadding - illustrationH;
+  drawBirthdaySoBackground(ctx, canvas, theme);
+  drawBirthdaySoBranches(ctx, canvas, branch, panelBottom);
+
+  ctx.save();
+  ctx.fillStyle = "#36583a";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.font = `700 64px ${BIRTHDAY_SO_TITLE_FONT}`;
+  ctx.fillText("Task Complete!", CANVAS_WIDTH / 2, l.titleY);
+  ctx.strokeStyle = "#789d76";
+  ctx.lineWidth = 4;
+  ctx.beginPath();
+  ctx.moveTo(420, 143);
+  ctx.quadraticCurveTo(540, 138, 660, 143);
+  ctx.stroke();
+  ctx.font = `500 28px ${BIRTHDAY_SO_TITLE_FONT}`;
+  ctx.fillText(dateText || "-", CANVAS_WIDTH / 2, l.dateY);
+  ctx.restore();
+
+  ctx.save();
+  ctx.shadowColor = "rgba(61,81,53,.12)";
+  ctx.shadowBlur = 24;
+  ctx.shadowOffsetY = 8;
+  ctx.fillStyle = "rgba(255,255,255,.68)";
+  roundRect(ctx, l.panelX, l.panelY, l.panelW, panelH, 34);
+  ctx.fill();
+  ctx.restore();
+  ctx.strokeStyle = "rgba(255,255,255,.85)";
+  ctx.lineWidth = 2;
+  roundRectStroke(ctx, l.panelX, l.panelY, l.panelW, panelH, 34);
+
+  tasks.forEach((task, index) => {
+    const y = l.panelY + l.panelPaddingTop + index * l.rowHeight;
+    const centerY = y + 25;
+    ctx.save();
+    ctx.strokeStyle = "#517e51";
+    ctx.lineWidth = 3;
+    roundRectStroke(ctx, 178, centerY - 17, 34, 34, 7);
+    ctx.beginPath();
+    ctx.moveTo(187, centerY);
+    ctx.lineTo(194, centerY + 7);
+    ctx.lineTo(207, centerY - 9);
+    ctx.stroke();
+    ctx.fillStyle = "#333c31";
+    ctx.textAlign = "left";
+    ctx.textBaseline = "middle";
+    ctx.font = `500 34px ${BIRTHDAY_SO_FONT}`;
+    drawEllipsizedText(ctx, String(task), 246, centerY, 645);
+    ctx.strokeStyle = "rgba(50,85,50,.18)";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(246, y + 65);
+    ctx.lineTo(900, y + 65);
+    ctx.stroke();
+    ctx.restore();
+  });
+
+  drawBirthdaySoSparkles(ctx, canvas, panelBottom);
+  if (biscuit) ctx.drawImage(biscuit, (CANVAS_WIDTH - l.illustrationW) / 2, illustrationY, l.illustrationW, illustrationH);
+  // 斜めの誕生日文字の右下余白にクレジットを寄せる。
+  ctx.save();
+  ctx.fillStyle = "#f4faf0";
+  ctx.textAlign = "right";
+  ctx.textBaseline = "bottom";
+  ctx.font = `26px ${BIRTHDAY_SO_FONT}`;
+  const right = CANVAS_WIDTH - 75;
+  const bottom = canvas.height - 30;
+  ctx.fillText(SHARE_IMAGE_TOOL_NAME, right, userName ? bottom - 30 : bottom);
+  if (userName) drawEllipsizedText(ctx, userName, right, bottom, 420);
+  ctx.restore();
+}
+
+SHARE_IMAGE_RENDERERS.birthdaySo = renderBirthdaySo;
