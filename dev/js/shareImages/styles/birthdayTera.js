@@ -42,10 +42,10 @@ async function renderBirthdayTera({canvas, ctx, theme, themeKey, tasks, userName
   }
   // Two clean curves form the white crescent.
   ctx.save();ctx.strokeStyle="#ffffff";ctx.lineWidth=3;ctx.lineCap="round";
-  ctx.beginPath();ctx.moveTo(140,28);ctx.bezierCurveTo(32,35,38,165,153,150);
-  ctx.bezierCurveTo(83,126,78,64,140,28);ctx.stroke();ctx.restore();
+  ctx.beginPath();ctx.moveTo(183,15);ctx.bezierCurveTo(19,17,23,193,198,172);
+  ctx.bezierCurveTo(91,142,88,59,183,15);ctx.stroke();ctx.restore();
   ctx.save();ctx.fillStyle="#ffffff";ctx.textAlign="center";ctx.textBaseline="middle";
-  ctx.font='italic 64px Georgia, serif';ctx.fillText("Mischief managed!",w/2+42,100);ctx.restore();
+  ctx.font='400 66px "Caveat", cursive';ctx.fillText("Mischief managed!",w/2+72,100);ctx.restore();
   // Frosted glass: quiet background, translucent tint and reflected edge light.
   ctx.save();ctx.shadowColor="rgba(5,15,30,.35)";ctx.shadowBlur=26;ctx.shadowOffsetY=10;
   ctx.fillStyle="rgba(20,39,61,.46)";roundRect(ctx,x,y,pw,ph,34);ctx.fill();ctx.restore();

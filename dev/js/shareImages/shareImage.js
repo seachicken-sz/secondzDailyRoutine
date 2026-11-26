@@ -168,7 +168,7 @@ function syncBirthdayShareImageStyles(redraw=true) {
   for(const s of allowed){
     if(!Array.from(select.options).some(o=>o.value===s.style)){
       const option=document.createElement("option");
-      option.value=s.style;option.textContent=s.label;option.dataset.birthdayStyle="1";select.appendChild(option);
+      option.value=s.style;option.textContent=s.label;option.dataset.birthdayStyle="1";select.insertBefore(option,select.firstChild);
     }
   }
   if(previous&&!Array.from(select.options).some(o=>o.value===previous)){
