@@ -133,16 +133,6 @@
         "input-flag": true
       },
       {
-        "id": "daily_saturdayamusic",
-        "name": "FM802 SATURDAY AMUSIC ISLANDS MORNING EDITION",
-        "short-name": "SATURDAY AMUSIC",
-        "url": "https://funky802.com/service/Request/index/member/1612",
-        "request-type": "music",
-        "request-input": "リクエスト曲",
-        "comment": "①番組名が「SATURDAY AMUSIC ISLANDS MORNING EDITION」か確認\n②「リクエスト曲」にコピーされた曲名を貼り付け\n③アーティスト名に「timelesz」、ラジオネームまたは匿名希望、メールアドレスを入力",
-        "input-flag": true
-      },
-      {
         "id": "daily_fmosaka_loveflap",
         "name": "FM大阪 iDoBuddy",
         "short-name": "iDoBuddy",
@@ -158,36 +148,6 @@
     "listName": "シノの地元大阪局も頑張ってみる？",
     "lastFlag": false,
     "items": [
-      {
-        "id": "daily_tactyinthemoening",
-        "name": "FM802 TACTY IN THE MORNING",
-        "short-name": "TACTY IN THE MORNING",
-        "url": "https://funky802.com/service/Request/index/member/1106",
-        "request-type": "music",
-        "request-input": "リクエスト曲",
-        "comment": "①番組名が「TACTY IN THE MORNING」か確認\n②「リクエスト曲」にコピーされた曲名を貼り付け\n③アーティスト名に「timelesz」、ラジオネームまたは匿名希望、メールアドレスを入力",
-        "input-flag": true
-      },
-      {
-        "id": "daily_osakanhot100",
-        "name": "FM802 OSAKAN HOT 100",
-        "short-name": "OSAKAN HOT 100",
-        "url": "https://funky802.com/service/Request/index/member/1712",
-        "request-type": "music",
-        "request-input": "リクエスト曲",
-        "comment": "①番組名が「OSAKAN HOT 100」か確認\n②「リクエスト曲」にコピーされた曲名を貼り付け\n③アーティスト名に「timelesz」、ラジオネームまたは匿名希望、メールアドレスを入力",
-        "input-flag": true
-      },
-      {
-        "id": "daily_fmcocolo_request",
-        "name": "FM COCOLO おとといラジオ",
-        "short-name": "おとといラジオ",
-        "url": "https://cocolo.jp/i/req/2180",
-        "request-type": "music",
-        "request-input": "リクエスト曲",
-        "comment": "①番組名が「おとといラジオ」になっていることを確認\n②「リクエスト曲」にコピーされた曲名を貼り付け\n③アーティスト名に「timelesz」、ラジオネームとメールアドレスを入力",
-        "input-flag": true
-      },
       {
         "id": "daily_mbs_musicpark",
         "name": "清水綾音のMBSミュージックパーク",
