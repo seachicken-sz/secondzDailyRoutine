@@ -38,20 +38,12 @@
   text-align: center;
   color: #fff7d9;
   font: 700 clamp(25px, 7.8vw, 60px)/1.25 "Klee One", "Zen Maru Gothic", sans-serif;
-  text-shadow: 0 2px 12px rgba(255, 232, 165, .35);
+  text-shadow: 0 1px 3px rgba(12,25,17,.65), 0 0 8px rgba(255,232,165,.45), 0 0 20px rgba(255,232,165,.25);
   opacity: 0;
   animation: birthdayIntroMessage .42s .98s ease both;
   cursor: pointer;
 }
 
-#birthdayConfettiLayer .birthday-intro-message::before {
-  content: "";
-  position: absolute;
-  inset: -45px -18px -65px;
-  z-index: -1;
-  pointer-events: none;
-  background: radial-gradient(ellipse at center, rgba(12,25,17,.72) 0%, rgba(12,25,17,.46) 43%, transparent 74%);
-}
 #birthdayConfettiLayer .birthday-intro-message:focus,
 #birthdayConfettiLayer .birthday-intro-message:focus-visible { outline: none; box-shadow: none; }
 #birthdayConfettiLayer .birthday-intro-message { -webkit-tap-highlight-color: transparent; }

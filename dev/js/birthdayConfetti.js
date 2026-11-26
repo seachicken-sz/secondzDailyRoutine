@@ -104,21 +104,32 @@
         sprites[shape + color] = sprite;
       });
     });
-    const particles = Array.from({ length: 192 }, (_, i) => {
-      const ribbon = i >= 180;
-      const burst = i < 100 || ribbon;
+    // Incoming particles share the same spawn logic on launch and recycling.
+    function incoming() {
+      const route = Math.random();
+      const left = Math.random() < .5;
+      const direction = left ? 1 : -1;
+      if (route < .4) return { x: rand(0, w), y: rand(-85, -15), vx: rand(-24, 24), vy: h * rand(.12, .22) };
+      if (route < .7) return { x: left ? rand(0, w * .25) : rand(w * .75, w), y: rand(-85, -15), vx: direction * w * rand(.16, .35), vy: h * rand(.12, .22) };
+      return { x: left ? -35 : w + 35, y: rand(0, h * .78), vx: direction * w * rand(.25, .55), vy: h * rand(.04, .13) };
+    }
+    const particles = Array.from({ length: 278 }, (_, i) => {
+      const ribbon = i >= 260;
+      const burst = i < 160 || ribbon;
       const left = i % 2 === 0;
       const n = Math.random();
       const shape = n < .45 ? "paper" : n < .75 ? "heart" : n < .88 ? "star" : "spark";
       const color = palette[Math.floor(Math.random() * palette.length)];
       const gravity = burst ? rand(380, 520) * h / 700 : rand(12, 30);
-      const trajectory = ribbon ? (i - 180) / 12 : i / 100;
+      const trajectory = ribbon ? (i - 260) / 18 : i / 160;
       const launchHeight = h * (trajectory < .5 ? rand(.72, 1.22) : trajectory < .85 ? rand(.30, .65) : rand(.08, .24));
       return {
-        x: burst ? (left ? rand(0, w * .055) : rand(w * .945, w)) : rand(0, w),
-        y: burst ? h + rand(6, 24) : rand(-85, -15),
-        vx: burst ? (left ? 1 : -1) * w * (trajectory < .5 ? rand(.16, .65) : rand(.45, 1.05)) : rand(-24, 24),
-        vy: burst ? -Math.sqrt(2 * gravity * launchHeight) : h * rand(.15, .24),
+        ...(burst ? {
+          x: left ? rand(0, w * .055) : rand(w * .945, w),
+          y: h + rand(6, 24),
+          vx: (left ? 1 : -1) * w * (trajectory < .5 ? rand(.16, .65) : rand(.45, 1.05)),
+          vy: -Math.sqrt(2 * gravity * launchHeight)
+        } : incoming()),
         gravity, drag: burst ? rand(.65, 1.05) : rand(.2, .55),
         terminal: h * (ribbon ? rand(.12, .19) : rand(.12, .30)),
         delay: burst ? rand(.28, .6) : rand(.9, 5.2),
@@ -170,10 +181,7 @@
         p.angle += p.spin * dt;
         p.flip += p.flipSpeed * dt;
         if ((p.y > h + (p.ribbon ? 100 : 50) && p.vy > 0) || p.x < -100 || p.x > w + 100) {
-          p.x = rand(0, w);
-          p.y = rand(-120, -40);
-          p.vx = rand(-18, 18);
-          p.vy = h * rand(.09, .18);
+          Object.assign(p, incoming());
           p.gravity = rand(12, 30);
           p.drag = rand(.2, .55);
           p.delay = t + rand(.15, 1.2);
