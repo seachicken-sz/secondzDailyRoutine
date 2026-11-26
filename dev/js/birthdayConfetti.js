@@ -132,7 +132,7 @@
         } : incoming()),
         gravity, drag: burst ? rand(.65, 1.05) : rand(.2, .55),
         terminal: h * (ribbon ? rand(.12, .19) : rand(.12, .30)),
-        delay: burst ? rand(.5, 1) : rand(1, 2),
+        delay: burst ? rand(.5, .7) : rand(1, 2),
         size: rand(8, 23), angle: rand(0, Math.PI * 2),
         ribbon, color, ribbonLength: rand(30, 65), ribbonWidth: rand(2, 4), left,
         spin: ribbon ? rand(-1.6, 1.6) : rand(-5.5, 5.5), flip: rand(0, Math.PI * 2),
@@ -286,12 +286,15 @@
     message.tabIndex = -1;
     let messageReady = false;
     message.className = "birthday-intro-message";
+    const greeting = document.createElement("div");
+    greeting.className = "birthday-intro-greeting";
     [["birthday-intro-title", "Happy Birthday!!"], ["birthday-intro-name", "So Matsushima"], ["birthday-intro-date", "2026.11.27"]].forEach(([className, value]) => {
       const line = document.createElement("span");
       line.className = className;
       line.textContent = value;
-      message.appendChild(line);
+      greeting.appendChild(line);
     });
+    message.appendChild(greeting);
     const sparkles = document.createElement("div");
     sparkles.className = "birthday-intro-sparkles";
     [[8,-20,15,0],[24,-38,10,.1],[46,-26,19,.25],[73,-39,12,.15],[92,-15,16,.3],[5,105,11,.25],[20,132,18,.15],[50,115,10,.35],[79,130,14,0],[94,95,19,.2]].forEach(([x,y,size,delay], i) => {
@@ -332,7 +335,7 @@
       message.tabIndex = 0;
       layer.classList.add("birthday-intro-ready");
       message.focus({ preventScroll: true });
-    }, 6300);
+    }, 5400);
 
   }
 
