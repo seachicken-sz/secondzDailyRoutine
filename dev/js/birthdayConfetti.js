@@ -8,6 +8,9 @@
   let cleanupTimer = null;
   let burstPlayed = false;
   let modalShown = false;
+  let modalReady = false;
+  let modalTimer = null;
+  const modalDelay = 1600;
   let suppressed = false;
   const storageKey = "tamugotoBirthday20261127Dismissed";
   try { suppressed = localStorage.getItem(storageKey) === "1"; } catch (error) { /* session fallback */ }
@@ -30,7 +33,7 @@
 
   function syncModal() {
     const modal = document.getElementById("birthdayModal");
-    if (!modal || !isNormalHome() || suppressed || modalShown) return;
+    if (!modal || !isNormalHome() || suppressed || modalShown || (!motion.matches && !modalReady)) return;
     if (document.querySelector(".modal-overlay:not(.hidden):not(#birthdayModal)")) return;
     modalShown = true;
     modal.classList.remove("hidden");
@@ -43,7 +46,8 @@
   function stop() {
     clearInterval(rainTimer);
     clearTimeout(cleanupTimer);
-    rainTimer = cleanupTimer = null;
+    clearTimeout(modalTimer);
+    rainTimer = cleanupTimer = modalTimer = null;
     layer?.remove();
     layer = null;
   }
@@ -86,8 +90,9 @@
   }
 
   function sync() {
+    if (!canPlay()) { stop(); syncModal(); return; }
+    if (document.querySelector(".modal-overlay:not(.hidden):not(#birthdayModal)") && !modalShown) { stop(); return; }
     syncModal();
-    if (!canPlay()) { stop(); return; }
     const modalFront = !document.getElementById("birthdayModal")?.classList.contains("hidden");
     if (layer) {
       layer.classList.toggle("birthday-modal-front", modalFront);
@@ -103,6 +108,14 @@
       burstPlayed = true;
       for (let i = 0; i < 100; i++) particle(true, i, 100);
       for (let i = 0; i < 60; i++) particle(false, i, 60);
+    }
+    if (!modalReady && !modalShown) {
+      modalTimer = setTimeout(() => {
+        modalTimer = null;
+        if (!canPlay()) return;
+        modalReady = true;
+        sync();
+      }, modalDelay);
     }
     function startRain() {
       if (!canPlay() || !layer) return;
@@ -120,6 +133,12 @@
     const modal = document.getElementById("birthdayModal");
     const dismiss = document.getElementById("birthdayDismissCheckbox");
     if (dismiss) dismiss.checked = suppressed;
+    const resetPostFields = () => {
+      const field = document.getElementById("birthdayPostText");
+      if (field) field.value = "";
+      modal?.querySelectorAll('input[name="birthdayTag"]').forEach(el => { el.checked = false; });
+    };
+    resetPostFields();
     dismiss?.addEventListener("change", () => setSuppressed(dismiss.checked));
     document.getElementById("birthdayModalCloseButton")?.addEventListener("click", closeModal);
     document.getElementById("birthdayModalCloseOnlyButton")?.addEventListener("click", closeModal);
@@ -137,6 +156,8 @@
       stop();
       burstPlayed = false;
       modalShown = false;
+      modalReady = false;
+      resetPostFields();
       if (dismiss) dismiss.checked = false;
       setSuppressed(false);
     });

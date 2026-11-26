@@ -90,7 +90,6 @@
 #birthdayModal .birthday-tag-chip input:focus-visible + span { outline: 2px solid #51834d; outline-offset: 2px; }
 #birthdayModal input[type="checkbox"] { accent-color: #51834d; flex-shrink: 0; }
 #birthdayModal .birthday-dismiss { display: flex; justify-content: center; gap: 8px; align-items: center; }
-#birthdayModal .birthday-dismiss-note { text-align: center; font-size: .78rem; color: var(--color-text-sub); }
 
 #birthdayModal .birthday-modal-body > * { flex-shrink: 0; }
 #birthdayModal .birthday-greeting {
