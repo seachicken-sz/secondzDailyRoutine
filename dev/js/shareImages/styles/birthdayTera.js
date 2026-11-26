@@ -4,9 +4,10 @@ async function renderBirthdayTera({canvas, ctx, theme, themeKey, tasks, userName
   const w = CANVAS_WIDTH, x = 105, y = 190, pw = w - 210;
   const row = 76, ph = 88 + tasks.length * row, bottom = y + ph;
   const iw = 950, ih = owl ? iw * owl.naturalHeight / owl.naturalWidth : 280;
-  const iy = bottom + 30;
+  const footer = userName ? 110 : 76;
   canvas.width = w;
-  canvas.height = Math.max(MIN_CANVAS_HEIGHT, Math.ceil(iy + ih + (userName ? 110 : 76)));
+  canvas.height = Math.max(MIN_CANVAS_HEIGHT, Math.ceil(bottom + 30 + ih + footer));
+  const iy = canvas.height - footer - ih;
   const h = canvas.height, sky = "#bdeeff";
   const accent = themeKey === "white" ? "#ffffff" : themeKey === "normal" || themeKey === "sky" ? sky : theme.dream || theme.main;
   const font = '"Zen Maru Gothic", sans-serif';
@@ -18,7 +19,7 @@ async function renderBirthdayTera({canvas, ctx, theme, themeKey, tasks, userName
     b.addColorStop(0,hexToRgba(color,alpha)); b.addColorStop(1,hexToRgba(color,0));
     ctx.fillStyle=b;ctx.fillRect(cx-r,cy-r,r*2,r*2);
   }
-  glow(135,85,260,sky,.22);
+  glow(135,y+95,330,sky,.22);
   glow(w-70,bottom+ih*.65,350,accent,.24);
   glow(30,y+ph*.55,230,accent,.15);
   let seed=143;
@@ -42,10 +43,11 @@ async function renderBirthdayTera({canvas, ctx, theme, themeKey, tasks, userName
   }
   // Two clean curves form the white crescent.
   ctx.save();ctx.strokeStyle="#ffffff";ctx.lineWidth=3;ctx.lineCap="round";
+  ctx.translate(-70,y-40);ctx.scale(2,2);ctx.lineWidth=1.5;
   ctx.beginPath();ctx.moveTo(183,15);ctx.bezierCurveTo(19,17,23,193,198,172);
   ctx.bezierCurveTo(91,142,88,59,183,15);ctx.stroke();ctx.restore();
   ctx.save();ctx.fillStyle="#ffffff";ctx.textAlign="center";ctx.textBaseline="middle";
-  ctx.font='400 66px "Caveat", cursive';ctx.fillText("Mischief managed!",w/2+72,100);ctx.restore();
+  ctx.font='400 66px "Caveat", cursive';ctx.fillText("Mischief managed!",w/2,100);ctx.restore();
   // Frosted glass: quiet background, translucent tint and reflected edge light.
   ctx.save();ctx.shadowColor="rgba(5,15,30,.35)";ctx.shadowBlur=26;ctx.shadowOffsetY=10;
   ctx.fillStyle="rgba(20,39,61,.46)";roundRect(ctx,x,y,pw,ph,34);ctx.fill();ctx.restore();
