@@ -6,7 +6,7 @@
   pointer-events: auto;
   z-index: 1001;
   contain: strict;
-  animation: birthdayLayerFade .28s linear both, birthdayBackground 1.15s 2.25s ease-in-out both;
+  animation: birthdayLayerFade .28s linear both, birthdayBackground 1.5s 2.9s ease-in-out both;
   background: rgba(12, 25, 17, .72);
 }
 #birthdayConfettiLayer .birthday-confetti-canvas {
@@ -87,7 +87,7 @@
   letter-spacing: .18em;
   color: #fff7d9;
   opacity: 0;
-  animation: birthdayTapAppear .5s 5.4s ease both, birthdayTapPulse 2.4s 5.9s ease-in-out infinite;
+  animation: birthdayTapAppear .5s 6.5s ease both, birthdayTapPulse 2.4s 7s ease-in-out infinite;
 }
 @keyframes birthdayTapAppear { from { opacity: 0; } to { opacity: .9; } }
 @keyframes birthdayTapPulse { 0%, 100% { opacity: .9; } 50% { opacity: .35; } }
@@ -107,7 +107,7 @@
   font: var(--ss)/1 sans-serif;
   color: #fff0c6;
   text-shadow: 0 0 6px #ffe8ad;
-  opacity:0;animation: birthdayIntroTwinkle .85s calc(1s + var(--sd)) ease-in-out infinite alternate;
+  opacity:0;animation: birthdayIntroTwinkle .85s calc(4.6s + var(--sd)) ease-in-out infinite alternate;
 }
 @keyframes birthdayIntroTwinkle {
   from { opacity: .2; transform: translate(-50%, -50%) scale(.55); }
@@ -197,7 +197,7 @@
 
 @keyframes birthdayBackground {from{background:rgba(12,25,17,.97)}to{background:rgba(12,25,17,.72)}}
 @keyframes birthdayRule {from{transform:scaleX(0)}to{transform:scaleX(1)}}
-#birthdayConfettiLayer .birthday-garland {position:absolute;z-index:1;top:0;left:0;width:100%;height:auto;max-height:27%;pointer-events:none;animation:birthdayGarlandDrop 1.05s 1.2s cubic-bezier(.22,.75,.3,1) both;}
+#birthdayConfettiLayer .birthday-garland {position:absolute;z-index:1;top:0;left:0;width:100%;height:auto;max-height:27%;pointer-events:none;animation:birthdayGarlandDrop 1s 1.9s cubic-bezier(.22,.75,.3,1) both;}
 #birthdayConfettiLayer .birthday-intro-message {z-index:2;}
 @keyframes birthdayGarlandDrop {0%{transform:translateY(-110%)}65%{transform:translateY(5px)}82%{transform:translateY(-3px)}100%{transform:translateY(0)}}
 @keyframes birthdayLightOn {to{opacity:1}}
@@ -205,5 +205,5 @@
 @keyframes birthdayGarlandSway {0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
 
 
-#birthdayConfettiLayer .birthday-intro-greeting {animation:birthdayGreetingTogether .6s 3.8s ease-out both;}
+#birthdayConfettiLayer .birthday-intro-greeting {animation:birthdayGreetingTogether .6s 4.9s ease-out both;}
 @keyframes birthdayGreetingTogether {from{opacity:0;filter:blur(4px);transform:scale(.96)}to{opacity:1;filter:blur(0);transform:scale(1)}}

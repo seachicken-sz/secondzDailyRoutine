@@ -104,35 +104,25 @@
         sprites[shape + color] = sprite;
       });
     });
-    // Incoming particles share the same spawn logic on launch and recycling.
-    function incoming() {
-      const route = Math.random();
-      const left = Math.random() < .5;
-      const direction = left ? 1 : -1;
-      if (route < .4) return { x: rand(0, w), y: rand(-85, -15), vx: rand(-24, 24), vy: h * rand(.12, .22) };
-      if (route < .7) return { x: left ? rand(0, w * .25) : rand(w * .75, w), y: rand(-85, -15), vx: direction * w * rand(.16, .35), vy: h * rand(.12, .22) };
-      return { x: left ? -35 : w + 35, y: rand(0, h * .95), vx: direction * w * rand(.25, .55), vy: h * rand(.04, .13) };
-    }
     const particles = Array.from({ length: 132 }, (_, i) => {
       const ribbon = i >= 120;
-      const burst = i < 80 || ribbon;
       const left = i % 2 === 0;
       const n = Math.random();
       const shape = n < .45 ? "paper" : n < .75 ? "heart" : n < .88 ? "star" : "spark";
       const color = palette[Math.floor(Math.random() * palette.length)];
-      const gravity = burst ? rand(380, 520) * h / 700 : rand(12, 30);
-      const trajectory = ribbon ? (i - 120) / 12 : i / 80;
+      const gravity = rand(380, 520) * h / 700;
+      const trajectory = ribbon ? (i - 120) / 12 : i / 120;
       const launchHeight = h * (trajectory < .5 ? rand(.72, 1.22) : trajectory < .85 ? rand(.30, .65) : rand(.08, .24));
       return {
-        ...(burst ? {
+        ...{
           x: left ? rand(0, w * .055) : rand(w * .945, w),
           y: h + rand(6, 24),
           vx: (left ? 1 : -1) * w * (trajectory < .5 ? rand(.16, .65) : rand(.45, 1.05)),
           vy: -Math.sqrt(2 * gravity * launchHeight)
-        } : incoming()),
-        gravity, drag: burst ? rand(.65, 1.05) : rand(.2, .55),
+        },
+        gravity, drag: rand(.65, 1.05),
         terminal: h * (ribbon ? rand(.12, .19) : rand(.12, .30)),
-        delay: burst ? rand(.5, .7) : rand(1, 2),
+        delay: rand(1.08, 1.38),
         size: rand(8, 23), angle: rand(0, Math.PI * 2),
         ribbon, color, ribbonLength: rand(30, 65), ribbonWidth: rand(2, 4), left,
         spin: ribbon ? rand(-1.6, 1.6) : rand(-5.5, 5.5), flip: rand(0, Math.PI * 2),
@@ -154,7 +144,7 @@
     const lights = Array.from({length:190},(_,i)=>({
       x:(i%10+rand(.1,.9))*w/10, y:(Math.floor(i/10)+rand(.1,.9))*h/19,
       size:i<60?rand(6,16):i<160?rand(2,6):rand(14,42),
-      period:rand(1.2,3.7), appear:rand(1,2.4), phase:rand(0,Math.PI*2),
+      period:rand(1.2,3.7), appear:rand(4.6,5.25), phase:rand(0,Math.PI*2),
       alpha:i<160?1:.3, sprite:i<60?sprites["spark"+lightColors[i%3]]:i<160?dots[i%3]:glows[i%3]
     }));
     let frame = 0, stopped = false;
@@ -189,12 +179,7 @@
         p.angle += p.spin * dt;
         p.flip += p.flipSpeed * dt;
         if ((p.y > h + (p.ribbon ? 100 : 50) && p.vy > 0) || p.x < -100 || p.x > w + 100) {
-          const target = t < 3 ? 132 : Math.round(132 * (t < 6 ? 1-(t-3)*.7/3 : t < 9 ? .3-(t-6)*.15/3 : .15));
-          if (particles.filter(q => q.active).length > target) { p.active = false; continue; }
-          Object.assign(p, incoming());
-          p.gravity = rand(12, 30);
-          p.drag = rand(.2, .55);
-          p.delay = t + rand(.15, 1.2);
+          p.active = false;
           continue;
         }
         if (p.ribbon) {
@@ -247,7 +232,7 @@
       const x=6+i*19.3,y=8+20*Math.sin(Math.PI*(i%9)/9),end=y+20+i*37%65;
       const g=add("g",{},svg);g.style.transformOrigin=x+"px "+y+"px";g.style.animation="birthdayGarlandSway "+(3+i%4)+"s "+(-i*.2)+"s infinite ease-in-out";
       add("path",{d:"M"+x+" "+y+"V"+end,stroke:"#d6be83","stroke-width":".7"},g);
-      const lamp=add("g",{opacity:0},g),delay=2.25+Math.min(i,18-i)*.09;
+      const lamp=add("g",{opacity:0},g),delay=2.9+Math.min(i,18-i)*(1.15/9);
       lamp.style.animation="birthdayLightOn .35s "+delay+"s forwards";
       const core=add("g",{},lamp),color=colors[i%7];core.style.animation="birthdayLampGlow "+(2+i%4*.5)+"s "+(delay+.35)+"s infinite";
       [12,8,5].forEach((r,j)=>add("circle",{cx:x,cy:end,r,fill:color,opacity:[.09,.16,.22][j]},core));
@@ -268,7 +253,7 @@
       layer.classList.toggle("birthday-modal-front", modalFront);
       return;
     }
-    // One launch per intro; recycled particles continue until dismissal.
+    // One launch per intro; particles retire when they leave the screen.
     if (burstPlayed) return;
     layer = document.createElement("div");
     layer.classList.toggle("birthday-modal-front", modalFront);
@@ -335,7 +320,7 @@
       message.tabIndex = 0;
       layer.classList.add("birthday-intro-ready");
       message.focus({ preventScroll: true });
-    }, 5400);
+    }, 6500);
 
   }
 
