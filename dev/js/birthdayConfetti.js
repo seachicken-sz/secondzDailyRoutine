@@ -106,21 +106,22 @@
     });
     const particles = Array.from({ length: 192 }, (_, i) => {
       const ribbon = i >= 180;
-      const burst = i < 60 || (ribbon && i < 188);
+      const burst = i < 100 || ribbon;
       const left = i % 2 === 0;
       const n = Math.random();
       const shape = n < .45 ? "paper" : n < .75 ? "heart" : n < .88 ? "star" : "spark";
       const color = palette[Math.floor(Math.random() * palette.length)];
       const gravity = burst ? rand(380, 520) * h / 700 : rand(12, 30);
-      const launchHeight = h * rand(.72, 1.22);
+      const trajectory = ribbon ? (i - 180) / 12 : i / 100;
+      const launchHeight = h * (trajectory < .5 ? rand(.72, 1.22) : trajectory < .85 ? rand(.30, .65) : rand(.08, .24));
       return {
         x: burst ? (left ? rand(0, w * .055) : rand(w * .945, w)) : rand(0, w),
         y: burst ? h + rand(6, 24) : rand(-85, -15),
-        vx: burst ? (left ? 1 : -1) * w * rand(.16, .92) : rand(-24, 24),
+        vx: burst ? (left ? 1 : -1) * w * (trajectory < .5 ? rand(.16, .65) : rand(.45, 1.05)) : rand(-24, 24),
         vy: burst ? -Math.sqrt(2 * gravity * launchHeight) : h * rand(.15, .24),
         gravity, drag: burst ? rand(.65, 1.05) : rand(.2, .55),
         terminal: h * (ribbon ? rand(.12, .19) : rand(.12, .30)),
-        delay: burst ? rand(.28, .46) : rand(.9, 5.2),
+        delay: burst ? rand(.28, .6) : rand(.9, 5.2),
         size: rand(8, 23), angle: rand(0, Math.PI * 2),
         ribbon, color, ribbonLength: rand(30, 65), ribbonWidth: rand(2, 4), left,
         spin: ribbon ? rand(-1.6, 1.6) : rand(-5.5, 5.5), flip: rand(0, Math.PI * 2),
@@ -133,7 +134,7 @@
     const lights = Array.from({ length: 40 }, (_, i) => ({
       x: ((i % 5) + rand(.1, .9)) * w / 5,
       y: (Math.floor(i / 5) + rand(.1, .9)) * h / 8,
-      size: rand(3, 16), period: rand(.8, 2.5),
+      size: rand(3, 16), period: rand(.8, 2.5), appear: rand(.8, 1.3),
       phase: rand(0, Math.PI * 2),
       sprite: sprites["spark" + lightColors[i % lightColors.length]]
     }));
@@ -152,9 +153,10 @@
       last = now;
       ctx.clearRect(0, 0, w, h);
       for (const light of lights) {
+        if (t < light.appear) continue;
         const glow = .5 + .5 * Math.sin(t * Math.PI * 2 / light.period + light.phase);
         const size = light.size * (.55 + .65 * glow);
-        ctx.globalAlpha = .12 + .78 * glow;
+        ctx.globalAlpha = (.12 + .78 * glow) * Math.min(1, (t - light.appear) / .45);
         ctx.drawImage(light.sprite, light.x - size / 2, light.y - size / 2, size, size);
       }
       ctx.globalAlpha = 1;

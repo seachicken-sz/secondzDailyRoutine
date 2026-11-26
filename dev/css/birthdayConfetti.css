@@ -94,9 +94,10 @@
   letter-spacing: .18em;
   color: #fff7d9;
   opacity: 0;
-  animation: birthdayTapAppear .25s 2.4s ease both;
+  animation: birthdayTapAppear .25s 2.4s ease both, birthdayTapPulse 2.4s 2.65s ease-in-out infinite;
 }
 @keyframes birthdayTapAppear { from { opacity: 0; } to { opacity: .9; } }
+@keyframes birthdayTapPulse { 0%, 100% { opacity: .9; } 50% { opacity: .35; } }
 #birthdayConfettiLayer.birthday-intro-leaving { animation: birthdayIntroLeave .22s ease both; }
 @keyframes birthdayIntroLeave { from { opacity: 1; } to { opacity: 0; } }
 #birthdayConfettiLayer .birthday-intro-sparkles {
