@@ -9,7 +9,8 @@
   let modalShown = false;
   let modalReady = false;
   let tapTimer = null;
-  const animationDuration = 3000;
+  const animationDuration = 10000;
+  let stopCanvas = null;
   let suppressed = false;
   const storageKey = "tamugotoBirthday20261127Dismissed";
   try { suppressed = localStorage.getItem(storageKey) === "1"; } catch (error) { /* session fallback */ }
@@ -43,6 +44,7 @@
   }
 
   function stop() {
+    if (stopCanvas) { stopCanvas(); stopCanvas = null; }
     clearTimeout(cleanupTimer);
     clearTimeout(tapTimer);
     cleanupTimer = tapTimer = null;
@@ -56,35 +58,116 @@
     return !suppressed && !motion.matches && isNormalHome();
   }
 
-  function particle(fragment, w, h, burst, index, count) {
-    const random = Math.random;
-    const n = random();
-    const shape = n < .45 ? "paper" : n < .75 ? "heart" : n < .88 ? "star" : "spark";
-    const el = document.createElement("span");
-    el.className = "birthday-particle birthday-" + shape + " birthday-" + (burst ? "burst" : "fall");
-    const color = palette[Math.floor(random() * palette.length)];
-    const left = index < count / 2;
-    const startX = burst ? (left ? random() * w * .08 : w * (.92 + random() * .08)) : random() * w;
-    const spread = (left ? 1 : -1) * w * (.12 + random() * .55);
-    const peakX = burst ? startX + spread : startX + 18;
-    const peakY = h * (.02 + random() * .31);
-    const midX = burst ? startX + spread * 1.1 : startX - 18;
-    const endX = burst ? startX + spread * 1.15 : startX + 25;
-    const delay = burst ? .28 + random() * .12 : .5 + random() * 2.1;
-    const duration = burst ? 2.25 + random() * .2 : 3.1 + random() * .7;
-    const drift = (random() - .5) * 100;
-    const vars = {
-      "--size": (7 + random() * 9) + "px", "--color": color,
-      "--start-x": startX + "px", "--start-y": (burst ? h + 15 : -30 - random() * 110) + "px",
-      "--rain-x1": (startX + drift * .45) + "px", "--rain-x2": (startX - drift * .25) + "px", "--rain-x3": (startX + drift) + "px",
-      "--peak-x": peakX + "px", "--peak-y": peakY + "px",
-      "--mid-x": midX + "px", "--mid-y": (peakY + (h - peakY) * .5) + "px",
-      "--end-x": endX + "px", "--end-y": (h + 30) + "px",
-      "--duration": duration + "s", "--delay": delay + "s"
-    };
-    Object.entries(vars).forEach(([key, value]) => el.style.setProperty(key, value));
-    el.addEventListener("animationend", () => el.remove(), { once: true });
-    fragment.appendChild(el);
+  // A single canvas, capped DPR and elapsed-time physics keep the animation
+  // independent of the display refresh rate and avoid per-particle DOM layers.
+  function startConfettiCanvas(parent) {
+    const canvas = document.createElement("canvas");
+    canvas.className = "birthday-confetti-canvas";
+    canvas.setAttribute("aria-hidden", "true");
+    parent.appendChild(canvas);
+    const ctx = canvas.getContext("2d");
+    if (!ctx) { canvas.remove(); return () => {}; }
+    const rand = (min, max) => min + Math.random() * (max - min);
+    const w = parent.clientWidth || window.innerWidth;
+    const h = parent.clientHeight || window.innerHeight;
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    canvas.width = Math.max(1, Math.round(w * dpr));
+    canvas.height = Math.max(1, Math.round(h * dpr));
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const shapes = ["paper", "heart", "star", "spark"];
+    // Cache tiny sprites once, including the heart and star outlines.
+    const sprites = {};
+    shapes.forEach(shape => {
+      palette.forEach(color => {
+        const sprite = document.createElement("canvas");
+        sprite.width = sprite.height = 40;
+        const c = sprite.getContext("2d");
+        c.translate(20, 20);
+        c.fillStyle = color;
+        if (shape === "paper") c.fillRect(-9, -14, 18, 28);
+        else {
+          c.beginPath();
+          if (shape === "heart") {
+            c.moveTo(0, 14);
+            c.bezierCurveTo(-30, -5, -13, -24, 0, -9);
+            c.bezierCurveTo(13, -24, 30, -5, 0, 14);
+          } else {
+            const count = shape === "star" ? 10 : 8;
+            for (let j = 0; j < count; j++) {
+              const angle = j * Math.PI * 2 / count - Math.PI / 2;
+              const r = j % 2 ? (shape === "star" ? 7 : 4) : 17;
+              const x = Math.cos(angle) * r, y = Math.sin(angle) * r;
+              if (j === 0) c.moveTo(x, y); else c.lineTo(x, y);
+            }
+          }
+          c.closePath(); c.fill();
+        }
+        sprites[shape + color] = sprite;
+      });
+    });
+    const particles = Array.from({ length: 120 }, (_, i) => {
+      const burst = i < 60, left = i < 30;
+      const n = Math.random();
+      const shape = n < .45 ? "paper" : n < .75 ? "heart" : n < .88 ? "star" : "spark";
+      const color = palette[Math.floor(Math.random() * palette.length)];
+      const gravity = burst ? rand(380, 520) * h / 700 : rand(12, 30);
+      const launchHeight = h * rand(.72, 1.22);
+      return {
+        x: burst ? (left ? rand(0, w * .055) : rand(w * .945, w)) : rand(-10, w + 10),
+        y: burst ? h + rand(6, 24) : rand(-85, -15),
+        vx: burst ? (left ? 1 : -1) * w * rand(.35, 1.08) : rand(-24, 24),
+        vy: burst ? -Math.sqrt(2 * gravity * launchHeight) : h * rand(.15, .24),
+        gravity, drag: burst ? rand(.65, 1.05) : rand(.2, .55),
+        terminal: h * rand(.17, .27),
+        delay: burst ? rand(.28, .46) : rand(.9, 5.2),
+        size: rand(9, 19), angle: rand(0, Math.PI * 2),
+        spin: rand(-5.5, 5.5), flip: rand(0, Math.PI * 2),
+        flipSpeed: rand(2, 6) * (Math.random() < .5 ? -1 : 1),
+        phase: rand(0, Math.PI * 2), flutter: rand(12, 36), frequency: rand(1.8, 4.4),
+        sprite: sprites[shape + color], active: true
+      };
+    });
+    let frame = 0, stopped = false;
+    const start = performance.now();
+    let last = start;
+    function finish() {
+      stopped = true;
+      cancelAnimationFrame(frame);
+      canvas.remove();
+    }
+    function draw(now) {
+      if (stopped || !canvas.isConnected) { finish(); return; }
+      const t = (now - start) / 1000;
+      if (t >= animationDuration / 1000) { finish(); return; }
+      const previous = (last - start) / 1000;
+      last = now;
+      ctx.clearRect(0, 0, w, h);
+      ctx.globalAlpha = Math.min(1, (animationDuration / 1000 - t) / .55);
+      let remaining = false;
+      for (const p of particles) {
+        if (!p.active) continue;
+        remaining = true;
+        if (t < p.delay) continue;
+        const dt = Math.min(.05, Math.max(0, t - Math.max(previous, p.delay)));
+        p.vx *= Math.exp(-p.drag * dt);
+        p.vy = Math.min(p.terminal, p.vy + p.gravity * dt);
+        p.x += (p.vx + Math.sin(t * p.frequency + p.phase) * p.flutter) * dt;
+        p.y += p.vy * dt;
+        p.angle += p.spin * dt;
+        p.flip += p.flipSpeed * dt;
+        if (p.y > h + 50 && p.vy > 0) { p.active = false; continue; }
+        const flip = Math.cos(p.flip);
+        const scale = p.size / 40;
+        const cs = Math.cos(p.angle), sn = Math.sin(p.angle);
+        ctx.setTransform(dpr * cs * scale * flip, dpr * sn * scale * flip,
+          -dpr * sn * scale, dpr * cs * scale, dpr * p.x, dpr * p.y);
+        ctx.drawImage(p.sprite, -20, -20);
+      }
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      if (remaining) frame = requestAnimationFrame(draw); else finish();
+    }
+    frame = requestAnimationFrame(draw);
+    return finish;
   }
 
   function sync() {
@@ -109,17 +192,17 @@
     layer.setAttribute("aria-label", "Happy Birthday!!");
     document.body.appendChild(layer);
     burstPlayed = true;
-    const w = layer.clientWidth;
-    const h = layer.clientHeight;
-    const fragment = document.createDocumentFragment();
-    for (let i = 0; i < 60; i++) particle(fragment, w, h, true, i, 60);
-    for (let i = 0; i < 60; i++) particle(fragment, w, h, false, i, 60);
-    layer.appendChild(fragment);
+    stopCanvas = startConfettiCanvas(layer);
     const message = document.createElement("button");
     message.type = "button";
     message.disabled = true;
     message.className = "birthday-intro-message";
-    message.textContent = "Happy Birthday!!";
+    [["birthday-intro-title", "Happy Birthday!!"], ["birthday-intro-name", "So Matsushima"], ["birthday-intro-date", "2026.11.27"]].forEach(([className, value]) => {
+      const line = document.createElement("span");
+      line.className = className;
+      line.textContent = value;
+      message.appendChild(line);
+    });
     const sparkles = document.createElement("div");
     sparkles.className = "birthday-intro-sparkles";
     [[8,-20,15,0],[24,-38,10,.1],[46,-26,19,.25],[73,-39,12,.15],[92,-15,16,.3],[5,105,11,.25],[20,132,18,.15],[50,115,10,.35],[79,130,14,0],[94,95,19,.2]].forEach(([x,y,size,delay], i) => {
@@ -156,11 +239,11 @@
       message.disabled = false;
       layer.classList.add("birthday-intro-ready");
       message.focus({ preventScroll: true });
-    }, 1400);
+    }, 2400);
     cleanupTimer = setTimeout(() => {
       cleanupTimer = null;
       if (!layer) return;
-      layer.querySelectorAll(".birthday-particle").forEach(el => el.remove());
+      if (stopCanvas) { stopCanvas(); stopCanvas = null; }
     }, animationDuration);
 
   }
