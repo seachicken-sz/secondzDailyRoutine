@@ -1,7 +1,7 @@
 // Birthday confetti (dev preview). No image assets or changes to home UI.
 (function () {
   "use strict";
-  const palette = ["#4d9b50", "#75b96a", "#a8d595", "#d4ebc5", "#e5c675", "#fff0c6", "#ffffff"];
+  const palette = ["#4d9b50", "#75b96a", "#a8d595", "#d4ebc5", "#e5c675", "#fff0c6", "#ffffff", "#efd28b", "#fffaf0"];
   const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let layer = null;
   let cleanupTimer = null;
@@ -9,7 +9,6 @@
   let modalShown = false;
   let modalReady = false;
   let tapTimer = null;
-  const animationDuration = 10000;
   let stopCanvas = null;
   let suppressed = false;
   const storageKey = "tamugotoBirthday20261127Dismissed";
@@ -105,25 +104,25 @@
         sprites[shape + color] = sprite;
       });
     });
-    const particles = Array.from({ length: 136 }, (_, i) => {
-      const ribbon = i >= 120;
-      const burst = i < 60 || (ribbon && i < 132);
-      const left = ribbon ? i % 2 === 0 : i < 30;
+    const particles = Array.from({ length: 192 }, (_, i) => {
+      const ribbon = i >= 180;
+      const burst = i < 60 || (ribbon && i < 188);
+      const left = i % 2 === 0;
       const n = Math.random();
       const shape = n < .45 ? "paper" : n < .75 ? "heart" : n < .88 ? "star" : "spark";
       const color = palette[Math.floor(Math.random() * palette.length)];
       const gravity = burst ? rand(380, 520) * h / 700 : rand(12, 30);
       const launchHeight = h * rand(.72, 1.22);
       return {
-        x: burst ? (left ? rand(0, w * .055) : rand(w * .945, w)) : rand(-10, w + 10),
+        x: burst ? (left ? rand(0, w * .055) : rand(w * .945, w)) : (left ? rand(0, w * .33) : rand(w * .67, w)),
         y: burst ? h + rand(6, 24) : rand(-85, -15),
-        vx: burst ? (left ? 1 : -1) * w * rand(.35, 1.08) : rand(-24, 24),
+        vx: burst ? (left ? 1 : -1) * w * rand(.16, .92) : rand(-24, 24),
         vy: burst ? -Math.sqrt(2 * gravity * launchHeight) : h * rand(.15, .24),
         gravity, drag: burst ? rand(.65, 1.05) : rand(.2, .55),
-        terminal: h * (ribbon ? rand(.12, .19) : rand(.17, .27)),
+        terminal: h * (ribbon ? rand(.12, .19) : rand(.12, .30)),
         delay: burst ? rand(.28, .46) : rand(.9, 5.2),
-        size: rand(9, 19) * 1.2, angle: rand(0, Math.PI * 2),
-        ribbon, color, ribbonLength: rand(42, 78), ribbonWidth: rand(3, 5),
+        size: rand(8, 23), angle: rand(0, Math.PI * 2),
+        ribbon, color, ribbonLength: rand(30, 65), ribbonWidth: rand(2, 4), left,
         spin: ribbon ? rand(-1.6, 1.6) : rand(-5.5, 5.5), flip: rand(0, Math.PI * 2),
         flipSpeed: rand(2, 6) * (Math.random() < .5 ? -1 : 1),
         phase: rand(0, Math.PI * 2), flutter: rand(12, 36), frequency: rand(1.8, 4.4),
@@ -141,24 +140,45 @@
     function draw(now) {
       if (stopped || !canvas.isConnected) { finish(); return; }
       const t = (now - start) / 1000;
-      if (t >= animationDuration / 1000) { finish(); return; }
       const previous = (last - start) / 1000;
       last = now;
       ctx.clearRect(0, 0, w, h);
-      ctx.globalAlpha = Math.min(1, (animationDuration / 1000 - t) / .55);
-      let remaining = false;
+      // Reserve a central band for the greeting, including its tap hint.
+      const halfWidth = Math.min(w * .42, 285);
+      const halfHeight = Math.min(h * .25, 155);
       for (const p of particles) {
-        if (!p.active) continue;
-        remaining = true;
         if (t < p.delay) continue;
         const dt = Math.min(.05, Math.max(0, t - Math.max(previous, p.delay)));
         p.vx *= Math.exp(-p.drag * dt);
+        // Soft lateral steering before reaching the central greeting.
+        const margin = p.ribbon ? 35 : 12;
+        const dy = Math.abs(p.y - h / 2);
+        const dx = Math.abs(p.x - w / 2);
+        if (dy < halfHeight + 100 && dx < halfWidth + margin + 25) {
+          const strength = Math.max(0, 1 - Math.max(0, dy - halfHeight) / 100);
+          p.vx += (p.x < w / 2 ? -1 : 1) * 240 * strength * dt;
+        }
         p.vy = Math.min(p.terminal, p.vy + p.gravity * dt);
         p.x += (p.vx + Math.sin(t * p.frequency + p.phase) * p.flutter) * dt;
         p.y += p.vy * dt;
         p.angle += p.spin * dt;
         p.flip += p.flipSpeed * dt;
-        if (p.y > h + (p.ribbon ? 100 : 50) && p.vy > 0) { p.active = false; continue; }
+        if ((p.y > h + (p.ribbon ? 100 : 50) && p.vy > 0) || p.x < -100 || p.x > w + 100) {
+          p.left = Math.random() < .5;
+          p.x = p.left ? rand(0, w * .30) : rand(w * .70, w);
+          p.y = rand(-120, -40);
+          p.vx = rand(-18, 18);
+          p.vy = h * rand(.09, .18);
+          p.gravity = rand(12, 30);
+          p.drag = rand(.2, .55);
+          p.delay = t + rand(.15, 1.2);
+          continue;
+        }
+        // Feather the protected area so no particle or ribbon crosses the text.
+        const edgeX = Math.abs(p.x - w / 2) - halfWidth - margin;
+        const edgeY = Math.abs(p.y - h / 2) - halfHeight - margin;
+        ctx.globalAlpha = Math.max(0, Math.min(1, Math.max(edgeX, edgeY) / 28));
+        if (ctx.globalAlpha <= 0) continue;
         if (p.ribbon) {
           // A flexible, tapered-looking streamer with alternating highlights.
           const length = p.ribbonLength, width = p.ribbonWidth;
@@ -193,7 +213,7 @@
         ctx.drawImage(p.sprite, -20, -20);
       }
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      if (remaining) frame = requestAnimationFrame(draw); else finish();
+      frame = requestAnimationFrame(draw);
     }
     frame = requestAnimationFrame(draw);
     return finish;
@@ -211,7 +231,7 @@
       layer.classList.toggle("birthday-modal-front", modalFront);
       return;
     }
-    // One burst per page load or explicit dev reset. No continuous rain.
+    // One launch per intro; recycled particles continue until dismissal.
     if (burstPlayed) return;
     layer = document.createElement("div");
     layer.classList.toggle("birthday-modal-front", modalFront);
@@ -252,6 +272,7 @@
     const advance = () => {
       if (!messageReady || !layer || modalReady) return;
       modalReady = true;
+      if (stopCanvas) { stopCanvas(); stopCanvas = null; }
       layer.classList.add("birthday-intro-leaving");
       messageReady = false;
       message.setAttribute("aria-disabled", "true");
@@ -274,11 +295,6 @@
       layer.classList.add("birthday-intro-ready");
       message.focus({ preventScroll: true });
     }, 2400);
-    cleanupTimer = setTimeout(() => {
-      cleanupTimer = null;
-      if (!layer) return;
-      if (stopCanvas) { stopCanvas(); stopCanvas = null; }
-    }, animationDuration);
 
   }
 

@@ -41,7 +41,10 @@
   cursor: pointer;
 }
 
-#birthdayConfettiLayer .birthday-intro-message:focus-visible { outline: 2px solid #fff0c6; outline-offset: 6px; }
+#birthdayConfettiLayer .birthday-intro-message:focus,
+#birthdayConfettiLayer .birthday-intro-message:focus-visible { outline: none; box-shadow: none; }
+#birthdayConfettiLayer .birthday-intro-message { -webkit-tap-highlight-color: transparent; }
+#birthdayConfettiLayer.birthday-intro-leaving .birthday-intro-sparkles span { animation-play-state: paused; }
 @keyframes birthdayIntroMessage {
   0% { opacity: 0; transform: translate(-50%, -50%) scale(.86); }
   65% { opacity: 1; transform: translate(-50%, -50%) scale(1.04); }
@@ -99,7 +102,7 @@
   font: var(--ss)/1 sans-serif;
   color: #fff0c6;
   text-shadow: 0 0 6px #ffe8ad;
-  animation: birthdayIntroTwinkle .85s var(--sd) ease-in-out 5 alternate both;
+  animation: birthdayIntroTwinkle .85s var(--sd) ease-in-out infinite alternate both;
 }
 @keyframes birthdayIntroTwinkle {
   from { opacity: .2; transform: translate(-50%, -50%) scale(.55); }
