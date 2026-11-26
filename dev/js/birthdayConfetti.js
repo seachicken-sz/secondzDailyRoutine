@@ -111,17 +111,17 @@
       const direction = left ? 1 : -1;
       if (route < .4) return { x: rand(0, w), y: rand(-85, -15), vx: rand(-24, 24), vy: h * rand(.12, .22) };
       if (route < .7) return { x: left ? rand(0, w * .25) : rand(w * .75, w), y: rand(-85, -15), vx: direction * w * rand(.16, .35), vy: h * rand(.12, .22) };
-      return { x: left ? -35 : w + 35, y: rand(0, h * .78), vx: direction * w * rand(.25, .55), vy: h * rand(.04, .13) };
+      return { x: left ? -35 : w + 35, y: rand(0, h * .95), vx: direction * w * rand(.25, .55), vy: h * rand(.04, .13) };
     }
-    const particles = Array.from({ length: 278 }, (_, i) => {
-      const ribbon = i >= 260;
-      const burst = i < 160 || ribbon;
+    const particles = Array.from({ length: 132 }, (_, i) => {
+      const ribbon = i >= 120;
+      const burst = i < 80 || ribbon;
       const left = i % 2 === 0;
       const n = Math.random();
       const shape = n < .45 ? "paper" : n < .75 ? "heart" : n < .88 ? "star" : "spark";
       const color = palette[Math.floor(Math.random() * palette.length)];
       const gravity = burst ? rand(380, 520) * h / 700 : rand(12, 30);
-      const trajectory = ribbon ? (i - 260) / 18 : i / 160;
+      const trajectory = ribbon ? (i - 120) / 12 : i / 80;
       const launchHeight = h * (trajectory < .5 ? rand(.72, 1.22) : trajectory < .85 ? rand(.30, .65) : rand(.08, .24));
       return {
         ...(burst ? {
@@ -132,26 +132,30 @@
         } : incoming()),
         gravity, drag: burst ? rand(.65, 1.05) : rand(.2, .55),
         terminal: h * (ribbon ? rand(.12, .19) : rand(.12, .30)),
-        delay: burst ? rand(.28, .6) : rand(.9, 5.2),
+        delay: burst ? rand(.5, 1) : rand(1, 2),
         size: rand(8, 23), angle: rand(0, Math.PI * 2),
         ribbon, color, ribbonLength: rand(30, 65), ribbonWidth: rand(2, 4), left,
         spin: ribbon ? rand(-1.6, 1.6) : rand(-5.5, 5.5), flip: rand(0, Math.PI * 2),
         flipSpeed: rand(2, 6) * (Math.random() < .5 ? -1 : 1),
         phase: rand(0, Math.PI * 2), flutter: rand(12, 36), frequency: rand(1.8, 4.4),
-        orbit: ribbon ? i % 3 === 0 : i % 10 < 3,
-        orbitJoin: rand(2, 4), orbitAngle: rand(0, Math.PI * 2),
-        orbitX: w * rand(.23, .48), orbitY: h * rand(.18, .43),
-        orbitSpeed: rand(Math.PI * 2 / 10, Math.PI * 2 / 5) * (Math.random() < .5 ? -1 : 1),
         sprite: sprites[shape + color], active: true
       };
     });
     const lightColors = ["#ffffff", "#fff0c6", "#d4ebc5"];
-    const lights = Array.from({ length: 40 }, (_, i) => ({
-      x: ((i % 5) + rand(.1, .9)) * w / 5,
-      y: (Math.floor(i / 5) + rand(.1, .9)) * h / 8,
-      size: rand(3, 16), period: rand(.8, 2.5), appear: rand(.8, 1.3),
-      phase: rand(0, Math.PI * 2),
-      sprite: sprites["spark" + lightColors[i % lightColors.length]]
+    const dots = lightColors.map(color => {
+      const a=document.createElement("canvas"); a.width=a.height=40;
+      const g=a.getContext("2d"); g.fillStyle=color; g.beginPath(); g.arc(20,20,15,0,Math.PI*2); g.fill(); return a;
+    });
+    const glows = lightColors.map(color => {
+      const a=document.createElement("canvas"); a.width=a.height=64;
+      const g=a.getContext("2d"), gr=g.createRadialGradient(32,32,0,32,32,32);
+      gr.addColorStop(0,color); gr.addColorStop(1,"transparent"); g.fillStyle=gr; g.fillRect(0,0,64,64); return a;
+    });
+    const lights = Array.from({length:190},(_,i)=>({
+      x:(i%10+rand(.1,.9))*w/10, y:(Math.floor(i/10)+rand(.1,.9))*h/19,
+      size:i<60?rand(6,16):i<160?rand(2,6):rand(14,42),
+      period:rand(1.2,3.7), appear:rand(1,2.4), phase:rand(0,Math.PI*2),
+      alpha:i<160?1:.3, sprite:i<60?sprites["spark"+lightColors[i%3]]:i<160?dots[i%3]:glows[i%3]
     }));
     let frame = 0, stopped = false;
     const start = performance.now();
@@ -171,31 +175,22 @@
         if (t < light.appear) continue;
         const glow = .5 + .5 * Math.sin(t * Math.PI * 2 / light.period + light.phase);
         const size = light.size * (.55 + .65 * glow);
-        ctx.globalAlpha = (.12 + .78 * glow) * Math.min(1, (t - light.appear) / .45);
+        ctx.globalAlpha = light.alpha * (.08 + .92 * glow * glow) * Math.min(1, (t - light.appear) / .45);
         ctx.drawImage(light.sprite, light.x - size / 2, light.y - size / 2, size, size);
       }
       ctx.globalAlpha = 1;
       for (const p of particles) {
-        if (t < p.delay) continue;
+        if (!p.active || t < p.delay) continue;
         const dt = Math.min(.05, Math.max(0, t - Math.max(previous, p.delay)));
-        const orbiting = p.orbit && t >= p.orbitJoin;
-        if (orbiting) {
-          p.orbitAngle += p.orbitSpeed * dt;
-          const spread = 1 + .08 * Math.sin(t * .7 + p.phase);
-          const x = w / 2 + Math.cos(p.orbitAngle) * p.orbitX * spread;
-          const y = h / 2 + Math.sin(p.orbitAngle) * p.orbitY;
-          const blend = 1 - Math.exp(-1.8 * dt);
-          p.x += (x - p.x) * blend;
-          p.y += (y - p.y) * blend;
-        } else {
-          p.vx *= Math.exp(-p.drag * dt);
-          p.vy = Math.min(p.terminal, p.vy + p.gravity * dt);
-          p.x += (p.vx + Math.sin(t * p.frequency + p.phase) * p.flutter) * dt;
-          p.y += p.vy * dt;
-        }
+        p.vx *= Math.exp(-p.drag * dt);
+        p.vy = Math.min(p.terminal, p.vy + p.gravity * dt);
+        p.x += (p.vx + Math.sin(t * p.frequency + p.phase) * p.flutter) * dt;
+        p.y += p.vy * dt;
         p.angle += p.spin * dt;
         p.flip += p.flipSpeed * dt;
-        if (!orbiting && ((p.y > h + (p.ribbon ? 100 : 50) && p.vy > 0) || p.x < -100 || p.x > w + 100)) {
+        if ((p.y > h + (p.ribbon ? 100 : 50) && p.vy > 0) || p.x < -100 || p.x > w + 100) {
+          const target = t < 3 ? 132 : Math.round(132 * (t < 6 ? 1-(t-3)*.7/3 : t < 9 ? .3-(t-6)*.15/3 : .15));
+          if (particles.filter(q => q.active).length > target) { p.active = false; continue; }
           Object.assign(p, incoming());
           p.gravity = rand(12, 30);
           p.drag = rand(.2, .55);
@@ -242,6 +237,25 @@
     return finish;
   }
 
+  function addGarland(parent) {
+    const ns="http://www.w3.org/2000/svg";
+    const add=(tag,attrs,root)=>{const e=document.createElementNS(ns,tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,v));root.appendChild(e);return e;};
+    const svg=add("svg",{viewBox:"0 0 360 155",class:"birthday-garland","aria-hidden":"true"},parent);
+    add("path",{d:"M-5 0 Q90 65 180 6 Q270 65 365 0 M-5 0 Q180 40 365 0",fill:"none",stroke:"#c9b17a","stroke-width":".8"},svg);
+    const colors=["#ff727b","#bd91ff","#63cf88","#82dfff","#c8ed78","#ff9bc9","#ffffff"];
+    for(let i=0;i<19;i++){
+      const x=6+i*19.3,y=8+20*Math.sin(Math.PI*(i%9)/9),end=y+20+i*37%65;
+      const g=add("g",{},svg);g.style.transformOrigin=x+"px "+y+"px";g.style.animation="birthdayGarlandSway "+(3+i%4)+"s "+(-i*.2)+"s infinite ease-in-out";
+      add("path",{d:"M"+x+" "+y+"V"+end,stroke:"#d6be83","stroke-width":".7"},g);
+      const lamp=add("g",{opacity:0},g),delay=2.25+Math.min(i,18-i)*.09;
+      lamp.style.animation="birthdayLightOn .35s "+delay+"s forwards";
+      const core=add("g",{},lamp),color=colors[i%7];core.style.animation="birthdayLampGlow "+(2+i%4*.5)+"s "+(delay+.35)+"s infinite";
+      [12,8,5].forEach((r,j)=>add("circle",{cx:x,cy:end,r,fill:color,opacity:[.09,.16,.22][j]},core));
+      if(i%3===1) add("ellipse",{cx:x,cy:end,rx:3,ry:5,fill:color},core);
+      else {const n=i%3===0?10:8;const pts=Array.from({length:n},(_,j)=>{const a=j*Math.PI*2/n-Math.PI/2,r=j%2?(n===10?3:1.5):7;return (x+Math.cos(a)*r)+","+(end+Math.sin(a)*r);});add("polygon",{points:pts.join(" "),fill:color},core);}
+    }
+  }
+
   function sync() {
     if (!canPlay()) { stop(); syncModal(); return; }
     if (document.querySelector(".modal-overlay:not(.hidden):not(#birthdayModal)") && !modalShown) {
@@ -265,6 +279,7 @@
     document.body.appendChild(layer);
     burstPlayed = true;
     stopCanvas = startConfettiCanvas(layer);
+    addGarland(layer);
     const message = document.createElement("div");
     message.setAttribute("role", "button");
     message.setAttribute("aria-disabled", "true");
@@ -317,12 +332,14 @@
       message.tabIndex = 0;
       layer.classList.add("birthday-intro-ready");
       message.focus({ preventScroll: true });
-    }, 2400);
+    }, 8800);
 
   }
 
   function initConfetti() {
     const modal = document.getElementById("birthdayModal");
+    const decoration=modal?.querySelector(".birthday-greeting-decoration");
+    if(decoration){decoration.replaceChildren();for(let i=0;i<65;i++){const s=document.createElement("span"),b=i<25,size=b?12+Math.random()*28:6+Math.random()*13;s.className=b?"birthday-card-bokeh":"birthday-card-star";s.textContent=b?"":"✦";s.style.cssText="--cx:"+Math.random()*96+"%;--cy:"+Math.random()*94+"%;--cs:"+size+"px;--cd:"+(-Math.random()*4)+"s;--cc:"+["#ffffff","#fff0c6","#d4ebc5"][i%3];decoration.appendChild(s);}}
     const dismiss = document.getElementById("birthdayDismissCheckbox");
     if (dismiss) dismiss.checked = suppressed;
     const resetPostFields = () => {
