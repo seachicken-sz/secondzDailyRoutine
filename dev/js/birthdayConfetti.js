@@ -19,11 +19,11 @@ window.startBirthdayCelebration = function (event) {
   const storageKey = `celebrationSeen_${eventId}`;
   let manualReplay = false;
   function isEventDay() { return active; }
-  try { suppressed = localStorage.getItem(storageKey) === "1"; } catch (error) { /* session fallback */ }
+  try { suppressed = !event.preview && localStorage.getItem(storageKey) === "1"; } catch (error) { /* session fallback */ }
 
   function markSeen() {
     suppressed = true;
-    try { localStorage.setItem(storageKey, "1"); } catch (error) { /* session fallback */ }
+    try { if (!event.preview) localStorage.setItem(storageKey, "1"); } catch (error) { /* session fallback */ }
   }
 
   function isNormalHome() {
