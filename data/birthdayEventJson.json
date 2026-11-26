@@ -1,6 +1,34 @@
 [
   {
     "enabled": true,
+    "birthday": "1996-10-30",
+    "theme": "red",
+    "name": "Shori Sato",
+    "modalTitle": "勝利くんバースデー❤️",
+    "placeholder": "勝利くん、誕生日おめでとう！",
+    "hashtags": [
+      "佐藤勝利誕生祭{year}",
+      "佐藤勝利HBD{age}",
+      "佐藤勝利",
+      "timelesz"
+    ]
+  },
+  {
+    "enabled": true,
+    "birthday": "1995-03-07",
+    "theme": "purple",
+    "name": "Fuma Kikuchi",
+    "modalTitle": "風磨くんバースデー💜",
+    "placeholder": "風磨くん、誕生日おめでとう！",
+    "hashtags": [
+      "菊池風磨誕生祭{year}",
+      "菊池風磨HBD{age}",
+      "菊池風磨",
+      "timelesz"
+    ]
+  },
+  {
+    "enabled": true,
     "birthday": "1997-11-27",
     "theme": "green",
     "name": "So Matsushima",
@@ -11,6 +39,63 @@
       "松島聡誕生祭{year}",
       "松島聡HBD{age}",
       "SOGOODDAYS",
+      "timelesz"
+    ]
+  },
+  {
+    "enabled": true,
+    "birthday": "1994-12-31",
+    "theme": "sky",
+    "name": "Takuto Teranishi",
+    "modalTitle": "寺西くんバースデー🩵",
+    "placeholder": "寺西くん、誕生日おめでとう！",
+    "hashtags": [
+      "寺西拓人誕生祭{year}",
+      "寺西拓人HBD{age}",
+      "寺西拓人",
+      "timelesz"
+    ]
+  },
+  {
+    "enabled": true,
+    "birthday": "1995-09-25",
+    "theme": "lime",
+    "name": "Yoshitaka Hara",
+    "modalTitle": "原ちゃんバースデー🎽",
+    "placeholder": "原ちゃん、誕生日おめでとう！",
+    "hashtags": [
+      "原嘉孝誕生祭{year}",
+      "原嘉孝HBD{age}",
+      "ちゃぼす誕生祭",
+      "原嘉孝",
+      "timelesz"
+    ]
+  },
+  {
+    "enabled": true,
+    "birthday": "1999-10-17",
+    "theme": "pink",
+    "name": "Masaki Hashimoto",
+    "modalTitle": "将生くんバースデー🩷",
+    "placeholder": "将生くん、誕生日おめでとう！",
+    "hashtags": [
+      "橋本将生誕生祭{year}",
+      "橋本将生HBD{age}",
+      "橋本将生",
+      "timelesz"
+    ]
+  },
+  {
+    "enabled": true,
+    "birthday": "2002-07-09",
+    "theme": "white",
+    "name": "Taiki Shinozuka",
+    "modalTitle": "篠塚くんバースデー🤍",
+    "placeholder": "篠塚くん、誕生日おめでとう！",
+    "hashtags": [
+      "篠塚大輝誕生祭{year}",
+      "篠塚大輝HBD{age}",
+      "篠塚大輝",
       "timelesz"
     ]
   }

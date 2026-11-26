@@ -3,6 +3,8 @@ window.createBirthdayModal = function(event,onClose) {
   const template=document.createElement("template");
   template.innerHTML="<!-- 誕生日限定モーダル -->\n  <div id=\"birthdayModal\" class=\"modal-overlay hidden\">\n    <div class=\"modal-content\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"birthdayModalTitle\">\n      <div class=\"modal-header\">\n        <h2 id=\"birthdayModalTitle\" class=\"modal-title\"></h2>\n        <button id=\"birthdayModalCloseButton\" class=\"modal-close-button\" type=\"button\" aria-label=\"閉じる\">×</button>\n      </div>\n      <div class=\"modal-body birthday-modal-body\">\n        <div class=\"birthday-greeting\">\n          <div class=\"birthday-greeting-decoration\" aria-hidden=\"true\"><span>✦</span><span>♡</span><span>✧</span><span>✦</span><span>♡</span><span>✧</span></div>\n          <div class=\"birthday-greeting-title\">Happy Birthday!!</div>\n          <div class=\"birthday-greeting-name\"></div>\n          <div class=\"birthday-greeting-date\"></div>\n        </div>\n        <div class=\"birthday-post-field\">\n          <label for=\"birthdayPostText\">お祝いメッセージ</label>\n          <textarea id=\"birthdayPostText\" rows=\"3\" ></textarea>\n        </div>\n        <fieldset class=\"birthday-tags\">\n          <legend>つけたいハッシュタグを選んでね</legend>\n          <div class=\"birthday-tag-list\"></div>\n        </fieldset>\n        <button id=\"birthdayPostButton\" class=\"primary-button\" type=\"button\"><i class=\"bi bi-twitter-x\" aria-hidden=\"true\"></i> Xでお祝いする</button>\n        <button id=\"birthdayModalCloseOnlyButton\" class=\"text-link-button\" type=\"button\">閉じる</button>\n      </div>\n    </div>\n  </div>";
   const modal=template.content.querySelector("#birthdayModal");
+  const theme=window.getBirthdayTheme(event.theme);
+  window.applyBirthdayTheme(modal,theme);
   document.body.appendChild(modal);
   const listeners=new AbortController();
     modal.querySelector("#birthdayModalTitle").textContent=event.modalTitle;
@@ -29,7 +31,7 @@ window.createBirthdayModal = function(event,onClose) {
         const size=b?(12+Math.random()*28)*(1-.4*center):6+Math.random()*13;
         s.className=b?"birthday-card-bokeh":"birthday-card-star";
         s.textContent=b?"":"✦";
-        s.style.cssText="--cx:"+x+"%;--cy:"+Math.random()*94+"%;--cs:"+size+"px;--cd:"+(-Math.random()*4)+"s;--cc:"+["#ffffff","#fff0c6","#d4ebc5"][i%3]+";--ca:"+(b?1-.55*center:1);
+        s.style.cssText="--cx:"+x+"%;--cy:"+Math.random()*94+"%;--cs:"+size+"px;--cd:"+(-Math.random()*4)+"s;--cc:"+theme.lightColors[i%3]+";--ca:"+(b?1-.55*center:1);
         decoration.appendChild(s);
       }
       const ns="http://www.w3.org/2000/svg";

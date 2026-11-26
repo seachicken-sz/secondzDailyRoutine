@@ -1,7 +1,8 @@
 // Birthday confetti (dev preview). No image assets or changes to home UI.
 window.startBirthdayCelebration = function (event) {
   "use strict";
-  const palette = ["#4d9b50", "#75b96a", "#a8d595", "#d4ebc5", "#e5c675", "#fff0c6", "#ffffff", "#efd28b", "#fffaf0"];
+  const theme = window.getBirthdayTheme(event.theme);
+  const palette = theme.palette;
   const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let layer = null;
   let cleanupTimer = null;
@@ -138,7 +139,7 @@ window.startBirthdayCelebration = function (event) {
         sprite: sprites[shape + color], active: true
       };
     });
-    const lightColors = ["#ffffff", "#fff0c6", "#d4ebc5"];
+    const lightColors = theme.lightColors;
     const dots = lightColors.map(color => {
       const a=document.createElement("canvas"); a.width=a.height=40;
       const g=a.getContext("2d"); g.fillStyle=color; g.beginPath(); g.arc(20,20,15,0,Math.PI*2); g.fill(); return a;
@@ -266,6 +267,7 @@ window.startBirthdayCelebration = function (event) {
     layer = document.createElement("div");
     layer.classList.toggle("birthday-modal-front", modalFront);
     layer.id = "birthdayConfettiLayer";
+    window.applyBirthdayTheme(layer,theme);
     layer.setAttribute("role", "dialog");
     layer.setAttribute("aria-modal", "true");
     layer.setAttribute("aria-label", "Happy Birthday!!");

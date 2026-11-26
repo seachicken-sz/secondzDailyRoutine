@@ -7,7 +7,7 @@
   z-index: 1001;
   contain: strict;
   animation: birthdayLayerFade .28s linear both, birthdayBackground 1.5s 2.9s ease-in-out both;
-  background: rgba(12, 25, 17, .72);
+  background: rgba(var(--birthday-dark-rgb), .72);
 }
 #birthdayConfettiLayer .birthday-confetti-canvas {
   position: absolute;
@@ -38,7 +38,7 @@
   text-align: center;
   color: #fff7d9;
   font: 700 clamp(25px, 7.8vw, 60px)/1.25 "Klee One", "Zen Maru Gothic", sans-serif;
-  text-shadow: 0 1px 3px rgba(12,25,17,.65), 0 0 8px rgba(255,232,165,.45), 0 0 20px rgba(255,232,165,.25);
+  text-shadow: 0 1px 3px rgba(var(--birthday-dark-rgb),.65), 0 0 8px rgba(255,232,165,.45), 0 0 20px rgba(255,232,165,.25);
   transform: translate(-50%, -50%);
   cursor: pointer;
 }
@@ -127,14 +127,14 @@
   border-radius: 10px;
   background: var(--color-surface);
 }
-#birthdayModal .birthday-post-field:focus-within { border-color: #81aa76; }
+#birthdayModal .birthday-post-field:focus-within { border-color: var(--birthday-accent); }
 #birthdayModal .birthday-post-field label {
   display: block;
   padding: 7px 10px;
   margin: 0;
   font-size: .85rem;
   font-weight: 600;
-  background: rgba(129, 170, 118, .12);
+  background: rgba(var(--birthday-accent-rgb), .12);
   border-bottom: 1px solid var(--color-border-soft, #ccd7c8);
 }
 #birthdayModal #birthdayPostText {
@@ -150,10 +150,10 @@
 #birthdayModal .birthday-tag-chip { position: relative; display: inline-flex; max-width: 100%; cursor: pointer; }
 #birthdayModal .birthday-tag-chip input { position: absolute; width: 1px; height: 1px; opacity: 0; margin: 0; }
 #birthdayModal .birthday-tag-chip span { display: inline-flex; align-items: center; gap: 4px; border: 1px solid var(--color-border-soft, #ccd7c8); border-radius: 999px; background: var(--color-surface, #fff); color: var(--color-text, #334033); padding: 5px 9px; font-size: .75rem; line-height: 1.4; white-space: nowrap; }
-#birthdayModal .birthday-tag-chip input:checked + span { background: #e0efda; color: #36583a; border-color: #81aa76; }
+#birthdayModal .birthday-tag-chip input:checked + span { background: var(--birthday-selected-bg); color: var(--birthday-selected-text); border-color: var(--birthday-accent); }
 #birthdayModal .birthday-tag-chip input:checked + span::before { content: "✓"; font-weight: 700; }
-#birthdayModal .birthday-tag-chip input:focus-visible + span { outline: 2px solid #51834d; outline-offset: 2px; }
-#birthdayModal input[type="checkbox"] { accent-color: #51834d; flex-shrink: 0; }
+#birthdayModal .birthday-tag-chip input:focus-visible + span { outline: 2px solid var(--birthday-focus); outline-offset: 2px; }
+#birthdayModal input[type="checkbox"] { accent-color: var(--birthday-focus); flex-shrink: 0; }
 
 #birthdayModal .birthday-modal-body > * { flex-shrink: 0; }
 #birthdayModal .birthday-greeting {
@@ -163,7 +163,7 @@
   text-align: center;
   border: 1px solid #b9a16b;
   border-radius: 14px;
-  background: radial-gradient(ellipse at 50% 40%, #52704a 0%, transparent 75%), linear-gradient(145deg, #344a38, #263b2d);
+  background: radial-gradient(ellipse at 50% 40%, var(--birthday-card-glow) 0%, transparent 75%), linear-gradient(145deg, var(--birthday-card-start), var(--birthday-card-end));
   color: #fff7d9;
   padding: 46px 12px 22px;
   box-shadow: inset 0 0 0 3px #fff0c61c;
@@ -188,13 +188,13 @@
 #birthdayModal .birthday-greeting-decoration { position: absolute; inset: 0; pointer-events: none; z-index: -1; }
 #birthdayModal .birthday-greeting-decoration span {position:absolute;left:var(--cx);top:var(--cy);width:var(--cs);height:var(--cs);font-size:var(--cs);color:var(--cc);line-height:1;animation:birthdayCardTwinkle 3s var(--cd) infinite;}
 #birthdayModal .birthday-card-bokeh {border-radius:50%;background:radial-gradient(circle,#fff4c780,transparent 70%);}
-#birthdayModal .birthday-greeting-title,#birthdayModal .birthday-greeting-name,#birthdayModal .birthday-greeting-date {text-shadow:0 1px 3px #183525,0 0 12px #ffe5a180;}
+#birthdayModal .birthday-greeting-title,#birthdayModal .birthday-greeting-name,#birthdayModal .birthday-greeting-date {text-shadow:0 1px 3px var(--birthday-shadow),0 0 12px #ffe5a180;}
 #birthdayModal.hidden .birthday-greeting-decoration span {animation-play-state:paused;}
 @keyframes birthdayCardTwinkle {0%,100%{opacity:.12;transform:scale(.65)}50%{opacity:1;transform:scale(1.2)}}
 @media(prefers-reduced-motion:reduce){#birthdayModal .birthday-greeting-decoration span{animation:none;opacity:.5}}
 #birthdayConfettiLayer.birthday-modal-front { z-index: 1001; }
 
-@keyframes birthdayBackground {from{background:rgba(12,25,17,.97)}to{background:rgba(12,25,17,.72)}}
+@keyframes birthdayBackground {from{background:rgba(var(--birthday-dark-rgb),.97)}to{background:rgba(var(--birthday-dark-rgb),.72)}}
 @keyframes birthdayRule {from{transform:scaleX(0)}to{transform:scaleX(1)}}
 #birthdayConfettiLayer .birthday-garland {position:absolute;z-index:1;top:0;left:0;width:100%;height:auto;max-height:27%;pointer-events:none;animation:birthdayGarlandDrop 1s 1.9s cubic-bezier(.22,.75,.3,1) both;}
 #birthdayConfettiLayer .birthday-intro-message {z-index:2;}
