@@ -7,7 +7,7 @@ const BIRTHDAY_SO_ASSET_DIR = "../img/shareImg/birthday/20261127/";
 const BIRTHDAY_SO_LAYOUT = {
   titleY: 95, dateY: 178, panelX: 120, panelY: 225, panelW: 840,
   rowHeight: 76, panelPaddingTop: 44, panelPaddingBottom: 62,
-  illustrationW: 930, illustrationGap: 45, bottomPadding: 28
+  illustrationW: 930, illustrationGap: 45, bottomPadding: 62
 };
 
 function drawBirthdaySoBackground(ctx, canvas, theme, themeKey) {
@@ -43,7 +43,7 @@ function drawBirthdaySoBranches(ctx, canvas, branch, panelBottom) {
   ctx.save();
   ctx.globalAlpha = .85;
   // 左上は上端から垂れる向き、右下はカード下端を基準に配置。
-  ctx.translate(340, -225);
+  ctx.translate(400, -225);
   ctx.rotate(Math.PI / 2);
   ctx.drawImage(branch, 0, 0, 800, 800 * ratio);
   ctx.restore();
@@ -51,7 +51,7 @@ function drawBirthdaySoBranches(ctx, canvas, branch, panelBottom) {
   ctx.globalAlpha = .8;
   ctx.translate(canvas.width + 100, panelBottom + 55);
   ctx.rotate(Math.PI);
-  ctx.drawImage(branch, 0, 0, 500, 500 * ratio);
+  ctx.drawImage(branch, 0, 0, 650, 650 * ratio);
   ctx.restore();
 }
 
@@ -185,8 +185,8 @@ async function renderBirthdaySo({canvas, ctx, theme, themeKey, dateText, tasks, 
   ctx.textAlign = "right";
   ctx.textBaseline = "bottom";
   ctx.font = `26px ${BIRTHDAY_SO_FONT}`;
-  const right = CANVAS_WIDTH - 75;
-  const bottom = Math.min(canvas.height - 12, illustrationY + illustrationH + 22);
+  const right = CANVAS_WIDTH - 40;
+  const bottom = Math.min(canvas.height - 40, illustrationY + illustrationH + 22);
   ctx.fillText(SHARE_IMAGE_TOOL_NAME, right, userName ? bottom - 30 : bottom);
   if (userName) drawEllipsizedText(ctx, userName, right, bottom, 420);
   ctx.restore();
