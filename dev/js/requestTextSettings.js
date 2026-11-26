@@ -134,7 +134,7 @@ function bindRequestTextSettings() {
   const editor = document.getElementById("requestTextEditor");
   const saveCloseButton = form.querySelector("[data-setting-save-close]");
   let items = new Map();
-  let editorSelection = null;
+  const tokenEditor = bindRadioRequestTokenEditor(editor, saveEditorText);
   let fixedText = "";
   let presets = [];
   let selectedPresets = new Set();
@@ -189,28 +189,6 @@ function bindRequestTextSettings() {
     option.textContent = name;
   }
 
-  function createSongToken() {
-    const token = document.createElement("span");
-    token.className = "request-text-song-token";
-    token.contentEditable = "false";
-    token.textContent = RADIO_REQUEST_SONG_TOKEN;
-    const remove = document.createElement("button");
-    remove.type = "button";
-    remove.setAttribute("aria-label", "曲名を削除");
-    token.append(remove);
-    return token;
-  }
-
-  function setEditorText(template) {
-    const parts = template.split(/musicname|［曲名］/);
-    editor.replaceChildren();
-    parts.forEach((part, index) => {
-      if (index) editor.append(createSongToken());
-      editor.append(part);
-    });
-    editorSelection = null;
-  }
-
   function showProgram() {
     const item = items.get(program.value);
     const local = isLocalRequestText(item);
@@ -230,7 +208,7 @@ function bindRequestTextSettings() {
     fixedText = getFixedRequestText(entry);
     selectedPresets = new Set(getSelectedRequestTextPresets(entry, presets));
     includeOriginalCheckbox.checked = includesOriginalRequestText(entry);
-    setEditorText(fixedText);
+    tokenEditor.setText(fixedText);
     presetChoices.replaceChildren(...presets.map(createCandidateRow));
     candidateList.scrollTop = 0;
     renderPanel();
@@ -272,8 +250,87 @@ function bindRequestTextSettings() {
   }
 
   function saveEditorText() {
-    fixedText = editor.innerText.replaceAll(RADIO_REQUEST_SONG_TOKEN, "musicname").trim();
+    fixedText = tokenEditor.getText();
     saveTextSettings();
+  }
+
+  program.addEventListener("change", showProgram);
+  includeOriginalCheckbox.addEventListener("change", saveTextSettings);
+  presetChoices.addEventListener("change", (event) => {
+    const checkbox = event.target;
+    if (checkbox.checked) selectedPresets.add(checkbox.value);
+    else selectedPresets.delete(checkbox.value);
+    saveTextSettings();
+  });
+
+  function setAllCandidates(checked) {
+    selectedPresets = new Set(checked ? presets : []);
+    includeOriginalCheckbox.checked = checked;
+    presetChoices.querySelectorAll("input").forEach((checkbox) => {
+      checkbox.checked = checked;
+    });
+    saveTextSettings();
+  }
+
+  selectAllButton.addEventListener("click", () => setAllCandidates(true));
+  clearAllButton.addEventListener("click", () => setAllCandidates(false));
+  document.getElementById("requestTextInsertSong").addEventListener("click", () => {
+    tokenEditor.insertSong();
+  });
+  return {
+    async open() {
+      const previousProgram = program.value;
+      form.classList.add("hidden");
+      status.textContent = "読み込み中…";
+      try {
+        await ensureDailyDataLoaded();
+      } catch {
+        status.textContent = "番組を読み込めませんでした。設定を開き直してください。";
+        return;
+      }
+      items = new Map(state.dailyGroups.flatMap((group) => group.items)
+        .filter(item => isCustomizableRadioRequest(item) && (!isLocalRequestText(item) || isEnabledLocalItem(item)))
+        .map((item) => [getRadioRequestTextSettingKey(item), item]));
+      if (!items.size) {
+        status.textContent = "設定できる番組がありません。";
+        return;
+      }
+
+      program.replaceChildren(...Array.from(items.keys(), (id) => {
+        const option = new Option("", id);
+        setOptionLabel(option);
+        return option;
+      }));
+      if (items.has(previousProgram)) program.value = previousProgram;
+      form.classList.remove("hidden");
+      showProgram();
+    }
+  };
+}
+
+// 曲名トークン付きエディター（設定画面とデイリー実行画面で共通）
+function bindRadioRequestTokenEditor(editor, onChange) {
+  let editorSelection = null;
+  function createSongToken() {
+    const token = document.createElement("span");
+    token.className = "request-text-song-token";
+    token.contentEditable = "false";
+    token.textContent = RADIO_REQUEST_SONG_TOKEN;
+    const remove = document.createElement("button");
+    remove.type = "button";
+    remove.setAttribute("aria-label", "曲名を削除");
+    token.append(remove);
+    return token;
+  }
+
+  function setEditorText(template) {
+    const parts = template.split(/musicname|［曲名］/);
+    editor.replaceChildren();
+    parts.forEach((part, index) => {
+      if (index) editor.append(createSongToken());
+      editor.append(part);
+    });
+    editorSelection = null;
   }
 
   function getSelectionInEditor() {
@@ -301,7 +358,7 @@ function bindRequestTextSettings() {
     range.setStartAfter(node);
     range.collapse(true);
     moveCaret(range);
-    saveEditorText();
+    onChange();
   }
 
   function removeSongToken(token) {
@@ -311,7 +368,7 @@ function bindRequestTextSettings() {
     token.remove();
     editor.focus();
     moveCaret(range);
-    saveEditorText();
+    onChange();
   }
 
   document.addEventListener("selectionchange", () => {
@@ -347,9 +404,9 @@ function bindRequestTextSettings() {
     if (button) removeSongToken(button.parentElement);
   });
   editor.addEventListener("input", (event) => {
-    if (!event.isComposing) saveEditorText();
+    if (!event.isComposing) onChange();
   });
-  editor.addEventListener("compositionend", saveEditorText);
+  editor.addEventListener("compositionend", onChange);
   editor.addEventListener("paste", (event) => {
     event.preventDefault();
     const text = event.clipboardData?.getData("text/plain");
@@ -357,56 +414,5 @@ function bindRequestTextSettings() {
   });
   editor.addEventListener("drop", (event) => event.preventDefault());
 
-  program.addEventListener("change", showProgram);
-  includeOriginalCheckbox.addEventListener("change", saveTextSettings);
-  presetChoices.addEventListener("change", (event) => {
-    const checkbox = event.target;
-    if (checkbox.checked) selectedPresets.add(checkbox.value);
-    else selectedPresets.delete(checkbox.value);
-    saveTextSettings();
-  });
-
-  function setAllCandidates(checked) {
-    selectedPresets = new Set(checked ? presets : []);
-    includeOriginalCheckbox.checked = checked;
-    presetChoices.querySelectorAll("input").forEach((checkbox) => {
-      checkbox.checked = checked;
-    });
-    saveTextSettings();
-  }
-
-  selectAllButton.addEventListener("click", () => setAllCandidates(true));
-  clearAllButton.addEventListener("click", () => setAllCandidates(false));
-  document.getElementById("requestTextInsertSong").addEventListener("click", () => {
-    insertInEditor(createSongToken());
-  });
-  return {
-    async open() {
-      const previousProgram = program.value;
-      form.classList.add("hidden");
-      status.textContent = "読み込み中…";
-      try {
-        await ensureDailyDataLoaded();
-      } catch {
-        status.textContent = "番組を読み込めませんでした。設定を開き直してください。";
-        return;
-      }
-      items = new Map(state.dailyGroups.flatMap((group) => group.items)
-        .filter(item => isCustomizableRadioRequest(item) && (!isLocalRequestText(item) || isEnabledLocalItem(item)))
-        .map((item) => [getRadioRequestTextSettingKey(item), item]));
-      if (!items.size) {
-        status.textContent = "設定できる番組がありません。";
-        return;
-      }
-
-      program.replaceChildren(...Array.from(items.keys(), (id) => {
-        const option = new Option("", id);
-        setOptionLabel(option);
-        return option;
-      }));
-      if (items.has(previousProgram)) program.value = previousProgram;
-      form.classList.remove("hidden");
-      showProgram();
-    }
-  };
+  return { setText: setEditorText, getText: () => editor.innerText.replaceAll(RADIO_REQUEST_SONG_TOKEN, "musicname").trim(), insertSong: () => insertInEditor(createSongToken()) };
 }
