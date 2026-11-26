@@ -6,6 +6,7 @@
   pointer-events: none;
   z-index: 90;
   contain: strict;
+  animation: birthdayLayerFade 3s linear both;
 }
 #birthdayConfettiLayer .birthday-particle {
   position: absolute;
@@ -15,7 +16,6 @@
   height: var(--size);
   opacity: 0;
   color: var(--color);
-  will-change: transform, opacity;
 }
 #birthdayConfettiLayer .birthday-particle::before {
   content: "";
@@ -46,23 +46,27 @@
 #birthdayConfettiLayer .birthday-fall {
   animation: birthdayFall var(--duration) var(--delay) linear both;
 }
+@keyframes birthdayLayerFade {
+  0%, 83.333% { opacity: 1; }
+  100% { opacity: 0; }
+}
 @keyframes birthdayBurst {
   0% { transform: translate3d(var(--start-x), var(--start-y), 0) rotate(0); opacity: 0; animation-timing-function: cubic-bezier(.12,.65,.3,1); }
   5% { opacity: .95; animation-timing-function: cubic-bezier(.12,.65,.3,1); }
   32% { transform: translate3d(var(--peak-x), var(--peak-y), 0) rotate(210deg); opacity: .95; animation-timing-function: ease-in; }
-  65% { transform: translate3d(var(--mid-x), var(--mid-y), 0) rotate(400deg) rotateY(160deg); opacity: .85; }
+  65% { transform: translate3d(var(--mid-x), var(--mid-y), 0) rotate(400deg); opacity: .85; }
   92% { opacity: .8; }
-  100% { transform: translate3d(var(--end-x), var(--end-y), 0) rotate(650deg) rotateY(450deg); opacity: 0; }
+  100% { transform: translate3d(var(--end-x), var(--end-y), 0) rotate(650deg); opacity: 0; }
 }
 @keyframes birthdayFall {
   0% { transform: translate3d(var(--start-x), -25px, 0) rotate(0); opacity: 0; }
   8% { opacity: .95; }
-  35% { transform: translate3d(var(--peak-x), 35vh, 0) rotate(120deg) rotateY(150deg); }
-  70% { transform: translate3d(var(--mid-x), 70vh, 0) rotate(270deg) rotateY(300deg); opacity: .9; }
-  100% { transform: translate3d(var(--end-x), var(--end-y), 0) rotate(480deg) rotateY(570deg); opacity: 0; }
+  35% { transform: translate3d(var(--peak-x), 35vh, 0) rotate(120deg); }
+  70% { transform: translate3d(var(--mid-x), 70vh, 0) rotate(270deg); opacity: .9; }
+  100% { transform: translate3d(var(--end-x), var(--end-y), 0) rotate(480deg); opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
-  #birthdayConfettiLayer { display: none; }
+  #birthdayConfettiLayer { display: none; animation: none; }
   #birthdayConfettiLayer .birthday-particle { animation: none; }
 }
 
