@@ -1,5 +1,5 @@
 // Birthday confetti (dev preview). No image assets or changes to home UI.
-(function () {
+window.startBirthdayCelebration = function (event) {
   "use strict";
   const palette = ["#4d9b50", "#75b96a", "#a8d595", "#d4ebc5", "#e5c675", "#fff0c6", "#ffffff", "#efd28b", "#fffaf0"];
   const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -11,15 +11,12 @@
   let tapTimer = null;
   let stopCanvas = null;
   let suppressed = false;
-  const eventId = "birthday_20261127";
-  const preview = true; // dev only
+  const eventId = event.id;
+  let active = true;
+  const listeners = new AbortController();
   const storageKey = `celebrationSeen_${eventId}`;
   let manualReplay = false;
-  function isEventDay() {
-    const day = new Intl.DateTimeFormat("en-CA", {timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
-    const key = ["year","month","day"].map(type=>day.find(p=>p.type===type).value).join("");
-    return preview || eventId === `birthday_${key}`;
-  }
+  function isEventDay() { return active; }
   try { suppressed = localStorage.getItem(storageKey) === "1"; } catch (error) { /* session fallback */ }
 
   function markSeen() {
@@ -283,7 +280,7 @@
     message.className = "birthday-intro-message";
     const greeting = document.createElement("div");
     greeting.className = "birthday-intro-greeting";
-    [["birthday-intro-title", "Happy Birthday!!"], ["birthday-intro-name", "So Matsushima"], ["birthday-intro-date", "2026.11.27"]].forEach(([className, value]) => {
+    [["birthday-intro-title", "Happy Birthday!!"], ["birthday-intro-name", event.name], ["birthday-intro-date", event.dateText]].forEach(([className, value]) => {
       const line = document.createElement("span");
       line.className = className;
       line.textContent = value;
@@ -336,6 +333,16 @@
 
   function initConfetti() {
     const modal = document.getElementById("birthdayModal");
+    modal.querySelector("#birthdayModalTitle").textContent=event.modalTitle;
+    modal.querySelector(".birthday-greeting-name").textContent=event.name;
+    modal.querySelector(".birthday-greeting-date").textContent=event.dateText;
+    modal.querySelector("#birthdayPostText").placeholder=event.placeholder;
+    const tags=modal.querySelector(".birthday-tag-list");
+    tags.replaceChildren();
+    event.hashtags.forEach(tag=>{
+      const label=document.createElement("label"),input=document.createElement("input"),span=document.createElement("span");
+      label.className="birthday-tag-chip";input.type="checkbox";input.name="birthdayTag";input.value=tag;span.textContent="#"+tag;label.append(input,span);tags.appendChild(label);
+    });
     const decoration=modal?.querySelector(".birthday-greeting-decoration");
     if (decoration) {
       decoration.replaceChildren();
@@ -376,9 +383,9 @@
       modal?.querySelectorAll('input[name="birthdayTag"]').forEach(el => { el.checked = false; });
     };
     resetPostFields();
-    document.getElementById("birthdayModalCloseButton")?.addEventListener("click", closeModal);
-    document.getElementById("birthdayModalCloseOnlyButton")?.addEventListener("click", closeModal);
-    modal?.addEventListener("click", event => { if (event.target === modal) closeModal(); });
+    document.getElementById("birthdayModalCloseButton")?.addEventListener("click", closeModal,{signal:listeners.signal});
+    document.getElementById("birthdayModalCloseOnlyButton")?.addEventListener("click", closeModal,{signal:listeners.signal});
+    modal?.addEventListener("click", event => { if (event.target === modal) closeModal(); },{signal:listeners.signal});
     document.getElementById("birthdayPostButton")?.addEventListener("click", () => {
       const message = document.getElementById("birthdayPostText").value.trim();
       const tags = Array.from(modal.querySelectorAll('input[name="birthdayTag"]:checked'), el => "#" + el.value);
@@ -386,7 +393,7 @@
       if (!postText) { document.getElementById("birthdayPostText").focus(); return; }
       closeModal();
       location.href = X_POST_URL + encodeURIComponent(postText);
-    });
+    },{signal:listeners.signal});
     document.getElementById("birthdayResetButton")?.addEventListener("click", () => {
       if (!isEventDay() || !isNormalHome()) return;
       closeModal();
@@ -397,18 +404,23 @@
       modalReady = false;
       resetPostFields();
       sync();
-    });
+    },{signal:listeners.signal});
     const observer = new MutationObserver(sync);
     [document.documentElement, document.getElementById("homeStep"), document.getElementById("normalHomeContent")]
       .filter(Boolean).forEach(el => observer.observe(el, { attributes: true, attributeFilter: ["class"] }));
     document.querySelectorAll(".modal-overlay").forEach(el => observer.observe(el, { attributes: true, attributeFilter: ["class"] }));
-    document.addEventListener("visibilitychange", sync);
-    window.addEventListener("pageshow", sync);
-    window.addEventListener("pagehide", stop);
+    document.addEventListener("visibilitychange", sync,{signal:listeners.signal});
+    window.addEventListener("pageshow", sync,{signal:listeners.signal});
+    window.addEventListener("pagehide", stop,{signal:listeners.signal});
     if (motion.addEventListener) motion.addEventListener("change", sync);
     else if (motion.addListener) motion.addListener(sync);
     sync();
+    return () => {
+      active=false;observer.disconnect();listeners.abort();
+      if(motion.removeEventListener)motion.removeEventListener("change",sync);else if(motion.removeListener)motion.removeListener(sync);
+      stop();modal.classList.add("hidden");decoration.replaceChildren();
+      document.getElementById("birthdayResetButton")?.classList.add("hidden");
+    };
   }
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initConfetti, { once: true });
-  else initConfetti();
-})();
+  return initConfetti();
+};
