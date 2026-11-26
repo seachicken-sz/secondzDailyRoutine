@@ -3,10 +3,10 @@
   position: fixed;
   inset: 0;
   overflow: hidden;
-  pointer-events: none;
+  pointer-events: auto;
   z-index: 1001;
   contain: strict;
-  animation: birthdayLayerFade 3s linear both;
+  animation: birthdayLayerFade .28s linear both;
   background: rgba(12, 25, 17, .72);
 }
 #birthdayConfettiLayer .birthday-particle {
@@ -48,9 +48,8 @@
   animation: birthdayFall var(--duration) var(--delay) linear both;
 }
 @keyframes birthdayLayerFade {
-  0% { opacity: 0; }
-  9%, 86% { opacity: 1; }
-  100% { opacity: 0; }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 @keyframes birthdayBurst {
   0% { transform: translate3d(var(--start-x), var(--start-y), 0) rotate(0); opacity: 0; animation-timing-function: cubic-bezier(.12,.65,.3,1); }
@@ -61,32 +60,52 @@
   100% { transform: translate3d(var(--end-x), var(--end-y), 0) rotate(1080deg); opacity: .8; }
 }
 @keyframes birthdayFall {
-  0% { transform: translate3d(var(--start-x), -25px, 0) rotate(0); opacity: 0; }
-  12% { opacity: 1; }
-  30% { transform: translate3d(var(--peak-x), 13vh, 0) rotate(240deg); }
-  48% { transform: translate3d(var(--peak-x), 20vh, 0) rotate(520deg); }
-  75% { transform: translate3d(var(--mid-x), 65vh, 0) rotate(760deg); opacity: .95; }
-  100% { transform: translate3d(var(--end-x), var(--end-y), 0) rotate(1000deg); opacity: .8; }
+  0% { transform: translate3d(var(--start-x), var(--start-y), 0) rotate(0); opacity: .95; }
+  25% { transform: translate3d(var(--rain-x1), 20vh, 0) rotate(180deg); opacity: 1; }
+  50% { transform: translate3d(var(--rain-x2), 46vh, 0) rotate(420deg); opacity: 1; }
+  75% { transform: translate3d(var(--rain-x1), 74vh, 0) rotate(650deg); opacity: .95; }
+  100% { transform: translate3d(var(--rain-x3), var(--end-y), 0) rotate(900deg); opacity: .8; }
 }
+#birthdayConfettiLayer .birthday-particle { pointer-events: none; }
 #birthdayConfettiLayer .birthday-intro-message {
   position: absolute;
   left: 0;
   right: 0;
   top: 43%;
+  width: 100%;
   padding: 0 12px;
+  border: 0;
+  background: transparent;
   text-align: center;
   color: #fff7d9;
   font: 700 clamp(32px, 9vw, 64px)/1.25 "Klee One", "Zen Maru Gothic", sans-serif;
   text-shadow: 0 2px 12px rgba(255, 232, 165, .35);
   opacity: 0;
-  animation: birthdayIntroMessage 3s ease both;
+  animation: birthdayIntroMessage .42s .98s ease both;
+  cursor: pointer;
 }
+#birthdayConfettiLayer .birthday-intro-message:disabled { opacity: 1; color: #fff7d9; -webkit-text-fill-color: #fff7d9; }
+#birthdayConfettiLayer .birthday-intro-message:focus-visible { outline: 2px solid #fff0c6; outline-offset: 6px; }
 @keyframes birthdayIntroMessage {
-  0%, 32% { opacity: 0; transform: scale(.86); }
-  46% { opacity: 1; transform: scale(1.04); }
-  55%, 85% { opacity: 1; transform: scale(1); }
-  100% { opacity: 0; transform: scale(1); }
+  0% { opacity: 0; transform: scale(.86); }
+  65% { opacity: 1; transform: scale(1.04); }
+  100% { opacity: 1; transform: scale(1); }
 }
+#birthdayConfettiLayer .birthday-intro-tap {
+  position: absolute;
+  top: calc(100% + 38px);
+  left: 0;
+  right: 0;
+  text-align: center;
+  font: 500 13px/1.4 "Zen Maru Gothic", sans-serif;
+  letter-spacing: .18em;
+  color: #fff7d9;
+  opacity: 0;
+  animation: birthdayTapAppear .25s 2.4s ease both;
+}
+@keyframes birthdayTapAppear { from { opacity: 0; } to { opacity: .9; } }
+#birthdayConfettiLayer.birthday-intro-leaving { animation: birthdayIntroLeave .22s ease both; }
+@keyframes birthdayIntroLeave { from { opacity: 1; } to { opacity: 0; } }
 #birthdayConfettiLayer .birthday-intro-sparkles {
   position: absolute;
   inset: 0;
@@ -101,7 +120,7 @@
   font: var(--ss)/1 sans-serif;
   color: #fff0c6;
   text-shadow: 0 0 6px #ffe8ad;
-  animation: birthdayIntroTwinkle .85s var(--sd) ease-in-out infinite alternate;
+  animation: birthdayIntroTwinkle .85s var(--sd) ease-in-out 5 alternate both;
 }
 @keyframes birthdayIntroTwinkle {
   from { opacity: .2; transform: translate(-50%, -50%) scale(.55); }

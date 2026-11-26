@@ -8,8 +8,7 @@
   let burstPlayed = false;
   let modalShown = false;
   let modalReady = false;
-  let modalTimer = null;
-  const modalDelay = 3000;
+  let tapTimer = null;
   const animationDuration = 3000;
   let suppressed = false;
   const storageKey = "tamugotoBirthday20261127Dismissed";
@@ -45,9 +44,9 @@
 
   function stop() {
     clearTimeout(cleanupTimer);
-    clearTimeout(modalTimer);
-    cleanupTimer = modalTimer = null;
-    if (burstPlayed) modalReady = true;
+    clearTimeout(tapTimer);
+    cleanupTimer = tapTimer = null;
+    if (layer && burstPlayed && !modalReady) burstPlayed = false;
     layer?.remove();
     layer = null;
   }
@@ -71,11 +70,13 @@
     const peakY = h * (.02 + random() * .31);
     const midX = burst ? startX + spread * 1.1 : startX - 18;
     const endX = burst ? startX + spread * 1.15 : startX + 25;
-    const delay = burst ? .28 + random() * .12 : .95 + random() * .35;
+    const delay = burst ? .28 + random() * .12 : .5 + random() * 2.1;
     const duration = burst ? 2.25 + random() * .2 : 3.1 + random() * .7;
+    const drift = (random() - .5) * 100;
     const vars = {
       "--size": (7 + random() * 9) + "px", "--color": color,
-      "--start-x": startX + "px", "--start-y": (h + 15) + "px",
+      "--start-x": startX + "px", "--start-y": (burst ? h + 15 : -30 - random() * 110) + "px",
+      "--rain-x1": (startX + drift * .45) + "px", "--rain-x2": (startX - drift * .25) + "px", "--rain-x3": (startX + drift) + "px",
       "--peak-x": peakX + "px", "--peak-y": peakY + "px",
       "--mid-x": midX + "px", "--mid-y": (peakY + (h - peakY) * .5) + "px",
       "--end-x": endX + "px", "--end-y": (h + 30) + "px",
@@ -103,7 +104,9 @@
     layer = document.createElement("div");
     layer.classList.toggle("birthday-modal-front", modalFront);
     layer.id = "birthdayConfettiLayer";
-    layer.setAttribute("aria-hidden", "true");
+    layer.setAttribute("role", "dialog");
+    layer.setAttribute("aria-modal", "true");
+    layer.setAttribute("aria-label", "Happy Birthday!!");
     document.body.appendChild(layer);
     burstPlayed = true;
     const w = layer.clientWidth;
@@ -112,7 +115,9 @@
     for (let i = 0; i < 60; i++) particle(fragment, w, h, true, i, 60);
     for (let i = 0; i < 60; i++) particle(fragment, w, h, false, i, 60);
     layer.appendChild(fragment);
-    const message = document.createElement("div");
+    const message = document.createElement("button");
+    message.type = "button";
+    message.disabled = true;
     message.className = "birthday-intro-message";
     message.textContent = "Happy Birthday!!";
     const sparkles = document.createElement("div");
@@ -123,20 +128,41 @@
       sparkle.style.cssText = "--sx:" + x + "%;--sy:" + y + "%;--ss:" + size + "px;--sd:" + delay + "s";
       sparkles.appendChild(sparkle);
     });
+    sparkles.setAttribute("aria-hidden", "true");
     message.appendChild(sparkles);
+    const tap = document.createElement("span");
+    tap.className = "birthday-intro-tap";
+    tap.textContent = "tap";
+    message.appendChild(tap);
     layer.appendChild(message);
-    if (!modalReady && !modalShown) {
-      modalTimer = setTimeout(() => {
-        modalTimer = null;
-        if (!canPlay()) return;
-        modalReady = true;
+    const advance = () => {
+      if (message.disabled || !layer || modalReady) return;
+      modalReady = true;
+      layer.classList.add("birthday-intro-leaving");
+      message.disabled = true;
+      clearTimeout(cleanupTimer);
+      cleanupTimer = setTimeout(() => {
+        stop();
         sync();
-      }, modalDelay);
-    }
+      }, 220);
+    };
+    layer.addEventListener("click", advance);
+    message.addEventListener("keydown", event => {
+      if (event.key === "Escape") { event.preventDefault(); advance(); }
+    });
+    tapTimer = setTimeout(() => {
+      tapTimer = null;
+      if (!layer || !canPlay()) return;
+      message.disabled = false;
+      layer.classList.add("birthday-intro-ready");
+      message.focus({ preventScroll: true });
+    }, 1400);
     cleanupTimer = setTimeout(() => {
-      stop();
-      sync();
+      cleanupTimer = null;
+      if (!layer) return;
+      layer.querySelectorAll(".birthday-particle").forEach(el => el.remove());
     }, animationDuration);
+
   }
 
   function initConfetti() {
