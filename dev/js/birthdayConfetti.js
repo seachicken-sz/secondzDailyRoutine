@@ -332,7 +332,7 @@
       message.tabIndex = 0;
       layer.classList.add("birthday-intro-ready");
       message.focus({ preventScroll: true });
-    }, 8800);
+    }, 6300);
 
   }
 

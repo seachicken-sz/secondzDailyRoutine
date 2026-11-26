@@ -6,7 +6,7 @@
   pointer-events: auto;
   z-index: 1001;
   contain: strict;
-  animation: birthdayLayerFade .28s linear both, birthdayBackground 1.2s .5s ease-out both;
+  animation: birthdayLayerFade .28s linear both, birthdayBackground .4s .7s ease-out both;
   background: rgba(12, 25, 17, .72);
 }
 #birthdayConfettiLayer .birthday-confetti-canvas {
@@ -55,9 +55,9 @@
 #birthdayConfettiLayer .birthday-intro-title,
 #birthdayConfettiLayer .birthday-intro-name,
 #birthdayConfettiLayer .birthday-intro-date { display: block; }
-#birthdayConfettiLayer .birthday-intro-title { white-space: nowrap; animation:birthdayIntroMessage 1s 3.8s both; }
+#birthdayConfettiLayer .birthday-intro-title { white-space: nowrap; animation:birthdayIntroMessage .5s 3.8s both; }
 #birthdayConfettiLayer .birthday-intro-name {
-  animation:birthdayIntroMessage 1s 4.6s both;
+  animation:birthdayIntroMessage .5s 4.2s both;
   margin-top: 12px;
   font-size: .73em;
   font-weight: 600;
@@ -69,11 +69,11 @@
   width: 32%;
   height: 1px;
   margin: 10px auto 0;
-  animation:birthdayRule .65s 5.4s both;
+  animation:birthdayRule .35s 4.6s both;
   background: linear-gradient(90deg, transparent, #dfc78e, transparent);
 }
 #birthdayConfettiLayer .birthday-intro-date {
-  animation:birthdayIntroMessage 1s 5.8s both;
+  animation:birthdayIntroMessage .5s 4.8s both;
   margin-top: 10px;
   font: 500 clamp(14px, 4vw, 22px)/1.4 "Zen Maru Gothic", sans-serif;
   letter-spacing: .18em;
@@ -87,7 +87,7 @@
   letter-spacing: .18em;
   color: #fff7d9;
   opacity: 0;
-  animation: birthdayTapAppear .5s 8.8s ease both, birthdayTapPulse 2.4s 9.3s ease-in-out infinite;
+  animation: birthdayTapAppear .5s 6.3s ease both, birthdayTapPulse 2.4s 6.8s ease-in-out infinite;
 }
 @keyframes birthdayTapAppear { from { opacity: 0; } to { opacity: .9; } }
 @keyframes birthdayTapPulse { 0%, 100% { opacity: .9; } 50% { opacity: .35; } }
@@ -203,3 +203,11 @@
 @keyframes birthdayLightOn {to{opacity:1}}
 @keyframes birthdayLampGlow {0%,100%{opacity:.5}50%{opacity:1}}
 @keyframes birthdayGarlandSway {0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+
+/* Soft launch light, behind the confetti and greeting. */
+#birthdayConfettiLayer::before {
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse at 0% 100%,rgba(255,224,151,.38),transparent 65%),radial-gradient(ellipse at 100% 100%,rgba(255,224,151,.38),transparent 65%);
+  opacity:0;animation:birthdayLaunchLight .85s .7s ease-out both;
+}
+@keyframes birthdayLaunchLight {0%{opacity:0;transform:scale(.8)}35%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.2)}}
