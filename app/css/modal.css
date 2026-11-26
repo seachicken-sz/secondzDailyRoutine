@@ -1471,7 +1471,10 @@
 }
 
 .request-text-bulk-actions button,
-#requestTextInsertSong {
+#requestTextInsertSong,
+#dailyRequestInsertSong,
+#dailyRequestEdit,
+.daily-request-small-button {
   width: auto;
   padding: 4px 0;
   border: 0;
@@ -1483,7 +1486,10 @@
   cursor: pointer;
 }
 
-#requestTextInsertSong {
+#requestTextInsertSong,
+#dailyRequestInsertSong,
+#dailyRequestEdit,
+.daily-request-small-button {
   padding-inline: 0.5em;
   border-radius: 4px;
   background: var(--color-surface-soft);
@@ -1533,7 +1539,9 @@
 
 #requestTextProgram,
 #requestTextExample,
-#requestTextEditor {
+#requestTextEditor,
+#dailyRequestEditor,
+.daily-request-inline-editor {
   width: 100%;
   padding: 10px;
   border: 1px solid var(--color-border);
@@ -1544,11 +1552,15 @@
   font-size: 16px;
 }
 
-#requestTextEditor {
+#requestTextEditor,
+#dailyRequestEditor,
+.daily-request-inline-editor {
   min-height: 7em;
 }
 
 #requestTextEditor,
+#dailyRequestEditor,
+.daily-request-inline-editor,
 #requestTextPreview {
   white-space: pre-wrap;
   overflow-wrap: anywhere;
@@ -1679,3 +1691,17 @@
 #requestTextSettingForm.is-local-request-text { grid-template-rows: auto auto minmax(0, 1fr) auto auto; }
 #requestTextLocalSettings { min-height: 0; overflow-y: auto; align-content: start; }
 #requestTextSettingForm.is-local-request-text .post-preview-tabs { display: none; }
+
+.daily-task-progress-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.daily-task-progress-row .description { margin: 0; }
+.daily-task-progress-row .task-help-button { margin-left: auto; flex-shrink: 0; }
+.daily-request-edit-actions { display: flex; justify-content: flex-end; margin: 6px 0; }
+.daily-request-save { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; }
+.daily-request-edit-buttons { display: flex; gap: 8px; margin-top: 8px; }
+.daily-request-edit-buttons > button { flex: 1; min-width: 0; }
+
+.daily-request-edit-options { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin: 6px 0; }
+.daily-request-edit-options .daily-request-save { min-width: 0; }
+.daily-request-edit-options #dailyRequestInsertSong { flex-shrink: 0; width: auto; margin: 0; padding: 4px 0.5em; border: 0; border-radius: 4px; background: var(--color-surface-soft); color: var(--color-brand); font: inherit; font-size: 0.8rem; white-space: nowrap; box-shadow: none; }
+
+.daily-request-edit-options .daily-request-small-button { flex-shrink: 0; width: auto; margin: 0; padding: 4px 0.5em; border: 0; border-radius: 4px; background: var(--color-surface-soft); color: var(--color-brand); font: inherit; font-size: 0.8rem; white-space: nowrap; box-shadow: none; }

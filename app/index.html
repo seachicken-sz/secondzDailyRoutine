@@ -240,6 +240,7 @@
             console.error("CLEAR COLLECTIONの表示判定に失敗", error);
           }
         </script>
+        <button id="birthdayResetButton" type="button" class="button secondary update-notice-button hidden" aria-label="誕生日演出を再生" title="誕生日演出を再生"><i class="bi bi-gift" aria-hidden="true"></i></button>
         <button id="refreshAllButton" type="button" class="button secondary update-notice-button" aria-label="JS・CSS・データを再取得して更新" title="最新データに更新"><i class="bi bi-arrow-clockwise" aria-hidden="true"></i></button>
       </div>
 
@@ -476,8 +477,8 @@
           <br>
             ↓↓やり方をチェック！↓↓<br>
           <button class="task-help-button" type="button" data-step-help-key="homeUsen">USEN推しリク</button>
-          <button id="dailyTaskHelpButton" class="task-help-button" type="button" data-step-help-key="dailyTask_01">デイリー(入力無)</button>
-          <button id="dailyTaskHelpButton" class="task-help-button" type="button" data-step-help-key="dailyTask_02">デイリー(入力有)</button>
+          <button class="task-help-button" type="button" data-step-help-key="dailyTask_01">デイリー(入力無)</button>
+          <button class="task-help-button" type="button" data-step-help-key="dailyTask_02">デイリー(入力有)</button>
           </p>
           <div id="homeRequestSongSelectArea" class="home-request-song-select-area hidden">
             <label class="home-request-song-label" for="homeRequestSongSelect">
@@ -769,9 +770,21 @@
         <h2 id="myCustomTaskName" class="task-title"></h2>
         <div id="myCustomTaskComment" class="notice-box"></div>
         <div id="myCustomLocalCopyPreview" class="daily-task-copy-preview hidden">
-          <p class="daily-task-copy-preview-note">「ページを開く」を押すと以下がコピーされます。</p>
+          <p id="myCustomLocalCopyNote" class="daily-task-copy-preview-note">「ページを開く」を押すと以下がコピーされます。</p>
           <div id="myCustomLocalCopyText" class="daily-task-copy-preview-text"></div>
-          <p id="myCustomLocalCopyTarget" class="daily-task-copy-preview-note"></p>
+          <div class="daily-request-edit-actions"><button type="button" id="myCustomLocalEdit" class="daily-request-small-button hidden">文章を編集</button></div>
+          <div id="myCustomLocalEditPanel" class="hidden">
+            <div id="myCustomLocalEditor" class="daily-request-inline-editor" contenteditable="true" role="textbox" aria-multiline="true" aria-label="リクエスト文章"></div>
+            <div class="daily-request-edit-options">
+              <label class="daily-request-save"><input type="checkbox" id="myCustomLocalSave"><span>この文章を次回以降も使う</span></label>
+              <button type="button" id="myCustomLocalInsertSong" class="daily-request-small-button">曲名を挿入</button>
+            </div>
+            <p id="myCustomLocalEditStatus" class="daily-task-copy-preview-note" role="status"></p>
+            <div class="daily-request-edit-buttons">
+              <button type="button" id="myCustomLocalCancel" class="secondary-button">キャンセル</button>
+              <button type="button" id="myCustomLocalApply" class="primary-button">編集完了</button>
+            </div>
+          </div>
         </div>
         <button id="openMyCustomTaskButton" type="button" class="primary-button">ページを開く</button>
         <button id="myCustomNextButton" type="button" class="secondary-button">スキップ</button>
@@ -852,21 +865,35 @@
 
       <section class="task-card">
         <p id="dailyTaskGroupName" class="group-label"></p>
-        <p id="dailyTaskProgress" class="description"></p>
-        <h2 class="task-title daily-task-title-row">
-          <span id="dailyTaskName"></span>
+        <div class="daily-task-progress-row">
+          <p id="dailyTaskProgress" class="description"></p>
           <button id="dailyTaskHelpButton" class="task-help-button" type="button" data-step-help-key="dailyTask_01">やり方をチェック</button>
-        </h2>
+        </div>
+        <h2 class="task-title"><span id="dailyTaskName"></span></h2>
 
         <div id="dailyTaskCommentArea" class="notice-box"></div>
         <div id="dailyTaskCopyPreviewArea" class="daily-task-copy-preview hidden">
-          <p class="daily-task-copy-preview-note">
+          <p id="dailyTaskCopyPreviewNote" class="daily-task-copy-preview-note">
             「ページを開く」を押すと以下がコピーされます。
           </p>
         
           <div id="dailyTaskCopyPreviewText" class="daily-task-copy-preview-text"></div>
+          <div class="daily-request-edit-actions">
+            <button type="button" id="dailyRequestEdit" class="hidden">文章を編集</button>
+          </div>
+          <div id="dailyRequestEditPanel" class="hidden">
+            <div id="dailyRequestEditor" contenteditable="true" role="textbox" aria-multiline="true" aria-label="リクエスト文章"></div>
+            <div class="daily-request-edit-options">
+              <label class="daily-request-save"><input type="checkbox" id="dailyRequestSave"><span id="dailyRequestSaveLabel">この文章を次回以降も使う</span></label>
+              <button type="button" id="dailyRequestInsertSong">曲名を挿入</button>
+            </div>
+            <p id="dailyRequestEditStatus" class="daily-task-copy-preview-note" role="status"></p>
+            <div class="daily-request-edit-buttons">
+              <button type="button" id="dailyRequestCancel" class="secondary-button">キャンセル</button>
+              <button type="button" id="dailyRequestApply" class="primary-button">編集完了</button>
+            </div>
+          </div>
         
-          <p id="dailyTaskCopyPreviewPasteTarget" class="daily-task-copy-preview-note"></p>
         </div>
         <button id="openDailyTaskUrlButton" class="primary-button">
           ページを開く
@@ -1743,8 +1770,10 @@
 <!-- シェア画像 -->
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/shareImages/shareImageThemes.js") + '" defer><' + '/script>');</script>
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/shareImages/shareImageUtils.js") + '" defer><' + '/script>');</script>
-<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/shareImages/index.js") + '" defer><' + '/script>');</script>
-<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/shareImages/shareImage.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/shareImages/styles/birthdaySo.js?v=20261126-24") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/shareImages/styles/birthdayTera.js?v=20261126-27") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/shareImages/index.js?v=20261126-24") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/shareImages/shareImage.js?v=20261126-28") + '" defer><' + '/script>');</script>
 <!-- 遷移・初期化 -->
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/navigation.js") + '" defer><' + '/script>');</script>
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/init.js") + '" defer><' + '/script>');</script>
@@ -1752,6 +1781,7 @@
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/stepHelpModal.js") + '" defer><' + '/script>');</script> 
 <!-- 画面別 -->
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/home.js") + '" defer><' + '/script>');</script>
+<script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/birthdayEvent.js?v=20261126-26") + '" defer><' + '/script>');</script>
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/spotify.js") + '" defer><' + '/script>');</script>
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/onceTask.js") + '" defer><' + '/script>');</script>
 <script>document.write('<scr' + 'ipt src="' + tamugotoFreshAssetUrl("./js/requestSong.js") + '" defer><' + '/script>');</script>

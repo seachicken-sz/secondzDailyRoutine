@@ -134,7 +134,7 @@ function bindRequestTextSettings() {
   const editor = document.getElementById("requestTextEditor");
   const saveCloseButton = form.querySelector("[data-setting-save-close]");
   let items = new Map();
-  let editorSelection = null;
+  const tokenEditor = bindRadioRequestTokenEditor(editor, saveEditorText);
   let fixedText = "";
   let presets = [];
   let selectedPresets = new Set();
@@ -189,28 +189,6 @@ function bindRequestTextSettings() {
     option.textContent = name;
   }
 
-  function createSongToken() {
-    const token = document.createElement("span");
-    token.className = "request-text-song-token";
-    token.contentEditable = "false";
-    token.textContent = RADIO_REQUEST_SONG_TOKEN;
-    const remove = document.createElement("button");
-    remove.type = "button";
-    remove.setAttribute("aria-label", "曲名を削除");
-    token.append(remove);
-    return token;
-  }
-
-  function setEditorText(template) {
-    const parts = template.split(/musicname|［曲名］/);
-    editor.replaceChildren();
-    parts.forEach((part, index) => {
-      if (index) editor.append(createSongToken());
-      editor.append(part);
-    });
-    editorSelection = null;
-  }
-
   function showProgram() {
     const item = items.get(program.value);
     const local = isLocalRequestText(item);
@@ -230,7 +208,7 @@ function bindRequestTextSettings() {
     fixedText = getFixedRequestText(entry);
     selectedPresets = new Set(getSelectedRequestTextPresets(entry, presets));
     includeOriginalCheckbox.checked = includesOriginalRequestText(entry);
-    setEditorText(fixedText);
+    tokenEditor.setText(fixedText);
     presetChoices.replaceChildren(...presets.map(createCandidateRow));
     candidateList.scrollTop = 0;
     renderPanel();
@@ -272,90 +250,9 @@ function bindRequestTextSettings() {
   }
 
   function saveEditorText() {
-    fixedText = editor.innerText.replaceAll(RADIO_REQUEST_SONG_TOKEN, "musicname").trim();
+    fixedText = tokenEditor.getText();
     saveTextSettings();
   }
-
-  function getSelectionInEditor() {
-    const selection = window.getSelection();
-    const range = selection?.rangeCount ? selection.getRangeAt(0) : null;
-    return range && editor.contains(range.commonAncestorContainer) ? range : null;
-  }
-
-  function moveCaret(range) {
-    const selection = window.getSelection();
-    selection.removeAllRanges();
-    selection.addRange(range);
-    editorSelection = range.cloneRange();
-  }
-
-  function insertInEditor(node) {
-    const range = getSelectionInEditor()?.cloneRange() || editorSelection || document.createRange();
-    if (!editor.contains(range.commonAncestorContainer)) {
-      range.selectNodeContents(editor);
-      range.collapse(false);
-    }
-    editor.focus();
-    range.deleteContents();
-    range.insertNode(node);
-    range.setStartAfter(node);
-    range.collapse(true);
-    moveCaret(range);
-    saveEditorText();
-  }
-
-  function removeSongToken(token) {
-    const range = document.createRange();
-    range.setStartBefore(token);
-    range.collapse(true);
-    token.remove();
-    editor.focus();
-    moveCaret(range);
-    saveEditorText();
-  }
-
-  document.addEventListener("selectionchange", () => {
-    const range = getSelectionInEditor();
-    if (range) editorSelection = range.cloneRange();
-  });
-
-  editor.addEventListener("beforeinput", (event) => {
-    const backward = event.inputType === "deleteContentBackward";
-    if ((!backward && event.inputType !== "deleteContentForward") || event.isComposing) return;
-    const caret = getSelectionInEditor();
-    if (!caret?.collapsed) return;
-    for (const token of editor.querySelectorAll(".request-text-song-token")) {
-      const gap = document.createRange();
-      gap.selectNode(token);
-      const side = gap.comparePoint(caret.startContainer, caret.startOffset);
-      if (backward ? side < 0 : side > 0) continue;
-      if (side !== 0) {
-        gap.collapse(backward ? false : true);
-        if (backward) gap.setEnd(caret.startContainer, caret.startOffset);
-        else gap.setStart(caret.startContainer, caret.startOffset);
-        const between = gap.cloneContents();
-        if (between.textContent || between.querySelector("br, div, p")) continue;
-      }
-      event.preventDefault();
-      removeSongToken(token);
-      break;
-    }
-  });
-
-  editor.addEventListener("click", (event) => {
-    const button = event.target.closest(".request-text-song-token button");
-    if (button) removeSongToken(button.parentElement);
-  });
-  editor.addEventListener("input", (event) => {
-    if (!event.isComposing) saveEditorText();
-  });
-  editor.addEventListener("compositionend", saveEditorText);
-  editor.addEventListener("paste", (event) => {
-    event.preventDefault();
-    const text = event.clipboardData?.getData("text/plain");
-    if (text) insertInEditor(document.createTextNode(text));
-  });
-  editor.addEventListener("drop", (event) => event.preventDefault());
 
   program.addEventListener("change", showProgram);
   includeOriginalCheckbox.addEventListener("change", saveTextSettings);
@@ -378,7 +275,7 @@ function bindRequestTextSettings() {
   selectAllButton.addEventListener("click", () => setAllCandidates(true));
   clearAllButton.addEventListener("click", () => setAllCandidates(false));
   document.getElementById("requestTextInsertSong").addEventListener("click", () => {
-    insertInEditor(createSongToken());
+    tokenEditor.insertSong();
   });
   return {
     async open() {
@@ -409,4 +306,125 @@ function bindRequestTextSettings() {
       showProgram();
     }
   };
+}
+
+// 曲名トークン付きエディター（設定画面とデイリー実行画面で共通）
+function bindRadioRequestTokenEditor(editor, onChange) {
+  const selectionController = new AbortController();
+  let editorSelection = null;
+  function createSongToken() {
+    const token = document.createElement("span");
+    token.className = "request-text-song-token";
+    token.contentEditable = "false";
+    token.textContent = RADIO_REQUEST_SONG_TOKEN;
+    const remove = document.createElement("button");
+    remove.type = "button";
+    remove.setAttribute("aria-label", "曲名を削除");
+    token.append(remove);
+    return token;
+  }
+
+  function setEditorText(template) {
+    const parts = template.split(/musicname|［曲名］/);
+    editor.replaceChildren();
+    parts.forEach((part, index) => {
+      if (index) editor.append(createSongToken());
+      editor.append(part);
+    });
+    editorSelection = null;
+  }
+
+  function getSelectionInEditor() {
+    const selection = window.getSelection();
+    const range = selection?.rangeCount ? selection.getRangeAt(0) : null;
+    return range && editor.contains(range.commonAncestorContainer) ? range : null;
+  }
+
+  function moveCaret(range) {
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+    editorSelection = range.cloneRange();
+  }
+
+  function insertInEditor(node) {
+    const range = getSelectionInEditor()?.cloneRange() || editorSelection || document.createRange();
+    if (!editor.contains(range.commonAncestorContainer)) {
+      range.selectNodeContents(editor);
+      range.collapse(false);
+    }
+    editor.focus();
+    range.deleteContents();
+    range.insertNode(node);
+    range.setStartAfter(node);
+    range.collapse(true);
+    moveCaret(range);
+    onChange();
+  }
+
+  function removeSongToken(token) {
+    const range = document.createRange();
+    range.setStartBefore(token);
+    range.collapse(true);
+    token.remove();
+    editor.focus();
+    moveCaret(range);
+    onChange();
+  }
+
+  document.addEventListener("selectionchange", () => {
+    const range = getSelectionInEditor();
+    if (range) editorSelection = range.cloneRange();
+  }, { signal: selectionController.signal });
+
+  editor.addEventListener("beforeinput", (event) => {
+    const backward = event.inputType === "deleteContentBackward";
+    if ((!backward && event.inputType !== "deleteContentForward") || event.isComposing) return;
+    const caret = getSelectionInEditor();
+    if (!caret?.collapsed) return;
+    for (const token of editor.querySelectorAll(".request-text-song-token")) {
+      const gap = document.createRange();
+      gap.selectNode(token);
+      const side = gap.comparePoint(caret.startContainer, caret.startOffset);
+      if (backward ? side < 0 : side > 0) continue;
+      if (side !== 0) {
+        gap.collapse(backward ? false : true);
+        if (backward) gap.setEnd(caret.startContainer, caret.startOffset);
+        else gap.setStart(caret.startContainer, caret.startOffset);
+        const between = gap.cloneContents();
+        if (between.textContent || between.querySelector("br, div, p")) continue;
+      }
+      event.preventDefault();
+      removeSongToken(token);
+      break;
+    }
+  });
+
+  editor.addEventListener("click", (event) => {
+    const button = event.target.closest(".request-text-song-token button");
+    if (button) removeSongToken(button.parentElement);
+  });
+  editor.addEventListener("input", (event) => {
+    if (!event.isComposing) onChange();
+  });
+  editor.addEventListener("compositionend", onChange);
+  editor.addEventListener("paste", (event) => {
+    event.preventDefault();
+    const text = event.clipboardData?.getData("text/plain");
+    if (text) insertInEditor(document.createTextNode(text));
+  });
+  editor.addEventListener("drop", (event) => event.preventDefault());
+
+  return { dispose: () => selectionController.abort(), setText: setEditorText, getText: () => editor.innerText.replaceAll(RADIO_REQUEST_SONG_TOKEN, "musicname").trim(), insertSong: () => insertInEditor(createSongToken()) };
+}
+
+// 実行画面から保存する場合は、この文章のみを次回以降の候補にする。
+function saveEditedRadioRequestText(item, template) {
+  const key = getRadioRequestTextSettingKey(item);
+  const saved = readRadioRequestTextSettings();
+  const entry = isLocalRequestText(item) ? { mode: "fixed", text: template } : {
+    mode: "random", text: template, selectedPresets: [], includeOriginal: true
+  };
+  localStorage.setItem(RADIO_REQUEST_TEXT_STORAGE_KEY, JSON.stringify({ ...saved, [key]: entry }));
+  return key;
 }

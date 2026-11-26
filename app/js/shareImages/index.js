@@ -29,7 +29,7 @@
     }
     script.src = styleUrl.href;
     script.onload = () => loadScript(index + 1);
-    script.onerror = () => loadScript(index + 1);
+    script.onerror = () => { console.warn("Share image style unavailable", styleUrl.href); loadScript(index + 1); };
     document.head.appendChild(script);
   }
 

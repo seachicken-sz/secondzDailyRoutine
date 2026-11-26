@@ -8,6 +8,7 @@
 // ==================================================
 // app.js から呼び出して、デイリータスク画面で使うクリックイベントをまとめて登録する
 function bindDailyTaskEvents() {
+  bindDailyRequestEditor();
   // ==================================================
   // デイリータスク画面：「ページを開く」ボタン
   // ==================================================
@@ -170,6 +171,7 @@ async function showDailyTaskStep(shouldInitialize = true) {
 // state.dailyGroups / currentDailyGroupIndex / currentDailyTaskIndex をもとに、
 // 現在のグループ名・タスク名・進捗・コメント・ボタン状態を反映する
 function renderCurrentDailyTask() {
+  closeDailyRequestEditor();
   // 現在のグループを取得
   const group = getCurrentDailyGroup();
 
@@ -285,6 +287,7 @@ function setDailyTaskStepHelpKey(item) {
 // ==================================================
 function buildDailyTaskCopyText(item) {
   const template = selectDailyRequestTextTemplate(item);
+  item._preparedCopyTemplate = template;
   return formatRadioRequestText(template, getSelectedRadioRequestSongName());
 }
 
@@ -487,26 +490,86 @@ function getDailyTaskItemUrl(item) {
 function updateDailyTaskCopyPreview(item) {
   const previewArea = document.getElementById("dailyTaskCopyPreviewArea");
   const previewText = document.getElementById("dailyTaskCopyPreviewText");
-  const pasteTarget = document.getElementById("dailyTaskCopyPreviewPasteTarget");
 
-  if (!previewArea || !previewText || !pasteTarget) {
+  if (!previewArea || !previewText) {
     return;
   }
 
   const copyText = item?._preparedCopyText || "";
-  const requestInput = item?.["request-input"] || "";
+  document.getElementById("dailyRequestEdit")?.classList.toggle("hidden", !canEditDailyRequest(item));
 
-  if (item?.["input-flag"] !== true || !copyText) {
+  if (item?.["input-flag"] !== true || (!copyText && !canEditDailyRequest(item))) {
     previewArea.classList.add("hidden");
     previewText.textContent = "";
-    pasteTarget.textContent = "";
     return;
   }
 
   previewText.textContent = copyText;
-  pasteTarget.textContent = requestInput
-    ? `「${requestInput}」にペーストしてください。`
-    : "指定の入力欄にペーストしてください。";
 
   previewArea.classList.remove("hidden");
+}
+
+ // デイリー実行画面の文章編集
+let dailyRequestEditorItem = null;
+let dailyRequestEditorUi = null;
+
+function canEditDailyRequest(item) {
+  return isCustomizableRadioRequest(item) && item["request-type"].startsWith("text-");
+}
+
+function closeDailyRequestEditor() {
+  if (!dailyRequestEditorItem) return;
+  dailyRequestEditorItem = null;
+  document.getElementById("dailyRequestEditPanel").classList.add("hidden");
+  document.getElementById("dailyTaskCopyPreviewNote").textContent = "「ページを開く」を押すと以下がコピーされます。";
+  document.getElementById("dailyTaskCopyPreviewText").classList.remove("hidden");
+  document.getElementById("dailyRequestEdit").classList.remove("hidden");
+  openDailyTaskUrlButtonElement.classList.toggle("hidden", !getDailyTaskItemUrl(getCurrentDailyTaskItem()));
+  dailyTaskNextButtonElement.classList.toggle("hidden", Boolean(getDailyTaskItemUrl(getCurrentDailyTaskItem())) && state.openedAction !== OPENED_ACTIONS.dailyTask);
+}
+
+function bindDailyRequestEditor() {
+  const editor = document.getElementById("dailyRequestEditor");
+  const save = document.getElementById("dailyRequestSave");
+  const status = document.getElementById("dailyRequestEditStatus");
+  const edit = document.getElementById("dailyRequestEdit");
+  dailyRequestEditorUi = bindRadioRequestTokenEditor(editor, () => {});
+  addClickEvent(edit, () => {
+    const item = getCurrentDailyTaskItem();
+    if (!canEditDailyRequest(item)) return;
+    dailyRequestEditorItem = item;
+    dailyRequestEditorUi.setText(item._preparedCopyTemplate || "");
+    save.checked = false;
+    document.getElementById("dailyTaskCopyPreviewNote").textContent = "コピーされる文章を編集できます。";
+    status.textContent = "";
+    edit.classList.add("hidden");
+    document.getElementById("dailyTaskCopyPreviewText").classList.add("hidden");
+    document.getElementById("dailyRequestEditPanel").classList.remove("hidden");
+    openDailyTaskUrlButtonElement.classList.add("hidden");
+    dailyTaskNextButtonElement.classList.add("hidden");
+  });
+  addClickEvent(document.getElementById("dailyRequestInsertSong"), () => dailyRequestEditorUi.insertSong());
+  addClickEvent(document.getElementById("dailyRequestCancel"), closeDailyRequestEditor);
+  addClickEvent(document.getElementById("dailyRequestApply"), () => {
+    const item = dailyRequestEditorItem;
+    if (!item || item !== getCurrentDailyTaskItem()) return;
+    const template = dailyRequestEditorUi.getText();
+    if (!template) {
+      status.textContent = "文章を入力してください。";
+      return;
+    }
+    if (save.checked) {
+      try {
+        const key = saveEditedRadioRequestText(item, template);
+        refreshHomeDailyTaskCopyTexts(key);
+      } catch (error) {
+        status.textContent = "設定を保存できませんでした。";
+        return;
+      }
+    }
+    item._preparedCopyTemplate = template;
+    item._preparedCopyText = formatRadioRequestText(template, getSelectedRadioRequestSongName());
+    closeDailyRequestEditor();
+    updateDailyTaskCopyPreview(item);
+  });
 }
