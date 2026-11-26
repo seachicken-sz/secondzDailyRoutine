@@ -3,6 +3,22 @@
   const fresh = path => window.tamugotoFreshAssetUrl ? window.tamugotoFreshAssetUrl(path) : path;
   let members=[], active=null, dispose=null, loading=false;
   const today=()=>new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date()).filter(p=>["year","month","day"].includes(p.type)).reduce((a,p)=>(a[p.type]=p.value,a),{});
+  function availableShareStyles(now=new Date(), previewTheme=new URLSearchParams(location.search).get("birthdayPreview")){
+    const year=new Date(now.getTime()+9*3600000).getUTCFullYear();
+    const boundary=(y,birthday,offset,time)=>{
+      if(!Number.isInteger(offset)||!/^([01]\d|2[0-3]):[0-5]\d$/.test(time))return NaN;
+      const [month,day]=birthday.slice(5).split("-").map(Number);
+      const [hour,minute]=time.split(":").map(Number);
+      return Date.UTC(y,month-1,day+offset,hour-9,minute);
+    };
+    return members.filter(m=>{
+      const s=m.shareImage;
+      if(m.enabled!==true||s?.enabled!==true||!s.style||!s.label||!/^\d{4}-\d{2}-\d{2}$/.test(m.birthday))return false;
+      if(previewTheme===m.theme)return true;
+      return [year-1,year,year+1].some(y=>now.getTime()>=boundary(y,m.birthday,s.startDayOffset,s.startTime)&&now.getTime()<boundary(y,m.birthday,s.endDayOffset,s.endTime));
+    }).map(m=>m.shareImage);
+  }
+  window.getBirthdayShareStyles=availableShareStyles;
   function select(){
     const {year,month,day}=today();
     const actualDate=year+"-"+month+"-"+day;
@@ -16,15 +32,16 @@
     return {...m,preview:!!previewMember,id:(previewMember?"birthday_preview_"+m.theme+"_":"birthday_")+date.replace(/-/g,""),dateText:date.replace(/-/g,"."),hashtags:(m.hashtags||[]).map(t=>String(t).replaceAll("{age}",String(age)).replaceAll("{year}",year))};
   }
   function loadScript(path){return new Promise((resolve,reject)=>{const s=document.createElement("script");s.src=fresh(path);s.onload=resolve;s.onerror=()=>{s.remove();reject(new Error(path));};document.head.appendChild(s);});}
-  function loadCss(){return new Promise((resolve,reject)=>{const s=document.createElement("link");s.rel="stylesheet";s.href=fresh("./css/birthdayConfetti.css?v=20261126-19");s.onload=resolve;s.onerror=()=>{s.remove();reject(new Error("birthday css"));};document.head.appendChild(s);});}
+  function loadCss(){return new Promise((resolve,reject)=>{const s=document.createElement("link");s.rel="stylesheet";s.href=fresh("./css/birthdayConfetti.css?v=20261126-20");s.onload=resolve;s.onerror=()=>{s.remove();reject(new Error("birthday css"));};document.head.appendChild(s);});}
   async function sync(){
+    if(window.syncBirthdayShareImageStyles)window.syncBirthdayShareImageStyles();
     const next=select();
     if(active?.id===next?.id || loading)return;
     if(dispose){dispose();dispose=null;} active=null;
     if(!next)return;
     loading=true;
     try{
-      if(!window.startBirthdayCelebration){await loadCss();await loadScript("./js/birthdayTheme.js?v=20261126-19");await loadScript("./js/birthdayModal.js?v=20261126-19");await loadScript("./js/birthdayConfetti.js?v=20261126-19");}
+      if(!window.startBirthdayCelebration){await loadCss();await loadScript("./js/birthdayTheme.js?v=20261126-20");await loadScript("./js/birthdayModal.js?v=20261126-20");await loadScript("./js/birthdayConfetti.js?v=20261126-20");}
       if(select()?.id!==next.id)return;
       dispose=window.startBirthdayCelebration(next);active=next;
     }catch(e){console.warn("Birthday event unavailable",e);}

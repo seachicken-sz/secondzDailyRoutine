@@ -150,7 +150,33 @@ ${location.origin}${location.pathname}`,
 // ==================================================
 // スタイルセレクトを現在値に同期
 // ==================================================
+function syncBirthdayShareImageStyles(redraw=true) {
+  const select=document.getElementById("shareImageStyleSelect");
+  if(!select)return;
+  const styles=window.getBirthdayShareStyles?.()||[];
+  const allowed=styles.filter(s=>typeof SHARE_IMAGE_RENDERERS!=="undefined" && typeof SHARE_IMAGE_RENDERERS[s.style]==="function");
+  const previous=select.value;
+  for(const option of Array.from(select.options)){
+    if(option.dataset.birthdayStyle==="1"||option.value==="birthdaySo"){
+      if(!allowed.some(s=>s.style===option.value))option.remove();
+    }
+  }
+  for(const s of allowed){
+    if(!Array.from(select.options).some(o=>o.value===s.style)){
+      const option=document.createElement("option");
+      option.value=s.style;option.textContent=s.label;option.dataset.birthdayStyle="1";select.appendChild(option);
+    }
+  }
+  if(previous&&!Array.from(select.options).some(o=>o.value===previous)){
+    select.value="yumekawaGradient";currentShareImageStyle=select.value;
+    if(redraw&&shareImageModalElement&&!shareImageModalElement.classList.contains("hidden"))renderShareImage(currentShareImageTheme);
+  }
+}
+window.syncBirthdayShareImageStyles=syncBirthdayShareImageStyles;
+window.addEventListener("shareImageStylesLoaded",()=>syncBirthdayShareImageStyles());
+
 function syncShareImageStyleSelect() {
+  syncBirthdayShareImageStyles(false);
   if (typeof shareImageStyleSelectElement === "undefined" || !shareImageStyleSelectElement) {
     return;
   }
@@ -586,6 +612,7 @@ async function renderShareImage(themeKey = currentShareImageTheme) {
   }
 
   await waitShareImageStylesLoaded();
+  syncBirthdayShareImageStyles(false);
   await waitShareImageFontsLoaded();
 
   if (renderToken !== shareImageRenderToken) return;
