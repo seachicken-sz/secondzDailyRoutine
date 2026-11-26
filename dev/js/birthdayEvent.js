@@ -37,7 +37,7 @@
     if(!next)return;
     loading=true;
     try{
-      if(!window.startBirthdayCelebration){await loadCss();await loadScript("./js/birthdayTheme.js?v=20261126-20");await loadScript("./js/birthdayModal.js?v=20261126-20");await loadScript("./js/birthdayConfetti.js?v=20261126-20");}
+      if(!window.startBirthdayCelebration){await loadCss();await loadScript("./js/birthdayTheme.js?v=20261126-20");await loadScript("./js/birthdayModal.js?v=20261126-20");await loadScript("./js/birthdayConfetti.js?v=20261126-26");}
       if(select()?.id!==next.id)return;
       dispose=window.startBirthdayCelebration(next);active=next;
     }catch(e){console.warn("Birthday event unavailable",e);}

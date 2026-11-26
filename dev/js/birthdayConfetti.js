@@ -19,11 +19,11 @@ window.startBirthdayCelebration = function (event) {
   const storageKey = `celebrationSeen_${eventId}`;
   let manualReplay = false;
   function isEventDay() { return active; }
-  try { suppressed = !event.preview && localStorage.getItem(storageKey) === "1"; } catch (error) { /* session fallback */ }
+  try { suppressed = localStorage.getItem(storageKey) === "1"; } catch (error) { /* session fallback */ }
 
   function markSeen() {
     suppressed = true;
-    try { if (!event.preview) localStorage.setItem(storageKey, "1"); } catch (error) { /* session fallback */ }
+    try { localStorage.setItem(storageKey, "1"); } catch (error) { /* session fallback */ }
   }
 
   function isNormalHome() {
@@ -61,7 +61,6 @@ window.startBirthdayCelebration = function (event) {
   }
 
   function canPlay() {
-    // dev: always enabled for preview. Date restriction can be applied at release.
     return isEventDay() && (!suppressed || manualReplay) && !motion.matches && isNormalHome();
   }
 
@@ -337,6 +336,9 @@ window.startBirthdayCelebration = function (event) {
   function initConfetti() {
     birthdayModal = window.createBirthdayModal(event, closeModal);
     const resetPostFields = birthdayModal.reset;
+    const giftIcon = document.querySelector("#birthdayResetButton i");
+    const giftColor = ({red:"#e85b4f",purple:"#8d72c7",green:"#5ca35a",sky:"#5bb9e6",lime:"#9bcf45",pink:"#ef8fa7",white:"#ffffff"})[event.theme] || theme.particle1;
+    if(giftIcon){giftIcon.style.color=giftColor;if(event.theme==="white")giftIcon.style.textShadow="0 0 2px #777, 0 0 1px #555";}
     document.getElementById("birthdayResetButton")?.addEventListener("click", () => {
       if (!isEventDay() || !isNormalHome()) return;
       closeModal();
@@ -362,6 +364,7 @@ window.startBirthdayCelebration = function (event) {
       active=false;observer.disconnect();listeners.abort();
       if(motion.removeEventListener)motion.removeEventListener("change",sync);else if(motion.removeListener)motion.removeListener(sync);
       stop();birthdayModal.destroy();
+      if(giftIcon){giftIcon.style.removeProperty("color");giftIcon.style.removeProperty("text-shadow");}
       document.getElementById("birthdayResetButton")?.classList.add("hidden");
     };
   }
