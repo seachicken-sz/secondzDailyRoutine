@@ -77,6 +77,17 @@
     ],
     "localFlag": false
   },
+  "text-nack5": {
+    "programName": "Good Luck！Morning！",
+    "text": [
+      "Good Luck！Morning！でtimeleszの「musicname」が聴けたらうれしいです。リクエストお願いします！",
+      "timeleszの「musicname」をGood Luck！Morning！のリスナーのみなさんにも聴いてほしいです。",
+      "Good Luck！Morning！に曲のリクエストです。timeleszの「musicname」をお願いします。",
+      "ラジオで聴きたい一曲として、timeleszの「musicname」をリクエストします！",
+      "timeleszの「musicname」をぜひGood Luck！Morning！でかけてください！"
+    ],
+    "localFlag": false
+  },
   "text-atb": {
     "programName": "All-Time Best",
     "text": [
@@ -98,14 +109,6 @@
     ],
     "localFlag": false
   },
-  "text-fightfortheradio": {
-    "programName": "Fight For The Radio",
-    "text": [
-      "ネオジャポのみなさん、こんにちは！ timeleszの「musicname」をリクエストします。",
-      "番組のリスナーのみなさんにも聴いてほしい曲があります。timeleszの「musicname」です。"
-    ],
-    "localFlag": false
-  },
   "text-skyrocketcompany": {
     "programName": "Skyrocket Company",
     "text": [
@@ -114,20 +117,11 @@
     ],
     "localFlag": false
   },
-  "text-djsunsun": {
-    "programName": "DJ SUNSUN",
+  "text-fightfortheradio": {
+    "programName": "Fight For The Radio",
     "text": [
-      "スンスン、こんにちは！ 今日聴きたい曲は、timeleszの「musicname」です。",
-      "スンスンに曲のリクエストです。timeleszの「musicname」をかけてくれたらうれしいな。",
-      "スンスン、timeleszの「musicname」を一緒に聴きたいです。リクエストお願いします！",
-      "スンスン、今日はtimeleszの「musicname」を選んでみました。番組でかけてもらえたらうれしいな！",
-      "スンスン、聴いてほしい曲があります。timeleszの「musicname」をリクエストするね！",
-      "こんにちは、スンスン。今日のリクエストはtimeleszの「musicname」です。ぜひかけてください！",
-      "スンスンの番組で、timeleszの「musicname」をみんなと聴けたら楽しそうです。リクエストします！",
-      "スンスンへ、今日の一曲を送ります。timeleszの「musicname」をお願いします。",
-      "スンスン、こんにちは！ timeleszの「musicname」、かけてくれる？",
-      "スンスンと一緒に聴きたい曲を送るね。timeleszの「musicname」です。",
-      "スンスンにリクエストです。今日はtimeleszの「musicname」が聴きたいな。"
+      "ネオジャポのみなさん、こんにちは！ timeleszの「musicname」をリクエストします。",
+      "番組のリスナーのみなさんにも聴いてほしい曲があります。timeleszの「musicname」です。"
     ],
     "localFlag": false
   },
@@ -141,6 +135,15 @@
       "清水さん、土曜の午後に聴きたい曲を送ります。timeleszの「musicname」をお願いします。",
       "ミュージックパークでみなさんと聴きたい一曲です。timeleszの「musicname」をリクエストします。",
       "清水さん、こんにちは。週末のひと休みに、timeleszの「musicname」をラジオで聴けたらうれしいです。"
+    ],
+    "localFlag": false
+  },
+  "text-marchecoucou": {
+    "programName": "Marché Coucou",
+    "text": [
+      "珠久さん、おはようございます。朝の支度をしながら聴きたい、timeleszの「musicname」をリクエストします。",
+      "珠久さん、おはようございます。出かける前にラジオで聴けたらうれしい一曲です。timeleszの「musicname」をお願いします。",
+      "朝のひと息に、まるしゅくでtimeleszの「musicname」が聴けたらうれしいです。リクエストします！"
     ],
     "localFlag": false
   },
@@ -178,14 +181,29 @@
     ],
     "localFlag": false
   },
-  "text-nack5": {
-    "programName": "Good Luck！Morning！",
+  "text-sidebyside": {
+    "programName": "side by side",
     "text": [
-      "Good Luck！Morning！でtimeleszの「musicname」が聴けたらうれしいです。リクエストお願いします！",
-      "timeleszの「musicname」をNACK5のリスナーのみなさんにも聴いてほしいです。",
-      "Good Luck！Morning！に曲のリクエストです。timeleszの「musicname」をお願いします。",
-      "ラジオで聴きたい一曲として、timeleszの「musicname」をリクエストします！",
-      "timeleszの「musicname」をぜひGood Luck！Morning！でかけてください！"
+      "西さん、こんばんは。木曜の夜にラジオで聴きたい一曲です。timeleszの「musicname」をお願いします。",
+      "西さん、こんばんは。帰り道のお供に聴きたい、timeleszの「musicname」をリクエストします。",
+      "一日の終わりにひと息つきながら聴きたい曲です。side by sideでtimeleszの「musicname」が流れたらうれしいです。"
+    ],
+    "localFlag": false
+  },
+  "text-djsunsun": {
+    "programName": "DJ SUNSUN",
+    "text": [
+      "スンスン、こんにちは！ 今日聴きたい曲は、timeleszの「musicname」です。",
+      "スンスンに曲のリクエストです。timeleszの「musicname」をかけてくれたらうれしいな。",
+      "スンスン、timeleszの「musicname」を一緒に聴きたいです。リクエストお願いします！",
+      "スンスン、今日はtimeleszの「musicname」を選んでみました。番組でかけてもらえたらうれしいな！",
+      "スンスン、聴いてほしい曲があります。timeleszの「musicname」をリクエストするね！",
+      "こんにちは、スンスン。今日のリクエストはtimeleszの「musicname」です。ぜひかけてください！",
+      "スンスンの番組で、timeleszの「musicname」をみんなと聴けたら楽しそうです。リクエストします！",
+      "スンスンへ、今日の一曲を送ります。timeleszの「musicname」をお願いします。",
+      "スンスン、こんにちは！ timeleszの「musicname」、かけてくれる？",
+      "スンスンと一緒に聴きたい曲を送るね。timeleszの「musicname」です。",
+      "スンスンにリクエストです。今日はtimeleszの「musicname」が聴きたいな。"
     ],
     "localFlag": false
   },
@@ -317,77 +335,54 @@
     ],
     "localFlag": false
   },
-  "text-ranimusic": {
-    "programName": "RaNi Music♪",
-    "text": "作業の合間に聴きたい一曲です。timeleszの「musicname」をリクエストします。",
-    "localFlag": false
-  },
-  "text-marchecoucou": {
-    "programName": "Marché Coucou",
-    "text": [
-      "珠久さん、おはようございます。朝の支度をしながら聴きたい、timeleszの「musicname」をリクエストします。",
-      "珠久さん、おはようございます。出かける前にラジオで聴けたらうれしい一曲です。timeleszの「musicname」をお願いします。",
-      "朝のひと息に、まるしゅくでtimeleszの「musicname」が聴けたらうれしいです。リクエストします！"
-    ],
-    "localFlag": false
-  },
-  "text-sidebyside": {
-    "programName": "side by side",
-    "text": [
-      "西さん、こんばんは。木曜の夜にラジオで聴きたい一曲です。timeleszの「musicname」をお願いします。\nラジオネーム：",
-      "西さん、こんばんは。帰り道のお供に聴きたい、timeleszの「musicname」をリクエストします。\nラジオネーム：",
-      "一日の終わりにひと息つきながら聴きたい曲です。side by sideでtimeleszの「musicname」が流れたらうれしいです。\nラジオネーム："
-    ],
-    "localFlag": false
-  },
   "text-stv": {
     "programName": "STVラジオ(北海道)",
     "text": "おはようございます。 timeleszの「musicname」をリクエストします。 この曲が朝ラジオから流れてきたら、とてもいい気分で一日を始められそうです。 ラジオネーム：",
-    "localFlag": true
+    "localFlag": false
   },
   "text-fmaomori": {
     "programName": "FM青森",
     "text": "timeleszの「musicname」をリクエストします。",
-    "localFlag": true
+    "localFlag": false
   },
   "text-fmiwate": {
     "programName": "FM岩手",
     "text": "timeleszの「musicname」をリクエストします。",
-    "localFlag": true
+    "localFlag": false
   },
   "text-abs": {
     "programName": "ABS秋田放送",
     "text": "朝のスタートにtimeleszの「musicname」が聴きたいです。 よろしくお願いします！",
-    "localFlag": true
+    "localFlag": false
   },
   "text-tbc": {
     "programName": "TBC東北放送(宮城)",
     "text": "こんにちは。 timeleszの「musicname」をリクエストします。 ラジオを通して、たくさんの方にも聴いていただけたらうれしいです。 よろしくお願いします。 ラジオネーム：",
-    "localFlag": true
+    "localFlag": false
   },
   "text-ybc": {
     "programName": "YBC山形放送",
     "text": "お休みの日にtimeleszの「musicname」が流れたら嬉しいです。 よろしくお願いします！",
-    "localFlag": true
+    "localFlag": false
   },
   "text-fmgunma": {
     "programName": "FM群馬",
     "text": "おはようございます！ 一日の始まりをtimeleszの「musicname」で始めたいです！ よろしくお願いします。",
-    "localFlag": true
+    "localFlag": false
   },
   "text-fbc": {
     "programName": "FBCラジオ(福井)",
     "text": "こんにちは。 timeleszの「musicname」をリクエストします。 お休みの日のラジオで聴けたらうれしいです。 ラジオネーム：",
-    "localFlag": true
+    "localFlag": false
   },
   "text-sbc": {
     "programName": "SBC信越放送(長野)",
     "text": "こんにちは。 timeleszの「musicname」をリクエストします。 ラジオで好きな曲を聴いて、明日からも頑張りたいです。 ラジオネーム：",
-    "localFlag": true
+    "localFlag": false
   },
   "text-kbs": {
     "programName": "KBSラジオ(京都)",
     "text": "お休みの日にtimeleszの「musicname」が流れたら嬉しいです。 よろしくお願いします！",
-    "localFlag": true
+    "localFlag": false
   }
 }
