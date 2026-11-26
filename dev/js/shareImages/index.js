@@ -10,7 +10,8 @@
     "styles/fireworks.js",
     "styles/fireworksCharacter.js",
     "styles/honkoto.js",
-    "styles/birthdaySo.js"
+    "styles/birthdaySo.js",
+    "styles/birthdayTera.js"
   ];
 
   const loaderUrl = new URL(document.currentScript.src);
