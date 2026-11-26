@@ -3,7 +3,7 @@
 // ==================================================
 const BIRTHDAY_SO_FONT = '"Zen Maru Gothic", sans-serif';
 const BIRTHDAY_SO_TITLE_FONT = '"Klee One", "Zen Maru Gothic", sans-serif';
-const BIRTHDAY_SO_ASSET_DIR = "../img/shareImg/birthday/20261127/";
+const BIRTHDAY_SO_ASSET_DIR = "../img/shareImg/birthday/1127/";
 const BIRTHDAY_SO_LAYOUT = {
   titleY: 95, dateY: 178, panelX: 120, panelY: 225, panelW: 840,
   rowHeight: 76, panelPaddingTop: 44, panelPaddingBottom: 62,
