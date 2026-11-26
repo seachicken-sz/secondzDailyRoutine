@@ -11,16 +11,20 @@
   let tapTimer = null;
   let stopCanvas = null;
   let suppressed = false;
-  const storageKey = "tamugotoBirthday20261127Dismissed";
+  const eventId = "birthday_20261127";
+  const preview = true; // dev only
+  const storageKey = `celebrationSeen_${eventId}`;
+  let manualReplay = false;
+  function isEventDay() {
+    const day = new Intl.DateTimeFormat("en-CA", {timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
+    const key = ["year","month","day"].map(type=>day.find(p=>p.type===type).value).join("");
+    return preview || eventId === `birthday_${key}`;
+  }
   try { suppressed = localStorage.getItem(storageKey) === "1"; } catch (error) { /* session fallback */ }
 
-  function setSuppressed(value) {
-    suppressed = value;
-    try {
-      if (value) localStorage.setItem(storageKey, "1");
-      else localStorage.removeItem(storageKey);
-    } catch (error) { /* session fallback */ }
-    sync();
+  function markSeen() {
+    suppressed = true;
+    try { localStorage.setItem(storageKey, "1"); } catch (error) { /* session fallback */ }
   }
 
   function isNormalHome() {
@@ -32,14 +36,19 @@
 
   function syncModal() {
     const modal = document.getElementById("birthdayModal");
-    if (!modal || !isNormalHome() || suppressed || modalShown || (!motion.matches && !modalReady)) return;
+    if (!modal || !isEventDay() || !isNormalHome() || (suppressed && !manualReplay) || modalShown || (!motion.matches && !modalReady)) return;
     if (document.querySelector(".modal-overlay:not(.hidden):not(#birthdayModal)")) return;
     modalShown = true;
     modal.classList.remove("hidden");
   }
 
   function closeModal() {
-    document.getElementById("birthdayModal")?.classList.add("hidden");
+    const modal = document.getElementById("birthdayModal");
+    if (!modal || modal.classList.contains("hidden")) return;
+    markSeen();
+    manualReplay = false;
+    modal.classList.add("hidden");
+    sync();
   }
 
   function stop() {
@@ -54,7 +63,7 @@
 
   function canPlay() {
     // dev: always enabled for preview. Date restriction can be applied at release.
-    return !suppressed && !motion.matches && isNormalHome();
+    return isEventDay() && (!suppressed || manualReplay) && !motion.matches && isNormalHome();
   }
 
   // A single canvas, capped DPR and elapsed-time physics keep the animation
@@ -242,6 +251,7 @@
   }
 
   function sync() {
+    document.getElementById("birthdayResetButton")?.classList.toggle("hidden", !isEventDay());
     if (!canPlay()) { stop(); syncModal(); return; }
     if (document.querySelector(".modal-overlay:not(.hidden):not(#birthdayModal)") && !modalShown) {
       stop();
@@ -360,15 +370,12 @@
         add("polygon",{points:points.join(" "),fill:color},core);
       });
     }
-    const dismiss = document.getElementById("birthdayDismissCheckbox");
-    if (dismiss) dismiss.checked = suppressed;
     const resetPostFields = () => {
       const field = document.getElementById("birthdayPostText");
       if (field) field.value = "";
       modal?.querySelectorAll('input[name="birthdayTag"]').forEach(el => { el.checked = false; });
     };
     resetPostFields();
-    dismiss?.addEventListener("change", () => setSuppressed(dismiss.checked));
     document.getElementById("birthdayModalCloseButton")?.addEventListener("click", closeModal);
     document.getElementById("birthdayModalCloseOnlyButton")?.addEventListener("click", closeModal);
     modal?.addEventListener("click", event => { if (event.target === modal) closeModal(); });
@@ -381,14 +388,15 @@
       location.href = X_POST_URL + encodeURIComponent(postText);
     });
     document.getElementById("birthdayResetButton")?.addEventListener("click", () => {
+      if (!isEventDay() || !isNormalHome()) return;
       closeModal();
       stop();
+      manualReplay = true;
       burstPlayed = false;
       modalShown = false;
       modalReady = false;
       resetPostFields();
-      if (dismiss) dismiss.checked = false;
-      setSuppressed(false);
+      sync();
     });
     const observer = new MutationObserver(sync);
     [document.documentElement, document.getElementById("homeStep"), document.getElementById("normalHomeContent")]

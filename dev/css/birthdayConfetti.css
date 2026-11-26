@@ -154,7 +154,6 @@
 #birthdayModal .birthday-tag-chip input:checked + span::before { content: "✓"; font-weight: 700; }
 #birthdayModal .birthday-tag-chip input:focus-visible + span { outline: 2px solid #51834d; outline-offset: 2px; }
 #birthdayModal input[type="checkbox"] { accent-color: #51834d; flex-shrink: 0; }
-#birthdayModal .birthday-dismiss { display: flex; justify-content: center; gap: 8px; align-items: center; }
 
 #birthdayModal .birthday-modal-body > * { flex-shrink: 0; }
 #birthdayModal .birthday-greeting {
