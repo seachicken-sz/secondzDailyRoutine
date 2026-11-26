@@ -1,4 +1,4 @@
-/* Birthday confetti: decorative overlay only, never intercepts taps. */
+/* Birthday celebration: tap-to-dismiss overlay. */
 #birthdayConfettiLayer {
   position: fixed;
   inset: 0;
@@ -11,6 +11,7 @@
 }
 #birthdayConfettiLayer .birthday-confetti-canvas {
   position: absolute;
+  z-index: 0;
   inset: 0;
   display: block;
   width: 100%;
@@ -23,6 +24,8 @@
 }
 #birthdayConfettiLayer .birthday-intro-message {
   position: absolute;
+  z-index: 1;
+  isolation: isolate;
   left: 50%;
   top: 50%;
   width: min(92%, 600px);
@@ -41,6 +44,14 @@
   cursor: pointer;
 }
 
+#birthdayConfettiLayer .birthday-intro-message::before {
+  content: "";
+  position: absolute;
+  inset: -45px -18px -65px;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(12,25,17,.72) 0%, rgba(12,25,17,.46) 43%, transparent 74%);
+}
 #birthdayConfettiLayer .birthday-intro-message:focus,
 #birthdayConfettiLayer .birthday-intro-message:focus-visible { outline: none; box-shadow: none; }
 #birthdayConfettiLayer .birthday-intro-message { -webkit-tap-highlight-color: transparent; }
