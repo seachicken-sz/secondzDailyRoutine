@@ -327,7 +327,39 @@
   function initConfetti() {
     const modal = document.getElementById("birthdayModal");
     const decoration=modal?.querySelector(".birthday-greeting-decoration");
-    if(decoration){decoration.replaceChildren();for(let i=0;i<65;i++){const s=document.createElement("span"),b=i<25,size=b?12+Math.random()*28:6+Math.random()*13;s.className=b?"birthday-card-bokeh":"birthday-card-star";s.textContent=b?"":"✦";s.style.cssText="--cx:"+Math.random()*96+"%;--cy:"+Math.random()*94+"%;--cs:"+size+"px;--cd:"+(-Math.random()*4)+"s;--cc:"+["#ffffff","#fff0c6","#d4ebc5"][i%3];decoration.appendChild(s);}}
+    if (decoration) {
+      decoration.replaceChildren();
+      for (let i=0;i<65;i++) {
+        const s=document.createElement("span"), b=i<25;
+        let x=Math.random()*96;
+        if(b) {
+          // Smoothly favor the sides without excluding the center.
+          while(Math.random() > .25+.75*Math.pow(Math.abs(x-48)/48,1.5)) x=Math.random()*96;
+        }
+        const center=1-Math.abs(x-48)/48;
+        const size=b?(12+Math.random()*28)*(1-.4*center):6+Math.random()*13;
+        s.className=b?"birthday-card-bokeh":"birthday-card-star";
+        s.textContent=b?"":"✦";
+        s.style.cssText="--cx:"+x+"%;--cy:"+Math.random()*94+"%;--cs:"+size+"px;--cd:"+(-Math.random()*4)+"s;--cc:"+["#ffffff","#fff0c6","#d4ebc5"][i%3]+";--ca:"+(b?1-.55*center:1);
+        decoration.appendChild(s);
+      }
+      const ns="http://www.w3.org/2000/svg";
+      const add=(tag,attrs,root)=>{const e=document.createElementNS(ns,tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,v));root.appendChild(e);return e;};
+      const svg=add("svg",{viewBox:"0 0 360 44",class:"birthday-card-garland","aria-hidden":"true"},decoration);
+      add("path",{d:"M0 3 Q90 29 180 4 Q270 29 360 3",fill:"none",stroke:"#c9b17a","stroke-width":".8"},svg);
+      ["#ff727b","#bd91ff","#63cf88","#82dfff","#c8ed78","#ff9bc9","#ffffff"].forEach((color,i)=>{
+        const x=27+i*51, u=(x%180)/180, y=(x<180?3:4)*(1-u)*(1-u)+58*u*(1-u)+(x<180?4:3)*u*u, end=23+i%2*12;
+        const g=add("g",{class:"birthday-card-lamp"},svg);
+        g.style.transformOrigin=x+"px "+y+"px";
+        g.style.animationDelay=(-i*.37)+"s";
+        add("path",{d:"M"+x+" "+y+"V"+end,stroke:"#c9b17a","stroke-width":".7"},g);
+        const core=add("g",{class:"birthday-card-lamp-core"},g);
+        core.style.animationDelay=(-i*.53)+"s";
+        [13,9].forEach((r,j)=>add("circle",{cx:x,cy:end,r,fill:color,opacity:[.08,.15][j]},core));
+        const points=Array.from({length:10},(_,j)=>{const a=j*Math.PI/5-Math.PI/2,r=j%2?3.5:8;return (x+Math.cos(a)*r)+","+(end+Math.sin(a)*r);});
+        add("polygon",{points:points.join(" "),fill:color},core);
+      });
+    }
     const dismiss = document.getElementById("birthdayDismissCheckbox");
     if (dismiss) dismiss.checked = suppressed;
     const resetPostFields = () => {

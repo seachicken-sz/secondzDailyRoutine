@@ -166,7 +166,7 @@
   border-radius: 14px;
   background: radial-gradient(ellipse at 50% 40%, #52704a 0%, transparent 75%), linear-gradient(145deg, #344a38, #263b2d);
   color: #fff7d9;
-  padding: 22px 12px;
+  padding: 46px 12px 22px;
   box-shadow: inset 0 0 0 3px #fff0c61c;
 }
 #birthdayModal .birthday-greeting-title {
@@ -207,3 +207,11 @@
 
 #birthdayConfettiLayer .birthday-intro-greeting {animation:birthdayGreetingTogether .6s 4.9s ease-out both;}
 @keyframes birthdayGreetingTogether {from{opacity:0;filter:blur(4px);transform:scale(.96)}to{opacity:1;filter:blur(0);transform:scale(1)}}
+
+#birthdayModal .birthday-card-bokeh {opacity:var(--ca,1);animation-name:birthdayCardBokehTwinkle;}
+@keyframes birthdayCardBokehTwinkle {0%,100%{opacity:calc(.12 * var(--ca,1));transform:scale(.65)}50%{opacity:var(--ca,1);transform:scale(1.2)}}
+#birthdayModal .birthday-card-garland {position:absolute;top:0;left:0;width:100%;height:44px;overflow:visible;pointer-events:none;}
+#birthdayModal .birthday-card-lamp {animation:birthdayGarlandSway 4s ease-in-out infinite;}
+#birthdayModal .birthday-card-lamp-core {animation:birthdayLampGlow 3s ease-in-out infinite;}
+#birthdayModal.hidden .birthday-card-lamp,#birthdayModal.hidden .birthday-card-lamp-core {animation-play-state:paused;}
+@media(prefers-reduced-motion:reduce){#birthdayModal .birthday-card-bokeh,#birthdayModal .birthday-card-lamp,#birthdayModal .birthday-card-lamp-core{animation:none}}
