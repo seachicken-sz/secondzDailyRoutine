@@ -13,7 +13,7 @@
     return {...m,id:"birthday_"+date.replace(/-/g,""),dateText:date.replace(/-/g,"."),hashtags:(m.hashtags||[]).map(t=>String(t).replaceAll("{age}",String(age)).replaceAll("{year}",year))};
   }
   function loadScript(path){return new Promise((resolve,reject)=>{const s=document.createElement("script");s.src=fresh(path);s.onload=resolve;s.onerror=()=>{s.remove();reject(new Error(path));};document.head.appendChild(s);});}
-  function loadCss(){return new Promise((resolve,reject)=>{const s=document.createElement("link");s.rel="stylesheet";s.href=fresh("./css/birthdayConfetti.css?v=20261126-16");s.onload=resolve;s.onerror=()=>{s.remove();reject(new Error("birthday css"));};document.head.appendChild(s);});}
+  function loadCss(){return new Promise((resolve,reject)=>{const s=document.createElement("link");s.rel="stylesheet";s.href=fresh("./css/birthdayConfetti.css?v=20261126-17");s.onload=resolve;s.onerror=()=>{s.remove();reject(new Error("birthday css"));};document.head.appendChild(s);});}
   async function sync(){
     const next=select();
     if(active?.id===next?.id || loading)return;
@@ -21,7 +21,7 @@
     if(!next)return;
     loading=true;
     try{
-      if(!window.startBirthdayCelebration){await loadCss();await loadScript("./js/birthdayConfetti.js?v=20261126-16");}
+      if(!window.startBirthdayCelebration){await loadCss();await loadScript("./js/birthdayModal.js?v=20261126-17");await loadScript("./js/birthdayConfetti.js?v=20261126-17");}
       if(select()?.id!==next.id)return;
       dispose=window.startBirthdayCelebration(next);active=next;
     }catch(e){console.warn("Birthday event unavailable",e);}
