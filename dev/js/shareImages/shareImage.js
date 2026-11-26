@@ -15,6 +15,7 @@ let currentShareImageStyle = "yumekawaGradient";
 
 let currentShareImageCharacter = null;
 let shareImageRenderToken = 0;
+let shareImageInitialStylePending = false;
 
 // ==================================================
 // シェア画像の呼び出し元・外部項目
@@ -36,6 +37,7 @@ function openShareImageModal(options = {}) {
   currentShareImageExternalItems = Array.isArray(options.items) ? options.items : null;
   currentShareImageTitleText = options.titleText || "タスク完了！";
 
+  shareImageInitialStylePending = true;
   shareImageModalElement.classList.remove("hidden");
   syncShareImageStyleSelect();
   restoreShareImageUserName();
@@ -81,6 +83,7 @@ function bindShareImageEvents() {
 
   if (typeof shareImageStyleSelectElement !== "undefined" && shareImageStyleSelectElement) {
     shareImageStyleSelectElement.addEventListener("change", async () => {
+      shareImageInitialStylePending = false;
       currentShareImageStyle = shareImageStyleSelectElement.value || "yumekawaGradient";
       await waitShareImageStyleFontsLoaded(currentShareImageStyle);
       await new Promise((resolve) => requestAnimationFrame(resolve));
@@ -618,7 +621,15 @@ async function renderShareImage(themeKey = currentShareImageTheme) {
   }
 
   await Promise.all([waitShareImageStylesLoaded(),window.birthdayShareDataReady]);
+  if (renderToken !== shareImageRenderToken) return;
   syncBirthdayShareImageStyles(false);
+  if (shareImageInitialStylePending) {
+    shareImageInitialStylePending = false;
+    const select = document.getElementById("shareImageStyleSelect");
+    const options = Array.from(select?.options || []).filter(o => !o.disabled);
+    const first = options.find(o => o.dataset.birthdayStyle === "1") || options[0];
+    if (first) { select.value = first.value; currentShareImageStyle = first.value; }
+  }
   await waitShareImageFontsLoaded();
 
   if (renderToken !== shareImageRenderToken) return;
