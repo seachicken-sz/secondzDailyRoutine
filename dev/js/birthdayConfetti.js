@@ -72,7 +72,7 @@
     const midX = burst ? startX + spread * 1.1 : startX - 18;
     const endX = burst ? startX + spread * 1.15 : startX + 25;
     const delay = burst ? .28 + random() * .12 : .95 + random() * .35;
-    const duration = burst ? 2.25 + random() * .2 : 1.55 + random() * .15;
+    const duration = burst ? 2.25 + random() * .2 : 3.1 + random() * .7;
     const vars = {
       "--size": (7 + random() * 9) + "px", "--color": color,
       "--start-x": startX + "px", "--start-y": (h + 15) + "px",
@@ -110,11 +110,20 @@
     const h = layer.clientHeight;
     const fragment = document.createDocumentFragment();
     for (let i = 0; i < 60; i++) particle(fragment, w, h, true, i, 60);
-    for (let i = 0; i < 30; i++) particle(fragment, w, h, false, i, 30);
+    for (let i = 0; i < 60; i++) particle(fragment, w, h, false, i, 60);
     layer.appendChild(fragment);
     const message = document.createElement("div");
     message.className = "birthday-intro-message";
     message.textContent = "Happy Birthday!!";
+    const sparkles = document.createElement("div");
+    sparkles.className = "birthday-intro-sparkles";
+    [[8,-20,15,0],[24,-38,10,.1],[46,-26,19,.25],[73,-39,12,.15],[92,-15,16,.3],[5,105,11,.25],[20,132,18,.15],[50,115,10,.35],[79,130,14,0],[94,95,19,.2]].forEach(([x,y,size,delay], i) => {
+      const sparkle = document.createElement("span");
+      sparkle.textContent = i % 3 === 0 ? "✧" : "✦";
+      sparkle.style.cssText = "--sx:" + x + "%;--sy:" + y + "%;--ss:" + size + "px;--sd:" + delay + "s";
+      sparkles.appendChild(sparkle);
+    });
+    message.appendChild(sparkles);
     layer.appendChild(message);
     if (!modalReady && !modalShown) {
       modalTimer = setTimeout(() => {

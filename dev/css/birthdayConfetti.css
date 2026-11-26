@@ -87,6 +87,26 @@
   55%, 85% { opacity: 1; transform: scale(1); }
   100% { opacity: 0; transform: scale(1); }
 }
+#birthdayConfettiLayer .birthday-intro-sparkles {
+  position: absolute;
+  inset: 0;
+  max-width: 580px;
+  margin: auto;
+  pointer-events: none;
+}
+#birthdayConfettiLayer .birthday-intro-sparkles span {
+  position: absolute;
+  left: var(--sx);
+  top: var(--sy);
+  font: var(--ss)/1 sans-serif;
+  color: #fff0c6;
+  text-shadow: 0 0 6px #ffe8ad;
+  animation: birthdayIntroTwinkle .85s var(--sd) ease-in-out infinite alternate;
+}
+@keyframes birthdayIntroTwinkle {
+  from { opacity: .2; transform: translate(-50%, -50%) scale(.55); }
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1.15); }
+}
 @media (prefers-reduced-motion: reduce) {
   #birthdayConfettiLayer { display: none; animation: none; }
   #birthdayConfettiLayer .birthday-particle { animation: none; }
