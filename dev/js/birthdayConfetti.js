@@ -138,6 +138,10 @@
         spin: ribbon ? rand(-1.6, 1.6) : rand(-5.5, 5.5), flip: rand(0, Math.PI * 2),
         flipSpeed: rand(2, 6) * (Math.random() < .5 ? -1 : 1),
         phase: rand(0, Math.PI * 2), flutter: rand(12, 36), frequency: rand(1.8, 4.4),
+        orbit: ribbon ? i % 3 === 0 : i % 10 < 3,
+        orbitJoin: rand(2, 4), orbitAngle: rand(0, Math.PI * 2),
+        orbitX: w * rand(.23, .48), orbitY: h * rand(.18, .43),
+        orbitSpeed: rand(Math.PI * 2 / 10, Math.PI * 2 / 5) * (Math.random() < .5 ? -1 : 1),
         sprite: sprites[shape + color], active: true
       };
     });
@@ -174,13 +178,24 @@
       for (const p of particles) {
         if (t < p.delay) continue;
         const dt = Math.min(.05, Math.max(0, t - Math.max(previous, p.delay)));
-        p.vx *= Math.exp(-p.drag * dt);
-        p.vy = Math.min(p.terminal, p.vy + p.gravity * dt);
-        p.x += (p.vx + Math.sin(t * p.frequency + p.phase) * p.flutter) * dt;
-        p.y += p.vy * dt;
+        const orbiting = p.orbit && t >= p.orbitJoin;
+        if (orbiting) {
+          p.orbitAngle += p.orbitSpeed * dt;
+          const spread = 1 + .08 * Math.sin(t * .7 + p.phase);
+          const x = w / 2 + Math.cos(p.orbitAngle) * p.orbitX * spread;
+          const y = h / 2 + Math.sin(p.orbitAngle) * p.orbitY;
+          const blend = 1 - Math.exp(-1.8 * dt);
+          p.x += (x - p.x) * blend;
+          p.y += (y - p.y) * blend;
+        } else {
+          p.vx *= Math.exp(-p.drag * dt);
+          p.vy = Math.min(p.terminal, p.vy + p.gravity * dt);
+          p.x += (p.vx + Math.sin(t * p.frequency + p.phase) * p.flutter) * dt;
+          p.y += p.vy * dt;
+        }
         p.angle += p.spin * dt;
         p.flip += p.flipSpeed * dt;
-        if ((p.y > h + (p.ribbon ? 100 : 50) && p.vy > 0) || p.x < -100 || p.x > w + 100) {
+        if (!orbiting && ((p.y > h + (p.ribbon ? 100 : 50) && p.vy > 0) || p.x < -100 || p.x > w + 100)) {
           Object.assign(p, incoming());
           p.gravity = rand(12, 30);
           p.drag = rand(.2, .55);
