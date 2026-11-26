@@ -6,7 +6,7 @@
   pointer-events: auto;
   z-index: 1001;
   contain: strict;
-  animation: birthdayLayerFade .28s linear both, birthdayBackground .15s .7s ease-out both;
+  animation: birthdayLayerFade .28s linear both, birthdayBackground 1.15s 2.25s ease-in-out both;
   background: rgba(12, 25, 17, .72);
 }
 #birthdayConfettiLayer .birthday-confetti-canvas {
@@ -195,7 +195,7 @@
 @media(prefers-reduced-motion:reduce){#birthdayModal .birthday-greeting-decoration span{animation:none;opacity:.5}}
 #birthdayConfettiLayer.birthday-modal-front { z-index: 1001; }
 
-@keyframes birthdayBackground {from{background:rgba(3,9,6,.97)}to{background:rgba(12,25,17,.72)}}
+@keyframes birthdayBackground {from{background:rgba(12,25,17,.97)}to{background:rgba(12,25,17,.72)}}
 @keyframes birthdayRule {from{transform:scaleX(0)}to{transform:scaleX(1)}}
 #birthdayConfettiLayer .birthday-garland {position:absolute;z-index:1;top:0;left:0;width:100%;height:auto;max-height:27%;pointer-events:none;animation:birthdayGarlandDrop 1.05s 1.2s cubic-bezier(.22,.75,.3,1) both;}
 #birthdayConfettiLayer .birthday-intro-message {z-index:2;}
@@ -204,13 +204,6 @@
 @keyframes birthdayLampGlow {0%,100%{opacity:.5}50%{opacity:1}}
 @keyframes birthdayGarlandSway {0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
 
-/* Soft launch light, behind the confetti and greeting. */
-#birthdayConfettiLayer::before {
-  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
-  background:radial-gradient(ellipse at 0% 100%,rgba(255,224,151,.22),transparent 65%),radial-gradient(ellipse at 100% 100%,rgba(255,224,151,.22),transparent 65%);
-  opacity:0;animation:birthdayLaunchLight .35s .7s ease-out both;
-}
-@keyframes birthdayLaunchLight {0%{opacity:0;transform:scale(.8)}35%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.2)}}
 
 #birthdayConfettiLayer .birthday-intro-greeting {animation:birthdayGreetingTogether .6s 3.8s ease-out both;}
 @keyframes birthdayGreetingTogether {from{opacity:0;filter:blur(4px);transform:scale(.96)}to{opacity:1;filter:blur(0);transform:scale(1)}}
