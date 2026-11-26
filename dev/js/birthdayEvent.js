@@ -2,8 +2,9 @@
 (function(){
   const fresh = path => window.tamugotoFreshAssetUrl ? window.tamugotoFreshAssetUrl(path) : path;
   let members=[], active=null, dispose=null, loading=false;
+  const requestedPreview=new URLSearchParams(location.search).get("birthdayPreview");
   const today=()=>new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date()).filter(p=>["year","month","day"].includes(p.type)).reduce((a,p)=>(a[p.type]=p.value,a),{});
-  function availableShareStyles(now=new Date(), previewTheme=new URLSearchParams(location.search).get("birthdayPreview")){
+  function availableShareStyles(now=new Date(), previewTheme=requestedPreview){
     const jst=new Date(now.getTime()+9*3600000);
     const monthDay=String(jst.getUTCMonth()+1).padStart(2,"0")+"-"+String(jst.getUTCDate()).padStart(2,"0");
     return members.filter(m=>{
@@ -17,7 +18,7 @@
   function select(){
     const {year,month,day}=today();
     const actualDate=year+"-"+month+"-"+day;
-    const previewTheme=new URLSearchParams(location.search).get("birthdayPreview");
+    const previewTheme=requestedPreview;
     const valid=m=>m.enabled===true && /^\d{4}-\d{2}-\d{2}$/.test(m.birthday);
     const previewMember=previewTheme && members.find(m=>valid(m) && m.theme===previewTheme);
     const m=previewMember || members.find(m=>valid(m) && m.birthday.slice(5)===actualDate.slice(5));
@@ -43,8 +44,10 @@
     finally{loading=false;}
   }
   async function init(){
-    try{const r=await fetch(fresh("../data/birthdayEventJson.json"),{cache:"no-store"});if(!r.ok)throw new Error(r.status);const d=await r.json();if(Array.isArray(d))members=d;}catch(e){console.warn("Birthday data unavailable",e);}
+    try{const r=await fetch(fresh("../data/birthdayEventJson.json?v=20261126-24"),{cache:"no-store"});if(!r.ok)throw new Error(r.status);const d=await r.json();if(Array.isArray(d))members=d;}catch(e){console.warn("Birthday data unavailable",e);}
+    window.dispatchEvent(new Event("birthdayShareDataLoaded"));
     sync();setInterval(sync,15000);document.addEventListener("visibilitychange",sync);window.addEventListener("pageshow",sync);
   }
+  window.birthdayShareDataReady=new Promise(resolve=>{window.addEventListener("birthdayShareDataLoaded",resolve,{once:true});});
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init,{once:true});else init();
 })();

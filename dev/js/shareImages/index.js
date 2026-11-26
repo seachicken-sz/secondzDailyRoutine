@@ -9,9 +9,7 @@
     "styles/characterSimpleCard.js",
     "styles/fireworks.js",
     "styles/fireworksCharacter.js",
-    "styles/honkoto.js",
-    "styles/birthdaySo.js",
-    "styles/birthdayTera.js"
+    "styles/honkoto.js"
   ];
 
   const loaderUrl = new URL(document.currentScript.src);
@@ -31,7 +29,7 @@
     }
     script.src = styleUrl.href;
     script.onload = () => loadScript(index + 1);
-    script.onerror = () => loadScript(index + 1);
+    script.onerror = () => { console.warn("Share image style unavailable", styleUrl.href); loadScript(index + 1); };
     document.head.appendChild(script);
   }
 

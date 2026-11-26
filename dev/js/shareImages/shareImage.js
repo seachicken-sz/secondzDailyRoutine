@@ -154,7 +154,11 @@ function syncBirthdayShareImageStyles(redraw=true) {
   const select=document.getElementById("shareImageStyleSelect");
   if(!select)return;
   const styles=window.getBirthdayShareStyles?.()||[];
-  const allowed=styles.filter(s=>typeof SHARE_IMAGE_RENDERERS!=="undefined" && typeof SHARE_IMAGE_RENDERERS[s.style]==="function");
+  const allowed=styles.filter(s=>{
+    const ready=typeof SHARE_IMAGE_RENDERERS!=="undefined" && typeof SHARE_IMAGE_RENDERERS[s.style]==="function";
+    if(!ready && window.shareImageStylesLoaded)console.warn("Birthday share renderer unavailable",s.style);
+    return ready;
+  });
   const previous=select.value;
   for(const option of Array.from(select.options)){
     if(option.dataset.birthdayStyle==="1"||option.value==="birthdaySo"){
@@ -175,6 +179,7 @@ function syncBirthdayShareImageStyles(redraw=true) {
 }
 window.syncBirthdayShareImageStyles=syncBirthdayShareImageStyles;
 window.addEventListener("shareImageStylesLoaded",()=>syncBirthdayShareImageStyles());
+window.addEventListener("birthdayShareDataLoaded",()=>syncBirthdayShareImageStyles());
 
 function syncShareImageStyleSelect() {
   syncBirthdayShareImageStyles(false);
@@ -612,7 +617,7 @@ async function renderShareImage(themeKey = currentShareImageTheme) {
     return;
   }
 
-  await waitShareImageStylesLoaded();
+  await Promise.all([waitShareImageStylesLoaded(),window.birthdayShareDataReady]);
   syncBirthdayShareImageStyles(false);
   await waitShareImageFontsLoaded();
 
