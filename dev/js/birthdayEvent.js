@@ -4,18 +4,13 @@
   let members=[], active=null, dispose=null, loading=false;
   const today=()=>new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date()).filter(p=>["year","month","day"].includes(p.type)).reduce((a,p)=>(a[p.type]=p.value,a),{});
   function availableShareStyles(now=new Date(), previewTheme=new URLSearchParams(location.search).get("birthdayPreview")){
-    const year=new Date(now.getTime()+9*3600000).getUTCFullYear();
-    const boundary=(y,birthday,offset,time)=>{
-      if(!Number.isInteger(offset)||!/^([01]\d|2[0-3]):[0-5]\d$/.test(time))return NaN;
-      const [month,day]=birthday.slice(5).split("-").map(Number);
-      const [hour,minute]=time.split(":").map(Number);
-      return Date.UTC(y,month-1,day+offset,hour-9,minute);
-    };
+    const jst=new Date(now.getTime()+9*3600000);
+    const monthDay=String(jst.getUTCMonth()+1).padStart(2,"0")+"-"+String(jst.getUTCDate()).padStart(2,"0");
     return members.filter(m=>{
       const s=m.shareImage;
       if(m.enabled!==true||s?.enabled!==true||!s.style||!s.label||!/^\d{4}-\d{2}-\d{2}$/.test(m.birthday))return false;
       if(previewTheme===m.theme)return true;
-      return [year-1,year,year+1].some(y=>now.getTime()>=boundary(y,m.birthday,s.startDayOffset,s.startTime)&&now.getTime()<boundary(y,m.birthday,s.endDayOffset,s.endTime));
+      return m.birthday.slice(5)===monthDay;
     }).map(m=>m.shareImage);
   }
   window.getBirthdayShareStyles=availableShareStyles;

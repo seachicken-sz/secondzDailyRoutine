@@ -168,7 +168,8 @@ function syncBirthdayShareImageStyles(redraw=true) {
     }
   }
   if(previous&&!Array.from(select.options).some(o=>o.value===previous)){
-    select.value="yumekawaGradient";currentShareImageStyle=select.value;
+    const first=Array.from(select.options).find(o=>!o.disabled&&o.dataset.birthdayStyle!=="1"&&o.value!=="birthdaySo");
+    select.value=first?.value||"yumekawaGradient";currentShareImageStyle=select.value;
     if(redraw&&shareImageModalElement&&!shareImageModalElement.classList.contains("hidden"))renderShareImage(currentShareImageTheme);
   }
 }
