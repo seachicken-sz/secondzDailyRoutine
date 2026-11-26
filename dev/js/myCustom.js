@@ -114,6 +114,7 @@ function renderMyCustomTask() {
   const flow = state.myCustomFlow;
   const task = flow?.tasks?.[flow.index];
   if (!task) return;
+  closeMyCustomLocalEditor();
   const local = task._localTask === true;
   document.getElementById("myCustomStepTitle").textContent = local ? "ローカルタスク" : "マイカスタム";
   const groupName = document.getElementById("myCustomLocalGroupName");
@@ -135,7 +136,9 @@ function renderMyCustomTask() {
 
 function getMyCustomLocalCopyText(task) {
   if (!task?._localTask || task["input-flag"] !== true) return "";
-  const template = selectDailyRequestTextTemplate(task);
+  const template = typeof task._editedLocalCopyTemplate === "string"
+    ? task._editedLocalCopyTemplate : selectDailyRequestTextTemplate(task);
+  task._preparedLocalCopyTemplate = template;
   // USEN・デイリー用の曲選択を省略した場合は、おかわりDailyの選択曲を使用する。
   const songName = getSelectedRadioRequestSongName() || getHomeSelectedRequestSongName();
   if (!songName && /musicname|［曲名］/.test(template)) return "";
@@ -145,11 +148,11 @@ function getMyCustomLocalCopyText(task) {
 function renderMyCustomLocalCopyPreview(task) {
   const text = getMyCustomLocalCopyText(task);
   const preview = document.getElementById("myCustomLocalCopyPreview");
-  const target = task?.["request-input"];
+  task._preparedLocalCopyText = text;
   document.getElementById("myCustomLocalCopyText").textContent = text;
-  document.getElementById("myCustomLocalCopyTarget").textContent =
-    target ? "「" + target + "」にペーストしてください。" : "指定の入力欄にペーストしてください。";
-  preview.classList.toggle("hidden", !text);
+  const editable = task._localTask === true && canEditDailyRequest(task);
+  document.getElementById("myCustomLocalEdit").classList.toggle("hidden", !editable);
+  preview.classList.toggle("hidden", !text && !editable);
 }
 
 async function continueAfterMyCustom(continuation) {
@@ -163,7 +166,73 @@ async function continueAfterMyCustom(continuation) {
   }
 }
 
+let myCustomLocalEditingTask = null;
+
+function closeMyCustomLocalEditor() {
+  if (!myCustomLocalEditingTask) return;
+  myCustomLocalEditingTask = null;
+  document.getElementById("myCustomLocalEditPanel").classList.add("hidden");
+  document.getElementById("myCustomLocalCopyText").classList.remove("hidden");
+  document.getElementById("myCustomLocalEdit").classList.remove("hidden");
+  document.getElementById("myCustomLocalCopyNote").textContent = "「ページを開く」を押すと以下がコピーされます。";
+  document.getElementById("openMyCustomTaskButton").classList.remove("hidden");
+  document.getElementById("myCustomNextButton").classList.remove("hidden");
+}
+
+function bindMyCustomLocalEditor() {
+  const editor = document.getElementById("myCustomLocalEditor");
+  const ui = bindRadioRequestTokenEditor(editor, () => {});
+  const save = document.getElementById("myCustomLocalSave");
+  const status = document.getElementById("myCustomLocalEditStatus");
+  const edit = document.getElementById("myCustomLocalEdit");
+  addClickEvent(edit, () => {
+    const flow = state.myCustomFlow;
+    const task = flow?.tasks?.[flow.index];
+    if (task?._localTask !== true || !canEditDailyRequest(task)) return;
+    myCustomLocalEditingTask = task;
+    ui.setText(task._preparedLocalCopyTemplate || "");
+    save.checked = false;
+    status.textContent = "";
+    document.getElementById("myCustomLocalCopyNote").textContent = "コピーされる文章を編集できます。";
+    document.getElementById("myCustomLocalCopyText").classList.add("hidden");
+    edit.classList.add("hidden");
+    document.getElementById("myCustomLocalEditPanel").classList.remove("hidden");
+    document.getElementById("openMyCustomTaskButton").classList.add("hidden");
+    document.getElementById("myCustomNextButton").classList.add("hidden");
+  });
+  addClickEvent(document.getElementById("myCustomLocalInsertSong"), () => ui.insertSong());
+  addClickEvent(document.getElementById("myCustomLocalCancel"), closeMyCustomLocalEditor);
+  addClickEvent(document.getElementById("myCustomLocalApply"), () => {
+    const flow = state.myCustomFlow;
+    const task = myCustomLocalEditingTask;
+    if (!task || task !== flow?.tasks?.[flow.index]) return;
+    const template = ui.getText();
+    if (!template) { status.textContent = "文章を入力してください。"; return; }
+    const songName = getSelectedRadioRequestSongName() || getHomeSelectedRequestSongName();
+    if (!songName && /musicname|［曲名］/.test(template)) { status.textContent = "リクエスト曲を選択してください。"; return; }
+    let key = "";
+    if (save.checked) {
+      try { key = saveEditedRadioRequestText(task, template); }
+      catch { status.textContent = "設定を保存できませんでした。"; return; }
+    }
+    task._editedLocalCopyTemplate = template;
+    task._preparedLocalCopyTemplate = template;
+    task._preparedLocalCopyText = normalizeDisplayNewlines(formatRadioRequestText(template, songName));
+    document.getElementById("myCustomLocalCopyText").textContent = task._preparedLocalCopyText;
+    closeMyCustomLocalEditor();
+    if (key) {
+      const current = getCurrentDailyTaskItem();
+      if (current && getRadioRequestTextSettingKey(current) === key) {
+        current._preparedCopyText = buildDailyTaskCopyText(current);
+        updateDailyTaskCopyPreview(current);
+      }
+      refreshHomeDailyTaskCopyTexts(key);
+    }
+  });
+}
+
 function bindMyCustomEvents() {
+  bindMyCustomLocalEditor();
   addClickEvent(document.getElementById("openMyCustomTaskButton"), async () => {
     const flow = state.myCustomFlow;
     const task = flow?.tasks?.[flow.index];
@@ -178,7 +247,7 @@ function bindMyCustomEvents() {
       return;
     }
     if (task._localTask) {
-      const copyText = getMyCustomLocalCopyText(task);
+      const copyText = task._preparedLocalCopyText ?? getMyCustomLocalCopyText(task);
       if (copyText) {
         try {
           await navigator.clipboard.writeText(copyText);

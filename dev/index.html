@@ -770,9 +770,21 @@
         <h2 id="myCustomTaskName" class="task-title"></h2>
         <div id="myCustomTaskComment" class="notice-box"></div>
         <div id="myCustomLocalCopyPreview" class="daily-task-copy-preview hidden">
-          <p class="daily-task-copy-preview-note">「ページを開く」を押すと以下がコピーされます。</p>
+          <p id="myCustomLocalCopyNote" class="daily-task-copy-preview-note">「ページを開く」を押すと以下がコピーされます。</p>
           <div id="myCustomLocalCopyText" class="daily-task-copy-preview-text"></div>
-          <p id="myCustomLocalCopyTarget" class="daily-task-copy-preview-note"></p>
+          <div class="daily-request-edit-actions"><button type="button" id="myCustomLocalEdit" class="daily-request-small-button hidden">文章を編集</button></div>
+          <div id="myCustomLocalEditPanel" class="hidden">
+            <div id="myCustomLocalEditor" class="daily-request-inline-editor" contenteditable="true" role="textbox" aria-multiline="true" aria-label="リクエスト文章"></div>
+            <div class="daily-request-edit-options">
+              <label class="daily-request-save"><input type="checkbox" id="myCustomLocalSave"><span>この文章を次回以降も使う</span></label>
+              <button type="button" id="myCustomLocalInsertSong" class="daily-request-small-button">曲名を挿入</button>
+            </div>
+            <p id="myCustomLocalEditStatus" class="daily-task-copy-preview-note" role="status"></p>
+            <div class="daily-request-edit-buttons">
+              <button type="button" id="myCustomLocalCancel" class="secondary-button">キャンセル</button>
+              <button type="button" id="myCustomLocalApply" class="primary-button">編集完了</button>
+            </div>
+          </div>
         </div>
         <button id="openMyCustomTaskButton" type="button" class="primary-button">ページを開く</button>
         <button id="myCustomNextButton" type="button" class="secondary-button">スキップ</button>
