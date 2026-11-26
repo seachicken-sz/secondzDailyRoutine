@@ -7,6 +7,38 @@
   let rainTimer = null;
   let cleanupTimer = null;
   let burstPlayed = false;
+  let modalShown = false;
+  let suppressed = false;
+  const storageKey = "tamugotoBirthday20261127Dismissed";
+  try { suppressed = localStorage.getItem(storageKey) === "1"; } catch (error) { /* session fallback */ }
+
+  function setSuppressed(value) {
+    suppressed = value;
+    try {
+      if (value) localStorage.setItem(storageKey, "1");
+      else localStorage.removeItem(storageKey);
+    } catch (error) { /* session fallback */ }
+    sync();
+  }
+
+  function isNormalHome() {
+    const home = document.getElementById("homeStep");
+    const normal = document.getElementById("normalHomeContent");
+    return !document.hidden && !document.documentElement.classList.contains("refresh-loading") &&
+      !!home && !!normal && !home.classList.contains("hidden") && !normal.classList.contains("hidden");
+  }
+
+  function syncModal() {
+    const modal = document.getElementById("birthdayModal");
+    if (!modal || !isNormalHome() || suppressed || modalShown) return;
+    if (document.querySelector(".modal-overlay:not(.hidden):not(#birthdayModal)")) return;
+    modalShown = true;
+    modal.classList.remove("hidden");
+  }
+
+  function closeModal() {
+    document.getElementById("birthdayModal")?.classList.add("hidden");
+  }
 
   function stop() {
     clearInterval(rainTimer);
@@ -18,12 +50,7 @@
 
   function canPlay() {
     // dev: always enabled for preview. Date restriction can be applied at release.
-    const home = document.getElementById("homeStep");
-    const normal = document.getElementById("normalHomeContent");
-    return !document.hidden && !motion.matches &&
-      !document.documentElement.classList.contains("refresh-loading") &&
-      !!home && !!normal && !home.classList.contains("hidden") &&
-      !normal.classList.contains("hidden");
+    return !suppressed && !motion.matches && isNormalHome();
   }
 
   function particle(burst, index, count, slow = false) {
@@ -59,6 +86,7 @@
   }
 
   function sync() {
+    syncModal();
     if (!canPlay()) { stop(); return; }
     if (layer) return;
     layer = document.createElement("div");
@@ -84,9 +112,33 @@
   }
 
   function initConfetti() {
+    const modal = document.getElementById("birthdayModal");
+    const dismiss = document.getElementById("birthdayDismissCheckbox");
+    if (dismiss) dismiss.checked = suppressed;
+    dismiss?.addEventListener("change", () => setSuppressed(dismiss.checked));
+    document.getElementById("birthdayModalCloseButton")?.addEventListener("click", closeModal);
+    document.getElementById("birthdayModalCloseOnlyButton")?.addEventListener("click", closeModal);
+    modal?.addEventListener("click", event => { if (event.target === modal) closeModal(); });
+    document.getElementById("birthdayPostButton")?.addEventListener("click", () => {
+      const message = document.getElementById("birthdayPostText").value.trim();
+      const tags = Array.from(modal.querySelectorAll('input[name="birthdayTag"]:checked'), el => "#" + el.value);
+      const postText = [message, tags.join(" ")].filter(Boolean).join("\n\n");
+      if (!postText) { document.getElementById("birthdayPostText").focus(); return; }
+      closeModal();
+      location.href = X_POST_URL + encodeURIComponent(postText);
+    });
+    document.getElementById("birthdayResetButton")?.addEventListener("click", () => {
+      closeModal();
+      stop();
+      burstPlayed = false;
+      modalShown = false;
+      if (dismiss) dismiss.checked = false;
+      setSuppressed(false);
+    });
     const observer = new MutationObserver(sync);
     [document.documentElement, document.getElementById("homeStep"), document.getElementById("normalHomeContent")]
       .filter(Boolean).forEach(el => observer.observe(el, { attributes: true, attributeFilter: ["class"] }));
+    document.querySelectorAll(".modal-overlay").forEach(el => observer.observe(el, { attributes: true, attributeFilter: ["class"] }));
     document.addEventListener("visibilitychange", sync);
     window.addEventListener("pageshow", sync);
     window.addEventListener("pagehide", stop);

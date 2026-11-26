@@ -242,6 +242,8 @@
           }
         </script>
         <button id="refreshAllButton" type="button" class="button secondary update-notice-button" aria-label="JS・CSS・データを再取得して更新" title="最新データに更新"><i class="bi bi-arrow-clockwise" aria-hidden="true"></i></button>
+        <!-- dev限定：誕生日演出の非表示設定を解除 -->
+        <button id="birthdayResetButton" type="button" class="button secondary update-notice-button" aria-label="誕生日演出の非表示を解除（テスト用）" title="誕生日演出を再表示（テスト用）"><i class="bi bi-gift" aria-hidden="true"></i></button>
       </div>
 
       <!-- 通常ホームとTVerモードの共通ロゴ -->
@@ -1412,6 +1414,38 @@
     </div>
   </div>
   
+  <!-- 誕生日限定モーダル -->
+  <div id="birthdayModal" class="modal-overlay hidden">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="birthdayModalTitle">
+      <div class="modal-header">
+        <h2 id="birthdayModalTitle" class="modal-title">So Goodday♡</h2>
+        <button id="birthdayModalCloseButton" class="modal-close-button" type="button" aria-label="閉じる">×</button>
+      </div>
+      <div class="modal-body birthday-modal-body">
+        <div class="birthday-greeting">
+          <div class="birthday-greeting-date">2026.11.27</div>
+          <div class="birthday-greeting-title">Happy Birthday!</div>
+          <strong>聡ちゃん、お誕生日おめでとう！</strong>
+        </div>
+        <p>みんなでお祝いのメッセージを届けませんか？</p>
+        <label for="birthdayPostText">お祝いメッセージ</label>
+        <textarea id="birthdayPostText" rows="3">聡ちゃん、お誕生日おめでとう！</textarea>
+        <fieldset class="birthday-tags">
+          <legend>つけたいハッシュタグを選んでね</legend>
+          <label><input type="checkbox" name="birthdayTag" value="松島聡誕生祭2026" checked> #松島聡誕生祭2026</label>
+          <label><input type="checkbox" name="birthdayTag" value="松島聡誕生祭" > #松島聡誕生祭</label>
+          <label><input type="checkbox" name="birthdayTag" value="松島聡"> #松島聡</label>
+          <label><input type="checkbox" name="birthdayTag" value="timelesz"> #timelesz</label>
+          <label><input type="checkbox" name="birthdayTag" value="SoGoodday"> #SoGoodday</label>
+        </fieldset>
+        <button id="birthdayPostButton" class="primary-button" type="button"><i class="bi bi-twitter-x" aria-hidden="true"></i> Xでお祝いする</button>
+        <label class="birthday-dismiss"><input id="birthdayDismissCheckbox" type="checkbox"> もう表示しない</label>
+        <p class="birthday-dismiss-note">チェックすると紙吹雪も表示されなくなります。</p>
+        <button id="birthdayModalCloseOnlyButton" class="text-link-button" type="button">閉じる</button>
+      </div>
+    </div>
+  </div>
+
   <!--お知らせ-->
   <div id="updateNoticeModal" class="modal-overlay hidden">
     <div class="modal-content update-notice-modal-content" role="dialog" aria-modal="true" aria-labelledby="updateNoticeModalTitle">

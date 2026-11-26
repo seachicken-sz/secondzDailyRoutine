@@ -65,3 +65,24 @@
   #birthdayConfettiLayer { display: none; }
   #birthdayConfettiLayer .birthday-particle { animation: none; }
 }
+
+/* Birthday modal: shared modal header/content/close button styles are inherited. */
+#birthdayModal .birthday-modal-body { display: flex; flex-direction: column; gap: 12px; }
+#birthdayModal .birthday-modal-body p { margin: 0; }
+#birthdayModal .birthday-greeting {
+  text-align: center;
+  padding: 20px 8px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #fafff9, #e3f0dc);
+  color: #36583a;
+}
+#birthdayModal .birthday-greeting-date { font-size: .85rem; letter-spacing: .08em; }
+#birthdayModal .birthday-greeting-title { font: 600 30px "Klee One", sans-serif; margin: 4px 0 10px; }
+#birthdayPostText { width: 100%; box-sizing: border-box; resize: vertical; padding: 10px; border: 1px solid var(--color-border-soft); border-radius: 10px; font: inherit; color: var(--color-text); background: var(--color-surface); }
+#birthdayModal .birthday-tags { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--color-border-soft); border-radius: 10px; padding: 4px 10px; min-width: 0; margin: 0; }
+#birthdayModal .birthday-tags legend { font-size: .85rem; padding: 0 4px; }
+#birthdayModal .birthday-tags label { display: flex; gap: 8px; align-items: center; padding: 9px 0; }
+#birthdayModal .birthday-tags label + label { border-top: 1px solid var(--color-border-light); }
+#birthdayModal input[type="checkbox"] { accent-color: #51834d; flex-shrink: 0; }
+#birthdayModal .birthday-dismiss { display: flex; justify-content: center; gap: 8px; align-items: center; }
+#birthdayModal .birthday-dismiss-note { text-align: center; font-size: .78rem; color: var(--color-text-sub); }
