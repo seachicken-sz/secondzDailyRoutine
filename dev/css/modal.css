@@ -1694,3 +1694,7 @@
 .daily-request-save { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; }
 .daily-request-edit-buttons { display: flex; gap: 8px; margin-top: 8px; }
 .daily-request-edit-buttons > button { flex: 1; min-width: 0; }
+
+.daily-request-edit-options { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin: 6px 0; }
+.daily-request-edit-options .daily-request-save { min-width: 0; }
+.daily-request-edit-options #dailyRequestInsertSong { flex-shrink: 0; width: auto; margin: 0; padding: 4px 0.5em; border: 0; border-radius: 4px; background: var(--color-surface-soft); color: var(--color-brand); font: inherit; font-size: 0.8rem; white-space: nowrap; box-shadow: none; }

@@ -871,8 +871,10 @@
           </div>
           <div id="dailyRequestEditPanel" class="hidden">
             <div id="dailyRequestEditor" contenteditable="true" role="textbox" aria-multiline="true" aria-label="リクエスト文章"></div>
-            <div class="daily-request-edit-actions"><button type="button" id="dailyRequestInsertSong">曲名を挿入</button></div>
-            <label class="daily-request-save"><input type="checkbox" id="dailyRequestSave"><span id="dailyRequestSaveLabel">オリジナル文章として保存する</span></label>
+            <div class="daily-request-edit-options">
+              <label class="daily-request-save"><input type="checkbox" id="dailyRequestSave"><span id="dailyRequestSaveLabel">この文章を次回以降も使う</span></label>
+              <button type="button" id="dailyRequestInsertSong">曲名を挿入</button>
+            </div>
             <p id="dailyRequestEditStatus" class="daily-task-copy-preview-note" role="status"></p>
             <div class="daily-request-edit-buttons">
               <button type="button" id="dailyRequestCancel" class="secondary-button">キャンセル</button>

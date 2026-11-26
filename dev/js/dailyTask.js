@@ -527,6 +527,7 @@ function closeDailyRequestEditor() {
   if (!dailyRequestEditorItem) return;
   dailyRequestEditorItem = null;
   document.getElementById("dailyRequestEditPanel").classList.add("hidden");
+  document.getElementById("dailyTaskCopyPreviewPasteTarget").classList.remove("hidden");
   document.getElementById("dailyTaskCopyPreviewText").classList.remove("hidden");
   document.getElementById("dailyRequestEdit").classList.remove("hidden");
   openDailyTaskUrlButtonElement.classList.toggle("hidden", !getDailyTaskItemUrl(getCurrentDailyTaskItem()));
@@ -545,10 +546,7 @@ function bindDailyRequestEditor() {
     dailyRequestEditorItem = item;
     dailyRequestEditorUi.setText(item._preparedCopyTemplate || "");
     save.checked = false;
-    const entry = getRadioRequestTextSetting(getRadioRequestTextSettingKey(item));
-    document.getElementById("dailyRequestSaveLabel").textContent = isLocalRequestText(item)
-      ? "次回以降も使う文章として保存する"
-      : getFixedRequestText(entry) ? "保存済みのオリジナル文章を上書きする" : "オリジナル文章として保存する";
+    document.getElementById("dailyTaskCopyPreviewPasteTarget").classList.add("hidden");
     status.textContent = "";
     edit.classList.add("hidden");
     document.getElementById("dailyTaskCopyPreviewText").classList.add("hidden");
@@ -570,10 +568,8 @@ function bindDailyRequestEditor() {
       try {
         const key = getRadioRequestTextSettingKey(item);
         const saved = readRadioRequestTextSettings();
-        const presets = getRadioRequestTextExamples(state.requestTexts[item["request-type"]]);
-        const previous = migrateFixedRequestTextEntry(getRadioRequestTextSetting(key, saved), presets);
         const entry = isLocalRequestText(item) ? { mode: "fixed", text: template } : {
-          mode: "random", text: template, selectedPresets: getSelectedRequestTextPresets(previous, presets),
+          mode: "random", text: template, selectedPresets: [],
           includeOriginal: true
         };
         localStorage.setItem(RADIO_REQUEST_TEXT_STORAGE_KEY, JSON.stringify({ ...saved, [key]: entry }));
