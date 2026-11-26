@@ -1473,7 +1473,8 @@
 .request-text-bulk-actions button,
 #requestTextInsertSong,
 #dailyRequestInsertSong,
-#dailyRequestEdit {
+#dailyRequestEdit,
+.daily-request-small-button {
   width: auto;
   padding: 4px 0;
   border: 0;
@@ -1487,7 +1488,8 @@
 
 #requestTextInsertSong,
 #dailyRequestInsertSong,
-#dailyRequestEdit {
+#dailyRequestEdit,
+.daily-request-small-button {
   padding-inline: 0.5em;
   border-radius: 4px;
   background: var(--color-surface-soft);
@@ -1538,7 +1540,8 @@
 #requestTextProgram,
 #requestTextExample,
 #requestTextEditor,
-#dailyRequestEditor {
+#dailyRequestEditor,
+.daily-request-inline-editor {
   width: 100%;
   padding: 10px;
   border: 1px solid var(--color-border);
@@ -1550,12 +1553,14 @@
 }
 
 #requestTextEditor,
-#dailyRequestEditor {
+#dailyRequestEditor,
+.daily-request-inline-editor {
   min-height: 7em;
 }
 
 #requestTextEditor,
 #dailyRequestEditor,
+.daily-request-inline-editor,
 #requestTextPreview {
   white-space: pre-wrap;
   overflow-wrap: anywhere;
@@ -1698,3 +1703,5 @@
 .daily-request-edit-options { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin: 6px 0; }
 .daily-request-edit-options .daily-request-save { min-width: 0; }
 .daily-request-edit-options #dailyRequestInsertSong { flex-shrink: 0; width: auto; margin: 0; padding: 4px 0.5em; border: 0; border-radius: 4px; background: var(--color-surface-soft); color: var(--color-brand); font: inherit; font-size: 0.8rem; white-space: nowrap; box-shadow: none; }
+
+.daily-request-edit-options .daily-request-small-button { flex-shrink: 0; width: auto; margin: 0; padding: 4px 0.5em; border: 0; border-radius: 4px; background: var(--color-surface-soft); color: var(--color-brand); font: inherit; font-size: 0.8rem; white-space: nowrap; box-shadow: none; }

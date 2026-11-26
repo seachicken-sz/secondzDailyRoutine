@@ -487,11 +487,9 @@ function createHomeDailyTaskCopyPreview(task, source) {
 
   const copyText = task._preparedHomeCopyText || "";
 
-  if (!copyText) {
+  if (!copyText && !canEditDailyRequest(task)) {
     return null;
   }
-
-  const requestInput = task["request-input"] || "";
 
   const previewArea = document.createElement("div");
   previewArea.className = "daily-task-copy-preview";
@@ -504,15 +502,9 @@ function createHomeDailyTaskCopyPreview(task, source) {
   previewText.className = "daily-task-copy-preview-text";
   previewText.textContent = copyText;
 
-  const afterNote = document.createElement("p");
-  afterNote.className = "daily-task-copy-preview-note";
-  afterNote.textContent = requestInput
-    ? `「${requestInput}」にペーストしてください。`
-    : "指定の入力欄にペーストしてください。";
-
   previewArea.appendChild(beforeNote);
   previewArea.appendChild(previewText);
-  previewArea.appendChild(afterNote);
+  if (canEditDailyRequest(task)) bindHomeDailyRequestEditor(previewArea, beforeNote, previewText, task);
 
   return previewArea;
 }
@@ -659,6 +651,7 @@ function renderHomeDailyExtraList(groups) {
     return;
   }
 
+  homeDailyExtraListElement.querySelectorAll(".daily-task-copy-preview").forEach(disposeHomeDailyRequestEditor);
   HOME_EXTRA_DAILY_TASKS = [];
   homeDailyExtraListElement.innerHTML = "";
 
@@ -1320,15 +1313,16 @@ function getHomeSelectedRequestSongName() {
 function buildHomeDailyTaskCopyText(item) {
   const musicName = getHomeSelectedRequestSongName();
   const template = selectDailyRequestTextTemplate(item, "home_");
+  item._preparedHomeCopyTemplate = template;
   if (!musicName && /musicname|［曲名］/.test(template)) return "";
   return normalizeDisplayNewlines(formatRadioRequestText(template, musicName));
 }
 
-function refreshHomeDailyTaskCopyTexts(settingKey) {
+function refreshHomeDailyTaskCopyTexts(settingKey, exceptTask = null) {
   if (!homeDailyExtraListElement) return;
 
   HOME_EXTRA_DAILY_TASKS.forEach((task, index) => {
-    if (getRadioRequestTextSettingKey(task) !== settingKey) return;
+    if (task === exceptTask || getRadioRequestTextSettingKey(task) !== settingKey) return;
 
     const openButton = homeDailyExtraListElement.querySelector(
       `[data-home-extra-action="open"][data-source="daily"][data-index="${index}"]`
@@ -1337,7 +1331,8 @@ function refreshHomeDailyTaskCopyTexts(settingKey) {
     if (!actions) return;
 
     task._preparedHomeCopyText = buildHomeDailyTaskCopyText(task);
-    actions.parentElement.querySelector(".daily-task-copy-preview")?.remove();
+    const oldPreview = actions.parentElement.querySelector(".daily-task-copy-preview");
+    if (oldPreview) { disposeHomeDailyRequestEditor(oldPreview); oldPreview.remove(); }
     const preview = createHomeDailyTaskCopyPreview(task, "daily");
     if (preview) actions.before(preview);
   });
@@ -1915,4 +1910,74 @@ function openHomeSubscription() {
   });
 
   location.href = subscriptionUrl;
+}
+
+// おかわりDailyの各タスクで、通常Dailyと同じ文章編集を行う。
+const homeDailyRequestEditorCleanup = new WeakMap();
+function disposeHomeDailyRequestEditor(preview) {
+  homeDailyRequestEditorCleanup.get(preview)?.();
+  homeDailyRequestEditorCleanup.delete(preview);
+}
+function bindHomeDailyRequestEditor(preview, note, text, task) {
+  const actions = document.createElement("div");
+  actions.className = "daily-request-edit-actions";
+  const edit = document.createElement("button");
+  edit.type = "button";
+  edit.className = "daily-request-small-button";
+  edit.textContent = "文章を編集";
+  actions.append(edit);
+  preview.append(actions);
+  edit.addEventListener("click", () => {
+    if (homeDailyRequestEditorCleanup.has(preview)) return;
+    const panel = document.createElement("div");
+    panel.innerHTML = '<div class="daily-request-inline-editor" contenteditable="true" role="textbox" aria-multiline="true" aria-label="リクエスト文章"></div><div class="daily-request-edit-options"><label class="daily-request-save"><input type="checkbox"><span>この文章を次回以降も使う</span></label><button type="button" class="daily-request-small-button">曲名を挿入</button></div><p class="daily-task-copy-preview-note" role="status"></p><div class="daily-request-edit-buttons"><button type="button" class="secondary-button">キャンセル</button><button type="button" class="primary-button">編集完了</button></div>';
+    preview.append(panel);
+    const editor = panel.querySelector("[contenteditable]");
+    const save = panel.querySelector("input");
+    const status = panel.querySelector("[role=status]");
+    const [insert, cancel, apply] = panel.querySelectorAll("button");
+    const ui = bindRadioRequestTokenEditor(editor, () => {});
+    ui.setText(task._preparedHomeCopyTemplate || "");
+    const openButton = preview.parentElement.querySelector('[data-home-extra-action="open"]');
+    const wasHidden = openButton?.classList.contains("hidden");
+    openButton?.classList.add("hidden");
+    note.textContent = "コピーされる文章を編集できます。";
+    text.classList.add("hidden");
+    actions.classList.add("hidden");
+    function close() {
+      ui.dispose();
+      panel.remove();
+      note.textContent = "「ページを開く」を押すと以下がコピーされます。";
+      text.classList.remove("hidden");
+      actions.classList.remove("hidden");
+      if (!wasHidden) openButton?.classList.remove("hidden");
+      homeDailyRequestEditorCleanup.delete(preview);
+    }
+    homeDailyRequestEditorCleanup.set(preview, close);
+    insert.addEventListener("click", () => ui.insertSong());
+    cancel.addEventListener("click", close);
+    apply.addEventListener("click", () => {
+      const template = ui.getText();
+      if (!template) { status.textContent = "文章を入力してください。"; return; }
+      const song = getHomeSelectedRequestSongName();
+      if (!song && /musicname|［曲名］/.test(template)) { status.textContent = "リクエスト曲を選択してください。"; return; }
+      let key = "";
+      if (save.checked) {
+        try { key = saveEditedRadioRequestText(task, template); }
+        catch { status.textContent = "設定を保存できませんでした。"; return; }
+      }
+      task._preparedHomeCopyTemplate = template;
+      task._preparedHomeCopyText = normalizeDisplayNewlines(formatRadioRequestText(template, song));
+      text.textContent = task._preparedHomeCopyText;
+      close();
+      if (key) {
+        const current = getCurrentDailyTaskItem();
+        if (current && getRadioRequestTextSettingKey(current) === key) {
+          current._preparedCopyText = buildDailyTaskCopyText(current);
+          updateDailyTaskCopyPreview(current);
+        }
+        refreshHomeDailyTaskCopyTexts(key, task);
+      }
+    });
+  });
 }

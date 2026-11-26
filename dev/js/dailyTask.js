@@ -560,13 +560,7 @@ function bindDailyRequestEditor() {
     }
     if (save.checked) {
       try {
-        const key = getRadioRequestTextSettingKey(item);
-        const saved = readRadioRequestTextSettings();
-        const entry = isLocalRequestText(item) ? { mode: "fixed", text: template } : {
-          mode: "random", text: template, selectedPresets: [],
-          includeOriginal: true
-        };
-        localStorage.setItem(RADIO_REQUEST_TEXT_STORAGE_KEY, JSON.stringify({ ...saved, [key]: entry }));
+        const key = saveEditedRadioRequestText(item, template);
         refreshHomeDailyTaskCopyTexts(key);
       } catch (error) {
         status.textContent = "設定を保存できませんでした。";

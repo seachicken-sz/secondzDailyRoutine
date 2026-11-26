@@ -310,6 +310,7 @@ function bindRequestTextSettings() {
 
 // 曲名トークン付きエディター（設定画面とデイリー実行画面で共通）
 function bindRadioRequestTokenEditor(editor, onChange) {
+  const selectionController = new AbortController();
   let editorSelection = null;
   function createSongToken() {
     const token = document.createElement("span");
@@ -374,7 +375,7 @@ function bindRadioRequestTokenEditor(editor, onChange) {
   document.addEventListener("selectionchange", () => {
     const range = getSelectionInEditor();
     if (range) editorSelection = range.cloneRange();
-  });
+  }, { signal: selectionController.signal });
 
   editor.addEventListener("beforeinput", (event) => {
     const backward = event.inputType === "deleteContentBackward";
@@ -414,5 +415,16 @@ function bindRadioRequestTokenEditor(editor, onChange) {
   });
   editor.addEventListener("drop", (event) => event.preventDefault());
 
-  return { setText: setEditorText, getText: () => editor.innerText.replaceAll(RADIO_REQUEST_SONG_TOKEN, "musicname").trim(), insertSong: () => insertInEditor(createSongToken()) };
+  return { dispose: () => selectionController.abort(), setText: setEditorText, getText: () => editor.innerText.replaceAll(RADIO_REQUEST_SONG_TOKEN, "musicname").trim(), insertSong: () => insertInEditor(createSongToken()) };
+}
+
+// 実行画面から保存する場合は、この文章のみを次回以降の候補にする。
+function saveEditedRadioRequestText(item, template) {
+  const key = getRadioRequestTextSettingKey(item);
+  const saved = readRadioRequestTextSettings();
+  const entry = isLocalRequestText(item) ? { mode: "fixed", text: template } : {
+    mode: "random", text: template, selectedPresets: [], includeOriginal: true
+  };
+  localStorage.setItem(RADIO_REQUEST_TEXT_STORAGE_KEY, JSON.stringify({ ...saved, [key]: entry }));
+  return key;
 }
