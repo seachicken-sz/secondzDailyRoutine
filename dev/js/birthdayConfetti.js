@@ -9,7 +9,7 @@
   let modalShown = false;
   let modalReady = false;
   let modalTimer = null;
-  const modalDelay = 1600;
+  const modalDelay = 3000;
   const animationDuration = 3000;
   let suppressed = false;
   const storageKey = "tamugotoBirthday20261127Dismissed";
@@ -68,11 +68,11 @@
     const startX = burst ? (left ? random() * w * .08 : w * (.92 + random() * .08)) : random() * w;
     const spread = (left ? 1 : -1) * w * (.12 + random() * .55);
     const peakX = burst ? startX + spread : startX + 18;
-    const peakY = h * (-.15 + random() * .43);
+    const peakY = h * (.02 + random() * .31);
     const midX = burst ? startX + spread * 1.1 : startX - 18;
     const endX = burst ? startX + spread * 1.15 : startX + 25;
-    const delay = burst ? random() * .12 : .5 + random() * .65;
-    const duration = burst ? 2.55 + random() * .3 : 1.65 + random() * .45;
+    const delay = burst ? .28 + random() * .12 : .95 + random() * .35;
+    const duration = burst ? 2.25 + random() * .2 : 1.55 + random() * .15;
     const vars = {
       "--size": (7 + random() * 9) + "px", "--color": color,
       "--start-x": startX + "px", "--start-y": (h + 15) + "px",
@@ -112,6 +112,10 @@
     for (let i = 0; i < 60; i++) particle(fragment, w, h, true, i, 60);
     for (let i = 0; i < 30; i++) particle(fragment, w, h, false, i, 30);
     layer.appendChild(fragment);
+    const message = document.createElement("div");
+    message.className = "birthday-intro-message";
+    message.textContent = "Happy Birthday!!";
+    layer.appendChild(message);
     if (!modalReady && !modalShown) {
       modalTimer = setTimeout(() => {
         modalTimer = null;
