@@ -490,27 +490,21 @@ function getDailyTaskItemUrl(item) {
 function updateDailyTaskCopyPreview(item) {
   const previewArea = document.getElementById("dailyTaskCopyPreviewArea");
   const previewText = document.getElementById("dailyTaskCopyPreviewText");
-  const pasteTarget = document.getElementById("dailyTaskCopyPreviewPasteTarget");
 
-  if (!previewArea || !previewText || !pasteTarget) {
+  if (!previewArea || !previewText) {
     return;
   }
 
   const copyText = item?._preparedCopyText || "";
-  const requestInput = item?.["request-input"] || "";
   document.getElementById("dailyRequestEdit")?.classList.toggle("hidden", !canEditDailyRequest(item));
 
   if (item?.["input-flag"] !== true || (!copyText && !canEditDailyRequest(item))) {
     previewArea.classList.add("hidden");
     previewText.textContent = "";
-    pasteTarget.textContent = "";
     return;
   }
 
   previewText.textContent = copyText;
-  pasteTarget.textContent = requestInput
-    ? `「${requestInput}」にペーストしてください。`
-    : "指定の入力欄にペーストしてください。";
 
   previewArea.classList.remove("hidden");
 }
@@ -527,7 +521,7 @@ function closeDailyRequestEditor() {
   if (!dailyRequestEditorItem) return;
   dailyRequestEditorItem = null;
   document.getElementById("dailyRequestEditPanel").classList.add("hidden");
-  document.getElementById("dailyTaskCopyPreviewPasteTarget").classList.remove("hidden");
+  document.getElementById("dailyTaskCopyPreviewNote").textContent = "「ページを開く」を押すと以下がコピーされます。";
   document.getElementById("dailyTaskCopyPreviewText").classList.remove("hidden");
   document.getElementById("dailyRequestEdit").classList.remove("hidden");
   openDailyTaskUrlButtonElement.classList.toggle("hidden", !getDailyTaskItemUrl(getCurrentDailyTaskItem()));
@@ -546,7 +540,7 @@ function bindDailyRequestEditor() {
     dailyRequestEditorItem = item;
     dailyRequestEditorUi.setText(item._preparedCopyTemplate || "");
     save.checked = false;
-    document.getElementById("dailyTaskCopyPreviewPasteTarget").classList.add("hidden");
+    document.getElementById("dailyTaskCopyPreviewNote").textContent = "コピーされる文章を編集できます。";
     status.textContent = "";
     edit.classList.add("hidden");
     document.getElementById("dailyTaskCopyPreviewText").classList.add("hidden");
