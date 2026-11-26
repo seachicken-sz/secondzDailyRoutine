@@ -88,8 +88,13 @@
   function sync() {
     syncModal();
     if (!canPlay()) { stop(); return; }
-    if (layer) return;
+    const modalFront = !document.getElementById("birthdayModal")?.classList.contains("hidden");
+    if (layer) {
+      layer.classList.toggle("birthday-modal-front", modalFront);
+      return;
+    }
     layer = document.createElement("div");
+    layer.classList.toggle("birthday-modal-front", modalFront);
     layer.id = "birthdayConfettiLayer";
     layer.setAttribute("aria-hidden", "true");
     document.body.appendChild(layer);

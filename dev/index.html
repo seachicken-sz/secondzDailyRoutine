@@ -1423,6 +1423,7 @@
       </div>
       <div class="modal-body birthday-modal-body">
         <div class="birthday-greeting">
+          <div class="birthday-greeting-decoration" aria-hidden="true"><span>✦</span><span>♡</span><span>✧</span><span>✦</span><span>♡</span><span>✧</span></div>
           <div class="birthday-greeting-date">2026.11.27</div>
           <div class="birthday-greeting-title">Happy Birthday!</div>
           <strong>聡ちゃん、お誕生日おめでとう！</strong>
@@ -1432,11 +1433,13 @@
         <textarea id="birthdayPostText" rows="3">聡ちゃん、お誕生日おめでとう！</textarea>
         <fieldset class="birthday-tags">
           <legend>つけたいハッシュタグを選んでね</legend>
-          <label><input type="checkbox" name="birthdayTag" value="松島聡誕生祭2026" checked> #松島聡誕生祭2026</label>
-          <label><input type="checkbox" name="birthdayTag" value="松島聡誕生祭" > #松島聡誕生祭</label>
-          <label><input type="checkbox" name="birthdayTag" value="松島聡"> #松島聡</label>
-          <label><input type="checkbox" name="birthdayTag" value="timelesz"> #timelesz</label>
-          <label><input type="checkbox" name="birthdayTag" value="SoGoodday"> #SoGoodday</label>
+          <div class="birthday-tag-list">
+            <label class="birthday-tag-chip"><input type="checkbox" name="birthdayTag" value="松島聡29thanniversary" checked><span>#松島聡29thanniversary</span></label>
+            <label class="birthday-tag-chip"><input type="checkbox" name="birthdayTag" value="松島聡誕生祭2026" checked><span>#松島聡誕生祭2026</span></label>
+            <label class="birthday-tag-chip"><input type="checkbox" name="birthdayTag" value="松島聡HBD29"><span>#松島聡HBD29</span></label>
+            <label class="birthday-tag-chip"><input type="checkbox" name="birthdayTag" value="SOGOODDAYS"><span>#SOGOODDAYS</span></label>
+            <label class="birthday-tag-chip"><input type="checkbox" name="birthdayTag" value="timelesz" checked><span>#timelesz</span></label>
+          </div>
         </fieldset>
         <button id="birthdayPostButton" class="primary-button" type="button"><i class="bi bi-twitter-x" aria-hidden="true"></i> Xでお祝いする</button>
         <label class="birthday-dismiss"><input id="birthdayDismissCheckbox" type="checkbox"> もう表示しない</label>

@@ -78,11 +78,38 @@
 }
 #birthdayModal .birthday-greeting-date { font-size: .85rem; letter-spacing: .08em; }
 #birthdayModal .birthday-greeting-title { font: 600 30px "Klee One", sans-serif; margin: 4px 0 10px; }
-#birthdayPostText { width: 100%; box-sizing: border-box; resize: vertical; padding: 10px; border: 1px solid var(--color-border-soft); border-radius: 10px; font: inherit; color: var(--color-text); background: var(--color-surface); }
-#birthdayModal .birthday-tags { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--color-border-soft); border-radius: 10px; padding: 4px 10px; min-width: 0; margin: 0; }
-#birthdayModal .birthday-tags legend { font-size: .85rem; padding: 0 4px; }
-#birthdayModal .birthday-tags label { display: flex; gap: 8px; align-items: center; padding: 9px 0; }
-#birthdayModal .birthday-tags label + label { border-top: 1px solid var(--color-border-light); }
+#birthdayModal #birthdayPostText { display: block; flex: 0 0 auto; width: 100%; height: 6.2em; min-height: 6.2em; box-sizing: border-box; resize: vertical; padding: 10px; border: 1px solid var(--color-border-soft); border-radius: 10px; font: inherit; font-size: 16px; line-height: 1.5; color: var(--color-text); background: var(--color-surface); }
+#birthdayModal .birthday-tags { flex: 0 0 auto; min-width: 0; margin: 0; padding: 0; border: 0; }
+#birthdayModal .birthday-tags legend { font-size: .85rem; padding: 0 0 6px; }
+#birthdayModal .birthday-tag-list { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+#birthdayModal .birthday-tag-chip { position: relative; display: inline-flex; max-width: 100%; cursor: pointer; }
+#birthdayModal .birthday-tag-chip input { position: absolute; width: 1px; height: 1px; opacity: 0; margin: 0; }
+#birthdayModal .birthday-tag-chip span { display: inline-flex; align-items: center; gap: 4px; border: 1px solid var(--color-border-soft, #ccd7c8); border-radius: 999px; background: var(--color-surface, #fff); color: var(--color-text, #334033); padding: 5px 9px; font-size: .75rem; line-height: 1.4; white-space: nowrap; }
+#birthdayModal .birthday-tag-chip input:checked + span { background: #e0efda; color: #36583a; border-color: #81aa76; }
+#birthdayModal .birthday-tag-chip input:checked + span::before { content: "✓"; font-weight: 700; }
+#birthdayModal .birthday-tag-chip input:focus-visible + span { outline: 2px solid #51834d; outline-offset: 2px; }
 #birthdayModal input[type="checkbox"] { accent-color: #51834d; flex-shrink: 0; }
 #birthdayModal .birthday-dismiss { display: flex; justify-content: center; gap: 8px; align-items: center; }
 #birthdayModal .birthday-dismiss-note { text-align: center; font-size: .78rem; color: var(--color-text-sub); }
+
+#birthdayModal .birthday-modal-body > * { flex-shrink: 0; }
+#birthdayModal .birthday-greeting {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid #d9e8ce;
+  background: radial-gradient(circle at 10% 18%, #ffffffd9 0, transparent 25%), radial-gradient(circle at 93% 80%, #fff9e6b0 0, transparent 28%), linear-gradient(145deg, #f6fcf3, #e0efd8);
+  box-shadow: inset 0 0 0 4px #ffffff65;
+  padding: 21px 12px;
+}
+#birthdayModal .birthday-greeting-title { text-shadow: 0 1px 0 #fff; }
+#birthdayModal .birthday-greeting-title::after { content: ""; display: block; width: 38%; height: 2px; margin: 5px auto 0; background: linear-gradient(90deg, transparent, #d3b775, transparent); }
+#birthdayModal .birthday-greeting-decoration { position: absolute; inset: 0; pointer-events: none; z-index: -1; }
+#birthdayModal .birthday-greeting-decoration span { position: absolute; color: #b99b51; font-size: 17px; line-height: 1; opacity: .8; }
+#birthdayModal .birthday-greeting-decoration span:nth-child(1) { top: 11%; left: 6%; }
+#birthdayModal .birthday-greeting-decoration span:nth-child(2) { top: 36%; left: 3%; color: #81a77a; transform: rotate(-20deg); }
+#birthdayModal .birthday-greeting-decoration span:nth-child(3) { bottom: 12%; left: 8%; }
+#birthdayModal .birthday-greeting-decoration span:nth-child(4) { top: 12%; right: 7%; }
+#birthdayModal .birthday-greeting-decoration span:nth-child(5) { bottom: 14%; right: 5%; color: #81a77a; transform: rotate(18deg); }
+#birthdayModal .birthday-greeting-decoration span:nth-child(6) { top: 45%; right: 3%; }
+#birthdayConfettiLayer.birthday-modal-front { z-index: 1001; }
