@@ -105,8 +105,10 @@
         sprites[shape + color] = sprite;
       });
     });
-    const particles = Array.from({ length: 120 }, (_, i) => {
-      const burst = i < 60, left = i < 30;
+    const particles = Array.from({ length: 136 }, (_, i) => {
+      const ribbon = i >= 120;
+      const burst = i < 60 || (ribbon && i < 132);
+      const left = ribbon ? i % 2 === 0 : i < 30;
       const n = Math.random();
       const shape = n < .45 ? "paper" : n < .75 ? "heart" : n < .88 ? "star" : "spark";
       const color = palette[Math.floor(Math.random() * palette.length)];
@@ -118,10 +120,11 @@
         vx: burst ? (left ? 1 : -1) * w * rand(.35, 1.08) : rand(-24, 24),
         vy: burst ? -Math.sqrt(2 * gravity * launchHeight) : h * rand(.15, .24),
         gravity, drag: burst ? rand(.65, 1.05) : rand(.2, .55),
-        terminal: h * rand(.17, .27),
+        terminal: h * (ribbon ? rand(.12, .19) : rand(.17, .27)),
         delay: burst ? rand(.28, .46) : rand(.9, 5.2),
-        size: rand(9, 19), angle: rand(0, Math.PI * 2),
-        spin: rand(-5.5, 5.5), flip: rand(0, Math.PI * 2),
+        size: rand(9, 19) * 1.2, angle: rand(0, Math.PI * 2),
+        ribbon, color, ribbonLength: rand(42, 78), ribbonWidth: rand(3, 5),
+        spin: ribbon ? rand(-1.6, 1.6) : rand(-5.5, 5.5), flip: rand(0, Math.PI * 2),
         flipSpeed: rand(2, 6) * (Math.random() < .5 ? -1 : 1),
         phase: rand(0, Math.PI * 2), flutter: rand(12, 36), frequency: rand(1.8, 4.4),
         sprite: sprites[shape + color], active: true
@@ -155,7 +158,33 @@
         p.y += p.vy * dt;
         p.angle += p.spin * dt;
         p.flip += p.flipSpeed * dt;
-        if (p.y > h + 50 && p.vy > 0) { p.active = false; continue; }
+        if (p.y > h + (p.ribbon ? 100 : 50) && p.vy > 0) { p.active = false; continue; }
+        if (p.ribbon) {
+          // A flexible, tapered-looking streamer with alternating highlights.
+          const length = p.ribbonLength, width = p.ribbonWidth;
+          ctx.setTransform(dpr, 0, 0, dpr, dpr * p.x, dpr * p.y);
+          ctx.rotate(p.angle * .55);
+          ctx.lineCap = "round";
+          const segments = 14;
+          let px = Math.sin(p.phase + t * 4) * 7, py = -length / 2;
+          for (let k = 1; k <= segments; k++) {
+            const q = k / segments;
+            const wave = q * Math.PI * 3.4 + p.phase + t * 4;
+            const x = Math.sin(wave) * 8, y = (q - .5) * length;
+            ctx.beginPath();
+            ctx.moveTo(px, py); ctx.lineTo(x, y);
+            ctx.strokeStyle = p.color;
+            ctx.lineWidth = width * (.35 + .65 * Math.abs(Math.cos(wave)));
+            ctx.stroke();
+            if (Math.cos(wave) > .35) {
+              ctx.strokeStyle = "rgba(255,255,255,.35)";
+              ctx.lineWidth *= .35;
+              ctx.stroke();
+            }
+            px = x; py = y;
+          }
+          continue;
+        }
         const flip = Math.cos(p.flip);
         const scale = p.size / 40;
         const cs = Math.cos(p.angle), sn = Math.sin(p.angle);
@@ -193,9 +222,11 @@
     document.body.appendChild(layer);
     burstPlayed = true;
     stopCanvas = startConfettiCanvas(layer);
-    const message = document.createElement("button");
-    message.type = "button";
-    message.disabled = true;
+    const message = document.createElement("div");
+    message.setAttribute("role", "button");
+    message.setAttribute("aria-disabled", "true");
+    message.tabIndex = -1;
+    let messageReady = false;
     message.className = "birthday-intro-message";
     [["birthday-intro-title", "Happy Birthday!!"], ["birthday-intro-name", "So Matsushima"], ["birthday-intro-date", "2026.11.27"]].forEach(([className, value]) => {
       const line = document.createElement("span");
@@ -219,10 +250,11 @@
     message.appendChild(tap);
     layer.appendChild(message);
     const advance = () => {
-      if (message.disabled || !layer || modalReady) return;
+      if (!messageReady || !layer || modalReady) return;
       modalReady = true;
       layer.classList.add("birthday-intro-leaving");
-      message.disabled = true;
+      messageReady = false;
+      message.setAttribute("aria-disabled", "true");
       clearTimeout(cleanupTimer);
       cleanupTimer = setTimeout(() => {
         stop();
@@ -231,12 +263,14 @@
     };
     layer.addEventListener("click", advance);
     message.addEventListener("keydown", event => {
-      if (event.key === "Escape") { event.preventDefault(); advance(); }
+      if (["Escape", "Enter", " "].includes(event.key)) { event.preventDefault(); advance(); }
     });
     tapTimer = setTimeout(() => {
       tapTimer = null;
       if (!layer || !canPlay()) return;
-      message.disabled = false;
+      messageReady = true;
+      message.setAttribute("aria-disabled", "false");
+      message.tabIndex = 0;
       layer.classList.add("birthday-intro-ready");
       message.focus({ preventScroll: true });
     }, 2400);
