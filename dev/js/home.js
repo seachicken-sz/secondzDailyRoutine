@@ -461,7 +461,12 @@ function createHomeExtraTaskDetail({ task, source, index }) {
   actionArea.appendChild(shareXButton);
   actionArea.appendChild(shareThreadsButton);
 
-  if (source === "daily") body.appendChild(createDailyLastRunLabel(task));
+  if (source === "daily") {
+    summary.style.paddingBottom = "6.5px";
+    const lastRun = createDailyLastRunLabel(task);
+    lastRun.style.marginBottom = "6.5px";
+    body.appendChild(lastRun);
+  }
   body.appendChild(comment);
 
   if (copyPreview) {
