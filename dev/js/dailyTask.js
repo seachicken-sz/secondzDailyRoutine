@@ -277,8 +277,10 @@ function updateDailyLastRunDisplay(item) {
   const existing = document.getElementById("dailyLastRunLabel");
   const label = createDailyLastRunLabel(item);
   label.id = "dailyLastRunLabel";
-  if (existing) existing.replaceWith(label);
-  else dailyTaskNameElement.after(label);
+  label.style.fontSize = "12px";
+  label.style.fontWeight = "normal";
+  if (existing) existing.remove();
+  dailyTaskNameElement.closest(".task-title").after(label);
 }
 
 function setDailyTaskStepHelpKey(item) {
