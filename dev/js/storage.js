@@ -88,6 +88,39 @@ function isDailyTaskDone(item) {
   return Boolean(doneMap?.[dayKey]?.[taskKey]);
 }
 
+function getDailyLastRunMap() {
+  try { return JSON.parse(localStorage.getItem("dailyLastRunMapV1") || "{}") || {}; }
+  catch (error) { return {}; }
+}
+function getDailyLastRunKey(item) {
+  return (item._localTask === true ? "local:" : "daily:") + getDailyTaskStorageKey(item);
+}
+function saveDailyLastRun(item, dayKey = getDailyTaskDayKey()) {
+  try {
+    const map = getDailyLastRunMap();
+    map[getDailyLastRunKey(item)] = dayKey;
+    localStorage.setItem("dailyLastRunMapV1", JSON.stringify(map));
+  } catch (error) { console.error("最終実行日保存失敗", error); }
+}
+function getDailyLastRunLabel(item) {
+  const key = getDailyLastRunKey(item);
+  const doneMap = loadDailyTaskDoneMap();
+  const previous = Object.keys(doneMap).filter(day => doneMap[day]?.[getDailyTaskStorageKey(item)]).sort().pop();
+  const day = [getDailyLastRunMap()[key], previous].filter(Boolean).sort().pop();
+  if (!day || !/^\d{8}$/.test(day)) return "実行履歴なし";
+  const toDate = value => Date.UTC(Number(value.slice(0,4)), Number(value.slice(4,6))-1, Number(value.slice(6,8)));
+  const diff = Math.round((toDate(getDailyTaskDayKey()) - toDate(day)) / 86400000);
+  return "最終実行日：" + (diff === 0 ? "今日" : Number(day.slice(4,6)) + "/" + Number(day.slice(6,8)) + (diff === 1 ? "（昨日）" : diff > 1 ? "（" + diff + "日前）" : ""));
+}
+function createDailyLastRunLabel(item) {
+  const label = document.createElement("div");
+  label.className = "daily-last-run-label";
+  label.style.fontSize = "0.8em";
+  label.style.opacity = "0.75";
+  label.textContent = getDailyLastRunLabel(item);
+  return label;
+}
+
 function markDailyTaskDone(item, source = "") {
   const taskKey = getDailyTaskStorageKey(item);
 
@@ -108,6 +141,7 @@ function markDailyTaskDone(item, source = "") {
   };
 
   saveDailyTaskDoneMap(doneMap);
+  if (source === "mainFlow" || source === "home") saveDailyLastRun(item, dayKey);
 }
 
 // 古いdaily完了データを軽く掃除する
@@ -132,6 +166,17 @@ function cleanupDailyTaskDoneMap(keepDays = 7) {
 
   Object.keys(doneMap).forEach((key) => {
     if (!keepKeys.has(key) && key !== todayKey) {
+      // Preserve historical dates before the existing seven-day cleanup.
+      try {
+        const history = getDailyLastRunMap();
+        Object.keys(doneMap[key] || {}).forEach(id => {
+          const entry = doneMap[key][id];
+          if (entry?.source !== "mainFlow" && entry?.source !== "home") return;
+          const historyKey = "daily:" + id;
+          if (!history[historyKey] || history[historyKey] < key) history[historyKey] = key;
+        });
+        localStorage.setItem("dailyLastRunMapV1", JSON.stringify(history));
+      } catch (error) { console.error(error); }
       delete doneMap[key];
       hasChanged = true;
     }
