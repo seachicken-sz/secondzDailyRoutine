@@ -47,6 +47,8 @@ function bindDailyTaskEvents() {
 
     // 現在のデイリータスクを完了済みとして記録する
     recordCompletedDailyItem(item);
+    saveDailyLastRun(item);
+    updateDailyLastRunDisplay(item);
 
     // ページを開いた後に進めるよう、次へボタンを表示
     if (dailyTaskNextButtonElement) {
@@ -184,10 +186,9 @@ function renderCurrentDailyTask() {
   // 前回表示されていたエラーを消す
   hideError(dailyTaskErrorAreaElement);
 
-  // 次へボタンはいったん非表示に戻す
-  // URLありタスクでは「ページを開く」後に表示される
+  // 次へボタンは常に表示する
   if (dailyTaskNextButtonElement) {
-    dailyTaskNextButtonElement.classList.add("hidden");
+    dailyTaskNextButtonElement.classList.remove("hidden");
   }
 
   // グループまたはタスクが存在しない場合は、デイリー終了扱いでSNS共有確認へ進む
@@ -225,6 +226,8 @@ function renderCurrentDailyTask() {
   if (dailyTaskNameElement) {
     dailyTaskNameElement.textContent = itemName;
   }
+
+  updateDailyLastRunDisplay(item);
 
   // タスクコメントを表示
   if (dailyTaskCommentAreaElement) {
@@ -269,6 +272,15 @@ function renderCurrentDailyTask() {
 // デイリータスク用やり方ボタン設定
 // ==================================================
 // input-flag があるタスクは入力補助あり版、それ以外は通常版の解説画像を表示する
+function updateDailyLastRunDisplay(item) {
+  if (!dailyTaskNameElement) return;
+  const existing = document.getElementById("dailyLastRunLabel");
+  const label = createDailyLastRunLabel(item);
+  label.id = "dailyLastRunLabel";
+  if (existing) existing.replaceWith(label);
+  else dailyTaskNameElement.after(label);
+}
+
 function setDailyTaskStepHelpKey(item) {
   const dailyTaskHelpButtonElement = document.getElementById("dailyTaskHelpButton");
 
@@ -525,7 +537,7 @@ function closeDailyRequestEditor() {
   document.getElementById("dailyTaskCopyPreviewText").classList.remove("hidden");
   document.getElementById("dailyRequestEdit").classList.remove("hidden");
   openDailyTaskUrlButtonElement.classList.toggle("hidden", !getDailyTaskItemUrl(getCurrentDailyTaskItem()));
-  dailyTaskNextButtonElement.classList.toggle("hidden", Boolean(getDailyTaskItemUrl(getCurrentDailyTaskItem())) && state.openedAction !== OPENED_ACTIONS.dailyTask);
+  dailyTaskNextButtonElement.classList.remove("hidden");
 }
 
 function bindDailyRequestEditor() {
